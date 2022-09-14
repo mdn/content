@@ -1,11 +1,13 @@
 ---
 title: User Timing API
 slug: Web/API/User_Timing_API
+page-type: web-api-overview
 tags:
   - Guide
   - Overview
   - Web Performance
 ---
+
 {{DefaultAPISidebar("User Timing API")}}
 
 The **`User Timing`** interface allows the developer to create application specific {{domxref("DOMHighResTimeStamp","timestamps")}} that are part of the browser's _performance timeline_. There are two types of _user_ defined timing event types: the "`mark`" {{domxref("PerformanceEntry.entryType","event type")}} and the "`measure`" {{domxref("PerformanceEntry.entryType","event type")}}.

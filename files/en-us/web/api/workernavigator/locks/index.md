@@ -1,16 +1,17 @@
 ---
 title: WorkerNavigator.locks
 slug: Web/API/WorkerNavigator/locks
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - LockManager
   - Property
   - Reference
   - Web Locks API
 browser-compat: api.WorkerNavigator.locks
 ---
-{{SeeCompatTable}}{{APIRef("Web Locks")}}
+
+{{APIRef("Web Locks")}}
 
 The **`locks`** read-only property of
 the {{domxref("WorkerNavigator")}} interface returns a {{domxref("LockManager")}}

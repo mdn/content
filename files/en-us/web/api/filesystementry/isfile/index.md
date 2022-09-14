@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.isFile
 slug: Web/API/FileSystemEntry/isFile
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API
@@ -12,6 +13,7 @@ tags:
   - isFile
 browser-compat: api.FileSystemEntry.isFile
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`isFile`** property of

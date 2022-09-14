@@ -1,6 +1,7 @@
 ---
 title: CSSRotate.angle
 slug: Web/API/CSSRotate/angle
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -13,6 +14,7 @@ tags:
   - Property
 browser-compat: api.CSSRotate.angle
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`angle`** property of the

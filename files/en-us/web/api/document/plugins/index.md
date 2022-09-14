@@ -1,6 +1,7 @@
 ---
 title: Document.plugins
 slug: Web/API/Document/plugins
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.plugins
 ---
+
 {{APIRef("DOM")}}
 
 The **`plugins`** read-only property of the

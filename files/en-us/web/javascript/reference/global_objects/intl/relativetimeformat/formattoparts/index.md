@@ -12,6 +12,7 @@ tags:
   - RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.formatToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.RelativeTimeFormat.prototype.formatToParts()`** method returns an {{jsxref("Array")}} of objects representing the relative time format in parts that can be used for custom locale-aware formatting.
@@ -22,7 +23,7 @@ The **`Intl.RelativeTimeFormat.prototype.formatToParts()`** method returns an {{
 
 ## Syntax
 
-```js
+```js-nolint
 formatToParts(value, unit)
 ```
 
@@ -31,7 +32,7 @@ formatToParts(value, unit)
 - `value`
   - : Numeric value to use in the internationalized relative time message.
 - `unit`
-  - : Unit to use in the relative time internationalized message. Possible values are: "`year`", "`quarter`", "`month`", "`week`", "`day`", "`hour`", "`minute`", "`second`". Plural forms are also permitted.
+  - : Unit to use in the relative time internationalized message. Possible values are: `"year"`, `"quarter"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"`. Plural forms are also permitted.
 
 ### Return value
 

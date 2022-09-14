@@ -1,6 +1,7 @@
 ---
 title: WEBGL_multi_draw.multiDrawElementsInstancedWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL
+page-type: webgl-extension-method
 tags:
   - Method
   - Reference
@@ -8,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawElementsInstancedWEBGL
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_multi_draw.multiDrawElementsWEBGL()`** method of
@@ -20,8 +22,8 @@ method.
 
 ## Syntax
 
-```js
-void ext.multiDrawElementsInstancedWEBGL(mode,
+```js-nolint
+multiDrawElementsInstancedWEBGL(mode,
     countsList, countsOffset,
     type,
     firstsList, firstsOffset,
@@ -101,13 +103,10 @@ None.
 ## Examples
 
 ```js
-// let counts = new Int32Array(...);
-// let offsets = new Int32Array(...);
-// let instanceCounts = new Int32Array(...);
-ext.multiDrawElementsInstancedWEBGL(
-    gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0,
-    counts.length);
-}
+const counts = new Int32Array(/* … */);
+const offsets = new Int32Array(/* … */);
+const instanceCounts = new Int32Array(/* … */);
+ext.multiDrawElementsInstancedWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0, counts.length);
 ```
 
 ## Specifications

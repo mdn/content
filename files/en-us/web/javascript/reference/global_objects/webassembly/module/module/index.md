@@ -9,6 +9,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Module.Module
 ---
+
 {{JSRef}}
 
 A **`WebAssembly.Module()`** constructor creates a new Module
@@ -19,6 +20,9 @@ The `WebAssembly.Module()` constructor function can be called to
 synchronously compile given WebAssembly binary code. However, the primary way to get a
 `Module` is through an asynchronous compilation function like
 {{jsxref("WebAssembly.compile()")}}.
+
+> **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
+> For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 
 ## Syntax
 
@@ -37,6 +41,14 @@ new WebAssembly.Module(bufferSource)
   - : A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
     containing the binary code of the .wasm module you want to compile.
 
+#### Exceptions
+
+- If the parameter is not of the correct type or structure, a
+  {{jsxref("TypeError")}} is thrown.
+- If compilation fails, the constructor rejects with a
+  {{jsxref("WebAssembly.CompileError")}}.
+- Some browsers may throw a {{jsxref("RangeError")}}, as they prohibit compilation and instantiation of Wasm with large buffers on the UI thread.
+
 ## Examples
 
 ### Synchronously compiling a WebAssembly module
@@ -44,25 +56,24 @@ new WebAssembly.Module(bufferSource)
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func(arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
 function createWasmModule(bytes) {
   return new WebAssembly.Module(bytes);
 }
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes => {
-  let mod = createWasmModule(bytes);
-  WebAssembly.instantiate(mod, importObject)
-  .then(result =>
-     result.exports.exported_func()
-  );
-})
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => {
+    const mod = createWasmModule(bytes);
+    WebAssembly.instantiate(mod, importObject).then((result) =>
+      result.exports.exported_func()
+    );
+  });
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: HTMLTableRowElement.insertCell()
 slug: Web/API/HTMLTableRowElement/insertCell
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableRowElement.insertCell
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableRowElement.insertCell()`** method inserts a new
@@ -26,7 +28,7 @@ reference to the cell.
 
 ## Syntax
 
-```js
+```js-nolint
 insertCell()
 insertCell(index)
 ```
@@ -63,9 +65,15 @@ element.) Finally, we add some text to the cell using
 
 ```html
 <table id="my-table">
-  <tr><td>Row 1</td></tr>
-  <tr><td>Row 2</td></tr>
-  <tr><td>Row 3</td></tr>
+  <tr>
+    <td>Row 1</td>
+  </tr>
+  <tr>
+    <td>Row 2</td>
+  </tr>
+  <tr>
+    <td>Row 3</td>
+  </tr>
 </table>
 ```
 

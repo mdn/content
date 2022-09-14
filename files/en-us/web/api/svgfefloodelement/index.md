@@ -1,6 +1,7 @@
 ---
 title: SVGFEFloodElement
 slug: Web/API/SVGFEFloodElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEFloodElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEFloodElement`** interface corresponds to the {{SVGElement("feFlood")}} element.

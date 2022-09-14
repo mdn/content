@@ -1,6 +1,7 @@
 ---
 title: HTMLSpanElement
 slug: Web/API/HTMLSpanElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSpanElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSpanElement`** interface represents a {{HTMLElement("span")}} element and derives from the {{DOMxRef("HTMLElement")}} interface, but without implementing any additional properties or methods.

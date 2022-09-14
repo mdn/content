@@ -1,6 +1,7 @@
 ---
 title: Navigator.hid
 slug: Web/API/Navigator/hid
+page-type: web-api-instance-property
 tags:
   - API
   - Advanced
@@ -8,8 +9,10 @@ tags:
   - WebHID API
   - Property
   - Reference
+  - Experimental
 browser-compat: api.Navigator.hid
 ---
+
 {{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`Navigator.hid`**

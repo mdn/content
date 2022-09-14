@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.strict_inequality
 ---
+
 {{jsSidebar("Operators")}}
 
 The strict inequality operator (`!==`) checks whether its two operands are
@@ -19,7 +20,7 @@ be different.
 
 ## Syntax
 
-```js
+```js-nolint
 x !== y
 ```
 

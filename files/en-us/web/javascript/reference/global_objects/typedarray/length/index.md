@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.length
 ---
+
 {{JSRef}}
 
 The **`length`** accessor property represents the length (in elements) of a typed array.
@@ -24,15 +25,15 @@ The `length` property is an accessor property whose set accessor function is `un
 ### Using the `length` property
 
 ```js
-var buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(8);
 
-var uint8 = new Uint8Array(buffer);
+let uint8 = new Uint8Array(buffer);
 uint8.length; // 8 (matches the length of the buffer)
 
-var uint8 = new Uint8Array(buffer, 1, 5);
+uint8 = new Uint8Array(buffer, 1, 5);
 uint8.length; // 5 (as specified when constructing the Uint8Array)
 
-var uint8 = new Uint8Array(buffer, 2);
+uint8 = new Uint8Array(buffer, 2);
 uint8.length; // 6 (due to the offset of the constructed Uint8Array)
 ```
 

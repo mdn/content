@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.rel
 slug: Web/API/HTMLAnchorElement/rel
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.rel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.rel`** property reflects the
@@ -24,10 +26,9 @@ A string.
 ## Examples
 
 ```js
-var anchors = document.getElementsByTagName("a");
-var length = anchors.length;
-for (var i = 0; i < length; i++) {
-  alert("Rel: " + anchors[i].rel);
+const anchors = document.getElementsByTagName("a");
+for (const anchor of anchors) {
+  alert(`Rel: ${anchor.rel}`);
 }
 ```
 

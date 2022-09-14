@@ -1,6 +1,7 @@
 ---
 title: Element.matches()
 slug: Web/API/Element/matches
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Selector
@@ -11,20 +12,21 @@ tags:
   - Selector
 browser-compat: api.Element.matches
 ---
+
 {{APIRef("DOM")}}
 
 The **`matches()`** method of the {{domxref("Element")}} interface tests whether the element would be selected by the specified [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
 
 ## Syntax
 
-```js
-matches(selectorString)
+```js-nolint
+matches(selectors)
 ```
 
 ### Parameters
 
 - `selectors`
-  - : A string of valid [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to test the {{domxref("Element")}} against.
+  - : A string containing valid [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to test the {{domxref("Element")}} against.
 
 ### Return value
 
@@ -33,7 +35,7 @@ matches(selectorString)
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if the `selectors` is not a valid CSS selector.
+  - : Thrown if `selectors` cannot be parsed as a CSS selector list.
 
 ## Examples
 

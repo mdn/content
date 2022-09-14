@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception
@@ -15,17 +16,15 @@ property that was assigned to is a read-only property.
 
 ## Message
 
-```js
-TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+```
+TypeError: Cannot assign to read only property 'x' of #<Object> (V8-based)
 TypeError: "x" is read-only (Firefox)
-TypeError: 0 is read-only (Firefox)
-TypeError: Cannot assign to read only property 'x' of #<Object> (Chrome)
-TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
+TypeError: Attempted to assign to readonly property. (Safari)
 ```
 
 ## Error type
 
-{{jsxref("TypeError")}}
+{{jsxref("TypeError")}} in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) only.
 
 ## What went wrong?
 
@@ -44,15 +43,15 @@ Read-only properties are not super common, but they can be created using
 
 ```js example-bad
 'use strict';
-var obj = Object.freeze({name: 'Elsa', score: 157});
+const obj = Object.freeze({ name: 'Elsa', score: 157 });
 obj.score = 0;  // TypeError
 
 'use strict';
-Object.defineProperty(this, 'LUNG_COUNT', {value: 2, writable: false});
+Object.defineProperty(this, 'LUNG_COUNT', { value: 2, writable: false });
 LUNG_COUNT = 3;  // TypeError
 
 'use strict';
-var frozenArray = Object.freeze([0, 1, 2]);
+const frozenArray = Object.freeze([0, 1, 2]);
 frozenArray[0]++;  // TypeError
 ```
 
@@ -78,12 +77,8 @@ undefined = function() {};  // TypeError: "undefined" is read-only
 
 ```js example-good
 'use strict';
-var obj = Object.freeze({name: 'Score', points: 157});
-obj = {name: obj.name, points: 0};   // replacing it with a new object works
-
-'use strict';
-var LUNG_COUNT = 2;  // a `var` works, because it's not read-only
-LUNG_COUNT = 3;  // ok (anatomically unlikely, though)
+let obj = Object.freeze({ name: 'Score', points: 157 });
+obj = { name: obj.name, points: 0 };   // replacing it with a new object works
 ```
 
 ## See also

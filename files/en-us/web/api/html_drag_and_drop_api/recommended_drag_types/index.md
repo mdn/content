@@ -1,10 +1,12 @@
 ---
 title: Recommended Drag Types
 slug: Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
+page-type: guide
 tags:
   - Guide
   - drag and drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 The HTML Drag and Drop API supports dragging various types of data, including plain text, URLs, HTML code, files, etc. The document describes best practices for common draggable data types.
@@ -30,7 +32,7 @@ Note: In older code, you may find `text/unicode` or the `Text` types. These are 
 Dragged hyperlinks should include data of two types: `text/uri-list`, and `text/plain`. _Both_ types should use the link's URL for their data. For example:
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.setData("text/uri-list", "https://www.mozilla.org");
 dt.setData("text/plain", "https://www.mozilla.org");
 ```
@@ -56,7 +58,7 @@ When retrieving a dropped link, ensure you handle when multiple links are dragge
 > **Warning:** Do not add data with the `URL` type — attempting to do so will set the value of the `text/uri-list` type instead.
 
 ```js
-var url = event.dataTransfer.getData("URL");
+const url = event.dataTransfer.getData("URL");
 ```
 
 You may also see data with the Mozilla-specific type `text/x-moz-url`. If it appears, it should appear before the `text/uri-list` type. It holds the URLs of links followed by their titles, separated by a linebreak. For example:
@@ -77,7 +79,7 @@ XML content may use the `text/xml` type, but ensure that the data is well-formed
 You may also include a plain text representation of the HTML or XML data using the `text/plain` type. The data should be just the text without any of the source tags or attributes. For instance:
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.setData("text/html", "Hello there, <strong>stranger</strong>");
 dt.setData("text/plain", "Hello there, stranger");
 ```
@@ -98,22 +100,23 @@ Multiple files will be received during a drop as multiple items in the data tran
 
 The following example shows how to create an area for receiving dropped files:
 
-```xml
-<listbox ondragenter="return checkDrag(event)"
-         ondragover="return checkDrag(event)"
-         ondrop="doDrop(event)"/>
+```html
+<listbox
+  ondragenter="return checkDrag(event)"
+  ondragover="return checkDrag(event)"
+  ondrop="doDrop(event)" />
 
 <script>
-function checkDrag(event) {
-  return event.dataTransfer.types.contains("application/x-moz-file");
-}
-
-function doDrop(event) {
-  var file = event.dataTransfer.mozGetDataAt("application/x-moz-file", 0);
-  if (file instanceof Components.interfaces.nsIFile) {
-    event.currentTarget.appendItem(file.leafName);
+  function checkDrag(event) {
+    return event.dataTransfer.types.contains("application/x-moz-file");
   }
-}
+
+  function doDrop(event) {
+    const file = event.dataTransfer.mozGetDataAt("application/x-moz-file", 0);
+    if (file instanceof Components.interfaces.nsIFile) {
+      event.currentTarget.appendItem(file.leafName);
+    }
+  }
 </script>
 ```
 
@@ -146,7 +149,7 @@ You should also include the `application/x-moz-file` type if the image is locate
 It is important to set the data in the right order, from most-specific to least-specific. The standard image type, such as `image/jpeg`, should come first, followed by the `application/x-moz-file` type. Next, you should set the `text/uri-list` data, and finally the `text/plain` data. For example:
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.mozSetDataAt("image/png", stream, 0);
 dt.mozSetDataAt("application/x-moz-file", file, 0);
 dt.setData("text/uri-list", imageurl);
@@ -182,39 +185,39 @@ currentEvent.dataTransfer.mozSetDataAt('application/x-moz-file-promise',
 function dataProvider(){}
 
 dataProvider.prototype = {
-  QueryInterface : function(iid) {
+  QueryInterface(iid) {
     if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
                   || iid.equals(Components.interfaces.nsISupports))
       return this;
     throw Components.results.NS_NOINTERFACE;
   },
-  getFlavorData : function(aTransferable, aFlavor, aData, aDataLen) {
-    if (aFlavor == 'application/x-moz-file-promise') {
+  getFlavorData(aTransferable, aFlavor, aData, aDataLen) {
+    if (aFlavor === 'application/x-moz-file-promise') {
 
-       var urlPrimitive = {};
-       var dataSize = {};
+       const urlPrimitive = {};
+       const dataSize = {};
 
        aTransferable.getTransferData('application/x-moz-file-promise-url', urlPrimitive, dataSize);
-       var url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
-       console.log("URL file original is = " + url);
+       const url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
+       console.log(`URL file original is = ${url}`);
 
-       var namePrimitive = {};
+       const namePrimitive = {};
        aTransferable.getTransferData('application/x-moz-file-promise-dest-filename', namePrimitive, dataSize);
-       var name = namePrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
+       const name = namePrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
 
-       console.log("target filename is = " + name);
+       console.log(`target filename is = ${name}`);
 
-       var dirPrimitive = {};
+       const dirPrimitive = {};
        aTransferable.getTransferData('application/x-moz-file-promise-dir', dirPrimitive, dataSize);
-       var dir = dirPrimitive.value.QueryInterface(Components.interfaces.nsILocalFile);
+       const dir = dirPrimitive.value.QueryInterface(Components.interfaces.nsILocalFile);
 
-       console.log("target folder is = " + dir.path);
+       console.log(`target folder is = ${dir.path}`);
 
-       var file = Cc['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
+       const file = Cc['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
        file.initWithPath(dir.path);
        file.appendRelativePath(name);
 
-       console.log("output final path is =" + file.path);
+       console.log(`output final path is = ${file.path}`);
 
        // now you can write or copy the file yourself…
     }
@@ -227,4 +230,4 @@ dataProvider.prototype = {
 - [HTML Drag and Drop API (Overview)](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

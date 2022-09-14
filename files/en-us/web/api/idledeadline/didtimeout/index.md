@@ -1,6 +1,7 @@
 ---
 title: IdleDeadline.didTimeout
 slug: Web/API/IdleDeadline/didTimeout
+page-type: web-api-instance-property
 tags:
   - API
   - Background Tasks
@@ -14,6 +15,7 @@ tags:
   - requestIdleCallback
 browser-compat: api.IdleDeadline.didTimeout
 ---
+
 {{APIRef("Background Tasks")}}
 
 The read-only **`didTimeout`** property on the
@@ -42,8 +44,7 @@ user agent is idle and is offering time to the callback.
 ## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
-in the article [Cooperative Scheduling
-of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
+in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## Specifications
 
@@ -55,8 +56,7 @@ of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## See also
 
-- [Collaborative Scheduling of
-  Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
+- [Collaborative Scheduling of Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
 - {{domxref("IdleDeadline")}}
 - {{domxref("Window.requestIdleCallback()")}}
 - {{domxref("Window.cancelIdleCallback()")}}

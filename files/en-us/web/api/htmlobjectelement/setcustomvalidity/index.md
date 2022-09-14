@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.setCustomValidity()
 slug: Web/API/HTMLObjectElement/setCustomValidity
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - setCustomValidity()
 browser-compat: api.HTMLObjectElement.setCustomValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`setCustomValidity()`** method of the
@@ -19,7 +21,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 setCustomValidity(errorMessage)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: SyncEvent.tag
 slug: Web/API/SyncEvent/tag
+page-type: web-api-instance-property
 tags:
   - API
   - Background Sync
@@ -12,6 +13,7 @@ tags:
   - tag
 browser-compat: api.SyncEvent.tag
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
 The **`SyncEvent.tag`** read-only property of the

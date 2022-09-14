@@ -1,6 +1,7 @@
 ---
 title: PushManager.registrations()
 slug: Web/API/PushManager/registrations
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -9,6 +10,7 @@ tags:
   - Simple Push API
 browser-compat: api.PushManager.registrations
 ---
+
 {{deprecated_header}}{{ApiRef("Push API")}}
 
 The **`registrations`** method is used to ask the system about
@@ -18,7 +20,7 @@ existing push endpoint registrations.
 
 ## Syntax
 
-```js
+```js-nolint
 registrations()
 ```
 
@@ -28,7 +30,7 @@ None.
 
 ### Return value
 
-A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
+A `DOMRequest` object to handle the success or failure of the method call.
 
 If the method call is successful, the request's `result` will be an array of
 [PushRegistration](#pushregistration) objects.
@@ -45,19 +47,19 @@ Those objects are anonymous JavaScript objects with the following properties:
 ## Examples
 
 ```js
-var req = navigator.push.registrations();
+const req = navigator.push.registrations();
 
-req.onsuccess = function(e) {
+req.onsuccess = (e) => {
   if (req.result.length > 0) {
-    for (var i = 0, l = req.result.length; i < l; i++) {
-      console.log("Existing registration", req.result[i].pushEndpoint, req.result[i].version);
-    }
+    req.result.forEach((result) => {
+      console.log(`Existing registration ${result.pushEndpoint} ${result.version}`);
+    });
     // Reuse existing endpoints.
   } else {
     // Register for a new endpoint.
-    var register = navigator.push.register();
-    register.onsuccess = function(e) {
-      console.log("Registered new endpoint", register.result);
+    const register = navigator.push.register();
+    register.onsuccess = (e) => {
+      console.log(`Registered new endpoint: ${register.result}`);
     }
   }
 }
@@ -74,4 +76,3 @@ This feature is not part of any specification anymore. It is no longer on track 
 ## See also
 
 - {{domxref("PushManager")}}
-- {{domxref("DOMRequest")}}

@@ -8,6 +8,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Error.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -15,7 +16,7 @@ specified {{jsxref("Error")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -30,19 +31,16 @@ method inherited by all objects. Its semantics are as follows (assuming
 {{jsxref("Object")}} and {{jsxref("String")}} have their original values):
 
 ```js
-Error.prototype.toString = function() {
-  'use strict';
-
-  const obj = Object(this);
-  if (obj !== this) {
+Error.prototype.toString = function () {
+  if (typeof this !== 'object' || typeof this !== 'function') {
     throw new TypeError();
   }
 
   let name = this.name;
-  name = (name === undefined) ? 'Error' : String(name);
+  name = name === undefined ? 'Error' : String(name);
 
   let msg = this.message;
-  msg = (msg === undefined) ? '' : String(msg);
+  msg = msg === undefined ? '' : String(msg);
 
   if (name === '') {
     return msg;
@@ -51,7 +49,7 @@ Error.prototype.toString = function() {
     return name;
   }
 
-  return name + ': ' + msg;
+  return `${name}: ${msg}`;
 };
 ```
 
@@ -93,4 +91,3 @@ console.log(e5.toString()); // 'hello'
 ## See also
 
 - [A polyfill of `Error.prototype.toString`](https://github.com/zloirock/core-js#ecmascript-error) with many bug fixes is available in [`core-js`](https://github.com/zloirock/core-js)
-- {{jsxref("Error.prototype.toSource()")}}

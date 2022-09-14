@@ -6,6 +6,7 @@ tags:
   - Firefox 31
   - Firefox for Developers
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers
@@ -57,7 +58,7 @@ New ECMAScript 2015 features implemented:
 - `InputEvent` interface has been implemented ({{Bug(993253)}}).
 - `InputEvent.isComposing` attribute has been implemented ({{Bug(993253)}}).
 - {{domxref("CSS.escape", "CSS.escape()")}} has been implemented ({{Bug(955860)}}).
-- {{event("mousemove") }} is now cancelable like in other browsers ({{Bug(704423)}}). Calling `preventDefault()` only sets `defaultPrevented` attribute to `true;` any other behaviors are not changed. E.g., it cannot prevent to set `:hover` state.
+- {{domxref("Element/mousemove_event", "mousemove")}} is now cancelable like in other browsers ({{Bug(704423)}}). Calling `preventDefault()` only sets `defaultPrevented` attribute to `true;` any other behaviors are not changed. E.g., it cannot prevent to set `:hover` state.
 - The {{domxref("Path2D")}} interface has been implemented.
 - The {{domxref("CanvasRenderingContext2D.isPointInPath()")}}, {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}, {{domxref("CanvasRenderingContext2D.clip()")}}, {{domxref("CanvasRenderingContext2D.fill()")}} and {{domxref("CanvasRenderingContext2D.stroke()")}} methods have been updated to optionally accept a {{domxref("Path2D")}} object.
 - Implemented {{domxref("HTMLMediaElement.fastSeek()")}}.
@@ -66,7 +67,7 @@ New ECMAScript 2015 features implemented:
 
 ### MathML
 
-- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ({{Bug(407059)}}). For details, see the [fonts for Mozilla's MathML engine](/en-US/docs/Mozilla/MathML_Project/Fonts) and try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
+- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ({{Bug(407059)}}). For details, try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
 - The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
 - When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic math variants ({{Bug(930504)}}).
 
@@ -80,11 +81,11 @@ _No change._
 
 ## Security
 
-- [Privileged code now gets Xray vision for `Date` instances](/en-US/docs/Xray_vision#Xrays_for_JavaScript_objects).
+- [Privileged code now gets Xray vision for `Date` instances](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays_for_javascript_objects).
 
 ## Changes for add-on and Mozilla developers
 
-- The "`align`" attribute on the `urlbar-wrapper` (formerly on the `urlbar-container`) which was set to "`center`" since [time immemorial](http://bonsai.mozilla.org/cvsview2.cgi?diff_mode=context&whitespace_mode=show&root=/cvsroot&subdir=mozilla/browser/base/content&command=DIFF_FRAMESET&file=browser.xul&rev2=1.10&rev1=1.9), has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
+- The "`align`" attribute on the `urlbar-wrapper` (formerly on the `urlbar-container`) which was set to "`center`" since time immemorial, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
 
   ```css
   #urlbar-wrapper {
@@ -92,7 +93,7 @@ _No change._
   }
   ```
 
-- `nsIDOMWindowUtils.sendQueryContentEvent()`>) and `nsIDOMWindowUtils.sendSelectionSetEvent()` have `aAdditionalFlags` as optional argument. If you called `nsIDOMWindowUtils.sendSelectionSetEvent()` with `true` for `aReverse`, the behavior would be broken by this change. See [explanation of each flag](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`) for the detail of `aAdditionalFlags`.
+- `nsIDOMWindowUtils.sendQueryContentEvent()`>) and `nsIDOMWindowUtils.sendSelectionSetEvent()` have `aAdditionalFlags` as optional argument. If you called `nsIDOMWindowUtils.sendSelectionSetEvent()` with `true` for `aReverse`, the behavior would be broken by this change. See [explanation of each flag](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`) for the detail of `aAdditionalFlags`.
 
 ### Add-on SDK
 

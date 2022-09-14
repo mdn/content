@@ -1,6 +1,7 @@
 ---
 title: SVGStringList
 slug: Web/API/SVGStringList
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStringList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG string list interface

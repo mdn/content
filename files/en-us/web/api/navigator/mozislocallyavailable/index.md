@@ -1,6 +1,7 @@
 ---
 title: Navigator.mozIsLocallyAvailable()
 slug: Web/API/Navigator/mozIsLocallyAvailable
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.Navigator.mozIsLocallyAvailable
 ---
+
 {{APIRef("HTML DOM")}} {{non-standard_header}}{{deprecated_header}}
 
 The **`Navigator.mozIsLocallyAvailable()`** method allows
@@ -18,7 +20,7 @@ add-ons to determine whether or not a given resource is available.
 
 ## Syntax
 
-```js
+```js-nolint
 mozIsLocallyAvailable(uri, ifOffline)
 ```
 
@@ -37,7 +39,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var available = navigator.mozIsLocallyAvailable("my-image-file.png", true);
+const available = navigator.mozIsLocallyAvailable("my-image-file.png", true);
 if (available) {
   /* the offline resource is present */
 } else {

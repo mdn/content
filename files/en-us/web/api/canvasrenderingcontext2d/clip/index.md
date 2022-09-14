@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.clip()
 slug: Web/API/CanvasRenderingContext2D/clip
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.clip
 ---
+
 {{APIRef}}
 
 The
@@ -31,7 +33,7 @@ drawn.
 
 ## Syntax
 
-```js
+```js-nolint
 clip()
 clip(path)
 clip(fillRule)
@@ -45,10 +47,11 @@ clip(path, fillRule)
   - : The algorithm by which to determine if a point is inside or outside the clipping
     region. Possible values:
 
-    - **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
-      Default rule.
-    - **`"evenodd"`**: The [even-odd winding
-      rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - `nonzero`
+      - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
+        Default rule.
+    - `evenodd`
+      - : The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : A {{domxref("Path2D")}} path to use as the clipping region.
@@ -151,9 +154,9 @@ const ctx = canvas.getContext('2d');
 
 // Create two clipping paths
 let circlePath = new Path2D();
-circlePath.arc( 150, 75, 75, 0, 2 * Math.PI );
+circlePath.arc(150, 75, 75, 0, 2 * Math.PI);
 let squarePath = new Path2D();
-squarePath.rect( 85, 10, 130, 130 );
+squarePath.rect(85, 10, 130, 130);
 
 // Set the clip to the circle
 ctx.clip(circlePath);

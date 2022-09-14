@@ -1,6 +1,7 @@
 ---
 title: DOMPointReadOnly.y
 slug: Web/API/DOMPointReadOnly/y
+page-type: web-api-instance-property
 tags:
   - API
   - Coordinates
@@ -16,6 +17,7 @@ tags:
   - 'y'
 browser-compat: api.DOMPointReadOnly.y
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly`** interface's

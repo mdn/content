@@ -1,6 +1,7 @@
 ---
 title: CSSRuleList
 slug: Web/API/CSSRuleList
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSRuleList
 ---
+
 {{ APIRef("CSSOM") }}
 
 A `CSSRuleList` represents an ordered collection of read-only {{domxref("CSSRule")}} objects.
@@ -20,7 +22,7 @@ The interface has no constructor. An instance of `CSSRuleList` is returned by {{
 
 ## Properties
 
-- {{domxref("CSSRuleList.length")}}{{ReadOnlyInline}}
+- {{domxref("CSSRuleList.length")}} {{ReadOnlyInline}}
   - : Returns an integer representing the number of {{domxref("CSSRule")}} objects in the collection.
 
 ## Methods

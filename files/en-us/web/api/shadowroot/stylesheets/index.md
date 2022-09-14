@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.styleSheets
 slug: Web/API/ShadowRoot/styleSheets
+page-type: web-api-instance-property
 tags:
   - API
   - ShadowRoot
@@ -9,6 +10,7 @@ tags:
   - Stylesheets
 browser-compat: api.ShadowRoot.styleSheets
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`styleSheets`** read-only property of the {{domxref("ShadowRoot")}} interface

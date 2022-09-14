@@ -1,6 +1,7 @@
 ---
 title: WebGLProgram
 slug: Web/API/WebGLProgram
+page-type: web-api-interface
 tags:
   - API
   - GL
@@ -14,6 +15,7 @@ tags:
   - WebGLProgram
 browser-compat: api.WebGLProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLProgram`** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and is a combination of two compiled {{domxref("WebGLShader")}}s consisting of a vertex shader and a fragment shader (both written in GLSL).
@@ -23,7 +25,7 @@ The **`WebGLProgram`** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API)
 To create a `WebGLProgram`, call the GL context's {{domxref("WebGLRenderingContext.createProgram", "createProgram()")}} function. After attaching the shader programs using {{domxref("WebGLRenderingContext.attachShader", "attachShader()")}}, you link them into a usable program. This is shown in the code below.
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -31,9 +33,9 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
-  var info = gl.getProgramInfoLog(program);
-  throw 'Could not compile WebGL program. \n\n' + info;
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  const info = gl.getProgramInfoLog(program);
+  throw `Could not compile WebGL program. \n\n${info}`;
 }
 ```
 

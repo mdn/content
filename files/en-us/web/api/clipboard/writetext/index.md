@@ -1,6 +1,7 @@
 ---
 title: Clipboard.writeText()
 slug: Web/API/Clipboard/writeText
+page-type: web-api-instance-method
 tags:
   - API
   - Clip
@@ -16,6 +17,7 @@ tags:
   - writeText
 browser-compat: api.Clipboard.writeText
 ---
+
 {{APIRef("Clipboard API")}}
 
 The {{domxref("Clipboard")}} interface's **`writeText()`**
@@ -28,7 +30,7 @@ automatically to pages when they are in the active tab.
 
 ## Syntax
 
-```js
+```js-nolint
 writeText(newClipText)
 ```
 
@@ -48,9 +50,9 @@ clipboard.
 This example sets the clipboard's contents to the string "\<empty clipboard>".
 
 ```js
-navigator.clipboard.writeText("<empty clipboard>").then(function() {
+navigator.clipboard.writeText("<empty clipboard>").then(() => {
   /* clipboard successfully set */
-}, function() {
+}, () => {
   /* clipboard write failed */
 });
 ```

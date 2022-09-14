@@ -8,7 +8,9 @@ tags:
   - Reference
   - WebExtensions
   - find
+browser-compat: webextensions.api.find
 ---
+
 {{AddonSidebar}}
 
 Finds text in a web page, and highlights matches.
@@ -26,4 +28,6 @@ To use this API you need to have the "find" [permission](/en-US/docs/Mozilla/Add
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.find", 1, 1)}} {{WebExtExamples("h2")}}
+{{WebExtExamples("h2")}}
+
+{{Compat}}

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.join
 ---
+
 {{JSRef}}
 
 The **`join()`** method creates and
@@ -21,7 +22,7 @@ only one item, then that item will be returned without using the separator.
 
 ## Syntax
 
-```js
+```js-nolint
 join()
 join(separator)
 ```
@@ -45,6 +46,8 @@ The string conversions of all array elements are joined into one string.
 
 > **Warning:** If an element is `undefined`, `null` or an empty array
 > `[]`, it is converted to an empty string.
+
+The `join` method is accessed internally by [`Array.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) with no arguments. Overriding `join` of an array instance will override its `toString` behavior as well.
 
 ## Examples
 

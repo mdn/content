@@ -1,6 +1,7 @@
 ---
 title: SecurityPolicyViolationEvent.sourceFile
 slug: Web/API/SecurityPolicyViolationEvent/sourceFile
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
@@ -12,6 +13,7 @@ tags:
   - sourceFile
 browser-compat: api.SecurityPolicyViolationEvent.sourceFile
 ---
+
 {{HTTPSidebar}}
 
 The **`sourceFile`** read-only property of the

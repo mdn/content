@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryEntry.removeRecursively()
 slug: Web/API/FileSystemDirectoryEntry/removeRecursively
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API
@@ -13,7 +14,8 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemDirectoryEntry.removeRecursively
 ---
-{{APIRef("File and Directory Entries API")}}{{deprecated_header}}{{SeeCompatTable}}
+
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemDirectoryEntry")}} interface's method
 **`removeRecursively()`** removes
@@ -25,7 +27,7 @@ To remove a single file, or an empty directory, you can also use
 
 ## Syntax
 
-```js
+```js-nolint
 removeRecursively(successCallback)
 removeRecursively(successCallback, errorCallback)
 ```
@@ -77,9 +79,9 @@ a single parameter: a {{domxref("FileError")}} object describing the error. The
 ## Examples
 
 ```js
-directory.removeRecursively(function() {
+directory.removeRecursively(() => {
   /* The directory was removed successfully */
-}, function() {
+}, () => {
   /* an error occurred while removing the directory */
 });
 ```

@@ -1,6 +1,7 @@
 ---
 title: IDBTransaction.objectStoreNames
 slug: Web/API/IDBTransaction/ObjectStoreNames
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -12,7 +13,8 @@ tags:
   - db
 browser-compat: api.IDBTransaction.objectStoreNames
 ---
-{{ APIRef("IndexedDB") }} {{SeeCompatTable}}
+
+{{ APIRef("IndexedDB") }}
 
 The **`objectStoreNames`** read-only property of the
 {{domxref("IDBTransaction")}} interface returns a {{domxref("DOMStringList")}} of names

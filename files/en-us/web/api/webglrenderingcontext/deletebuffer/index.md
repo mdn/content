@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.deleteBuffer()
 slug: Web/API/WebGLRenderingContext/deleteBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,15 +10,16 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.deleteBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
 {{domxref("WebGLBuffer")}}. This method has no effect if the buffer has already been
-deleted.
+deleted. Normally you don't need to call this method yourself, when the buffer object is dereferenced it will be marked as free.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteBuffer(buffer)
 ```
 
@@ -35,11 +37,11 @@ None ({{jsxref("undefined")}}).
 ### Deleting a buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var buffer = gl.createBuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const buffer = gl.createBuffer();
 
-// ...
+// …
 
 gl.deleteBuffer(buffer);
 ```

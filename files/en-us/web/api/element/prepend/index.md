@@ -1,6 +1,7 @@
 ---
 title: Element.prepend()
 slug: Web/API/Element/prepend
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - prepend
 browser-compat: api.Element.prepend
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.prepend()`** method inserts a set of
@@ -20,10 +22,10 @@ equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 prepend(param1)
 prepend(param1, param2)
-prepend(param1, param2, /* ... ,*/ paramN)
+prepend(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

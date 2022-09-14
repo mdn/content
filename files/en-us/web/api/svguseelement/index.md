@@ -1,6 +1,7 @@
 ---
 title: SVGUseElement
 slug: Web/API/SVGUseElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGUseElement
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG use DOM interface

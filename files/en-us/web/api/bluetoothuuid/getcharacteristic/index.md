@@ -1,6 +1,7 @@
 ---
 title: BluetoothUUID.getCharacteristic()
 slug: Web/API/BluetoothUUID/getCharacteristic
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,13 +11,14 @@ tags:
   - BluetoothUUID
 browser-compat: api.BluetoothUUID.getCharacteristic
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The **`getCharacteristic()`**  method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered characteristic when passed a name or the 16- or 32-bit UUID alias.
+The **`getCharacteristic()`** method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered characteristic when passed a name or the 16- or 32-bit UUID alias.
 
 ## Syntax
 
-```js
+```js-nolint
 getCharacteristic(name)
 ```
 

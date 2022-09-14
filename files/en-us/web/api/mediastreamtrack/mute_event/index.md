@@ -1,6 +1,7 @@
 ---
 title: 'MediaStreamTrack: mute event'
 slug: Web/API/MediaStreamTrack/mute_event
+page-type: web-api-event
 tags:
   - API
   - Audio
@@ -13,6 +14,7 @@ tags:
   - mute
 browser-compat: api.MediaStreamTrack.mute_event
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`mute`** event is sent to a {{domxref("MediaStreamTrack")}} when the track's source is temporarily unable to provide media data.
@@ -30,9 +32,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mute', event => { });
+addEventListener('mute', (event) => { });
 
-onmute = event => { };
+onmute = (event) => { };
 ```
 
 ## Event type
@@ -44,11 +46,11 @@ A generic {{domxref("Event")}}.
 In this example, event handlers are established for the `mute` and {{domxref("MediaStreamTrack.unmute_event", "unmute")}} events in order to detect when the media is not flowing from the source for the {{domxref("MediaStreamTrack")}} referenced by `musicTrack`.
 
 ```js
-musicTrack.addEventListener("mute", event => {
+musicTrack.addEventListener("mute", (event) => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 }, false);
 
-musicTrack.addEventListener("unmute", event => {
+musicTrack.addEventListener("unmute", (event) => {
  document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }, false);
 ```
@@ -58,11 +60,11 @@ With these event handlers in place, when the track `musicTrack` enters its {{dom
 You can also use the `onmute` event handler property to set up a handler for this event; similarly, the {{domxref("MediaStreamTrack.unmute_event", "onunmute")}} event handler is available for setting up a handler for the `unmute` event. The following example shows this:
 
 ```js
-musicTrack.onmute = event => {
+musicTrack.onmute = (event) => {
   document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
 }
 
-musicTrack.onunmute = event = > {
+musicTrack.onunmute = (event) => {
   document.getElementById("timeline-widget").style.backgroundColor = "#fff";
 }
 ```
@@ -73,11 +75,11 @@ The following example shows how to mute tracks using receivers.
 
 ```js
 // Peer 1 (Receiver)
-audioTrack.addEventListener('mute', event => {
+audioTrack.addEventListener('mute', (event) => {
   // Do something in UI
 });
 
-videoTrack.addEventListener('mute', event => {
+videoTrack.addEventListener('mute', (event) => {
   // Do something in UI
 });
 

@@ -17,9 +17,10 @@ tags:
   - subtitles
   - text tracks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
-Another category of content that can create accessibility problems is multimedia — video, audio, and image content need to be given proper textual alternatives so they can be understood by assistive technologies and their users. This article shows how.
+Another category of content that can create accessibility problems is multimedia. Video, audio, and image content need to be given proper textual alternatives so that they can be understood by assistive technologies and their users. This article shows how.
 
 <table>
   <tbody>
@@ -47,42 +48,49 @@ Another category of content that can create accessibility problems is multimedia
 
 So far in this module, we have looked at a variety of content and what needs to be done to ensure its accessibility, ranging from simple text content to data tables, images, native controls such as form elements and buttons, and even more complex markup structures (with [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) attributes).
 
-This article on the other hand looks at another general class of content that arguably isn't as easy to ensure accessibility for — multimedia. Images, audio tracks, videos, {{htmlelement("canvas")}} elements, etc., aren't as easily understood by screenreaders or navigated by the keyboard, and we need to give them a helping hand.
+This article on the other hand looks at another general class of content that arguably isn't as easy to ensure accessibility for — multimedia. Images, audio tracks, videos, {{htmlelement("canvas")}} elements, etc., aren't as easily understood by screen readers or navigated by the keyboard, and we need to give them a helping hand.
 
 But don't despair — here we will help you navigate through the techniques available for making multimedia more accessible.
 
 ## Simple images
 
-We already covered simple text alternatives for HTML images in our [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML) article — you can refer back to there for the full details. In short, you should ensure that where possible visual content has an alternative text available for screenreaders to pick up and read to their users.
+We already covered simple text alternatives for HTML images in our [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML) article — you can refer back to there for the full details. In short, you should ensure that where possible visual content has an alternative text available for screen readers to pick up and read to their users.
 
 For example:
 
 ```html
-<img src="dinosaur.png"
-     alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
 ```
 
 ## Accessible audio and video controls
 
 Implementing controls for web-based audio/video shouldn't be a problem, right? Let's investigate.
 
-### The problem with native HTML5 controls
+### The problem with native HTML controls
 
-HTML5 video and audio instances even come with a set of inbuilt controls that allow you to control the media straight out of the box. For example (see `native-controls.html` [source code](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/native-controls.html) and [live](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
+HTML video and audio instances even come with a set of inbuilt controls that allow you to control the media straight out of the box. For example (see `native-controls.html` [source code](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/native-controls.html) and [live](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support HTML audio. Here is a
+    <a href="viper.mp3">link to the audio</a> instead.
+  </p>
 </audio>
 
-<br>
+<br />
 
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -101,7 +109,7 @@ To remedy this, we can create our own custom controls. Let's look at how.
 
 ### Creating custom audio and video controls
 
-HTML5 video and audio share an API — HTML Media Element — which allows you to map custom functionality to buttons and other controls — both of which you define yourself.
+HTML video and audio share an API — HTML Media Element — which allows you to map custom functionality to buttons and other controls — both of which you define yourself.
 
 Let's take the video example from above and add custom controls to them.
 
@@ -116,9 +124,12 @@ First of all, let's look at the HTML for the video player, in the HTML:
 ```html
 <section class="player">
   <video controls>
-    <source src="rabbit320.mp4" type="video/mp4">
-    <source src="rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source src="rabbit320.mp4" type="video/mp4" />
+    <source src="rabbit320.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 
   <div class="controls">
@@ -138,17 +149,17 @@ We've inserted some simple control buttons below our video. These controls of co
 We will first need to store references to each of the controls — add the following to the top of your JavaScript file:
 
 ```js
-const playPauseBtn = document.querySelector('.playpause');
-const stopBtn = document.querySelector('.stop');
-const rwdBtn = document.querySelector('.rwd');
-const fwdBtn = document.querySelector('.fwd');
-const timeLabel = document.querySelector('.time');
+const playPauseBtn = document.querySelector(".playpause");
+const stopBtn = document.querySelector(".stop");
+const rwdBtn = document.querySelector(".rwd");
+const fwdBtn = document.querySelector(".fwd");
+const timeLabel = document.querySelector(".time");
 ```
 
 Next, we need to grab a reference to the video/audio player itself — add this line below the previous lines:
 
 ```js
-const player = document.querySelector('video');
+const player = document.querySelector("video");
 ```
 
 This holds a reference to a {{domxref("HTMLMediaElement")}} object, which has several useful properties and methods available on it that can be used to wire up functionality to our buttons.
@@ -156,7 +167,7 @@ This holds a reference to a {{domxref("HTMLMediaElement")}} object, which has se
 Before moving onto creating our button functionality, let's remove the native controls so they don't get in the way of our custom controls. Add the following, again at the bottom of your JavaScript:
 
 ```js
-player.removeAttribute('controls');
+player.removeAttribute("controls");
 ```
 
 Doing it this way round rather than just not including the controls attribute in the first place has the advantage that if our JavaScript fails for any reason, the user still has some controls available.
@@ -166,13 +177,13 @@ Doing it this way round rather than just not including the controls attribute in
 First, let's set up the play/pause button. We can get this to toggle between play and pause with a simple conditional function, like the following. Add it to your code, at the bottom:
 
 ```js
-playPauseBtn.onclick = function() {
-  if(player.paused) {
+playPauseBtn.onclick = () => {
+  if (player.paused) {
     player.play();
-    playPauseBtn.textContent = 'Pause';
+    playPauseBtn.textContent = "Pause";
   } else {
     player.pause();
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
@@ -180,58 +191,46 @@ playPauseBtn.onclick = function() {
 Next, add this code to the bottom, which controls the stop button:
 
 ```js
-stopBtn.onclick = function() {
+stopBtn.onclick = () => {
   player.pause();
   player.currentTime = 0;
-  playPauseBtn.textContent = 'Play';
+  playPauseBtn.textContent = "Play";
 };
 ```
 
 There is no `stop()` function available on {{domxref("HTMLMediaElement")}}s, so instead we `pause()` it, and at the same time set the `currentTime` to 0.
 
-Next, our rewind and fast forward buttons — add the following blocks to the bottom of your code:
+Next, our rewind and fast-forward buttons — add the following blocks to the bottom of your code:
 
 ```js
-rwdBtn.onclick = function() {
+rwdBtn.onclick = () => {
   player.currentTime -= 3;
 };
 
-fwdBtn.onclick = function() {
+fwdBtn.onclick = () => {
   player.currentTime += 3;
-  if(player.currentTime >= player.duration || player.paused) {
+  if (player.currentTime >= player.duration || player.paused) {
     player.pause();
     player.currentTime = 0;
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
 
 These are very simple, just adding or subtracting 3 seconds to the `currentTime` each time they are clicked. In a real video player, you'd probably want a more elaborate seeking bar, or similar.
 
-Note that we also check to see if the `currentTime` is more than the total media `duration`, or if the media is not playing, when the Fwd button is pressed. If either condition is true, we stop the video, to avoid the user interface going wrong if they attempt to fast forward when the video is not playing or fast forward past the end of the video.
+Note that we also check to see if the `currentTime` is more than the total media `duration` or if the media is not playing when the `fwdBtn` is pressed. If either condition is true, we stop the video to avoid the user interface going wrong if they attempt to fast forward when the video is not playing or fast forward past the end of the video.
 
 Last of all, add the following to the end of the code, to control the time elapsed display:
 
 ```js
-player.ontimeupdate = function () {
+player.ontimeupdate = () => {
   const minutes = Math.floor(player.currentTime / 60);
   const seconds = Math.floor(player.currentTime - minutes * 60);
-  let minuteValue;
-  let secondValue;
+  const minuteValue = minutes < 10 ? `0${minutes}` : minutes;
+  const secondValue = seconds < 10 ? `0${seconds}` : seconds;
 
-  if (minutes < 10) {
-    minuteValue = "0" + minutes;
-  } else {
-    minuteValue = minutes;
-  }
-
-  if (seconds < 10) {
-    secondValue = "0" + seconds;
-  } else {
-    secondValue = seconds;
-  }
-
-  const mediaTime = minuteValue + ":" + secondValue;
+  const mediaTime = `${minuteValue}:${secondValue}`;
   timeLabel.textContent = mediaTime;
 };
 ```
@@ -282,13 +281,13 @@ However, there are some edge cases. You might for example have an audio recordin
 
 To make video accessible for deaf, visually impaired, or other groups of users (such as those on low bandwidth, or who don't understand the language the video is recorded in), you need to include text tracks along with your video content.
 
-> **Note:** text tracks are also useful for potentially any user, not just those with disabilities. for example, some users may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library.)
+> **Note:** Text tracks are also useful for potentially any user, not just those with disabilities. For example, some users may not be able to hear the audio because they are in noisy environments (like a crowded bar when a sports game is being shown) or might not want to disturb others if they are in a quiet place (like a library).
 
 This is not a new concept — television services have had closed captioning available for quite a long time:
 
 ![Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"](closed-captions.png)
 
-Whereas many countries offer English films with subtitles written in their own native languages, and different language subtitles are often available on DVDs, for example
+Many countries offer English films with subtitles written in their own native languages, and different language subtitles are often available on DVDs, as shown below:
 
 ![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](subtitles_german.png)
 
@@ -299,9 +298,9 @@ There are different types of text tracks for different purposes. The main ones y
 - Descriptions — These include descriptions for visually impaired people who can't see the video, for example, what the scene looks like.
 - Chapter titles — Chapter markers intended to help the user navigate the media resource
 
-### Implementing HTML5 video text tracks
+### Implementing HTML video text tracks
 
-Text tracks for displaying with HTML5 video need to be written in WebVTT, a text format containing multiple strings of text along with metadata such as what time in the video you want each text string to be displayed, and even limited styling/positioning information. These text strings are called cues.
+Text tracks for displaying with HTML video need to be written in WebVTT, a text format containing multiple strings of text along with metadata such as what time in the video you want each text string to be displayed, and even limited styling/positioning information. These text strings are called cues.
 
 A typical WebVTT file will look something like this:
 
@@ -316,7 +315,7 @@ This is the first subtitle.
 00:00:30.739 --> 00:00:34.074
 This is the second.
 
-...
+…
 ```
 
 To get this displayed along with the HTML media playback, you need to:
@@ -328,9 +327,9 @@ Here's an example:
 
 ```html
 <video controls>
-  <source src="example.mp4" type="video/mp4">
-  <source src="example.webm" type="video/webm">
-  <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 
@@ -338,7 +337,7 @@ This will result in a video that has subtitles displayed, kind of like this:
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-For more details, please read [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
+For more details, see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 
 > **Note:** Text tracks and transcriptions also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 

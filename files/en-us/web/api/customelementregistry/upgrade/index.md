@@ -1,6 +1,7 @@
 ---
 title: CustomElementRegistry.upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
+page-type: web-api-instance-method
 tags:
   - API
   - CustomElementRegistry
@@ -11,6 +12,7 @@ tags:
   - custom elements
 browser-compat: api.CustomElementRegistry.upgrade
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 The **`upgrade()`** method of the
@@ -20,7 +22,7 @@ document.
 
 ## Syntax
 
-```js
+```js-nolint
 upgrade(root)
 ```
 

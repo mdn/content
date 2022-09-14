@@ -8,13 +8,14 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.ambient-light-sensor
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader('Feature-Policy')}} header `ambient-light-sensor` directive controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the {{domxref('AmbientLightSensor')}} interface.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: ambient-light-sensor <allowlist>;
 ```
 

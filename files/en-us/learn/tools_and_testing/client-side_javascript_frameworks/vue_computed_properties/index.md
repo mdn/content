@@ -11,6 +11,7 @@ tags:
   - computed properties
   - Vue
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 In this article we'll add a counter that displays the number of completed todo items, using a feature of Vue called computed properties. These work similarly to methods, but only re-run when one of their dependencies changes.
@@ -48,9 +49,9 @@ In this article we'll add a counter that displays the number of completed todo i
 
 ## Using computed properties
 
-The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5".  While it might be tempting to do something like this:
+The aim here is to add a summary count of our to-do list. This can be useful for users, while also serving to label the list for assistive technology. If we have 2 of 5 items completed in our to-do list, our summary could read "2 items completed out of 5". While it might be tempting to do something like this:
 
-```js
+```html
 <h2>\{{ToDoItems.filter(item =&gt; item.done).length}} out of \{{ToDoItems.length}} items completed</h2>
 ```
 
@@ -67,7 +68,7 @@ Add the following code to your `App` component object, below the `methods` prope
 ```js
 computed: {
   listSummary() {
-    const numberFinishedItems = this.ToDoItems.filter(item =>item.done).length
+    const numberFinishedItems = this.ToDoItems.filter((item) =>item.done).length
     return `${numberFinishedItems} out of ${this.ToDoItems.length} items completed`
   }
 }
@@ -75,7 +76,7 @@ computed: {
 
 Now we can add `\{{listSummary}}` directly to our template; we'll add this inside an `<h2>` element, just above our `<ul>`. We'll also add an `id` and an `aria-labelledby` attribute to assign the `<h2>` contents to be a label for the `<ul>` element.
 
-Add the described `<h2>` and update the `<ul>` inside your App's template as follows:
+Add the described `<h2>` and update the `<ul>` inside your `App`'s template as follows:
 
 ```html
 <h2 id="list-summary">\{{listSummary}}</h2>
@@ -107,7 +108,7 @@ In `App.vue`, add a new method called `updateDoneStatus()`, below your `addToDo(
 
 ```js
 updateDoneStatus(toDoId) {
-  const toDoToUpdate = this.ToDoItems.find(item => item.id === toDoId)
+  const toDoToUpdate = this.ToDoItems.find((item) => item.id === toDoId)
   toDoToUpdate.done = !toDoToUpdate.done
 }
 ```

@@ -1,5 +1,5 @@
 ---
-title: 'aria-labelledby'
+title: "aria-labelledby"
 slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 tags:
   - Accessibility
@@ -32,7 +32,11 @@ The `aria-labelledby` and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARI
 The following example uses `aria-labelledby` to provide an accessible name for a checkbox input by using the text content of a sibling element:
 
 ```html
-<span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="tac"></span>
+<span
+  role="checkbox"
+  aria-checked="false"
+  tabindex="0"
+  aria-labelledby="tac"></span>
 <span id="tac">I agree to the Terms and Conditions.</span>
 ```
 
@@ -42,12 +46,10 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
 ```html
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   I agree to the Terms and Conditions.
 </label>
-<p>
-  <a href="tac.html">Read our Terms and Conditions</a>.
-</p>
+<p><a href="tac.html">Read our Terms and Conditions</a>.</p>
 ```
 
 ### Benefits (and drawbacks)
@@ -61,22 +63,23 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
    In this example, that accessible name is "Yellow".
 
-2. The `aria-labelledby` property takes as value an id reference list, which means you can combine more than one element into a single accessible name. You can include the {{htmlattrxref('id')}} of the element itself to reference its own content.
+2. The `aria-labelledby` property takes as value a space-separated id reference list, which means you can combine more than one element into a single accessible name. You can include the {{htmlattrxref('id')}} of the element itself to reference its own content.
 
    ```html
    <h2 id="attr" class="article-title">13 ARIA attributes you need to know</h2>
-   <p>There are over 50 ARIA states and properties, but 13 of them stand out &helip;
+   <p>
+     There are over 50 ARIA states and properties, but 13 of them stand out…
      <a href="13.html" id="rm13" aria-labelledby="rm13 attr">read more</a>
    </p>
    ```
 
-    In this example, the accessible name is "read more 13 ARIA attributes you need to know".
+   In this example, the accessible name is "read more 13 ARIA attributes you need to know".
 
 3. The `aria-labelledby` property value order matters. When more than one element is referenced by `aria-labelledby`, the content from each referenced element is combined in the order that they are referenced in the `aria-labelledby` value. Had we written `aria-labelledby="attr rm13">`, the accessible name would have been "13 ARIA attributes you need to know read more".
 
 4. The `aria-labelledby` property ignores repeated `id`s in its value. If an element is referenced more than one time, only the first reference is processed. `aria-labelledby="attr attr rm13 rm13">` is treated as `aria-labelledby="attr rm13">`
 
-5. The `aria-labelledby` property value can include content from elements that aren't even visible. While you should provide assistive technology users with the same content and all other users, you can include content from elements with the HTML {{htmlattrxref('hidden')}} attribute, CSS [`display: none`](/en-US/docs/Web/CSS/display), and CSS [`visibility: hidden`](/en-US/docs/Web/CSS/visibility) in the calculated name string.
+5. The `aria-labelledby` property value can include content from elements that aren't even visible. While you should provide assistive technology users with the same content as all other users, you can include content from elements with the HTML {{htmlattrxref('hidden')}} attribute, CSS [`display: none`](/en-US/docs/Web/CSS/display), and CSS [`visibility: hidden`](/en-US/docs/Web/CSS/visibility) in the calculated name string.
 
 6. The `aria-labelledby` property incorporates the value of input elements. If the value references an `<input>`, the current value of the form control is included in the calculated name string, changing if the value is updated.
 

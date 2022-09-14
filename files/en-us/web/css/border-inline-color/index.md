@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-inline-color
 ---
+
 {{CSSRef}}
 
 The **`border-inline-color`** [CSS](/en-US/docs/Web/CSS) property defines the color of the logical inline borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-color")}} and {{cssxref("border-bottom-color")}}, or {{cssxref("border-right-color")}} and {{cssxref("border-left-color")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
@@ -21,7 +22,7 @@ The border color in the other dimension can be set with {{cssxref("border-block-
 
 ```css
 border-inline-color: yellow;
-border-inline-color: #F5F6F7;
+border-inline-color: #f5f6f7;
 
 /* Global values */
 border-inline-color: inherit;

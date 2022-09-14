@@ -1,11 +1,13 @@
 ---
 title: BroadcastChannel.postMessage()
 slug: Web/API/BroadcastChannel/postMessage
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.BroadcastChannel.postMessage
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 The **`BroadcastChannel.postMessage()`** sends a message,
@@ -18,8 +20,8 @@ targeted at each {{domxref("BroadcastChannel")}} bound to the channel.
 
 ## Syntax
 
-```js
-channel.postMessage(message);
+```js-nolint
+channel.postMessage(message)
 ```
 
 ### Parameters

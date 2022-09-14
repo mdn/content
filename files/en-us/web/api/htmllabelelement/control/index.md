@@ -1,6 +1,7 @@
 ---
 title: HTMLLabelElement.control
 slug: Web/API/HTMLLabelElement/control
+page-type: web-api-instance-property
 tags:
   - Forms
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - control
 browser-compat: api.HTMLLabelElement.control
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`HTMLLabelElement.control`** property returns a

@@ -1,6 +1,7 @@
 ---
 title: AudioListener.forwardX
 slug: Web/API/AudioListener/forwardX
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - forwardX
 browser-compat: api.AudioListener.forwardX
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `forwardX` read-only property of the {{ domxref("AudioListener") }} interface is an {{domxref("AudioParam")}} representing the x value of the direction vector defining the forward direction the listener is pointing in.

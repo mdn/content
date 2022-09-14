@@ -9,6 +9,7 @@ tags:
   - aria-current
 spec-urls: https://w3c.github.io/aria/#aria-current
 ---
+
 A non-null `aria-current` state on an element indicates that this element represents the current item within a container or set of related elements.
 
 ## Description
@@ -33,29 +34,19 @@ The breadcrumb for the "current page" should have `aria-current="page"` set on i
 <nav aria-label="Breadcrumb" class="breadcrumb">
   <ol>
     <li>
-      <a href="../../../../../">
-        Web technology for developers
-      </a>
+      <a href="../../../../../"> Web technology for developers </a>
     </li>
     <li>
-      <a href="../../../../">
-        Accessibility
-      </a>
+      <a href="../../../../"> Accessibility </a>
     </li>
     <li>
-      <a href="../../../">
-        ARIA
-      </a>
+      <a href="../../../"> ARIA </a>
     </li>
     <li>
-      <a href="../../">
-        ARIA States and Properties
-      </a>
+      <a href="../../"> ARIA States and Properties </a>
     </li>
     <li>
-      <a href="./" aria-current="page">
-        ARIA: `aria-current` attribute
-      </a>
+      <a href="./" aria-current="page"> ARIA: `aria-current` attribute </a>
     </li>
   </ol>
 </nav>

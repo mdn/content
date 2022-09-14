@@ -10,6 +10,7 @@ tags:
   - font-stretch
 browser-compat: css.at-rules.font-face.font-stretch
 ---
+
 {{CSSRef}}
 
 The **`font-stretch`** CSS descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} rule.
@@ -125,7 +126,21 @@ People with dyslexia and other cognitive conditions may have difficulty reading 
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<font-stretch-absolute>{1,2}
+
+<font-stretch-absolute> =
+  normal          |
+  ultra-condensed |
+  extra-condensed |
+  condensed       |
+  semi-condensed  |
+  semi-expanded   |
+  expanded        |
+  extra-expanded  |
+  ultra-expanded  |
+  <percentage>
+```
 
 ## Examples
 
@@ -136,8 +151,8 @@ The following find a local Open Sans font or import it, and allow using the font
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src: local("Open Sans") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+      format("woff");
   font-stretch: 87.5% 112.5%;
 }
 ```

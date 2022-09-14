@@ -1,6 +1,7 @@
 ---
 title: MediaDeviceInfo.label
 slug: Web/API/MediaDeviceInfo/label
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -13,9 +14,10 @@ tags:
   - label
 browser-compat: api.MediaDeviceInfo.label
 ---
+
 {{APIRef("Media Capture")}}
 
-The **`label`** readonlyinline
+The **`label`** ReadOnlyInline
 property of the {{domxref("MediaDeviceInfo")}} interface returns a
 string describing this device (for example
 "External USB Webcam").

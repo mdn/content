@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.offsetWidth
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetWidth`** read-only property returns

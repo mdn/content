@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
+page-type: web-api-instance-method
 tags:
   - API
   - Constraint Validation API
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.checkValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.checkValidity()`** method checks
@@ -19,7 +21,7 @@ element, and then returns `false`.
 
 ## Syntax
 
-```js
+```js-nolint
 checkValidity()
 ```
 

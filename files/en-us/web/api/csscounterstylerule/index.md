@@ -1,6 +1,7 @@
 ---
 title: CSSCounterStyleRule
 slug: Web/API/CSSCounterStyleRule
+page-type: web-api-interface
 tags:
   - API
   - CSS Counter Styles
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSCounterStyleRule
 ---
+
 {{APIRef("CSS Counter Styles")}}
 
 The **`CSSCounterStyleRule`** interface represents an {{CSSxRef("@counter-style")}} [at-rule](/en-US/docs/Web/CSS/At-rule).

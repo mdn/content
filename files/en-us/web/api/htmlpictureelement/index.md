@@ -1,15 +1,16 @@
 ---
 title: HTMLPictureElement
 slug: Web/API/HTMLPictureElement
+page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - HTML DOM
   - Interface
   - Reference
 browser-compat: api.HTMLPictureElement
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`HTMLPictureElement`** interface represents a {{HTMLElement("picture")}} HTML element. It doesn't implement specific properties or methods.
 

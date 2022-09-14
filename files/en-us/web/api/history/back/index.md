@@ -1,6 +1,7 @@
 ---
 title: History.back()
 slug: Web/API/History/back
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - Web
 browser-compat: api.History.back
 ---
+
 {{APIRef("History API")}}
 
 The **`History.back()`** method causes
@@ -25,7 +27,7 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 
 ## Syntax
 
-```js
+```js-nolint
 back()
 ```
 

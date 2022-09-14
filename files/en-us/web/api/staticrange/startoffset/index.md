@@ -1,6 +1,7 @@
 ---
 title: StaticRange.startOffset
 slug: Web/API/StaticRange/startOffset
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -13,6 +14,7 @@ tags:
   - startContainer
 browser-compat: api.StaticRange.startOffset
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`startOffset`**

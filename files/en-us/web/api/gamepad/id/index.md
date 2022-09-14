@@ -1,6 +1,7 @@
 ---
 title: Gamepad.id
 slug: Web/API/Gamepad/id
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.id
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.id`** property of the {{domxref("Gamepad") }}
@@ -30,20 +32,16 @@ device as well as display useful feedback to the user.
 
 ## Value
 
-A string.
+A string primitive.
 
 ## Examples
 
 ```js
-window.addEventListener("gamepadconnected", function() {
-  var gp = navigator.getGamepads()[0];
-  gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
+window.addEventListener("gamepadconnected", () => {
+  const gp = navigator.getGamepads()[0];
+  gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}.`;
 });
 ```
-
-## Value
-
-A {{jsxref("String")}}.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: ProgressEvent.lengthComputable
 slug: Web/API/ProgressEvent/lengthComputable
+page-type: web-api-instance-property
 tags:
   - API
   - Progress Events
@@ -8,6 +9,7 @@ tags:
   - Property
 browser-compat: api.ProgressEvent.lengthComputable
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The

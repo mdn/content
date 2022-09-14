@@ -1,6 +1,7 @@
 ---
 title: TextTrack.language
 slug: Web/API/TextTrack/language
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.language
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`language`** read-only property of the {{domxref("TextTrack")}} interface returns the language of the text track.

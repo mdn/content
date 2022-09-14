@@ -7,6 +7,7 @@ tags:
   - header
 browser-compat: http.headers.Expect-CT
 ---
+
 {{HTTPSidebar}}
 
 The `Expect-CT` header lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements, to prevent the use of misissued certificates for that site from going unnoticed.
@@ -38,7 +39,7 @@ CT requirements can be satisfied via any one of the following mechanisms:
 
 ## Syntax
 
-```
+```http
 Expect-CT: report-uri="<uri>",
            enforce,
            max-age=<age>
@@ -68,7 +69,7 @@ Expect-CT: report-uri="<uri>",
 
 The following example specifies enforcement of Certificate Transparency for 24 hours and reports violations to `foo.example.com`.
 
-```
+```http
 Expect-CT: max-age=86400, enforce, report-uri="https://foo.example.com/report"
 ```
 

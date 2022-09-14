@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.kind
 slug: Web/API/AudioTrack/kind
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -15,6 +16,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.kind
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`kind`** property contains a

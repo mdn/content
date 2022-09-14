@@ -4,6 +4,7 @@ slug: Web/XSLT/XSLT_JS_interface_in_Gecko
 tags:
   - XSLT
 ---
+
 1. [Introduction](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction)
 2. [JavaScript/XSLT Bindings](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings)
 3. [Basic Example](/en-US/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example)

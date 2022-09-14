@@ -1,6 +1,7 @@
 ---
 title: AnimationEvent.animationName
 slug: Web/API/AnimationEvent/animationName
+page-type: web-api-instance-property
 tags:
   - API
   - AnimationEvent
@@ -10,6 +11,7 @@ tags:
   - Web Animations
 browser-compat: api.AnimationEvent.animationName
 ---
+
 {{APIRef("Web Animations API")}}
 
 The **`AnimationEvent.animationName`** read-only property is a

@@ -1,13 +1,15 @@
 ---
 title: CSS Counter Styles
 slug: Web/API/CSS_Counter_Styles
+page-type: web-api-overview
 tags:
   - CSS
   - CSS Counter Styles
   - Overview
 browser-compat: api.CSSCounterStyleRule
 ---
-{{DefaultAPISidebar("CSS Counter Styles")}}{{SeeCompatTable}}
+
+{{DefaultAPISidebar("CSS Counter Styles")}}
 
 The CSS Counter Styles module allows to define custom counter styles, which can be used for CSS list-marker and generated-content counters.
 

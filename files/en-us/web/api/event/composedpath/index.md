@@ -1,12 +1,14 @@
 ---
 title: Event.composedPath()
 slug: Web/API/Event/composedPath
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
   - Web Components
 browser-compat: api.Event.composedPath
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`composedPath()`** method of the {{domxref("Event")}}
@@ -16,8 +18,8 @@ created with its {{domxref("ShadowRoot.mode")}} closed.
 
 ## Syntax
 
-```js
-var composed = Event.composedPath();
+```js-nolint
+const composed = Event.composedPath()
 ```
 
 ### Parameters
@@ -78,7 +80,7 @@ We then insert one of each element into our page:
 Then include a click event listener on the `<html>` element:
 
 ```js
-document.querySelector('html').addEventListener('click',function(e) {
+document.querySelector('html').addEventListener('click', (e) => {
   console.log(e.composed);
   console.log(e.composedPath());
 });
@@ -91,13 +93,13 @@ event is always able to propagate across shadow boundaries. Second, you'll notic
 difference in the value of `composedPath` for the two elements. The
 `<open-shadow>` element's composed path is this:
 
-```js
+```
 Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 
 Whereas the `<closed-shadow>` element's composed path is a follows:
 
-```js
+```
 Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 

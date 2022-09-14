@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.toSum()
 slug: Web/API/CSSNumericValue/toSum
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - toSum()
 browser-compat: api.CSSNumericValue.toSum
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`toSum()`** method of the
@@ -20,7 +22,7 @@ The **`toSum()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 toSum(units)
 ```
 

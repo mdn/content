@@ -1,6 +1,7 @@
 ---
 title: FileSystem.name
 slug: Web/API/FileSystem/name
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API
@@ -11,6 +12,7 @@ tags:
   - name
 browser-compat: api.FileSystem.name
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`name`** property of the

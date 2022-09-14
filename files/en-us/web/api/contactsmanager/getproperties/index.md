@@ -1,6 +1,7 @@
 ---
 title: ContactsManager.getProperties()
 slug: Web/API/ContactsManager/getProperties
+page-type: web-api-instance-method
 tags:
   - Contact Picker API
   - Contacts
@@ -8,9 +9,11 @@ tags:
   - Method
   - PWA
   - contact picker
+  - Experimental
 browser-compat: api.ContactsManager.getProperties
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+
+{{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`getProperties()`** method of the
 {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which resolves
@@ -19,8 +22,8 @@ properties are available.
 
 ## Syntax
 
-```js
-var ContactProperties = ContactsManager.getProperties();
+```js-nolint
+getProperties()
 ```
 
 ### Parameters

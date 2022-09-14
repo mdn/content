@@ -6,6 +6,7 @@ tags:
   - HTTP
   - URL
 ---
+
 {{HTTPSidebar}}
 
 A recurring question among website owners is whether to choose non-www or www URLs. This page provides some advice on what's best.
@@ -39,14 +40,14 @@ Example:
 
 The [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) has an example on [how to configure an Apache server to redirect one domain to the other](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
 
-### Using _`<link rel="canonical">`_
+### Using \<link rel="canonical">
 
 It is possible to add a special HTML {{HTMLElement("link")}} element to a page to indicate what the canonical address of a page is. This has no impact on the human reader of the page, but tells search engine crawlers where the page actually lives. This way, search engines don't index the same page several times, potentially leading to it being considered as duplicate content or spam, and even removing or lowering your page from the search engine result pages.
 
 When adding such a tag, you serve the same content for both domains, telling search engines which URL is canonical. In the previous example, `http://www.example.org/whaddup` would serve the same content as `http://example.org/whaddup`, but with an additional {{htmlelement("link")}} element in the head:
 
 ```html
-<link href="http://example.org/whaddup" rel="canonical">
+<link href="http://example.org/whaddup" rel="canonical" />
 ```
 
 Unlike the previous case, browser history will consider non-www and www URLs as independent entries.
@@ -57,7 +58,7 @@ With these techniques, you can configure your server to respond correctly for bo
 
 ## Deciding the case
 
-This is a very subjective topic it could be considered a [bikeshedding](https://bikeshed.com/) issue. If you wish to read deeper, please see some of the [many](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) [articles](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) on the subject.
+This is a very subjective topic — it could be considered a [bikeshedding](https://bikeshed.com/) issue. If you wish to read deeper, please see some of the [many](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) [articles](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) on the subject.
 
 ## See also
 

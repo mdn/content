@@ -3,7 +3,6 @@ title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 tags:
   - Class
-  - Experimental
   - Internationalization
   - Intl
   - JavaScript
@@ -11,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat`** object enables language-sensitive list formatting.

@@ -12,6 +12,7 @@ tags:
   - conditional rendering
   - filtering
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 As we near the end of our React journey (for now at least), we'll add the finishing touches to the main areas of functionality in our Todo list app. This includes allowing you to edit existing tasks, and filtering the list of tasks between all, completed, and incomplete tasks. We'll look at conditional UI rendering along the way.
@@ -51,7 +52,7 @@ Add the `editTask()` function inside your App component, in the same place as th
 
 ```js
 function editTask(id, newName) {
-  const editedTaskList = tasks.map(task => {
+  const editedTaskList = tasks.map((task) => {
   // if this task has the same ID as the edited task
     if (id === task.id) {
       //
@@ -66,7 +67,7 @@ function editTask(id, newName) {
 Pass `editTask` into our `<Todo />` components as a prop in the same way we did with `deleteTask`:
 
 ```js
-const taskList = tasks.map(task => (
+const taskList = tasks.map((task) => (
   <Todo
     id={task.id}
     name={task.name}
@@ -89,7 +90,7 @@ In order to allow users to edit a task, we have to provide a user interface for 
 import React, { useState } from "react";
 ```
 
-We'll now use this to set an `isEditing` state, the default state of which should be `false`. Add the following line just inside the top of your `Todo(props) { … }` component definition:
+We'll now use this to set an `isEditing` state, the default state of which should be `false`. Add the following line just inside the top of your `Todo(props) { }` component definition:
 
 ```js
 const [isEditing, setEditing] = useState(false);
@@ -281,8 +282,8 @@ At the top of `App.js`, beneath our imports but above our `App()` function, let'
 ```js
 const FILTER_MAP = {
   All: () => true,
-  Active: task => !task.completed,
-  Completed: task => task.completed
+  Active: (task) => !task.completed,
+  Completed: (task) => task.completed
 };
 ```
 
@@ -307,7 +308,7 @@ Now that we have the `FILTER_NAMES` array, we can use it to render all three of 
 Add the following underneath your `taskList` constant declaration:
 
 ```js
-const filterList = FILTER_NAMES.map(name => (
+const filterList = FILTER_NAMES.map((name) => (
   <FilterButton key={name} name={name}/>
 ));
 ```
@@ -338,7 +339,7 @@ To make our filter buttons interactive, we should consider what props they need 
 Update your `filterList` constant as follows:
 
 ```js
-const filterList = FILTER_NAMES.map(name => (
+const filterList = FILTER_NAMES.map((name) => (
   <FilterButton
     key={name}
     name={name}
@@ -388,7 +389,7 @@ Update your `taskList` like so:
 ```js
 const taskList = tasks
 .filter(FILTER_MAP[filter])
-.map(task => (
+.map((task) => (
   <Todo
     id={task.id}
     name={task.name}
@@ -409,7 +410,7 @@ Choosing a filter in your browser will now remove the tasks that do not meet its
 
 ## Summary
 
-So that's it — our app is now functionally complete. However, now that we've implemented all of our features, we can make a few improvements to ensure that a wider range of users can use our app. Our next article rounds things off for our React tutorials by looking at including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screenreader users.
+So that's it — our app is now functionally complete. However, now that we've implemented all of our features, we can make a few improvements to ensure that a wider range of users can use our app. Our next article rounds things off for our React tutorials by looking at including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screen reader users.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

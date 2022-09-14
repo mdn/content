@@ -1,6 +1,7 @@
 ---
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - createDocumentFragment
 browser-compat: api.Document.createDocumentFragment
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 Creates a new empty {{domxref("DocumentFragment")}} into which
@@ -17,7 +19,7 @@ DOM nodes can be added to build an offscreen DOM tree.
 
 ## Syntax
 
-```js
+```js-nolint
 createDocumentFragment()
 ```
 
@@ -46,7 +48,7 @@ You can also use the `DocumentFragment` constructor to create a new
 fragment:
 
 ```js
-let fragment = new DocumentFragment();
+const fragment = new DocumentFragment();
 ```
 
 ## Examples
@@ -57,20 +59,19 @@ then adds the new DOM subtree to the document to be displayed.
 ### HTML
 
 ```html
-<ul id="ul">
-</ul>
+<ul id="ul"></ul>
 ```
 
 ### JavaScript
 
 ```js
-var element  = document.getElementById('ul'); // assuming ul exists
-var fragment = document.createDocumentFragment();
-var browsers = ['Firefox', 'Chrome', 'Opera',
+const element  = document.getElementById('ul'); // assuming ul exists
+const fragment = document.createDocumentFragment();
+const browsers = ['Firefox', 'Chrome', 'Opera',
     'Safari', 'Internet Explorer'];
 
-browsers.forEach(function(browser) {
-    var li = document.createElement('li');
+browsers.forEach((browser) => {
+    const li = document.createElement('li');
     li.textContent = browser;
     fragment.appendChild(li);
 });

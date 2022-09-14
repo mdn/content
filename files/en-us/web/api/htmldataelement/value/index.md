@@ -1,6 +1,7 @@
 ---
 title: HTMLDataElement.value
 slug: Web/API/HTMLDataElement/value
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - value
 browser-compat: api.HTMLDataElement.value
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`value`** property of the {{domxref("HTMLDataElement")}}

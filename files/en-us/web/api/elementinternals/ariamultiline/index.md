@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.ariaMultiLine
 slug: Web/API/ElementInternals/ariaMultiLine
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaMultiLine
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaMultiLine`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.

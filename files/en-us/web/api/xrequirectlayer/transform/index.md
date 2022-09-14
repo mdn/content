@@ -1,6 +1,7 @@
 ---
 title: XREquirectLayer.transform
 slug: Web/API/XREquirectLayer/transform
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XREquirectLayer.transform
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`transform`** property of the {{domxref("XREquirectLayer")}} interface represents the offset and orientation relative to the layer's {{domxref("XREquirectLayer.space", "space")}}.
 

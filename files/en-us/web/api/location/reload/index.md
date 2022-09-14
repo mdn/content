@@ -1,6 +1,7 @@
 ---
 title: location.reload()
 slug: Web/API/Location/reload
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Location.reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`location.reload()`** method reloads the current URL, like the Refresh button.
@@ -21,7 +23,7 @@ information.
 
 ## Syntax
 
-```js
+```js-nolint
 reload()
 ```
 

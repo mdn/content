@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.transferControlToOffscreen()
 slug: Web/API/HTMLCanvasElement/transferControlToOffscreen
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.transferControlToOffscreen
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The
@@ -19,7 +21,7 @@ thread or on a worker.
 
 ## Syntax
 
-```js
+```js-nolint
 transferControlToOffscreen()
 ```
 
@@ -40,7 +42,7 @@ const htmlCanvas = document.createElement('canvas');
 const offscreen = htmlCanvas.transferControlToOffscreen();
 const gl = offscreen.getContext('webgl');
 
-// ... some drawing using the gl context ...
+// Some drawing using the gl context…
 
 // Push frames back to the original HTMLCanvasElement
 gl.commit();

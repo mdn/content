@@ -1,6 +1,7 @@
 ---
 title: XRJointSpace
 slug: Web/API/XRJointSpace
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -11,6 +12,7 @@ tags:
   - VR
 browser-compat: api.XRJointSpace
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The **`XRJointSpace`** interface is an {{domxref("XRSpace")}} and represents the position and orientation of an {{domxref("XRHand")}} joint.
@@ -19,7 +21,7 @@ The **`XRJointSpace`** interface is an {{domxref("XRSpace")}} and represents the
 
 ## Properties
 
-- {{domxref("XRJointSpace.jointName")}} {{readonlyInline}}
+- {{domxref("XRJointSpace.jointName")}} {{ReadOnlyInline}}
   - : The name of the joint that is tracked. See {{domxref("XRHand")}} for possible hand joint names.
 
 ## Examples
@@ -29,20 +31,20 @@ The **`XRJointSpace`** interface is an {{domxref("XRSpace")}} and represents the
 You can use an `XRJointSpace` object and an {{domxref("XRReferenceSpace")}} to get an {{domxref("XRJointPose")}} by calling {{domxref("XRFrame.getJointPose()")}}.
 
 ```js
-navigator.xr.requestSession({optionalFeatures: ["hand-tracking"]}).then(
-  // ...
-);
+navigator.xr
+  .requestSession({ optionalFeatures: ["hand-tracking"] })
+  .then(/** … */);
 
 function renderFrame(session, frame) {
-   // ...
+  // …
 
-   for (inputSource of session.inputSources) {
-      if (inputSource.hand) {
-        let indexFingerTipJoint = inputSource.hand.get("index-finger-tip"); // XRJointSpace
-        indexFingerTipJoint.jointName; // "index-finger-tip"
-        frame.getJointPose(indexFingerTipJoint, referenceSpace); // XRJointPose
-      }
-   }
+  for (const inputSource of session.inputSources) {
+    if (inputSource.hand) {
+      const indexFingerTipJoint = inputSource.hand.get("index-finger-tip"); // XRJointSpace
+      indexFingerTipJoint.jointName; // "index-finger-tip"
+      frame.getJointPose(indexFingerTipJoint, referenceSpace); // XRJointPose
+    }
+  }
 }
 ```
 

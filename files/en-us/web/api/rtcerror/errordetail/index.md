@@ -1,6 +1,7 @@
 ---
 title: RTCError.errorDetail
 slug: Web/API/RTCError/errorDetail
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -21,6 +22,7 @@ tags:
   - rtc
 browser-compat: api.RTCError.errorDetail
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCError")}} interface's read-only
@@ -29,8 +31,7 @@ The {{domxref("RTCError")}} interface's read-only
 ## Value
 
 A read-only string whose value indicates the type of WebRTC-specific error that
-occurred on an {{domxref("RTCPeerConnection")}}. The possible values are taken from the
-`RTCErrorDetailType` enumeration:
+occurred on an {{domxref("RTCPeerConnection")}}. The possible values are:
 
 - `data-channel-failure`
   - : The connection's {{domxref("RTCDataChannel")}} has failed.

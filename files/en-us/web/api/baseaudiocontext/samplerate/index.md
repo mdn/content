@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
+page-type: web-api-instance-property
 tags:
   - API
   - AudioContext
@@ -11,6 +12,7 @@ tags:
   - sampleRate
 browser-compat: api.BaseAudioContext.sampleRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `sampleRate` property of the {{
@@ -26,15 +28,14 @@ second.
 ## Examples
 
 > **Note:** for a full Web Audio example implementation, see one of our
-> Web Audio Demos on the [MDN GitHub repo](https://github.com/mdn/), like [panner-node](https://github.com/mdn/panner-node). Try entering
+> Web Audio Demos on the [MDN GitHub repo](https://github.com/mdn/webaudio-examples). Try entering
 > `audioCtx.sampleRate` into your browser console.
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
-...
+// …
 
 console.log(audioCtx.sampleRate);
 ```

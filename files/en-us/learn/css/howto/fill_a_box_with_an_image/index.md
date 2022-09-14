@@ -9,6 +9,7 @@ tags:
   - Guide
   - Web
 ---
+
 {{LearnSidebar}}
 
 In this guide you can learn a technique for causing an HTML image to completely fill a box.

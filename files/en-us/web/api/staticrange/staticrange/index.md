@@ -1,6 +1,7 @@
 ---
 title: StaticRange()
 slug: Web/API/StaticRange/StaticRange
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -11,6 +12,7 @@ tags:
   - StaticRange
 browser-compat: api.StaticRange.StaticRange
 ---
+
 {{APIRef("DOM")}}
 
 The **`StaticRange()`** constructor
@@ -23,7 +25,7 @@ the range as well as a Boolean indicating whether or not the range is
 
 ## Syntax
 
-```js
+```js-nolint
 new StaticRange(rangeSpec)
 ```
 

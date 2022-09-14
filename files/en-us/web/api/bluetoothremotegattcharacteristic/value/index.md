@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.value
 slug: Web/API/BluetoothRemoteGATTCharacteristic/value
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -12,6 +13,7 @@ tags:
   - value
 browser-compat: api.BluetoothRemoteGATTCharacteristic.value
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.value`** read-only

@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue.toMatrix()
 slug: Web/API/CSSTransformValue/toMatrix
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
@@ -12,6 +13,7 @@ tags:
   - toMatrix
 browser-compat: api.CSSTransformValue.toMatrix
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`toMatrix()`** method of the
@@ -19,7 +21,7 @@ The **`toMatrix()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 toMatrix()
 ```
 

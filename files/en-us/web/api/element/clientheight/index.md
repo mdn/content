@@ -1,6 +1,7 @@
 ---
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.clientHeight
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.clientHeight`** read-only property is zero for

@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.setRemoteDescription()
 slug: Web/API/RTCPeerConnection/setRemoteDescription
+page-type: web-api-instance-method
 tags:
   - API
   - ICE
@@ -40,7 +41,7 @@ effect.
 
 ## Syntax
 
-```js
+```js-nolint
 setRemoteDescription(sessionDescription)
 ```
 
@@ -61,17 +62,15 @@ The `sessionDescription` parameter is technically of type
 ```js
 myPeerConnection
   .setRemoteDescription(new RTCSessionDescription(description))
-  .then(function () {
-    return createMyStream();
-  });
+  .then(() => createMyStream());
 ```
 
 to be:
 
 ```js
-myPeerConnection.setRemoteDescription(description).then(function () {
-  return createMyStream();
-});
+myPeerConnection
+  .setRemoteDescription(description)
+  .then(() => createMyStream());
 ```
 
 Using
@@ -201,8 +200,7 @@ When using the deprecated callback-based version of
 ## Examples
 
 Here we see a function which handles an offer received from the remote peer. This code
-is derived from the example and tutorial in the article [Signaling and
-video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling); take a look at that for more details and a more in-depth
+is derived from the example and tutorial in the article [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling); take a look at that for more details and a more in-depth
 explanation of what's going on.
 
 ```js
@@ -211,20 +209,14 @@ function handleOffer(msg) {
 
   myPeerConnection
     .setRemoteDescription(msg.description)
-    .then(function () {
-      return navigator.mediaDevices.getUserMedia(mediaConstraints);
-    })
-    .then(function (stream) {
+    .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
+    .then((stream) => {
       document.getElementById("local_video").srcObject = stream;
       return myPeerConnection.addStream(stream);
     })
-    .then(function () {
-      return myPeerConnection.createAnswer();
-    })
-    .then(function (answer) {
-      return myPeerConnection.setLocalDescription(answer);
-    })
-    .then(function () {
+    .then(() => myPeerConnection.createAnswer())
+    .then((answer) => myPeerConnection.setLocalDescription(answer))
+    .then(() => {
       // Send the answer to the remote peer using the signaling server
     })
     .catch(handleGetUserMediaError);

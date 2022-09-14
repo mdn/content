@@ -6,6 +6,7 @@ tags:
   - Firefox 19
   - NeedsContent
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 19 was released on February 19, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -49,7 +50,7 @@ Support for [XForms](/en-US/docs/XForms) has been [**removed**](https://www.phil
 > **Note:** A key change in Firefox 19 is that `nsresult` is now strongly typed. This will help make it easier to detect bugs that are caused by mishandling of return values, but may cause existing code to break if it's making incorrect assumptions in this regard.
 
 - `getBrowserSelection()` now returns the selected text in a text input field. As a result, `gContextMenu.isTextSelected` will be `true` when the user selects text in a text input field that is not a password field. ({{bug("565717")}})
-- [Dict.jsm](/en-US/docs/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/en-US/docs/Mozilla/JavaScript_code_modules/Dict.jsm#Creating_a_dictionary) now takes a JSON String. [`Dict.toJSON()`](</en-US/docs/Mozilla/JavaScript_code_modules/Dict.jsm#toJSON()>) was added, and it returns a JSON String. ({{bug("727967")}})
+- [Dict.jsm](/en-US/docs/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/en-US/docs/Mozilla/JavaScript_code_modules/Dict.jsm#creating_a_dictionary) now takes a JSON String. [`Dict.toJSON()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Dict.html#toJSON()>) was added, and it returns a JSON String. ({{bug("727967")}})
 
 ### Interface changes
 

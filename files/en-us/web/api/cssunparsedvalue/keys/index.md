@@ -1,6 +1,7 @@
 ---
 title: CSSUnparsedValue.keys()
 slug: Web/API/CSSUnparsedValue/keys
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -14,6 +15,7 @@ tags:
   - keys()
 browser-compat: api.CSSUnparsedValue.keys
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue.keys()`** method
@@ -22,7 +24,7 @@ for each index in the array.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

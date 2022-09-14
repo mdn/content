@@ -10,6 +10,7 @@ tags:
   - SVG Font
 browser-compat: svg.elements.font-face-name
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<font-face-name>`** element points to a locally installed copy of this font, identified by its name.
@@ -26,7 +27,7 @@ The **`<font-face-name>`** element points to a locally installed copy of this fo
 
 ### Specific attributes
 
-- {{SVGATTR("name")}}
+- {{SVGATTR("name")}} {{Deprecated_Inline}}
 
 ## DOM Interface
 

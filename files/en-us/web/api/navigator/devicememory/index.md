@@ -1,6 +1,7 @@
 ---
 title: Navigator.deviceMemory
 slug: Web/API/Navigator/deviceMemory
+page-type: web-api-instance-property
 tags:
   - API
   - Device Memory API
@@ -9,8 +10,10 @@ tags:
   - Reference
   - deviceMemory
   - memory
+  - Experimental
 browser-compat: api.Navigator.deviceMemory
 ---
+
 {{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`deviceMemory`** read-only

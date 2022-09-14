@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.clientWaitSync()
 slug: Web/API/WebGL2RenderingContext/clientWaitSync
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.clientWaitSync
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.clientWaitSync()`** method of the
@@ -17,7 +19,7 @@ The **`WebGL2RenderingContext.clientWaitSync()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 clientWaitSync(sync, flags, timeout)
 ```
 
@@ -48,8 +50,8 @@ A {{domxref("WebGL_API/Types", "GLenum")}} indicating the sync object's status.
 ## Examples
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
-var status = gl.clientWaitSync(sync, 0, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const status = gl.clientWaitSync(sync, 0, 0);
 ```
 
 ## Specifications

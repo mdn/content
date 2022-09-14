@@ -1,6 +1,7 @@
 ---
 title: IDBCursor.continuePrimaryKey()
 slug: Web/API/IDBCursor/continuePrimaryKey
+page-type: web-api-instance-method
 tags:
   - API
   - IDBCursor
@@ -11,6 +12,7 @@ tags:
   - Web
 browser-compat: api.IDBCursor.continuePrimaryKey
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`continuePrimaryKey()`** method of the
@@ -33,7 +35,7 @@ from an object store will throw an error.
 
 ## Syntax
 
-```js
+```js-nolint
 continuePrimaryKey(key, primaryKey)
 ```
 

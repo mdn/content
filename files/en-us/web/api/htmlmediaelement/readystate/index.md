@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.readyState
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.readyState`** property indicates the
@@ -77,16 +79,16 @@ audio will play.
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById('example');
+const obj = document.getElementById('example');
 
-obj.addEventListener('loadeddata', function() {
+obj.addEventListener('loadeddata', () => {
 
-  if(obj.readyState >= 2) {
+  if (obj.readyState >= 2) {
     obj.play();
   }
 

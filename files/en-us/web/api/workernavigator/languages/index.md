@@ -1,9 +1,9 @@
 ---
 title: WorkerNavigator.languages
 slug: Web/API/WorkerNavigator/languages
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - WorkerNavigator
   - Property
   - Read-only
@@ -11,7 +11,8 @@ tags:
   - languages
 browser-compat: api.WorkerNavigator.languages
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`WorkerNavigator.languages`** read-only property
 returns an array of strings representing the user's preferred

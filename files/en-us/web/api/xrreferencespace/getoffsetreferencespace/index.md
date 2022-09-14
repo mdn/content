@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpace.getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -24,6 +25,7 @@ tags:
   - Method
 browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRReferenceSpace")}}
@@ -36,9 +38,8 @@ object returned by `getOffsetReferenceSpace()` is an
 
 In other words, when you have an object in 3D space and need to position another object
 relative to that one, you can call `getOffsetReferenceSpace()`, passing into
-it the position and orientation you want the second object to have *relative to the
-position and orientation of the object on which you
-call `getOffsetReferenceSpace()`*.
+it the position and orientation you want the second object to have
+_relative to the position and orientation of the object on which you call `getOffsetReferenceSpace()`_.
 
 Then, when drawing the scene, you can use the offset reference space to not only
 position objects relative to one another, but to apply the needed transforms to render
@@ -48,7 +49,7 @@ use this method to let the user use their mouse to pitch and yaw their viewing a
 
 ## Syntax
 
-```js
+```js-nolint
 getOffsetReferenceSpace(originOffset)
 ```
 
@@ -184,9 +185,7 @@ drawing a frame, immediately before fetching the viewer's pose using
 {{domxref("XRFrame.getViewerPose", "getViewerPose()")}}, and the rendering should be
 performed in this reference space.
 
-You can see code similar to this in use in our broader WebXR tutorial article called [Movement, orientation,
-and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion). In particular, check out the section called [Starting
-up the WebXR session](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#starting_up_the_webxr_session).
+You can see code similar to this in use in our broader WebXR tutorial article called [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion). In particular, check out the section called [Starting up the WebXR session](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion#starting_up_the_webxr_session).
 
 ## Specifications
 

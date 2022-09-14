@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.serverTiming
 slug: Web/API/PerformanceResourceTiming/serverTiming
+page-type: web-api-instance-property
 tags:
   - API
   - PerformanceResourceTiming
@@ -10,6 +11,7 @@ tags:
   - ServerTiming
 browser-compat: api.PerformanceResourceTiming.serverTiming
 ---
+
 {{APIRef("Resource Timing API")}} {{securecontext_header}}
 
 The **`serverTiming`** read-only property returns an array of

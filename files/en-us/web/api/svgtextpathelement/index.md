@@ -1,6 +1,7 @@
 ---
 title: SVGTextPathElement
 slug: Web/API/SVGTextPathElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTextPathElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGTextPathElement`** interface corresponds to the {{SVGElement("textPath")}} element.

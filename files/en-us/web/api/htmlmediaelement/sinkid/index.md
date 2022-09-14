@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.sinkId
 slug: Web/API/HTMLMediaElement/sinkId
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.HTMLMediaElement.sinkId
 ---
+
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.sinkId`** read-only property returns a

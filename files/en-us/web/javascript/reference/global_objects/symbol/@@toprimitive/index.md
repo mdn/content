@@ -9,6 +9,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.@@toPrimitive
 ---
+
 {{JSRef}}
 
 The **`[@@toPrimitive]()`** method converts a Symbol object to
@@ -16,7 +17,7 @@ a primitive value.
 
 ## Syntax
 
-```js
+```js-nolint
 Symbol()[Symbol.toPrimitive](hint)
 ```
 

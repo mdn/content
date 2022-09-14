@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisEvent.charIndex
 slug: Web/API/SpeechSynthesisEvent/charIndex
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -12,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisEvent.charIndex
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`charIndex`** read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the index position of the character in {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.
@@ -23,10 +25,9 @@ A number.
 ## Examples
 
 ```js
-utterThis.onpause = function(event) {
-  var char = event.utterance.text.charAt(event.charIndex);
-  console.log('Speech paused at character ' + event.charIndex + ' of "' +
-  event.utterance.text + '", which is "' + char + '".');
+utterThis.onpause = (event) => {
+  const char = event.utterance.text.charAt(event.charIndex);
+  console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
 }
 ```
 

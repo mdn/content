@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent.openWindow()
 slug: Web/API/PaymentRequestEvent/openWindow
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,8 +10,10 @@ tags:
   - Reference
   - openWindow()
   - payment
+  - Experimental
 browser-compat: api.PaymentRequestEvent.openWindow
 ---
+
 {{APIRef("Payment Request API")}}{{SeeCompatTable}}
 
 The **`openWindow`** property of the
@@ -20,7 +23,7 @@ and only if the given URL is on the same origin as the calling page. It returns 
 
 ## Syntax
 
-```js
+```js-nolint
 openWindow(url)
 ```
 

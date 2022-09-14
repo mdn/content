@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.isDirectory
 slug: Web/API/FileSystemEntry/isDirectory
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API
@@ -12,6 +13,7 @@ tags:
   - isDirectory
 browser-compat: api.FileSystemEntry.isDirectory
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`isDirectory`**

@@ -9,6 +9,7 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Table()`** object is a JavaScript wrapper object — an array-like structure representing a WebAssembly Table, which stores function references. A table created by JavaScript or in WebAssembly code will be accessible and mutable from both JavaScript and WebAssembly.
@@ -22,7 +23,7 @@ The **`WebAssembly.Table()`** object is a JavaScript wrapper object — an array
 
 ## Instance properties
 
-- {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}
+- {{jsxref("WebAssembly/Table/length","Table.prototype.length")}} {{ReadOnlyInline}}
   - : Returns the length of the table, i.e. the number of elements.
 
 ## Instance methods
@@ -38,10 +39,10 @@ The **`WebAssembly.Table()`** object is a JavaScript wrapper object — an array
 
 ### Creating a new WebAssembly Table instance
 
-The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)) creates a new WebAssembly Table instance with an initial size of 2 elements. We then print out the table length and contents of the two indexes (retrieved via {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} to show that the length is two and both elements are {{jsxref("null")}}.
+The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)) creates a new WebAssembly Table instance with an initial size of 2 elements. We then print out the table length and contents of the two indexes (retrieved via {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} to show that the length is two and both elements are [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
 console.log(tbl.length);  // "2"
 console.log(tbl.get(0));  // "null"
 console.log(tbl.get(1));  // "null"
@@ -50,14 +51,12 @@ console.log(tbl.get(1));  // "null"
 We then create an import object that contains the table:
 
 ```js
-var importObj = {
-  js: {
-    tbl:tbl
-  }
+const importObj = {
+  js: { tbl },
 };
 ```
 
-Finally, we load and instantiate a wasm module (table2.wasm) using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.  The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)).  So after instantiation, the table still has length 2, but the elements now contain callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions) which we can call from JS.
+Finally, we load and instantiate a wasm module (table2.wasm) using the {{jsxref("WebAssembly.instantiateStreaming()")}} method. The table2.wasm module contains two functions (one that returns 42 and another that returns 83) and stores both into elements 0 and 1 of the imported table (see [text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). So after instantiation, the table still has length 2, but the elements now contain callable [Exported WebAssembly Functions](/en-US/docs/WebAssembly/Exported_functions) which we can call from JS.
 
 ```js
 WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)

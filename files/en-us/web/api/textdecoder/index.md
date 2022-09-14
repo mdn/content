@@ -1,16 +1,17 @@
 ---
 title: TextDecoder
 slug: Web/API/TextDecoder
+page-type: web-api-interface
 tags:
   - API
   - DOM
   - Encoding
-  - Experimental
   - Interface
   - Reference
   - TextDecoder
 browser-compat: api.TextDecoder
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextDecoder`** interface represents a decoder for a specific text encoding, such as `UTF-8`, `ISO-8859-2`, `KOI8-R`, `GBK`, etc. A decoder takes a stream of bytes as input and emits a stream of code points.
@@ -58,11 +59,11 @@ console.log(win1251decoder.decode(bytes)); // Привет, мир!
 
 _The `TextDecoder` interface doesn't inherit any properties._
 
-- {{DOMxRef("TextDecoder.encoding")}}{{ReadOnlyInline}}
+- {{DOMxRef("TextDecoder.encoding")}} {{ReadOnlyInline}}
   - : A string containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
-- {{DOMxRef("TextDecoder.fatal")}}{{ReadOnlyInline}}
+- {{DOMxRef("TextDecoder.fatal")}} {{ReadOnlyInline}}
   - : A {{jsxref('Boolean')}} indicating whether the error mode is fatal.
-- {{DOMxRef("TextDecoder.ignoreBOM")}}{{ReadOnlyInline}}
+- {{DOMxRef("TextDecoder.ignoreBOM")}} {{ReadOnlyInline}}
   - : A {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) is ignored.
 
 ## Methods

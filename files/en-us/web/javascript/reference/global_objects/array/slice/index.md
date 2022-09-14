@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.slice
 ---
+
 {{JSRef}}
 
 The **`slice()`** method returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of
@@ -20,7 +21,7 @@ the index of items in that array. The original array will not be modified.
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)
@@ -84,8 +85,8 @@ If a new element is added to either array, the other array is not affected.
 ### Return a portion of an existing array
 
 ```js
-let fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
-let citrus = fruits.slice(1, 3)
+const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+const citrus = fruits.slice(1, 3);
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
 // citrus contains ['Orange','Lemon']
@@ -100,31 +101,35 @@ change.
 
 ```js
 // Using slice, create newCar from myCar.
-let myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }
-let myCar = [myHonda, 2, 'cherry condition', 'purchased 1997']
-let newCar = myCar.slice(0, 2)
+const myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
+const myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
+const newCar = myCar.slice(0, 2);
 
 // Display the values of myCar, newCar, and the color of myHonda
 //  referenced from both arrays.
-console.log('myCar = ' + JSON.stringify(myCar))
-console.log('newCar = ' + JSON.stringify(newCar))
-console.log('myCar[0].color = ' + myCar[0].color)
-console.log('newCar[0].color = ' + newCar[0].color)
+console.log('myCar = ', myCar);
+console.log('newCar = ', newCar);
+console.log('myCar[0].color = ', myCar[0].color);
+console.log('newCar[0].color = ', newCar[0].color);
 
 // Change the color of myHonda.
-myHonda.color = 'purple'
-console.log('The new color of my Honda is ' + myHonda.color)
+myHonda.color = 'purple';
+console.log('The new color of my Honda is ', myHonda.color);
 
 // Display the color of myHonda referenced from both arrays.
-console.log('myCar[0].color = ' + myCar[0].color)
-console.log('newCar[0].color = ' + newCar[0].color)
+console.log('myCar[0].color = ', myCar[0].color);
+console.log('newCar[0].color = ', newCar[0].color);
 ```
 
 This script writes:
 
-```js
-myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
-         'cherry condition', 'purchased 1997']
+```
+myCar = [
+  { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } },
+  2,
+  'cherry condition',
+  'purchased 1997'
+]
 newCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2]
 myCar[0].color = red
 newCar[0].color = red
@@ -142,10 +147,10 @@ example of an 'array-like object'.
 
 ```js
 function list() {
-  return Array.prototype.slice.call(arguments)
+  return Array.prototype.slice.call(arguments);
 }
 
-let list1 = list(1, 2, 3) // [1, 2, 3]
+const list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
 Binding can be done with the {{jsxref("Function.prototype.call", "call()")}} method of
@@ -156,14 +161,14 @@ Binding can be done with the {{jsxref("Function.prototype.call", "call()")}} met
 Anyway, it can be simplified using {{jsxref("Function.prototype.bind", "bind")}}.
 
 ```js
-let unboundSlice = Array.prototype.slice
-let slice = Function.prototype.call.bind(unboundSlice)
+const unboundSlice = Array.prototype.slice;
+const slice = Function.prototype.call.bind(unboundSlice);
 
 function list() {
-  return slice(arguments)
+  return slice(arguments);
 }
 
-let list1 = list(1, 2, 3) // [1, 2, 3]
+const list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
 ## Specifications

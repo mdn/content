@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement.select
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLInputElement.select()`** method selects all the text
@@ -18,7 +20,7 @@ that includes a text field.
 
 ## Syntax
 
-```js
+```js-nolint
 select()
 ```
 
@@ -38,7 +40,7 @@ Click the button in this example to select all the text in the
 ### HTML
 
 ```html
-<input type="text" id="text-box" size="20" value="Hello world!">
+<input type="text" id="text-box" size="20" value="Hello world!" />
 <button onclick="selectText()">Select text</button>
 ```
 
@@ -67,7 +69,9 @@ parameters 0 and the input's value length:
 ```html
 <input onClick="this.select();" value="Sample Text" />
 <!-- equivalent to -->
-<input onClick="this.setSelectionRange(0, this.value.length);" value="Sample Text" />
+<input
+  onClick="this.setSelectionRange(0, this.value.length);"
+  value="Sample Text" />
 ```
 
 ## Specifications

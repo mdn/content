@@ -9,10 +9,10 @@ tags:
   - Reference
   - polyfill
   - at
-  - Experimental
   - Polyfill
 browser-compat: javascript.builtins.Array.at
 ---
+
 {{JSRef}}
 
 The **`at()`** method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
@@ -23,7 +23,7 @@ This is not to suggest there is anything wrong with using the square bracket not
 
 ## Syntax
 
-```js
+```js-nolint
 at(index)
 ```
 

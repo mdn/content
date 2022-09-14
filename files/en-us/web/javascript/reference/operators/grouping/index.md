@@ -8,6 +8,7 @@ tags:
   - Primary Expressions
 browser-compat: javascript.operators.grouping
 ---
+
 {{jsSidebar("Operators")}}
 
 The grouping operator `( )` controls the precedence of evaluation in
@@ -17,7 +18,7 @@ expressions.
 
 ## Syntax
 
-```js
+```js-nolint
 ( )
 ```
 
@@ -38,9 +39,9 @@ Overriding multiplication and division first, then addition and subtraction to e
 addition first.
 
 ```js
-var a = 1;
-var b = 2;
-var c = 3;
+const a = 1;
+const b = 2;
+const c = 3;
 
 // default precedence
 a + b * c     // 7
@@ -56,8 +57,8 @@ a * c + b * c // 9
 ```
 
 Notice in these examples that the left-to-right order of evaluation is still
-preserved. In other words, the order in which the *operators* evaluate has changed,
-but the order in which the *operands* evaluate has not.
+preserved. In other words, the order in which the _operators_ evaluate has changed,
+but the order in which the _operands_ evaluate has not.
 For example in this code:
 
 ```js

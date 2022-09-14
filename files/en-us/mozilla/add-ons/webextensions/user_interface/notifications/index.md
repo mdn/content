@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Notifications allow you to communicate information about your extension or its content using the underlying operating system's notification service.
@@ -23,13 +24,13 @@ You manage notifications programmatically, using the {{WebExtAPIRef("notificatio
 You then use {{WebExtAPIRef("notifications.create")}} to create your notifications, as in this example from [notify-link-clicks-i18n:](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
 
 ```js
-let title = browser.i18n.getMessage("notificationTitle");
-let content = browser.i18n.getMessage("notificationContent", message.url);
+const title = browser.i18n.getMessage("notificationTitle");
+const content = browser.i18n.getMessage("notificationContent", message.url);
 browser.notifications.create({
-  "type": "basic",
-  "iconUrl": browser.extension.getURL("icons/link-48.png"),
-  "title": title,
-  "message": content
+  type: "basic",
+  iconUrl: browser.extension.getURL("icons/link-48.png"),
+  title,
+  message: content,
 });
 ```
 

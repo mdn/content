@@ -11,6 +11,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.class
 ---
+
 {{jsSidebar("Statements")}}
 
 The **class declaration** creates a new class
@@ -23,7 +24,7 @@ You can also define a class using a {{jsxref("Operators/class", "class expressio
 
 ## Syntax
 
-```js
+```js-nolint
 class name [extends otherName] {
   // class body
 }

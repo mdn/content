@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.writableAuxiliaries
 slug: Web/API/BluetoothCharacteristicProperties/writableAuxiliaries
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -13,7 +14,8 @@ tags:
   - writableAuxiliaries
 browser-compat: api.BluetoothCharacteristicProperties.writableAuxiliaries
 ---
-{{securecontext_header}}{{APIRef("Bluetooth API")}}
+
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`writableAuxiliaries`** read-only
 property of the {{domxref("BluetoothCharacteristicProperties")}} interface returns a

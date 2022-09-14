@@ -1,12 +1,15 @@
 ---
 title: Navigator.wakeLock
 slug: Web/API/Navigator/wakeLock
+page-type: web-api-instance-property
 tags:
   - API
   - Reference
   - Screen Wake Lock API
+  - Experimental
 browser-compat: api.Navigator.wakeLock
 ---
+
 {{ApiRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`wakeLock`** read-only property
@@ -17,8 +20,8 @@ screensaver.
 
 ## Syntax
 
-```js
-const wakeLock = navigator.wakeLock;
+```js-nolint
+navigator.wakeLock
 ```
 
 ## Specifications
@@ -33,5 +36,4 @@ const wakeLock = navigator.wakeLock;
 
 - {{DOMxRef("WakeLock.request","WakeLock.request()")}}
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API)
-- [Blog post - Stay awake with the
-  Screen Wake Lock API](https://web.dev/wake-lock/)
+- [Blog post - Stay awake with the Screen Wake Lock API](https://web.dev/wake-lock/)

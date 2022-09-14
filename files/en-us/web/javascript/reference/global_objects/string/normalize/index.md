@@ -11,6 +11,7 @@ tags:
   - Unicode
 browser-compat: javascript.builtins.String.normalize
 ---
+
 {{JSRef}}
 
 The **`normalize()`** method returns the Unicode Normalization
@@ -20,7 +21,7 @@ Form of the string.
 
 ## Syntax
 
-```js
+```js-nolint
 normalize()
 normalize(form)
 ```
@@ -67,8 +68,8 @@ either of:
   combining tilde (U+0303).
 
 ```js
-let string1 = '\u00F1';
-let string2 = '\u006E\u0303';
+const string1 = '\u00F1';
+const string2 = '\u006E\u0303';
 
 console.log(string1);  //  ñ
 console.log(string2);  //  ñ
@@ -79,8 +80,8 @@ equal. And since the number of code points in each version is different, they ev
 different lengths.
 
 ```js
-let string1 = '\u00F1';            // ñ
-let string2 = '\u006E\u0303';      // ñ
+const string1 = '\u00F1';            // ñ
+const string2 = '\u006E\u0303';      // ñ
 
 console.log(string1 === string2); // false
 console.log(string1.length);      // 1
@@ -194,14 +195,14 @@ forms by passing `"NFKD"` or `"NFKC"`, respectively.
 
 ## Examples
 
-### Using `normalize()`
+### Using normalize()
 
 ```js
 // Initial string
 
 // U+1E9B: LATIN SMALL LETTER LONG S WITH DOT ABOVE
 // U+0323: COMBINING DOT BELOW
-let str = '\u1E9B\u0323';
+const str = '\u1E9B\u0323';
 
 // Canonically-composed form (NFC)
 

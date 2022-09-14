@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.toURL()
 slug: Web/API/FileSystemEntry/toURL
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entries API
@@ -13,7 +14,8 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.toURL
 ---
-{{APIRef("File and Directory Entry API")}}{{deprecated_header}}
+
+{{APIRef("File and Directory Entry API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`toURL()`** creates and
@@ -23,7 +25,7 @@ the value of `src` and `href` attributes.
 
 ## Syntax
 
-```js
+```js-nolint
 toURL()
 toURL(mimeType)
 ```
@@ -65,7 +67,8 @@ Assuming the scenario mentioned before the code, the result would be HTML that l
 like this being appended to the end of the document:
 
 ```html
-<img src="filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg">
+<img
+  src="filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg" />
 ```
 
 ## Browser compatibility

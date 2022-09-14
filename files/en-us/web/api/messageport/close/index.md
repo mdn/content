@@ -1,6 +1,7 @@
 ---
 title: MessagePort.close()
 slug: Web/API/MessagePort/close
+page-type: web-api-instance-method
 tags:
   - API
   - Channel messaging
@@ -10,6 +11,7 @@ tags:
   - close
 browser-compat: api.MessagePort.close
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`close()`** method of the {{domxref("MessagePort")}}
@@ -20,7 +22,7 @@ messages to that port.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 
@@ -64,5 +66,4 @@ channel.port1.close();
 
 ## See also
 
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

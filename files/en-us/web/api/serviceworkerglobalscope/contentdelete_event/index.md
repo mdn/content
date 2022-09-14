@@ -1,6 +1,7 @@
 ---
 title: 'ServiceWorkerGlobalScope: contentdelete event'
 slug: Web/API/ServiceWorkerGlobalScope/contentdelete_event
+page-type: web-api-event
 tags:
   - Content Index API
   - ServiceWorkerGlobalScope
@@ -8,9 +9,11 @@ tags:
   - contentdelete
   - delete
   - event
+  - Experimental
 browser-compat: api.ServiceWorkerGlobalScope.contentdelete_event
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`contentdelete`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when an item is removed from the indexed content via the user agent.
 
@@ -21,14 +24,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('contentdelete', event => { });
+addEventListener('contentdelete', (event) => { });
 
-oncontentdelete = event => { };
+oncontentdelete = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("ContentIndexEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("ContentIndexEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ContentIndexEvent")}}
 
@@ -44,15 +47,13 @@ _In addition to the properties listed below, this interface inherits the propert
 The following example uses a `contentdelete` event handler to remove cached content related to the deleted index item.
 
 ```js
-self.addEventListener('contentdelete', event => {
-  event.waitUntil(
-    caches.open('cache-name').then(cache => {
-      return Promise.all([
-        cache.delete(`/icon/${event.id}`),
-        cache.delete(`/content/${event.id}`)
-      ])
-    })
-  );
+self.addEventListener('contentdelete', (event) => {
+  const deletion = caches.open('cache-name')
+    .then((cache) => Promise.all([
+      cache.delete(`/icon/${event.id}`),
+      cache.delete(`/content/${event.id}`),
+    ]));
+  event.waitUntil(deletion);
 });
 ```
 
@@ -60,7 +61,7 @@ You can also set up the event handler using the `oncontentdelete` property:
 
 ```js
 self.oncontentdelete = (event) => {
-  ...
+  // ...
 };
 ```
 
@@ -74,6 +75,6 @@ self.oncontentdelete = (event) => {
 
 ## See also
 
-- {{domxref("Content Index API")}}
+- [Content index API](/en-US/docs/Web/API/Content_Index_API)
 - [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)

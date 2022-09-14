@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.innerHTML
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`innerHTML`** property of the {{domxref("ShadowRoot")}}

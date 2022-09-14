@@ -1,6 +1,7 @@
 ---
 title: DOMException.message
 slug: Web/API/DOMException/message
+page-type: web-api-instance-property
 tags:
   - API
   - DOMException
@@ -9,6 +10,7 @@ tags:
   - message
 browser-compat: api.DOMException.message
 ---
+
 {{ APIRef("DOM") }}
 
 The **`message`** read-only property of the

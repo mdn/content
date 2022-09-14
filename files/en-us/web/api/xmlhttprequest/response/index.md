@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API
@@ -16,6 +17,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.response
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}}
@@ -51,12 +53,12 @@ The content is handled as raw text data (since nothing here is overriding the de
 {{domxref("XMLHttpRequest.responseType", "responseType")}}).
 
 ```js
-var url = 'somePage.html'; //A local page
+const url = 'somePage.html'; //A local page
 
 function load(url, callback) {
-  var xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
       callback(xhr.response);
     }
@@ -77,7 +79,6 @@ function load(url, callback) {
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - Getting text and HTML/XML data: {{domxref("XMLHttpRequest.responseText")}} and
   {{domxref("XMLHttpRequest.responseXML")}}

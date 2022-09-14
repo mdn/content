@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTServer.getPrimaryServices()
 slug: Web/API/BluetoothRemoteGATTServer/getPrimaryServices
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -12,6 +13,7 @@ tags:
   - getPrimaryServices()
 browser-compat: api.BluetoothRemoteGATTServer.getPrimaryServices
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **BluetoothRemoteGATTServer.getPrimaryServices()** method returns a
@@ -20,7 +22,7 @@ Bluetooth device for a specified `BluetoothServiceUUID`.
 
 ## Syntax
 
-```js
+```js-nolint
 getPrimaryServices(bluetoothServiceUUID)
 ```
 

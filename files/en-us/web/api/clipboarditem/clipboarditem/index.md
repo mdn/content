@@ -1,6 +1,7 @@
 ---
 title: ClipboardItem()
 slug: Web/API/ClipboardItem/ClipboardItem
+page-type: web-api-instance-property
 tags:
   - API
   - Clipboard
@@ -13,6 +14,7 @@ tags:
   - paste
 browser-compat: api.ClipboardItem.ClipboardItem
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The **`ClipboardItem()`** constructor of the {{domxref("Clipboard API")}} creates a new {{domxref("ClipboardItem")}} object which represents data to be stored or retrieved via the {{domxref("Clipboard API")}}, that is {{domxref("clipboard.write()")}} and {{domxref("clipboard.read()")}} respectively.
@@ -21,7 +23,7 @@ The **`ClipboardItem()`** constructor of the {{domxref("Clipboard API")}} create
 
 ## Syntax
 
-```js
+```js-nolint
 new ClipboardItem(data)
 new ClipboardItem(data, options)
 ```
@@ -57,7 +59,7 @@ async function writeClipImg() {
       })
     ]);
     console.log('Fetched image copied.');
-  } catch(err) {
+  } catch (err) {
     console.error(err.name, err.message);
   }
 }

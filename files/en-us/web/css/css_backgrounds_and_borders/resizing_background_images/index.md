@@ -16,6 +16,7 @@ tags:
   - resize
   - width
 ---
+
 {{CSSRef}}
 
 The **{{cssxref("background-size")}}** CSS property lets you resize the background image of an element, overriding the default behavior of tiling the image at its full size by specifying the width and/or height of the image. By doing so, you can scale the image upward or downward as desired.
@@ -27,8 +28,7 @@ Let's consider a large image, a 2982x2808 Firefox logo image. We want (for some 
 ### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 ### CSS

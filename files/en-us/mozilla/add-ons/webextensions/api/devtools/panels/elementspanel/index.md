@@ -13,6 +13,7 @@ tags:
   - devtools.panels.ElementsPanel
 browser-compat: webextensions.api.devtools.panels.ElementsPanel
 ---
+
 {{AddonSidebar()}}
 
 An `ElementsPanel` represents the HTML/CSS inspector in the browser's devtools. This is called the Page Inspector in Firefox and the Elements panel in Chrome.
@@ -35,7 +36,8 @@ An `ElementsPanel` represents the HTML/CSS inspector in the browser's devtools. 
 
 > **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -62,4 +64,4 @@ An `ElementsPanel` represents the HTML/CSS inspector in the browser's devtools. 
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

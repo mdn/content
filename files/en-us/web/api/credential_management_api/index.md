@@ -1,6 +1,7 @@
 ---
 title: Credential Management API
 slug: Web/API/Credential_Management_API
+page-type: web-api-overview
 tags:
   - API
   - Credential Management API
@@ -11,7 +12,8 @@ tags:
   - credential management
 browser-compat: api.Credential
 ---
-{{DefaultAPISidebar("Credential Management API")}}{{ SeeCompatTable() }}
+
+{{DefaultAPISidebar("Credential Management API")}}
 
 The Credential Management API lets a website store and retrieve password, public key, and federated credentials. These capabilities allow users to sign in without typing passwords, see the federated account they used to sign in to a site, and resume a session without the explicit sign-in flow of an expired session.
 

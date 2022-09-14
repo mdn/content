@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.getTransceivers()
 slug: Web/API/RTCPeerConnection/getTransceivers
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -14,6 +15,7 @@ tags:
   - getTransceivers
 browser-compat: api.RTCPeerConnection.getTransceivers
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} interface's
@@ -23,7 +25,7 @@ connection.
 
 ## Syntax
 
-```js
+```js-nolint
 getTransceivers()
 ```
 
@@ -43,7 +45,7 @@ The following snippet of code stops all transceivers associated with an
 `RTCPeerConnection`.
 
 ```js
-pc.getTransceivers().forEach(transceiver => {
+pc.getTransceivers().forEach((transceiver) => {
   transceiver.stop();
 });
 ```
@@ -59,7 +61,6 @@ pc.getTransceivers().forEach(transceiver => {
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Signaling and
-  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
 - {{domxref("RTCPeerConnection.addTransceiver()")}}
 - {{jsxref("Array.forEach()")}}

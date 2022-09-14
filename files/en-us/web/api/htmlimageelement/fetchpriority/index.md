@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.fetchPriority
 slug: Web/API/HTMLImageElement/fetchPriority
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -8,9 +9,11 @@ tags:
   - Property
   - Reference
   - fetchPriority
+  - Experimental
 browser-compat: api.HTMLImageElement.fetchPriority
 ---
-{{APIRef}}
+
+{{APIRef}}{{SeeCompatTable}}
 
 The **`fetchPriority`** property of the
 {{domxref("HTMLImageElement")}} interface represents a hint given to the browser on how
@@ -20,10 +23,13 @@ it should prioritize the fetch of the image relative to other images.
 
 A string representing the priority hint. Possible values are:
 
-- **`high`**: Fetch the image at a high priority relative to other images.
-- **`low`**: Fetch the image at a low priority relative to other images.
-- **`auto`**: Default mode, which indicates no preference for
-  the fetch priority. The browser decides what is best for the user.
+- `high`
+  - : Fetch the image at a high priority relative to other images.
+- `low`
+  - : Fetch the image at a low priority relative to other images.
+- `auto`
+  - : Default mode, which indicates no preference for the fetch priority.
+    The browser decides what is best for the user.
 
 The `fetchPriority` property allows you to signal high or low priority image
 fetches. This can be useful when applied to {{HTMLElement("img")}} elements
@@ -40,7 +46,7 @@ degrading performance.
 ## Examples
 
 ```js
-var img = new Image();
+const img = new Image();
 img.fetchPriority = 'high';
 img.src = 'img/logo.png';
 ```

@@ -1,6 +1,7 @@
 ---
 title: AudioContext.createMediaStreamTrackSource()
 slug: Web/API/AudioContext/createMediaStreamTrackSource
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -17,6 +18,7 @@ tags:
   - track
 browser-compat: api.AudioContext.createMediaStreamTrackSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`createMediaStreamTrackSource()`** method of the {{
@@ -32,7 +34,7 @@ first, lexicographically (alphabetically).
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaStreamTrackSource(track)
 ```
 
@@ -63,28 +65,30 @@ filter's output is in turn routed to the audio context's
 {{domxref("BaseAudioContext/destination", "destination")}}.
 
 ```js
-navigator.mediaDevices.getUserMedia ({audio: true, video: false})
-.then(function(stream) {
-  audio.srcObject = stream;
-  audio.onloadedmetadata = function(e) {
-    audio.play();
-    audio.muted = true;
-  };
+navigator.mediaDevices
+  .getUserMedia({ audio: true, video: false })
+  .then((stream) => {
+    audio.srcObject = stream;
+    audio.onloadedmetadata = (e) => {
+      audio.play();
+      audio.muted = true;
+    };
 
-  let audioCtx = new AudioContext();
-  let source = audioCtx.createMediaStreamSource(stream);
+    const audioCtx = new AudioContext();
+    const audioTracks = stream.getAudioTracks();
+    const source = audioCtx.createMediaStreamTrackSource(audioTracks[0]);
 
-  let biquadFilter = audioCtx.createBiquadFilter();
-  biquadFilter.type = "lowshelf";
-  biquadFilter.frequency.value = 3000;
-  biquadFilter.gain.value = 20;
+    const biquadFilter = audioCtx.createBiquadFilter();
+    biquadFilter.type = "lowshelf";
+    biquadFilter.frequency.value = 3000;
+    biquadFilter.gain.value = 20;
 
-  source.connect(biquadFilter);
-  biquadFilter.connect(audioCtx.destination);
-})
-.catch(function(err) {
-  // Handle getUserMedia() error
-});
+    source.connect(biquadFilter);
+    biquadFilter.connect(audioCtx.destination);
+  })
+  .catch((err) => {
+    // Handle getUserMedia() error
+  });
 ```
 
 ## Specifications

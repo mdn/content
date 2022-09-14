@@ -1,6 +1,7 @@
 ---
 title: CSS Declaration
 slug: Web/API/CSS_Object_Model/CSS_Declaration
+page-type: guide
 tags:
   - CSS
   - CSS Object Model
@@ -8,6 +9,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/cssom/#css-declarations
 ---
+
 {{ APIRef("CSSOM") }}
 
 A **CSS declaration** is an abstract concept not exposed as an object in the DOM. It represents a CSS property and value pairing.

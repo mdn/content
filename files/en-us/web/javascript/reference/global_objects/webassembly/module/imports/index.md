@@ -12,6 +12,7 @@ tags:
   - imports
 browser-compat: javascript.builtins.WebAssembly.Module.imports
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.imports()`** function returns an array
@@ -19,7 +20,7 @@ containing descriptions of all the declared imports of the given `Module`.
 
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.Module.imports(module)
 ```
 
@@ -56,7 +57,7 @@ WebAssembly.compileStreaming(fetch('simple.wasm'))
 
 The console log displays the following description for the imported module:
 
-```js
+```
 { module: "imports", name: "imported_func", kind: "function" }
 ```
 

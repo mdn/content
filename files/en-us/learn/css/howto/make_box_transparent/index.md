@@ -9,6 +9,7 @@ tags:
   - Guide
   - Web
 ---
+
 {{LearnSidebar}}
 
 This guide will help you to understand the ways to make a box semi-transparent using CSS.

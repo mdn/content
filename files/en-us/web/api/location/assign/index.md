@@ -1,6 +1,7 @@
 ---
 title: location.assign()
 slug: Web/API/Location/assign
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Location.assign
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`Location.assign()`** method causes the window to load
@@ -27,7 +29,7 @@ If the provided URL is not valid, a {{domxref("DOMException")}} of the
 
 ## Syntax
 
-```js
+```js-nolint
 assign(url)
 ```
 

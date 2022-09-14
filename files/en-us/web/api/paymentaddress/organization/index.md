@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.organization
 slug: Web/API/PaymentAddress/organization
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -15,9 +16,12 @@ tags:
   - institution
   - organization
   - paymentAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.organization
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`organization`** read-only
 property of the {{domxref('PaymentAddress')}} interface returns a string containing

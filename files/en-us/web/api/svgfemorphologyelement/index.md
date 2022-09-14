@@ -1,6 +1,7 @@
 ---
 title: SVGFEMorphologyElement
 slug: Web/API/SVGFEMorphologyElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEMorphologyElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEMorphologyElement`** interface corresponds to the {{SVGElement("feMorphology")}} element.

@@ -1,6 +1,7 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -10,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.Document.domain
 ---
+
 {{ApiRef}} {{Deprecated_Header}}
 
 The **`domain`** property of the {{domxref("Document")}}

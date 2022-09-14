@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement.x
 slug: Web/API/SVGImageElement/x
+page-type: web-api-instance-property
 tags:
   - API
   - Image
@@ -13,6 +14,7 @@ tags:
   - x
 browser-compat: api.SVGImageElement.x
 ---
+
 {{APIRef("SVG")}}
 
 The **`x`** read-only property of the

@@ -1,20 +1,23 @@
 ---
 title: Navigator.javaEnabled()
 slug: Web/API/Navigator/javaEnabled
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - Navigator
+  - Deprecated
 browser-compat: api.Navigator.javaEnabled
 ---
-{{ APIRef("HTML DOM") }}
+
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 This method always returns false.
 
 ## Syntax
 
-```js
+```js-nolint
 javaEnabled()
 ```
 

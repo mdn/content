@@ -1,6 +1,7 @@
 ---
 title: AudioNode.numberOfInputs
 slug: Web/API/AudioNode/numberOfInputs
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode
@@ -10,6 +11,7 @@ tags:
   - numberOfInputs
 browser-compat: api.AudioNode.numberOfInputs
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `numberOfInputs` property of

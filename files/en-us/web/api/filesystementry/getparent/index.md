@@ -1,6 +1,7 @@
 ---
 title: FileSystemEntry.getParent()
 slug: Web/API/FileSystemEntry/getParent
+page-type: web-api-instance-method
 tags:
   - API
   - File and Directory Entry API
@@ -11,6 +12,7 @@ tags:
   - getParent
 browser-compat: api.FileSystemEntry.getParent
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemEntry")}} interface's method
@@ -19,7 +21,7 @@ The {{domxref("FileSystemEntry")}} interface's method
 
 ## Syntax
 
-```js
+```js-nolint
 getParent(successCallback, errorCallback)
 getParent(successCallback)
 ```
@@ -56,13 +58,12 @@ This example renames the file specified by the variable `fileEntry` to
 `"newname.html"`.
 
 ```js
-fileEntry.getParent(function(parent) {
-  fileEntry.moveTo(parent, "newname.html", function(updatedEntry) {
-    console.log("File " + fileEntry.name + " renamed to newname.html.");
+fileEntry.getParent((parent) => {
+  fileEntry.moveTo(parent, "newname.html", (updatedEntry) => {
+    console.log(`File ${fileEntry.name} renamed to newname.html.`);
   });
-}, function(error) {
-  console.error("An error occurred: Unable to rename " + fileEntry.name
-        + " to newname.html.");
+}, (error) => {
+  console.error(`An error occurred: Unable to rename ${fileEntry.name} to newname.html.`);
 });
 ```
 

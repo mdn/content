@@ -1,6 +1,7 @@
 ---
 title: HTMLOptionsCollection
 slug: Web/API/HTMLOptionsCollection
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -11,7 +12,10 @@ tags:
   - Reference
 browser-compat: api.HTMLOptionsCollection
 ---
-{{ APIRef("HTML DOM") }}The **`HTMLOptionsCollection`** interface represents a collection of [`<option>`](/en-US/docs/Web/HTML/Element/option) HTML elements (in document order) and offers methods and properties for selecting from the list as well as optionally altering its items. This object is returned only by the `options` property of [select](/en-US/docs/Web/API/HTMLSelectElement).
+
+{{ APIRef("HTML DOM") }}
+
+The **`HTMLOptionsCollection`** interface represents a collection of [`<option>`](/en-US/docs/Web/HTML/Element/option) HTML elements (in document order) and offers methods and properties for selecting from the list as well as optionally altering its items. This object is returned only by the `options` property of [select](/en-US/docs/Web/API/HTMLSelectElement).
 
 {{InheritanceDiagram}}
 

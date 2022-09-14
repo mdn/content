@@ -6,6 +6,7 @@ tags:
   - Firefox 41
   - Releases
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -40,7 +41,7 @@ Highlights:
   - Direction-independent equivalents of {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} and {{cssxref("border-left")}} and their longhands for width, style and color: {{cssxref("border-block-start")}}, {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} and {{cssxref("border-inline-end-color")}}.
   - Direction-independent equivalents of {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}: `offset-block-start`, `offset-block-end`, `offset-inline-start` and `offset-inline-end`.
 
-- Support the {{cssxref("transform-origin")}} property in SVG and implement the {{cssxref("transform-box")}} property  ({{bug(923193)}}).
+- Support the {{cssxref("transform-origin")}} property in SVG and implement the {{cssxref("transform-box")}} property ({{bug(923193)}}).
 
 ### HTML
 
@@ -75,7 +76,7 @@ Highlights:
 
 #### Events
 
-- The non-standard {{domxref("CloseEvent.initCloseEvent()")}} method and the ability to create a {{domxref("CloseEvent")}} using the {{domxref("Document/createEvent", "document.createEvent('CloseEvent')")}} method has been removed; use the standard constructor, {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} instead ({{bug(1161950)}}).
+- The non-standard `initCloseEvent()` method of the {{domxref("CloseEvent")}} event and the ability to create a {{domxref("CloseEvent")}} using the {{domxref("Document/createEvent", "document.createEvent('CloseEvent')")}} method has been removed; use the standard constructor, {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} instead ({{bug(1161950)}}).
 - On Desktop, {{domxref("PointerEvent")}} is now activated by default in Nightly; it is not activated in Developer Edition, Beta or Release and won't be for at least some versions ({{bug(1166347)}}).
 - The unprefixed version of {{domxref("MouseEvent.movementX")}} and {{domxref("MouseEvent.movementY")}} have been added; the prefixed versions are deprecated and will be removed at some point in the future ({{bug(1164981)}}).
 
@@ -113,7 +114,7 @@ Highlights:
 - {{domxref("MessagePort")}} and {{domxref("MessageChannel")}} now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API), and are enabled by default in all contexts ({{bug(952139)}}) and ({{bug(911972)}}).
 - The User Timing API is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1155761)}}).
 - The [Notifications API](/en-US/docs/Web/API/Notifications_API) is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(916893)}}).
-- {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}} are now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1167650)}}).
+- `DOMRequest` and `DOMCursor` are now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1167650)}}).
 - The [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) has been completely implemented and is now enabled by default ({{bug(1149381)}}).
 - Shared workers can no longer be shared between private (i.e. browsing in a private window) and non-private documents (see {{bug(1177621)}}).
 - The {{domxref("URLUtilsSearchParams.searchParams")}} property is now read-only ({{bug(1174731)}}).
@@ -123,7 +124,7 @@ Highlights:
 
 #### New default and fallback font handling
 
-Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces, an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g. `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`.  All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see {{bug(947654)}} and {{bug(1160456)}}.
+Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces, an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g. `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`. All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see {{bug(947654)}} and {{bug(1160456)}}.
 
 ### SVG
 
@@ -161,7 +162,7 @@ _No change._
 
 ### Other
 
-- A new, internal, and chrome-context-only API to render the root widget of a window into a {{HTMLElement("canvas")}} has been added: {{domxref("CanvasRenderingContext2D.drawWidgetAsOnScreen()")}}. This API uses the operating system to snapshot the widget on-screen. For more details see {{bug(1167477)}}.
+- A new, internal, and chrome-context-only API to render the root widget of a window into a {{HTMLElement("canvas")}} has been added: `CanvasRenderingContext2D.drawWidgetAsOnScreen()`. This API uses the operating system to snapshot the widget on-screen. For more details see {{bug(1167477)}}.
 
 ## Older versions
 

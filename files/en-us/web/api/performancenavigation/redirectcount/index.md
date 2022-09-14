@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigation.redirectCount
 slug: Web/API/PerformanceNavigation/redirectCount
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -13,6 +14,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceNavigation.redirectCount
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 The legacy

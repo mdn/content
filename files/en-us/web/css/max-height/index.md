@@ -15,6 +15,7 @@ tags:
   - size
 browser-compat: css.properties.max-height
 ---
+
 {{CSSRef}}
 
 The **`max-height`** [CSS](/en-US/docs/Web/CSS) property sets the maximum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/used_value) of the {{cssxref("height")}} property from becoming larger than the value specified for `max-height`.
@@ -81,9 +82,13 @@ Ensure that elements set with a `max-height` are not truncated and/or do not obs
 ### Setting max-height using percentage and keyword values
 
 ```css
-table { max-height: 75%; }
+table {
+  max-height: 75%;
+}
 
-form { max-height: none; }
+form {
+  max-height: none;
+}
 ```
 
 ## Specifications

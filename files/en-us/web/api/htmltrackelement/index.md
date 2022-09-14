@@ -1,6 +1,7 @@
 ---
 title: HTMLTrackElement
 slug: Web/API/HTMLTrackElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTrackElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTrackElement`** interface represents an {{Glossary("HTML")}} {{HTMLElement("track")}} element within the {{Glossary("DOM")}}. This element can be used as a child of either {{HTMLElement("audio")}} or {{HTMLElement("video")}} to specify a text track containing information such as closed captions or subtitles.

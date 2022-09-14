@@ -1,6 +1,7 @@
 ---
 title: 'Window: storage event'
 slug: Web/API/Window/storage_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -10,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.storage_event
 ---
+
 {{APIRef}}
 
 The **`storage`** event of the {{domxref("Window")}} interface fires when a storage area (`localStorage`) has been modified in the context of another document.
@@ -21,8 +23,8 @@ The **`storage`** event of the {{domxref("Window")}} interface fires when a stor
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('storage', event => { });
-onstorage = event => { };
+addEventListener('storage', (event) => { });
+onstorage = (event) => { };
 ```
 
 ## Event type
@@ -35,7 +37,7 @@ A {{domxref("StorageEvent")}}. Inherits from {{domxref("Event")}}.
 
 - {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
   - : Returns a string that represents the key changed.
-    The `key` attribute is {{jsxref("null")}}
+    The `key` attribute is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
     when the change is caused by the storage `clear()` method.
 - {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
   - : Returns a string with the new value of the `key`.

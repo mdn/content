@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.renderbufferStorageMultisample()
 slug: Web/API/WebGL2RenderingContext/renderbufferStorageMultisample
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.renderbufferStorageMultisample
 ---
+
 {{APIRef("WebGL")}}
 
 The
@@ -19,7 +21,7 @@ samples to be used.
 
 ## Syntax
 
-```js
+```js-nolint
 renderbufferStorageMultisample(target, samples, internalFormat, width, height)
 ```
 

@@ -12,21 +12,22 @@ tags:
   - XPath
   - XSLT
 ---
+
 This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript internally, in extensions, and from websites. Mozilla implements a fair amount of the [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/), which means that XPath expressions can be run against both HTML and XML documents.
 
 The main interface to using XPath is the [evaluate](/en-US/docs/Web/API/Document/evaluate) function of the [document](/en-US/docs/Web/API/Document) object.
 
-## document.evaluate
+## document.evaluate()
 
 This method evaluates [XPath](/en-US/docs/Web/XPath) expressions against an [XML](/en-US/docs/Glossary/XML) based document (including HTML documents), and returns a [`XPathResult`](/en-US/docs/Web/API/XPathResult) object, which can be a single node or a set of nodes. The existing documentation for this method is located at [document.evaluate](/en-US/docs/Web/API/Document/evaluate), but it is rather sparse for our needs at the moment; a more comprehensive examination will be given below.
 
 ```js
-var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
+const xpathResult = document.evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result);
 ```
 
 ### Parameters
 
-The [evaluate](/en-US/docs/Web/API/Document/evaluate) function takes a total of five parameters:
+The [`evaluate()`](/en-US/docs/Web/API/Document/evaluate) method takes a total of five parameters:
 
 - `xpathExpression`: A string containing the XPath expression to be evaluated.
 - `contextNode`: A node in the document against which the `xpathExpression` should be evaluated, including any and all of its child nodes. The [document](/en-US/docs/Web/API/Document) node is the most commonly used.
@@ -48,14 +49,14 @@ Returns `xpathResult`, which is an `XPathResult` object of the type [specified](
 We create a namespace resolver using the `createNSResolver` method of the [document](/en-US/docs/Web/API/Document) object.
 
 ```js
-var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+const nsResolver = document.createNSResolver(contextNode.ownerDocument === null ? contextNode.documentElement : contextNode.ownerDocument.documentElement);
 ```
 
 Or alternatively by using the `createNSResolver` method of a `XPathEvaluator` object.
 
 ```js
-var xpEvaluator = new XPathEvaluator();
-var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+const xpEvaluator = new XPathEvaluator();
+const nsResolver = xpEvaluator.createNSResolver(contextNode.ownerDocument === null ? contextNode.documentElement : contextNode.ownerDocument.documentElement);
 ```
 
 And then pass `document.evaluate`, the `nsResolver` variable as the `namespaceResolver` parameter.
@@ -89,17 +90,17 @@ We obtain the returned value of the expression by accessing the following proper
 The following uses the XPath expression [`count(//p)`](/en-US/docs/Web/XPath/Functions/count) to obtain the number of `<p>` elements in an HTML document:
 
 ```js
-var paragraphCount = document.evaluate( 'count(//p)', document, null, XPathResult.ANY_TYPE, null );
+const paragraphCount = document.evaluate('count(//p)', document, null, XPathResult.ANY_TYPE, null);
 
-alert( 'This document contains ' + paragraphCount.numberValue + ' paragraph elements' );
+console.log(`This document contains ${paragraphCount.numberValue} paragraph elements.`);
 ```
 
 Although JavaScript allows us to convert the number to a string for display, the XPath interface will not automatically convert the numerical result if the `stringValue` property is requested, so the following code will **not** work:
 
 ```js
-var paragraphCount = document.evaluate('count(//p)', document, null, XPathResult.ANY_TYPE, null );
+const paragraphCount = document.evaluate('count(//p)', document, null, XPathResult.ANY_TYPE, null);
 
-alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elements' );
+console.log(`This document contains ${paragraphCount.stringValue} paragraph elements.`);
 ```
 
 Instead, it will return an exception with the code `NS_DOM_TYPE_ERROR`.
@@ -126,18 +127,18 @@ Once we have iterated over all of the individual matched nodes, `iterateNext()` 
 Note however, that if the document is mutated (the document tree is modified) between iterations that will invalidate the iteration and the `invalidIteratorState` property of `XPathResult` is set to `true`, and a `NS_ERROR_DOM_INVALID_STATE_ERR` exception is thrown.
 
 ```js
-var iterator = document.evaluate('//phoneNumber', documentNode, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null );
+const iterator = document.evaluate('//phoneNumber', documentNode, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
 
 try {
-  var thisNode = iterator.iterateNext();
+  let thisNode = iterator.iterateNext();
 
   while (thisNode) {
-    alert( thisNode.textContent );
+    console.log(thisNode.textContent);
     thisNode = iterator.iterateNext();
   }
 }
-catch (e) {
-  alert( 'Error: Document tree modified during iteration ' + e );
+catch(e) {
+  console.error(`Error: Document tree modified during iteration ${e}`);
 }
 ```
 
@@ -153,11 +154,11 @@ The `XPathResult` object returned is a static node-set of matched nodes, which a
 Snapshots do not change with document mutations, so unlike the iterators, the snapshot does not become invalid, but it may not correspond to the current document, for example, the nodes may have been moved, it might contain nodes that no longer exist, or new nodes could have been added.
 
 ```js
-var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+const nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 
-for ( var i=0; i < nodesSnapshot.snapshotLength; i++ )
+for (let i=0; i < nodesSnapshot.snapshotLength; i++)
 {
-  alert( nodesSnapshot.snapshotItem(i).textContent );
+  console.log(nodesSnapshot.snapshotItem(i).textContent);
 }
 ```
 
@@ -173,9 +174,9 @@ The `XPathResult` object returned is only the first found node that matched the 
 Note that, for the unordered subtype the single node returned might not be the first in document order, but for the ordered subtype you are guaranteed to get the first matched node in the document order.
 
 ```js
-var firstPhoneNumber = document.evaluate('//phoneNumber', documentNode, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
+const firstPhoneNumber = document.evaluate('//phoneNumber', documentNode, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
 
-alert( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.textContent );
+console.log(`The first phone number found is ${firstPhoneNumber.singleNodeValue.textContent}`);
 ```
 
 #### The ANY_TYPE Constant
@@ -195,7 +196,7 @@ The following code is intended to be placed in any JavaScript fragment within or
 To extract all the `<h2>` heading elements in an HTML document using XPath, the `xpathExpression` is '`//h2`'. Where, `//` is the Recursive Descent Operator that matches elements with the nodeName `h2` anywhere in the document tree. The full code for this is: link to introductory xpath doc
 
 ```js
-var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null );
+const headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null);
 ```
 
 Notice that, since HTML does not have namespaces, we have passed `null` for the `namespaceResolver` parameter.
@@ -205,12 +206,12 @@ Since we wish to search over the entire document for the headings, we have used 
 The result of this expression is an `XPathResult` object. If we wish to know the type of result returned, we may evaluate the `resultType` property of the returned object. In this case, that will evaluate to `4`, an `UNORDERED_NODE_ITERATOR_TYPE`. This is the default return type when the result of the XPath expression is a node set. It provides access to a single node at a time and may not return nodes in a particular order. To access the returned nodes, we use the `iterateNext()` method of the returned object:
 
 ```js
-var thisHeading = headings.iterateNext();
+let thisHeading = headings.iterateNext();
 
-var alertText = 'Level 2 headings in this document are:\n'
+let alertText = 'Level 2 headings in this document are:\n'
 
 while (thisHeading) {
-  alertText += thisHeading.textContent + '\n';
+  alertText += `${thisHeading.textContent}\n`;
   thisHeading = headings.iterateNext();
 }
 ```
@@ -242,24 +243,16 @@ To make the contents of the XML document available within the extension, we crea
 JavaScript used in the extensions xul/js documents.
 
 ```js
-var req = new XMLHttpRequest();
+const req = new XMLHttpRequest();
 
 req.open("GET", "chrome://yourextension/content/peopleDB.xml", false);
 req.send(null);
 
-var xmlDoc = req.responseXML;
+const xmlDoc = req.responseXML;
 
-var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+const nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument === null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
 
-var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
-```
-
-### Note
-
-When the XPathResult object is not defined, the constants can be retrieved in privileged code using `Components.interfaces.nsIDOMXPathResult.ANY_TYPE` (`CI.nsIDOMXPathResult`). Similarly, an XPathEvaluator can be created using:
-
-```js
-Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Components.interfaces.nsIDOMXPathEvaluator)
+const personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null);
 ```
 
 ## Appendix
@@ -278,7 +271,7 @@ In order to associate the '`mathml:`' prefix with the namespace URI '`http://www
 
 ```js
 function nsResolver(prefix) {
-  var ns = {
+  const ns = {
     'xhtml': 'http://www.w3.org/1999/xhtml',
     'mathml': 'http://www.w3.org/1998/Math/MathML'
   };
@@ -289,7 +282,7 @@ function nsResolver(prefix) {
 Our call to `document.evaluate` would then looks like:
 
 ```js
-document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null );
+document.evaluate('//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null);
 ```
 
 ### Implementing a default namespace for XML documents
@@ -330,16 +323,16 @@ If one wishes to provide flexibility in namespaces (as they are intended) by not
 
 While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using [`local-name()`](/en-US/docs/Web/XPath/Functions/local-name) in combination with [`namespace-uri()`](/en-US/docs/Web/XPath/Functions/namespace-uri) instead of [`name()`](/en-US/docs/Web/XPath/Functions/name)), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).
 
-For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
+For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `const xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
 This could inadvertently grab some elements if one of its attributes existed that had a local name of "`href`", but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en-US/docs/Web/XPath/Axes/attribute)).
 
 In order to accurately grab elements with the XLink `@href` attribute (without also being confined to predefined prefixes in a namespace resolver), one could obtain them as follows:
 
 ```js
-var xpathEls = 'someElements[@*[local-name() = "href" and namespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Grabs elements with any single attribute that has both the local name 'href' and the XLink namespace
-var thislevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
-var thisitemEl = thislevel.iterateNext();
+const xpathEls = 'someElements[@*[local-name() = "href" and namespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Grabs elements with any single attribute that has both the local name 'href' and the XLink namespace
+const thislevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
+let thisitemEl = thislevel.iterateNext();
 ```
 
 #### XPathResult Defined Constants

@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.relatedPort
 slug: Web/API/RTCIceCandidate/relatedPort
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -17,6 +18,7 @@ tags:
   - relatedPort
 browser-compat: api.RTCIceCandidate.relatedPort
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`relatedPort`** property indicates the port number of reflexive or relay candidates.
@@ -42,7 +44,7 @@ For host candidates, `relatedPort` is `null`, meaning the field is not included 
 
 The related address and port are not used by ICE itself, and are only present for
 diagnostic and Quality-of-Service purposes. They may in fact be omitted for security
-reasons, but if present can be a useful tool during debugging. See the [Example](#example), which shows a bit of this.
+reasons, but if present can be a useful tool during debugging. See the [Example](#examples), which shows a bit of this.
 
 Here's an {{Glossary("SDP")}} attribute line (a-line) describing an ICE candidate
 discovered by the STUN server:
@@ -62,15 +64,15 @@ the candidate's type, address (`ip` and {{domxref("RTCIceCandidate.port",
   "relatedAddress")}} and `relatedPort`).
 
 ```js
-var ip = candidate.ip;
-var port = candidate.port;
-var relIP = candidate.relatedAddress;
-var relPort = candidate.relatedPort;
+const ip = candidate.ip;
+const port = candidate.port;
+const relIP = candidate.relatedAddress;
+const relPort = candidate.relatedPort;
 
 if (relIP && relPort) {
-  console.log("Candidate type '" + type + "' -- contact address: " + ip + " " + port + ", related address: " + relIP + " " + relPort);
+  console.log(`Candidate type '${type}' — contact address: ${ip} ${port}, related address: ${relIP} ${relPort}`);
 } else {
-  console.log("Host candidate address is " + ip + " " + port);
+  console.log(`Host candidate address is ${ip} ${port}`);
 }
 ```
 

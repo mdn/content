@@ -8,6 +8,7 @@ tags:
   - Guide
   - Performance
 ---
+
 Performance means efficiency. In the context of Open Web Apps, this document explains in general what performance is, how the browser platform helps improve it, and what tools and processes you can use to test and improve it.
 
 ## What is performance?
@@ -157,11 +158,11 @@ Instead, you should try to use {{domxref("window.requestAnimationFrame()")}}. Th
 
 #### Make events immediate
 
-As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use {{event("touchstart")}} and {{event("touchend")}} instead. The reason is that these don't have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don't sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
+As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchend_event", "touchend")}} instead. The reason is that these don't have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don't sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
 
 #### Keep your interface simple
 
-One big performance issue we found in HTML5 apps was that moving lots of [DOM](/en-US/docs/Web/API/Document_Object_Model) elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.
+One big performance issue we found in HTML apps was that moving lots of [DOM](/en-US/docs/Web/API/Document_Object_Model) elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.
 
 When, for example, you have a long list of elements (let's say tweets), don't move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance. Think of the display as a presentation of your data rather than the data itself. That doesn't mean you can't use straight HTML as the source; just read it once and then scroll 10 elements, changing the content of the first and last accordingly to your position in the results list, instead of moving 100 elements that aren't visible. The same trick applies in games to sprites: if they aren't currently on the screen, there is no need to poll them. Instead re-use elements that scroll off screen as new ones coming in.
 
@@ -175,11 +176,11 @@ If your page contains JavaScript code that is taking a long time to run, the [Ja
 
 ![The Firefox JavaScript profiler showing a completed profile 1.](javascript-profiler.png)
 
-The [Built-in Gecko Profiler](/en-US/docs/Performance/Profiling_with_the_Built-in_Profiler) is a very useful tool that provides even more detailed information about which parts of the browser code are running slowly while the profiler runs. This is a bit more complex to use, but provides a lot of useful details.
+The [Built-in Gecko Profiler](https://firefox-source-docs.mozilla.org/tools/profiler/index.html) is a very useful tool that provides even more detailed information about which parts of the browser code are running slowly while the profiler runs. This is a bit more complex to use, but provides a lot of useful details.
 
 ![A built-in Gecko profiler windows showing a lot of network information.](gecko-profiler.png)
 
-> **Note:** You can use these tools with the Android browser by running Firefox and enabling [remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html).
+> **Note:** You can use these tools with the Android browser by running Firefox and enabling [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html).
 
 In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](https://www.slideshare.net/firt/mobile-web-high-performance) talk.
 

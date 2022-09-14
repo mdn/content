@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.deviceId
 slug: Web/API/MediaTrackSettings/deviceId
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -14,6 +15,7 @@ tags:
   - deviceId
 browser-compat: api.MediaTrackSettings.deviceId
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
@@ -70,8 +72,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackSettings.groupId")}}
 - {{domxref("MediaTrackConstraints.deviceId")}}
 - {{domxref("MediaTrackSettings")}}

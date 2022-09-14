@@ -1,6 +1,7 @@
 ---
 title: 'HTMLSlotElement: slotchange event'
 slug: Web/API/HTMLSlotElement/slotchange_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
@@ -10,34 +11,30 @@ tags:
   - slotchange
 browser-compat: api.HTMLSlotElement.slotchange_event
 ---
+
 {{APIRef}}
 
 The **`slotchange`** event is fired on an {{DOMxRef("HTMLSlotElement")}} instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.
 
 > **Note:** the `slotchange` event doesn't fire if the children of a slotted node change — only if you change (e.g. add or delete) the actual nodes themselves.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>None</td>
-    </tr>
-  </tbody>
-</table>
-
 In order to trigger a **slotchange** event, one has to set or remove the `slot` attribute.
+
+This event is not cancelable.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('slotchange', (event) => {});
+
+onslotchange = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -52,9 +49,9 @@ The following snippet is taken from our [slotchange example](https://github.com/
 
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', function(e) {
+slots[1].addEventListener('slotchange', (e) => {
   let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
 });
 ```
 

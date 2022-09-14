@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Timing-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 The **`Timing-Allow-Origin`** response header specifies origins that are allowed to see values of attributes retrieved via features of the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API), which would otherwise be reported as zero due to cross-origin restrictions.
@@ -28,7 +29,7 @@ The **`Timing-Allow-Origin`** response header specifies origins that are allowed
 
 ## Syntax
 
-```
+```http
 Timing-Allow-Origin: *
 Timing-Allow-Origin: <origin>[, <origin>]*
 ```
@@ -44,13 +45,13 @@ Timing-Allow-Origin: <origin>[, <origin>]*
 
 To allow any resource to see timing resources:
 
-```
+```http
 Timing-Allow-Origin: *
 ```
 
 To allow `https://developer.mozilla.org` to see timing resources, you can specify:
 
-```
+```http
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
 

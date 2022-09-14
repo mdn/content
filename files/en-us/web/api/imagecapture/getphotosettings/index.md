@@ -1,6 +1,7 @@
 ---
 title: ImageCapture.getPhotoSettings()
 slug: Web/API/ImageCapture/getPhotoSettings
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -14,7 +15,8 @@ tags:
   - getPhotoSettings
 browser-compat: api.ImageCapture.getPhotoSettings
 ---
-{{APIRef("MediaStream Image")}}
+
+{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`getPhotoSettings()`** method of
 the {{domxref("ImageCapture")}} interface returns a {{jsxref("Promise")}} that
@@ -23,7 +25,7 @@ configuration settings.
 
 ## Syntax
 
-```js
+```js-nolint
 getPhotoSettings()
 ```
 
@@ -36,7 +38,7 @@ None.
 A {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object
 containing the following properties:
 
-- `fillLightMode`:  The flash setting of the capture device, one of
+- `fillLightMode`: The flash setting of the capture device, one of
   `"auto"`, `"off"`, or `"on"`.
 - `imageHeight`: The desired image height as an integer. The user agent
   selects the closest width value to this setting if it only supports discrete heights.
@@ -47,8 +49,7 @@ containing the following properties:
 
 ## Examples
 
-The following example, extracted from [Chrome's
-Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from
+The following example, extracted from [Chrome's Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from
 `getPhotoSettings()` to modify the size of an input range. This example also
 shows how the {{domxref("ImageCapture")}} object is created using a
 {{domxref("MediaStreamTrack")}} retrieved from a device's {{domxref("MediaStream")}}.
@@ -56,10 +57,10 @@ shows how the {{domxref("ImageCapture")}} object is created using a
 ```js
 const input = document.querySelector('input[type="range"]');
 
-var imageCapture;
+let imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream => {
+.then((mediaStream) => {
   document.querySelector('video').srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];
@@ -67,7 +68,7 @@ navigator.mediaDevices.getUserMedia({video: true})
 
   return imageCapture.getPhotoCapabilities();
 })
-.then(photoCapabilities => {
+.then((photoCapabilities) => {
   const settings = imageCapture.track.getSettings();
 
   input.min = photoCapabilities.imageWidth.min;
@@ -76,10 +77,10 @@ navigator.mediaDevices.getUserMedia({video: true})
 
   return imageCapture.getPhotoSettings();
 })
-.then(photoSettings => {
+.then((photoSettings) => {
   input.value = photoSettings.imageWidth;
 })
-.catch(error => console.log('Argh!', error.name || error));
+.catch((error) => console.error('Argh!', error.name || error));
 ```
 
 ## Specifications

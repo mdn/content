@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.sliCount
 slug: Web/API/RTCInboundRtpStreamStats/sliCount
+page-type: web-api-instance-property
 tags:
   - API
   - Corruption
@@ -20,6 +21,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.sliCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`sliCount`** property of the

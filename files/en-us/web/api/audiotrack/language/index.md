@@ -1,6 +1,7 @@
 ---
 title: AudioTrack.language
 slug: Web/API/AudioTrack/language
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -17,6 +18,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.language
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrack")}}**
@@ -49,17 +51,15 @@ would like to listen to while watching a movie, for example.
 
 ```js
 function getAvailableLanguages(el) {
-  var trackList = [];
-  const wantedKinds = [
-    "main", "translation"
-  ];
+  const trackList = [];
+  const wantedKinds = ["main", "translation"];
 
-  el.audioTracks.forEach(function(track) {
+  el.audioTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,
         kind: track.kind,
-        language: track.language
+        language: track.language,
       });
     }
   });

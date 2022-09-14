@@ -1,13 +1,16 @@
 ---
 title: NDEFRecord.data
 slug: Web/API/NDEFRecord/data
+page-type: web-api-instance-property
 tags:
   - NDEF
   - Reference
   - Web NFC
+  - Experimental
 browser-compat: api.NDEFRecord.data
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`data`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns a
@@ -15,7 +18,7 @@ property of the {{DOMxRef("NDEFRecord")}} interface returns a
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.data
 ```
 

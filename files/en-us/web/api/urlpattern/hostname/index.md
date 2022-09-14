@@ -1,6 +1,7 @@
 ---
 title: URLPattern.hostname
 slug: Web/API/URLPattern/hostname
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,7 +12,7 @@ tags:
 browser-compat: api.URLPattern.hostname
 ---
 
-{{ APIRef("URL Pattern API") }}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`hostname`** property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the hostname part

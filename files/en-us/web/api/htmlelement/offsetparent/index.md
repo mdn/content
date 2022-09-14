@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.offsetParent
 slug: Web/API/HTMLElement/offsetParent
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -9,13 +10,19 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.offsetParent
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetParent`** read-only property returns a
 reference to the element which is the closest (nearest in the containment hierarchy)
-positioned ancestor element. If there is no positioned ancestor element, the nearest
-ancestor `td`, `th`, `table` will be returned, or the
-`body` if there are no ancestor table elements either.
+positioned ancestor element.
+
+A positioned ancestor is either:
+
+- an element with a non-static position, or
+- `td`, `th`, `table` in case the element itself is static positioned.
+
+If there is no positioned ancestor element, the `body` is returned.
 
 > **Note:** `offsetParent` returns `null` in the following
 > situations:

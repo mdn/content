@@ -10,13 +10,14 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.picture-in-picture
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `picture-in-picture` directive controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: picture-in-picture <allowlist>;
 ```
 

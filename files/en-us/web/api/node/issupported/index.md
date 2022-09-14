@@ -1,12 +1,14 @@
 ---
 title: Node.isSupported()
 slug: Web/API/Node/isSupported
+page-type: web-api-instance-method
 tags:
   - Method
   - Deprecated
   - Reference
 browser-compat: api.Node.isSupported
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 The **`isSupported()`** method of the {{domxref("Node")}} interface returns a boolean
@@ -15,8 +17,8 @@ specific feature and this feature is supported by the specific node.
 
 ## Syntax
 
-```js
-isSupported(feature, version);
+```js-nolint
+isSupported(feature, version)
 ```
 
 ### Parameters
@@ -32,13 +34,12 @@ isSupported(feature, version);
 ## Example
 
 ```html
-<div id="doc">
-</div>
+<div id="doc"></div>
 
 <script>
- // Get an element and check to see if its supports the DOM2 HTML Module.
- const main = document.getElementById('doc');
- const output = main.isSupported('HTML', '2.0');
+  // Get an element and check to see if its supports the DOM2 HTML Module.
+  const main = document.getElementById("doc");
+  const output = main.isSupported("HTML", "2.0");
 </script>
 ```
 

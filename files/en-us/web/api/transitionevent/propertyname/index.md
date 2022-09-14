@@ -1,16 +1,17 @@
 ---
 title: TransitionEvent.propertyName
 slug: Web/API/TransitionEvent/propertyName
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
-  - CSS3 Transitions
-  - Experimental
+  - CSS Transitions
   - Property
   - Reference
   - TransitionEvent
 browser-compat: api.TransitionEvent.propertyName
 ---
+
 {{ apiref("CSSOM") }}
 
 The **`propertyName`** read-only property of {{domxref("TransitionEvent")}} objects is a string containing the name of the CSS property associated with the transition.

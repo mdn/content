@@ -1,6 +1,7 @@
 ---
 title: ClipboardItem
 slug: Web/API/ClipboardItem
+page-type: web-api-interface
 tags:
   - API
   - Clipboard
@@ -13,6 +14,7 @@ tags:
   - paste
 browser-compat: api.ClipboardItem
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The **`ClipboardItem`** interface of the {{domxref('Clipboard API')}} represents a single item format, used when reading or writing data via the {{domxref('Clipboard API')}}. That is {{domxref("clipboard.read()")}} and {{domxref("clipboard.write()")}} respectively.
@@ -28,7 +30,7 @@ Access to the contents of the clipboard is gated behind the [Permissions API](/e
 ## Constructor
 
 - {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}}
-  - : Creates a new **`ClipboardItem`** object, with the {{Glossary("MIME type")}} as the key and {{domxref("Blob")}} as the value
+  - : Creates a new **`ClipboardItem`** object, with the {{Glossary("MIME type")}} as the key and {{domxref("Blob")}} as the value.
 
 ## Properties
 
@@ -65,7 +67,7 @@ async function writeClipImg() {
       })
     ]);
     console.log('Fetched image copied.');
-  } catch(err) {
+  } catch (err) {
     console.error(err.name, err.message);
   }
 }

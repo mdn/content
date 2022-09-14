@@ -16,6 +16,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-decoration-color
 ---
+
 {{ CSSRef }}
 
 The **`text-decoration-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of decorations added to text by {{ cssxref("text-decoration-line") }}.
@@ -72,8 +73,10 @@ Color alone should not be used to convey meaning. For example, change of text an
 ### Basic example
 
 ```html
-<p>This paragraph has <s>some erroneous text</s>
-    inside it that I want to call attention to.</p>
+<p>
+  This paragraph has <s>some erroneous text</s> inside it that I want to call
+  attention to.
+</p>
 ```
 
 ```css

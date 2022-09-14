@@ -15,6 +15,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.initial-letter-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`initial-letter-align`** CSS property specifies the alignment of initial letters within a paragraph.

@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.getVoices()
 slug: Web/API/SpeechSynthesis/getVoices
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -12,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.getVoices
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`getVoices()`** method of the
@@ -21,7 +23,7 @@ current device.
 
 ## Syntax
 
-```js
+```js-nolint
 getVoices()
 ```
 
@@ -39,18 +41,18 @@ A list (array) of {{domxref("SpeechSynthesisVoice")}} objects.
 
 ```js
 function populateVoiceList() {
-  if(typeof speechSynthesis === 'undefined') {
+  if (typeof speechSynthesis === 'undefined') {
     return;
   }
 
-  var voices = speechSynthesis.getVoices();
+  const voices = speechSynthesis.getVoices();
 
-  for(var i = 0; i < voices.length; i++) {
-    var option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+  for (let i = 0; i < voices.length; i++) {
+    const option = document.createElement('option');
+    option.textContent = `${voices[i].name} (${voices[i].lang})`;
 
-    if(voices[i].default) {
-      option.textContent += ' -- DEFAULT';
+    if (voices[i].default) {
+      option.textContent += ' — DEFAULT';
     }
 
     option.setAttribute('data-lang', voices[i].lang);

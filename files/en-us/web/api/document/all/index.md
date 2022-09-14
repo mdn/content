@@ -1,6 +1,7 @@
 ---
 title: Document.all
 slug: Web/API/Document/all
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -12,6 +13,7 @@ tags:
   - all
 browser-compat: api.Document.all
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{DOMxRef("Document")}} interface's read-only **`all`**

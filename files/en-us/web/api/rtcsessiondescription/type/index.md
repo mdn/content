@@ -1,8 +1,8 @@
 ---
 title: RTCSessionDescription.type
 slug: Web/API/RTCSessionDescription/type
+page-type: web-api-instance-property
 tags:
-  - Experimental
   - Property
   - RTCSessionDescription
   - Reference
@@ -12,16 +12,16 @@ tags:
 browser-compat: api.RTCSessionDescription.type
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}
 
 The property **`RTCSessionDescription.type`** is a read-only
 string value which describes the description's type.
 
 ## Syntax
 
-```js
-var value = sessionDescription.type;
-sessionDescription.type = value;
+```js-nolint
+const value = sessionDescription.type
+sessionDescription.type = value
 ```
 
 ### Value

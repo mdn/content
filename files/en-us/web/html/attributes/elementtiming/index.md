@@ -8,19 +8,18 @@ tags:
   - elementtiming
   - Performance
   - Reference
-spec-urls: https://wicg.github.io/element-timing/forms.html#attr-label-for
 ---
 
 {{HTMLSidebar}}
 
-The **`elementtiming`** attribute is used to indicate that an element is flagged for tracking by the {{domxref("Element Timing API")}}. This attribute may be applied to {{htmlelement("img")}}, {{SVGElement("image")}} elements inside an {{htmlelement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and elements containing text nodes, such as a {{htmlelement("p")}}.
+The **`elementtiming`** attribute is used to indicate that an element is flagged for tracking by the {{domxref("Element Timing API")}}. This attribute may be applied to {{htmlelement("img")}}, {{SVGElement("image")}} elements inside an {{SVGElement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and elements containing text nodes, such as a {{htmlelement("p")}}.
 
 ## Usage
 
 The value given for `elementtiming` becomes an identifier for the observed element.
 
 ```html
-<img alt="alt" src="img.jpg" elementtiming="label for element">
+<img alt="alt" src="img.jpg" elementtiming="label for element" />
 ```
 
 Good contenders for elements you might want to observe are:
@@ -37,14 +36,6 @@ Good contenders for elements you might want to observe are:
 
 <p elementtiming="important-text">Some very important information.</p">
 ```
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat("html.elements.attribute.elementtiming")}}
 
 ## See also
 

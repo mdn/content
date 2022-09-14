@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.pathname
 slug: Web/API/HTMLAreaElement/pathname
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAreaElement
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.pathname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.pathname`** property is a

@@ -1,6 +1,7 @@
 ---
 title: 'Window: offline event'
 slug: Web/API/Window/offline_event
+page-type: web-api-event
 tags:
   - API
   - Event
@@ -9,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.offline_event
 ---
+
 {{APIRef}}
 
 The **`offline`** event of the {{domxref("Window")}} interface is fired when the browser has lost access to the network and the value of {{domxref("Navigator.onLine")}} switches to `false`.
@@ -18,8 +20,8 @@ The **`offline`** event of the {{domxref("Window")}} interface is fired when the
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('offline', event => { });
-onoffline = event => { };
+addEventListener('offline', (event) => { });
+onoffline = (event) => { };
 ```
 
 ## Event type

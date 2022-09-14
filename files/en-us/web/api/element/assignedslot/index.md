@@ -1,6 +1,7 @@
 ---
 title: Element.assignedSlot
 slug: Web/API/Element/assignedSlot
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - shadow DOM
 browser-compat: api.Element.assignedSlot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`assignedSlot`** read-only

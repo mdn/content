@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.tiltX
 slug: Web/API/PointerEvent/tiltX
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.tiltX
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`tiltX`** read-only property of the
@@ -17,8 +19,7 @@ The **`tiltX`** read-only property of the
 plane_ of the pointer and the screen. This property is typically only useful for a
 pen/stylus pointer type.
 
-For an illustration of this property see [Figure 2 in the
-specification](https://w3c.github.io/pointerevents/#dom-pointerevent-tiltx).
+For an illustration of this property see [Figure 2 in the specification](https://w3c.github.io/pointerevents/#dom-pointerevent-tiltx).
 
 ## Value
 
@@ -30,7 +31,7 @@ This example illustrates simple accessing of the `tiltX` and
 {{domxref("PointerEvent.tiltY","tiltY")}} properties.
 
 ```js
-someElement.addEventListener("pointerdown", function(event) {
+someElement.addEventListener("pointerdown", (event) => {
   process_tilt(event.tiltX, event.tiltY);
 }, false);
 ```

@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.sizes
 slug: Web/API/HTMLImageElement/sizes
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -15,6 +16,7 @@ tags:
   - width
 browser-compat: api.HTMLImageElement.sizes
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property
@@ -35,7 +37,7 @@ comprised of a media condition, then at least one whitespace character, then the
 **source size value** to use for the image when the media condition
 evaluates to `true`.
 
-#### Media conditions
+### Media conditions
 
 Each source size descriptor consists of a media condition as defined by the media
 queries standard. Because a source size descriptor is used to specify the width to use
@@ -44,7 +46,7 @@ necessarily) based entirely on width information. See
 {{SectionOnPage("/en-US/docs/Web/CSS/Media_Queries/Using_media_queries", "Syntax")}} for
 details on how to construct a media condition.
 
-#### Source size values
+### Source size values
 
 The source size value is a [CSS length](/en-US/docs/Web/CSS/length). It may
 be specified using font-relative units (such as `em` or `ex`),
@@ -59,6 +61,8 @@ unit, which lets you specify the width as a percentage of the viewport width
 
 ## Examples
 
+### Selecting an image to fit window width
+
 In this example, a blog-like layout is created, displaying some text and an image which
 for which three size points are specified, depending on the width of the window. Three
 versions of the image are also available, with their widths specified. The browser takes
@@ -72,39 +76,45 @@ Buttons at the bottom of the example let you actually modify the `sizes`
 property slightly, switching the largest of the three widths for the image between 40em
 and 50em.
 
-### HTML
+#### HTML
 
 ```html
 <article>
   <h1>An amazing headline</h1>
   <div class="test"></div>
-  <p>This is even more amazing content text. It's really spectacular.
-     And fascinating. Oh, it's also clever and witty. Award-winning
-     stuff, I'm sure.</p>
-  <img src="/files/16870/new-york-skyline-wide.jpg"
-       srcset="/files/16870/new-york-skyline-wide.jpg 3724w,
-               /files/16869/new-york-skyline-4by3.jpg 1961w,
-               /files/16871/new-york-skyline-tall.jpg 1060w"
-       sizes="((min-width: 50em) and (max-width: 60em)) 50em,
+  <p>
+    This is even more amazing content text. It's really spectacular. And
+    fascinating. Oh, it's also clever and witty. Award-winning stuff, I'm sure.
+  </p>
+  <img
+    src="new-york-skyline-wide.jpg"
+    srcset="
+      new-york-skyline-wide.jpg 3724w,
+      new-york-skyline-4by3.jpg 1961w,
+      new-york-skyline-tall.jpg 1060w
+    "
+    sizes="((min-width: 50em) and (max-width: 60em)) 50em,
               ((min-width: 30em) and (max-width: 50em)) 30em,
-              (max-width: 30em) 20em">
-  <p>Then there's even more amazing stuff to say down here. Can you
-     believe it? I sure can't.</p>
+              (max-width: 30em) 20em"
+    alt="The New York City skyline on a beautiful day, with the One World Trade Center building in the middle." />
+  <p>
+    Then there's even more amazing stuff to say down here. Can you believe it? I
+    sure can't.
+  </p>
 
   <button id="break40">Last Width: 40em</button>
   <button id="break50">Last Width: 50em</button>
 </article>
 ```
 
-### CSS
+#### CSS
 
 ```css
 article {
   margin: 1em;
   max-width: 60em;
   min-width: 20em;
-  height: 100vh;
-  border: 4em solid #880E4F;
+  border: 4em solid #880e4f;
   border-radius: 7em;
   padding: 1.5em;
   font: 16px "Open Sans", Verdana, Arial, Helvetica, sans-serif;
@@ -119,7 +129,7 @@ article img {
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 The JavaScript code handles the two buttons that let you toggle the third width option
 between 40em and 50em; this is done by handling the {{domxref("Element.click_event",
@@ -127,22 +137,22 @@ between 40em and 50em; this is done by handling the {{domxref("Element.click_eve
   "replace()")}} to replace the relevant portion of the `sizes` string.
 
 ```js
-let image = document.querySelector("article img");
-let break40 = document.getElementById("break40");
-let break50 = document.getElementById("break50");
+const image = document.querySelector("article img");
+const break40 = document.getElementById("break40");
+const break50 = document.getElementById("break50");
 
 break40.addEventListener("click",
-    event => image.sizes = image.sizes.replace(/50em,/, "40em,"));
+    () => image.sizes = image.sizes.replace(/50em,/, "40em,"));
 
 break50.addEventListener("click",
-    event => image.sizes = image.sizes.replace(/40em,/, "50em,"));
+    () => image.sizes = image.sizes.replace(/40em,/, "50em,"));
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Example", 900, 850)}}
+{{EmbedLiveSample("Selecting an image to fit window width", "", 1050)}}
 
-This result may be {{LiveSampleLink('Example', 'viewed in its own window')}}.
+The page is best {{LiveSampleLink('Selecting an image to fit window width', 'viewed in its own window')}}, so you can adjust the sizes fully.
 
 ## Specifications
 
@@ -155,9 +165,6 @@ This result may be {{LiveSampleLink('Example', 'viewed in its own window')}}.
 ## See also
 
 - [Media queries](/en-US/docs/Web/CSS/Media_Queries)
-- [Using media
-  queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Images in
-  HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive
-  images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

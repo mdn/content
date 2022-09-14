@@ -1,11 +1,13 @@
 ---
 title: DOMTokenList.supports()
 slug: Web/API/DOMTokenList/supports
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.DOMTokenList.supports
 ---
+
 {{APIRef("DOM")}}
 
 The **`supports()`** method of the {{domxref("DOMTokenList")}} interface
@@ -14,8 +16,8 @@ This method is intended to support feature detection.
 
 ## Syntax
 
-```js
-supports(token);
+```js-nolint
+supports(token)
 ```
 
 ### Parameters

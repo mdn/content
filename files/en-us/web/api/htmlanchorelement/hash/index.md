@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.hash
 slug: Web/API/HTMLAnchorElement/hash
+page-type: web-api-instance-property
 tags:
   - API
   - HTMLAnchorElement
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.hash
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The

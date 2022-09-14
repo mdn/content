@@ -8,6 +8,7 @@ tags:
   - SVG Attribute
   - filter
 ---
+
 {{SVGRef}}
 
 The `type` attribute is a generic attribute and it has different meaning based on the context in which it's used.

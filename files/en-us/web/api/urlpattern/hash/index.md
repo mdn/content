@@ -1,6 +1,7 @@
 ---
 title: URLPattern.hash
 slug: Web/API/URLPattern/hash
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,7 +12,7 @@ tags:
 browser-compat: api.URLPattern.hash
 ---
 
-{{ APIRef("URL Pattern API") }}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`hash`** property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the fragment part

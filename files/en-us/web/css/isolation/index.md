@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.isolation
 ---
+
 {{CSSRef}}
 
 The **`isolation`** [CSS](/en-US/docs/Web/CSS) property determines whether an element must create a new {{glossary("stacking context")}}.
@@ -71,7 +72,7 @@ The `isolation` property is specified as one of the keyword values listed below.
 
 ```css
 .a {
-  background-color: rgb(0,255,0);
+  background-color: rgb(0, 255, 0);
 }
 #b {
   width: 200px;

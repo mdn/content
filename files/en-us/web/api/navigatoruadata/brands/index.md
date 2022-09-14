@@ -1,15 +1,18 @@
 ---
 title: NavigatorUAData.brands
 slug: Web/API/NavigatorUAData/brands
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - brands
   - NavigatorUAData
+  - Experimental
 browser-compat: api.NavigatorUAData.brands
 ---
-{{DefaultAPISidebar("")}}
+
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
 The **`brands`** read-only property of the {{domxref("NavigatorUAData")}} interface returns an array of brand information.
 
@@ -17,9 +20,9 @@ The **`brands`** read-only property of the {{domxref("NavigatorUAData")}} interf
 
 An array containing the following information for each brand:
 
-- brand
+- `brand`
   - : A string containing the brand. For example, `"Google Chrome"`.
-- version
+- `version`
   - : A string containing the version. For example, `"91"`.
 
 ## Examples
@@ -37,3 +40,7 @@ console.log(navigator.userAgentData.brands);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{HTTPHeader("Sec-CH-UA")}} (a [low-entropy client hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints)) contains the same information.

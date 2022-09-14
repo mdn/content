@@ -10,6 +10,7 @@ tags:
   - Operator
 browser-compat: javascript.operators.yield
 ---
+
 {{jsSidebar("Operators")}}
 
 The `yield` keyword is used to pause and resume a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
@@ -18,7 +19,7 @@ The `yield` keyword is used to pause and resume a [generator function](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 [rv] = yield [expression]
 ```
 
@@ -85,10 +86,10 @@ generators offer enormous power and control.
 The following code is the declaration of an example generator function.
 
 ```js
-function* countAppleSales () {
-  let saleList = [3, 7, 5]
+function* countAppleSales() {
+  const saleList = [3, 7, 5];
   for (let i = 0; i < saleList.length; i++) {
-    yield saleList[i]
+    yield saleList[i];
   }
 }
 ```
@@ -97,28 +98,28 @@ Once a generator function is defined, it can be used by constructing an iterator
 shown.
 
 ```js
-let appleStore = countAppleSales()  // Generator { }
-console.log(appleStore.next())      // { value: 3, done: false }
-console.log(appleStore.next())      // { value: 7, done: false }
-console.log(appleStore.next())      // { value: 5, done: false }
-console.log(appleStore.next())      // { value: undefined, done: true }
+const appleStore = countAppleSales(); // Generator { }
+console.log(appleStore.next()); // { value: 3, done: false }
+console.log(appleStore.next()); // { value: 7, done: false }
+console.log(appleStore.next()); // { value: 5, done: false }
+console.log(appleStore.next()); // { value: undefined, done: true }
 ```
 
 You can also send a value with `next(value)` into the generator. `step` evaluates as a
-return value in this syntax `[_rv_] = **yield** [expression]` — although a value passed
+return value in this syntax `rv = yield expression` — although a value passed
 to the generator's `next()` method is ignored the first time `next()` is called.
 
 ```js
 function* counter(value) {
- let step;
+  let step;
 
- while (true) {
-   step = yield value++;
+  while (true) {
+    step = yield value++;
 
-   if (step) {
-     value += step;
-   }
- }
+    if (step) {
+      value += step;
+    }
+  }
 }
 
 const generatorFunc = counter(0);
@@ -143,5 +144,5 @@ console.log(generatorFunc.next(10).value); // 26
 
 - [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
+- [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield*", "yield*")}}

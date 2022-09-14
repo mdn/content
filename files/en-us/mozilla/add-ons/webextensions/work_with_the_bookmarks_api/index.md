@@ -9,6 +9,7 @@ tags:
   - How-to
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Bookmarks enable users to collect and organize lists of web pages, so they can easily get back to their favorites. Using the Bookmarks API, your extensions can manipulate bookmarks in much the same way users can.
@@ -140,7 +141,7 @@ As with any background script, [background.js](https://github.com/mdn/webextensi
     let supportedProtocols = ["https:", "http:", "file:"];
     let url = document.createElement('a');
     url.href = urlString;
-    return supportedProtocols.indexOf(url.protocol) != -1;
+    return supportedProtocols.includes(url.protocol);
   }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: History.replaceState()
 slug: Web/API/History/replaceState
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.History.replaceState
 ---
+
 {{APIRef("History API")}}
 
 The **`History.replaceState()`** method modifies the current
@@ -20,7 +22,7 @@ to some user action.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceState(stateObj, unused)
 replaceState(stateObj, unused, url)
 ```
@@ -43,7 +45,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Suppose https\://www\.mozilla.org/foo.html executes the following JavaScript:
+Suppose `https://www.mozilla.org/foo.html` executes the following JavaScript:
 
 ```js
 const stateObj = { foo: 'bar' };
@@ -68,7 +70,7 @@ Suppose now that the user navigates to
 `https://www.microsoft.com`, then clicks the Back button. At this
 point, the URL bar will display `https://www.mozilla.org/bar2.html`.
 If the user now clicks Back again, the URL bar will
-display https\://www\.mozilla.org/foo.html, and totally bypass bar.html.
+display `https://www.mozilla.org/foo.html`, and totally bypass bar.html.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: HTMLInputElement.stepUp()
 slug: Web/API/HTMLInputElement/stepUp
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Text Field Selection API
 browser-compat: api.HTMLInputElement.stepUp
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLInputElement.stepUp()`** method increments the value
@@ -118,7 +120,7 @@ table above), or if the step value is set to `any`, an
 
 ## Syntax
 
-```js
+```js-nolint
 stepUp()
 stepUp(stepIncrement)
 ```
@@ -141,24 +143,25 @@ Click the button in this example to increment the {{HTMLElement("input/number",
 
 ```html
 <p>
-  <label>Enter a number between 0 and 400 that is divisible by 5:
-   <input type="number" step="5" id="theNumber" min="0" max="400">
-  </label>
+  <label for="theNumber">Enter a number between 0 and 400 that is divisible by 5:</label>
+  <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
-  <label>Enter how many values of step you would like to increment by or leave it blank:
-   <input type="number" step="1" id="incrementor" min="0" max="25">
+  <label>
+    Enter how many values of step you would like to increment by or leave it
+    blank:
   </label>
+  <input type="number" step="1" id="incrementor" min="0" max="25" />
 </p>
-<input type="button" value="Increment" id="theButton">
+<input type="button" value="Increment" id="theButton" />
 ```
 
 ### JavaScript
 
 ```js
 /* make the button call the function */
-let button = document.getElementById('theButton')
-button.addEventListener('click', function() {
+const button = document.getElementById('theButton');
+button.addEventListener('click', () => {
   steponup()
 })
 

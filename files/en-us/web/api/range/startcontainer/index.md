@@ -1,6 +1,7 @@
 ---
 title: Range.startContainer
 slug: Web/API/Range/startContainer
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.startContainer
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.startContainer`** read-only property returns the

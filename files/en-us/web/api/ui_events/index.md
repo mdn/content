@@ -1,6 +1,7 @@
 ---
 title: UI Events
 slug: Web/API/UI_Events
+page-type: web-api-overview
 tags:
   - API
   - Overview
@@ -8,6 +9,7 @@ tags:
   - UI Events
 spec-urls: https://w3c.github.io/uievents/
 ---
+
 {{DefaultAPISidebar("UI Events")}}
 
 ## Concepts and Usage
@@ -92,8 +94,6 @@ The UI Events API defines a system for handling user interactions such as mouse 
   - : Fired when a mouse or other pointing device is moved outside the element.
 - {{domxref("Element.mouseup_event", "mouseup")}}
   - : Fired when the user releases a button on a mouse or other pointing device, while the pointer is over the element.
-- {{domxref("Element.select_event", "select")}}
-  - : Fired when the user selects some text.
 - {{domxref("Window.unload_event", "unload")}}
   - : Fired when the document or a child resource are being unloaded.
 - {{domxref("Element.wheel_event", "wheel")}}
@@ -116,7 +116,6 @@ This example logs mouse events along with the X and Y coordinates at which the e
   <pre id="contents"></pre>
   <button id="clear">Clear log</button>
 </div>
-
 ```
 
 #### CSS
@@ -146,7 +145,7 @@ body {
   height: 150px;
   width: 250px;
   border: 1px solid black;
-  padding: .5rem;
+  padding: 0.5rem;
   overflow: scroll;
 }
 ```
@@ -160,27 +159,27 @@ const contents = document.querySelector('#contents');
 const clear = document.querySelector('#clear');
 let lines = 0;
 
-outer.addEventListener('click', event => {
+outer.addEventListener('click', (event) => {
   log(event);
 });
 
-outer.addEventListener('dblclick', event => {
+outer.addEventListener('dblclick', (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseover', event => {
+outer.addEventListener('mouseover', (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseout', event => {
+outer.addEventListener('mouseout', (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseenter', event => {
+outer.addEventListener('mouseenter', (event) => {
   log(event);
 });
 
-outer.addEventListener('mouseleave', event => {
+outer.addEventListener('mouseleave', (event) => {
   log(event);
 });
 
@@ -214,7 +213,6 @@ This example logs {{domxref("Element.keydown_event", "keydown")}}, {{domxref("El
   <pre id="contents"></pre>
   <button id="clear">Clear log</button>
 </div>
-
 ```
 
 #### CSS
@@ -226,14 +224,14 @@ body {
 }
 
 #story {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 #contents {
   height: 150px;
   width: 250px;
   border: 1px solid black;
-  padding: .5rem;
+  padding: 0.5rem;
   overflow: scroll;
 }
 ```
@@ -246,15 +244,15 @@ const contents = document.querySelector('#contents');
 const clear = document.querySelector('#clear');
 let lines = 0;
 
-story.addEventListener('keydown', event => {
+story.addEventListener('keydown', (event) => {
   log(`${event.type}(${event.key})`);
 });
 
-story.addEventListener('beforeinput', event => {
+story.addEventListener('beforeinput', (event) => {
   log(`${event.type}(${event.data})`);
 });
 
-story.addEventListener('input', event => {
+story.addEventListener('input', (event) => {
   log(`${event.type}(${event.data})`);
 });
 

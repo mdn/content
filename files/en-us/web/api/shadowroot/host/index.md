@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.host
 slug: Web/API/ShadowRoot/host
+page-type: web-api-instance-property
 tags:
   - API
   - Host
@@ -10,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.host
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`host`** read-only property of
@@ -26,7 +28,7 @@ A DOM {{domxref('Element')}}.
 let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 
-  ...
+// ...
 
 // return the original host element some time later
 let hostElem = shadow.host;

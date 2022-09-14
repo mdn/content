@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTService.isPrimary
 slug: Web/API/BluetoothRemoteGATTService/isPrimary
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -12,6 +13,7 @@ tags:
   - isPrimary
 browser-compat: api.BluetoothRemoteGATTService.isPrimary
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.isPrimary`** read-only property

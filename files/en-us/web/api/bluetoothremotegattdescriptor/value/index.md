@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTDescriptor.value
 slug: Web/API/BluetoothRemoteGATTDescriptor/value
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -13,6 +14,7 @@ tags:
   - value
 browser-compat: api.BluetoothRemoteGATTDescriptor.value
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.value`**

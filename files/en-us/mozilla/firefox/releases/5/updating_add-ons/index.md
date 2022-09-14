@@ -6,6 +6,7 @@ tags:
   - Extensions
   - Firefox 5
 ---
+
 {{FirefoxSidebar}}
 
 This article provides an overview of the changes you may need to make to your add-ons in order for them to work properly in Firefox 5. You can find a complete list of developer-related changes in Firefox 5 in [Firefox 5 for developers](/en-US/docs/Mozilla/Firefox/Releases/5).
@@ -56,10 +57,10 @@ To fix this, move your instantiation of these services into your `load` event ha
 ```js
 var MyObject = {
   comp : null,
-  init: function() {
-    this.comp = Components.classes[...].getService(...);
+  init() {
+    this.comp = Components.classes["…"].getService(/* … */);
   },
-  ...
+  // …
 }
 window.addEventListener("load", function() { MyObject.init(); }, false);
 ```

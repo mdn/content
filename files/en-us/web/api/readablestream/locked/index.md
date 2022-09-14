@@ -1,6 +1,7 @@
 ---
 title: ReadableStream.locked
 slug: Web/API/ReadableStream/locked
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - locked
 browser-compat: api.ReadableStream.locked
 ---
+
 {{APIRef("Streams")}}
 
 The **`locked`** read-only property of the {{domxref("ReadableStream")}} interface returns whether or not the readable stream is locked to a reader.
@@ -25,7 +27,7 @@ A {{Glossary("boolean")}} value indicating whether or not the readable stream is
 
 ```js
 const stream = new ReadableStream({
-  ...
+  // ...
 });
 
 const reader = stream.getReader();

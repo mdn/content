@@ -8,8 +8,12 @@ tags:
   - NeedsContent
   - Overview
   - Reference
-spec-urls: https://drafts.csswg.org/css-counter-styles/
+browser-compat:
+  - css.at-rules.counter-style
+  - css.properties.counter-increment
+  - css.properties.counter-reset
 ---
+
 {{CSSRef}}
 
 **CSS Counter Styles** is a module of CSS that lets you define your own counter styles.
@@ -50,14 +54,4 @@ spec-urls: https://drafts.csswg.org/css-counter-styles/
 
 ## Browser compatibility
 
-### `@counter-style` rule
-
-{{Compat("css.at-rules.counter-style")}}
-
-### `counter-increment` property
-
-{{Compat("css.properties.counter-increment")}}
-
-### `counter-reset` property
-
-{{Compat("css.properties.counter-reset")}}
+{{Compat}}

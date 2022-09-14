@@ -1,6 +1,7 @@
 ---
 title: MediaSession.playbackState
 slug: Web/API/MediaSession/playbackState
+page-type: web-api-instance-property
 tags:
   - Audio
   - Media
@@ -12,20 +13,14 @@ tags:
   - playbackState
 browser-compat: api.MediaSession.playbackState
 ---
+
 {{APIRef("Media Session API")}}
 
 The **`playbackState`** property of the
 {{domxref("MediaSession")}} interface indicates whether the current media session is
 playing or paused.
 
-## Syntax
-
-```js
-let playbackState = mediaSession.playbackState;
-mediaSession.playbackState = playbackState;
-```
-
-### Value
+## Value
 
 A string indicating the current playback state of the media session.
 The value may be one of the following:
@@ -49,13 +44,13 @@ const actionHandlers = [
   // play
   [
     'play',
-    async function() {
+    async () => {
       // play our audio
       await audioEl.play();
       // set playback state
       navigator.mediaSession.playbackState = "playing";
       // update our status element
-      updateStatus(allMeta[index], 'Action: play  |  Track is playing...')
+      updateStatus(allMeta[index], 'Action: play  |  Track is playing…')
     }
   ],
   [
@@ -66,7 +61,7 @@ const actionHandlers = [
       // set playback state
       navigator.mediaSession.playbackState = "paused";
       // update our status element
-      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused...');
+      updateStatus(allMeta[index], 'Action: pause  |  Track has been paused…');
     }
   ],
 ]

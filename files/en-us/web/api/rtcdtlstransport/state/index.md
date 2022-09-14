@@ -1,6 +1,7 @@
 ---
 title: RTCDtlsTransport.state
 slug: Web/API/RTCDtlsTransport/state
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - state
 browser-compat: api.RTCDtlsTransport.state
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`state`** read-only property of the

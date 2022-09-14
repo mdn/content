@@ -1,6 +1,7 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -17,11 +18,12 @@ tags:
   - user input
 browser-compat: api.KeyboardEvent
 ---
+
 {{APIRef("UI Events")}}
 
-**`KeyboardEvent`** objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type ({{event('keydown')}}, {{event('keypress')}}, or {{event('keyup')}}) identifies what kind of keyboard activity occurred.
+**`KeyboardEvent`** objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type ({{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, or {{domxref("Element/keyup_event", "keyup")}}) identifies what kind of keyboard activity occurred.
 
-> **Note:** `KeyboardEvent` events just indicate what interaction the user had with a key on the keyboard at a low level, providing no contextual meaning to that interaction. When you need to handle text input, use the {{event("input")}} event instead. Keyboard events may not be fired if the user is using an alternate means of entering text, such as a handwriting system on a tablet or graphics tablet.
+> **Note:** `KeyboardEvent` events just indicate what interaction the user had with a key on the keyboard at a low level, providing no contextual meaning to that interaction. When you need to handle text input, use the {{domxref("HTMLElement/input_event", "input")}} event instead. Keyboard events may not be fired if the user is using an alternate means of entering text, such as a handwriting system on a tablet or graphics tablet.
 
 {{InheritanceDiagram}}
 
@@ -119,39 +121,39 @@ The following constants identify which part of the keyboard the key event origin
 
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-- {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
+- {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
 
-  - : Returns a boolean value that is `true` if the  <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
+  - : Returns a boolean value that is `true` if the <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
 
-- {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
+- {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
 
   - : Returns a string with the code value of the physical key represented by the event.
 
     > **Warning:** This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.
 
-- {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
+- {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
 
   - : Returns a boolean value that is `true` if the <kbd>Ctrl</kbd> key was active when the key event was generated.
 
-- {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
+- {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
   - : Returns a boolean value that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
-- {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
+- {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
   - : Returns a string representing the key value of the key represented by the event.
-- {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
+- {{domxref("KeyboardEvent.locale")}} {{ReadOnlyInline}}
 
   - : Returns a string representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
 
     > **Note:** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
 
-- {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
-  - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in [Keyboard locations](#keyboard_locations).
-- {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
+- {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
+  - : Returns a number representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in [Keyboard locations](#keyboard_locations).
+- {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
 
   - : Returns a boolean value that is `true` if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.
 
-- {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
+- {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
   - : Returns a boolean value that is `true` if the key is being held down such that it is automatically repeating.
-- {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
+- {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
 
   - : Returns a boolean value that is `true` if the <kbd>Shift</kbd> key was active when the key event was generated.
 
@@ -172,51 +174,51 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 ## Obsolete properties
 
-- {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
+- {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}} {{Deprecated_inline}} {{ReadOnlyInline}}
 
   - : Returns a string representing the character value of the key. If the key corresponds to a printable character, this value is a non-empty Unicode string containing that character. If the key doesn't have a printable representation, this is an empty string.
 
-    > **Note:** If the key is used as a macro that inserts multiple characters, this attribute's value is the entire string, not just the first character.
+    > **Note:** If the key is used as a macro that inserts multiple characters, this property's value is the entire string, not just the first character.
 
-- {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
+- {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}} {{ReadOnlyInline}}
 
-  - : Returns a {{jsxref("Number")}} representing the Unicode reference number of the key; this attribute is used only by the `keypress` event. For keys whose `char` attribute contains multiple characters, this is the Unicode value of the first character in that attribute. In Firefox 26 this returns codes for printable characters.
+  - : Returns a number representing the Unicode reference number of the key; this property is used only by the `keypress` event. For keys whose `char` property contains multiple characters, this is the Unicode value of the first character in that property. In Firefox 26 this returns codes for printable characters.
 
-    > **Warning:** This attribute is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.
+    > **Warning:** This property is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.
 
-- {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}
+- {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}} {{ReadOnlyInline}}
 
-  - : Returns a {{jsxref("Number")}} representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
+  - : Returns a number representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
-    > **Warning:** This attribute is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.
+    > **Warning:** This property is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.
 
-- {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
+- {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : This property is non-standard and has been deprecated in favor of {{domxref("KeyboardEvent.key")}}. It was part of an old version of DOM Level 3 Events.
-- {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
+- {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : This is a non-standard deprecated alias for {{domxref("KeyboardEvent.location")}}. It was part of an old version of DOM Level 3 Events.
-- {{domxref("KeyboardEvent.which")}} {{deprecated_inline}} {{Readonlyinline}}
+- {{domxref("KeyboardEvent.which")}} {{deprecated_inline}} {{ReadOnlyInline}}
 
-  - : Returns a {{jsxref("Number")}} representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
+  - : Returns a number representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
 
-    > **Warning:** This attribute is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.
+    > **Warning:** This property is deprecated; you should use {{domxref("KeyboardEvent.key")}} instead, if available.
 
 ## Events
 
-The following events are based on the `KeyboardEvent` type. They can be delivered to any object which implements {{domxref("GlobalEventHandlers")}}, including {{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("Window")}}. In the list below, each event links to the documentation for the `Document` handler for the event, which applies generally to all of the recipients.
+The following events are based on the `KeyboardEvent` type. In the list below, each event links to the documentation for the `Element` handler for the event, which applies generally to all of the recipients, including {{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("Window")}}.
 
-- {{domxref("Document.keydown_event", "keydown")}}
+- {{domxref("Element.keydown_event", "keydown")}}
   - : A key has been pressed.
-- {{domxref("Document.keyup_event", "keyup")}}
+- {{domxref("Element.keyup_event", "keyup")}}
   - : A key has been released.
 
 ### Obsolete events
 
-- {{domxref("Document.keypress_event", "keypress")}} {{deprecated_inline}}
+- {{domxref("Element.keypress_event", "keypress")}} {{deprecated_inline}}
   - : A key that normally produces a character value has been pressed. This event was highly device-dependent and is obsolete. You should not use it.
 
 ## Usage notes
 
-There are three types of keyboard events: {{event("keydown")}}, {{event("keypress")}}, and {{event("keyup")}}. For most keys, Gecko dispatches a sequence of key events like this:
+There are three types of keyboard events: {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keypress_event", "keypress")}}, and {{domxref("Element/keyup_event", "keyup")}}. For most keys, Gecko dispatches a sequence of key events like this:
 
 1. When the key is first pressed, the `keydown` event is sent.
 2. If the key is not a modifier key, the `keypress` event is sent.
@@ -258,30 +260,9 @@ In some GTK-based environments, auto-repeat dispatches a native key-up event aut
 
 In these environments, unfortunately, there's no way for web content to tell the difference between auto-repeating keys and keys that are just being pressed repeatedly.
 
-#### Auto-repeat handling prior to Gecko 5.0
-
-Before Gecko 5.0 {{geckoRelease('5.0')}}, keyboard handling was less consistent across platforms.
-
-- Windows
-  - : Auto-repeat behavior is the same as in Gecko 4.0 and later.
-- Mac
-  - : After the initial keydown event, only keypress events are sent until the keyup event occurs; the inter-spaced keydown events are not sent.
-- Linux
-  - : The event behavior depends on the specific platform. It will either behave like Windows or Mac depending on what the native event model does.
-
-> **Note:** Manually firing an event does _not_ generate the default action associated with that event.
-> For example, manually firing a key event does not cause that letter to appear in a focused text input.
-> In the case of UI events, this is important for security reasons, as it prevents scripts from simulating user actions that interact with the browser itself.
-
 ## Example
 
 ```js
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-'use strict';
-
 document.addEventListener('keydown', (event) => {
   const keyName = event.key;
 
@@ -308,13 +289,6 @@ document.addEventListener('keyup', (event) => {
     alert('Control key was released');
   }
 }, false);
-
-</script>
-</head>
-
-<body>
-</body>
-</html>
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: MediaMetadata.album
 slug: Web/API/MediaMetadata/album
+page-type: web-api-instance-property
 tags:
   - API
   - MediaMetadata
@@ -8,7 +9,8 @@ tags:
   - Reference
 browser-compat: api.MediaMetadata.album
 ---
-{{SeeCompatTable}}{{APIRef("Media Session API")}}
+
+{{APIRef("Media Session API")}}
 
 The **`album`** property of the
 {{domxref("MediaMetaData")}} interface returns or sets the name of the album or
@@ -38,6 +40,7 @@ if ('mediaSession' in navigator) {
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
   });
+}
 ```
 
 ## Specifications

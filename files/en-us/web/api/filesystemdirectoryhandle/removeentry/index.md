@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle.removeEntry()
 slug: Web/API/FileSystemDirectoryHandle/removeEntry
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -9,6 +10,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.removeEntry
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`removeEntry()`** method of the
@@ -17,7 +19,7 @@ directory handle contains a file or directory called the name specified.
 
 ## Syntax
 
-```js
+```js-nolint
 removeEntry(name)
 removeEntry(name, options)
 ```
@@ -58,7 +60,7 @@ The following example removes an entry within the directory handle.
 const entryName = 'entryToRemove';
 
 // assuming we have a directory handle: 'currentDirHandle'
-currentDirHandle.removeEntry(entryName).then( () => {
+currentDirHandle.removeEntry(entryName).then(() => {
   // code to run if removing was successful
 } );
 ```
@@ -74,5 +76,4 @@ currentDirHandle.removeEntry(entryName).then( () => {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

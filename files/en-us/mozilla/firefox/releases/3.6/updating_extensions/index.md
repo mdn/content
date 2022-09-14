@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Firefox 3.6
 ---
+
 {{FirefoxSidebar}}
 
 This article provides helpful information to extension developers trying to update their extensions to work properly in Firefox 3.6.
@@ -29,17 +30,17 @@ The DOM Level 2 views to HTML and XHTML documents are now unified per HTML 5.
   to work in HTML documents.
 - The [`name`](/en-US/docs/Web/XPath/Functions/name) and the [`local-name`](/en-US/docs/Web/XPath/Functions/local-name) functions in XPath returns the name of HTML elements in lower case. Previously, in HTML documents, they returned it in upper case.
 
-The most probable upgrade problem is the pattern `if (elt.localName == "FOO")`.
+The most probable upgrade problem is the pattern `if (elt.localName === "FOO")`.
 
 ### Example: Testing if an element is an HTML img element
 
 #### Firefox 3.6, both text/html and application/xhtml+xml
 
-`if (elt.localName == "img" && elt.namespaceURI == "http://www.w3.org/1999/xhtml")`
+`if (elt.localName === "img" && elt.namespaceURI === "http://www.w3.org/1999/xhtml")`
 
 #### Firefox 3.5 and 3.6, only extension-supplied text/html without foreign (e.g. SVG) script-inserted elements
 
-`if (elt.tagName == "IMG")`
+`if (elt.tagName === "IMG")`
 
 #### Firefox 3.5 and 3.6, both text/html and application/xhtml+xml
 

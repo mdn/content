@@ -1,6 +1,7 @@
 ---
 title: RTCTrackEvent.transceiver
 slug: Web/API/RTCTrackEvent/transceiver
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -14,6 +15,7 @@ tags:
   - events
 browser-compat: api.RTCTrackEvent.transceiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC API interface {{domxref("RTCTrackEvent")}}'s

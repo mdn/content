@@ -1,6 +1,7 @@
 ---
 title: Headers()
 slug: Web/API/Headers/Headers
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Headers.Headers
 ---
+
 {{APIRef("Fetch")}}
 
 The **`Headers()`** constructor creates a new
@@ -15,7 +17,7 @@ The **`Headers()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new Headers()
 new Headers(init)
 ```
@@ -34,7 +36,7 @@ new Headers(init)
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 ```
 
 You could add a header to this using {{domxref("Headers.append")}}:
@@ -49,15 +51,15 @@ the following snippet we create a new {{domxref("Headers")}} object, adding some
 by passing the constructor an init object as an argument:
 
 ```js
-var httpHeaders = { 'Content-Type' : 'image/jpeg', 'X-My-Custom-Header' : 'Zeke are cool' };
-var myHeaders = new Headers(httpHeaders);
+const httpHeaders = { 'Content-Type' : 'image/jpeg', 'X-My-Custom-Header' : 'Zeke are cool' };
+const myHeaders = new Headers(httpHeaders);
 ```
 
 You can now create another `Headers` object, passing it the first
 `Headers` object as its init object:
 
 ```js
-var secondHeadersObj = new Headers(myHeaders);
+const secondHeadersObj = new Headers(myHeaders);
 secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object
 ```
 
@@ -66,11 +68,11 @@ the following snippet we create a new {{domxref("Headers")}} object with multipl
 by passing the constructor an init array as an argument:
 
 ```js
-var headers = [
+const headers = [
   ['Set-Cookie', 'greeting=hello'],
   ['Set-Cookie', 'name=world']
 ];
-var myHeaders = new Headers(headers);
+const myHeaders = new Headers(headers);
 ```
 
 ## Specifications

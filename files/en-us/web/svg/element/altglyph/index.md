@@ -9,6 +9,7 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.altGlyph
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<altGlyph>`** SVG element allows sophisticated selection of the glyphs used to render its child character data.
@@ -19,34 +20,34 @@ The **`<altGlyph>`** SVG element allows sophisticated selection of the glyphs us
 
 ## Attributes
 
-- {{SVGAttr("x")}}
+- {{SVGAttr("x")}} {{Deprecated_Inline}}
   - : This attribute defines the corresponding absolute x-coordinates for rendering the element.
-    *Value type*: [**\<list-of-coordinates>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; *Default value*: Absolute x-coordinate of ancestor {{SVGElement("text")}} or {{SVGElement("tspan")}}; *Animatable*: **yes**
-- {{SVGAttr("y")}}
+    _Value type_: [**\<list-of-coordinates>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; _Default value_: Absolute x-coordinate of ancestor {{SVGElement("text")}} or {{SVGElement("tspan")}}; _Animatable_: **yes**
+- {{SVGAttr("y")}} {{Deprecated_Inline}}
   - : This attribute defines the corresponding absolute y-coordinates for rendering the element.
-    *Value type*: [**\<list-of-coordinates>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; *Default value*: Absolute y-coordinate of ancestor {{SVGElement("text")}} or {{SVGElement("tspan")}}; *Animatable*: **yes**
-- {{SVGAttr("dx")}}
+    _Value type_: [**\<list-of-coordinates>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; _Default value_: Absolute y-coordinate of ancestor {{SVGElement("text")}} or {{SVGElement("tspan")}}; _Animatable_: **yes**
+- {{SVGAttr("dx")}} {{Deprecated_Inline}}
   - : This attribute indicates a shift along the x-axis on the position of the element.
-    *Value type*: [**\<list-of-coordinates>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; *Default value*: Relative x-coordinate of ancestor {{SVGElement("text")}} or {{SVGElement("tspan")}}; *Animatable*: **yes**
-- {{SVGAttr("dy")}}
+    _Value type_: [**\<list-of-coordinates>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; _Default value_: Relative x-coordinate of ancestor {{SVGElement("text")}} or {{SVGElement("tspan")}}; _Animatable_: **yes**
+- {{SVGAttr("dy")}} {{Deprecated_Inline}}
   - : This attribute indicates a shift along the x-axis on the position of the element.
-    *Value type*: [**\<list-of-coordinates>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; *Default value*: Relative y-coordinate of ancestor {{SVGElement("text")}} or {{SVGElement("tspan")}}; *Animatable*: **yes**
-- {{SVGAttr("rotate")}}
+    _Value type_: [**\<list-of-coordinates>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; _Default value_: Relative y-coordinate of ancestor {{SVGElement("text")}} or {{SVGElement("tspan")}}; _Animatable_: **yes**
+- {{SVGAttr("rotate")}} {{Deprecated_Inline}}
   - : This attribute defines the supplemental rotation that will be applied to the element.
-    *Value type*: [**\<list-of-numbers>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; *Default value*: *none*; *Animatable*: **yes (non-additive)**
-- {{SVGAttr("glyphRef")}}
+    _Value type_: [**\<list-of-numbers>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; _Default value_: _none_; _Animatable_: **yes (non-additive)**
+- {{SVGAttr("glyphRef")}} {{Deprecated_Inline}}
   - : The glyph identifier, the format of which is dependent on the format defined by the `format` attribute of the given font.
-    *Value type*: **\<string>** ; *Default value*: *none*; *Animatable*: **no**
-- {{SVGAttr("format")}}
+    _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
+- {{SVGAttr("format")}} {{Deprecated_Inline}}
   - : The format of the given font.
-    *Value type*: **\<string**[**>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: *none*; *Animatable*: **no**
+    _Value type_: **\<string**[**>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("xlink:href")}}
   - : An [\<iri>](/en-US/docs/Web/SVG/Content_type#iri) reference either to a {{SVGElement("glyph")}} element in an SVG document or to an {{SVGElement("altGlyphDef")}} element.
 
     If the reference is to a {{SVGElement("glyph")}} element and that glyph is available, then that glyph is rendered instead of the character(s) that are inside of the {{SVGElement("altGlyph")}} element.
 
     If the reference is to an {{SVGElement("altGlyphDef")}} element, then if an appropriate set of alternate glyphs is located from processing the {{SVGElement("altGlyphDef")}} element, then those alternate glyphs are rendered instead of the character(s) that are inside of the {{SVGElement("altGlyph")}} element.
-    *Value type*: [**\<iri**](/en-US/docs/Web/SVG/Content_type#iri)[**>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: *none*; *Animatable*: **no**
+    _Value type_: [**\<iri**](/en-US/docs/Web/SVG/Content_type#iri)[**>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **no**
 
 ### Global attributes
 

@@ -12,6 +12,7 @@ tags:
   - exports
 browser-compat: javascript.builtins.WebAssembly.Module.exports
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Module.exports()`** function returns an
@@ -20,7 +21,7 @@ array containing descriptions of all the declared exports of the given
 
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.Module.exports(module)
 ```
 
@@ -48,40 +49,38 @@ compiles the loaded simple.wasm byte code using the
 {{jsxref("WebAssembly.compileStreaming()")}} method and then sends it to a [worker](/en-US/docs/Web/API/Web_Workers_API) using [postMessage()](/en-US/docs/Web/API/Worker/postMessage).
 
 ```js
-var worker = new Worker("wasm_worker.js");
+const worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(mod =>
-  worker.postMessage(mod)
-);
+  .then((mod) => worker.postMessage(mod));
 ```
 
 In the worker (see
 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js))
 we define an import object for the module to use, then set up an event handler to
-receive the module from the main thread. when the module is received, we create an
+receive the module from the main thread. When the module is received, we create an
 instance from it using the {{jsxref("WebAssembly.Instantiate()")}} method, invoke an
 exported function from inside it, then show how we can return information on the
 available exports on a module using `WebAssembly.Module.exports`.
 
 ```js
-var importObject = {
+const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func(arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
+onmessage = (e) => {
   console.log('module received from main thread');
-  var mod = e.data;
+  const mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then((instance) => {
     instance.exports.exported_func();
   });
 
-  var exports = WebAssembly.Module.exports(mod);
+  const exports = WebAssembly.Module.exports(mod);
   console.log(exports[0]);
 };
 ```

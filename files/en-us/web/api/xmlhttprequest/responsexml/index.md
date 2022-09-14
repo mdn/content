@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.responseXML
 slug: Web/API/XMLHttpRequest/responseXML
+page-type: web-api-instance-property
 tags:
   - AJAX
   - API
@@ -18,6 +19,7 @@ tags:
   - upload
 browser-compat: api.XMLHttpRequest.responseXML
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The **`XMLHttpRequest.responseXML`** read-only property returns
@@ -55,7 +57,7 @@ data is not XML/HTML.
 ## Examples
 
 ```js
-var xhr = new XMLHttpRequest;
+const xhr = new XMLHttpRequest;
 xhr.open('GET', '/server');
 
 // If specified, responseType must be empty string or "document"
@@ -64,7 +66,7 @@ xhr.responseType = 'document';
 // Force the response to be parsed as XML
 xhr.overrideMimeType('text/xml');
 
-xhr.onload = function () {
+xhr.onload = () => {
   if (xhr.readyState === xhr.DONE && xhr.status === 200) {
     console.log(xhr.response, xhr.responseXML);
   }
@@ -86,8 +88,7 @@ xhr.send();
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLHttpRequest.response")}}
 - {{domxref("XMLHttpRequest.responseType")}}
-- [Parsing and serializing
-  XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
 - Parsing XML into a DOM tree: {{domxref("DOMParser")}}
 - Serializing a DOM tree into XML: {{domxref("XMLSerializer")}} (specifically, the
   {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method)

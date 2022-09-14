@@ -1,6 +1,7 @@
 ---
 title: The HTML DOM API
 slug: Web/API/HTML_DOM_API
+page-type: web-api-overview
 tags:
   - API
   - Beginner
@@ -14,8 +15,9 @@ tags:
   - Web
   - Windows
   - hierarchy
-spec-urls: https://html.spec.whatwg.org/multipage/
+browser-compat: api.HTMLElement
 ---
+
 {{DefaultAPISidebar("HTML DOM")}}
 
 The **HTML DOM API** is made up of the interfaces that define the functionality of each of the {{Glossary("element", "elements")}} in {{Glossary("HTML")}}, as well as any supporting types and interfaces they rely upon.
@@ -53,12 +55,12 @@ Among the things added to `Document` by the HTML standard are:
 - Support for accessing various information provided by the {{Glossary("HTTP")}} headers when loading the page, such as the {{DOMxRef("Document/location", "location", "", "1")}} from which the document was loaded, {{DOMxRef("Document/cookie", "cookies", "", "1")}}, {{DOMxRef("Document/lastModified", "modification date", "", "1")}}, {{DOMxRef("Document/referrer", "referring site", "", "1")}}, and so forth.
 - Access to lists of elements in the document's {{HTMLElement("head")}} block and {{DOMxRef("Document/body", "body", "", "1")}}, as well as lists of the {{DOMxRef("Document/images", "images", "", "1")}}, {{DOMxRef("Document/links", "links", "", "1")}}, {{DOMxRef("Document/scripts", "scripts", "", "1")}}, etc. contained in the document.
 - Support for interacting with the user by examining {{DOMxRef("Document/hasFocus", "focus", "", "1")}} and by executing commands on [editable content](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
-- Event handlers for document {{DOMxRef("GlobalEventHandlers", "events defined by the HTML standard", "", "1")}} to allow access to {{DOMxRef("MouseEvent", "mouse", "", "1")}} and {{DOMxRef("KeyboardEvent", "keyboard", "", "1")}} events, {{DOMxRef("HTML_Drag_and_Drop_API", "drag and drop", "", "1")}}, {{DOMxRef("HTMLMediaElement", "media control", "", "1")}}, and more.
+- Event handlers for document events defined by the HTML standard to allow access to {{DOMxRef("MouseEvent", "mouse", "", "1")}} and {{DOMxRef("KeyboardEvent", "keyboard", "", "1")}} events, {{DOMxRef("HTML_Drag_and_Drop_API", "drag and drop", "", "1")}}, {{DOMxRef("HTMLMediaElement", "media control", "", "1")}}, and more.
 - Event handlers for events that can be delivered to both elements and documents; these presently include only {{DOMxRef("HTMLElement/copy_event", "copy", "", "1")}}, {{DOMxRef("HTMLElement/cut_event", "cut", "", "1")}}, and {{DOMxRef("HTMLElement/paste_event", "paste", "", "1")}} actions.
 
 ### HTML element interfaces
 
-The `Element` interface has been further adapted to represent HTML elements specifically by introducing the {{domxref("HTMLElement")}} interface, which all more specific HTML element classes inherit from. This expands the `Element` class to add HTML-specific general features to the element nodes. Properties added by `HTMLElement` include for example {{domxref("HTMLElement.hidden", "hidden")}} and {{domxref("HTMLElement.innerText", "innerText")}}. `HTMLElement` also adds all the {{DOMxRef("GlobalEventHandlers", "global event handlers", "", "1")}}.
+The `Element` interface has been further adapted to represent HTML elements specifically by introducing the {{domxref("HTMLElement")}} interface, which all more specific HTML element classes inherit from. This expands the `Element` class to add HTML-specific general features to the element nodes. Properties added by `HTMLElement` include for example {{domxref("HTMLElement.hidden", "hidden")}} and {{domxref("HTMLElement.innerText", "innerText")}}.
 
 An {{Glossary("HTML")}} document is a DOM tree in which each of the nodes is an HTML element, represented by the {{domxref("HTMLElement")}} interface. The `HTMLElement` class, in turn, implements `Node`, so every element is also a node (but not the other way around). This way, the structural features implemented by the {{domxref("Node")}} interface are also available to HTML elements, allowing them to be nested within each other, created and deleted, moved around, and so forth.
 
@@ -163,7 +165,6 @@ These interfaces represent specific HTML elements (or sets of related elements w
 
 #### Obsolete HTML Element Interfaces
 
-- {{DOMxRef("HTMLBaseFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
@@ -311,7 +312,7 @@ The {{domxref("EventSource")}} interface represents the source which sent or is 
 
 In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLElement/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
 
-#### JavaScript
+### JavaScript
 
 ```js
 const nameField = document.getElementById("userName");
@@ -321,9 +322,9 @@ sendButton.disabled = true;
 // [note: this is disabled since it causes this article to always load with this example focused and scrolled into view]
 //nameField.focus();
 
-nameField.addEventListener("input", event => {
+nameField.addEventListener("input", (event) => {
   const elem = event.target;
-  const valid = elem.value.length != 0;
+  const valid = elem.value.length !== 0;
 
   if (valid && sendButton.disabled) {
     sendButton.disabled = false;
@@ -333,7 +334,7 @@ nameField.addEventListener("input", event => {
 });
 ```
 
-This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`.  With these, we can access the properties and methods that provide information about and grant control over these elements.
+This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`. With these, we can access the properties and methods that provide information about and grant control over these elements.
 
 The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to `true`, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLElement/focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.
 
@@ -341,7 +342,7 @@ Then {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called
 
 With this in place, the "Send" button is always enabled whenever the user name input field has a value, and disabled when it's empty.
 
-#### HTML
+### HTML
 
 The HTML for the form looks like this:
 
@@ -350,17 +351,17 @@ The HTML for the form looks like this:
 <form action="" method="get">
   <p>
     <label for="userName" required>Your name:</label>
-    <input type="text" id="userName"> (*)
+    <input type="text" id="userName" /> (*)
   </p>
   <p>
     <label for="email">Email:</label>
-    <input type="email" id="userEmail">
+    <input type="email" id="userEmail" />
   </p>
-  <input type="submit" value="Send" id="sendButton">
+  <input type="submit" value="Send" id="sendButton" />
 </form>
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("Examples", 640, 300)}}
 
@@ -370,7 +371,7 @@ The HTML for the form looks like this:
 
 ## Browser compatibility
 
-{{Compat("api.HTMLElement")}}
+{{Compat}}
 
 ## See also
 

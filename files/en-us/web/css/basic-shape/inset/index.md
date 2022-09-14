@@ -11,9 +11,12 @@ tags:
   - Reference
 browser-compat: css.types.basic-shape.inset
 ---
+
 {{CSSRef}}
 
 The **`inset()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types). It defines an inset rectangle.
+
+{{EmbedInteractiveExample("pages/css/function-inset.html")}}
 
 ## Syntax
 

@@ -1,6 +1,7 @@
 ---
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
+page-type: web-api-instance-method
 tags:
   - API
   - Element
@@ -10,6 +11,7 @@ tags:
   - shadow DOM
 browser-compat: api.Element.attachShadow
 ---
+
 {{APIRef('Shadow DOM')}}
 
 The **`Element.attachShadow()`** method attaches a shadow DOM tree to the specified element and returns a reference to its {{domxref("ShadowRoot")}}.
@@ -43,7 +45,7 @@ The following is a list of elements you **can** attach a shadow root to:
 
 ## Syntax
 
-```js
+```js-nolint
 attachShadow(options)
 ```
 
@@ -59,6 +61,7 @@ attachShadow(options)
         This can be one of:
 
         - `open`
+
           - : Elements of the shadow root are accessible from JavaScript outside the root,
             for example using {{domxref("Element.shadowRoot")}}:
 
@@ -67,6 +70,7 @@ attachShadow(options)
             ```
 
         - `closed`
+
           - : Denies access to the node(s) of a closed shadow root
             from JavaScript outside it:
 
@@ -75,17 +79,16 @@ attachShadow(options)
             ```
 
     - `delegatesFocus`
+
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
         When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling.
 
     - `slotAssignment`
 
-      - : A string specifying the _slot assignment mode_ for the shadow DOM tree.
-        This can be one of:
+      - : A string specifying the _slot assignment mode_ for the shadow DOM tree. This can be one of:
 
         - `named`
           - : Default. Elements are automatically assigned to `<slot>` elements within this shadow root. Any descendents of the host with a `slot` attribute which matches the `name` attribute of a `<slot>` within this shadow root will be assigned to that slot. Any top-level children of the host with no `slot` attribute will be assigned to a `<slot>` with no `name` attribute (the "default slot") if one is present.
-
         - `manual`
           - : Elements are not automatically assigned to `<slot>` elements. Instead, they must be manually assigned with {{domxref("HTMLSlotElement.assign()")}}.
 
@@ -95,9 +98,9 @@ Returns a {{domxref("ShadowRoot")}} object.
 
 ### Exceptions
 
-- `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : The element you are trying to attach to is already a shadow host.
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : You are trying to attach a shadow root to an element outside the HTML namespace, the element cannot have a shadow attached to it,
     or the static property `disabledFeatures` has been given a value of `"shadow"` in the element definition.
 
@@ -118,7 +121,7 @@ class WordCount extends HTMLParagraphElement {
 
     function countWords(node){
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter(a => a.trim().length > 0).length;
+      return text.trim().split(/\s+/g).filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Words: ${countWords(wcParent)}`;
@@ -134,7 +137,7 @@ class WordCount extends HTMLParagraphElement {
     shadow.appendChild(text);
 
     // Update count when element content changes
-    setInterval(function() {
+    setInterval(() => {
       const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
     }, 200);

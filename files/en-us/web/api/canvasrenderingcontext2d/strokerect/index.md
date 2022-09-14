@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.strokeRect
 ---
+
 {{APIRef}}
 
 The
@@ -24,7 +26,7 @@ on it.
 
 ## Syntax
 
-```js
+```js-nolint
 strokeRect(x, y, width, height)
 ```
 

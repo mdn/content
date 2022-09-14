@@ -5,6 +5,7 @@ tags:
   - Guide
   - SVG
 ---
+
 {{SVGRef}}
 
 The {{SVGAttr("target")}} attribute on the SVG {{SVGElement("a")}} element doesn't work in Mozilla Firefox 1.5. When SVG documents are embedded within a parent HTML document using the tag:
@@ -12,10 +13,10 @@ The {{SVGAttr("target")}} attribute on the SVG {{SVGElement("a")}} element doesn
 page1.html:
 
 ```html
-<html>
+<html lang="en">
   <body>
     <p>This is a SVG button:</p>
-    <object width="100" height="50" type="image/svg+xml" data="button.svg"/>
+    <object width="100" height="50" type="image/svg+xml" data="button.svg" />
   </body>
 </html>
 ```

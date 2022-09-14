@@ -1,6 +1,7 @@
 ---
 title: SVGMissingGlyphElement
 slug: Web/API/SVGMissingGlyphElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGMissingGlyphElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGMissingGlyphElement`** interface corresponds to the {{SVGElement("missing-glyph")}} elements.

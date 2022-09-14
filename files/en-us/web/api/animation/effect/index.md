@@ -1,6 +1,7 @@
 ---
 title: Animation.effect
 slug: Web/API/Animation/effect
+page-type: web-api-instance-property
 tags:
   - API
   - Animation
@@ -11,6 +12,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.effect
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`Animation.effect`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) gets and sets the target effect of an animation. The target effect may be either an effect object of a type based on {{domxref("AnimationEffect")}}, such as {{domxref("KeyframeEffect")}}, or `null`.

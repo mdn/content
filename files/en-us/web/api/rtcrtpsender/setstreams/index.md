@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.setStreams()
 slug: Web/API/RTCRtpSender/setStreams
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -18,6 +19,7 @@ tags:
   - setStreams
 browser-compat: api.RTCRtpSender.setStreams
 ---
+
 {{DefaultAPISidebar("WebRTC API")}}
 
 The {{domxref("RTCRtpSender")}} method **`setStreams()`**
@@ -26,7 +28,7 @@ associates the sender's {{domxref("RTCRtpSender.track", "track")}} with the spec
 
 ## Syntax
 
-```js
+```js-nolint
 setStreams()
 setStreams(mediaStream)
 setStreams(mediaStreams)

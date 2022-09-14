@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.cssRules
 slug: Web/API/CSSStyleSheet/cssRules
+page-type: web-api-instance-property
 tags:
   - API
   - CSS
@@ -15,6 +16,7 @@ tags:
   - StyleSheet
 browser-compat: api.CSSStyleSheet.cssRules
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only {{domxref("CSSStyleSheet")}} property
@@ -34,7 +36,7 @@ describing one rule making up the stylesheet.
 Individual rules within the stylesheet can then be accessed by index:
 
 ```js
-let ruleList = document.styleSheets[0].cssRules;
+const ruleList = document.styleSheets[0].cssRules;
 
 for (let i=0; i < ruleList.length; i++) {
   processRule(ruleList[i]);
@@ -44,9 +46,9 @@ for (let i=0; i < ruleList.length; i++) {
 Rules can also be accessed using {{jsxref("Statements/for...of", "for...of")}}:
 
 ```js
-let ruleList = document.styleSheets[0].cssRules;
+const ruleList = document.styleSheets[0].cssRules;
 
-for (let rule of ruleList) {
+for (const rule of ruleList) {
   processRule(rule);
 }
 ```
@@ -65,5 +67,4 @@ However, because `CSSRule` is not a proper array, you can't use
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

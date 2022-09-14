@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 The **`SharedArrayBuffer`** object is used to represent a generic, fixed-length raw binary data buffer, similar to the {{jsxref("ArrayBuffer")}} object, but in a way that they can be used to create views on shared memory. A `SharedArrayBuffer` is not a {{Glossary("Transferable Objects", "Transferable Object")}}, unlike an `ArrayBuffer` which is transferable.
@@ -47,7 +48,7 @@ For top-level documents, two headers will need to be set to cross-origin isolate
 - [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) with `same-origin` as value (protects your origin from attackers)
 - [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) with `require-corp` as value (protects victims from your origin)
 
-```plain
+```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
@@ -90,7 +91,7 @@ const sab = new SharedArrayBuffer(1024);
 
 ## Instance methods
 
-- {{jsxref("SharedArrayBuffer.slice", "SharedArrayBuffer.prototype.slice(begin, end)")}}
+- {{jsxref("SharedArrayBuffer.prototype.slice()")}}
   - : Returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from `begin`, inclusive, up to `end`, exclusive. If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 
 ## Examples

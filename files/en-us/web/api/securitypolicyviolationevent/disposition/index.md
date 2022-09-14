@@ -1,6 +1,7 @@
 ---
 title: SecurityPolicyViolationEvent.disposition
 slug: Web/API/SecurityPolicyViolationEvent/disposition
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
@@ -12,6 +13,7 @@ tags:
   - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.disposition
 ---
+
 {{HTTPSidebar}}")}}
 
 The **`disposition`** read-only property of the

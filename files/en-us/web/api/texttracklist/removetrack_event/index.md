@@ -1,6 +1,7 @@
 ---
 title: 'TextTrackList: removeTrack event'
 slug: Web/API/TextTrackList/removeTrack_event
+page-type: web-api-event
 tags:
   - API
   - Media Streams API
@@ -12,6 +13,7 @@ tags:
   - removeTrack
 browser-compat: api.TextTrackList.removetrack_event
 ---
+
 {{APIRef}}
 
 The **`removetrack`** event is fired when a track is removed from a [`TextTrackList`](/en-US/docs/Web/API/TextTrackList).
@@ -21,14 +23,14 @@ The **`removetrack`** event is fired when a track is removed from a [`TextTrackL
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('removetrack', event => { })
+addEventListener('removetrack', (event) => { })
 
-onremovetrack = event => { }
+onremovetrack = (event) => { }
 ```
 
 ## Event type
 
-An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TrackEvent")}}
 
@@ -46,7 +48,7 @@ Using `addEventListener()`:
 ```js
 const mediaElement = document.querySelector('video, audio');
 
-mediaElement.textTracks.addEventListener('removetrack', event => {
+mediaElement.textTracks.addEventListener('removetrack', (event) => {
   console.log(`Text track: ${event.track.label} removed`);
 });
 ```
@@ -56,7 +58,7 @@ Using the `onremovetrack` event handler property:
 ```js
 const mediaElement = document.querySelector('video, audio');
 
-mediaElement.textTracks.onremovetrack = event => {
+mediaElement.textTracks.onremovetrack = (event) => {
   console.log(`Text track: ${event.track.label} removed`);
 };
 ```

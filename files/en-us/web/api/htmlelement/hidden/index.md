@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
+page-type: web-api-instance-property
 tags:
   - API
   - Attribute
@@ -12,6 +13,7 @@ tags:
   - hidden
 browser-compat: api.HTMLElement.hidden
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The {{domxref("HTMLElement")}} property
@@ -52,7 +54,7 @@ displayed after a user agrees to an unusual request.
 
 ```js
 document.getElementById("okButton")
-        .addEventListener("click", function() {
+        .addEventListener("click", () => {
   document.getElementById("welcome").hidden = true;
   document.getElementById("awesome").hidden = false;
 }, false);
@@ -88,9 +90,10 @@ follow-up panel looks like this in HTML:
 ```html
 <div id="awesome" class="panel" hidden>
   <h1>Thanks!</h1>
-  <p>Thank you <strong>so</strong> much for agreeing to be
-  awesome today! Now get out there and do awesome things
-  awesomely to make the world more awesome!</p>
+  <p>
+    Thank you <strong>so</strong> much for agreeing to be awesome today! Now get
+    out there and do awesome things awesomely to make the world more awesome!
+  </p>
 </div>
 ```
 
@@ -120,7 +123,7 @@ h1 {
 
 ### Result
 
-{{ EmbedLiveSample('Example', 560, 200) }}
+{{ EmbedLiveSample('Examples', 560, 200) }}
 
 ## Specifications
 

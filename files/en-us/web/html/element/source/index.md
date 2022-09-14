@@ -77,15 +77,18 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("type")}}
+
   - : The [MIME media type of the resource](/en-US/docs/Web/Media/Formats/Image_types), optionally with a [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
 
 - {{htmlattrdef("src")}}
-  - : Required if the `source` element’s parent is an {{HTMLElement("audio")}} and {{HTMLElement("video")}} element, but not allowed if the `source` element’s parent is a {{HTMLElement("picture")}} element.
+
+  - : Required if the `source` element's parent is an {{HTMLElement("audio")}} and {{HTMLElement("video")}} element, but not allowed if the `source` element's parent is a {{HTMLElement("picture")}} element.
 
     Address of the media resource.
 
 - {{htmlattrdef("srcset")}}
-  - : Required if the `source` element’s parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element’s parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
+
+  - : Required if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     A list of one or more strings, separated by commas, indicating a set of possible images represented by the source for the browser to use. Each string is composed of:
 
@@ -93,25 +96,29 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     2. A width descriptor, which consists of a string containing a positive integer directly followed by `"w"`, such as `300w`. The default value, if missing, is the infinity.
     3. A pixel density descriptor, that is a positive floating number directly followed by `"x"`. The default value, if missing, is `1x`.
 
-    Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor. The browser chooses the most adequate image to display at a given point of time.
+    Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor. The browser chooses the most adequate image to display at a given point of time. If width descriptors are used, the `sizes` attribute must also be present, or the `srcset` value will be ignored.
 
 - {{htmlattrdef("sizes")}}
-  - : Allowed if the `source` element’s parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element’s parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
+
+  - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     A list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in {{htmlattrxref("srcset", "source")}} to use. Please note that `sizes` will have its effect only if width dimension descriptors are provided with `srcset` instead of pixel ratio values (200w instead of 2x for example).
 
 - {{htmlattrdef("media")}}
-  - : Allowed if the `source` element’s parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element’s parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
+
+  - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     [Media query](/en-US/docs/Web/CSS/Media_Queries) of the resource's intended media.
 
 - {{htmlattrdef("height")}}
-  - : Allowed if the `source` element’s parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element’s parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
+
+  - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     The intrinsic height of the image, in pixels. Must be an integer without a unit.
 
 - {{htmlattrdef("width")}}
-  - : Allowed if the `source` element’s parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element’s parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
+
+  - : Allowed if the `source` element's parent is a {{HTMLElement("picture")}} element, but not allowed if the `source` element's parent is an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element.
 
     The intrinsic width of the image in pixels. Must be an integer without a unit.
 
@@ -123,7 +130,7 @@ When used in the context of a `<picture>` element, the browser will fall back to
 
 The `<source>` element is an **empty element (or void element)**, which means that it not only has no content but also has no closing tag. That is, you _never_ use "`</source>`" in your HTML.
 
-For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types) on the web. For details on the video and audio media types, you can use, see the [Guide to media types formats used on the web](/en-US/docs/Web/Media/Formats).
+For information about image formats supported by web browsers and guidance on selecting appropriate formats to use, see our [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types) on the web. For details on the video and audio media types you can use, see the [Guide to media types formats used on the web](/en-US/docs/Web/Media/Formats).
 
 ## Examples
 
@@ -133,10 +140,10 @@ This example demonstrates how to offer a video in Ogg format for users whose bro
 
 ```html
 <video controls>
-  <source src="foo.webm" type="video/webm">
-  <source src="foo.ogg" type="video/ogg">
-  <source src="foo.mov" type="video/quicktime">
-  I'm sorry; your browser doesn't support HTML5 video.
+  <source src="foo.webm" type="video/webm" />
+  <source src="foo.ogg" type="video/ogg" />
+  <source src="foo.mov" type="video/quicktime" />
+  I'm sorry; your browser doesn't support HTML video.
 </video>
 ```
 
@@ -148,9 +155,9 @@ In this example, two `<source>` elements are included within the {{HTMLElement("
 
 ```html
 <picture>
-   <source srcset="mdn-logo-wide.png" media="(min-width: 800px)">
-   <source srcset="mdn-logo-medium.png" media="(min-width: 600px)">
-   <img src="mdn-logo-narrow.png" alt="MDN Web Docs">
+  <source srcset="mdn-logo-wide.png" media="(min-width: 800px)" />
+  <source srcset="mdn-logo-medium.png" media="(min-width: 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN Web Docs" />
 </picture>
 ```
 

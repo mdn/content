@@ -1,6 +1,7 @@
 ---
 title: HTMLEmbedElement
 slug: Web/API/HTMLEmbedElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLEmbedElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLEmbedElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("embed")}} elements.

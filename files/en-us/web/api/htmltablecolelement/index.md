@@ -1,6 +1,7 @@
 ---
 title: HTMLTableColElement
 slug: Web/API/HTMLTableColElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableColElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableColElement`** interface provides properties for manipulating single or grouped table column elements.

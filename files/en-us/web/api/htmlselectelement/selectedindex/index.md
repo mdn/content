@@ -1,6 +1,7 @@
 ---
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSelectElement.selectedIndex`** is a
@@ -40,14 +42,14 @@ A number.
 ### JavaScript
 
 ```js
-var selectElem = document.getElementById('select')
-var pElem = document.getElementById('p')
+const selectElem = document.getElementById('select')
+const pElem = document.getElementById('p')
 
 // When a new <option> is selected
-selectElem.addEventListener('change', function() {
-  var index = selectElem.selectedIndex;
+selectElem.addEventListener('change', () => {
+  const index = selectElem.selectedIndex;
   // Add that data to the <p>
-  pElem.innerHTML = 'selectedIndex: ' + index;
+  pElem.textContent = `selectedIndex: ${index}`;
 })
 ```
 

@@ -9,6 +9,7 @@ tags:
   - mapping
   - subtitles
 ---
+
 Mapping the time or time code value that is seen within a video track or video editor timeline to an IMSC document can be a little tricky. There are a few different issues that you'll need to be aware of, which we'll cover in this article.
 
 ## Considering time code start times
@@ -50,8 +51,8 @@ That said, there is actually a different approach to describing the time express
 The two attributes that must be included to use the frames method are `frameRate` and `frameRateMultiplier`. The frame rate describes how many frames are in one second, and the multiplier is applied to the `frameRate` to describe the actual frame rate in real time seconds. To describe a frame rate of 23.976fps, the following values would be used:
 
 ```xml
-<tt ... ttp:frameRate="24" ttp:frameRateMultiplier="1000 1001">
-  ...
+<tt ttp:frameRate="24" ttp:frameRateMultiplier="1000 1001">
+  …
 </tt>
 ```
 

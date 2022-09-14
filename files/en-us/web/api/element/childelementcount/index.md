@@ -1,6 +1,7 @@
 ---
 title: Element.childElementCount
 slug: Web/API/Element/childElementCount
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Element.childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.childElementCount`** read-only property

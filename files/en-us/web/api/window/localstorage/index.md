@@ -1,6 +1,7 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -13,6 +14,7 @@ tags:
   - localStorage
 browser-compat: api.Window.localStorage
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`localStorage`** read-only property of the {{domxref("window")}} interface allows you to access a {{DOMxRef("Storage")}} object for the {{DOMxRef("Document")}}'s {{glossary("origin")}}; the stored data is saved across browser sessions.

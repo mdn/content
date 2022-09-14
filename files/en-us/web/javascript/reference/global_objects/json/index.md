@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.JSON
 ---
+
 {{JSRef}}
 
 The **`JSON`** object contains methods
@@ -21,7 +22,7 @@ it has no interesting functionality of its own.
 ### JavaScript and JSON differences
 
 JSON is a syntax for serializing objects, arrays, numbers, strings, booleans, and
-{{jsxref("null")}}. It is based upon JavaScript syntax but is distinct from it: some
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). It is based upon JavaScript syntax but is distinct from it: some
 JavaScript is _not_ JSON.
 
 - **Objects and Arrays**
@@ -30,21 +31,17 @@ JavaScript is _not_ JSON.
 - **Numbers**
   - : Leading zeros are prohibited. A decimal point must be followed by at least one
     digit. `NaN` and `Infinity` are unsupported.
-- **Any JSON text is a valid JavaScript expression...**
-  - : ...But only in JavaScript engines that have implemented
-    the [proposal to make all JSON text valid ECMA-262](https://github.com/tc39/proposal-json-superset).
-    In engines that haven't implemented the proposal, U+2028 LINE
-    SEPARATOR and U+2029 PARAGRAPH SEPARATOR are allowed in string literals and property
-    keys in JSON; but their use in these features in JavaScript string literals is a
-    {{jsxref("SyntaxError")}}.
+
+Any JSON text is a valid JavaScript expression, but only in JavaScript engines that have implemented the [proposal to make all JSON text valid ECMA-262](https://github.com/tc39/proposal-json-superset).
+In engines that haven't implemented the proposal, U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR are allowed in string literals and property keys in JSON; but their use in these features in JavaScript string literals is a {{jsxref("SyntaxError")}}.
 
 Consider this example where {{jsxref("JSON.parse()")}} parses the string as JSON and
 {{jsxref("Global_Objects/eval", "eval")}} executes the string as JavaScript:
 
 ```js
-let code = '"\u2028\u2029"'
-JSON.parse(code)  // evaluates to "\u2028\u2029" in all engines
-eval(code)        // throws a SyntaxError in old engines
+const code = '"\u2028\u2029"';
+JSON.parse(code); // evaluates to "\u2028\u2029" in all engines
+eval(code); // throws a SyntaxError in old engines
 ```
 
 Other differences include allowing only double-quoted strings and having no provisions
@@ -117,18 +114,17 @@ whitespace characters.
 
 ## Static methods
 
-- {{jsxref("JSON.parse()", "JSON.parse(<var>text</var>[, <var>reviver</var>])")}}
+- {{jsxref("JSON.parse()")}}
   - : Parse the string `text` as JSON, optionally transform the
     produced value and its properties, and return the value. Any violations of the JSON
     syntax, including those pertaining to the differences between JavaScript and JSON,
     cause a {{jsxref("SyntaxError")}} to be thrown. The `reviver`
     option allows for interpreting what the `replacer` has used to
     stand in for other datatypes.
-- {{jsxref("JSON.stringify()", "JSON.stringify(<var>value</var>[,
-    <var>replacer</var>[, <var>space</var>]])")}}
+- {{jsxref("JSON.stringify()")}}
   - : Return a JSON string corresponding to the specified value, optionally including only
     certain properties or replacing property values in a user-defined manner. By default,
-    all instances of {{jsxref("undefined")}} are replaced with {{jsxref("null")}}, and
+    all instances of {{jsxref("undefined")}} are replaced with [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), and
     other unsupported native data types are censored. The `replacer`
     option allows for specifying other behavior.
 

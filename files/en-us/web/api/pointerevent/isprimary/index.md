@@ -1,6 +1,7 @@
 ---
 title: PointerEvent.isPrimary
 slug: Web/API/PointerEvent/isPrimary
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.isPrimary
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`isPrimary`** read-only property of the
@@ -41,8 +43,7 @@ interaction).
 
 ## Value
 
-A boolean, `true` if the pointer for this event is the primary pointer and
-    returns `false` otherwise.
+A boolean, `true` if the pointer for this event is the primary pointer and returns `false` otherwise.
 
 ## Examples
 
@@ -50,11 +51,12 @@ This example illustrates using the value of `isPrimary` to call the
 appropriate processing function.
 
 ```js
-target.addEventListener('pointerdown', function(event) {
-  if (event.isPrimary)
+target.addEventListener('pointerdown', (event) => {
+  if (event.isPrimary) {
     process_primary_pointer(event);
-  else
+  } else {
     process_secondary_pointer(event);
+  }
 }, false);
 ```
 

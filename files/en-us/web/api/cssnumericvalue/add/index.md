@@ -1,6 +1,7 @@
 ---
 title: CSSNumericValue.add()
 slug: Web/API/CSSNumericValue/add
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - add()
 browser-compat: api.CSSNumericValue.add
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`add()`** method of the
@@ -20,14 +22,14 @@ The **`add()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 add(number)
 ```
 
 ### Parameters
 
 - `number`
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 

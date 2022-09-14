@@ -1,16 +1,19 @@
 ---
 title: VideoFrame
 slug: Web/API/VideoFrame
+page-type: web-api-interface
 tags:
   - API
   - Interface
   - Reference
   - VideoFrame
+  - Experimental
 browser-compat: api.VideoFrame
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
 
-The **`VideoFrame`** interface of the {{domxref('Web Codecs API','','',' ')}} represents a frame of a video.
+{{APIRef("Web Codecs API")}}{{SeeCompatTable}}
+
+The **`VideoFrame`** interface of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) represents a frame of a video.
 
 `VideoFrame` is a {{glossary("Transferable objects","transferable object")}}.
 
@@ -18,47 +21,56 @@ The **`VideoFrame`** interface of the {{domxref('Web Codecs API','','',' ')}} re
 
 A `VideoFrame` object can be created or accessed in a number of ways. The {{domxref("MediaStreamTrackProcessor")}} breaks a media track into individual `VideoFrame` objects.
 
-A `VideoFrame` is a {{domxref("CanvasImageSource")}} and has a constructor that accepts a `CanvasImageSource`. This means that a frame can be created from an image or video element.
+A `VideoFrame` is an image source and has a constructor that accepts any other canvas source (
+an {{domxref("SVGImageElement")}},
+an {{domxref("HTMLVideoElement")}},
+an {{domxref("HTMLCanvasElement")}},
+an {{domxref("ImageBitmap")}},
+an {{domxref("OffscreenCanvas")}},
+or another {{domxref("VideoFrame")}}).
+This means that a frame can be created from an image or video element.
 
-A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in a {{domxref("BufferSource")}}.
+A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
 
 Created frames may then turned into a media track, for example with the {{domxref("MediaStreamTrackGenerator")}} interface that creates a media track from a stream of frames.
 
 ## Constructor
 
-- {{domxref("VideoFrame.VideoFrame", "VideoFrame()")}}
+- {{domxref("VideoFrame.VideoFrame", "VideoFrame()")}} {{Experimental_Inline}}
   - : Creates a new `VideoFrame` object.
 
 ## Properties
 
-- {{domxref("VideoFrame.format")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.format")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the pixel format of the `VideoFrame`.
-- {{domxref("VideoFrame.codedWidth")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.codedWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the width of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
-- {{domxref("VideoFrame.codedHeight")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.codedHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the height of the `VideoFrame` in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
-- {{domxref("VideoFrame.codedRect")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.codedRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} with the width and height matching `codedWidth` and `codedHeight`.
-- {{domxref("VideoFrame.visibleRect")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.visibleRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
-- {{domxref("VideoFrame.displayWidth")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.displayWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the width of the `VideoFrame` when displayed after applying aspect ratio adjustments.
-- {{domxref("VideoFrame.displayHeight")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.displayHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
-- {{domxref("VideoFrame.duration")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an integer indicating the duration of the video in microseconds.
-- {{domxref("VideoFrame.timestamp")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an integer indicating the timestamp of the video in microseconds.
-- {{domxref("VideoFrame.colorSpace")}}{{ReadOnlyInline}}
+- {{domxref("VideoFrame.colorSpace")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("VideoColorSpace")}} object.
 
 ## Methods
 
-- {{domxref("VideoFrame.allocationSize()")}}
+- {{domxref("VideoFrame.allocationSize()")}} {{Experimental_Inline}}
   - : Returns the number of bytes required to hold the `VideoFrame` as filtered by options passed into the method.
-- {{domxref("VideoFrame.clone()")}}
+- {{domxref("VideoFrame.copyTo()")}} {{Experimental_Inline}}
+  - : Copies the contents of the `VideoFrame` to an `ArrayBuffer`.
+- {{domxref("VideoFrame.clone()")}} {{Experimental_Inline}}
   - : Creates a new `VideoFrame` object with reference to the same media resource as the original.
-- {{domxref("VideoFrame.close()")}}
+- {{domxref("VideoFrame.close()")}} {{Experimental_Inline}}
   - : Clears all states and releases the reference to the media resource.
 
 ## Examples
@@ -84,7 +96,7 @@ while (true) {
       frame.close();
     } else {
       frame_counter++;
-      const insert_keyframe = (frame_counter % 150) == 0;
+      const insert_keyframe = frame_counter % 150 === 0;
       encoder.encode(frame, { keyFrame: insert_keyframe });
       frame.close();
     }

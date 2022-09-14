@@ -7,9 +7,10 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object
 ---
+
 {{JSRef}}
 
-The **`Object`** class represents one of [JavaScript's data types](/en-US/docs/Web/JavaScript/Data_structures). It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+The **`Object`** type represents one of [JavaScript's data types](/en-US/docs/Web/JavaScript/Data_structures). It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Description
 
@@ -17,9 +18,9 @@ Nearly all objects in JavaScript are instances of {{jsxref("Object")}}; a typica
 
 Changes to the `Object` prototype object are seen by **all** objects through prototype chaining, unless the properties and methods subject to those changes are overridden further along the prototype chain. This provides a very powerful although potentially dangerous mechanism to override or extend object behavior.
 
-The `Object` constructor creates an object wrapper for the given value.
+The `Object` constructor's behavior depends on the input's type.
 
-- If the value is {{jsxref("null")}} or {{jsxref("undefined")}}, it will create and return an empty object.
+- If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it will create and return an empty object.
 - If the value is an object already, it will return the value.
 - Otherwise, it will return an object of a Type that corresponds to the given value.
 
@@ -34,7 +35,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 ## Constructor
 
 - {{jsxref("Object/Object", "Object()")}}
-  - : Creates a new `Object` object. It is a wrapper for the given value.
+  - : Turns the input into an object.
 
 ## Static methods
 
@@ -63,7 +64,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 - {{jsxref("Object.getPrototypeOf","Object.getPrototypeOf()")}}
   - : Returns the prototype (internal `[[Prototype]]` property) of the specified object.
 - {{jsxref("Object.is","Object.is()")}}
-  - : Compares if two values are the same value. Equates all `NaN` values (which differs from both Abstract Equality Comparison and Strict Equality Comparison).
+  - : Compares if two values are the same value. Equates all `NaN` values (which differs from both `IsLooselyEqual` used by [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) and `IsStrictlyEqual` used by [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)).
 - {{jsxref("Object.isExtensible","Object.isExtensible()")}}
   - : Determines if extending of an object is allowed.
 - {{jsxref("Object.isFrozen","Object.isFrozen()")}}
@@ -85,19 +86,19 @@ There isn't any method in an Object itself to delete its own properties (such as
 
 - {{jsxref("Object.prototype.constructor")}}
   - : Specifies the function that creates an object's prototype.
-- {{jsxref("Object/proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{Deprecated_Inline}}
   - : Points to the object which was used as prototype when the object was instantiated.
 
 ## Instance methods
 
-- {{jsxref("Object.prototype.__defineGetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
   - : Associates a function with a property that, when accessed, executes that function and returns its return value.
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
   - : Associates a function with a property that, when set, executes that function which modifies the property.
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-  - : Returns the function associated with the specified property by the {{jsxref("Object.prototype.__defineGetter__()", "__defineGetter__()")}} method.
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
-  - : Returns the function associated with the specified property by the {{jsxref("Object.prototype.__defineSetter__()", "__defineSetter__()")}} method.
+- [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : Returns the function associated with the specified property by the [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) method.
+- [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : Returns the function associated with the specified property by the [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) method.
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
   - : Returns a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
@@ -105,7 +106,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
   - : Returns a boolean indicating if the internal [ECMAScript \[\[Enumerable\]\] attribute](/en-US/docs/Web/JavaScript/Data_structures#properties) is set.
 - {{jsxref("Object.prototype.toLocaleString()")}}
-  - : Calls {{jsxref("Object.toString", "toString()")}}.
+  - : Calls {{jsxref("Object/toString", "toString()")}}.
 - {{jsxref("Object.prototype.toString()")}}
   - : Returns a string representation of the object.
 - {{jsxref("Object.prototype.valueOf()")}}
@@ -113,41 +114,33 @@ There isn't any method in an Object itself to delete its own properties (such as
 
 ## Examples
 
-### Using `Object` given `undefined` and `null` types
+### Constructing empty objects
 
 The following examples store an empty `Object` object in `o`:
 
 ```js
-let o = new Object()
+const o1 = new Object();
+const o2 = new Object(undefined);
+const o3 = new Object(null);
 ```
 
-```js
-let o = new Object(undefined)
-```
-
-```js
-let o = new Object(null)
-```
-
-### Using `Object` to create `Boolean` objects
+### Using Object to create Boolean objects
 
 The following examples store {{jsxref("Boolean")}} objects in `o`:
 
 ```js
-// equivalent to o = new Boolean(true)
-let o = new Object(true)
+// equivalent to const o = new Boolean(true)
+const o = new Object(true);
 ```
 
 ```js
-// equivalent to o = new Boolean(false)
-let o = new Object(Boolean())
+// equivalent to const o = new Boolean(false)
+const o = new Object(Boolean());
 ```
 
 ### Object prototypes
 
 When altering the behavior of existing `Object.prototype` methods, consider injecting code by wrapping your extension before or after the existing logic. For example, this (untested) code will pre-conditionally execute custom logic before the built-in logic or someone else's extension is executed.
-
-When a function is called, the arguments to the call are held in the array-like "variable" [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments). For example, in the call `myFn(a, b, c)`, the arguments within `myFn`'s body will contain 3 array-like elements corresponding to `(a, b, c)`.
 
 When modifying prototypes with hooks, pass `this` and the arguments (the call state) to the current behavior by calling `apply()` on the function. This pattern can be used for any prototype, such as `Node.prototype`, `Function.prototype`, etc.
 
@@ -156,88 +149,22 @@ const current = Object.prototype.valueOf;
 
 // Since my property "-prop-value" is cross-cutting and isn't always
 // on the same prototype chain, I want to modify Object.prototype:
-Object.prototype.valueOf = function() {
-  if (this.hasOwnProperty('-prop-value')) {
+Object.prototype.valueOf = function (...args) {
+  if (Object.hasOwn(this, '-prop-value')) {
     return this['-prop-value'];
   } else {
     // It doesn't look like one of my objects, so let's fall back on
     // the default behavior by reproducing the current behavior as best we can.
     // The apply behaves like "super" in some other languages.
     // Even though valueOf() doesn't take arguments, some other hook may.
-    return current.apply(this, arguments);
+    return current.apply(this, args);
   }
 }
 ```
 
-Since JavaScript doesn't exactly have sub-class objects, prototype is a useful workaround to make a "base class" object of certain functions that act as objects. For example:
+> **Warning:** Modifying the `prototype` property of any built-in constructor is considered a bad practice and risks forward compatibility.
 
-```js
-const Person = function(name) {
-  this.name = name;
-  this.canTalk = true;
-};
-
-Person.prototype.greet = function() {
-  if (this.canTalk) {
-    console.log('Hi, I am ' + this.name);
-  }
-};
-
-const Employee = function(name, title) {
-  Person.call(this, name);
-  this.title = title;
-};
-
-Employee.prototype = Object.create(Person.prototype);
-Employee.prototype.constructor = Employee; //If you don't set Object.prototype.constructor to Employee,
-                                           //it will take prototype.constructor of Person (parent).
-                                           //To avoid that, we set the prototype.constructor to Employee (child).
-
-Employee.prototype.greet = function() {
-  if (this.canTalk) {
-    console.log('Hi, I am ' + this.name + ', the ' + this.title);
-  }
-};
-
-const Customer = function(name) {
-  Person.call(this, name);
-};
-
-Customer.prototype = Object.create(Person.prototype);
-Customer.prototype.constructor = Customer; //If you don't set Object.prototype.constructor to Customer,
-                                           //it will take prototype.constructor of Person (parent).
-                                           //To avoid that, we set the prototype.constructor to Customer (child).
-
-const Mime = function(name) {
-  Person.call(this, name);
-  this.canTalk = false;
-};
-
-Mime.prototype = Object.create(Person.prototype);
-Mime.prototype.constructor = Mime; //If you don't set Object.prototype.constructor to Mime,
-                                   //it will take prototype.constructor of Person (parent).
-                                   //To avoid that, we set the prototype.constructor to Mime (child).
-
-const bob = new Employee('Bob', 'Builder');
-const joe = new Customer('Joe');
-const rg = new Employee('Red Green', 'Handyman');
-const mike = new Customer('Mike');
-const mime = new Mime('Mime');
-
-bob.greet();
-// Hi, I am Bob, the Builder
-
-joe.greet();
-// Hi, I am Joe
-
-rg.greet();
-// Hi, I am Red Green, the Handyman
-
-mike.greet();
-// Hi, I am Mike
-
-mime.greet();
-```
+You can read more about prototypes in [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 ## Specifications
 

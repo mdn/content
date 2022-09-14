@@ -10,6 +10,7 @@ tags:
   - Web app
   - Web applications
 ---
+
 **Progressive Web Apps** (PWAs) are web apps that use [service workers](/en-US/docs/Web/API/Service_Worker_API), [manifests](/en-US/docs/Web/Manifest), and other web-platform features in combination with {{glossary("progressive enhancement")}} to give users an experience on par with native apps.
 
 PWAs provide a number of [advantages](/en-US/docs/Web/Progressive_web_apps/Introduction#advantages_of_web_applications) to users — including being [installable](/en-US/docs/Web/Progressive_web_apps/Introduction#installability), [progressively enhanced](/en-US/docs/Web/Progressive_web_apps/Introduction#progressive_enhancement_support), [responsively designed](/en-US/docs/Web/Progressive_web_apps/Introduction#responsiveness), [re-engageable](/en-US/docs/Web/Progressive_web_apps/Introduction#re-engageability), [linkable](/en-US/docs/Web/Progressive_web_apps/Introduction#linkability), [discoverable](/en-US/docs/Web/Progressive_web_apps/Introduction#discoverability), [network independent](/en-US/docs/Web/Progressive_web_apps/Introduction#network_independence), and [secure](/en-US/docs/Web/Progressive_web_apps/Introduction#secure).
@@ -36,9 +37,8 @@ These introductory materials and step-by-step guides walk you through key aspect
 - [Progressive Web Apps: Everything You Need To Know](https://www.csschopper.com/blog/progressive-web-apps-everything-you-need-to-know/)
 - [Progressive Web Apps: Escaping Tabs Without Losing Our Soul](https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955#.6czgj0myh)
 - [Instant Loading Web Apps with An Application Shell Architecture](https://developer.chrome.com/blog/app-shell/)
-- [Introduction to Progressive Web App Architectures](https://developers.google.com/web/ilt/pwa/introduction-to-progressive-web-app-architectures)
 - [Workbox](https://developer.chrome.com/docs/workbox/) — set of libraries to power a "production-ready" service worker for your PWA
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse) — web-app auditing tool that includes PWA-auditing features
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) — web-app auditing tool that includes PWA-auditing features
 - [localForage](https://localforage.github.io/localForage/) — `localStorage`-like _async_ storage, to improve your PWA's offline experience
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}

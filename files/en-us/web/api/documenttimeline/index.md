@@ -1,6 +1,7 @@
 ---
 title: DocumentTimeline
 slug: Web/API/DocumentTimeline
+page-type: web-api-interface
 tags:
   - API
   - Animation
@@ -13,7 +14,8 @@ tags:
   - web animations api
 browser-compat: api.DocumentTimeline
 ---
-{{ APIRef("Web Animations") }}{{ SeeCompatTable() }}
+
+{{ APIRef("Web Animations") }}
 
 The **`DocumentTimeline`** interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) represents animation timelines, including the default document timeline (accessed via {{domxref("Document.timeline")}}).
 

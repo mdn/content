@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedAngle
 slug: Web/API/SVGAnimatedAngle
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedAngle
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated angle interface

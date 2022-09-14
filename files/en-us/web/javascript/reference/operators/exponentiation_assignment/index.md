@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.exponentiation_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The exponentiation assignment operator (`**=`) raises the value of a
@@ -18,7 +19,7 @@ variable to the power of the right operand.
 
 ## Syntax
 
-```js
+```js-nolint
 x **= y // x = x ** y
 ```
 

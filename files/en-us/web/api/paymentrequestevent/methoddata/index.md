@@ -1,8 +1,10 @@
 ---
 title: PaymentRequestEvent.methodData
 slug: Web/API/PaymentRequestEvent/methodData
+page-type: web-api-instance-property
 browser-compat: api.PaymentRequestEvent.methodData
 ---
+
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
 The **`methodData`** read-only property of the
@@ -11,13 +13,7 @@ The **`methodData`** read-only property of the
 payment methods that the web site accepts and any associated payment method specific
 data.
 
-## Syntax
-
-```js
-var methodData[] = paymentRequestEvent.methodData
-```
-
-### Value
+## Value
 
 An array of {{domxref("PaymentMethodData")}} objects.
 

@@ -1,18 +1,20 @@
 ---
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
+page-type: web-api-constructor
 tags:
   - Constructor
   - Reference
 browser-compat: api.CustomEvent.CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 The **`CustomEvent()`** constructor creates a new {{domxref("CustomEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new CustomEvent(type)
 new CustomEvent(type, options)
 ```

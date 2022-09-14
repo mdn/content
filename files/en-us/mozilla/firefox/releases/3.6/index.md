@@ -11,6 +11,7 @@ tags:
   - Namoroka
   - XUL
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox 3.6](https://www.mozilla.org/firefox/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
@@ -44,14 +45,14 @@ tags:
 
 ### HTML
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
   - : Support for the new HTML5 File API has been added to Gecko, making it possible for web applications to access local files selected by the user. This includes support for selecting multiple files using the `input type="file"` HTML element's new `multiple` attribute.
 - HTML5 video supports poster frames
   - : The `poster` attribute is now supported for the [`video`](/en-US/docs/Web/HTML/Element/video) element, allowing content to specify a poster frame to be displayed until the video begins to play.
 - Checkboxes and radio buttons support the `indeterminate` property
   - : HTML [`input`](/en-US/docs/Web/HTML/Element/input) elements of types `checkbox` and `radio` now support the indeterminate property, which allows a third, "indeterminate" state.
 - Canvas image smoothing can be controlled
-  - : The new [`mozImageSmoothingEnabled`](/en-US/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior) property can be used to turn on and off image smoothing when scaling in [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements.
+  - : The new [`mozImageSmoothingEnabled`](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#controlling_image_scaling_behavior) property can be used to turn on and off image smoothing when scaling in [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements.
 - Asynchronous script execution
   - : By setting the `async` attribute on a [`script`](/en-US/docs/Web/HTML/Element/script) element, the `script` will not block loading or display of the rest of the page. Instead the `script` executes as soon as it is downloaded.
 
@@ -70,7 +71,7 @@ Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language feature
   - : The [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) object provided to drag listeners now includes a list of files that were dragged.
 - Checking to see if an element matches a specified CSS selector
   - : The new {{domxref("Node.mozMatchesSelector", "element.mozMatchesSelector")}} method lets you determine whether or not an element matches a specified CSS selector. See {{bug(518003)}}.
-- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation)
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
   - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/DOM/MozOrientation) event. Firefox 3.6 supports the accelerometer in Mac laptops.
 - [Detecting document width and height changes](/en-US/docs/DOM/Detecting_document_width_and_height_changes)
   - : The new `MozScrollAreaChanged` event is dispatched whenever the document's `scrollWidth` and/or `scrollHeight` properties change.
@@ -99,7 +100,7 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 ### New features
 
-- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation)
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
   - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/DOM/MozOrientation) event. Firefox 3.6 supports the accelerometer in Mac laptops.
 - [Monitoring HTTP activity](/en-US/docs/Monitoring_HTTP_activity)
   - : You can now monitor HTTP transactions to observe requests and responses in real time.
@@ -115,8 +116,8 @@ If you're an extension developer, you should start by reading [Updating extensio
 
 - [Locale-aware collation of data is now supported by the Storage API](</en-US/docs/Storage#Collation_(sorting)>)
   - : Gecko 1.9.2 added several new collation methods to provide optimized collation (sorting) of results using locale-aware techniques.
-- [Properties on a statement can now be enumerated](/en-US/docs/mozIStorageStatementParams#Enumeration_of_properties)
-  - : You can now use a [`for..in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) enumeration to enumerate all the properties on a statement.
+- [Properties on a statement can now be enumerated](/en-US/docs/mozIStorageStatementParams#enumeration_of_properties)
+  - : You can now use a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) enumeration to enumerate all the properties on a statement.
 - mozIStorageStatement's getParameterIndex changed behavior between 3.5 and 3.6.
   - : See {{bug(528166)}} for details.
 - Asynchronously bind multiple sets of parameters and execute a statement.

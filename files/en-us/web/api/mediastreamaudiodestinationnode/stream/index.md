@@ -1,6 +1,7 @@
 ---
 title: MediaStreamAudioDestinationNode.stream
 slug: Web/API/MediaStreamAudioDestinationNode/stream
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - stream
 browser-compat: api.MediaStreamAudioDestinationNode.stream
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `stream` property of the {{ domxref("AudioContext") }} interface represents a {{domxref("MediaStream")}} containing a single audio {{domxref("MediaStreamTrack")}} with the same number of channels as the node itself.

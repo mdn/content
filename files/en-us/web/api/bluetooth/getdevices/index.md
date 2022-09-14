@@ -1,13 +1,16 @@
 ---
 title: Bluetooth.getDevices()
 slug: Web/API/Bluetooth/getDevices
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
   - Reference
   - Web Bluetooth API
+  - Experimental
 browser-compat: api.Bluetooth.getDevices
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
 
 The **`getDevices()`** method of
@@ -21,8 +24,8 @@ permission prompts.
 
 ## Syntax
 
-```js
-var readerPromise = Bluetooth.getDevices();
+```js-nolint
+getDevices()
 ```
 
 ### Parameters

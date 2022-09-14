@@ -1,6 +1,7 @@
 ---
 title: AudioNode.context
 slug: Web/API/AudioNode/context
+page-type: web-api-instance-property
 tags:
   - API
   - AudioNode
@@ -10,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioNode.context
 ---
+
 {{APIRef("Web Audio API")}}
 
 The read-only `context` property of the

@@ -1,6 +1,7 @@
 ---
 title: Document.fullscreenElement
 slug: Web/API/Document/fullscreenElement
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -14,6 +15,7 @@ tags:
   - screen
 browser-compat: api.Document.fullscreenElement
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 The
@@ -42,7 +44,7 @@ that the video is in fullscreen mode.
 
 ```js
 function isVideoInFullscreen() {
-  if (document.fullscreenElement && document.fullscreenElement.nodeName == 'VIDEO') {
+  if (document.fullscreenElement?.nodeName === 'VIDEO') {
     return true;
   }
   return false;

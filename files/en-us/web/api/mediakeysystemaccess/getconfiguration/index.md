@@ -1,6 +1,7 @@
 ---
 title: MediaKeySystemAccess.getConfiguration()
 slug: Web/API/MediaKeySystemAccess/getConfiguration
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -14,25 +15,26 @@ tags:
   - getConfiguration
 browser-compat: api.MediaKeySystemAccess.getConfiguration
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySystemAccess.getConfiguration()` method returns an object with the supported combination of
 the following configuration options:
 
-- `initDataTypes` {{readonlyinline}}
+- `initDataTypes` {{ReadOnlyInline}}
   - : Returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
-- `audioCapabilities` {{readonlyinline}}
+- `audioCapabilities` {{ReadOnlyInline}}
   - : Returns a list of supported audio type and capability pairs.
-- `videoCapabilities` {{readonlyinline}}
+- `videoCapabilities` {{ReadOnlyInline}}
   - : Returns a list of supported video type and capability pairs.
-- `distinctiveIdentifier` {{readonlyinline}}
+- `distinctiveIdentifier` {{ReadOnlyInline}}
   - : Indicates whether a persistent distinctive identifier is required.
-- `persistentState` {{readonlyinline}}
+- `persistentState` {{ReadOnlyInline}}
   - : Indicates whether the ability to persist state is required.
 
 ## Syntax
 
-```js
+```js-nolint
 getConfiguration()
 ```
 

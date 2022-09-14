@@ -1,6 +1,7 @@
 ---
 title: SVGScriptElement
 slug: Web/API/SVGScriptElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGScriptElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGScriptElement`** interface corresponds to the SVG {{SVGElement("script")}} element.

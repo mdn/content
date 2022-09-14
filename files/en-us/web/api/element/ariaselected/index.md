@@ -1,6 +1,7 @@
 ---
 title: Element.ariaSelected
 slug: Web/API/Element/ariaSelected
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaSelected
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaSelected`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
@@ -31,7 +33,9 @@ A string with one of the following values:
 In this example the `aria-selected` attribute on the element with an ID of `tab-id` is set to "true". Using `ariaSelected` we update the value to "false".
 
 ```html
-<button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id">Tab label</button>
+<button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id">
+  Tab label
+</button>
 ```
 
 ```js

@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.set
 ---
+
 {{JSRef}}
 
 The static **`Reflect.set()`** method works like setting a
@@ -19,7 +20,7 @@ property on an object.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.set(target, propertyKey, value)
 Reflect.set(target, propertyKey, value, receiver)
 ```
@@ -33,8 +34,7 @@ Reflect.set(target, propertyKey, value, receiver)
 - `value`
   - : The value to set.
 - `receiver` {{optional_inline}}
-  - : The value of `this` provided for the call to
-    `target` if a setter is encountered.
+  - : The value of `this` provided for the call to the setter for `propertyKey` on `target`. If provided and `target` does not have a setter for `propertyKey`, the property will be set on `receiver` instead.
 
 ### Return value
 
@@ -75,6 +75,27 @@ let obj = {}
 Reflect.set(obj)  // true
 Reflect.getOwnPropertyDescriptor(obj, 'undefined')
 // { value: undefined, writable: true, enumerable: true, configurable: true }
+```
+
+### Different target and receiver
+
+When the `target` and `receiver` are different, `Reflect.set` will use the property descriptor of `target` (to find the setter or determine if the property is writable), but set the property on `receiver`.
+
+```js
+const target = {};
+const receiver = {};
+Reflect.set(target, "a", 2, receiver); // true
+// target is {}; receiver is { a: 2 }
+
+const target = { a: 1 };
+const receiver = {};
+Reflect.set(target, "a", 2, receiver); // true
+// target is { a: 1 }; receiver is { a: 2 }
+
+const target = { set a(v) { this.b = v; } };
+const receiver = {};
+Reflect.set(target, "a", 2, receiver); // true
+// target is { a: [Setter] }; receiver is { b: 2 }
 ```
 
 ## Specifications

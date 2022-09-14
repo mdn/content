@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.uniformMatrix[234]x[234]fv()
 slug: Web/API/WebGL2RenderingContext/uniformMatrix
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.uniformMatrix2fv
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`**
@@ -21,7 +23,7 @@ values for uniform variables.
 
 ## Syntax
 
-```js
+```js-nolint
 uniformMatrix2fv(location, transpose, data)
 uniformMatrix2fv(location, transpose, data, srcOffset)
 uniformMatrix2fv(location, transpose, data, srcOffset, srcLength)

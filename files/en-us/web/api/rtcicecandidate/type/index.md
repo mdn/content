@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate.type
 slug: Web/API/RTCIceCandidate/type
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -16,6 +17,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidate.type
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`type`** specifies the type of candidate the object represents.
@@ -49,7 +51,7 @@ present a modified user interface for host candidates (those where the
 an intermediary).
 
 ```js
-if (candidate.type == "host") {
+if (candidate.type === "host") {
   showHostControls();
 } else {
   hideHostControls();

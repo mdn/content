@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.connect
 ---
+
 {{AddonSidebar()}}
 
 Call this function to set up a connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) that belong to this extension and are running in the specified tab. This function returns a {{WebExtAPIRef("runtime.Port")}} object.
@@ -23,7 +24,7 @@ For more details, see [connection-based messaging](/en-US/docs/Mozilla/Add-ons/W
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.connect(
   tabId,      // integer
   connectInfo // optional object
@@ -34,13 +35,13 @@ browser.tabs.connect(
 
 - `tabId`
   - : `integer`. ID of the tab whose content scripts we want to connect to.
-- `connectInfo`{{optional_inline}}
+- `connectInfo` {{optional_inline}}
 
   - : An object with the following properties:
 
-    - `name`{{optional_inline}}
+    - `name` {{optional_inline}}
       - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.
-    - `frameId`{{optional_inline}}
+    - `frameId` {{optional_inline}}
       - : `integer`. Open a port to a specific frame identified by `frameId` instead of all frames in the tab.
 
 ### Return value
@@ -66,7 +67,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let gettingActive = browser.tabs.query({
     currentWindow: true, active: true
   });
@@ -84,7 +85,8 @@ browser.browserAction.onClicked.addListener(function() {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,4 +113,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

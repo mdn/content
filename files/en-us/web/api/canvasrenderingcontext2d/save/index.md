@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.save()
 slug: Web/API/CanvasRenderingContext2D/save
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.save
 ---
+
 {{APIRef}}
 
 The
@@ -46,7 +48,7 @@ The drawing state that gets saved onto a stack consists of:
 
 ## Syntax
 
-```js
+```js-nolint
 save()
 ```
 

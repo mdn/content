@@ -13,11 +13,14 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.@@iterator
 ---
+
 {{JSRef}}
 
 The **`@@iterator`** method is part of
 [The iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol),
 that defines how to synchronously iterate over a sequence of values.
+
+{{EmbedInteractiveExample("pages/js/array-iterator.html")}}
 
 The initial value of the **`@@iterator`** property is the same
 function object as the initial value of the {{jsxref("Array.prototype.values()",
@@ -25,7 +28,7 @@ function object as the initial value of the {{jsxref("Array.prototype.values()",
 
 ## Syntax
 
-```js
+```js-nolint
 [Symbol.iterator]()
 ```
 
@@ -42,21 +45,17 @@ return the {{jsxref("Array.prototype.values()", "values()")}} function.
 #### HTML
 
 ```html
-<ul id="letterResult">
-</ul>
+<ul id="letterResult"></ul>
 ```
 
 #### JavaScript
 
 ```js
 const arr = ['a', 'b', 'c'];
-const eArr = arr[Symbol.iterator]();
+const arrIter = arr[Symbol.iterator]();
 const letterResult = document.getElementById('letterResult');
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-// const and var could also be used
-for (let letter of eArr) {
-  const li = document.createElement('LI');
+for (const letter of arrIter) {
+  const li = document.createElement('li');
   li.textContent = letter;
   letterResult.appendChild(li);
 }
@@ -70,16 +69,16 @@ for (let letter of eArr) {
 ### Alternative iteration
 
 ```js
-var arr = ['a', 'b', 'c', 'd', 'e'];
-var eArr = arr[Symbol.iterator]();
-console.log(eArr.next().value); // a
-console.log(eArr.next().value); // b
-console.log(eArr.next().value); // c
-console.log(eArr.next().value); // d
-console.log(eArr.next().value); // e
+const arr = ['a', 'b', 'c', 'd', 'e'];
+const arrIter = arr[Symbol.iterator]();
+console.log(arrIter.next().value); // a
+console.log(arrIter.next().value); // b
+console.log(arrIter.next().value); // c
+console.log(arrIter.next().value); // d
+console.log(arrIter.next().value); // e
 ```
 
-### Use Case for brace notation
+### Use case for brace notation
 
 The use case for this syntax over using the dot notation
 (`Array.prototype.values()`) is in a case where you don't know what object is
@@ -90,19 +89,14 @@ object or a custom object.
 
 ```js
 function logIterable(it) {
- if (!(Symbol.iterator in Object.getPrototypeOf(it)
- /* or "Symbol.iterator in Object.__proto__"
-    or "it[Symbol.iterator]" */)) {
-   console.log(it, ' is not an iterable object...');
-   return;
- }
+  if (!(Symbol.iterator in it)) {
+    console.log(it, ' is not an iterable object.');
+    return;
+  }
 
- var iterator = it[Symbol.iterator]();
-  // your browser must support for..of loop
-  // and let-scoped variables in for loops
-  // const and var could also be used
-  for (let letter of iterator) {
-      console.log(letter);
+  const iterator = it[Symbol.iterator]();
+  for (const letter of iterator) {
+    console.log(letter);
   }
 }
 
@@ -119,7 +113,7 @@ logIterable('abc');
 // c
 
 logIterable(123);
-// 123 " is not an iterable object..."
+// 123 is not an iterable object.
 ```
 
 ## Specifications

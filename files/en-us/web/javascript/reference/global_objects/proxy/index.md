@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy
 ---
+
 {{JSRef}}
 
 The `Proxy` object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
@@ -142,14 +143,81 @@ console.log(target.a);
 //  (The operation has been properly forwarded!)
 ```
 
-Note that while this "no-op" works for JavaScript objects, it does not work for native browser objects like DOM Elements.
+Note that while this "no-op" works for plain JavaScript objects, it does not work for native objects, such as DOM elements, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects, or anything that has internal slots. See [no private property forwarding](#no_private_property_forwarding) for more information.
+
+### No private property forwarding
+
+A proxy is still another object with a different identity — it's a _proxy_ that operates between the wrapped object and the outside. As such, the proxy does not have direct access to the original object's [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+
+```js
+class Secret {
+  #secret;
+  constructor(secret) {
+    this.#secret = secret;
+  }
+  get secret() {
+    return this.#secret.replace(/\d+/, "[REDACTED]");
+  }
+}
+
+const aSecret = new Secret("123456");
+console.log(aSecret.secret); // [REDACTED]
+// Looks like a no-op forwarding...
+const proxy = new Proxy(aSecret, {});
+console.log(proxy.secret); // TypeError: Cannot read private member #secret from an object whose class did not declare it
+```
+
+This is because when the proxy's `get` trap is invoked, the `this` value is the `proxy` instead of the original `secret`, so `#secret` is not accessible. To fix this, use the original `secret` as `this`:
+
+```js
+const proxy = new Proxy(aSecret, {
+  get(target, prop, receiver) {
+    // By default, it looks like Reflect.get(target, prop, receiver)
+    // which has a different value of `this`
+    return target[prop];
+  },
+});
+console.log(proxy.secret);
+```
+
+For methods, this means you have to redirect the method's `this` value to the original object as well:
+
+```js
+class Secret {
+  #x = 1;
+  x() { return this.#x; }
+}
+
+const aSecret = new Secret();
+const proxy = new Proxy(aSecret, {
+  get(target, prop, receiver) {
+    const value = target[prop];
+    if (value instanceof Function) {
+      return function (...args) {
+        return value.apply(this === receiver ? target : this, args);
+      };
+    }
+    return value;
+  },
+});
+console.log(proxy.x());
+```
+
+Some native JavaScript objects have properties called _[internal slots](https://tc39.es/ecma262/#sec-object-internal-methods-and-internal-slots)_, which are not accessible from JavaScript code. For example, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects have an internal slot called `[[MapData]]`, which stores the key-value pairs of the map. As such, you cannot trivially create a forwarding proxy for a map:
+
+```js
+const proxy = new Proxy(new Map(), {});
+console.log(proxy.size); // TypeError: get size method called on incompatible Proxy
+```
+
+You have to use the "`this`-recovering" proxy illustrated above to work around this.
 
 ### Validation
 
 With a `Proxy`, you can easily validate the passed value for an object. This example uses the {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} handler.
 
 ```js
-let validator = {
+const validator = {
   set(obj, prop, value) {
     if (prop === 'age') {
       if (!Number.isInteger(value)) {
@@ -184,12 +252,12 @@ A function proxy could easily extend a constructor with a new constructor. This 
 function extend(sup, base) {
   base.prototype = Object.create(sup.prototype);
   base.prototype.constructor = new Proxy(base, {
-    construct: function(target, args) {
+    construct(target, args) {
       const obj = Object.create(base.prototype);
       this.apply(target, obj, args);
       return obj;
     },
-    apply: function(target, that, args) {
+    apply(target, that, args) {
       sup.apply(that, args);
       base.apply(that, args);
     }
@@ -197,21 +265,21 @@ function extend(sup, base) {
   return base.prototype.constructor;
 }
 
-const Person = function(name) {
+const Person = function (name) {
   this.name = name;
 };
 
-const Boy = extend(Person, function(name, age) {
+const Boy = extend(Person, function (name, age) {
   this.age = age;
 });
 
 Boy.prototype.gender = 'M';
 
-const Peter = new Boy('Peter', 13);
+const peter = new Boy('Peter', 13);
 
-console.log(Peter.gender);  // "M"
-console.log(Peter.name);    // "Peter"
-console.log(Peter.age);     // 13
+console.log(peter.gender);  // "M"
+console.log(peter.name);    // "Peter"
+console.log(peter.age);     // 13
 ```
 
 ### Manipulating DOM nodes
@@ -224,11 +292,11 @@ When we assign an HTML element to `view.selected`, the element's `'aria-selected
 
 ```js
 const view = new Proxy({
-  selected: null
+  selected: null,
 },
 {
   set(obj, prop, newval) {
-    let oldval = obj[prop];
+    const oldval = obj[prop];
 
     if (prop === 'selected') {
       if (oldval) {
@@ -271,7 +339,7 @@ console.log(`item2: ${item2.getAttribute('aria-selected')}`);
 The `products` proxy object evaluates the passed value and converts it to an array if needed. The object also supports an extra property called `latestBrowser` both as a getter and a setter.
 
 ```js
-let products = new Proxy({
+const products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
 },
 {
@@ -324,10 +392,10 @@ console.log(products.latestBrowser);
 
 ### Finding an array item object by its property
 
-This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties()")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement.rows", "table.rows")}}.
+This proxy extends an array with some utility features. As you see, you can flexibly "define" properties without using {{jsxref("Object.defineProperties", "Object.defineProperties()")}}. This example can be adapted to find a table row by its cell. In that case, the target will be {{domxref("HTMLTableElement/rows", "table.rows")}}.
 
 ```js
-let products = new Proxy([
+const products = new Proxy([
   { name: 'Firefox', type: 'browser' },
   { name: 'SeaMonkey', type: 'browser' },
   { name: 'Thunderbird', type: 'mailer' }
@@ -344,9 +412,10 @@ let products = new Proxy([
       return obj.length;
     }
 
-    let result, types = {};
+    let result;
+    const types = {};
 
-    for (let product of obj) {
+    for (const product of obj) {
       if (product.name === prop) {
         result = product;
       }
@@ -384,7 +453,7 @@ console.log(products.types);       // ['browser', 'mailer']
 console.log(products.number);      // 3
 ```
 
-### A complete `traps` list example
+### A complete traps list example
 
 Now in order to create a complete sample `traps` list, for didactic purposes, we will try to proxify a _non-native_ object that is particularly suited to this type of operation: the `docCookies` global object created by [a simple cookie framework](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework).
 
@@ -395,45 +464,47 @@ Now in order to create a complete sample `traps` list, for didactic purposes, we
 */
 
 const docCookies = new Proxy(docCookies, {
-  get (oTarget, sKey) {
-    return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
+  get(target, key) {
+    return target[key] || target.getItem(key) || undefined;
   },
-  set: function (oTarget, sKey, vValue) {
-    if (sKey in oTarget) { return false; }
-    return oTarget.setItem(sKey, vValue);
+  set(target, key, value) {
+    if (key in target) { return false; }
+    return target.setItem(key, value);
   },
-  deleteProperty: function (oTarget, sKey) {
-    if (!sKey in oTarget) { return false; }
-    return oTarget.removeItem(sKey);
+  deleteProperty(target, key) {
+    if (!(key in target)) { return false; }
+    return target.removeItem(key);
   },
-  ownKeys: function (oTarget, sKey) {
-    return oTarget.keys();
+  ownKeys(target) {
+    return target.keys();
   },
-  has: function (oTarget, sKey) {
-    return sKey in oTarget || oTarget.hasItem(sKey);
+  has(target, key) {
+    return key in target || target.hasItem(key);
   },
-  defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc && 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
-    return oTarget;
+  defineProperty(target, key, descriptor) {
+    if (descriptor && 'value' in descriptor) {
+      target.setItem(key, descriptor.value);
+    }
+    return target;
   },
-  getOwnPropertyDescriptor: function (oTarget, sKey) {
-    const vValue = oTarget.getItem(sKey);
-    return vValue ? {
-      value: vValue,
+  getOwnPropertyDescriptor(target, key) {
+    const value = target.getItem(key);
+    return value ? {
+      value,
       writable: true,
       enumerable: true,
-      configurable: false
+      configurable: false,
     } : undefined;
   },
 });
 
 /* Cookies test */
 
-console.log(docCookies.my_cookie1 = 'First value');
-console.log(docCookies.getItem('my_cookie1'));
+console.log(docCookies.myCookie1 = 'First value');
+console.log(docCookies.getItem('myCookie1'));
 
-docCookies.setItem('my_cookie1', 'Changed value');
-console.log(docCookies.my_cookie1);
+docCookies.setItem('myCookie1', 'Changed value');
+console.log(docCookies.myCookie1);
 ```
 
 ## Specifications

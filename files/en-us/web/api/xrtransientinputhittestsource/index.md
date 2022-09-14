@@ -1,6 +1,7 @@
 ---
 title: XRTransientInputHitTestSource
 slug: Web/API/XRTransientInputHitTestSource
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -9,9 +10,11 @@ tags:
   - XR
   - AR
   - VR
+  - Experimental
 browser-compat: api.XRTransientInputHitTestSource
 ---
-{{APIRef("WebXR Device API")}} {{secureContext_header}}
+
+{{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRTransientInputHitTestSource`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) handles transient input hit test subscriptions. You can get an `XRTransientInputHitTestSource` object by calling the {{domxref("XRSession.requestHitTestSourceForTransientInput()")}}.
 
@@ -23,7 +26,7 @@ None.
 
 ## Methods
 
-- {{domxref("XRTransientInputHitTestSource.cancel()")}}
+- {{domxref("XRTransientInputHitTestSource.cancel()")}} {{Experimental_Inline}}
   - : Unsubscribes from the transient input hit test.
 
 ## Examples
@@ -56,7 +59,7 @@ function onXRFrame(time, xrFrame) {
 
 ### Unsubscribe from a transient input hit test
 
-To unsubscribe from a transient input hit test source, use the {{domxref("XRTransientInputHitTestSource.cancel()")}} method. Since the object will no longer be usable, you can clean up and set the `XRTransientInputHitTestSource` object to {{jsxref("null")}}.
+To unsubscribe from a transient input hit test source, use the {{domxref("XRTransientInputHitTestSource.cancel()")}} method. Since the object will no longer be usable, you can clean up and set the `XRTransientInputHitTestSource` object to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ```js
 transientHitTestSource.cancel();

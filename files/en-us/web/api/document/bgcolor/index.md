@@ -1,6 +1,7 @@
 ---
 title: Document.bgColor
 slug: Web/API/Document/bgColor
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -12,9 +13,10 @@ tags:
   - Reference
 browser-compat: api.Document.bgColor
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
-The deprecated  `bgColor` property gets or sets the background color of the
+The deprecated `bgColor` property gets or sets the background color of the
 current document.
 
 ## Value

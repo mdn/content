@@ -10,20 +10,21 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.minimize
 ---
+
 {{JSRef}}
 
 The
 **`Intl.Locale.prototype.minimize()`** method attempts to
 remove information about the locale that would be added by calling
-{{jsxref("Intl/Locale/maximize", "Locale.maximize()")}}.
+{{jsxref("Intl/Locale/maximize", "maximize()")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html", "taller")}}
+{{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html")}}
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
-```js
+```js-nolint
 minimize()
 ```
 
@@ -45,18 +46,21 @@ the [language identifier](https://www.unicode.org/reports/tr35/#Language_Locale_
 language, script, and region subtags. Other subtags after the "-u"
 in the locale identifier are called extension subtags and are not affected by the
 `minimize()` method. Examples of these subtags include
-{{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}}, {{jsxref("Intl/Locale/calendar", "Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric", "Locale.numeric")}}.
+{{jsxref("Intl/Locale/hourCycle", "hourCycle")}}, {{jsxref("Intl/Locale/calendar", "calendar")}}, and {{jsxref("Intl/Locale/numeric", "numeric")}}.
 
 ## Examples
 
 ### Using minimize
 
 ```js
-let myLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+const myLocale = new Intl.Locale("fr-Latn-FR", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(myLocale.baseName); // Prints "fr-Latn-FR"
 console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
 
-let myLocMinimized = myLocale.minimize();
+const myLocMinimized = myLocale.minimize();
 
 // Prints "fr", since French is only written in the Latin script
 // and is most likely to be spoken in France.
@@ -78,4 +82,4 @@ console.log(myLocMinimized.toString());
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}
+- {{jsxref("Intl/Locale/baseName", "baseName")}}

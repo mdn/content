@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredential.getClientExtensionResults()
 slug: Web/API/PublicKeyCredential/getClientExtensionResults
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.getClientExtensionResults
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`getClientExtensionResults()`** is a method of the
@@ -33,7 +35,7 @@ respectively given by {{domxref("PublicKeyCredentialCreationOptions.extensions")
 
 ## Syntax
 
-```js
+```js-nolint
 getClientExtensionResults()
 ```
 
@@ -55,7 +57,7 @@ and their results from the processing.
 ## Examples
 
 ```js
-var publicKey = {
+const publicKey = {
   // Here are the extensions (as "inputs")
   extensions: {
     "loc": true, // This extension has been defined to include location information in attestation
@@ -80,10 +82,10 @@ var publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
-    var myBuffer = newCredentialInfo.getClientExtensionResults();
+  .then((newCredentialInfo) => {
+    const myBuffer = newCredentialInfo.getClientExtensionResults();
     // myBuffer will contain the result of any of the processing of the "loc" and "uvi" extensions
-  }).catch(function (err) {
+  }).catch((err) => {
      console.error(err);
   });
 ```
@@ -98,8 +100,7 @@ navigator.credentials.create({ publicKey })
 
 ## See also
 
-- [The list of the
-  currently defined extensions](https://www.w3.org/TR/webauthn/#sctn-defined-extensions)
+- [The list of the currently defined extensions](https://www.w3.org/TR/webauthn/#sctn-defined-extensions)
 - {{domxref("AuthenticatorAssertionResponse.authenticatorData")}} which contains the
   result of the authenticator's extensions processing
 - {{domxref("PublicKeyCredentialCreationOptions.extensions")}} which contains the

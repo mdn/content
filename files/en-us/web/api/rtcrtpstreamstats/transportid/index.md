@@ -1,6 +1,7 @@
 ---
 title: RTCRtpStreamStats.transportId
 slug: Web/API/RTCRtpStreamStats/transportId
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -15,6 +16,7 @@ tags:
   - transportID
 browser-compat: api.RTCRtpStreamStats.transportId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary's

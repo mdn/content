@@ -1,6 +1,7 @@
 ---
 title: URLPattern.pathname
 slug: Web/API/URLPattern/pathname
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,7 +12,7 @@ tags:
 browser-compat: api.URLPattern.pathname
 ---
 
-{{ APIRef("URL Pattern API") }}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`pathname`** property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the pathname part

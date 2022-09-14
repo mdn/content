@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.createShader()
 slug: Web/API/WebGLRenderingContext/createShader
+page-type: web-api-instance-method
 tags:
   - API
   - Graphics
@@ -10,6 +11,7 @@ tags:
   - WebGL
 browser-compat: api.WebGLRenderingContext.createShader
 ---
+
 {{APIRef("WebGL")}}
 
 The {{domxref("WebGLRenderingContext")}}
@@ -20,7 +22,7 @@ method **`createShader()`** of the [WebGL API](/en-US/docs/Web/API/WebGL_API) cr
 
 ## Syntax
 
-```js
+```js-nolint
 createShader(type)
 ```
 
@@ -31,7 +33,7 @@ createShader(type)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A new ({{domxref("WebGLShader")}}).
 
 ## Examples
 

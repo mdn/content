@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTDescriptor.uuid
 slug: Web/API/BluetoothRemoteGATTDescriptor/uuid
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -12,6 +13,7 @@ tags:
   - uuid
 browser-compat: api.BluetoothRemoteGATTDescriptor.uuid
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTDescriptor.uuid`** read-only property returns the {{Glossary("UUID")}} of the characteristic descriptor.

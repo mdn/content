@@ -1,6 +1,7 @@
 ---
 title: AudioContext.outputLatency
 slug: Web/API/AudioContext/outputLatency
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -11,6 +12,7 @@ tags:
   - outputLatency
 browser-compat: api.AudioContext.outputLatency
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`outputLatency`** read-only property of

@@ -1,6 +1,7 @@
 ---
 title: RTCRemoteOutboundRtpStreamStats
 slug: Web/API/RTCRemoteOutboundRtpStreamStats
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
@@ -20,6 +21,7 @@ tags:
   - stream
 browser-compat: api.RTCRemoteOutboundRtpStreamStats
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The WebRTC statistics model's **`RTCRemoteOutboundRtpStreamStats`** dictionary extends the underlying {{domxref("RTCSentRtpStreamStats")}} dictionary with properties measuring metrics specific to outgoing {{Glossary("RTP")}} streams.

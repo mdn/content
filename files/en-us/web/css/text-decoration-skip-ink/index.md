@@ -12,6 +12,7 @@ tags:
   - text-decoration-skip-ink
 browser-compat: css.properties.text-decoration-skip-ink
 ---
+
 {{CSSRef}}
 
 The **`text-decoration-skip-ink`** [CSS](/en-US/docs/Web/CSS) property specifies how overlines and underlines are drawn when they pass over glyph ascenders and descenders.
@@ -64,7 +65,9 @@ text-decoration-skip-ink: unset;
 <p>You should go on a quest for a cup of coffee.</p>
 <p class="no-skip-ink">Or maybe you'd prefer some tea?</p>
 <p>この文は、 text-decoration-skip-ink: auto の使用例を示しています。</p>
-<p class="skip-ink-all">この文は、 text-decoration-skip-ink: all の使用例を示しています。</p>
+<p class="skip-ink-all">
+  この文は、 text-decoration-skip-ink: all の使用例を示しています。
+</p>
 ```
 
 ### CSS
@@ -80,7 +83,7 @@ p {
   text-decoration-skip-ink: none;
 }
 
-.skip-ink-all{
+.skip-ink-all {
   text-decoration-skip-ink: all;
 }
 ```

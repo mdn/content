@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: canplaythrough event'
 slug: Web/API/HTMLMediaElement/canplaythrough_event
+page-type: web-api-event
 tags:
   - Audio
   - Event
@@ -9,40 +10,26 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.canplaythrough_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `canplaythrough` event is fired when the user agent can play the media, and estimates that enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.oncanplaythrough")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('canplaythrough', (event) => { });
+
+oncanplaythrough = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

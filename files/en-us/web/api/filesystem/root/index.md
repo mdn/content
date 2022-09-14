@@ -1,6 +1,7 @@
 ---
 title: FileSystem.root
 slug: Web/API/FileSystem/root
+page-type: web-api-instance-property
 tags:
   - API
   - File and Directory Entries API
@@ -12,6 +13,7 @@ tags:
   - root
 browser-compat: api.FileSystem.root
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`root`** property of the

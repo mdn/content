@@ -12,6 +12,7 @@ tags:
   - abs
 browser-compat: css.types.abs
 ---
+
 {{CSSRef}}
 
 The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) contains one calculation, and returns the absolute value of the argument, as the same type as the input.
@@ -39,7 +40,7 @@ The `abs()` function can be used to ensure that a value is always positive. In t
 
 ```css
 h1 {
-  font-size: abs( var( --font-size ) );
+  font-size: abs(var(--font-size));
 }
 ```
 
@@ -50,7 +51,7 @@ You can also control the gradient direction using `abs()` function. In the follo
 ```css
 div {
   --deg: -45deg;
-  background-image: linear-gradient( abs( var( --deg ) ), blue, red);
+  background-image: linear-gradient(abs(var(--deg)), blue, red);
 }
 ```
 

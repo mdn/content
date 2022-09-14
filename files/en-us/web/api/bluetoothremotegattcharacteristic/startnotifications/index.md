@@ -1,6 +1,7 @@
 ---
 title: BluetoothRemoteGATTCharacteristic.startNotifications()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/startNotifications
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
@@ -12,6 +13,7 @@ tags:
   - startNotifications()
 browser-compat: api.BluetoothRemoteGATTCharacteristic.startNotifications
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.startNotifications()`** method
@@ -20,7 +22,7 @@ there is an active notification on it.
 
 ## Syntax
 
-```js
+```js-nolint
 startNotifications()
 ```
 

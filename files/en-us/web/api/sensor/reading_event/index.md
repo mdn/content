@@ -1,6 +1,7 @@
 ---
 title: 'Sensor: reading event'
 slug: Web/API/Sensor/reading_event
+page-type: web-api-event
 tags:
   - API
   - Generic Sensor API
@@ -11,6 +12,7 @@ tags:
   - Event
 browser-compat: api.Sensor.reading_event
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`reading`** event is fired when a new reading is available on a sensor.
@@ -23,9 +25,9 @@ on one of the [derived classes](/en-US/docs/Web/API/Sensor#interfaces_based_on_s
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('reading', event => { })
+addEventListener('reading', (event) => { })
 
-onreading = event => { }
+onreading = (event) => { }
 ```
 
 ## Event type
@@ -41,9 +43,9 @@ This example adds an event listener to read acceleration values of an {{domxref(
 ```js
 const acl = new Accelerometer({frequency: 60});
 acl.addEventListener('reading', () => {
-  console.log("Acceleration along the X-axis " + acl.x);
-  console.log("Acceleration along the Y-axis " + acl.y);
-  console.log("Acceleration along the Z-axis " + acl.z);
+  console.log(`Acceleration along the X-axis ${acl.x}`);
+  console.log(`Acceleration along the Y-axis ${acl.y}`);
+  console.log(`Acceleration along the Z-axis ${acl.z}`);
 });
 acl.start();
 ```

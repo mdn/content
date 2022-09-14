@@ -1,6 +1,7 @@
 ---
 title: EventSource.close()
 slug: Web/API/EventSource/close
+page-type: web-api-instance-method
 tags:
   - API
   - EventSource
@@ -10,6 +11,7 @@ tags:
   - close
 browser-compat: api.EventSource.close
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`close()`** method of the {{domxref("EventSource")}}
@@ -20,7 +22,7 @@ interface closes the connection, if one is made, and sets the
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 
@@ -35,16 +37,16 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var button = document.querySelector('button');
-var evtSource = new EventSource('sse.php');
+const button = document.querySelector('button');
+const evtSource = new EventSource('sse.php');
 
-button.onclick = function() {
+button.onclick = () => {
   console.log('Connection closed');
   evtSource.close();
 }
 ```
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Specifications
 

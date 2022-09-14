@@ -1,11 +1,13 @@
 ---
 title: 'IDBTransaction: abort event'
 slug: Web/API/IDBTransaction/abort_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
 browser-compat: api.IDBTransaction.abort_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `abort` event is fired when an `IndexedDB` transaction is aborted.
@@ -25,8 +27,8 @@ This non-cancelable event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('abort', event => { });
-onabort = event => { };
+addEventListener('abort', (event) => { });
+onabort = (event) => { };
 ```
 
 ## Event type
@@ -47,7 +49,7 @@ This example opens a database (creating the database if it does not exist), then
 // Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
@@ -55,7 +57,7 @@ DBOpenRequest.onupgradeneeded = event => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -65,7 +67,7 @@ DBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
@@ -87,7 +89,7 @@ The same example, but assigning the event handler to the {{DOMxRef("IDBTransacti
 // Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
@@ -95,7 +97,7 @@ DBOpenRequest.onupgradeneeded = event => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -105,7 +107,7 @@ DBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data

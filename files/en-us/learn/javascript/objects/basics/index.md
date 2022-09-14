@@ -2,6 +2,7 @@
 title: JavaScript object basics
 slug: Learn/JavaScript/Objects/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 In this article, we'll look at fundamental JavaScript object syntax, and revisit some JavaScript features that we've already seen earlier in the course, reiterating the fact that many of the features you've already dealt with are objects.
@@ -14,9 +15,7 @@ In this article, we'll look at fundamental JavaScript object syntax, and revisit
         Basic computer literacy, a basic understanding of HTML and CSS,
         familiarity with JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
-          >Building blocks</a
-        >).
+        <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>).
       </td>
     </tr>
     <tr>
@@ -44,7 +43,7 @@ const person = {};
 
 Now open your browser's [JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#the_javascript_console), enter `person` into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should get a result similar to one of the below lines:
 
-```js
+```
 [object Object]
 Object { }
 { }
@@ -56,10 +55,10 @@ Congratulations, you've just created your first object. Job done! But this is an
 const person = {
   name: ['Bob', 'Smith'],
   age: 32,
-  bio: function() {
+  bio: function () {
     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
   },
-  introduceSelf: function() {
+  introduceSelf: function () {
     console.log(`Hi! I'm ${this.name[0]}.`);
   }
 };
@@ -89,7 +88,7 @@ const objectName = {
 
 The value of an object member can be pretty much anything — in our person object we've got a number, an array, and two functions. The first two items are data items, and are referred to as the object's **properties**. The last two items are functions that allow the object to do something with that data, and are referred to as the object's **methods**.
 
-When the object's members are functions there's a simpler syntax. Instead of `bio: function()` we can write `bio()`. Like this:
+When the object's members are functions there's a simpler syntax. Instead of `bio: function ()` we can write `bio()`. Like this:
 
 ```js
 const person = {
@@ -124,16 +123,21 @@ person.bio()
 An object property can itself be an object. For example, try changing the `name` member from
 
 ```js
-name: ['Bob', 'Smith'],
+const person = {
+  name: ['Bob', 'Smith'],
+};
 ```
 
 to
 
 ```js
-name : {
-  first: 'Bob',
-  last: 'Smith'
-},
+const person = {
+  name: {
+    first: 'Bob',
+    last: 'Smith',
+  },
+  // …
+};
 ```
 
 To access these items you just need to chain the extra step onto the end with another dot. Try these in the JS console:
@@ -161,21 +165,36 @@ Otherwise, your methods will no longer work.
 
 ## Bracket notation
 
-There is another way to access object properties — using bracket notation. Instead of using these:
+Bracket notation provides an alternative way to access object properties.
+Instead of using [dot notation](#dot_notation) like this:
 
 ```js
 person.age
 person.name.first
 ```
 
-You can use
+You can instead use brackets:
 
 ```js
 person['age']
 person['name']['first']
 ```
 
-This looks very similar to how you access the items in an array, and it is basically the same thing — instead of using an index number to select an item, you are using the name associated with each member's value. It is no wonder that objects are sometimes called **associative arrays** — they map strings to values in the same way that arrays map numbers to values.
+This looks very similar to how you access the items in an array, and it is basically the same thing — instead of using an index number to select an item, you are using the name associated with each member's value.
+It is no wonder that objects are sometimes called **associative arrays** — they map strings to values in the same way that arrays map numbers to values.
+
+Dot notation is generally preferred over bracket notation because it is more succinct and easier to read.
+However there are some cases where you have to use brackets.
+For example, if an object property name is defined at runtime then you can't use dot notation to access the value, but you can pass the name as a variable inside brackets as shown with `input` below:
+
+```js
+const person = {
+  name: ['Bob', 'Smith'],
+  age: 32
+}
+const input = prompt('Get name or age?')
+console.log(person[input])
+```
 
 ## Setting object members
 

@@ -6,6 +6,7 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `math:max()` returns the maximum value of a node-set.
@@ -14,7 +15,7 @@ To compute the maximum value of the node-set, the node set is sorted into descen
 
 ## Syntax
 
-```js
+```plain
 math:max(nodeSet)
 ```
 

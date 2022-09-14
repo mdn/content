@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: webextensions.api.permissions.request
 ---
+
 {{AddonSidebar()}}
 
 Ask for the set of permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
@@ -27,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let requesting = browser.permissions.request(
   permissions                // Permissions object
 )
@@ -40,7 +41,7 @@ let requesting = browser.permissions.request(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension was granted all the permissions listed in the `permissions` argument, or `false` otherwise.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with `true` if the extension is now granted all the permissions listed in the `permissions` argument, or `false` otherwise.
 
 ## Browser compatibility
 

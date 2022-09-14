@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.setFormValue()
 slug: Web/API/ElementInternals/setFormValue
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,13 +10,14 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.setFormValue
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`setFormValue()`** method of the {{domxref("ElementInternals")}} interface sets the element's submission value and state, communicating these to the user agent.
 
 ## Syntax
 
-```js
+```js-nolint
 setFormValue(value)
 setFormValue(value, state)
 ```
@@ -23,9 +25,9 @@ setFormValue(value, state)
 ### Parameters
 
 - `value`
-  - : A {{domxref("File")}}, or a string, or a {{domxref("FormData")}} as the value to be submitted to the server.
-- `state`{{Optional_Inline}}
-  - : A {{domxref("File")}}, or a {{domxref("USVString","string")}}, or a {{domxref("FormData")}} representing the input made by the user.
+  - : A {{domxref("File")}}, a string, or a {{domxref("FormData")}} as the value to be submitted to the server.
+- `state` {{optional_inline}}
+  - : A {{domxref("File")}}, a string, or a {{domxref("FormData")}} representing the input made by the user.
     This allows the application to re-display the information that the user submitted, in the form that they submitted it, if required.
 
 > **Note:** In general, `state` is used to pass information specified by a user, the `value` is suitable for submission to a server, post sanitization.

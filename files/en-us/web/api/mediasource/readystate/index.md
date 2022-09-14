@@ -1,10 +1,10 @@
 ---
 title: MediaSource.readyState
 slug: Web/API/MediaSource/readyState
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - MediaSource
@@ -14,7 +14,8 @@ tags:
   - readyState
 browser-compat: api.MediaSource.readyState
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`readyState`** read-only property of the
 {{domxref("MediaSource")}} interface returns an enum representing the state of the
@@ -32,29 +33,28 @@ A string.
 
 ## Examples
 
-The following snippet is from a simple example written by Nick Desaulniers ([view the full demo
-live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
-the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
+let mediaSource;
+
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource;
-  //console.log(mediaSource.readyState); // closed
+  mediaSource = getMediaSource();
+  console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
 } else {
   console.error('Unsupported MIME type or codec: ', mimeCodec);
 }
 
-function sourceOpen (_) {
-  //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+function sourceOpen() {
+  console.log(this.readyState); // open
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  fetchAB(assetURL, (buf) => {
+    sourceBuffer.addEventListener('updateend', () => {
       mediaSource.endOfStream();
       video.play();
-      //console.log(mediaSource.readyState); // ended
+      console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });

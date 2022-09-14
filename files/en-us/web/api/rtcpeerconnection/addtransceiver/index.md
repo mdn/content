@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.addTransceiver()
 slug: Web/API/RTCPeerConnection/addTransceiver
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -15,6 +16,7 @@ tags:
   - Method
 browser-compat: api.RTCPeerConnection.addTransceiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method
@@ -26,7 +28,7 @@ bidirectional stream, with both an {{domxref("RTCRtpSender")}} and an
 
 ## Syntax
 
-```js
+```js-nolint
 addTransceiver(trackOrKind)
 addTransceiver(trackOrKind, init)
 ```
@@ -50,11 +52,12 @@ addTransceiver(trackOrKind, init)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+The {{domxref("RTCRtpTransceiver")}} object which will be used to exchange the media data.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
+
   - : Thrown if `trackOrKind` was not either `"audio"` or `"video"`.
 
 - {{jsxref("RangeError")}}
@@ -71,7 +74,6 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCPeerConnection.addTrack()")}} also creates transceivers
 - {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}}

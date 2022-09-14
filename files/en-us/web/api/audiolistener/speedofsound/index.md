@@ -1,6 +1,7 @@
 ---
 title: AudioListener.speedOfSound
 slug: Web/API/AudioListener/speedOfSound
+page-type: web-api-instance-property
 tags:
   - API
   - AudioListener
@@ -11,6 +12,7 @@ tags:
   - speedOfSound
 browser-compat: api.AudioListener.speedOfSound
 ---
+
 {{ APIRef("Web Audio API") }}{{deprecated_header}}
 
 The **`speedOfSound`** property of the {{
@@ -18,8 +20,7 @@ The **`speedOfSound`** property of the {{
 in _meters per second_.
 
 The `speedOfSound` property's default value is `343.3` m/s and is
-used to calculate the [doppler
-shift](https://en.wikipedia.org/wiki/Doppler_effect) appropriate for the speed the panner is traveling at (as defined by
+used to calculate the [doppler shift](https://en.wikipedia.org/wiki/Doppler_effect) appropriate for the speed the panner is traveling at (as defined by
 {{domxref("PannerNode.setVelocity")}}.)
 
 > **Note:** Bear in mind that no propagation delay is automatically

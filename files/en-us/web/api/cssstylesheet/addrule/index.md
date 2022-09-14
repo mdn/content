@@ -1,6 +1,7 @@
 ---
 title: CSSStyleSheet.addRule()
 slug: Web/API/CSSStyleSheet/addRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSS
@@ -19,6 +20,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSStyleSheet.addRule
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The obsolete {{domxref("CSSStyleSheet")}} interface's
@@ -28,7 +30,7 @@ stylesheet. You should avoid using this method, and should instead use the more 
 
 ## Syntax
 
-```js
+```js-nolint
 addRule(selector, styleBlock, index)
 ```
 
@@ -83,5 +85,4 @@ cssStyleSheet.insertRule(`${selector} {${styles}}`, 0);
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

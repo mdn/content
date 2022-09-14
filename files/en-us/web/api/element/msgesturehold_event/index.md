@@ -1,12 +1,14 @@
 ---
 title: 'Element: MSGestureHold event'
 slug: Web/API/Element/MSGestureHold_event
+page-type: web-api-event
 tags:
   - Event
   - Non-standard
   - Reference
 browser-compat: api.Element.MSGestureHold_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 The **`MSGestureHold`** event is fired when the user contacts the touch surface and remains in the same position for a while.

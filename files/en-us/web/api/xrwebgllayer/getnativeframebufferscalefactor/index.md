@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.getNativeFramebufferScaleFactor() static method
 slug: Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor
+page-type: web-api-static-method
 tags:
   - API
   - AR
@@ -23,9 +24,11 @@ tags:
   - getNativeFramebufferScaleFactor
   - native
   - resolution
+  - Experimental
 browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The static method
 **`XRWebGLLayer.getNativeFramebufferScaleFactor()`** returns a
@@ -49,8 +52,8 @@ superscaling or anti-aliasing techniques to improve perceived image quality.
 
 ## Syntax
 
-```js
-let nativeScaling = XRWebGLLayer.getNativeFramebufferScaleFactor(session);
+```js-nolint
+getNativeFramebufferScaleFactor(session)
 ```
 
 ### Parameters
@@ -103,8 +106,7 @@ Since each eye gets half of the frame buffer, the result is that the left eye ge
 0, the width at 640, and the height set to 720. The right eye gets the other half of the
 frame buffer, with its viewport's `x` set at 639.
 
-While [rendering a
-frame for this scene](/en-US/docs/Web/API/XRWebGLLayer#rendering_every_view_in_a_frame), we get the viewport for the view and apply it to WebGL, then
+While [rendering a frame for this scene](/en-US/docs/Web/API/XRWebGLLayer#rendering_every_view_in_a_frame), we get the viewport for the view and apply it to WebGL, then
 render the scene. This ensures that the scene we render will not only match the
 viewpoint we need to express (which is defined by the position and orientation data in
 the pose), but that the rendered output will be constrained within the correct portion
@@ -128,8 +130,7 @@ function requestNativeScaleWebGLLayer(gl, xrSession) {
 };
 ```
 
-This starts by calling the [WebGL
-rendering context](/en-US/docs/Web/API/WebGLRenderingContext) function {{domxref("WebGLRenderingContext.makeXRCompatible",
+This starts by calling the [WebGL rendering context](/en-US/docs/Web/API/WebGLRenderingContext) function {{domxref("WebGLRenderingContext.makeXRCompatible",
   "makeXRCompatible()")}}. When the returned {{jsxref("promise")}} resolves, we proceed by
 calling `XRWebGLLayer`'s `getNativeFramebufferScaleFactor()`
 static function to get the scale factor needed to reach the native resolution, and we
@@ -163,5 +164,4 @@ same width and height: 1280x1440.
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- [WebXR performance
-  guide](/en-US/docs/Web/API/WebXR_Device_API/Performance)
+- [WebXR performance guide](/en-US/docs/Web/API/WebXR_Device_API/Performance)

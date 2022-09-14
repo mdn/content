@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.contentWindow
 slug: Web/API/HTMLObjectElement/contentWindow
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - contentWindow
 browser-compat: api.HTMLObjectElement.contentWindow
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`contentWindow`** read-only property of

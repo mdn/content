@@ -1,6 +1,7 @@
 ---
 title: IDBVersionChangeEvent()
 slug: Web/API/IDBVersionChangeEvent/IDBVersionChangeEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -11,6 +12,7 @@ tags:
   - Database
 browser-compat: api.IDBVersionChangeEvent.IDBVersionChangeEvent
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
 
 The **`IDBVersionChangeEvent()`** constructor
@@ -20,7 +22,7 @@ when a version of the database has changed, as a result of the
 
 ## Syntax
 
-```js
+```js-nolint
 new IDBVersionChangeEvent(type)
 new IDBVersionChangeEvent(type, options)
 ```

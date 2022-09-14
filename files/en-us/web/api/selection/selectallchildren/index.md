@@ -1,6 +1,7 @@
 ---
 title: Selection.selectAllChildren()
 slug: Web/API/Selection/selectAllChildren
+page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing
@@ -9,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.selectAllChildren
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.selectAllChildren()`** method adds all the
@@ -16,7 +18,7 @@ children of the specified node to the selection. Previous selection is lost.
 
 ## Syntax
 
-```js
+```js-nolint
 selectAllChildren(parentNode)
 ```
 

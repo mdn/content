@@ -1,6 +1,7 @@
 ---
 title: 'XRSystem: isSessionSupported()'
 slug: Web/API/XRSystem/isSessionSupported
+page-type: web-api-instance-method
 tags:
   - API
   - AR
@@ -16,7 +17,8 @@ tags:
   - isSessionSupported
 browser-compat: api.XRSystem.isSessionSupported
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRSystem")}} method
 **`isSessionSupported()`** returns a promise which resolves to
@@ -29,7 +31,7 @@ to use the XR device, the promise is rejected with an appropriate
 
 ## Syntax
 
-```js
+```js-nolint
 isSessionSupported(mode)
 ```
 
@@ -40,7 +42,7 @@ isSessionSupported(mode)
   - : A {{jsxref("String")}} specifying the WebXR session mode for which support is to
     be checked. Possible modes to check for:
 
-    - `immersive-ar` {{experimental_inline}}
+    - `immersive-ar` {{Experimental_Inline}}
     - `immersive-vr`
     - `inline`
 
@@ -57,8 +59,7 @@ returned promise, passing to the rejection handler a {{domxref("DOMException")}}
 
 - `SecurityError`
   - : The document's origin does not have permission to use the
-    `xr-spatial-tracking` [feature
-    policy](/en-US/docs/Web/HTTP/Feature_Policy).
+    `xr-spatial-tracking` [feature policy](/en-US/docs/Web/HTTP/Feature_Policy).
 
 ## Examples
 

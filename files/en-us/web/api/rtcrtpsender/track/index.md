@@ -1,6 +1,7 @@
 ---
 title: RTCRtpSender.track
 slug: Web/API/RTCRtpSender/track
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -14,6 +15,7 @@ tags:
   - track
 browser-compat: api.RTCRtpSender.track
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`track`** read-only property of

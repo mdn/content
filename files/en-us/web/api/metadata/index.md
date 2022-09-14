@@ -1,6 +1,7 @@
 ---
 title: Metadata
 slug: Web/API/Metadata
+page-type: web-api-interface
 tags:
   - API
   - File and Directory Entries API
@@ -10,9 +11,11 @@ tags:
   - Offline
   - Reference
   - metadata
+  - Experimental
 browser-compat: api.Metadata
 ---
-{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`Metadata`** interface contains information about a file system entry. This metadata includes the file's size and modification date and time.
 
@@ -20,9 +23,9 @@ The **`Metadata`** interface contains information about a file system entry. Thi
 
 ## Properties
 
-- {{domxref("Metadata.modificationTime", "modificationTime")}} {{ReadOnlyInline}}
+- {{domxref("Metadata.modificationTime", "modificationTime")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : A {{jsxref("Date")}} object indicating the date and time the entry was modified.
-- {{domxref("Metadata.size", "size")}} {{ReadOnlyInline}}
+- {{domxref("Metadata.size", "size")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : A 64-bit unsigned integer indicating the size of the entry in bytes.
 
 ## Specifications

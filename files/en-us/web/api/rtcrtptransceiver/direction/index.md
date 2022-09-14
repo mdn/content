@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver.direction
 slug: Web/API/RTCRtpTransceiver/direction
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -14,6 +15,7 @@ tags:
   - direction
 browser-compat: api.RTCRtpTransceiver.direction
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpTransceiver")}} property

@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Reference
 ---
+
 {{jsSidebar("Intermediate")}}
 
 A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
@@ -20,8 +21,9 @@ Consider the following example code:
 ```js
 function init() {
   var name = 'Mozilla'; // name is a local variable created by init
-  function displayName() { // displayName() is the inner function, a closure
-    alert(name); // use variable declared in the parent function
+  function displayName() {
+    // displayName() is the inner function, a closure
+    console.log(name); // use variable declared in the parent function
   }
   displayName();
 }
@@ -30,7 +32,37 @@ init();
 
 `init()` creates a local variable called `name` and a function called `displayName()`. The `displayName()` function is an inner function that is defined inside `init()` and is available only within the body of the `init()` function. Note that the `displayName()` function has no local variables of its own. However, since inner functions have access to the variables of outer functions, `displayName()` can access the variable `name` declared in the parent function, `init()`.
 
-Run the code using [this JSFiddle link](https://jsfiddle.net/xAFs9/3/) and notice that the `alert()` statement within the `displayName()` function successfully displays the value of the `name` variable, which is declared in its parent function. This is an example of _lexical_ _scoping_, which describes how a parser resolves variable names when functions are nested. The word *lexical* refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.
+Run the code using [this JSFiddle link](https://jsfiddle.net/3dxck52m/) and notice that the `console.log()` statement within the `displayName()` function successfully displays the value of the `name` variable, which is declared in its parent function. This is an example of _lexical scoping_, which describes how a parser resolves variable names when functions are nested. The word _lexical_ refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.
+
+In this particular example, the scope is called a _function scope_, because the variable is accessible and only accessible within the function body where it's declared.
+
+### Scoping with let and const
+
+Traditionally (before ES6), JavaScript only had two kinds of scopes: _function scope_ and _global scope_. Variables declared with `var` are either function-scoped or global-scoped, depending on whether they are declared within a function or outside a function. This can be tricky, because blocks with curly braces do not create scopes:
+
+```js
+if (Math.random() > 0.5) {
+  var x = 1;
+} else {
+  var x = 2;
+}
+console.log(x);
+```
+
+For people from other languages (e.g. C, Java) where blocks create scopes, the above code should throw an error on the `console.log` line, because we are outside the scope of `x` in either block. However, because blocks don't create scopes for `var`, the `var` statements here actually create a global variable. There is also [a practical example](#creating_closures_in_loops_a_common_mistake) introduced below that illustrates how this can cause actual bugs when combined with closures.
+
+In ES6, JavaScript introduced the `let` and `const` declarations, which, among other things like [temporal dead zones](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz), allow you to create block-scoped variables.
+
+```js
+if (Math.random() > 0.5) {
+  const x = 1;
+} else {
+  const x = 2;
+}
+console.log(x); // ReferenceError: x is not defined
+```
+
+In essence, blocks are finally treated as scopes in ES6, but only if you declare variables with `let` or `const`. In addition, ES6 introduced [modules](/en-US/docs/Web/JavaScript/Guide/Modules), which introduced another kind of scope. Closures are able to capture variables in all these scopes, which we will introduce later.
 
 ## Closure
 
@@ -38,36 +70,36 @@ Consider the following code example:
 
 ```js
 function makeFunc() {
-  var name = 'Mozilla';
+  const name = 'Mozilla';
   function displayName() {
-    alert(name);
+    console.log(name);
   }
   return displayName;
 }
 
-var myFunc = makeFunc();
+const myFunc = makeFunc();
 myFunc();
 ```
 
 Running this code has exactly the same effect as the previous example of the `init()` function above. What's different (and interesting) is that the `displayName()` inner function is returned from the outer function _before being executed_.
 
-At first glance, it might seem unintuitive that this code still works. In some programming languages, the local variables within a function exist for just the duration of that function's execution. Once `makeFunc()` finishes executing, you might expect that the name variable would no longer be accessible. However, because the code still works as expected, this is obviously not the case in JavaScript.
+At first glance, it might seem unintuitive that this code still works. In some programming languages, the local variables within a function exist for just the duration of that function's execution. Once `makeFunc()` finishes executing, you might expect that the `name` variable would no longer be accessible. However, because the code still works as expected, this is obviously not the case in JavaScript.
 
-The reason is that functions in JavaScript form closures. A _closure_ is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created. In this case, `myFunc` is a reference to the instance of the function `displayName` that is created when `makeFunc` is run. The instance of `displayName` maintains a reference to its lexical environment, within which the variable `name` exists. For this reason, when `myFunc` is invoked, the variable `name` remains available for use, and "Mozilla" is passed to `alert`.
+The reason is that functions in JavaScript form closures. A _closure_ is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created. In this case, `myFunc` is a reference to the instance of the function `displayName` that is created when `makeFunc` is run. The instance of `displayName` maintains a reference to its lexical environment, within which the variable `name` exists. For this reason, when `myFunc` is invoked, the variable `name` remains available for use, and "Mozilla" is passed to `console.log`.
 
 Here's a slightly more interesting example—a `makeAdder` function:
 
 ```js
 function makeAdder(x) {
-  return function(y) {
+  return function (y) {
     return x + y;
   };
 }
 
-var add5 = makeAdder(5);
-var add10 = makeAdder(10);
+const add5 = makeAdder(5);
+const add10 = makeAdder(10);
 
-console.log(add5(2));  // 7
+console.log(add5(2)); // 7
 console.log(add10(2)); // 12
 ```
 
@@ -108,14 +140,14 @@ Here's the JavaScript:
 
 ```js
 function makeSizer(size) {
-  return function() {
-    document.body.style.fontSize = size + 'px';
+  return function () {
+    document.body.style.fontSize = `${size}px`;
   };
 }
 
-var size12 = makeSizer(12);
-var size14 = makeSizer(14);
-var size16 = makeSizer(16);
+const size12 = makeSizer(12);
+const size14 = makeSizer(14);
+const size16 = makeSizer(16);
 ```
 
 `size12`, `size14`, and `size16` are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons (in this case hyperlinks) as demonstrated in the following code example.
@@ -138,40 +170,40 @@ Run the code using [JSFiddle](https://jsfiddle.net/vnkuZ/7726/).
 
 Languages such as Java allow you to declare methods as private, meaning that they can be called only by other methods in the same class.
 
-JavaScript previously didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
+JavaScript, prior to [classes](/en-US/docs/Web/JavaScript/Reference/Classes), didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
 
 The following code illustrates how to use closures to define public functions that can access private functions and variables. Note that these closures follow the [Module Design Pattern](https://www.google.com/search?q=javascript+module+pattern).
 
 ```js
-var counter = (function() {
-  var privateCounter = 0;
+const counter = (function () {
+  let privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
 
   return {
-    increment: function() {
+    increment() {
       changeBy(1);
     },
 
-    decrement: function() {
+    decrement() {
       changeBy(-1);
     },
 
-    value: function() {
+    value() {
       return privateCounter;
-    }
+    },
   };
 })();
 
-console.log(counter.value());  // 0.
+console.log(counter.value()); // 0.
 
 counter.increment();
 counter.increment();
-console.log(counter.value());  // 2.
+console.log(counter.value()); // 2.
 
 counter.decrement();
-console.log(counter.value());  // 1.
+console.log(counter.value()); // 1.
 ```
 
 In previous examples, each closure had its own lexical environment. Here though, there is a single lexical environment that is shared by the three functions: `counter.increment`, `counter.decrement`, and `counter.value`.
@@ -181,105 +213,168 @@ The shared lexical environment is created in the body of an anonymous function, 
 Those three public functions are closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the `privateCounter` variable and the `changeBy` function.
 
 ```js
-var makeCounter = function() {
-  var privateCounter = 0;
+const makeCounter = function () {
+  let privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment() {
       changeBy(1);
     },
 
-    decrement: function() {
+    decrement() {
       changeBy(-1);
     },
 
-    value: function() {
+    value() {
       return privateCounter;
-    }
-  }
+    },
+  };
 };
 
-var counter1 = makeCounter();
-var counter2 = makeCounter();
+const counter1 = makeCounter();
+const counter2 = makeCounter();
 
-alert(counter1.value());  // 0.
+console.log(counter1.value()); // 0.
 
 counter1.increment();
 counter1.increment();
-alert(counter1.value()); // 2.
+console.log(counter1.value()); // 2.
 
 counter1.decrement();
-alert(counter1.value()); // 1.
-alert(counter2.value()); // 0.
+console.log(counter1.value()); // 1.
+console.log(counter2.value()); // 0.
 ```
 
 Notice how the two counters maintain their independence from one another. Each closure references a different version of the `privateCounter` variable through its own closure. Each time one of the counters is called, its lexical environment changes by changing the value of this variable. Changes to the variable value in one closure don't affect the value in the other closure.
 
 > **Note:** Using closures in this way provides benefits that are normally associated with object-oriented programming. In particular, _data hiding_ and _encapsulation_.
 
-## Closure Scope Chain
+## Closure scope chain
 
 Every closure has three scopes:
 
-- Local Scope (Own scope)
-- Outer Functions Scope
-- Global Scope
+- Local scope (Own scope)
+- Enclosing scope (can be block, function, or module scope)
+- Global scope
 
 A common mistake is not realizing that in the case where the outer function is itself a nested function, access to the outer function's scope includes the enclosing scope of the outer function—effectively creating a chain of function scopes. To demonstrate, consider the following example code.
 
 ```js
 // global scope
-var e = 10;
-function sum(a){
-  return function(b){
-    return function(c){
+const e = 10;
+function sum(a) {
+  return function (b) {
+    return function (c) {
       // outer functions scope
-      return function(d){
+      return function (d) {
         // local scope
         return a + b + c + d + e;
-      }
-    }
-  }
+      };
+    };
+  };
 }
 
 console.log(sum(1)(2)(3)(4)); // log 20
+```
 
-// You can also write without anonymous functions:
+You can also write without anonymous functions:
 
+```js
 // global scope
-var e = 10;
-function sum(a){
-  return function sum2(b){
-    return function sum3(c){
+const e = 10;
+function sum(a) {
+  return function sum2(b) {
+    return function sum3(c) {
       // outer functions scope
-      return function sum4(d){
+      return function sum4(d) {
         // local scope
         return a + b + c + d + e;
-      }
-    }
-  }
+      };
+    };
+  };
 }
 
-var sum2 = sum(1);
-var sum3 = sum2(2);
-var sum4 = sum3(3);
-var result = sum4(4);
-console.log(result) //log 20
+const sum2 = sum(1);
+const sum3 = sum2(2);
+const sum4 = sum3(3);
+const result = sum4(4);
+console.log(result); //log 20
 ```
 
 In the example above, there's a series of nested functions, all of which have access to the outer functions' scope. In this context, we can say that closures have access to _all_ outer function scopes.
 
+Closures can capture variables in block scopes and module scopes as well. For example, the following creates a closure over the block-scoped variable `y`:
+
+```js
+function outer() {
+  const x = 5;
+  if (Math.random() > 0.5) {
+    const y = 6;
+    return () => console.log(x, y);
+  }
+}
+
+outer()(); // logs 5 6
+```
+
+Closures over modules can be more interesting.
+
+```js
+// myModule.js
+let x = 5;
+export const getX = () => x;
+export const setX = (val) => {
+  x = val;
+}
+```
+
+Here, the module exports a pair of getter-setter functions, which close over the module-scoped variable `x`. Even when `x` is not directly accessible from other modules, it can be read and written with the functions.
+
+```js
+import { getX, setX } from "./myModule.js";
+
+console.log(getX()); // 5
+setX(6);
+console.log(getX()); // 6
+```
+
+Closures can close over imported values as well, which are regarded as _live bindings_, because when the original value changes, the imported one changes accordingly.
+
+```js
+// myModule.js
+export let x = 1;
+export const setX = (val) => {
+  x = val;
+}
+```
+
+```js
+// closureCreator.js
+import { x } from "./myModule.js";
+
+export const getX = () => x; // Close over an imported live binding
+```
+
+```js
+import { getX } from "./closureCreator.js";
+import { setX } from "./myModule.js";
+
+console.log(getX()); // 1
+setX(2);
+console.log(getX()); // 2
+```
+
 ## Creating closures in loops: A common mistake
 
-Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword in ECMAScript 2015, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.
+Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email"></p>
-<p>Name: <input type="text" id="name" name="name"></p>
-<p>Age: <input type="text" id="age" name="age"></p>
+<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Name: <input type="text" id="name" name="name" /></p>
+<p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js
@@ -289,16 +384,17 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: 'email', help: 'Your e-mail address' },
+    { id: 'name', help: 'Your full name' },
+    { id: 'age', help: 'Your age (you must be over 16)' },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
+    // Culprit is the use of `var` on this line
     var item = helpText[i];
-    document.getElementById(item.id).onfocus = function() {
+    document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
-    }
+    };
   }
 }
 
@@ -321,17 +417,17 @@ function showHelp(help) {
 }
 
 function makeHelpCallback(help) {
-  return function() {
+  return function () {
     showHelp(help);
   };
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: 'email', help: 'Your e-mail address' },
+    { id: 'name', help: 'Your full name' },
+    { id: 'age', help: 'Your age (you must be over 16)' },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
@@ -355,17 +451,17 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: 'email', help: 'Your e-mail address' },
+    { id: 'name', help: 'Your full name' },
+    { id: 'age', help: 'Your age (you must be over 16)' },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
-    (function() {
-       var item = helpText[i];
-       document.getElementById(item.id).onfocus = function() {
-         showHelp(item.help);
-       }
+    (function () {
+      var item = helpText[i];
+      document.getElementById(item.id).onfocus = function () {
+        showHelp(item.help);
+      };
     })(); // Immediate event listener attachment with the current value of item (preserved until iteration).
   }
 }
@@ -373,7 +469,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-If you don't want to use more closures, you can use the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword introduced in ES2015 :
+If you don't want to use more closures, you can use the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) keyword:
 
 ```js
 function showHelp(help) {
@@ -381,24 +477,24 @@ function showHelp(help) {
 }
 
 function setupHelp() {
-  var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+  const helpText = [
+    { id: 'email', help: 'Your e-mail address' },
+    { id: 'name', help: 'Your full name' },
+    { id: 'age', help: 'Your age (you must be over 16)' },
+  ];
 
   for (let i = 0; i < helpText.length; i++) {
-    let item = helpText[i];
-    document.getElementById(item.id).onfocus = function() {
+    const item = helpText[i];
+    document.getElementById(item.id).onfocus = () => {
       showHelp(item.help);
-    }
+    };
   }
 }
 
 setupHelp();
 ```
 
-This example uses `let` instead of `var`, so every closure binds the block-scoped variable, meaning that no additional closures are required.
+This example uses `const` instead of `var`, so every closure binds the block-scoped variable, meaning that no additional closures are required.
 
 Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Element/input), as shown:
 
@@ -409,15 +505,15 @@ function showHelp(help) {
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: 'email', help: 'Your e-mail address' },
+    { id: 'name', help: 'Your full name' },
+    { id: 'age', help: 'Your age (you must be over 16)' },
+  ];
 
-  helpText.forEach(function(text) {
-    document.getElementById(text.id).onfocus = function() {
+  helpText.forEach(function (text) {
+    document.getElementById(text.id).onfocus = function () {
       showHelp(text.help);
-    }
+    };
   });
 }
 
@@ -426,7 +522,7 @@ setupHelp();
 
 ## Performance considerations
 
-It is unwise to unnecessarily create functions within other functions if closures are not needed for a particular task, as it will negatively affect script performance both in terms of processing speed and memory consumption.
+As mentioned previously, each function instance manages its own scope and closure. Therefore, it is unwise to unnecessarily create functions within other functions if closures are not needed for a particular task, as it will negatively affect script performance both in terms of processing speed and memory consumption.
 
 For instance, when creating a new object/class, methods should normally be associated to the object's prototype rather than defined into the object constructor. The reason is that whenever the constructor is called, the methods would get reassigned (that is, for every object creation).
 
@@ -436,11 +532,11 @@ Consider the following case:
 function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
-  this.getName = function() {
+  this.getName = function () {
     return this.name;
   };
 
-  this.getMessage = function() {
+  this.getMessage = function () {
     return this.message;
   };
 }
@@ -454,12 +550,12 @@ function MyObject(name, message) {
   this.message = message.toString();
 }
 MyObject.prototype = {
-  getName: function() {
+  getName() {
     return this.name;
   },
-  getMessage: function() {
+  getMessage() {
     return this.message;
-  }
+  },
 };
 ```
 
@@ -470,12 +566,12 @@ function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
-MyObject.prototype.getName = function() {
+MyObject.prototype.getName = function () {
   return this.name;
 };
-MyObject.prototype.getMessage = function() {
+MyObject.prototype.getMessage = function () {
   return this.message;
 };
 ```
 
-In the two previous examples, the inherited prototype can be shared by all objects and the method definitions need not occur at every object creation. See [Details of the Object Model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model) for more.
+In the two previous examples, the inherited prototype can be shared by all objects and the method definitions need not occur at every object creation. See [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) for more.

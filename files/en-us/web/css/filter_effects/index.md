@@ -7,8 +7,11 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: https://drafts.fxtf.org/filter-effects/#FilterProperty
+browser-compat:
+  - css.properties.backdrop-filter
+  - css.properties.filter
 ---
+
 {{CSSRef}}
 
 **Filter Effects** is a module of CSS that defines a way of processing an element's rendering before it is displayed in the document.
@@ -30,10 +33,4 @@ spec-urls: https://drafts.fxtf.org/filter-effects/#FilterProperty
 
 ## Browser compatibility
 
-### `backdrop-filter` property
-
-{{Compat("css.properties.backdrop-filter")}}
-
-### `filter` property
-
-{{Compat("css.properties.filter")}}
+{{Compat}}

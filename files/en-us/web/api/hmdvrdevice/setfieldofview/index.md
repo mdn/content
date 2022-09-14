@@ -1,9 +1,9 @@
 ---
 title: HMDVRDevice.setFieldOfView()
 slug: Web/API/HMDVRDevice/setFieldOfView
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HMDVRDevice
   - Method
   - Reference
@@ -11,15 +11,17 @@ tags:
   - Virtual Reality
   - WebVR
   - Deprecated
+  - Non-standard
 browser-compat: api.HMDVRDevice.setFieldOfView
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+
+{{deprecated_header}}{{APIRef("WebVR API")}}{{Non-standard_header}}
 
 The **`setFieldOfView()`** method of the {{domxref("HMDVRDevice")}} interface can be used to set the field of view for one eye, or both eyes simultaneously.
 
 ## Syntax
 
-```js
+```js-nolint
 setFieldOfView(leftFOV, rightFOV, zNear, zFar)
 ```
 
@@ -44,12 +46,12 @@ The following simple example shows a function that can be used to set a custom f
 
 ```js
 function setCustomFOV(up,right,down,left) {
-  var testFOV = new VRFieldOfView(up,right,down,left);
+  const testFOV = new VRFieldOfView(up,right,down,left);
 
   gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
 
-  var lEye = gHMD.getEyeParameters('left');
-  var rEye = gHMD.getEyeParameters('right');
+  const lEye = gHMD.getEyeParameters('left');
+  const rEye = gHMD.getEyeParameters('right');
   console.log(lEye.currentFieldOfView);
   console.log(rEye.currentFieldOfView);
 }

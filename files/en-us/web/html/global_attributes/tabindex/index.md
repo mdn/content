@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: html.global_attributes.tabindex
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 The **`tabindex`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) indicates that its element can be focused, and where it participates in sequential keyboard navigation (usually with the <kbd>Tab</kbd> key, hence the name).

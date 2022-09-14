@@ -161,7 +161,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Example
 
 ```html
-<html>
+<html lang="en">
   <head>
     <title>Document title</title>
   </head>

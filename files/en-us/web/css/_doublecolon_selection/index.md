@@ -9,15 +9,12 @@ tags:
   - Selector
 browser-compat: css.selectors.selection
 ---
+
 {{CSSRef}}
 
 The **`::selection`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
 
-```css
-::selection {
-  background-color: cyan;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-selection.html", "tabbed-shorter")}}
 
 ## Allowable properties
 

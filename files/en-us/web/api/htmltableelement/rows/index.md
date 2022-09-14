@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.rows
 slug: Web/API/HTMLTableElement/rows
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -14,6 +15,7 @@ tags:
   - rows
 browser-compat: api.HTMLTableElement.rows
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLTableElement")}}

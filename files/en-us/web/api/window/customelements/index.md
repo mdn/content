@@ -1,6 +1,7 @@
 ---
 title: Window.customElements
 slug: Web/API/Window/customElements
+page-type: web-api-instance-property
 tags:
   - API
   - CustomElementRegistry
@@ -12,6 +13,7 @@ tags:
   - customElements
 browser-compat: api.Window.customElements
 ---
+
 {{APIRef}}
 
 The **`customElements`** read-only property of the {{domxref("Window")}} interface returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.

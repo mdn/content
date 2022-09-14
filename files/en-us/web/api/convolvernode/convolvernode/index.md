@@ -1,6 +1,7 @@
 ---
 title: ConvolverNode()
 slug: Web/API/ConvolverNode/ConvolverNode
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -10,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.ConvolverNode.ConvolverNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`ConvolverNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
@@ -17,7 +19,7 @@ The **`ConvolverNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API
 
 ## Syntax
 
-```js
+```js-nolint
 new ConvolverNode(context, options)
 ```
 
@@ -60,8 +62,8 @@ A new {{domxref("ConvolverNode")}} object instance.
 
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the referenced {{domxref("AudioBuffer")}} does not have the
-      correct number of channels, or it has a different sample rate to the
-      associated {{domxref("AudioContext")}}.
+    correct number of channels, or it has a different sample rate to the
+    associated {{domxref("AudioContext")}}.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultController.enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - enqueue
 browser-compat: api.ReadableStreamDefaultController.enqueue
 ---
+
 {{APIRef("Streams")}}
 
 The **`enqueue()`** method of the
@@ -18,7 +20,7 @@ associated stream.
 
 ## Syntax
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 
@@ -39,8 +41,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 In the following simple example, a custom `ReadableStream` is created using
-a constructor (see our [Simple random
-stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
+a constructor (see our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
 random string of text every second and enqueues it into the stream — see
 `controller.enqueue(string)`. A `cancel()` function is also
 provided to stop the generation if {{domxref("ReadableStream.cancel()")}} is called for
@@ -65,7 +66,7 @@ const stream = new ReadableStream({
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', () => {
       clearInterval(interval);
       fetchStream();
       controller.close();

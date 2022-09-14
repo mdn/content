@@ -1,6 +1,7 @@
 ---
 title: ClipboardItem.presentationStyle
 slug: Web/API/ClipboardItem/presentationStyle
+page-type: web-api-instance-property
 tags:
   - API
   - Clipboard
@@ -15,11 +16,12 @@ tags:
   - paste
 browser-compat: api.ClipboardItem.presentationStyle
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The read-only
 **`presentationStyle`** property of the {{domxref("ClipboardItem")}}
-interface returns a {{jsxref("String")}} indicating how an item should be presented.
+interface returns a string indicating how an item should be presented.
 
 ## Value
 
@@ -57,7 +59,5 @@ async function getClipboardContents() {
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on
-  Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async
-  Clipboard article](https://web.dev/async-clipboard/)
+- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

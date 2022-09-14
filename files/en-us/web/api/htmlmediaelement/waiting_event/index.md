@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: waiting event'
 slug: Web/API/HTMLMediaElement/waiting_event
+page-type: web-api-event
 tags:
   - Audio
   - Event
@@ -10,38 +11,26 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.waiting_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `waiting` event is fired when playback has stopped because of a temporary lack of data.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onwaiting")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('waiting', (event) => {});
+
+onwaiting = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 

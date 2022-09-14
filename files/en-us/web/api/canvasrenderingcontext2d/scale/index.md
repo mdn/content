@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.scale
 ---
+
 {{APIRef}}
 
 The
@@ -24,7 +26,7 @@ drawn at twice the normal size.
 
 ## Syntax
 
-```js
+```js-nolint
 scale(x, y)
 ```
 

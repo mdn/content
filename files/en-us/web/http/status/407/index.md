@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.407
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`407 Proxy Authentication Required`** client error
@@ -26,7 +27,7 @@ information on how to authorize correctly.
 
 ## Example response
 
-```
+```http
 HTTP/1.1 407 Proxy Authentication Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT
 Proxy-Authenticate: Basic realm="Access to internal site"

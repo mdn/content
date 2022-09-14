@@ -1,6 +1,7 @@
 ---
 title: HTMLIFrameElement.contentDocument
 slug: Web/API/HTMLIFrameElement/contentDocument
+page-type: web-api-instance-property
 browser-compat: api.HTMLIFrameElement.contentDocument
 ---
 
@@ -11,7 +12,7 @@ If the iframe and the iframe's parent document are [Same Origin](/en-US/docs/Web
 ## Example of contentDocument
 
 ```js
-var iframeDocument = document.getElementsByTagName("iframe")[0].contentDocument;
+const iframeDocument = document.querySelector("iframe").contentDocument;
 
 iframeDocument.body.style.backgroundColor = "blue";
 // This would turn the iframe blue.

@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "function statement requires a name" occurs
@@ -15,10 +16,10 @@ in the code that requires a name.
 
 ## Message
 
-```js
-Syntax Error: Expected identifier (Edge)
-SyntaxError: function statement requires a name [Firefox]
-SyntaxError: Unexpected token ( [Chrome]
+```
+SyntaxError: Function statements require a function name (V8-based)
+SyntaxError: function statement requires a name (Firefox)
+SyntaxError: Function statements must have a name. (Safari)
 ```
 
 ## Error type
@@ -47,7 +48,7 @@ function () {
 You can use a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) (assignment) instead:
 
 ```js example-good
-var greet = function() {
+const greet = function () {
   return 'Hello world';
 };
 ```
@@ -90,8 +91,16 @@ If you intended to create a method of an object, you will need to create an obje
 The following syntax without a name after the `function` keyword is valid then.
 
 ```js example-good
-var greeter = {
+const greeter = {
   german: function () {
+    return "Moin";
+  }
+};
+
+// or
+
+const greeter = {
+  german() {
     return "Moin";
   }
 };
@@ -104,10 +113,10 @@ Brackets and commas can quickly get confusing.
 
 ```js example-bad
 promise.then(
-  function() {
+  function () {
     console.log("success");
   });
-  function() {
+  function () {
     console.log("error");
 }
 // SyntaxError: function statement requires a name
@@ -115,14 +124,14 @@ promise.then(
 
 Correct would be:
 
-```json example-good
+```js example-good
 promise.then(
-  function() {
+  function () {
     console.log("success");
   },
-  function() {
+  function () {
     console.log("error");
-  }
+  },
 );
 ```
 
@@ -131,5 +140,5 @@ promise.then(
 - [Functions in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions)
 - [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 - [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+- {{glossary("IIFE")}}
 - [label](/en-US/docs/Web/JavaScript/Reference/Statements/label)

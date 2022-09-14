@@ -1,6 +1,7 @@
 ---
 title: GeolocationCoordinates.heading
 slug: Web/API/GeolocationCoordinates/heading
+page-type: web-api-instance-property
 tags:
   - API
   - Geolocation API
@@ -10,6 +11,7 @@ tags:
   - heading
 browser-compat: api.GeolocationCoordinates.heading
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.heading`** read-only property is

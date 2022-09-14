@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `substring-after` function returns a string that is the rest of a given string after a given substring.
@@ -17,10 +18,10 @@ substring-after( haystack, needle )
 
 ### Arguments
 
-- _`haystack`_
+- `haystack`
   - : The string to be evaluated. Part of this string will be returned.
-- _`needle`_
-  - : The substring to search for. Everything after the first occurrence of*`needle`* in*`haystack`* will be returned.
+- `needle`
+  - : The substring to search for. Everything after the first occurrence of `needle` in `haystack` will be returned.
 
 ### Returns
 

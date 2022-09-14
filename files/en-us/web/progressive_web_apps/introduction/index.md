@@ -13,6 +13,7 @@ tags:
   - progressive
   - web manifest
 ---
+
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
 
 This article provides an introduction to Progressive Web Apps (PWAs), discussing what they are and the advantages they offer over regular web apps.
@@ -35,7 +36,7 @@ PWAs, however, provide all this and more without losing any of the existing feat
 
 As we hinted at above, PWAs are not created with a single technology. They represent a new philosophy for building web apps, involving some specific patterns, APIs, and other features. It's not that obvious if a web app is a PWA or not from first glance. An app could be considered a PWA when it meets certain requirements, or implements a set of given features: works offline, is installable, is easy to synchronize, can send push notifications, etc.
 
-In addition, there are tools to measure how complete (as a percentage) a web app is, such as [Lighthouse](https://developers.google.com/web/tools/lighthouse/). By implementing various technological advantages, we can make an app more progressive, thus ending up with a higher Lighthouse score. But this is only a rough indicator.
+In addition, there are tools to measure how complete (as a percentage) a web app is, such as [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/). By implementing various technological advantages, we can make an app more progressive, thus ending up with a higher Lighthouse score. But this is only a rough indicator.
 
 There are some key principles a web app should try to observe to be identified as a PWA. It should be:
 

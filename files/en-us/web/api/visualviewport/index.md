@@ -1,6 +1,7 @@
 ---
 title: VisualViewport
 slug: Web/API/VisualViewport
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -10,6 +11,7 @@ tags:
   - viewport
 browser-compat: api.VisualViewport
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`VisualViewport`** interface of the [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique `VisualViewport` representing the properties associated with that window.
@@ -24,19 +26,19 @@ You can get a window's visual viewport using {{domxref("Window.visualViewport")}
 
 _`VisualViewport` also inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("VisualViewport.offsetLeft")}} {{readonlyinline}}
+- {{domxref("VisualViewport.offsetLeft")}} {{ReadOnlyInline}}
   - : Returns the offset of the left edge of the visual viewport from the left edge of the layout viewport in CSS pixels.
-- {{domxref("VisualViewport.offsetTop")}} {{readonlyinline}}
+- {{domxref("VisualViewport.offsetTop")}} {{ReadOnlyInline}}
   - : Returns the offset of the top edge of the visual viewport from the top edge of the layout viewport in CSS pixels.
-- {{domxref("VisualViewport.pageLeft")}} {{readonlyinline}}
+- {{domxref("VisualViewport.pageLeft")}} {{ReadOnlyInline}}
   - : Returns the x coordinate of the visual viewport relative to the initial containing block origin of the top edge in CSS pixels.
-- {{domxref("VisualViewport.pageTop")}} {{readonlyinline}}
+- {{domxref("VisualViewport.pageTop")}} {{ReadOnlyInline}}
   - : Returns the y coordinate of the visual viewport relative to the initial containing block origin of the top edge in CSS pixels.
-- {{domxref("VisualViewport.width")}} {{readonlyinline}}
+- {{domxref("VisualViewport.width")}} {{ReadOnlyInline}}
   - : Returns the width of the visual viewport in CSS pixels.
-- {{domxref("VisualViewport.height")}} {{readonlyinline}}
+- {{domxref("VisualViewport.height")}} {{ReadOnlyInline}}
   - : Returns the height of the visual viewport in CSS pixels.
-- {{domxref("VisualViewport.scale")}} {{readonlyinline}}
+- {{domxref("VisualViewport.scale")}} {{ReadOnlyInline}}
   - : Returns the pinch-zoom scaling factor applied to the visual viewport.
 
 ## Events
@@ -57,14 +59,11 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 This example, taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to write a simple bit of code that will hide an overlaid box (which might contain an advert, say) when the user zooms in. This is a nice way to improve the user experience when zooming in on pages. A [live sample](https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html) is also available.
 
 ```js
-var bottomBar = document.getElementById('bottombar');
-var viewport = window.visualViewport;
+const bottomBar = document.getElementById('bottombar');
+const viewport = window.visualViewport;
 
 function resizeHandler() {
-   if (viewport.scale > 1.3)
-     bottomBar.style.display = "none";
-   else
-     bottomBar.style.display = "block";
+  bottomBar.style.display = viewport.scale > 1.3 ? "none" : "block";
 }
 
 window.visualViewport.addEventListener('resize', resizeHandler);
@@ -75,24 +74,21 @@ window.visualViewport.addEventListener('resize', resizeHandler);
 This example, also taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to use this API to simulate `position: device-fixed`, which fixes elements to the visual viewport. A [live sample](https://wicg.github.io/visual-viewport/examples/fixed-to-viewport.html) is also available.
 
 ```js
-var bottomBar = document.getElementById('bottombar');
-var viewport = window.visualViewport;
+const bottomBar = document.getElementById('bottombar');
+const viewport = window.visualViewport;
 function viewportHandler() {
-  var layoutViewport = document.getElementById('layoutViewport');
+  const layoutViewport = document.getElementById('layoutViewport');
 
   // Since the bar is position: fixed we need to offset it by the visual
   // viewport's offset from the layout viewport origin.
-  var offsetLeft = viewport.offsetLeft;
-  var offsetTop = viewport.height
+  const offsetLeft = viewport.offsetLeft;
+  const offsetTop = viewport.height
               - layoutViewport.getBoundingClientRect().height
               + viewport.offsetTop;
 
   // You could also do this by setting style.left and style.top if you
   // use width: 100% instead.
-  bottomBar.style.transform = 'translate(' +
-                              offsetLeft + 'px,' +
-                              offsetTop + 'px) ' +
-                              'scale(' + 1/viewport.scale + ')'
+  bottomBar.style.transform = `translate(${offsetLeft}px, ${offsetTop}px) scale(${1 / viewport.scale})`;
 }
 window.visualViewport.addEventListener('scroll', viewportHandler);
 window.visualViewport.addEventListener('resize', viewportHandler);

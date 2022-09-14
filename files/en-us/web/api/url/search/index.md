@@ -1,6 +1,7 @@
 ---
 title: URL.search
 slug: Web/API/URL/search
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - URL API
 browser-compat: api.URL.search
 ---
+
 {{ApiRef("URL API")}}
 
 The **`search`** property of the {{domxref("URL")}} interface

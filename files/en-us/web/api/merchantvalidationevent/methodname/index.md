@@ -1,6 +1,7 @@
 ---
 title: MerchantValidationEvent.methodName
 slug: Web/API/MerchantValidationEvent/methodName
+page-type: web-api-instance-property
 tags:
   - API
   - Commerce
@@ -17,9 +18,11 @@ tags:
   - Validation
   - methodName
   - payment
+  - Deprecated
 browser-compat: api.MerchantValidationEvent.methodName
 ---
-{{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{SecureContext_Header}}
 
 The {{domxref("MerchantValidationEvent")}} property
 **`methodName`** is a read-only value which returns a string
@@ -40,7 +43,5 @@ which is requesting merchant validation. See
 ## See also
 
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
-- [Using
-  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- [Payment processing
-  concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

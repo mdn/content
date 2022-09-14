@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.transform()
 slug: Web/API/CanvasRenderingContext2D/transform
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.transform
 ---
+
 {{APIRef}}
 
 The
@@ -24,7 +26,7 @@ described by the arguments of this method. This lets you scale, rotate, translat
 
 ## Syntax
 
-```js
+```js-nolint
 transform(a, b, c, d, e, f)
 ```
 

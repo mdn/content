@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.samplerParameter[if]()
 slug: Web/API/WebGL2RenderingContext/samplerParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.samplerParameteri
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.samplerParameter[if]()`** methods
@@ -17,7 +19,7 @@ of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) set
 
 ## Syntax
 
-```js
+```js-nolint
 samplerParameteri(sampler, pname, param)
 samplerParameterf(sampler, pname, param)
 ```
@@ -69,7 +71,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var sampler = gl.createSampler();
+const sampler = gl.createSampler();
 gl.samplerParameteri(sampler, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
 ```
 

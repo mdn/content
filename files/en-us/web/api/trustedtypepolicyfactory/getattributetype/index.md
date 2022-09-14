@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.getAttributeType()
 slug: Web/API/TrustedTypePolicyFactory/getAttributeType
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,13 +10,14 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.getAttributeType
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`getAttributeType()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element, and if so which Trusted Type is used.
 
 ## Syntax
 
-```js
+```js-nolint
 getAttributeType(tagName, attribute)
 getAttributeType(tagName, attribute, elementNS)
 getAttributeType(tagName, attribute, elementNS, attrNS)
@@ -27,9 +29,9 @@ getAttributeType(tagName, attribute, elementNS, attrNS)
   - : A string containing the name of an HTML tag.
 - `attribute`
   - : A string containing an attribute.
-- `elementNS`{{optional_inline}}
+- `elementNS` {{optional_inline}}
   - : A string containing a namespace, if empty defaults to the HTML namespace.
-- `attrNS`{{optional_inline}}
+- `attrNS` {{optional_inline}}
   - : A string containing a namespace, if empty defaults to null.
 
 ### Return value

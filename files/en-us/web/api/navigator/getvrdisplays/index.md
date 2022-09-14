@@ -1,6 +1,7 @@
 ---
 title: Navigator.getVRDisplays()
 slug: Web/API/Navigator/getVRDisplays
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -13,9 +14,11 @@ tags:
   - Virtual Reality
   - WebVR
   - getVRDisplays()
+  - Non-standard
 browser-compat: api.Navigator.getVRDisplays
 ---
-{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`getVRDisplays()`** method of the
 {{domxref("Navigator")}} interface returns a promise that resolves to an array of
@@ -24,7 +27,7 @@ computer.
 
 ## Syntax
 
-```js
+```js-nolint
 getVRDisplays()
 ```
 

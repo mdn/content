@@ -6,10 +6,11 @@ tags:
   - Glossary
   - Locale
 ---
+
 **Locale** is a set of language- or country-based preferences for a user interface.
 
 A program draws its locale settings from the language of the host system. Among other things, locales represent paper format, currency, date format, and numbers according to the protocols in the given region.
 
 ## See also
 
-- {{interwiki("wikipedia", "Locale", "Locale")}} on Wikipedia
+- [Locale](https://en.wikipedia.org/wiki/Locale) on Wikipedia
