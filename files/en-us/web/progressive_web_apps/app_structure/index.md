@@ -95,9 +95,9 @@ From the HTML point of view, the app shell is everything outside the content sec
   <body>
     <header>
       <p>
-        <a class="logo" href="https://js13kgames.com"
-          ><img src="img/js13kgames.png" alt="js13kGames"
-        /></a>
+        <a class="logo" href="https://js13kgames.com">
+        		<img src="img/js13kgames.png" alt="js13kGames" />
+        </a>
       </p>
     </header>
     <main>
