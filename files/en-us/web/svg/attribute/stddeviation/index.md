@@ -39,8 +39,16 @@ svg {
   </filter>
 
   <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur1);" />
-  <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur2); transform: translateX(140px);" />
-  <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur3); transform: translateX(280px);" />
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    style="filter: url(#gaussianBlur2); transform: translateX(140px);" />
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    style="filter: url(#gaussianBlur3); transform: translateX(280px);" />
 </svg>
 ```
 

@@ -313,8 +313,7 @@ Make sure you always declare the namespaces you use in your XML files. If you do
 ```html
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-</svg>
+  xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
 ```
 
 Even if you don't use all those namespaces in a particular document, there's no harm in including the namespace declarations. It may save you from some annoying errors if you end up adding content from one of the unused namespaces at a later date.

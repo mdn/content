@@ -29,8 +29,7 @@ svg {
   <polyline points="0,100 50,25 50,75 100,0" />
 
   <!-- Example of the same polyline shape with stroke and no fill -->
-  <polyline points="100,100 150,25 150,75 200,0"
-            fill="none" stroke="black" />
+  <polyline points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
 </svg>
 ```
 

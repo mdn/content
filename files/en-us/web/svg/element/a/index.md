@@ -30,14 +30,12 @@ svg {
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- A link around a shape -->
   <a href="/docs/Web/SVG/Element/circle">
-    <circle cx="50" cy="40" r="35"/>
+    <circle cx="50" cy="40" r="35" />
   </a>
 
   <!-- A link around a text -->
   <a href="/docs/Web/SVG/Element/text">
-    <text x="50" y="90" text-anchor="middle">
-      &lt;circle&gt;
-    </text>
+    <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
   </a>
 </svg>
 ```

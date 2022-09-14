@@ -42,12 +42,10 @@ svg {
   <circle cx="5" cy="5" r="3" stroke="green" />
 
   <!-- Stroke width as a number -->
-  <circle cx="15" cy="5" r="3" stroke="green"
-          stroke-width="3" />
+  <circle cx="15" cy="5" r="3" stroke="green" stroke-width="3" />
 
   <!-- Stroke width as a percentage -->
-  <circle cx="25" cy="5" r="3" stroke="green"
-          stroke-width="2%" />
+  <circle cx="25" cy="5" r="3" stroke="green" stroke-width="2%" />
 </svg>
 ```
 
