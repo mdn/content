@@ -399,8 +399,11 @@ Make sure your labels make sense out of context, read on their own, as well as i
 
 but this is bad link text:
 
-```html-nolint example-bad
-<p>Whales are really awesome creatures. To find out more about whales, <a href="whales.html">click here</a>.</p>
+```html example-bad
+<p>
+  Whales are really awesome creatures. To find out more about whales,
+  <a href="whales.html">click here</a>.
+</p>
 ```
 
 > **Note:** You can find a lot more about link implementation and best practices in our [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) article. You can also see some good and bad examples at [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) and [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
