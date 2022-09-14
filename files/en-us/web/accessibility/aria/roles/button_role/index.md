@@ -166,18 +166,18 @@ function handleCommand(event) {
   }
 
   // Get the new name value from the input element
-  let newNameInput = document.getElementById("newName");
-  let name = newNameInput.value;
+  const newNameInput = document.getElementById("newName");
+  const name = newNameInput.value;
   newNameInput.value = ""; // clear the text field
   newNameInput.focus(); // give the text field focus to enable entering and additional name.
 
   // Don't add blank entries to the list.
   if (name.length > 0) {
-    listItem = document.createElement("li");
+    const listItem = document.createElement("li");
     listItem.appendChild(document.createTextNode(name));
 
     // Add the new name to the list.
-    let list = document.getElementById("nameList");
+    const list = document.getElementById("nameList");
     list.appendChild(listItem);
   }
 }
