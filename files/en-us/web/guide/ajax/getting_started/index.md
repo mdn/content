@@ -123,32 +123,34 @@ Let's put it all together with a simple HTTP request. Our JavaScript will reques
 <button id="ajaxButton" type="button">Make a request</button>
 
 <script>
-(() => {
-  let httpRequest;
-  document.getElementById("ajaxButton").addEventListener('click', makeRequest);
+  (() => {
+    let httpRequest;
+    document
+      .getElementById("ajaxButton")
+      .addEventListener("click", makeRequest);
 
-  function makeRequest() {
-    httpRequest = new XMLHttpRequest();
+    function makeRequest() {
+      httpRequest = new XMLHttpRequest();
 
-    if (!httpRequest) {
-      alert('Giving up :( Cannot create an XMLHTTP instance');
-      return false;
+      if (!httpRequest) {
+        alert("Giving up :( Cannot create an XMLHTTP instance");
+        return false;
+      }
+      httpRequest.onreadystatechange = alertContents;
+      httpRequest.open("GET", "test.html");
+      httpRequest.send();
     }
-    httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('GET', 'test.html');
-    httpRequest.send();
-  }
 
-  function alertContents() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
-      } else {
-        alert('There was a problem with the request.');
+    function alertContents() {
+      if (httpRequest.readyState === XMLHttpRequest.DONE) {
+        if (httpRequest.status === 200) {
+          alert(httpRequest.responseText);
+        } else {
+          alert("There was a problem with the request.");
+        }
       }
     }
-  }
-})();
+  })();
 </script>
 ```
 
@@ -191,9 +193,7 @@ First off, let's create a valid XML document that we'll request later on. The do
 
 ```html
 <?xml version="1.0" ?>
-<root>
-    I'm a test.
-</root>
+<root> I'm a test. </root>
 ```
 
 Next, in `makeRequest()`, we need to replace `test.html` with the XML file we just created:
@@ -303,38 +303,35 @@ This is repeated every 5 seconds, using a `setInterval()` call. The idea would b
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>XHR log time</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
     <p id="writeData" class="data">Off-Line</p>
     <p id="lastStamp">No Data yet</p>
 
     <script>
-
-      const fullData = document.getElementById('writeData');
-      const lastData = document.getElementById('lastStamp');
+      const fullData = document.getElementById("writeData");
+      const lastData = document.getElementById("lastStamp");
 
       function fetchData() {
-        console.log('Fetching updated data.');
+        console.log("Fetching updated data.");
         const xhr = new XMLHttpRequest();
         xhr.open("GET", "time-log.txt", true);
         xhr.onload = () => {
           updateDisplay(xhr.response);
-        }
+        };
         xhr.send();
       }
 
       function updateDisplay(text) {
         fullData.textContent = text;
 
-        const timeArray = text.split('\n');
+        const timeArray = text.split("\n");
 
         // included because some file systems always include a blank line at the end of text files.
-        if (timeArray[timeArray.length - 1] === '') {
+        if (timeArray[timeArray.length - 1] === "") {
           timeArray.pop();
         }
 
