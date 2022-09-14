@@ -21,7 +21,7 @@ before browsers' main rendering machinery kicks in. This ensures they are availa
 You most commonly use `<link>` to load a CSS file to style your page with:
 
 ```html
-<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/main.css" />
 ```
 
 Here however, we will use a `rel` value of `preload`, which turns `<link>` into a preloader for any resource we want. You will also need to specify:
@@ -33,13 +33,13 @@ A simple example might look like this (see our [JS and CSS example source](https
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>JS and CSS preload example</title>
 
-  <link rel="preload" href="style.css" as="style">
-  <link rel="preload" href="main.js" as="script">
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="main.js" as="script" />
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -92,16 +92,19 @@ You can see an example of this in our video example (see the [full source code](
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Video preload example</title>
 
-  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4">
+  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4" />
 </head>
 <body>
   <video controls>
-    <source src="sintel-short.mp4" type="video/mp4">
-    <source src="sintel-short.webm" type="video/webm">
-    <p>Your browser doesn't support HTML video. Here is a <a href="sintel-short.mp4">link to the video</a> instead.</p>
+    <source src="sintel-short.mp4" type="video/mp4" />
+    <source src="sintel-short.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML video. Here is a
+      <a href="sintel-short.mp4">link to the video</a> instead.
+    </p>
   </video>
 </body>
 ```
@@ -124,13 +127,23 @@ Let's use this case as an example. You can see the full [example source code on 
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Web font example</title>
 
-  <link rel="preload" href="fonts/cicle_fina-webfont.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/zantroke-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link
+    rel="preload"
+    href="fonts/cicle_fina-webfont.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin />
+  <link
+    rel="preload"
+    href="fonts/zantroke-webfont.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin />
 
-  <link href="style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
   …
@@ -147,13 +160,21 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Responsive preload example</title>
 
-  <link rel="preload" href="bg-image-narrow.png" as="image" media="(max-width: 600px)">
-  <link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)">
+  <link
+    rel="preload"
+    href="bg-image-narrow.png"
+    as="image"
+    media="(max-width: 600px)" />
+  <link
+    rel="preload"
+    href="bg-image-wide.png"
+    as="image"
+    media="(min-width: 601px)" />
 
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
   <header>
@@ -162,12 +183,12 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
 
   <script>
     const mediaQueryList = window.matchMedia("(max-width: 600px)");
-    const header = document.querySelector('header');
+    const header = document.querySelector("header");
 
     if (mediaQueryList.matches) {
-      header.style.backgroundImage = 'url(bg-image-narrow.png)';
+      header.style.backgroundImage = "url(bg-image-narrow.png)";
     } else {
-      header.style.backgroundImage = 'url(bg-image-wide.png)';
+      header.style.backgroundImage = "url(bg-image-wide.png)";
     }
   </script>
 </body>

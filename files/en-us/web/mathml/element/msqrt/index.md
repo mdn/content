@@ -25,11 +25,9 @@ Rendering in your browser: <math><msqrt><mi>x</mi></msqrt></math>
 
 ```html
 <math>
-
- <msqrt>
+  <msqrt>
     <mi>x</mi>
   </msqrt>
-
 </math>
 ```
 

@@ -101,8 +101,9 @@ The default `<iframe>` [allowlist](#allowlist) value is `'src'`, so this is equi
 This example allows `<iframe>` content on a particular origin to access the user's location:
 
 ```html
-<iframe src="https://google-developers.appspot.com/demos/…"
-        allow="geolocation https://google-developers.appspot.com"></iframe>
+<iframe
+  src="https://google-developers.appspot.com/demos/…"
+  allow="geolocation https://google-developers.appspot.com"></iframe>
 ```
 
 Similar to the HTTP header, several features can be controlled at the same time by specifying a semicolon-separated list of policy directives.
@@ -110,7 +111,7 @@ Similar to the HTTP header, several features can be controlled at the same time 
 For example, this blocks the `<iframe>` from using the camera and microphone:
 
 ```html
-<iframe allow="camera 'none'; microphone 'none'">
+<iframe allow="camera 'none'; microphone 'none'">…</iframe>
 ```
 
 ## Inheritance of policy for embedded content
@@ -149,7 +150,9 @@ Feature-Policy: layout-animations 'none'; unoptimized-images 'none'; oversized-i
 Using the `<iframe>` `allow` attribute:
 
 ```html
-<iframe src="https://example.com/…" allow="layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';"></iframe>
+<iframe
+  src="https://example.com/…"
+  allow="layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';"></iframe>
 ```
 
 ## See also

@@ -29,18 +29,16 @@ Rendering in your browser: <math><mover accent="true"><mrow><mi>x</mi><mo>+</mo>
 
 ```html
 <math>
-
-<mover accent="true">
-  <mrow>
-    <mi>x</mi>
-    <mo>+</mo>
-    <mi>y</mi>
-    <mo>+</mo>
-    <mi>z</mi>
-  </mrow>
-  <mo>&#x23DE;<!--TOP CURLY BRACKET--></mo>
-</mover>
-
+  <mover accent="true">
+    <mrow>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>y</mi>
+      <mo>+</mo>
+      <mi>z</mi>
+    </mrow>
+    <mo>&#x23DE;<!--TOP CURLY BRACKET--></mo>
+  </mover>
 </math>
 ```
 

@@ -445,11 +445,11 @@ The regular expression looks for:
 ```html
 <p>
   Enter your phone number (with area code) and then click "Check".
-  <br>
+  <br />
   The expected format is like ###-###-####.
 </p>
 <form id="form">
-  <input id="phone">
+  <input id="phone" />
   <button type="submit">Check</button>
 </form>
 <p id="output"></p>
