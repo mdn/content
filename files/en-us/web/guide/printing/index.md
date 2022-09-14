@@ -119,9 +119,9 @@ If you want to be able to print an external page without opening it, you can uti
     <p>
       <span
         onclick="printPage('externalPage.html');"
-        style="cursor:pointer;text-decoration:underline;color:#0000ff;"
-        >Print external page!</span
-      >
+        style="cursor:pointer;text-decoration:underline;color:#0000ff;">
+        Print external page!
+      </span>
     </p>
   </body>
 </html>
