@@ -26,7 +26,7 @@ Although this property is read-only, it will not throw if it is modified (even i
 
 ## Value
 
-A Boolean value which is `true` if the document is currently displaying an element in fullscreen mode; otherwise, the value is `false.`
+A Boolean value which is `true` if the document is currently displaying an element in fullscreen mode; otherwise, the value is `false`.
 
 ## Examples
 
