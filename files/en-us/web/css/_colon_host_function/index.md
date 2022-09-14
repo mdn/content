@@ -51,8 +51,8 @@ In this example we have a simple custom element — `<context-span>` — that yo
 Inside the element's constructor, we create `style` and `span` elements, fill the `span` with the content of the custom element, and fill the `style` element with some CSS rules:
 
 ```js
-let style = document.createElement("style");
-let span = document.createElement("span");
+const style = document.createElement("style");
+const span = document.createElement("span");
 span.textContent = this.textContent;
 
 const shadowRoot = this.attachShadow({ mode: "open" });
