@@ -54,13 +54,8 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the object store has been deleted.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the <var>key</var> is not a <a
-          href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-valid-key"
-          >valid key</a
-        > or a <a
-          href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-key-range"
-          >key range</a
-        >.
+  - : Thrown if the `key` is not a [valid key](https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-valid-key)
+    or a [key range](https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-key-range).
 
 ## Examples
 
