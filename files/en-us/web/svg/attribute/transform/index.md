@@ -214,7 +214,7 @@ svg {
   <circle cx="0" cy="0" r="10" fill="red" transform="scale(4)" />
 
   <!-- vertical scale -->
-  <circle cx="0" cy="0" r="10" fill="yellow" transform="scale(1,4)" />
+  <circle cx="0" cy="0" r="10" fill="yellow" transform="scale(1, 4)" />
 
   <!-- horizontal scale -->
   <circle cx="0" cy="0" r="10" fill="pink" transform="scale(4,1)" />
