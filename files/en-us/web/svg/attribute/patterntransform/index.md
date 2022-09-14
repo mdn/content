@@ -33,8 +33,8 @@ svg {
     width=".25"
     height=".25"
     patternTransform="rotate(20)
-                             skewX(30)
-                             scale(1 0.5)">
+                      skewX(30)
+                      scale(1 0.5)">
     <circle cx="10" cy="10" r="10" />
   </pattern>
 
