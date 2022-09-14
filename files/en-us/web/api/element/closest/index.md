@@ -43,8 +43,10 @@ The closest ancestor {{domxref("Element")}} or itself, which matches the `select
 
 ```html
 <article>
-  <div id="div-01">Here is div-01
-    <div id="div-02">Here is div-02
+  <div id="div-01">
+    Here is div-01
+    <div id="div-02">
+      Here is div-02
       <div id="div-03">Here is div-03</div>
     </div>
   </div>

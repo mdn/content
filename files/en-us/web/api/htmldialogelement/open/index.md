@@ -37,58 +37,59 @@ From there you can click the _Cancel_ button to close the dialog (via the
 button.
 
 ```html
-  <!-- Simple pop-up dialog box, containing a form -->
-  <dialog id="favDialog">
-    <form method="dialog">
-      <section>
-        <p><label for="favAnimal">Favorite animal:</label>
+<!-- Simple pop-up dialog box, containing a form -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <section>
+      <p>
+        <label for="favAnimal">Favorite animal:</label>
         <select id="favAnimal" name="favAnimal">
           <option></option>
           <option>Brine shrimp</option>
           <option>Red panda</option>
           <option>Spider monkey</option>
-        </select></p>
-      </section>
-      <menu>
-        <button id="cancel" type="reset">Cancel</button>
-        <button type="submit">Confirm</button>
-      </menu>
-    </form>
-  </dialog>
+        </select>
+      </p>
+    </section>
+    <menu>
+      <button id="cancel" type="reset">Cancel</button>
+      <button type="submit">Confirm</button>
+    </menu>
+  </form>
+</dialog>
 
-  <menu>
-    <button id="updateDetails">Update details</button>
-  </menu>
+<menu>
+  <button id="updateDetails">Update details</button>
+</menu>
 
-  <script>
-    (() => {
-      const updateButton = document.getElementById('updateDetails');
-      const cancelButton = document.getElementById('cancel');
-      const dialog = document.getElementById('favDialog');
-      dialog.returnValue = 'favAnimal';
+<script>
+  (() => {
+    const updateButton = document.getElementById("updateDetails");
+    const cancelButton = document.getElementById("cancel");
+    const dialog = document.getElementById("favDialog");
+    dialog.returnValue = "favAnimal";
 
-      function openCheck(dialog) {
-        if (dialog.open) {
-          console.log('Dialog open');
-        } else {
-          console.log('Dialog closed');
-        }
+    function openCheck(dialog) {
+      if (dialog.open) {
+        console.log("Dialog open");
+      } else {
+        console.log("Dialog closed");
       }
+    }
 
-      // Update button opens a modal dialog
-      updateButton.addEventListener('click', () => {
-        dialog.showModal();
-        openCheck(dialog);
-      });
+    // Update button opens a modal dialog
+    updateButton.addEventListener("click", () => {
+      dialog.showModal();
+      openCheck(dialog);
+    });
 
-      // Form cancel button closes the dialog box
-      cancelButton.addEventListener('click', () => {
-        dialog.close('animalNotChosen');
-        openCheck(dialog);
-      });
-
-    })();
-  </script>
+    // Form cancel button closes the dialog box
+    cancelButton.addEventListener("click", () => {
+      dialog.close("animalNotChosen");
+      openCheck(dialog);
+    });
+  })();
+</script>
 ```
 
 > **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/main/htmldialogelement-basic/index.html)

@@ -83,17 +83,27 @@ You can also send files using `FormData`. Include an {{ HTMLElement("input") }} 
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
   <p>
-    <label>Your email address:
-      <input type="email" autocomplete="on" name="userid" placeholder="email" required size="32" maxlength="64" />
+    <label
+      >Your email address:
+      <input
+        type="email"
+        autocomplete="on"
+        name="userid"
+        placeholder="email"
+        required
+        size="32"
+        maxlength="64" />
     </label>
   </p>
   <p>
-    <label>Custom file label:
+    <label
+      >Custom file label:
       <input type="text" name="filelabel" size="12" maxlength="32" />
     </label>
   </p>
   <p>
-    <label>File to stash:
+    <label
+      >File to stash:
       <input type="file" name="file" required />
     </label>
   </p>
