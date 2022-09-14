@@ -39,7 +39,7 @@ progress {
 ### HTML content
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### Result

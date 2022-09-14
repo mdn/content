@@ -31,7 +31,7 @@ This example applies special font and border styles when the placeholder is show
 #### HTML
 
 ```html
-<input placeholder="Type something here!">
+<input placeholder="Type something here!" />
 ```
 
 #### CSS
@@ -60,9 +60,8 @@ When form fields are too small, placeholder text can get cropped in an undesirab
 #### HTML
 
 ```html
-<input id="input1" placeholder="Name, Rank, and Serial Number">
-<br><br>
-<input id="input2" placeholder="Name, Rank, and Serial Number">
+<input id="input1" placeholder="Name, Rank, and Serial Number" /> <br /><br />
+<input id="input2" placeholder="Name, Rank, and Serial Number" />
 ```
 
 #### CSS
@@ -87,17 +86,23 @@ The following example highlights the Branch and ID code fields with a custom sty
 <form id="test">
   <p>
     <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name"/>
+    <input id="name" placeholder="Student Name" />
   </p>
   <p>
     <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch"/>
+    <input id="branch" placeholder="Student Branch" />
   </p>
   <p>
     <label for="sid">Enter Student ID:</label>
-    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
+    <input
+      type="number"
+      pattern="[0-9]{8}"
+      title="8 digit ID"
+      id="sid"
+      class="studentid"
+      placeholder="8 digit id" />
   </p>
-  <input type="submit"/>
+  <input type="submit" />
 </form>
 ```
 
