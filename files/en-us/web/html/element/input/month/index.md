@@ -225,9 +225,9 @@ Let's look at an example; here we've set minimum and maximum dates, and also mad
 ```html
 <form>
   <div>
-    <label for="month"
-      >What month would you like to visit (June to Sept.)?</label
-    >
+    <label for="month">
+      What month would you like to visit (June to Sept.)?
+    </label>
     <input
       id="month"
       type="month"
@@ -316,9 +316,9 @@ For example, try viewing the following demo in a browser that doesn't support `m
 ```html
 <form>
   <div>
-    <label for="month"
-      >What month would you like to visit (June to Sept.)?</label
-    >
+    <label for="month">
+      What month would you like to visit (June to Sept.)?
+    </label>
     <input
       id="month"
       type="month"

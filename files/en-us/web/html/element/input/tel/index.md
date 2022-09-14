@@ -327,7 +327,8 @@ In this example we'll use the same CSS as before, but our HTML is changed to loo
 ```html
 <form>
   <div>
-    <label for="telNo">Enter a telephone number (in the form xxx-xxx-xxxx):
+    <label for="telNo">
+      Enter a telephone number (in the form xxx-xxx-xxxx):
     </label>
     <input
       id="telNo"

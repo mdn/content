@@ -34,8 +34,7 @@ The **`<bgsound>`** [HTML](/en-US/docs/Web/HTML) element is deprecated. It sets 
 
 ```html
 <bgsound src="sound1.mid">
-  <bgsound src="sound2.au" loop="infinite"></bgsound
-></bgsound>
+  <bgsound src="sound2.au" loop="infinite"></bgsound>
 ```
 
 ## Usage notes

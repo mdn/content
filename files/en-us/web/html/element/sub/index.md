@@ -136,8 +136,7 @@ In mathematics, families of variables related to the same concept (such as dista
 ```html
 <p>
   The horizontal coordinates' positions along the X-axis are represented as
-  <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var
-  >.
+  <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var>.
 </p>
 ```
 

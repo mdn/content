@@ -156,8 +156,8 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 
 ```html
 <form>
-  <label
-    >Choose your preferred party date:
+  <label>
+    Choose your preferred party date:
     <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
   </label>
 </form>
@@ -246,8 +246,8 @@ One way around this is the {{htmlattrxref("pattern", "input")}} attribute on you
 
 ```html
 <form>
-  <label
-    >Enter your birthday:
+  <label>
+    Enter your birthday:
     <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" />
     <span class="validity"></span>
   </label>

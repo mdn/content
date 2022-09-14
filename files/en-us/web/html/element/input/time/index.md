@@ -243,7 +243,8 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 
 ```html
 <form>
-  <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00):
+  <label for="appt-time">
+    Choose an appointment time (opening hours 12:00 to 18:00):
   </label>
   <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
   <span class="validity"></span>
@@ -313,7 +314,8 @@ Let's look at an example; here we've set minimum and maximum times, and also mad
 ```html
 <form>
   <div>
-    <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00):
+    <label for="appt-time">
+      Choose an appointment time (opening hours 12:00 to 18:00):
     </label>
     <input
       id="appt-time"
@@ -357,7 +359,8 @@ One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute o
 ```html
 <form>
   <div>
-    <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00):
+    <label for="appt-time">
+      Choose an appointment time (opening hours 12:00 to 18:00):
     </label>
     <input
       id="appt-time"
@@ -421,7 +424,8 @@ The HTML looks like so:
 ```html
 <form>
   <div class="nativeTimePicker">
-    <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00):
+    <label for="appt-time">
+      Choose an appointment time (opening hours 12:00 to 18:00):
     </label>
     <input
       id="appt-time"

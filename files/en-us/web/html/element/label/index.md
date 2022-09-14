@@ -27,7 +27,8 @@ To associate the `<label>` with an `<input>` element, you need to give the `<inp
 Alternatively, you can nest the `<input>` directly inside the `<label>`, in which case the `for` and `id` attributes are not needed because the association is implicit:
 
 ```html
-<label>Do you like peas?
+<label>
+  Do you like peas?
   <input type="checkbox" name="peas" />
 </label>
 ```
@@ -75,7 +76,8 @@ There are no special styling considerations for `<label>` elements — structura
 ### Using the "for" attribute
 
 ```html
-<label for="username">Click me</label> <input type="text" id="username" />
+<label for="username">Click me to focus on the input field</label>
+<input type="text" id="username" />
 ```
 
 {{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}

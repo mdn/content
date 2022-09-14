@@ -412,7 +412,8 @@ A few additional non-standard attributes are listed following the descriptions o
     ```html
     <form action="page.html" method="post">
       <label>Fruit:
-        <input type="text" name="fruit" dirname="fruit.dir" value="cherry" /></label>
+        <input type="text" name="fruit" dirname="fruit.dir" value="cherry" />
+      </label>
       <input type="submit" />
     </form>
     <!-- page.html?fruit=cherry&fruit.dir=ltr -->
@@ -981,8 +982,8 @@ It does not suffice to have plain text adjacent to the `<input>` element. Rather
 
 <!-- explicit label -->
 <p>
-  <label for="name">Enter your name: </label
-  ><input id="name" type="text" size="30" />
+  <label for="name">Enter your name: </label>
+  <input id="name" type="text" size="30" />
 </p>
 ```
 

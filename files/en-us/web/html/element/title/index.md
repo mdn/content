@@ -123,8 +123,7 @@ If a form submission contains errors and the submission re-renders the current p
 
 ```html
 <title>
-  2 errors - Your order - Blue House Chinese Food - FoodYum: Online takeout
-  today!
+  2 errors - Your order - Sea Food Store - Food: Online takeout today!
 </title>
 ```
 

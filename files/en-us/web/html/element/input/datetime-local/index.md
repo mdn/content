@@ -218,10 +218,10 @@ Let's look at an example; here we've set minimum and maximum date/time values, a
 ```html
 <form>
   <div>
-    <label for="party"
-      >Choose your preferred party date and time (required, June 1st 8.30am to
-      June 30th 4.30pm):</label
-    >
+    <label for="party">
+      Choose your preferred party date and time (required, June 1st 8.30am to
+      June 30th 4.30pm):
+    </label>
     <input
       id="party"
       type="datetime-local"
@@ -288,10 +288,10 @@ One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute o
 ```html
 <form>
   <div>
-    <label for="party"
-      >Choose your preferred party date and time (required, June 1st 8.30am to
-      June 30th 4.30pm):</label
-    >
+    <label for="party">
+      Choose your preferred party date and time (required, June 1st 8.30am to
+      June 30th 4.30pm):
+    </label>
     <input
       id="party"
       type="datetime-local"
