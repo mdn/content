@@ -16,7 +16,9 @@ In previous guides we've looked at placing items by the lines created by definin
 You can assign some or all of the lines in your grid a name when you define your grid with the `grid-template-rows` and `grid-template-columns` properties. To demonstrate I'll use the simple layout created in the guide on line-based placement. This time I'll create the grid using named lines.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -94,7 +96,9 @@ When naming the lines, I mentioned that you can name these anything you like. Th
 While you can choose any name, if you append `-start` and `-end` to the lines around an area, as I have in the example above, grid will create you a named area of the main name used. Taking the above example, I have `content-start` and `content-end` both for rows and for columns. This means I get a grid area named `content`, and could place something in that area should I wish to.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -163,7 +167,9 @@ You can see the named lines in the image, note that some lines have two names - 
 To position `overlay` using these implicit named lines is the same as positioning an item using lines that we have named.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -211,9 +217,9 @@ To position `overlay` using these implicit named lines is the same as positionin
   z-index: 10;
   grid-column: main-start / main-end;
   grid-row: hd-start / ft-end;
-  border: 4px solid rgb(92,148,13);
-  background-color: rgba(92,148,13,.4);
-  color: rgb(92,148,13);
+  border: 4px solid rgb(92, 148, 13);
+  background-color: rgba(92, 148, 13, 0.4);
+  color: rgb(92, 148, 13);
   font-size: 150%;
 }
 ```
@@ -241,7 +247,9 @@ If you want to give all of the lines in your grid a unique name then you will ne
 In this next example I am creating a grid with twelve equal width columns. Before defining the 1fr size of the column track I am also defining a line name of `[col-start]`. This means that we will end up with a grid that has 12 column lines all named `col-start` before a `1fr` width column.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -269,7 +277,7 @@ Once you have created the grid you can place items onto it. As we have multiple 
 
 ```css
 .item1 {
-  grid-column: col-start / col-start 5
+  grid-column: col-start / col-start 5;
 }
 ```
 
@@ -308,7 +316,7 @@ If your repeating syntax puts two lines next to each other then they will be mer
 
 ```css
 .wrapper {
-  grid-template-columns: repeat(4, [col-start] 1fr [col-end] );
+  grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
 }
 ```
 
@@ -323,7 +331,9 @@ If we write this definition out without using repeat notation it would look like
 If you have used a track list then you can use the `span` keyword not just to span a number of lines but also to span a number of lines of a certain name.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -347,7 +357,7 @@ If you have used a track list then you can use the `span` keyword not just to sp
 }
 
 .item1 {
-  grid-column: col1-start / col2-start 2
+  grid-column: col1-start / col2-start 2;
 }
 
 .item2 {
@@ -358,8 +368,12 @@ If you have used a track list then you can use the `span` keyword not just to sp
 
 ```html
 <div class="wrapper">
-  <div class="item1">I am placed from col1-start line 1 to col2-start line 2</div>
-  <div class="item2">I am placed from col1-start line 2 spanning 2 lines named col1-start</div>
+  <div class="item1">
+    I am placed from col1-start line 1 to col2-start line 2
+  </div>
+  <div class="item2">
+    I am placed from col1-start line 2 spanning 2 lines named col1-start
+  </div>
 </div>
 ```
 
@@ -382,7 +396,9 @@ If working with a strict multiple column layout for example the named lines demo
 We can then use that framework to layout our page. For example, to create a three column layout with a header and footer, I might have the following markup.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

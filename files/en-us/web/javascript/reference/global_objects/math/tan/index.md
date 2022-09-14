@@ -17,7 +17,7 @@ The **`Math.tan()`** function returns the tangent of a number in radians.
 
 ## Syntax
 
-```js
+```js-nolint
 Math.tan(x)
 ```
 

@@ -29,7 +29,7 @@ geometry attributes on all the elements contained in the target element).
 
 ## Syntax
 
-```js
+```js-nolint
 getBBox()
 getBBox(options)
 ```

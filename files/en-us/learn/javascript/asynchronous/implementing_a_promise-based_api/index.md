@@ -45,7 +45,7 @@ In the example below, we call `setTimeout()` with a callback function and a dela
 
 ```css hidden
 div {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
@@ -117,8 +117,9 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 
@@ -174,8 +175,9 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 

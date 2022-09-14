@@ -23,7 +23,7 @@ That is, if the animation is playing forward, it sets the playback time to the l
 
 ## Syntax
 
-```js
+```js-nolint
 finish()
 ```
 

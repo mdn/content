@@ -107,15 +107,9 @@ If _max_ < _min_, then _max_ is ignored and `minmax(min,max)` is treated as _min
 
 ```html
 <div id="container">
-  <div>
-    Item as wide as the content, but at most 300 pixels.
-  </div>
-  <div>
-    Item with flexible width but a minimum of 200 pixels.
-  </div>
-  <div>
-    Inflexible item of 150 pixels width.
-  </div>
+  <div>Item as wide as the content, but at most 300 pixels.</div>
+  <div>Item with flexible width but a minimum of 200 pixels.</div>
+  <div>Inflexible item of 150 pixels width.</div>
 </div>
 ```
 

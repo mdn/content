@@ -24,7 +24,7 @@ message is received in the "`message`" event on
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(message)
 postMessage(message, transferables)
 ```

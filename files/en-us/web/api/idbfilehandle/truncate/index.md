@@ -30,7 +30,7 @@ at the index corresponding to the parameter and regardless of the value of
 
 ## Syntax
 
-```js
+```js-nolint
 truncate()
 truncate(start)
 ```

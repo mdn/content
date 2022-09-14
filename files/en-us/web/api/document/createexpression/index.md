@@ -19,7 +19,7 @@ This method compiles an {{DOMxRef("XPathExpression")}} which can then be used fo
 
 ## Syntax
 
-```js
+```js-nolint
 createExpression(xpathText, namespaceURLMapper)
 ```
 

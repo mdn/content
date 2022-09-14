@@ -1,5 +1,5 @@
 ---
-title: 'BroadcastChannel: messageerror event'
+title: "BroadcastChannel: messageerror event"
 slug: Web/API/BroadcastChannel/messageerror_event
 page-type: web-api-event
 tags:

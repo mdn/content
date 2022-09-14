@@ -22,7 +22,7 @@ The **`resetSensor()`** method of the {{domxref("VRDisplay")}} interface _can be
 
 ## Syntax
 
-```js
+```js-nolint
 resetSensor()
 ```
 

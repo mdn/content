@@ -25,7 +25,7 @@ the underlying sink.
 
 ## Syntax
 
-```js
+```js-nolint
 error(message)
 ```
 

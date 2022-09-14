@@ -43,10 +43,9 @@ Next, we have a {{HTMLElement("canvas")}} element into which the captured frames
 We also have an {{HTMLElement("img")}} element into which we will draw the image — this is the final display shown to the user.
 
 ```html
-<canvas id="canvas">
-</canvas>
+<canvas id="canvas"> </canvas>
 <div class="output">
-  <img id="photo" alt="The screen capture will appear in this box.">
+  <img id="photo" alt="The screen capture will appear in this box." />
 </div>
 ```
 
@@ -232,23 +231,26 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
 ```html
 <div class="contentarea">
-  <h1>
-    MDN - navigator.mediaDevices.getUserMedia(): Still photo capture demo
-  </h1>
+  <h1>MDN - navigator.mediaDevices.getUserMedia(): Still photo capture demo</h1>
   <p>
-   This example demonstrates how to set up a media stream using your built-in webcam, fetch an image from that stream, and create a PNG using that image.
+    This example demonstrates how to set up a media stream using your built-in
+    webcam, fetch an image from that stream, and create a PNG using that image.
   </p>
   <div class="camera">
     <video id="video">Video stream not available.</video>
     <button id="startbutton">Take photo</button>
   </div>
-  <canvas id="canvas">
-  </canvas>
+  <canvas id="canvas"> </canvas>
   <div class="output">
-    <img id="photo" alt="The screen capture will appear in this box.">
+    <img id="photo" alt="The screen capture will appear in this box." />
   </div>
   <p>
-    Visit our article <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos"> Taking still photos with WebRTC</a> to learn more about the technologies used here.
+    Visit our article
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">
+      Taking still photos with WebRTC</a
+    >
+    to learn more about the technologies used here.
   </p>
 </div>
 ```
@@ -259,44 +261,44 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 #video {
   border: 1px solid black;
   box-shadow: 2px 2px 3px black;
-  width:320px;
-  height:240px;
+  width: 320px;
+  height: 240px;
 }
 
 #photo {
   border: 1px solid black;
   box-shadow: 2px 2px 3px black;
-  width:320px;
-  height:240px;
+  width: 320px;
+  height: 240px;
 }
 
 #canvas {
-  display:none;
+  display: none;
 }
 
 .camera {
   width: 340px;
-  display:inline-block;
+  display: inline-block;
 }
 
 .output {
   width: 340px;
-  display:inline-block;
+  display: inline-block;
   vertical-align: top;
 }
 
 #startbutton {
-  display:block;
-  position:relative;
-  margin-left:auto;
-  margin-right:auto;
-  bottom:32px;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 32px;
   background-color: rgba(0, 150, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
   font-size: 14px;
   font-family: "Lucida Grande", "Arial", sans-serif;
-  color: rgba(255, 255, 255, 1.0);
+  color: rgba(255, 255, 255, 1);
 }
 
 .contentarea {

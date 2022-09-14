@@ -20,7 +20,7 @@ the current path.
 
 ## Syntax
 
-```js
+```js-nolint
 isPointInPath(x, y)
 isPointInPath(x, y, fillRule)
 isPointInPath(path, x, y)

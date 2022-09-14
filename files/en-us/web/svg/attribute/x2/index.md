@@ -21,7 +21,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -74,14 +78,18 @@ For {{SVGElement('line')}}, `x2` defines the x coordinate of the ending point of
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="5" x2="1" y1="1" y2="9" stroke="red"   />
+  <line x1="5" x2="1" y1="1" y2="9" stroke="red" />
   <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
-  <line x1="5" x2="9" y1="1" y2="9" stroke="blue"  />
+  <line x1="5" x2="9" y1="1" y2="9" stroke="blue" />
 </svg>
 ```
 
@@ -127,7 +135,11 @@ For {{SVGElement('linearGradient')}}, `x2` defines the x coordinate of the endin
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -137,18 +149,18 @@ html,body,svg { height:100% }
   bounding limit of the shape it is applied to
   -->
   <linearGradient x2="100%" id="g0">
-    <stop offset="0"    stop-color="black" />
+    <stop offset="0" stop-color="black" />
     <stop offset="100%" stop-color="red" />
   </linearGradient>
 
-  <rect x="1"  y="1" width="8" height="8" fill="url(#g0)" />
+  <rect x="1" y="1" width="8" height="8" fill="url(#g0)" />
 
   <!--
   Here the gradient vector start at 20% of the left
   bounding limit of the shape it is applied to
   -->
   <linearGradient x2="20%" id="g1">
-    <stop offset="0"    stop-color="black" />
+    <stop offset="0" stop-color="black" />
     <stop offset="100%" stop-color="red" />
   </linearGradient>
 

@@ -18,7 +18,7 @@ Resource Identifier (URI) component previously created by
 
 ## Syntax
 
-```js
+```js-nolint
 decodeURIComponent(encodedURI)
 ```
 

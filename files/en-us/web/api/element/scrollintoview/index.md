@@ -24,7 +24,7 @@ visible to the user.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollIntoView()
 scrollIntoView(alignToTop)
 scrollIntoView(scrollIntoViewOptions)

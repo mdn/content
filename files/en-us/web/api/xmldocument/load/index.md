@@ -19,7 +19,7 @@ browser-compat: api.XMLDocument.load
 
 ## Syntax
 
-```js
+```js-nolint
 load()
 ```
 

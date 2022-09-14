@@ -20,7 +20,7 @@ value converted to lower case, according to any locale-specific case mappings.
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleLowerCase()
 toLocaleLowerCase(locales)
 ```

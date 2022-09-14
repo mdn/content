@@ -28,7 +28,7 @@ transaction object, a different {{domxref("IDBObjectStore")}} instance is return
 
 ## Syntax
 
-```js
+```js-nolint
 objectStore(name)
 ```
 

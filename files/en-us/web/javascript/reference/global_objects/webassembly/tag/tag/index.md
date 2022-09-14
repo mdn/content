@@ -16,7 +16,7 @@ The **`WebAssembly.Tag()`** constructor creates a new [`WebAssembly.Tag`](/en-US
 
 ## Syntax
 
-```js
+```js-nolint
 new WebAssembly.Tag(type)
 ```
 
@@ -32,6 +32,7 @@ new WebAssembly.Tag(type)
 ### Exceptions
 
 - {{jsxref("TypeError")}}:
+
   - : Thrown if at least one of these conditions are met:
     - The `type` parameter is not an object.
     - The `type.parameters` property is not supplied.

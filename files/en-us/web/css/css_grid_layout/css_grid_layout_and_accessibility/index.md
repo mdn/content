@@ -39,20 +39,22 @@ Any time you reorder things with grid layout – or with flexbox – you only pe
 In this example I have used grid to lay out a set of boxes that contain links. I have used the line-based placement properties to position box 1 on the second row of the grid. Visually it now appears as the fourth item in the list. However, if I tab from link to link the tab order still begins with box 1, as it comes first in the source.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 

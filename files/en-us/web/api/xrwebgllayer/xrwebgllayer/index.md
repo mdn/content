@@ -33,9 +33,9 @@ WebXR device and the WebGL graphics layer used to render the 3D scene.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRWebGLLayer(session, context)
-new XRWebGLLayer(session, context, layerInit)
+new XRWebGLLayer(session, context, options)
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ new XRWebGLLayer(session, context, layerInit)
   - : A {{domxref("WebGLRenderingContext")}} or {{domxref("WebGL2RenderingContext")}}
     identifying the WebGL drawing context to use for rendering the scene for the specified
     WebXR session.
-- `layerInit` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object providing configuration options for the new `XRWebGLLayer`. The available options
     are:

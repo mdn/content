@@ -17,7 +17,7 @@ The **`add()`** method of the {{domxref("FontFaceSet")}} interface adds a new fo
 
 ## Syntax
 
-```js
+```js-nolint
 add(font)
 ```
 
@@ -40,7 +40,7 @@ A new {{domxref("FontFaceSet")}}.
 In the following example a new {{domxref("FontFace")}} object is created and then added to the {{domxref("FontFaceSet")}}.
 
 ```js
-let font = new FontFace('MyFont', 'url(myFont.woff2)');
+const font = new FontFace("MyFont", "url(myFont.woff2)");
 document.fonts.add(font);
 ```
 

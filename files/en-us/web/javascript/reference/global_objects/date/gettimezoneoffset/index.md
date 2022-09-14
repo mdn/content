@@ -18,7 +18,7 @@ The **`getTimezoneOffset()`** method returns the difference, in minutes, between
 
 ## Syntax
 
-```js
+```js-nolint
 getTimezoneOffset()
 ```
 

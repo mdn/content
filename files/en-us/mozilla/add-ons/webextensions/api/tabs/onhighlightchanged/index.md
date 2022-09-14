@@ -23,7 +23,7 @@ Fired when the highlighted or selected tabs in a window changes.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onHighlightChanged.addListener(listener)
 browser.tabs.onHighlightChanged.removeListener(listener)
 browser.tabs.onHighlightChanged.hasListener(listener)

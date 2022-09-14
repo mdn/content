@@ -17,7 +17,7 @@ The **`Math.ceil()`** function always rounds up and returns the smaller integer 
 
 ## Syntax
 
-```js
+```js-nolint
 Math.ceil(x)
 ```
 

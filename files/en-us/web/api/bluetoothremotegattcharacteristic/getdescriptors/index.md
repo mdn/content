@@ -22,7 +22,7 @@ returns a {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}} of all
 
 ## Syntax
 
-```js
+```js-nolint
 getDescriptors(bluetoothDescriptorUUID)
 ```
 

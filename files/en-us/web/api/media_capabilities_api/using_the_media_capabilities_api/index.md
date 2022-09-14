@@ -128,61 +128,67 @@ navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(
 ### CSS
 
 ```css
-li { margin : 1em; }
+li {
+  margin: 1em;
+}
 ```
 
 ### HTML
 
 ```html
 <form>
-<p>Select your video configuration and find out if this browser supports the codec,
-and whether decoding will be smooth and power efficient:</p>
+  <p>
+    Select your video configuration and find out if this browser supports the
+    codec, and whether decoding will be smooth and power efficient:
+  </p>
   <ul>
-  <li>
-    <label for="codec">Select a codec</label>
-    <select id="codec">
-      <option>video/webm; codecs=vp8</option>
-      <option>video/webm; codecs=vp9</option>
-      <option>video/mp4; codecs=avc1</option>
-      <option>video/mp4; codecs=avc1.420034</option>
-      <option>video/ogg; codecs=theora</option>
-      <option>invalid</option>
-    </select>
-  </li>
-  <li>
-    <label for="size">Select a size</label>
-    <select id="size">
-      <option>7680x4320</option>
-      <option>3840x2160</option>
-      <option>2560x1440</option>
-      <option>1920x1080</option>
-      <option>1280x720</option>
-      <option selected>800x600</option>
-      <option>640x480</option>
-      <option>320x240</option>
-      <option value=" x ">none</option>
-    </select>
-  </li>
-  <li>
-    <label for="framerate">Select a framerate</label>
-    <select id="framerate">
-      <option>60</option>
-      <option>50</option>
-      <option>30</option>
-      <option>24</option>
-      <option selected>15</option>
-    </select>
-  </li>
     <li>
-    <label for="bitrate">Select a bitrate</label>
-    <select id="bitrate">
-      <option>4000</option>
-      <option>2500</option>
-      <option>800</option>
-    </select>
-  </li>
+      <label for="codec">Select a codec</label>
+      <select id="codec">
+        <option>video/webm; codecs=vp8</option>
+        <option>video/webm; codecs=vp9</option>
+        <option>video/mp4; codecs=avc1</option>
+        <option>video/mp4; codecs=avc1.420034</option>
+        <option>video/ogg; codecs=theora</option>
+        <option>invalid</option>
+      </select>
+    </li>
+    <li>
+      <label for="size">Select a size</label>
+      <select id="size">
+        <option>7680x4320</option>
+        <option>3840x2160</option>
+        <option>2560x1440</option>
+        <option>1920x1080</option>
+        <option>1280x720</option>
+        <option selected>800x600</option>
+        <option>640x480</option>
+        <option>320x240</option>
+        <option value=" x ">none</option>
+      </select>
+    </li>
+    <li>
+      <label for="framerate">Select a framerate</label>
+      <select id="framerate">
+        <option>60</option>
+        <option>50</option>
+        <option>30</option>
+        <option>24</option>
+        <option selected>15</option>
+      </select>
+    </li>
+    <li>
+      <label for="bitrate">Select a bitrate</label>
+      <select id="bitrate">
+        <option>4000</option>
+        <option>2500</option>
+        <option>800</option>
+      </select>
+    </li>
   </ul>
-  <p><input type="button" value="Test this Video Configuration" id="try-it"></p>
+  <p>
+    <input type="button" value="Test this Video Configuration" id="try-it" />
+  </p>
 </form>
 
 <ul id="results"></ul>

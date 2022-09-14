@@ -30,7 +30,7 @@ If you want to see the headers that are processed by the system, without the ris
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onHeadersReceived.addListener(
   listener,             // function
   filter,               //  object

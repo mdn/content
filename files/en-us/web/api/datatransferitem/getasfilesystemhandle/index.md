@@ -21,7 +21,7 @@ dragged item is a directory.
 
 ## Syntax
 
-```js
+```js-nolint
 getAsFileSystemHandle()
 ```
 

@@ -20,7 +20,7 @@ The **`BluetoothRemoteGATTCharacteristic.writeValueWithResponse()`** method sets
 
 ## Syntax
 
-```js
+```js-nolint
 writeValueWithResponse(value)
 ```
 

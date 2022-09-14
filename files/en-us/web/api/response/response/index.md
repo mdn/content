@@ -17,7 +17,7 @@ The **`Response()`** constructor creates a new {{domxref("Response")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new Response()
 new Response(body)
 new Response(body, options)

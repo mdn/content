@@ -22,7 +22,7 @@ every element in the calling array.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 map((element) => { /* … */ })
 map((element, index) => { /* … */ })

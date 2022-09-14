@@ -32,7 +32,7 @@ is returned.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllResponseHeaders()
 ```
 

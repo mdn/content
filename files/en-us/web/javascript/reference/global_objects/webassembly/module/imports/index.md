@@ -20,7 +20,7 @@ containing descriptions of all the declared imports of the given `Module`.
 
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.Module.imports(module)
 ```
 

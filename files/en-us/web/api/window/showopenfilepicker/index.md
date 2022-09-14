@@ -20,7 +20,7 @@ or multiple files and returns a handle for the file(s).
 
 ## Syntax
 
-```js
+```js-nolint
 showOpenFilePicker()
 ```
 

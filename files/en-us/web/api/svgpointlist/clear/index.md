@@ -17,7 +17,7 @@ The **`clear()`** method of the {{domxref("SVGPointList")}} interface removes al
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

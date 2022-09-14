@@ -28,10 +28,10 @@ Event listeners can also be removed by passing an {{domxref("AbortSignal")}} to 
 
 ## Syntax
 
-```js
-removeEventListener(type, listener);
-removeEventListener(type, listener, options);
-removeEventListener(type, listener, useCapture);
+```js-nolint
+removeEventListener(type, listener)
+removeEventListener(type, listener, options)
+removeEventListener(type, listener, useCapture)
 ```
 
 ### Parameters

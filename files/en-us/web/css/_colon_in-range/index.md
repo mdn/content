@@ -38,9 +38,18 @@ This pseudo-class is useful for giving the user a visual indication that a field
 
 ```html
 <form action="" id="form1">
-  <ul>Values between 1 and 10 are valid.
+  <ul>
+    Values between 1 and 10 are valid.
     <li>
-      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12" required>
+      <input
+        id="value1"
+        name="value1"
+        type="number"
+        placeholder="1 to 10"
+        min="1"
+        max="10"
+        value="12"
+        required />
       <label for="value1">Your value is </label>
     </li>
   </ul>
@@ -69,11 +78,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content: 'okay.';
+  content: "okay.";
 }
 
 input:out-of-range + label::after {
-  content: 'out of range!';
+  content: "out of range!";
 }
 ```
 

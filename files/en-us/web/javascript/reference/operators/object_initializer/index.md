@@ -24,7 +24,7 @@ Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Ref
 
 ## Syntax
 
-```js
+```js-nolint
 o = {};
 o = {a: 'foo', b: 42, c: {}};
 

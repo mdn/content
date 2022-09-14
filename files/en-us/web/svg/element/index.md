@@ -8,7 +8,7 @@ tags:
   - SVG
   - SVG Reference
   - Vector Graphics
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 SVG drawings and images are created using a wide array of elements which are dedicated to the construction, drawing, and layout of vector images and diagrams. Here you'll find reference documentation for each of the SVG elements.

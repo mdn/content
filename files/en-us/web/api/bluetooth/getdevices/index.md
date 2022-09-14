@@ -24,7 +24,7 @@ permission prompts.
 
 ## Syntax
 
-```js
+```js-nolint
 getDevices()
 ```
 

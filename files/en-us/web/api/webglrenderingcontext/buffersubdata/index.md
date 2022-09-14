@@ -20,7 +20,7 @@ object's data store.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL1
 bufferSubData(target, offset)
 bufferSubData(target, offset, srcData)

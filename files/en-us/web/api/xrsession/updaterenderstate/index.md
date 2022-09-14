@@ -24,7 +24,7 @@ The `updateRenderState()` method of the {{DOMxRef("XRSession")}} interface of th
 
 ## Syntax
 
-```js
+```js-nolint
 updateRenderState()
 updateRenderState(state)
 ```

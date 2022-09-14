@@ -19,7 +19,7 @@ The **`SecurityPolicyViolationEvent()`** constructor creates a new {{domxref("Se
 
 ## Syntax
 
-```js
+```js-nolint
 new SecurityPolicyViolationEvent(type)
 new SecurityPolicyViolationEvent(type, options)
 ```

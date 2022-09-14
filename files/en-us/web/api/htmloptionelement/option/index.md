@@ -21,7 +21,7 @@ The **`Option()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new Option()
 new Option(text)
 new Option(text, value)

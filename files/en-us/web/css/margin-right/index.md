@@ -152,9 +152,15 @@ The `margin-right` property is specified as the keyword `auto`, or a `<length>`,
 ### Setting right margin using pixels and percentages
 
 ```css
-.content { margin-right: 5%; }
-.sidebox { margin-right: 10px; }
-.logo    { margin-right: -5px; }
+.content {
+  margin-right: 5%;
+}
+.sidebox {
+  margin-right: 10px;
+}
+.logo {
+  margin-right: -5px;
+}
 ```
 
 ## Specifications

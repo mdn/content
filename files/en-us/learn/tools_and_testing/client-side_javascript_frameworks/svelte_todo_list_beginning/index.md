@@ -497,7 +497,7 @@ body {
 }
 .btn__primary:disabled {
   color: darkgrey;
-  background-color:#565656;
+  background-color: #565656;
 }
 .btn-group {
   display: flex;

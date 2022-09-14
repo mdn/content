@@ -19,7 +19,7 @@ buffer to another buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 copyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size)
 ```
 

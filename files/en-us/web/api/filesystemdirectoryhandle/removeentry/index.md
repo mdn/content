@@ -19,7 +19,7 @@ directory handle contains a file or directory called the name specified.
 
 ## Syntax
 
-```js
+```js-nolint
 removeEntry(name)
 removeEntry(name, options)
 ```

@@ -22,7 +22,7 @@ function calls, `new.target` is {{jsxref("undefined")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new.target
 ```
 

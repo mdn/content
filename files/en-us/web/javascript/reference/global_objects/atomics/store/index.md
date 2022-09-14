@@ -18,7 +18,7 @@ method stores a given value at the given position in the array and returns that 
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.store(typedArray, index, value)
 ```
 

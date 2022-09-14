@@ -19,7 +19,7 @@ If the array has fewer elements than the {{domxref("AnalyserNode.fftSize")}}, ex
 
 ## Syntax
 
-```js
+```js-nolint
 getByteTimeDomainData(array)
 ```
 

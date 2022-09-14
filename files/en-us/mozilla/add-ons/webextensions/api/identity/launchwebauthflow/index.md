@@ -39,7 +39,7 @@ If there's any error, the promise is rejected with an error message. Error condi
 
 ## Syntax
 
-```js
+```js-nolint
 let authorizing = browser.identity.launchWebAuthFlow(
   details   // object
 )

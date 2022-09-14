@@ -23,7 +23,7 @@ This is not to suggest there is anything wrong with using the square bracket not
 
 ## Syntax
 
-```js
+```js-nolint
 at(index)
 ```
 

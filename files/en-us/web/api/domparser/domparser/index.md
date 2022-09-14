@@ -17,7 +17,7 @@ The **`DOMParser()`** constructor creates a new [`DOMParser`](/en-US/docs/Web/AP
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMParser()
 ```
 

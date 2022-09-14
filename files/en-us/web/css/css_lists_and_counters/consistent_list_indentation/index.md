@@ -42,7 +42,11 @@ This is why, in every browser except Internet Explorer for Windows, markers are 
 So how will all this appear in a document? At the moment, we have a situation analogous to these styles:
 
 ```css
-ul, li {margin-left: 0; padding-left: 0;}
+ul,
+li {
+  margin-left: 0;
+  padding-left: 0;
+}
 ```
 
 If we dropped this list into a document as-is, there would be no apparent indentation and the markers would be in danger of falling off the left edge of the browser window.
@@ -70,19 +74,28 @@ As we can see, the markers remain attached to the `<li>` elements, no matter whe
 Boil it all down, and what we're left with is this: if you want consistent rendering of lists between Gecko, Internet Explorer, and Opera, you need to set **both** the left margin and left padding of the `<ul>` element. We can ignore `<li>` altogether for these purposes. If you want to reproduce the default display in Netscape 6.x, you write:
 
 ```css
-ul {margin-left: 0; padding-left: 40px;}
+ul {
+  margin-left: 0;
+  padding-left: 40px;
+}
 ```
 
 If you're more interested in following the Internet Explorer/Opera model, then:
 
 ```css
-ul {margin-left: 40px; padding-left: 0;}
+ul {
+  margin-left: 40px;
+  padding-left: 0;
+}
 ```
 
 Of course, you can fill in your preferred values. Set both to `1.25em`, if you like — there's no reason why you have to stick with pixel-based indentation. If you want to reset lists to have no indentation, then you still have to zero out both padding and margin:
 
 ```css
-ul {margin-left: 0; padding-left: 0;}
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
 ```
 
 Remember, though, that in so doing, you'll have the bullets hanging outside the list and its parent element. If the parent is the `body`, there's a strong chance your bullets will be completely outside the browser window, and thus will not be visible.

@@ -5,7 +5,7 @@ tags:
   - Guide
   - Intermediate
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
@@ -232,7 +232,7 @@ console.log(sequence.next().value);     // 2
 
 You can force a generator to throw an exception by calling its {{jsxref("Global_Objects/Generator/throw","throw()")}} method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the `yield` that is currently suspended were instead a `throw value` statement.
 
-If the exception is not caught from within the generator,  it will propagate up through the call to `throw()`, and subsequent calls to `next()` will result in the `done` property being `true`.
+If the exception is not caught from within the generator, it will propagate up through the call to `throw()`, and subsequent calls to `next()` will result in the `done` property being `true`.
 
 Generators have a {{jsxref("Global_Objects/Generator/return","return(value)")}} method that returns the given value and finishes the generator itself.
 

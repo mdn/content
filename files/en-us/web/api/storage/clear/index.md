@@ -18,7 +18,7 @@ interface clears all keys stored in a given `Storage` object.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

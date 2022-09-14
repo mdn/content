@@ -21,7 +21,7 @@ The method may be called in the service worker's `activate` event handler (befor
 
 ## Syntax
 
-```js
+```js-nolint
 disable()
 ```
 

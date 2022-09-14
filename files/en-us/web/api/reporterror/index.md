@@ -23,7 +23,7 @@ This ensures that an exception in one callback will not prevent others from bein
 
 ## Syntax
 
-```js
+```js-nolint
 reportError(throwable)
 ```
 

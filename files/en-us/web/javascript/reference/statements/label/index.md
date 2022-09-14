@@ -18,7 +18,7 @@ a statement with an identifier which you can refer to.
 
 ## Syntax
 
-```js
+```js-nolint
 label:
   statement
 ```

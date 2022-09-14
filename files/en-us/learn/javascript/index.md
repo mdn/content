@@ -9,7 +9,7 @@ tags:
   - Landing
   - Module
   - Topic
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}

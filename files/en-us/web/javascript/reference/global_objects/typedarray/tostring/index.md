@@ -21,7 +21,7 @@ specified array and its elements. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

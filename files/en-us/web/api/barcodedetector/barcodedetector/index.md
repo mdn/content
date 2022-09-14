@@ -21,7 +21,7 @@ barcodes in images.
 
 ## Syntax
 
-```js
+```js-nolint
 new BarcodeDetector()
 new BarcodeDetector(options)
 ```

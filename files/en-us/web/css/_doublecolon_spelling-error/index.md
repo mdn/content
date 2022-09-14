@@ -43,7 +43,9 @@ In this example, eventual supporting browsers should highlight any flagged spell
 #### HTML
 
 ```html
-<p contenteditable spellcheck="true">My friends are coegdfgfddffbgning to the party tonight.</p>
+<p contenteditable spellcheck="true">
+  My friends are coegdfgfddffbgning to the party tonight.
+</p>
 ```
 
 #### CSS

@@ -20,7 +20,7 @@ The **`Object.setPrototypeOf()`** method sets the prototype (i.e., the internal 
 
 ## Syntax
 
-```js
+```js-nolint
 Object.setPrototypeOf(obj, prototype)
 ```
 

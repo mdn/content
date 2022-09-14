@@ -13,7 +13,7 @@ tags:
 
 ## Syntax
 
-```js
+```js-nolint
 regexp:match(targetString, regExpString[, flagsString])
 ```
 

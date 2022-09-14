@@ -18,7 +18,7 @@ boundary points of the {{domxref("Range")}} with those of another range.
 
 ## Syntax
 
-```js
+```js-nolint
 compareBoundaryPoints(how, sourceRange)
 ```
 

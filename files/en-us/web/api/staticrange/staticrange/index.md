@@ -25,7 +25,7 @@ the range as well as a Boolean indicating whether or not the range is
 
 ## Syntax
 
-```js
+```js-nolint
 new StaticRange(rangeSpec)
 ```
 

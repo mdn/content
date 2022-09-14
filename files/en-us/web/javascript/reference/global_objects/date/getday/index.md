@@ -20,7 +20,7 @@ Sunday. For the day of the month, see {{jsxref("Date.prototype.getDate()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getDay()
 ```
 

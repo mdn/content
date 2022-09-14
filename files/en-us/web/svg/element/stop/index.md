@@ -16,15 +16,21 @@ The SVG **`<stop>`** element defines a color and its position to use on a gradie
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 10 10"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="myGradient" gradientTransform="rotate(90)">
-      <stop offset="5%"  stop-color="gold" />
+      <stop offset="5%" stop-color="gold" />
       <stop offset="95%" stop-color="red" />
     </linearGradient>
   </defs>

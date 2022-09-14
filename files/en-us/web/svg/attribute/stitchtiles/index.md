@@ -19,7 +19,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -34,14 +36,49 @@ html, body, svg {
   </filter>
 
   <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(100px, 0);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(0, 100px);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise1); transform: translate(100px, 100px);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise1); transform: translate(100px, 0);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise1); transform: translate(0, 100px);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise1); transform: translate(100px, 100px);" />
 
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(220px, 0);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(320px, 0);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(220px, 100px);" />
-  <rect x="0" y="0" width="100" height="100" style="filter: url(#noise2); transform: translate(320px, 100px);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise2); transform: translate(220px, 0);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise2); transform: translate(320px, 0);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise2); transform: translate(220px, 100px);" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    style="filter: url(#noise2); transform: translate(320px, 100px);" />
 </svg>
 ```
 

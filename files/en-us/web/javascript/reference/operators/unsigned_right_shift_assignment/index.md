@@ -19,7 +19,7 @@ moves the specified amount of bits to the right and assigns the result to the va
 
 ## Syntax
 
-```js
+```js-nolint
 x >>>= y // x = x >>> y
 ```
 

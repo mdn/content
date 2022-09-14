@@ -11,7 +11,7 @@ tags:
   - Fonts
   - Learn
   - Simple
-  - l10n:priority
+  - "l10n:priority"
   - step by step
 ---
 

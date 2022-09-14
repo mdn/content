@@ -96,7 +96,9 @@ This is how a browser interprets the previous HTML snippet — it renders the ab
 {{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## Applying CSS to the DOM
@@ -142,7 +144,7 @@ Similarly, if a browser encounters a selector that it doesn't understand, it wil
 In the example below I have used the British English spelling for color, which makes that property invalid as it is not recognized. So my paragraph has not been colored blue. All of the other CSS have been applied however; only the invalid line is ignored.
 
 ```html
-<p> I want this text to be large, bold and blue.</p>
+<p>I want this text to be large, bold and blue.</p>
 ```
 
 ```css

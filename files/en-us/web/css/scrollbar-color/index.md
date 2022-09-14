@@ -26,7 +26,7 @@ The **thumb** refers to the moving part of the scrollbar, which usually floats o
 scrollbar-color: auto;
 
 /* <color> values */
-scrollbar-color: rebeccapurple green;   /* Two valid colors.
+scrollbar-color: rebeccapurple green; /* Two valid colors.
 The first applies to the thumb of the scrollbar, the second to the track. */
 
 /* Global values */
@@ -94,7 +94,13 @@ When using `scrollbar-color` property with specific color values, authors should
 #### HTML
 
 ```html
-<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+<div class="scroller">
+  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+  earthnut pea peanut soko zucchini.
+</div>
 ```
 
 #### Result

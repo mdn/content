@@ -16,8 +16,12 @@ You can use this attribute with any SVG element.
 ## Example
 
 ```html
-<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
+  <style>
     <![CDATA[
       #smallRect {
         stroke: #000066;

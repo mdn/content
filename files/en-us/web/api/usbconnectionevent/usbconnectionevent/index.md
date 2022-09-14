@@ -19,7 +19,7 @@ it is created by the browser in response to the connection and disconnection of 
 
 ## Syntax
 
-```js
+```js-nolint
 new USBConnectionEvent(type, options)
 ```
 

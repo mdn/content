@@ -64,12 +64,16 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20"  y="20" width="60" height="60" />
+  <rect x="20" y="20" width="60" height="60" />
   <rect x="120" y="20" width="60" height="60" />
   <rect x="220" y="20" width="60" height="60" />
 </svg>
@@ -1189,7 +1193,11 @@ If it contains multiple values, `x` defines the x coordinate of each individual 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1219,7 +1227,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```
@@ -1299,7 +1307,11 @@ If it contains multiple values, `x` defines the x coordinate of each individual 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1331,7 +1343,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```

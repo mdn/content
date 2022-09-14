@@ -22,7 +22,7 @@ string. If there is no track with the specified ID, this method returns
 
 ## Syntax
 
-```js
+```js-nolint
 getTrackById(id)
 ```
 

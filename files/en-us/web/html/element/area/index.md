@@ -153,10 +153,21 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html" alt="Click to go Left">
-  <area shape="circle" coords="275,75,75" href="right.html" alt="Click to go Right">
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="left.html"
+    alt="Click to go Left" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="right.html"
+    alt="Click to go Right" />
 </map>
-<img usemap="#primary" src="https://via.placeholder.com/350x150" alt="350 x 150 pic">
+<img
+  usemap="#primary"
+  src="https://via.placeholder.com/350x150"
+  alt="350 x 150 pic" />
 ```
 
 ### Result

@@ -27,7 +27,7 @@ The reading operation starts at the position given by the
 
 ## Syntax
 
-```js
+```js-nolint
 readAsArrayBuffer(size)
 ```
 

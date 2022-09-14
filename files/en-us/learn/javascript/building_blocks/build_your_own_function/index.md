@@ -12,7 +12,7 @@ tags:
   - Tutorial
   - build
   - invoke
-  - l10n:priority
+  - "l10n:priority"
   - parameters
 ---
 

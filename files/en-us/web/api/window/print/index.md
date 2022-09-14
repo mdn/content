@@ -21,7 +21,7 @@ This method will block while the print dialog is open.
 
 ## Syntax
 
-```js
+```js-nolint
 print()
 ```
 

@@ -19,7 +19,7 @@ systems).
 
 ## Syntax
 
-```js
+```js-nolint
 parseInt(string)
 parseInt(string, radix)
 ```

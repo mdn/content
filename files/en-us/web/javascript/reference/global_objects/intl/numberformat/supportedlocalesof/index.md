@@ -24,7 +24,7 @@ formatting without having to fall back to the runtime's default locale.
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.NumberFormat.supportedLocalesOf(locales)
 Intl.NumberFormat.supportedLocalesOf(locales, options)
 ```

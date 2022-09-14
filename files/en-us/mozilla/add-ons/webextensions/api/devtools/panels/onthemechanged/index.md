@@ -19,7 +19,7 @@ Fired when the devtools theme changes.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.panels.onThemeChanged.addListener(listener)
 browser.devtools.panels.onThemeChanged.removeListener(listener)
 browser.devtools.panels.onThemeChanged.hasListener(listener)

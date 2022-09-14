@@ -21,7 +21,7 @@ the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered, and t
 
 ## Syntax
 
-```js
+```js-nolint
 readAsText(blob)
 readAsText(blob, encoding)
 ```
@@ -42,7 +42,7 @@ None ({{jsxref("undefined")}}).
 ### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
+<input type="file" onchange="previewFile()" /><br />
 <p class="content"></p>
 ```
 

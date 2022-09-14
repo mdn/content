@@ -28,7 +28,7 @@ close/remove a previously displayed notification.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

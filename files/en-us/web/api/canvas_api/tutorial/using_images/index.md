@@ -219,8 +219,8 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
   <body onload="draw();">
     <canvas id="canvas" width="150" height="150"></canvas>
     <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227">
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
+      <img id="source" src="rhino.jpg" width="300" height="227" />
+      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
     </div>
   </body>
 </html>
@@ -259,19 +259,19 @@ The code below should be self-explanatory. We loop through the {{domxref("docume
   <body onload="draw();">
     <table>
       <tr>
-        <td><img src="gallery_1.jpg"></td>
-        <td><img src="gallery_2.jpg"></td>
-        <td><img src="gallery_3.jpg"></td>
-        <td><img src="gallery_4.jpg"></td>
+        <td><img src="gallery_1.jpg" /></td>
+        <td><img src="gallery_2.jpg" /></td>
+        <td><img src="gallery_3.jpg" /></td>
+        <td><img src="gallery_4.jpg" /></td>
       </tr>
       <tr>
-        <td><img src="gallery_5.jpg"></td>
-        <td><img src="gallery_6.jpg"></td>
-        <td><img src="gallery_7.jpg"></td>
-        <td><img src="gallery_8.jpg"></td>
+        <td><img src="gallery_5.jpg" /></td>
+        <td><img src="gallery_6.jpg" /></td>
+        <td><img src="gallery_7.jpg" /></td>
+        <td><img src="gallery_8.jpg" /></td>
       </tr>
     </table>
-    <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
+    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
   </body>
 </html>
 ```
@@ -280,7 +280,7 @@ And here's some CSS to make things look nice:
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
   margin: 10px;
 }
 

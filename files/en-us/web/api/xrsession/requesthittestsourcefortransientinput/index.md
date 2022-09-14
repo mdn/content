@@ -25,7 +25,7 @@ The **`requestHitTestSourceForTransientInput()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 requestHitTestSourceForTransientInput(options)
 ```
 

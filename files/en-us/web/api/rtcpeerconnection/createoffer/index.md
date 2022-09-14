@@ -35,7 +35,7 @@ offer.
 
 ## Syntax
 
-```js
+```js-nolint
 createOffer()
 createOffer(options)
 

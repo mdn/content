@@ -14,14 +14,15 @@ browser-compat: javascript.builtins.WebAssembly.compile
 
 {{JSRef}}
 
-The **`WebAssembly.compile()`** function compiles WebAssembly
-binary code into a {{jsxref("WebAssembly.Module")}} object. This function is useful if
-it is necessary to a compile a module before it can be instantiated (otherwise, the
-{{jsxref("WebAssembly.instantiate()")}} function should be used).
+The **`WebAssembly.compile()`** function compiles WebAssembly binary code into a {{jsxref("WebAssembly.Module")}} object.
+This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the {{jsxref("WebAssembly.instantiate()")}} function should be used).
+
+> **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
+> For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.compile(bufferSource)
 ```
 
@@ -53,7 +54,7 @@ The following example compiles the loaded simple.wasm byte code using the
 ```js
 const worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm')
+fetch("simple.wasm")
   .then((response) => response.arrayBuffer())
   .then((bytes) => WebAssembly.compile(bytes))
   .then((mod) => worker.postMessage(mod));

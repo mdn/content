@@ -29,7 +29,7 @@ as such. This method must be called before calling {{domxref("XMLHttpRequest.sen
 
 ## Syntax
 
-```js
+```js-nolint
 overrideMimeType(mimeType)
 ```
 

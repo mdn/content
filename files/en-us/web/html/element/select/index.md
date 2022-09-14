@@ -227,7 +227,7 @@ This example basically:
 
 ```css
 body {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .select:focus {
@@ -239,7 +239,7 @@ html body form fieldset#custom div.select[data-multiple] div.header {
 }
 
 html body form fieldset#custom div.select div.header {
-  content: '↓';
+  content: "↓";
   display: inline-flex;
   align-items: center;
   padding: 0;
@@ -247,7 +247,7 @@ html body form fieldset#custom div.select div.header {
 }
 
 html body form fieldset#custom div.select div.header::after {
-  content: '↓';
+  content: "↓";
   align-self: stretch;
   display: flex;
   align-content: center;

@@ -24,7 +24,7 @@ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 indexOf(searchElement)
 indexOf(searchElement, fromIndex)
 ```

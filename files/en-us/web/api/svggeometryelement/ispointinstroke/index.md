@@ -23,7 +23,7 @@ the element.
 
 ## Syntax
 
-```js
+```js-nolint
 isPointInStroke(point)
 ```
 

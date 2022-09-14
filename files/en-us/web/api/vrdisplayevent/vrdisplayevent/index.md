@@ -23,8 +23,8 @@ The **`VRDisplayEvent()`** constructor creates a {{domxref("VRDisplayEvent")}} o
 
 ## Syntax
 
-```js
-new VRDisplayEvent(type, options);
+```js-nolint
+new VRDisplayEvent(type, options)
 ```
 
 ### Parameters

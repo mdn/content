@@ -20,7 +20,7 @@ This method may only be run once, to notify the user on a failed or a successful
 
 ## Syntax
 
-```js
+```js-nolint
 updateUI(options)
 ```
 

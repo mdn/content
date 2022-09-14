@@ -140,7 +140,10 @@ If an element has a transparent content model, then its contents must be structu
 For example, the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements are transparent:
 
 ```html
-<p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p>
+<p>
+  We hold these truths to be <del><em>sacred &amp; undeniable</em></del>
+  <ins>self-evident</ins>.
+</p>
 ```
 
 If those elements were removed, this fragment would still be valid HTML (if not correct English).

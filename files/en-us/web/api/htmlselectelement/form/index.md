@@ -38,8 +38,8 @@ A {{domxref("HTMLFormElement")}}.
 
 <label for="lunch-select">Choose your lunch</label>
 <select name="lunch" id="lunch-select">
-    <option value="salad">Salad</option>
-    <option value="sandwich">Sandwich</option>
+  <option value="salad">Salad</option>
+  <option value="sandwich">Sandwich</option>
 </select>
 
 <script>

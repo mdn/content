@@ -22,7 +22,7 @@ interface closes the connection, if one is made, and sets the
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

@@ -20,7 +20,7 @@ given index.
 
 ## Syntax
 
-```js
+```js-nolint
 get(index)
 ```
 

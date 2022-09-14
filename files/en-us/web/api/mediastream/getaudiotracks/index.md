@@ -27,7 +27,7 @@ is `audio`.
 
 ## Syntax
 
-```js
+```js-nolint
 getAudioTracks()
 ```
 

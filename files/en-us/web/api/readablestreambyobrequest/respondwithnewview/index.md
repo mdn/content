@@ -24,7 +24,7 @@ For example, the source may transfer the BYOB view to a separate worker thread, 
 
 ## Syntax
 
-```js
+```js-nolint
 respondWithNewView(view)
 ```
 

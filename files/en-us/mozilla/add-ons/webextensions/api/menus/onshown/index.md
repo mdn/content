@@ -82,7 +82,7 @@ Firefox makes this event available via the `contextMenus` namespace as well as t
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.onShown.addListener(listener)
 browser.menus.onShown.removeListener(listener)
 browser.menus.onShown.hasListener(listener)

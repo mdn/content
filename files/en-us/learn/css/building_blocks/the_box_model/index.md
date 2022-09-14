@@ -187,7 +187,9 @@ To use the alternative box model for all of your elements (which is a common cho
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```

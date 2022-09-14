@@ -24,7 +24,7 @@ single value. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduce((accumulator, currentValue) => { /* ... */ } )
 reduce((accumulator, currentValue, index) => { /* ... */ } )

@@ -23,7 +23,7 @@ the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Type
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 filter((element) => { /* ... */ } )
 filter((element, index) => { /* ... */ } )
@@ -43,10 +43,12 @@ filter(function(element, index, array) { /* ... */ }, thisArg)
 ### Parameters
 
 - `callbackFn`
+
   - : Function to test each element of the typed array.
 
     The function is called with the following arguments: `(element, index, array)`.
     Return `true` to keep the element, `false` otherwise.
+
 - `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 

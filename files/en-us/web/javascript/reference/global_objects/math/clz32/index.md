@@ -19,7 +19,7 @@ The **`Math.clz32()`** function returns the number of leading zero bits in the 3
 
 ## Syntax
 
-```js
+```js-nolint
 Math.clz32(x)
 ```
 

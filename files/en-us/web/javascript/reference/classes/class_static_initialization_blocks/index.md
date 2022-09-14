@@ -25,7 +25,7 @@ This means that static blocks can also be used to share information between clas
 
 ## Syntax
 
-```js
+```js-nolint
 static { /* … */ }
 ```
 
@@ -36,7 +36,7 @@ These are evaluated, along with any interleaved static field initializers, in th
 Any static initialization of a super class is performed first, before that of its sub classes.
 
 The scope of the variables declared inside the static block is local to the block.
-Since `var`, `function`, `const` or  `let` declared in a `static {}` initialization block are local to the block, any `var` declarations in the block are not hoisted.
+Since `var`, `function`, `const` or `let` declared in a `static {}` initialization block are local to the block, any `var` declarations in the block are not hoisted.
 
 ```js
 var y = 'Outer y';

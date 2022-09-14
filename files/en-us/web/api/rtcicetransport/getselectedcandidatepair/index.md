@@ -28,7 +28,7 @@ of {{Glossary("ICE")}} candidates describing the configuration of the endpoints 
 
 ## Syntax
 
-```js
+```js-nolint
 getSelectedCandidatePair()
 ```
 

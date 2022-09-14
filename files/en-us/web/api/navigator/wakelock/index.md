@@ -20,8 +20,8 @@ screensaver.
 
 ## Syntax
 
-```js
-const wakeLock = navigator.wakeLock;
+```js-nolint
+navigator.wakeLock
 ```
 
 ## Specifications

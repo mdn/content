@@ -20,7 +20,7 @@ string. `trimRight()` is an alias of this method.
 
 ## Syntax
 
-```js
+```js-nolint
 trimEnd()
 
 trimRight()

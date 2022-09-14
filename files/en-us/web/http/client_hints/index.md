@@ -32,7 +32,7 @@ There is a small set of [low entropy client hint headers](#low_entropy_hints) th
 > **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
 >
 > ```html
-> <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA">
+> <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />
 > ```
 
 ## Caching and Client Hints

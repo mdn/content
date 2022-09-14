@@ -23,7 +23,7 @@ must be re-established before rendering can resume.
 
 ## Syntax
 
-```js
+```js-nolint
 isContextLost()
 ```
 

@@ -157,17 +157,22 @@ We could even provide an information box saying who made the suggestion and when
 Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions, but you'll probably want to use some more interesting styling of your own, for example:
 
 ```css
-ins, [role="insertion"] {
+ins,
+[role="insertion"] {
   color: #0c0;
   text-decoration: underline;
 }
 
-del, [role="deletion"] {
+del,
+[role="deletion"] {
   color: red;
   text-decoration: line-through;
 }
 
-ins, [role="insertion"], del, [role="deletion"] {
+ins,
+[role="insertion"],
+del,
+[role="deletion"] {
   text-decoration-thickness: 2px;
   background-color: #fee;
   padding: 2px 4px;

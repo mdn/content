@@ -18,8 +18,8 @@ The **`BigInt.asIntN`** static method clamps a `BigInt` value to the given numbe
 
 ## Syntax
 
-```js
-BigInt.asIntN(bits, bigint);
+```js-nolint
+BigInt.asIntN(bits, bigint)
 ```
 
 ### Parameters

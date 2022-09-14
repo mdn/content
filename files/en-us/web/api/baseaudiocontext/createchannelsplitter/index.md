@@ -24,7 +24,7 @@ which is used to access the individual channels of an audio stream and process t
 
 ## Syntax
 
-```js
+```js-nolint
 createChannelSplitter(numberOfOutputs)
 ```
 

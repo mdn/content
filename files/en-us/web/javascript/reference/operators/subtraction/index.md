@@ -18,7 +18,7 @@ difference.
 
 ## Syntax
 
-```js
+```js-nolint
 x - y
 ```
 

@@ -25,7 +25,7 @@ a function to be called when an attempt is made to set that property.
 
 ## Syntax
 
-```js
+```js-nolint
 __defineSetter__(prop, fun)
 ```
 

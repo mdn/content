@@ -17,7 +17,7 @@ a primitive value.
 
 ## Syntax
 
-```js
+```js-nolint
 Symbol()[Symbol.toPrimitive](hint)
 ```
 

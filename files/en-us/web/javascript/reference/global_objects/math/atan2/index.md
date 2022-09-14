@@ -17,7 +17,7 @@ The **`Math.atan2()`** function returns the angle in the plane (in radians) betw
 
 ## Syntax
 
-```js
+```js-nolint
 Math.atan2(y, x)
 ```
 

@@ -18,7 +18,7 @@ The **`close()`** method of the {{domxref("VideoEncoder")}} interface ends all p
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

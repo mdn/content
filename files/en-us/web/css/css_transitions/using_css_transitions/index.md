@@ -46,7 +46,7 @@ The `transition` shorthand CSS syntax is written as follows:
 
 ```css
 div {
-    transition: <property> <duration> <timing-function> <delay>;
+  transition: <property> <duration> <timing-function> <delay>;
 }
 ```
 
@@ -73,8 +73,11 @@ This example performs a four-second font size transition with a two-second delay
 
 ```html hidden
 <body>
-    <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
-    <div class="box">Sample</div>
+  <p>
+    The box below combines transitions for: width, height, background-color,
+    transform. Hover over the box to see these properties animated.
+  </p>
+  <div class="box">Sample</div>
 </body>
 ```
 
@@ -82,20 +85,20 @@ This example performs a four-second font size transition with a two-second delay
 
 ```css
 .box {
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: #0000FF;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 
 .box:hover {
-    background-color: #FFCCCC;
-    width: 200px;
-    height: 200px;
-    transform: rotate(180deg);
+  background-color: #ffcccc;
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
 }
 ```
 

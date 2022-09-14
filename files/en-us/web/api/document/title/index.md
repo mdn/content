@@ -37,19 +37,17 @@ document).
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>Hello World!</title>
-</head>
-<body>
-
-  <script>
-    alert(document.title); // displays "Hello World!"
-    document.title = "Goodbye World!";
-    alert(document.title); // displays "Goodbye World!"
-  </script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <script>
+      alert(document.title); // displays "Hello World!"
+      document.title = "Goodbye World!";
+      alert(document.title); // displays "Goodbye World!"
+    </script>
+  </body>
 </html>
 ```
 

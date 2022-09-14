@@ -19,7 +19,7 @@ is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations.
 
 ## Syntax
 
-```js
+```js-nolint
 null
 ```
 

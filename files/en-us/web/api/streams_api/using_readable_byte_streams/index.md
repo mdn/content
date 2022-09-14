@@ -937,7 +937,7 @@ class MockUnderlyingFileHandle {
   width: 50%;
   overflow-wrap: break-word;
 }
- button {
+button {
   display: block;
 }
 ```

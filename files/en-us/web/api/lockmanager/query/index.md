@@ -18,7 +18,7 @@ The **`query()`** method of the {{domxref("LockManager")}} interface returns a {
 
 ## Syntax
 
-```js
+```js-nolint
 query()
 ```
 

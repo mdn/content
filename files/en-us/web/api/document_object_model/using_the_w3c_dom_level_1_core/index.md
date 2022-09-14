@@ -47,7 +47,7 @@ Suppose the author wants to change the header of the above document and write tw
 
 ```html
 <body>
-  <input type="button" value="Change this document." onclick="change()">
+  <input type="button" value="Change this document." onclick="change()" />
   <h2>Header</h2>
   <p>Paragraph</p>
 </body>

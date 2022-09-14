@@ -80,7 +80,7 @@ Making an element _draggable_ requires adding the {{htmlattrxref("draggable")}} 
     ev.dataTransfer.setData("text/plain", ev.target.id);
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener("DOMContentLoaded", () => {
     // Get the element by id
     const element = document.getElementById("p1");
     // Add the ondragstart event listener
@@ -165,19 +165,24 @@ The following example shows how to use those attributes, and includes basic even
 
 ```html
 <script>
-function dragover_handler(ev) {
- ev.preventDefault();
- ev.dataTransfer.dropEffect = "move";
-}
-function drop_handler(ev) {
- ev.preventDefault();
- // Get the id of the target and add the moved element to the target's DOM
- const data = ev.dataTransfer.getData("text/plain");
- ev.target.appendChild(document.getElementById(data));
-}
+  function dragover_handler(ev) {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+  }
+  function drop_handler(ev) {
+    ev.preventDefault();
+    // Get the id of the target and add the moved element to the target's DOM
+    const data = ev.dataTransfer.getData("text/plain");
+    ev.target.appendChild(document.getElementById(data));
+  }
 </script>
 
-<p id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</p>
+<p
+  id="target"
+  ondrop="drop_handler(event)"
+  ondragover="dragover_handler(event)">
+  Drop Zone
+</p>
 ```
 
 Note that each handler calls {{domxref("Event.preventDefault","preventDefault()")}} to prevent additional event processing for this event (such as [touch events](/en-US/docs/Web/API/Touch_events) or [pointer events](/en-US/docs/Web/API/Pointer_events)).
@@ -196,25 +201,32 @@ The following example shows a drop handler getting the source element's `id` fro
 
 ```html
 <script>
-function dragstart_handler(ev) {
- // Add the target element's id to the data transfer object
- ev.dataTransfer.setData("application/my-app", ev.target.id);
- ev.dataTransfer.effectAllowed = "move";
-}
-function dragover_handler(ev) {
- ev.preventDefault();
- ev.dataTransfer.dropEffect = "move"
-}
-function drop_handler(ev) {
- ev.preventDefault();
- // Get the id of the target and add the moved element to the target's DOM
- const data = ev.dataTransfer.getData("application/my-app");
- ev.target.appendChild(document.getElementById(data));
-}
+  function dragstart_handler(ev) {
+    // Add the target element's id to the data transfer object
+    ev.dataTransfer.setData("application/my-app", ev.target.id);
+    ev.dataTransfer.effectAllowed = "move";
+  }
+  function dragover_handler(ev) {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+  }
+  function drop_handler(ev) {
+    ev.preventDefault();
+    // Get the id of the target and add the moved element to the target's DOM
+    const data = ev.dataTransfer.getData("application/my-app");
+    ev.target.appendChild(document.getElementById(data));
+  }
 </script>
 
-<p id="p1" draggable="true" ondragstart="dragstart_handler(event)">This element is draggable.</p>
-<div id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</div>
+<p id="p1" draggable="true" ondragstart="dragstart_handler(event)">
+  This element is draggable.
+</p>
+<div
+  id="target"
+  ondrop="drop_handler(event)"
+  ondragover="dragover_handler(event)">
+  Drop Zone
+</div>
 ```
 
 For more information, see:

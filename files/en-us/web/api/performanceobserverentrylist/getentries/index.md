@@ -26,7 +26,7 @@ interfaces.
 
 ## Syntax
 
-```js
+```js-nolint
 getEntries()
 getEntries(performanceEntryFilterOptions)
 ```

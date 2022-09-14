@@ -67,7 +67,7 @@ The two URNs correspond to
 | ----------- | -------------------------------------------------------------------- |
 | data        | [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)           |
 | file        | Host-specific file names                                             |
-| ftp         | {{Glossary("FTP","File Transfer Protocol")}}         |
+| ftp         | {{Glossary("FTP","File Transfer Protocol")}}                         |
 | http/https  | [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)   |
 | javascript  | URL-embedded JavaScript code                                         |
 | mailto      | Electronic mail address                                              |

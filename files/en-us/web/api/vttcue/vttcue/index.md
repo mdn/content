@@ -23,7 +23,7 @@ The **`VTTCue()`** constructor creates and returns a new
 
 ## Syntax
 
-```js
+```js-nolint
 new VTTCue(startTime, endTime, text)
 ```
 

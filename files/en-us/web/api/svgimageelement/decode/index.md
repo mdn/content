@@ -25,7 +25,7 @@ for use.
 
 ## Syntax
 
-```js
+```js-nolint
 decode()
 ```
 

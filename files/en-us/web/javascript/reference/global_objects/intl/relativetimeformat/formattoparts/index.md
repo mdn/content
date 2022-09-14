@@ -23,7 +23,7 @@ The **`Intl.RelativeTimeFormat.prototype.formatToParts()`** method returns an {{
 
 ## Syntax
 
-```js
+```js-nolint
 formatToParts(value, unit)
 ```
 

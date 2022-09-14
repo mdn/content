@@ -19,7 +19,7 @@ image.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL1
 texImage2D(target, level, internalformat, width, height, border, format, type)
 texImage2D(target, level, internalformat, width, height, border, format, type, pixels) // pixels a TypedArray or a DataView

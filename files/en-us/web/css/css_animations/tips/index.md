@@ -24,8 +24,7 @@ Here's one way to do it that we feel is stable and reliable enough to suggest to
 First, let's define the HTML for a {{HTMLElement("div")}} we wish to animate and a button that will play (or replay) the animation.
 
 ```html
-<div class="box">
-</div>
+<div class="box"></div>
 
 <div class="runButton">Click me to run the animation</div>
 ```
@@ -52,8 +51,12 @@ Now we'll define the animation itself using CSS. Some CSS that's not important (
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {

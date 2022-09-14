@@ -24,7 +24,7 @@ constructor, or the function expression syntax.
 
 ## Syntax
 
-```js
+```js-nolint
 function* name(param0) {
   statements
 }

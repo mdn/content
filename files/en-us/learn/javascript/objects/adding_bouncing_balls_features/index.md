@@ -10,7 +10,7 @@ tags:
   - OOJS
   - Object-Oriented
   - Objects
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

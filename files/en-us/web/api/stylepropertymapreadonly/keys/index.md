@@ -22,7 +22,7 @@ in `StylePropertyMapReadOnly`
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

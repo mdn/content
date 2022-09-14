@@ -34,7 +34,7 @@ The [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types
 
 ## Syntax
 
-```js
+```js-nolint
 let setting = setting.set(
   details     // object
 )

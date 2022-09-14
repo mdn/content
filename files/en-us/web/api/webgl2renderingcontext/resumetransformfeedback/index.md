@@ -19,7 +19,7 @@ transform feedback operation.
 
 ## Syntax
 
-```js
+```js-nolint
 resumeTransformFeedback()
 ```
 

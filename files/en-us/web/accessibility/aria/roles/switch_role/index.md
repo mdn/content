@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: switch role'
+title: "ARIA: switch role"
 slug: Web/Accessibility/ARIA/Roles/switch_role
 tags:
   - ARIA
@@ -20,10 +20,14 @@ The ARIA **`switch`** role is functionally identical to the [checkbox](/en-US/do
 This example creates a widget and assigns the ARIA `switch` role to it.
 
 ```html
-<button type="button" role="switch" aria-checked="true"
-    id="speakerPower" class="switch">
-    <span aria-hidden="true">off</span>
-    <span aria-hidden="true">on</span>
+<button
+  type="button"
+  role="switch"
+  aria-checked="true"
+  id="speakerPower"
+  class="switch">
+  <span aria-hidden="true">off</span>
+  <span aria-hidden="true">on</span>
 </button>
 <label for="speakerPower" class="switch">Speaker power</label>
 ```
@@ -99,8 +103,7 @@ This simple example just creates a widget and assigns the ARIA `switch` role to 
 The HTML is fairly simple here. The switch is implemented as a {{HTMLElement("button")}} element which is initially checked courtesy of its `aria-checked` attribute being set to `"true"`. The switch has two child elements containing the "off" and "on" labels and is followed by a {{HTMLElement("label")}} identifying the switch.
 
 ```html
-<button role="switch" aria-checked="true"
-      id="speakerPower" class="switch">
+<button role="switch" aria-checked="true" id="speakerPower" class="switch">
   <span>off</span>
   <span>on</span>
 </button>

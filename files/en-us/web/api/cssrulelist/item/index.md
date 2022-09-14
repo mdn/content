@@ -17,7 +17,7 @@ The **`item()`** method of the {{domxref("CSSRuleList")}} interface returns the 
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

@@ -21,7 +21,7 @@ The **`Math.asinh()`** function returns the inverse hyperbolic sine of a number.
 
 ## Syntax
 
-```js
+```js-nolint
 Math.asinh(x)
 ```
 

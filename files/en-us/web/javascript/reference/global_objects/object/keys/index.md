@@ -21,7 +21,7 @@ in the same order that a normal loop would.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.keys(obj)
 ```
 

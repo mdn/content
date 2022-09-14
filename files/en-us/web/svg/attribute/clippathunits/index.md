@@ -18,7 +18,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -32,10 +36,10 @@ html,body,svg { height:100% }
   </clipPath>
 
   <!-- Some reference rect to materialized to clip path -->
-  <rect id="r1" x="0"  y="0"  width="45" height="45" />
-  <rect id="r2" x="0"  y="55" width="45" height="45" />
+  <rect id="r1" x="0" y="0" width="45" height="45" />
+  <rect id="r2" x="0" y="55" width="45" height="45" />
   <rect id="r3" x="55" y="55" width="45" height="45" />
-  <rect id="r4" x="55" y="0"  width="45" height="45" />
+  <rect id="r4" x="55" y="0" width="45" height="45" />
 
   <!-- The first 3 rect are clipped with userSpaceOnUse units -->
   <use clip-path="url(#myClip1)" xlink:href="#r1" fill="red" />

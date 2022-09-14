@@ -19,7 +19,9 @@ As a presentation attribute, it can be applied to any element but it only has ef
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```

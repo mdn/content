@@ -17,7 +17,7 @@ The **`addCue()`** method of the {{domxref("TextTrack")}} interface adds a new c
 
 ## Syntax
 
-```js
+```js-nolint
 addCue(cue)
 ```
 

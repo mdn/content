@@ -20,7 +20,7 @@ If the field is numeric in nature, including the {{HTMLElement("input/date", "da
 Given the following:
 
 ```html
-<input type="number" min="20" max="40" step="2"/>
+<input type="number" min="20" max="40" step="2" />
 ```
 
 if `value < 20`, `rangeUnderflow` will be true. When `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.

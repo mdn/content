@@ -25,7 +25,7 @@ which is used to delay the incoming audio signal by a certain amount of time.
 
 ## Syntax
 
-```js
+```js-nolint
 createDelay(maxDelayTime)
 ```
 

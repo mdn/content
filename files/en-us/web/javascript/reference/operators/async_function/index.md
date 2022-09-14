@@ -20,7 +20,7 @@ You can also define async functions using an
 
 ## Syntax
 
-```js
+```js-nolint
 async function (param0) {
   statements
 }

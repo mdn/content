@@ -34,7 +34,7 @@ of encrypt + export.
 
 ## Syntax
 
-```js
+```js-nolint
 unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extractable, keyUsages)
 ```
 

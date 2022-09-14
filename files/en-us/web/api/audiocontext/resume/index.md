@@ -24,7 +24,7 @@ called on an {{domxref("OfflineAudioContext")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 resume()
 ```
 

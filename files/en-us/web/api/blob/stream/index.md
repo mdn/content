@@ -19,7 +19,7 @@ which upon reading returns the data contained within the `Blob`.
 
 ## Syntax
 
-```js
+```js-nolint
 stream()
 ```
 

@@ -30,7 +30,10 @@ This element implements the {{domxref('HTMLElement')}} interface.
 ## Example
 
 ```html
-<p>The <acronym title="World Wide Web">WWW</acronym> is only a component of the Internet.</p>
+<p>
+  The <acronym title="World Wide Web">WWW</acronym> is only a component of the
+  Internet.
+</p>
 ```
 
 ## Default styling

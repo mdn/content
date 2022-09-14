@@ -26,7 +26,7 @@ on it.
 
 ## Syntax
 
-```js
+```js-nolint
 strokeRect(x, y, width, height)
 ```
 

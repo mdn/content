@@ -18,7 +18,7 @@ The left shift assignment operator (`<<=`) moves the specified amount of bits to
 
 ## Syntax
 
-```js
+```js-nolint
 x <<= y // x = x << y
 ```
 

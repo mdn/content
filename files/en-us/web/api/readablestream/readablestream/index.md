@@ -18,7 +18,7 @@ Note that while all parameters are technically optional, omitting the `underlyin
 
 ## Syntax
 
-```js
+```js-nolint
 new ReadableStream()
 new ReadableStream(underlyingSource)
 new ReadableStream(underlyingSource, queuingStrategy)

@@ -15,13 +15,23 @@ The SVG **`<animate>`** element provides a way to animate an attribute of an ele
 ## Example
 
 ```css hidden
-html,body,svg { height:100%; margin:0; padding:0; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
   <rect width="10" height="10">
-    <animate attributeName="rx" values="0;5;0" dur="10s" repeatCount="indefinite" />
+    <animate
+      attributeName="rx"
+      values="0;5;0"
+      dur="10s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```

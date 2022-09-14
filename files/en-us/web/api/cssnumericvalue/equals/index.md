@@ -24,7 +24,7 @@ equality to be tested quickly.
 
 ## Syntax
 
-```js
+```js-nolint
 equals(number)
 ```
 

@@ -18,7 +18,7 @@ which represents an event signaling that a {{domxref("MediaStreamTrack")}} has b
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamTrackEvent(type, options)
 ```
 

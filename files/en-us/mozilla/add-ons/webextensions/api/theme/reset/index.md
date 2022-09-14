@@ -21,7 +21,7 @@ Note that this will always reset the theme back to the original default theme, e
 
 ## Syntax
 
-```js
+```js-nolint
 browser.theme.reset(
   windowId     // integer
 )

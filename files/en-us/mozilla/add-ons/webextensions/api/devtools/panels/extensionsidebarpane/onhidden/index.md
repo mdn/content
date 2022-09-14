@@ -21,7 +21,7 @@ Called when the sidebar pane becomes hidden, as a result of the user switching a
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.panels.onHidden.addListener(listener)
 browser.devtools.panels.onHidden.removeListener(listener)
 browser.devtools.panels.onHidden.hasListener(listener)

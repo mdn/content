@@ -26,7 +26,7 @@ applied.
 
 ## Syntax
 
-```js
+```js-nolint
 new OverconstrainedError()
 ```
 

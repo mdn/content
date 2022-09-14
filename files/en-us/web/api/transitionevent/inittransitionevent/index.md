@@ -32,7 +32,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 initTransitionEvent(type, canBubble, cancelable, transitionName, elapsedTime)
 ```
 

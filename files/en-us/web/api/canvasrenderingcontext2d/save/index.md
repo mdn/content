@@ -48,7 +48,7 @@ The drawing state that gets saved onto a stack consists of:
 
 ## Syntax
 
-```js
+```js-nolint
 save()
 ```
 

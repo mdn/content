@@ -1,8 +1,8 @@
 ---
-title: ':any-link'
+title: ":any-link"
 slug: Web/CSS/:any-link
 tags:
-  - ':any-link'
+  - ":any-link"
   - CSS
   - Layout
   - Links
@@ -31,8 +31,8 @@ The **`:any-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 ### HTML
 
 ```html
-<a href="https://example.com">External link</a><br>
-<a href="#">Internal target link</a><br>
+<a href="https://example.com">External link</a><br />
+<a href="#">Internal target link</a><br />
 <a>Placeholder link (won't get styled)</a>
 ```
 

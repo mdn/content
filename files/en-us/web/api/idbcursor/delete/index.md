@@ -30,7 +30,7 @@ Be aware that you can't call `delete()` (or
 
 ## Syntax
 
-```js
+```js-nolint
 delete()
 ```
 

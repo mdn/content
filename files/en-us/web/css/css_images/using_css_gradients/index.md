@@ -163,7 +163,7 @@ div {
 
 ```css
 .multicolor-linear {
-   background: linear-gradient(to left, lime 28px, red 77%, cyan);
+  background: linear-gradient(to left, lime 28px, red 77%, cyan);
 }
 ```
 
@@ -186,7 +186,7 @@ div {
 
 ```css
 .striped {
-   background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
+  background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
 }
 ```
 
@@ -204,7 +204,9 @@ By default, the gradient transitions evenly from one color to the next. You can 
 ```css hidden
 div {
   width: 120px;
-  height: 120px; float: left; margin-right: 10px;
+  height: 120px;
+  float: left;
+  margin-right: 10px;
 }
 ```
 
@@ -232,22 +234,48 @@ To include a solid, non-transitioning color area within a gradient, include two 
 div {
   width: 120px;
   height: 120px;
-  float: left; margin-right: 10px; box-sizing: border-box;
+  float: left;
+  margin-right: 10px;
+  box-sizing: border-box;
 }
 ```
 
 ```css
 .multiposition-stops {
-   background: linear-gradient(to left,
-       lime 20%, red 30%, red 45%, cyan 55%, cyan 70%, yellow 80% );
-   background: linear-gradient(to left,
-       lime 20%, red 30% 45%, cyan 55% 70%, yellow 80% );
+  background: linear-gradient(
+    to left,
+    lime 20%,
+    red 30%,
+    red 45%,
+    cyan 55%,
+    cyan 70%,
+    yellow 80%
+  );
+  background: linear-gradient(
+    to left,
+    lime 20%,
+    red 30% 45%,
+    cyan 55% 70%,
+    yellow 80%
+  );
 }
 .multiposition-stop2 {
-   background: linear-gradient(to left,
-      lime 25%, red 25%, red 50%, cyan 50%, cyan 75%, yellow 75% );
-   background: linear-gradient(to left,
-      lime 25%, red 25% 50%, cyan 50% 75%, yellow 75% );
+  background: linear-gradient(
+    to left,
+    lime 25%,
+    red 25%,
+    red 50%,
+    cyan 50%,
+    cyan 75%,
+    yellow 75%
+  );
+  background: linear-gradient(
+    to left,
+    lime 25%,
+    red 25% 50%,
+    cyan 50% 75%,
+    yellow 75%
+  );
 }
 ```
 
@@ -264,14 +292,17 @@ In both examples, the gradient is written twice: the first is the CSS Images Lev
 By default, a gradient evenly progresses between the colors of two adjacent color stops, with the midpoint between those two color stops being the midpoint color value. You can control the {{Glossary("interpolation")}}, or progression, between two color stops by including a color hint location. In this example, the color reaches the midpoint between lime and cyan 20% of the way through the gradient rather than 50% of the way through. The second example does not contain the hint to highlight the difference the color hint can make:
 
 ```html hidden
-<div class="colorhint-gradient"></div> <div class="regular-progression"></div>
+<div class="colorhint-gradient"></div>
+<div class="regular-progression"></div>
 ```
 
 ```css hidden
 div {
   width: 120px;
   height: 120px;
-  float: left; margin-right: 10px; box-sizing: border-box;
+  float: left;
+  margin-right: 10px;
+  box-sizing: border-box;
 }
 ```
 
@@ -304,7 +335,7 @@ div {
 ```css
 .layered-image {
   background: linear-gradient(to right, transparent, mistyrose),
-      url("critters.png");
+    url("critters.png");
 }
 ```
 
@@ -327,10 +358,12 @@ div {
 
 ```css
 .stacked-linear {
-  background:
-      linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-      linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
 }
 ```
 
@@ -430,8 +463,13 @@ div {
 
 ```css
 .radial-ellipse-side {
-  background: radial-gradient(ellipse closest-side,
-      red, yellow 10%, #1e90ff 50%, beige);
+  background: radial-gradient(
+    ellipse closest-side,
+    red,
+    yellow 10%,
+    #1e90ff 50%,
+    beige
+  );
 }
 ```
 
@@ -454,8 +492,13 @@ div {
 
 ```css
 .radial-ellipse-far {
-  background: radial-gradient(ellipse farthest-corner at 90% 90%,
-      red, yellow 10%, #1e90ff 50%, beige);
+  background: radial-gradient(
+    ellipse farthest-corner at 90% 90%,
+    red,
+    yellow 10%,
+    #1e90ff 50%,
+    beige
+  );
 }
 ```
 
@@ -478,8 +521,13 @@ div {
 
 ```css
 .radial-circle-close {
-  background: radial-gradient(circle closest-side at 25% 75%,
-      red, yellow 10%, #1e90ff 50%, beige);
+  background: radial-gradient(
+    circle closest-side at 25% 75%,
+    red,
+    yellow 10%,
+    #1e90ff 50%,
+    beige
+  );
 }
 ```
 
@@ -502,8 +550,13 @@ div {
 
 ```css
 .radial-ellipse-size {
-   background: radial-gradient(ellipse 50% 50px,
-      red, yellow 10%, #1e90ff 50%, beige);
+  background: radial-gradient(
+    ellipse 50% 50px,
+    red,
+    yellow 10%,
+    #1e90ff 50%,
+    beige
+  );
 }
 ```
 
@@ -526,8 +579,7 @@ div {
 
 ```css
 .radial-circle-size {
-  background: radial-gradient(circle 50px,
-      red, yellow 10%, #1e90ff 50%, beige);
+  background: radial-gradient(circle 50px, red, yellow 10%, #1e90ff 50%, beige);
 }
 ```
 
@@ -550,16 +602,20 @@ div {
 
 ```css
 .stacked-radial {
-  background:
-      radial-gradient(circle at 50% 0,
-        rgba(255,0,0,.5),
-        rgba(255,0,0,0) 70.71%),
-      radial-gradient(circle at 6.7% 75%,
-        rgba(0,0,255,.5),
-        rgba(0,0,255,0) 70.71%),
-      radial-gradient(circle at 93.3% 75%,
-        rgba(0,255,0,.5),
-        rgba(0,255,0,0) 70.71%) beige;
+  background: radial-gradient(
+      circle at 50% 0,
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0) 70.71%
+    ), radial-gradient(
+      circle at 6.7% 75%,
+      rgba(0, 0, 255, 0.5),
+      rgba(0, 0, 255, 0) 70.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        rgba(0, 255, 0, 0.5),
+        rgba(0, 255, 0, 0) 70.71%
+      ) beige;
   border-radius: 50%;
 }
 ```
@@ -666,7 +722,13 @@ div {
 
 ```css
 .repeating-linear {
-  background: repeating-linear-gradient(-45deg, red, red 5px, blue 5px, blue 10px);
+  background: repeating-linear-gradient(
+    -45deg,
+    red,
+    red 5px,
+    blue 5px,
+    blue 10px
+  );
 }
 ```
 
@@ -691,20 +753,28 @@ div {
 
 ```css
 .multi-repeating-linear {
-  background:
-      repeating-linear-gradient(190deg, rgba(255, 0, 0, 0.5) 40px,
-        rgba(255, 153, 0, 0.5) 80px, rgba(255, 255, 0, 0.5) 120px,
-        rgba(0, 255, 0, 0.5) 160px, rgba(0, 0, 255, 0.5) 200px,
-        rgba(75, 0, 130, 0.5) 240px, rgba(238, 130, 238, 0.5) 280px,
-        rgba(255, 0, 0, 0.5) 300px),
-      repeating-linear-gradient(-190deg, rgba(255, 0, 0, 0.5) 30px,
-        rgba(255, 153, 0, 0.5) 60px, rgba(255, 255, 0, 0.5) 90px,
-        rgba(0, 255, 0, 0.5) 120px, rgba(0, 0, 255, 0.5) 150px,
-        rgba(75, 0, 130, 0.5) 180px, rgba(238, 130, 238, 0.5) 210px,
-        rgba(255, 0, 0, 0.5) 230px),
-      repeating-linear-gradient(23deg, red 50px, orange 100px,
-        yellow 150px, green 200px, blue 250px,
-        indigo 300px, violet 350px, red 370px);
+  background: repeating-linear-gradient(
+      190deg,
+      rgba(255, 0, 0, 0.5) 40px,
+      rgba(255, 153, 0, 0.5) 80px,
+      rgba(255, 255, 0, 0.5) 120px,
+      rgba(0, 255, 0, 0.5) 160px,
+      rgba(0, 0, 255, 0.5) 200px,
+      rgba(75, 0, 130, 0.5) 240px,
+      rgba(238, 130, 238, 0.5) 280px,
+      rgba(255, 0, 0, 0.5) 300px
+    ), repeating-linear-gradient(
+      -190deg,
+      rgba(255, 0, 0, 0.5) 30px,
+      rgba(255, 153, 0, 0.5) 60px,
+      rgba(255, 255, 0, 0.5) 90px,
+      rgba(0, 255, 0, 0.5) 120px,
+      rgba(0, 0, 255, 0.5) 150px,
+      rgba(75, 0, 130, 0.5) 180px,
+      rgba(238, 130, 238, 0.5) 210px,
+      rgba(255, 0, 0, 0.5) 230px
+    ), repeating-linear-gradient(23deg, red 50px, orange 100px, yellow 150px, green
+        200px, blue 250px, indigo 300px, violet 350px, red 370px);
 }
 ```
 
@@ -727,41 +797,73 @@ div {
 
 ```css
 .plaid-gradient {
-  background:
-      repeating-linear-gradient(90deg, transparent, transparent 50px,
-        rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px,
-        transparent 56px, transparent 63px,
-        rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px,
-        transparent 69px, transparent 116px,
-        rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
-      repeating-linear-gradient(0deg, transparent, transparent 50px,
-        rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px,
-        transparent 56px, transparent 63px,
-        rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px,
-        transparent 69px, transparent 116px,
-        rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
-      repeating-linear-gradient(-45deg, transparent, transparent 5px,
-        rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px),
-      repeating-linear-gradient(45deg, transparent, transparent 5px,
-        rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
+  background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 50px,
+      rgba(255, 127, 0, 0.25) 50px,
+      rgba(255, 127, 0, 0.25) 56px,
+      transparent 56px,
+      transparent 63px,
+      rgba(255, 127, 0, 0.25) 63px,
+      rgba(255, 127, 0, 0.25) 69px,
+      transparent 69px,
+      transparent 116px,
+      rgba(255, 206, 0, 0.25) 116px,
+      rgba(255, 206, 0, 0.25) 166px
+    ), repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 50px,
+      rgba(255, 127, 0, 0.25) 50px,
+      rgba(255, 127, 0, 0.25) 56px,
+      transparent 56px,
+      transparent 63px,
+      rgba(255, 127, 0, 0.25) 63px,
+      rgba(255, 127, 0, 0.25) 69px,
+      transparent 69px,
+      transparent 116px,
+      rgba(255, 206, 0, 0.25) 116px,
+      rgba(255, 206, 0, 0.25) 166px
+    ), repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 5px,
+      rgba(143, 77, 63, 0.25) 5px,
+      rgba(143, 77, 63, 0.25) 10px
+    ), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(
+          143,
+          77,
+          63,
+          0.25
+        ) 5px, rgba(143, 77, 63, 0.25) 10px);
 
-  background:
-      repeating-linear-gradient(90deg, transparent 0 50px,
-        rgba(255, 127, 0, 0.25) 50px 56px,
-        transparent 56px 63px,
-        rgba(255, 127, 0, 0.25) 63px 69px,
-        transparent 69px 116px,
-        rgba(255, 206, 0, 0.25) 116px 166px),
-      repeating-linear-gradient(0deg, transparent 0 50px,
-        rgba(255, 127, 0, 0.25) 50px 56px,
-        transparent 56px 63px,
-        rgba(255, 127, 0, 0.25) 63px 69px,
-        transparent 69px 116px,
-        rgba(255, 206, 0, 0.25) 116px 166px),
-      repeating-linear-gradient(-45deg, transparent 0 5px,
-        rgba(143, 77, 63, 0.25) 5px 10px),
-      repeating-linear-gradient(45deg, transparent 0 5px,
-        rgba(143, 77, 63, 0.25) 5px 10px);
+  background: repeating-linear-gradient(
+      90deg,
+      transparent 0 50px,
+      rgba(255, 127, 0, 0.25) 50px 56px,
+      transparent 56px 63px,
+      rgba(255, 127, 0, 0.25) 63px 69px,
+      transparent 69px 116px,
+      rgba(255, 206, 0, 0.25) 116px 166px
+    ), repeating-linear-gradient(
+      0deg,
+      transparent 0 50px,
+      rgba(255, 127, 0, 0.25) 50px 56px,
+      transparent 56px 63px,
+      rgba(255, 127, 0, 0.25) 63px 69px,
+      transparent 69px 116px,
+      rgba(255, 206, 0, 0.25) 116px 166px
+    ), repeating-linear-gradient(
+      -45deg,
+      transparent 0 5px,
+      rgba(143, 77, 63, 0.25) 5px 10px
+    ), repeating-linear-gradient(45deg, transparent 0 5px, rgba(
+          143,
+          77,
+          63,
+          0.25
+        ) 5px 10px);
 }
 ```
 
@@ -784,7 +886,12 @@ div {
 
 ```css
 .repeating-radial {
-  background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  background: repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
 }
 ```
 
@@ -805,13 +912,19 @@ div {
 
 ```css
 .multi-target {
-  background:
-      repeating-radial-gradient(ellipse at 80% 50%,rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5) 15px, rgba(255,255,255,0.5) 15px,
-        rgba(255,255,255,0.5) 30px) top left no-repeat,
-      repeating-radial-gradient(ellipse at 20% 50%,rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5) 10px, rgba(255,255,255,0.5) 10px,
-        rgba(255,255,255,0.5) 20px) top left no-repeat yellow;
+  background: repeating-radial-gradient(
+        ellipse at 80% 50%,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5) 15px,
+        rgba(255, 255, 255, 0.5) 15px,
+        rgba(255, 255, 255, 0.5) 30px
+      ) top left no-repeat, repeating-radial-gradient(
+        ellipse at 20% 50%,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5) 10px,
+        rgba(255, 255, 255, 0.5) 10px,
+        rgba(255, 255, 255, 0.5) 20px
+      ) top left no-repeat yellow;
   background-size: 200px 200px, 150px 150px;
 }
 ```

@@ -24,7 +24,7 @@ it includes the upper endpoint value and is closed.
 
 ## Syntax
 
-```js
+```js-nolint
 upperBound(upper)
 upperBound(upper, open)
 ```

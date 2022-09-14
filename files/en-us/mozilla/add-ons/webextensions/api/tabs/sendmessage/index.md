@@ -26,7 +26,7 @@ This is an asynchronous function that returns a {{jsxref("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 const sending = browser.tabs.sendMessage(
   tabId,     // integer
   message,   // any

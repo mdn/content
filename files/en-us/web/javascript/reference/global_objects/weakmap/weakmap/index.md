@@ -16,7 +16,7 @@ The **`WeakMap()` constructor** creates a [`WeakMap`](/en-US/docs/Web/JavaScript
 
 ## Syntax
 
-```js
+```js-nolint
 new WeakMap()
 new WeakMap(iterable)
 ```

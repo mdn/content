@@ -23,7 +23,7 @@ _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 join()
 join(separator)
 ```

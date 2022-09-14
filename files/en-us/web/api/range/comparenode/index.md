@@ -64,7 +64,7 @@ function rangeCompareNode(range, node) {
 
 ## Syntax
 
-```js
+```js-nolint
 compareNode(referenceNode)
 ```
 

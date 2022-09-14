@@ -24,7 +24,7 @@ If you try to enable the shelf when at least one other extension has already dis
 
 ## Syntax
 
-```js
+```js-nolint
 chrome.downloads.setShelfEnabled(enabled);
 ```
 

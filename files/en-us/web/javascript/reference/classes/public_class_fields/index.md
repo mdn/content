@@ -16,7 +16,7 @@ inheritance.
 
 ## Syntax
 
-```js
+```js-nolint
 class ClassWithInstanceField {
   instanceField = 'instance field';
 }

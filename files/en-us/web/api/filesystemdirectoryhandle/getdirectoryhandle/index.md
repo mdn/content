@@ -21,7 +21,7 @@ within the directory handle on which the method is called.
 
 ## Syntax
 
-```js
+```js-nolint
 getDirectoryHandle(name)
 getDirectoryHandle(name, options)
 ```

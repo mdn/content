@@ -38,10 +38,11 @@ The code values for Windows, Linux, and macOS are list on the [KeyboardEvent: co
 #### HTML
 
 ```html
-<p>Press keys on the keyboard to see what the KeyboardEvent's key and code
-   values are for each one.</p>
-<div id="output" tabindex="0">
-</div>
+<p>
+  Press keys on the keyboard to see what the KeyboardEvent's key and code values
+  are for each one.
+</p>
+<div id="output" tabindex="0"></div>
 ```
 
 #### CSS
@@ -83,8 +84,12 @@ This example establishes an event listener for {{domxref("Element/keydown_event"
 
 ```html
 <p>Use the WASD (ZQSD on AZERTY) keys to move and steer.</p>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world" tabindex="0">
-  <polygon id="spaceship" points="15,0 0,30 30,30"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  class="world"
+  tabindex="0">
+  <polygon id="spaceship" points="15,0 0,30 30,30" />
 </svg>
 ```
 

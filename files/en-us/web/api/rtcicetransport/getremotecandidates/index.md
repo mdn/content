@@ -33,7 +33,7 @@ returned by this function.
 
 ## Syntax
 
-```js
+```js-nolint
 getRemoteCandidates()
 ```
 

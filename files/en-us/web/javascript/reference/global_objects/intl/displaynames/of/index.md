@@ -23,7 +23,7 @@ The **`Intl.DisplayNames.prototype.of()`** method receives a code and returns a 
 
 ## Syntax
 
-```js
+```js-nolint
 of(code)
 ```
 

@@ -34,9 +34,9 @@ To clone a node to insert into a _different_ document, use
 
 ## Syntax
 
-```js
-cloneNode();
-cloneNode(deep);
+```js-nolint
+cloneNode()
+cloneNode(deep)
 ```
 
 ### Parameters

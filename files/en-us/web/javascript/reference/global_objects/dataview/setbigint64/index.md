@@ -23,7 +23,7 @@ The **`setBigInt64()`** method stores a signed 64-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 setBigInt64(byteOffset, value)
 setBigInt64(byteOffset, value, littleEndian)
 ```

@@ -19,7 +19,7 @@ The **`getDepthInformation()`** method of the {{domxref("XRFrame")}} interface r
 
 ## Syntax
 
-```js
+```js-nolint
 getDepthInformation(view)
 ```
 

@@ -25,7 +25,7 @@ window.addEventListener("afterprint", resumeFunction, false);
 
 ## Syntax
 
-```js
+```js-nolint
 let openingPreview = browser.tabs.printPreview()
 ```
 

@@ -29,7 +29,7 @@ instead.
 
 ## Syntax
 
-```js
+```js-nolint
 remove(successCallback)
 remove(successCallback, errorCallback)
 ```

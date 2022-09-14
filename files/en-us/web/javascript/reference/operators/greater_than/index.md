@@ -18,7 +18,7 @@ operand is greater than the right operand, and `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 x > y
 ```
 

@@ -23,7 +23,7 @@ HTML element that causes a string to be displayed in the specified font color.
 
 ## Syntax
 
-```js
+```js-nolint
 fontcolor(color)
 ```
 

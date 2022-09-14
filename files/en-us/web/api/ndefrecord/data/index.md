@@ -18,7 +18,7 @@ property of the {{DOMxRef("NDEFRecord")}} interface returns a
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.data
 ```
 

@@ -22,7 +22,7 @@ If no {{domxref("Cache")}} entry is found, it resolves to `false`.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(request)
 delete(request, options)
 ```

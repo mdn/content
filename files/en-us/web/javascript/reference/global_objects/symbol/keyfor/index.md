@@ -18,8 +18,8 @@ key from the global symbol registry for the given symbol.
 
 ## Syntax
 
-```js
-Symbol.keyFor(sym);
+```js-nolint
+Symbol.keyFor(sym)
 ```
 
 ### Parameters

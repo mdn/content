@@ -28,7 +28,7 @@ of filter.
 
 ## Syntax
 
-```js
+```js-nolint
 createIIRFilter(feedforward, feedback)
 ```
 

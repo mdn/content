@@ -20,7 +20,7 @@ Sets parameters for the extension's update URL. This value is ignored for extens
 
 ## Syntax
 
-```js
+```js-nolint
 browser.extension.setUpdateUrlData(
   data // string
 )

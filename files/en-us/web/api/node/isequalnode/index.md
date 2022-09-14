@@ -18,8 +18,8 @@ the types of the nodes.
 
 ## Syntax
 
-```js
-isEqualNode(otherNode);
+```js-nolint
+isEqualNode(otherNode)
 ```
 
 ### Parameters

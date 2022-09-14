@@ -20,7 +20,7 @@ the `OffscreenCanvas`.
 
 ## Syntax
 
-```js
+```js-nolint
 transferToImageBitmap()
 ```
 

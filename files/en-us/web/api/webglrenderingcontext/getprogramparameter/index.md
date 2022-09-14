@@ -20,7 +20,7 @@ given program.
 
 ## Syntax
 
-```js
+```js-nolint
 getProgramParameter(program, pname)
 ```
 

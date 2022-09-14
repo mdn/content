@@ -17,7 +17,7 @@ browser-compat: api.Element.setAttributeNodeNS
 
 ## Syntax
 
-```js
+```js-nolint
 setAttributeNodeNS(attributeNode)
 ```
 

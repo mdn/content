@@ -24,7 +24,7 @@ method of the {{domxref("RTCRtpReceiver")}} interface returns an array of
 
 ## Syntax
 
-```js
+```js-nolint
 getSynchronizationSources()
 ```
 

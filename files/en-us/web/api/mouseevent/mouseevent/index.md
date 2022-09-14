@@ -18,7 +18,7 @@ The **`MouseEvent()`** constructor creates a new {{domxref("MouseEvent")}} objec
 
 ## Syntax
 
-```js
+```js-nolint
 new MouseEvent(type)
 new MouseEvent(type, options)
 ```

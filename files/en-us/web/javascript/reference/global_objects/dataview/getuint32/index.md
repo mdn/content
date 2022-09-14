@@ -20,7 +20,7 @@ The **`getUint32()`** method gets an unsigned 32-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 getUint32(byteOffset)
 getUint32(byteOffset, littleEndian)
 ```

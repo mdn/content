@@ -88,7 +88,13 @@ function playSourceNode(audioContext, audioBuffer) {
 This function is called when the play button is pressed. The play button HTML looks like this:
 
 ```html
-<button class="button-play" role="switch" data-playing="false" aria-pressed="false">Play</button>
+<button
+  class="button-play"
+  role="switch"
+  data-playing="false"
+  aria-pressed="false">
+  Play
+</button>
 ```
 
 And the `click` event listener starts like so:
@@ -105,7 +111,13 @@ playButton.addEventListener('click', () => {
 The toggle that turns the IIR filter on and off is set up in the similar way. First, the HTML:
 
 ```html
-<button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
+<button
+  class="button-filter"
+  role="switch"
+  data-filteron="false"
+  aria-pressed="false"
+  aria-describedby="label"
+  disabled></button>
 ```
 
 The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the destination:

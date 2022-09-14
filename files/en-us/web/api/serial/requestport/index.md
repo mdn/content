@@ -18,7 +18,7 @@ The **`Serial.requestPort()`** method of the {{domxref("Serial")}} interface ret
 
 ## Syntax
 
-```js
+```js-nolint
 requestPort()
 requestPort(options)
 ```

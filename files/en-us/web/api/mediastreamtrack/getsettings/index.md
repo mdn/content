@@ -23,7 +23,7 @@ See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_
 
 ## Syntax
 
-```js
+```js-nolint
 getSettings()
 ```
 

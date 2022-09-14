@@ -24,7 +24,7 @@ Tags that are neither imported into or exported from the WebAssembly code are in
 
 ## Syntax
 
-```js
+```js-nolint
 getArg(exceptionTag, index)
 ```
 

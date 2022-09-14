@@ -44,7 +44,7 @@ The sequence of events which occurs in response to this method being called:
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

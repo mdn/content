@@ -24,7 +24,7 @@ resolves with a new {{domxref("Credential")}} instance based on the provided opt
 
 ## Syntax
 
-```js
+```js-nolint
 create()
 create(options)
 ```

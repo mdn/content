@@ -20,7 +20,7 @@ Fired when the children of a folder have changed their order due to the order be
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onChildrenReordered.addListener(listener)
 browser.bookmarks.onChildrenReordered.removeListener(listener)
 browser.bookmarks.onChildrenReordered.hasListener(listener)

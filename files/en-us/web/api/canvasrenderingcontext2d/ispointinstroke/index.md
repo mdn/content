@@ -20,7 +20,7 @@ area contained by the stroking of a path.
 
 ## Syntax
 
-```js
+```js-nolint
 isPointInStroke(x, y)
 isPointInStroke(path, x, y)
 ```

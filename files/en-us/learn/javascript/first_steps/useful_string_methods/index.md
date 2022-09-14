@@ -9,7 +9,7 @@ tags:
   - Learn
   - case
   - indexOf
-  - l10n:priority
+  - "l10n:priority"
   - length
   - lower
   - replace

@@ -19,7 +19,7 @@ specified Boolean object.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

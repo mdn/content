@@ -32,7 +32,7 @@ Request API (or even provide instructions for paying by mail or by phone).
 
 ## Syntax
 
-```js
+```js-nolint
 canMakePayment()
 ```
 

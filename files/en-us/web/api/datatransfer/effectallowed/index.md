@@ -71,7 +71,9 @@ In this example we set `effectAllowed` to `"move"` in the `dragstart` handler.
 ```html
 <div>
   <p id="source" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
 </div>
 <div id="target">Drop Zone</div>
 <pre id="output"></pre>

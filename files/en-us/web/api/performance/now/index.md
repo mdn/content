@@ -39,7 +39,7 @@ are alleviated through other means.
 
 ## Syntax
 
-```js
+```js-nolint
 now()
 ```
 

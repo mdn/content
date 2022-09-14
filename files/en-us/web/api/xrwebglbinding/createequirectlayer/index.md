@@ -19,13 +19,13 @@ The **`createEquirectLayer()`** method of the {{domxref("XRWebGLBinding")}} inte
 
 ## Syntax
 
-```js
-createEquirectLayer(init)
+```js-nolint
+createEquirectLayer(options)
 ```
 
 ### Parameters
 
-- `init`
+- `options`
   - : An object to configure the {{domxref("XREquirectLayer")}}. It must have the `space`, `viewPixelHeight`, and `viewPixelWidth` properties. `init` has the following properties:
     - `centralHorizontalAngle` {{optional_inline}}
       - : A number indicating the central horizontal angle in radians of the sphere. Default value: `6.28318` (2π).

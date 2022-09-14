@@ -17,7 +17,7 @@ The **`entries()`** method of the {{domxref("FontFaceSet")}} interface returns a
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

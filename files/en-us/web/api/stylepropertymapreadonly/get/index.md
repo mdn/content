@@ -21,7 +21,7 @@ object for the first value of the specified property.
 
 ## Syntax
 
-```js
+```js-nolint
 get(property)
 ```
 
@@ -54,8 +54,8 @@ p {
   font-weight: bold;
 }
 a {
-   --color: red;
-   color: var(--color);
+  --color: red;
+  color: var(--color);
 }
 ```
 

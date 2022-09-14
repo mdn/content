@@ -22,7 +22,7 @@ resumes it if it was already paused.
 
 ## Syntax
 
-```js
+```js-nolint
 resume()
 ```
 

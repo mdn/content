@@ -30,8 +30,8 @@ reject upon any of them rejecting.
 
 ## Syntax
 
-```js
-Promise.allSettled(iterable);
+```js-nolint
+Promise.allSettled(iterable)
 ```
 
 ### Parameters

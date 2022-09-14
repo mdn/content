@@ -17,7 +17,7 @@ The **`ImageDecoder()`** constructor creates a new {{domxref("ImageDecoder")}} o
 
 ## Syntax
 
-```js
+```js-nolint
 new ImageDecoder(init)
 ```
 

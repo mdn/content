@@ -19,7 +19,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -27,20 +29,38 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
   <filter id="blending1" x="0" y="0" width="100%" height="100%">
-    <feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
-        flood-color="seagreen" flood-opacity="1"/>
-    <feBlend in="SourceGraphic" in2="floodFill" mode="multiply"/>
+    <feFlood
+      result="floodFill"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      flood-color="seagreen"
+      flood-opacity="1" />
+    <feBlend in="SourceGraphic" in2="floodFill" mode="multiply" />
   </filter>
   <filter id="blending2" x="0" y="0" width="100%" height="100%">
-    <feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
-        flood-color="seagreen" flood-opacity="1"/>
-    <feBlend in="SourceGraphic" in2="floodFill" mode="color-dodge"/>
+    <feFlood
+      result="floodFill"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      flood-color="seagreen"
+      flood-opacity="1" />
+    <feBlend in="SourceGraphic" in2="floodFill" mode="color-dodge" />
   </filter>
 
-  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#blending1);"/>
-  <image xlink:href="mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#blending2); transform:translateX(220px);"/>
+  <image
+    xlink:href="mdn_logo_only_color.png"
+    width="200"
+    height="200"
+    style="filter:url(#blending1);" />
+  <image
+    xlink:href="mdn_logo_only_color.png"
+    width="200"
+    height="200"
+    style="filter:url(#blending2); transform:translateX(220px);" />
 </svg>
 ```
 

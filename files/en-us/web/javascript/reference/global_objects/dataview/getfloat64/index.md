@@ -19,7 +19,7 @@ The **`getFloat64()`** method gets a signed 64-bit float
 
 ## Syntax
 
-```js
+```js-nolint
 getFloat64(byteOffset)
 getFloat64(byteOffset, littleEndian)
 ```

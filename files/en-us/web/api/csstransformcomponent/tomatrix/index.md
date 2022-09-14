@@ -26,7 +26,7 @@ All transform functions can be represented mathematically as a 4x4 transformatio
 
 ## Syntax
 
-```js
+```js-nolint
 toMatrix()
 ```
 

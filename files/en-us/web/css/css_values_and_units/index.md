@@ -50,7 +50,7 @@ In comparison, a data type that is a {{cssxref("&lt;string&gt;")}}, such as a st
 
 ```css
 .item::after {
-    content: "This is my content.";
+  content: "This is my content.";
 }
 ```
 
@@ -70,7 +70,7 @@ Such values are used without quotes:
 
 ```css
 .box {
-    float: left;
+  float: left;
 }
 ```
 

@@ -19,7 +19,7 @@ value of a {{ domxref("StorageEvent") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 initStorageEvent(type)
 initStorageEvent(type, canBubble)
 initStorageEvent(type, canBubble, cancelable)

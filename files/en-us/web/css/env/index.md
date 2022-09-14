@@ -135,11 +135,10 @@ The below example makes use of the optional second parameter of `env()`, which a
 
 ```html
 <p>
-  If the <code>env()</code> function is supported in your browser,
-  this paragraph's text will have 50px of padding between it and
-  the left border — but not the top, right and bottom.
-  This is because the accompanying CSS is the equivalent of
-  <code>padding: 0 0 0 50px</code>, because, unlike other CSS
+  If the <code>env()</code> function is supported in your browser, this
+  paragraph's text will have 50px of padding between it and the left border —
+  but not the top, right and bottom. This is because the accompanying CSS is the
+  equivalent of <code>padding: 0 0 0 50px</code>, because, unlike other CSS
   properties, user agent property names are case-sensitive.
 </p>
 ```
@@ -161,10 +160,30 @@ p {
 ### Example values
 
 ```css
-padding: env(safe-area-inset-bottom, 50px); /* zero for all rectangular user agents */
-padding: env(Safe-area-inset-bottom, 50px); /* 50px because UA properties are case sensitive */
-padding: env(x, 50px 20px); /* as if padding: '50px 20px' were set because x is not a valid environment variable */
-padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padding value and x is not a valid environment variable */
+/* zero for all rectangular user agents */
+padding: env(
+  safe-area-inset-bottom,
+  50px
+);
+
+/* 50px because UA properties are case sensitive */
+padding: env(
+  Safe-area-inset-bottom,
+  50px
+);
+
+/* as if padding: '50px 20px' were set because x is not a valid environment variable */
+padding: env(
+  x,
+  50px 20px
+);
+
+/* ignored because '50px, 20px' is not a valid padding value and x is not a valid environment variable */
+padding: env(
+  x,
+  50px,
+  20px
+);
 ```
 
 The syntax of the fallback, like that of custom properties, allows commas. But, if the property value doesn't support commas, the value is not valid.

@@ -18,7 +18,7 @@ The **`Math.sign()`** function returns 1 or -1, indicating the sign of the numbe
 
 ## Syntax
 
-```js
+```js-nolint
 Math.sign(x)
 ```
 
