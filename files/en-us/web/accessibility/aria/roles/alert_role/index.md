@@ -89,7 +89,7 @@ This snippet dynamically creates an element with an alert role and adds it to th
 ```js
 const myAlert = document.createElement("p");
 myAlert.setAttribute("role", "alert");
-let myAlertText = document.createTextNode(
+const myAlertText = document.createTextNode(
   "You must agree with our terms of service to create an account."
 );
 myAlert.appendChild(myAlertText);
