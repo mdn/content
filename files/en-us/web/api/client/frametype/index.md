@@ -25,7 +25,7 @@ One of these four strings: `"auxiliary"`, `"top-level"`, `"nested"`, or `"none"`
 ## Examples
 
 ```js
-TBD
+TBD;
 ```
 
 ## Specifications

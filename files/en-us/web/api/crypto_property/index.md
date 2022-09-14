@@ -43,7 +43,7 @@ globalThis.genRandomNumbers = () => {
 
   const randText = document.getElementById("myRandText");
   randText.textContent = `The random numbers are: ${array.join(" ")}`;
-}
+};
 ```
 
 ### HTML

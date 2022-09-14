@@ -25,7 +25,7 @@ A string uniquely identifying the object.
 ## Examples
 
 ```js
-TBD
+TBD;
 ```
 
 ## Specifications

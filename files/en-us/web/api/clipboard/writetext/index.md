@@ -50,11 +50,14 @@ clipboard.
 This example sets the clipboard's contents to the string "\<empty clipboard>".
 
 ```js
-navigator.clipboard.writeText("<empty clipboard>").then(() => {
-  /* clipboard successfully set */
-}, () => {
-  /* clipboard write failed */
-});
+navigator.clipboard.writeText("<empty clipboard>").then(
+  () => {
+    /* clipboard successfully set */
+  },
+  () => {
+    /* clipboard write failed */
+  }
+);
 ```
 
 ## Specifications

@@ -46,10 +46,10 @@ This examples constructs a new {{domxref('ContentIndexEvent')}} with the relevan
 
 ```js
 const removeData = {
-  id : 'unique-content-id'
-}
+  id: "unique-content-id",
+};
 
-const ciEvent = new ContentIndexEvent('contentdelete', removeData);
+const ciEvent = new ContentIndexEvent("contentdelete", removeData);
 
 ciEvent.id; // should return 'unique-content-id'
 ```
