@@ -43,10 +43,12 @@ _Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular D
 
 There are some bits of shadow DOM terminology to be aware of:
 
-- **Shadow host**: The regular DOM node that the shadow DOM is attached to.
-- **Shadow tree**: The DOM tree inside the shadow DOM.
-- **Shadow boundary**: the place where the shadow DOM ends, and the regular DOM begins.
-- **Shadow root**: The root node of the shadow tree.
+- **Shadow host**: A DOM node that a shadow DOM is attached to.
+- **Shadow tree**: A DOM tree inside a shadow DOM.
+- **Shadow boundary**: The place where regular DOM ends, and a shadow DOM begins.
+- **Shadow root**: The root node of a shadow tree.
+- **Composed tree**: The final tree that the browser renders, a composition of all shadow trees in the DOM.
+- **Flat tree**: An alternative name for composed tree.
 
 You can affect the nodes in the shadow DOM in exactly the same way as non-shadow nodes — for example appending children or setting attributes, styling individual nodes using element.style.foo, or adding style to the entire shadow DOM tree inside a {{htmlelement("style")}} element. The difference is that none of the code inside a shadow DOM can affect anything outside it, allowing for handy encapsulation.
 
