@@ -42,7 +42,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 - `movablelimits`
   - : Specifies whether attached under- and overscripts move to sub- and superscript positions when `displaystyle` is `false`.
-    Allowed values are either `true` or `false.`
+    Allowed values are either `true` or `false`.
 - `rspace`
   - : The amount of space after the operator (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units). The constant `thickmathspace` (5/18em) is the default value.
 - `separator`
