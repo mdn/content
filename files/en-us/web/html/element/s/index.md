@@ -85,6 +85,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   text-decoration: line-through;
 }
 ```
+
 ```html
 <s>Today's Special: Salmon</s> SOLD OUT<br />
 <span class="sould-out">Today's Special: Salmon</span> SOLD OUT
