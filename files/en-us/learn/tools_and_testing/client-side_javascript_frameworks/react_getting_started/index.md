@@ -74,7 +74,7 @@ This article is going to focus on the use case of using React to render the enti
 
 React utilizes features of modern JavaScript for many of its patterns. Its biggest departure from JavaScript comes with the use of [JSX](https://reactjs.org/docs/introducing-jsx.html) syntax. JSX extends JavaScript's syntax so that HTML-like code can live alongside it. For example:
 
-```js
+```jsx
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
@@ -82,7 +82,7 @@ This heading constant is known as a **JSX expression**. React can use it to rend
 
 Suppose we wanted to wrap our heading in a [`<header>`](/en-US/docs/Web/HTML/Element/header) tag, for semantic reasons? The JSX approach allows us to nest our elements within each other, just like we do with HTML:
 
-```js
+```jsx
 const header = (
   <header>
     <h1>Mozilla Developer Network</h1>
@@ -92,7 +92,7 @@ const header = (
 
 > **Note:** The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
 >
-> ```js
+> ```jsx
 > const header = <header>
 >     <h1>Mozilla Developer Network</h1>
 > </header>
@@ -102,7 +102,7 @@ const header = (
 
 Of course, your browser can't read JSX without help. When compiled (using a tool like [Babel](https://babeljs.io/) or [Parcel](https://parceljs.org/)), our header expression would look like this:
 
-```js
+```jsx
 const header = React.createElement("header", null,
   React.createElement("h1", null, "Mozilla Developer Network")
 );
@@ -206,7 +206,7 @@ In React, a **component** is a reusable module that renders a part of our app. T
 
 Let's open `src/App.js`, since our browser is prompting us to edit it. This file contains our first component, `App`, and a few other lines of code:
 
-```js
+```jsx
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -240,7 +240,7 @@ The `App.js` file consists of three main parts: some [`import`](/en-US/docs/Web/
 
 The `import` statements at the top of the file allow `App.js` to use code that has been defined elsewhere. Let's look at these statements more closely.
 
-```js
+```jsx
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -260,7 +260,7 @@ After the imports, we have a function named `App`. Whereas most of the JavaScrip
 
 Let's look at `App` more closely.
 
-```js
+```jsx
 function App() {
   return (
     <div className="App">
@@ -291,7 +291,7 @@ Take a moment to change the [`<p>`](/en-US/docs/Web/HTML/Element/p) tag on line 
 
 Your `App` component should now look like this:
 
-```js
+```jsx
 function App() {
   return (
     <div className="App">
@@ -314,7 +314,7 @@ At the very bottom of the `App.js` file, the statement `export default App` make
 
 Let's open `src/index.js`, because that's where the `App` component is being used. This file is the entry point for our app, and it initially looks like this:
 
-```js
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -348,7 +348,7 @@ All of this tells React that we want to render our React application with the `A
 
 Your final `index.js` file should look like this:
 
-```js
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -366,7 +366,7 @@ Next, we'll use a few of our JavaScript skills to get a bit more comfortable edi
 
 Back in `App.js`, let's focus on line 5:
 
-```js
+```jsx
 <img src={logo} className="App-logo" alt="logo" />
 ```
 
@@ -374,7 +374,7 @@ Here, the `<img />` tag's `src` attribute value is in curly braces. This is how 
 
 Let's try making a variable of our own. Before the return statement of `App`, add `const subject = 'React';`. Your `App` component should now look like this:
 
-```js
+```jsx
 function App() {
   const subject = "React";
   return (
@@ -392,7 +392,7 @@ function App() {
 
 Change line 8 to use our `subject` variable instead of the word "world", like this:
 
-```js
+```jsx
 function App() {
   const subject = "React";
   return (
@@ -420,13 +420,13 @@ Let's open `index.js` and give our `<App/>` call its first prop.
 
 Add a prop of `subject` to the `<App/>` component call, with a value of `Clarice`. When you are done, your code should look something like this:
 
-```js
+```jsx
 root.render(<App subject="Clarice" />);
 ```
 
 Back in `App.js`, let's revisit the App function itself, which reads like this (with the `return` statement shortened for brevity):
 
-```js
+```jsx
 function App() {
   const subject = "React";
   return (
@@ -438,7 +438,7 @@ function App() {
 Change the signature of the `App` function so that it accepts `props` as a parameter, and delete the `subject` const.
 Just like any other function parameter, you can put `props` in a `console.log()` to print it to your browser's console. Go ahead and do that before the `return` statement, like so:
 
-```js
+```jsx
 function App(props) {
   console.log(props);
   return (
@@ -458,7 +458,7 @@ The object property `subject` corresponds to the `subject` prop we added to our 
 
 Now that `subject` is one of our props, let's utilize it in `App.js`. Change the `subject` constant so that, instead of defining it as the string `React`, you are reading the value of `props.subject`. Now, you can also uncomment the line `Hello, {subject}!` and, if you wish, delete your `console.log()`.
 
-```js
+```jsx
 function App(props) {
   const subject = props.subject;
   return (
