@@ -50,8 +50,8 @@ There's one last essential concept about functions for us to discuss — return 
 Let's return to a familiar example (from a [previous article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#built-in_browser_functions) in this series):
 
 ```js
-const myText = 'The weather is cold';
-const newString = myText.replace('cold', 'warm');
+const myText = "The weather is cold";
+const newString = myText.replace("cold", "warm");
 console.log(newString); // Should print "The weather is warm"
 // the replace() string function takes a string,
 // replaces one substring with another, and returns
@@ -80,7 +80,7 @@ function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -155,10 +155,10 @@ Let's have a go at writing our own functions featuring return values.
 3. Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
 
    ```js
-   input.addEventListener('change', () => {
+   input.addEventListener("change", () => {
      const num = parseFloat(input.value);
      if (isNaN(num)) {
-       para.textContent = 'You need to enter a number!';
+       para.textContent = "You need to enter a number!";
      } else {
        para.textContent = `${num} squared is ${squared(num)}. `;
        para.textContent += `${num} cubed is ${cubed(num)}. `;

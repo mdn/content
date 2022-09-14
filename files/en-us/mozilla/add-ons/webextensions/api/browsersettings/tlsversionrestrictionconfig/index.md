@@ -35,9 +35,11 @@ This is a read-only setting.
 Get the highest TLS version supported by the browser:
 
 ```js
-browser.browserSettings.tlsVersionRestrictionConfig.maximum.get({}).then((result) => {
-  console.log(`Highest TLS version supported: ${result}`);
-});
+browser.browserSettings.tlsVersionRestrictionConfig.maximum
+  .get({})
+  .then((result) => {
+    console.log(`Highest TLS version supported: ${result}`);
+  });
 ```
 
 {{WebExtExamples}}

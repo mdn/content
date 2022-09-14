@@ -37,8 +37,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.useDocumentFonts.set({value: false}).
-  then(logResult);
+browser.browserSettings.useDocumentFonts.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

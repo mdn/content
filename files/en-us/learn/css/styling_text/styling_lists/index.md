@@ -394,8 +394,8 @@ const cssCode = cssInput.value;
 const output = document.querySelector(".output");
 const solution = document.getElementById("solution");
 
-const styleElem = document.createElement('style');
-const headElem = document.querySelector('head');
+const styleElem = document.createElement("style");
+const headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
