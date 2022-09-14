@@ -18,7 +18,7 @@ The **`::-webkit-meter-suboptimum-value`** [pseudo-element](/en-US/docs/Glossary
 ## Syntax
 
 ```css
-::-webkit-meter-suboptimum-value ;
+::-webkit-meter-suboptimum-value
 ```
 
 ## Examples
