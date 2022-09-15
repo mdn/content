@@ -77,7 +77,7 @@ Content-Length: 100
 
 ### Response
 
-A successful response is indicated by any [2xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3) status code.
+A successful response is indicated by any [2xx](https://httpwg.org/specs/rfc9110.html#status.2xx) status code.
 
 In the example below a {{HTTPStatus("204")}} response code is used, because the response does not carry a payload body. A {{HTTPStatus("200")}} response could have contained a payload body.
 
