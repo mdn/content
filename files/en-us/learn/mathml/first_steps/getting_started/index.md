@@ -106,7 +106,7 @@ You may also notice some subtle change in the appearance: the text and vertical 
 
 ## Grouping with the \<mrow> element
 
-The `<math>` element can actually contain an arbitrary number of children and will essentially render them in a row. For instance, the simple formula "1 + 2 + 3" would be be encoded like this in MathML:
+The `<math>` element can actually contain an arbitrary number of children and will essentially render them in a row. For instance, the simple formula "1 + 2 + 3" would be encoded like this in MathML:
 
 ```html
 <math>
