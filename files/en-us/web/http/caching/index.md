@@ -253,7 +253,7 @@ If that response is stale, the client takes the value of the `ETag` response hea
 GET /index.html HTTP/1.1
 Host: example.com
 Accept: text/html
-If-None-Match: "cafebabe"
+If-None-Match: "33a64df5"
 ```
 
 The server will return `304 Not Modified` if the value of the `ETag` header it determines for the requested resource is the same as the `If-None-Match` value in the request.
