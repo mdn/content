@@ -1,5 +1,5 @@
 ---
-title: How to replace deprecated Kumascript macros
+title: How to replace deprecated KumaScript macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Deprecated_macros
 page-type: mdn-writing-guide
 tags:
