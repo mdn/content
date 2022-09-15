@@ -14,8 +14,13 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 - [What we write](/en-US/docs/MDN/Writing_guidelines/What_we_write)
 
   - : This section covers what we include on MDN Web Docs and want we don't, as well as a number of other policies, such as when we write about new technologies, the content suggestion process, and whether we accept external links. This is a good place to start if you're considering writing or updating content for us. This section also includes:
+
     - [Inclusion criteria](/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
+
       - : Provides an in-depth criteria for content to be included on MDN Web Docs, the application process for getting new documentation added on MDN Web Docs, and the expectations and guidelines for a party applying.
+
+    - [Content reuse](/en-US/docs/MDN/Writing_guidelines/Content_reuse)
+      - : Describes our policy on content reuse and republishing, and how to get permission to republish content on MDN Web Docs.
 
 - [Our writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide)
 
