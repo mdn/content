@@ -22,13 +22,16 @@ content should be replaced with a plain Markdown style link.
 A common usage of the macro is as follows:
 
 ```plain
-The \{{Link("/en-US/docs/Web/JavaScript/Guide")}} on MDN
+The \{{Link("/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates")}} page on MDN
 ```
 
 This can be replaced with the following Markdown:
 
 ```markdown
-The [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide) on MDN
+The [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) page on MDN
 ```
 
-The text for the link matches the title of the page it links to.
+When replacing `Link` macros:
+
+- The **link text** must match the title of the page it's linking to.
+- Internal links are **root-relative** so you should omit `https://developer.mozilla.org` at the beginning of the URL.
