@@ -70,7 +70,7 @@ The `list-style` property is specified as one, two, or three keywords in any ord
 
 ## Accessibility concerns
 
-In a notable exception, Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style` value of `none`. This behavior is an intentional decision meant to combat misuse of list elements.
+In a notable exception, Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style` value of `none`. This [behavior is intentional](https://bugs.webkit.org/show_bug.cgi?id=170179#c1) and not considered a bug.
 
 The most straightforward way to address this is to add an explicit `role="list"` to the `<ol>` or `<ul>` element in the markup. This will restore the list semantics without affecting the design:
 
@@ -93,7 +93,7 @@ ul li::before {
 }
 ```
 
-If the intent is to keep list item markers visually hidden, this can be managed with a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space):
+If the intent is to keep list item markers visually hidden, this can be managed with a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space), `&#8203;`, which is `\200B` in CSS and `\u200B` in JavaScript:
 
 ```css
 ul {
