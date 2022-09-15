@@ -192,7 +192,7 @@ To represent the code block as a good or bad example, add `example-good` or `exa
 <p class="brush: js example-good">
 ```
 
-```html-nolint example-bad
+```html example-bad
 <p class="brush: js example-bad">
 ```
 ````
@@ -203,6 +203,6 @@ These will be rendered as:
 <p class="brush: js example-good">
 ```
 
-```html-nolint example-bad
+```html example-bad
 <p class="brush: js example-bad">
 ```

@@ -337,7 +337,7 @@ This means using links, buttons, form elements, and labels appropriately (includ
 
 However, it is again the case that people sometimes do strange things with HTML. For example, you sometimes see buttons marked up using {{htmlelement("div")}}s, for example:
 
-```html-nolint example-bad
+```html example-bad
 <div data-message="This is from the first button">Click me!</div>
 <div data-message="This is from the second button">Click me too!</div>
 <div data-message="This is from the third button">And me!</div>
@@ -410,7 +410,7 @@ but this is bad link text:
 
 Form labels are also important for giving you a clue about what you need to enter into each form input. The following seems like a reasonable enough example:
 
-```html-nolint example-bad
+```html example-bad
 Fill in your name: <input type="text" id="name" name="name" />
 ```
 

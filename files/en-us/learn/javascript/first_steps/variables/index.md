@@ -72,7 +72,7 @@ In this example pressing the button runs some code. The first line pops a box up
 
 To understand why this is so useful, let's think about how we'd write this example without using a variable. It would end up looking something like this:
 
-```html-nolint example-bad
+```html example-bad
 <button id="button_B">Press me</button>
 <h3 id="heading_B"></h3>
 ```

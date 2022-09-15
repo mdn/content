@@ -113,7 +113,7 @@ Use semantic class/ID names, and separate multiple words with hyphens. Don't use
 <p class="editorial-summary">Blah blah blah</p>
 ```
 
-```html-nolint example-bad
+```html example-bad
 <p class="bigRedBox">Blah blah blah</p>
 ```
 
@@ -141,7 +141,7 @@ As an example, you could just write:
 
 Instead of:
 
-```html-nolint example-bad
+```html example-bad
 <p>&copy; 2018 Me</p>
 ```
 
