@@ -279,13 +279,13 @@ In addition, the {{jsxref("String.raw()")}} method exists to create raw strings 
 
 ```js
 const str = String.raw`Hi\n${2 + 3}!`;
-// "Hi\\n5!"
+// "Hi\n5!"
 
 str.length;
 // 6
 
 Array.from(str).join(",");
-// "H,i,\\,n,5,!"
+// "H,i,\,n,5,!"
 ```
 
 `String.raw` functions like an "identity" tag if the literal doesn't contain any escape sequences. In case you want an actual identity tag that always works as if the literal is untagged, you can make a custom function that passes the "cooked" (i.e. escape sequences are processed) literal array to `String.raw`, pretending they are raw strings.
