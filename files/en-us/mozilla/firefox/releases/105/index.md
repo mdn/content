@@ -52,7 +52,15 @@ This article provides information about the changes in Firefox 105 that will aff
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Removals
+#### WebDriver BiDi
+
+- On systems with IPv6 preferred DNS resolution clients will no longer fail to connect when `localhost` is used as host for the WebSocket server ({{bug("1769994")}}).
+
+- Improved `RemoteValue` support to allow plain JS objects with simple JSON-serializable fields to be serialized ({{bug("1779226")}}).
+
+#### Marionette
+
+- The `WebDriver:GetElementProperty` command is now able to return node properties as set by web content ({{bug("1398792")}}).
 
 ## Changes for add-on developers
 
