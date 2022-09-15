@@ -30,7 +30,7 @@ at(index)
 ### Parameters
 
 - `index`
-  - : The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index. i.e. If a negative number is used the element returned will be found by counting back from the end of the array.
+  - : The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index; that is, if a negative number is used, the element returned will be found by counting back from the end of the array.
 
 ### Return value
 
