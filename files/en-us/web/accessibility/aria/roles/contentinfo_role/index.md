@@ -113,7 +113,7 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 ### Prefer HTML
 
-When it is an immediate descendant of the {{HTMLElement('body')}} using the {{HTMLElement('footer')}} element will automatically communicate a section has a role of `contentinfo` (save for {{HTMLElement('footer#accessibility_concerns', 'a known issue')}} in VoiceOver). If at all possible, prefer using `<footer>` instead. Note that a `footer` element nested within an `article`, `aside`, `main`, `nav`, or `section` is not considered `contentinfo.`
+When it is an immediate descendant of the {{HTMLElement('body')}} using the {{HTMLElement('footer')}} element will automatically communicate a section has a role of `contentinfo` (save for {{HTMLElement('footer#accessibility_concerns', 'a known issue')}} in VoiceOver). If at all possible, prefer using `<footer>` instead. Note that a `footer` element nested within an `article`, `aside`, `main`, `nav`, or `section` is not considered `contentinfo`.
 
 ### Added benefits
 
