@@ -11,7 +11,7 @@ tags:
 
 The following is a list of [KumaScript macros](https://github.com/mdn/yari/tree/main/kumascript/macros) that has been deprecated and should no longer be used. This document also provides guidance on how to replace these macros should you encounter them in the content.
 
-## The `Link` macro
+## The \{{Link}} macro
 
 The `Link` macro [is now deprecated](https://github.com/mdn/yari/pull/6865) and
 should no longer be used. Any occurrences that still exist in actively-maintained
