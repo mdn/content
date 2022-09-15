@@ -31,9 +31,9 @@ A boolean.
 
 ```js
 navigator.getBattery().then((battery) => {
-    const charging = battery.charging;
+  const charging = battery.charging;
 
-    document.querySelector('#charging').textContent = charging ;
+  document.querySelector("#charging").textContent = charging;
 });
 ```
 

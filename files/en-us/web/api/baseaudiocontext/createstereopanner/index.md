@@ -53,10 +53,10 @@ the left and right speakers of the output, respectively.
 
 ```js
 const audioCtx = new AudioContext();
-const myAudio = document.querySelector('audio');
+const myAudio = document.querySelector("audio");
 
-const panControl = document.querySelector('.panning-control');
-const panValue = document.querySelector('.panning-value');
+const panControl = document.querySelector(".panning-control");
+const panValue = document.querySelector(".panning-value");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
@@ -71,7 +71,7 @@ const panNode = audioCtx.createStereoPanner();
 panControl.oninput = () => {
   panNode.pan.setValueAtTime(panControl.value, audioCtx.currentTime);
   panValue.innerHTML = panControl.value;
-}
+};
 
 // connect the MediaElementAudioSourceNode to the panNode
 // and the panNode to the destination, so we can play the
