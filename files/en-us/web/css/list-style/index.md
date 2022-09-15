@@ -81,7 +81,7 @@ The most straightforward way to address this is to add an explicit `role="list"`
 </ul>
 ```
 
-A CSS-only workaround is also available for those who do not have access to the markup: Adding any [pseudo-content](/en-US/docs/Web/CSS/content) before each list item will also restore list semantics:
+A CSS-only workaround is also available for those who do not have access to the markup: Adding [pseudo-content](/en-US/docs/Web/CSS/content) before each list item can restore list semantics:
 
 ```css
 ul {
@@ -93,7 +93,13 @@ ul li::before {
 }
 ```
 
-If the intent is to keep list item markers visually hidden, this can be managed with a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space), `&#8203;`, which is `\200B` in CSS and `\u200B` in JavaScript:
+The added pseudo-content is tested by Safari to determine if it should be accessible or ignored. Accessible pseudo-content restores list semantics, while ignored pseudo-content does not.
+
+Generally, text or images are determined to be things that should be accessible, which is why the `content: "+ ";` declaration in the previous example works.
+
+A declaration of `content: "";` (an empty string) is ignored, as are `content` values that contain only spaces, such as `content: " ";`, so these do not work.
+
+If the intent is to keep list item markers visually hidden, this can often be managed with a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space), `&#8203;`, which is `\200B` in CSS and `\u200B` in JavaScript:
 
 ```css
 ul {
