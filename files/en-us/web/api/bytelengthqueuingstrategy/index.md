@@ -34,17 +34,20 @@ None.
 ```js
 const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
-const readableStream = new ReadableStream({
-  start(controller) {
-    // …
+const readableStream = new ReadableStream(
+  {
+    start(controller) {
+      // …
+    },
+    pull(controller) {
+      // …
+    },
+    cancel(err) {
+      console.log("stream error:", err);
+    },
   },
-  pull(controller) {
-    // …
-  },
-  cancel(err) {
-    console.log("stream error:", err);
-  }
-}, queueingStrategy);
+  queueingStrategy
+);
 
 const size = queueingStrategy.size(chunk);
 ```

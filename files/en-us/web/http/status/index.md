@@ -22,7 +22,7 @@ Responses are grouped in five classes:
 4. [Client error responses](#client_error_responses) (`400`–`499`)
 5. [Server error responses](#server_error_responses) (`500`–`599`)
 
-The below status codes are defined by [section 10 of RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-10). You can find an updated specification in [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-6).
+The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes).
 
 > **Note:** If you receive a response that is not in [this list](#information_responses), it is a non-standard response, possibly custom to the server's software.
 
