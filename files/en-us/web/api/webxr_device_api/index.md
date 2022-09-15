@@ -256,3 +256,4 @@ The following guides and tutorials are a great resource to learn how to comprehe
 - [WebGL API](/en-US/docs/Web/API/WebGL_API): Accelerated 2D and 3D graphics on the web
 - [Canvas API](/en-US/docs/Web/API/Canvas_API): 2D drawing for the web
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
+- [BabylonjsWebXRDemo](https://github.com/chrisjohndigital/BabylonjsWebXRDemo): Platform game style WebXR demo using Babylon.js with a Vue.js wrapper
