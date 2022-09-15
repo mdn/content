@@ -11,7 +11,7 @@ page-type: mdn-writing-guide
 
 ## Adding images
 
-To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.html` or `index.md` file, using an `<img>` or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
+To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's  `index.md` file, using an `<img>` or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
 
 Let's walk through an example:
 
