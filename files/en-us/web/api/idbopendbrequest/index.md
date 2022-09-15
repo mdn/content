@@ -24,7 +24,7 @@ The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the
 
 ## Properties
 
-_Also inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}_.
+_Also inherits properties from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}_.
 
 ## Methods
 
