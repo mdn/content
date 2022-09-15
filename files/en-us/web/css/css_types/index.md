@@ -1,5 +1,5 @@
 ---
-title: CSS Data Types
+title: CSS data types
 slug: Web/CSS/CSS_Types
 tags:
   - CSS
