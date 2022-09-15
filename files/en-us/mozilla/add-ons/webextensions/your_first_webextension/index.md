@@ -17,10 +17,9 @@ The source code for this example is on GitHub: <https://github.com/mdn/webextens
 
 ## Writing the extension
 
-In a suitable location, such as in the `documents` directory on a Mac or Windows PC, create a new directory called `borderify` and navigate to it. You can do this using your computer's file explorer or [command line terminal](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). Understanding how to use the command line terminal is a handy skill, as it helps with your more advanced extension development. Using terminal on a Mac, you create the directory like this:
+In a suitable location, such as in the `Documents` directory, create a new directory called `borderify` and navigate to it. You can do this using your computer's file explorer or [command line terminal](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). Understanding how to use the command line terminal is a handy skill, as it helps with your more advanced extension development. Using the terminal, you create the directory like this:
 
 ```bash
-cd ~/documents
 mkdir borderify
 cd borderify
 ```
