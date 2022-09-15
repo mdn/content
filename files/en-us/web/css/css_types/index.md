@@ -25,6 +25,12 @@ Below you will find a reference to the types that you are most likely to come ac
 
 ## Syntax
 
+```css
+selector {
+  property: <unit-data-type>;
+}
+```
+
 In formal CSS syntax, data types are denoted by a keyword placed between the inequality signs "`<`" and "`>`".
 
 ## Textual data types
