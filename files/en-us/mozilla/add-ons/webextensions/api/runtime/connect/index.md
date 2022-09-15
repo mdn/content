@@ -25,7 +25,7 @@ You can call this:
 
 Note that you can't use this function to connect an extension to its content scripts. To do this, use {{WebExtAPIRef('tabs.connect()')}}.
 
-By default, this connection enables the extension to exchange messages with itself and any other extension (defined by `extensionId`). However, the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) manifest key can be used to limit communication to specific extensions and enable communication with websites.
+By default, this connection enables the extension to exchange messages with itself or any other extension (if `extensionId` is specified). However, the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) manifest key can be used to limit communication to specific extensions and enable communication with websites. Connections within the extension trigger the {{WebExtAPIRef('runtime.onConnect')}} event, connections from other extensions or web pages trigger the {{WebExtAPIRef('runtime.onConnectExternal')}} event.
 
 ## Syntax
 
