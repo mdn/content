@@ -65,7 +65,7 @@ ctx.fillText(`AVA Ta We (${ctx.fontKerning})`, 5, 110);
 
 ### Result
 
-Note that the the last string has font kerning disabled, so adjacent characters are evenly spread.
+Note that the last string has font kerning disabled, so adjacent characters are evenly spread.
 
 {{ EmbedLiveSample('Examples', 700, 150) }}
 
