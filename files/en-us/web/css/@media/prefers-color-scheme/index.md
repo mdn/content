@@ -17,7 +17,7 @@ The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US
 
 The user might indicate this preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
 
-To avoid cases where OS and browser preferences are conflicting, `prefers-color-scheme` passes the color scheme of the embedding element in the embedding document to the embedded content when acceptable from security standpoint.
+To avoid cases where OS and browser preferences are conflicting, `prefers-color-scheme` passes the `color-scheme` of the embedding element in the embedding document to the embedded content when acceptable from security standpoint.
 This applies to both same and cross-origin SVG and iframe elements.
 
 ## Syntax
