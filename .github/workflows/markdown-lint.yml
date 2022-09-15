@@ -10,9 +10,11 @@ on:
       - yarn.lock
       - .github/workflows/markdown-lint.yml
       - .github/workflows/markdownlint-problem-matcher.json
+      - .prettierignore
+      - .prettierrc.json
 
 jobs:
-  docs:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,10 +27,13 @@ jobs:
           cache: yarn
 
       - name: Install all yarn packages
-        run: |
-          yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
-      - name: Lint markdown files
+      - name: Prettier check markdown files
+        run: |
+          yarn prettier -c --embedded-language-formatting "off" "**/*.md"
+
+      - name: Markdownlint check markdown files
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
           yarn lint:md
