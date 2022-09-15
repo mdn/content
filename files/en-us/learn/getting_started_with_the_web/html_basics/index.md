@@ -66,7 +66,7 @@ You can put elements inside other elements too — this is called **nesting**. I
 
 You do however need to make sure that your elements are properly nested. In the example above, we opened the {{htmlelement("p")}} element first, then the {{htmlelement("strong")}} element; therefore, we have to close the {{htmlelement("strong")}} element first, then the {{htmlelement("p")}} element. The following is incorrect:
 
-```html example-bad
+```html-nolint example-bad
 <p>My cat is <strong>very grumpy.</p></strong>
 ```
 
