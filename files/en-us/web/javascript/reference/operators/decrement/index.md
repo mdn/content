@@ -39,20 +39,20 @@ after decrementing.
 
 ```js
 let x = 3;
-y = x--;
+const y = x--;
 
-// y = 3
 // x = 2
+// y = 3
 ```
 
 ### Prefix decrement
 
 ```js
-let a = 2;
-b = --a;
+let a = 3;
+const b = --a;
 
-// a = 1
-// b = 1
+// a = 2
+// b = 2
 ```
 
 ## Specifications

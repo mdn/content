@@ -39,20 +39,20 @@ after incrementing.
 
 ```js
 let x = 3;
-y = x++;
+const y = x++;
 
-// y = 3
 // x = 4
+// y = 3
 ```
 
 ### Prefix increment
 
 ```js
-let a = 2;
-b = ++a;
+let a = 3;
+const b = ++a;
 
-// a = 3
-// b = 3
+// a = 4
+// b = 4
 ```
 
 ## Specifications
