@@ -172,7 +172,7 @@ async function fileHash(file) {
   const arrayBufferToHash = await newBlob.arrayBuffer();
 
   // Finally we perform the hash this time as SHA1 which is what Git uses.
-  // Then we return it as a string. to be displayed.
+  // Then we return it as a string to be displayed.
   return hashToString(await crypto.subtle.digest('SHA-1', arrayBufferToHash));
 }
 
