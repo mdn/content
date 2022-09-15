@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.Element.nextElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.nextElementSibling`** read-only
@@ -26,8 +27,8 @@ A {{domxref("Element")}} object, or `null`.
 <div id="div-02">Here is div-02</div>
 
 <script>
-  let el = document.getElementById('div-01').nextElementSibling;
-  console.log('Siblings of div-01:');
+  let el = document.getElementById("div-01").nextElementSibling;
+  console.log("Siblings of div-01:");
   while (el) {
     console.log(el.nodeName);
     el = el.nextElementSibling;

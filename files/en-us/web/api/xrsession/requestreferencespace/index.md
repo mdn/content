@@ -20,6 +20,7 @@ tags:
   - tracking
 browser-compat: api.XRSession.requestReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`requestReferenceSpace()`** method of the
@@ -30,7 +31,7 @@ space requested.
 
 ## Syntax
 
-```js
+```js-nolint
 requestReferenceSpace(referenceSpaceType)
 ```
 

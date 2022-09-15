@@ -13,6 +13,7 @@ tags:
   - track
 browser-compat: api.VideoTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("VideoTrack")}} interface represents a single video track from a {{HTMLElement("video")}} element.

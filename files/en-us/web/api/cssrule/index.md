@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSRule`** interface represents a single CSS rule. There are several types of rules which inherit properties from `CSSRule`.

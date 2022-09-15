@@ -13,15 +13,19 @@ tags:
   - streaming
 browser-compat: javascript.builtins.WebAssembly.instantiateStreaming
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.instantiateStreaming()`** function compiles
 and instantiates a WebAssembly module directly from a streamed underlying source. This
 is the most efficient, optimized way to load wasm code.
 
+> **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
+> For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.instantiateStreaming(source, importObject)
 ```
 
@@ -73,8 +77,9 @@ call, and it will pass the response into the function when it fulfills.
 ```js
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-  .then((obj) => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func()
+);
 ```
 
 The `ResultObject`'s instance member is then accessed, and the contained

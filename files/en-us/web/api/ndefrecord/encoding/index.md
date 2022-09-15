@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.NDEFRecord.encoding
 ---
+
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`encoding`**
@@ -18,7 +19,7 @@ a textual payload, or `null` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.encoding
 ```
 

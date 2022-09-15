@@ -13,6 +13,7 @@ tags:
   - payment
 browser-compat: api.PaymentMethodChangeEvent.PaymentMethodChangeEvent
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`PaymentMethodChangeEvent()`**
@@ -21,7 +22,7 @@ details about a {{domxref("PaymentRequest.paymentmethodchange_event", "paymentme
 
 ## Syntax
 
-```js
+```js-nolint
 new PaymentMethodChangeEvent(type)
 new PaymentMethodChangeEvent(type, options)
 ```

@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.moveBy
 ---
+
 {{APIRef}}
 
 The **`moveBy()`** method of the {{domxref("Window")}}
@@ -21,7 +22,7 @@ interface moves the current window by a specified amount.
 
 ## Syntax
 
-```js
+```js-nolint
 moveBy(deltaX, deltaY)
 ```
 

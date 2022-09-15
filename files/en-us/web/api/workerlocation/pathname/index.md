@@ -10,6 +10,7 @@ tags:
   - WorkerLocation
 browser-compat: api.WorkerLocation.pathname
 ---
+
 {{ApiRef("WorkerLocation")}}
 
 The **`pathname`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.pathname", "pathname")}} part of the worker's location.

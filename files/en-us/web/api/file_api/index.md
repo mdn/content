@@ -8,6 +8,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/FileAPI/
 ---
+
 {{DefaultAPISidebar("File API")}}
 
 ## Concepts and Usage
@@ -49,7 +50,7 @@ In this example, we provide a [file `<input>` element](/en-US/docs/Web/HTML/Elem
 #### HTML
 
 ```html
-<input type="file">
+<input type="file" />
 <div class="output"></div>
 ```
 

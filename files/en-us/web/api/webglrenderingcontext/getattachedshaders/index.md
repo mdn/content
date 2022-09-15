@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getAttachedShaders
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getAttachedShaders()`** method of
@@ -18,7 +19,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a list of
 
 ## Syntax
 
-```js
+```js-nolint
 getAttachedShaders(program)
 ```
 

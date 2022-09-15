@@ -11,6 +11,7 @@ tags:
   - viewport
 browser-compat: api.VisualViewport
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`VisualViewport`** interface of the [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique `VisualViewport` representing the properties associated with that window.

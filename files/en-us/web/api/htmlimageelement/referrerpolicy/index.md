@@ -9,6 +9,7 @@ tags:
   - Referrer Policy
 browser-compat: api.HTMLImageElement.referrerPolicy
 ---
+
 {{APIRef("HTML DOM")}}
 
 The

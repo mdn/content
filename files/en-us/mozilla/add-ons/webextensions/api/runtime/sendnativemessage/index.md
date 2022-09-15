@@ -13,6 +13,7 @@ tags:
   - sendNativeMessage
 browser-compat: webextensions.api.runtime.sendNativeMessage
 ---
+
 {{AddonSidebar()}}
 
 Sends a single message from an extension to a native application.
@@ -27,7 +28,7 @@ For more information, see [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExte
 
 ## Syntax
 
-```js
+```js-nolint
 let sending = browser.runtime.sendNativeMessage(
   application,             // string
   message                  // object

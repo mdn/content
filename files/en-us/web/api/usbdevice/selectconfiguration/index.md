@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.selectConfiguration
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`selectConfiguration()`** method of the
@@ -22,7 +23,7 @@ the specified configuration is selected.
 
 ## Syntax
 
-```js
+```js-nolint
 selectConfiguration(configurationValue)
 ```
 

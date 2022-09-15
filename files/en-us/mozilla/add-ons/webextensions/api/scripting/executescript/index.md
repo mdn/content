@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.executeScript
 ---
+
 {{AddonSidebar()}}
 
 Injects a script into a target context. The script is run at `document_idle` by default.
@@ -28,7 +29,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let results = await browser.scripting.executeScript(
   details             // object
 )

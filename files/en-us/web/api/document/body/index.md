@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.body
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.body`** property represents the

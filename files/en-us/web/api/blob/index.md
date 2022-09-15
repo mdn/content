@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob
 ---
+
 {{APIRef("File API")}}
 
 The **`Blob`** object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a {{DOMxRef("ReadableStream")}} so its methods can be used for processing the data.
@@ -63,10 +64,11 @@ The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript
 #### HTML
 
 ```html
-<p>This example creates a typed array containing the ASCII codes
-   for the space character through the letter Z, then converts it
-   to an object URL. A link to open that object URL is created.
-   Click the link to see the decoded object URL.</p>
+<p>
+  This example creates a typed array containing the ASCII codes for the space
+  character through the letter Z, then converts it to an object URL. A link to
+  open that object URL is created. Click the link to see the decoded object URL.
+</p>
 ```
 
 #### JavaScript

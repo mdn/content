@@ -10,6 +10,7 @@ tags:
   - properties
   - shorthand
 ---
+
 {{CSSRef}}
 
 **_Shorthand properties_** are CSS properties that let you set the values of multiple other CSS properties simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.
@@ -96,7 +97,7 @@ Consider the following declarations:
 ```css
 font-style: italic;
 font-weight: bold;
-font-size: .8em;
+font-size: 0.8em;
 line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
@@ -104,7 +105,7 @@ font-family: Arial, sans-serif;
 This 5 statements can be shortened to the following:
 
 ```css
-font: italic bold .8em/1.2 Arial, sans-serif;
+font: italic bold 0.8em/1.2 Arial, sans-serif;
 ```
 
 This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal`, `font-size-adjust: none`, and `font-stretch: normal`.

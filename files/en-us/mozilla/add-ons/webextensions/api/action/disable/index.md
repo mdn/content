@@ -13,6 +13,7 @@ tags:
   - disable
 browser-compat: webextensions.api.action.disable
 ---
+
 {{AddonSidebar()}}
 
 Disables the browser action for a tab, meaning that it cannot be clicked when that tab is active.
@@ -21,7 +22,7 @@ Disables the browser action for a tab, meaning that it cannot be clicked when th
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.disable(
   tabId // optional integer
 )

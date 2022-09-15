@@ -11,6 +11,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCIceServer.url
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
 The **obsolete** {{domxref("RTCIceServer")}} dictionary's
@@ -27,7 +28,7 @@ property instead.
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   // ...
   url: iceServerUrl,

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DocumentFragment.querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 The **`DocumentFragment.querySelector()`** method returns the
@@ -25,7 +26,7 @@ a `SYNTAX_ERR` value is raised.
 
 ## Syntax
 
-```js
+```js-nolint
 querySelector(selectors)
 ```
 
@@ -63,10 +64,10 @@ double back slash:
 <div id="foo:bar"></div>
 
 <script>
-document.querySelector('#foo\bar');    // Does not match anything
-document.querySelector('#foo\\\\bar'); // Match the first div
-document.querySelector('#foo:bar');     // Does not match anything
-document.querySelector('#foo\\:bar');   // Match the second div
+  document.querySelector("#foo\bar"); // Does not match anything
+  document.querySelector("#foo\\\\bar"); // Match the first div
+  document.querySelector("#foo:bar"); // Does not match anything
+  document.querySelector("#foo\\:bar"); // Match the second div
 </script>
 ```
 

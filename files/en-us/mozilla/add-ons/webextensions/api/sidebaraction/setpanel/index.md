@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.setPanel
 ---
+
 {{AddonSidebar()}}
 
 Sets the sidebar's panel: that is, the HTML document that defines the content of this sidebar.
@@ -28,7 +29,7 @@ If you set a new panel using `setPanel()`, and omit both the `tabId` and `window
 
 ## Syntax
 
-```js
+```js-nolint
 browser.sidebarAction.setPanel(
   details // object
 )

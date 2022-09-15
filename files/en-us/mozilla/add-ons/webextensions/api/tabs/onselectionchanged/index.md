@@ -14,6 +14,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onSelectionChanged
 ---
+
 {{AddonSidebar()}}
 
 > **Warning:** This event is deprecated. Use {{WebExtAPIRef("tabs.onActivated")}} instead.
@@ -22,7 +23,7 @@ Fires when the selected tab in a window changes.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onSelectionChanged.addListener(listener)
 browser.tabs.onSelectionChanged.removeListener(listener)
 browser.tabs.onSelectionChanged.hasListener(listener)

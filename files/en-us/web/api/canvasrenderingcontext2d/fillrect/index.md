@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.fillRect
 ---
+
 {{APIRef}}
 
 The
@@ -24,7 +25,7 @@ on it.
 
 ## Syntax
 
-```js
+```js-nolint
 fillRect(x, y, width, height)
 ```
 

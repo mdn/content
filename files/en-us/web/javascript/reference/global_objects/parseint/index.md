@@ -8,6 +8,7 @@ tags:
   - parseInt
 browser-compat: javascript.builtins.parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`parseInt()`** function parses a string argument and
@@ -18,7 +19,7 @@ systems).
 
 ## Syntax
 
-```js
+```js-nolint
 parseInt(string)
 parseInt(string, radix)
 ```

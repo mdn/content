@@ -183,7 +183,7 @@ The value must be a non-negative decimal number. If not provided, or an invalid 
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q">
+    <input type="search" id="mySearch" name="q" />
     <button>Search</button>
   </div>
 </form>
@@ -214,8 +214,11 @@ You can provide a useful placeholder inside your search input that could give a 
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="Search the site…">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…" />
     <button>Search</button>
   </div>
 </form>
@@ -239,9 +242,12 @@ Let's have a look at an example:
 ```html
 <form role="search">
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="Search the site…"
-     aria-label="Search through site content">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…"
+      aria-label="Search through site content" />
     <button>Search</button>
   </div>
 </form>
@@ -262,8 +268,12 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="Search the site…" size="30">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…"
+      size="30" />
     <button>Search</button>
   </div>
 </form>
@@ -285,15 +295,15 @@ There are useful pseudo-classes available for styling valid/invalid form element
 
 ```css
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -306,8 +316,12 @@ You can use the {{htmlattrxref("required", "input")}} attribute as an easy way o
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="Search the site…" required>
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…"
+      required />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -320,15 +334,15 @@ input {
 }
 
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -352,9 +366,15 @@ The example below requires that the entered value be 4–8 characters in length.
 <form>
   <div>
     <label for="mySearch">Search for user</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="User IDs are 4–8 characters in length" required
-    size="30" minlength="4" maxlength="8">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="User IDs are 4–8 characters in length"
+      required
+      size="30"
+      minlength="4"
+      maxlength="8" />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -367,15 +387,15 @@ input {
 }
 
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -395,9 +415,14 @@ Let's look at an example. Say we wanted to provide a product ID search form, and
 <form>
   <div>
     <label for="mySearch">Search for product by ID:</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="two letters followed by four numbers" required
-    size="30" pattern="[A-z]{2}[0-9]{4}">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="two letters followed by four numbers"
+      required
+      size="30"
+      pattern="[A-z]{2}[0-9]{4}" />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -410,15 +435,15 @@ input {
 }
 
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 

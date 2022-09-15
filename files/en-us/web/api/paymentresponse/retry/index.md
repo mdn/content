@@ -15,6 +15,7 @@ tags:
   - retry
 browser-compat: api.PaymentResponse.retry
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentResponse")}} interface's
@@ -27,7 +28,7 @@ cards.
 
 ## Syntax
 
-```js
+```js-nolint
 retry(errorFields)
 ```
 
@@ -57,22 +58,22 @@ See the [example](#examples) below for a thorough example, but the basic
 concept, in outline form, is:
 
 1. Create a new {{domxref("PaymentRequest")}}
-    (`new` {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
+   (`new` {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
 2. Display the payment request ({{domxref("PaymentRequest.show()")}}
 3. If `show()` resolves, the returned {{domxref("PaymentResponse")}}
-    describes the requested payment and the options chosen by the user. Continue with the following steps:
+   describes the requested payment and the options chosen by the user. Continue with the following steps:
 
-    1. Validate the returned response; if there are any fields whose values are not
-        acceptable, call the response's {{domxref("PaymentResponse.complete",
-        "complete()")}} method with a value of `"fail"` to indicate failure.
-    2. If the response's data is valid and acceptable, call
-        `complete("success")` to finalize the payment and process it.
+   1. Validate the returned response; if there are any fields whose values are not
+      acceptable, call the response's {{domxref("PaymentResponse.complete",
+      "complete()")}} method with a value of `"fail"` to indicate failure.
+   2. If the response's data is valid and acceptable, call
+      `complete("success")` to finalize the payment and process it.
 
 4. If `show()` is rejected, the payment request failed, usually because
-    either there's already one being processed, because the {{Glossary("user agent")}}
-    doesn't support any of the specified payment methods, or because of a security issue.
-    See the [list of exceptions](/en-US/docs/Web/API/PaymentRequest/show#exceptions) for `show()` for further details. Call
-    `complete("fail")` to close the payment request.
+   either there's already one being processed, because the {{Glossary("user agent")}}
+   doesn't support any of the specified payment methods, or because of a security issue.
+   See the [list of exceptions](/en-US/docs/Web/API/PaymentRequest/show#exceptions) for `show()` for further details. Call
+   `complete("fail")` to close the payment request.
 
 ```js
 async function handlePayment() {

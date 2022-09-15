@@ -13,6 +13,7 @@ tags:
   - violatedDirective
 browser-compat: api.SecurityPolicyViolationEvent.violatedDirective
 ---
+
 {{HTTPSidebar}}
 
 The **`violatedDirective`** read-only property of the

@@ -6,6 +6,7 @@ tags:
   - DOM
   - NeedsUpdate
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The W3C's [DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) is an API for manipulating the DOM trees of HTML and XML documents (among other tree-like types of documents). Due to the ubiquity of the DOM, this API is supported in all major browsers, including Mozilla Firefox and Microsoft Internet Explorer, and serves as a base for scripting on the web.
@@ -46,7 +47,7 @@ Suppose the author wants to change the header of the above document and write tw
 
 ```html
 <body>
-  <input type="button" value="Change this document." onclick="change()">
+  <input type="button" value="Change this document." onclick="change()" />
   <h2>Header</h2>
   <p>Paragraph</p>
 </body>

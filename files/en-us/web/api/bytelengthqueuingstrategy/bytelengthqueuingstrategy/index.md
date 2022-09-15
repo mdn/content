@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
+
 {{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy()`**
@@ -18,7 +19,7 @@ instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new ByteLengthQueuingStrategy(highWaterMark)
 ```
 

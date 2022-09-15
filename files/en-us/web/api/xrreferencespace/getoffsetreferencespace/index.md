@@ -25,6 +25,7 @@ tags:
   - Method
 browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRReferenceSpace")}}
@@ -48,7 +49,7 @@ use this method to let the user use their mouse to pitch and yaw their viewing a
 
 ## Syntax
 
-```js
+```js-nolint
 getOffsetReferenceSpace(originOffset)
 ```
 

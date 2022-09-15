@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.IDBObjectStore.delete
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`delete()`** method of the
@@ -27,7 +28,7 @@ record — without having to explicitly look up the record's key.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(key)
 ```
 

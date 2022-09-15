@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.animation
 ---
+
 {{CSSRef}}
 
 The **`animation`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property applies an animation between styles. It is a shorthand for {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, and {{cssxref("animation-play-state")}}.
@@ -100,9 +101,7 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ```html
 <div class="view_port">
-  <div class="polling_message">
-    Listening for dispatches
-  </div>
+  <div class="polling_message">Listening for dispatches</div>
   <div class="cylon_eye"></div>
 </div>
 ```
@@ -123,10 +122,12 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 .cylon_eye {
   background-color: red;
-  background-image: linear-gradient(to right,
-      rgba(0, 0, 0, .9) 25%,
-      rgba(0, 0, 0, .1) 50%,
-      rgba(0, 0, 0, .9) 75%);
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
   color: white;
   height: 100%;
   width: 20%;
@@ -134,9 +135,13 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
   animation: 4s linear 0s infinite alternate move_eye;
 }
 
-@keyframes move_eye { 
-  from { margin-left: -20%; } 
-  to { margin-left: 100%; }
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
 }
 ```
 

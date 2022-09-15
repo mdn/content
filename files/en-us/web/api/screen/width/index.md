@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Screen.width
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`Screen.width`** read-only property returns the width of

@@ -12,6 +12,7 @@ tags:
   - sound
 browser-compat: api.AudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `AudioContext` interface represents an audio-processing graph built from audio modules linked together, each represented by an {{domxref("AudioNode")}}.

@@ -1,5 +1,5 @@
 ---
-title: ':dir()'
+title: ":dir()"
 slug: Web/CSS/:dir
 tags:
   - BiDi
@@ -9,6 +9,7 @@ tags:
   - Selector
 browser-compat: css.selectors.dir
 ---
+
 {{CSSRef}}
 
 The **`:dir()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on the directionality of the text contained in them.
@@ -48,7 +49,8 @@ The `:dir()` pseudo-class requires one parameter, representing the text directio
 ```html
 <div dir="rtl">
   <span>test1</span>
-  <div dir="ltr">test2
+  <div dir="ltr">
+    test2
     <div dir="auto">עִבְרִית</div>
   </div>
 </div>

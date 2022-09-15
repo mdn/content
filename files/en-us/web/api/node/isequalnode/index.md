@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.isEqualNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`isEqualNode()`** method of the {{domxref("Node")}} interface tests whether two nodes are equal.
@@ -17,8 +18,8 @@ the types of the nodes.
 
 ## Syntax
 
-```js
-isEqualNode(otherNode);
+```js-nolint
+isEqualNode(otherNode)
 ```
 
 ### Parameters

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.values
 ---
+
 {{APIRef("DOM")}}
 
 The **`values()`** method of the {{domxref("DOMTokenList")}} interface
@@ -16,8 +17,8 @@ The individual values are strings.
 
 ## Syntax
 
-```js
-tokenList.values();
+```js-nolint
+tokenList.values()
 ```
 
 ### Parameters

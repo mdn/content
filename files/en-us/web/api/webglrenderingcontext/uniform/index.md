@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.uniform1f
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.uniform[1234][fi][v]()`** methods
@@ -25,7 +26,7 @@ object, when they are once again initialized to 0.
 
 ## Syntax
 
-```js
+```js-nolint
 uniform1f(location, v0)
 uniform1fv(location, value)
 uniform1i(location, v0)

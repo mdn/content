@@ -10,6 +10,7 @@ tags:
   - BarProp
 browser-compat: api.BarProp.visible
 ---
+
 {{APIRef("DOM")}}
 
 The **`visible`** read-only property of the {{domxref("BarProp")}} interface returns `true` if the user interface element it represents is visible.

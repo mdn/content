@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.Permissions.query
 ---
+
 {{APIRef("Permissions API")}}
 
 The **`Permissions.query()`** method of the {{domxref("Permissions")}} interface returns the state of a user permission on the global scope.
 
 ## Syntax
 
-```js
+```js-nolint
 query(permissionDescriptor)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.text
 ---
+
 {{APIRef("File API")}}
 
 The **`text()`** method in the
@@ -18,7 +19,7 @@ string containing the contents of the blob, interpreted as UTF-8.
 
 ## Syntax
 
-```js
+```js-nolint
 text()
 ```
 

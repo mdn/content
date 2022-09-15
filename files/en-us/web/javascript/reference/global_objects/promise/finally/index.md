@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.finally
 ---
+
 {{JSRef}}
 
 The **`finally()`** method of a {{jsxref("Promise")}} schedules a function,
@@ -25,7 +26,7 @@ This lets you avoid duplicating code in both the promise's {{jsxref("Promise/the
 
 ## Syntax
 
-```js
+```js-nolint
 promise.finally(onFinally)
 
 promise.finally(() => {

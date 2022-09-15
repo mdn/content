@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.RelativeTimeFormat`** object enables language-sensitive relative time formatting.

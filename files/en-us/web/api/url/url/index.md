@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: api.URL.URL
 ---
+
 {{APIRef("URL API")}}
 
 The **`URL()`** constructor returns a newly created
@@ -23,7 +24,7 @@ If the given base URL or the resulting URL are not valid URLs, the JavaScript
 
 ## Syntax
 
-```js
+```js-nolint
 new URL(url)
 new URL(url, base)
 ```
@@ -48,8 +49,8 @@ new URL(url, base)
 
 ### Exceptions
 
-| Exception                        | Explanation                                                                                               |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Exception               | Explanation                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------------- |
 | {{jsxref("TypeError")}} | `url` (in the case of absolute URLs) or `base` + `url` (in the case of relative URLs) is not a valid URL. |
 
 ## Examples

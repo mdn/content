@@ -12,6 +12,7 @@ tags:
   - interactivity
   - state
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn't have any hard rules for what is and isn't a component – that's up to you! In this article we will show you a sensible way to break our app up into components.
@@ -182,7 +183,7 @@ _Now_ your browser should show three unique tasks. Another problem remains thoug
 
 ### Is it `completed`?
 
-In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />`  component, but change one thing. That's a good job for another prop!  Give each `<Todo />` call in `App.js` a new prop of `completed`. The first (`Eat`) should have a value of `true`; the rest should be `false`:
+In our original static list, only `Eat` was checked. Once again, we want to reuse _most_ of the UI that makes up a `<Todo />` component, but change one thing. That's a good job for another prop! Give each `<Todo />` call in `App.js` a new prop of `completed`. The first (`Eat`) should have a value of `true`; the rest should be `false`:
 
 ```js
 <Todo name="Eat" completed={true} />

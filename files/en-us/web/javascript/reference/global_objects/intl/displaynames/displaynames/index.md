@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
 ---
+
 {{JSRef}}
 
 The **`Intl.DisplayNames()`** constructor creates
@@ -23,7 +24,7 @@ translation of language, region and script display names.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.DisplayNames(locales, options)
 ```
 
@@ -75,6 +76,7 @@ new Intl.DisplayNames(locales, options)
         - `"script"`
 
     - `languageDisplay`
+
       - : The `languageDisplay` it's only usable along with type `language`, defaults to `dialect`.
         - `"dialect"`
         - `"standard"`
@@ -130,7 +132,7 @@ console.log(dn.of('chinese')); // logs 'Chinese Calendar'
 
 ### Using type `language` with `languageDisplay`
 
-Example using  `language` as a type with `languageDisplay` options.
+Example using `language` as a type with `languageDisplay` options.
 
 ```js
 // Using `dialect` option

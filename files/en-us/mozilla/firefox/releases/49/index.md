@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 49 was released on September 20, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -282,7 +283,7 @@ In order to improve compatibility with existing content, Firefox now accepts som
 
 ### Interfaces
 
-- In {{domxref("EventTarget.addEventListener()")}}, the value `mozSystemGroup`,  active only in code running in XBL or in Firefox's chrome, is a {{jsxref("Boolean")}} which indicates if the listener is added to the system group. ({{bug(1274520)}})
+- In {{domxref("EventTarget.addEventListener()")}}, the value `mozSystemGroup`, active only in code running in XBL or in Firefox's chrome, is a {{jsxref("Boolean")}} which indicates if the listener is added to the system group. ({{bug(1274520)}})
 
 ### Other
 

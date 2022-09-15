@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTimeElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTimeElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("time")}} elements.

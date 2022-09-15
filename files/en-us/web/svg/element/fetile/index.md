@@ -9,6 +9,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feTile
 ---
+
 {{SVGRef}}
 
 The **`<feTile>`** [SVG](/en-US/docs/Web/SVG) filter primitive allows to fill a target rectangle with a repeated, tiled pattern of an input image. The effect is similar to the one of a {{SVGElement("pattern")}}.
@@ -40,19 +41,25 @@ This element implements the {{domxref("SVGFETileElement")}} interface.
 ### SVG
 
 ```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="200"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="tile" x="0" y="0" width="100%" height="100%">
-      <feTile in="SourceGraphic" x="50" y="50"
-          width="100" height="100" />
-      <feTile/>
+      <feTile in="SourceGraphic" x="50" y="50" width="100" height="100" />
+      <feTile />
     </filter>
   </defs>
 
-  <image xlink:href="mdn_logo_only_color.png"
-      x="10%" y="10%" width="80%" height="80%"
-      style="filter:url(#tile);"/>
+  <image
+    xlink:href="mdn_logo_only_color.png"
+    x="10%"
+    y="10%"
+    width="80%"
+    height="80%"
+    style="filter:url(#tile);" />
 </svg>
 ```
 

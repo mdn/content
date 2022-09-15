@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feGaussianBlur.stdDeviation
 ---
+
 {{SVGRef}}
 
 The **`stdDeviation`** attribute defines the standard deviation for the blur operation.
@@ -18,7 +19,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -36,8 +39,16 @@ html, body, svg {
   </filter>
 
   <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur1);" />
-  <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur2); transform: translateX(140px);" />
-  <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur3); transform: translateX(280px);" />
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    style="filter: url(#gaussianBlur2); transform: translateX(140px);" />
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    style="filter: url(#gaussianBlur3); transform: translateX(280px);" />
 </svg>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
 tags:
   - CSS
@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.active
 ---
+
 {{CSSRef}}
 
 The **`:active`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.
@@ -35,7 +36,8 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 #### HTML
 
 ```html
-<p>This paragraph contains a link:
+<p>
+  This paragraph contains a link:
   <a href="#">This link will turn red while you click on it.</a>
   The paragraph will get a gray background while you click on it or the link.
 </p>
@@ -44,12 +46,22 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 #### CSS
 
 ```css
-a:link { color: blue; }          /* Unvisited links */
-a:visited { color: purple; }     /* Visited links */
-a:hover { background: yellow; }  /* Hovered links */
-a:active { color: red; }         /* Active links */
+a:link { /* Unvisited links */
+  color: blue;
+}
+a:visited { /* Visited links */
+  color: purple;
+}
+a:hover { /* Hovered links */
+  background: yellow;
+}
+a:active { /* Active links */
+  color: red;
+}
 
-p:active { background: #eee; }   /* Active paragraphs */
+p:active { /* Active paragraphs */
+  background: #eee;
+}
 ```
 
 #### Result

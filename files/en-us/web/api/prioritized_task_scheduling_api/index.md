@@ -9,6 +9,7 @@ tags:
   - Landing
 browser-compat: api.Scheduler
 ---
+
 {{DefaultAPISidebar("Prioritized Task Scheduling API")}} {{AvailableInWorkers}}
 
 The **Prioritized Task Scheduling API** provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
@@ -86,10 +87,12 @@ Scheduled tasks are run in priority order, followed by the order that they were 
 There are just three priorities, which are listed below (ordered from highest to lowest):
 
 - `user-blocking`
+
   - : Tasks that stop users from interacting with the page.
     This includes rendering the page to the point where it can be used, or responding to user input.
 
 - `user-visible`
+
   - : Tasks that are visible to the user but not necessarily blocking user actions.
     This might include rendering non-essential parts of the page, such as non-essential images or animations.
 

@@ -13,13 +13,14 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onSuspendCanceled
 ---
+
 {{AddonSidebar()}}
 
 Sent after {{WebExtAPIRef("runtime.onSuspend")}} to indicate that the app won't be unloaded after all.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onSuspendCanceled.addListener(listener)
 browser.runtime.onSuspendCanceled.removeListener(listener)
 browser.runtime.onSuspendCanceled.hasListener(listener)

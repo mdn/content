@@ -12,6 +12,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-page
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-page`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents an individual page when printed or in a print preview.

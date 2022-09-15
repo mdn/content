@@ -11,6 +11,7 @@ tags:
   - selectionchange
 browser-compat: api.Document.selectionchange_event
 ---
+
 {{APIRef}}
 
 The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the current {{domxref("Selection")}} of a {{domxref("Document")}} is changed.

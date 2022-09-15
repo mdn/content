@@ -9,6 +9,7 @@ tags:
   - WeakSet
 browser-compat: javascript.builtins.WeakSet.add
 ---
+
 {{JSRef}}
 
 The **`add()`** method appends a new object to the end of a
@@ -18,7 +19,7 @@ The **`add()`** method appends a new object to the end of a
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 ```
 

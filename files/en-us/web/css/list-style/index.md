@@ -9,13 +9,14 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.list-style
 ---
+
 {{CSSRef}}
 
 The **`list-style`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to set all the list style properties at once.
 
 {{EmbedInteractiveExample("pages/css/list-style.html")}}
 
-> **Note:** This property is applied to list items, i.e., elements with `{{cssxref("display")}}: list-item;` . [By default](https://html.spec.whatwg.org/multipage/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the items inside.
+> **Note:** This property is applied to list items, i.e., elements with `{{cssxref("display")}}: list-item;`. [By default](https://html.spec.whatwg.org/multipage/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the items inside.
 
 ## Constituent properties
 
@@ -32,7 +33,7 @@ This property is a shorthand for the following CSS properties:
 list-style: square;
 
 /* image */
-list-style: url('../img/shape.png');
+list-style: url("../img/shape.png");
 
 /* position */
 list-style: inside;
@@ -41,7 +42,7 @@ list-style: inside;
 list-style: georgian inside;
 
 /* type | image | position */
-list-style: lower-roman url('../img/shape.png') outside;
+list-style: lower-roman url("../img/shape.png") outside;
 
 /* Keyword value */
 list-style: none;
@@ -88,13 +89,15 @@ ul li::before {
 A second approach is to apply a url value to the list-style property:
 
 ```css
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: none;
 }
 
 /* becomes */
 
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
 }
 ```

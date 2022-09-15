@@ -63,7 +63,7 @@ You can use this class to style SVG content using CSS.
       viewPort="0 0 120 120"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg">
-      <style type="text/css">
+      <style>
         <![CDATA[
             rect.rectClass {
                 stroke: #000066;

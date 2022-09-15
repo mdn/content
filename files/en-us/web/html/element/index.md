@@ -7,7 +7,7 @@ tags:
   - HTML
   - Reference
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{HTMLSidebar("Elements")}}

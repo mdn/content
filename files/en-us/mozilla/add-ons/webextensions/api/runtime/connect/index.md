@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.connect
 ---
+
 {{AddonSidebar()}}
 
 Make a connection between different contexts inside the extension.
@@ -28,7 +29,7 @@ By default, this connection enables the extension to exchange messages with itse
 
 ## Syntax
 
-```js
+```js-nolint
 let port = browser.runtime.connect(
   extensionId, // optional string
   connectInfo  // optional object
@@ -50,7 +51,7 @@ let port = browser.runtime.connect(
 
 ### Return value
 
-{{WebExtAPIRef('runtime.Port')}}. Port through which messages can be sent and received. The port's  `onDisconnect` event is fired if the extension does not exist.
+{{WebExtAPIRef('runtime.Port')}}. Port through which messages can be sent and received. The port's `onDisconnect` event is fired if the extension does not exist.
 
 ## Browser compatibility
 

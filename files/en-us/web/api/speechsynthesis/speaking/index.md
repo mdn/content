@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.speaking
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`speaking`** read-only property of the

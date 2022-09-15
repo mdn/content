@@ -14,6 +14,7 @@ tags:
   - sound
 browser-compat: api.HTMLAudioElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAudioElement`** interface provides access to the properties of {{HTMLElement("audio")}} elements, as well as methods to manipulate them.

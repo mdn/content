@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.translate
 ---
+
 {{APIRef}}
 
 The
@@ -18,7 +19,7 @@ method of the Canvas 2D API adds a translation transformation to the current mat
 
 ## Syntax
 
-```js
+```js-nolint
 translate(x, y)
 ```
 

@@ -15,6 +15,7 @@ tags:
   - noiseSuppression
 browser-compat: api.MediaTrackSupportedConstraints.noiseSuppression
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
@@ -47,8 +48,7 @@ This example displays whether or not your browser supports the
 `noiseSuppression` constraint.
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden

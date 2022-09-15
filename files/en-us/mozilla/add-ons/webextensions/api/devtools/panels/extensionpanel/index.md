@@ -11,6 +11,7 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels.ExtensionPanel
 ---
+
 {{AddonSidebar()}}
 
 An `ExtensionPanel` represents a panel added to the devtools. It's the resolution of the [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) returned by [`browser.devtools.panels.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create).

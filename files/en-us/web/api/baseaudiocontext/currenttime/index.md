@@ -12,6 +12,7 @@ tags:
   - currentTime
 browser-compat: api.BaseAudioContext.currentTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `currentTime` read-only property of the {{ domxref("BaseAudioContext") }}
@@ -37,7 +38,7 @@ console.log(audioCtx.currentTime);
 
 To offer protection against timing attacks and fingerprinting, the precision of
 `audioCtx.currentTime` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
 ```js

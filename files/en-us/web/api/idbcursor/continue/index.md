@@ -13,6 +13,7 @@ tags:
   - continue
 browser-compat: api.IDBCursor.continue
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`continue()`** method of the {{domxref("IDBCursor")}}
@@ -24,7 +25,7 @@ advances to the immediate next position, based on its direction.
 
 ## Syntax
 
-```js
+```js-nolint
 continue()
 continue(key)
 ```

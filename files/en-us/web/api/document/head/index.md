@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.head
 ---
+
 {{APIRef("DOM")}}
 
 The **`head`** read-only property of
@@ -23,7 +24,7 @@ An {{domxref("HTMLHeadElement")}}.
 ## Examples
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <head id="my-document-head">
   <title>Example: using document.head</title>
 </head>

@@ -10,6 +10,7 @@ tags:
   - Server-side programming
   - django
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 In this first Django article, we answer the question "What is Django?" and give you an overview of what makes this web framework special.

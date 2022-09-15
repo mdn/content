@@ -9,15 +9,16 @@ tags:
   - MIDIMessageEvent
 browser-compat: api.MIDIMessageEvent.MIDIMessageEvent
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`MIDIMessageEvent()`** constructor creates a new {{domxref("MIDIMessageEvent")}} object. Typically this constructor is not used as events are created when a {{domxref("MIDIInput")}} finishes receiving one or more MIDI messages.
 
 ## Syntax
 
-```js
-new MIDIMessageEvent(type);
-new MIDIMessageEvent(type, options);
+```js-nolint
+new MIDIMessageEvent(type)
+new MIDIMessageEvent(type, options)
 ```
 
 ### Parameters

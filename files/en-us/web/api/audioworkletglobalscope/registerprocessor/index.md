@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioWorkletGlobalScope.registerProcessor
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`registerProcessor`** method of the
@@ -20,7 +21,7 @@ from {{domxref("AudioWorkletProcessor")}} interface under a specified _name_.
 
 ## Syntax
 
-```js
+```js-nolint
 registerProcessor(name, processorCtor)
 ```
 

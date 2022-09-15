@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.412
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP)

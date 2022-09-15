@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-position
 ---
+
 {{CSSRef}}
 
 The **`font-variant-position`** CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.

@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: api.btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`btoa()`** method creates a
@@ -25,7 +26,7 @@ characters such as ASCII values 0 through 31.
 
 ## Syntax
 
-```js
+```js-nolint
 btoa(stringToEncode)
 ```
 

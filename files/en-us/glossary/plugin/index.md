@@ -2,6 +2,7 @@
 title: Plugin
 slug: Glossary/Plugin
 ---
+
 A browser plugin is a software component that users can install to handle content that the browser can't support natively. Browser plugins are usually written using the [NPAPI](https://en.wikipedia.org/wiki/NPAPI) (Netscape Plugin Application Programming Interface) architecture.
 
 The most well-known and widely used plugin was the now outdated Adobe Flash player, which enabled browsers to run {{Glossary("Adobe Flash")}} content.

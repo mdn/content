@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.Magnetometer.Magnetometer
 ---
+
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`Magnetometer()`** constructor
@@ -27,7 +28,7 @@ instructions.
 
 ## Syntax
 
-```js
+```js-nolint
 new Magnetometer()
 new Magnetometer(options)
 ```

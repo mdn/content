@@ -3584,9 +3584,10 @@
 /en-US/docs/Glossary/404	/en-US/docs/Web/HTTP/Status/404
 /en-US/docs/Glossary/502	/en-US/docs/Web/HTTP/Status/502
 /en-US/docs/Glossary/AOM	/en-US/docs/Glossary/Accessibility_tree
-/en-US/docs/Glossary/B2G	/en-US/docs/Glossary/Boot2Gecko
+/en-US/docs/Glossary/B2G	/en-US/docs/Glossary/Firefox_OS
 /en-US/docs/Glossary/Block/Block_(CSS)	/en-US/docs/Glossary/Block/CSS
 /en-US/docs/Glossary/Block/Block_(scripting)	/en-US/docs/Glossary/Block/Scripting
+/en-US/docs/Glossary/Boot2Gecko	/en-US/docs/Glossary/Firefox_OS
 /en-US/docs/Glossary/Bézier_curve	/en-US/docs/Glossary/Bezier_curve
 /en-US/docs/Glossary/CSS_property	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Cleartext	/en-US/docs/Glossary/Plaintext
@@ -8312,6 +8313,8 @@
 /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/GlobalFetch/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/Guide/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
+/en-US/docs/Web/API/HID/onconnect	/en-US/docs/Web/API/HID/connect_event
+/en-US/docs/Web/API/HID/ondisconnect	/en-US/docs/Web/API/HID/disconnect_event
 /en-US/docs/Web/API/HIDDevice/oninputreport	/en-US/docs/Web/API/HIDDevice/inputreport_event
 /en-US/docs/Web/API/HTMLAnchorElement.rel	/en-US/docs/Web/API/HTMLAnchorElement/rel
 /en-US/docs/Web/API/HTMLAnchorElement.relList	/en-US/docs/Web/API/HTMLAnchorElement/relList
@@ -8466,6 +8469,7 @@
 /en-US/docs/Web/API/HTMLMediaElement/Web_audio:_ended_event	/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event
 /en-US/docs/Web/API/HTMLMediaElement/mcs_ended_event	/en-US/docs/Web/API/MediaStreamTrack/ended_event
 /en-US/docs/Web/API/HTMLMediaElement/onencrypted	/en-US/docs/Web/API/HTMLMediaElement
+/en-US/docs/Web/API/HTMLMediaElement/onerror	/en-US/docs/Web/API/HTMLMediaElement/error_event
 /en-US/docs/Web/API/HTMLMediaElement/onwaitingforkey	/en-US/docs/Web/API/HTMLMediaElement
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
@@ -12297,7 +12301,11 @@
 /en-US/docs/Web/Manifest/dir	/en-US/docs/Web/Manifest
 /en-US/docs/Web/Manifest/iarc_rating_id	/en-US/docs/Web/Manifest
 /en-US/docs/Web/Manifest/lang	/en-US/docs/Web/Manifest
+/en-US/docs/Web/MathML/Element/annotation	/en-US/docs/Web/MathML/Element/semantics
+/en-US/docs/Web/MathML/Element/annotation-xml	/en-US/docs/Web/MathML/Element/semantics
 /en-US/docs/Web/MathML/Element/menclosed	/en-US/docs/Web/MathML/Element/menclose
+/en-US/docs/Web/MathML/Element/mprescripts	/en-US/docs/Web/MathML/Element/mmultiscripts
+/en-US/docs/Web/MathML/Element/none	/en-US/docs/Web/MathML/Element/mmultiscripts
 /en-US/docs/Web/MathML/Fonts/Test	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Web/MathML/Index	/en-US/docs/Web/MathML
 /en-US/docs/Web/Media/Formats/Guide_to_codecs_for_audio_on_the_web	/en-US/docs/Web/Media/Formats/Audio_codecs

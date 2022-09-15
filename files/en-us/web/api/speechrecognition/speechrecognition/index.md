@@ -12,6 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.SpeechRecognition
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechRecognition()`** constructor creates a new
@@ -19,7 +20,7 @@ The **`SpeechRecognition()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new SpeechRecognition()
 ```
 

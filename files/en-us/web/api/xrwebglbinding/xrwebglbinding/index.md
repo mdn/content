@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLBinding.XRWebGLBinding
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRWebGLBinding()`** constructor creates and
@@ -18,7 +19,7 @@ returns a new {{domxref("XRWebGLBinding")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRWebGLBinding(session, context)
 ```
 
@@ -34,7 +35,7 @@ new XRWebGLBinding(session, context)
 
 ### Return value
 
-A newly-created {{domxref("XRWebGLBinding")}}.
+A new {{domxref("XRWebGLBinding")}}.
 
 ### Exceptions
 

@@ -13,13 +13,14 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.onCompleted
 ---
+
 {{AddonSidebar()}}
 
 Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM [`load`](/en-US/docs/Web/API/Window/load_event) event.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onCompleted.addListener(
   listener,                   // function
   filter                      // optional object

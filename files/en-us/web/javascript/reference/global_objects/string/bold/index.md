@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.bold
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`bold()`** method creates a {{HTMLElement("b")}} HTML
@@ -19,7 +20,7 @@ element that causes a string to be displayed as bold.
 
 ## Syntax
 
-```js
+```js-nolint
 bold()
 ```
 

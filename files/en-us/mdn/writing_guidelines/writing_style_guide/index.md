@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This writing style guide describes how content should be written, organized, spelled, and formatted on MDN Web Docs.
@@ -14,7 +15,7 @@ These guidelines are for ensuring language and style consistency across the webs
 
 > **Note:** The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) their own style guides. These should be published as subpages of the respective localization team's page. However, this guide should still be consulted for formatting and organizing content.
 
-After listing the general writing guidelines, this guide describes the recommended the writing style for MDN Web Docs and then how to format different components on a page, such as lists and titles.
+After listing the general writing guidelines, this guide describes the recommended writing style for MDN Web Docs and then how to format different components on a page, such as lists and titles.
 
 ## General writing guidelines
 
@@ -72,8 +73,8 @@ In a guide or tutorial, the introductory paragraph(s) should inform the reader a
 
 - **Example of an appropriate introduction**: Here we see a much better overview for the `strokeText()` method.
 
-  > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API),   strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y   coordinates.
-  > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according   to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}},   and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
+  > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
+  > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
   >
   > For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -245,6 +246,7 @@ Our writing style tends to be casual, so you should feel free to use contraction
   - **Incorrect**: February 24th, 2006; 24 February, 2006; 24/02/2006
 
   Alternately, you can use the YYYY/MM/DD format.
+
   - **Correct**: 2006/02/24
   - **Incorrect**: 02/24/2006; 24/02/2006; 02/24/06
 
@@ -277,6 +279,7 @@ Do not use "curly" quotes and quotation marks. On MDN Web Docs, we only use stra
 The list below describes some of the common situations where we need to be aware of the comma usage rules:
 
 - **After introductory clauses**: An introductory clause is a dependent clause, usually found at the beginning of a sentence. Use a comma after an introductory clause to separate it from the following independent clause.
+
   - Example 1:
     - **Correct**: "In this example, you will see how to use a comma."
     - **Incorrect**: "In this example you will see how to use a comma."
@@ -298,6 +301,7 @@ The list below describes some of the common situations where we need to be aware
   - **Incorrect**: "My dog is cute, and smart."
 
   Use comma before the conjunctions "and", "but", and "or" if they join two independent clauses. However, if the sentence is becoming very long or complex with the conjunction, consider rewriting it as two sentences.
+
   - Example 1:
     - **Correct**: "You can perform this step, but you need to pay attention to the file setting."
     - **Incorrect**: "You can perform this step but you need to pay attention to the file setting."
@@ -439,7 +443,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 If you include images or other media in on a page, follow these guidelines:
 
-- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license —  [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
+- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
 - When displaying icons on a page (e.g., via {{cssxref("background-image")}}), use icons from the [mdn-dinocons](https://github.com/mdn/mdn-dinocons) repository, where appropriate, and try to match their style in other cases. <!--this is not valid anymore, the repo has been archived. do we want to point readers to another resource?-->
@@ -468,10 +472,11 @@ However, depending on the type of list you are creating, you will want to adjust
   >
   > 1. Open with a heading or brief paragraph to introduce the instructions. It's important to provide the user with context before beginning the instructions.
   > 2. Start creating your instructions, and keep each step in its own numbered item.
-  >   Your instructions may be quite extensive, so it is important to write clearly and use correct punctuation.
+  >    Your instructions may be quite extensive, so it is important to write clearly and use correct punctuation.
   > 3. After you have finished your instructions, follow the numbered list with a brief closing summary or explanation about the expected outcome upon completion.
 
   The following is an example of writing a closing explanation for the above list:
+
   > We have created a short numbered list that provides instructive steps to produce a numbered list with the correct formatting.
 
   Notice how the items in numbered lists read like short paragraphs. Because numbered lists are routinely used for instructional purposes or to walk someone through an orderly procedure, be sure to keep each item focused: one numbered item per step.

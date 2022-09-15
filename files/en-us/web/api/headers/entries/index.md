@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Headers.entries
 ---
+
 {{APIRef}}
 
 The **`Headers.entries()`** method returns an
@@ -21,7 +22,7 @@ contained in this object. The both the key and value of each pairs are
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

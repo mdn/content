@@ -11,6 +11,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.onstart
 ---
+
 {{AddonSidebar()}}
 
 An event handler that will be called when the stream is opened and is about to begin delivering data. From this point on, the extension may use filter functions like {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.

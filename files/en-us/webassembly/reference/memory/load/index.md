@@ -7,6 +7,7 @@ tags:
   - Reference
   - Memory
 ---
+
 {{WebAssemblySidebar}}
 
 The **`load`** instructions, are used to load a number from memory onto the stack.

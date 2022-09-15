@@ -11,6 +11,7 @@ tags:
   - shadow DOM
 browser-compat: api.Element.attachShadow
 ---
+
 {{APIRef('Shadow DOM')}}
 
 The **`Element.attachShadow()`** method attaches a shadow DOM tree to the specified element and returns a reference to its {{domxref("ShadowRoot")}}.
@@ -44,7 +45,7 @@ The following is a list of elements you **can** attach a shadow root to:
 
 ## Syntax
 
-```js
+```js-nolint
 attachShadow(options)
 ```
 
@@ -60,6 +61,7 @@ attachShadow(options)
         This can be one of:
 
         - `open`
+
           - : Elements of the shadow root are accessible from JavaScript outside the root,
             for example using {{domxref("Element.shadowRoot")}}:
 
@@ -68,6 +70,7 @@ attachShadow(options)
             ```
 
         - `closed`
+
           - : Denies access to the node(s) of a closed shadow root
             from JavaScript outside it:
 
@@ -76,6 +79,7 @@ attachShadow(options)
             ```
 
     - `delegatesFocus`
+
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
         When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling.
 

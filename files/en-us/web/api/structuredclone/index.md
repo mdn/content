@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: api.structuredClone
 ---
+
 {{APIRef("HTML DOM")}}
 
 The global **`structuredClone()`** method creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
@@ -21,7 +22,7 @@ Transferred objects are detached from the original object and attached to the ne
 
 ## Syntax
 
-```js
+```js-nolint
 structuredClone(value)
 structuredClone(value, transferables)
 ```
@@ -75,7 +76,7 @@ On return, the original `uInt8Array.buffer` will be cleared.
 
 ```js
 // 16MB = 1024 * 1024 * 16
-const uInt8Array = Uint8Array.from({ length: 1024 * 1024 * 16 }, (v, i) => i); 
+const uInt8Array = Uint8Array.from({ length: 1024 * 1024 * 16 }, (v, i) => i);
 
 const transferred = structuredClone(uInt8Array, { transfer: [uInt8Array.buffer] });
 console.log(uInt8Array.byteLength);  // 0

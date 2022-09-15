@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules.prototype.resolvedOptions()`** method
@@ -20,7 +21,7 @@ options computed during initialization of this {{jsxref("Intl.PluralRules")}} ob
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reflect
 browser-compat: javascript.builtins.Reflect
 ---
+
 {{JSRef}}
 
 **`Reflect`** is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of [proxy handlers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy). `Reflect` is not a function object, so it's not constructible.
@@ -34,7 +35,7 @@ Some of these methods are also the same as corresponding methods on {{jsxref("Ob
 - {{jsxref("Reflect.get()")}}
   - : Returns the value of the property. Works like getting a property from an object (`target[propertyKey]`) as a function.
 - {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
-  - : Similar to {{jsxref("Object.getOwnPropertyDescriptor()")}}. Returns a property descriptor of the given property if it exists on the object,  {{jsxref("undefined")}} otherwise.
+  - : Similar to {{jsxref("Object.getOwnPropertyDescriptor()")}}. Returns a property descriptor of the given property if it exists on the object, {{jsxref("undefined")}} otherwise.
 - {{jsxref("Reflect.getPrototypeOf()")}}
   - : Same as {{jsxref("Object.getPrototypeOf()")}}.
 - {{jsxref("Reflect.has()")}}

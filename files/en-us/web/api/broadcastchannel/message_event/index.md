@@ -1,5 +1,5 @@
 ---
-title: 'BroadcastChannel: message event'
+title: "BroadcastChannel: message event"
 slug: Web/API/BroadcastChannel/message_event
 page-type: web-api-event
 tags:
@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.BroadcastChannel.message_event
 ---
+
 {{APIRef}}
 
 The `message` event is fired on a {{domxref('BroadcastChannel')}} object when a message arrives on that channel.
@@ -49,7 +50,7 @@ In this example there's a "sender" [`<iframe>`](/en-US/docs/Web/HTML/Element/ifr
 
 ```html hidden
 <h1>Sender</h1>
-<label for="message">Type a message to broadcast:</label><br/>
+<label for="message">Type a message to broadcast:</label><br />
 <textarea id="message" name="message" rows="1" cols="40">Hello</textarea>
 <button id="broadcast-message" type="button">Broadcast message</button>
 ```

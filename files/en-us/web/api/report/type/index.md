@@ -12,6 +12,7 @@ tags:
   - Type
 browser-compat: api.Report.type
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`type`** read-only property of the {{domxref("Report")}}

@@ -19,7 +19,7 @@ The **`Math.pow()`** method returns the value of a base raised to a power. That 
 
 ## Syntax
 
-```js
+```js-nolint
 Math.pow(base, exponent)
 ```
 

@@ -20,6 +20,7 @@ tags:
   - stream
 browser-compat: api.RTCOutboundRtpStreamStats.framesEncoded
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`framesEncoded`** property of

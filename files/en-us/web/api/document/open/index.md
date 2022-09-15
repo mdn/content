@@ -11,6 +11,7 @@ tags:
   - open
 browser-compat: api.Document.open
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.open()`** method opens a document for
@@ -24,7 +25,7 @@ This does come with some side effects. For example:
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 ```
 
@@ -87,7 +88,7 @@ entry of the document being written to.
 
 This form is now obsolete; it won't throw an error, but instead just forwards to
 `document.open()` (i.e. is the equivalent of just running it with no
-arguments).  The history-replacement behavior now always happens.
+arguments). The history-replacement behavior now always happens.
 
 ## Specifications
 

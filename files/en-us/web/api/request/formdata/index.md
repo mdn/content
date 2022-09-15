@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Request.formData
 ---
+
 {{APIRef("Fetch")}}
 
 The **`formData()`** method of the {{domxref("Request")}} interface
@@ -18,7 +19,7 @@ reads the request body and returns it as a promise that resolves with a {{domxre
 
 ## Syntax
 
-```js
+```js-nolint
 formData()
 ```
 

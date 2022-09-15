@@ -15,6 +15,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.perspective-origin
 ---
+
 {{CSSRef}}
 
 The **`perspective-origin`** [CSS](/en-US/docs/Web/CSS) property determines the position at which the viewer is looking. It is used as the _vanishing point_ by the {{cssxref("perspective")}} property.

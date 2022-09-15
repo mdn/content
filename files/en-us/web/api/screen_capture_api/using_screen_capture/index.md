@@ -18,6 +18,7 @@ tags:
   - screen
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 In this article, we will examine how to use the Screen Capture API and its {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture part or all of a screen for streaming, recording, or sharing during a [WebRTC](/en-US/docs/Web/API/WebRTC_API) conference session.
@@ -262,16 +263,22 @@ The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "g
 The HTML starts with a simple introductory paragraph, then gets into the meat of things.
 
 ```html
-<p>This example shows you the contents of the selected part of your display.
-Click the Start Capture button to begin.</p>
+<p>
+  This example shows you the contents of the selected part of your display.
+  Click the Start Capture button to begin.
+</p>
 
-<p><button id="start">Start Capture</button>&nbsp;<button id="stop">Stop Capture</button></p>
+<p>
+  <button id="start">Start Capture</button>&nbsp;<button id="stop">
+    Stop Capture
+  </button>
+</p>
 
 <video id="video" autoplay></video>
-<br>
+<br />
 
 <strong>Log:</strong>
-<br>
+<br />
 <pre id="log"></pre>
 ```
 
@@ -327,8 +334,7 @@ Feature-Policy: display-capture 'self'
 If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:
 
 ```html
-<iframe src="https://mycode.example.net/etc" allow="display-capture">
-</iframe>
+<iframe src="https://mycode.example.net/etc" allow="display-capture"> </iframe>
 ```
 
 ## Browser compatibility

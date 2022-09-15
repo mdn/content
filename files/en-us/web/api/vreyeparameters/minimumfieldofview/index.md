@@ -17,6 +17,7 @@ tags:
   - minimumFieldOfView
 browser-compat: api.VREyeParameters.minimumFieldOfView
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`minimumFieldOfView`** read-only property of the {{domxref("VREyeParameters")}} interface describes the minimum supported field of view for the current eye.

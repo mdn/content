@@ -13,13 +13,14 @@ tags:
   - Experimental
 browser-compat: api.XRHitTestSource.cancel
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`cancel()`** method of the {{domxref("XRHitTestSource")}} interface unsubscribes a hit test.
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 ```
 

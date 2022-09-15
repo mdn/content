@@ -11,6 +11,7 @@ tags:
   - Authentication
 browser-compat: http.headers.WWW-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`WWW-Authenticate`** response header defines the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods ("challenges") that might be used to gain access to a specific resource.
@@ -82,9 +83,11 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ## Directives
 
 - `<auth-scheme>`
+
   - : The [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
 
     > **Note:** For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
+
 - **realm=**\<realm> {{optional_inline}}
   - : A string describing a protected area.
     A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning), and informs users about which particular username/password are required.

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Date.toGMTString
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`toGMTString()`** method converts a date to a string, using Internet Greenwich Mean Time (GMT) conventions. In practice, it's an alias for {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}.
@@ -19,7 +20,7 @@ The **`toGMTString()`** method converts a date to a string, using Internet Green
 
 ## Syntax
 
-```js
+```js-nolint
 toGMTString()
 ```
 

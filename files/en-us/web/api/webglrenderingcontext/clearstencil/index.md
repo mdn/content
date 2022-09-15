@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.clearStencil
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.clearStencil()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the clear value for the
@@ -20,7 +21,7 @@ This specifies what stencil value to use when calling the
 
 ## Syntax
 
-```js
+```js-nolint
 clearStencil(s)
 ```
 

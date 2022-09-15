@@ -11,6 +11,7 @@ tags:
   - Reporting API
 browser-compat: api.DeprecationReportBody
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `DeprecationReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of a deprecation report.
@@ -93,7 +94,7 @@ function displayReports(reports) {
       innerListItem.textContent = `${key}: ${value}`;
       innerList.appendChild(innerListItem);
     }
-  }
+  });
 }
 ```
 

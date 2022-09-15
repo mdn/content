@@ -12,6 +12,7 @@ tags:
   - origin
 browser-compat: api.URL.origin
 ---
+
 {{APIRef("URL API")}}
 
 The **`origin`** read-only property of

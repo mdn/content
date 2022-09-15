@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-position-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-mask-position-x` CSS property sets the initial horizontal position of a mask image.

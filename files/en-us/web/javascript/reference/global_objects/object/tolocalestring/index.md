@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Object.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string representing
@@ -19,7 +20,7 @@ purposes.
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 ```
 

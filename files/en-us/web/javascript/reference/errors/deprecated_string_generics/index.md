@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning about string generics occurs in Firefox versions prior to 68.

@@ -12,6 +12,7 @@ tags:
   - onInputEntered
 browser-compat: webextensions.api.omnibox.onInputEntered
 ---
+
 {{AddonSidebar()}}
 
 Fired when the user has selected one of the suggestions your extension has added to the address bar's drop-down list.
@@ -23,7 +24,7 @@ Use this event to handle the user's selection, generally by opening the correspo
 
 ## Syntax
 
-```js
+```js-nolint
 browser.omnibox.onInputEntered.addListener(listener)
 browser.omnibox.onInputEntered.removeListener(listener)
 browser.omnibox.onInputEntered.hasListener(listener)

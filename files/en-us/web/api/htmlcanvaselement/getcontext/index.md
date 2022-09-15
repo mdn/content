@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 The
@@ -24,7 +25,7 @@ different drawing context object on a given canvas element.
 
 ## Syntax
 
-```js
+```js-nolint
 getContext(contextType)
 getContext(contextType, contextAttributes)
 ```
@@ -109,6 +110,7 @@ getContext(contextType, contextAttributes)
         indicates if a context will be created if the system performance is low or if no
         hardware GPU is available.
     - `powerPreference`
+
       - : A hint to the user agent
         indicating what configuration of GPU is suitable for the WebGL context. Possible
         values are:

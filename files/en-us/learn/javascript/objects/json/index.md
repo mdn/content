@@ -15,8 +15,9 @@ tags:
   - Learn
   - Objects
   - Tutorial
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.
@@ -69,11 +70,7 @@ This allows you to construct a data hierarchy, like so:
       "name": "Molecule Man",
       "age": 29,
       "secretIdentity": "Dan Jukes",
-      "powers": [
-        "Radiation resistance",
-        "Turning tiny",
-        "Radiation blast"
-      ]
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
     },
     {
       "name": "Madame Uppercut",
@@ -135,11 +132,7 @@ We can also convert arrays to/from JSON. Below is also valid JSON, for example:
     "name": "Molecule Man",
     "age": 29,
     "secretIdentity": "Dan Jukes",
-    "powers": [
-      "Radiation resistance",
-      "Turning tiny",
-      "Radiation blast"
-    ]
+    "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
   },
   {
     "name": "Madame Uppercut",

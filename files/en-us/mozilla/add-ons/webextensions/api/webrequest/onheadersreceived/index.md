@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onHeadersReceived
 ---
+
 {{AddonSidebar()}}
 
 Fired when the HTTP response headers for a request are received. Use this event to modify HTTP response headers.
@@ -29,7 +30,7 @@ If you want to see the headers that are processed by the system, without the ris
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onHeadersReceived.addListener(
   listener,             // function
   filter,               //  object
@@ -59,7 +60,7 @@ Events have three functions:
     - `details`
       - : [`object`](#details_2). Details of the request. This will include response headers if you have included `"responseHeaders"` in `extraInfoSpec`.
 
-    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener will return a `BlockingResponse` object, and can set its `responseHeaders` property. In Firefox, the return value can be a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a  `BlockingResponse`.
+    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener will return a `BlockingResponse` object, and can set its `responseHeaders` property. In Firefox, the return value can be a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `BlockingResponse`.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that are sent to this listener.

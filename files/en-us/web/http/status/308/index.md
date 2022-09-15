@@ -8,6 +8,7 @@ tags:
   - redirects
 browser-compat: http.status.308
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP)

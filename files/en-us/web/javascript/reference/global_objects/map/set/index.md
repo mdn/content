@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.set
 ---
+
 {{JSRef}}
 
 The **`set()`** method adds or updates an entry in a `Map` object with a specified key and a value.
@@ -18,7 +19,7 @@ The **`set()`** method adds or updates an entry in a `Map` object with a specifi
 
 ## Syntax
 
-```js
+```js-nolint
 set(key, value)
 ```
 

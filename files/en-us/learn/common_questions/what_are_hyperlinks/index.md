@@ -7,6 +7,7 @@ tags:
   - Navigation
   - NeedsActiveLearning
 ---
+
 In this article, we'll go over what hyperlinks are and why they matter.
 
 <table>

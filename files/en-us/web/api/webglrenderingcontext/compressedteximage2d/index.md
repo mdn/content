@@ -14,6 +14,7 @@ browser-compat:
   - api.WebGLRenderingContext.compressedTexImage2D
   - api.WebGL2RenderingContext.compressedTexImage3D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.compressedTexImage2D()`**
@@ -26,7 +27,7 @@ using these methods.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL 1:
 compressedTexImage2D(target, level, internalformat, width, height, border)
 compressedTexImage2D(target, level, internalformat, width, height, border, pixels)

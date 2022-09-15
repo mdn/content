@@ -19,6 +19,7 @@ tags:
   - parameters
 browser-compat: api.RTCRtpEncodingParameters.maxBitrate
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpEncodingParameters")}} dictionary's

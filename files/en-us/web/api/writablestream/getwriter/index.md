@@ -11,6 +11,7 @@ tags:
   - getWriter
 browser-compat: api.WritableStream.getWriter
 ---
+
 {{APIRef("Streams")}}
 
 The **`getWriter()`** method of the {{domxref("WritableStream")}} interface returns a new instance of {{domxref("WritableStreamDefaultWriter")}} and locks the stream to that instance.
@@ -18,7 +19,7 @@ While the stream is locked, no other writer can be acquired until this one is re
 
 ## Syntax
 
-```js
+```js-nolint
 getWriter()
 ```
 
@@ -37,7 +38,7 @@ A {{domxref("WritableStreamDefaultWriter")}} object instance.
 
 ## Examples
 
-The following example illustrates several features of this interface.  It shows the
+The following example illustrates several features of this interface. It shows the
 creation of the `WritableStream` with a custom sink and an API-supplied
 queuing strategy. It then calls a function called `sendMessage()`, passing
 the newly created stream and a string. Inside this function it calls the stream's

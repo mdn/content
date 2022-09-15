@@ -13,6 +13,7 @@ tags:
   - Houdini
 browser-compat: api.CSSMatrixComponent.CSSMatrixComponent
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMatrixComponent()`** constructor
@@ -21,7 +22,7 @@ individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMatrixComponent(matrix)
 new CSSMatrixComponent(matrix, options)
 ```

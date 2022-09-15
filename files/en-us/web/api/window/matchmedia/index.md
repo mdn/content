@@ -13,6 +13,7 @@ tags:
   - Window
 browser-compat: api.Window.matchMedia
 ---
+
 {{APIRef}}
 
 The {{domxref("Window")}} interface's **`matchMedia()`** method
@@ -23,7 +24,7 @@ media query.
 
 ## Syntax
 
-```js
+```js-nolint
 matchMedia(mediaQueryString)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-meter-suboptimum-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-meter-suboptimum-value`** [pseudo-element](/en-US/docs/Glossary/Pseudo-element) gives a yellow color to the {{htmlelement("meter")}} element when the value attribute falls outside of the low-high range.
@@ -27,7 +28,7 @@ This example will only work in browsers based on WebKit or Blink.
 ### HTML
 
 ```html
-<meter min="0" max="10" low="3" high="7" value="2" >Score out of 10</meter>
+<meter min="0" max="10" low="3" high="7" value="2">Score out of 10</meter>
 ```
 
 ### CSS

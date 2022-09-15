@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toUTCString
 ---
+
 {{JSRef}}
 
 The **`toUTCString()`** method converts a date to a string, interpreting it in the UTC time zone.
@@ -19,7 +20,7 @@ Based on [rfc7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1
 
 ## Syntax
 
-```js
+```js-nolint
 toUTCString()
 ```
 

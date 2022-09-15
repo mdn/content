@@ -14,6 +14,7 @@ tags:
   - takePhoto
 browser-compat: api.ImageCapture.takePhoto
 ---
+
 {{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`takePhoto()`** method of the
@@ -23,7 +24,7 @@ that resolves with a {{domxref("Blob")}} containing the data.
 
 ## Syntax
 
-```js
+```js-nolint
 takePhoto()
 takePhoto(photoSettings)
 ```

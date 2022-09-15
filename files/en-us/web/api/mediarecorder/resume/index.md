@@ -31,8 +31,8 @@ the following steps:
 
 ## Syntax
 
-```js
-resume();
+```js-nolint
+resume()
 ```
 
 ### Parameters

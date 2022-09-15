@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.WeakSet.WeakSet
 ---
+
 {{JSRef}}
 
 The **`WeakSet`** constructor lets you create
@@ -16,7 +17,7 @@ The **`WeakSet`** constructor lets you create
 
 ## Syntax
 
-```js
+```js-nolint
 new WeakSet()
 new WeakSet(iterable)
 ```

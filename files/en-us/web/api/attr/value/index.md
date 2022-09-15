@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Attr.value
 ---
+
 {{APIRef("DOM")}}
 
 The **`value`** property of the {{domxref("Attr")}} interface contains the value of the attribute.

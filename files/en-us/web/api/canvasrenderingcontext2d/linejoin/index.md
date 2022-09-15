@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.lineJoin
 ---
+
 {{APIRef}}
 
 The
@@ -23,8 +24,8 @@ zero (i.e., with all endpoints and control points at the exact same position) ar
 ignored.
 
 > **Note:** Lines can be drawn with the
-> {{domxref("CanvasRenderingContext2D.stroke()",
-    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
+> {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}},
+> {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
 ## Value

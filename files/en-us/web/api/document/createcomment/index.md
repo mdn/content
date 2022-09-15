@@ -17,7 +17,7 @@ it.
 
 ## Syntax
 
-```js
+```js-nolint
 createComment(data)
 ```
 

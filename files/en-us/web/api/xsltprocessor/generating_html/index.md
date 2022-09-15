@@ -55,7 +55,7 @@ A template matching the root node of the XML document is created and used to cre
       <xsl:value-of select="/myNS:Article/myNS:Title"/>
     </title>
 
-    <style type="text/css">
+    <style>
       .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
     </style>
 
@@ -135,7 +135,7 @@ The final XSLT stylesheet looks as follows:
           <xsl:value-of select="/myNS:Article/myNS:Title"/>
         </title>
 
-        <style type="text/css">
+        <style>
           .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
         </style>
 

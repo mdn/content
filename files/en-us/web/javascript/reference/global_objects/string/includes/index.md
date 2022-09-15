@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.includes
 ---
+
 {{JSRef}}
 
 The **`includes()`** method performs a case-sensitive search to determine whether one string may be found within another string, returning `true` or `false` as appropriate.
@@ -18,7 +19,7 @@ The **`includes()`** method performs a case-sensitive search to determine whethe
 
 ## Syntax
 
-```js
+```js-nolint
 includes(searchString)
 includes(searchString, position)
 ```

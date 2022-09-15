@@ -13,6 +13,7 @@ tags:
   - Workers
 browser-compat: api.Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`Worker`** interface of the [Web Workers API](/en-US/docs/Web/API/Web_Workers_API) represents a background task that can be created via script, which can send messages back to its creator.

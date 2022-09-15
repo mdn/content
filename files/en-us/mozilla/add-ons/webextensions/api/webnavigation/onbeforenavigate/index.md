@@ -13,13 +13,14 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.onBeforeNavigate
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser is about to start a navigation event.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onBeforeNavigate.addListener(
   listener,                   // function
   filter                      // optional object

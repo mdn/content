@@ -13,13 +13,14 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onRestartRequired
 ---
+
 {{AddonSidebar()}}
 
 Fired when an app or the device that it runs on needs to be restarted. The app should close all its windows at its earliest convenience to let the restart happen. If the app does nothing, a restart will be enforced after a 24-hour grace period has passed. Currently, this event is only fired for Chrome OS kiosk apps.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onRestartRequired.addListener(listener)
 browser.runtime.onRestartRequired.removeListener(listener)
 browser.runtime.onRestartRequired.hasListener(listener)

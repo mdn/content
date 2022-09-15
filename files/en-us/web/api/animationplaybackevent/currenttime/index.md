@@ -14,6 +14,7 @@ tags:
   - web animations api
 browser-compat: api.AnimationPlaybackEvent.currentTime
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`currentTime`** read-only property of the {{domxref("AnimationPlaybackEvent")}} interface represents the current time of the animation that generated the event at the moment the event is queued. This will be unresolved if the animation was `idle` at the time the event was generated.
@@ -25,7 +26,7 @@ A number representing the current time in milliseconds, or `null`.
 ## Reduced time precision
 
 To offer protection against timing attacks and fingerprinting, the precision of `playbackEvent.currentTime` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20 µs in Firefox 59; in 60, it will be 2 ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60

@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSTransformValue.CSSTransformValue
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTransformValue()`** constructor
@@ -21,7 +22,7 @@ individual transform objects.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSTransformValue(transforms)
 ```
 

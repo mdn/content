@@ -12,6 +12,7 @@ tags:
   - matches
 browser-compat: api.MediaQueryListEvent.matches
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`matches`** read-only property of the

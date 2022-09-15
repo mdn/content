@@ -20,6 +20,7 @@ tags:
   - Polyfill
 browser-compat: api.Window.requestAnimationFrame
 ---
+
 {{APIRef}}
 
 The **`window.requestAnimationFrame()`** method tells the
@@ -55,7 +56,7 @@ timestamp is a decimal number, in milliseconds, but with a minimal precision of 
 
 ## Syntax
 
-```js
+```js-nolint
 requestAnimationFrame(callback)
 ```
 

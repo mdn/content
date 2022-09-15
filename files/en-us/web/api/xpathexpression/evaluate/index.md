@@ -11,6 +11,7 @@ tags:
   - XPathExpression
 browser-compat: api.XPathExpression.evaluate
 ---
+
 {{APIRef("DOM XPath")}}
 
 The **`evaluate()`** method of the
@@ -19,7 +20,7 @@ returns an {{domxref("XPathResult")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 evaluate(contextNode)
 evaluate(contextNode, type)
 evaluate(contextNode, type, result)

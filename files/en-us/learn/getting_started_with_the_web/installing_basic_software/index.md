@@ -8,9 +8,10 @@ tags:
   - Setup
   - Tools
   - WebMechanics
-  - l10n:priority
+  - "l10n:priority"
   - text editor
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
 In _Installing basic software_, we show you what tools you need to do simple web development and how to install them properly.

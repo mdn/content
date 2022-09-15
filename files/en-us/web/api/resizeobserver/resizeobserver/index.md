@@ -11,6 +11,7 @@ tags:
   - observers
 browser-compat: api.ResizeObserver.ResizeObserver
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`ResizeObserver`** constructor creates a
@@ -20,7 +21,7 @@ content or border box of an {{domxref('Element')}} or the bounding box of an
 
 ## Syntax
 
-```js
+```js-nolint
 new ResizeObserver(callback)
 ```
 

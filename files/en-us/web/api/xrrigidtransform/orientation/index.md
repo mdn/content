@@ -21,6 +21,7 @@ tags:
   - rotation
 browser-compat: api.XRRigidTransform.orientation
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRRigidTransform")}} property

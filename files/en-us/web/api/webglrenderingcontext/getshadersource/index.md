@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderSource
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getShaderSource()`** method of the
@@ -18,7 +19,7 @@ The **`WebGLRenderingContext.getShaderSource()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getShaderSource(shader)
 ```
 

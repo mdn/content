@@ -14,6 +14,7 @@ tags:
   - list
 spec-urls: https://drafts.csswg.org/css-values/
 ---
+
 {{CSSRef}}
 
 **CSS data types** define typical values (including keywords and units) accepted by CSS properties and functions. They are a special kind of [component value type](https://www.w3.org/TR/css3-values/#component-types).

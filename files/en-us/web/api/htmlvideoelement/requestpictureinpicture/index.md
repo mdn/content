@@ -15,6 +15,7 @@ tags:
   - pip
 browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **{{domxref("HTMLVideoElement")}}** method
@@ -28,7 +29,7 @@ video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event",
 
 ## Syntax
 
-```js
+```js-nolint
 requestPictureInPicture()
 ```
 

@@ -12,6 +12,7 @@ tags:
   - createWaveShaper
 browser-compat: api.BaseAudioContext.createWaveShaper
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createWaveShaper()` method of the {{ domxref("BaseAudioContext") }}
@@ -24,7 +25,7 @@ distortion. It is used to apply distortion effects to your audio.
 
 ## Syntax
 
-```js
+```js-nolint
 createWaveShaper()
 ```
 

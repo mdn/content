@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Security
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "Permission denied to access property" occurs when there was
@@ -38,12 +39,14 @@ violated the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
+    <iframe
+      id="myframe"
+      src="http://www1.w3c-test.org/common/blank.html"></iframe>
     <script>
-      onload = function() {
+      onload = function () {
         console.log(frames[0].document);
         // Error: Permission denied to access property "document"
-      }
+      };
     </script>
   </head>
   <body></body>

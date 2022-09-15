@@ -10,15 +10,16 @@ tags:
   - Experimental
 browser-compat: api.NDEFReader.write
 ---
+
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The `write()` method of the {{DOMxRef("NDEFReader")}} interface attempts to write an NDEF message to a tag and returns a {{jsxref("Promise")}} that either resolves when a message has been written to the tag or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 
 ## Syntax
 
-```js
-NDEFReader.write(message);
-  NDEFReader.write(message, options);
+```js-nolint
+write(message)
+write(message, options)
 ```
 
 ### Parameters

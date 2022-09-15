@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Types
 ---
+
 {{jsSidebar("More")}}
 
 Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.
@@ -26,6 +27,7 @@ foo     = true;  // foo is now a boolean
 The set of types in the JavaScript language consists of [_primitive values_](#primitive_values) and [_objects_](#objects).
 
 - [Primitive values](#primitive_values) (immutable datum represented directly at the lowest level of the language)
+
   - [Boolean type](#boolean_type)
   - [Null type](#null_type)
   - [Undefined type](#undefined_type)

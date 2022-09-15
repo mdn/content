@@ -14,6 +14,7 @@ tags:
   - createObjectURL
 browser-compat: api.URL.createObjectURL
 ---
+
 {{APIRef("URL API")}}
 
 The **`URL.createObjectURL()`** static
@@ -33,7 +34,7 @@ To release an object URL, call {{domxref("URL.revokeObjectURL", "revokeObjectURL
 
 ## Syntax
 
-```js
+```js-nolint
 createObjectURL(object)
 ```
 
@@ -73,8 +74,7 @@ support for doing this.
 
 > **Warning:** If you still have code that relies on
 > {{domxref("URL.createObjectURL", "createObjectURL()")}} to attach streams to media
-> elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject",
-    "srcObject")}} to the `MediaStream` directly.
+> elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to the `MediaStream` directly.
 
 ## Specifications
 

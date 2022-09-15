@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRHitTestSource
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`XRHitTestSource`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) handles hit test subscriptions. You can get an `XRHitTestSource` object by using the {{domxref("XRSession.requestHitTestSource()")}} method.

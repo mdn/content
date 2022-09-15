@@ -11,6 +11,7 @@ tags:
   - factory function
 browser-compat: api.CSS
 ---
+
 {{APIRef("CSSOM")}}
 {{SeeCompatTable}}
 
@@ -23,53 +24,53 @@ functions create new numeric values less verbosely than using the
 
 ## Syntax
 
-```js
-CSS.number(number);
-CSS.percent(number);
+```js-nolint
+CSS.number(number)
+CSS.percent(number)
 
 // <length>
-CSS.em(number);
-CSS.ex(number);
-CSS.ch(number);
-CSS.ic(number);
-CSS.rem(number);
-CSS.lh(number);
-CSS.rlh(number);
-CSS.vw(number);
-CSS.vh(number);
-CSS.vi(number);
-CSS.vb(number);
-CSS.vmin(number);
-CSS.vmax(number);
-CSS.cm(number);
-CSS.mm(number);
-CSS.Q(number);
-CSS.in(number);
-CSS.pt(number);
-CSS.pc(number);
-CSS.px(number);
+CSS.em(number)
+CSS.ex(number)
+CSS.ch(number)
+CSS.ic(number)
+CSS.rem(number)
+CSS.lh(number)
+CSS.rlh(number)
+CSS.vw(number)
+CSS.vh(number)
+CSS.vi(number)
+CSS.vb(number)
+CSS.vmin(number)
+CSS.vmax(number)
+CSS.cm(number)
+CSS.mm(number)
+CSS.Q(number)
+CSS.in(number)
+CSS.pt(number)
+CSS.pc(number)
+CSS.px(number)
 
 // <angle>
-CSS.deg(number);
-CSS.grad(number);
-CSS.rad(number);
-CSS.turn(number);
+CSS.deg(number)
+CSS.grad(number)
+CSS.rad(number)
+CSS.turn(number)
 
 // <time>
-CSS.s(number);
-CSS.ms(number);
+CSS.s(number)
+CSS.ms(number)
 
 // <frequency>
-CSS.Hz(number);
-CSS.kHz(number);
+CSS.Hz(number)
+CSS.kHz(number)
 
 // <resolution>
-CSS.dpi(number);
-CSS.dpcm(number);
-CSS.dppx(number);
+CSS.dpi(number)
+CSS.dpcm(number)
+CSS.dppx(number)
 
 // <flex>
-CSS.fr(number);
+CSS.fr(number)
 ```
 
 ## Examples

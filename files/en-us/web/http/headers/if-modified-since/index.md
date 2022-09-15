@@ -9,6 +9,7 @@ tags:
   - Request header
 browser-compat: http.headers.If-Modified-Since
 ---
+
 {{HTTPSidebar}}
 
 The **`If-Modified-Since`** request HTTP header makes the

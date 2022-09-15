@@ -11,6 +11,7 @@ tags:
   - complete
 browser-compat: api.OfflineAudioContext.complete_event
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 The `complete` event of the {{domxref("OfflineAudioContext")}} interface is fired when the rendering of an offline audio context is complete.

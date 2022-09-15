@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.IDBDatabase.close_event
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The `close` event is fired on `IDBDatabase` when the database connection is unexpectedly closed. This could happen, for example, if the underlying storage is removed or if the user clears the database in the browser's history preferences.

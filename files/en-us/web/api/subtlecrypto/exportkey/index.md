@@ -11,6 +11,7 @@ tags:
   - exportKey
 browser-compat: api.SubtleCrypto.exportKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`exportKey()`** method of the {{domxref("SubtleCrypto")}}
@@ -31,7 +32,7 @@ API instead.
 
 ## Syntax
 
-```js
+```js-nolint
 exportKey(format, key)
 ```
 

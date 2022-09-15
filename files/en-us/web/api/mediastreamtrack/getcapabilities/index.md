@@ -12,6 +12,7 @@ tags:
   - getCapabilities
 browser-compat: api.MediaStreamTrack.getCapabilities
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getCapabilities()`** method of
@@ -26,7 +27,7 @@ track to be configured to match ideal or acceptable settings. See [Capabilities,
 
 ## Syntax
 
-```js
+```js-nolint
 getCapabilities()
 ```
 

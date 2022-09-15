@@ -4,6 +4,7 @@ slug: Web/API/MediaImage
 page-type: web-api-interface
 browser-compat: api.MediaImage
 ---
+
 {{APIRef("Media Session API")}}
 
 The Media Session API's **`MediaImage`** dictionary describes the images associated with a media resource's {{domxref("MediaMetadata")}}.

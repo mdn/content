@@ -19,6 +19,7 @@ tags:
   - remove
 browser-compat: api.CSSStyleSheet.deleteRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The {{domxref("CSSStyleSheet")}} method
@@ -27,7 +28,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteRule(index)
 ```
 

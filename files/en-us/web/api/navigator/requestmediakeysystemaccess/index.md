@@ -17,6 +17,7 @@ tags:
   - requestMediaKeySystemAccess
 browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
+
 {{DefaultAPISidebar("Encrypted Media Extensions")}}
 
 The **`Navigator.requestMediaKeySystemAccess()`** method
@@ -34,7 +35,7 @@ returned {{domxref("MediaKeySystemAccess")}} object's
 
 ## Syntax
 
-```js
+```js-nolint
 requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 ```
 

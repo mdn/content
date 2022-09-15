@@ -12,6 +12,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.id
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`id`** read-only property of the

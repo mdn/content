@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules.supportedLocalesOf()`** method returns
@@ -21,7 +22,7 @@ formatting without having to fall back to the runtime's default locale.
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.PluralRules.supportedLocalesOf(locales)
 Intl.PluralRules.supportedLocalesOf(locales, options)
 ```

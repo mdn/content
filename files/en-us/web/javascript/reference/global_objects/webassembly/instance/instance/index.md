@@ -8,6 +8,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Instance.Instance
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Instance()`** constructor creates a new

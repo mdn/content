@@ -1540,6 +1540,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLModelElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLModElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -3906,6 +3910,10 @@
     },
     "XRBoundedReferenceSpace": {
       "inh": "XRReferenceSpace",
+      "impl": []
+    },
+    "XRCamera": {
+      "inh": "",
       "impl": []
     },
     "XRCompositionLayer": {

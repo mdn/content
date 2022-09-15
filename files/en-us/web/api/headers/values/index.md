@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Headers.values
 ---
+
 {{APIRef}}
 
 The **`Headers.values()`** method returns an
@@ -20,7 +21,7 @@ in this object. The values are {{jsxref("String")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

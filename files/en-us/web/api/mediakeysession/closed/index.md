@@ -12,6 +12,7 @@ tags:
   - closed
 browser-compat: api.MediaKeySession.closed
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.closed` read-only property returns a

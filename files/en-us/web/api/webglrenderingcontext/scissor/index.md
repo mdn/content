@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.scissor
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.scissor()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets a scissor box, which limits
@@ -17,7 +18,7 @@ the drawing to a specified rectangle.
 
 ## Syntax
 
-```js
+```js-nolint
 scissor(x, y, width, height)
 ```
 

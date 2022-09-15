@@ -11,6 +11,7 @@ tags:
   - write
 browser-compat: api.WritableStreamDefaultWriter.write
 ---
+
 {{APIRef("Streams")}}
 
 The **`write()`** method of the
@@ -25,7 +26,7 @@ destination.
 
 ## Syntax
 
-```js
+```js-nolint
 write(chunk)
 ```
 

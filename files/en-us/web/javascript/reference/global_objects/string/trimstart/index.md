@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.trimStart
 ---
+
 {{JSRef}}
 
 The **`trimStart()`** method removes whitespace from the
@@ -19,7 +20,7 @@ beginning of a string. `trimLeft()` is an alias of this method.
 
 ## Syntax
 
-```js
+```js-nolint
 trimStart()
 
 trimLeft()

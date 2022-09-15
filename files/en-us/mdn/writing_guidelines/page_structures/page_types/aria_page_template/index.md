@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 ## Page includes
@@ -83,25 +84,27 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 >
 > Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
 >
->  ```md
->  ## Examples
+> ```md
+> ## Examples
 >
->  ### Using the fetch API
->  Example of Fetch
+> ### Using the fetch API
 >
->  ### More examples
->  Links to more examples on other pages
->  ```
+> Example of Fetch
+>
+> ### More examples
+>
+> Links to more examples on other pages
+> ```
 >
 > **Scenario 2:** If you _only_ have examples on another page and none on this page:
 >
 > Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
 >
->  ```md
->   ## Examples
+> ```md
+> ## Examples
 >
->   For examples of this API, see [the page on fetch()](https://example.org).
->
+> For examples of this API, see [the page on fetch()](https://example.org).
+> ```
 
 ## Accessibility concerns
 

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.BlobEvent.data
 ---
+
 {{APIRef("Media Recorder API")}}
 
 The **`BlobEvent.data`** read-only property represents a {{domxref("Blob")}} associated with the event.

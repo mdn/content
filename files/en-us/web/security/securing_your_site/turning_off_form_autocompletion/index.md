@@ -7,6 +7,7 @@ tags:
   - Security
   - Web Development
 ---
+
 This article explains how a website can disable autocomplete for form fields.
 
 By default, browsers remember information that the user submits through {{HTMLElement("input")}} fields on websites. This enables the browser to offer autocompletion (that is, suggest possible completions for fields that the user has started typing in) or autofill (that is, pre-populate certain fields upon load).
@@ -27,16 +28,16 @@ You can do this either for an entire form, or for specific input elements in a f
 
 ```html
 <form method="post" action="/form" autocomplete="off">
-[…]
+  …
 </form>
 ```
 
 ```html
 <form method="post" action="/form">
-  […]
+  …
   <div>
     <label for="cc">Credit card:</label>
-    <input type="text" id="cc" name="cc" autocomplete="off">
+    <input type="text" id="cc" name="cc" autocomplete="off" />
   </div>
 </form>
 ```

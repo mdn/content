@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.BookmarkTreeNodeType
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.BookmarkTreeNodeType`** type is used to describe whether a node in the bookmark tree is a bookmark, a folder, or a separator.

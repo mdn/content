@@ -8,6 +8,7 @@ tags:
   - NeedsActiveLearning
   - WebMechanics
 ---
+
 In this article, we describe various web-related concepts: web pages, websites, web servers, and search engines. These terms are often confused by newcomers to the web or are incorrectly used. Let's learn what they each mean!
 
 <table>

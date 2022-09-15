@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.Bluetooth
 ---
+
 {{DefaultAPISidebar("Bluetooth API")}}{{SeeCompatTable}}
 
 The Web Bluetooth API provides the ability to connect and interact with Bluetooth Low Energy peripherals.

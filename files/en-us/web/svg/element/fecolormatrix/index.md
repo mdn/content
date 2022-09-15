@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feColorMatrix
 ---
+
 {{SVGRef}}
 
 The **`<feColorMatrix>`** SVG filter element changes colors based on a transformation matrix. Every pixel's color value `[R,G,B,A]` is [matrix multiplied](https://en.wikipedia.org/wiki/Matrix_multiplication) by a 5 by 5 color matrix to create new color `[R',G',B',A']`.
@@ -90,11 +91,13 @@ This element implements the {{domxref("SVGFEColorMatrixElement")}} interface.
 ### SVG
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 150 500"
-    preserveAspectRatio="xMidYMid meet"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 150 500"
+  preserveAspectRatio="xMidYMid meet"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- ref -->
   <defs>
     <g id="circles">
@@ -108,50 +111,59 @@ This element implements the {{domxref("SVGFEColorMatrixElement")}} interface.
 
   <!-- identity matrix -->
   <filter id="colorMeTheSame">
-    <feColorMatrix in="SourceGraphic"
-        type="matrix"
-        values="1 0 0 0 0
-                0 1 0 0 0
-                0 0 1 0 0
-                0 0 0 1 0" />
-   </filter>
-  <use href="#circles" transform="translate(0 70)" filter="url(#colorMeTheSame)" />
+    <feColorMatrix
+      in="SourceGraphic"
+      type="matrix"
+      values="1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 1 0" />
+  </filter>
+  <use
+    href="#circles"
+    transform="translate(0 70)"
+    filter="url(#colorMeTheSame)" />
   <text x="70" y="120">Identity matrix</text>
 
   <!-- Combine RGB into green matrix -->
   <filter id="colorMeGreen">
-    <feColorMatrix in="SourceGraphic"
-        type="matrix"
-        values="0 0 0 0 0
-                1 1 1 1 0
-                0 0 0 0 0
-                0 0 0 1 0" />
+    <feColorMatrix
+      in="SourceGraphic"
+      type="matrix"
+      values="0 0 0 0 0
+              1 1 1 1 0
+              0 0 0 0 0
+              0 0 0 1 0" />
   </filter>
-  <use href="#circles" transform="translate(0 140)" filter="url(#colorMeGreen)" />
+  <use
+    href="#circles"
+    transform="translate(0 140)"
+    filter="url(#colorMeGreen)" />
   <text x="70" y="190">rgbToGreen</text>
 
   <!-- saturate -->
   <filter id="colorMeSaturate">
-    <feColorMatrix in="SourceGraphic"
-        type="saturate"
-        values="0.2" />
+    <feColorMatrix in="SourceGraphic" type="saturate" values="0.2" />
   </filter>
-  <use href="#circles" transform="translate(0 210)" filter="url(#colorMeSaturate)" />
+  <use
+    href="#circles"
+    transform="translate(0 210)"
+    filter="url(#colorMeSaturate)" />
   <text x="70" y="260">saturate</text>
 
   <!-- hueRotate -->
   <filter id="colorMeHueRotate">
-    <feColorMatrix in="SourceGraphic"
-        type="hueRotate"
-        values="180" />
+    <feColorMatrix in="SourceGraphic" type="hueRotate" values="180" />
   </filter>
-  <use href="#circles" transform="translate(0 280)" filter="url(#colorMeHueRotate)" />
+  <use
+    href="#circles"
+    transform="translate(0 280)"
+    filter="url(#colorMeHueRotate)" />
   <text x="70" y="330">hueRotate</text>
 
   <!-- luminanceToAlpha -->
   <filter id="colorMeLTA">
-    <feColorMatrix in="SourceGraphic"
-        type="luminanceToAlpha" />
+    <feColorMatrix in="SourceGraphic" type="luminanceToAlpha" />
   </filter>
   <use href="#circles" transform="translate(0 350)" filter="url(#colorMeLTA)" />
   <text x="70" y="400">luminanceToAlpha</text>

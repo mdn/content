@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_xor_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise XOR assignment operator (`^=`) uses the binary representation of
@@ -19,7 +20,7 @@ variable.
 
 ## Syntax
 
-```js
+```js-nolint
 x ^= y // x = x ^ y
 ```
 

@@ -10,6 +10,7 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.label
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`label`** read-only property of the {{domxref("TextTrack")}} interface returns a human-readable label for the text track, if it is available.

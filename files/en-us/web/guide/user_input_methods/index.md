@@ -12,6 +12,7 @@ tags:
   - touch
   - user input
 ---
+
 Modern web user input goes beyond simple mouse and keyboard: think of touchscreens for example. This article provides recommendations for managing user input and implementing controls in open web apps, along with FAQs, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies. Relevant APIs and events include [touch events](/en-US/docs/Web/API/Touch_events), [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API), [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API), [Drag & Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) and more.
 
 ## User input and controls workflow
@@ -116,7 +117,7 @@ if (elem.requestFullscreen) {
 }
 ```
 
-> **Note:** To find more out about adding fullscreen functionality your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
+> **Note:** To find out more about adding fullscreen functionality your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 
 #### Drag & Drop
 
@@ -125,8 +126,10 @@ if (elem.requestFullscreen) {
 Here is an example that allows a section of content to be dragged.
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
-    This text <strong>may</strong> be dragged.
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+  This text <strong>may</strong> be dragged.
 </div>
 ```
 
@@ -150,9 +153,7 @@ div {
 ```
 
 ```html
-<div contenteditable="true">
-    This text can be edited by the user.
-</div>
+<div contenteditable="true">This text can be edited by the user.</div>
 ```
 
 {{EmbedLiveSample("contentEditable")}}

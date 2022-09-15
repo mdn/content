@@ -11,6 +11,7 @@ tags:
   - onInstalled
 browser-compat: webextensions.api.management.onInstalled
 ---
+
 {{AddonSidebar()}}
 
 Fired when an add-on is installed.
@@ -19,7 +20,7 @@ This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/
 
 ## Syntax
 
-```js
+```js-nolint
 browser.management.onInstalled.addListener(listener)
 browser.management.onInstalled.removeListener(listener)
 browser.management.onInstalled.hasListener(listener)

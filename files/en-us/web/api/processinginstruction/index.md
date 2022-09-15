@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.ProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 The **`ProcessingInstruction`** interface represents a [processing instruction](https://www.w3.org/TR/xml/#sec-pi); that is, a {{domxref("Node")}} which embeds an instruction targeting a specific application but that can be ignored by any other applications which don't recognize the instruction.

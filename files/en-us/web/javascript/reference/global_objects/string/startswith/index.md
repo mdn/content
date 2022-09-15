@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.startsWith
 ---
+
 {{JSRef}}
 
 The **`startsWith()`** method determines whether a string begins with the characters of a specified string, returning `true` or `false` as appropriate.
@@ -19,7 +20,7 @@ The **`startsWith()`** method determines whether a string begins with the charac
 
 ## Syntax
 
-```js
+```js-nolint
 startsWith(searchString)
 startsWith(searchString, position)
 ```

@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.resumeTransformFeedback
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.resumeTransformFeedback()`**
@@ -18,7 +19,7 @@ transform feedback operation.
 
 ## Syntax
 
-```js
+```js-nolint
 resumeTransformFeedback()
 ```
 

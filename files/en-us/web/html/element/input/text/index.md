@@ -14,6 +14,7 @@ tags:
   - text input
 browser-compat: html.elements.input.type_text
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`text`** create basic single-line text fields.
@@ -174,7 +175,7 @@ This attribute has been deprecated: use the {{htmlattrxref("enterkeyhint")}} glo
 <form>
   <div>
     <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name">
+    <input type="text" id="uname" name="name" />
   </div>
   <div>
     <button>Submit</button>
@@ -196,8 +197,11 @@ You can provide a useful placeholder inside your text input that can provide a h
 <form>
   <div>
     <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name"
-           placeholder="Lower case, all one word">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      placeholder="Lower case, all one word" />
   </div>
   <div>
     <button>Submit</button>
@@ -219,9 +223,12 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 <form>
   <div>
     <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name"
-           placeholder="Lower case, all one word"
-           size="30">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      placeholder="Lower case, all one word"
+      size="30" />
   </div>
   <div>
     <button>Submit</button>
@@ -274,7 +281,7 @@ You can use the {{htmlattrxref("required","input")}} attribute as an easy way of
 <form>
   <div>
     <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name" required>
+    <input type="text" id="uname" name="name" required />
     <span class="validity"></span>
   </div>
   <div>
@@ -319,9 +326,15 @@ The example below requires that the entered value be 4–8 characters in length.
 <form>
   <div>
     <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name" required size="10"
-           placeholder="Username"
-           minlength="4" maxlength="8">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="10"
+      placeholder="Username"
+      minlength="4"
+      maxlength="8" />
     <span class="validity"></span>
   </div>
   <div>
@@ -368,8 +381,13 @@ The example below restricts the value to 4-8 characters and requires that it con
 <form>
   <div>
     <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      pattern="[a-z]{4,8}" />
     <span class="validity"></span>
     <p>Usernames must be lowercase and 4-8 characters in length.</p>
   </div>

@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.FileEntrySync
 ---
+
 {{APIRef("File and Directory Entries API")}} {{Non-standard_header}}{{Deprecated_Header}}
 
 The `FileEntrySync` interface represents a file in a file system. It lets you write content to a file.

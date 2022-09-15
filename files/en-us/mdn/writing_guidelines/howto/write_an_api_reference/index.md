@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This guide takes you through all you need to know to write an API reference on MDN.
@@ -38,9 +39,9 @@ Before starting to document an API, you should have available:
    It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser.
    Good places to find them are:
 
-    - Your internal company address book, if you work for a relevant company.
-    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) or a W3C list like [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/).
-    - The spec itself. For example, the [Web Audio API spec](https://webaudio.github.io/web-audio-api/) lists the authors and their contact details at the top.
+   - Your internal company address book, if you work for a relevant company.
+   - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) or a W3C list like [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/).
+   - The spec itself. For example, the [Web Audio API spec](https://webaudio.github.io/web-audio-api/) lists the authors and their contact details at the top.
 
 ### Take some time to play with the API
 
@@ -100,8 +101,8 @@ Examples:
 > **Note:** We document every member appearing in the interface. You should bear the following rules in mind:
 
 - We document methods defined on the prototype of an object implementing this interface (instance methods), and methods defined on the actual class itself (static methods).
-On the rare occasions that they both exist on the same interface, you should list them in separate sections on the page (Static methods/Instance methods).
-Usually only instance methods exist, in which case you can put these under the title "Methods".
+  On the rare occasions that they both exist on the same interface, you should list them in separate sections on the page (Static methods/Instance methods).
+  Usually only instance methods exist, in which case you can put these under the title "Methods".
 - We do not document inherited properties and methods of the interface: they are listed on the respective parent interface. We do hint at their existence though.
 - We do document properties and methods defined in mixins. Please see the [contribution guide for mixins](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixins) for more details.
 - Special methods like the stringifier (`toString()`) and the jsonizer (`toJSON()`) are also listed if they do exist.
@@ -119,7 +120,7 @@ Example:
 
 #### Property pages
 
-Each interface has zero or more properties, documented on subpages of the interface's page. each page describes the purpose of the property and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug is the name of the property, and the title is interface name, dot, then property name.
+Each interface has zero or more properties, documented on subpages of the interface's page. Each page describes the purpose of the property and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug is the name of the property, and the title is interface name, dot, then property name.
 
 Examples:
 
@@ -131,7 +132,7 @@ Examples:
 
 #### Method pages
 
-Each interface has zero or more methods, documented on subpages of the interface's page. each page describes the purpose of the method and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug is the name of the method, and the title is interface name, dot, method name, then parentheses.
+Each interface has zero or more methods, documented on subpages of the interface's page. Each page describes the purpose of the method and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug is the name of the method, and the title is interface name, dot, method name, then parentheses.
 
 Examples:
 
@@ -232,7 +233,7 @@ The features of a landing page are outlined below:
 Now you should be ready to start writing your interface pages. Each interface reference page should observe the following structure:
 
 1. **\\{{APIRef}}**: Include the \\{{APIRef}} macro in the first line of each interface page, including the name of the API as an argument, so for example \\{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left-hand side of the interface page, including properties and methods, and other quick links as defined in the [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.
-    ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
+   ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
 2. **Standardization status**: The banner indicating the standardization status should be added next (these can be placed on the same line as the \\{{APIRef}} macro.):
 
    - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
@@ -243,12 +244,12 @@ Now you should be ready to start writing your interface pages. Each interface re
 4. **Inheritance diagram:** Use the [`\{{InheritanceDiagram}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) macro to embed an SVG inheritance diagram for the interface.
 5. **List of properties, List of methods**: These sections should be titled "Properties" and "Methods", and provide links (using the \\{{domxref}} macro) to a reference page for each property/method of that interface, along with a description of what each one does. These should be marked up using [description/definition lists](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists). Each description should be short and concise — one sentence if possible. See the "Referencing other API features with the \\{{domxref}} macro" section for a quicker way to create links to other pages.
 
-    At the beginning of both sections, before the beginning of the list of properties/methods, indicate inheritance using the appropriate sentence, in italics:
+   At the beginning of both sections, before the beginning of the list of properties/methods, indicate inheritance using the appropriate sentence, in italics:
 
-    - _This interface doesn't implement any specific properties, but inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
-    - _This interface also inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
-    - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
-    - _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
+   - _This interface doesn't implement any specific properties, but inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
+   - _This interface also inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
+   - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
+   - _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
 
    > **Note:** Properties that are read-only should have the \\{{ReadOnlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \\{{domxref}} links (after the use of the \\{{experimentalInline}}, \\{{non-standard_Inline}} and \\{{deprecatedInline}} macros, if some of these are needed.
 
@@ -282,7 +283,7 @@ Property pages must have the following sections:
 
 1. **Title**: the title of the page must be **InterfaceName.propertyName**. The interface name must start with a capital letter. Although an interface is implemented in JavaScript on the prototype of objects, we don't include `.prototype.` in the title, like we do in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 2. **\\{{APIRef}}**: Include the \\{{APIRef}} macro in the first line of each property page, including the name of the API as an argument, so for example \\{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left-hand side of the interface page, including properties and methods, and other quick links as defined in the [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.
-    ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
+   ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
 3. **Standardization status**: The banner indicating the standardization status should be added next to the interface name (these can be placed on the same line as the \\{{APIRef}} macro):
 
    - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
@@ -321,30 +322,30 @@ Method pages need the following sections:
 
 1. **Title**: the title of the page must be **InterfaceName.method()** (with the two terminal parentheses), but the slug (the end of the page URL) must not include the brackets. Also the interface name must start with a capital. Although an interface is implemented in JavaScript on the prototype of objects, we don't put `.prototype.` in the title, like we do in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 2. **\\{{APIRef}}**: Include the \\{{APIRef}} macro in the first line of each method page, including the name of the API as an argument, so for example \\{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left-hand side of the interface page, including properties and methods, and other quick links as defined in the [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.
-    ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
+   ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
 3. **Standardization status**: Next, the banner indicating the standardization status should be added (these can be placed on the same line as the \\{{APIRef}} macro):
 
-    - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
-    - \\{{Deprecated_header}}
-    - \\{{Non-standard_header}}
+   - \\{{SeeCompatTable}} for an experimental feature (i.e. the spec is not at the CR level.)
+   - \\{{Deprecated_header}}
+   - \\{{Non-standard_header}}
 
 4. **Description**: The first paragraph of the method page should provide a short concise description of the method's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. Obvious extra information to include is its default parameter values, any theory that the method relies on, and what the parameter values do.
 
-    - The beginning of the first sentence must follow the following structure:
-      - : The **`InterfaceName.method()`** method interface …
+   - The beginning of the first sentence must follow the following structure:
+     - : The **`InterfaceName.method()`** method interface …
 
-    > **Note:** `InterfaceName.method()` should be in `<code>`, and should also be in bold (`<strong>`) the first time it's used.
+   > **Note:** `InterfaceName.method()` should be in `<code>`, and should also be in bold (`<strong>`) the first time it's used.
 
 5. **Syntax**: The syntax section should include a 2–3 line example — usually just construction of the interface, then calling of the interface method.
 
-    - The syntax should be of the form:
-      - : method(param1, param2, …)
+   - The syntax should be of the form:
+     - : method(param1, param2, …)
 
-    The syntax section should include three subsections (see {{domxref("SubtleCrypto.sign()")}} for an example):
+   The syntax section should include three subsections (see {{domxref("SubtleCrypto.sign()")}} for an example):
 
-    - "Parameters": This should contain a definition list (or unordered list) that names and describes the different parameters the method takes. You should include the {{optional_inline}} macro next to the parameter name, in the case of optional parameters. If there are no parameters, this section should be omitted.
-    - "Return value": This should say what return value the method has, be it a simple value like a double or boolean, or a more complex value like another interface object, in which case you can use \\{{domxref}} macro to link to the MDN API page covering that interface (if it exists.) A method might return nothing, in which case the return value should be written as "\\{{jsxref('undefined')}}" (which will look like this in the rendered page: {{jsxref("undefined")}}).
-    - "Exceptions": This should list the different exceptions that can be raised when invoking the method, and what circumstances cause them. If there are no exceptions, this section should be omitted.
+   - "Parameters": This should contain a definition list (or unordered list) that names and describes the different parameters the method takes. You should include the {{optional_inline}} macro next to the parameter name, in the case of optional parameters. If there are no parameters, this section should be omitted.
+   - "Return value": This should say what return value the method has, be it a simple value like a double or boolean, or a more complex value like another interface object, in which case you can use \\{{domxref}} macro to link to the MDN API page covering that interface (if it exists.) A method might return nothing, in which case the return value should be written as "\\{{jsxref('undefined')}}" (which will look like this in the rendered page: {{jsxref("undefined")}}).
+   - "Exceptions": This should list the different exceptions that can be raised when invoking the method, and what circumstances cause them. If there are no exceptions, this section should be omitted.
 
 6. **Examples**: Include a code listing to show typical usage of the method in question. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you should reference a [GitHub](https://github.com/) repo containing the full example, and you could also link to a live example created using the [GitHub gh-pages feature](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN [Live Sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) feature to make it live and playable in the page.
 7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.

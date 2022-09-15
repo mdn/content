@@ -11,6 +11,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_vertex_array_object.bindVertexArrayOES
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_vertex_array_object.bindVertexArrayOES()`** method
@@ -19,7 +20,7 @@ passed {{domxref("WebGLVertexArrayObject")}} object to the buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 bindVertexArrayOES(arrayObject)
 ```
 

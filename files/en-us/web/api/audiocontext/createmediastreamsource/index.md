@@ -18,6 +18,7 @@ tags:
   - createMediastreamSource
 browser-compat: api.AudioContext.createMediaStreamSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createMediaStreamSource()` method of the {{ domxref("AudioContext") }}
@@ -30,7 +31,7 @@ For more details about media stream audio source nodes, check out the {{
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaStreamSource(stream)
 ```
 

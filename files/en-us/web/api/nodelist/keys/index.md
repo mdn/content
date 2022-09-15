@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: api.NodeList.keys
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.keys()`** method returns an
@@ -20,8 +21,8 @@ in this object. The keys are `unsigned integer`.
 
 ## Syntax
 
-```js
-nodeList.keys();
+```js-nolint
+keys()
 ```
 
 ### Return value

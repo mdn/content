@@ -23,6 +23,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLLayer.getViewport
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRWebGLLayer")}} interface's
@@ -35,7 +36,7 @@ represented by the view.
 
 ## Syntax
 
-```js
+```js-nolint
 getViewport(view)
 ```
 

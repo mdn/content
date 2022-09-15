@@ -7,6 +7,7 @@ tags:
   - header
 browser-compat: http.headers.Server
 ---
+
 {{HTTPSidebar}}
 
 The **`Server`** header describes the

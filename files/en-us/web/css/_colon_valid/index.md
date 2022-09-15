@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.valid
 ---
+
 {{CSSRef}}
 
 The **`:valid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents [validate](/en-US/docs/Web/Guide/HTML/Constraint_validation) successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
@@ -33,7 +34,7 @@ In this example, we use structures like this, which include extra `<span>`s to g
 ```html
 <div>
   <label for="fname">First name *: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -56,12 +57,12 @@ input:invalid {
 }
 
 input:invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 
 input:valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```

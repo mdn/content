@@ -16,6 +16,7 @@ tags:
   - frameRate
 browser-compat: api.MediaTrackConstraints.frameRate
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's

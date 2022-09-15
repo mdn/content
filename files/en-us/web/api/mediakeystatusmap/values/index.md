@@ -11,6 +11,7 @@ tags:
   - values()
 browser-compat: api.MediaKeyStatusMap.values
 ---
+
 {{APIRef("EncryptedMediaExtensions API")}}
 
 The **`values`** property of the
@@ -19,7 +20,7 @@ values for each element in the status map, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

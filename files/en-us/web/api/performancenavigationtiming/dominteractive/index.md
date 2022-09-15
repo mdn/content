@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.domInteractive
 ---
+
 {{APIRef("Navigation Timing")}}
 
 The **`domInteractive`** read-only property returns a

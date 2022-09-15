@@ -12,6 +12,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItem.getAsFile
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 If the item is a file, the **`DataTransferItem.getAsFile()`**
@@ -20,7 +21,7 @@ file, this method returns `null`.
 
 ## Syntax
 
-```js
+```js-nolint
 getAsFile()
 ```
 

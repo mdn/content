@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.privacy.network
 ---
+
 {{AddonSidebar}}
 
 The {{WebExtAPIRef("privacy.network")}} property contains privacy-related network settings. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
@@ -42,6 +43,11 @@ Default values for these properties tend to vary across browsers.
     - `"always"`: HTTPS-Only mode is on.
     - `"never"`: HTTPS-Only mode is off.
     - `"private_browsing"`: HTTPS-Only mode is on in private browsing windows only.
+
+- `globalPrivacyControl`
+
+  - : this setting allows your extension to determine if a user has enabled
+    [Global Privacy Control](/en-US/docs/Web/API/Navigator/globalPrivacyControl). This property is read-only on all platforms. Its underlying value is a boolean where `true` indicates that the browser sends Global Privacy Control signals and `false` indicates the browser does not send the signals.
 
 ## Browser compatibility
 

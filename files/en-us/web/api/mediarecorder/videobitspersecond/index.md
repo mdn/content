@@ -6,6 +6,7 @@ tags:
 - Property
 browser-compat: api.MediaRecorder.videoBitsPerSecond
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The **`videoBitsPerSecond`** read-only

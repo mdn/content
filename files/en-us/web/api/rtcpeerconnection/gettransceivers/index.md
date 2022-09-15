@@ -15,6 +15,7 @@ tags:
   - getTransceivers
 browser-compat: api.RTCPeerConnection.getTransceivers
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} interface's
@@ -24,7 +25,7 @@ connection.
 
 ## Syntax
 
-```js
+```js-nolint
 getTransceivers()
 ```
 

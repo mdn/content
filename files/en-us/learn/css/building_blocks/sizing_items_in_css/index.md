@@ -12,6 +12,7 @@ tags:
   - sizing
   - viewport units
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
 
 In the various lessons so far, you have come across a number of ways to size items on a web page using CSS. Understanding how big the different features in your design will be is important. So, in this lesson we will summarize the various ways elements get a size via CSS and define a few terms about sizing that will help you in the future.

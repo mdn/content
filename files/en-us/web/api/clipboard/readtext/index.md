@@ -19,6 +19,7 @@ tags:
   - readText
 browser-compat: api.Clipboard.readText
 ---
+
 {{APIRef("Clipboard API")}}
 
 The **{{domxref("Clipboard")}}** interface's
@@ -31,7 +32,7 @@ you can read data from the clipboard.
 
 ## Syntax
 
-```js
+```js-nolint
 readText()
 ```
 

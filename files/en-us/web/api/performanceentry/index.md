@@ -11,6 +11,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`PerformanceEntry`** object encapsulates a single performance metric that is part of the _performance timeline_. A _performance entry_ can be directly created by making a performance _{{domxref("PerformanceMark","mark")}}_ or _{{domxref("PerformanceMeasure","measure")}}_ (for example by calling the {{domxref("Performance.mark","mark()")}} method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image).
@@ -47,7 +48,7 @@ The **`PerformanceEntry`** object encapsulates a single performance metric that 
 The following example checks all `PerformanceEntry` properties to see if the browser supports them and if so, shows their values.
 
 ```html hidden
-<pre id='output'></pre>
+<pre id="output"></pre>
 ```
 
 ```js

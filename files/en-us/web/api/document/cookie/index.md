@@ -13,6 +13,7 @@ tags:
   - cookie
 browser-compat: api.Document.cookie
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Document")}} property `cookie` lets
@@ -145,9 +146,7 @@ function clearOutputCookies() {
 ```html
 <button onclick="showCookies()">Show cookies</button>
 
-<button onclick="clearOutputCookies()">
-  Clear
-</button>
+<button onclick="clearOutputCookies()">Clear</button>
 
 <div>
   <code id="cookies"></code>
@@ -185,9 +184,7 @@ function clearOutputCookieValue() {
 ```html
 <button onclick="showCookieValue()">Show cookie value</button>
 
-<button onclick="clearOutputCookieValue()">
-  Clear
-</button>
+<button onclick="clearOutputCookieValue()">Clear</button>
 
 <div>
   <code id="cookie-value"></code>
@@ -224,9 +221,7 @@ function clearOutputDoOnce() {
 ```html
 <button onclick="doOnce()">Only do something once</button>
 
-<button onclick="clearOutputDoOnce()">
-  Clear
-</button>
+<button onclick="clearOutputDoOnce()">Clear</button>
 
 <div>
   <code id="do-once"></code>
@@ -258,9 +253,7 @@ function clearOutputResetOnce() {
 ```html
 <button onclick="resetOnce()">Reset only once cookie</button>
 
-<button onclick="clearOutputResetOnce()">
-  Clear
-</button>
+<button onclick="clearOutputResetOnce()">Clear</button>
 
 <div>
   <code id="reset-once"></code>
@@ -292,13 +285,9 @@ function clearOutputACookieExists() {
 ```
 
 ```html
-<button onclick="checkACookieExists()">
-  Check a cookie exists
-</button>
+<button onclick="checkACookieExists()">Check a cookie exists</button>
 
-<button onclick="clearOutputACookieExists()">
-  Clear
-</button>
+<button onclick="clearOutputACookieExists()">Clear</button>
 
 <div>
   <code id="a-cookie-existence"></code>
@@ -328,9 +317,7 @@ function clearASpecificValueOfTheCookie() {
   Check that a cookie has a specific value
 </button>
 
-<button onclick="clearASpecificValueOfTheCookie()">
-  Clear
-</button>
+<button onclick="clearASpecificValueOfTheCookie()">Clear</button>
 
 <div>
   <code id="a-specific-value-of-the-cookie"></code>

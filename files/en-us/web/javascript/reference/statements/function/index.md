@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.function
 ---
+
 {{jsSidebar("Statements")}}
 
 The **function declaration** (function statement) defines a function with
@@ -20,7 +21,7 @@ You can also define functions using the {{jsxref("Function")}} constructor and a
 
 ## Syntax
 
-```js
+```js-nolint
 function name(param0) {
   statements
 }

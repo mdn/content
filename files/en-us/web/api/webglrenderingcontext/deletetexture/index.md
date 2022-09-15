@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteTexture
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.deleteTexture()`** method of the
@@ -20,7 +21,7 @@ been deleted.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteTexture(texture)
 ```
 

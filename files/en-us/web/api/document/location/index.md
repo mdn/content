@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.location
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.location`** read-only property returns a

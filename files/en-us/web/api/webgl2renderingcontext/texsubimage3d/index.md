@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.texSubImage3D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.texSubImage3D()`** method of the
@@ -18,7 +19,7 @@ current texture.
 
 ## Syntax
 
-```js
+```js-nolint
 texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels)
 texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, offset)
 texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, srcData)

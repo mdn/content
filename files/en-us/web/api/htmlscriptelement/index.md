@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLScriptElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTML {{HTMLElement("script")}} elements expose the **`HTMLScriptElement`** interface, which provides special properties and methods for manipulating the behavior and execution of `<script>` elements (beyond the inherited {{domxref("HTMLElement")}} interface).
@@ -63,7 +64,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLScriptElement.supports()")}}
   - : Returns `true` if the browser supports scripts of the specified type and `false` otherwise.
-     This method provides a simple and unified method for script-related feature detection.
+    This method provides a simple and unified method for script-related feature detection.
 
 ## Methods
 

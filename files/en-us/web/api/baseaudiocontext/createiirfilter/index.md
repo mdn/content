@@ -14,6 +14,7 @@ tags:
   - filter
 browser-compat: api.BaseAudioContext.createIIRFilter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`createIIRFilter()`** method of the {{
@@ -27,7 +28,7 @@ of filter.
 
 ## Syntax
 
-```js
+```js-nolint
 createIIRFilter(feedforward, feedback)
 ```
 

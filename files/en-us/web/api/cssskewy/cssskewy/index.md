@@ -13,6 +13,7 @@ tags:
   - Houdini
 browser-compat: api.CSSSkewY.CSSSkewY
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSSkewY()`** constructor creates a new
@@ -22,7 +23,7 @@ of the individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSSkewY(ay)
 ```
 

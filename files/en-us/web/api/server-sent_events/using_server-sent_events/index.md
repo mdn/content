@@ -13,6 +13,7 @@ tags:
   - messaging
 browser-compat: api.EventSource
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 Developing a web application that uses [server-sent events](/en-US/docs/Web/API/Server-sent_events) is straightforward. You'll need a bit of code on the server to stream events to the front-end, but the client side code works almost identically to [websockets](/en-US/docs/Web/API/WebSockets_API) in part of handling incoming events. This is a one-way connection, so you can't send events from a client to a server.

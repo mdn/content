@@ -18,6 +18,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceTransport.getRemoteCandidates
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceTransport")}}** method
@@ -32,7 +33,7 @@ returned by this function.
 
 ## Syntax
 
-```js
+```js-nolint
 getRemoteCandidates()
 ```
 

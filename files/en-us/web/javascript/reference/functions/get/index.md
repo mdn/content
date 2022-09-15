@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.get
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`get`** syntax binds an object property to a function
@@ -19,7 +20,7 @@ that will be called when that property is looked up.
 
 ## Syntax
 
-```js
+```js-nolint
 { get prop() { /* … */ } }
 { get [expression]() { /* … */ } }
 ```

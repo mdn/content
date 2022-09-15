@@ -14,6 +14,7 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPane
 ---
+
 {{AddonSidebar()}}
 
 Adds a new pane to the sidebar in the HTML/CSS inspector.
@@ -28,7 +29,7 @@ This function takes one argument, which is a string representing the pane's titl
 
 ## Syntax
 
-```js
+```js-nolint
 let creating = browser.devtools.panels.elements.createSidebarPane(
   title       // string
 )

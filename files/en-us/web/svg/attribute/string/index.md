@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face-format.string
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`string`** attribute is a hint to the user agent, and specifies a list of formats that the font referenced by the parent {{SVGElement("font-face-uri")}} element supports.

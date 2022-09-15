@@ -12,13 +12,14 @@ tags:
   - onUpdated
 browser-compat: webextensions.api.contextualIdentities.onUpdated
 ---
+
 {{AddonSidebar()}}
 
 Fired when the properties of a contextual identity, such as its name, icon, or color, are changed. Contextual identities may be updated by extensions using the `contextualIdentities` API, or directly by the user, using the browser's user interface.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.contextualIdentities.onUpdated.addListener(listener)
 browser.contextualIdentities.onUpdated.removeListener(listener)
 browser.contextualIdentities.onUpdated.hasListener(listener)

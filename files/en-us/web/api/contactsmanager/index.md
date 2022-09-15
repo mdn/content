@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.ContactsManager
 ---
+
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`ContactsManager`** interface of the {{domxref('Contact Picker API')}} allows users to select entries from their contact list and share limited details of the selected entries with a website or application.

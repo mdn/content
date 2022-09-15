@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplay.isConnected
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`isConnected`** read-only property of the {{domxref("VRDisplay")}} interface returns a boolean value indicating whether the `VRDisplay` is connected to the computer.

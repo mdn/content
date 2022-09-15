@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.AbsoluteOrientationSensor.AbsoluteOrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`AbsoluteOrientationSensor()`** constructor creates a new {{domxref("AbsoluteOrientationSensor")}} object which describes the device's physical orientation in relation to the Earth's reference coordinate system.
@@ -22,7 +23,7 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 
 ## Syntax
 
-```js
+```js-nolint
 new AbsoluteOrientationSensor()
 new AbsoluteOrientationSensor(options)
 ```

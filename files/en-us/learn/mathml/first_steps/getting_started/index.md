@@ -6,6 +6,7 @@ tags:
   - MathML
   - Landing
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps")}}
 
 In this article, we will take a simple HTML document and see how to add MathML formulas into it, introducing a few elements along the way.
@@ -101,11 +102,11 @@ You may also notice some subtle change in the appearance: the text and vertical 
 
 > **Note:** This corresponds to the LaTeX's concept of _inline_ formulas (delimited by dollar signs `$...$`) and _display_ formulas (delimited by `\[...\]`).
 
-> **Note:** The appearance change mentioned above is actually controlled by the  [`math-style`](/en-US/docs/Web/CSS/math-style) property which is initially `normal` for `<math display="block">` and `compact` otherwise. In some MathML subtrees, this property can then automatically become `compact` but we will ignore this subtlety for this introductory tutorial. Again, this is similar to LaTeX.
+> **Note:** The appearance change mentioned above is actually controlled by the [`math-style`](/en-US/docs/Web/CSS/math-style) property which is initially `normal` for `<math display="block">` and `compact` otherwise. In some MathML subtrees, this property can then automatically become `compact` but we will ignore this subtlety for this introductory tutorial. Again, this is similar to LaTeX.
 
 ## Grouping with the \<mrow> element
 
-The `<math>` element can actually contain an arbitrary number of children and will essentially render them in a row. For instance, the simple formula "1 + 2 + 3" would be be encoded like this in MathML:
+The `<math>` element can actually contain an arbitrary number of children and will essentially render them in a row. For instance, the simple formula "1 + 2 + 3" would be encoded like this in MathML:
 
 ```html
 <math>

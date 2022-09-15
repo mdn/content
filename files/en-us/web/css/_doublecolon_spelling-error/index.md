@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.spelling-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`::spelling-error`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a text segment which the {{glossary("user agent")}} has flagged as incorrectly spelled.
@@ -42,7 +43,9 @@ In this example, eventual supporting browsers should highlight any flagged spell
 #### HTML
 
 ```html
-<p contenteditable spellcheck="true">My friends are coegdfgfddffbgning to the party tonight.</p>
+<p contenteditable spellcheck="true">
+  My friends are coegdfgfddffbgning to the party tonight.
+</p>
 ```
 
 #### CSS

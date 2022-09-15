@@ -13,6 +13,7 @@ tags:
   - register
 browser-compat: api.ServiceWorkerContainer.register
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`register()`** method of the
@@ -30,7 +31,7 @@ service worker can't have a scope broader than its own location, only use the
 
 ## Syntax
 
-```js
+```js-nolint
 register(scriptURL)
 register(scriptURL, options)
 ```
@@ -53,6 +54,7 @@ register(scriptURL, options)
         See the [Examples](#examples) section for more information on how it
         works.
     - `type`
+
       - : A string
         specifying the type of worker to create. Valid values are:
 
@@ -65,6 +67,7 @@ register(scriptURL, options)
             worker contexts.
 
     - `updateViaCache`
+
       - : A string indicating how the HTTP cache is used for service worker scripts resources during updates. Note: This only refers to the service worker script and its imports, not other resources fetched by these scripts.
 
         - `'all'`

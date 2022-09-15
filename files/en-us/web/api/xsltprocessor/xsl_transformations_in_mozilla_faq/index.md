@@ -6,6 +6,7 @@ tags:
   - Guide
   - XSLT
 ---
+
 ## Why isn't my stylesheet applied?
 
 Make sure the mime type for both source and stylesheet are set to an XML mimetype, namely `text/xml` or `application/xml`. The XSLT namespace is `http://www.w3.org/1999/XSL/Transform`. Use the \<?xml-stylesheet ?> processing instruction instead of the non-standard xml:stylesheet. The most common cause is the MIME type handling. To find out which MIME type your server sends, look at Page Info, use extensions like [LiveHTTPHeaders](http://livehttpheaders.mozdev.org/) or a download manager like `wget`. Mozilla won't load XSLT stylesheets from a different domain for security reasons.

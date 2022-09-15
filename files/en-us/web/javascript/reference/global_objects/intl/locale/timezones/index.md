@@ -14,6 +14,7 @@ tags:
   - time zone
 browser-compat: javascript.builtins.Intl.Locale.timeZones
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.timeZones`** property is an accessor property which returns an array of supported time zones for a chosen `Locale`.

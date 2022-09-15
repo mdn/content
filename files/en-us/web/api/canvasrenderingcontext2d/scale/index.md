@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.scale
 ---
+
 {{APIRef}}
 
 The
@@ -25,7 +26,7 @@ drawn at twice the normal size.
 
 ## Syntax
 
-```js
+```js-nolint
 scale(x, y)
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Element: animationend event'
+title: "Element: animationend event"
 slug: Web/API/Element/animationend_event
 tags:
   - API
@@ -13,6 +13,7 @@ tags:
 browser-compat: api.Element.animationend_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The **`animationend`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) has completed. If the animation aborts before reaching completion, such as if the element is removed from the DOM or the animation is removed from the element, the `animationend` event is not fired.
@@ -72,11 +73,11 @@ animated.onanimationend = () => {
 
 ```html
 <div class="animation-example">
-    <div class="container">
-        <p class="animation">You chose a cold night to visit our planet.</p>
-    </div>
-    <button class="activate" type="button">Activate animation</button>
-    <div class="event-log"></div>
+  <div class="container">
+    <p class="animation">You chose a cold night to visit our planet.</p>
+  </div>
+  <button class="activate" type="button">Activate animation</button>
+  <div class="event-log"></div>
 </div>
 ```
 
@@ -91,8 +92,8 @@ animated.onanimationend = () => {
   width: 25rem;
   height: 2rem;
   border: 1px solid black;
-  margin: .2rem;
-  padding: .2rem;
+  margin: 0.2rem;
+  padding: 0.2rem;
 }
 
 .animation.active {

@@ -16,6 +16,7 @@ tags:
   - screen
 browser-compat: api.Document.exitFullscreen
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 The {{domxref("Document")}} method
@@ -26,7 +27,7 @@ reverses the effects of a previous call to {{domxref("Element.requestFullscreen(
 
 ## Syntax
 
-```js
+```js-nolint
 exitFullscreen()
 ```
 

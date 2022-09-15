@@ -9,6 +9,7 @@ tags:
   - flexbox
   - patterns
 ---
+
 {{CSSRef}}
 
 In this guide, we will take a look at some of the common use cases for flexbox — those places where it makes more sense than another layout method.

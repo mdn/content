@@ -13,6 +13,7 @@ tags:
   - all
 browser-compat: api.Document.all
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{DOMxRef("Document")}} interface's read-only **`all`**

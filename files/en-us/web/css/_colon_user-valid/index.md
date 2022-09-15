@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: css.selectors.user-valid
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`:user-valid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value validates correctly based on its [validation constraints](/en-US/docs/Learn/Forms#constraint_validation). However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.
@@ -41,7 +42,12 @@ Try changing the email address to another valid email to see it in action.
 ```html
 <form>
   <label for="email">Email *: </label>
-  <input id="email" name="email" type="email" value="test@example.com" required>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    value="test@example.com"
+    required />
   <span></span>
 </form>
 ```
@@ -52,7 +58,7 @@ input:user-valid {
 }
 
 input:user-valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```

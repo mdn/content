@@ -11,6 +11,7 @@ tags:
   - credential management
 browser-compat: api.Credential.type
 ---
+
 {{APIRef("Credential Management API")}}
 
 The **`type`** property of the

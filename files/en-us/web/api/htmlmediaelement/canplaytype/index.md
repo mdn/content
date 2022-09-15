@@ -22,6 +22,7 @@ tags:
   - support
 browser-compat: api.HTMLMediaElement.canPlayType
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}} method **`canPlayType()`** reports how likely it is that the current browser will be able to play media of a given MIME type.
@@ -30,7 +31,7 @@ The {{domxref("HTMLMediaElement")}} method **`canPlayType()`** reports how likel
 
 ## Syntax
 
-```js
+```js-nolint
 canPlayType(type)
 ```
 

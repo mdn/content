@@ -1,5 +1,5 @@
 ---
-title: 'Element: animationiteration event'
+title: "Element: animationiteration event"
 slug: Web/API/Element/animationiteration_event
 tags:
   - API
@@ -12,6 +12,7 @@ tags:
 browser-compat: api.Element.animationiteration_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The **`animationiteration`** event is fired when an iteration of a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) ends, and another one begins. This event does not occur at the same time as the {{domxref("Element/animationend_event", "animationend")}} event, and therefore does not occur for animations with an `animation-iteration-count` of one.
@@ -77,11 +78,11 @@ animated.onanimationiteration = () => {
 
 ```html
 <div class="animation-example">
-    <div class="container">
-        <p class="animation">You chose a cold night to visit our planet.</p>
-    </div>
-    <button class="activate" type="button">Activate animation</button>
-    <div class="event-log"></div>
+  <div class="container">
+    <p class="animation">You chose a cold night to visit our planet.</p>
+  </div>
+  <button class="activate" type="button">Activate animation</button>
+  <div class="event-log"></div>
 </div>
 ```
 

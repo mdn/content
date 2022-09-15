@@ -90,8 +90,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 ## Examples
 
 ```html
-<p><del>This text has been deleted</del>,
-here is the rest of the paragraph.</p>
+<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
 <del><p>This paragraph has been deleted.</p></del>
 ```
 

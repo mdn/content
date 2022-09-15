@@ -12,6 +12,7 @@ tags:
   - import
 browser-compat: javascript.statements.import
 ---
+
 {{jsSidebar("Statements")}}
 
 The static **`import`** declaration is used to import read-only live bindings which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be modified by the importing module.
@@ -22,7 +23,7 @@ There is also a function-like dynamic [`import()`](/en-US/docs/Web/JavaScript/Re
 
 ## Syntax
 
-```js
+```js-nolint
 import defaultExport from "module-name";
 import * as name from "module-name";
 import { export1 } from "module-name";

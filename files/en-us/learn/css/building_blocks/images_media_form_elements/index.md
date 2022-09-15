@@ -10,6 +10,7 @@ tags:
   - Media
   - replaced content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
 
 In this lesson we will take a look at how certain special elements are treated in CSS. Images, other media, and form elements behave a little differently from regular boxes in terms of your ability to style them with CSS. Understanding what is and isn't possible can save some frustration, and this lesson will highlight some of the main things that you need to know.
@@ -129,8 +130,8 @@ button,
 input,
 select,
 textarea {
-  font-family : inherit;
-  font-size : 100%;
+  font-family: inherit;
+  font-size: 100%;
 }
 ```
 

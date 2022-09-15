@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.altGlyph.format
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`format`** attribute indicates the format of the given font.

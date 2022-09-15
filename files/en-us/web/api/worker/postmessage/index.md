@@ -12,6 +12,7 @@ tags:
   - postMessage
 browser-compat: api.Worker.postMessage
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`postMessage()`** method of the {{domxref("Worker")}} interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
@@ -22,7 +23,7 @@ The `Worker` can send back information to the thread that spawned it using the {
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(message)
 postMessage(message, transfer)
 ```

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Date.getYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`getYear()`** method returns the year in the specified
@@ -20,7 +21,7 @@ date according to local time. Because `getYear()` does not return full years
 
 ## Syntax
 
-```js
+```js-nolint
 getYear()
 ```
 

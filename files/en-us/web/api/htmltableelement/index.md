@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement`** interface provides special properties and methods (beyond the regular {{DOMxRef("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document.
@@ -32,7 +33,7 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 
 ### Obsolete Properties
 
-> **Warning:** The following properties are obsolete.  You should avoid using them.
+> **Warning:** The following properties are obsolete. You should avoid using them.
 
 - {{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}
   - : A string containing an enumerated value reflecting the {{HTMLAttrxRef("align", "table")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.

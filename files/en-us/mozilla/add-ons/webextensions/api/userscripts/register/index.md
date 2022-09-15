@@ -11,6 +11,7 @@ tags:
   - userScripts
 browser-compat: webextensions.api.userScripts.register
 ---
+
 {{AddonSidebar}}
 
 This method enables user scripts to be registered from an extension's pages (such as the background page).
@@ -21,7 +22,7 @@ This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 const registeredUserScript = await browser.userScripts.register(
   userScriptOptions       // object
 );

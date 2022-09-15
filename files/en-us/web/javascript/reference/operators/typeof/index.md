@@ -18,7 +18,7 @@ The **`typeof`** operator returns a string indicating the type of the operand's 
 
 ## Syntax
 
-```js
+```js-nolint
 typeof operand
 ```
 

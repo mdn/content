@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.stroke-opacity
 ---
+
 {{SVGRef}}
 
 The **`stroke-opacity`** attribute is a presentation attribute defining the opacity of the paint server (_color_, _gradient_, _pattern_, etc.) applied to the stroke of a shape.
@@ -30,7 +31,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -39,16 +44,13 @@ html,body,svg { height:100% }
   <circle cx="5" cy="5" r="4" stroke="green" />
 
   <!-- Stroke opacity as a number -->
-  <circle cx="15" cy="5" r="4" stroke="green"
-          stroke-opacity="0.7" />
+  <circle cx="15" cy="5" r="4" stroke="green" stroke-opacity="0.7" />
 
   <!-- Stroke opacity as a percentage -->
-  <circle cx="25" cy="5" r="4" stroke="green"
-          stroke-opacity="50%" />
+  <circle cx="25" cy="5" r="4" stroke="green" stroke-opacity="50%" />
 
   <!-- Stroke opacity as a CSS property -->
-  <circle cx="35" cy="5" r="4" stroke="green"
-          style="stroke-opacity: .3;" />
+  <circle cx="35" cy="5" r="4" stroke="green" style="stroke-opacity: .3;" />
 </svg>
 ```
 

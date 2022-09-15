@@ -17,6 +17,7 @@ tags:
   - requestAnimationFrame()
 browser-compat: api.XRSession.requestAnimationFrame
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRSession")}}
@@ -43,7 +44,7 @@ You can cancel a previously scheduled animation by calling
 
 ## Syntax
 
-```js
+```js-nolint
 requestAnimationFrame(animationFrameCallback)
 ```
 

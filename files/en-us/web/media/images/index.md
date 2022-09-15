@@ -7,6 +7,7 @@ tags:
   - Landing
   - Media
 ---
+
 The {{Glossary("HTML")}} {{HTMLElement("img")}} element lets you embed images into an HTML document, while the {{HTMLElement("picture")}} element enables [responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images). In this guide you'll find links to resources that deal with adding images to websites.
 
 ## References

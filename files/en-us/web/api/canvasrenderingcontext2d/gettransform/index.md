@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.getTransform
 ---
+
 {{APIRef}}
 
 The
@@ -19,7 +20,7 @@ the context.
 
 ## Syntax
 
-```js
+```js-nolint
 getTransform()
 ```
 
@@ -63,8 +64,7 @@ on it.
 ### HTML
 
 ```html
-<canvas width="240"></canvas>
-<canvas width="240"></canvas>
+<canvas width="240"></canvas> <canvas width="240"></canvas>
 ```
 
 ### CSS

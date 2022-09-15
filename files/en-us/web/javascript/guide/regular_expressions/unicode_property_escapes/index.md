@@ -9,6 +9,7 @@ tags:
   - regex
   - unicode property escapes
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 **Unicode property escapes** [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) allows for matching characters based on their Unicode properties. A character is described by several properties which are either binary ("boolean-like") or non-binary. For instance, unicode property escapes can be used to match emojis, punctuations, letters (even letters from specific languages or scripts), etc.
@@ -21,7 +22,7 @@ tags:
 
 ## Syntax
 
-```js
+```js-nolint
 // Non-binary values
 \p{UnicodePropertyValue}
 \p{UnicodePropertyName=UnicodePropertyValue}

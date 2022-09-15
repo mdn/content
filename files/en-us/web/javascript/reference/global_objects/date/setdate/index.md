@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setDate
 ---
+
 {{JSRef}}
 
 The **`setDate()`** method changes the day of the month of a given {{jsxref("Date")}} instance, based on local time.
@@ -19,7 +20,7 @@ To instead change the day of the month for a given {{jsxref("Date")}} instance b
 
 ## Syntax
 
-```js
+```js-nolint
 setDate(dayValue)
 ```
 

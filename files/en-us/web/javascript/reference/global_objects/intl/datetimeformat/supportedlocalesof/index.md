@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.supportedLocalesOf()`** method
@@ -23,7 +24,7 @@ and time formatting without having to fall back to the runtime's default locale.
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.DateTimeFormat.supportedLocalesOf(locales)
 Intl.DateTimeFormat.supportedLocalesOf(locales, options)
 ```

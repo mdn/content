@@ -10,6 +10,7 @@ tags:
   - username
 browser-compat: api.RTCIceServer.username
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceServer")}} dictionary's **`username`**
@@ -21,7 +22,7 @@ property is a string which specifies the username to use when authenticating wit
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   // ...
   username: someUsername,

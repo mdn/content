@@ -18,6 +18,7 @@ tags:
   - metadata
 browser-compat: api.Navigator.mediaSession
 ---
+
 {{APIRef}}
 
 The read-only {{domxref("Navigator")}} property

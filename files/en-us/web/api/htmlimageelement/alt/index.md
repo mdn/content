@@ -17,6 +17,7 @@ tags:
   - fallback
 browser-compat: api.HTMLImageElement.alt
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} property **`alt`** provides fallback (alternate) text to display when the image specified by the {{HTMLElement("img")}} element is not loaded.
@@ -60,18 +61,17 @@ In the HTML for this example, shown below, the {{HTMLElement("img")}} element in
 ```html
 <div class="container">
   <div class="left-margin">
-    <img src="/files/16861/margin-flourish.svg" alt="">
+    <img src="/files/16861/margin-flourish.svg" alt="" />
   </div>
   <div class="contents">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit. Quisque quis orci ligula. Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit. In ac neque libero.
-    Vivamus consectetur rhoncus elit eget porta. Etiam
-    pulvinar ex id sapien laoreet, quis aliquet odio
-    lobortis. Nam ac mauris at risus laoreet cursus vitae et
-    sapien. Etiam molestie auctor eros, ac porta risus
-    scelerisque sit amet. Ut nunc neque, porta eu auctor at,
-    tempor et arcu.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis orci
+      ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac
+      neque libero. Vivamus consectetur rhoncus elit eget porta. Etiam pulvinar
+      ex id sapien laoreet, quis aliquet odio lobortis. Nam ac mauris at risus
+      laoreet cursus vitae et sapien. Etiam molestie auctor eros, ac porta risus
+      scelerisque sit amet. Ut nunc neque, porta eu auctor at, tempor et arcu.
+    </p>
   </div>
 </div>
 ```
@@ -96,7 +96,7 @@ p {
 .container {
   width: 100vh;
   height: 95vh;
-  font: 16px Arial,Helvetica,sans-serif;
+  font: 16px Arial, Helvetica, sans-serif;
 }
 
 .left-margin {
@@ -138,10 +138,17 @@ For example, in the snippet of HTML below, a toolbar which uses icon images as l
 
 ```html
 <li class="toolbar" aria-role="toolbar">
-  <a href="songs.html" aria-role="button"><img src="songicon.svg" alt="Songs"</a>
-  <a href="albums.html" aria-role="button"><img src="albumicon.svg" alt="Albums"</a>
-  <a href="artists.html" aria-role="button"><img src="artisticon.svg" alt="Artists"</a>
-  <a href="playlists.html" aria-role="button"><img src="playlisticon.svg" alt="Playlists"</a>
+  <a href="songs.html" aria-role="button">
+    <img src="songicon.svg" alt="Songs">
+  </a>
+  <a href="albums.html" aria-role="button">
+    <img src="albumicon.svg" alt="Albums"></a>
+  <a href="artists.html" aria-role="button">
+    <img src="artisticon.svg" alt="Artists">
+  </a>
+  <a href="playlists.html" aria-role="button">
+    <img src="playlisticon.svg" alt="Playlists">
+  </a>
 </li>
 ```
 
@@ -176,18 +183,17 @@ Note the use of the `alt` attribute on the {{HTMLElement("img")}}, providing a g
 
 ```html
 <div class="container">
-  <img src="https://www.bitstampede.com/mdn-test/new-page.svg"
-       alt="New Page!" class="pageinfo-badge">
+  <img
+    src="https://www.bitstampede.com/mdn-test/new-page.svg"
+    alt="New Page!"
+    class="pageinfo-badge" />
   <p class="contents">
-    Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit. Quisque quis orci ligula. Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit. In ac neque libero.
-    Vivamus consectetur rhoncus elit eget porta. Etiam
-    pulvinar ex id sapien laoreet, quis aliquet odio
-    lobortis. Nam ac mauris at risus laoreet cursus vitae et
-    sapien. Etiam molestie auctor eros, ac porta risus
-    scelerisque sit amet. Ut nunc neque, porta eu auctor at,
-    tempor et arcu.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis orci
+    ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac neque
+    libero. Vivamus consectetur rhoncus elit eget porta. Etiam pulvinar ex id
+    sapien laoreet, quis aliquet odio lobortis. Nam ac mauris at risus laoreet
+    cursus vitae et sapien. Etiam molestie auctor eros, ac porta risus
+    scelerisque sit amet. Ut nunc neque, porta eu auctor at, tempor et arcu.
   </p>
 </div>
 ```
@@ -205,15 +211,31 @@ The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cs
   width: 9em;
   padding-right: 1em;
   float: left;
-  clip-path: polygon(100% 0, 100% 50%, 90% 70%, 80% 80%,
-             70% 90%, 50% 100%, 0 100%, 0 0);
-  shape-outside: polygon(100% 0, 100% 50%, 90% 70%, 80% 80%,
-             70% 90%, 50% 100%, 0 100%, 0 0);
+  clip-path: polygon(
+    100% 0,
+    100% 50%,
+    90% 70%,
+    80% 80%,
+    70% 90%,
+    50% 100%,
+    0 100%,
+    0 0
+  );
+  shape-outside: polygon(
+    100% 0,
+    100% 50%,
+    90% 70%,
+    80% 80%,
+    70% 90%,
+    50% 100%,
+    0 100%,
+    0 0
+  );
 }
 
 .contents {
   margin-top: 1em;
-  font: 16px Arial,Helvetica,Verdana,sans-serif;
+  font: 16px Arial, Helvetica, Verdana, sans-serif;
 }
 ```
 

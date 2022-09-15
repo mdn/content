@@ -13,6 +13,7 @@ tags:
   - unsubscribe
 browser-compat: api.PushSubscription.unsubscribe
 ---
+
 {{APIRef("Push API")}}
 
 The `unsubscribe()` method of the {{domxref("PushSubscription")}} interface
@@ -21,7 +22,7 @@ current subscription is successfully unsubscribed.
 
 ## Syntax
 
-```js
+```js-nolint
 unsubscribe()
 ```
 

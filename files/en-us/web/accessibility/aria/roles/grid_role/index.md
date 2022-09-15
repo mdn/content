@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: grid role'
+title: "ARIA: grid role"
 slug: Web/Accessibility/ARIA/Roles/grid_role
 tags:
   - ARIA
@@ -14,6 +14,7 @@ tags:
 spec-urls:
   - https://w3c.github.io/aria/#grid
 ---
+
 The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.
 
 ## Description
@@ -22,7 +23,9 @@ The `grid` role is a composite widget containing a collection of one or more row
 
 ```html
 <table role="grid" aria-labelledby="id-select-your-seat">
-  <caption id="id-select-your-seat">Select your seat</caption>
+  <caption id="id-select-your-seat">
+    Select your seat
+  </caption>
   <tbody role="presentation">
     <tr role="presentation">
       <td></td>
@@ -87,10 +90,10 @@ When a keyboard user encounters a grid, they navigate the rows and columns using
 
 | Key                               | Action                                                                                                                                                                                                                                |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <kbd>→</kbd>                      | Moves focus one cell to the right. Optionally (layout grids), if focus is on the right-most cell in the row, focus may move to the first cell in the following row. If focus is on the last cell in the grid, focus does not move.                                                                                                                                |
-| <kbd>←</kbd>                      | Moves focus one cell to the left. Optionally (layout grids), if focus is on the left-most cell in the row, focus may move to the last cell in the previous row. If focus is on the first cell in the grid, focus does not move.                                                                                                                                  |
-| <kbd>↓</kbd>                      | Moves focus one cell down. Optionally (layout grids), if focus is on the bottom cell in the column, focus may move to the top cell in the following column. If focus is on the last cell in the grid, focus does not move.                                                                                                                                         |
-| <kbd>↑</kbd>                      | Moves focus one cell up. Optionally (layout grids), if focus is on the top cell in the column, focus may move to the bottom cell in the previous column. If focus is on the first cell in the grid, focus does not move.                                                                                                                                              |
+| <kbd>→</kbd>                      | Moves focus one cell to the right. Optionally (layout grids), if focus is on the right-most cell in the row, focus may move to the first cell in the following row. If focus is on the last cell in the grid, focus does not move.    |
+| <kbd>←</kbd>                      | Moves focus one cell to the left. Optionally (layout grids), if focus is on the left-most cell in the row, focus may move to the last cell in the previous row. If focus is on the first cell in the grid, focus does not move.       |
+| <kbd>↓</kbd>                      | Moves focus one cell down. Optionally (layout grids), if focus is on the bottom cell in the column, focus may move to the top cell in the following column. If focus is on the last cell in the grid, focus does not move.            |
+| <kbd>↑</kbd>                      | Moves focus one cell up. Optionally (layout grids), if focus is on the top cell in the column, focus may move to the bottom cell in the previous column. If focus is on the first cell in the grid, focus does not move.              |
 | <kbd>Page Down</kbd>              | Moves focus down an author-determined number of rows, typically scrolling so the bottom row in the currently visible set of rows becomes one of the first visible rows. If focus is in the last row of the grid, focus does not move. |
 | <kbd>Page Up</kbd>                | Moves focus up an author-determined number of rows, typically scrolling so the top row in the currently visible set of rows becomes one of the last visible rows. If focus is in the first row of the grid, focus does not move.      |
 | <kbd>Home</kbd>                   | Moves focus to the first cell in the row that contains focus.                                                                                                                                                                         |
@@ -120,7 +123,9 @@ If cells, rows, or columns can be selected, the following key combination are co
 
 ```html
 <table role="grid" aria-labelledby="calendarheader">
-  <caption id="calendarheader">September 2018</caption>
+  <caption id="calendarheader">
+    September 2018
+  </caption>
   <thead role="rowgroup">
     <tr role="row">
       <td></td>
@@ -146,105 +151,47 @@ If cells, rows, or columns can be selected, the following key combination are co
     </tr>
     <tr role="row">
       <th scope="row" role="rowheader">Week 2</th>
-      <td role="gridcell" tabindex="-1">
-        2
-      </td>
-      <td role="gridcell" tabindex="-1">
-        3
-      </td>
-      <td role="gridcell" tabindex="-1">
-        4
-      </td>
-      <td role="gridcell" tabindex="-1">
-        5
-      </td>
-      <td role="gridcell" tabindex="-1">
-        6
-      </td>
-      <td role="gridcell" tabindex="-1">
-        7
-      </td>
-      <td role="gridcell" tabindex="-1">
-        8
-      </td>
+      <td role="gridcell" tabindex="-1">2</td>
+      <td role="gridcell" tabindex="-1">3</td>
+      <td role="gridcell" tabindex="-1">4</td>
+      <td role="gridcell" tabindex="-1">5</td>
+      <td role="gridcell" tabindex="-1">6</td>
+      <td role="gridcell" tabindex="-1">7</td>
+      <td role="gridcell" tabindex="-1">8</td>
     </tr>
     <tr role="row">
       <th scope="row" role="rowheader">Week 3</th>
-      <td role="gridcell" tabindex="-1">
-        9
-      </td>
-      <td role="gridcell" tabindex="-1">
-        10
-      </td>
-      <td role="gridcell" tabindex="-1">
-        11
-      </td>
-      <td role="gridcell" tabindex="-1">
-        12
-      </td>
-      <td role="gridcell" tabindex="-1">
-        13
-      </td>
-      <td role="gridcell" tabindex="-1">
-        14
-      </td>
-      <td role="gridcell" tabindex="-1">
-        15
-      </td>
+      <td role="gridcell" tabindex="-1">9</td>
+      <td role="gridcell" tabindex="-1">10</td>
+      <td role="gridcell" tabindex="-1">11</td>
+      <td role="gridcell" tabindex="-1">12</td>
+      <td role="gridcell" tabindex="-1">13</td>
+      <td role="gridcell" tabindex="-1">14</td>
+      <td role="gridcell" tabindex="-1">15</td>
     </tr>
     <tr role="row">
       <th scope="row" role="rowheader">Week 4</th>
-      <td role="gridcell" tabindex="-1">
-        16
-      </td>
-      <td role="gridcell" tabindex="-1">
-        17
-      </td>
-      <td role="gridcell" tabindex="-1">
-        18
-      </td>
-      <td role="gridcell" tabindex="-1">
-        19
-      </td>
-      <td role="gridcell" tabindex="-1">
-        20
-      </td>
-      <td role="gridcell" tabindex="-1">
-        21
-      </td>
-      <td role="gridcell" tabindex="-1">
-        22
-      </td>
+      <td role="gridcell" tabindex="-1">16</td>
+      <td role="gridcell" tabindex="-1">17</td>
+      <td role="gridcell" tabindex="-1">18</td>
+      <td role="gridcell" tabindex="-1">19</td>
+      <td role="gridcell" tabindex="-1">20</td>
+      <td role="gridcell" tabindex="-1">21</td>
+      <td role="gridcell" tabindex="-1">22</td>
     </tr>
     <tr role="row">
       <th scope="row" role="rowheader">Week 5</th>
-      <td role="gridcell" tabindex="-1">
-        23
-      </td>
-      <td role="gridcell" tabindex="-1">
-        24
-      </td>
-      <td role="gridcell" tabindex="-1">
-        25
-      </td>
-      <td role="gridcell" tabindex="-1">
-        26
-      </td>
-      <td role="gridcell" tabindex="-1">
-        27
-      </td>
-      <td role="gridcell" tabindex="-1">
-        28
-      </td>
-      <td role="gridcell" tabindex="-1">
-        29
-      </td>
-    </tr> 
+      <td role="gridcell" tabindex="-1">23</td>
+      <td role="gridcell" tabindex="-1">24</td>
+      <td role="gridcell" tabindex="-1">25</td>
+      <td role="gridcell" tabindex="-1">26</td>
+      <td role="gridcell" tabindex="-1">27</td>
+      <td role="gridcell" tabindex="-1">28</td>
+      <td role="gridcell" tabindex="-1">29</td>
+    </tr>
     <tr role="row">
       <th scope="row" role="rowheader">Week 6</th>
-      <td role="gridcell" tabindex="-1">
-        30
-      </td>
+      <td role="gridcell" tabindex="-1">30</td>
       <td>1</td>
       <td>2</td>
       <td>3</td>
@@ -252,7 +199,7 @@ If cells, rows, or columns can be selected, the following key combination are co
       <td>5</td>
       <td>6</td>
     </tr>
-    </tbody>
+  </tbody>
 </table>
 ```
 
@@ -265,7 +212,8 @@ table {
   font-variant-numeric: tabular-nums;
 }
 
-tbody th, tbody td {
+tbody th,
+tbody td {
   padding: 5px;
 }
 
@@ -279,8 +227,10 @@ tbody td[role="gridcell"] {
   color: #000;
 }
 
-tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
-  background-color: #f6f6f6; outline: 3px solid blue;
+tbody td[role="gridcell"]:hover,
+tbody td[role="gridcell"]:focus {
+  background-color: #f6f6f6;
+  outline: 3px solid blue;
 }
 ```
 
@@ -289,32 +239,36 @@ tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
 ```js
 const selectables = document.querySelectorAll('table td[role="gridcell"]');
 
-selectables[0].setAttribute('tabindex', 0);
+selectables[0].setAttribute("tabindex", 0);
 
-const trs = document.querySelectorAll('table tbody tr');
+const trs = document.querySelectorAll("table tbody tr");
 let row = 0;
 let col = 0;
 let maxrow = trs.length - 1;
 let maxcol = 0;
 
 trs.forEach((gridrow) => {
-  gridrow.querySelectorAll('td').forEach((el) => {
+  gridrow.querySelectorAll("td").forEach((el) => {
     el.dataset.row = row;
     el.dataset.col = col;
     col++;
   });
-  if (col > maxcol) { maxcol = col - 1; }
+  if (col > maxcol) {
+    maxcol = col - 1;
+  }
   col = 0;
   row++;
 });
 
 function moveto(newrow, newcol) {
-  const tgt = document.querySelector(`[data-row="${newrow}"][data-col="${newcol}"]`);
-  if (tgt?.getAttribute('role') === 'gridcell') {
-    document.querySelectorAll('[role=gridcell]').forEach((el) => {
-      el.setAttribute('tabindex', '-1');
+  const tgt = document.querySelector(
+    `[data-row="${newrow}"][data-col="${newcol}"]`
+  );
+  if (tgt?.getAttribute("role") === "gridcell") {
+    document.querySelectorAll("[role=gridcell]").forEach((el) => {
+      el.setAttribute("tabindex", "-1");
     });
-    tgt.setAttribute('tabindex', '0');
+    tgt.setAttribute("tabindex", "0");
     tgt.focus();
     return true;
   } else {
@@ -322,7 +276,7 @@ function moveto(newrow, newcol) {
   }
 }
 
-document.querySelector('table').addEventListener("keydown", (event) => {
+document.querySelector("table").addEventListener("keydown", (event) => {
   const col = parseInt(event.target.dataset.col, 10);
   const row = parseInt(event.target.dataset.row, 10);
   switch (event.key) {
@@ -374,7 +328,12 @@ document.querySelector('table').addEventListener("keydown", (event) => {
           i--;
         } while (!result);
       } else {
-        moveto(row, document.querySelector(`[data-row="${event.target.dataset.row}"]:last-of-type`).dataset.col);
+        moveto(
+          row,
+          document.querySelector(
+            `[data-row="${event.target.dataset.row}"]:last-of-type`
+          ).dataset.col
+        );
       }
       break;
     }
@@ -438,6 +397,6 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

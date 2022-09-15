@@ -16,6 +16,7 @@ tags:
   - Property
 browser-compat: api.MediaStreamAudioSourceNode.mediaStream
 ---
+
 {{APIRef("Web Audio API")}}
 
 The {{domxref("MediaStreamAudioSourceNode")}} interface's

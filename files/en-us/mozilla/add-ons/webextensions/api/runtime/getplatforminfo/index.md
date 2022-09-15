@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.getPlatformInfo
 ---
+
 {{AddonSidebar()}}
 
 Returns information about the current platform. This can only be called in the background script context.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getting = browser.runtime.getPlatformInfo()
 ```
 

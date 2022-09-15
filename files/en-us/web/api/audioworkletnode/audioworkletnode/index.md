@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioWorkletNode.AudioWorkletNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioWorkletNode()`**
@@ -19,7 +20,7 @@ processing.
 
 ## Syntax
 
-```js
+```js-nolint
 new AudioWorkletNode(context, name)
 new AudioWorkletNode(context, name, options)
 ```
@@ -56,10 +57,12 @@ new AudioWorkletNode(context, name, options)
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
+
   - : The specified `options.outputChannelCount` is `0` or larger
     than the current implementation supports.
 
     Both `options.numberOfInputs` and `options.numberOfOutputs` are 0.
+
 - `IndexSizeError` {{domxref("DOMException")}}
   - : The length of `options.outputChannelCount` array does not match
     `options.numberOfOutputs`.
@@ -68,7 +71,7 @@ new AudioWorkletNode(context, name, options)
 
 Different `options` parameter values can have the following effects.
 
-If the number of inputs and number of outputs are both set to 0, a `NotSupportedError` will be thrown and the node construction process aborted. If the length of the `outputChannelCount` array doesn't match `numberOfOutputs`, an `IndexSizeError`  {{domxref("DOMException")}} will be thrown.
+If the number of inputs and number of outputs are both set to 0, a `NotSupportedError` will be thrown and the node construction process aborted. If the length of the `outputChannelCount` array doesn't match `numberOfOutputs`, an `IndexSizeError` {{domxref("DOMException")}} will be thrown.
 
 If `outputChannelCount` isn't specified, and `numberOfInputs` and `numberOfOutputs` are both 1, the `AudioWorkletNode`'s initial channel count is set to 1. This has the effect of changing the output channel count to dynamically change to the computed number of channels, based on the input's channel count and the current setting of the {{domxref("AudioNode")}} property {{domxref("AudioNode.channelCountMode", "channelCountMode")}}.
 

@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
 **Promises** are the foundation of asynchronous programming in modern JavaScript. A promise is an object returned by an asynchronous function, which represents the current state of the operation. At the time the promise is returned to the caller, the operation often isn't finished, but the promise object provides methods to handle the eventual success or failure of the operation.
@@ -170,7 +171,7 @@ First, a promise can be in one of three states:
 - **fulfilled**: the asynchronous function has succeeded. When a promise is fulfilled, its `then()` handler is called.
 - **rejected**: the asynchronous function has failed. When a promise is rejected, its `catch()` handler is called.
 
- Note that what "succeeded" or "failed" means here is up to the API in question: for example, `fetch()` considers a request successful if the server returned an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404), but not if a network error prevented the request being sent.
+Note that what "succeeded" or "failed" means here is up to the API in question: for example, `fetch()` considers a request successful if the server returned an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404), but not if a network error prevented the request being sent.
 
 Sometimes, we use the term **settled** to cover both **fulfilled** and **rejected**.
 

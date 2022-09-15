@@ -12,6 +12,7 @@ tags:
   - getTags
 browser-compat: api.SyncManager.getTags
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`SyncManager.getTags`** method of the
@@ -20,7 +21,7 @@ The **`SyncManager.getTags`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getTags()
 ```
 

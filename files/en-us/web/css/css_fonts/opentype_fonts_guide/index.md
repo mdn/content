@@ -9,6 +9,7 @@ tags:
   - font-feature-settings
   - opentype
 ---
+
 {{CSSRef}}
 
 Font features or variants refer to different glyphs or character styles contained within an OpenType font. These include things like ligatures (special glyphs that combine characters like 'fi' or 'ffl'), kerning (adjustments to the spacing between specific letterform pairings), fractions, numeral styles, and several others. These are all referred to as OpenType Features, and are made available to use on the web via specific properties and low-level control properties — {{cssxref("font-feature-settings")}}. This article provides you with all you need to know about using OpenType font features in CSS.
@@ -185,14 +186,14 @@ For example, small caps can be set several ways, but if you want to ensure that 
 
 ```css
 .small-caps {
-   font-feature-settings: "smcp", "c2sc";
+  font-feature-settings: "smcp", "c2sc";
 }
 
 @supports (font-variant-caps: all-small-caps) {
-   .small-caps {
-       font-feature-settings: normal;
-       font-variant-caps: all-small-caps;
-   }
+  .small-caps {
+    font-feature-settings: normal;
+    font-variant-caps: all-small-caps;
+  }
 }
 ```
 

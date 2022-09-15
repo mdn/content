@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.EyeDropper.open
 ---
+
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The **`EyeDropper.open()`** method starts the eyedropper mode, returning a promise which is fulfilled once the user has either selected a color or dismissed the eyedropper mode.
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 open(options)
 ```

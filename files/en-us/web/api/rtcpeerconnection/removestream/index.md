@@ -13,6 +13,7 @@ tags:
   - Non-standard
 browser-compat: api.RTCPeerConnection.removeStream
 ---
+
 {{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The
@@ -31,8 +32,8 @@ If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set 
 
 ## Syntax
 
-```js
-RTCPeerConnection.removeStream(mediaStream);
+```js-nolint
+removeStream(mediaStream)
 ```
 
 ### Parameters

@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.requestUpdateCheck
 ---
+
 {{AddonSidebar()}}
 
 Checks to see if an update for the extension is available.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let requestingCheck = browser.runtime.requestUpdateCheck()
 ```
 

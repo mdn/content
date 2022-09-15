@@ -12,6 +12,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement.getPointAtLength
 ---
+
 {{APIRef("SVG")}}
 
 The
@@ -20,7 +21,7 @@ point at a given distance along the path.
 
 ## Syntax
 
-```js
+```js-nolint
 getPointAtLength(distance)
 ```
 

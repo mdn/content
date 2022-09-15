@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.slice
 ---
+
 {{JSRef}}
 
 The **`slice()`** method returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of
@@ -20,7 +21,7 @@ the index of items in that array. The original array will not be modified.
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)

@@ -19,6 +19,7 @@ tags:
   - upload
 browser-compat: api.XMLHttpRequest.responseXML
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The **`XMLHttpRequest.responseXML`** read-only property returns

@@ -14,6 +14,7 @@ tags:
   - WebXR Device API
 browser-compat: api.XRDepthInformation.width
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`width`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the width of the depth buffer (number of columns).

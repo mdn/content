@@ -14,6 +14,7 @@ browser-compat:
   - api.SpeechRecognition
   - api.SpeechSynthesis
 ---
+
 {{DefaultAPISidebar("Web Speech API")}}
 
 The **Web Speech API** enables you to incorporate voice data into web apps.

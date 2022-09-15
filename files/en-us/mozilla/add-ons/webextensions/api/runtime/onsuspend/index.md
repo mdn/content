@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onSuspend
 ---
+
 {{AddonSidebar()}}
 
 Sent to the event page just before it is unloaded. This gives the extension an opportunity to do some cleanup. Note that since the page is unloading, any asynchronous operations started while handling this event are not guaranteed to complete.
@@ -21,7 +22,7 @@ Sent to the event page just before it is unloaded. This gives the extension an o
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onSuspend.addListener(listener)
 browser.runtime.onSuspend.removeListener(listener)
 browser.runtime.onSuspend.hasListener(listener)

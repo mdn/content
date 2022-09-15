@@ -8,6 +8,7 @@ tags:
   - Media
   - Video
 ---
+
 We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web based media and compatibility with popular browsers.
 
 ## The Audio and Video Elements
@@ -25,10 +26,10 @@ To deliver video and audio, the general workflow is usually something like this:
 
 ```html
 <audio controls preload="auto">
-  <source src="audiofile.mp3" type="audio/mpeg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
 
   <!-- fallback for browsers that don't support mp3 -->
-  <source src="audiofile.ogg" type="audio/ogg">
+  <source src="audiofile.ogg" type="audio/ogg" />
 
   <!-- fallback for browsers that don't support audio tag -->
   <a href="audiofile.mp3">download audio</a>
@@ -44,15 +45,25 @@ For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/
 ### HTML Video
 
 ```html
-<video controls width="640" height="480" poster="initialimage.png" autoplay muted>
-  <source src="videofile.mp4" type="video/mp4">
+<video
+  controls
+  width="640"
+  height="480"
+  poster="initialimage.png"
+  autoplay
+  muted>
+  <source src="videofile.mp4" type="video/mp4" />
 
   <!-- fallback for browsers that don't support mp4 -->
-  <source src="videofile.webm" type="video/webm">
+  <source src="videofile.webm" type="video/webm" />
 
   <!-- specifying subtitle files -->
-  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-  <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" />
+  <track
+    src="subtitles_no.vtt"
+    kind="subtitles"
+    srclang="no"
+    label="Norwegian" />
 
   <!-- fallback for browsers that don't support video tag -->
   <a href="videofile.mp4">download video</a>
@@ -240,7 +251,9 @@ You may detect click, touch and/or keyboard events to trigger actions such as pl
 A quick example — first set up your audio and custom controls in HTML:
 
 ```html
-<audio id="my-audio" src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
+<audio
+  id="my-audio"
+  src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
 <button id="my-control">play</button>
 ```
 

@@ -12,6 +12,7 @@ tags:
   - get
 browser-compat: webextensions.api.contextualIdentities.get
 ---
+
 {{AddonSidebar()}}
 
 Gets information about a contextual identity, given its cookie store ID.
@@ -20,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getContext = browser.contextualIdentities.get(
   cookieStoreId                  // string
 )

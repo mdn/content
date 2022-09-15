@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.DataView.DataView
 ---
+
 {{JSRef}}
 
 The **`DataView()`** constructor is used to create {{jsxref("DataView")}} objects.
@@ -18,7 +19,7 @@ The **`DataView()`** constructor is used to create {{jsxref("DataView")}} object
 
 ## Syntax
 
-```js
+```js-nolint
 new DataView(buffer)
 new DataView(buffer, byteOffset)
 new DataView(buffer, byteOffset, byteLength)

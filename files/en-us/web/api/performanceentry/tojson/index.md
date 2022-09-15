@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry.toJSON
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`toJSON()`** method is a _serializer_; it returns
@@ -18,7 +19,7 @@ a JSON representation of the {{domxref("PerformanceEntry","performance entry")}}
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

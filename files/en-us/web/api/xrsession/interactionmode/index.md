@@ -19,6 +19,7 @@ tags:
   - Experimental
 browser-compat: api.XRSession.interactionMode
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRSession")}} interface's _read-only_ **`interactionMode`** property

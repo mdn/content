@@ -13,13 +13,14 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.onTabReplaced
 ---
+
 {{AddonSidebar()}}
 
 Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onTabReplaced.addListener(
   listener,                   // function
   filter                      // optional object

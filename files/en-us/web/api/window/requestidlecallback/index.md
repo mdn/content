@@ -13,6 +13,7 @@ tags:
   - polyfill
 browser-compat: api.Window.requestIdleCallback
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`window.requestIdleCallback()`** method queues a function
@@ -32,7 +33,7 @@ loop.
 
 ## Syntax
 
-```js
+```js-nolint
 requestIdleCallback(callback)
 requestIdleCallback(callback, options)
 ```

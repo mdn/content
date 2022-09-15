@@ -103,7 +103,7 @@ The edit form's HTML might look a little bit like this:
 <form>
   <div>
     <label for="title">Post title:</label>
-    <input type="text" id="title" name="title" value="My excellent blog post">
+    <input type="text" id="title" name="title" value="My excellent blog post" />
   </div>
   <div>
     <label for="content">Post content:</label>
@@ -114,7 +114,7 @@ This is the content of my excellent blog post. I hope you enjoy it!
   <div>
     <button type="submit">Update post</button>
   </div>
-  <input type="hidden" id="postId" name="postId" value="34657">
+  <input type="hidden" id="postId" name="postId" value="34657" />
 </form>
 ```
 
@@ -141,7 +141,8 @@ label {
   padding-right: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   flex: 7;
   font-family: sans-serif;
   font-size: 1.1rem;

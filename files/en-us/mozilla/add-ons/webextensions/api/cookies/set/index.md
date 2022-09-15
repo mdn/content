@@ -13,6 +13,7 @@ tags:
   - set
 browser-compat: webextensions.api.cookies.set
 ---
+
 {{AddonSidebar()}}
 
 The **`set()`** method of the {{WebExtAPIRef("cookies")}} API sets a cookie containing the specified cookie data. This method is equivalent to issuing an HTTP `Set-Cookie` header during a request to a given URL.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let setting = browser.cookies.set(
   details               // object
 )

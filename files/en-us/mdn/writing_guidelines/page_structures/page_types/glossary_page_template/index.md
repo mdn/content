@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
@@ -29,14 +30,15 @@ tags:
 >
 > - **title**
 >   - : Title heading displayed at top of page.
->       Format as: `Term being defined`.
+>     Format as: `Term being defined`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
->       This will be formatted as snake case of the title: `Glossary/Term_being_defined`.
+>     This will be formatted as snake case of the title: `Glossary/Term_being_defined`.
 > - **tags**
 >   - : Always include the following tags: **Glossary**, _Term being defined_.
 >
 > ---
+>
 > _Remember to remove this whole explanatory note before publishing_
 
 The **TermBeingDefined** is _(include a concise definition of the term)_.

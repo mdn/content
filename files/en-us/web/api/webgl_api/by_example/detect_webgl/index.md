@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
 
 This example demonstrates how to detect a {{Glossary("WebGL")}} rendering context and reports the result to the user.
@@ -29,13 +30,13 @@ Saving the state of the graphics machine within a single context interface is no
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 

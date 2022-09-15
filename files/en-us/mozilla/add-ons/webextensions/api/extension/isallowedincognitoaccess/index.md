@@ -13,6 +13,7 @@ tags:
   - isAllowedIncognitoAccess
 browser-compat: webextensions.api.extension.isAllowedIncognitoAccess
 ---
+
 {{AddonSidebar()}}
 
 Check whether the extension is allowed access to tabs opened in "private browsing" mode.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let isAllowed = browser.extension.isAllowedIncognitoAccess()
 ```
 

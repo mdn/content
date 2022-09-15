@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.pageY
 ---
+
 {{APIRef("UI Events")}}
 
 The **`pageY`** read-only property of the {{domxref("MouseEvent")}} interface returns the Y (vertical) coordinate in pixels of the event relative to the whole document.

@@ -7,6 +7,7 @@ tags:
   - MathML:Element
 browser-compat: mathml.elements.semantics
 ---
+
 {{MathMLRef}}
 
 The `<semantics>` element associates annotations with a MathML expression, for example its text source as a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or mathematical meaning expressed in a special {{glossary("XML")}} dialect. Typically, its structure is:
@@ -45,7 +46,6 @@ By default, only the first child of the `<semantics>` element is rendered while 
 ```html
 <math>
   <semantics>
-
     <!-- The first child is the MathML expression rendered by default. -->
     <mrow>
       <msup>
@@ -60,9 +60,9 @@ By default, only the first child of the `<semantics>` element is rendered while 
          express the meaning of mathematical formulas. -->
     <annotation-xml encoding="MathML-Content">
       <apply>
-        <plus/>
+        <plus />
         <apply>
-          <power/>
+          <power />
           <ci>x</ci>
           <cn type="integer">2</cn>
         </apply>
@@ -71,14 +71,11 @@ By default, only the first child of the `<semantics>` element is rendered while 
     </annotation-xml>
 
     <!-- Annotate with a PNG image of the formula. -->
-    <annotation encoding="image/png" src="some/path/formula.png"/>
+    <annotation encoding="image/png" src="some/path/formula.png" />
 
     <!-- Annotate with LaTeX, a lightweight markup language to write
          mathematical formulas. -->
-    <annotation encoding="application/x-tex">
-      x^{2} + y
-    </annotation>
-
+    <annotation encoding="application/x-tex"> x^{2} + y </annotation>
   </semantics>
 </math>
 ```

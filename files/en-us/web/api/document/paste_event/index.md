@@ -12,6 +12,7 @@ tags:
   - paste
 browser-compat: api.Element.paste_event
 ---
+
 {{APIRef}}
 
 The **`paste`** event fires when the user initiates a paste action through the browser's user interface.

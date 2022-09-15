@@ -6,6 +6,7 @@ tags:
   - Property
   - Non-standard
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}
@@ -18,8 +19,8 @@ Starting with Internet Explorer 10, input type=password fields will automaticall
 
 ## Syntax
 
-```js
-document.msCapsLockWarningOff = true;
+```js-nolint
+document.msCapsLockWarningOff = true
 ```
 
 ## Value

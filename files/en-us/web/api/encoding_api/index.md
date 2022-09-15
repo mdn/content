@@ -11,6 +11,7 @@ browser-compat:
   - api.TextDecoder
   - api.TextEncoder
 ---
+
 {{DefaultAPISidebar("Encoding API")}}
 
 The **Encoding API** provides a mechanism for handling text in various {{Glossary("character encoding", "character encodings")}}, including legacy non-{{Glossary("UTF-8")}} encodings.

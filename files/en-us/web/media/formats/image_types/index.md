@@ -26,6 +26,7 @@ tags:
   - gif
   - icon
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 In this guide, we'll cover the image file types generally supported by web browsers, and provide insights that will help you select the most appropriate formats to use for your site's imagery.
@@ -1579,10 +1580,13 @@ For example, if you're displaying a diagram best displayed with SVG, but wish to
 
 ```html
 <picture>
-  <source srcset="diagram.svg" type="image/svg+xml">
-  <source srcset="diagram.png" type="image/png">
-  <img src="diagram.gif" width="620" height="540"
-       alt="Diagram showing the data channels">
+  <source srcset="diagram.svg" type="image/svg+xml" />
+  <source srcset="diagram.png" type="image/png" />
+  <img
+    src="diagram.gif"
+    width="620"
+    height="540"
+    alt="Diagram showing the data channels" />
 </picture>
 ```
 

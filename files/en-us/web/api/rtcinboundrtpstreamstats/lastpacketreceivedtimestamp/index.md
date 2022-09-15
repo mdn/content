@@ -18,6 +18,7 @@ tags:
   - timeStamp
 browser-compat: api.RTCInboundRtpStreamStats.lastPacketReceivedTimestamp
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`lastPacketReceivedTimestamp`**
@@ -29,8 +30,8 @@ at which the most recently received packet arrived from this source.
 A {{domxref("DOMHighResTimeStamp")}} which specifies the time at which the most
 recently received packet arrived on this RTP stream.
 
-> **Note:** This value differs from the {{domxref("RTCStats.timestamp",
-    "timestamp")}}, which represents the time at which the statistics object was created.
+> **Note:** This value differs from the {{domxref("RTCStats.timestamp", "timestamp")}},
+> which represents the time at which the statistics object was created.
 
 ## Specifications
 

@@ -16,6 +16,7 @@ tags:
   - track
 browser-compat: api.MediaStream.getVideoTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getVideoTracks()`** method of the
@@ -24,7 +25,7 @@ The **`getVideoTracks()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getVideoTracks()
 ```
 

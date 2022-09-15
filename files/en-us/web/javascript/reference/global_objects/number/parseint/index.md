@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.parseInt
 ---
+
 {{JSRef}}
 
 The **`Number.parseInt()`** method parses a string argument and
@@ -18,7 +19,7 @@ returns an integer of the specified radix or base.
 
 ## Syntax
 
-```js
+```js-nolint
 Number.parseInt(string)
 Number.parseInt(string, radix)
 ```

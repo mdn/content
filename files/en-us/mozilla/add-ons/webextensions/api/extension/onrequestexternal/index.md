@@ -13,6 +13,7 @@ tags:
   - onRequestExternal
 browser-compat: webextensions.api.extension.onRequestExternal
 ---
+
 {{AddonSidebar()}}
 
 > **Warning:** This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use [runtime.onMessageExternal](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal) instead.
@@ -21,7 +22,7 @@ Fired when a request is sent from another extension.
 
 ## Syntax
 
-```js
+```js-nolint
 chrome.extension.onRequestExternal.addListener(function(
   request,      // optional any
   sender,       // runtime.MessageSender

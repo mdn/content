@@ -12,6 +12,7 @@ tags:
   - django views
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
 We're now ready to add the code that displays our first complete page — a home page for the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website. The home page will show the number of records we have for each model type and provide sidebar navigation links to our other pages. Along the way we'll gain practical experience in writing basic URL maps and views, getting records from the database, and using templates.
@@ -258,9 +259,9 @@ The base template also references a local CSS file (**styles.css**) that provide
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 
@@ -314,14 +315,14 @@ Within the template you first call the `load` template tag specifying "static" t
 ```html
 <!-- Add additional CSS in static file -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 You can add an image into the page in a similar way, for example:
 
 ```html
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;">
+<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;" />
 ```
 
 > **Note:** The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (**/locallibrary/locallibrary/urls.py**) when we [created the website skeleton](/en-US/docs/Learn/Server-side/Django/skeleton_website), but still need to enable file serving in production. We'll look at this later.
@@ -381,9 +382,9 @@ Here are a couple of tasks to test your familiarity with model queries, views, a
 
 1. The LocalLibrary [base template](#the_locallibrary_base_template) includes a `title` block. Override this block in the [index template](#the_index_template) and create a new title for the page.
 
-    > **Note:** The section [Extending templates](#extending_templates) explains how to create blocks and extend a block in another template.
+   > **Note:** The section [Extending templates](#extending_templates) explains how to create blocks and extend a block in another template.
 
-2. Modify the [view](<#view_(function-based)>) to generate counts for _genres_ and _books_ that contain a particular word (case insensitive), and pass the results to the `context.` You accomplish this in a similar way to creating and using `num_books` and `num_instances_available`. Then update the [index template](#the_index_template) to include these variables.
+2. Modify the [view](<#view_(function-based)>) to generate counts for _genres_ and _books_ that contain a particular word (case insensitive), and pass the results to the `context`. You accomplish this in a similar way to creating and using `num_books` and `num_instances_available`. Then update the [index template](#the_index_template) to include these variables.
 
 ## Summary
 

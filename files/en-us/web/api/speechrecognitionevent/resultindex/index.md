@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionEvent.resultIndex
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`resultIndex`** read-only property of the

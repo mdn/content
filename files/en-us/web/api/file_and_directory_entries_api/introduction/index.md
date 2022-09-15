@@ -11,6 +11,7 @@ tags:
   - Introduction
 browser-compat: api.FileSystem
 ---
+
 {{DefaultAPISidebar("File and Directory Entries API")}}
 
 The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) simulates a local file system that web apps can navigate around. You can develop apps that can read, write, and create files and directories in a sandboxed, virtual file system.
@@ -112,7 +113,7 @@ The File and Directory Entries API comes with asynchronous and synchronous versi
 
 - **WebWorkers.** The asynchronous API can be used in either the document or [WebWorkers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) context, while the synchronous API is for use with WebWorkers only.
 - **Callbacks**. The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.
-- **Global methods of the asynchronous and synchronous APIs**. The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods:  `requestFileSystemSync()` and  `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
+- **Global methods of the asynchronous and synchronous APIs**. The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods: `requestFileSystemSync()` and `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
 
 The synchronous API can be simpler for some tasks. Its direct, in-order programming model can make code easier to read. The drawback of synchronous API has to do with its interactions with Web Workers, which has some limitations.
 

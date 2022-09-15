@@ -15,6 +15,7 @@ tags:
   - properties
 browser-compat: javascript.operators.object_initializer
 ---
+
 {{JsSidebar("Operators")}}
 
 Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object), [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create), or using the _literal_ notation (_initializer_ notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
@@ -23,7 +24,7 @@ Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Ref
 
 ## Syntax
 
-```js
+```js-nolint
 o = {};
 o = {a: 'foo', b: 42, c: {}};
 

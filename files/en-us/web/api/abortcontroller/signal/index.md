@@ -11,6 +11,7 @@ tags:
   - signal
 browser-compat: api.AbortController.signal
 ---
+
 {{APIRef("DOM")}}
 
 The **`signal`** read-only property of the {{domxref("AbortController")}} interface returns an {{domxref("AbortSignal")}} object instance, which can be used to communicate with/abort a DOM request as desired.
@@ -31,21 +32,21 @@ When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the
 const controller = new AbortController();
 const signal = controller.signal;
 
-const url = 'video.mp4';
-const downloadBtn = document.querySelector('.download');
-const abortBtn = document.querySelector('.abort');
+const url = "video.mp4";
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', () => {
+abortBtn.addEventListener("click", () => {
   controller.abort();
-  console.log('Download aborted');
+  console.log("Download aborted");
 });
 
 function fetchVideo() {
   fetch(url, { signal })
     .then((response) => {
-      console.log('Download complete', response);
+      console.log("Download complete", response);
     })
     .catch((err) => {
       console.error(`Download error: ${err.message}`);

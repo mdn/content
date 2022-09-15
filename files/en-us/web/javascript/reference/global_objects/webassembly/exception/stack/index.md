@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: javascript.builtins.WebAssembly.Exception.stack
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The read-only **`stack`** property of an object instance of type [`WebAssembly.Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) _may_ contain a stack trace.

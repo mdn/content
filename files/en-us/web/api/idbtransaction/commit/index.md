@@ -11,6 +11,7 @@ tags:
   - commit
 browser-compat: api.IDBTransaction.commit
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`commit()`** method of the {{domxref("IDBTransaction")}} interface commits the transaction if it is called on an active transaction.
@@ -23,7 +24,7 @@ If it is called on a transaction that is not active, it throws an `InvalidStateE
 
 ## Syntax
 
-```js
+```js-nolint
 commit()
 ```
 

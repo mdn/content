@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Window.beforeprint_event
 ---
+
 {{APIRef}}
 
 The **`beforeprint`** event is fired when the associated document is about to be printed or previewed for printing.

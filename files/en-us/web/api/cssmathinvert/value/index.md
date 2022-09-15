@@ -12,6 +12,7 @@ tags:
   - Property
 browser-compat: api.CSSMathInvert.value
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The CSSMathInvert.value read-only property of the

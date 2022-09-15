@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.removeAllRanges
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.removeAllRanges()`** method removes all ranges
@@ -19,7 +20,7 @@ leaving nothing selected.
 
 ## Syntax
 
-```js
+```js-nolint
 removeAllRanges()
 ```
 

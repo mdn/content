@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: api.Request.clone
 ---
+
 {{APIRef("Fetch")}}
 
 The **`clone()`** method of the {{domxref("Request")}} interface creates a copy of the current `Request` object.
@@ -28,7 +29,7 @@ If you intend to modify the request, you may prefer the {{domxref("Request")}} c
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Web
   - cascading variables
 ---
+
 {{CSSRef}}
 
 **Custom properties** (sometimes referred to as **CSS variables** or **cascading variables**) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., **`--main-color: black;`**) and are accessed using the {{cssxref("var", "var()")}} function (e.g., `color: var(--main-color);`).
@@ -93,7 +94,7 @@ We'll apply it to this HTML:
 <div>
   <div class="one">1:</div>
   <div class="two">2: Text <span class="five">5 - more text</span></div>
-  <input class="three">
+  <input class="three" />
   <textarea class="four">4: Lorem Ipsum</textarea>
 </div>
 ```
@@ -148,10 +149,10 @@ Notice the repetitive CSS in the example above. The background color is set to `
 
 ```html hidden
 <div>
-    <div class="one"></div>
-    <div class="two">Text <span class="five">- more text</span></div>
-    <input class="three">
-    <textarea class="four">Lorem Ipsum</textarea>
+  <div class="one"></div>
+  <div class="two">Text <span class="five">- more text</span></div>
+  <input class="three" />
+  <textarea class="four">Lorem Ipsum</textarea>
 </div>
 ```
 
@@ -211,7 +212,7 @@ The first argument to the function is the name of the [custom property](https://
 }
 
 .three {
-   /* Invalid: "--my-background, pink" */
+  /* Invalid: "--my-background, pink" */
   background-color: var(--my-var, --my-background, pink);
 }
 ```

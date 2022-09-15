@@ -15,6 +15,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-rendering
 ---
+
 {{CSSRef}}
 
 The **`text-rendering`** CSS property provides information to the rendering engine about what to optimize for when rendering text.
@@ -84,8 +85,12 @@ This demonstrates how `optimizeLegibility` is used by browsers automatically whe
 #### CSS
 
 ```css
-.small { font: 19.9px "Constantia", "Times New Roman", "Georgia", "Palatino", serif; }
-.big   { font: 20px "Constantia", "Times New Roman", "Georgia", "Palatino", serif; }
+.small {
+  font: 19.9px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+}
+.big {
+  font: 20px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+}
 ```
 
 #### Result
@@ -106,10 +111,16 @@ This example shows the difference between the appearance of `optimizeSpeed` and 
 #### CSS
 
 ```css
-p { font: 1.5em "Constantia", "Times New Roman", "Georgia", "Palatino", serif }
+p {
+  font: 1.5em "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+}
 
-.speed       { text-rendering: optimizeSpeed; }
-.legibility  { text-rendering: optimizeLegibility; }
+.speed {
+  text-rendering: optimizeSpeed;
+}
+.legibility {
+  text-rendering: optimizeLegibility;
+}
 ```
 
 #### Result

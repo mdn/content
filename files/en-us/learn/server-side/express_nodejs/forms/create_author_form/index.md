@@ -8,6 +8,7 @@ tags:
   - part 6
   - server-side
 ---
+
 This subarticle shows how to define a page for creating `Author` objects.
 
 ## Import validation and sanitization methods
@@ -28,7 +29,6 @@ Find the exported `author_create_get()` controller method and replace it with th
 // Display Author create form on GET.
 exports.author_create_get = (req, res, next) => {
   res.render("author_form", { title: "Create Author" });
-
 };
 ```
 

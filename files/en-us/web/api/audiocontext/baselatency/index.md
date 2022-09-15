@@ -12,6 +12,7 @@ tags:
   - baseLatency
 browser-compat: api.AudioContext.baseLatency
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`baseLatency`** read-only property of the
@@ -36,7 +37,7 @@ const audioCtx1 = new AudioContext();
 console.log(audioCtx1.baseLatency); // 0.00
 
 // higher latency ("playback")
-const audioCtx2 = new AudioContext({ latencyHint: 'playback' });
+const audioCtx2 = new AudioContext({ latencyHint: "playback" });
 console.log(audioCtx2.baseLatency); // 0.15
 ```
 

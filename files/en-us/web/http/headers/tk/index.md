@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: http.headers.Tk
 ---
+
 {{HTTPSidebar}}{{Deprecated_header}}
 
 The **`Tk`** response header indicates the tracking status that

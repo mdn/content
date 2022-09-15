@@ -13,6 +13,7 @@ tags:
   - respondWith
 browser-compat: api.FetchEvent.respondWith
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`respondWith()`** method of
@@ -72,7 +73,7 @@ resulting {{domxref("Window.location")}}. This means sites can still provide an
 
 ## Syntax
 
-```js
+```js-nolint
 respondWith(response)
 ```
 
@@ -80,7 +81,7 @@ respondWith(response)
 
 - `response`
   - : A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
-`Response`. Otherwise, a network error is returned to Fetch.
+    `Response`. Otherwise, a network error is returned to Fetch.
 
 ### Return value
 

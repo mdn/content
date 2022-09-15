@@ -13,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLTableElement.rules
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The **`HTMLTableElement.rules`** property indicates which cell

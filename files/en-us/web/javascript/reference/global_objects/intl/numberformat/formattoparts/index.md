@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat.prototype.formatToParts()`** method
@@ -22,7 +23,7 @@ formatters.
 
 ## Syntax
 
-```js
+```js-nolint
 formatToParts()
 formatToParts(number)
 ```

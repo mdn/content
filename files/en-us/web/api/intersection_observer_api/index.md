@@ -14,6 +14,7 @@ tags:
   - Web
 browser-compat: api.IntersectionObserver
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's {{Glossary("viewport")}}.
@@ -158,8 +159,7 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
 
 <main>
   <div class="contents">
-    <div class="wrapper">
-    </div>
+    <div class="wrapper"></div>
   </div>
 </main>
 ```
@@ -353,9 +353,7 @@ The HTML for this example is very short, with a primary element which is the box
 
 ```html
 <div id="box">
-  <div class="vertical">
-    Welcome to <strong>The Box!</strong>
-  </div>
+  <div class="vertical">Welcome to <strong>The Box!</strong></div>
 </div>
 ```
 

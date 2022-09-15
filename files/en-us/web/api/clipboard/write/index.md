@@ -17,6 +17,7 @@ tags:
   - write
 browser-compat: api.Clipboard.write
 ---
+
 {{APIRef("Clipboard API")}}
 
 The {{domxref("Clipboard")}} method
@@ -33,7 +34,7 @@ automatically to pages when they are in the active tab.
 
 ## Syntax
 
-```js
+```js-nolint
 write(data)
 ```
 

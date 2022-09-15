@@ -16,6 +16,7 @@ tags:
   - print
 browser-compat: api.console.debug
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.debug()`** method outputs a message to the web console at
@@ -27,7 +28,7 @@ level might correspond to the \`Debug\` or \`Verbose\` log level.
 
 ## Syntax
 
-```js
+```js-nolint
 debug(obj1)
 debug(obj1, /* …, */ objN)
 debug(msg)

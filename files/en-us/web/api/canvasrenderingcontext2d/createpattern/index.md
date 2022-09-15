@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createPattern
 ---
+
 {{APIRef}}
 
 The
@@ -24,7 +25,7 @@ applied to any subsequent drawing.
 
 ## Syntax
 
-```js
+```js-nolint
 createPattern(image, repetition)
 ```
 

@@ -14,6 +14,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioWorkletProcessor.process
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`process()`**
@@ -43,7 +44,7 @@ invoked to do so.
 
 ## Syntax
 
-```js
+```js-nolint
 process(inputs, outputs, parameters)
 ```
 
@@ -113,28 +114,28 @@ processing.
 The 3 most common types of audio node are:
 
 1. A source of output. An {{domxref("AudioWorkletProcessor")}} implementing such a node
-    should return `true` from the `process` method as long as it
-    produces an output. The method should return `false` as soon as it's known
-    that it will no longer produce an output. For example, take the
-    {{domxref("AudioBufferSourceNode")}} — the processor behind such a node should return
-    `true` from the `process` method while the buffer is playing,
-    and start returning `false` when the buffer playing has ended (there's no
-    way to call `play` on the same {{domxref("AudioBufferSourceNode")}} again).
+   should return `true` from the `process` method as long as it
+   produces an output. The method should return `false` as soon as it's known
+   that it will no longer produce an output. For example, take the
+   {{domxref("AudioBufferSourceNode")}} — the processor behind such a node should return
+   `true` from the `process` method while the buffer is playing,
+   and start returning `false` when the buffer playing has ended (there's no
+   way to call `play` on the same {{domxref("AudioBufferSourceNode")}} again).
 2. A node that transforms its input. A processor implementing such a node should return
-    `false` from the `process` method to allow the presence of
-    active input nodes and references to the node to determine whether it can be
-    garbage-collected. An example of a node with this behavior is the
-    {{domxref("GainNode")}}. As soon as there are no inputs connected and references
-    retained, gain can no longer be applied to anything, so it can be safely
-    garbage-collected.
+   `false` from the `process` method to allow the presence of
+   active input nodes and references to the node to determine whether it can be
+   garbage-collected. An example of a node with this behavior is the
+   {{domxref("GainNode")}}. As soon as there are no inputs connected and references
+   retained, gain can no longer be applied to anything, so it can be safely
+   garbage-collected.
 3. A node that transforms its input, but has a so-called _tail-time_ — this
-    means that it will produce an output for some time even after its inputs are
-    disconnected or are inactive (producing zero-channels). A processor implementing such
-    a node should return `true` from the `process` method for the
-    period of the _tail-time_, beginning as soon as inputs are found that contain
-    zero-channels. An example of such a node is the {{domxref("DelayNode")}} — it has a
-    _tail-time_ equal to its {{domxref("DelayNode.delayTime", "delayTime")}}
-    property.
+   means that it will produce an output for some time even after its inputs are
+   disconnected or are inactive (producing zero-channels). A processor implementing such
+   a node should return `true` from the `process` method for the
+   period of the _tail-time_, beginning as soon as inputs are found that contain
+   zero-channels. An example of such a node is the {{domxref("DelayNode")}} — it has a
+   _tail-time_ equal to its {{domxref("DelayNode.delayTime", "delayTime")}}
+   property.
 
 > **Note:** An absence of the `return` statement means that the method returns `undefined`, and as this is a falsy value, it is like returning `false`.
 > Omitting an explicit `return` statement may cause hard-to-detect problems for your nodes.

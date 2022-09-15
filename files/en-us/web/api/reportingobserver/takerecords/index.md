@@ -11,6 +11,7 @@ tags:
   - ReportingObserver
 browser-compat: api.ReportingObserver.takeRecords
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`takeRecords()`** method of the
@@ -19,7 +20,7 @@ in the observer's report queue, and empties the queue.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 

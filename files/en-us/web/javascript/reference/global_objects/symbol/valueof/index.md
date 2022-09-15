@@ -9,13 +9,14 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of a Symbol object.
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 

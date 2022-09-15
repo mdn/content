@@ -9,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimateMotionElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGAnimateMotionElement`** interface corresponds to the {{SVGElement("animateMotion")}} element.

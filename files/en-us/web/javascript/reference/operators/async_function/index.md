@@ -9,6 +9,7 @@ tags:
   - Primary Expression
 browser-compat: javascript.operators.async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`async function`** keyword can be used to define
@@ -19,7 +20,7 @@ You can also define async functions using an
 
 ## Syntax
 
-```js
+```js-nolint
 async function (param0) {
   statements
 }

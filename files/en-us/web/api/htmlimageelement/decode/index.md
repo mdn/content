@@ -18,6 +18,7 @@ tags:
   - decoding
 browser-compat: api.HTMLImageElement.decode
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`decode()`**
@@ -33,7 +34,7 @@ a delay while the image loads.
 
 ## Syntax
 
-```js
+```js-nolint
 decode()
 ```
 

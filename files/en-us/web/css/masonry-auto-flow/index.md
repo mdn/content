@@ -93,7 +93,7 @@ This property may take one of two forms:
 
 #item1 {
   background-color: lime;
-  height: 2em
+  height: 2em;
 }
 
 #item2 {

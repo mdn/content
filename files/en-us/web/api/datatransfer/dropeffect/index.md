@@ -10,6 +10,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.dropEffect
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.dropEffect`** property controls the
@@ -64,10 +65,16 @@ This example shows the use of the `dropEffect` and
 ```html
 <div>
   <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
-    Select this element, drag it to the Drop Zone and then release the selection to move the element.
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
   </p>
 </div>
-<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+<div
+  id="target"
+  ondrop="drop_handler(event);"
+  ondragover="dragover_handler(event);">
+  Drop Zone
+</div>
 ```
 
 ### CSS

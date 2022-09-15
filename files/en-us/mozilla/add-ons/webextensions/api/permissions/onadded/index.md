@@ -11,13 +11,14 @@ tags:
   - onAdded
 browser-compat: webextensions.api.permissions.onAdded
 ---
+
 {{AddonSidebar()}}
 
 Fired when the extension granted new permissions.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.permissions.onAdded.addListener(listener)
 browser.permissions.onAdded.removeListener(listener)
 browser.permissions.onAdded.hasListener(listener)

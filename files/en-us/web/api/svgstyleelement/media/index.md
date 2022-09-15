@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStyleElement.media
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGStyleElement.media`** property is a media query string corresponding to the [`media`](/en-US/docs/Web/SVG/Element/style#media) attribute of the given SVG style element.
@@ -34,7 +35,9 @@ We also define a `button` that will be used to display the current style and cha
 
 ```html
 <button></button>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <circle cx="60" cy="60" r="50" />
 </svg>
 ```

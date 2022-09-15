@@ -12,6 +12,7 @@ tags:
   - UIEvent
 browser-compat: api.UIEvent.view
 ---
+
 {{APIRef("UI Events")}}
 
 The **`UIEvent.view`** read-only property returns the

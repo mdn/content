@@ -12,6 +12,7 @@ tags:
   - cacheEnabled
 browser-compat: webextensions.api.browserSettings.cacheEnabled
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to globally enable or disable the browser cache.
@@ -32,8 +33,7 @@ function logResult(result) {
   console.log(`Current level of control: ${result.levelOfControl}`);
 }
 
-browser.browserSettings.cacheEnabled.get({}).
-  then(logResult);
+browser.browserSettings.cacheEnabled.get({}).then(logResult);
 ```
 
 Disabling the browser cache:
@@ -43,8 +43,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.cacheEnabled.set({value: false}).
-  then(logResult);
+browser.browserSettings.cacheEnabled.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

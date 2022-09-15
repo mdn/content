@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.link
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`link()`** method creates a string representing the code
@@ -19,7 +20,7 @@ for an {{HTMLElement("a")}} HTML element to be used as a hypertext link to anoth
 
 ## Syntax
 
-```js
+```js-nolint
 link(url)
 ```
 

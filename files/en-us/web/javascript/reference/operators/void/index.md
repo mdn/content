@@ -9,6 +9,7 @@ tags:
   - Unary
 browser-compat: javascript.operators.void
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`void` operator** evaluates the given
@@ -18,7 +19,7 @@ The **`void` operator** evaluates the given
 
 ## Syntax
 
-```js
+```js-nolint
 void expression
 ```
 

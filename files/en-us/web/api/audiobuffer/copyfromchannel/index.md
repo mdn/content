@@ -18,6 +18,7 @@ tags:
   - sound
 browser-compat: api.AudioBuffer.copyFromChannel
 ---
+
 {{APIRef("Web Audio API")}}
 
 The
@@ -28,7 +29,7 @@ channel of the `AudioBuffer` to a specified
 
 ## Syntax
 
-```js
+```js-nolint
 copyFromChannel(destination, channelNumber, startInChannel)
 ```
 

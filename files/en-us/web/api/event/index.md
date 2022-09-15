@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Event
 ---
+
 {{APIRef("DOM")}}
 
 The **`Event`** interface represents an event which takes place in the DOM.
@@ -42,6 +43,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("ErrorEvent")}}
 - {{domxref("FetchEvent")}}
 - {{domxref("FocusEvent")}}
+- {{domxref("FontFaceSetLoadEvent")}}
 - {{domxref("FormDataEvent")}}
 - {{domxref("GamepadEvent")}}
 - {{domxref("HashChangeEvent")}}

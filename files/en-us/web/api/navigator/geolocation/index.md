@@ -11,6 +11,7 @@ tags:
   - Secure context
 browser-compat: api.Navigator.geolocation
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`Navigator.geolocation`** read-only property returns a

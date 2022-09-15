@@ -10,6 +10,7 @@ tags:
   - Worklets
 browser-compat: api.Worklet
 ---
+
 {{APIRef("Worklets")}}
 
 The **`Worklet`** interface is a lightweight version of {{domxref("Worker", "Web Workers")}} and gives developers access to low-level parts of the rendering pipeline.

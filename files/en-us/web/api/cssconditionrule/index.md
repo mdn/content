@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSConditionRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 An object implementing the **`CSSConditionRule`** interface represents a single condition CSS [at-rule](/en-US/docs/Web/CSS/At-rule), which consists of a condition and a statement block.

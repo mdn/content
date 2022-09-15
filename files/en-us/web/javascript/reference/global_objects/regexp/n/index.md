@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.n
 ---
+
 {{JSRef}}
 
 The legacy RegExp **$1, $2, $3, $4, $5, $6, $7, $8, $9** properties are static and read-only properties of regular expressions that contain parenthesized substring matches.

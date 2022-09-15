@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.BatteryManager.dischargingTime
 ---
+
 {{APIRef("Battery API")}}
 
 The **`BatteryManager.dischargingTime`** property indicates the amount of time, in seconds, that remains until the battery is fully

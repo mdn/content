@@ -8,6 +8,7 @@ tags:
   - Interfaces
   - XPCOM
 ---
+
 {{FirefoxSidebar}}
 
 These interfaces were moved to new locations in the tree in Gecko 1.9.2.
@@ -18,7 +19,7 @@ This is generally only interesting to people doing development on Mozilla itself
 The following interfaces were moved from `dom/public/idl/base/` to `dom/interfaces/base/`:
 
 | From                       | To                       |
-|----------------------------|--------------------------|
+| -------------------------- | ------------------------ |
 | `nsIBrowserDOMWindow`      | `nsIDOMBarProp`          |
 | `nsIDOMCRMFObject`         | `nsIDOMChromeWindow`     |
 | `nsIDOMClientInformation`  | `nsIDOMClientRect`       |
@@ -36,12 +37,12 @@ The following interfaces were moved from `dom/public/idl/base/` to `dom/interfac
 The following interfaces moved from `dom/public/idl/core/` to `dom/interfaces/core/`:
 
 | From                 | To                            |
-|----------------------|-------------------------------|
+| -------------------- | ----------------------------- |
 | `nsIDOM3Attr`        | `nsIDOM3Document`             |
 | `nsIDOM3Node`        | `nsIDOM3Text`                 |
 | `nsIDOM3TypeInfo`    | `nsIDOMAttr`                  |
 | `nsIDOMCDATASection` | `nsIDOMCharacterData`         |
-| `nsIDOMComment`      | `nsIDOMDOMConfiguration`   |
+| `nsIDOMComment`      | `nsIDOMDOMConfiguration`      |
 | `nsIDOMDOMError`     | `nsIDOMDOMErrorHandler`       |
 | `nsIDOMDOMException` | `nsIDOMDOMImplementation`     |
 | `nsIDOMDOMLocator`   | `nsIDOMDOMStringList`         |
@@ -59,7 +60,7 @@ The following interfaces moved from `dom/public/idl/core/` to `dom/interfaces/co
 These interfaces moved from `dom/public/idl/css/` to `dom/interfaces/css/`:
 
 | From                          | To                         |
-|-------------------------------|----------------------------|
+| ----------------------------- | -------------------------- |
 | `nsIDOMCSS2Properties`        | `nsIDOMCSSCharsetRule`     |
 | `nsIDOMCSSFontFaceRule`       | `nsIDOMCSSImportRule`      |
 | `nsIDOMCSSMediaRule`          | `nsIDOMCSSMozDocumentRule` |
@@ -76,7 +77,7 @@ These interfaces moved from `dom/public/idl/css/` to `dom/interfaces/css/`:
 The following interfaces moved from `dom/public/idl/events/` to `dom/interfaces/events/`:
 
 | From                        | To                         |
-|-----------------------------|----------------------------|
+| --------------------------- | -------------------------- |
 | `nsIDOM3DocumentEvent`      | `nsIDOM3EventTarget`       |
 | `nsIDOMBeforeUnloadEvent`   | `nsIDOMCommandEvent`       |
 | `nsIDOMDataContainerEvent`  | `nsIDOMDataTransfer`       |
@@ -95,7 +96,7 @@ The following interfaces moved from `dom/public/idl/events/` to `dom/interfaces/
 These interfaces moved from `dom/public/idl/geolocation/` to `/dom/interfaces/geolocation/`:
 
 | From                        | To                               |
-|-----------------------------|----------------------------------|
+| --------------------------- | -------------------------------- |
 | `nsIDOMGeoGeolocation`      | `nsIDOMGeoPosition`              |
 | `nsIDOMGeoPositionCallback` | `nsIDOMGeoPositionCoords`        |
 | `nsIDOMGeoPositionError`    | `nsIDOMGeoPositionErrorCallback` |
@@ -105,7 +106,7 @@ These interfaces moved from `dom/public/idl/geolocation/` to `/dom/interfaces/ge
 These interfaces moved from `dom/public/idl/html/` to `/dom/interfaces/html/`:
 
 | From                          | To                            |
-|-------------------------------|-------------------------------|
+| ----------------------------- | ----------------------------- |
 | `nsIDOMHTMLAnchorElement`     | `nsIDOMHTMLAppletElement`     |
 | `nsIDOMHTMLAreaElement`       | `nsIDOMHTMLAudioElement`      |
 | `nsIDOMHTMLBRElement`         | `nsIDOMHTMLBaseElement`       |
@@ -152,13 +153,13 @@ These interfaces moved from `dom/public/idl/html/` to `/dom/interfaces/html/`:
 The following interfaces were moved from `dom/public/idl/json/` to `dom/interfaces/json/`:
 
 | From      | To        |
-|-----------|-----------|
+| --------- | --------- |
 | `nsIJSON` | `nsIJSON` |
 
 The following interfaces were moved from `dom/public/idl/ls/` to `dom/interfaces/load-save/`:
 
 | From                        | To                         |
-|-----------------------------|----------------------------|
+| --------------------------- | -------------------------- |
 | `nsIDOMDOMImplementationLS` | `nsIDOMLSException`        |
 | `nsIDOMLSInput`             | `nsIDOMLSLoadEvent`        |
 | `nsIDOMLSOutput`            | `nsIDOMLSParser`           |
@@ -169,27 +170,27 @@ The following interfaces were moved from `dom/public/idl/ls/` to `dom/interfaces
 The following interfaces moved from `dom/public/idl/offline/` to `dom/interfaces/offline/`:
 
 | From                        | To                          |
-|-----------------------------|-----------------------------|
+| --------------------------- | --------------------------- |
 | `nsIDOMLoadStatus`          | `nsIDOMLoadStatusEvent`     |
 | `nsIDOMOfflineResourceList` | `nsIDOMOfflineResourceList` |
 
 These interfaces moved from `dom/public/idl/range/` to `dom/interfaces/range/`:
 
 | From                  | To                     |
-|-----------------------|------------------------|
+| --------------------- | ---------------------- |
 | `nsIDOMDocumentRange` | `nsIDOMNSRange`        |
 | `nsIDOMRange`         | `nsIDOMRangeException` |
 
 This interface moved from `dom/public/idl/smil` to `dom/interfaces/smil/`:
 
 | From                       | To                         |
-|----------------------------|----------------------------|
+| -------------------------- | -------------------------- |
 | `nsIDOMElementTimeControl` | `nsIDOMElementTimeControl` |
 
 The following interfaces moved from `dom/public/idl/storage/` to `dom/interfaces/storage/`:
 
 | From                   | To                    |
-|------------------------|-----------------------|
+| ---------------------- | --------------------- |
 | `nsIDOMStorage`        | `nsIDOMStorageEvent`  |
 | `nsIDOMStorageItem`    | `nsIDOMStorageList`   |
 | `nsIDOMStorageManager` | `nsIDOMStorageWindow` |
@@ -198,7 +199,7 @@ The following interfaces moved from `dom/public/idl/storage/` to `dom/interfaces
 The following interfaces moved from `dom/public/idl/stylesheets/` to `dom/interfaces/stylesheets/`:
 
 | From                  | To                      |
-|-----------------------|-------------------------|
+| --------------------- | ----------------------- |
 | `nsIDOMDocumentStyle` | `nsIDOMLinkStyle`       |
 | `nsIDOMMediaList`     | `nsIDOMNSDocumentStyle` |
 | `nsIDOMStyleSheet`    | `nsIDOMStyleSheetList`  |
@@ -206,7 +207,7 @@ The following interfaces moved from `dom/public/idl/stylesheets/` to `dom/interf
 The following interfaces moved from `dom/public/idl/svg/` to `dom/interfaces/svg/`:
 
 | From                               | To                          |
-|------------------------------------|-----------------------------|
+| ---------------------------------- | --------------------------- |
 | `nsIDOMGetSVGDocument`             | `nsIDOMSVGAElement`         |
 | `nsIDOMSVGAngle`                   | `nsIDOMSVGAnimPresAspRatio` |
 | `nsIDOMSVGAnimTransformList`       | `nsIDOMSVGAnimateElement`   |
@@ -251,32 +252,32 @@ The following interfaces moved from `dom/public/idl/svg/` to `dom/interfaces/svg
 The IDL files for DOM workers have moved as well, from `dom/public/idl/threads/` to `dom/interfaces/threads/`:
 
 | From                                               | To                  |
-|----------------------------------------------------|---------------------|
+| -------------------------------------------------- | ------------------- |
 | `nsIDOMWorkers.idl` (contains multiple interfaces) | `nsIDOMWorkers.idl` |
 
 The following IDL files have moved from `dom/public/idl/traversal/` to `dom/interfaces/traversal/`:
 
 | From                      | To                 |
-|---------------------------|--------------------|
+| ------------------------- | ------------------ |
 | `nsIDOMDocumentTraversal` | `nsIDOMNodeFilter` |
 | `nsIDOMNodeIterator`      | `nsIDOMTreeWalker` |
 
 The following IDL files have moved from `dom/public/idl/views/` to `dom/interfaces/views/`:
 
 | From                 | To                   |
-|----------------------|----------------------|
+| -------------------- | -------------------- |
 | `nsIDOMAbstractView` | `nsIDOMDocumentView` |
 
 The following IDL files have moved from `dom/public/idl/xbl/` to `dom/interfaces/xbl/`:
 
 | From                | To                  |
-|---------------------|---------------------|
+| ------------------- | ------------------- |
 | `nsIDOMDocumentXBL` | `nsIDOMDocumentXBL` |
 
 The following IDL files have moved from `dom/public/idl/xpath/` to `dom/interfaces/xpath/`:
 
 | From                      | To                      |
-|---------------------------|-------------------------|
+| ------------------------- | ----------------------- |
 | `nsIDOMNSXPathExpression` | `nsIDOMXPathEvaluator`  |
 | `nsIDOMXPathException`    | `nsIDOMXPathExpression` |
 | `nsIDOMXPathNSResolver`   | `nsIDOMXPathNamespace`  |
@@ -285,7 +286,7 @@ The following IDL files have moved from `dom/public/idl/xpath/` to `dom/interfac
 The following IDL files have moved from `dom/public/idl/xul/` to `dom/interfaces/xul/`:
 
 | From                          | To                           |
-|-------------------------------|------------------------------|
+| ----------------------------- | ---------------------------- |
 | `nsIDOMXULButtonElement`      | `nsIDOMXULCheckboxElement`   |
 | `nsIDOMXULCommandDispatcher`  | `nsIDOMXULCommandEvent`      |
 | `nsIDOMXULContainerElement`   | `nsIDOMXULControlElement`    |

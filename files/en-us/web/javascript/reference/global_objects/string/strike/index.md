@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.strike
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`strike()`** method creates a {{HTMLElement("strike")}}
@@ -18,7 +19,7 @@ HTML element that causes a string to be displayed as struck-out text.
 
 ## Syntax
 
-```js
+```js-nolint
 strike()
 ```
 

@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.iterateNext
 ---
+
 {{APIRef("DOM XPath")}}
 
 The **`iterateNext()`** method of the
@@ -19,7 +20,7 @@ next node from it or `null` if there are no more nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 iterateNext()
 ```
 

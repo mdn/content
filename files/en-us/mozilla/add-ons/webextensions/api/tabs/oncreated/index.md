@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onCreated
 ---
+
 {{AddonSidebar()}}
 
 Fired when a tab is created.
@@ -21,7 +22,7 @@ Note that the tab's URL may not be given its final value at the time this event 
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onCreated.addListener(callback)
 browser.tabs.onCreated.removeListener(listener)
 browser.tabs.onCreated.hasListener(listener)

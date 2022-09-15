@@ -15,6 +15,7 @@ tags:
   - speech
 browser-compat: api.SpeechGrammarList.item
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 The **`item`** getter of the {{domxref("SpeechGrammarList")}}
@@ -23,7 +24,7 @@ objects to be retrieved from the `SpeechGrammarList` using array syntax.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

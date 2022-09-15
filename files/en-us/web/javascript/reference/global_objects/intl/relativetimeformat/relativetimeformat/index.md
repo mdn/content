@@ -12,13 +12,14 @@ tags:
   - RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.RelativeTimeFormat()
 new Intl.RelativeTimeFormat(locales)
 new Intl.RelativeTimeFormat(locales, options)

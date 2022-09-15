@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Comparison
 ---
+
 {{WebAssemblySidebar}}
 
 The **`eq`** instructions, short for _equal_, check if two numbers are equal. If both numbers are equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.

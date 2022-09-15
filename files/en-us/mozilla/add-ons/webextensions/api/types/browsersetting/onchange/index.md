@@ -13,6 +13,7 @@ tags:
   - onchange
 browser-compat: webextensions.api.types.BrowserSetting.onChange
 ---
+
 {{AddonSidebar()}}
 
 The `BrowserSetting.onChange` event is fired when the setting is changed.
@@ -21,7 +22,7 @@ On Firefox, it doesn't fire if the change has been made through `about:config`.
 
 ## Syntax
 
-```js
+```js-nolint
 BrowserSetting.onChange.addListener(listener)
 BrowserSetting.onChange.removeListener(listener)
 BrowserSetting.onChange.hasListener(listener)

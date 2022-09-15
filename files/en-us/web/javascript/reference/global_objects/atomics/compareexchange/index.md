@@ -8,12 +8,13 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.compareExchange
 ---
+
 {{JSRef}}
 
 The static
 **`Atomics.compareExchange()`**
 method exchanges a given replacement value at a given position in the array, if a given
-expected value equals the old value.  It returns the old value at that position whether
+expected value equals the old value. It returns the old value at that position whether
 it was equal to the expected value or not. This atomic operation guarantees that no
 other write happens until the modified value is written back.
 
@@ -21,7 +22,7 @@ other write happens until the modified value is written back.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.compareExchange(typedArray, index, expectedValue, replacementValue)
 ```
 
