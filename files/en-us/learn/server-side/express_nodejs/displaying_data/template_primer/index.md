@@ -87,7 +87,7 @@ html(lang="en")
 Element attributes are defined in parentheses after their associated element. Inside the parentheses, the attributes are defined in comma- or whitespace- separated lists of the pairs of attribute names and attribute values, for example:
 
 - `script(type='text/javascript')`, `link(rel='stylesheet', href='/stylesheets/style.css')`
-- `meta(name='viewport' content='width=device-width initial-scale=1')`
+- `meta(name='viewport', content='width=device-width initial-scale=1')`
 
 The values of all attributes are _escaped_ (e.g. characters like "`>`" are converted to their HTML code equivalents like "`&gt;"`) to prevent JavaScript injection or cross-site scripting attacks.
 
