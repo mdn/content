@@ -315,14 +315,14 @@ Within the template you first call the `load` template tag specifying "static" t
 ```html
 <!-- Add additional CSS in static file -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 You can add an image into the page in a similar way, for example:
 
 ```html
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;">
+<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;" />
 ```
 
 > **Note:** The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (**/locallibrary/locallibrary/urls.py**) when we [created the website skeleton](/en-US/docs/Learn/Server-side/Django/skeleton_website), but still need to enable file serving in production. We'll look at this later.

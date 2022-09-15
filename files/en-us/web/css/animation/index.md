@@ -101,9 +101,7 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ```html
 <div class="view_port">
-  <div class="polling_message">
-    Listening for dispatches
-  </div>
+  <div class="polling_message">Listening for dispatches</div>
   <div class="cylon_eye"></div>
 </div>
 ```

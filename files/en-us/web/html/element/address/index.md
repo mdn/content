@@ -114,17 +114,17 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 This example demonstrates the use of `<address>` to demarcate the contact information for an article's author.
 
 ```html
-  <address>
-    You can contact author at <a href="http://www.somedomain.com/contact">
-    www.somedomain.com</a>.<br>
-    If you see any bugs, please <a href="mailto:webmaster@somedomain.com">
-    contact webmaster</a>.<br>
-    You may also want to visit us:<br>
-    Mozilla Foundation<br>
-    331 E Evelyn Ave<br>
-    Mountain View, CA 94041<br>
-    USA
-  </address>
+<address>
+  You can contact author at
+  <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>.<br />
+  If you see any bugs, please
+  <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.<br />
+  You may also want to visit us:<br />
+  Mozilla Foundation<br />
+  331 E Evelyn Ave<br />
+  Mountain View, CA 94041<br />
+  USA
+</address>
 ```
 
 ### Result

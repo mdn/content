@@ -28,8 +28,7 @@ Let's consider a large image, a 2982x2808 Firefox logo image. We want (for some 
 ### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 ### CSS

@@ -40,10 +40,17 @@ This pseudo-class is useful for giving the user a visual indication that a field
 
 ```html
 <form action="" id="form1">
- <p>Values between 1 and 10 are valid.</p>
+  <p>Values between 1 and 10 are valid.</p>
   <ul>
     <li>
-      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+      <input
+        id="value1"
+        name="value1"
+        type="number"
+        placeholder="1 to 10"
+        min="1"
+        max="10"
+        value="12" />
       <label for="value1">Your value is </label>
     </li>
   </ul>

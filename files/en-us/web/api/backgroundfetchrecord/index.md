@@ -31,9 +31,9 @@ There will be one `BackgroundFetchRecord` for each resource requested by `fetch(
 In this example an individual `BackgroundFetchRecord` is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The {{domxref("BackgroundFetchRecord.request")}} and {{domxref("BackgroundFetchRecord.responseReady")}} are returned and logged to the console.
 
 ```js
-bgFetch.match('/ep-5.mp3').then(async (record) => {
+bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log('No record found');
+    console.log("No record found");
     return;
   }
 

@@ -75,17 +75,20 @@ label {
 ```
 
 ```html hidden
-<img id="image" src="oriole.jpg"
-    alt="Orientation taken from the image">
+<img id="image" src="oriole.jpg" alt="Orientation taken from the image" />
 
 <div>
-  <input type="radio" id="from-image" name="orientation" value="from-image"
-         checked>
+  <input
+    type="radio"
+    id="from-image"
+    name="orientation"
+    value="from-image"
+    checked />
   <label for="from-image">from-image</label>
 </div>
 
 <div>
-  <input type="radio" id="none" name="orientation" value="none">
+  <input type="radio" id="none" name="orientation" value="none" />
   <label for="none">none</label>
 </div>
 ```

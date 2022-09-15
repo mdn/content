@@ -66,7 +66,7 @@ Content-Security-Policy: img-src https://example.com/
 The following {{HTMLElement("img")}} is blocked and won't load:
 
 ```html
-<img src="https://not-example.com/foo.jpg" alt="example picture">
+<img src="https://not-example.com/foo.jpg" alt="example picture" />
 ```
 
 ## Specifications

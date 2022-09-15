@@ -73,18 +73,13 @@ We now have an app that displays a list of to-do items. However, we can't update
    ```html
    <template>
      <form>
-       <label for="new-todo-input">
-         What needs to be done?
-       </label>
+       <label for="new-todo-input"> What needs to be done? </label>
        <input
          type="text"
          id="new-todo-input"
          name="new-todo"
-         autocomplete="off"
-       />
-       <button type="submit">
-         Add
-       </button>
+         autocomplete="off" />
+       <button type="submit">Add</button>
      </form>
    </template>
    ```
@@ -115,7 +110,10 @@ We now have an app that displays a list of to-do items. However, we can't update
        <to-do-form></to-do-form>
        <ul>
          <li v-for="item in ToDoItems" :key="item.id">
-           <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
+           <to-do-item
+             :label="item.label"
+             :done="item.done"
+             :id="item.id"></to-do-item>
          </li>
        </ul>
      </div>
@@ -151,7 +149,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
    We'll use the shorthand syntax here for consistency. Add the `submit` handler to your `<form>` element like so:
 
    ```html
-   <form @submit="onSubmit">
+   <form @submit="onSubmit">…</form>
    ```
 
 3. When you run this, the app still posts the data to the server, causing a refresh. Since we're doing all of our processing on the client, there's no server to handle the postback. We also lose all local state on page refresh. To prevent the browser from posting to the server, we need to stop the event's default action while bubbling up through the page ([`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault), in vanilla JavaScript). Vue has a special syntax called **event modifiers** that can handle this for us right in our template.
@@ -172,7 +170,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
    In this case, we need to use the `.prevent` modifier to stop the browser's default submit action. Add `.prevent` to the `@submit` handler in your template like so:
 
    ```html
-   <form @submit.prevent="onSubmit">
+   <form @submit.prevent="onSubmit">…</form>
    ```
 
 If you try submitting the form now, you'll notice that the page doesn't reload. If you open the console, you can see the results of the [`console.log()`](/en-US/docs/Web/API/console/log) we added inside our `onSubmit()` method.

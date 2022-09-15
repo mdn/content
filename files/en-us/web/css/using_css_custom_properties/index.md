@@ -94,7 +94,7 @@ We'll apply it to this HTML:
 <div>
   <div class="one">1:</div>
   <div class="two">2: Text <span class="five">5 - more text</span></div>
-  <input class="three">
+  <input class="three" />
   <textarea class="four">4: Lorem Ipsum</textarea>
 </div>
 ```
@@ -149,10 +149,10 @@ Notice the repetitive CSS in the example above. The background color is set to `
 
 ```html hidden
 <div>
-    <div class="one"></div>
-    <div class="two">Text <span class="five">- more text</span></div>
-    <input class="three">
-    <textarea class="four">Lorem Ipsum</textarea>
+  <div class="one"></div>
+  <div class="two">Text <span class="five">- more text</span></div>
+  <input class="three" />
+  <textarea class="four">Lorem Ipsum</textarea>
 </div>
 ```
 

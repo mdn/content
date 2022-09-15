@@ -207,15 +207,15 @@ A lot of JavaScript is required to make radio buttons out of non-semantic HTML.
 ```js
 // initialize all the radio role elements
 
-let radioGroups = document.querySelectorAll('[role="radiogroup"]');
+const radioGroups = document.querySelectorAll('[role="radiogroup"]');
 
 for (let i = 0, groups = radioGroups.length; i < groups; i++) {
-  let radios = radioGroups[i].querySelectorAll('[role=radio]');
+  const radios = radioGroups[i].querySelectorAll("[role=radio]");
   for (let j = 0, radiobuttons = radios.length; j < radios; j++) {
-    radios[j].addEventListener('keydown', function() {
-      handleKeydown(); }
-    );
-    radios[j].addEventListener('click', function() {
+    radios[j].addEventListener("keydown", function () {
+      handleKeydown();
+    });
+    radios[j].addEventListener("click", function () {
       handleClick();
     });
   }
@@ -251,23 +251,21 @@ let handleKeydown = function (event) {
   }
   event.stopPropagation();
   event.preventDefault();
-
 };
 
 // when a radio is selected, give it focus, set checked to true;
 // ensure all other radios in radio group are not checked
 
-setChecked  = function () {
+setChecked = function () {
   // uncheck all the radios in group
   // iterated thru all the radios in radio group
-    // eachRadio.tabIndex = -1;
-    // eachRadio.setAttribute('aria-checked', 'false');
-
+  // eachRadio.tabIndex = -1;
+  // eachRadio.setAttribute('aria-checked', 'false');
   // set the selected radio to checked
-    // thisRadio.setAttribute('aria-checked', 'true');
-    // thisRadio.tabIndex = 0;
-    // thisRadio.focus();
-    // set the value of the radioGroup to the value of the currently selected radio
+  // thisRadio.setAttribute('aria-checked', 'true');
+  // thisRadio.tabIndex = 0;
+  // thisRadio.focus();
+  // set the value of the radioGroup to the value of the currently selected radio
 };
 ```
 

@@ -32,8 +32,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.openBookmarksInNewTabs.set({value: true}).
-  then(logResult);
+browser.browserSettings.openBookmarksInNewTabs
+  .set({ value: true })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

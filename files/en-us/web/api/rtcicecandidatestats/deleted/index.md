@@ -24,7 +24,7 @@ has been deleted or released.
 
 A Boolean value indicating whether or not the candidate has been deleted or released.
 If this value is `true`, the candidate described by the
-{{domxref("RTCIceCandidateStats")}} object is no longer under consideration. dThe exact
+{{domxref("RTCIceCandidateStats")}} object is no longer under consideration. The exact
 meaning varies depending on the type of candidate:
 
 - `Local candidate`

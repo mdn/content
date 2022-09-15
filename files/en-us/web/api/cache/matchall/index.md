@@ -71,8 +71,8 @@ A {{jsxref("Promise")}} that resolves to an array of all matching responses in t
 The following example deletes all cached entries in the `v1` cache matching the URL `/`, even including potential query parameters. By using `{ ignoreSearch: true }`, using `matchAll` would retrieve `/` as well as `/?value=bar`.
 
 ```js
-caches.open('v1').then((cache) => {
-  cache.matchAll('/', { ignoreSearch: true }).then((responses) => {
+caches.open("v1").then((cache) => {
+  cache.matchAll("/", { ignoreSearch: true }).then((responses) => {
     for (const response of responses) {
       cache.delete(response);
     }

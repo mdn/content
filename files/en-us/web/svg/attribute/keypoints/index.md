@@ -30,17 +30,27 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
-      stroke="lightgrey" stroke-width="2" fill="none" id="motionPath"/>
-  <circle cx="10" cy="110" r="3" fill="lightgrey"/>
-  <circle cx="110" cy="10" r="3" fill="lightgrey"/>
+<svg
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path
+    d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
+    stroke="lightgrey"
+    stroke-width="2"
+    fill="none"
+    id="motionPath" />
+  <circle cx="10" cy="110" r="3" fill="lightgrey" />
+  <circle cx="110" cy="10" r="3" fill="lightgrey" />
 
   <circle r="5" fill="red">
-    <animateMotion dur="3s" repeatCount="indefinite"
-        keyPoints="0;0.5;1" keyTimes="0;0.15;1" calcMode="linear">
-      <mpath xlink:href="#motionPath"/>
+    <animateMotion
+      dur="3s"
+      repeatCount="indefinite"
+      keyPoints="0;0.5;1"
+      keyTimes="0;0.15;1"
+      calcMode="linear">
+      <mpath xlink:href="#motionPath" />
     </animateMotion>
   </circle>
 </svg>

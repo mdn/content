@@ -139,8 +139,7 @@ To do this, we can use a fixed `background-size` value of 150 pixels.
 #### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 #### CSS

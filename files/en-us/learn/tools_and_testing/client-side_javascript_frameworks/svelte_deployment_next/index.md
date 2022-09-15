@@ -261,11 +261,11 @@ Let's have a go at doing this now.
    ```html
    <title>Svelte To-Do list</title>
 
-   <link rel='icon' type='image/png' href='favicon.png'>
-   <link rel='stylesheet' href='global.css'>
-   <link rel='stylesheet' href='build/bundle.css'>
+   <link rel="icon" type="image/png" href="favicon.png" />
+   <link rel="stylesheet" href="global.css" />
+   <link rel="stylesheet" href="build/bundle.css" />
 
-   <script defer src='build/bundle.js'></script>
+   <script defer src="build/bundle.js"></script>
    ```
 
    Do this now.

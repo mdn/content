@@ -42,7 +42,7 @@ None ({{jsxref("undefined")}}).
 ### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
+<input type="file" onchange="previewFile()" /><br />
 <p class="content"></p>
 ```
 

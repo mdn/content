@@ -21,14 +21,19 @@ This article assumes you are already familiar with the concept of the [DOM (Docu
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple DOM example</title>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <section>
+      <img
+        src="dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
   </body>
 </html>
 ```
@@ -195,9 +200,11 @@ customElements.define('popup-info', PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC) is an extra
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
-                                    numbers on the back of your card.">
+                                    numbers on the back of your card."></popup-info>
 ```
 
 ### Internal versus external styles

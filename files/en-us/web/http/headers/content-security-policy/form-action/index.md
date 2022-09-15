@@ -56,14 +56,14 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 ### Meta tag configuration
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="form-action 'none'">
+ <meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
 ```
 
 ### Apache configuration
 
 ```html
 <IfModule mod_headers.c>
-Header set Content-Security-Policy "form-action 'none';"
+  Header set Content-Security-Policy "form-action 'none';"
 </IfModule>
 ```
 
@@ -78,15 +78,17 @@ add_header Content-Security-Policy "form-action 'none';"
 Using a {{HTMLElement("form")}} element with an action set to inline JavaScript will result in a CSP violation.
 
 ```html example-bad
-<meta http-equiv="Content-Security-Policy" content="form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
 
 <form action="javascript:alert('Foo')" id="form1" method="post">
-  <input type="text" name="fieldName" value="fieldValue">
-  <input type="submit" id="submit" value="submit">
+  <input type="text" name="fieldName" value="fieldValue" />
+  <input type="submit" id="submit" value="submit" />
 </form>
 
+<!--
 // Error: Refused to send form data because it violates the following
 // Content Security Policy directive: "form-action 'none'".
+-->
 ```
 
 ## Specifications

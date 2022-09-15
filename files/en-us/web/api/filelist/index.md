@@ -16,7 +16,7 @@ An object of this type is returned by the `files` property of the HTML {{HTMLEle
 All `<input>` element nodes have a `files` attribute of type `FileList` on them which allows access to the items in this list. For example, if the HTML includes the following file input:
 
 ```html
-<input id="fileItem" type="file">
+<input id="fileItem" type="file" />
 ```
 
 The following line of code fetches the first file in the node's file list as a [`File`](/en-US/docs/Web/API/File) object:
@@ -44,7 +44,7 @@ In this example, we log the names of all the files selected by the user.
 #### HTML
 
 ```html
-<input id="myfiles" multiple type="file">
+<input id="myfiles" multiple type="file" />
 <pre class="output">Selected files:</pre>
 ```
 

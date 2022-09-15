@@ -45,8 +45,7 @@ return the {{jsxref("Array.prototype.values()", "values()")}} function.
 #### HTML
 
 ```html
-<ul id="letterResult">
-</ul>
+<ul id="letterResult"></ul>
 ```
 
 #### JavaScript

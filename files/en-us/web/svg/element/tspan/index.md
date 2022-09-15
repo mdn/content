@@ -26,8 +26,13 @@ svg {
 ```html
 <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
   <style>
-    text  { font: italic 12px serif; }
-    tspan { font: bold 10px sans-serif; fill: red; }
+    text {
+      font: italic 12px serif;
+    }
+    tspan {
+      font: bold 10px sans-serif;
+      fill: red;
+    }
   </style>
 
   <text x="10" y="30" class="small">

@@ -71,7 +71,7 @@ The promise is rejected immediately if the signal is already aborted, or if the 
 Otherwise it completes normally and then resolves the promise.
 
 ```js
-function myCoolPromiseAPI(/* … ,*/ {signal}) {
+function myCoolPromiseAPI(/* … ,*/ { signal }) {
   return new Promise((resolve, reject) => {
     // If the signal is already aborted, immediately throw in order to reject the promise.
     if (signal.aborted) {
@@ -82,7 +82,7 @@ function myCoolPromiseAPI(/* … ,*/ {signal}) {
     // Call resolve(result) when done.
 
     // Watch for 'abort' signals
-    signal.addEventListener('abort', () => {
+    signal.addEventListener("abort", () => {
       // Stop the main operation
       // Reject the promise wth the abort reason.
       reject(signal.reason);
@@ -101,9 +101,9 @@ const signal = controller.signal;
 startSpinner();
 
 myCoolPromiseAPI({ /* … ,*/ signal })
-  .then((result) => { })
+  .then((result) => {})
   .catch((err) => {
-    if (err.name === 'AbortError') return;
+    if (err.name === "AbortError") return;
     showUserErrorMessage();
   })
   .then(() => stopSpinner());

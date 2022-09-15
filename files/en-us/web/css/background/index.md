@@ -108,11 +108,12 @@ Browsers do not provide any special information on background images to assistiv
 
 ```html
 <p class="topbanner">
-  Starry sky<br/>
-  Twinkle twinkle<br/>
+  Starry sky<br />
+  Twinkle twinkle<br />
   Starry sky
 </p>
-<p class="warning">Here is a paragraph<p>
+<p class="warning">Here is a paragraph</p>
+<p></p>
 ```
 
 #### CSS

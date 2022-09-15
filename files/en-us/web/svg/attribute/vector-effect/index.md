@@ -70,15 +70,28 @@ You can use this attribute with the following SVG elements:
 ```html
 <svg viewBox="0 0 500 240">
   <!-- normal -->
-  <path d="M10,20 L40,100 L39,200 z" stroke="black" stroke-width="2px" fill="none"></path>
+  <path
+    d="M10,20 L40,100 L39,200 z"
+    stroke="black"
+    stroke-width="2px"
+    fill="none"></path>
 
   <!-- scaled -->
-  <path transform="translate(100,0) scale(4,1)" d="M10,20 L40,100 L39,200 z" stroke="black"
-      stroke-width="2px" fill="none"></path>
+  <path
+    transform="translate(100,0) scale(4,1)"
+    d="M10,20 L40,100 L39,200 z"
+    stroke="black"
+    stroke-width="2px"
+    fill="none"></path>
 
   <!-- fixed-->
-  <path vector-effect="non-scaling-stroke" transform="translate(300,0) scale(4,1)" d="M10,20 L40,100 L39,200 z"
-      stroke="black" stroke-width="2px" fill="none"></path>
+  <path
+    vector-effect="non-scaling-stroke"
+    transform="translate(300, 0) scale(4, 1)"
+    d="M10,20 L40,100 L39,200 z"
+    stroke="black"
+    stroke-width="2px"
+    fill="none"></path>
 </svg>
 ```
 

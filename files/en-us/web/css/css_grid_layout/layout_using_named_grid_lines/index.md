@@ -368,8 +368,12 @@ If you have used a track list then you can use the `span` keyword not just to sp
 
 ```html
 <div class="wrapper">
-  <div class="item1">I am placed from col1-start line 1 to col2-start line 2</div>
-  <div class="item2">I am placed from col1-start line 2 spanning 2 lines named col1-start</div>
+  <div class="item1">
+    I am placed from col1-start line 1 to col2-start line 2
+  </div>
+  <div class="item2">
+    I am placed from col1-start line 2 spanning 2 lines named col1-start
+  </div>
 </div>
 ```
 

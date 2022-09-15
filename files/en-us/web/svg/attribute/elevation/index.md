@@ -40,7 +40,11 @@ svg {
   </filter>
 
   <circle cx="100" cy="100" r="80" style="filter: url(#distantLight1);" />
-  <circle cx="100" cy="100" r="80" style="filter: url(#distantLight2); transform: translateX(240px);" />
+  <circle
+    cx="100"
+    cy="100"
+    r="80"
+    style="filter: url(#distantLight2); transform: translateX(240px);" />
 </svg>
 ```
 

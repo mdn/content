@@ -38,10 +38,10 @@ In this example, the form will receive special coloring styles when either text 
 
 <form>
   <label for="given_name">Given Name:</label>
-  <input id="given_name" type="text">
-  <br>
+  <input id="given_name" type="text" />
+  <br />
   <label for="family_name">Family Name:</label>
-  <input id="family_name" type="text">
+  <input id="family_name" type="text" />
 </form>
 ```
 

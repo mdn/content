@@ -79,7 +79,7 @@ A string representing the date entered in the input. The date is formatted accor
 You can set a default value for the input with a date inside the {{htmlattrxref("value", "input")}} attribute, like so:
 
 ```html
-<input type="date" value="2017-06-01">
+<input type="date" value="2017-06-01" />
 ```
 
 {{EmbedLiveSample('Value', 600, 40)}}
@@ -139,7 +139,7 @@ The simplest use of `<input type="date">` involves one `<input>` combined with i
 <form action="https://example.com">
   <label>
     Enter your birthday:
-    <input type="date" name="bday">
+    <input type="date" name="bday" />
   </label>
 
   <p><button>Submit</button></p>
@@ -156,8 +156,9 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 
 ```html
 <form>
-  <label>Choose your preferred party date:
-    <input type="date" name="party" min="2017-04-01" max="2017-04-30">
+  <label>
+    Choose your preferred party date:
+    <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
   </label>
 </form>
 ```
@@ -186,7 +187,12 @@ Let's look at an example of minimum and maximum dates, and also made a field req
 <form>
   <label>
     Choose your preferred party date (required, April 1st to 20th):
-    <input type="date" name="party" min="2017-04-01" max="2017-04-20" required>
+    <input
+      type="date"
+      name="party"
+      min="2017-04-01"
+      max="2017-04-20"
+      required />
     <span class="validity"></span>
   </label>
 
@@ -240,8 +246,9 @@ One way around this is the {{htmlattrxref("pattern", "input")}} attribute on you
 
 ```html
 <form>
-  <label>Enter your birthday:
-    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}">
+  <label>
+    Enter your birthday:
+    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" />
     <span class="validity"></span>
   </label>
   <p>
@@ -289,15 +296,14 @@ The HTML looks like so:
 <form>
   <div class="nativeDatePicker">
     <label for="bday">Enter your birthday:</label>
-    <input type="date" id="bday" name="bday">
+    <input type="date" id="bday" name="bday" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">Enter your birthday:</p>
   <div class="fallbackDatePicker">
     <span>
       <label for="day">Day:</label>
-      <select id="day" name="day">
-      </select>
+      <select id="day" name="day"></select>
     </span>
     <span>
       <label for="month">Month:</label>
@@ -318,8 +324,7 @@ The HTML looks like so:
     </span>
     <span>
       <label for="year">Year:</label>
-      <select id="year" name="year">
-      </select>
+      <select id="year" name="year"></select>
     </span>
   </div>
 </form>

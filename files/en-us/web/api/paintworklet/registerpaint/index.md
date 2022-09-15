@@ -85,7 +85,7 @@ the `CSS.paintWorklet.addModule()` method:
 
 ```html
 <script>
-   CSS.paintWorklet.addModule('checkboardWorklet.js');
+  CSS.paintWorklet.addModule("checkboardWorklet.js");
 </script>
 ```
 

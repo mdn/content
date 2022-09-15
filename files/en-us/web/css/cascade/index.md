@@ -143,8 +143,8 @@ li {
 
 ```html
 <ul>
-<li class="specific">1<sup>st</sup></li>
-<li>2<sup>nd</sup></li>
+  <li class="specific">1<sup>st</sup></li>
+  <li>2<sup>nd</sup></li>
 </ul>
 ```
 

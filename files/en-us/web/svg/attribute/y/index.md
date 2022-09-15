@@ -73,7 +73,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <rect y="20"  x="20" width="60" height="60" />
+  <rect y="20" x="20" width="60" height="60" />
   <rect y="120" x="20" width="60" height="60" />
   <rect y="220" x="20" width="60" height="60" />
 </svg>
@@ -1204,7 +1204,7 @@ svg {
   <line x1="0" y1="80%" x2="100%" y2="80%" />
 
   <!-- vertical line to materialized the x positioning -->
-  <line x1="5%"  y1="0" x2="5%"  y2="100%" />
+  <line x1="5%" y1="0" x2="5%" y2="100%" />
   <line x1="55%" y1="0" x2="55%" y2="100%" />
 
   <!-- y with a single value -->
@@ -1318,7 +1318,7 @@ svg {
   <line x1="0" y1="80%" x2="100%" y2="80%" />
 
   <!-- vertical line to materialized the x positioning -->
-  <line x1="5%"  y1="0" x2="5%"  y2="100%" />
+  <line x1="5%" y1="0" x2="5%" y2="100%" />
   <line x1="55%" y1="0" x2="55%" y2="100%" />
 
   <text>

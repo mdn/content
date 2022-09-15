@@ -73,8 +73,11 @@ This example performs a four-second font size transition with a two-second delay
 
 ```html hidden
 <body>
-    <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
-    <div class="box">Sample</div>
+  <p>
+    The box below combines transitions for: width, height, background-color,
+    transform. Hover over the box to see these properties animated.
+  </p>
+  <div class="box">Sample</div>
 </body>
 ```
 

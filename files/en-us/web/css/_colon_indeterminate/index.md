@@ -50,7 +50,7 @@ This example applies special styles to the labels associated with indeterminate 
 <fieldset>
   <legend>Checkbox</legend>
   <div>
-    <input type="checkbox" id="checkbox">
+    <input type="checkbox" id="checkbox" />
     <label for="checkbox">This checkbox label starts out lime.</label>
   </div>
 </fieldset>
@@ -58,11 +58,11 @@ This example applies special styles to the labels associated with indeterminate 
 <fieldset>
   <legend>Radio</legend>
   <div>
-    <input type="radio" id="radio1" name="radioButton">
+    <input type="radio" id="radio1" name="radioButton" />
     <label for="radio1">First radio label starts out lime.</label>
   </div>
   <div>
-    <input type="radio" id="radio2" name="radioButton">
+    <input type="radio" id="radio2" name="radioButton" />
     <label for="radio2">Second radio label also starts out lime.</label>
   </div>
 </fieldset>

@@ -25,7 +25,11 @@ A {{domxref("DOMHighResTimeStamp")}} with the loadTime of the element.
 In this example calling `entry.loadTime` returns the loadTime of the image element.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

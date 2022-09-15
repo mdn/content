@@ -33,10 +33,13 @@ To avoid this, fully qualify global variable access using "window.", like so:
 ```html
 <script>
   function localName() {
-    alert('Function localName has been called');
+    alert("Function localName has been called");
   }
 </script>
-<div onclick="window.localName()">Clicking me should show an alert<div>
+<div onclick="window.localName()">
+  Clicking me should show an alert
+  <div></div>
+</div>
 ```
 
 ### Don't concatenate scripts you don't control

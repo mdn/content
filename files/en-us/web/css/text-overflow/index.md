@@ -81,21 +81,33 @@ This example shows different values for `text-overflow` applied to a paragraph, 
 <div class="ltr">
   <h2>Left to right text</h2>
   <pre>clip</pre>
-  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-clip">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-ellipsis">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>" [..]"</pre>
-  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-string">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
 </div>
 
 <div class="rtl">
   <h2>Right to left text</h2>
   <pre>clip</pre>
-  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-clip">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-ellipsis">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>" [..]"</pre>
-  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-string">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
 </div>
 ```
 
@@ -151,13 +163,21 @@ To show the effect we have to scroll the line so the start of the line is also h
 
 ```html
 <pre>clip clip</pre>
-<p class="overflow-clip-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-clip-clip">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>clip ellipsis</pre>
-<p class="overflow-clip-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-clip-ellipsis">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>ellipsis ellipsis</pre>
-<p class="overflow-ellipsis-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-ellipsis-ellipsis">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>ellipsis " [..]"</pre>
-<p class="overflow-ellipsis-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-ellipsis-string">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 ```
 
 #### CSS
