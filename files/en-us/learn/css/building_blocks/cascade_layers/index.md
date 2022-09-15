@@ -289,7 +289,7 @@ Layer order matters. A lot. In the same way the cascade sorts by origin and impo
 @import url(C.css);
 ```
 
-The layer order precedence is the order in which layers are created. If the author styles have two declared layers, the order of precedence is as follows:
+The layer order precedence is the order in which layers are created. If the author styles have two declared layers, (assuming there are no layers in C.css), the order of precedence is as follows:
 
 1. firstLayer normal styles (A)
 2. secondLayer normal styles (B)
