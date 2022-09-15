@@ -113,7 +113,7 @@ where
 }
 ```
 
-### Specifying custom size
+### Specifying a custom size
 
 ```css
 @page {
