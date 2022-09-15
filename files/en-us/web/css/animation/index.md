@@ -97,7 +97,14 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ## Examples
 
-### Naive Sun Rise
+> **Note:** Animating [CSS Box Model](/en-US/docs/Web/CSS/CSS_Box_Model) properties is discouraged.
+> Animating any box model property is inherently CPU intensive;
+> consider animating the [transform](/en-US/docs/Web/CSS/transform) property instead.
+
+### Sun Rise
+
+Here is a yellow sun on a lightblue background. The sun rises
+to the center of the viewport and then falls out of sight.
 
 ```html
 <div class="sun"></div>
@@ -105,120 +112,71 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ```css
 :root {
- overflow: hidden;
- background-color: lightblue;
- display: flex;
- justify-content: center;
+  overflow: hidden; /* hides any part of the sun below the horizon */
+  background-color: lightblue;
+  display: flex;
+  justify-content: center; /* centers the sun in the background */
 }
 
 .sun {
- background-color: yellow;
- border-radius: 50%;
- height: 100vh;
- aspect-ratio: 1 / 1;
- animation:
-  4s linear 0s infinite alternate
-  naive-sun-rise;
+  background-color: yellow;
+  border-radius: 50%; /* creates a circular background */
+  height: 100vh; /* makes the sun the size of the viewport */
+  aspect-ratio: 1 / 1;
+  animation: 4s linear 0s infinite alternate sun-rise;
 }
 
-/* 
- animating CPU dependent properties is possible but
- unrecommended due to potential performance issues 
-*/
-@keyframes naive-sun-rise {
- from {
-  /* all box model properties are CPU dependent */
-  margin-top: 110vh;
- }
- to {
-  margin-top: 0%;
- }
+@keyframes sun-rise {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateY(110vh);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateY(0);
+  }
 }
 ```
 
-{{EmbedLiveSample('Naive_Sun_Rise')}}
-
-### Effecient Sun Rise
-
-```html
-<div class="sun"></div>
-```
-
-```css
-:root {
- overflow: hidden;
- background-color: lightblue;
- display: flex;
- justify-content: center;
-}
-
-.sun {
- background-color: yellow;
- border-radius: 50%;
- height: 100vh;
- aspect-ratio: 1 / 1;
- animation:
-  4s linear 0s infinite alternate
-  effecient-sun-rise;
-}
-
-/*
- the same effect as before but now utilizing the GPU
-*/
-@keyframes effecient-sun-rise {
- from {
-  transform: translateY(110vh);
- }
- to {
-  transform: translateY(0);
- }
-}
-```
-
-{{EmbedLiveSample('Effecient_Sun_Rise')}}
+{{EmbedLiveSample('Sun_Rise')}}
 
 ### Animating Multiple Properties
 
+Here is a sun that rises and falls on a lightblue background. The sun starts
+as a dark red below the horizon. At the apex the sun is a bright orange color.
+
 ```html
 <div class="sun"></div>
 ```
 
 ```css
 :root {
- overflow: hidden;
- background-color: lightblue;
- display: flex;
- justify-content: center;
+  overflow: hidden;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
 }
 
 .sun {
- background-color: yellow;
- border-radius: 50%;
- height: 100vh;
- aspect-ratio: 1 / 1;
- animation:
-  4s linear 0s infinite alternate
-  animating-multiple-properties;
+  background-color: yellow;
+  border-radius: 50%;
+  height: 100vh;
+  aspect-ratio: 1 / 1;
+  animation: 4s linear 0s infinite alternate animating-multiple-properties;
 }
 
-/*
- it is possible to animate mulitple properties
- in a single animation
-*/
+/* it is possible to animate mulitple properties in a single animation */
 @keyframes animating-multiple-properties {
- from {
-  transform: translateY(110vh);
-  background-color: red;
-  filter: brightness(75%);
- }
- to {
-  transform: translateY(0);
-  background-color: orange;
-  /*
-   unset properties i.e. 'filter'
-   will revert to default values
-  */
- }
+  from {
+    transform: translateY(110vh);
+    background-color: red;
+    filter: brightness(75%);
+  }
+  to {
+    transform: translateY(0);
+    background-color: orange;
+    /* unset properties i.e. 'filter' will revert to default values */
+  }
 }
 ```
 
@@ -226,48 +184,50 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ### Applying Multiple Animations
 
+Here is a sun that rises and falls on a lightblue background. The sun
+gradually rotates through a rainbow of colors. The timing of the sun's
+position and color are independent. 
+
 ```html
 <div class="sun"></div>
 ```
 
 ```css
 :root {
- overflow: hidden;
- background-color: lightblue;
- display: flex;
- justify-content: center;
+  overflow: hidden;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
 }
 
 .sun {
- background-color: yellow;
- border-radius: 50%;
- height: 100vh;
- aspect-ratio: 1 / 1;
- /* multiple animations are seperated by commas */
- animation:
-  4s linear 0s infinite alternate
-  rise,
-  /* animation parameters are set independently */
-  24s linear 0s infinite
-  psychedelic;
+  background-color: yellow;
+  border-radius: 50%;
+  height: 100vh;
+  aspect-ratio: 1 / 1;
+  /* multiple animations are seperated by commas */
+  animation: 
+    4s linear 0s infinite alternate rise,
+    /* animation parameters are set independently */
+    24s linear 0s infinite psychedelic;
 }
 
 @keyframes rise {
- from {
-  transform: translateY(110vh);
- }
- to {
-  transform: translateY(0);
- }
+  from {
+    transform: translateY(110vh);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 @keyframes psychedelic {
- from {
-  filter: hue-rotate(0deg);
- }
- to {
-  filter: hue-rotate(360deg);
- }
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
 }
 ```
 
@@ -275,53 +235,55 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ### Cascading Multiple Animations
 
+Here is a yellow sun on a lightblue background. The sun bounces between the
+left and right sides of the viewport. The sun remains in the viewport even
+though a rise animation is defined. The rise animation's transform property
+is 'overwritten' by the bounce animation.
+
 ```html
 <div class="sun"></div>
 ```
 
 ```css
 :root {
- overflow: hidden;
- background-color: lightblue;
- display: flex;
- justify-content: center;
+  overflow: hidden;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
 }
 
 .sun {
- background-color: yellow;
- border-radius: 50%;
- height: 100vh;
- aspect-ratio: 1 / 1;
- /*
-  animations declared later in the cascade will
-  override the properties of previously
-  declared animations
- */
- animation:
-  4s linear 0s infinite alternate
-  rise,
-  /* run 'overwrites' the transform set by rise */
-  4s linear 0s infinite alternate
-  run;
-  /* hence the sun only moves horizontally */
+  background-color: yellow;
+  border-radius: 50%;
+  height: 100vh;
+  aspect-ratio: 1 / 1;
+  /*
+    animations declared later in the cascade will override the
+    properties of previously declared animations
+  */
+  animation:
+    4s linear 0s infinite alternate rise,
+    /* bounce 'overwrites' the transform set by rise */
+    4s linear 0s infinite alternate bounce;
+    /* hence the sun only moves horizontally */
 }
 
 @keyframes rise {
- from {
-  transform: translateY(110vh);
- }
- to {
-  transform: translateY(0);
- }
+  from {
+    transform: translateY(110vh);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
-@keyframes run {
- from {
-  transform: translateX(-50vw);
- }
- to {
-  transform: translateX(50vw);
- }
+@keyframes bounce {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(50vw);
+  }
 }
 ```
 
