@@ -21,7 +21,7 @@ The **Gamepad API** is a way for developers to access and respond to signals fro
 - [`GamepadButton`](/en-US/docs/Web/API/GamepadButton)
   - : Represents a button on one of the connected controllers.
 - [`GamepadEvent`](/en-US/docs/Web/API/GamepadEvent)
-  - : The event object representing events fired that are related to gamepads.
+  - : The event object represents events fired that are related to gamepads.
 
 ### Experimental Gamepad extensions
 
