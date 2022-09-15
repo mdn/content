@@ -125,10 +125,12 @@ Don't:
 
 - Try to cram multiple fixes into a single pull request. It makes it a lot harder to review, and raises suspicions (some people might think you are trying to hide some malicious code in between the valid changes).
 
-## Opening a pull request
+## Deployment timeline
 
-## Reviewing a pull request
+After your pull request is merged, it can take up to 48 hours before merged changes are live on the [production site](https://developer.mozilla.org/), but it's usually quicker.
 
-## Pull requests we accept
+- The site build runs every 24 hours at around 19:00 US/Eastern time, and is deployed immediately after.
+- Once deployment has occurred, it can take up to 24 hours for the CDN to invalidate caches and serve new content.
 
-## Idle pull requests
+There are tools to see the state of deployed content such as [whatsdeployed.io](https://whatsdeployed.io/s/DLi/mdn/content) which let you see if your changes have been deployed.
+The same tool can also be used to [see if `translated-content` is live](https://whatsdeployed.io/s/16d/mdn/translated-content) after merging a pull request in the [`transpated-content` repository](https://github.com/mdn/translated-content).
