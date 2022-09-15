@@ -14,7 +14,7 @@ The following is a list of [KumaScript macros](https://github.com/mdn/yari/tree/
 ## The `Link` macro
 
 The Link macro has [been deprecated](https://github.com/mdn/yari/pull/6865) and
-should no longer be used. Any occurances that still exist in actively maintained
+should no longer be used. Any occurrences that still exist in actively-maintained
 content should be replaced with a plain Markdown style link.
 
 ### How to replace the macro
