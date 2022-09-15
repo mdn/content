@@ -208,7 +208,7 @@ moveMe.style.transform = matrix3dRule;
 
 ## Scale matrix
 
-A **scale matrix** makes something larger or smaller in one or more of the three dimensions: width, height, and depth. In typical (cartesian) coordinates. this causes stretching or contracting of the object in the corresponding directions.
+A **scale matrix** makes something larger or smaller in one or more of the three dimensions: width, height, and depth. In typical (cartesian) coordinates, this causes stretching or contracting of the object in the corresponding directions.
 
 The amount of change to apply to each of the width, height, and depth is placed diagonally starting at the top-left corner and making their way down toward the bottom-right.
 

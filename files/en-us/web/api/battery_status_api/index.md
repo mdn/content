@@ -33,7 +33,7 @@ In this example, we watch for changes both to the charging status (whether or no
 
 ```js
 navigator.getBattery().then((battery) => {
-  function updateAllBatteryInfo(){
+  function updateAllBatteryInfo() {
     updateChargeInfo();
     updateLevelInfo();
     updateChargingInfo();
@@ -41,34 +41,33 @@ navigator.getBattery().then((battery) => {
   }
   updateAllBatteryInfo();
 
-  battery.addEventListener('chargingchange', () => {
+  battery.addEventListener("chargingchange", () => {
     updateChargeInfo();
   });
-  function updateChargeInfo(){
+  function updateChargeInfo() {
     console.log(`Battery charging? ${battery.charging ? "Yes" : "No"}`);
   }
 
-  battery.addEventListener('levelchange', () => {
+  battery.addEventListener("levelchange", () => {
     updateLevelInfo();
   });
-  function updateLevelInfo(){
+  function updateLevelInfo() {
     console.log(`Battery level: ${battery.level * 100}%`);
   }
 
-  battery.addEventListener('chargingtimechange', () => {
+  battery.addEventListener("chargingtimechange", () => {
     updateChargingInfo();
   });
-  function updateChargingInfo(){
+  function updateChargingInfo() {
     console.log(`Battery charging time: ${battery.chargingTime} seconds`);
   }
 
-  battery.addEventListener('dischargingtimechange', () => {
+  battery.addEventListener("dischargingtimechange", () => {
     updateDischargingInfo();
   });
-  function updateDischargingInfo(){
+  function updateDischargingInfo() {
     console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
   }
-
 });
 ```
 

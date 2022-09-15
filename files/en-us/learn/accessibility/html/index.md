@@ -127,7 +127,8 @@ We've prepared a version with longer text for you to try out with a screen reade
 People sometimes write headings, paragraphs, etc. using line breaks and adding HTML elements purely for styling, something like the following:
 
 ```html example-bad
-<span style="font-size: 3em">My heading</span> <br /><br />
+<span style="font-size: 3em">My heading</span>
+<br /><br />
 This is the first section of my document.
 <br /><br />
 I'll add another paragraph here too.
