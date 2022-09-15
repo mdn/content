@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.push
 ---
+
 {{JSRef}}
 
 The **`push()`** method adds one or more elements to the end of
@@ -19,7 +20,7 @@ an array and returns the new length of the array.
 
 ## Syntax
 
-```js
+```js-nolint
 push(element0)
 push(element0, element1)
 push(element0, element1, /* … ,*/ elementN)
@@ -32,8 +33,7 @@ push(element0, element1, /* … ,*/ elementN)
 
 ### Return value
 
-The new {{jsxref("Array.length", "length")}} property of the object upon which the
-method was called.
+The new {{jsxref("Array/length", "length")}} property of the object upon which the method was called.
 
 ## Description
 
@@ -43,8 +43,7 @@ The `push()` method appends values to an array.
 
 The `push()` method is a mutating method. It changes the length and the content of `this`. In case you want the value of `this` to be the same, but return a new array with elements appended to the end, you can use [`arr.concat([element0, element1, /* ... ,*/ elementN])`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) instead. Notice that the elements are wrapped in an extra array — otherwise, if the element is an array itself, it would be spread instead of pushed as a single element due to the behavior of `concat()`.
 
-`Array.prototype.push()` is intentionally generic. This method can be used with
-{{jsxref("Function.call", "call()")}} or {{jsxref("Function.apply", "apply()")}} on
+`Array.prototype.push()` is intentionally generic. This method can be called on
 objects resembling arrays. The `push` method relies on a `length`
 property to determine where to start inserting the given values. If the
 `length` property cannot be converted into a number, the index used is 0.

@@ -7,6 +7,7 @@ tags:
   - Guide
   - Reference
 ---
+
 This article explains the inline formatting context
 
 ## Core concepts

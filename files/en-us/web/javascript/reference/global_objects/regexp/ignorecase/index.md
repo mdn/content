@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.ignoreCase
 ---
+
 {{JSRef}}
 
 The **`ignoreCase`** accessor property indicates whether or not the `i` flag is used with the regular expression.
@@ -44,7 +45,7 @@ console.log(regex.ignoreCase); // true
 
 ## See also
 
-- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.global")}}
 - {{JSxRef("RegExp.prototype.hasIndices")}}

@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.MouseEvent.layerX
 ---
+
 {{APIRef("UI Events")}}{{Non-standard_Header}}
 
 The **`MouseEvent.layerX`** read-only property returns the
@@ -100,10 +101,10 @@ An integer value in pixels for the x-coordinate of the mouse pointer, when the m
     <div id="d3">
       <form name="form_coords" id="form1">
         Parent Element id: <input type="text" name="parentId" size="7" /><br />
-        pageX: <input type="text" name="pageXCoords" size="7" />
-        pageY: <input type="text" name="pageYCoords" size="7" /><br />
-        layerX: <input type="text" name="layerXCoords" size="7" />
-        layerY: <input type="text" name="layerYCoords" size="7" />
+        pageX: <input type="text" name="pageXCoords" size="7" /> pageY:
+        <input type="text" name="pageYCoords" size="7" /><br />
+        layerX: <input type="text" name="layerXCoords" size="7" /> layerY:
+        <input type="text" name="layerYCoords" size="7" />
       </form>
     </div>
   </body>

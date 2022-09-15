@@ -12,6 +12,7 @@ tags:
   - Web Audio
   - Web Audio API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.
@@ -64,7 +65,7 @@ change the volume of the notes E and G in the chord.</p>
   content: "⏸";
 }
 
-#playButton:not(checked) + label::after{
+#playButton:not(checked) + label::after {
   content: "▶️";
 }
 
@@ -74,7 +75,7 @@ change the volume of the notes E and G in the chord.</p>
 
 #playButton {
   vertical-align: middle;
-  display:none;
+  display: none;
 }
 
 #volumeControl {

@@ -13,6 +13,7 @@ tags:
   - open
 browser-compat: webextensions.api.downloads.open
 ---
+
 {{AddonSidebar()}}
 
 The **`open()`** function of the {{WebExtAPIRef("downloads")}} API opens the downloaded file with its associated application. A {{WebExtAPIRef("downloads.onChanged")}} event will fire when the item is opened for the first time.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let opening = browser.downloads.open(
   downloadId      // integer
 )

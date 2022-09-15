@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.lookupSetter
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`__lookupSetter__`** method returns the function bound as
@@ -17,7 +18,7 @@ a setter to the specified property.
 
 ## Syntax
 
-```js
+```js-nolint
 __lookupSetter__(sprop)
 ```
 

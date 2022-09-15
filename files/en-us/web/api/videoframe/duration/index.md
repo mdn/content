@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.VideoFrame.duration
 ---
+
 {{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`duration`** property of the {{domxref("VideoFrame")}} interface returns an integer indicating the duration of the video in microseconds.

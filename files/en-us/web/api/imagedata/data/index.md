@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ImageData.data
 ---
+
 {{APIRef("Canvas API")}}
 
 The readonly **`ImageData.data`** property returns a

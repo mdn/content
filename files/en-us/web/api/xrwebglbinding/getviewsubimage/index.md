@@ -9,15 +9,17 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRWebGLBinding.getViewSubImage
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getViewSubImage()`** method of the {{domxref("XRWebGLBinding")}} interface returns a {{domxref("XRWebGLSubImage")}} object representing the WebGL texture to render for a view.
 
 ## Syntax
 
-```js
+```js-nolint
 getViewSubImage(layer, view)
 ```
 

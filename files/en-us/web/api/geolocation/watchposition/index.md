@@ -11,6 +11,7 @@ tags:
   - Secure context
 browser-compat: api.Geolocation.watchPosition
 ---
+
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 
 The {{domxref("Geolocation")}} method **`watchPosition()`** method is used to register a handler function that will be called automatically each time the position of the device changes.
@@ -18,7 +19,7 @@ You can also, optionally, specify an error handling callback function.
 
 ## Syntax
 
-```js
+```js-nolint
 watchPosition(success)
 watchPosition(success, error)
 watchPosition(success, error, options)

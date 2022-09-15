@@ -12,6 +12,7 @@ tags:
   - removeDownloads
 browser-compat: webextensions.api.browsingData.removeDownloads
 ---
+
 {{AddonSidebar()}}
 
 Clears the browser's download history. Note that this does not delete the downloaded objects themselves, only records of downloads in the browser's history.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removeDownloads(
   removalOptions            // RemovalOptions object
 )
@@ -57,11 +58,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeDownloads(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeDownloads({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Remove all records of downloaded objects:
@@ -75,8 +76,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeDownloads({}).
-then(onRemoved, onError);
+browser.browsingData.removeDownloads({}).then(onRemoved, onError);
 ```
 
 ## Browser compatibility

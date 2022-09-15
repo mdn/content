@@ -13,6 +13,7 @@ tags:
   - touch
 browser-compat: api.TouchList.item
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`item()`** method returns the {{ domxref("Touch") }}
@@ -20,7 +21,7 @@ object at the specified index in the {{ domxref("TouchList") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

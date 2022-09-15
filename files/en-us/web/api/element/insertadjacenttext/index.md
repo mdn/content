@@ -12,13 +12,14 @@ tags:
   - insertAdjacentText
 browser-compat: api.Element.insertAdjacentText
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertAdjacentText()`** method of the {{domxref("Element")}} interface, given a relative position and a string, inserts a new text node at the given position relative to the element it is called from.
 
 ## Syntax
 
-```js
+```js-nolint
 insertAdjacentText(where, data)
 ```
 

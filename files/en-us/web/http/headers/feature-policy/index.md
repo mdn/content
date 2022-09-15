@@ -12,6 +12,7 @@ tags:
   - header
 browser-compat: http.headers.Feature-Policy
 ---
+
 {{HTTPSidebar}}
 
 > **Warning:** The header has now been renamed to `Permissions-Policy` in the spec, and this article will eventually be updated to reflect that change.

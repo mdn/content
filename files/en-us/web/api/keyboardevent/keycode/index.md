@@ -14,6 +14,7 @@ tags:
   - keyCode
 browser-compat: api.KeyboardEvent.keyCode
 ---
+
 {{APIRef("UI Events")}}{{Deprecated_Header}}
 
 The deprecated **`KeyboardEvent.keyCode`** read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
@@ -76,11 +77,11 @@ Firefox gets `keyCode` values from ASCII characters inputtable by the key — ev
 6. If the pressed key inputs a different ASCII character with a Shift key modifier, use a keycode for it.
 7. Otherwise, i.e., pressed key inputs a unicode character:
 
-    1. If the keyboard layout is ASCII-capable (i.e., can input ASCII alphabets), use 0 or compute with [the following additional rules](#keycode_of_punctuation_keys_on_some_keyboard_layout).
-    2. Otherwise, i.e., the keyboard layout isn't ASCII capable, use the ASCII capable keyboard layout installed on the environment with the highest priority:
+   1. If the keyboard layout is ASCII-capable (i.e., can input ASCII alphabets), use 0 or compute with [the following additional rules](#keycode_of_punctuation_keys_on_some_keyboard_layout).
+   2. Otherwise, i.e., the keyboard layout isn't ASCII capable, use the ASCII capable keyboard layout installed on the environment with the highest priority:
 
-        1. If the pressed key on the alternative keyboard layout inputs an ASCII alphabetic or numeric character, use a keycode for it.
-        2. Otherwise, use 0 or compute with [the following additional rules](#keycode_of_punctuation_keys_on_some_keyboard_layout).
+      1. If the pressed key on the alternative keyboard layout inputs an ASCII alphabetic or numeric character, use a keycode for it.
+      2. Otherwise, use 0 or compute with [the following additional rules](#keycode_of_punctuation_keys_on_some_keyboard_layout).
 
 Gecko sets `keyCode` values of punctuation keys as far as possible (when points 7.1 or 7.2 in the above list are reached) with the following rules:
 
@@ -88,17 +89,17 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
 
 1. If running macOS or Linux:
 
-    1. If the active keyboard layout is not ASCII-capable and an alternative ASCII-capable keyboard layout is available.
+   1. If the active keyboard layout is not ASCII-capable and an alternative ASCII-capable keyboard layout is available.
 
-        1. If the alternative ASCII-capable keyboard layout produces an ASCII character via just the unmodified key, use a `keyCode` for the character.
-        2. If the alternative ASCII-capable keyboard layout produces an ASCII character with a Shift key modifier, use a `keyCode` for the shifted character.
-        3. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
+      1. If the alternative ASCII-capable keyboard layout produces an ASCII character via just the unmodified key, use a `keyCode` for the character.
+      2. If the alternative ASCII-capable keyboard layout produces an ASCII character with a Shift key modifier, use a `keyCode` for the shifted character.
+      3. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
 
-    2. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
+   2. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
 
 2. If running on Windows:
 
-    1. Use a `keyCode` value for an ASCII character produced by a key which is mapped to the same virtual keycode of Windows when the US keyboard layout is active.
+   1. Use a `keyCode` value for an ASCII character produced by a key which is mapped to the same virtual keycode of Windows when the US keyboard layout is active.
 
 <table class="no-markdown">
   <caption>
@@ -3307,4 +3308,4 @@ On Windows, some values of virtual keycode are defined (reserved) for OEM specif
 
 Starting Gecko 21 (and older than 15), OEM specific key values are available on the keyCode attribute only on Windows. So they are not useful for usual web applications. They are useful only for intranet applications or in similar situations.
 
-See "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10))" in MSDN for the detail.
+See "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](<https://docs.microsoft.com/previous-versions/windows/embedded/aa452679(v=msdn.10)>)" in MSDN for the detail.

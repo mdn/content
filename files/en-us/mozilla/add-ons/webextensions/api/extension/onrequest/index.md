@@ -13,6 +13,7 @@ tags:
   - onRequest
 browser-compat: webextensions.api.extension.onRequest
 ---
+
 {{AddonSidebar()}}
 
 > **Warning:** This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use [runtime.onMessage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) instead.
@@ -21,7 +22,7 @@ Fired when a request is sent from either an extension process or a content scrip
 
 ## Syntax
 
-```js
+```js-nolint
 chrome.extension.onRequest.addListener(function(
   request,         // optional any
   sender,          // runtime.MessageSender

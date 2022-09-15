@@ -12,6 +12,7 @@ tags:
   - prompt
 browser-compat: api.Window.prompt
 ---
+
 {{ApiRef("Window")}}
 
 `window.prompt()` instructs the browser to display a dialog with an optional message prompting the user to input some text, and to wait until the user either submits the text or cancels the dialog.
@@ -20,7 +21,7 @@ Under some conditions — for example, when the user switches tabs — the brows
 
 ## Syntax
 
-```js
+```js-nolint
 prompt()
 prompt(message)
 prompt(message, defaultValue)

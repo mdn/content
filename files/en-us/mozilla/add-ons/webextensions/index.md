@@ -6,6 +6,7 @@ tags:
   - Landing
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Extensions, or add-ons, can modify and enhance the capability of a browser. Extensions for Firefox are built using the WebExtensions API cross-browser technology.

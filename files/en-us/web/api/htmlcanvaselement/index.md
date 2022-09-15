@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement`** interface provides properties and methods for manipulating the layout and presentation of {{HtmlElement("canvas")}} elements. The `HTMLCanvasElement` interface also inherits the properties and methods of the {{domxref("HTMLElement")}} interface.
@@ -48,9 +49,9 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
 
-- [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event)
+- [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event) {{Experimental_Inline}}
   - : Fired if the user agent detects that the backing storage associated with a `CanvasRenderingContext2D` or an `OffscreenCanvasRenderingContext2D` context has been lost.
-- [`contextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event)
+- [`contextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event) {{Experimental_Inline}}
   - : Fired if the user agent successfully restores a `CanvasRenderingContext2D` or an `OffscreenCanvasRenderingContext2D` context.
 - [`webglcontextcreationerror`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
   - : Fired if the user agent is unable to create a `WebGLRenderingContext` or `WebGL2RenderingContext` context.

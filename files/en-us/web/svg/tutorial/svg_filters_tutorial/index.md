@@ -4,6 +4,7 @@ slug: Web/SVG/Tutorial/SVG_Filters_Tutorial
 tags:
   - SVG filters primitives
 ---
+
 ## Filters
 
 SVG allows us to use similar tools as the bitmap description language such as the use of shadow, blur effects or even merging the results of different filters. With the filter element <`filter`> it is possible to add these effects and later on attach them to an object.
@@ -35,11 +36,11 @@ This above example will not produced the desired output. Instead we need to add 
 ```html
 <defs>
   <filter id="drop-shadow">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
-    <feoffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+    <feoffset in="blur" dx="4" dy="4" result="offsetBlur" />
     <feMerge>
-      <feMergeNode in="offsetBlur"/>
-      <feMergeNode in="SourceGraphic"/>
+      <feMergeNode in="offsetBlur" />
+      <feMergeNode in="SourceGraphic" />
     </feMerge>
   </filter>
 </defs>

@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.425
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`425 Too Early`**

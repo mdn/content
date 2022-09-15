@@ -13,6 +13,7 @@ tags:
   - state
 browser-compat: api.BaseAudioContext.state
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `state` read-only property of the {{ domxref("BaseAudioContext") }}

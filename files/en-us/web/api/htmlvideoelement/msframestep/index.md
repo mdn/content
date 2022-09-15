@@ -10,6 +10,7 @@ tags:
   - Reference
   - msFrameStep
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 The **`HTMLVideoElement.msFrameStep()`** method steps the video
@@ -19,7 +20,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
+```js-nolint
 msFrameStep(forward)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.set
 ---
+
 {{JSRef}}
 
 The static **`Reflect.set()`** method works like setting a
@@ -19,7 +20,7 @@ property on an object.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.set(target, propertyKey, value)
 Reflect.set(target, propertyKey, value, receiver)
 ```

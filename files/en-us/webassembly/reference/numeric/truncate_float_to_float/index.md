@@ -8,9 +8,10 @@ tags:
   - Numeric
   - Something
 ---
+
 {{WebAssemblySidebar}}
 
-The **`trunc`** instructions, short for _truncate_, are used for getting the value of a number without it's fractional part.
+The **`trunc`** instructions, short for _truncate_, are used for getting the value of a number without its fractional part.
 
 **`trunc`** differs from **`floor`** when used on negative numbers, **`floor`** will round down in those cases while **`trunc`** will round up.
 

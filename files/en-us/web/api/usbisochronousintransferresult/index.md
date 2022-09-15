@@ -13,6 +13,7 @@ tags:
   - WebUSB API
 browser-compat: api.USBIsochronousInTransferResult
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The `USBIsochronousInTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides the result from a call to the `isochronousTransferIn()` method of the `USBDevice` interface. It represents the result from requesting a transfer of data from the USB device to the USB host.

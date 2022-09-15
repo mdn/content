@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchEvent
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`BackgroundFetchEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is the event type for background fetch events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope")}}.
@@ -43,13 +44,13 @@ None.
 In this example, if the user clicks on the user interface displaying the download progress, a new window will open. The current {{domxref("BackgroundFetchRegistration")}} is returned by calling `event.registration`.
 
 ```js
-addEventListener('backgroundfetchclick', (event) => {
+addEventListener("backgroundfetchclick", (event) => {
   const bgFetch = event.registration;
 
-  if (bgFetch.result === 'success') {
-    clients.openWindow('/latest-podcasts');
+  if (bgFetch.result === "success") {
+    clients.openWindow("/latest-podcasts");
   } else {
-    clients.openWindow('/download-progress');
+    clients.openWindow("/download-progress");
   }
 });
 ```

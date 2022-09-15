@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_or
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical OR (`||`) operator (logical disjunction) for a set of operands
@@ -22,7 +23,7 @@ non-Boolean value.
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 || expr2
 ```
 

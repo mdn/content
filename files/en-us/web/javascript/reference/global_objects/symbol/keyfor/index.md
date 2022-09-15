@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.keyFor
 ---
+
 {{JSRef}}
 
 The **`Symbol.keyFor(sym)`** method retrieves a shared symbol
@@ -17,8 +18,8 @@ key from the global symbol registry for the given symbol.
 
 ## Syntax
 
-```js
-Symbol.keyFor(sym);
+```js-nolint
+Symbol.keyFor(sym)
 ```
 
 ### Parameters

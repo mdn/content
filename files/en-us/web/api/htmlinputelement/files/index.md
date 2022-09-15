@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement.files
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The **`HTMLInputElement.files`** is a property that allows you to access the {{domxref("FileList")}} selected with the [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element.
@@ -27,7 +28,7 @@ The example below shows how you can access the **`HTMLInputElement.files`** prop
 ### HTML
 
 ```html
-<input id="files" type="file" multiple>
+<input id="files" type="file" multiple />
 ```
 
 ### JavaScript

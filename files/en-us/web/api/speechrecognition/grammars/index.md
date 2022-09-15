@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.grammars
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`grammars`** property of the

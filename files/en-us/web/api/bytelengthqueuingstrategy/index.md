@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy
 ---
+
 {{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in byte length queuing strategy that can be used when constructing streams.

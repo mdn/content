@@ -13,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.MediaQueryList.removeListener
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}
 
 The **`removeListener()`** method of the
@@ -26,7 +27,7 @@ available in the browsers you need to support.
 
 ## Syntax
 
-```js
+```js-nolint
 removeListener(func)
 ```
 

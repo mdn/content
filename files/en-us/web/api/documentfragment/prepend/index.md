@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.DocumentFragment.prepend
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentFragment.prepend()`** method
@@ -22,7 +23,7 @@ This method prepends a child to a `DocumentFragment`. To prepend to an arbitrary
 
 ## Syntax
 
-```js
+```js-nolint
 prepend(param1)
 prepend(param1, param2)
 prepend(param1, param2, /* … ,*/ paramN)

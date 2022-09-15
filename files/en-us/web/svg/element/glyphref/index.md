@@ -10,6 +10,7 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.glyphRef
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The `glyphRef` element provides a single possible glyph to the referencing {{ SVGElement("altGlyph") }} substitution.

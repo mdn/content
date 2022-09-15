@@ -14,6 +14,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.getSelected
 ---
+
 {{AddonSidebar()}}
 
 > **Warning:** This method has been deprecated. Use {{WebExtAPIRef("tabs.query", "tabs.query({active: true})")}} instead.
@@ -24,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingSelected = browser.tabs.getSelected(
   windowId           // optional integer
 )

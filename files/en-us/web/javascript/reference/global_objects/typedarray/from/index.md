@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.from
 ---
+
 {{JSRef}}
 
 The **`TypedArray.from()`** method creates a new
@@ -22,7 +23,7 @@ from an array-like or iterable object. This method is nearly the same as
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 TypedArray.from(arrayLike, (element) => { /* ... */ } )
 TypedArray.from(arrayLike, (element, index) => { /* ... */ } )

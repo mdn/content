@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.BlobEvent.BlobEvent
 ---
+
 {{APIRef("Media Recorder API")}}
 
 The **`BlobEvent()`** constructor returns a newly created
@@ -19,7 +20,7 @@ The **`BlobEvent()`** constructor returns a newly created
 
 ## Syntax
 
-```js
+```js-nolint
 new BlobEvent(type, options)
 ```
 

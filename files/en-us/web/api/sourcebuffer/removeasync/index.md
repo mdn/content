@@ -17,6 +17,7 @@ tags:
   - Experimental
 browser-compat: api.SourceBuffer.removeAsync
 ---
+
 {{APIRef("Media Source Extensions")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`removeAsync()`** method of the
@@ -31,7 +32,7 @@ This method can only be called when {{domxref("SourceBuffer.updating", "updating
 
 ## Syntax
 
-```js
+```js-nolint
 removeAsync(start, end)
 ```
 

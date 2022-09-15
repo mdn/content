@@ -12,13 +12,14 @@ tags:
   - Service Workers
 browser-compat: api.PushMessageData.arrayBuffer
 ---
+
 {{APIRef("Push API")}}
 
 The **`arrayBuffer()`** method of the {{domxref("PushMessageData")}} interface extracts push message data as an {{jsxref("ArrayBuffer")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 arrayBuffer()
 ```
 

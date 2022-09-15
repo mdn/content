@@ -11,6 +11,7 @@ tags:
   - Web Components
 browser-compat: api.HTMLTemplateElement
 ---
+
 {{APIRef("Web Components")}}
 
 The **`HTMLTemplateElement`** interface enables access to the contents of an HTML {{HTMLElement("template")}} element.

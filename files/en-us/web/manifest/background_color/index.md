@@ -8,6 +8,7 @@ tags:
   - Experimental
 browser-compat: html.manifest.background_color
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">

@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-disabled
 ---
+
 The `aria-disabled` state indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 
 ## Description
@@ -26,14 +27,12 @@ When needing to disable native HTML form controls, developers will need to speci
 
 In each of these cases, one may want users to find these elements through standard keyboard navigation, though the functionality of that control is removed or "disabled". Developers will still need to use JavaScript to fully disable the functionality of the element while also changing the appearance of the element so sighted users know it is disabled.
 
-> **Note:**  The state of being disabled applies to the element with `aria-disabled="true"` and all of its focusable descendants. Take care when using this attribute on container elements. Particularly in the case where a container may have both form controls and links - where the intent may be to expose the form controls as being in the disabled state, but <strong>not</strong> to communicate the links as being "disabled".
+> **Note:** The state of being disabled applies to the element with `aria-disabled="true"` and all of its focusable descendants. Take care when using this attribute on container elements. Particularly in the case where a container may have both form controls and links - where the intent may be to expose the form controls as being in the disabled state, but <strong>not</strong> to communicate the links as being "disabled".
 
-Another reason to need use the `aria-disabled` attribute over the HTML `disabled` attribute is if you have created custom controls which need to be marked as disabled, but are not using an element that allows for the `disabled` attribute. For instance, in the following snippet a `<div>` was used to create a custom button which needs to be marked as disabled.  However, the `<div>` element does not expect, nor respect the `disabled` attribute - even if it were to be given a `role="button"` to change its exposed ARIA role. The `aria-disabled` attribute is required to disable such custom controls.
+Another reason to need use the `aria-disabled` attribute over the HTML `disabled` attribute is if you have created custom controls which need to be marked as disabled, but are not using an element that allows for the `disabled` attribute. For instance, in the following snippet a `<div>` was used to create a custom button which needs to be marked as disabled. However, the `<div>` element does not expect, nor respect the `disabled` attribute - even if it were to be given a `role="button"` to change its exposed ARIA role. The `aria-disabled` attribute is required to disable such custom controls.
 
 ```html
-<div role="button" aria-disabled="true" tabindex="-1">
-  Edit
-</div>
+<div role="button" aria-disabled="true" tabindex="-1">Edit</div>
 ```
 
 Similarly to needing to use JavaScript to ensure an element with `aria-disabled="true"` is not functional, the element will also need styling adjustments. In contrast to the HTML `disabled` attribute, where specifying it provides `:disabled` user-agent styles to be applied, adding `aria-disabled="true"` doesn't. The element can be styled with the [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]`.
@@ -44,7 +43,7 @@ Similarly to needing to use JavaScript to ensure an element with `aria-disabled=
 }
 ```
 
-If you are purposefully using the `aria-disabled` attribute to allow for a form control to remain in the page's keyboard focus order, particularly if the element represents important content that all users should be able to perceive, then you may need to use styling that still passes color contrast requirements.  For instance, a disabled button/heading that introduces a non-collapsible accordion panel is content that still needs to be legible.
+If you are purposefully using the `aria-disabled` attribute to allow for a form control to remain in the page's keyboard focus order, particularly if the element represents important content that all users should be able to perceive, then you may need to use styling that still passes color contrast requirements. For instance, a disabled button/heading that introduces a non-collapsible accordion panel is content that still needs to be legible.
 
 ```css
 @media (forced-colors: active) {
@@ -69,14 +68,14 @@ function onClick(event) {
 function toggleDisabled(element, status, update) {
   if (status) {
     //element.input.disabled = false;
-    element.setAttribute('aria-disabled', 'false');
-    update.textContent = 'The element is now enabled.';
-    element.addEventListener('click', onClick);
+    element.setAttribute("aria-disabled", "false");
+    update.textContent = "The element is now enabled.";
+    element.addEventListener("click", onClick);
   } else {
     //element.input.disabled = true;
-    element.setAttribute('aria-disabled', 'true');
-    update.textContent = 'The element is now disabled.';
-    element.removeEventListener('click', onClick);
+    element.setAttribute("aria-disabled", "true");
+    update.textContent = "The element is now disabled.";
+    element.removeEventListener("click", onClick);
   }
 }
 ```
@@ -92,6 +91,7 @@ If you used just CSS to style the disabled state using an attribute selector, th
 ## Values
 
 - `true`
+
   - : The element is disabled
 
 - `false`

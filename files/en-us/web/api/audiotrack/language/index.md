@@ -18,6 +18,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.language
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrack")}}**
@@ -51,16 +52,14 @@ would like to listen to while watching a movie, for example.
 ```js
 function getAvailableLanguages(el) {
   const trackList = [];
-  const wantedKinds = [
-    "main", "translation"
-  ];
+  const wantedKinds = ["main", "translation"];
 
   el.audioTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,
         kind: track.kind,
-        language: track.language
+        language: track.language,
       });
     }
   });

@@ -11,6 +11,7 @@ tags:
   - timeStamp
 browser-compat: javascript.builtins.Date
 ---
+
 {{JSRef}}
 
 JavaScript **`Date`** objects represent a single moment in time in a platform-independent format. `Date` objects contain a `Number` that represents milliseconds since 1 January 1970 UTC.
@@ -31,7 +32,7 @@ It should be noted that the maximum `Date` is not of the same value as the maxim
 
 There are several methods available to obtain a date in various formats, as well as to perform time zone conversions. Particularly useful are the functions that output the date and time in Coordinated Universal Time (UTC), the global standard time defined by the World Time Standard. (This time is historically known as _Greenwich Mean Time_, as UTC lies along the meridian that includes London—and nearby Greenwich—in the United Kingdom.) The user's device provides the local time.
 
-In addition to methods to read and alter individual components of the local date and time (such as {{jsxref("Date.getDay", "getDay()")}} and {{jsxref("Date.setHours", "setHours()")}}), there are also versions of the same methods that read and manipulate the date and time using UTC (such as {{jsxref("Date.getUTCDay()", "getUTCDay()")}} and {{jsxref("Date.setUTCHours", "setUTCHours()")}}).
+In addition to methods to read and alter individual components of the local date and time (such as {{jsxref("Date/getDay", "getDay()")}} and {{jsxref("Date/setHours", "setHours()")}}), there are also versions of the same methods that read and manipulate the date and time using UTC (such as {{jsxref("Date/getUTCDay()", "getUTCDay()")}} and {{jsxref("Date/setUTCHours", "setUTCHours()")}}).
 
 ## Constructor
 

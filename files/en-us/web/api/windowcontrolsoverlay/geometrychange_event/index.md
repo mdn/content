@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.WindowControlsOverlay.geometrychange_event
 ---
+
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The `geometrychange` event is fired when the position, size, or visibility of a Progressive Web App's title bar area changes.

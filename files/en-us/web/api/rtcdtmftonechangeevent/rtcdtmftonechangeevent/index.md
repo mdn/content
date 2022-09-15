@@ -12,13 +12,14 @@ tags:
   - WebRTC API
 browser-compat: api.RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent
 ---
+
 {{APIRef("WebRTC")}}
 The **`RTCDTMFToneChangeEvent()`** constructor creates a new
 {{domxref("RTCDTMFToneChangeEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCDTMFToneChangeEvent(type)
 new RTCDTMFToneChangeEvent(type, options)
 ```

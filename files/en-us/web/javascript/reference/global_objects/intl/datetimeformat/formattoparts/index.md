@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.formatToParts()`** method
@@ -22,7 +23,7 @@ formatters.
 
 ## Syntax
 
-```js
+```js-nolint
 formatToParts(date)
 ```
 

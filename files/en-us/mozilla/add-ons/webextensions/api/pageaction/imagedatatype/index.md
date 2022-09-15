@@ -13,6 +13,7 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction.ImageDataType
 ---
+
 {{AddonSidebar()}}
 
 Pixel data for an image.

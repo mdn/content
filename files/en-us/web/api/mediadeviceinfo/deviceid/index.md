@@ -10,6 +10,7 @@ tags:
   - deviceId
 browser-compat: api.MediaDeviceInfo.deviceId
 ---
+
 {{APIRef("Media Capture")}}
 
 The **`deviceId`** readonly property

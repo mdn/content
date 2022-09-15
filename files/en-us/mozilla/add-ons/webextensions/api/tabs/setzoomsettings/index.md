@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.setZoomSettings
 ---
+
 {{AddonSidebar()}}
 
 Sets zoom settings for the specified tab. These settings are reset to the default settings upon navigating the tab.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let settingZoomSettings = browser.tabs.setZoomSettings(
   tabId,           // optional integer
   zoomSettings     // ZoomSettings

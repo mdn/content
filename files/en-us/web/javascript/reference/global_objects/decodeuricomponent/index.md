@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.decodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`decodeURIComponent()`** function decodes a Uniform
@@ -17,7 +18,7 @@ Resource Identifier (URI) component previously created by
 
 ## Syntax
 
-```js
+```js-nolint
 decodeURIComponent(encodedURI)
 ```
 

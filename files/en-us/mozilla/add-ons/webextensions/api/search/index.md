@@ -11,6 +11,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.search
 ---
+
 {{AddonSidebar}}
 
 Retrieves search engines and executes a search with a specific search engine.

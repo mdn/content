@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fontcolor
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`fontcolor()`** method creates a {{HTMLElement("font")}}
@@ -22,7 +23,7 @@ HTML element that causes a string to be displayed in the specified font color.
 
 ## Syntax
 
-```js
+```js-nolint
 fontcolor(color)
 ```
 

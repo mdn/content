@@ -13,6 +13,7 @@ tags:
   - sub()
 browser-compat: api.CSSNumericValue.sub
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`sub()`** method of the
@@ -21,7 +22,7 @@ The **`sub()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 sub(number)
 ```
 

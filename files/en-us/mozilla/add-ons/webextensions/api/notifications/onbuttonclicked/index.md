@@ -13,13 +13,14 @@ tags:
   - onButtonClicked
 browser-compat: webextensions.api.notifications.onButtonClicked
 ---
+
 {{AddonSidebar()}}
 
 Fired when the user clicks one of the notification's buttons.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.notifications.onButtonClicked.addListener(listener)
 browser.notifications.onButtonClicked.removeListener(listener)
 browser.notifications.onButtonClicked.hasListener(listener)

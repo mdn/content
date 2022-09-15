@@ -11,6 +11,7 @@ tags:
   - size
 browser-compat: api.CountQueuingStrategy.size
 ---
+
 {{APIRef("Streams")}}
 
 The **`size()`** method of the
@@ -19,7 +20,7 @@ total queue size is a count of the number of chunks in the queue.
 
 ## Syntax
 
-```js
+```js-nolint
 size()
 ```
 

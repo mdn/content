@@ -7,6 +7,7 @@ tags:
   - Streams
   - concepts
 ---
+
 {{apiref("Streams")}}
 
 The [Streams API](/en-US/docs/Web/API/Streams_API) adds a very useful set of tools to the web platform, providing objects allowing JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.
@@ -73,6 +74,7 @@ There are two methods that facilitate this:
   A transform stream consists of a pair of streams: a readable stream from which data is read and a writable stream into which it is written, along with appropriate mechanisms to ensure that new data is made available to read as soon as data is written.
 
   {{domxref("TransformStream")}} is a concrete implementation of a transform stream, but any object that has the same readable stream and writable stream properties can be passed to `pipeThrough()`.
+
 - {{domxref("ReadableStream.pipeTo()")}} — pipes to a writable stream that acts as the end point of the pipe chain.
 
 The start of the pipe chain is called the **original source**, and the end is called the **ultimate sink**.

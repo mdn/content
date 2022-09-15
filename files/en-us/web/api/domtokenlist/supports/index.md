@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.supports
 ---
+
 {{APIRef("DOM")}}
 
 The **`supports()`** method of the {{domxref("DOMTokenList")}} interface
@@ -15,8 +16,8 @@ This method is intended to support feature detection.
 
 ## Syntax
 
-```js
-supports(token);
+```js-nolint
+supports(token)
 ```
 
 ### Parameters

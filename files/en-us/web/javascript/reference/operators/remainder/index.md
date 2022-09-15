@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.remainder
 ---
+
 {{jsSidebar("Operators")}}
 
 The remainder operator (`%`) returns the remainder left over when one
@@ -17,7 +18,7 @@ operand is divided by a second operand. It always takes the sign of the dividend
 
 ## Syntax
 
-```js
+```js-nolint
 x % y
 ```
 

@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.getZoom
 ---
+
 {{AddonSidebar()}}
 
 Gets the current zoom factor for the specified tab.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingZoom = browser.tabs.getZoom(
   tabId                     // optional integer
 )

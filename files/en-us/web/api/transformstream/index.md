@@ -9,9 +9,10 @@ tags:
   - Streams API
 browser-compat: api.TransformStream
 ---
+
 {{APIRef("Streams")}}
 
-The `TransformStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a concrete implementation of the [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) *transform stream* concept.
+The **`TransformStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a concrete implementation of the [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) _transform stream_ concept.
 
 It may be passed to the {{domxref("ReadableStream.pipeThrough()")}} method in order to transform a stream of data from one format into another.
 For example, it might be used to decode (or encode) video frames, decompress data, or convert the stream from XML to JSON.

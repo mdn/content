@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechGrammarList
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`SpeechGrammarList`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a list of {{domxref("SpeechGrammar")}} objects containing words or patterns of words that we want the recognition service to recognize.

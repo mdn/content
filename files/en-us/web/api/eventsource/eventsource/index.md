@@ -10,6 +10,7 @@ tags:
   - Server-sent events
 browser-compat: api.EventSource.EventSource
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`EventSource()`**
@@ -18,7 +19,7 @@ remote resource.
 
 ## Syntax
 
-```js
+```js-nolint
 new EventSource(url)
 new EventSource(url, options)
 ```

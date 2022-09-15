@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.reload
 ---
+
 {{AddonSidebar()}}
 
 Reloads the extension.
@@ -21,7 +22,7 @@ If there are any pending updates for the extension, that it has deferred by list
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.reload()
 ```
 

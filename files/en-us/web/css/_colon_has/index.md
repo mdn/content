@@ -10,6 +10,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.has
 ---
+
 {{CSSRef}}
 
 The **`:has()`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element if any of the selectors passed as parameters (relative to the {{cssxref(":scope")}} of the given element) match at least one element.

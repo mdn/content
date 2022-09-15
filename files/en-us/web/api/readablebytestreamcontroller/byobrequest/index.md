@@ -11,6 +11,7 @@ tags:
   - byobRequest
 browser-compat: api.ReadableByteStreamController.byobRequest
 ---
+
 {{APIRef("Streams")}}
 
 The **`byobRequest`** read-only property of the {{domxref("ReadableByteStreamController")}} interface returns the current BYOB request, or `null` if there are no pending requests.

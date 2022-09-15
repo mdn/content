@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.measureText
 ---
+
 {{APIRef}}
 
 The
@@ -19,7 +20,7 @@ measured text (such as its width, for example).
 
 ## Syntax
 
-```js
+```js-nolint
 measureText(text)
 ```
 

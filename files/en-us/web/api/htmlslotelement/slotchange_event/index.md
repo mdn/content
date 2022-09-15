@@ -11,6 +11,7 @@ tags:
   - slotchange
 browser-compat: api.HTMLSlotElement.slotchange_event
 ---
+
 {{APIRef}}
 
 The **`slotchange`** event is fired on an {{DOMxRef("HTMLSlotElement")}} instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.

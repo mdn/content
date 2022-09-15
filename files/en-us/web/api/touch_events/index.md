@@ -12,6 +12,7 @@ tags:
   - touch
 browser-compat: api.Touch
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 To provide quality support for touch-based user interfaces, touch events offer the ability to interpret finger (or stylus) activity on touch screens or trackpads.
@@ -48,8 +49,9 @@ This example tracks multiple touchpoints at a time, allowing the user to draw in
 <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
   Your browser does not support canvas element.
 </canvas>
-<br>
-Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Log:
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ```css

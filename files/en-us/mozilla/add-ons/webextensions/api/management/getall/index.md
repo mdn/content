@@ -11,6 +11,7 @@ tags:
   - management
 browser-compat: webextensions.api.management.getAll
 ---
+
 {{AddonSidebar()}}
 
 Retrieves an array of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} objects, one for each installed add-on.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingAll = browser.management.getAll()
 ```
 

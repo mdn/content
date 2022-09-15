@@ -13,6 +13,7 @@ tags:
   - name
 browser-compat: api.IDBIndex.name
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`name`** property of the {{domxref("IDBIndex")}}

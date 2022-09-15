@@ -11,6 +11,7 @@ tags:
   - r
 browser-compat: api.SVGCircleElement.r
 ---
+
 {{APIRef("SVG")}}
 
 The **`r`** read-only property of the {{domxref("SVGCircleElement")}} interface reflects the {{SVGAttr("r")}} attribute of a {{SVGElement("circle")}} element and by that defines the radius of the circle.
@@ -26,8 +27,12 @@ An {{domxref("SVGAnimatedLength")}} representing the radius of the circle.
 ### SVG
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-  <circle r="50" r="50" r="50" fill="gold" id="circle"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 100"
+  width="200"
+  height="200">
+  <circle r="50" r="50" r="50" fill="gold" id="circle" />
 </svg>
 ```
 

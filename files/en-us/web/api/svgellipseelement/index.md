@@ -9,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGEllipseElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGEllipseElement`** interface provides access to the properties of {{SVGElement("ellipse")}} elements.
@@ -38,8 +39,13 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ```html
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="100" cy="100" rx="100" ry="60" id="ellipse"
-      onclick="outputSize();"/>
+  <ellipse
+    cx="100"
+    cy="100"
+    rx="100"
+    ry="60"
+    id="ellipse"
+    onclick="outputSize();" />
 </svg>
 ```
 

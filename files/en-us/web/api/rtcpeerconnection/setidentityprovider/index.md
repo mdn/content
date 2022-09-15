@@ -9,6 +9,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.setIdentityProvider
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.setIdentityProvider()`** method sets
@@ -21,7 +22,7 @@ If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set 
 
 ## Syntax
 
-```js
+```js-nolint
 setIdentityProvider(domainname)
 setIdentityProvider(domainname, protocol)
 setIdentityProvider(domainname, protocol, username)

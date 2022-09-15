@@ -13,6 +13,7 @@ tags:
   - keyPath
 browser-compat: api.IDBObjectStore.keyPath
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`keyPath`** read-only property of the

@@ -8,6 +8,7 @@ tags:
   - part 6
   - server-side
 ---
+
 This sub article shows how we define our page to create `Genre` objects (this is a good place to start because the `Genre` has only one field, its `name`, and no dependencies). Like any other pages, we need to set up routes, controllers, and views.
 
 ## Import validation and sanitization methods
@@ -100,12 +101,9 @@ The first method in the array defines a body validator (`body()`) that validates
 ```js
 [
   // Validate that the name field is not empty.
-  body('name', 'Genre name required')
-    .trim()
-    .isLength({ min: 1 })
-    .escape(),
+  body("name", "Genre name required").trim().isLength({ min: 1 }).escape(),
   // …
-]
+];
 ```
 
 After specifying the validators we create a middleware function to extract any validation errors. We use `isEmpty()` to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitized genre object and the array of error messages (`errors.array()`).

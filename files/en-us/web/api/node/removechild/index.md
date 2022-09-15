@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.removeChild
 ---
+
 {{APIRef("DOM")}}
 
 The **`removeChild()`** method of the {{domxref("Node")}} interface
@@ -23,8 +24,8 @@ Unlike {{domxref("Node.cloneNode()")}} the return value preserves the {{domxref(
 
 ## Syntax
 
-```js
-removeChild(child);
+```js-nolint
+removeChild(child)
 ```
 
 ### Parameters
@@ -81,7 +82,7 @@ while (element.firstChild) {
 
 ```html
 <!--Sample HTML code-->
-<div id="top"> </div>
+<div id="top"></div>
 ```
 
 ```js

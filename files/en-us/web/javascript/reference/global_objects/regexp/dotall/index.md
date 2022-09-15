@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.dotAll
 ---
+
 {{JSRef}}
 
 The **`dotAll`** accessor property indicates whether or not the `s` flag is used with the regular expression.
@@ -64,7 +65,7 @@ console.log(str2.replace(regex2,'')); // Output: bar
 ## See also
 
 - [Polyfill of `dotAll` `RegExp` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{JSxRef("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.global")}}
 - {{JSxRef("RegExp.prototype.hasIndices")}}
 - {{JSxRef("RegExp.prototype.ignoreCase")}}

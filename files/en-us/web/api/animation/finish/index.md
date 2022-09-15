@@ -14,6 +14,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.finish
 ---
+
 {{APIRef("Web Animations")}}
 
 The **`finish()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} Interface sets the current playback time to the end of the animation corresponding to the current playback direction.
@@ -22,7 +23,7 @@ That is, if the animation is playing forward, it sets the playback time to the l
 
 ## Syntax
 
-```js
+```js-nolint
 finish()
 ```
 

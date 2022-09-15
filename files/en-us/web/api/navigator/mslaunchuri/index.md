@@ -10,6 +10,7 @@ tags:
   - Non-standard
   - Reference
 ---
+
 {{APIRef("Microsoft Extensions")}}{{Non-standard_header}}
 
 The **`msLaunchUri()`** method is a Microsoft extension to the {{DOMxRef("Navigator")}} interface, which starts a service or app, such as an email client, that handles a given protocol. The Uniform Resource Identifier (URI) contains the protocol for the default service or app, such as `mailto://test@contoso.com`.
@@ -18,7 +19,7 @@ This proprietary method is specific to Internet Explorer, and Microsoft Edge ver
 
 ## Syntax
 
-```js
+```js-nolint
 msLaunchUri(uri)
 msLaunchUri(uri, successCallback)
 msLaunchUri(uri, successCallback, noHandlerCallback)

@@ -13,9 +13,10 @@ tags:
   - Events
   - Data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. the Angular event model is covered here.
+Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. The Angular event model is covered here.
 
 <table>
   <tbody>
@@ -283,14 +284,14 @@ Paste the following styles into `item.component.css`.
 
 ```css
 .item {
-  padding: .5rem 0 .75rem 0;
+  padding: 0.5rem 0 0.75rem 0;
   text-align: left;
   font-size: 1.2rem;
 }
 
 .btn-wrapper {
   margin-top: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .btn {
@@ -302,7 +303,6 @@ Paste the following styles into `item.component.css`.
   background-color: #000;
   color: #fff;
   border-color: #000;
-
 }
 
 .btn-save:hover {
@@ -315,7 +315,7 @@ Paste the following styles into `item.component.css`.
 }
 
 .checkbox-wrapper {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .btn-warn {
@@ -335,7 +335,7 @@ Paste the following styles into `item.component.css`.
 
 .sm-text-input {
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
   border: 2px solid #555;
   display: block;
   box-sizing: border-box;
@@ -362,10 +362,12 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 /* checkbox aspect */
 [type="checkbox"]:not(:checked) + label:before,
 [type="checkbox"]:checked + label:before {
-  content: '';
+  content: "";
   position: absolute;
-  left: 0; top: 0;
-  width: 1.25em; height: 1.25em;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+  height: 1.25em;
   border: 2px solid #ccc;
   background: #fff;
 }
@@ -373,14 +375,15 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
 [type="checkbox"]:checked + label:after {
-  content: '\2713\0020';
+  content: "\2713\0020";
   position: absolute;
-  top: .15em; left: .22em;
+  top: 0.15em;
+  left: 0.22em;
   font-size: 1.3em;
   line-height: 0.8;
   color: #0d8dee;
-  transition: all .2s;
-  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+  transition: all 0.2s;
+  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
 }
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label:after {

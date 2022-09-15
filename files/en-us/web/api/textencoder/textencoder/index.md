@@ -10,6 +10,7 @@ tags:
   - TextEncoder
 browser-compat: api.TextEncoder.TextEncoder
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextEncoder()`** constructor returns a newly created
@@ -17,7 +18,7 @@ The **`TextEncoder()`** constructor returns a newly created
 
 ## Syntax
 
-```js
+```js-nolint
 new TextEncoder()
 ```
 

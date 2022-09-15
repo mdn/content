@@ -12,9 +12,10 @@ tags:
   - conditions
   - else
   - if
-  - l10n:priority
+  - "l10n:priority"
   - ternary
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
 In any programming language, the code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article, we'll explore how so-called conditional statements work in JavaScript.
@@ -464,7 +465,9 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const select = document.querySelector('select');
@@ -493,8 +496,8 @@ createCalendar(31,'January');
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -514,7 +517,7 @@ createCalendar(31,'January');
   border: 2px solid white;
   padding: 5px;
   height: 40px;
-  background-color: #4A2DB6;
+  background-color: #4a2db6;
   color: white;
 }
 
@@ -674,7 +677,9 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 450px;width: 95%">
 const select = document.querySelector('select');
@@ -689,11 +694,12 @@ select.addEventListener('change', () => {
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
-}</textarea>
+}
+</textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 

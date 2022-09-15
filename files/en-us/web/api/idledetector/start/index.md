@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.IdleDetector.start
 ---
+
 {{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`start()`** method of the {{domxref("IdleDetector")}} interface returns a
@@ -22,7 +23,7 @@ the idle detector.
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 start(options)
 ```

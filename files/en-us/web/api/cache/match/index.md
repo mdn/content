@@ -13,6 +13,7 @@ tags:
   - match
 browser-compat: api.Cache.match
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`match()`** method of the {{domxref("Cache")}} interface returns a {{jsxref("Promise")}} that resolves to the {{domxref("Response")}} associated with the first matching request in the {{domxref("Cache")}} object.
@@ -20,7 +21,7 @@ If no match is found, the {{jsxref("Promise")}} resolves to {{jsxref("undefined"
 
 ## Syntax
 
-```js
+```js-nolint
 match(request)
 match(request, options)
 ```
@@ -33,11 +34,11 @@ match(request, options)
 - `options` {{optional_inline}}
 
   - : An object that sets options for the `match` operation.
-     The available options are:
+    The available options are:
 
     - `ignoreSearch`
       - : A boolean value that specifies whether to
-        ignore the query string in the URL.  For example, if set to
+        ignore the query string in the URL. For example, if set to
         `true` the `?value=bar` part of
         `http://foo.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.

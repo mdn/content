@@ -11,6 +11,7 @@ tags:
   - postMessage
 browser-compat: api.MessagePort.postMessage
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`postMessage()`** method of the
@@ -21,7 +22,7 @@ transfers ownership of objects to other browsing contexts.
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(message, transferList)
 ```
 

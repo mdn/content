@@ -11,6 +11,7 @@ tags:
   - Web Components
 browser-compat: api.HTMLTemplateElement.content
 ---
+
 {{APIRef("Web Components")}}
 
 The **`HTMLTemplateElement.content`** property returns a

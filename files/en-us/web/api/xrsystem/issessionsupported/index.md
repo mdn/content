@@ -17,6 +17,7 @@ tags:
   - isSessionSupported
 browser-compat: api.XRSystem.isSessionSupported
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRSystem")}} method
@@ -30,7 +31,7 @@ to use the XR device, the promise is rejected with an appropriate
 
 ## Syntax
 
-```js
+```js-nolint
 isSessionSupported(mode)
 ```
 

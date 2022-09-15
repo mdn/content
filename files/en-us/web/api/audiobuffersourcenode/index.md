@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioBufferSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioBufferSourceNode`** interface is an {{domxref("AudioScheduledSourceNode")}} which represents an audio source consisting of in-memory audio data, stored in an {{domxref("AudioBuffer")}}.
@@ -76,7 +77,7 @@ _Inherits event handlers from its parent, {{domxref("AudioScheduledSourceNode")}
 _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and overrides the following method:_.
 
 - {{domxref("AudioBufferSourceNode.start", "start()")}}
-  - :  Schedules playback of the audio data contained in the buffer, or begins playback immediately. Additionally allows the start offset and play duration to be set.
+  - : Schedules playback of the audio data contained in the buffer, or begins playback immediately. Additionally allows the start offset and play duration to be set.
 
 ## Examples
 
@@ -88,7 +89,11 @@ In this example, we create a two-second buffer, fill it with white noise, and th
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
-const myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(
+  2,
+  audioCtx.sampleRate * 3,
+  audioCtx.sampleRate
+);
 
 // Fill the buffer with white noise;
 //just random values between -1.0 and 1.0

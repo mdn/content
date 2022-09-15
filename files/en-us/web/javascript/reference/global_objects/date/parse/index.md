@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.parse
 ---
+
 {{JSRef}}
 
 The **`Date.parse()`** method parses a string representation of
@@ -21,7 +22,7 @@ Only the [ISO 8601 format](https://tc39.es/ecma262/#sec-date-time-string-format)
 
 ## Syntax
 
-```js
+```js-nolint
 Date.parse(dateString)
 ```
 
@@ -152,11 +153,11 @@ Date.parse("2019-01-01T00:00:00")
 > **Note:** This section contains implementation-specific behavior that can be inconsistent
 > across implementations.
 
-If `IPOdate` is an existing {{jsxref("Date")}} object, it can be set to
+If `ipoDate` is an existing {{jsxref("Date")}} object, it can be set to
 August 9, 1995 (local time) as follows:
 
 ```js
-IPOdate.setTime(Date.parse('Aug 9, 1995'));
+ipoDate.setTime(Date.parse('Aug 9, 1995'));
 ```
 
 Some other examples of parsing non-standard date strings:

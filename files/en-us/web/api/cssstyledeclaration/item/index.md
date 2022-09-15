@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.item
 ---
+
 {{ APIRef("CSSOM") }}
 
 The `CSSStyleDeclaration.item()`
@@ -21,7 +22,7 @@ arguments; the empty string is returned if the index is out of range and a
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

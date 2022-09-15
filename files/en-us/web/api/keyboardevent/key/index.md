@@ -12,6 +12,7 @@ tags:
   - UI Events
 browser-compat: api.KeyboardEvent.key
 ---
+
 {{APIRef("UI Events")}}
 
 The {{domxref("KeyboardEvent")}} interface's **`key`** read-only property returns the value of the key pressed by the user, taking into consideration the state of modifier keys such as <kbd>Shift</kbd> as well as the keyboard locale and layout.
@@ -24,7 +25,7 @@ Its value is determined as follows:
 
 - If the pressed key has a printed representation, the returned value is a non-empty Unicode character string containing the printable representation of the key.
 - If the pressed key is a control or special character, the returned value is one of the [pre-defined key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values).
-- If the `KeyboardEvent` represents the press of a [dead key](https://wikipedia.org/wiki/Dead_key), the key value must be "`Dead`".
+- If the `KeyboardEvent` represents the press of a [dead key](https://en.wikipedia.org/wiki/Dead_key), the key value must be "`Dead`".
 - Some specialty keyboard keys (such as the extended keys for controlling media on multimedia keyboards) don't generate key codes on Windows; instead, they trigger `WM_APPCOMMAND` events. These events get mapped to DOM keyboard events, and are listed among the "Virtual key codes" for Windows, even though they aren't actually key codes.
 - If the key cannot be identified, the returned value is `Unidentified`.
 
@@ -50,35 +51,35 @@ Try experimenting using the following two test cases:
 
 1. Press and hold the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key, then press
+   key, then press
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    and release it. Next, release the
+   and release it. Next, release the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key.
+   key.
 
 2. Press and hold the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key, then press and hold
+   key, then press and hold
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    . Release the
+   . Release the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key. Finally, release
+   key. Finally, release
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    .
+   .
 
 ### HTML
 
@@ -110,7 +111,7 @@ Try experimenting using the following two test cases:
 }
 
 .fx > div:first-child {
-   width: 30%;
+  width: 30%;
 }
 
 .flex {

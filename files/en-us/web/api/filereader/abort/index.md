@@ -12,6 +12,7 @@ tags:
   - abort
 browser-compat: api.FileReader.abort
 ---
+
 {{APIRef("File API")}}
 
 The **`abort`** method aborts the read operation. Upon return,
@@ -19,7 +20,7 @@ the {{domxref("FileReader.readyState","readyState")}} will be `DONE`.
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

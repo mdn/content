@@ -13,6 +13,7 @@ tags:
   - onChanged
 browser-compat: webextensions.api.bookmarks.onChanged
 ---
+
 {{AddonSidebar()}}
 
 Fired when there is a change to:
@@ -22,7 +23,7 @@ Fired when there is a change to:
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onChanged.addListener(listener)
 browser.bookmarks.onChanged.removeListener(listener)
 browser.bookmarks.onChanged.hasListener(listener)

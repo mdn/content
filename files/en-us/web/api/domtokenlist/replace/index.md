@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMTokenList.replace
 ---
+
 {{APIRef("DOM")}}
 
 The **`replace()`** method of the {{domxref("DOMTokenList")}} interface
@@ -19,7 +20,7 @@ without adding the new token to the token list.
 
 ## Syntax
 
-```js
+```js-nolint
 replace(oldToken, newToken)
 ```
 

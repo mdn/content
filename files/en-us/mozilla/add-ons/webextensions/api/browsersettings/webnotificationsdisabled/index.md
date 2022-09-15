@@ -12,6 +12,7 @@ tags:
   - webNotificationsDisabled
 browser-compat: webextensions.api.browserSettings.webNotificationsDisabled
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to prevent websites from showing notifications using the [`Notifications`](/en-US/docs/Web/API/Notifications_API) Web API.
@@ -38,7 +39,9 @@ Toggle the setting:
 async function toggleWebNotifications() {
   let current = await browser.browserSettings.webNotificationsDisabled.get({});
   console.log(`Current value: ${current.value}`);
-  browser.browserSettings.webNotificationsDisabled.set({value: !current.value});
+  browser.browserSettings.webNotificationsDisabled.set({
+    value: !current.value,
+  });
 }
 
 browser.browserAction.onClicked.addListener(() => {

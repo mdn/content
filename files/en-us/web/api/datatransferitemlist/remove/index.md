@@ -13,6 +13,7 @@ tags:
   - remove
 browser-compat: api.DataTransferItemList.remove
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItemList.remove()`** method removes the
@@ -22,7 +23,7 @@ be changed.
 
 ## Syntax
 
-```js
+```js-nolint
 remove(index)
 ```
 
@@ -52,9 +53,10 @@ This example shows the use of the `remove()` method.
 
 ```html
 <div>
- <p id="source" draggable="true">
-   Select this element, drag it to the Drop Zone
-   and then release the selection to move the element.</p>
+  <p id="source" draggable="true">
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
 </div>
 <div id="target">Drop Zone</div>
 ```

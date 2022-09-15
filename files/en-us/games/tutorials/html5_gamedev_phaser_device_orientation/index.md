@@ -101,7 +101,7 @@ The first value is the name of the state and the second one is the object we wan
 
 ## Managing game states
 
-The states in Phaser are separate parts of the game logic; in our case we're loading them from independent JavaScript files for better maintainability. The basic states used in this game are: `Boot`, `Preloader`, `MainMenu`, `Howto` and `Game`. `Boot` will take care of initializing a few settings, `Preloader` will load all of the assets like graphics and audio, `MainMenu` is the menu with the start button, `Howto` shows the "how to play" instructions and the `Game` state lets you actually play the game. Let's quickly go through the content of those states.
+The states in Phaser are separate parts of the game logic; in our case we're loading them from independent JavaScript files for better maintainability. The basic states used in this game are: `Boot`, `Preloader`, `MainMenu`, `Howto` and `Game`. `Boot` will take care of initializing a few settings, `Preloader` will load all the assets like graphics and audio, `MainMenu` is the menu with the start button, `Howto` shows the "how to play" instructions and the `Game` state lets you actually play the game. Let's quickly go through the content of those states.
 
 ### Boot.js
 
@@ -330,7 +330,7 @@ The more you tilt the device, the more force is applied to the ball, therefore t
 
 ![An explanation of the X, Y and Z axes of a Flame mobile device with the Cyber Orb game demo on the screen.](cyber-orb-flame-orientation.png)
 
-> **Note:** To find more out about implementing device orientation and what raw code would look like, read [Keep it level: responding to device orientation changes](/en-US/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes).
+> **Note:** To find out more about implementing device orientation and what raw code would look like, read [Keep it level: responding to device orientation changes](/en-US/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes).
 
 #### Adding the hole
 
@@ -363,7 +363,7 @@ this.levelData = [
 ];
 ```
 
-Every array element holds a collection of blocks with an `x` and `y` position and `t` value for each. After `levelData`, but still in the `initLevels` function, we're adding the blocks into an array in the `for` loop using some of the framework-specific methods:
+Every array element holds a collection of blocks with an `x` and `y` position and `t` value for each. After `levelData`, but still in the `initLevels` function, we're adding the blocks into an array in the `for` loop using some framework-specific methods:
 
 ```js
 for (let i = 0; i < this.maxLevels; i++) {

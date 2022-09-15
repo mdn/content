@@ -1,5 +1,5 @@
 ---
-title: 'Window: pageshow event'
+title: "Window: pageshow event"
 slug: Web/API/Window/pageshow_event
 page-type: web-api-event
 tags:
@@ -16,6 +16,7 @@ tags:
   - show
 browser-compat: api.Window.pageshow_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`pageshow`** event is sent to a {{domxref("Window")}} when the browser displays the window's document due to navigation.
@@ -86,9 +87,11 @@ events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 ### HTML
 
 ```html
-<p>Open the console and watch the output as you navigate to and from
-this page. Try loading new pages into this tab, then navigating forward
-and backward through history, noting the events' output to the log.</p>
+<p>
+  Open the console and watch the output as you navigate to and from this page.
+  Try loading new pages into this tab, then navigating forward and backward
+  through history, noting the events' output to the log.
+</p>
 ```
 
 ### Results

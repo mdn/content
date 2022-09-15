@@ -12,6 +12,7 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels.create
 ---
+
 {{AddonSidebar()}}
 
 Adds a new panel to the devtools.
@@ -20,7 +21,7 @@ This function takes: a title, a URL to an icon file, and a URL to an HTML file. 
 
 ## Syntax
 
-```js
+```js-nolint
 let creating = browser.devtools.panels.create(
   title,       // string
   iconPath,    // string

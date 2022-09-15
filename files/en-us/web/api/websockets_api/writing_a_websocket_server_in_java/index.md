@@ -9,9 +9,8 @@ tags:
   - Tutorial
   - WebSockets
 ---
-{{DefaultAPISidebar("Websockets API")}}
 
-## Introduction
+{{DefaultAPISidebar("Websockets API")}}
 
 This example shows you how to create a WebSocket API server using Oracle Java.
 

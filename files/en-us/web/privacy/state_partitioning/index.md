@@ -8,6 +8,7 @@ tags:
   - Storage
   - tracking
 ---
+
 State Partitioning is a broad effort to rework how Firefox manages client-side
 state (i.e., data stored in the browser) to mitigate the ability of websites
 to abuse state for cross-site tracking. This effort aims to

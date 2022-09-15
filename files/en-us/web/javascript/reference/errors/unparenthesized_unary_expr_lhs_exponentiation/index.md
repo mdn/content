@@ -6,9 +6,10 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "unparenthesized unary expression can't appear on the left-hand side of '**'" occurs when a unary operator (one of `typeof`, `void`, `delete`, `await`, `!`, `~`, `+`, `-`) is used on the left operand of the [exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) without parentheses.
+The JavaScript exception "unparenthesized unary expression can't appear on the left-hand side of '\*\*'" occurs when a unary operator (one of `typeof`, `void`, `delete`, `await`, `!`, `~`, `+`, `-`) is used on the left operand of the [exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) without parentheses.
 
 ## Message
 

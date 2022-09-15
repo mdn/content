@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.readyState
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.readyState`** property indicates the
@@ -78,7 +79,7 @@ audio will play.
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 

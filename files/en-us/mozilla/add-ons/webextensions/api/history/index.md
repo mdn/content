@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.history
 ---
+
 {{AddonSidebar}}
 
 Use the `history` API to interact with the browser history.

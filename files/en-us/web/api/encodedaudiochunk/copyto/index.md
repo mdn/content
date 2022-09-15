@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.EncodedAudioChunk.copyTo
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`copyTo()`** method of the {{domxref("EncodedAudioChunk")}} interface copies the encoded chunk of audio data.
 
 ## Syntax
 
-```js
+```js-nolint
 copyTo(destination)
 ```
 

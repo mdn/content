@@ -14,13 +14,14 @@ tags:
   - web animations api
 browser-compat: api.Animation.play
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`play()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{ domxref("Animation") }} Interface starts or resumes playing of an animation. If the animation is finished, calling `play()` restarts the animation, playing it from the beginning.
 
 ## Syntax
 
-```js
+```js-nolint
 play()
 ```
 

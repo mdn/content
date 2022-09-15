@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.pause_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`pause`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechSynthesisUtterance")}} object is fired when the utterance is paused part way through.

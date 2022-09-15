@@ -181,15 +181,14 @@
     },
     "CSS Font Loading API": {
       "overview": ["CSS Font Loading API"],
-      "interfaces": [
-        "FontFace",
-        "FontFaceSet",
-        "FontFaceSource",
-        "FontFaceSetLoadEvent"
-      ],
+      "interfaces": ["FontFace", "FontFaceSet", "FontFaceSetLoadEvent"],
       "methods": [],
-      "properties": [],
-      "events": []
+      "properties": ["Document.fonts", "WorkerGlobalScope.fonts"],
+      "events": [
+        "FontFaceSet: loading event",
+        "FontFaceSet: loadingdone event",
+        "FontFaceSet: loadingerror event"
+      ]
     },
     "CSS Painting API": {
       "overview": ["CSS Painting API"],
@@ -265,10 +264,11 @@
       ]
     },
     "Device Orientation Events": {
+      "overview": ["Device orientation events"],
       "guides": [
-        "/docs/Web/Events/Detecting_device_orientation",
-        "/docs/Web/Events/Orientation_and_motion_data_explained",
-        "/docs/Web/Events/Using_device_orientation_with_3D_transforms"
+        "/docs/Web/API/Device_orientation_events/Detecting_device_orientation",
+        "/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained",
+        "/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms"
       ],
       "interfaces": [
         "DeviceMotionEvent",
@@ -280,7 +280,7 @@
       "properties": [],
       "events": [
         "Window: deviceorientation",
-        "Window: compassneedscalibration",
+        "Window: deviceorientationabsolute",
         "Window: devicemotion"
       ]
     },
@@ -739,6 +739,13 @@
       "properties": ["indexedDB"],
       "events": []
     },
+    "Largest Contentful Paint API": {
+      "overview": ["Largest Contentful Paint API"],
+      "interfaces": ["LargestContentfulPaint"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Layout Instability API": {
       "overview": ["Layout Instability API"],
       "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
@@ -868,6 +875,13 @@
       "methods": [],
       "properties": ["Document.hidden", "Document.visibilityState"],
       "events": ["Document: visibilitychange"]
+    },
+    "Paint Timing API": {
+      "overview": ["Paint Timing API"],
+      "interfaces": ["PerformancePaintTiming"],
+      "methods": [],
+      "properties": [],
+      "events": []
     },
     "Payment Request API": {
       "overview": ["Payment Request API"],

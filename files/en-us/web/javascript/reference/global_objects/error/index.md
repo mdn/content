@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Error
 ---
+
 {{JSRef}}
 
 `Error` objects are thrown when runtime errors occur. The `Error` object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
@@ -17,7 +18,7 @@ browser-compat: javascript.builtins.Error
 
 Runtime errors result in new `Error` objects being created and thrown.
 
-`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ### Error types
 
@@ -48,9 +49,11 @@ Besides the generic `Error` constructor, there are other core error constructors
 ## Static methods
 
 - `Error.captureStackTrace()` {{non-standard_inline}}
+
   - : A non-standard V8 function that creates the {{JSxRef("Error.prototype.stack", "stack")}} property on an Error instance.
 
 - `Error.stackTraceLimit` {{non-standard_inline}}
+
   - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
 
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}

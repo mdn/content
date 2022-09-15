@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: api.Document.visibilityState
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Document.visibilityState`**
@@ -29,12 +30,6 @@ values are:
   - : The page content is not visible to the user. In practice this means that the
     document is either a background tab or part of a minimized window, or the OS screen
     lock is active.
-- `prerender` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : The page content is being prerendered and is not visible to the user (considered
-    hidden for purposes of
-    [`document.hidden`](/en-US/docs/Web/API/Document/hidden)). The
-    document may start in this state, but will never transition to it from another value.
-    Note: This was removed from the standard. Check compatibility table for details.
 
 When the value of this property changes, the
 {{domxref("Document/visibilitychange_event", "visibilitychange")}} event is sent to the
@@ -46,7 +41,7 @@ minimized.
 
 ## Syntax
 
-```js
+```js-nolint
 document.visibilityState
 ```
 

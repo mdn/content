@@ -1,5 +1,5 @@
 ---
-title: 'SVGAnimationElement: endEvent event'
+title: "SVGAnimationElement: endEvent event"
 slug: Web/API/SVGAnimationElement/endEvent_event
 page-type: web-api-event
 tags:
@@ -11,6 +11,7 @@ tags:
   - Event
 browser-compat: api.SVGAnimationElement.endEvent_event
 ---
+
 {{APIRef("SVG")}}
 
 The **`endEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.
@@ -50,19 +51,15 @@ A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
   <title>SVG SMIL Animate with Path</title>
   <circle cx="0" cy="50" r="50" fill="blue" stroke="black" stroke-width="1">
-    <animateMotion
-       path="M 0 0 H 300 Z"
-       dur="5s" repeatCount="indefinite" />
+    <animateMotion path="M 0 0 H 300 Z" dur="5s" repeatCount="indefinite" />
   </circle>
 </svg>
 
-<hr>
+<hr />
 
 <button>Stop animation</button>
 
-<ul>
-
-</ul>
+<ul></ul>
 ```
 
 ```css

@@ -15,6 +15,7 @@ tags:
   - registerPaint
 browser-compat: api.PaintWorkletGlobalScope.registerPaint
 ---
+
 {{APIRef("CSS Painting API")}}
 
 The
@@ -24,7 +25,7 @@ image where a CSS property expects a file.
 
 ## Syntax
 
-```js
+```js-nolint
 registerPaint(name, classRef)
 ```
 
@@ -84,7 +85,7 @@ the `CSS.paintWorklet.addModule()` method:
 
 ```html
 <script>
-   CSS.paintWorklet.addModule('checkboardWorklet.js');
+  CSS.paintWorklet.addModule("checkboardWorklet.js");
 </script>
 ```
 
@@ -93,7 +94,7 @@ CSS anywhere an `{{cssxref('&lt;image&gt;')}}` value is valid.
 
 ```css
 li {
-   background-image: paint(checkerboard);
+  background-image: paint(checkerboard);
 }
 ```
 

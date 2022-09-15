@@ -13,6 +13,7 @@ tags:
   - getTree
 browser-compat: webextensions.api.bookmarks.getTree
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.getTree()`** returns an array containing the root of the bookmarks tree as a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} object.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingTree = browser.bookmarks.getTree()
 ```
 

@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.BarcodeDetector.BarcodeDetector
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`BarcodeDetector()`** constructor creates
@@ -20,7 +21,7 @@ barcodes in images.
 
 ## Syntax
 
-```js
+```js-nolint
 new BarcodeDetector()
 new BarcodeDetector(options)
 ```

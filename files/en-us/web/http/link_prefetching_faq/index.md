@@ -18,7 +18,7 @@ Link prefetching is a browser mechanism, which utilizes browser idle time to dow
 The browser looks for either an HTML {{ HTMLElement("link") }} or an [HTTP `Link:` header](/en-US/docs/Web/HTTP/Headers) with a relation type of either `next` or `prefetch`. An example using the `link` tag follows:
 
 ```html
-<link rel="prefetch" href="/images/big.jpeg">
+<link rel="prefetch" href="/images/big.jpeg" />
 ```
 
 The same prefetching hint using an HTTP `Link:` header:
@@ -34,8 +34,11 @@ The browser observes all of these hints and queues up each unique request to be 
 Some more examples follow:
 
 ```html
-<link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css">
-<link rel="next" href="2.html">
+<link
+  rel="prefetch alternate stylesheet"
+  title="Designed for Mozilla"
+  href="mozspecific.css" />
+<link rel="next" href="2.html" />
 ```
 
 ### Are anchor (\<a>) tags prefetched?

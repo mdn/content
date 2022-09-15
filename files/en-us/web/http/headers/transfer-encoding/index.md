@@ -10,13 +10,14 @@ tags:
   - Payload header
 browser-compat: http.headers.Transfer-Encoding
 ---
+
 {{HTTPSidebar}}
 
 The **`Transfer-Encoding`** header specifies the form of
 encoding used to safely transfer the {{Glossary("Payload body","payload body")}} to the
 user.
 
-> **Note:** [HTTP/2](https://wikipedia.org/wiki/HTTP/2) doesn't support
+> **Note:** [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) doesn't support
 > HTTP 1.1's chunked transfer encoding mechanism, as it provides its own, more efficient,
 > mechanisms for data streaming.
 

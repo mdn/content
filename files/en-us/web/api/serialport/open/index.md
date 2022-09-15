@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.SerialPort.open
 ---
+
 {{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
 
 The **`open()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking. The `baudRate` parameter is required.
 
 ## Syntax
 
-```js
+```js-nolint
 open(options)
 ```
 

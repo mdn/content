@@ -10,6 +10,7 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.createQueryEXT
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_disjoint_timer_query.createQueryEXT()`** method of
@@ -19,7 +20,7 @@ a set of GL commands.
 
 ## Syntax
 
-```js
+```js-nolint
 createQueryEXT()
 ```
 

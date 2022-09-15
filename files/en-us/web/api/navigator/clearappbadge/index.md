@@ -12,13 +12,14 @@ tags:
   - Experimental
 browser-compat: api.Navigator.clearAppBadge
 ---
+
 {{APIRef("Badging API")}}{{SeeCompatTable}}
 
 The **`clearAppBadge()`** method of the {{domxref("Navigator")}} interface clears a badge on the current app's icon by setting it to `nothing`. The value `nothing` indicates that no badge is currently set, and the status of the badge is _cleared_.
 
 ## Syntax
 
-```js
+```js-nolint
 clearAppBadge()
 ```
 

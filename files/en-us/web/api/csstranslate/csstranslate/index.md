@@ -13,6 +13,7 @@ tags:
   - Houdini
 browser-compat: api.CSSTranslate.CSSTranslate
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTranslate()`** constructor creates a
@@ -21,7 +22,7 @@ individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSTranslate(x, y)
 new CSSTranslate(x, y, z)
 ```

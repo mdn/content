@@ -9,6 +9,7 @@ tags:
   - Response header
 browser-compat: http.headers.Accept-CH
 ---
+
 {{HTTPSidebar}}{{securecontext_header}}
 
 The **`Accept-CH`** header may be set by a server to specify

@@ -10,6 +10,7 @@ tags:
   - Intermediate
   - Web
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 Earlier in this tutorial we've learned about the [canvas grid](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) and the **coordinate space**. Until now, we only used the default grid and changed the size of the overall canvas for our needs. With transformations there are more powerful ways to translate the origin to a different position, rotate the grid and even scale it.
@@ -81,7 +82,7 @@ The first of the transformation methods we'll look at is `translate()`. This met
 - {{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}
   - : Moves the canvas and its origin on the grid. `x` indicates the horizontal distance to move, and `y` indicates how far to move the grid vertically.
 
-![](canvas_grid_translate.png)
+![The canvas is pushed down and to the right, or translated, from its origin point on the grid by 'x' units horizontally and 'y' units vertically.](canvas_grid_translate.png)
 
 It's a good idea to save the canvas state before doing any transformations. In most cases, it is just easier to call the `restore` method than having to do a reverse translation to return to the original state. Also if you're translating inside a loop and don't save and restore the canvas state, you might end up missing part of your drawing, because it was drawn outside the canvas edge.
 
@@ -123,7 +124,7 @@ The second transformation method is `rotate()`. We use it to rotate the canvas a
 - {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
   - : Rotates the canvas clockwise around the current origin by the `angle` number of radians.
 
-![](canvas_grid_rotate.png)
+![The default origin point is at the top left, 0 degrees is horizontal and to the right. The rotation point starts from the origin point and goes clockwise.](canvas_grid_rotate.png)
 
 The rotation center point is always the canvas origin. To change the center point, we will need to move the canvas by using the `translate()` method.
 

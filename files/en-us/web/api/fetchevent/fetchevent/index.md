@@ -14,13 +14,14 @@ tags:
   - ServiceWorker
 browser-compat: api.FetchEvent.FetchEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`FetchEvent()`** constructor creates a new {{domxref("FetchEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new FetchEvent(type, options)
 ```
 
@@ -35,7 +36,7 @@ new FetchEvent(type, options)
       - : The {{domxref("Request")}} object that would have triggered the event handler.
     - `preloadResponse`
       - : A {{jsxref("Promise")}} which returns a previously-loaded response to the client.
-    - `clientId`  {{optional_inline}}
+    - `clientId` {{optional_inline}}
       - : The {{domxref("Client")}} that the current service worker is controlling. It defaults to `""`.
     - `isReload` {{deprecated_inline}} {{optional_inline}}
       - : A boolean value that signifies whether the page was reloaded or not when

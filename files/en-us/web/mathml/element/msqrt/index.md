@@ -8,6 +8,7 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.msqrt
 ---
+
 {{MathMLRef}}
 
 The MathML `<msqrt>` element is used to display square roots (no index is displayed). The square root accepts only one argument, which leads to the following syntax: `<msqrt> base </msqrt>`.
@@ -24,11 +25,9 @@ Rendering in your browser: <math><msqrt><mi>x</mi></msqrt></math>
 
 ```html
 <math>
-
- <msqrt>
+  <msqrt>
     <mi>x</mi>
   </msqrt>
-
 </math>
 ```
 

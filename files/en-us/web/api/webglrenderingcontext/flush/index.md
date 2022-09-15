@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.flush
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.flush()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) empties different buffer commands,
@@ -17,7 +18,7 @@ causing all commands to be executed as quickly as possible.
 
 ## Syntax
 
-```js
+```js-nolint
 flush()
 ```
 

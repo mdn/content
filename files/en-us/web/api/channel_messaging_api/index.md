@@ -12,6 +12,7 @@ browser-compat:
   - api.MessageChannel
   - api.MessagePort
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 The **Channel Messaging API** allows two separate scripts running in different browsing contexts attached to the same document (e.g., two IFrames, or the main document and an IFrame, two documents via a {{domxref("SharedWorker")}}, or two workers) to communicate directly, passing messages between one another through two-way channels (or pipes) with a port at each end.

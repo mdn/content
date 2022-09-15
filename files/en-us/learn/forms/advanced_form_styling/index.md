@@ -10,6 +10,7 @@ tags:
   - HTML
   - Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
 In this article, we will see what can be done with CSS to style the types of form control that are more difficult to style — the "bad" and "ugly" categories. As we saw [in the previous article](/en-US/docs/Learn/Forms/Styling_web_forms), text fields and buttons are perfectly easy to style; now we will dig into styling the bits that are more problematic.
@@ -64,26 +65,26 @@ For example, let's take the following controls:
 <form>
   <p>
     <label for="search">search: </label>
-    <input id="search" name="search" type="search">
+    <input id="search" name="search" type="search" />
   </p>
   <p>
     <label for="text">text: </label>
-    <input id="text" name="text" type="text">
+    <input id="text" name="text" type="text" />
   </p>
   <p>
     <label for="date">date: </label>
-    <input id="date" name="date" type="datetime-local">
+    <input id="date" name="date" type="datetime-local" />
   </p>
   <p>
     <label for="radio">radio: </label>
-    <input id="radio" name="radio" type="radio">
+    <input id="radio" name="radio" type="radio" />
   </p>
   <p>
     <label for="checkbox">checkbox: </label>
-    <input id="checkbox" name="checkbox" type="checkbox">
+    <input id="checkbox" name="checkbox" type="checkbox" />
   </p>
-  <p><input type="submit" value="submit"></p>
-  <p><input type="button" value="button"></p>
+  <p><input type="submit" value="submit" /></p>
+  <p><input type="button" value="button" /></p>
 </form>
 ```
 
@@ -109,7 +110,7 @@ This can be fixed using our friend `appearance: none;`, which disables the defau
 
 ```css
 input[type="search"] {
-    appearance: none;
+  appearance: none;
 }
 ```
 
@@ -136,13 +137,13 @@ For example, consider this simple test case:
 
 ```css
 span {
-    display: inline-block;
-    background: red;
+  display: inline-block;
+  background: red;
 }
 
 input[type="checkbox"] {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 ```
 
@@ -168,19 +169,19 @@ As we showed before, you can remove the default appearance of a checkbox or radi
 
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="cherry">
+        <input type="checkbox" name="fruit" value="cherry" />
         I like cherry
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="banana" disabled>
+        <input type="checkbox" name="fruit" value="banana" disabled />
         I can't like banana
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit" value="strawberry">
+        <input type="checkbox" name="fruit" value="strawberry" />
         I like strawberry
       </label>
     </p>
@@ -265,7 +266,7 @@ This example has the following CSS applied to it:
 
 ```css
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
   max-width: 400px;
 }
@@ -290,7 +291,12 @@ select {
   position: absolute;
 }
 
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -301,7 +307,10 @@ button, label, input, select, progress, meter {
   height: 30px;
 }
 
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -325,7 +334,12 @@ As you can see, we've done fairly well at getting these to look uniform across m
 We've applied some global normalizing CSS to all the controls and their labels, to get them to size in the same way, adopt their parent font, etc., as mentioned in the previous article:
 
 ```css
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -340,7 +354,10 @@ button, label, input, select, progress, meter {
 We also added some uniform shadow and rounded corners to the controls on which it made sense:
 
 ```css
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -428,7 +445,7 @@ input[type="range"] {
 }
 ```
 
-However, it is very difficult to customize the style of the range control's drag handle — to get full control over range styling you'll need to use a whole bunch of complex CSS code, including multiple non-standard, browser-specific pseudo-elements. Check out [Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) on CSS tricks for a detailed write up of what's needed.
+However, it is very difficult to customize the style of the range control's drag handle — to get full control over range styling you'll need to use a whole bunch of complex CSS code, including multiple non-standard, browser-specific pseudo-elements. Check out [Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) on CSS tricks for a detailed write-up of what's needed.
 
 ### Color input types
 

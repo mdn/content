@@ -13,6 +13,7 @@ tags:
   - color
 spec-urls: https://drafts.csswg.org/css-color/#type-def-alpha-value
 ---
+
 {{CSSRef}}
 
 The **`<alpha-value>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}, specifying the **{{Glossary("alpha", "alpha channel")}}** or **transparency** of a color.
@@ -42,7 +43,7 @@ Here an alpha value is used to set partially transparent text:
 ```css
 /* <rgba()> */
 color: rgba(34, 12, 64, 0.6);
-color: rgba(34.0 12 64 / 60%);
+color: rgba(34 12 64 / 60%);
 ```
 
 ### Setting shape image threshold

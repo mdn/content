@@ -11,13 +11,14 @@ tags:
   - terminate
 browser-compat: api.Worker.terminate
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`terminate()`** method of the {{domxref("Worker")}} interface immediately terminates the {{domxref("Worker")}}. This does not offer the worker an opportunity to finish its operations; it is stopped at once.
 
 ## Syntax
 
-```js
+```js-nolint
 terminate()
 ```
 

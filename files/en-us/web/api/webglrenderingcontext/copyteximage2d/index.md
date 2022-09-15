@@ -11,6 +11,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.copyTexImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.copyTexImage2D()`** method of the
@@ -19,7 +20,7 @@ The **`WebGLRenderingContext.copyTexImage2D()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 copyTexImage2D(target, level, internalformat, x, y, width, height, border)
 ```
 
@@ -46,7 +47,7 @@ copyTexImage2D(target, level, internalformat, x, y, width, height, border)
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the color components in the texture. Possible

@@ -17,6 +17,7 @@ tags:
   - value
 browser-compat: api.HTMLElement.input_event
 ---
+
 {{APIRef}}
 
 The **`input`** event fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
@@ -50,7 +51,7 @@ This example logs the value whenever you change the value of the {{HtmlElement("
 ### HTML
 
 ```html
-<input placeholder="Enter some text" name="name"/>
+<input placeholder="Enter some text" name="name" />
 <p id="values"></p>
 ```
 

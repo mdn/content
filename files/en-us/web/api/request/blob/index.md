@@ -11,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.blob
 ---
+
 {{APIRef("Fetch")}}
 
 The **`blob()`** method of the {{domxref("Request")}} interface
@@ -18,7 +19,7 @@ reads the request body and returns it as a promise that resolves with a {{domxre
 
 ## Syntax
 
-```js
+```js-nolint
 blob()
 ```
 

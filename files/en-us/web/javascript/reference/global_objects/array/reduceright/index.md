@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.reduceRight
 ---
+
 {{JSRef}}
 
 The **`reduceRight()`** method applies a function against an
@@ -22,7 +23,7 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduceRight((accumulator, currentValue) => { /* … */ } )
 reduceRight((accumulator, currentValue, index) => { /* … */ } )
@@ -112,7 +113,7 @@ The callback would be invoked four times, with the arguments and return values i
 call being as follows:
 
 |             | `accumulator` | `currentValue` | `index` | Return value |
-| ------------|---------------|----------------|---------|--------------|
+| ----------- | ------------- | -------------- | ------- | ------------ |
 | First call  | `4`           | `3`            | `3`     | `7`          |
 | Second call | `7`           | `2`            | `2`     | `9`          |
 | Third call  | `9`           | `1`            | `1`     | `10`         |
@@ -131,7 +132,7 @@ look like this:
 ```
 
 |             | `accumulator` | `currentValue` | `index` | Return value |
-| ------------|---------------|----------------|---------|--------------|
+| ----------- | ------------- | -------------- | ------- | ------------ |
 | First call  | `10`          | `4`            | `4`     | `14`         |
 | Second call | `14`          | `3`            | `3`     | `17`         |
 | Third call  | `17`          | `2`            | `2`     | `19`         |

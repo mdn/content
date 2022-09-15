@@ -23,7 +23,7 @@ If permission is granted then the {{jsxref('Promise')}} resolves and a [`MIDIAcc
 
 ## Syntax
 
-```js
+```js-nolint
 requestMIDIAccess()
 requestMIDIAccess(MIDIOptions)
 ```

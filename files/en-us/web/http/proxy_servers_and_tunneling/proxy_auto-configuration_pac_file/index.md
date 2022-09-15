@@ -7,6 +7,7 @@ tags:
   - PAC
   - Proxy
 ---
+
 {{HTTPSidebar}}
 
 A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
@@ -126,7 +127,7 @@ These functions can be used in building the PAC file:
 
 #### Syntax
 
-```js
+```js-nolint
 isPlainHostName(host)
 ```
 
@@ -150,7 +151,7 @@ isPlainHostName("www") // true
 
 #### Syntax
 
-```js
+```js-nolint
 dnsDomainIs(host, domain)
 ```
 
@@ -176,7 +177,7 @@ dnsDomainIs("www", ".mozilla.org") // false
 
 #### Syntax
 
-```js
+```js-nolint
 localHostOrDomainIs(host, hostdom)
 ```
 
@@ -204,7 +205,7 @@ localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mi
 
 #### Syntax
 
-```js
+```js-nolint
 isResolvable(host)
 ```
 
@@ -225,7 +226,7 @@ isResolvable("www.mozilla.org") // true
 
 #### Syntax
 
-```js
+```js-nolint
 isInNet(host, pattern, mask)
 ```
 
@@ -277,7 +278,7 @@ dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"
 
 #### Syntax
 
-```js
+```js-nolint
 convert_addr(ipaddr)
 ```
 
@@ -298,7 +299,7 @@ convert_addr("104.16.41.2"); // returns the decimal number 1745889538
 
 #### Syntax
 
-```js
+```js-nolint
 myIpAddress()
 ```
 
@@ -322,7 +323,7 @@ myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on th
 
 #### Syntax
 
-```js
+```js-nolint
 dnsDomainLevels(host)
 ```
 
@@ -345,7 +346,7 @@ dnsDomainLevels("www.mozilla.org"); // 2
 
 #### Syntax
 
-```js
+```js-nolint
 shExpMatch(str, shexp)
 ```
 
@@ -375,7 +376,7 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 
 #### Syntax
 
-```js
+```js-nolint
 weekdayRange(wd1, wd2, [gmt])
 ```
 
@@ -481,7 +482,7 @@ dateRange(1995, 1997);
 
 #### Syntax
 
-```js
+```js-nolint
 // The full range of expansions is analogous to dateRange.
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
@@ -518,7 +519,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 #### Syntax
 
-```js
+```js-nolint
 alert(message)
 ```
 
@@ -711,4 +712,4 @@ Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, 
 
 The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://searchfox.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
 
-Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).
+Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).

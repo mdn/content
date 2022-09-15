@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isShader
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.isShader()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
@@ -17,7 +18,7 @@ passed {{domxref("WebGLShader")}} is valid, `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 isShader(shader)
 ```
 

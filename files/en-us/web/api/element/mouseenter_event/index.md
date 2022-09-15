@@ -16,6 +16,7 @@ tags:
   - pointer
 browser-compat: api.Element.mouseenter_event
 ---
+
 {{APIRef}}
 
 The **`mouseenter`** event is fired at an {{domxref("Element")}} when a pointing device (usually a mouse) is initially moved so that its hotspot is within the element at which the event was fired.
@@ -95,12 +96,12 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 Though similar to {{domxref("Element/mouseover_event", "mouseover")}}, `mouseenter` differs in that it doesn't [bubble](/en-US/docs/Web/API/Event/bubbles) and it isn't sent to any descendants when the pointer is moved from one of its descendants' physical space to its own physical space.
 
-#### Behavior of `mouseenter` events:
+### Behavior of `mouseenter` events:
 
 ![](mouseenter.png)
 One `mouseenter` event is sent to each element of the hierarchy when entering them. Here 4 events are sent to the four elements of the hierarchy when the pointer reaches the text.
 
-#### Behavior of `mouseover` events:
+### Behavior of `mouseover` events:
 
 ![](mouseover.png)
 A single `mouseover` event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.
@@ -120,10 +121,10 @@ The following trivial example uses the `mouseenter` event to change the border o
 #### HTML
 
 ```html
-<div id='mouseTarget'>
- <ul id="unorderedList">
-  <li>No events yet!</li>
- </ul>
+<div id="mouseTarget">
+  <ul id="unorderedList">
+    <li>No events yet!</li>
+  </ul>
 </div>
 ```
 
@@ -134,8 +135,8 @@ Styling the `div` to make it more visible.
 ```css
 #mouseTarget {
   box-sizing: border-box;
-  width:15rem;
-  border:1px solid #333;
+  width: 15rem;
+  border: 1px solid #333;
 }
 ```
 

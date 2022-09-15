@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Number.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the wrapped primitive value
@@ -18,7 +19,7 @@ of a {{jsxref("Number")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 

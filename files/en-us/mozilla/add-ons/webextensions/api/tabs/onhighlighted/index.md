@@ -13,15 +13,16 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onHighlighted
 ---
+
 {{AddonSidebar()}}
 
 Fired when the set of highlighted tabs in a window changes.
 
-Note that before version 63, Firefox didn't have the concept of highlighting multiple tabs,  so this event was just an alias for {{WebExtAPIRef("tabs.onActivated")}}.
+Note that before version 63, Firefox didn't have the concept of highlighting multiple tabs, so this event was just an alias for {{WebExtAPIRef("tabs.onActivated")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onHighlighted.addListener(listener)
 browser.tabs.onHighlighted.removeListener(listener)
 browser.tabs.onHighlighted.hasListener(listener)

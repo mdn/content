@@ -13,6 +13,7 @@ tags:
   - i18n
 browser-compat: webextensions.api.i18n.getUILanguage
 ---
+
 {{AddonSidebar()}}
 
 Gets the UI language of the browser. This is different from {{WebExtAPIRef('i18n.getAcceptLanguages')}} which returns the preferred user languages.
@@ -21,7 +22,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 
 ## Syntax
 
-```js
+```js-nolint
 browser.i18n.getUILanguage()
 ```
 

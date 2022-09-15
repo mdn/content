@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.some
 ---
+
 {{JSRef}}
 
 The **`some()`** method tests whether
@@ -21,7 +22,7 @@ function. It returns true if, in the array, it finds an element for which the pr
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 some((element) => { /* … */ } )
 some((element, index) => { /* … */ } )

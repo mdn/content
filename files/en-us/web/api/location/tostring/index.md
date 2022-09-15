@@ -10,6 +10,7 @@ tags:
   - Stringifier
 browser-compat: api.Location.toString
 ---
+
 {{ApiRef("Location")}}
 
 The **`toString()`** {{Glossary("stringifier")}} method of the
@@ -18,7 +19,7 @@ whole URL. It is a read-only version of {{domxref("Location.href")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

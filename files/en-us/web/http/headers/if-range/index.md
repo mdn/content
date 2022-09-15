@@ -10,6 +10,7 @@ tags:
   - Request header
 browser-compat: http.headers.If-Range
 ---
+
 {{HTTPSidebar}}
 
 The **`If-Range`** HTTP request header makes a range request

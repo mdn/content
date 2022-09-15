@@ -12,6 +12,7 @@ tags:
   - define
 browser-compat: api.CustomElementRegistry.define
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 The **`define()`** method of the
@@ -26,7 +27,7 @@ There are two types of custom elements you can create:
 
 ## Syntax
 
-```js
+```js-nolint
 define(name, constructor)
 define(name, constructor, options)
 ```
@@ -149,7 +150,9 @@ customElements.define('popup-info', PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card.">
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."></popup-info>
 ```
 
 > **Note:** Constructors for autonomous custom elements must extend

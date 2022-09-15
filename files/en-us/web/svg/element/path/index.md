@@ -8,6 +8,7 @@ tags:
   - SVG Graphics
 browser-compat: svg.elements.path
 ---
+
 {{SVGRef}}
 
 The **`<path>`** [SVG](/en-US/docs/Web/SVG) element is the generic element to define a shape. All the basic shapes can be created with a path element.
@@ -20,11 +21,12 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 10,30
+  <path
+    d="M 10,30
            A 20,20 0,0,1 50,30
            A 20,20 0,0,1 90,30
            Q 90,60 50,90
-           Q 10,60 10,30 z"/>
+           Q 10,60 10,30 z" />
 </svg>
 ```
 

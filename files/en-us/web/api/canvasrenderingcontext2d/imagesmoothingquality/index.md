@@ -11,6 +11,7 @@ tags:
   - imageSmoothingQuality
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingQuality
 ---
+
 {{APIRef}}
 
 The **`imageSmoothingQuality`** property of the

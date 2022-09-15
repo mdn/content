@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.ownKeys
 ---
+
 {{JSRef}}
 
 The **`handler.ownKeys()`** method is a trap for
@@ -17,7 +18,7 @@ The **`handler.ownKeys()`** method is a trap for
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   ownKeys(target) {
   }

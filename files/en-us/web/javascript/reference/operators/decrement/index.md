@@ -8,6 +8,7 @@ tags:
   - Operator
 browser-compat: javascript.operators.decrement
 ---
+
 {{jsSidebar("Operators")}}
 
 The decrement operator (`--`) decrements (subtracts one from) its operand
@@ -17,7 +18,7 @@ and returns a value.
 
 ## Syntax
 
-```js
+```js-nolint
 x--
 --x
 ```

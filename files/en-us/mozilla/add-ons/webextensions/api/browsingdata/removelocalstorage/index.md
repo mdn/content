@@ -12,6 +12,7 @@ tags:
   - removeLocalStorage
 browser-compat: webextensions.api.browsingData.removeLocalStorage
 ---
+
 {{AddonSidebar()}}
 
 Clears any [local storage](/en-US/docs/Web/API/Window/localStorage) created by websites.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removeLocalStorage(
   removalOptions            // RemovalOptions object
 )
@@ -53,8 +54,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeLocalStorage({}).
-then(onRemoved, onError);
+browser.browsingData.removeLocalStorage({}).then(onRemoved, onError);
 ```
 
 ## Browser compatibility

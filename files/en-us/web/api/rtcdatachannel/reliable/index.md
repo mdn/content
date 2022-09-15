@@ -12,6 +12,7 @@ tags:
   - reliable
 browser-compat: api.RTCDataChannel.reliable
 ---
+
 {{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only `RTCDataChannel` property

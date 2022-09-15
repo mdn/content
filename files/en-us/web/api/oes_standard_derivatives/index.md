@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_standard_derivatives
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_standard_derivatives`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds the GLSL derivative functions `dFdx`, `dFdy`, and `fwidth`.
@@ -47,16 +48,16 @@ Shader code that avoids artifacts when wrapping texture coordinates:
 
 ```html
 <script type="x-shader/x-fragment">
-#extension GL_EXT_shader_texture_lod : enable
-#extension GL_OES_standard_derivatives : enable
+  #extension GL_EXT_shader_texture_lod : enable
+  #extension GL_OES_standard_derivatives : enable
 
-uniform sampler2D myTexture;
-varying vec2 texcoord;
+  uniform sampler2D myTexture;
+  varying vec2 texcoord;
 
-void main(){
-  gl_FragColor = texture2DGradEXT(myTexture, mod(texcoord, vec2(0.1, 0.5)),
-                                  dFdx(texcoord), dFdy(texcoord));
-}
+  void main(){
+    gl_FragColor = texture2DGradEXT(myTexture, mod(texcoord, vec2(0.1, 0.5)),
+                                    dFdx(texcoord), dFdy(texcoord));
+  }
 </script>
 ```
 

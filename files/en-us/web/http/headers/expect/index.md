@@ -8,6 +8,7 @@ tags:
   - Request header
 browser-compat: http.headers.Expect
 ---
+
 {{HTTPSidebar}}
 
 The **`Expect`** HTTP request header indicates expectations

@@ -18,6 +18,7 @@ tags:
   - web animations api
 browser-compat: api.ShadowRoot.getAnimations
 ---
+
 {{APIRef("Web Animations")}}
 
 The **`getAnimations()`** method of the {{domxref("ShadowRoot")}} interface
@@ -26,7 +27,7 @@ target elements are descendants of the shadow tree. This array includes [CSS Ani
 
 ## Syntax
 
-```js
+```js-nolint
 getAnimations()
 ```
 

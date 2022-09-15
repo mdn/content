@@ -13,6 +13,7 @@ tags:
   - indexNames
 browser-compat: api.IDBObjectStore.indexNames
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`indexNames`** read-only property of the

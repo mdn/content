@@ -14,6 +14,7 @@ tags:
   - track
 browser-compat: api.RTCTrackEvent.RTCTrackEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCTrackEvent()`** constructor creates and returns a new {{domxref("RTCTrackEvent")}} object,
@@ -25,14 +26,14 @@ objects are created by WebRTC and delivered to your `RTCPeerConnector`'s
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCTrackEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - :  A string with the name of the event.
+  - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `track`.
 - `options`
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:

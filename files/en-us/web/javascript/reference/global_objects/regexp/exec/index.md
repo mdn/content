@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.exec
 ---
+
 {{JSRef}}
 
 The **`exec()`** method executes a search for a match in a specified string and returns a result array, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
@@ -18,7 +19,7 @@ The **`exec()`** method executes a search for a match in a specified string and 
 
 ## Syntax
 
-```js
+```js-nolint
 exec(str)
 ```
 
@@ -40,6 +41,7 @@ If the match succeeds, the `exec()` method returns an array and updates the [`la
 - `groups`
   - : An object of named capturing groups whose keys are the names and values are the capturing groups or {{jsxref("undefined")}} if no named capturing groups were defined. See [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences) for more information.
 - `indices` {{optional_inline}}
+
   - : This property is only present when the [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) flag is set. It is an array where each entry represents the bounds of a substring match. Each substring match itself is an array where the first entry represents its start index and the second entry its end index.
 
     It additionally has a `groups` property which holds an object of all named capturing groups. The keys are the names of the capturing groups and each value is an array with the first item being the start entry and the second entry being the end index of the capturing group. If the regular expression doesn't contain any named capturing groups, `groups` is `undefined`.
@@ -73,20 +75,20 @@ const result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 The following table shows the state of `result` after running this script:
 
 | Property  | Value                                                              |
-|-----------|--------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------ |
 | `[0]`     | `"Quick Brown Fox Jumps"`                                          |
 | `[1]`     | `"Brown"`                                                          |
 | `[2]`     | `"Jumps"`                                                          |
 | `index`   | `4`                                                                |
 | `indices` | `[[4, 25], [10, 15], [20, 25]]`<br />`groups: { color: [10, 15 ]}` |
-| `input`   | `4`                                                                |
+| `input`   | `"The Quick Brown Fox Jumps Over The Lazy Dog"`                    |
 | `groups`  | `{ color: "brown" }`                                               |
 
 In addition, `re.lastIndex` will be set to `25`, due to this regex being global.
 
 ### Finding successive matches
 
-If your regular expression uses the [`g`](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) flag, you can use the `exec()` method multiple times to find successive matches in the same string. When you do so, the search starts at the substring of `str` specified by the regular expression's {{jsxref("RegExp.lastIndex", "lastIndex")}} property ({{jsxref("RegExp.prototype.test()", "test()")}} will also advance the {{jsxref("RegExp.lastIndex", "lastIndex")}} property). Note that the {{jsxref("RegExp.lastIndex", "lastIndex")}} property will not be reset when searching a different string, it will start its search at its existing {{jsxref("RegExp.lastIndex", "lastIndex")}}.
+If your regular expression uses the [`g`](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) flag, you can use the `exec()` method multiple times to find successive matches in the same string. When you do so, the search starts at the substring of `str` specified by the regular expression's {{jsxref("RegExp/lastIndex", "lastIndex")}} property ({{jsxref("RegExp.prototype.test()", "test()")}} will also advance the {{jsxref("RegExp/lastIndex", "lastIndex")}} property). Note that the {{jsxref("RegExp/lastIndex", "lastIndex")}} property will not be reset when searching a different string, it will start its search at its existing {{jsxref("RegExp/lastIndex", "lastIndex")}}.
 
 For example, assume you have this script:
 
@@ -110,9 +112,9 @@ Found ab. Next match starts at 9
 
 > **Warning:** There are many pitfalls that can lead to this becoming an infinite loop!
 >
-> - Do _not_ place the regular expression literal (or {{jsxref("RegExp")}} constructor) within the `while` condition —  it will recreate the regex for every iteration and reset {{jsxref("RegExp.lastIndex", "lastIndex")}}.
+> - Do _not_ place the regular expression literal (or {{jsxref("RegExp")}} constructor) within the `while` condition — it will recreate the regex for every iteration and reset {{jsxref("RegExp/lastIndex", "lastIndex")}}.
 > - Be sure that the [global (`g`) flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) is set, or `lastIndex` will never be advanced.
-> - If the regex may match zero-length characters (e.g. `/^/gm`), increase its {{jsxref("RegExp.lastIndex", "lastIndex")}} manually each time to avoid being stuck in the same place.
+> - If the regex may match zero-length characters (e.g. `/^/gm`), increase its {{jsxref("RegExp/lastIndex", "lastIndex")}} manually each time to avoid being stuck in the same place.
 
 You can usually replace this kind of code with {{jsxref("String.prototype.matchAll()")}} to make it less error-prone.
 

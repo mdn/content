@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Vary
 ---
+
 {{HTTPSidebar}}
 
 The **`Vary`** HTTP response header describes the parts of the request message aside from the method and URL that influenced the content of the response it occurs in. Most often, this is used to create a cache key when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) is in use.
@@ -52,7 +53,7 @@ Vary: <header-name>, <header-name>, ...
 
 ### Compatibility notes
 
-- [Vary with care – Vary header problems in IE6-9](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/vary-with-care)
+- [Vary with care – Vary header problems in IE6-9](https://docs.microsoft.com/archive/blogs/ieinternals/vary-with-care)
 
 ## See also
 

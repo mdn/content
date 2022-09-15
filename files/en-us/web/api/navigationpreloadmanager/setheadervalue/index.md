@@ -10,6 +10,7 @@ tags:
   - Service Workers
 browser-compat: api.NavigationPreloadManager.setHeaderValue
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`setHeaderValue()`** method of the {{domxref("NavigationPreloadManager")}} interface sets the value of the {{HTTPHeader("Service-Worker-Navigation-Preload")}} header that will be sent with requests resulting from a {{domxref("fetch()")}} operation made during service worker navigation preloading.
@@ -22,7 +23,7 @@ The default directive is set to `true`: this method allows the possibility of co
 
 ## Syntax
 
-```js
+```js-nolint
 setHeaderValue(value)
 ```
 

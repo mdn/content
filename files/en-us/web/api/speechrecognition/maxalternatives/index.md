@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.maxAlternatives
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`maxAlternatives`** property of the

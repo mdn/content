@@ -86,19 +86,15 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ```html
 <p>
-  This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.
+  This is the first paragraph of text. This is the first paragraph of text. This
+  is the first paragraph of text. This is the first paragraph of text.
 </p>
 
-<hr>
+<hr />
 
 <p>
-  This is the second paragraph of text.
-  This is the second paragraph of text.
-  This is the second paragraph of text.
-  This is the second paragraph of text.
+  This is the second paragraph of text. This is the second paragraph of text.
+  This is the second paragraph of text. This is the second paragraph of text.
 </p>
 ```
 

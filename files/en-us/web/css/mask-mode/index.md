@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.mask-mode
 ---
+
 {{CSSRef}}
 
 The **`mask-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether the mask reference defined by {{cssxref("mask-image")}} is treated as a luminance or alpha mask.

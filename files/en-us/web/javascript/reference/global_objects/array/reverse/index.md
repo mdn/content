@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.reverse
 ---
+
 {{JSRef}}
 
 The **`reverse()`** method reverses an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first. In other words, elements order in the array will be turned towards the direction opposite to that previously stated.
@@ -16,7 +17,7 @@ The **`reverse()`** method reverses an array _[in place](https://en.wikipedia.or
 
 ## Syntax
 
-```js
+```js-nolint
 reverse()
 ```
 
@@ -29,9 +30,7 @@ The reference to the original array, now reversed. Note that the array is revers
 The `reverse` method transposes the elements of the calling array object in
 place, mutating the array, and returning a reference to the array.
 
-`reverse` is intentionally generic; this method can be
-{{jsxref("Function.call", "called", "", 1)}} or {{jsxref("Function.apply", "applied",
-  "", 1)}} to objects resembling arrays. Objects which do not contain a
+`reverse` is intentionally generic; this method can be called on objects resembling arrays. Objects which do not contain a
 `length` property reflecting the last in a series of consecutive, zero-based
 numerical properties may not behave in any meaningful manner.
 

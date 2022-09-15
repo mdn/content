@@ -14,6 +14,7 @@ tags:
   - observers
 browser-compat: api.ResizeObserverEntry.contentRect
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The `contentRect` read-only property of the

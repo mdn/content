@@ -8,6 +8,7 @@ tags:
   - Response Header
 browser-compat: http.headers.X-Content-Type-Options
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Content-Type-Options`** response HTTP header is a
@@ -76,7 +77,7 @@ X-Content-Type-Options: nosniff
 ## See also
 
 - {{HTTPHeader("Content-Type")}}
-- The [original definition](https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vi-beta-2-update) of X-Content-Type-Options by Microsoft.
+- The [original definition](https://docs.microsoft.com/archive/blogs/ie/ie8-security-part-vi-beta-2-update) of X-Content-Type-Options by Microsoft.
 - The [Mozilla Observatory](https://observatory.mozilla.org/) tool testing
   the configuration (including this header) of Web sites for safety and security
 - [Mitigating MIME Confusion Attacks in Firefox](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)

@@ -12,6 +12,7 @@ tags:
   - takeRecords()
 browser-compat: api.PerformanceObserver.takeRecords
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`takeRecords()`** method of the
@@ -21,7 +22,7 @@ observer, emptying it out.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 
@@ -37,12 +38,12 @@ A list of {{domxref("PerformanceEntry")}} objects.
 
 ```js
 const observer = new PerformanceObserver((list, obj) => {
-  const entries = list.getEntries();
-  for (let i=0; i < entries.length; i++) {
-    // Process "mark" and "frame" events
-  }
+  list.getEntries()
+    .forEach((entry) => {
+      // Process "mark" and "frame" events
+    });
 });
-observer.observe({entryTypes: ["mark", "frame"]});
+observer.observe({ entryTypes: ["mark", "frame"] });
 const records = observer.takeRecords();
 console.log(records[0].name);
 console.log(records[0].startTime);

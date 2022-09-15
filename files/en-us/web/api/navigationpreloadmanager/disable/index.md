@@ -11,6 +11,7 @@ tags:
   - NavigationPreloadManager
 browser-compat: api.NavigationPreloadManager.disable
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`disable()`** method of the {{domxref("NavigationPreloadManager")}} interface halts the automatic preloading of service-worker-managed resources previously started using {{domxref("NavigationPreloadManager.enable()","enable()")}}
@@ -20,7 +21,7 @@ The method may be called in the service worker's `activate` event handler (befor
 
 ## Syntax
 
-```js
+```js-nolint
 disable()
 ```
 

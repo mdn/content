@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.PasswordCredential.PasswordCredential
 ---
+
 {{APIRef("Credential Management API")}}{{SeeCompatTable}}
 
 The **`PasswordCredential()`**
@@ -21,7 +22,7 @@ from the `init` object for global {{domxref('fetch()')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new PasswordCredential(passwordCredentialData)
 new PasswordCredential(htmlFormElement)
 ```

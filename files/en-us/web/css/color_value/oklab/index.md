@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: css.types.color.oklab
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`oklab()`** functional notation expresses a given color in the Oklab perpetual color space, which attempts to mimic how color is perceived by the human eye.

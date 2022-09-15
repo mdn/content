@@ -8,6 +8,7 @@ tags:
   - part 5
   - server-side
 ---
+
 Next we'll implement our book list page. This page needs to display a list of all books in the database along with their author, with each book title being a hyperlink to its associated book detail page.
 
 ## Controller
@@ -18,17 +19,17 @@ Open **/controllers/bookController.js**. Find the exported `book_list()` control
 
 ```js
 // Display list of all Books.
-exports.book_list = function(req, res, next) {
-
-  Book.find({}, 'title author')
-    .sort({title : 1})
-    .populate('author')
+exports.book_list = function (req, res, next) {
+  Book.find({}, "title author")
+    .sort({ title: 1 })
+    .populate("author")
     .exec(function (err, list_books) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       //Successful, so render
-      res.render('book_list', { title: 'Book List', book_list: list_books });
+      res.render("book_list", { title: "Book List", book_list: list_books });
     });
-
 };
 ```
 

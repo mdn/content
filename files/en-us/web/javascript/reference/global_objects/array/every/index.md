@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.every
 ---
+
 {{JSRef}}
 
 The **`every()`** method tests whether
@@ -20,7 +21,7 @@ returns a Boolean value.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 every((element) => { /* … */ } )
 every((element, index) => { /* … */ } )

@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 If you've been through the [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) article, you've already got an idea of how to write an extension. In this article, you'll write a slightly more complex extension that demonstrates a few more of the APIs.
@@ -142,7 +143,7 @@ The HTML file looks like this:
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="choose_beast.css" />
   </head>
 

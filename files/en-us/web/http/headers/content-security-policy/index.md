@@ -10,6 +10,7 @@ tags:
   - header
 browser-compat: http.headers.Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy`** response header allows
@@ -89,7 +90,7 @@ where `<policy-directive>` consists of:
 - {{CSP("prefetch-src")}} {{experimental_inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
-  - : Specifies valid sources for JavaScript.
+  - : Specifies valid sources for JavaScript and WebAssembly resources.
 - {{CSP("script-src-elem")}}
   - : Specifies valid sources for JavaScript {{HTMLElement("script")}} elements.
 - {{CSP("script-src-attr")}}
@@ -219,6 +220,7 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
 ### Hosts values
 
 - Host
+
   - Only allow loading of resources from a specific host, with optional scheme, port, and path. e.g. `example.com`, `*.example.com`, `https://*.example.com:12/path/to/file.js`
   - Path parts in the CSP that end in `/` match any path they are a prefix of. e.g. `example.com/api/` will match URLs like `example.com/api/users/new`.
   - Other path parts in the CSP are matched exactly e.g. `example.com/file.js` will match `http://example.com/file.js` and `https://example.com/file.js`, but not `https://example.com/file.js/file2.js`
@@ -281,7 +283,7 @@ Content-Security-Policy: default-src https:
 ### Using the HTML meta element
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="default-src https:">
+<meta http-equiv="Content-Security-Policy" content="default-src https:" />
 ```
 
 Example: Pre-existing site that uses too much inline code to fix but wants to ensure

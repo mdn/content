@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.NDEFRecord.lang
 ---
+
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`lang`**
@@ -20,7 +21,7 @@ not locale-specific.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.lang
 ```
 

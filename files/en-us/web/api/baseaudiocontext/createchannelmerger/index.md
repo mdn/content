@@ -13,6 +13,7 @@ tags:
   - createChannelMerger
 browser-compat: api.BaseAudioContext.createChannelMerger
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createChannelMerger()` method of the {{domxref("BaseAudioContext")}} interface creates a {{domxref("ChannelMergerNode")}},
@@ -24,7 +25,7 @@ which combines channels from multiple audio streams into a single audio stream.
 
 ## Syntax
 
-```js
+```js-nolint
 createChannelMerger(numberOfInputs)
 ```
 

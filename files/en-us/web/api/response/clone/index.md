@@ -11,6 +11,7 @@ tags:
   - clone
 browser-compat: api.Response.clone
 ---
+
 {{APIRef("Fetch")}}
 
 The **`clone()`** method of the {{domxref("Response")}} interface creates a clone of a response object, identical in every way, but stored in a different variable.
@@ -35,7 +36,7 @@ In fact, the main reason `clone()` exists is to allow multiple uses of body obje
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

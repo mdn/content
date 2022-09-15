@@ -18,6 +18,7 @@ tags:
   - Web
 browser-compat: api.Element.error_event
 ---
+
 {{APIRef}}
 
 The `error` event is fired on an {{domxref("Element")}} object when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
@@ -54,7 +55,12 @@ The event object is a {{domxref("UIEvent")}} instance if it was generated from a
 
 <div class="event-log">
   <label for="eventLog">Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30" id="eventLog"></textarea>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
 </div>
 ```
 
@@ -79,13 +85,14 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 button {
   height: 2rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 img {

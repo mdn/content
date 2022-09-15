@@ -8,6 +8,7 @@ tags:
   - redirects
 browser-compat: http.status.307
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("HTTP")}} **`307 Temporary Redirect`** redirect

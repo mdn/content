@@ -13,6 +13,7 @@ tags:
   - v-if
   - Vue
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Now it is time to add one of the major parts of functionality that we're still missing — the ability to edit existing todo items. To do this, we will take advantage of Vue's conditional rendering capabilities — namely `v-if` and `v-else` — to allow us to toggle between the existing todo item view, and an edit view where you can update todo item labels. We'll also look at adding functionality to delete todo items.
@@ -72,59 +73,59 @@ We can start by creating a separate component to handle the editing functionalit
   </form>
 </template>
 <script>
-export default {
-  props: {
-    label: {
-      type: String,
-      required: true
+  export default {
+    props: {
+      label: {
+        type: String,
+        required: true,
+      },
+      id: {
+        type: String,
+        required: true,
+      },
     },
-    id: {
-      type: String,
-      required: true
-    }
-  },
-  data() {
-    return {
-      newLabel: this.label
-    };
-  },
-  methods: {
-    onSubmit() {
-      if (this.newLabel && this.newLabel !== this.label) {
-        this.$emit("item-edited", this.newLabel);
-      }
+    data() {
+      return {
+        newLabel: this.label,
+      };
     },
-    onCancel() {
-      this.$emit("edit-cancelled");
-    }
-  }
-};
+    methods: {
+      onSubmit() {
+        if (this.newLabel && this.newLabel !== this.label) {
+          this.$emit("item-edited", this.newLabel);
+        }
+      },
+      onCancel() {
+        this.$emit("edit-cancelled");
+      },
+    },
+  };
 </script>
 <style scoped>
-.edit-label {
-  font-family: Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #0b0c0c;
-  display: block;
-  margin-bottom: 5px;
-}
-input {
-  display: inline-block;
-  margin-top: 0.4rem;
-  width: 100%;
-  min-height: 4.4rem;
-  padding: 0.4rem 0.8rem;
-  border: 2px solid #565656;
-}
-form {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-form > * {
-  flex: 0 0 100%;
-}
+  .edit-label {
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #0b0c0c;
+    display: block;
+    margin-bottom: 5px;
+  }
+  input {
+    display: inline-block;
+    margin-top: 0.4rem;
+    width: 100%;
+    min-height: 4.4rem;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid #565656;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  form > * {
+    flex: 0 0 100%;
+  }
 </style>
 ```
 
@@ -320,19 +321,19 @@ So, let's implement the fix:
 
 1. Remove the following line from inside our `data()` property:
 
-    ```js
-    isDone: this.done,
-    ```
+   ```js
+   isDone: this.done,
+   ```
 
 2. Add the following block below the data() { } block:
 
-    ```js
-    computed: {
-      isDone() {
-        return this.done;
-      }
-    },
-    ```
+   ```js
+   computed: {
+     isDone() {
+       return this.done;
+     }
+   },
+   ```
 
 Now when you save and reload, you'll find that the problem is solved — the checkbox state is now preserved when you switch between todo item templates.
 
@@ -340,9 +341,7 @@ Now when you save and reload, you'll find that the problem is solved — the che
 
 One of the most potentially confusing parts is the tangle of standard and custom events we've used to trigger all the interactivity in our app. To understand this better, it is a good idea to write out a flow chart, description, or diagram of what events are emitted where, where they are being listened for, and what happens as a result of them firing.
 
-For example:
-
-**App.vue**
+### App.vue
 
 `<to-do-form>` listens for:
 
@@ -358,12 +357,12 @@ For example:
 - `item-edited` event emitted by the `itemEdited()` method inside the `ToDoItem` component when the `item-edited` event emitted by the `onSubmit()` method inside the `ToDoItemEditForm` has been successfully listened for. Yes, this is a chain of two different `item-edited` events!
   **Result**: `editToDo()` method invoked to update label of associated todo item.
 
-**ToDoForm.vue**
+### ToDoForm.vue
 
 `<form>` listens for `submit` event.
 **Result**: `onSubmit()` method is invoked, which checks that the new label is not empty, then emits the `todo-added` event (which is then listened for inside `App.vue`, see above), and finally clears the new label `<input>`.
 
-**ToDoItem.vue**
+### ToDoItem.vue
 
 `checkbox` `<input>` listens for `change` event.
 **Result**: `checkbox-changed` event emitted when the checkbox is checked/unchecked (which is then listened for inside `App.vue`; see above).
@@ -381,7 +380,7 @@ For example:
 - `edit-cancelled` event emitted by the `onCancel()` method inside the `ToDoItemEditForm` component when the "Cancel" button is clicked.
   **Result**: `editCancelled()` method is invoked, which sets `this.isEditing` back to `false`, so that the edit form is no longer shown on re-render.
 
-**ToDoItemEditForm.vue**
+### ToDoItemEditForm.vue
 
 `<form>` listens for `submit` event.
 **Result**: `onSubmit()` method is invoked, which checks to see if the new label value is not blank, and not the same as the old one, and if so emits the `item-edited` event (which is then listened for inside `ToDoItem.vue`, see above).

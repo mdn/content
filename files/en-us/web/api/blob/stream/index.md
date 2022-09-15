@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Blob.stream
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("Blob")}} interface's
@@ -18,7 +19,7 @@ which upon reading returns the data contained within the `Blob`.
 
 ## Syntax
 
-```js
+```js-nolint
 stream()
 ```
 

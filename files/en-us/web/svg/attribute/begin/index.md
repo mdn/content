@@ -9,6 +9,7 @@ spec-urls:
   - https://svgwg.org/specs/animations/#DiscardElementBeginAttribute
   - https://svgwg.org/specs/animations/#BeginAttribute
 ---
+
 {{SVGRef}}
 
 The **`begin`** attribute defines when an animation should begin or when an element should be discarded.
@@ -108,42 +109,57 @@ The definition of `<begin-value-list>` is the [same as for the other animation e
 ### Offset example
 
 ```html
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1">
+  <!-- animated rectangles -->
+  <rect x="10" y="35" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="100"
+      begin="0s"
+      dur="8s"
+      fill="freeze" />
+  </rect>
 
-    <!-- animated rectangles -->
-    <rect x="10" y="35" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" to="100"
-                 begin="0s" dur="8s"
-                 fill="freeze" />
-    </rect>
+  <rect x="35" y="60" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="75"
+      begin="2s"
+      dur="6s"
+      fill="freeze" />
+  </rect>
 
-    <rect x="35" y="60" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" to="75"
-                 begin="2s" dur="6s"
-                 fill="freeze" />
-    </rect>
+  <rect x="60" y="85" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="50"
+      begin="4s"
+      dur="4s"
+      fill="freeze" />
+  </rect>
 
-    <rect x="60" y="85" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" to="50"
-                 begin="4s" dur="4s"
-                 fill="freeze" />
-    </rect>
+  <!-- grid -->
+  <text x="10" y="20" text-anchor="middle">0s</text>
+  <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="35" y="20" text-anchor="middle">2s</text>
+  <line x1="35" y1="25" x2="35" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="60" y="20" text-anchor="middle">4s</text>
+  <line x1="60" y1="25" x2="60" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="85" y="20" text-anchor="middle">6s</text>
+  <line x1="85" y1="25" x2="85" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="110" y="20" text-anchor="middle">8s</text>
+  <line x1="110" y1="25" x2="110" y2="105" stroke="grey" stroke-width=".5" />
 
-    <!-- grid -->
-    <text x="10" y="20" text-anchor="middle">0s</text>
-    <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="35" y="20" text-anchor="middle">2s</text>
-    <line x1="35" y1="25" x2="35" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="60" y="20" text-anchor="middle">4s</text>
-    <line x1="60" y1="25" x2="60" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="85" y="20" text-anchor="middle">6s</text>
-    <line x1="85" y1="25" x2="85" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="110" y="20" text-anchor="middle">8s</text>
-    <line x1="110" y1="25" x2="110" y2="105" stroke="grey" stroke-width=".5" />
-
-    <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-    <line x1="10" y1="105" x2="110" y2="105" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="105" x2="110" y2="105" stroke="grey" stroke-width=".5" />
 </svg>
 ```
 
@@ -154,40 +170,58 @@ The definition of `<begin-value-list>` is the [same as for the other animation e
 ### Syncbase example
 
 ```html
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- animated rectangles -->
+  <rect x="10" y="35" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="50"
+      id="first"
+      begin="0s;third.end"
+      dur="4s" />
+  </rect>
 
-    <!-- animated rectangles -->
-    <rect x="10" y="35" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" to="50"
-                 id="first" begin="0s;third.end" dur="4s" />
-    </rect>
+  <rect x="60" y="60" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="25"
+      id="second"
+      begin="first.end"
+      dur="2s" />
+  </rect>
 
-    <rect x="60" y="60" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" to="25"
-                 id="second" begin="first.end" dur="2s" />
-    </rect>
+  <rect x="85" y="85" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      to="25"
+      id="third"
+      begin="second.end"
+      dur="2s" />
+  </rect>
 
-    <rect x="85" y="85" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" to="25"
-                 id="third" begin="second.end" dur="2s" />
-    </rect>
+  <!-- grid -->
+  <text x="10" y="20" text-anchor="middle">0s</text>
+  <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="35" y="20" text-anchor="middle">2s</text>
+  <line x1="35" y1="25" x2="35" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="60" y="20" text-anchor="middle">4s</text>
+  <line x1="60" y1="25" x2="60" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="85" y="20" text-anchor="middle">6s</text>
+  <line x1="85" y1="25" x2="85" y2="105" stroke="grey" stroke-width=".5" />
+  <text x="110" y="20" text-anchor="middle">8s</text>
+  <line x1="110" y1="25" x2="110" y2="105" stroke="grey" stroke-width=".5" />
 
-    <!-- grid -->
-    <text x="10" y="20" text-anchor="middle">0s</text>
-    <line x1="10" y1="25" x2="10" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="35" y="20" text-anchor="middle">2s</text>
-    <line x1="35" y1="25" x2="35" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="60" y="20" text-anchor="middle">4s</text>
-    <line x1="60" y1="25" x2="60" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="85" y="20" text-anchor="middle">6s</text>
-    <line x1="85" y1="25" x2="85" y2="105" stroke="grey" stroke-width=".5" />
-    <text x="110" y="20" text-anchor="middle">8s</text>
-    <line x1="110" y1="25" x2="110" y2="105" stroke="grey" stroke-width=".5" />
-
-    <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-    <line x1="10" y1="105" x2="110" y2="105" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="105" x2="110" y2="105" stroke="grey" stroke-width=".5" />
 </svg>
 ```
 
@@ -198,39 +232,56 @@ The definition of `<begin-value-list>` is the [same as for the other animation e
 ### Event example
 
 ```html
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- animated rectangle -->
+  <rect x="10" y="35" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      from="0"
+      to="100"
+      begin="startButton.click"
+      dur="8s"
+      fill="freeze" />
+  </rect>
 
-    <!-- animated rectangle -->
-    <rect x="10" y="35" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" from="0" to="100"
-                 begin="startButton.click" dur="8s"
-                 fill="freeze" />
-    </rect>
+  <!-- trigger -->
+  <rect
+    id="startButton"
+    style="cursor:pointer;"
+    x="19.5"
+    y="62.5"
+    rx="5"
+    height="25"
+    width="80"
+    fill="#EFEFEF"
+    stroke="black"
+    stroke-width="1" />
 
-    <!-- trigger -->
-    <rect id="startButton" style="cursor:pointer;"
-          x="19.5" y="62.5" rx="5" height="25" width="80"
-          fill="#EFEFEF" stroke="black" stroke-width="1" />
+  <text x="60" y="80" text-anchor="middle" style="pointer-events:none;">
+    Click me.
+  </text>
 
-    <text x="60" y="80" text-anchor="middle"
-          style="pointer-events:none;">Click me.</text>
+  <!-- grid -->
+  <text x="10" y="20" text-anchor="middle">0s</text>
+  <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="35" y="20" text-anchor="middle">2s</text>
+  <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="60" y="20" text-anchor="middle">4s</text>
+  <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="85" y="20" text-anchor="middle">6s</text>
+  <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="110" y="20" text-anchor="middle">8s</text>
+  <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
 
-    <!-- grid -->
-    <text x="10" y="20" text-anchor="middle">0s</text>
-    <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="35" y="20" text-anchor="middle">2s</text>
-    <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="60" y="20" text-anchor="middle">4s</text>
-    <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="85" y="20" text-anchor="middle">6s</text>
-    <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="110" y="20" text-anchor="middle">8s</text>
-    <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
-
-    <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-    <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
 </svg>
 ```
 
@@ -241,40 +292,58 @@ The definition of `<begin-value-list>` is the [same as for the other animation e
 ### Repeat example
 
 ```html
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- animated rectangle -->
+  <rect x="10" y="35" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      from="0"
+      to="100"
+      id="myLoop"
+      begin="0s;myLoop.end"
+      dur="4s"
+      repeatCount="3" />
 
-    <!-- animated rectangle -->
-    <rect x="10" y="35" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" from="0" to="100"
-                 id="myLoop" begin="0s;myLoop.end" dur="4s"
-                 repeatCount="3" />
+    <set
+      attributeType="CSS"
+      attributeName="fill"
+      to="green"
+      begin="myLoop.begin" />
 
-        <set attributeType="CSS" attributeName="fill" to="green"
-             begin="myLoop.begin" />
+    <set
+      attributeType="CSS"
+      attributeName="fill"
+      to="gold"
+      begin="myLoop.repeat(1)" />
 
-        <set attributeType="CSS" attributeName="fill" to="gold"
-             begin="myLoop.repeat(1)" />
+    <set
+      attributeType="CSS"
+      attributeName="fill"
+      to="red"
+      begin="myLoop.repeat(2)" />
+  </rect>
 
-        <set attributeType="CSS" attributeName="fill" to="red"
-             begin="myLoop.repeat(2)" />
-    </rect>
+  <!-- grid -->
+  <text x="10" y="20" text-anchor="middle">0s</text>
+  <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="35" y="20" text-anchor="middle">1s</text>
+  <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="60" y="20" text-anchor="middle">2s</text>
+  <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="85" y="20" text-anchor="middle">3s</text>
+  <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="110" y="20" text-anchor="middle">4s</text>
+  <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
 
-    <!-- grid -->
-    <text x="10" y="20" text-anchor="middle">0s</text>
-    <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="35" y="20" text-anchor="middle">1s</text>
-    <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="60" y="20" text-anchor="middle">2s</text>
-    <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="85" y="20" text-anchor="middle">3s</text>
-    <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="110" y="20" text-anchor="middle">4s</text>
-    <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
-
-    <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-    <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
 </svg>
 ```
 
@@ -285,35 +354,44 @@ The definition of `<begin-value-list>` is the [same as for the other animation e
 ### Accesskey example
 
 ```html
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- animated rectangles -->
+  <rect x="10" y="35" height="15" width="0">
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      from="0"
+      to="100"
+      begin="accessKey(s)"
+      dur="8s"
+      fill="freeze" />
+  </rect>
 
-    <!-- animated rectangles -->
-    <rect x="10" y="35" height="15" width="0">
-        <animate attributeType="XML" attributeName="width" from="0" to="100"
-                 begin="accessKey(s)" dur="8s"
-                 fill="freeze" />
-    </rect>
+  <!-- trigger -->
+  <text x="60" y="80" text-anchor="middle" style="pointer-events:none;">
+    Hit the "s" key
+  </text>
 
-    <!-- trigger -->
-    <text x="60" y="80" text-anchor="middle"
-          style="pointer-events:none;">Hit the "s" key</text>
+  <!-- grid -->
+  <text x="10" y="20" text-anchor="middle">0s</text>
+  <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="35" y="20" text-anchor="middle">2s</text>
+  <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="60" y="20" text-anchor="middle">4s</text>
+  <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="85" y="20" text-anchor="middle">6s</text>
+  <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
+  <text x="110" y="20" text-anchor="middle">8s</text>
+  <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
 
-    <!-- grid -->
-    <text x="10" y="20" text-anchor="middle">0s</text>
-    <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="35" y="20" text-anchor="middle">2s</text>
-    <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="60" y="20" text-anchor="middle">4s</text>
-    <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="85" y="20" text-anchor="middle">6s</text>
-    <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
-    <text x="110" y="20" text-anchor="middle">8s</text>
-    <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
-
-    <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
-    <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+  <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
 </svg>
 ```
 

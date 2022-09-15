@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.background-size
 ---
+
 {{CSSRef}}
 
 The **`background-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the element's background image.
@@ -138,8 +139,7 @@ To do this, we can use a fixed `background-size` value of 150 pixels.
 #### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 #### CSS

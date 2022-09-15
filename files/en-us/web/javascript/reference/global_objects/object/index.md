@@ -7,6 +7,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object
 ---
+
 {{JSRef}}
 
 The **`Object`** type represents one of [JavaScript's data types](/en-US/docs/Web/JavaScript/Data_structures). It is used to store various keyed collections and more complex entities. Objects can be created using the {{jsxref("Object/Object", "Object()")}} constructor or the [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
@@ -105,7 +106,7 @@ There isn't any method in an Object itself to delete its own properties (such as
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
   - : Returns a boolean indicating if the internal [ECMAScript \[\[Enumerable\]\] attribute](/en-US/docs/Web/JavaScript/Data_structures#properties) is set.
 - {{jsxref("Object.prototype.toLocaleString()")}}
-  - : Calls {{jsxref("Object.toString", "toString()")}}.
+  - : Calls {{jsxref("Object/toString", "toString()")}}.
 - {{jsxref("Object.prototype.toString()")}}
   - : Returns a string representation of the object.
 - {{jsxref("Object.prototype.valueOf()")}}

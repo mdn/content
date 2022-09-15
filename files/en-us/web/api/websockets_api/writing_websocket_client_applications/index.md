@@ -12,6 +12,7 @@ tags:
   - WebSocket API
   - WebSockets
 ---
+
 {{APIRef("Websockets API")}}
 
 WebSocket client applications use the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to communicate with [WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) using the WebSocket protocol.

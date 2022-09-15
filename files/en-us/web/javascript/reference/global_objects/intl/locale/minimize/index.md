@@ -10,12 +10,13 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.minimize
 ---
+
 {{JSRef}}
 
 The
 **`Intl.Locale.prototype.minimize()`** method attempts to
 remove information about the locale that would be added by calling
-{{jsxref("Intl/Locale/maximize", "Locale.maximize()")}}.
+{{jsxref("Intl/Locale/maximize", "maximize()")}}.
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html")}}
 
@@ -23,7 +24,7 @@ remove information about the locale that would be added by calling
 
 ## Syntax
 
-```js
+```js-nolint
 minimize()
 ```
 
@@ -45,7 +46,7 @@ the [language identifier](https://www.unicode.org/reports/tr35/#Language_Locale_
 language, script, and region subtags. Other subtags after the "-u"
 in the locale identifier are called extension subtags and are not affected by the
 `minimize()` method. Examples of these subtags include
-{{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}}, {{jsxref("Intl/Locale/calendar", "Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric", "Locale.numeric")}}.
+{{jsxref("Intl/Locale/hourCycle", "hourCycle")}}, {{jsxref("Intl/Locale/calendar", "calendar")}}, and {{jsxref("Intl/Locale/numeric", "numeric")}}.
 
 ## Examples
 
@@ -81,4 +82,4 @@ console.log(myLocMinimized.toString());
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}
+- {{jsxref("Intl/Locale/baseName", "baseName")}}

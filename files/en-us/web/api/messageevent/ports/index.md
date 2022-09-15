@@ -12,6 +12,7 @@ tags:
   - ports
 browser-compat: api.MessageEvent.ports
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`ports`** read-only property of the

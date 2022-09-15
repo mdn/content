@@ -10,6 +10,7 @@ tags:
   - supportedValuesOf
 browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.supportedValuesOf()`** method returns an array containing the supported calendar, collation, currency, numbering systems, or unit values supported by the implementation.
@@ -25,7 +26,7 @@ It can also be used to build UIs that allow users to select their preferred loca
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.supportedValuesOf(key)
 ```
 
@@ -33,7 +34,7 @@ Intl.supportedValuesOf(key)
 
 - `key`
   - : A key string indicating the category of values to be returned.
-      This is one of: `"calendar"`, `"collation"`, `"currency"`,`"numberingSystem"`, `"timeZone"`, `"unit"`.
+    This is one of: `"calendar"`, `"collation"`, `"currency"`,`"numberingSystem"`, `"timeZone"`, `"unit"`.
 
 ### Return value
 

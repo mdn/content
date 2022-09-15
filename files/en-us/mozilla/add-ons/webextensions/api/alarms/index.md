@@ -11,6 +11,7 @@ tags:
   - alarms
 browser-compat: webextensions.api.alarms
 ---
+
 {{AddonSidebar}}
 
 Schedule code to run at a specific time in the future. This is like [`setTimeout()`](/en-US/docs/Web/API/setTimeout) and [`setInterval()`](/en-US/docs/Web/API/setInterval), except that those functions don't work with background pages that are loaded on demand.

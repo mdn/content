@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaColIndexText
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaColIndexText`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
@@ -25,12 +26,33 @@ A string.
 In this example the `aria-colindex` attribute on the element with an ID of `role-heading` is set to "Aria Role column". Using `ariaColIndexText` we update the value to the string "New column name".
 
 ```html
-<table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100">
-  <caption id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</caption>
+<table
+  id="semantic-table"
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="100">
+  <caption id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </caption>
   <thead role="rowgroup">
     <tr role="row">
-      <th role="columnheader" id="role-heading" aria-sort="none" aria-rowindex="1" aria-colindex="1" aria-colindextext="Aria Role column">ARIA Role</th>
-      <th role="columnheader" id="element-heading" aria-sort="none" aria-rowindex="1">Semantic Element</th>
+      <th
+        role="columnheader"
+        id="role-heading"
+        aria-sort="none"
+        aria-rowindex="1"
+        aria-colindex="1"
+        aria-colindextext="Aria Role column">
+        ARIA Role
+      </th>
+      <th
+        role="columnheader"
+        id="element-heading"
+        aria-sort="none"
+        aria-rowindex="1">
+        Semantic Element
+      </th>
     </tr>
   </thead>
   <tbody role="rowgroup">

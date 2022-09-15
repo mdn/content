@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRDepthInformation
 ---
+
 {{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRDepthInformation`** interface contains information about the distance from the user's device to the real-world geometry in the user's environment.

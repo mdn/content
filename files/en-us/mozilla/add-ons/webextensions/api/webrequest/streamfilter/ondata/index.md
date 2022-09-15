@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.ondata
 ---
+
 {{AddonSidebar()}}
 
 An event handler that is called repeatedly when response data is available. The handler is passed an `event` object containing a `data` property, which includes a chunk of the response data as an {{jsxref("ArrayBuffer")}}.

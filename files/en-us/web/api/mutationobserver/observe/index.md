@@ -19,6 +19,7 @@ tags:
   - observe
 browser-compat: api.MutationObserver.observe
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The {{domxref("MutationObserver")}} method **`observe()`** configures the `MutationObserver`
@@ -30,7 +31,7 @@ To stop the `MutationObserver` (so that none of its callbacks will be triggered 
 
 ## Syntax
 
-```js
+```js-nolint
 observe(target, options)
 ```
 

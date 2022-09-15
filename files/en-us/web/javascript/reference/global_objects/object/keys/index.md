@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.keys
 ---
+
 {{JSRef}}
 
 The **`Object.keys()`** method returns
@@ -20,7 +21,7 @@ in the same order that a normal loop would.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.keys(obj)
 ```
 

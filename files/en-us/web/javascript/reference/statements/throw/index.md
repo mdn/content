@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.throw
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`throw` statement** throws a user-defined exception.
@@ -20,8 +21,8 @@ the program will terminate.
 
 ## Syntax
 
-```js
-throw expression;
+```js-nolint
+throw expression
 ```
 
 - `expression`

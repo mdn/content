@@ -9,6 +9,7 @@ tags:
   - Deprecated
 browser-compat: api.DirectoryReaderSync
 ---
+
 {{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The `DirectoryReaderSync` interface lets you read the entries in a directory.
@@ -20,7 +21,7 @@ The `DirectoryReaderSync` interface lets you read the entries in a directory.
 
 Before you call the only method in this interface, [`readEntries()`](#readentries), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`. That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
 
-#### Example
+### Example
 
 In the following code snippet from [HTML5Rocks (web.dev)](https://web.dev/filesystem-sync/), we create Web Workers and pass data from it to the main app.
 
@@ -94,10 +95,6 @@ self.onmessage = (e) => {
   }
 };
 ```
-
-## Method overview
-
-- <a href="#createreader()" title="#readEntries">readEntries()</a>
 
 ## Method
 

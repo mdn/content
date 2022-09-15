@@ -15,6 +15,7 @@ browser-compat:
   - css.properties.display.inline-flex
   - css.properties.display.inline-grid
 ---
+
 {{CSSRef}}
 
 CSS 2 used a single-keyword syntax for the `display` property, requiring separate keywords for block-level and inline-level variants of the same layout mode. This page details those values.

@@ -12,6 +12,7 @@ tags:
   - events
 browser-compat: webextensions.api.events
 ---
+
 {{AddonSidebar}}
 
 Common types used by APIs that dispatch events.

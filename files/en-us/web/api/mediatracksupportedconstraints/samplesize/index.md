@@ -15,6 +15,7 @@ tags:
   - sampleSize
 browser-compat: api.MediaTrackSupportedConstraints.sampleSize
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
@@ -38,8 +39,7 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ## Examples
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden

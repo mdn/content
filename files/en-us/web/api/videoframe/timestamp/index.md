@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.VideoFrame.timestamp
 ---
+
 {{APIRef("Web Codecs API")}}{{SeeCompatTable}}
 
 The **`timestamp`** property of the {{domxref("VideoFrame")}} interface returns an integer indicating the timestamp of the video in microseconds.

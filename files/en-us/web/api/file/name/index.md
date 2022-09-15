@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.File.name
 ---
+
 {{APIRef("File API")}}
 
 Returns the name of the file represented by a {{domxref("File")}} object. For security
@@ -24,7 +25,7 @@ A string, containing the name of the file without path, such as "My Resume.rtf".
 ### HTML
 
 ```html
-<input type="file" id="filepicker" multiple>
+<input type="file" id="filepicker" multiple />
 <div>
   <p>List of selected files:</p>
   <ul id="output"></ul>

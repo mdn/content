@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.duplicate
 ---
+
 {{AddonSidebar()}}
 
 Duplicates a tab, given its ID.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let duplicating = browser.tabs.duplicate(
   tabId,              // integer
   duplicateProperties // optional object

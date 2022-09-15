@@ -13,6 +13,7 @@ tags:
   - openCursor
 browser-compat: api.IDBObjectStore.openCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openCursor()`** method of the
@@ -27,7 +28,7 @@ To determine if the add operation has completed successfully, listen for the res
 
 ## Syntax
 
-```js
+```js-nolint
 openCursor()
 openCursor(query)
 openCursor(query, direction)

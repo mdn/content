@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Node.hasChildNodes
 ---
+
 {{APIRef("DOM")}}
 
 The **`hasChildNodes()`** method of the {{domxref("Node")}} interface
@@ -16,8 +17,8 @@ whether the given {{domxref("Node")}} has [child nodes](/en-US/docs/Web/API/Node
 
 ## Syntax
 
-```js
-hasChildNodes();
+```js-nolint
+hasChildNodes()
 ```
 
 ### Parameters

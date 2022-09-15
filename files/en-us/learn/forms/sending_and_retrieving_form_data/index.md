@@ -13,6 +13,7 @@ tags:
   - Security
   - Web
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
 
 Once the form data has been validated on the client-side, it is okay to submit the form. And, since we covered validation in the previous article, we're ready to submit! This article looks at what happens when a user submits a form — where does the data go, and how do we handle it when it gets there? We also look at some of the security concerns associated with sending form data.
@@ -65,19 +66,19 @@ The {{htmlattrxref("action","form")}} attribute defines where the data gets sent
 In this example, the data is sent to an absolute URL — `https://example.com`:
 
 ```html
-<form action="https://example.com">
+<form action="https://example.com">…</form>
 ```
 
 Here, we use a relative URL — the data is sent to a different URL on the same origin:
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else">…</form>
 ```
 
 When specified with no attributes, as below, the {{HTMLElement("form")}} data is sent to the same page that the form is present on:
 
 ```html
-<form>
+<form>…</form>
 ```
 
 > **Note:** It's possible to specify a URL that uses the HTTPS (secure HTTP) protocol. When you do this, the data is encrypted along with the rest of the request, even if the form itself is hosted on an insecure page accessed using HTTP. On the other hand, if the form is hosted on a secure page but you specify an insecure HTTP URL with the {{htmlattrxref("action","form")}} attribute, all browsers display a security warning to the user each time they try to send data because the data will not be encrypted.
@@ -102,11 +103,11 @@ Consider the following form:
 <form action="http://www.foo.com" method="GET">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -142,11 +143,11 @@ Let's look at an example — this is the same form we looked at in the `GET` sec
 <form action="http://www.foo.com" method="POST">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -277,7 +278,7 @@ For example:
 <form method="post" action="https://www.foo.com" enctype="multipart/form-data">
   <div>
     <label for="file">Choose a file</label>
-    <input type="file" id="file" name="myFile">
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
     <button>Send the file</button>

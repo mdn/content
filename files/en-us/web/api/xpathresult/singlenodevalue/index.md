@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.singleNodeValue
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`singleNodeValue`** property of the
@@ -40,7 +41,10 @@ The following example shows the use of the `singleNodeValue` property.
 
 ```html
 <div>XPath example</div>
-<div>Tag name of the element having the text content 'XPath example': <output></output></div>
+<div>
+  Tag name of the element having the text content 'XPath example':
+  <output></output>
+</div>
 ```
 
 ### JavaScript

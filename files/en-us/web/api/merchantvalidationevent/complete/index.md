@@ -17,6 +17,7 @@ tags:
   - Deprecated
 browser-compat: api.MerchantValidationEvent.complete
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_Header}}{{SecureContext_Header}}
 
 The {{domxref("MerchantValidationEvent")}} method **`complete()`** takes merchant-specific information previously received from the {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} and uses it to validate the merchant.
@@ -25,7 +26,7 @@ All you have to do is call `complete()` from your handler for the {{domxref("Pay
 
 ## Syntax
 
-```js
+```js-nolint
 complete(validationData)
 complete(merchantSessionPromise)
 ```

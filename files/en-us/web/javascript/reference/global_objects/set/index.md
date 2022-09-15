@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Set
 ---
+
 {{JSRef}}
 
 The **`Set`** object lets you store unique values of any type, whether {{Glossary("Primitive", "primitive values")}} or object references.
@@ -47,22 +48,19 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 
 ## Instance methods
 
-- {{jsxref("Set.add", "Set.prototype.add(<var>value</var>)")}}
+- {{jsxref("Set.prototype.add()")}}
   - : Inserts a new element with a specified value in to a `Set` object, if there isn't an element with the same value already in the `Set`.
 - {{jsxref("Set.prototype.clear()")}}
   - : Removes all elements from the `Set` object.
-- {{jsxref("Set.delete", "Set.prototype.delete(<var>value</var>)")}}
+- {{jsxref("Set.prototype.delete()")}}
   - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
-- {{jsxref("Set.has", "Set.prototype.has(<var>value</var>)")}}
+- {{jsxref("Set.prototype.has()")}}
   - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
-
-### Iteration methods
-
 - {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.values", " Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
 
@@ -70,7 +68,7 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 
     This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
 
-- {{jsxref("Set.forEach", "Set.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}
+- {{jsxref("Set.prototype.forEach()")}}
   - : Calls `callbackFn` once for each value present in the `Set` object, in insertion order. If a `thisArg` parameter is provided, it will be used as the `this` value for each invocation of `callbackFn`.
 
 ## Examples

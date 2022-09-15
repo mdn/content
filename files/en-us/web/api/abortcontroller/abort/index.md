@@ -11,6 +11,7 @@ tags:
   - abort()
 browser-compat: api.AbortController.abort
 ---
+
 {{APIRef("DOM")}}
 
 The **`abort()`** method of the {{domxref("AbortController")}} interface aborts a DOM request before it has completed.
@@ -18,7 +19,7 @@ This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), the consumpti
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 abort(reason)
 ```
@@ -45,21 +46,21 @@ When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the
 const controller = new AbortController();
 const signal = controller.signal;
 
-const url = 'video.mp4';
-const downloadBtn = document.querySelector('.download');
-const abortBtn = document.querySelector('.abort');
+const url = "video.mp4";
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', () => {
+abortBtn.addEventListener("click", () => {
   controller.abort();
-  console.log('Download aborted');
+  console.log("Download aborted");
 });
 
 function fetchVideo() {
   fetch(url, { signal })
     .then((response) => {
-      console.log('Download complete', response);
+      console.log("Download complete", response);
     })
     .catch((err) => {
       console.error(`Download error: ${err.message}`);

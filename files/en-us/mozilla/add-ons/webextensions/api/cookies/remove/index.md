@@ -13,6 +13,7 @@ tags:
   - remove
 browser-compat: webextensions.api.cookies.remove
 ---
+
 {{AddonSidebar()}}
 
 The **`remove()`** method of the {{WebExtAPIRef("cookies")}} API deletes a cookie, given its name and URL.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.cookies.remove(
   details               // object
 )
@@ -53,7 +54,7 @@ let removing = browser.cookies.remove(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been removed. If a cookie matching the `details` parameter could not be found, the promise is fulfilled with `null`.  If the call fails for any reason, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been removed. If a cookie matching the `details` parameter could not be found, the promise is fulfilled with `null`. If the call fails for any reason, the promise will be rejected with an error message.
 
 ## Browser compatibility
 

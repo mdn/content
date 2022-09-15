@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.notifications.getAll
 ---
+
 {{AddonSidebar()}}
 
 Gets all currently active notifications created by the extension.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingAll = browser.notifications.getAll()
 ```
 

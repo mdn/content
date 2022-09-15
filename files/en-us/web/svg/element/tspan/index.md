@@ -8,6 +8,7 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.tspan
 ---
+
 {{SVGRef}}
 
 The SVG **`<tspan>`** element defines a subtext within a {{SVGElement('text')}} element or another `<tspan>` element. It allows for adjustment of the style and/or position of that subtext as needed.
@@ -15,14 +16,23 @@ The SVG **`<tspan>`** element defines a subtext within a {{SVGElement('text')}} 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
   <style>
-    text  { font: italic 12px serif; }
-    tspan { font: bold 10px sans-serif; fill: red; }
+    text {
+      font: italic 12px serif;
+    }
+    tspan {
+      font: bold 10px sans-serif;
+      fill: red;
+    }
   </style>
 
   <text x="10" y="30" class="small">

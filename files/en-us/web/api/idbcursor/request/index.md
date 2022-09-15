@@ -13,6 +13,7 @@ tags:
   - request
 browser-compat: api.IDBCursor.request
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`request`** read-only property of the {{domxref("IDBCursor")}} interface returns the {{domxref("IDBRequest")}} used to obtain the cursor.

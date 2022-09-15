@@ -11,6 +11,7 @@ tags:
   - prompt
 browser-compat: api.BeforeInstallPromptEvent.prompt
 ---
+
 {{SeeCompatTable}}
 
 The **`prompt()`** method of the
@@ -19,7 +20,7 @@ install prompt at a time of their own choosing.
 
 ## Syntax
 
-```js
+```js-nolint
 prompt()
 ```
 
@@ -32,6 +33,7 @@ None.
 A {{jsxref("Promise")}} resolving to an object containing:
 
 - `userChoice` {{experimental_inline}}
+
   - : A string, either `"accepted"` or `"dismissed"`, reflecting the {{jsxref("BeforeInstallPromptEvent.userChoice")}} property.
 
 - `platform` {{non-standard_inline}}

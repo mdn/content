@@ -32,8 +32,8 @@ browser queues a task that runs the below steps:
 
 ## Syntax
 
-```js
-pause();
+```js-nolint
+pause()
 ```
 
 ### Parameters

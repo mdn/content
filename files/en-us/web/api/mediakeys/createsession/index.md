@@ -12,6 +12,7 @@ tags:
   - createSession
 browser-compat: api.MediaKeys.createSession
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeys.createSession()` method returns a new
@@ -20,14 +21,14 @@ with a content decryption module (CDM).
 
 ## Syntax
 
-```js
+```js-nolint
 createSession()
 createSession(mediaKeySessionType)
 ```
 
 ### Parameters
 
-- `mediaKeySessionType`  {{optional_inline}}
+- `mediaKeySessionType` {{optional_inline}}
   - : A string. Either "temporary" or "persistent-license". The default value is "temporary".
 
 ### Return value

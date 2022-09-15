@@ -12,6 +12,7 @@ tags:
   - viewport
 browser-compat: api.VisualViewport.height
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`height`** read-only property of the

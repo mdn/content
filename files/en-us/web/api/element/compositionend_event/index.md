@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Element.compositionend_event
 ---
+
 {{APIRef}}
 
 The **`compositionend`** event is fired when a text composition system such as an {{glossary("input method editor")}} completes or cancels the current composition session.
@@ -54,20 +55,31 @@ inputElement.addEventListener('compositionend', (event) => {
 
 ```html
 <div class="control">
-  <label for="name">First select textbox, then to open IME:<ul><li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li><li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li></ul></label>
-  <input type="text" id="example" name="example">
+  <label for="example">
+    First select textbox, then to open IME:
+    <ul>
+      <li>on macOS type <kbd>option</kbd> + <kbd>`</kbd></li>
+      <li>on Windows type <kbd>windows</kbd> + <kbd>.</kbd></li>
+    </ul>
+  </label>
+  <input type="text" id="example" name="example" />
 </div>
 
 <div class="event-log">
   <label for="eventLog">Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="25" id="eventLog"></textarea>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="25"
+    id="eventLog"></textarea>
   <button class="clear-log">Clear</button>
 </div>
 ```
 
 ```css hidden
 body {
-  padding: .2rem;
+  padding: 0.2rem;
   display: grid;
   grid-template-areas: "control log";
 }
@@ -84,12 +96,13 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 input[type="text"] {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 kbd {

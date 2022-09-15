@@ -13,6 +13,7 @@ tags:
   - text format
   - web platform
 ---
+
 {{WebAssemblySidebar}}
 
 This article explains the concepts behind how WebAssembly works including its goals, the problems it solves, and how it runs inside the web browser's rendering engine.

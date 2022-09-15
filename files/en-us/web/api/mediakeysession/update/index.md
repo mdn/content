@@ -12,6 +12,7 @@ tags:
   - Update
 browser-compat: api.MediaKeySession.update
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySession.update()` method loads messages and licenses to the
@@ -19,7 +20,7 @@ CDM, and then returns a {{jsxref('Promise')}} .
 
 ## Syntax
 
-```js
+```js-nolint
 update(response)
 ```
 

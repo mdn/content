@@ -60,6 +60,6 @@ Relevant only as an attribute on elements with the following roles:
 
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
 
 </section>

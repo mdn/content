@@ -12,6 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.interimResults
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`interimResults`** property of the

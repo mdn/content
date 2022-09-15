@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.match
 ---
+
 {{JSRef}}
 
 The **`match()`** method retrieves the result of matching a string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
@@ -19,7 +20,7 @@ The **`match()`** method retrieves the result of matching a string against a [re
 
 ## Syntax
 
-```js
+```js-nolint
 match(regexp)
 ```
 

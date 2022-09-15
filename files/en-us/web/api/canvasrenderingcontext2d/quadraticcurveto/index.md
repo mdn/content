@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.quadraticCurveTo
 ---
+
 {{APIRef}}
 
 The
@@ -22,7 +23,7 @@ the quadratic Bézier curve.
 
 ## Syntax
 
-```js
+```js-nolint
 quadraticCurveTo(cpx, cpy, x, y)
 ```
 

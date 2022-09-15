@@ -53,9 +53,9 @@ data gathering stops. A final {{domxref("MediaRecorder.dataavailable_event", "da
 
 ## Syntax
 
-```js
-start();
-start(timeslice);
+```js-nolint
+start()
+start(timeslice)
 ```
 
 ### Parameters

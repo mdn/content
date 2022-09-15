@@ -10,6 +10,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.parentNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.parentNode()`** method moves the current
@@ -20,7 +21,7 @@ node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 parentNode()
 ```
 

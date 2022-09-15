@@ -10,6 +10,7 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.isQueryEXT
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_disjoint_timer_query.isQueryEXT()`** method of the
@@ -18,7 +19,7 @@ passed object is a {{domxref("WebGLQuery")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 isQueryEXT(query)
 ```
 

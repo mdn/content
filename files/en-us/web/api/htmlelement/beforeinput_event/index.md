@@ -12,6 +12,7 @@ tags:
   - beforeinput
 browser-compat: api.HTMLElement.beforeinput_event
 ---
+
 {{APIRef}}
 
 The DOM **`beforeinput`** event fires when the value of an {{HTMLElement("input")}}, or {{HTMLElement("textarea")}} element is about to be modified. The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on.
@@ -68,7 +69,7 @@ This example logs the current value of the element, immediately before replacing
 #### HTML
 
 ```html
-<input placeholder="Enter some text" name="name"/>
+<input placeholder="Enter some text" name="name" />
 <p id="values"></p>
 ```
 

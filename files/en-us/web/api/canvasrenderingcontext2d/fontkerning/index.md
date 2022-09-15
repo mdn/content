@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.fontKerning
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.fontKerning`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) specifies how font kerning information is used.
@@ -37,13 +38,13 @@ Allowed values are:
 
 In this example we display the text "AVA Ta We" using each of the supported values of the `textRendering` property.
 
-#### HTML
+### HTML
 
 ```html
 <canvas id="canvas" width="700" height="140"></canvas>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 const canvas = document.getElementById('canvas');
@@ -62,9 +63,9 @@ ctx.fontKerning = 'none';
 ctx.fillText(`AVA Ta We (${ctx.fontKerning})`, 5, 110);
 ```
 
-#### Result
+### Result
 
-Note that the the last string has font kerning disabled, so adjacent characters are evenly spread.
+Note that the last string has font kerning disabled, so adjacent characters are evenly spread.
 
 {{ EmbedLiveSample('Examples', 700, 150) }}
 

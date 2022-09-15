@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onMessage
 ---
+
 {{AddonSidebar()}}
 
 Use this event to listen for messages from another part of your extension.
@@ -46,7 +47,7 @@ To send an asynchronous response, there are two options:
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onMessage.addListener(listener)
 browser.runtime.onMessage.removeListener(listener)
 browser.runtime.onMessage.hasListener(listener)

@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Firefox 23
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers

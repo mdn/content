@@ -10,13 +10,14 @@ tags:
   - InputDeviceInfo
 browser-compat: api.InputDeviceInfo.getCapabilities
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getCapabilities()`** method of the {{domxref("InputDeviceInfo")}} interface returns a `MediaTrackCapabilities` object describing the primary audio or video track of the device's {{domxref("MediaStream")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getCapabilities()
 ```
 

@@ -14,6 +14,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResultList.item
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`item`** getter of the
@@ -23,7 +24,7 @@ syntax.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

@@ -11,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XREquirectLayer.redraw_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The `redraw` event is sent to the `XREquirectLayer` object when the underlying resources of the layer are lost or when the XR Compositor can no longer reproject the layer. If this event is sent, authors should redraw the content of the layer in the next XR animation frame.
 

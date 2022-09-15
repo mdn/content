@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.split
 ---
+
 {{JSRef}}
 
 The **`split()`** method takes a pattern and divides a {{jsxref("String")}} into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
@@ -19,7 +20,7 @@ The **`split()`** method takes a pattern and divides a {{jsxref("String")}} into
 
 ## Syntax
 
-```js
+```js-nolint
 split()
 split(separator)
 split(separator, limit)

@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.idle
 ---
+
 {{AddonSidebar}}
 
 Find out when the user's system is idle, locked, or active.

@@ -10,6 +10,7 @@ tags:
   - Storage
   - Storage Access API
 ---
+
 {{DefaultAPISidebar("Storage Access API")}}
 
 The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) should be used by embedded cross-origin documents to verify whether they have access to their first-party storage and, if not, to request access. We'll briefly look at a common storage access scenario.
@@ -25,7 +26,8 @@ In this example we show how an embedded cross-origin {{htmlelement("iframe")}} c
 First of all, if the `<iframe>` is sandboxed, the embedding website needs to add the `allow-storage-access-by-user-activation` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#attr-sandbox) to allow storage access requests to be successful, along with `allow-scripts` and `allow-same-origin` to allow it to call the API, and execute in an origin that can have cookies:
 
 ```html
-<iframe sandbox="allow-storage-access-by-user-activation
+<iframe
+  sandbox="allow-storage-access-by-user-activation
                  allow-scripts
                  allow-same-origin">
   …

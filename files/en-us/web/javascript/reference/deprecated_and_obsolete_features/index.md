@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Deprecated
 ---
+
 {{JsSidebar("More")}}
 
 This page lists features of JavaScript that are deprecated (that is, still available but planned for removal) and obsolete (that is, no longer usable).
@@ -48,7 +49,7 @@ The following properties are deprecated. This does not affect their use in [repl
       <th>Description</th>
     </tr>
     <tr>
-      <td>{{jsxref("RegExp.n", "$1-$9")}}</td>
+      <td>{{jsxref("RegExp/n", "$1-$9")}}</td>
       <td>
         <p>
           Parenthesized substring matches, if any.<br /><strong
@@ -102,7 +103,7 @@ The following properties are deprecated. This does not affect their use in [repl
   </tbody>
 </table>
 
-The {{jsxref("RegExp.compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
+The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
 
 ### Function
 
@@ -134,7 +135,7 @@ The {{jsxref("RegExp.compile", "compile()")}} method is deprecated. Construct a 
 
 The [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement is deprecated and unavailable in strict mode.
 
-Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops headers are deprecated and produce syntax errors in strict mode. They are silently ignored in non-strict mode.
+Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops headers are deprecated and produce [syntax errors](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode. They are silently ignored in non-strict mode.
 
 ## Obsolete features
 
@@ -144,13 +145,13 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 
 The following are now properties of `RegExp` instances, no longer of the `RegExp` constructor:
 
-| Property                                                     | Description                                                                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| {{jsxref("RegExp.global", "global")}}             | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
-| {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Whether or not to ignore case while attempting a match in a string.                                                |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}     | The index at which to start the next match.                                                                        |
-| {{jsxref("RegExp.multiline", "multiline")}} (also via `RegExp.$*`) | Whether or not to search in strings across multiple lines.                                                         |
-| {{jsxref("RegExp.source", "source")}}             | The text of the pattern.                                                                                           |
+| Property                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| {{jsxref("RegExp/global", "global")}}                              | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
+| {{jsxref("RegExp/ignoreCase", "ignoreCase")}}                      | Whether or not to ignore case while attempting a match in a string.                                                |
+| {{jsxref("RegExp/lastIndex", "lastIndex")}}                        | The index at which to start the next match.                                                                        |
+| {{jsxref("RegExp/multiline", "multiline")}} (also via `RegExp.$*`) | Whether or not to search in strings across multiple lines.                                                         |
+| {{jsxref("RegExp/source", "source")}}                              | The text of the pattern.                                                                                           |
 
 The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("Object.prototype.valueOf()")}}, which returns itself.
 
@@ -160,24 +161,28 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 ### Object
 
-| Property | Description | Alternative |
-| -------- | ----------- | ----------- |
-| `__count__` | Returns the number of enumerable properties directly on a user-defined object. | [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) |
-| `__parent__` | Points to an object's context. | No direct replacement |
-| `__iterator__` | Used with [legacy iterators](#legacy_generator_and_iterator). |  [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) and the new [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) |
-| `__noSuchMethod__` | A method called when a non-existent property is called as method. | {{jsxref("Proxy")}} |
-| `Object.prototype.eval()` | Evaluates a string of JavaScript code in the context of the specified object.  | No direct replacement |
-| `Object.observe()` | Asynchronously observing the changes to an object. | {{jsxref("Proxy")}} |
-| `Object.unobserve()` | Remove observers. | {{jsxref("Proxy")}} |
-| `Object.getNotifier()` | Create a notifier object that allows to synthetically trigger a change observable with `Object.observe()`. | No direct replacement |
-| `Object.prototype.watch()` | Attach a handler callback to a property that gets called when the property is assigned. | {{jsxref("Proxy")}} |
-| `Object.prototype.unwatch()` | Remove watch handlers on a property. | {{jsxref("Proxy")}} |
+| Property                     | Description                                                                                                | Alternative                                                                                                                                                                          |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `__count__`                  | Returns the number of enumerable properties directly on a user-defined object.                             | [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                                   |
+| `__parent__`                 | Points to an object's context.                                                                             | No direct replacement                                                                                                                                                                |
+| `__iterator__`               | Used with [legacy iterators](#legacy_generator_and_iterator).                                              | [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) and the new [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) |
+| `__noSuchMethod__`           | A method called when a non-existent property is called as method.                                          | {{jsxref("Proxy")}}                                                                                                                                                                  |
+| `Object.prototype.eval()`    | Evaluates a string of JavaScript code in the context of the specified object.                              | No direct replacement                                                                                                                                                                |
+| `Object.observe()`           | Asynchronously observing the changes to an object.                                                         | {{jsxref("Proxy")}}                                                                                                                                                                  |
+| `Object.unobserve()`         | Remove observers.                                                                                          | {{jsxref("Proxy")}}                                                                                                                                                                  |
+| `Object.getNotifier()`       | Create a notifier object that allows to synthetically trigger a change observable with `Object.observe()`. | No direct replacement                                                                                                                                                                |
+| `Object.prototype.watch()`   | Attach a handler callback to a property that gets called when the property is assigned.                    | {{jsxref("Proxy")}}                                                                                                                                                                  |
+| `Object.prototype.unwatch()` | Remove watch handlers on a property.                                                                       | {{jsxref("Proxy")}}                                                                                                                                                                  |
 
 ### String
 
 - Non-standard String generic methods like `String.slice(myStr, 0, 12)`, `String.replace(myStr, /\./g, "!")`, etc. have been introduced in Firefox 1.5 (JavaScript 1.6), deprecated in Firefox 53, and removed in Firefox 68. You can use methods on {{jsxref("String", "String.prototype", "instance_methods")}} together with {{jsxref("Function.call")}} instead.
 - `String.prototype.quote` is removed from Firefox 37.
 - Non-standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} are obsolete.
+
+### WeakMap
+
+- `WeakMap.prototype.clear()` was added in Firefox 20 and removed in Firefox 46. It is not possible to traverse all keys in a [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap).
 
 ### Date
 
@@ -187,10 +192,10 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 - Non-standard Array generic methods like `Array.slice(myArr, 0, 12)`, `Array.forEach(myArr, myFn)`, etc. have been introduced in Firefox 1.5 (JavaScript 1.6), deprecated in Firefox 68, and removed in Firefox 71. You can use methods on {{jsxref("Array", "Array.prototype", "instance_methods")}} together with {{jsxref("Function.call")}} instead.
 
-| Property | Description | Alternative |
-| -------- | ----------- | ----------- |
-| `Array.observe()` | Asynchronously observing changes to Arrays. | {{jsxref("Proxy")}} |
-| `Array.unobserve()` | Remove observers. | {{jsxref("Proxy")}} |
+| Property            | Description                                 | Alternative         |
+| ------------------- | ------------------------------------------- | ------------------- |
+| `Array.observe()`   | Asynchronously observing changes to Arrays. | {{jsxref("Proxy")}} |
+| `Array.unobserve()` | Remove observers.                           | {{jsxref("Proxy")}} |
 
 ### Number
 

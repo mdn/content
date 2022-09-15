@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.FederatedCredential.FederatedCredential
 ---
+
 {{APIRef("Credential Management API")}}{{SeeCompatTable}}
 
 The **`FederatedCredential()`**
@@ -22,7 +23,7 @@ received from the `init` object for global {{domxref('fetch()')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new FederatedCredential(init)
 ```
 

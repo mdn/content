@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.counter-style.range
 ---
+
 {{CSSRef}}
 
 When defining custom counter styles, the **`range`** descriptor lets the author specify a range of counter values over which the style is applied. If a counter value is outside the specified range, then the fallback style will be used to construct the representation of that marker.
@@ -87,7 +88,7 @@ auto
 ```css
 @counter-style range-multi-example {
   system: cyclic;
-  symbols: "\25A0" "\25A1";
+  symbols: "\25A0""\25A1";
   range: 2 4, 7 9;
 }
 

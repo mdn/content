@@ -7,6 +7,7 @@ tags:
   - Introduction
   - JavaScript
 ---
+
 {{JsSidebar}}
 
 ## What is JavaScript?
@@ -25,7 +26,7 @@ For a more in depth discussion of JavaScript programming follow the [JavaScript 
 
 ## What JavaScript implementations are available?
 
-The Mozilla project provides two JavaScript implementations. The first **ever** JavaScript was created by Brendan Eich at Netscape, and has since been updated to conform to ECMA-262 Edition 5 and later versions. This engine, code named [SpiderMonkey](https://spidermonkey.dev/), is implemented in C/C++. The [Rhino](https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)) engine, created primarily by Norris Boyd (also at Netscape) is a JavaScript implementation written in Java. Like SpiderMonkey, Rhino is ECMA-262 Edition 5 compliant.
+The Mozilla project provides two JavaScript implementations. The first **ever** JavaScript was created by Brendan Eich at Netscape, and has since been updated to conform to ECMA-262 Edition 5 and later versions. This engine, code named [SpiderMonkey](https://spidermonkey.dev/), is implemented in C/C++. The [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>) engine, created primarily by Norris Boyd (also at Netscape) is a JavaScript implementation written in Java. Like SpiderMonkey, Rhino is ECMA-262 Edition 5 compliant.
 
 Several major runtime optimizations such as TraceMonkey (Firefox 3.5), JägerMonkey (Firefox 4) and IonMonkey were added to the SpiderMonkey JavaScript engine over time. Work is always ongoing to improve JavaScript execution performance.
 
@@ -42,9 +43,8 @@ Another common application for JavaScript is as a (Web) server side scripting la
 
 ## JavaScript resources
 
-- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview)
-  - : Pointers to published JavaScript standards and relevant resources.
-- [A re-introduction to JavaScript](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
-  - : [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
+- [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview): Pointers to published JavaScript standards and relevant resources.
+- [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_Overview): An overview of various JavaScript language features and syntaxes, designed for people familiar with other programming languages.
+- [JavaScript guide](/en-US/docs/Web/JavaScript/Guide) and [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 
 JavaScript® is a trademark or registered trademark of Oracle in the U.S. and other countries.

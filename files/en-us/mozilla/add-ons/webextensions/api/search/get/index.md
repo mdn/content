@@ -12,6 +12,7 @@ tags:
   - get
 browser-compat: webextensions.api.search.search
 ---
+
 {{AddonSidebar()}}
 
 Gets an array of all installed search engines.
@@ -22,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingEngines = browser.search.get()
 ```
 
@@ -32,7 +33,7 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an [array](Web/JavaScript/Reference/Global_Objects/array) of search engine objects. Each search engine object may contain the following properties:
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of search engine objects. Each search engine object may contain the following properties:
 
 - `name`
   - : `string`. The search engine's name.

@@ -8,6 +8,7 @@ tags:
   - part 5
   - server-side
 ---
+
 Next we'll implement our list of all book copies (`BookInstance`) in the library. This page needs to include the title of the `Book` associated with each `BookInstance` (linked to its detail page) along with other information in the `BookInstance` model, including the status, imprint, and unique id of each copy. The unique id text should be linked to the `BookInstance` detail page.
 
 ## Controller
@@ -19,16 +20,19 @@ Find the exported `bookinstance_list()` controller method and replace it with th
 
 ```js
 // Display list of all BookInstances.
-exports.bookinstance_list = function(req, res, next) {
-
+exports.bookinstance_list = function (req, res, next) {
   BookInstance.find()
-    .populate('book')
+    .populate("book")
     .exec(function (err, list_bookinstances) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       // Successful, so render
-      res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
+      res.render("bookinstance_list", {
+        title: "Book Instance List",
+        bookinstance_list: list_bookinstances,
+      });
     });
-
 };
 ```
 

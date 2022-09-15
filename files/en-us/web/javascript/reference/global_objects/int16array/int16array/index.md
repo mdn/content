@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Int16Array.Int16Array
 ---
+
 {{JSRef}}
 
 The **`Int16Array()`** typed array constructor creates an array
@@ -20,7 +21,7 @@ notation).
 
 ## Syntax
 
-```js
+```js-nolint
 new Int16Array()
 new Int16Array(length)
 new Int16Array(typedArray)

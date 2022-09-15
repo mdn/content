@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.Notification.vibrate
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The `vibrate` read-only property of the {{domxref("Notification")}}

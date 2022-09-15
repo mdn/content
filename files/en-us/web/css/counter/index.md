@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.counter
 ---
+
 {{CSSRef}}
 
 The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a string representing the current value of the named counter, if there is one.
@@ -62,8 +63,8 @@ li {
   counter-increment: listCounter;
 }
 li::after {
-  content: "[" counter(listCounter) "] == ["
-               counter(listCounter, upper-roman) "]";
+  content: "[" counter(listCounter) "] == [" counter(listCounter, upper-roman)
+    "]";
 }
 ```
 
@@ -93,8 +94,11 @@ li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, decimal-leading-zero) "] == ["
-               counter(count, lower-alpha) "]";
+  content: "[" counter(count, decimal-leading-zero) "] == [" counter(
+      count,
+      lower-alpha
+    )
+    "]";
 }
 ```
 

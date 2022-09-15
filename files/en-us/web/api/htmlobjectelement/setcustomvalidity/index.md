@@ -12,6 +12,7 @@ tags:
   - setCustomValidity()
 browser-compat: api.HTMLObjectElement.setCustomValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`setCustomValidity()`** method of the
@@ -20,7 +21,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 setCustomValidity(errorMessage)
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.hasOwn
 ---
+
 {{JSRef}}
 
 The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property.
@@ -20,7 +21,7 @@ If the property is inherited, or does not exist, the method returns `false`.
 
 ## Syntax
 
-```js
+```js-nolint
 hasOwn(instance, prop)
 ```
 
@@ -124,7 +125,7 @@ Object.hasOwn(fruits, 4);   // false - not defined
 
 ### Problematic cases for hasOwnProperty
 
-This section demonstrate that `hasOwn()` is immune to the problems that affect
+This section demonstrates that `hasOwn()` is immune to the problems that affect
 `hasOwnProperty`. Firstly, it can be used with objects that have reimplemented
 `hasOwnProperty()`:
 

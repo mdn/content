@@ -10,6 +10,7 @@ tags:
   - get
 browser-compat: api.URLSearchParams.get
 ---
+
 {{ApiRef("URL API")}}
 
 The **`get()`** method of the {{domxref("URLSearchParams")}}
@@ -19,7 +20,7 @@ interface returns the first value associated to the given search parameter.
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 

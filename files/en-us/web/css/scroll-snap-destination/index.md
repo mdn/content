@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: css.properties.scroll-snap-destination
 ---
+
 {{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`scroll-snap-destination`** [CSS](/en-US/docs/Web/CSS) property defines the position in x and y coordinates within the scroll container's visual {{Glossary("viewport")}} which element snap points align with.
@@ -87,7 +88,7 @@ scroll-snap-destination =
   display: flex;
 }
 
-#container > div:nth-child(-n+2) {
+#container > div:nth-child(-n + 2) {
   margin-right: 20px;
 }
 
@@ -123,11 +124,11 @@ scroll-snap-destination =
 }
 
 .scrollContainer > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 .scrollContainer > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 

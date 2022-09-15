@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getAttribLocation
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getAttribLocation()`** method of
@@ -18,7 +19,7 @@ attribute variable in a given {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getAttribLocation(program, name)
 ```
 

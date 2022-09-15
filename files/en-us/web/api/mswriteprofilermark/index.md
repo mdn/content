@@ -5,6 +5,7 @@ page-type: web-api-global-function
 tags:
   - msWriteProfilerMark
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -15,7 +16,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
+```js-nolint
 msWriteProfilerMark(profilerMarkName)
 ```
 

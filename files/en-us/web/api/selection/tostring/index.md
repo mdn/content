@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.toString
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.toString()`** method returns a string
@@ -17,7 +18,7 @@ currently being represented by the selection object, i.e. the currently selected
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

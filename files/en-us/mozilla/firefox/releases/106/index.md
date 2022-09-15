@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 106 that will affect developers. Firefox 106 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and will ship on [October 18, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
@@ -53,7 +54,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ## Changes for add-on developers
 
-#### Removals
+### Removals
 
 ### Other
 

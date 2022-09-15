@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.RTCPeerConnection.addStream
 ---
+
 {{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The _obsolete_ {{domxref("RTCPeerConnection")}} method
@@ -29,8 +30,8 @@ be repeated to consider the new stream.
 
 ## Syntax
 
-```js
-rtcPeerConnection.addStream(mediaStream);
+```js-nolint
+addStream(mediaStream)
 ```
 
 ### Parameters

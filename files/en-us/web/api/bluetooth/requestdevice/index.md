@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.Bluetooth.requestDevice
 ---
+
 {{APIRef("Bluetooth API")}} {{securecontext_header}}{{SeeCompatTable}}
 
 The **`Bluetooth.requestDevice()`** method of the
@@ -21,7 +22,7 @@ UI, this method returns the first device matching the criteria.
 
 ## Syntax
 
-```js
+```js-nolint
 requestDevice()
 requestDevice(options)
 ```

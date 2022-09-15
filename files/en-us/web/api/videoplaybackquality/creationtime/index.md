@@ -15,6 +15,7 @@ tags:
   - creationTime
 browser-compat: api.VideoPlaybackQuality.creationTime
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`creationTime`** property on the

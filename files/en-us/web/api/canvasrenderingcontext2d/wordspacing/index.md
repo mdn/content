@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.CanvasRenderingContext2D.wordSpacing
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.wordSpacing`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) specifies the spacing between words when drawing text.
@@ -30,13 +31,13 @@ The property value will remain unchanged if set to an invalid/unparsable value.
 In this example we display the text "Hello World" three times, using the `wordSpacing` property to modify the spacing in each case.
 The spacing is also displayed for each case, using the value of the property.
 
-#### HTML
+### HTML
 
 ```html
 <canvas id="canvas" width="700"></canvas>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 const canvas = document.getElementById('canvas');
@@ -56,7 +57,7 @@ ctx.wordSpacing = '30px';
 ctx.fillText(`Hello world (${ctx.wordSpacing})`, 10, 140);
 ```
 
-#### Result
+### Result
 
 {{ EmbedLiveSample('Examples', 700, 180) }}
 

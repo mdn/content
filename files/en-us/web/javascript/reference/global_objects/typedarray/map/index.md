@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.map
 ---
+
 {{JSRef}}
 
 The **`map()`** method creates a new typed array with the
@@ -23,7 +24,7 @@ _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 map((currentValue) => { /* ... */ } )
 map((currentValue, index) => { /* ... */ } )

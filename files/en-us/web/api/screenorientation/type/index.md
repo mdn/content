@@ -12,6 +12,7 @@ tags:
   - Type
 browser-compat: api.ScreenOrientation.type
 ---
+
 {{APIRef("Screen Orientation")}}
 
 The **`type`** read-only property of the

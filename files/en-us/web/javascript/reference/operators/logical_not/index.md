@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_not
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical NOT (`!`) operator (logical complement, negation) takes truth to
@@ -20,7 +21,7 @@ operand can be converted to `true`; otherwise, returns `true`.
 
 ## Syntax
 
-```js
+```js-nolint
 !expr
 ```
 

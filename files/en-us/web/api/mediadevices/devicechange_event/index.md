@@ -14,6 +14,7 @@ tags:
   - Event
 browser-compat: api.MediaDevices.devicechange_event
 ---
+
 {{APIRef}}
 
 A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
@@ -46,10 +47,8 @@ media device is attached to or removed from the device running the sample.
 
 ```html hidden
 <p>Click the start button below to begin the demonstration.</p>
-<div id="startButton" class="button">
-  Start
-</div>
-<video id="video" width="160" height="120" autoplay></video><br>
+<div id="startButton" class="button">Start</div>
+<video id="video" width="160" height="120" autoplay></video><br />
 
 <div class="left">
   <h2>Audio devices:</h2>
@@ -111,9 +110,9 @@ h2 {
 
 ```js hidden
 // UI elements
-const videoElement = document.queryElement("#video");
-const logElement = document.queryElement("output");
-const startButton = document.queryElement("#startButton");
+const videoElement = document.querySelector("#video");
+const logElement = document.querySelector("output");
+const startButton = document.querySelector("#startButton");
 
 function log(msg) {
   logElement.innerHTML += `${msg}<br>`;
@@ -156,7 +155,7 @@ const audioList = document.getElementById("audioList");
 const videoList = document.getElementById("videoList");
 ```
 
-#### Getting and drawing the device list
+### Getting and drawing the device list
 
 Now let's take a look at `updateDeviceList()` itself. This method is called
 any time we want to fetch the current list of media devices and then update the
@@ -212,7 +211,7 @@ parentheses, it's appended to the appropriate list by calling
 {{domxref("Node.appendChild", "appendChild()")}} on either `audioList` or
 `videoList`, as appropriate based on the device type.
 
-#### Handling device list changes
+### Handling device list changes
 
 We call `updateDeviceList()` in two places. The first is in the
 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} promise's fulfillment

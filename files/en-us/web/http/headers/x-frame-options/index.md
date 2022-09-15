@@ -10,6 +10,7 @@ tags:
   - nginx
 browser-compat: http.headers.X-Frame-Options
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid [click-jacking](/en-US/docs/Web/Security/Types_of_attacks#click-jacking) attacks, by ensuring that their content is not embedded into other sites.
@@ -139,5 +140,5 @@ app.use(frameguard({ action: 'SAMEORIGIN' }))
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}} directive {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}}
-- [ClickJacking Defenses - IEBlog](https://docs.microsoft.com/en-us/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
-- [Combating ClickJacking with X-Frame-Options - IEInternals](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)
+- [ClickJacking Defenses - IEBlog](https://docs.microsoft.com/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
+- [Combating ClickJacking with X-Frame-Options - IEInternals](https://docs.microsoft.com/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)

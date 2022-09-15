@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.big
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`big()`** method creates a {{HTMLElement("big")}} HTML
@@ -22,7 +23,7 @@ element that causes a string to be displayed in a big font.
 
 ## Syntax
 
-```js
+```js-nolint
 big()
 ```
 

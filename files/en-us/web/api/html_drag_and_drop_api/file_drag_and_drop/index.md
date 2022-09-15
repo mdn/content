@@ -7,6 +7,7 @@ tags:
   - drag and drop
   - drop zone
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform's _file manager_ and dropped on a web page.
@@ -28,7 +29,10 @@ The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event 
 Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("HTMLElement.dragover_event","ondragover")}} event handler:
 
 ```html
-<div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+<div
+  id="drop_zone"
+  ondrop="dropHandler(event);"
+  ondragover="dragOverHandler(event);">
   <p>Drag one or more files to this <i>drop zone</i>.</p>
 </div>
 ```
@@ -38,7 +42,7 @@ Lastly, an application may want to style the drop target element to visually ind
 ```css
 #drop_zone {
   border: 5px solid blue;
-  width:  200px;
+  width: 200px;
   height: 100px;
 }
 ```

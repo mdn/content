@@ -12,6 +12,7 @@ tags:
   - createDelay
 browser-compat: api.BaseAudioContext.createDelay
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `createDelay()` method of the
@@ -24,7 +25,7 @@ which is used to delay the incoming audio signal by a certain amount of time.
 
 ## Syntax
 
-```js
+```js-nolint
 createDelay(maxDelayTime)
 ```
 

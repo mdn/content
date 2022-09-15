@@ -25,6 +25,7 @@ tags:
   - scrollHeight
 browser-compat: api.Element.getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.getBoundingClientRect()`** method returns a
@@ -33,7 +34,7 @@ position relative to the [viewport](/en-US/docs/Glossary/Viewport).
 
 ## Syntax
 
-```js
+```js-nolint
 getBoundingClientRect()
 ```
 
@@ -144,8 +145,12 @@ div#example {
   background: purple;
 }
 
-body { padding-bottom: 1000px; }
-p { margin: 0; }
+body {
+  padding-bottom: 1000px;
+}
+p {
+  margin: 0;
+}
 ```
 
 ```js

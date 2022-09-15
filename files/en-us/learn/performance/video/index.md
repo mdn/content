@@ -8,6 +8,7 @@ tags:
   - Video
   - Web Performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
 
 As we learned in the previous section, media, namely images and video, account for over 70% of the bytes downloaded for the average website. We have already taken a look at optimizing images. This article looks at optimizing video to improve web performance.
@@ -73,10 +74,15 @@ See [CanIUse.com](https://caniuse.com/#search=video) for current browser support
 
 ### Video autoplay
 
-To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline.`
+To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline`.
 
 ```html
-<video autoplay="" loop="" muted="true" playsinline="" src="backgroundvideo.mp4">
+<video
+  autoplay=""
+  loop=""
+  muted="true"
+  playsinline=""
+  src="backgroundvideo.mp4"></video>
 ```
 
 While the `loop` and `autoplay` make sense for a looping and autoplaying video, the `muted` attribute is required for autoplay in mobile browsers.
@@ -89,9 +95,8 @@ For hero-video or other video without audio, removing audio is smart.
 
 ```html
 <video autoplay="" loop="" muted="true" playsinline="" id="hero-video">
-  <source src="banner_video.webm"
-          type='video/webm; codecs="vp8, vorbis"'>
-  <source src="web_banner.mp4" type="video/mp4">
+  <source src="banner_video.webm" type='video/webm; codecs="vp8, vorbis"' />
+  <source src="web_banner.mp4" type="video/mp4" />
 </video>
 ```
 

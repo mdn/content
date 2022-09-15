@@ -14,6 +14,7 @@ tags:
   - OpenGL
   - WebGL
 ---
+
 {{WebGLSidebar}}
 
 WebGL is a complicated API, and it's often not obvious what the recommended ways to use it are. This page tackles recommendations across the spectrum of expertise, and not only highlights dos and don'ts, but also details _why_. You can rely on this document to guide your choice of approach, and ensure you're on the right track no matter what browser or hardware your users run.
@@ -347,7 +348,7 @@ precision mediump float;
 | `mediump` | int11 | (-2^10, 2^10) |
 | `lowp`    | int9  | (-2^8, 2^8)   |
 
-_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa_
+_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa._
 
 ### ESSL300 minimum requirements (WebGL 2)
 

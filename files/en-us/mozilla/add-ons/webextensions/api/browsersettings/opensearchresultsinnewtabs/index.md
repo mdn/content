@@ -12,6 +12,7 @@ tags:
   - openSearchResultsInNewTabs
 browser-compat: webextensions.api.browserSettings.openSearchResultsInNewTabs
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
@@ -33,8 +34,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.openSearchResultsInNewTabs.set({value: true}).
-  then(logResult);
+browser.browserSettings.openSearchResultsInNewTabs
+  .set({ value: true })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

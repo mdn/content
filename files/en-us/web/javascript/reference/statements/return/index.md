@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.return
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`return`** statement ends function execution and
@@ -16,8 +17,8 @@ specifies a value to be returned to the function caller.
 
 ## Syntax
 
-```js
-return [expression];
+```js-nolint
+return [expression]
 ```
 
 - `expression`

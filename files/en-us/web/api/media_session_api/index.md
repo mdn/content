@@ -13,6 +13,7 @@ tags:
   - Video
 browser-compat: api.MediaSession
 ---
+
 {{DefaultAPISidebar("Media Session API")}}
 
 The Media Session API provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing.

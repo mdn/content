@@ -11,6 +11,7 @@ tags:
   - close
 browser-compat: api.WritableStreamDefaultWriter.close
 ---
+
 {{APIRef("Streams")}}
 
 The **`close()`** method of the
@@ -23,7 +24,7 @@ invoking the close behavior. During this time any further attempts to write will
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

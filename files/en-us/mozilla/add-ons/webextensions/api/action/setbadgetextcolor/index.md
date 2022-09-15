@@ -12,6 +12,7 @@ tags:
   - setBadgeTextColor
 browser-compat: webextensions.api.action.setBadgeTextColor
 ---
+
 {{AddonSidebar()}}
 
 Sets the text color for the browser action's badge. Tabs without a specific badge text color will inherit the global badge text color.
@@ -20,7 +21,7 @@ Sets the text color for the browser action's badge. Tabs without a specific badg
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.setBadgeTextColor(
   details // object
 )

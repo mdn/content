@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: http.headers.Content-Type
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Type`** representation header is used to indicate the original {{Glossary("MIME type","media type")}} of the resource (prior to any content encoding applied for sending).
@@ -73,8 +74,8 @@ In a {{HTTPMethod("POST")}} request, resulting from an HTML form submission, the
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```

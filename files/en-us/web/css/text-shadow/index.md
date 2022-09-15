@@ -15,6 +15,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-shadow
 ---
+
 {{CSSRef}}
 
 The **`text-shadow`** CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its [`decorations`](/en-US/docs/Web/CSS/text-decoration). Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
@@ -84,9 +85,10 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 ```
 
 ```html
-<p class="red-text-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+<p class="red-text-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Simple_shadow', '660px', '90px')}}
@@ -102,9 +104,10 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 ```
 
 ```html
-<p class="white-text-with-blue-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+<p class="white-text-with-blue-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Multiple_shadows', '660px', '170px')}}

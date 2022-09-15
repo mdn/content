@@ -16,6 +16,7 @@ tags:
   - outerHTML
 browser-compat: api.Element.outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 The **`outerHTML`** attribute of the {{ domxref("Element") }}
@@ -46,9 +47,9 @@ descendants with a new DOM tree constructed by parsing the specified
 
 ## Examples
 
-Getting the value of an element's `outerHTML` property:
+### Getting the value of an element's outerHTML property
 
-### HTML
+#### HTML
 
 ```html
 <div id="d">
@@ -57,7 +58,7 @@ Getting the value of an element's `outerHTML` property:
 </div>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const d = document.getElementById("d");
@@ -67,9 +68,9 @@ console.log(d.outerHTML);
 // is written to the console window
 ```
 
-Replacing a node by setting the `outerHTML` property:
+### Replacing a node by setting the outerHTML property
 
-### HTML
+#### HTML
 
 ```html
 <div id="container">
@@ -77,7 +78,7 @@ Replacing a node by setting the `outerHTML` property:
 </div>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const container = document.getElementById("container");

@@ -13,6 +13,7 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.onCreatedNavigationTarget
 ---
+
 {{AddonSidebar()}}
 
 Fired when a new window, or a new tab in an existing window, is created to host the target of a navigation. For example, this event is sent when:
@@ -26,7 +27,7 @@ If this event is fired, it will be fired before {{WebExtAPIRef("webNavigation.on
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onCreatedNavigationTarget.addListener(
   listener,                   // function
   filter                      // optional object

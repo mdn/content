@@ -12,6 +12,7 @@ spec-urls:
   - https://drafts.csswg.org/mediaqueries/
   - https://drafts.csswg.org/css-conditional/
 ---
+
 {{CSSRef}}
 
 **Media queries** let you adapt your site or app depending on the presence or value of various device characteristics and parameters.

@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Object.propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 The **`propertyIsEnumerable()`** method returns a Boolean
@@ -19,7 +20,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 propertyIsEnumerable(prop)
 ```
 

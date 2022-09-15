@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Event.preventDefault
 ---
+
 {{apiref("DOM")}}
 
 The **`preventDefault()`** method of the {{domxref("Event")}} interface tells the {{Glossary("user agent")}} that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
@@ -24,8 +25,8 @@ non-cancelable event, such as one dispatched via
 
 ## Syntax
 
-```js
-event.preventDefault();
+```js-nolint
+event.preventDefault()
 ```
 
 ## Examples
@@ -38,10 +39,15 @@ demonstrates how to prevent that from happening:
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener("click", (event) => {
-  document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
+const checkbox = document.querySelector("#id-checkbox");
+
+checkbox.addEventListener("click", checkboxClick, false);
+
+function checkboxClick(event) {
+  let warn = "preventDefault() won't let you check this!<br>";
+  document.getElementById("output-box").innerHTML += warn;
   event.preventDefault();
-}, false);
+}
 ```
 
 #### HTML
@@ -51,7 +57,7 @@ document.querySelector("#id-checkbox").addEventListener("click", (event) => {
 
 <form>
   <label for="id-checkbox">Checkbox:</label>
-  <input type="checkbox" id="id-checkbox"/>
+  <input type="checkbox" id="id-checkbox" />
 </form>
 
 <div id="output-box"></div>
@@ -69,14 +75,15 @@ instead.
 
 #### HTML
 
-Here's the form:
+The HTML form below captures user input.
+Since we're only interested in keystrokes, we're disabling `autocomplete` to prevent the browser from filling in the input field with cached values.
 
 ```html
 <div class="container">
   <p>Please enter your name using lowercase letters only.</p>
 
   <form>
-    <input type="text" id="my-textbox">
+    <input type="text" id="my-textbox" autocomplete="off" />
   </form>
 </div>
 ```
@@ -103,8 +110,8 @@ And here's the JavaScript code that does the job. First, listen for
 {{domxref("Element/keypress_event", "keypress")}} events:
 
 ```js
-const myTextbox = document.getElementById('my-textbox');
-myTextbox.addEventListener('keypress', checkName, false);
+const myTextbox = document.getElementById("my-textbox");
+myTextbox.addEventListener("keypress", checkName, false);
 ```
 
 The `checkName()` function, which looks at the pressed key and decides
@@ -117,8 +124,7 @@ function checkName(evt) {
     if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
       displayWarning(
-        "Please use lowercase letters only.\n" +
-        `charCode: ${charCode}\n`
+        "Please use lowercase letters only.\n" + `charCode: ${charCode}\n`
       );
     }
   }

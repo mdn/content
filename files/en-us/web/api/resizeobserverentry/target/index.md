@@ -15,6 +15,7 @@ tags:
   - target
 browser-compat: api.ResizeObserverEntry.target
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`target`** read-only property of the
@@ -39,7 +40,7 @@ size.
 To grab a reference to the observed element so we can update its
 {{cssxref("border-radius")}} value after each change, we make use of the
 `target` property of each entry —
- `entry.target.style.borderRadius`.
+`entry.target.style.borderRadius`.
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {

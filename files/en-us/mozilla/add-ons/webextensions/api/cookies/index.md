@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.cookies
 ---
+
 {{AddonSidebar}}
 
 Enables extensions to get and set cookies, and be notified when they change.

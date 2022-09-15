@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fontsize
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`fontsize()`** method creates a {{HTMLElement("font")}}
@@ -22,7 +23,7 @@ HTML element that causes a string to be displayed in the specified font size.
 
 ## Syntax
 
-```js
+```js-nolint
 fontsize(size)
 ```
 

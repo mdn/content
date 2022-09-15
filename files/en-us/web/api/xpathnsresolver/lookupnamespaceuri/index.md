@@ -12,6 +12,7 @@ tags:
   - XPathNSResolver
 browser-compat: api.XPathNSResolver.lookupNamespaceURI
 ---
+
 {{APIRef("DOM XPath")}}
 
 The `lookupNamespaceURI` method looks up the namespace URI associated to the
@@ -20,7 +21,7 @@ given namespace prefix within an {{Glossary("XPath")}} expression evaluated by t
 
 ## Syntax
 
-```js
+```js-nolint
 lookupNamespaceURI(prefix)
 ```
 

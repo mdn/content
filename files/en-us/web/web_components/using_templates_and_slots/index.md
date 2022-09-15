@@ -8,6 +8,7 @@ tags:
   - slot
   - slots
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 This article explains how you can use the {{htmlelement("template")}} and {{htmlelement("slot")}} elements to create a flexible template that can then be used to populate the shadow DOM of a web component.
@@ -150,14 +151,36 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
 ```html
 <template id="element-details-template">
   <style>
-  details {font-family: "Open Sans Light",Helvetica,Arial}
-  .name {font-weight: bold; color: #217ac0; font-size: 120%}
-  h4 { margin: 10px 0 -8px 0; }
-  h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-  h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-  h4 span { color: white }
-  .attributes { margin-left: 22px; font-size: 90% }
-  .attributes p { margin-left: 16px; font-style: italic }
+    details {
+      font-family: "Open Sans Light", Helvetica, Arial;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
+    h4 {
+      margin: 10px 0 -8px 0;
+    }
+    h4 span {
+      background: #217ac0;
+      padding: 2px 6px 2px 6px;
+    }
+    h4 span {
+      border: 1px solid #cee9f9;
+      border-radius: 4px;
+    }
+    h4 span {
+      color: white;
+    }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
   </style>
   <details>
     <summary>
@@ -171,7 +194,7 @@ First of all, we use the {{HTMLElement("slot")}} element within a {{HTMLElement(
       <slot name="attributes"><p>None</p></slot>
     </div>
   </details>
-  <hr>
+  <hr />
 </template>
 ```
 
@@ -243,14 +266,26 @@ About that snippet, notice these points:
 As a finishing touch, we'll add a tiny bit more CSS for the {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, and {{HTMLElement("dd")}} elements in our doc:
 
 ```css
-  dl { margin-left: 6px; }
-  dt { font-weight: bold; color: #217ac0; font-size: 110% }
-  dt { font-family: Consolas, "Liberation Mono", Courier }
-  dd { margin-left: 16px }
+dl {
+  margin-left: 6px;
+}
+dt {
+  font-weight: bold;
+  color: #217ac0;
+  font-size: 110%;
+}
+dt {
+  font-family: Consolas, "Liberation Mono", Courier;
+}
+dd {
+  margin-left: 16px;
+}
 ```
 
 ```css hidden
-body { margin-top: 47px }
+body {
+  margin-top: 47px;
+}
 ```
 
 ### Result

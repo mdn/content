@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing : after property id" occurs when objects are created

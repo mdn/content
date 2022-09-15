@@ -12,6 +12,7 @@ tags:
   - action
 browser-compat: webextensions.api.action
 ---
+
 {{AddonSidebar}}
 
 Adds a button to the browser's toolbar.

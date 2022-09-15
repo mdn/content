@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.Document.createNSResolver
 ---
+
 {{ ApiRef("DOM") }}
 
 Creates an `XPathNSResolver` which resolves namespaces with respect to the definitions in scope for a specified node.
 
 ## Syntax
 
-```js
+```js-nolint
 createNSResolver(node)
 ```
 

@@ -15,6 +15,7 @@ tags:
   - getPhotoCapabilities
 browser-compat: api.ImageCapture.getPhotoCapabilities
 ---
+
 {{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`getPhotoCapabilities()`**
@@ -24,7 +25,7 @@ available configuration options.
 
 ## Syntax
 
-```js
+```js-nolint
 getPhotoCapabilities()
 ```
 

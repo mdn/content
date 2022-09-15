@@ -12,6 +12,7 @@ tags:
   - pip
 browser-compat: api.PictureInPictureWindow.width
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 The read-only {{domxref("PictureInPictureWindow")}} property
@@ -20,8 +21,8 @@ pixels.
 
 ## Syntax
 
-```js
-let width = pictureInPictureWindow.width;
+```js-nolint
+pictureInPictureWindow.width
 ```
 
 ### Value

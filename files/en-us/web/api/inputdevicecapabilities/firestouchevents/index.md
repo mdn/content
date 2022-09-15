@@ -7,6 +7,7 @@ tags:
   - Experimental
 browser-compat: api.InputDeviceCapabilities.firesTouchEvents
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`InputDeviceCapabilities.firesTouchEvents`** read-only
@@ -20,7 +21,7 @@ touch events on mobile browsers.
 
 ## Syntax
 
-```js
+```js-nolint
 const boolean = InputDeviceCapabilities.firesTouchEvents
 ```
 
