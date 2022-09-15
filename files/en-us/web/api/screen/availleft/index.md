@@ -1,6 +1,7 @@
 ---
 title: Screen.availLeft
 slug: Web/API/Screen/availLeft
+page-type: web-api-instance-property
 tags:
   - API
   - API:Mozilla Extensions
@@ -10,6 +11,7 @@ tags:
   - Property
 browser-compat: api.Screen.availLeft
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 Returns the first available pixel from the left side of the screen.

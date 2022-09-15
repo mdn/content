@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.web_accessible_resources
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -64,7 +65,7 @@ In Manifest V3, the `web_accessible_resources` key is an array of objects like t
 
 ```
 {
-  ...
+  // …
   "web_accessible_resources": [
     {
       "resources": [ "test1.png", "test2.png" ],
@@ -75,7 +76,7 @@ In Manifest V3, the `web_accessible_resources` key is an array of objects like t
       "use_dynamic_url": true
     }
   ],
-  ...
+  // …
 }
 ```
 

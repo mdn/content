@@ -1,6 +1,7 @@
 ---
 title: PictureInPictureWindow.height
 slug: Web/API/PictureInPictureWindow/height
+page-type: web-api-instance-property
 tags:
   - API
   - Interface
@@ -11,6 +12,7 @@ tags:
   - pip
 browser-compat: api.PictureInPictureWindow.height
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 The read-only {{domxref("PictureInPictureWindow")}} property
@@ -19,8 +21,8 @@ in pixels.
 
 ## Syntax
 
-```js
-let height = pictureInPictureWindow.height;
+```js-nolint
+pictureInPictureWindow.height
 ```
 
 ### Value

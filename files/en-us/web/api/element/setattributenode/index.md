@@ -1,6 +1,7 @@
 ---
 title: Element.setAttributeNode()
 slug: Web/API/Element/setAttributeNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.setAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`setAttributeNode()`** method adds a new
@@ -16,7 +18,7 @@ The **`setAttributeNode()`** method adds a new
 
 ## Syntax
 
-```js
+```js-nolint
 setAttributeNode(attribute)
 ```
 

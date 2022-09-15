@@ -13,13 +13,14 @@ tags:
   - inIncognitoContext
 browser-compat: webextensions.api.extension.inIncognitoContext
 ---
+
 {{AddonSidebar()}}
 
 Boolean value, `true` for content scripts running inside private browsing tabs and for extension pages running inside a private browsing process.
 
 ## Syntax
 
-```js
+```js-nolint
 let isPrivate = browser.extension.inIncognitoContext;  // true or false
 ```
 
@@ -37,7 +38,8 @@ A _boolean_ value indicate if the current script is running in a private tab or 
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -64,4 +66,4 @@ A _boolean_ value indicate if the current script is running in a private tab or 
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

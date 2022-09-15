@@ -1,6 +1,7 @@
 ---
 title: ReportingObserver.takeRecords()
 slug: Web/API/ReportingObserver/takeRecords
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -10,6 +11,7 @@ tags:
   - ReportingObserver
 browser-compat: api.ReportingObserver.takeRecords
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`takeRecords()`** method of the
@@ -18,7 +20,7 @@ in the observer's report queue, and empties the queue.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 
@@ -33,20 +35,20 @@ An array of {{domxref("Report")}} objects.
 ## Examples
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 
 observer.observe()
 
-// ...
+// …
 
-let records = observer.takeRecords();
+const records = observer.takeRecords();
 console.log(records);
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: History.pushState()
 slug: Web/API/History/pushState
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -15,6 +16,7 @@ tags:
   - pushState
 browser-compat: api.History.pushState
 ---
+
 {{APIRef("History API")}}
 
 In an [HTML](/en-US/docs/Web/HTML) document, the
@@ -23,7 +25,7 @@ session history stack.
 
 ## Syntax
 
-```js
+```js-nolint
 pushState(state, unused)
 pushState(state, unused, url)
 ```
@@ -48,12 +50,13 @@ pushState(state, unused, url)
     "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
 
 - `unused`
-  - : This parameter exists for historical reasons, and cannot be omitted; passing the empty string is safe against future changes to the method.
+
+  - : This parameter exists for historical reasons, and cannot be omitted; passing an empty string is safe against future changes to the method.
 
 - `url` {{optional_inline}}
-  - : The new history entry's URL is given by this parameter. Note that the browser won't
-    attempt to load this URL after a call to `pushState()`, but it might
-    attempt to load the URL later, for instance after the user restarts the browser. The
+  - : The new history entry's URL. Note that the browser won't
+    attempt to load this URL after a call to `pushState()`, but it may
+    attempt to load the URL later, for instance, after the user restarts the browser. The
     new URL does not need to be absolute; if it's relative, it's resolved relative to the
     current URL. The new URL must be of the same {{glossary("origin")}} as the current
     URL; otherwise, `pushState()` will throw an exception. If this parameter
@@ -73,7 +76,7 @@ But `pushState()` has a few advantages:
 - The new URL can be any URL in the same origin as the current URL. In contrast,
   setting {{domxref("window.location")}} keeps you at the same document only if you
   modify only the hash.
-- You don't have to change the URL if you don't want to. In contrast,
+- Changing the page's URL is optional. In contrast,
   setting `window.location = "#foo";` only creates a new history entry if the
   current hash isn't `#foo`.
 - You can associate arbitrary data with your new history entry. With the hash-based
@@ -113,6 +116,5 @@ window.history.pushState({}, '', url);
 
 ## See also
 
-- [Working with
-  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)
 - [Window: popstate event](/en-US/docs/Web/API/Window/popstate_event)

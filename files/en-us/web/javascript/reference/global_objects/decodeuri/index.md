@@ -13,6 +13,7 @@ tags:
   - decoding
 browser-compat: javascript.builtins.decodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`decodeURI()`** function decodes
@@ -23,7 +24,7 @@ a Uniform Resource Identifier (URI) previously created by {{jsxref("encodeURI",
 
 ## Syntax
 
-```js
+```js-nolint
 decodeURI(encodedURI)
 ```
 
@@ -46,7 +47,7 @@ Throws an {{jsxref("URIError")}} ("malformed URI sequence") exception when
 
 Replaces each escape sequence in the encoded URI with the character that it represents,
 but does not decode escape sequences that could not have been introduced by
-{{jsxref("encodeURI")}}. The character "`#`" is not decoded from escape
+{{jsxref("encodeURI")}}. The character `#` is not decoded from escape
 sequences.
 
 ## Examples
@@ -63,7 +64,7 @@ decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D
 ```js
 try {
   const a = decodeURI('%E0%A4%A');
-} catch(e) {
+} catch (e) {
   console.error(e);
 }
 

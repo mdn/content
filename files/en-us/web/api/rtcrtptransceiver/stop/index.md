@@ -1,6 +1,7 @@
 ---
 title: RTCRtpTransceiver.stop()
 slug: Web/API/RTCRtpTransceiver/stop
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -13,6 +14,7 @@ tags:
   - stop
 browser-compat: api.RTCRtpTransceiver.stop
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`stop()`** method in the
@@ -20,17 +22,15 @@ The **`stop()`** method in the
 stopping both the associated {{domxref("RTCRtpSender")}} and
 {{domxref("RTCRtpReceiver")}}.
 
-> **Note:** Until recently, the {{domxref("RTCRtpTransceiver.stopped",
-    "stopped")}} property was provided to return `true` if the connection is
+> **Note:** Until recently, the {{domxref("RTCRtpTransceiver.stopped", "stopped")}} property was provided to return `true` if the connection is
 > stopped. That property has been deprecated and will be removed at some point. Instead,
-> check the value of {{domxref("RTCRtpTransceiver.currentDirection",
-    "currentDirection")}}. If it's `stopped`, the transceiver has been stopped.
+> check the value of {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}}. If it's `stopped`, the transceiver has been stopped.
 
 This method does nothing if the transceiver is already stopped.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 
@@ -76,6 +76,5 @@ transceiver has been fully stopped.
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("MediaStreamTrack")}}

@@ -10,6 +10,7 @@ tags:
   - Specifications
   - Syntax
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 **{{Glossary("CSS")}}** (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is with a simple syntax example and also covers some key terms about the language.
@@ -56,7 +57,7 @@ As we have mentioned before, CSS is a language for specifying how documents are 
 
 A **document** is usually a text file structured using a markup language — {{Glossary("HTML")}} is the most common markup language, but you may also come across other markup languages such as {{Glossary("SVG")}} or {{Glossary("XML")}}.
 
-**Presenting** a document to a user means converting it into a form usable by your audience. {{Glossary("browser","Browsers")}}, like {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}}, or {{Glossary("Microsoft Edge","Edge")}} , are designed to present documents visually, for example, on a computer screen, projector, or printer.
+**Presenting** a document to a user means converting it into a form usable by your audience. {{Glossary("browser","Browsers")}}, like {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}}, or {{Glossary("Microsoft Edge","Edge")}}, are designed to present documents visually, for example, on a computer screen, projector, or printer.
 
 > **Note:** A browser is sometimes called a {{Glossary("User agent","user agent")}}, which basically means a computer program that represents a person inside a computer system. Browsers are the main type of user agents we think of when talking about CSS, however, they are not the only ones. There are other user agents available, such as those that convert HTML and CSS documents into PDFs to be printed.
 
@@ -70,12 +71,12 @@ For example, you can decide to have the main heading on your page to be shown as
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 ```
 
-- In the above example, the CSS rule opens with a {{Glossary("CSS Selector", "selector")}} . This _selects_ the HTML element that we are going to style. In this case, we are styling level one headings ({{htmlelement("h1")}}).
+- In the above example, the CSS rule opens with a {{Glossary("CSS Selector", "selector")}}. This _selects_ the HTML element that we are going to style. In this case, we are styling level one headings ({{htmlelement("h1")}}).
 - We then have a set of curly braces `{ }`.
 - Inside the braces will be one or more **declarations**, which take the form of **property** and **value** pairs. We specify the property (`color` in the above example) before the colon, and we specify the value of the property after the colon (`red` in this example).
 - This example contains two declarations, one for `color` and the other for `font-size`. Each pair specifies a property of the element(s) we are selecting ({{htmlelement("h1")}} in this case), then a value that we'd like to give the property.
@@ -86,12 +87,12 @@ A CSS stylesheet will contain many such rules, written one after the other.
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 
 p {
-    color: black;
+  color: black;
 }
 ```
 
@@ -121,11 +122,9 @@ As a newcomer to CSS, it is likely that you will find the CSS specs overwhelming
 
 After a CSS feature has been specified, then it is only useful for us in developing web pages if one or more browsers have implemented the feature. This means that the code has been written to turn the instruction in our CSS file into something that can be output to the screen. We'll look at this process more in the lesson [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works). It is unusual for all browsers to implement a feature at the same time, and so there is usually a gap where you can use some part of CSS in some browsers and not in others. For this reason, being able to check implementation status is useful.
 
-The browser support status is shown on every MDN CSS property page in a section named "Browser compatibility" — use information in this section to check if the property can be used on your website. For example, the compatibility section for the CSS [`font-family`](/en-US/docs/Web/CSS/font-family) property is reproduced below. Based on your requirements, you can use the Browser compatibility table to check how this property is supported across various browsers, or check if your specific browser and the version you have support the property, or if there are any caveats you should be aware of for the browser and version you are using.
+The browser support status is shown on every MDN CSS property page in a table named "Browser compatibility". Consult the information in that table to check if the property can be used on your website. For an example, see the [browser compatibility table for the CSS `font-family` property](/en-US/docs/Web/CSS/font-family#browser_compatibility).
 
-### Browser compatibility
-
-{{Compat("css.properties.font-family")}}
+Based on your requirements, you can use the browser compatibility table to check how this property is supported across various browsers, or check if your specific browser and the version you have support the property, or if there are any caveats you should be aware of for the browser and version you are using.
 
 ## Summary
 

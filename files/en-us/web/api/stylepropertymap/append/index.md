@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap.append()
 slug: Web/API/StylePropertyMap/append
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -9,8 +10,10 @@ tags:
   - Reference
   - StylePropertyMap
   - append()
+  - Experimental
 browser-compat: api.StylePropertyMap.append
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`append()`** method of the
@@ -19,7 +22,7 @@ The **`append()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 append(property, value)
 ```
 

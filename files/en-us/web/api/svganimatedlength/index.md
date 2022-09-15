@@ -1,12 +1,14 @@
 ---
 title: SVGAnimatedLength
 slug: Web/API/SVGAnimatedLength
+page-type: web-api-interface
 tags:
   - API
   - Reference
   - SVG
 browser-compat: api.SVGAnimatedLength
 ---
+
 {{APIRef("SVG")}}
 
 The `SVGAnimatedLength` interface represents attributes of type [\<length>](/en-US/docs/Web/SVG/Content_type#length) which can be animated.

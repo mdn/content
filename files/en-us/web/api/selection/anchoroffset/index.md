@@ -1,6 +1,7 @@
 ---
 title: Selection.anchorOffset
 slug: Web/API/Selection/anchorOffset
+page-type: web-api-instance-property
 tags:
   - API
   - HTML Editing
@@ -10,6 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.anchorOffset
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.anchorOffset`** read-only property returns the

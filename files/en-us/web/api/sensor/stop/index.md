@@ -1,6 +1,7 @@
 ---
 title: Sensor.stop()
 slug: Web/API/Sensor/stop
+page-type: web-api-instance-method
 tags:
   - API
   - Generic Sensor API
@@ -12,6 +13,7 @@ tags:
   - stop()
 browser-compat: api.Sensor.stop
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`stop`** method of the
@@ -19,7 +21,7 @@ The **`stop`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 

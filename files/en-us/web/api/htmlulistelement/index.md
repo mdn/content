@@ -1,6 +1,7 @@
 ---
 title: HTMLUListElement
 slug: Web/API/HTMLUListElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLUListElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLUListElement`** interface provides special properties (beyond those defined on the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating unordered list elements.

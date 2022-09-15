@@ -1,6 +1,7 @@
 ---
 title: Range.cloneRange()
 slug: Web/API/Range/cloneRange
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.cloneRange
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Range.cloneRange()`** method returns a
@@ -19,7 +21,7 @@ The returned clone is copied by value, not reference, so a change in either
 
 ## Syntax
 
-```js
+```js-nolint
 cloneRange()
 ```
 
@@ -29,7 +31,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A {{domxref("Range")}} object.
 
 ## Examples
 

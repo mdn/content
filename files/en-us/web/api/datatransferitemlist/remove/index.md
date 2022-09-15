@@ -1,6 +1,7 @@
 ---
 title: DataTransferItemList.remove()
 slug: Web/API/DataTransferItemList/remove
+page-type: web-api-instance-method
 tags:
   - API
   - DataTransferItemList
@@ -12,6 +13,7 @@ tags:
   - remove
 browser-compat: api.DataTransferItemList.remove
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItemList.remove()`** method removes the
@@ -21,7 +23,7 @@ be changed.
 
 ## Syntax
 
-```js
+```js-nolint
 remove(index)
 ```
 
@@ -51,9 +53,10 @@ This example shows the use of the `remove()` method.
 
 ```html
 <div>
- <p id="source" draggable="true">
-   Select this element, drag it to the Drop Zone
-   and then release the selection to move the element.</p>
+  <p id="source" draggable="true">
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
 </div>
 <div id="target">Drop Zone</div>
 ```
@@ -86,7 +89,7 @@ function dragstart_handler(ev) {
   const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, 'text/plain');
   // Add some other items to the drag payload
-  dataList.add('<p>... paragraph ...</p>', 'text/html');
+  dataList.add('<p>Paragraph…</p>', 'text/html');
   dataList.add('http://www.example.org','text/uri-list');
 }
 
@@ -96,23 +99,23 @@ function drop_handler(ev) {
   const data = event.dataTransfer.items;
   // Loop through the dropped items and log their data
   for (const item of data) {
-    if ((item.kind == 'string') &&
+    if ((item.kind === 'string') &&
         (item.type.match('^text/plain'))) {
       // This item is the target node
-      item.getAsString(function (s){
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((item.kind == 'string') &&
+    } else if ((item.kind === 'string') &&
                (item.type.match('^text/html'))) {
       // Drag data item is HTML
-      item.getAsString(function (s){
-        console.log('... Drop: HTML = ' + s);
+      item.getAsString((s) => {
+        console.log(`… Drop: HTML = ${s}`);
       });
-    } else if ((item.kind == 'string') &&
+    } else if ((item.kind === 'string') &&
                (item.type.match('^text/uri-list'))) {
       // Drag data item is URI
-      item.getAsString(function (s){
-        console.log('... Drop: URI = ' + s);
+      item.getAsString((s) => {
+        console.log(`… Drop: URI = ${s}`);
       });
     }
   }

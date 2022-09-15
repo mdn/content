@@ -1,10 +1,10 @@
 ---
 title: MediaSource.removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - MediaSource
@@ -14,7 +14,8 @@ tags:
   - removeSourceBuffer
 browser-compat: api.MediaSource.removeSourceBuffer
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`removeSourceBuffer()`** method of the
 {{domxref("MediaSource")}} interface removes the given {{domxref("SourceBuffer")}} from
@@ -23,7 +24,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 removeSourceBuffer(sourceBuffer)
 ```
 
@@ -39,13 +40,13 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `NotFoundError` {{domxref("DOMException")}}
-  - :  Thrown if the supplied sourceBuffer doesn't exist in {{domxref("MediaSource.sourceBuffers")}}.
+  - : Thrown if the supplied sourceBuffer doesn't exist in {{domxref("MediaSource.sourceBuffers")}}.
 
 ## Examples
 
 ```js
-for (i = 0; i < 10; i++) {
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+for (let i = 0; i < 10; i++) {
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
 }
 
 mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);

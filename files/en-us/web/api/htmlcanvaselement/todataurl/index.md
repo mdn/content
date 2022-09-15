@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement.toDataURL()`** method returns a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) containing a representation of the image in the format specified by the `type` parameter.
@@ -17,13 +19,13 @@ The desired file format and image quality may be specified.
 If the file format is not specified, or if the given format is not supported, then the data will be exported as `image/png`.
 In other words, if the returned value starts with `data:image/png` for any other requested `type`, then that format is not supported.
 
-Browsers are required to support `image/png`; many will support additional formats including `image/jpg` and `image/webp`.
+Browsers are required to support `image/png`; many will support additional formats including `image/jpeg` and `image/webp`.
 
 The created image data will have a resolution of 96dpi for file formats that support encoding resolution metadata.
 
 ## Syntax
 
-```js
+```js-nolint
 toDataURL()
 toDataURL(type)
 toDataURL(type, encoderOptions)
@@ -61,8 +63,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get a data-URL of the canvas with the following lines:
 
 ```js
-var canvas = document.getElementById('canvas');
-var dataURL = canvas.toDataURL();
+const canvas = document.getElementById('canvas');
+const dataURL = canvas.toDataURL();
 console.log(dataURL);
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
 // blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
@@ -71,10 +73,10 @@ console.log(dataURL);
 ### Setting image quality with jpegs
 
 ```js
-var fullQuality = canvas.toDataURL('image/jpeg', 1.0);
-// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
-var mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
-var lowQuality = canvas.toDataURL('image/jpeg', 0.1);
+const fullQuality = canvas.toDataURL('image/jpeg', 1.0);
+// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ…9oADAMBAAIRAxEAPwD/AD/6AP/Z"
+const mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
+const lowQuality = canvas.toDataURL('image/jpeg', 0.1);
 ```
 
 ### Example: Dynamically change images
@@ -103,11 +105,11 @@ function showGrayImg() {
 }
 
 function removeColors() {
-  var aImages = document.getElementsByClassName('grayscale'),
+  const aImages = document.getElementsByClassName('grayscale'),
       nImgsLen = aImages.length,
       oCanvas = document.createElement('canvas'),
       oCtx = oCanvas.getContext('2d');
-  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
+  for (let nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
     oColorImg = aImages[nImgId];
     nWidth = oColorImg.offsetWidth;
     nHeight = oColorImg.offsetHeight;

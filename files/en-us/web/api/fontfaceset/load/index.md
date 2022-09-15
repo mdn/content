@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet.load()
 slug: Web/API/FontFaceSet/load
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Font Loading API
@@ -10,14 +11,14 @@ tags:
   - Reference
 browser-compat: api.FontFaceSet.load
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
-The `load()` method of the {{domxref("FontFaceSet")}} forces all the fonts
-given in parameters to be loaded.
+The `load()` method of the {{domxref("FontFaceSet")}} forces all the fonts given in parameters to be loaded.
 
 ## Syntax
 
-```js
+```js-nolint
 load(font)
 load(font, text)
 ```
@@ -40,7 +41,7 @@ failed to load.
 The following example returns a promise that will be fulfilled or rejected according the success of loading "MyFont". The code in `then()` can assume the availability of that font.
 
 ```js
-document.fonts.load("12px MyFont", "ß").then(…);
+document.fonts.load("12px MyFont", "ß").then(/* ... */);
 ```
 
 ## Specifications

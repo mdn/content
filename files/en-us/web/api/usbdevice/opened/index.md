@@ -1,6 +1,7 @@
 ---
 title: USBDevice.opened
 slug: Web/API/USBDevice/opened
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - opened
+  - Experimental
 browser-compat: api.USBDevice.opened
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`opened`** read only property of the
@@ -32,21 +35,21 @@ set a specified LED color.
 > to each device.
 
 ```js
-async setDeviceColor(usbDevice, r, g, b) {
-   if (device.opened) {
-     // This hypothetical USB device requires that the data passed to
-     // it be in a Uint8Array.
-     let payload = new Uint8Array([r, g, b]);
+async function setDeviceColor(usbDevice, r, g, b) {
+  if (device.opened) {
+    // This hypothetical USB device requires that the data passed to
+    // it be in a Uint8Array.
+    const payload = new Uint8Array([r, g, b]);
 
-     await usbDevice.controlTransferOut({
-       requestType: 'vendor',
-       recipient: 'device',
-       request: 1,
-       value: 0,
-       index: 0,
-     }, payload);
-   }
- }
+    await usbDevice.controlTransferOut({
+      requestType: 'vendor',
+      recipient: 'device',
+      request: 1,
+      value: 0,
+      index: 0,
+    }, payload);
+  }
+}
 ```
 
 ## Specifications

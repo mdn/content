@@ -1,6 +1,7 @@
 ---
 title: DOMPoint.w
 slug: Web/API/DOMPoint/w
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -14,6 +15,7 @@ tags:
   - perspective
 browser-compat: api.DOMPoint.w
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint`** interface's

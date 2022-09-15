@@ -1,12 +1,14 @@
 ---
 title: 'SpeechRecognition: soundend event'
 slug: Web/API/SpeechRecognition/soundend_event
+page-type: web-api-event
 tags:
   - Event
   - Reference
   - Web Speech API
 browser-compat: api.SpeechRecognition.soundend_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`soundend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when any sound — recognizable speech or not — has stopped being detected.
@@ -16,9 +18,9 @@ The **`soundend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('soundend', event => { })
+addEventListener('soundend', (event) => { })
 
-onsoundend = event => { }
+onsoundend = (event) => { }
 ```
 
 ## Event type
@@ -30,9 +32,9 @@ A generic {{DOMxRef("Event")}} with no added properties.
 You can use the `soundend` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('soundend', function(event) {
+recognition.addEventListener('soundend', (event) => {
   console.log('Sound has stopped being received');
 });
 ```
@@ -40,7 +42,7 @@ recognition.addEventListener('soundend', function(event) {
 Or use the `onsoundend` event handler property:
 
 ```js
-recognition.onsoundend = function(event) {
+recognition.onsoundend = (event) => {
   console.log('Sound has stopped being received');
 }
 ```

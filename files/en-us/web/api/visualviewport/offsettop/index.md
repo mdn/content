@@ -1,6 +1,7 @@
 ---
 title: VisualViewport.offsetTop
 slug: Web/API/VisualViewport/offsetTop
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - viewport
 browser-compat: api.VisualViewport.offsetTop
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`offsetTop`** read-only property of the

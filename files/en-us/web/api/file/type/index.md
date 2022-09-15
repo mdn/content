@@ -1,6 +1,7 @@
 ---
 title: File.type
 slug: Web/API/File/type
+page-type: web-api-instance-property
 tags:
   - API
   - File API
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.File.type
 ---
+
 {{APIRef("File API")}}
 
 Returns the media type ([MIME](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) of the file represented by a {{domxref("File")}} object.
@@ -51,7 +53,7 @@ filepicker.addEventListener('change', (event) => {
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 > **Note:** Based on the current implementation, browsers won't actually read the bytestream of a file to determine its media type.
 > It is assumed based on the file extension; a PNG image file renamed to .txt would give "_text/plain_" and not "_image/png_". Moreover, `file.type` is generally reliable only for common file types like images, HTML documents, audio and video.
@@ -68,5 +70,5 @@ filepicker.addEventListener('change', (event) => {
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - Blog Post: [Be skeptical of client-reported MIME types](https://textslashplain.com/2018/07/26/be-skeptical-of-client-reported-mime-content-types/)

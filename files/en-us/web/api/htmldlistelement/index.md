@@ -1,6 +1,7 @@
 ---
 title: HTMLDListElement
 slug: Web/API/HTMLDListElement
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLDListElement
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLDListElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating definition list ({{HtmlElement("dl")}}) elements.

@@ -1,6 +1,7 @@
 ---
 title: Element.setAttributeNS()
 slug: Web/API/Element/setAttributeNS
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.setAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNS` adds a new attribute or changes the value of an attribute
@@ -16,7 +18,7 @@ with the given namespace and name.
 
 ## Syntax
 
-```js
+```js-nolint
 setAttributeNS(namespace, name, value)
 ```
 

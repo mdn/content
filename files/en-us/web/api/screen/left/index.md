@@ -1,6 +1,7 @@
 ---
 title: Screen.left
 slug: Web/API/Screen/left
+page-type: web-api-instance-property
 tags:
   - API
   - API:Microsoft Extensions
@@ -11,6 +12,7 @@ tags:
   - Property
 browser-compat: api.Screen.left
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 Returns the distance in pixels from the left side of the main screen to the left side

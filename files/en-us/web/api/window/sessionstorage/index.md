@@ -1,6 +1,7 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
+page-type: web-api-instance-property
 tags:
   - APIs
   - Property
@@ -11,6 +12,7 @@ tags:
   - sessionStorage
 browser-compat: api.Window.sessionStorage
 ---
+
 {{APIRef("Web Storage API")}}
 
 The read-only **`sessionStorage`**
@@ -93,7 +95,7 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // Listen for changes in the text field
-field.addEventListener("change", function() {
+field.addEventListener("change", () => {
   // And save the results into the session storage object
   sessionStorage.setItem("autosave", field.value);
 });

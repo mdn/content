@@ -5,6 +5,7 @@ tags:
   - Accessibility
   - keyboard
 ---
+
 To be fully accessible, a web page must be operable by someone using only a keyboard to access and control it. This includes users of screen readers, but can also include users who have trouble operating a pointing device such as a mouse or trackball, or whose mouse is not working at the moment, or who prefer to use a keyboard for input whenever possible.
 
 ## Focusable elements should have interactive semantics
@@ -18,8 +19,8 @@ Most interactive elements are focusable by default; you can make an element focu
 ### See also
 
 - [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
-- Global event handlers: [onkeydown](/en-US/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Global event handlers: [onkeyup](/en-US/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
+- Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
 ## Avoid using `tabindex` attribute greater than zero
 
@@ -42,8 +43,8 @@ An element is clickable if it has an `onclick` event handler defined. You can ma
 ### See also
 
 - [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
-- Global event handlers: [onkeydown](/en-US/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Global event handlers: [onkeyup](/en-US/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
+- Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
 ## Interactive elements must be able to be activated using a keyboard
 
@@ -51,8 +52,8 @@ If the user can interact with an element using touch or a pointing device, then 
 
 ### See also
 
-- Global event handlers: [onkeydown](/en-US/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Global event handlers: [onkeyup](/en-US/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
+- Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
 ## Interactive elements must be focusable
 
@@ -64,7 +65,7 @@ If the user can interact with an element (for example, using touch or a pointing
 
 ## Focusable element must have focus styling
 
-Any element that can receive keyboard focus should have visible styling that indicates when the element is focused. You can do this with the [`:focus`](/en-US/docs/Web/CSS/:focus) CSS pseudo-class.
+Any element that can receive keyboard focus should have visible styling that indicates when the element is focused. You can do this with the [`:focus`](/en-US/docs/Web/CSS/:focus) and [`:focus-visible`](/en-US/docs/Web/CSS/:focus-visible) CSS pseudo-classes.
 
 Standard focusable elements such as links and input fields are given special styling by the browser by default, so you might not need to specify focus styling for such elements, unless you want the focus styling to be more distinctive.
 

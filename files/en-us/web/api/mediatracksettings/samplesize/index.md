@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.sampleSize
 slug: Web/API/MediaTrackSettings/sampleSize
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -15,6 +16,7 @@ tags:
   - sampleSize
 browser-compat: api.MediaTrackSettings.sampleSize
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
@@ -38,16 +40,13 @@ commonly used sample size for many years now is 16 bits per sample, which was us
 CD audio among others. Other common sample sizes are 8 (for reduced bandwidth
 requirements) and 24 (for high-resolution professional audio).
 
-Each audio channel on the track requires sampleSize bits. That means that a given
-sample actually uses
-(`sampleSize`/8)\*{{domxref("MediaTrackSettings.channelCount",
-  "channelCount")}} bytes of data. For example, 16-bit stereo audio requires (16/8)\*2 or 4
-bytes per sample.
+Each audio channel on the track requires sampleSize bits.
+That means that a given sample actually uses (`sampleSize`/8)\*{{domxref("MediaTrackSettings.channelCount","channelCount")}} bytes of data.
+For example, 16-bit stereo audio requires (16/8)\*2 or 4 bytes per sample.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
 
 ## Specifications
 
@@ -60,7 +59,6 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.sampleSize")}}
 - {{domxref("MediaTrackSettings")}}

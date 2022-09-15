@@ -1,6 +1,7 @@
 ---
 title: TextTrackCue.id
 slug: Web/API/TextTrackCue/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.id
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`id`** property of the {{domxref("TextTrackCue")}} interface returns and sets the identifier for this cue.

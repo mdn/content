@@ -7,9 +7,11 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-property
+  - Experimental
 browser-compat: css.properties.animation-timeline
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the names of one or more {{cssxref("@scroll-timeline")}} at-rules describing the scroll animations to apply to the element.
 
@@ -78,7 +80,8 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 
 #square {
   background-color: deeppink;
-  width: 100px; height: 100px;
+  width: 100px;
+  height: 100px;
   margin-top: 100px;
   animation-name: rotateAnimation;
   animation-duration: 3s;
@@ -87,9 +90,9 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 }
 
 @scroll-timeline squareTimeline {
-  source: selector('#container');
+  source: selector("#container");
   orientation: "vertical";
-  scroll-offsets:  0px, 300px;
+  scroll-offsets: 0px, 300px;
 }
 
 @keyframes rotateAnimation {

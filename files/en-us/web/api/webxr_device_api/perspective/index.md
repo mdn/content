@@ -1,6 +1,7 @@
 ---
 title: A perspective retrospective for WebXR developers
 slug: Web/API/WebXR_Device_API/Perspective
+page-type: guide
 tags:
   - 3D
   - API
@@ -17,6 +18,7 @@ tags:
   - augmented
   - perspective
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 Because [WebXR](/en-US/docs/Web/API/WebXR_Device_API) uses [WebGL](/en-US/docs/Web/API/WebGL_API) to render the views that form the 3D environment displayed using the XR hardware, it's easy to think that the perspective-related matters are identical to those found in any WebGL project. This is largely true, but there are a few specific topics that need to be revisited and some minor additional guidelines considered in order to ensure that your app looks right and, more importantly, that your 3D world doesn't cause people to become ill from vertigo or other effects that can be caused when what's being seen doesn't match what the brain expects from reality.
@@ -33,7 +35,7 @@ The majority of these values define the XR device's [viewing frustum](/en-US/doc
 
 Most of the time, the projection model you'll use is the perspective projection model, so its projection matrix is called the **[perspective projection matrix](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#perspective_projection_matrix)**. This matrix is used to map each pixel from the 3D virtual world to a point in the 2D backbuffer for the view being rendered.
 
-Under typical circumstances, you can and should get the perspective projection matrix directly from the view you're rendering. The {{domxref("XRView")}} object's {{domxref("XRView.projectionMatrix", "projectionMatrix")}} property holds the projection matrix representing the view's perspective, and should almost always be used without alteration. Changes made to the projection matrix provided by the `XRView` are likely to result in distortion or poor alignment of the rendered content relative to the real-world scenery; this could be significant enough to cause {{interwiki("wikipedia", "virtual reality sickness")}} in at least some of your users.
+Under typical circumstances, you can and should get the perspective projection matrix directly from the view you're rendering. The {{domxref("XRView")}} object's {{domxref("XRView.projectionMatrix", "projectionMatrix")}} property holds the projection matrix representing the view's perspective, and should almost always be used without alteration. Changes made to the projection matrix provided by the `XRView` are likely to result in distortion or poor alignment of the rendered content relative to the real-world scenery; this could be significant enough to cause [virtual reality sickness](https://en.wikipedia.org/wiki/Virtual_reality_sickness) in at least some of your users.
 
 For example, if your app uses a WebGL uniform named `uProjectionMatrix` to pass the projection matrix to your shaders, you might use code like this to pass the projection matrix for the `view` currently being rendered:
 
@@ -55,8 +57,8 @@ Once you have the viewing frustum, you can compute the perspective projection ma
 
 ```js
 function makePerspectiveMatrix(fieldOfViewInRadians, aspectRatio, near, far) {
-  var f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
-  var rangeInv = 1 / (near - far);
+  const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
+  const rangeInv = 1 / (near - far);
 
   return [
     f / aspectRatio, 0,                          0,   0,

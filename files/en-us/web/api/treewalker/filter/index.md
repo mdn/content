@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.filter
 slug: Web/API/TreeWalker/filter
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.filter
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.filter`** read-only property returns a
@@ -25,10 +27,10 @@ A {{domxref("NodeFilter")}} object.
 ## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 nodeFilter = treeWalker.filter; // document.body in this case

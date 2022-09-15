@@ -1,6 +1,7 @@
 ---
 title: AudioParam.defaultValue
 slug: Web/API/AudioParam/defaultValue
+page-type: web-api-instance-property
 tags:
   - API
   - AudioParam
@@ -10,6 +11,7 @@ tags:
   - defaultValue
 browser-compat: api.AudioParam.defaultValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`defaultValue`**

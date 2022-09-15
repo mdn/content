@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.set()
 slug: Web/API/URLSearchParams/set
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - set
 browser-compat: api.URLSearchParams.set
 ---
+
 {{ApiRef("URL API")}}
 
 The **`set()`** method of the {{domxref("URLSearchParams")}}
@@ -20,7 +22,7 @@ parameter doesn't exist, this method creates it.
 
 ## Syntax
 
-```js
+```js-nolint
 set(name, value)
 ```
 

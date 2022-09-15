@@ -1,6 +1,7 @@
 ---
 title: Window.scrollMaxY
 slug: Web/API/Window/scrollMaxY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM_0
@@ -14,6 +15,7 @@ tags:
   - Window
 browser-compat: api.Window.scrollMaxY
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 The **`Window.scrollMaxY`** read-only property returns the

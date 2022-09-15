@@ -1,6 +1,7 @@
 ---
 title: URL.port
 slug: Web/API/URL/port
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - port
 browser-compat: api.URL.port
 ---
+
 {{ApiRef("URL API")}}
 
 The **`port`** property of the {{domxref("URL")}} interface is

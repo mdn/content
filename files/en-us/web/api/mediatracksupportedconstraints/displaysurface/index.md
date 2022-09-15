@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.displaySurface
 slug: Web/API/MediaTrackSupportedConstraints/displaySurface
+page-type: web-api-instance-property
 tags:
   - API
   - Capture
@@ -20,22 +21,16 @@ tags:
   - screen
 browser-compat: api.MediaTrackSupportedConstraints.displaySurface
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
-**`displaySurface`** property indicates whether or not the
-{{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is
-supported by the user agent and the device on which the content is being used.
+The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`displaySurface`** property indicates whether or not the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is supported by the user agent and the device on which the content is being used.
 
-The supported constraints list is obtained by calling
-{{domxref("MediaDevices.getSupportedConstraints",
-  "navigator.mediaDevices.getSupportedConstraints()")}}.
+The supported constraints list is obtained by calling {{domxref("MediaDevices.getSupportedConstraints","navigator.mediaDevices.getSupportedConstraints()")}}.
 
 ## Value
 
-A Boolean value which is `true` if the
-{{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is
-supported by the device and user agent.
+A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is supported by the device and user agent.
 
 ## Examples
 
@@ -50,9 +45,8 @@ element referenced by the variable `videoElem`.
 async function capture() {
   let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
   let displayMediaOptions = {
-    video: {
-    },
-    audio: false;
+    video: {},
+    audio: false
   };
 
   if (supportedConstraints.displaySurface) {
@@ -61,7 +55,7 @@ async function capture() {
 
   try {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -78,10 +72,8 @@ async function capture() {
 ## See also
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
-- [Using the
-  screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Using the screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("MediaStreamTrack.getConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}

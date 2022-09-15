@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.close()
 slug: Web/API/RTCPeerConnection/close
+page-type: web-api-instance-method
 tags:
   - Method
   - RTCPeerConnection
@@ -17,8 +18,8 @@ peer connection.
 
 ## Syntax
 
-```js
-peerConnection.close();
+```js-nolint
+close()
 ```
 
 _This method has no parameters, and returns nothing._
@@ -40,19 +41,19 @@ browser.
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
-dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+dc.onmessage = (event) => {
+  console.log(`received: ${event.data}`);
   pc.close(); // We decided to close after the first received message
 };
 
-dc.onopen = function () {
+dc.onopen = () => {
   console.log("datachannel open");
 };
 
-dc.onclose = function () {
+dc.onclose = () => {
   console.log("datachannel close");
 };
 ```

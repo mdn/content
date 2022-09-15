@@ -1,6 +1,7 @@
 ---
 title: TextEncoder.encoding
 slug: Web/API/TextEncoder/encoding
+page-type: web-api-instance-property
 tags:
   - API
   - Encoding
@@ -10,6 +11,7 @@ tags:
   - TextEncoder
 browser-compat: api.TextEncoder.encoding
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextEncoder.encoding`** read-only property returns a

@@ -1,6 +1,7 @@
 ---
 title: Request.arrayBuffer()
 slug: Web/API/Request/arrayBuffer
+page-type: web-api-instance-method
 tags:
   - API
   - ArrayBuffer
@@ -10,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.arrayBuffer
 ---
+
 {{APIRef("Fetch")}}
 
 The **`arrayBuffer()`** method of the {{domxref("Request")}} interface
@@ -17,7 +19,7 @@ reads the request body and returns it as a promise that resolves with an {{jsxre
 
 ## Syntax
 
-```js
+```js-nolint
 arrayBuffer()
 ```
 
@@ -39,7 +41,7 @@ const request = new Request('/myEndpoint', {
   body: myArray
 });
 
-request.arrayBuffer().then(function(buffer) {
+request.arrayBuffer().then((buffer) => {
   // do something with the buffer sent in the request
 });
 ```

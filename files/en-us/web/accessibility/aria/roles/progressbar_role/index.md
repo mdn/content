@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: progressbar role'
+title: "ARIA: progressbar role"
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
 tags:
   - Accessibility
@@ -41,7 +41,9 @@ For example, consider the following `progressbar` element, which contains a head
 Because descendants of `progressbar` are presentational, the following code is equivalent:
 
 ```html
-<div role="progressbar"><h3 role="presentation">Title of my progressbar</h3></div>
+<div role="progressbar">
+  <h3 role="presentation">Title of my progressbar</h3>
+</div>
 ```
 
 From the assistive technology user's perspective, the heading does not exist since the previous code snippets are equivalent to the following in the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree):
@@ -72,11 +74,9 @@ In the example below, the progress bar uses the default values of 0 and 100 for 
 ```html
 <div>
   <span id="loadinglabel">Loading:</span>
-  <span role="progressbar"
-        aria-labelledby="loadinglabel"
-        aria-valuenow="23" >
+  <span role="progressbar" aria-labelledby="loadinglabel" aria-valuenow="23">
     <svg width="100" height="10">
-      <rect height="10" width="100" stroke="black" fill="black"/>
+      <rect height="10" width="100" stroke="black" fill="black" />
       <rect height="10" width="23" fill="white" />
     </svg>
   </span>
@@ -116,6 +116,6 @@ It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

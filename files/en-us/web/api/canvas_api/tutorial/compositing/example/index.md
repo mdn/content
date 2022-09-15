@@ -1,14 +1,15 @@
 ---
 title: Compositing example
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
+page-type: guide
 tags:
   - Canvas
   - Example
   - Graphics
   - HTML
-  - HTML5
   - Tutorial
 ---
+
 {{CanvasSidebar}}
 
 This sample program demonstrates a number of [compositing operations](/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). The output looks like this:
@@ -20,15 +21,15 @@ This sample program demonstrates a number of [compositing operations](/en-US/doc
 This code sets up the global values used by the rest of the program.
 
 ```js
-var canvas1 = document.createElement("canvas");
-var canvas2 = document.createElement("canvas");
-var gco = [ 'source-over','source-in','source-out','source-atop',
+const canvas1 = document.createElement("canvas");
+const canvas2 = document.createElement("canvas");
+const gco = [ 'source-over','source-in','source-out','source-atop',
             'destination-over','destination-in','destination-out','destination-atop',
             'lighter', 'copy','xor', 'multiply', 'screen', 'overlay', 'darken',
             'lighten', 'color-dodge', 'color-burn', 'hard-light', 'soft-light',
             'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity'
           ].reverse();
-var gcoText = [
+const gcoText = [
 'This is the default setting and draws new shapes on top of the existing canvas content.',
 'The new shape is drawn only where both the new shape and the destination canvas overlap. Everything else is made transparent.',
 'The new shape is drawn where it doesn\'t overlap the existing canvas content.',
@@ -56,8 +57,8 @@ var gcoText = [
 'Preserves the luma of the bottom layer, while adopting the hue and chroma of the top layer.',
 'Preserves the hue and chroma of the bottom layer, while adopting the luma of the top layer.'
           ].reverse();
-var width = 320;
-var height = 340;
+const width = 320;
+const height = 340;
 ```
 
 ### Main program
@@ -65,9 +66,9 @@ var height = 340;
 When the page loads, this code runs to set up and run the example:
 
 ```js
-window.onload = function() {
+window.onload = () => {
     // lum in sRGB
-    var lum = {
+    const lum = {
         r: 0.33,
         g: 0.33,
         b: 0.33
@@ -88,8 +89,8 @@ And this code, `runComposite()`, handles the bulk of the work, relying on a numb
 
 ```js
 function createCanvas() {
-    var canvas = document.createElement("canvas");
-    canvas.style.background = "url("+op_8x8.data+")";
+    const canvas = document.createElement("canvas");
+    canvas.style.background = `url(${op_8x8.data})`;
     canvas.style.border = "1px solid #000";
     canvas.style.margin = "5px";
     canvas.width = width/2;
@@ -98,23 +99,23 @@ function createCanvas() {
 }
 
 function runComposite() {
-    var dl = document.createElement("dl");
+    const dl = document.createElement("dl");
     document.body.appendChild(dl);
     while(gco.length) {
-        var pop = gco.pop();
-        var dt = document.createElement("dt");
+        const pop = gco.pop();
+        const dt = document.createElement("dt");
         dt.textContent = pop;
         dl.appendChild(dt);
-        var dd = document.createElement("dd");
-        var p = document.createElement("p");
+        const dd = document.createElement("dd");
+        const p = document.createElement("p");
         p.textContent = gcoText.pop();
         dd.appendChild(p);
 
-        var canvasToDrawOn = createCanvas();
-        var canvasToDrawFrom = createCanvas();
-        var canvasToDrawResult = createCanvas();
+        const canvasToDrawOn = createCanvas();
+        const canvasToDrawFrom = createCanvas();
+        const canvasToDrawResult = createCanvas();
 
-        var ctx = canvasToDrawResult.getContext('2d');
+        let ctx = canvasToDrawResult.getContext('2d');
         ctx.clearRect(0, 0, width, height)
         ctx.save();
         ctx.drawImage(canvas1, 0, 0, width/2, height/2);
@@ -128,7 +129,7 @@ function runComposite() {
         ctx.fillText(pop, 5, height/2 - 5);
         ctx.restore();
 
-        var ctx = canvasToDrawOn.getContext('2d');
+        ctx = canvasToDrawOn.getContext('2d');
         ctx.clearRect(0, 0, width, height)
         ctx.save();
         ctx.drawImage(canvas1, 0, 0, width/2, height/2);
@@ -139,7 +140,7 @@ function runComposite() {
         ctx.fillText('existing content', 5, height/2 - 5);
         ctx.restore();
 
-        var ctx = canvasToDrawFrom.getContext('2d');
+        ctx = canvasToDrawFrom.getContext('2d');
         ctx.clearRect(0, 0, width, height)
         ctx.save();
         ctx.drawImage(canvas2, 0, 0, width/2, height/2);
@@ -164,8 +165,8 @@ function runComposite() {
 The program relies on a number of utility functions.
 
 ```js
-var lightMix = function() {
-    var ctx = canvas2.getContext("2d");
+const lightMix = () => {
+    const ctx = canvas2.getContext("2d");
     ctx.save();
     ctx.globalCompositeOperation = "lighter";
     ctx.beginPath();
@@ -189,19 +190,19 @@ var lightMix = function() {
 ```
 
 ```js
-var colorSphere = function(element) {
-    var ctx = canvas1.getContext("2d");
-    var width = 360;
-    var halfWidth = width / 2;
-    var rotate = (1 / 360) * Math.PI * 2; // per degree
-    var offset = 0; // scrollbar offset
-    var oleft = -20;
-    var otop = -20;
-    for (var n = 0; n <= 359; n ++) {
-        var gradient = ctx.createLinearGradient(oleft + halfWidth, otop, oleft + halfWidth, otop + halfWidth);
-        var color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
+const colorSphere = (element) => {
+    const ctx = canvas1.getContext("2d");
+    const width = 360;
+    const halfWidth = width / 2;
+    const rotate = (1 / 360) * Math.PI * 2; // per degree
+    const offset = 0; // scrollbar offset
+    const oleft = -20;
+    const otop = -20;
+    for (let n = 0; n <= 359; n ++) {
+        const gradient = ctx.createLinearGradient(oleft + halfWidth, otop, oleft + halfWidth, otop + halfWidth);
+        const color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
         gradient.addColorStop(0, "rgba(0,0,0,0)");
-        gradient.addColorStop(0.7, "rgba("+color.R+","+color.G+","+color.B+",1)");
+        gradient.addColorStop(0.7, `rgba(${color.R}, ${color.G}, ${color.B}, 1)`);
         gradient.addColorStop(1, "rgba(255,255,255,1)");
         ctx.beginPath();
         ctx.moveTo(oleft + halfWidth, otop);
@@ -224,17 +225,17 @@ var colorSphere = function(element) {
 ```js
 // HSV (1978) = H: Hue / S: Saturation / V: Value
 Color = {};
-Color.HSV_RGB = function (o) {
-    var H = o.H / 360,
-        S = o.S / 100,
-        V = o.V / 100,
-        R, G, B;
-    var A, B, C, D;
-    if (S == 0) {
+Color.HSV_RGB = (o) => {
+    const S = o.S / 100;
+    let H = o.H / 360,
+        V = o.V / 100;
+    let R, G;
+    let A, B, C, D;
+    if (S === 0) {
         R = G = B = Math.round(V * 255);
     } else {
         if (H >= 1) H = 0;
-        H = 6 * H;
+        H *= 6;
         D = H - Math.floor(H);
         A = Math.round(255 * V * (1 - S));
         B = Math.round(255 * V * (1 - (S * D)));
@@ -273,15 +274,11 @@ Color.HSV_RGB = function (o) {
                 break;
         }
     }
-    return {
-        R: R,
-        G: G,
-        B: B
-    };
+    return { R, G, B };
 };
 
-var createInterlace = function (size, color1, color2) {
-    var proto = document.createElement("canvas").getContext("2d");
+const createInterlace = (size, color1, color2) => {
+    const proto = document.createElement("canvas").getContext("2d");
     proto.canvas.width = size * 2;
     proto.canvas.height = size * 2;
     proto.fillStyle = color1; // top-left
@@ -292,10 +289,10 @@ var createInterlace = function (size, color1, color2) {
     proto.fillRect(0, size, size, size);
     proto.fillStyle = color1; // bottom-right
     proto.fillRect(size, size, size, size);
-    var pattern = proto.createPattern(proto.canvas, "repeat");
+    const pattern = proto.createPattern(proto.canvas, "repeat");
     pattern.data = proto.canvas.toDataURL();
     return pattern;
 };
 
-var op_8x8 = createInterlace(8, "#FFF", "#eee");
+const op_8x8 = createInterlace(8, "#FFF", "#eee");
 ```

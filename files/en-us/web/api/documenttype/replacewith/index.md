@@ -1,6 +1,7 @@
 ---
 title: DocumentType.replaceWith()
 slug: Web/API/DocumentType/replaceWith
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,16 +10,17 @@ tags:
   - Reference
 browser-compat: api.DocumentType.replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType.replaceWith()`** method replaces the document type with a set of given nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceWith(node1)
 replaceWith(node1, node2)
-replaceWith(node1, node2, /* ... ,*/ nodeN)
+replaceWith(node1, node2, /* … ,*/ nodeN)
 ```
 
 ### Parameters

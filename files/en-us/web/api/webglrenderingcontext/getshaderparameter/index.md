@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getShaderParameter()
 slug: Web/API/WebGLRenderingContext/getShaderParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getShaderParameter()`** method of
@@ -17,7 +19,7 @@ given shader.
 
 ## Syntax
 
-```js
+```js-nolint
 getShaderParameter(shader, pname)
 ```
 

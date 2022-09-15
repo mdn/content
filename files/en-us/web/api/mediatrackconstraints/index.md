@@ -1,6 +1,7 @@
 ---
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
+page-type: web-api-interface
 tags:
   - API
   - Constraints
@@ -18,6 +19,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaTrackConstraints`** dictionary is used to describe a set of capabilities and the value or values each can take on. A constraints dictionary is passed into {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.
@@ -99,7 +101,7 @@ Some combination—but not necessarily all—of the following properties will ex
   - : A [`ConstrainULong`](#constrainulong) specifying the sample rate or range of sample rates which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.sampleSize", "sampleSize")}}
   - : A [`ConstrainULong`](#constrainulong) specifying the sample size or range of sample sizes which are acceptable and/or required.
-- {{domxref("MediaTrackConstraints.volume", "volume")}}
+- {{domxref("MediaTrackConstraints.volume", "volume")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A [`ConstrainDouble`](#constraindouble) specifying the volume or range of volumes which are acceptable and/or required.
 
 ### Properties of image tracks
@@ -111,7 +113,7 @@ Some combination—but not necessarily all—of the following properties will ex
 - focusMode
   - : A {{jsxref("String")}} specifying one of `"none"`, `"manual"`, `"single-shot"`, or `"continuous"`.
 - pointsOfInterest
-  - : The pixel coordinates on the sensor of one or more points of interest. This is either an object in the form { x:_value_, y:*value* } or an array of such objects, where *value* is a double-precision integer.
+  - : The pixel coordinates on the sensor of one or more points of interest. This is either an object in the form { x:_value_, y:_value_ } or an array of such objects, where _value_ is a double-precision integer.
 - exposureCompensation
   - : A [`ConstrainDouble`](#constraindouble) (a double-precision integer) specifying f-stop adjustment by up to ±3.
 - colorTemperature

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.isNaN
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`isNaN()`** function determines whether a value is
@@ -18,7 +19,7 @@ want to use {{jsxref("Number.isNaN()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 isNaN(value)
 ```
 
@@ -67,24 +68,7 @@ a number", has a specific meaning for numbers represented as IEEE-754 floating-p
 values. The function should be interpreted as answering the question, "is this value,
 when coerced to a numeric value, an IEEE-754 'Not A Number' value?"
 
-ECMAScript 2015 contains the {{jsxref("Number.isNaN()")}} function.
-`Number.isNaN(x)` is a reliable way to test whether `x` is
-`NaN` or not. Even with `Number.isNaN`, however, the meaning of
-`NaN` remains the precise numeric meaning and not, "not a number".
-Alternatively, in the absence of `Number.isNaN`, the expression
-`(x != x)` is a more reliable way to test whether variable `x` is
-`NaN` or not, as the result is not subject to the false positives that make
-`isNaN` unreliable.
-
-A polyfill for `isNaN` would be (the polyfill leverages the unique
-never-equal-to-itself characteristic of `NaN`):
-
-```js
-const isNaN = function(value) {
-    const n = Number(value);
-    return n !== n;
-};
-```
+{{jsxref("Number.isNaN()")}} is a more reliable way to test whether a value is the number value `NaN` or not. Alternatively, the expression `x !== x` can be used, and both of the solutions are not subject to the false positives that make the global `isNaN()` unreliable.
 
 ## Examples
 

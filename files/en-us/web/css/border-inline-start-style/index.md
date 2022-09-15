@@ -13,6 +13,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-inline-start-style
 ---
+
 {{CSSRef}}
 
 The **`border-inline-start-style`** [CSS](/en-US/docs/Web/CSS) property defines the style of the logical inline start border of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.

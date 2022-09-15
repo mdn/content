@@ -9,6 +9,7 @@ spec-urls:
   - https://drafts.csswg.org/css-conditional-3/
   - https://compat.spec.whatwg.org/#css-at-rules
 ---
+
 {{CSSRef}}
 
 **At-rules** are [CSS statements](/en-US/docs/Web/CSS/Syntax#css_statements) that instruct CSS how to behave. They begin with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier and includes everything up to the next semicolon, '`;`' (`U+003B SEMICOLON`), or the next [CSS block](/en-US/docs/Web/CSS/Syntax#css_declarations_blocks), whichever comes first.
@@ -19,7 +20,7 @@ spec-urls:
 
 ```css
 /* General structure */
-@IDENTIFIER (RULE);
+@identifier (RULE);
 
 /* Example: tells browser to use UTF-8 character set */
 @charset "utf-8";
@@ -34,8 +35,7 @@ There are several regular at-rules, designated by their identifiers, each with a
 ### Nested
 
 ```css
-@IDENTIFIER (RULE) {
-
+@identifier (RULE) {
 }
 ```
 
@@ -51,7 +51,7 @@ A subset of nested statements, which can be used as a statement of a style sheet
 - {{cssxref("@counter-style")}} — Defines specific counter styles that are not part of the predefined set of styles. _(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)_
 - {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`) — Define common names in {{cssxref("font-variant-alternates")}} for feature activated differently in OpenType. _(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)_
 - {{cssxref("@property")}} {{experimental_inline}} — Describes the aspect of custom properties and variables. _(currently at the Working Draft stage)_
-- {{cssxref("@color-profile")}} {{experimental_inline}} — Allows a color profile to be defined for use by the {{cssxref("color_value/color", "color()")}} function.
+- {{cssxref("@layer")}} – Declares a cascade layer and defines the order of precedence in case of multiple cascade layers.
 
 ## Conditional group rules
 
@@ -68,13 +68,13 @@ Since each conditional group may also contain nested statements, there may be an
 ## Index
 
 - {{cssxref("@charset")}}
-- {{cssxref("@color-profile")}} {{experimental_inline}}
 - {{cssxref("@counter-style")}}
 - {{cssxref("@document")}} {{deprecated_inline}}
 - {{cssxref("@font-face")}}
 - {{cssxref("@font-feature-values")}}
 - {{cssxref("@import")}}
 - {{cssxref("@keyframes")}}
+- {{cssxref("@layer")}}
 - {{cssxref("@media")}}
 - {{cssxref("@namespace")}}
 - {{cssxref("@page")}}
@@ -88,4 +88,20 @@ Since each conditional group may also contain nested statements, there may be an
 
 ## See also
 
-- {{CSS_key_concepts}}
+- CSS key concepts:
+  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Values
+    - [Initial values](/en-US/docs/Web/CSS/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

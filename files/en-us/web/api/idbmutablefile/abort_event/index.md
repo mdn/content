@@ -1,6 +1,7 @@
 ---
 title: 'IDBMutableFile: abort event'
 slug: Web/API/IDBMutableFile/abort_event
+page-type: web-api-event
 tags:
   - API
   - Files
@@ -11,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBMutableFile.abort_event
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -25,8 +27,8 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('abort', event => { })
-onabort = event => { }
+addEventListener('abort', (event) => { })
+onabort = (event) => { }
 ```
 
 ## Event type

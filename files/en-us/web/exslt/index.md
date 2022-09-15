@@ -5,6 +5,7 @@ tags:
   - EXSLT
   - Landing
 ---
+
 EXSLT is a set of extensions to [XSLT](/en-US/docs/Web/XSLT). There are a number of modules; those that are supported by Firefox are listed below:
 
 {{SubpagesWithSummaries}}
@@ -18,9 +19,9 @@ To use an EXSLT function, you need to declare the namespace the function is in, 
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:regexp="http://exslt.org/regular-expressions">
   <xsl:template match="/">
-    ...
+    …
     <xsl:value-of select="regexp:replace(/root/@value, 'before', 'gi', 'AFTER')"/>
-    ...
+    …
   </xsl:template>
 
 </xsl:stylesheet>

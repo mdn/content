@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.msInsertAudioEffect()
 slug: Web/API/HTMLMediaElement/msInsertAudioEffect
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions
@@ -9,6 +10,7 @@ tags:
   - Reference
   - msInsertAudioEffect
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
 The **`HTMLMediaElement.msInsertAudioEffect()`** method inserts
@@ -18,7 +20,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
+```js-nolint
 msInsertAudioEffect(activatableClassId, effectRequired)
 msInsertAudioEffect(activatableClassId, effectRequired, config)
 ```

@@ -1,6 +1,7 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.doctype
 ---
+
 {{ApiRef("DOM")}}
 
 Returns the Document Type Declaration (DTD) associated with current document. The
@@ -25,14 +27,12 @@ A {{domxref("DocumentType")}} object.
 ## Examples
 
 ```js
-var doctypeObj = document.doctype;
+const doctypeObj = document.doctype;
 
-console.log(
-  "doctypeObj.name: "           + doctypeObj.name            + "\n" +
-  "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
-  "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
-  "doctypeObj.systemId: "       + doctypeObj.systemId
-);
+console.log(`doctypeObj.name: ${doctypeObj.name}`);
+console.log(`doctypeObj.internalSubset: ${doctypeObj.internalSubset}`);
+console.log(`doctypeObj.publicId: ${doctypeObj.publicId}`);
+console.log(`doctypeObj.systemId: ${doctypeObj.systemId}`);
 ```
 
 ## Notes

@@ -1,6 +1,7 @@
 ---
 title: CSSGroupingRule.deleteRule()
 slug: Web/API/CSSGroupingRule/deleteRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSGroupingRule.deleteRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`deleteRule()`** method of the
@@ -17,7 +19,7 @@ rules.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteRule(index)
 ```
 

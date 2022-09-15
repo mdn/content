@@ -1,6 +1,7 @@
 ---
 title: Window.resizeTo()
 slug: Web/API/Window/resizeTo
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -9,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.resizeTo
 ---
+
 {{APIRef}}
 
 The **`Window.resizeTo()`** method dynamically resizes the
@@ -16,7 +18,7 @@ window.
 
 ## Syntax
 
-```js
+```js-nolint
 resizeTo(width, height)
 ```
 
@@ -24,11 +26,11 @@ resizeTo(width, height)
 
 - `width`
   - : An integer representing the new {{domxref("window.outerWidth","outerWidth")}} in
-    pixels (including scroll bars, title bars, etc).
+    pixels (including scroll bars, title bars, etc.).
 - `height`
   - : An integer value representing the new
     {{domxref("window.outerHeight","outerHeight")}} in pixels (including scroll bars,
-    title bars, etc).
+    title bars, etc.).
 
 ### Return value
 

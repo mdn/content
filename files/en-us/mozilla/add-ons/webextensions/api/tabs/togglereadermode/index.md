@@ -12,6 +12,7 @@ tags:
   - toggleReaderMode
 browser-compat: webextensions.api.tabs.toggleReaderMode
 ---
+
 {{AddonSidebar()}}
 
 Toggles Reader Mode for the given tab.
@@ -41,7 +42,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ## Syntax
 
-```js
+```js-nolint
 let toggling = browser.tabs.toggleReaderMode(
   tabId            // optional integer
 )
@@ -49,7 +50,7 @@ let toggling = browser.tabs.toggleReaderMode(
 
 ### Parameters
 
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. The ID of the tab to display in Reader Mode. Defaults to the selected tab of the current window.
 
 ### Return value

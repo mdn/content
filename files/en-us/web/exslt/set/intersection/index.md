@@ -6,13 +6,14 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `set:intersection()` returns the intersection of two node-sets. In other words, it returns a node-set containing all the nodes that exits in both `nodeSet1` and `nodeSet2`.
 
 ## Syntax
 
-```js
+```plain
 set:intersection(nodeSet1, nodeSet2)
 ```
 

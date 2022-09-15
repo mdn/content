@@ -1,6 +1,7 @@
 ---
 title: RTCIceParameters.password
 slug: Web/API/RTCIceParameters/password
+page-type: web-api-instance-property
 tags:
   - API
   - Candidates
@@ -15,6 +16,7 @@ tags:
   - password
 browser-compat: api.RTCIceParameters.password
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceParameters")}}**

@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.active
 slug: Web/API/IDBFileHandle/active
+page-type: web-api-instance-property
 tags:
   - API
   - Files
@@ -11,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileHandle.abort
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).

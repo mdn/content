@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesisEvent.name
 slug: Web/API/SpeechSynthesisEvent/name
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -12,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisEvent.name
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`name`** read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken:
@@ -24,8 +26,8 @@ A string.
 ## Examples
 
 ```js
-utterThis.onboundary = function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
+utterThis.onboundary = (event) => {
+  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
 }
 ```
 

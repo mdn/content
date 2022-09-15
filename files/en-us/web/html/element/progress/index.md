@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML forms
-  - HTML5
   - Reference
   - Web
 browser-compat: html.elements.progress
@@ -105,12 +104,12 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
 #### Example
 
 ```html
-  <label>Uploading Document: <progress value="70" max="100">70 %</progress></label>
+<label>Uploading Document: <progress value="70" max="100">70 %</progress></label>
 
-  <!-- OR -->
+<!-- OR -->
 
-  <label for="progress-bar">Uploading Document</label>
-  <progress id="progress-bar" value="70" max="100">70 %</progress>
+<label for="progress-bar">Uploading Document</label>
+<progress id="progress-bar" value="70" max="100">70 %</progress>
 ```
 
 ### Describing a particular region
@@ -120,13 +119,13 @@ If the `<progress>` element is describing the loading progress of a section of a
 #### Example
 
 ```html
-  <div aria-busy="true" aria-describedby="progress-bar">
-    <!-- content is for this region is loading -->
-  </div>
+<div aria-busy="true" aria-describedby="progress-bar">
+  <!-- content is for this region is loading -->
+</div>
 
-  <!-- ... -->
+<!-- ... -->
 
-  <progress id="progress-bar" aria-label="Content loading..."></progress>
+<progress id="progress-bar" aria-label="Content loading…"></progress>
 ```
 
 ## Specifications

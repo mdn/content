@@ -13,6 +13,7 @@ tags:
   - clear
 browser-compat: webextensions.api.alarms.clear
 ---
+
 {{AddonSidebar()}}
 
 Cancels an alarm, given its name.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let clearAlarm = browser.alarms.clear(
   name                       // string
 )
@@ -29,7 +30,7 @@ let clearAlarm = browser.alarms.clear(
 
 ### Parameters
 
-- `name`{{optional_inline}}
+- `name` {{optional_inline}}
   - : `string`. The name of the alarm to clear. If you don't supply this, the empty string "" will be used.
 
 ### Return value
@@ -40,7 +41,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function onCleared(wasCleared) {
-  console.log(wasCleared);  // true/false
+  console.log(wasCleared); // true/false
 }
 
 let clearAlarm = browser.alarms.clear("my-periodic-alarm");

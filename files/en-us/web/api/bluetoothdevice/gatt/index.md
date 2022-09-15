@@ -1,6 +1,7 @@
 ---
 title: BluetoothDevice.gatt
 slug: Web/API/BluetoothDevice/gatt
+page-type: web-api-instance-property
 tags:
   - API
   - BluetoothDevice
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.BluetoothDevice.gatt
 ---
+
 {{APIRef("Bluetooth API") }}{{SeeCompatTable}}
 
 The

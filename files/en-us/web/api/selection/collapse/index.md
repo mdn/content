@@ -1,6 +1,7 @@
 ---
 title: Selection.collapse()
 slug: Web/API/Selection/collapse
+page-type: web-api-instance-method
 tags:
   - API
   - HTML Editing
@@ -9,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.collapse
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Selection.collapse()`** method collapses the current
@@ -17,19 +19,19 @@ editable, the caret will blink there.
 
 ## Syntax
 
-```js
+```js-nolint
 collapse(node)
 collapse(node, offset)
 ```
 
 ### Parameters
 
-- _`node`_
+- `node`
   - : The caret location will be within this node. This value can also be set to
     `null` — if `null` is specified, the method will behave like
     {{domxref("Selection.removeAllRanges()")}}, i.e. all ranges will be removed from the
     selection.
-- _`offset`_ {{optional_inline}}
+- `offset` {{optional_inline}}
   - : The offset in `node` to which the selection will be collapsed. If not
     specified, the default value `0` is used.
 
@@ -41,7 +43,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 /* Place the caret at the beginning of an HTML document's body. */
-var body = document.getElementsByTagName("body")[0];
+const body = document.querySelector("body");
 window.getSelection().collapse(body,0);
 ```
 

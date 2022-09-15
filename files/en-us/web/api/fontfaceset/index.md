@@ -1,6 +1,7 @@
 ---
 title: FontFaceSet
 slug: Web/API/FontFaceSet
+page-type: web-api-interface
 tags:
   - API
   - CSS Font Loading API
@@ -10,19 +11,22 @@ tags:
   - Reference
 browser-compat: api.FontFaceSet
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
-The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) manages the loading of font-faces and querying of their download status. It is available as {{domxref("Document.fonts")}}.
+The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) manages the loading of font-faces and querying of their download status.
+
+This property is available as {{domxref("Document.fonts")}}, or `self.fonts` in [web workers](/en-US/docs/Web/API/Web_Workers_API).
 
 {{InheritanceDiagram}}
 
 ## Properties
 
-- {{domxref("FontFaceSet.status")}} {{readonlyinline}}
+- {{domxref("FontFaceSet.status")}} {{ReadOnlyInline}}
   - : Indicates the font-face's loading status. It will be one of `'loading'` or `'loaded'`.
-- {{domxref("FontFaceSet.ready")}} {{readonlyinline}}
+- {{domxref("FontFaceSet.ready")}} {{ReadOnlyInline}}
   - : {{jsxref("Promise")}} which resolves once font loading and layout operations have completed.
-- {{domxref("FontFaceSet.size")}} {{readonlyinline}}
+- {{domxref("FontFaceSet.size")}} {{ReadOnlyInline}}
   - : Returns the number of values in the `FontFaceSet`.
 
 ### Events

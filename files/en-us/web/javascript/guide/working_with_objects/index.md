@@ -8,9 +8,10 @@ tags:
   - Guide
   - JavaScript
   - Object
-  - l10n:priority
+  - "l10n:priority"
 ---
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_Classes")}}
 
 JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, functions, and methods, and how to create your own objects.
 
@@ -47,7 +48,7 @@ const myCar = {
 };
 ```
 
-Unassigned properties of an object are {{jsxref("undefined")}} (and not {{jsxref("null")}}).
+Unassigned properties of an object are {{jsxref("undefined")}} (and not [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
 
 ```js
 myCar.color; // undefined
@@ -61,36 +62,68 @@ myCar['model'] = 'Mustang';
 myCar['year'] = 1969;
 ```
 
-An object property name can be any valid JavaScript string, or anything that can be converted to a string, including the empty string. However, any property name that is not a valid JavaScript identifier (for example, a property name that has a space or a hyphen, or that starts with a number) can only be accessed using the square bracket notation. This notation is also very useful when property names are to be dynamically determined (when the property name is not determined until runtime). Examples are as follows:
+An object property name can be any valid JavaScript string, or anything that can be _converted_ to a string, including an empty string. However, any property name that is not a valid JavaScript identifier cannot use dot notation. For example, a property name that has a space or a hyphen, that starts with a number, or that is held inside a variable can only be accessed using the square bracket notation. This notation is also very useful when property names are to be dynamically determined, i.e. not determinable until runtime. Examples are as follows:
 
 ```js
 // four variables are created and assigned in a single go,
 // separated by commas
-const myObj = new Object(),
+const myObj = {},
       str = 'myString',
       rand = Math.random(),
-      obj = new Object();
+      anotherObj = {};
 
-myObj.type              = 'Dot syntax';
-myObj['date created']   = 'String with space';
-myObj[str]              = 'String value';
-myObj[rand]             = 'Random Number';
-myObj[obj]              = 'Object';
-myObj['']               = 'Even an empty string';
+// Now, creating additional properties.
+myObj.type              = 'Dot syntax for a key named type';
+myObj['date created']   = 'This key has a space';
+myObj[str]              = 'This key is in variable str';
+myObj[rand]             = 'A random number is the key here';
+myObj[anotherObj]       = 'This key is object anotherObj';
+myObj['']               = 'This key is an empty string';
 
 console.log(myObj);
+console.log(myObj.myString);
+
+/*
+[Log] Object
+    : "This key is an empty string"
+    0.8916485437228595: "A random number is the key here"
+    [object Object]: "This key is object anotherObj"
+    date created: "This key has a space"
+    myString: "This key is in variable str"
+    type: "Dot syntax for a key named type"
+*/
+// notice that in the log, the order of the properties listed is not the same as the order they were created.
+
+// [Log] This key is in variable str
 ```
 
-Please note that all keys in the square bracket notation are converted to string unless they're Symbols, since JavaScript object property names (keys) can only be strings or Symbols (at some point, private names will also be added as the [class fields proposal](https://github.com/tc39/proposal-class-fields) progresses, but you won't use them with `[]` form). For example, in the above code, when the key `obj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "obj.toString()")}} method, and use this result string as the new key.
+JavaScript object property names (keys) can only be strings or Symbols — all keys in the square bracket notation are converted to strings unless they are Symbols. For example, in the above code, when the key `anotherObj` is added to the `myObj`, JavaScript will call the {{jsxref("Object/toString", "toString()")}} method of `anotherObj`, and use the resulting string as the new key.
 
-You can also access properties by using a string value that is stored in a variable:
+You can also access properties with a string value stored in a variable. The variable must be passed in bracket notation. In the example above, the variable `str` held `"myString"` and it is `"myString"` that is the property name. Therefore, `myObj.str` will return as undefined.
+
+```js
+str = 'myString';
+myObj[str] = 'This key is in variable str';
+
+console.log(myObj.str); //[Log] undefined
+
+console.log(myObj[str]); //[Log] This key is in variable str
+console.log(myObj.myString); //[Log] This key is in variable str
+```
+
+This allows accessing any property as determined at runtime:
 
 ```js
 let propertyName = 'make';
 myCar[propertyName] = 'Ford';
 
+// access different properties by changing the contents of the variable
 propertyName = 'model';
 myCar[propertyName] = 'Mustang';
+
+console.log(myCar);
+
+// [Log] {make: 'Ford', model: 'Mustang'}
 ```
 
 You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) to iterate over all the enumerable properties of an object. To illustrate how this works, the following function displays the properties of the object when you pass the object and the object's name as arguments to the function:
@@ -98,9 +131,9 @@ You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Re
 ```js
 function showProps(obj, objName) {
   let result = '';
-  for (let i in obj) {
-    // obj.hasOwnProperty() is used to filter out properties from the object's prototype chain
-    if (obj.hasOwnProperty(i)) {
+  for (const i in obj) {
+    // obj.hasOwn is used to exclude properties from the object's prototype chain and only show "own properties"
+    if (Object.hasOwn(obj, i)) {
       result += `${objName}.${i} = ${obj[i]}\n`;
     }
   }
@@ -108,7 +141,7 @@ function showProps(obj, objName) {
 }
 ```
 
-So, the function call `showProps(myCar, 'myCar')` would print the following:
+The term "own property" refers to the properties of the object, but excluding those of the prototype chain. So, the function call `showProps(myCar, 'myCar')` would print the following:
 
 ```
 myCar.make = Ford
@@ -120,15 +153,15 @@ myCar.year = 1969
 
 There are three native ways to list/traverse object properties:
 
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. This method traverses all enumerable properties of an object and its prototype chain.
-- {{jsxref("Object.keys", "Object.keys(o)")}}. This method returns an array with all the own (not in the prototype chain) enumerable properties' names ("keys") of an object `o`.
-- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(o)")}}. This method returns an array containing all own properties' names (enumerable or not) of an object `o`.
+- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. This method traverses all of the enumerable string properties of an object as well as its prototype chain.
+- {{jsxref("Object.keys", "Object.keys(myObj)")}}. This method returns an array with only the enumerable own string property names ("keys") in the object `myObj`, but not those in the prototype chain.
+- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObj)")}}. This method returns an array containing all the own string property names in the object `myObj`, regardless of if they are enumerable or not.
 
 There is no native way to list "hidden" properties (properties in the prototype chain which are not accessible through the object, because another property has the same name earlier in the prototype chain). However, this can be achieved with the following function:
 
 ```js
-function listAllProperties(o) {
-  let objectToInspect = o;
+function listAllProperties(myObj) {
+  let objectToInspect = myObj;
   let result = [];
 
   while(objectToInspect !== null) {
@@ -152,14 +185,13 @@ The syntax for an object using an object initializer is:
 
 ```js
 const obj = {
-  property_1:   value_1,   // property name may be an identifier...
-  2:            value_2,   // or a number...
-  // ...,
-  'property n': value_n    // or a string
+  property1: value1,   // property name may be an identifier
+  2: value2,   // or a number
+  'property n': value3    // or a string
 };
 ```
 
-where `obj` is the name of the new object, each property name before colons is an identifier (either a name, a number, or a string literal), and each `value_i` is an expression whose value is assigned to the property name. The `obj` and assignment are optional; if you do not need to refer to this object elsewhere, you do not need to assign it to a variable. (Note that you may need to wrap the object literal in parentheses if the object appears where a statement is expected, so as not to have the literal be confused with a block statement.)
+where `obj` is the name of the new object, each property name before colons is an identifier (either a name, a number, or a string literal), and each `valueN` is an expression whose value is assigned to the property name. The `obj` and assignment are optional; if you do not need to refer to this object elsewhere, you do not need to assign it to a variable. (Note that you may need to wrap the object literal in parentheses if the object appears where a statement is expected, so as not to have the literal be confused with a block statement.)
 
 Object initializers are expressions, and each object initializer results in a new object being created whenever the statement in which it appears is executed. Identical object initializers create distinct objects that will not compare to each other as equal. Objects are created as if a call to `new Object()` were made; that is, objects made from object literal expressions are instances of `Object`.
 
@@ -271,7 +303,7 @@ Objects can also be created using the {{jsxref("Object.create()")}} method. This
 // Animal properties and method encapsulation
 const Animal = {
   type: 'Invertebrates', // Default value of properties
-  displayType: function() {  // Method which will display type of Animal
+  displayType() {  // Method which will display type of Animal
     console.log(this.type);
   }
 };
@@ -318,12 +350,12 @@ objectName.methodName = functionName;
 
 const myObj = {
   myMethod: function(params) {
-    // ...do something
+    // do something
   },
 
   // this works too!
   myOtherMethod(params) {
-    // ...do something else
+    // do something else
   }
 };
 ```
@@ -374,7 +406,7 @@ car2.displayCar();
 
 ## Using `this` for object references
 
-JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have 2 objects, `Manager`and `Intern`. Each object have their own `name`, `age` and `job`. In the function `sayHi()`, notice there is `this.name`. When added to the 2 objects they can be called and prints the `'Hello, My name is'` then adds the `name` value from that specific object. As shown below.
+JavaScript has a special keyword, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), that you can use within a method to refer to the current object. For example, suppose you have 2 objects, `Manager` and `Intern`. Each object have their own `name`, `age` and `job`. In the function `sayHi()`, notice there is `this.name`. When added to the 2 objects they can be called and prints the `'Hello, My name is'` then adds the `name` value from that specific object. As shown below.
 
 ```js
 const Manager = {
@@ -422,7 +454,7 @@ Getters and setters can be either
 When defining getters and setters using [object initializers](#object_initializers) all you need to do is to prefix a getter method with `get` and a setter method with `set`. Of course, the getter method must not expect a parameter, while the setter method expects exactly one parameter (the new value to set). For instance:
 
 ```js
-const o = {
+const myObj = {
   a: 7,
   get b() {
     return this.a + 1;
@@ -432,32 +464,32 @@ const o = {
   }
 };
 
-console.log(o.a); // 7
-console.log(o.b); // 8 <-- At this point the get b() method is initiated.
-o.c = 50;         //   <-- At this point the set c(x) method is initiated
-console.log(o.a); // 25
+console.log(myObj.a); // 7
+console.log(myObj.b); // 8 <-- At this point the get b() method is initiated.
+myObj.c = 50;         //   <-- At this point the set c(x) method is initiated
+console.log(myObj.a); // 25
 ```
 
-The `o` object's properties are:
+The `myObj` object's properties are:
 
-- `o.a` — a number
-- `o.b` — a getter that returns `o.a` plus 1
-- `o.c` — a setter that sets the value of `o.a` to half of the value `o.c` is being set to
+- `myObj.a` — a number
+- `myObj.b` — a getter that returns `myObj.a` plus 1
+- `myObj.c` — a setter that sets the value of `myObj.a` to half of the value `myObj.c` is being set to
 
 Please note that function names of getters and setters defined in an object literal using "\[gs]et _property_()" are not the names of the getters themselves, even though the `[gs]et propertyName(){ }` syntax may mislead you to think otherwise.
 
 Getters and setters can also be added to an object at any time after creation using the {{jsxref("Object.defineProperties()")}} method. This method's first parameter is the object on which you want to define the getter or setter. The second parameter is an object whose property names are the getter or setter names, and whose property values are objects for defining the getter or setter functions. Here's an example that defines the same getter and setter used in the previous example:
 
 ```js
-const o = { a: 0 };
+const myObj = { a: 0 };
 
-Object.defineProperties(o, {
-     'b': { get: function() { return this.a + 1; } },
-     'c': { set: function(x) { this.a = x / 2; } }
+Object.defineProperties(myObj, {
+  b: { get() { return this.a + 1; } },
+  c: { set(x) { this.a = x / 2; } },
 });
 
-o.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
-console.log(o.b); // Runs the getter, which yields a + 1 or 6
+myObj.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
+console.log(myObj.b); // Runs the getter, which yields a + 1 or 6
 ```
 
 Which of the two forms to choose depends on your programming style and task at hand. If you already go for the object initializer when defining a prototype you will probably most of the time choose the first form. This form is more compact and natural. However, if you need to add getters and setters later — because you did not write the prototype or particular object — then the second form is the only possible form. The second form probably best represents the dynamic nature of JavaScript — but it can make the code hard to read and understand.
@@ -507,7 +539,7 @@ For more information about comparison operators, see [equality operators](/en-US
 
 ## See also
 
-- To dive deeper, read about the [details of JavaScript's object model](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
-- To learn about ECMAScript 2015 classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
+- To dive deeper, read about [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+- To learn about classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Using_Classes")}}

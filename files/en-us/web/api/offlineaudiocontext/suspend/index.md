@@ -1,6 +1,7 @@
 ---
 title: OfflineAudioContext.suspend()
 slug: Web/API/OfflineAudioContext/suspend
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -11,6 +12,7 @@ tags:
   - suspend
 browser-compat: api.OfflineAudioContext.suspend
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`suspend()`** method of the {{
@@ -27,7 +29,7 @@ precise suspension.
 
 ## Syntax
 
-```js
+```js-nolint
 suspend(suspendTime)
 ```
 

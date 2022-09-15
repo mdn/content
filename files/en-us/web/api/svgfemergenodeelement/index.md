@@ -1,6 +1,7 @@
 ---
 title: SVGFEMergeNodeElement
 slug: Web/API/SVGFEMergeNodeElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEMergeNodeElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEMergeNodeElement`** interface corresponds to the {{SVGElement("feMergeNode")}} element.

@@ -1,6 +1,7 @@
 ---
 title: Navigator.keyboard
 slug: Web/API/Navigator/keyboard
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -12,6 +13,7 @@ tags:
   - keyboard
 browser-compat: api.Navigator.keyboard
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`keyboard`** read-only property

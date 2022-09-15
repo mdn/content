@@ -1,27 +1,31 @@
 ---
-title: MediaStreamTrackGenerator.MediaStreamTrackGenerator()
+title: MediaStreamTrackGenerator()
 slug: Web/API/MediaStreamTrackGenerator/MediaStreamTrackGenerator
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
   - Reference
   - MediaStreamTrackGenerator
+  - Experimental
+  - Non-standard
 browser-compat: api.MediaStreamTrackGenerator.MediaStreamTrackGenerator
 ---
-{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
+
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 The **`MediaStreamTrackGenerator()`** constructor creates a new {{domxref("MediaStreamTrackGenerator")}} object which consumes a stream of media frames and exposes a {{domxref("MediaStreamTrack")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamTrackGenerator(options)
 ```
 
 ### Parameters
 
 - `options`
-  - : An object containing the property `kind`, which is a {{domxref("DOMString", "string")}} with one of the following values:
+  - : An object containing the property `kind`, which is one of the following strings:
     - `"audio"`
       - : Specifies that the stream accepts {{domxref("AudioTrack")}} objects.
     - `"video"`

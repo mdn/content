@@ -1,6 +1,7 @@
 ---
 title: Window.scroll()
 slug: Web/API/Window/scroll
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Window.scroll
 ---
+
 {{APIRef}}
 
 The **`Window.scroll()`** method scrolls the window to a
@@ -16,7 +18,7 @@ particular place in the document.
 
 ## Syntax
 
-```js
+```js-nolint
 scroll(x-coord, y-coord)
 scroll(options)
 ```

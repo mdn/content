@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 was released on January 26, 2021.
@@ -45,7 +46,7 @@ This article provides information about the changes in Firefox 85 that will affe
 
 ### Plugins
 
-- Flash support has been completely removed from Firefox ({{bug(1675349)}}). Read our [plugin roadmap](/en-US/docs/Plugins/Roadmap#schedule) for more information.
+- Flash support has been completely removed from Firefox ({{bug(1675349)}}).
 
 ### APIs
 

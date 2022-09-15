@@ -1,6 +1,7 @@
 ---
 title: URL.toString()
 slug: Web/API/URL/toString
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - URL API
 browser-compat: api.URL.toString
 ---
+
 {{ApiRef("URL API")}}
 
 The **`URL.toString()`** {{Glossary("stringifier")}} method returns a
@@ -20,7 +22,7 @@ of {{domxref("URL.href")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

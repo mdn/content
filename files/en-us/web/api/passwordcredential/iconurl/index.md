@@ -1,6 +1,7 @@
 ---
 title: PasswordCredential.iconURL
 slug: Web/API/PasswordCredential/iconURL
+page-type: web-api-instance-property
 tags:
   - API
   - Credential Management API
@@ -9,8 +10,10 @@ tags:
   - Property
   - Reference
   - credential management
+  - Experimental
 browser-compat: api.PasswordCredential.iconURL
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 The **`iconURL`** read-only property

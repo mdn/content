@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing ; before statement" occurs when there is a semicolon (`;`)
@@ -16,7 +17,7 @@ You need to provide a semicolon, so that JavaScript can parse the source code co
 
 ## Message
 
-```js
+```
 SyntaxError: Expected ';' (Edge)
 SyntaxError: missing ; before statement (Firefox)
 ```
@@ -45,15 +46,16 @@ This error can occur easily when not escaping strings properly and the JavaScrip
 engine is expecting the end of your string already. For example:
 
 ```js example-bad
-var foo = 'Tom's bar';
+const foo = 'Tom's bar';
 // SyntaxError: missing ; before statement
 ```
 
 You can use double quotes, or escape the apostrophe:
 
 ```js example-good
-var foo = "Tom's bar";
-var foo = 'Tom\'s bar';
+const foo = "Tom's bar";
+// OR
+const foo = 'Tom\'s bar';
 ```
 
 ### Declaring properties with var
@@ -62,20 +64,20 @@ You **cannot** declare properties of an object or array with a
 `var` declaration.
 
 ```js example-bad
-var obj = {};
-var obj.foo = 'hi'; // SyntaxError missing ; before statement
+const obj = {};
+const obj.foo = 'hi'; // SyntaxError missing ; before statement
 
-var array = [];
-var array[0] = 'there'; // SyntaxError missing ; before statement
+const array = [];
+const array[0] = 'there'; // SyntaxError missing ; before statement
 ```
 
 Instead, omit the `var` keyword:
 
 ```js example-good
-var obj = {};
+const obj = {};
 obj.foo = 'hi';
 
-var array = [];
+const array = [];
 array[0] = 'there';
 ```
 
@@ -85,17 +87,17 @@ If you come from another programming language, it is also common to use keywords
 don't mean the same or have no meaning at all in JavaScript:
 
 ```js example-bad
-def print(info){
+def print(info) {
   console.log(info);
-}; // SyntaxError missing ; before statement
+} // SyntaxError missing ; before statement
 ```
 
 Instead, use `function` instead of `def`:
 
 ```js example-good
-function print(info){
+function print(info) {
   console.log(info);
-};
+}
 ```
 
 ## See also

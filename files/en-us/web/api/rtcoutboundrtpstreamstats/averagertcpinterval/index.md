@@ -1,6 +1,7 @@
 ---
 title: RTCOutboundRtpStreamStats.averageRtcpInterval
 slug: Web/API/RTCOutboundRtpStreamStats/averageRtcpInterval
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -21,6 +22,7 @@ tags:
   - stream
 browser-compat: api.RTCOutboundRtpStreamStats.averageRtcpInterval
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`averageRtcpInterval`** property

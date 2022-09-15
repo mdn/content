@@ -1,6 +1,7 @@
 ---
 title: SVGFETurbulenceElement
 slug: Web/API/SVGFETurbulenceElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFETurbulenceElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFETurbulenceElement`** interface corresponds to the {{SVGElement("feTurbulence")}} element.

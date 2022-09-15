@@ -1,6 +1,7 @@
 ---
-title: 'MediaRecorder: resume event'
+title: "MediaRecorder: resume event"
 slug: Web/API/MediaRecorder/resume_event
+page-type: web-api-event
 tags:
   - API
   - Audio
@@ -13,6 +14,7 @@ tags:
   - resume
 browser-compat: api.MediaRecorder.resume_event
 ---
+
 {{APIRef("Media Recorder API")}}
 
 The `resume` event is thrown when
@@ -23,9 +25,9 @@ The `resume` event is thrown when
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('resume', event => { });
+addEventListener("resume", (event) => {});
 
-onresume = event => { };
+onresume = (event) => {};
 ```
 
 ## Event type
@@ -35,29 +37,25 @@ A generic {{domxref("Event")}}.
 ## Example
 
 ```js
-...
-
-  pause.onclick = function() {
-    if(MediaRecorder.state === "recording") {
-      mediaRecorder.pause();
-      // recording paused
-    } else if(MediaRecorder.state === "paused") {
-      mediaRecorder.resume();
-      // resume recording
-    }
+pause.onclick = () => {
+  if (MediaRecorder.state === "recording") {
+    mediaRecorder.pause();
+    // recording paused
+  } else if (MediaRecorder.state === "paused") {
+    mediaRecorder.resume();
+    // resume recording
   }
+}
 
-  mediaRecorder.onpause = function() {
-    // do something in response to
-    // recording being paused
-  }
+mediaRecorder.onpause = () => {
+  // do something in response to
+  // recording being paused
+}
 
-  mediaRecorder.onresume = function() {
-    // do something in response to
-    // recording being resumed
-  }
-
-...
+mediaRecorder.onresume = () => {
+  // do something in response to
+  // recording being resumed
+}
 ```
 
 ## Properties
@@ -74,10 +72,8 @@ None.
 
 ## See also
 
-- [Using
-  the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording
-  demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

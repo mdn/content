@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.responsesReceived
 slug: Web/API/RTCIceCandidatePairStats/responsesReceived
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity
@@ -19,6 +20,7 @@ tags:
   - responsesReceived
 browser-compat: api.RTCIceCandidatePairStats.responsesReceived
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`responsesReceived`** property

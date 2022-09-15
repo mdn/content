@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedInteger
 slug: Web/API/SVGAnimatedInteger
+page-type: web-api-interface
 tags:
   - API
   - NeedsBrowserCompatibility
@@ -10,6 +11,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedInteger
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated integer interface

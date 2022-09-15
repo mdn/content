@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrackEvent()
 slug: Web/API/MediaStreamTrackEvent/MediaStreamTrackEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MediaStreamTrackEvent.MediaStreamTrackEvent
 ---
+
 {{APIRef("Media Streams API")}}
 
 The **`MediaStreamTrackEvent()`** constructor returns a new {{domxref("MediaStreamTrackEvent")}} object,
@@ -16,7 +18,7 @@ which represents an event signaling that a {{domxref("MediaStreamTrack")}} has b
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamTrackEvent(type, options)
 ```
 
@@ -44,7 +46,7 @@ A new {{domxref("MediaStreamTrackEvent")}} object, initialized based on the prov
 
 ## See also
 
-- {{event("addtrack")}} and {{event("removetrack")}} events
+- {{domxref("MediaStream/addtrack_event", "addtrack")}} and {{domxref("MediaStream/removetrack_event", "removetrack")}} events
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStream")}}
 - [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)

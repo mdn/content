@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.type
 slug: Web/API/HTMLObjectElement/type
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - Type
 browser-compat: api.HTMLObjectElement.type
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`type`** property of the
@@ -20,7 +22,7 @@ of the resource.
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

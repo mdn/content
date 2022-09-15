@@ -1,6 +1,7 @@
 ---
 title: XRCubeLayer.space
 slug: Web/API/XRCubeLayer/space
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XRCubeLayer.space
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`space`** property of the {{domxref("XRCubeLayer")}} interface represents the layer's spatial relationship with the user's physical environment.
 

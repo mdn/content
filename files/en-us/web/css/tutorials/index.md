@@ -7,6 +7,7 @@ tags:
   - Junk
   - Tutorial
 ---
+
 Learning CSS may be a daunting task.
 In order to help you, we have written numerous **tutorials about CSS**.
 Some are aimed at complete beginners, while others present complex features to be used by more experienced users.
@@ -40,9 +41,9 @@ They are easy to use for anybody with a fair knowledge of basic concepts.
 - [CSS Counters](/en-US/docs/Web/CSS/counters)
   - : Counting items and pages is an easy task in CSS. Learn to use {{cssxref("counter-reset")}}, {{cssxref("counter-increment")}}, {{cssxref("counters", "counters()")}}, and {{cssxref("counter", "counter()")}}.
 - [CSS Animations](/en-US/docs/Web/CSS/Tutorials/Using_CSS_animations)
-  - : CSS3 Animations allow you to define configurations of style, as [keyframes](/en-US/docs/Web/CSS/@keyframes), and to transition between them defining an animation.
+  - : CSS Animations allow you to define configurations of style, as [keyframes](/en-US/docs/Web/CSS/@keyframes), and to transition between them defining an animation.
 - [CSS Transitions](/en-US/docs/Web/CSS/Tutorials/Using_CSS_transitions)
-  - : CSS3 Transitions allow you to define an animation between several styles and to control the way this transition happens.
+  - : CSS Transitions allow you to define an animation between several styles and to control the way this transition happens.
 - [CSS Transforms](/en-US/docs/Web/CSS/Tutorials/Using_CSS_transforms)
   - : Transforms allow you to change the position of elements by modifying their coordinate space: it allows for translating, rotating, and deforming them in the 2D or 3D spaces.
 - [CSS Gradients](/en-US/docs/Web/CSS/Using_CSS_gradients)

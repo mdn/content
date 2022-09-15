@@ -1,6 +1,7 @@
 ---
 title: RadioNodeList
 slug: Web/API/RadioNodeList
+page-type: web-api-interface
 tags:
   - API
   - HTML DOM
@@ -8,6 +9,7 @@ tags:
   - RadioNodeList
 browser-compat: api.RadioNodeList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`RadioNodeList`** interface represents a collection of radio elements in a {{HTMLElement("form")}} or a {{HTMLElement("fieldset")}} element.

@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.construct
 ---
+
 {{JSRef}}
 
 The **`handler.construct()`** method is a trap for the {{jsxref("Operators/new", "new")}} operator. In order for the new operation to be valid on the resulting Proxy object, the target used to initialize the proxy must itself have a `[[Construct]]` internal method (i.e. `new target` must be valid).
@@ -16,9 +17,9 @@ The **`handler.construct()`** method is a trap for the {{jsxref("Operators/new",
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
-  construct: function(target, argumentsList, newTarget) {
+  construct(target, argumentsList, newTarget) {
   }
 });
 ```
@@ -62,9 +63,9 @@ If the following invariants are violated, the proxy will throw a {{jsxref("TypeE
 The following code traps the {{jsxref("Operators/new", "new")}} operator.
 
 ```js
-const p = new Proxy(function() {}, {
-  construct: function(target, argumentsList, newTarget) {
-    console.log('called: ' + argumentsList.join(', '));
+const p = new Proxy(function () {}, {
+  construct(target, argumentsList, newTarget) {
+    console.log(`called: ${argumentsList}`);
     return { value: argumentsList[0] * 10 };
   }
 });
@@ -76,8 +77,8 @@ console.log(new p(1).value); // "called: 1"
 The following code violates the invariant.
 
 ```js example-bad
-const p = new Proxy(function() {}, {
-  construct: function(target, argumentsList, newTarget) {
+const p = new Proxy(function () {}, {
+  construct(target, argumentsList, newTarget) {
     return 1;
   }
 });
@@ -89,7 +90,7 @@ The following code improperly initializes the proxy. The `target` in Proxy initi
 
 ```js example-bad
 const p = new Proxy({}, {
-  construct: function(target, argumentsList, newTarget) {
+  construct(target, argumentsList, newTarget) {
     return {};
   }
 });
@@ -108,6 +109,6 @@ new p(); // TypeError is thrown, "p" is not a constructor
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy/Proxy", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Operators/new", "new")}} operator.
 - {{jsxref("Reflect.construct()")}}

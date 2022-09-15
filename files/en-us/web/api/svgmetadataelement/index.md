@@ -1,6 +1,7 @@
 ---
 title: SVGMetadataElement
 slug: Web/API/SVGMetadataElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGMetadataElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGMetadataElement`** interface corresponds to the {{SVGElement("metadata")}} element.

@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.RequestFilter
 ---
+
 {{AddonSidebar()}}
 
 An object describing filters to apply to webRequest events.
@@ -23,11 +24,11 @@ Values of this type are objects. They contain the following properties:
 
 - `urls`
   - : `array` of `string`. An array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). The listener will only be called for requests whose targets match any of the given patterns. Only requests made using HTTP or HTTPS will trigger events, other protocols (such as data: and file:) supported by pattern matching do not trigger events. `view-source:` requests may be matched based on its inner URL.
-- `types`{{optional_inline}}
+- `types` {{optional_inline}}
   - : `array` of `{{WebExtAPIRef('webRequest.ResourceType')}}`. A list of resource types (for example, stylesheets, images, scripts). The listener will only be called for requests for resources which are one of the given types.
-- `tabId`{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. The listener will only be called for requests from the {{WebExtAPIRef("tabs.Tab", "tab")}} identified by this ID.
-- `windowId`{{optional_inline}}
+- `windowId` {{optional_inline}}
   - : `integer`. The listener will only be called for requests from the {{WebExtAPIRef("windows.Window", "window")}} identified by this ID.
 - `incognito` {{optional_inline}}
   - : `boolean`. If provided, requests that do not match the incognito state (`true` or `false`) will be filtered out.
@@ -40,7 +41,8 @@ Values of this type are objects. They contain the following properties:
 
 > **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#type-RequestFilter) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -67,4 +69,4 @@ Values of this type are objects. They contain the following properties:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

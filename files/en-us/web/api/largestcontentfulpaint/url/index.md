@@ -1,15 +1,18 @@
 ---
 title: LargestContentfulPaint.url
 slug: Web/API/LargestContentfulPaint/url
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - url
   - LargestContentfulPaint
+  - Experimental
 browser-compat: api.LargestContentfulPaint.url
 ---
-{{DefaultAPISidebar("Largest Contentful Paint API")}}
+
+{{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the request URL of the element, if the element is an image.
 

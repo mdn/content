@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.id
 slug: Web/API/VideoTrack/id
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -16,6 +17,7 @@ tags:
   - track
 browser-compat: api.VideoTrack.id
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`id`** property contains a

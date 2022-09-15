@@ -12,8 +12,9 @@ tags:
   - Security
   - script-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.script-src-attr
+browser-compat: http.headers.Content-Security-Policy.script-src-attr
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)

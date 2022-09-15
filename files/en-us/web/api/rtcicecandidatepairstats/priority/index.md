@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.priority
 slug: Web/API/RTCIceCandidatePairStats/priority
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -15,6 +16,7 @@ tags:
   - priority
 browser-compat: api.RTCIceCandidatePairStats.priority
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
 The _obsolete_ {{domxref("RTCIceCandidatePairStats")}}

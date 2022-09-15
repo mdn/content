@@ -1,6 +1,7 @@
 ---
 title: CSSGroupingRule.insertRule()
 slug: Web/API/CSSGroupingRule/insertRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSGroupingRule.insertRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`insertRule()`** method of the
@@ -16,7 +18,7 @@ The **`insertRule()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 insertRule(rule)
 insertRule(rule, index)
 ```

@@ -1,6 +1,7 @@
 ---
 title: Document.defaultView
 slug: Web/API/Document/defaultView
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.defaultView
 ---
+
 {{ApiRef}}
 
 In browsers, **`document.defaultView`** returns the

@@ -1,6 +1,7 @@
 ---
 title: PannerNode.rolloffFactor
 slug: Web/API/PannerNode/rolloffFactor
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
@@ -10,9 +11,10 @@ tags:
   - rollOffFactor
 browser-compat: api.PannerNode.rolloffFactor
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The `rolloffFactor` property of the {{ domxref("PannerNode") }} interface is a double value describing how quickly the volume is reduced as the source moves away from the listener. This value is used by all distance models.The `rolloffFactor` property's default value is `1`.
+The `rolloffFactor` property of the {{ domxref("PannerNode") }} interface is a double value describing how quickly the volume is reduced as the source moves away from the listener. This value is used by all distance models. The `rolloffFactor` property's default value is `1`.
 
 ## Value
 

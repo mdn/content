@@ -1,6 +1,7 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
+page-type: web-api-instance-method
 tags:
   - API
   - Geolocation
@@ -11,6 +12,7 @@ tags:
   - getCurrentPosition
 browser-compat: api.Geolocation.getCurrentPosition
 ---
+
 {{securecontext_header}}{{ APIRef("Geolocation API") }}
 
 The
@@ -19,7 +21,7 @@ the current position of the device.
 
 ## Syntax
 
-```js
+```js-nolint
 getCurrentPosition(success)
 getCurrentPosition(success, error)
 getCurrentPosition(success, error, options)
@@ -49,14 +51,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var options = {
+const options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0
 };
 
 function success(pos) {
-  var crd = pos.coords;
+  const crd = pos.coords;
 
   console.log('Your current position is:');
   console.log(`Latitude : ${crd.latitude}`);
@@ -81,6 +83,5 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 ## See also
 
-- [Using the
-  Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("Navigator.geolocation")}}

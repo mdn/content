@@ -1,6 +1,7 @@
 ---
 title: CSSKeyframesRule.findRule()
 slug: Web/API/CSSKeyframesRule/findRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -10,13 +11,14 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.findRule
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`findRule()`** method of the {{domxref("CSSKeyframeRule")}} interface finds the {{domxref("CSSKeyFrameRule")}} that matches the specified keyframe selector.
 
 ## Syntax
 
-```js
+```js-nolint
 findRule(select)
 ```
 

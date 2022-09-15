@@ -11,8 +11,9 @@ tags:
   - Learn
   - Server
   - TCP
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
 _How the web works_ provides a simplified view of what happens when you view a webpage in a web browser on your computer or phone.
@@ -21,7 +22,7 @@ This theory is not essential to writing web code in the short term, but before l
 
 ## Clients and servers
 
-Computers connected to the web are called **clients** and **servers**. A simplified diagram of how they interact might look like this:
+Computers connected to the internet are called **clients** and **servers**. A simplified diagram of how they interact might look like this:
 
 ![Two circles representing client and server. An arrow labelled request is going from client to server, and an arrow labelled responses is going from server to client](simple-client-server.png)
 
@@ -34,14 +35,14 @@ The client and server we've described above don't tell the whole story. There ar
 
 For now, let's imagine that the web is a road. On one end of the road is the client, which is like your house. On the other end of the road is the server, which is a shop you want to buy something from.
 
-![](road.jpg)
+![A black-and-white photo of a person crossing a road at a crosswalk](road.jpg)
 
 In addition to the client and the server, we also need to say hello to:
 
 - **Your internet connection**: Allows you to send and receive data on the web. It's basically like the street between your house and the shop.
 - **TCP/IP**: Transmission Control Protocol and Internet Protocol are communication protocols that define how data should travel across the internet. This is like the transport mechanisms that let you place an order, go to the shop, and buy your goods. In our example, this is like a car or a bike (or however else you might get around).
 - **DNS**: Domain Name System is like an address book for websites. When you type a web address in your browser, the browser looks at the DNS to find the website's IP address before it can retrieve the website. The browser needs to find out which server the website lives on, so it can send HTTP messages to the right place (see below). This is like looking up the address of the shop so you can access it.
-- **HTTP**: Hypertext Transfer Protocol is an application {{Glossary("Protocol" , "protocol")}} that defines a language for clients and servers to speak to each other. This is like the language you use to order your goods.
+- **HTTP**: Hypertext Transfer Protocol is an application {{Glossary("Protocol", "protocol")}} that defines a language for clients and servers to speak to each other. This is like the language you use to order your goods.
 - **Component files**: A website is made up of many different files, which are like the different parts of the goods you buy from the shop. These files come in two main types:
 
   - **Code files**: Websites are built primarily from HTML, CSS, and JavaScript, though you'll meet other technologies a bit later.
@@ -71,7 +72,7 @@ Real web addresses aren't the nice, memorable strings you type into your address
 
 This is called an {{Glossary("IP Address", "IP address")}}, and it represents a unique location on the web. However, it's not very easy to remember, is it? That's why Domain Name Servers were invented. These are special servers that match up a web address you type into your browser (like "mozilla.org") to the website's real (IP) address.
 
-Websites can be reached directly via their IP addresses. You can find the IP address of a website by typing its domain into a tool like [IP Checker](https://ipinfo.info/html/ip_checker.php).
+Websites can be reached directly via their IP addresses. You can use a [DNS lookup tool](https://www.nslookup.io/website-to-ip-lookup/) to find the IP address of a website.
 
 ## Packets explained
 

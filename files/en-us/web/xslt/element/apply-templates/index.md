@@ -7,6 +7,7 @@ tags:
   - XSLT
   - apply-templates
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:apply-templates>` element selects a set of nodes in the input tree and instructs the processor to apply the proper templates to them.

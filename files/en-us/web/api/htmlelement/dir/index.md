@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.dir
 slug: Web/API/HTMLElement/dir
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.dir
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLElement.dir`** property gets or sets the text
@@ -46,7 +48,7 @@ One of the following:
 ## Examples
 
 ```js
-var parg = document.getElementById("para1");
+const parg = document.getElementById("para1");
 parg.dir = "rtl";
 // change the text direction on a paragraph identified as "para1"
 ```

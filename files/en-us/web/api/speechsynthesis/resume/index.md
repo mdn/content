@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.resume()
 slug: Web/API/SpeechSynthesis/resume
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -12,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.resume
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`resume()`** method of the {{domxref("SpeechSynthesis")}}
@@ -20,7 +22,7 @@ resumes it if it was already paused.
 
 ## Syntax
 
-```js
+```js-nolint
 resume()
 ```
 

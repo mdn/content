@@ -1,6 +1,7 @@
 ---
 title: Trusted Types API
 slug: Web/API/Trusted_Types_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
@@ -8,6 +9,7 @@ tags:
   - Trusted Types
 spec-urls: https://w3c.github.io/webappsec-trusted-types/dist/spec/
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **Trusted Types API** gives web developers a way to lock down the insecure parts of the {{domxref("Document Object Model","DOM API")}} to prevent client-side {{Glossary("Cross-site scripting")}} (XSS) attacks.
@@ -60,7 +62,7 @@ The sanitized value can then be used with {{domxref("Element.innerHTML")}} to en
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<")
 });
 
 let el = document.getElementById("myDiv");

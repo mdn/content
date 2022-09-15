@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMap.set()
 slug: Web/API/StylePropertyMap/set
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -9,8 +10,10 @@ tags:
   - Reference
   - StylePropertyMap
   - set()
+  - Experimental
 browser-compat: api.StylePropertyMap.set
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`set()`** method of the {{domxref("StylePropertyMap")}}
@@ -18,7 +21,7 @@ interface changes the CSS declaration with the given property.
 
 ## Syntax
 
-```js
+```js-nolint
 set(property, value)
 ```
 
@@ -37,8 +40,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example sets the {{cssxref('padding-top')}} property, with the given value, within
-the element's [style
-attribute](/en-US/docs/Web/HTML/Global_attributes/style).
+the element's [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
 ```js
 // get the button element

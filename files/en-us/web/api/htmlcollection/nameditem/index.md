@@ -1,14 +1,16 @@
 ---
 title: HTMLCollection.namedItem()
 slug: Web/API/HTMLCollection/namedItem
+page-type: web-api-instance-method
 tags:
   - API
   - Element Lists
   - HTMLCollection
-  - Interface
+  - Method
   - Reference
 browser-compat: api.HTMLCollection.namedItem
 ---
+
 {{APIRef("DOM")}}
 
 The **`namedItem()`** method of the {{domxref("HTMLCollection")}} interface returns
@@ -18,8 +20,8 @@ In JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like 
 
 ## Syntax
 
-```js
-const item = collection.namedItem(key);
+```js-nolint
+namedItem(key)
 ```
 
 ### Parameters
@@ -28,7 +30,7 @@ const item = collection.namedItem(key);
 
 ### Return value
 
-- `item` is the first {{domxref("Element")}} in the {{domxref("HTMLCollection")}} matching the _key_, or {{jsxref("null")}}, if there are none.
+- `item` is the first {{domxref("Element")}} in the {{domxref("HTMLCollection")}} matching the _key_, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), if there are none.
 
 ## Example
 

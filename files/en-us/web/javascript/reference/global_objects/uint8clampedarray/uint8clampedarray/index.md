@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
 ---
+
 {{JSRef}}
 
 The **`Uint8ClampedArray()`** constructor creates a typed array
@@ -20,16 +21,18 @@ using standard array index syntax (that is, using bracket notation).
 
 ## Syntax
 
-```js
-new Uint8ClampedArray(); // new in ES2017
-new Uint8ClampedArray(length);
-new Uint8ClampedArray(typedArray);
-new Uint8ClampedArray(object);
+```js-nolint
+new Uint8ClampedArray()
+new Uint8ClampedArray(length)
+new Uint8ClampedArray(typedArray)
+new Uint8ClampedArray(object)
 
-new Uint8ClampedArray(buffer);
-new Uint8ClampedArray(buffer, byteOffset);
-new Uint8ClampedArray(buffer, byteOffset, length);
+new Uint8ClampedArray(buffer)
+new Uint8ClampedArray(buffer, byteOffset)
+new Uint8ClampedArray(buffer, byteOffset, length)
 ```
+
+> **Note:** `Uint8ClampedArray()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -73,22 +76,23 @@ console.log(uintc8.length); // 2
 console.log(uintc8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-const arr = new Uint8ClampedArray([21,31]);
-console.log(arr[1]); // 31
+const x = new Uint8ClampedArray([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-const x = new Uint8ClampedArray([21, 31]);
 const y = new Uint8ClampedArray(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
 const buffer = new ArrayBuffer(8);
 const z = new Uint8ClampedArray(buffer, 1, 4);
+console.log(z.byteOffset); // 1
 
 // From an iterable
-const iterable = function*(){ yield* [1,2,3]; }();
-const uintc8Arr = new Uint8ClampedArray(iterable);
-// Uint8ClampedArray[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const uintc8FromIterable = new Uint8ClampedArray(iterable);
+console.log(uintc8FromIterable);
+// Uint8ClampedArray [1, 2, 3]
 ```
 
 ## Specifications
@@ -98,23 +102,6 @@ const uintc8Arr = new Uint8ClampedArray(iterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Uint8ClampedArray` constructors require to
-be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Uint8ClampedArray` constructor as a function without `new`, will
-throw a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Uint8ClampedArray([1, 2, 3]);
-// TypeError: calling a builtin Uint8ClampedArray constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Uint8ClampedArray([1, 2, 3]);
-```
 
 ## See also
 

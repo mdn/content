@@ -9,9 +9,11 @@ tags:
   - Web
   - color
   - lch
+  - Experimental
 browser-compat: css.types.color.lch
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`lch()`** functional notation expresses a given color in the LCH color space. It has the same L axis as {{cssxref("color_value/lab","lab()")}}, but uses polar coordinates C (Chroma) and H (Hue).
 

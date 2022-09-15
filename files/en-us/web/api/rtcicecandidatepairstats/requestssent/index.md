@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.requestsSent
 slug: Web/API/RTCIceCandidatePairStats/requestsSent
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity
@@ -17,6 +18,7 @@ tags:
   - requestsSent
 browser-compat: api.RTCIceCandidatePairStats.requestsSent
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} dictionary's
@@ -34,7 +36,7 @@ candidates.
 > retransmissions. If a request had to be repeated due to network issues, it will be
 > counted multiple times here. This differs from
 > {{domxref("RTCIceCandidatePairStats.requestsReceived", "requestsReceived")}}, which
-> _does_ include retransmisions.
+> _does_ include retransmissions.
 
 ## Specifications
 

@@ -7,6 +7,7 @@ tags:
   - Intermediate
   - Resource
 ---
+
 {{HTTPSidebar}}{{non-standard_header}}
 
 Resource URLs, URLs prefixed with the `resource:` scheme, are used by
@@ -35,8 +36,7 @@ loaded the next one:
 resource://<File-loader> -> <File-loaded>
 ```
 
-Please refer to [Identifying
-resources on the web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) for more general details.
+Please refer to [Identifying resources on the web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) for more general details.
 
 In this article, we focus on resource URIs, which are used internally by Firefox to
 point to built-in resources.
@@ -48,8 +48,7 @@ websites, a web page could run internal scripts and inspect internal resources o
 Firefox, including the default preferences, which could be a serious security and
 privacy issue.
 
-For example, [a script on
-Browserleaks](https://browserleaks.com/firefox) highlights what Firefox reveals when queried by a simple script
+For example, [a script on Browserleaks](https://browserleaks.com/firefox) highlights what Firefox reveals when queried by a simple script
 running on the site (you can find the code in <https://browserleaks.com/firefox#more>).
 
 The file firefox.js passes preference names and values to the pref() function. For
@@ -98,8 +97,6 @@ resource: is Firefox only.
 
 ## See also
 
-- [Identifying
-  resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
 - [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
-- [IANA list
-  of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` is [covered here](https://www.iana.org/assignments/uri-schemes/prov/resource))
+- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` is [covered here](https://www.iana.org/assignments/uri-schemes/prov/resource))

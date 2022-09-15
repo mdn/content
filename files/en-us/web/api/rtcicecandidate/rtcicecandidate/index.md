@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidate()
 slug: Web/API/RTCIceCandidate/RTCIceCandidate
+page-type: web-api-constructor
 tags:
   - API
   - Audio
@@ -15,6 +16,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidate.RTCIceCandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 The
@@ -24,7 +26,7 @@ be configured to represent a single {{Glossary("ICE")}} candidate.
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCIceCandidate()
 new RTCIceCandidate(candidateInfo)
 ```

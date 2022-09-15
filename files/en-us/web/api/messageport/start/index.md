@@ -1,6 +1,7 @@
 ---
 title: MessagePort.start()
 slug: Web/API/MessagePort/start
+page-type: web-api-instance-method
 tags:
   - API
   - Channel messaging
@@ -10,6 +11,7 @@ tags:
   - start
 browser-compat: api.MessagePort.start
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`start()`** method of the {{domxref("MessagePort")}}
@@ -21,7 +23,7 @@ when using {{domxref("EventTarget.addEventListener")}}; it is implied when using
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 ```
 
@@ -69,5 +71,4 @@ channel.port1.start();
 
 ## See also
 
-- [Using
-  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

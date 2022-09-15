@@ -12,6 +12,7 @@ tags:
   - isEnabled
 browser-compat: webextensions.api.browserAction.isEnabled
 ---
+
 {{AddonSidebar()}}
 
 Returns `true` if the browser action is enabled.
@@ -20,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingIsEnabled = browser.browserAction.isEnabled(
   details // object
 )
@@ -55,7 +56,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Check the global state:
 
 ```js
-browser.browserAction.isEnabled({}).then(result => {
+browser.browserAction.isEnabled({}).then((result) => {
   console.log(result);
 });
 ```

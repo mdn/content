@@ -1,6 +1,7 @@
 ---
 title: AudioNode.connect()
 slug: Web/API/AudioNode/connect
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -12,6 +13,7 @@ tags:
   - connect
 browser-compat: api.AudioNode.connect
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `connect()` method of the {{ domxref("AudioNode") }} interface lets
@@ -22,7 +24,7 @@ change the value of that parameter over time.
 
 ## Syntax
 
-```js
+```js-nolint
 connect(destination)
 connect(destination, outputIndex)
 connect(destination, outputIndex, inputIndex)
@@ -85,12 +87,10 @@ This example creates an oscillator, then links it to a gain node, so that the ga
 controls the volume of the oscillator node.
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
-var audioCtx = new AudioContext();
-
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+const oscillator = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
 
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
@@ -103,22 +103,20 @@ an {{domxref("OscillatorNode")}} with a slow frequency value. This technique is 
 an _LFO_-controlled parameter.
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
 // create an normal oscillator to make sound
-var oscillator = audioCtx.createOscillator();
+const oscillator = audioCtx.createOscillator();
 
 // create a second oscillator that will be used as an LFO (Low-frequency
 // oscillator), and will control a parameter
-var lfo = audioCtx.createOscillator();
+const lfo = audioCtx.createOscillator();
 
 // set the frequency of the second oscillator to a low number
 lfo.frequency.value = 2.0; // 2Hz: two oscillations per second
 
 // create a gain whose gain AudioParam will be controlled by the LFO
-var gain = audioCtx.createGain();
+const gain = audioCtx.createGain();
 
 // connect the LFO to the gain AudioParam. This means the value of the LFO
 // will not produce any audio, but will change the value of the gain instead
@@ -141,8 +139,7 @@ lfo.start();
 
 It is possible to connect an `AudioNode` output to more than one {{
   domxref("AudioParam") }}, and more than one AudioNode output to a single {{
-  domxref("AudioParam") }}, with multiple calls to `connect()`. [Fan-in
-and fan-out](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out) are therefore supported.
+  domxref("AudioParam") }}, with multiple calls to `connect()`. [Fan-in and fan-out](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out) are therefore supported.
 
 An {{ domxref("AudioParam") }} will take the rendered audio data from any
 `AudioNode` output connected to it and convert it to mono by [down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing)
@@ -166,5 +163,4 @@ frequency, and to use a {{domxref("GainNode")}} between the audio source and the
 
 ## See also
 
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

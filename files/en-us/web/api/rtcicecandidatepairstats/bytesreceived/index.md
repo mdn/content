@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.bytesReceived
 slug: Web/API/RTCIceCandidatePairStats/bytesReceived
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -18,6 +19,7 @@ tags:
   - data
 browser-compat: api.RTCIceCandidatePairStats.bytesReceived
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

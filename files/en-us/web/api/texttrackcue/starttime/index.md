@@ -1,6 +1,7 @@
 ---
 title: TextTrackCue.startTime
 slug: Web/API/TextTrackCue/startTime
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.startTime
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`startTime`** property of the {{domxref("TextTrackCue")}} interface returns and sets the start time of the cue.

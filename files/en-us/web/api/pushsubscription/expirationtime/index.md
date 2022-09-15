@@ -1,9 +1,9 @@
 ---
 title: PushSubscription.expirationTime
 slug: Web/API/PushSubscription/expirationTime
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Push API
   - PushManager
@@ -12,7 +12,8 @@ tags:
   - Service Worker
 browser-compat: api.PushSubscription.expirationTime
 ---
-{{SeeCompatTable}}{{APIRef("Push API")}}
+
+{{APIRef("Push API")}}
 
 The **`expirationTime`** read-only property of the
 {{domxref("PushSubscription")}} interface returns a {{domxref("DOMHighResTimeStamp")}}

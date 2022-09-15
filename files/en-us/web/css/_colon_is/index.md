@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.is
 ---
+
 {{CSSRef}}
 
 > **Note:** `:matches()` was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
@@ -36,28 +37,6 @@ footer p:hover {
 
 Pseudo-elements are not valid in the selector list for `:is()`.
 
-Note that older browsers support this functionality as `:matches()`, or through an older, prefixed pseudo-class — `:any()`, including older versions of Chrome, Firefox, and Safari. `:any()` works in exactly the same way as `:matches()`/`:is()`, except that it requires vendor prefixes and doesn't support [complex selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
-
-These legacy pseudo-classes can be used to provide backwards compatibility.
-
-```css
-/* Backwards-compatible version with :-*-any() and :matches()
-   (It is not possible to group selectors into single rule,
-   because presence of invalid selector would invalidate whole rule.) */
-:-webkit-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-:-moz-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-:matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
-
 ### Difference between :is() and :where()
 
 The difference between the two is that `:is()` counts towards the specificity of the overall selector (it takes the specificity of its most specific argument), whereas [`:where()`](/en-US/docs/Web/CSS/:where) has a specificity value of 0. This is demonstrated by the [example on the `:where()` reference page](/en-US/docs/Web/CSS/:where#examples).
@@ -70,15 +49,16 @@ In CSS when using a selector list, if any of the selectors are invalid then the 
 
 ```css
 :is(:valid, :unsupported) {
-  ...
+  /* … */
 }
 ```
 
 Will still parse correctly and match `:valid` even in browsers which don't support `:unsupported`, whereas:
 
 ```css
-:valid, :unsupported {
-  ...
+:valid,
+:unsupported {
+  /* … */
 }
 ```
 
@@ -95,8 +75,14 @@ Will be ignored in browsers which don't support `:unsupported` even if they supp
 
 <main>
   <ul>
-    <li><p>This is my first</p><p>list item</p></li>
-    <li><p>This is my second</p><p>list item</p></li>
+    <li>
+      <p>This is my first</p>
+      <p>list item</p>
+    </li>
+    <li>
+      <p>This is my second</p>
+      <p>list item</p>
+    </li>
   </ul>
 </main>
 
@@ -131,18 +117,26 @@ Will be ignored in browsers which don't support `:unsupported` even if they supp
 let matchedItems;
 
 try {
-  matchedItems = document.querySelectorAll(':is(header, main, footer) p');
-} catch(e) {
+  matchedItems = document.querySelectorAll(":is(header, main, footer) p");
+} catch (e) {
   try {
-    matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
-  } catch(e) {
+    matchedItems = document.querySelectorAll(
+      ":matches(header, main, footer) p"
+    );
+  } catch (e) {
     try {
-      matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
-    } catch(e) {
+      matchedItems = document.querySelectorAll(
+        ":-webkit-any(header, main, footer) p"
+      );
+    } catch (e) {
       try {
-        matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
-      } catch(e) {
-        console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
+        matchedItems = document.querySelectorAll(
+          ":-moz-any(header, main, footer) p"
+        );
+      } catch (e) {
+        console.log(
+          "Your browser doesn't support :is(), :matches(), or :any()"
+        );
       }
     }
   }
@@ -151,8 +145,8 @@ try {
 matchedItems.forEach(applyHandler);
 
 function applyHandler(elem) {
-  elem.addEventListener('click', function(e) {
-    alert('This paragraph is inside a ' + e.target.parentNode.nodeName);
+  elem.addEventListener("click", (e) => {
+    alert(`This paragraph is inside a ${e.target.parentNode.nodeName}`);
   });
 }
 ```
@@ -161,27 +155,63 @@ function applyHandler(elem) {
 
 ### Simplifying list selectors
 
-The `:is()` pseudo-class can greatly simplify your CSS selectors. For example, the following CSS:
+The `:is()` pseudo-class can greatly simplify your CSS selectors. For example, take the following CSS:
 
 ```css
 /* 3-deep (or more) unordered lists use a square */
-ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
-ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
-ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
-ul ol ul,     ul ul ul,     ul menu ul,     ul dir ul,
-ul ol menu,   ul ul menu,   ul menu menu,   ul dir menu,
-ul ol dir,    ul ul dir,    ul menu dir,    ul dir dir,
-menu ol ul,   menu ul ul,   menu menu ul,   menu dir ul,
-menu ol menu, menu ul menu, menu menu menu, menu dir menu,
-menu ol dir,  menu ul dir,  menu menu dir,  menu dir dir,
-dir ol ul,    dir ul ul,    dir menu ul,    dir dir ul,
-dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
-dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
+ol ol ul,
+ol ul ul,
+ol menu ul,
+ol dir ul,
+ol ol menu,
+ol ul menu,
+ol menu menu,
+ol dir menu,
+ol ol dir,
+ol ul dir,
+ol menu dir,
+ol dir dir,
+ul ol ul,
+ul ul ul,
+ul menu ul,
+ul dir ul,
+ul ol menu,
+ul ul menu,
+ul menu menu,
+ul dir menu,
+ul ol dir,
+ul ul dir,
+ul menu dir,
+ul dir dir,
+menu ol ul,
+menu ul ul,
+menu menu ul,
+menu dir ul,
+menu ol menu,
+menu ul menu,
+menu menu menu,
+menu dir menu,
+menu ol dir,
+menu ul dir,
+menu menu dir,
+menu dir dir,
+dir ol ul,
+dir ul ul,
+dir menu ul,
+dir dir ul,
+dir ol menu,
+dir ul menu,
+dir menu menu,
+dir dir menu,
+dir ol dir,
+dir ul dir,
+dir menu dir,
+dir dir dir {
   list-style-type: square;
 }
 ```
 
-... can be replaced with:
+You can replace it with:
 
 ```css
 /* 3-deep (or more) unordered lists use a square */
@@ -192,7 +222,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 ### Simplifying section selectors
 
-The `:is()` pseudo-class is particularly useful when dealing with HTML5 [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
+The `:is()` pseudo-class is particularly useful when dealing with HTML [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
 
 For example, without `:is()`, styling all the {{HTMLElement("h1")}} elements at different depths could be very complicated:
 
@@ -201,19 +231,37 @@ For example, without `:is()`, styling all the {{HTMLElement("h1")}} elements at 
 h1 {
   font-size: 30px;
 }
+
 /* Level 1 */
-section h1, article h1, aside h1, nav h1 {
+section h1,
+article h1,
+aside h1,
+nav h1 {
   font-size: 25px;
 }
+
 /* Level 2 */
-section section h1, section article h1, section aside h1, section nav h1,
-article section h1, article article h1, article aside h1, article nav h1,
-aside section h1, aside article h1, aside aside h1, aside nav h1,
-nav section h1, nav article h1, nav aside h1, nav nav h1 {
+section section h1,
+section article h1,
+section aside h1,
+section nav h1,
+article section h1,
+article article h1,
+article aside h1,
+article nav h1,
+aside section h1,
+aside article h1,
+aside aside h1,
+aside nav h1,
+nav section h1,
+nav article h1,
+nav aside h1,
+nav nav h1 {
   font-size: 20px;
 }
+
 /* Level 3 */
-/* ... don't even think about it! */
+/* don't even think about it! */
 ```
 
 Using `:is()`, though, it's much easier:
@@ -228,14 +276,14 @@ h1 {
   font-size: 25px;
 }
 /* Level 2 */
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+:is(section, article, aside, nav) :is(section, article, aside, nav) h1 {
   font-size: 20px;
 }
 /* Level 3 */
 :is(section, article, aside, nav)
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+  :is(section, article, aside, nav)
+  :is(section, article, aside, nav)
+  h1 {
   font-size: 15px;
 }
 ```

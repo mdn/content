@@ -1,6 +1,7 @@
 ---
 title: VTTCue()
 slug: Web/API/VTTCue/VTTCue
+page-type: web-api-constructor
 tags:
   - API
   - Accessibility
@@ -14,6 +15,7 @@ tags:
   - vtt
 browser-compat: api.VTTCue.VTTCue
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`VTTCue()`** constructor creates and returns a new
@@ -21,7 +23,7 @@ The **`VTTCue()`** constructor creates and returns a new
 
 ## Syntax
 
-```js
+```js-nolint
 new VTTCue(startTime, endTime, text)
 ```
 

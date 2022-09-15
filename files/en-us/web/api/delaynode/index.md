@@ -1,6 +1,7 @@
 ---
 title: DelayNode
 slug: Web/API/DelayNode
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -10,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.DelayNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`DelayNode`** interface represents a [delay-line](https://en.wikipedia.org/wiki/Digital_delay_line); an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.
@@ -56,7 +58,7 @@ When creating a graph that has a cycle, it is mandatory to have at least one `De
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}._
 
-- {{domxref("DelayNode.delayTime")}} {{readonlyInline}}
+- {{domxref("DelayNode.delayTime")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of delay to apply, specified in seconds.
 
 ## Methods

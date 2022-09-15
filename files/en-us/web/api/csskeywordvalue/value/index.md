@@ -1,6 +1,7 @@
 ---
 title: CSSKeywordValue.value
 slug: Web/API/CSSKeywordValue/value
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - value
 browser-compat: api.CSSKeywordValue.value
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`value`** property of the

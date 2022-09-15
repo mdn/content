@@ -8,6 +8,7 @@ tags:
   - SharedArrayBuffer
 browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 > **Note:** `SharedArrayBuffer` was disabled by default in all major
@@ -24,10 +25,12 @@ data buffer, similar to the {{jsxref("ArrayBuffer")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new SharedArrayBuffer()
 new SharedArrayBuffer(length)
 ```
+
+> **Note:** `SharedArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

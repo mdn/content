@@ -1,6 +1,7 @@
 ---
 title: GamepadButton.value
 slug: Web/API/GamepadButton/value
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.GamepadButton.value
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`GamepadButton.value`** property of the
@@ -24,7 +26,7 @@ button that is fully pressed.
 ```js
 let gp = navigator.getGamepads()[0];
 
-if(gp.buttons[0].value > 0) {
+if (gp.buttons[0].value > 0) {
   // respond to analog button being pressed in
 }
 ```

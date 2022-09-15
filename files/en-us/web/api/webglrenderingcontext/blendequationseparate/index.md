@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.blendEquationSeparate()
 slug: Web/API/WebGLRenderingContext/blendEquationSeparate
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendEquationSeparate
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.blendEquationSeparate()`** method
@@ -20,7 +22,7 @@ The blend equation determines how a new pixel is combined with a pixel already i
 
 ## Syntax
 
-```js
+```js-nolint
 blendEquationSeparate(modeRGB, modeAlpha)
 ```
 

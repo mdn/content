@@ -1,6 +1,7 @@
 ---
 title: Request.bodyUsed
 slug: Web/API/Request/bodyUsed
+page-type: web-api-instance-property
 tags:
   - API
   - Fetch
@@ -10,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.bodyUsed
 ---
+
 {{APIRef("Fetch")}}
 
 The read-only **`bodyUsed`** property of the
@@ -30,7 +32,7 @@ const request = new Request('/myEndpoint', {
 
 request.bodyUsed; // false
 
-request.text().then(function(bodyAsText) {
+request.text().then((bodyAsText) => {
   console.log(request.bodyUsed); // true
 });
 ```

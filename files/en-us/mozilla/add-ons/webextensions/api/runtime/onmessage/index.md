@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onMessage
 ---
+
 {{AddonSidebar()}}
 
 Use this event to listen for messages from another part of your extension.
@@ -35,18 +36,18 @@ Along with the message itself, the listener is passed:
 - a `sender` object giving details about the message sender.
 - a `sendResponse()` function that can be used to send a response back to the sender.
 
-You can send a synchronous response to the message by calling the `sendResponse()` function inside your listener. [See an example](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_a_synchronous_response).
+You can send a synchronous response to the message by calling the `sendResponse()` function inside your listener. [See an example](#sending_a_synchronous_response).
 
 To send an asynchronous response, there are two options:
 
-- return `true` from the event listener. This keeps the `sendResponse()` function valid after the listener returns, so you can call it later. [See an example](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
-- return a `Promise` from the event listener, and resolve when you have the response (or reject it in case of an error). [See an example](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise).
+- return `true` from the event listener. This keeps the `sendResponse()` function valid after the listener returns, so you can call it later. [See an example](#sending_an_asynchronous_response_using_sendresponse).
+- return a `Promise` from the event listener, and resolve when you have the response (or reject it in case of an error). [See an example](#sending_an_asynchronous_response_using_a_promise).
 
 > **Note:** You can also use a [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onMessage.addListener(listener)
 browser.runtime.onMessage.removeListener(listener)
 browser.runtime.onMessage.hasListener(listener)
@@ -128,7 +129,7 @@ This content script listens for click events on the web page. If the click was o
 window.addEventListener("click", notifyExtension);
 
 function notifyExtension(e) {
-  if (e.target.tagName != "A") {
+  if (e.target.tagName !== "A") {
     return;
   }
   browser.runtime.sendMessage({"url": e.target.href});
@@ -247,9 +248,7 @@ Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` 
 function isBookmarked(message, sender, response) {
   return browser.bookmarks.search({
     url: message.url
-  }).then(function(results) {
-    return results.length > 0;
-  });
+  }).then((results) => results.length > 0);
 }
 
 browser.runtime.onMessage.addListener(isBookmarked);
@@ -261,8 +260,8 @@ If the asynchronous handler doesn't return a Promise, you can explicitly constru
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  return new Promise(resolve => {
-    setTimeout( () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
       resolve({response: "async response from background script"});
     }, 1000);
   });
@@ -277,7 +276,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre class="brush: js">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -304,4 +304,4 @@ browser.runtime.onMessage.addListener(handleMessage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

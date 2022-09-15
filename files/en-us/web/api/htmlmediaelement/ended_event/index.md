@@ -1,6 +1,7 @@
 ---
 title: 'HTMLMediaElement: ended event'
 slug: Web/API/HTMLMediaElement/ended_event
+page-type: web-api-event
 tags:
   - Audio
   - Event
@@ -14,42 +15,28 @@ tags:
   - ended
 browser-compat: api.HTMLMediaElement.ended_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `ended` event is fired when playback or streaming has stopped because the end of the media was reached or because no further data is available.
 
-This event occurs based upon {{domxref("HTMLMediaElement")}} ({{HTMLElement("audio")}} and {{HTMLElement("video")}}) fire `ended` when playback of the media reaches the end of the media.
+This event occurs based upon {{domxref("HTMLMediaElement")}} ({{HTMLElement("audio")}} and {{HTMLElement("video")}}) fire `ended` when playback reaches the end of the media.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onended")}}</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
 
-> **Note:** This event is also defined in [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API) and [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('ended', (event) => {});
+
+onended = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
@@ -114,7 +101,7 @@ video.onended = (event) => {
 - {{HTMLElement("video")}}
 - [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API)
 
-  - [Media Capture and Streams: ended event](/en-US/docs/Web/API/Media_Streams_API)[: ended event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
+  - [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API)[: ended event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 

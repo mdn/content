@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback.prompt()
 slug: Web/API/RemotePlayback/prompt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.prompt
 ---
+
 {{DefaultAPISidebar("Remote Playback API")}}
 
 The **`prompt()`** method of the {{domxref("RemotePlayback")}} interface prompts the user to select an available remote playback device and give permission for the current media to be played using that device.
@@ -19,7 +21,7 @@ If the user chooses to instead disconnect from the device, the {{domxref("Remote
 
 ## Syntax
 
-```js
+```js-nolint
 prompt()
 ```
 

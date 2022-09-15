@@ -8,7 +8,9 @@ tags:
   - Navigation
   - cookbook
   - flexbox
+browser-compat: css.properties.flex
 ---
+
 {{CSSRef}}
 
 Breadcrumb navigation helps the user to understand their location in the website by providing a breadcrumb trail back to the start page.
@@ -35,7 +37,7 @@ The items typically display inline with a separator to indicate a hierarchy betw
 > }
 > ```
 >
-> This solution uses a more complex selector, but requires less rules. Feel free to choose the solution that you prefer.
+> This solution uses a more complicated selector, but requires fewer rules. Feel free to choose the solution that you prefer.
 
 ## Choices made
 
@@ -47,11 +49,7 @@ I have used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/ari
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### Flexbox
-
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## See also
 

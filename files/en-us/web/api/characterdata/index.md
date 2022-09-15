@@ -1,11 +1,13 @@
 ---
 title: CharacterData
 slug: Web/API/CharacterData
+page-type: web-api-interface
 tags:
   - Interface
   - Reference
 browser-compat: api.CharacterData
 ---
+
 {{APIRef("DOM")}}
 
 The **`CharacterData`** abstract interface represents a {{domxref("Node")}} object that contains characters. This is an abstract interface, meaning there aren't any objects of type `CharacterData`: it is implemented by other interfaces like {{domxref("Text")}}, {{domxref("Comment")}}, {{domxref("CDATASection")}}, or {{domxref("ProcessingInstruction")}}, which aren't abstract.
@@ -18,11 +20,11 @@ _This interface also inherits properties from its parents, {{domxref("Node")}} a
 
 - {{domxref("CharacterData.data")}}
   - : A string representing the textual data contained in this object.
-- {{domxref("CharacterData.length")}} {{readonlyInline}}
+- {{domxref("CharacterData.length")}} {{ReadOnlyInline}}
   - : Returns a number representing the size of the string contained in the object.
-- {{domxref("CharacterData.nextElementSibling")}} {{readonlyInline}}
+- {{domxref("CharacterData.nextElementSibling")}} {{ReadOnlyInline}}
   - : Returns the first {{domxref("Element")}} that _follows_ this node, and is a sibling.
-- {{domxref("CharacterData.previousElementSibling")}} {{readonlyInline}}
+- {{domxref("CharacterData.previousElementSibling")}} {{ReadOnlyInline}}
   - : Returns the first {{domxref("Element")}} that _precedes_ this node, and is a sibling.
 
 ## Methods

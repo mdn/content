@@ -1,6 +1,7 @@
 ---
 title: URL.hash
 slug: Web/API/URL/hash
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - URL API
 browser-compat: api.URL.hash
 ---
+
 {{ APIRef("URL API") }}
 
 The **`hash`** property of the

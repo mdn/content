@@ -1,6 +1,7 @@
 ---
 title: RTCRtpCodecParameters
 slug: Web/API/RTCRtpCodecParameters
+page-type: web-api-interface
 tags:
   - API
   - Codec Configuration
@@ -19,6 +20,7 @@ tags:
   - WebRTC
   - setCodecPreferences
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpCodecParameters")}} dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media {{Glossary("codec")}}.
@@ -39,7 +41,7 @@ Most of the fields in this property take values which are defined and maintained
   - : An unsigned short integer indicating the number of channels the codec should support. For example, for audio codecs, a value of 1 specifies monaural sound while 2 indicates stereo.
 - {{domxref("RTCRtpCodecParameters.sdpFmtpLine", "sdpFmtpLine")}} {{optional_inline}}
 
-  - : A `DOMString` containing the format-specific parameters field from the `"a=fmtp"` line in the codec's {{Glossary("SDP")}}, if one is present; see [section 5.8 of the IETF specification for JSEP](https://datatracker.ietf.org/doc/html/draft-ietf-rtcweb-jsep-24#section-5.8).
+  - : A string containing the format-specific parameters field from the `"a=fmtp"` line in the codec's {{Glossary("SDP")}}, if one is present; see [section 5.8 of the IETF specification for JSEP](https://datatracker.ietf.org/doc/html/draft-ietf-rtcweb-jsep-24#section-5.8).
 
     > **Note:** On an {{domxref("RTCRtpReceiver")}}, the format-specific parameters come from the SDP sent by the remote peer, while for {{domxref("RTCRtpSender")}}, they're provided by the local description.
 

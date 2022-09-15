@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
+page-type: web-api-instance-method
 tags:
   - API
   - Intersection Observer
@@ -12,6 +13,7 @@ tags:
   - takeRecords
 browser-compat: api.IntersectionObserver.takeRecords
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} method
@@ -27,7 +29,7 @@ call to the observer's callback.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 
@@ -51,5 +53,4 @@ intersections were checked.
 
 ## See also
 
-- [Intersection Observer
-  API](/en-US/docs/Web/API/Intersection_Observer_API)
+- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)

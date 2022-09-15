@@ -1,6 +1,7 @@
 ---
 title: 'In depth: Microtasks and the JavaScript runtime environment'
 slug: Web/API/HTML_DOM_API/Microtask_guide/In_depth
+page-type: guide
 tags:
   - API
   - Advanced
@@ -11,11 +12,10 @@ tags:
   - queueMicrotask
   - runtime
 ---
+
 {{APIRef("HTML DOM")}}
 
-When debugging or, possibly, when trying to decide upon the best approach to solving a problem around timing and scheduling of tasks and microtasks, there are things about how the JavaScript runtime operates under the hood that may be useful to understand. That's what this section covers
-
-## Introduction
+When debugging or, possibly, when trying to decide upon the best approach to solving a problem around timing and scheduling of tasks and microtasks, there are things about how the JavaScript runtime operates under the hood that may be useful to understand.
 
 JavaScript is an inherently single-threaded language. It was designed in an era in which this was a positive choice; there were few multi-processor computers available to the general public, and the expected amount of code that would be handled by JavaScript was relatively low at that time.
 
@@ -59,7 +59,7 @@ function greetUser(user) {
     }
     return greeting;
   }
-  outputElem.innerHTML += localGreeting(user) + "<br>\r";
+  outputElem.innerHTML += `${localGreeting(user)}<br>\r`;
 }
 
 greetUser("Mike");

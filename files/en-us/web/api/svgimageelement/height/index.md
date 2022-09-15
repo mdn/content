@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement.height
 slug: Web/API/SVGImageElement/height
+page-type: web-api-instance-property
 tags:
   - API
   - Image
@@ -13,6 +14,7 @@ tags:
   - height
 browser-compat: api.SVGImageElement.height
 ---
+
 {{APIRef("SVG")}}
 
 The **`height`** read-only property of the

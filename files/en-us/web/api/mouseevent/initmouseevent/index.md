@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.initMouseEvent
 ---
+
 {{APIRef("UI Events")}}{{deprecated_header}}
 
 The **`MouseEvent.initMouseEvent()`** method initializes the
@@ -27,7 +29,7 @@ before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 initMouseEvent(type, canBubble, cancelable, view,
                      detail, screenX, screenY, clientX, clientY,
                      ctrlKey, altKey, shiftKey, metaKey,
@@ -101,23 +103,22 @@ None ({{jsxref("undefined")}}).
 ```html
 <div style="background:red; width:180px; padding:10px;">
   <div id="out"></div>
-  <input type="text">
+  <input type="text" />
 </div>
 ```
 
 ### JavaScript
 
 ```js
-document.body.onclick = function(){
-  e = arguments[0];
-  var dt = e.target,stag = dt.tagName.toLowerCase();
-  document.getElementById("out").innerHTML = stag;
+document.body.onclick = (event) => {
+  const elementTag = event.target.tagName.toLowerCase();
+  document.getElementById("out").innerHTML = elementTag;
 };
 
-var simulateClick = function(){
-  var evt = document.createEvent("MouseEvents");
-  evt.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
-  document.body.dispatchEvent(evt);
+const simulateClick = () => {
+  const event = document.createEvent("MouseEvents");
+  event.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
+  document.body.dispatchEvent(event);
 }
 
 simulateClick();

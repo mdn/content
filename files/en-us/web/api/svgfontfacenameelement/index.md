@@ -1,6 +1,7 @@
 ---
 title: SVGFontFaceNameElement
 slug: Web/API/SVGFontFaceNameElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFontFaceNameElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGFontFaceNameElement`** interface corresponds to the {{SVGElement("font-face-name")}} elements.

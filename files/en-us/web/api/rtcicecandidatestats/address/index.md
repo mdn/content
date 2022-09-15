@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.address
 slug: Web/API/RTCIceCandidateStats/address
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -19,6 +20,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidateStats.address
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`address`** property of the

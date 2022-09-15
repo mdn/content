@@ -1,6 +1,7 @@
 ---
 title: FeaturePolicy.allowedFeatures()
 slug: Web/API/FeaturePolicy/allowedFeatures
+page-type: web-api-instance-method
 tags:
   - API
   - Directive
@@ -8,8 +9,10 @@ tags:
   - Feature-Policy
   - FeaturePolicy
   - Reference
+  - Experimental
 browser-compat: api.FeaturePolicy.allowedFeatures
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`allowedFeatures()`** method of
@@ -21,7 +24,7 @@ returns a subset of directives returned by {{DOMxRef("FeaturePolicy.features",
 
 ## Syntax
 
-```js
+```js-nolint
 const allowed = FeaturePolicy.allowedFeatures()
 ```
 

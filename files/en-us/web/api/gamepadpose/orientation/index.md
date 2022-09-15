@@ -1,6 +1,7 @@
 ---
 title: GamepadPose.orientation
 slug: Web/API/GamepadPose/orientation
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -13,6 +14,7 @@ tags:
   - WebVR
 browser-compat: api.GamepadPose.orientation
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`orientation`** read-only property of the {{domxref("GamepadPose")}} interface returns the orientation of the {{domxref("Gamepad")}}, as a quarternion value.

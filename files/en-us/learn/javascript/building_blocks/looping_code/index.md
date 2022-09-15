@@ -13,9 +13,10 @@ tags:
   - break
   - continue
   - for
-  - l10n:priority
+  - "l10n:priority"
   - while
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 Programming languages are very useful for rapidly completing repetitive tasks, from multiple basic calculations to just about any other situation where you've got a lot of similar items of work to complete. Here we'll look at the loop structures available in JavaScript that handle such needs.
@@ -47,8 +48,7 @@ Loops are all about doing the same thing over and over again. Often, the code wi
 Suppose we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the _Update_ button to run the example again and again to see different random sets):
 
 ```html hidden
-<button>Update</button>
-<canvas></canvas>
+<button>Update</button> <canvas></canvas>
 ```
 
 ```css hidden
@@ -261,7 +261,7 @@ function calculate() {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += '\n...finished!';
+  results.textContent += '\nFinished!';
 }
 
 const calculateBtn = document.querySelector('#calculate');
@@ -269,7 +269,6 @@ const clearBtn = document.querySelector('#clear');
 
 calculateBtn.addEventListener('click', calculate);
 clearBtn.addEventListener('click', () => results.textContent = '');
-
 ```
 
 This gives us the following output:
@@ -288,8 +287,8 @@ Inside the loop, we calculate the square of the current value of `i`, that is: `
 
 1. During the first run, `i = 1`, so we will add `1 x 1 = 1`.
 2. During the second run, `i = 2`, so we will add `2 x 2 = 4`.
-3. ...and so on.
-4. When `i` becomes equal to `10` we will stop running the loop and move straight to the next bit of code below the loop, printing out the `...finished!` message.
+3. And so on…
+4. When `i` becomes equal to `10` we will stop running the loop and move straight to the next bit of code below the loop, printing out the `Finished!` message on a new line.
 
 ### Looping through collections with a for loop
 
@@ -335,7 +334,7 @@ const cats = ['Pete', 'Biggles', 'Jasmine'];
 let myFavoriteCats = 'My cats are called ';
 
 for (const cat of cats) {
-  myFavoriteCats = `${myFavoriteCats}${cat}, `
+  myFavoriteCats += `${cat}, `
 }
 
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
@@ -362,9 +361,9 @@ let myFavoriteCats = 'My cats are called ';
 
 for (let i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {   // We are at the end of the array
-    myFavoriteCats = `${myFavoriteCats}and ${cats[i]}.`
+    myFavoriteCats += `and ${cats[i]}.`
   } else {
-    myFavoriteCats = `${myFavoriteCats}${cats[i]}, `
+    myFavoriteCats += `${cats[i]}, `
   }
 }
 
@@ -383,7 +382,7 @@ First, some simple HTML — a text {{htmlelement("input")}} allowing us to enter
 
 ```html
 <label for="search">Search by contact name: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>Search</button>
 
 <p></p>
@@ -405,7 +404,7 @@ btn.addEventListener('click', () => {
   for (const contact of contacts) {
     const splitContact = contact.split(':');
     if (splitContact[0].toLowerCase() === searchName) {
-      para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+      para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
       break;
     }
   }
@@ -440,10 +439,10 @@ The HTML is basically the same as the last example — a simple text input, and 
 
 ```html
 <label for="number">Enter number: </label>
-<input id="number" type="text">
+<input id="number" type="text" />
 <button>Generate integer squares</button>
 
-<p>Output: </p>
+<p>Output:</p>
 ```
 
 The JavaScript is mostly the same too, although the loop itself is a bit different:
@@ -479,7 +478,7 @@ Here's the output:
 
 > **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
-## while and do ... while
+## while and do...while
 
 `for` is not the only type of loop available in JavaScript. There are actually many others and, while you don't need to understand all of these now, it is worth having a look at the structure of a couple of others so that you can recognize the same features at work in a slightly different way.
 
@@ -595,12 +594,12 @@ If you get really stuck, press "Show solution" to see a solution.
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="height: 410px;overflow: auto;">
-
-</div>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 let output = document.querySelector('.output');
 output.innerHTML = '';
@@ -613,8 +612,8 @@ output.innerHTML = '';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -660,7 +659,7 @@ reset.addEventListener('click', function() {
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -676,18 +675,18 @@ output.innerHTML = '';
 let i = 10;
 
 while (i >= 0) {
- const para = document.createElement('p');
- if (i === 10) {
- para.textContent = \`Countdown \$\{i}\`;
- } else if (i === 0) {
-  para.textContent = 'Blast off!';
- } else {
- para.textContent = i;
- }
+  const para = document.createElement('p');
+  if (i === 10) {
+    para.textContent = \`Countdown \${i}\`;
+  } else if (i === 0) {
+    para.textContent = 'Blast off!';
+  } else {
+    para.textContent = i;
+  }
 
- output.appendChild(para);
+  output.appendChild(para);
 
- i--;
+  i--;
 }`;
 
 let solutionEntry = jsSolution;
@@ -712,11 +711,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -725,10 +724,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -772,7 +771,9 @@ If you get really stuck, press "Show solution" to see a solution.
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
@@ -789,8 +790,8 @@ refused.textContent = 'Refuse: ';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -836,7 +837,7 @@ reset.addEventListener('click', function() {
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -888,11 +889,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
 
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -901,10 +902,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

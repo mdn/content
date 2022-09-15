@@ -7,6 +7,7 @@ tags:
   - IDL
   - Interface description language
 ---
+
 An **IDL** (_Interface Description Language_) is a generic language used to specified objects' interfaces apart from any specific programming language.
 
 ## Content versus IDL attributes
@@ -25,6 +26,6 @@ IDL attributes can [reflect other types](https://html.spec.whatwg.org/multipage/
 
 ## See also
 
-- {{interwiki("wikipedia", "Interface description language", "IDL")}} on Wikipedia
+- [IDL](https://en.wikipedia.org/wiki/Interface_description_language) on Wikipedia
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
 - [Interface Definition Language](https://people.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf)

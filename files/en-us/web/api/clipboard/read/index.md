@@ -1,6 +1,7 @@
 ---
 title: Clipboard.read()
 slug: Web/API/Clipboard/read
+page-type: web-api-instance-method
 tags:
   - API
   - Clip
@@ -17,6 +18,7 @@ tags:
   - read
 browser-compat: api.Clipboard.read
 ---
+
 {{APIRef("Clipboard API")}}
 
 The **`read()`** method of the
@@ -35,7 +37,7 @@ permission.
 
 ## Syntax
 
-```js
+```js-nolint
 read()
 ```
 
@@ -67,8 +69,8 @@ The example will check or ask for permission to read the clipboard, then fetch t
 #### HTML
 
 ```html
-<img id="source" src="butterfly.jpg" alt="A butterfly">
-<img id="destination">
+<img id="source" src="butterfly.jpg" alt="A butterfly" />
+<img id="destination" />
 ```
 
 #### CSS
@@ -124,7 +126,5 @@ async function pasteImage() {
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on
-  Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async
-  Clipboard article](https://web.dev/async-clipboard/)
+- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

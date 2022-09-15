@@ -1,6 +1,7 @@
 ---
 title: USBDevice.transferOut()
 slug: Web/API/USBDevice/transferOut
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - transferOut
+  - Experimental
 browser-compat: api.USBDevice.transferOut
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`transferOut()`** method of the {{domxref("USBDevice")}}
@@ -21,7 +24,7 @@ device.
 
 ## Syntax
 
-```js
+```js-nolint
 transferOut(endpointNumber, data)
 ```
 

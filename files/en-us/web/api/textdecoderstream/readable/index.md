@@ -1,6 +1,7 @@
 ---
 title: TextDecoderStream.readable
 slug: Web/API/TextDecoderStream/readable
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.readable
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`readable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("ReadableStream")}}.

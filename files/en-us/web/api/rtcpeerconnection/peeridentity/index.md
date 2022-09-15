@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.peerIdentity
 slug: Web/API/RTCPeerConnection/peerIdentity
+page-type: web-api-instance-property
 tags:
   - API
   - Authentication
@@ -15,6 +16,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCPeerConnection.peerIdentity
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only {{domxref("RTCPeerConnection")}} property
@@ -53,13 +55,13 @@ the console and returns `null` to the caller.
 ```js
 let pc = new RTCPeerConnection();
 
-/* ... */
+// …
 
 async function getIdentityAssertion(pc) {
   try {
     const identity = await pc.peerIdentity;
     return identity;
-  } catch(err) {
+  } catch (err) {
     console.log("Error identifying remote peer: ", err);
     return null;
   }

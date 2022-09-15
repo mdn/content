@@ -1,12 +1,14 @@
 ---
 title: 'Element: MSInertiaStart event'
 slug: Web/API/Element/MSInertiaStart_event
+page-type: web-api-event
 tags:
   - Event
   - Non-standard
   - Reference
 browser-compat: api.Element.MSInertiaStart_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 The **`MSInertiaStart`** event is fired when contact with the touch surface stops when a scroll has enough inertia to continue scrolling. This event may not be fired if the scroll is sufficiently slow.

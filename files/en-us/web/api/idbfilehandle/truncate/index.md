@@ -1,6 +1,7 @@
 ---
 title: IDBFileHandle.truncate()
 slug: Web/API/IDBFileHandle/truncate
+page-type: web-api-instance-method
 tags:
   - API
   - Files
@@ -11,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileHandle.truncate
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -28,7 +30,7 @@ at the index corresponding to the parameter and regardless of the value of
 
 ## Syntax
 
-```js
+```js-nolint
 truncate()
 truncate(start)
 ```

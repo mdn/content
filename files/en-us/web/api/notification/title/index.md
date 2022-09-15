@@ -1,6 +1,7 @@
 ---
 title: Notification.title
 slug: Web/API/Notification/title
+page-type: web-api-instance-property
 tags:
   - API
   - Notification
@@ -11,6 +12,7 @@ tags:
   - Title
 browser-compat: api.Notification.title
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`title`** read-only property of the
@@ -26,12 +28,12 @@ A string.
 
 ```js
 function spawnNotification(theBody,theIcon,theTitle) {
-  var options = {
+  const options = {
       body: theBody,
       icon: theIcon
   }
 
-  var n = new Notification(theTitle,options);
+  const n = new Notification(theTitle,options);
 
   console.log(n.title)
 }
@@ -47,5 +49,4 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

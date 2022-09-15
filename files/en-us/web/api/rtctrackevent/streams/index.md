@@ -1,6 +1,7 @@
 ---
 title: RTCTrackEvent.streams
 slug: Web/API/RTCTrackEvent/streams
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -15,6 +16,7 @@ tags:
   - track
 browser-compat: api.RTCTrackEvent.streams
 ---
+
 {{APIRef("WebRTC")}}
 
 The [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

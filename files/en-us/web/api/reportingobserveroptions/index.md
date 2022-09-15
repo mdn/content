@@ -1,6 +1,7 @@
 ---
 title: ReportingObserverOptions
 slug: Web/API/ReportingObserverOptions
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
@@ -10,6 +11,7 @@ tags:
   - ReportingObserverOptions
 browser-compat: api.ReportingObserverOptions
 ---
+
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
 The `ReportingObserverOptions` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) allows options to be set in the constructor when creating a {{domxref("ReportingObserver")}}.
@@ -24,12 +26,12 @@ The `ReportingObserverOptions` dictionary of the [Reporting API](/en-US/docs/Web
 ## Examples
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```

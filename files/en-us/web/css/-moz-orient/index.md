@@ -1,5 +1,5 @@
 ---
-title: '-moz-orient'
+title: "-moz-orient"
 slug: Web/CSS/-moz-orient
 tags:
   - CSS
@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-moz-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`-moz-orient`** [CSS](/en-US/docs/Web/CSS) property specifies the orientation of the element to which it's applied.
@@ -34,23 +35,20 @@ The `-moz-orient` property is specified as one of the keyword values chosen from
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-moz-orient =
+  inline | block | horizontal | vertical
+```
 
 ## Examples
 
 ### HTML
 
 ```html
-<p>
-  The following progress meter
-  is horizontal (the default):
-</p>
+<p>The following progress meter is horizontal (the default):</p>
 <progress max="100" value="75"></progress>
 
-<p>
- The following progress meter
- is vertical:
-</p>
+<p>The following progress meter is vertical:</p>
 <progress class="vert" max="100" value="75"></progress>
 ```
 

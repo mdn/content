@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.throw
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`throw` statement** throws a user-defined exception.
@@ -20,8 +21,8 @@ the program will terminate.
 
 ## Syntax
 
-```js
-throw expression;
+```js-nolint
+throw expression
 ```
 
 - `expression`
@@ -58,8 +59,8 @@ function UserException(message) {
   this.name = 'UserException';
 }
 function getMonthName(mo) {
-  mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
+  mo--; // Adjust month number for array index (1 = Jan, 12 = Dec)
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
     'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   if (months[mo] !== undefined) {
     return months[mo];
@@ -68,10 +69,12 @@ function getMonthName(mo) {
   }
 }
 
+let monthName;
+
 try {
   // statements to try
-  var myMonth = 15; // 15 is out of bound to raise the exception
-  var monthName = getMonthName(myMonth);
+  const myMonth = 15; // 15 is out of bound to raise the exception
+  monthName = getMonthName(myMonth);
 } catch (e) {
   monthName = 'unknown';
   console.error(e.message, e.name); // pass exception object to err handler
@@ -97,30 +100,29 @@ an invalid format, the throw statement throws an exception by creating an object
  * If the argument passed to the ZipCode constructor does not
  * conform to one of these patterns, an exception is thrown.
  */
-
-function ZipCode(zip) {
-  zip = new String(zip);
-  pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
-  if (pattern.test(zip)) {
+class ZipCode {
+  static pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
+  constructor(zip) {
+    zip = String(zip);
+    const match = zip.match(ZipCode.pattern);
+    if (!match) {
+      throw new ZipCodeFormatException(zip);
+    }
     // zip code value will be the first match in the string
-    this.value = zip.match(pattern)[0];
-    this.valueOf = function() {
-      return this.value
-    };
-    this.toString = function() {
-      return String(this.value)
-    };
-  } else {
-    throw new ZipCodeFormatException(zip);
+    this.value = match[0];
+  }
+  valueOf() {
+    return this.value;
+  }
+  toString() {
+    return this.value;
   }
 }
 
-function ZipCodeFormatException(value) {
-  this.value = value;
-  this.message = 'does not conform to the expected format for a zip code';
-  this.toString = function() {
-    return this.value + this.message;
-  };
+class ZipCodeFormatException extends Error {
+  constructor(zip) {
+    super(`${zip} does not conform to the expected format for a zip code`);
+  }
 }
 
 /*
@@ -135,11 +137,8 @@ function verifyZipCode(z) {
   try {
     z = new ZipCode(z);
   } catch (e) {
-    if (e instanceof ZipCodeFormatException) {
-      return ZIPCODE_INVALID;
-    } else {
-      return ZIPCODE_UNKNOWN_ERROR;
-    }
+    const isInvalidCode = e instanceof ZipCodeFormatException;
+    return isInvalidCode ? ZIPCODE_INVALID : ZIPCODE_UNKNOWN_ERROR;
   }
   return z;
 }

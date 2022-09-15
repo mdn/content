@@ -1,6 +1,7 @@
 ---
 title: NetworkInformation.type
 slug: Web/API/NetworkInformation/type
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.NetworkInformation.type
 ---
+
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation.type`** read-only property returns

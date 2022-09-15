@@ -1,11 +1,13 @@
 ---
 title: FileReaderSync
 slug: Web/API/FileReaderSync
+page-type: web-api-interface
 tags:
   - API
   - NeedsMarkupWork
 browser-compat: api.FileReaderSync
 ---
+
 {{APIRef("File API")}}
 
 The `FileReaderSync` interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects synchronously.
@@ -40,6 +42,6 @@ This interface does not have any properties.
 ## See also
 
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{DOMxRef("Blob")}}
+- {{DOMxRef("Blob")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReader")}}

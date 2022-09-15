@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.nackCount
 slug: Web/API/RTCInboundRtpStreamStats/nackCount
+page-type: web-api-instance-property
 tags:
   - API
   - NACK
@@ -17,6 +18,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.nackCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`nackCount`** property of the

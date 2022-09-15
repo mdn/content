@@ -1,6 +1,7 @@
 ---
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
+page-type: web-api-static-method
 tags:
   - API
   - Blob
@@ -13,6 +14,7 @@ tags:
   - createObjectURL
 browser-compat: api.URL.createObjectURL
 ---
+
 {{APIRef("URL API")}}
 
 The **`URL.createObjectURL()`** static
@@ -32,7 +34,7 @@ To release an object URL, call {{domxref("URL.revokeObjectURL", "revokeObjectURL
 
 ## Syntax
 
-```js
+```js-nolint
 createObjectURL(object)
 ```
 
@@ -49,7 +51,7 @@ contents of the specified source `object`.
 
 ## Examples
 
-See [Using object URLs to display images](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images).
+See [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
 ## Usage notes
 
@@ -72,8 +74,7 @@ support for doing this.
 
 > **Warning:** If you still have code that relies on
 > {{domxref("URL.createObjectURL", "createObjectURL()")}} to attach streams to media
-> elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject",
-    "srcObject")}} to the `MediaStream` directly.
+> elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to the `MediaStream` directly.
 
 ## Specifications
 
@@ -85,8 +86,8 @@ support for doing this.
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
-- [Using object URLs to display images](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
+- [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.language
 slug: Web/API/VideoTrack/language
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,6 +16,7 @@ tags:
   - track
 browser-compat: api.VideoTrack.language
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrack")}}**

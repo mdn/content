@@ -1,6 +1,7 @@
 ---
 title: DataTransfer.mozClearDataAt()
 slug: Web/API/DataTransfer/mozClearDataAt
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,9 +11,8 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozClearDataAt
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{ Non-standard_header() }}{{deprecated_header}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozClearDataAt()`** method removes the data
 associated with the given format for an item at the specified index. The index must be
@@ -30,7 +30,7 @@ entirely, shifting the remaining items down and changing their indices.
 
 ## Syntax
 
-```js
+```js-nolint
 mozClearDataAt(index)
 mozClearDataAt(type, index)
 ```
@@ -55,7 +55,7 @@ This example shows the use of the `mozClearDataAt()` method in a
 ```js
 function dragend_handler(event)
 {
-  var dt = event.dataTransfer;
+  const dt = event.dataTransfer;
   // Remove a text/html item
   dt.mozClearDataAt("text/html", 1);
 }

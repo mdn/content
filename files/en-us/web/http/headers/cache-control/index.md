@@ -103,7 +103,7 @@ This section lists directives that affect caching — both response directives a
 
 The `max-age=N` response directive indicates that the response remains [fresh](/en-US/docs/Web/HTTP/Caching#freshness) until _N_ seconds after the response is generated.
 
-```
+```http
 Cache-Control: max-age=604800
 ```
 
@@ -112,7 +112,7 @@ Indicates that caches can store this response and reuse it for subsequent reques
 Note that `max-age` is not the elapsed time since the response was received; it is the elapsed time since the response was generated on the origin server.
 So if the other cache(s) — on the network route taken by the response — store the response for 100 seconds (indicated using the `Age` response header field), the browser cache would deduct 100 seconds from its [freshness lifetime](/en-US/docs/Web/HTTP/Caching#freshness_lifetime).
 
-```
+```http
 Cache-Control: max-age=604800
 Age: 100
 ```
@@ -121,7 +121,7 @@ Age: 100
 
 The `s-maxage` response directive also indicates how long the response is [fresh](/en-US/docs/Web/HTTP/Caching#freshness) for (similar to `max-age`) — but it is specific to shared caches, and they will ignore `max-age` when it is present.
 
-```
+```http
 Cache-Control: s-maxage=604800
 ```
 
@@ -129,7 +129,7 @@ Cache-Control: s-maxage=604800
 
 The `no-cache` response directive indicates that the response can be stored in caches, but the response must be validated with the origin server before each reuse, even when the cache is disconnected from the origin server.
 
-```
+```http
 Cache-Control: no-cache
 ```
 
@@ -143,7 +143,7 @@ The `must-revalidate` response directive indicates that the response can be stor
 
 Typically, `must-revalidate` is used with `max-age`.
 
-```
+```http
 Cache-Control: max-age=604800, must-revalidate
 ```
 
@@ -157,7 +157,7 @@ The `proxy-revalidate` response directive is the equivalent of `must-revalidate`
 
 The `no-store` response directive indicates that any caches of any kind (private or shared) should not store this response.
 
-```
+```http
 Cache-Control: no-store
 ```
 
@@ -165,7 +165,7 @@ Cache-Control: no-store
 
 The `private` response directive indicates that the response can be stored only in a private cache (e.g. local caches in browsers).
 
-```
+```http
 Cache-Control: private
 ```
 
@@ -177,7 +177,7 @@ If you forget to add `private` to a response with personalized content, then tha
 
 The `public` response directive indicates that the response can be stored in a shared cache. Responses for requests with `Authorization` header fields must not be stored in a shared cache; however, the `public` directive will cause such responses to be stored in a shared cache.
 
-```
+```http
 Cache-Control: public
 ```
 
@@ -185,7 +185,7 @@ In general, when pages are under Basic Auth or Digest Auth, the browser sends re
 
 You can use the `public` directive to unlock that restriction.
 
-```
+```http
 Cache-Control: public, max-age=604800
 ```
 
@@ -199,7 +199,7 @@ The `must-understand` response directive indicates that a cache should store the
 
 `must-understand` should be coupled with `no-store` for fallback behavior.
 
-```
+```http
 Cache-Control: must-understand, no-store
 ```
 
@@ -219,13 +219,13 @@ Note: [Google's Web Light](https://developers.google.com/search/docs/advanced/mo
 
 The `immutable` response directive indicates that the response will not be updated while it's [fresh](/en-US/docs/Web/HTTP/Caching#freshness).
 
-```
+```http
 Cache-Control: public, max-age=604800, immutable
 ```
 
 A modern best practice for static resources is to include version/hashes in their URLs, while never modifying the resources — but instead, when necessary, _updating_ the resources with newer versions that have new version-numbers/hashes, so that their URLs are different. That's called the **cache-busting** pattern.
 
-```
+```html
 <script src=https://example.com/react.0.0.0.js></script>
 ```
 
@@ -238,7 +238,7 @@ When you use a cache-busting pattern for resources and apply them to a long `max
 
 The `stale-while-revalidate` response directive indicates that the cache could reuse a stale response while it revalidates it to a cache.
 
-```
+```http
 Cache-Control: max-age=604800, stale-while-revalidate=86400
 ```
 
@@ -253,7 +253,7 @@ If no request happened during that period, the cache became [stale](/en-US/docs/
 
 The `stale-if-error` response directive indicates that the cache can reuse a [stale response](/en-US/docs/Web/HTTP/Caching#freshness) when an origin server responds with an error (500, 502, 503, or 504).
 
-```
+```http
 Cache-Control: max-age=604800, stale-if-error=86400
 ```
 
@@ -267,7 +267,7 @@ After a period of time, the stored response became [stale](/en-US/docs/Web/HTTP/
 
 The `no-cache` request directive asks caches to validate the response with the origin server before reuse.
 
-```
+```http
 Cache-Control: no-cache
 ```
 
@@ -279,7 +279,7 @@ Browsers usually add `no-cache` to requests when users are **force reloading** a
 
 The `no-store` request directive allows a client to request that caches refrain from storing the request and corresponding response — even if the origin server's response could be stored.
 
-```
+```http
 Cache-Control: no-store
 ```
 
@@ -289,7 +289,7 @@ Note that the major browsers do not support requests with `no-store`.
 
 The `max-age=N` request directive indicates that the client allows a stored response that is generated on the origin server within _N_ seconds — where _N_ may be any non-negative integer (including `0`).
 
-```
+```http
 Cache-Control: max-age=3600
 ```
 
@@ -297,7 +297,7 @@ In the case above, if the response with `Cache-Control: max-age=604800` was gene
 
 Many browsers use this directive for **reloading**, as explained below.
 
-```
+```http
 Cache-Control: max-age=0
 ```
 
@@ -313,7 +313,7 @@ In other words, for any `max-age` value that isn't an integer or isn't non-negat
 
 The `max-stale=N` request directive indicates that the client allows a stored response that is [stale](/en-US/docs/Web/HTTP/Caching#freshness) within _N_ seconds.
 
-```
+```http
 Cache-Control: max-stale=3600
 ```
 
@@ -327,7 +327,7 @@ Note that the major browsers do not support requests with `max-stale`.
 
 The `min-fresh=N` request directive indicates that the client allows a stored response that is [fresh](/en-US/docs/Web/HTTP/Caching#freshness) for at least _N_ seconds.
 
-```
+```http
 Cache-Control: min-fresh=600
 ```
 
@@ -351,19 +351,19 @@ The client indicates that cache should obtain an already-cached response. If a c
 
 If you don't want a response stored in caches, use the `no-store` directive.
 
-```
+```http
 Cache-Control: no-store
 ```
 
 Note that `no-cache` means "it can be stored but don't reuse before validating" — so it's not for preventing a response from being stored.
 
-```plain example-bad
+```http example-bad
 Cache-Control: no-cache
 ```
 
 In theory, if directives are conflicted, the most restrictive directive should be honored. So the example below is basically meaningless because `private`, `no-cache`, `max-age=0` and `must-revalidate` conflict with `no-store`.
 
-```plain example-bad
+```http example-bad
 # conflicted
 Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
 
@@ -379,8 +379,8 @@ For example:
 
 ```html
 <!-- index.html -->
-<script src=/assets/react.min.js></script>
-<img src=/assets/hero.png width=900 height=400>
+<script src="/assets/react.min.js"></script>
+<img src="/assets/hero.png" width="900" height="400" />
 ```
 
 The React library version will change when you update the library, and `hero.png` will also change when you edit the picture. So those are hard to store in a cache with `max-age`.
@@ -389,13 +389,13 @@ In such a case, you could address the caching needs by using a specific, numbere
 
 ```html
 <!-- index.html -->
-<script src=/assets/react.0.0.0min.js></script>
-<img src=/assets/hero.png?hash=deadbeef width=900 height=400>
+<script src="/assets/react.0.0.0min.js"></script>
+<img src="/assets/hero.png?hash=deadbeef" width="900" height="400" />
 ```
 
 You can add a long `max-age` value and `immutable` because the content will never change.
 
-```
+```http
 # /assets/*
 Cache-Control: max-age=31536000, immutable
 ```
@@ -404,7 +404,7 @@ When you update the library or edit the picture, new content should have a new U
 
 Use a `no-cache` to make sure that the HTML response itself is not cached. `no-cache` could cause revalidation, and the client will correctly receive a new version of the HTML response and static assets.
 
-```
+```http
 # /index.html
 Cache-Control: no-cache
 ```
@@ -419,13 +419,13 @@ If you don't add a `Cache-Control` header because the response is not intended t
 
 Adding `no-cache` to the response causes revalidation to the server, so you can serve a [fresh](/en-US/docs/Web/HTTP/Caching#freshness) response every time — or if the client already has a new one, just respond `304 Not Modified`.
 
-```
+```http
 Cache-Control: no-cache
 ```
 
 Most HTTP/1.0 caches don't support `no-cache` directives, so historically `max-age=0` was used as a workaround. But only `max-age=0` could cause a [stale response](/en-US/docs/Web/HTTP/Caching#freshness) to be reused when caches disconnected from the origin server. `must-revalidate` addresses that. That's why the example below is equivalent to `no-cache`.
 
-```
+```http
 Cache-Control: max-age=0, must-revalidate
 ```
 

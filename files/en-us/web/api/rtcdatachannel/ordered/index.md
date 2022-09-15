@@ -1,6 +1,7 @@
 ---
 title: RTCDataChannel.ordered
 slug: Web/API/RTCDataChannel/ordered
+page-type: web-api-instance-property
 tags:
   - Property
   - RTCDataChannel
@@ -10,6 +11,7 @@ tags:
   - ordered
 browser-compat: api.RTCDataChannel.ordered
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property **`ordered`** indicates
@@ -20,11 +22,7 @@ This is set when the {{domxref("RTCDataChannel")}} is created,
 by setting the `ordered` property
 on the object passed as {{domxref("RTCPeerConnection.createDataChannel()")}}'s `options` parameter.
 
-## Syntax
-
-```js
-var ordered = aDataChannel.ordered;
-```
+## Value
 
 A boolean value which is `true` if in-order delivery is
 guaranteed and is otherwise `false`.
@@ -32,8 +30,8 @@ guaranteed and is otherwise `false`.
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
 if (!dc.ordered) {
   // Handle unordered messaging

@@ -1,6 +1,7 @@
 ---
 title: FileSystemHandle.kind
 slug: Web/API/FileSystemHandle/kind
+page-type: web-api-instance-property
 tags:
   - Directory
   - File
@@ -11,6 +12,7 @@ tags:
   - handle
 browser-compat: api.FileSystemHandle.kind
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`kind`** read-only property of the
@@ -23,9 +25,8 @@ directory.
 
 A string that can be:
 
-    - `'file'`: If handle is a {{domxref('FileSystemFileHandle')}}.
-    - `'directory'`: If handle is a
-      {{domxref('FileSystemDirectoryHandle')}}.
+- `'file'`: If the handle is a {{domxref('FileSystemFileHandle')}}.
+- `'directory'`: If the handle is a {{domxref('FileSystemDirectoryHandle')}}.
 
 ## Examples
 
@@ -42,7 +43,7 @@ async function getFile() {
 
   if (fileHandle.kind === 'file') {
     // run file code
-  } else if (fileHandle.kind === 'directory')
+  } else if (fileHandle.kind === 'directory') {
     // run directory code
   }
 
@@ -60,5 +61,4 @@ async function getFile() {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

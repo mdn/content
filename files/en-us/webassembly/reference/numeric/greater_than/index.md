@@ -8,9 +8,10 @@ tags:
   - Numeric
   - Comparison
 ---
+
 {{WebAssemblySidebar}}
 
-The **`gt`** instructions, short for *greater than*, check if a number is greater than another number. If the first number is greater than the second number equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
+The **`gt`** instructions, short for _greater than_, check if a number is greater than another number. If the first number is greater than the second number equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
 
 The integer types have separate greater than instructions for signed (**`gt_s`**) and unsigned (**`gt_u`**) numbers.
 

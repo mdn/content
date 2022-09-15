@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Gecko
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Firefox 13 that affect developers.
@@ -27,7 +28,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### JavaScript
 
-- Support for the ECMAScript 2015 [`for..of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) construct has been added.
+- Support for the ECMAScript 2015 [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) construct has been added.
 - Experimental support for ECMAScript 2015 [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) objects has been implemented.
 
 ### DOM
@@ -37,7 +38,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 - The {{domxref("Blob","Blob.mozSlice()")}} method has been unprefixed.
 - Support for the {{domxref("Blob")}} constructor has been added.
 - Support for `globalStorage` has been removed.
-- The new {{domxref("DOMRequest")}} interface, used for reporting the status and result of background operations, has been added.
+- The new `DOMRequest` interface, used for reporting the status and result of background operations, has been added.
 - The {{domxref("HTMLOptionElement", "HTMLOptionElement.index()")}} method now returns `0` instead of the incorrect `-1` when the {{HTMLElement("option")}} is inside a {{HTMLElement("datalist")}} HTML element.
 - {{domxref("DOMException")}} as defined in DOM Level 4 has been implemented.
 - The {{domxref("FileError")}} interface has been removed in favor of the {{domxref("DOMError")}} interface as defined in the latest FileAPI specification.
@@ -47,7 +48,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 
 ### UA string
 
-- Firefox for Android now has a [Tablet or Mobile token in the UA string](/en-US/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators) to indicate the form factor and no longer has the Fennec token. Also, the number after "Gecko/" is now the Gecko version number instead of a frozen date.
+- Firefox for Android now has a [Tablet or Mobile token in the UA string](/en-US/docs/Gecko_user_agent_string_reference#mobile_and_tablet_indicators) to indicate the form factor and no longer has the Fennec token. Also, the number after "Gecko/" is now the Gecko version number instead of a frozen date.
 - The UA string no longer exposes the Gecko patch number or release status in the version number; that is, the version number is now always of the form "X.Y", where X is the major release number and Y the minor. For example, "13.0" or "14.1". It will no longer be something like "14.0.1b1".
 
 ### SVG
@@ -61,7 +62,7 @@ Firefox 13 was shipped on June 5, 2012. This page summarizes the changes in Fire
 ### MathML
 
 - Support for the `width` attribute on {{MathMLElement("mtable")}} elements has been added ({{bug("722880")}}).
-- [MathJax fonts](https://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/) are now used as the default fonts for mathematical text. See [Fonts for Mozilla's MathML engine](/en-US/docs/Mozilla_MathML_Project/Fonts) for more information.
+- [MathJax fonts](https://docs.mathjax.org/en/latest/output/fonts.html) are now used as the default fonts for mathematical text. See [Fonts for Mozilla's MathML engine](/en-US/docs/Mozilla_MathML_Project/Fonts) for more information.
 
 ### Network
 

@@ -1,6 +1,7 @@
 ---
 title: SecurityPolicyViolationEvent.documentURI
 slug: Web/API/SecurityPolicyViolationEvent/documentURI
+page-type: web-api-instance-property
 tags:
   - API
   - CSP
@@ -12,6 +13,7 @@ tags:
   - documentURI
 browser-compat: api.SecurityPolicyViolationEvent.documentURI
 ---
+
 {{HTTPSidebar}}
 
 The **`documentURI`** read-only property of the

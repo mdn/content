@@ -1,6 +1,7 @@
 ---
 title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -13,6 +14,7 @@ tags:
   - Reference
 browser-compat: api.DOMPoint.DOMPoint
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPoint()`** constructor
@@ -25,7 +27,7 @@ You can also create a `DOMPoint` by calling the
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMPoint()
 new DOMPoint(x)
 new DOMPoint(x, y)
@@ -51,8 +53,8 @@ current window, then creates a second point based on the first, which is then of
 100 pixels both vertically and horizontally.
 
 ```js
-var windTopLeft = new DOMPoint(window.screenX, window.screenY);
-var newTopLeft = DOMPoint.fromPoint(windTopLeft);
+const windTopLeft = new DOMPoint(window.screenX, window.screenY);
+const newTopLeft = DOMPoint.fromPoint(windTopLeft);
 newTopLeft.x += 100;
 newTopLeft.y += 100;
 ```
@@ -67,6 +69,6 @@ newTopLeft.y += 100;
 
 ## See also
 
-- {{domxref("DOMPointReadOnly.DOMPoint", "DOMPointReadOnly()")}}
+- {{domxref("DOMPointReadOnly.DOMPointReadOnly", "DOMPointReadOnly()")}}
 - {{domxref("DOMRect")}}
 - {{domxref("DOMMatrix")}}

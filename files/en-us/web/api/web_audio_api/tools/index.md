@@ -1,6 +1,7 @@
 ---
 title: Tools for analyzing Web Audio usage
 slug: Web/API/Web_Audio_API/Tools
+page-type: guide
 tags:
   - API
   - Audio
@@ -12,7 +13,8 @@ tags:
   - Web Audio API
   - sound
 ---
-{{APIRef("Web Audio API")}}
+
+{{DefaultAPISidebar("Web Audio API")}}
 
 While working on your Web Audio API code, you may find that you need tools to analyze the graph of nodes you create or to otherwise debug your work. This article discusses tools available to help you do that.
 

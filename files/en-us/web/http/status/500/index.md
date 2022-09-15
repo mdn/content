@@ -7,6 +7,7 @@ tags:
   - Status code
 browser-compat: http.status.500
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`500 Internal Server Error`** server error response code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.

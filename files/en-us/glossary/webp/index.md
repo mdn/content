@@ -8,6 +8,7 @@ tags:
   - Infrastructure
   - WebP
 ---
+
 **WebP** is a lossless and lossy compression image format developed by Google.
 
 ## See also

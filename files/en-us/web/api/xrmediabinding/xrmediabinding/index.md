@@ -1,21 +1,24 @@
 ---
 title: XRMediaBinding()
 slug: Web/API/XRMediaBinding/XRMediaBinding
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
   - Reference
   - WebXR
   - XR
+  - Experimental
 browser-compat: api.XRMediaBinding.XRMediaBinding
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRMediaBinding()`** constructor creates and returns a new {{domxref("XRMediaBinding")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRMediaBinding(session)
 ```
 
@@ -31,6 +34,7 @@ A newly-created {{domxref("XRMediaBinding")}}.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
+
   - : Thrown if the new `XRMediaBinding` could not be created due to one of a number of possible state errors:
 
     - The {{domxref("XRSession")}} specified by `session` has already been stopped.

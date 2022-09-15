@@ -12,6 +12,7 @@ tags:
   - setTabValue
 browser-compat: webextensions.api.sessions.setTabValue
 ---
+
 {{AddonSidebar()}}
 
 Stores a key/value pair to associate with a given tab. You can subsequently retrieve this value using {{WebExtAPIRef("sessions.getTabValue")}}.
@@ -22,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let storing = browser.sessions.setTabValue(
   tabId,    // integer
   key,      // string

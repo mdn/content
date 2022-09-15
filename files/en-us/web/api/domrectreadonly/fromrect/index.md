@@ -1,6 +1,7 @@
 ---
 title: DOMRectReadOnly.fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect
+page-type: web-api-static-method
 tags:
   - API
   - DOMRectReadOnly
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMRectReadOnly.fromRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`fromRect()`** static method of the
@@ -17,7 +19,7 @@ object with a given location and dimensions.
 
 ## Syntax
 
-```js
+```js-nolint
 fromRect()
 fromRect(rectangle)
 ```

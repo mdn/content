@@ -4,15 +4,16 @@ slug: Web/JavaScript/Guide/Text_formatting
 tags:
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
 
 This chapter introduces how to work with strings and text in JavaScript.
 
 ## Strings
 
-JavaScript's [String](/en-US/docs/Glossary/String) type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values  (UTF-16 code units). Each element in the String occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The length of a String is the number of elements in it. You can create strings using string literals or string objects.
+JavaScript's [String](/en-US/docs/Glossary/String) type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values (UTF-16 code units). Each element in the String occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The length of a String is the number of elements in it. You can create strings using string literals or string objects.
 
 ### String literals
 
@@ -43,7 +44,7 @@ The Unicode escape sequences require at least four hexadecimal digits following 
 
 #### Unicode code point escapes
 
-New in ECMAScript 2015. With Unicode code point escapes, any character can be escaped using hexadecimal numbers so that it is possible to use Unicode code points up to `0x10FFFF`. With simple Unicode escapes it is often necessary to write the surrogate halves separately to achieve the same result.
+With Unicode code point escapes, any character can be escaped using hexadecimal numbers so that it is possible to use Unicode code points up to `0x10FFFF`. With simple Unicode escapes it is often necessary to write the surrogate halves separately to achieve the same result.
 
 See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
 
@@ -64,7 +65,7 @@ console.log(foo); // Displays: [String: 'foo']
 typeof foo; // Returns 'object'
 ```
 
-You can call any of the methods of the `String` object on a string literal value—JavaScript automatically converts the string literal to a temporary `String` object, calls the method, then discards the temporary `String` object. You can also use the `String.length` property with a string literal.
+You can call any of the methods of the `String` object on a string literal value—JavaScript automatically converts the string literal to a temporary `String` object, calls the method, then discards the temporary `String` object. You can also use the `length` property with a string literal.
 
 You should use string literals unless you specifically need to use a `String` object, because `String` objects can have counterintuitive behavior. For example:
 
@@ -103,8 +104,8 @@ The following table summarizes the methods of {{jsxref("String")}} objects.
   <tbody>
     <tr>
       <td>
-        {{jsxref("String.charAt", "charAt")}}, {{jsxref("String.charCodeAt", "charCodeAt")}},
-        {{jsxref("String.codePointAt", "codePointAt")}}
+        {{jsxref("String/charAt", "charAt()")}}, {{jsxref("String/charCodeAt", "charCodeAt()")}},
+        {{jsxref("String/codePointAt", "codePointAt()")}}
       </td>
       <td>
         Return the character or character code at the specified position in
@@ -113,8 +114,8 @@ The following table summarizes the methods of {{jsxref("String")}} objects.
     </tr>
     <tr>
       <td>
-        {{jsxref("String.indexOf", "indexOf")}},
-        {{jsxref("String.lastIndexOf", "lastIndexOf")}}
+        {{jsxref("String/indexOf", "indexOf()")}},
+        {{jsxref("String/lastIndexOf", "lastIndexOf()")}}
       </td>
       <td>
         Return the position of specified substring in the string or last
@@ -123,9 +124,9 @@ The following table summarizes the methods of {{jsxref("String")}} objects.
     </tr>
     <tr>
       <td>
-        {{jsxref("String.startsWith", "startsWith")}},
-        {{jsxref("String.endsWith", "endsWith")}},
-        {{jsxref("String.includes", "includes")}}
+        {{jsxref("String/startsWith", "startsWith()")}},
+        {{jsxref("String/endsWith", "endsWith()")}},
+        {{jsxref("String/includes", "includes()")}}
       </td>
       <td>
         Returns whether or not the string starts, ends or contains a specified
@@ -133,34 +134,24 @@ The following table summarizes the methods of {{jsxref("String")}} objects.
       </td>
     </tr>
     <tr>
-      <td>{{jsxref("String.concat", "concat")}}</td>
+      <td>{{jsxref("String/concat", "concat()")}}</td>
       <td>Combines the text of two strings and returns a new string.</td>
     </tr>
     <tr>
-      <td>
-        {{jsxref("String.fromCharCode", "fromCharCode")}},
-        {{jsxref("String.fromCodePoint", "fromCodePoint")}}
-      </td>
-      <td>
-        Constructs a string from the specified sequence of Unicode values. This
-        is a method of the String class, not a String instance.
-      </td>
-    </tr>
-    <tr>
-      <td>{{jsxref("String.split", "split")}}</td>
+      <td>{{jsxref("String/split", "split()")}}</td>
       <td>
         Splits a <code>String</code> object into an array of strings by
         separating the string into substrings.
       </td>
     </tr>
     <tr>
-      <td>{{jsxref("String.slice", "slice")}}</td>
+      <td>{{jsxref("String/slice", "slice()")}}</td>
       <td>Extracts a section of a string and returns a new string.</td>
     </tr>
     <tr>
       <td>
-        {{jsxref("String.substring", "substring")}},
-        {{jsxref("String.substr", "substr")}}
+        {{jsxref("String/substring", "substring()")}},
+        {{jsxref("String/substr", "substr()")}}
       </td>
       <td>
         Return the specified subset of the string, either by specifying the
@@ -169,16 +160,16 @@ The following table summarizes the methods of {{jsxref("String")}} objects.
     </tr>
     <tr>
       <td>
-        {{jsxref("String.match", "match")}}, {{jsxref("String.matchAll", "matchAll")}},
-        {{jsxref("String.replace", "replace")}}, {{jsxref("String.replaceAll", "replaceAll")}},
-        {{jsxref("String.search", "search")}}
+        {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}},
+        {{jsxref("String/replace", "replace()")}}, {{jsxref("String/replaceAll", "replaceAll()")}},
+        {{jsxref("String/search", "search()")}}
       </td>
       <td>Work with regular expressions.</td>
     </tr>
     <tr>
       <td>
-        {{jsxref("String.toLowerCase", "toLowerCase")}},
-        {{jsxref("String.toUpperCase", "toUpperCase")}}
+        {{jsxref("String/toLowerCase", "toLowerCase()")}},
+        {{jsxref("String/toUpperCase", "toUpperCase()")}}
       </td>
       <td>
         <p>
@@ -187,20 +178,20 @@ The following table summarizes the methods of {{jsxref("String")}} objects.
       </td>
     </tr>
     <tr>
-      <td>{{jsxref("String.normalize", "normalize")}}</td>
+      <td>{{jsxref("String/normalize", "normalize()")}}</td>
       <td>
         Returns the Unicode Normalization Form of the calling string value.
       </td>
     </tr>
     <tr>
-      <td>{{jsxref("String.repeat", "repeat")}}</td>
+      <td>{{jsxref("String/repeat", "repeat()")}}</td>
       <td>
         Returns a string consisting of the elements of the object repeated the
         given times.
       </td>
     </tr>
     <tr>
-      <td>{{jsxref("String.trim", "trim")}}</td>
+      <td>{{jsxref("String/trim", "trim()")}}</td>
       <td>Trims whitespace from the beginning and end of the string.</td>
     </tr>
   </tbody>
@@ -263,16 +254,23 @@ The {{jsxref("Intl")}} object is the namespace for the ECMAScript Internationali
 The {{jsxref("Intl.DateTimeFormat")}} object is useful for formatting date and time. The following formats a date for English as used in the United States. (The result is different in another time zone.)
 
 ```js
-const msPerDay = 24 * 60 * 60 * 1000;
+// July 17, 2014 00:00:00 UTC:
+const july172014 = new Date("2014-07-17");
 
-// July 17, 2014 00:00:00 UTC.
-const july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));
-
-const options = { year: '2-digit', month: '2-digit', day: '2-digit',
-                hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
+const options = {
+  year: '2-digit',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  timeZoneName: 'short'
+};
 const americanDateTime = new Intl.DateTimeFormat('en-US', options).format;
 
-console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
+// Local timezone vary depending on your settings
+// In CEST, logs: 07/17/14, 02:00 AM GMT+2
+// In PDT, logs: 07/16/14, 05:00 PM GMT-7
+console.log(americanDateTime(july172014));
 ```
 
 ### Number formatting

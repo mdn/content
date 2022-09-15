@@ -1,6 +1,7 @@
 ---
 title: Performance
 slug: Web/API/Performance
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -10,6 +11,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance
 ---
+
 {{APIRef("High Resolution Time")}}
 
 The **`Performance`** interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API), the [User Timing API](/en-US/docs/Web/API/User_Timing_API), and the [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API).
@@ -24,21 +26,21 @@ An object of this type can be obtained by calling the {{domxref("window.performa
 
 _The `Performance` interface doesn't inherit any properties._
 
-- {{domxref("Performance.navigation")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxref("Performance.navigation")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
 
   - : A legacy {{domxref("PerformanceNavigation")}} object that provides useful context about the operations included in the times listed in `timing`, including whether the page was a load or a refresh, how many redirections occurred, and so forth.
 
     > **Note:** Not available in workers.
 
-- {{domxref("Performance.timing")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxref("Performance.timing")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
 
   - : A legacy {{domxref("PerformanceTiming")}} object containing latency-related performance information.
 
     > **Note:** Not available in workers.
 
-- {{domxref("Performance.memory")}} {{readonlyInline}} {{Non-standard_inline}}
+- {{domxref("Performance.memory")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : A _non-standard_ extension added in Chrome, this property provides an object with basic memory usage information. _You **should not use** this non-standard API._
-- {{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Non-standard_inline}}
+- {{domxref("Performance.timeOrigin")}} {{ReadOnlyInline}}
   - : Returns the high resolution timestamp of the start time of the performance measurement.
 
 ## Methods

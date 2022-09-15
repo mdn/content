@@ -1,6 +1,7 @@
 ---
 title: XPathException.code
 slug: Web/API/XPathException/code
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - XPathException
 browser-compat: api.XPathException.code
 ---
+
 {{APIRef("DOM XPath")}}{{Deprecated_Header}}
 
 The **`code`** read-only property of the

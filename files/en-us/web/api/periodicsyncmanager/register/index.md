@@ -1,6 +1,7 @@
 ---
 title: PeriodicSyncManager.register()
 slug: Web/API/PeriodicSyncManager/register
+page-type: web-api-instance-method
 tags:
   - Background Sync
   - Method
@@ -9,9 +10,11 @@ tags:
   - PeriodicSyncManager
   - Service Worker
   - Web Periodic Background Synchronization API
+  - Experimental
 browser-compat: api.PeriodicSyncManager.register
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`register()`** method of the
 {{domxref("PeriodicSyncManager")}} interface registers a periodic sync request with the
@@ -20,7 +23,7 @@ resolves when the registration completes.
 
 ## Syntax
 
-```js
+```js-nolint
 register(tag, options)
 ```
 
@@ -77,7 +80,5 @@ async function registerPeriodicNewsCheck() {
 
 ## See also
 
-- [Richer offline experiences with
-  the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
-- [A
-  Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

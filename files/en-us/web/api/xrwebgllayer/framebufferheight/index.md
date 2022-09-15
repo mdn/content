@@ -1,6 +1,7 @@
 ---
 title: XRWebGLLayer.framebufferHeight
 slug: Web/API/XRWebGLLayer/framebufferHeight
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -21,9 +22,11 @@ tags:
   - framebufferHeight
   - height
   - size
+  - Experimental
 browser-compat: api.XRWebGLLayer.framebufferHeight
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`framebufferHeight`** indicates the height of the

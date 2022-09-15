@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.selected
 slug: Web/API/VideoTrack/selected
+page-type: web-api-instance-property
 tags:
   - HTML DOM
   - Media
@@ -14,6 +15,7 @@ tags:
   - track
 browser-compat: api.VideoTrack.selected
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("VideoTrack")}}** property

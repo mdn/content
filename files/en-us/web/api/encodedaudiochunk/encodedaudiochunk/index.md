@@ -1,20 +1,23 @@
 ---
-title: EncodedAudioChunk.EncodedAudioChunk()
+title: EncodedAudioChunk()
 slug: Web/API/EncodedAudioChunk/EncodedAudioChunk
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
   - Reference
   - EncodedAudioChunk
+  - Experimental
 browser-compat: api.EncodedAudioChunk.EncodedAudioChunk
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`EncodedAudioChunk()`** constructor creates a new {{domxref("EncodedAudioChunk")}} object representing a chunk of encoded audio.
 
 ## Syntax
 
-```js
+```js-nolint
 new EncodedAudioChunk(options)
 ```
 
@@ -33,7 +36,7 @@ new EncodedAudioChunk(options)
     - `duration`
       - : An integer representing the length of the audio in microseconds.
     - `data`
-      - : A {{domxref("BufferSource")}} containing the audio data.
+      - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the audio data.
 
 ## Examples
 

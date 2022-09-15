@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.optional_chaining
 ---
+
 {{JSSidebar("Operators")}}
 
 The **optional chaining** operator (**`?.`**)
@@ -18,7 +19,7 @@ without having to check that each reference in the chain is valid.
 
 The `?.` operator is like the
 `.` chaining operator, except that instead of causing an error if a
-reference is [nullish](/en-US/docs/Glossary/Nullish) ({{JSxRef("null")}} or
+reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or
 {{JSxRef("undefined")}}), the expression short-circuits with a return value of
 `undefined`. When used with function calls, it returns
 `undefined` if the given function does not exist.
@@ -35,10 +36,9 @@ Optional chaining cannot be used on a non-declared root object, but can be used 
 
 ## Syntax
 
-```js
+```js-nolint
 obj.val?.prop
 obj.val?.[expr]
-obj.arr?.[index]
 obj.func?.(args)
 ```
 
@@ -53,7 +53,7 @@ optional chaining, looking up a deeply-nested subproperty requires validating th
 references in between, such as:
 
 ```js
-let nestedProp = obj.first && obj.first.second;
+const nestedProp = obj.first && obj.first.second;
 ```
 
 The value of `obj.first` is confirmed to be non-`null` (and
@@ -66,7 +66,7 @@ explicitly test and short-circuit based on the state of `obj.first` before
 trying to access `obj.first.second`:
 
 ```js
-let nestedProp = obj.first?.second;
+const nestedProp = obj.first?.second;
 ```
 
 By using the `?.` operator instead of just `.`, JavaScript knows
@@ -79,8 +79,8 @@ This is equivalent to the following, except that the temporary variable is in fa
 created:
 
 ```js
-let temp = obj.first;
-let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
+const temp = obj.first;
+const nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
 ```
 
 ### Optional chaining with function calls
@@ -95,7 +95,7 @@ return `undefined` instead of throwing an exception if the method isn't
 found:
 
 ```js
-let result = someInterface.customMethod?.();
+const result = someInterface.customMethod?.();
 ```
 
 > **Note:** If there is a property with such a name and which is not a
@@ -109,19 +109,104 @@ let result = someInterface.customMethod?.();
 > you have to use `?.` at this position as
 > well: `someInterface?.customMethod?.()`
 
-#### Dealing with optional callbacks or event handlers
+### Optional chaining with expressions
+
+You can also use the optional chaining operator when accessing properties with an expression using
+[the bracket notation of the property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation):
+
+```js
+const nestedProp = obj?.['prop' + 'Name'];
+```
+
+This is particularly useful for arrays:
+
+```js
+const arr = ['a', 'b', 'c', 'd']
+const arrayItem = arr?.[42];
+```
+
+### Optional chaining not valid on the left-hand side of an assignment
+
+It is invalid to try to assign to the result of an optional chaining expression:
+
+```js example-bad
+const object = {};
+object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
+```
+
+### Short-circuiting
+
+When using optional chaining with expressions, if the left operand is `null` or `undefined`, the expression will not be evaluated. For instance:
+
+```js
+const potentiallyNullObj = null;
+let x = 0;
+const prop = potentiallyNullObj?.[x++];
+
+console.log(x); // 0 as x was not incremented
+```
+
+Subsequent property accesses will not be evaluated either.
+
+```js
+const potentiallyNullObj = null;
+const prop = potentiallyNullObj?.a.b;
+// This does not throw, because evaluation has already stopped at
+// the first optional chain
+```
+
+This is equivalent to:
+
+```js
+const potentiallyNullObj = null;
+const prop = (potentiallyNullObj === null || potentiallyNullObj === undefined) ? undefined : potentiallyNullObj.a.b;
+```
+
+However, this short-circuiting behavior only happens along one continuous "chain" of property accesses. If you [group](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) one part of the chain, then subsequent property accesses will still be evaluated.
+
+```js
+const potentiallyNullObj = null;
+const prop = (potentiallyNullObj?.a).b;
+// Uncaught TypeError: Cannot read properties of undefined (reading 'b')
+```
+
+This is equivalent to:
+
+```js
+const potentiallyNullObj = null;
+const temp = potentiallyNullObj?.a;
+const prop = temp.b;
+```
+
+…except the `temp` variable isn't created.
+
+## Examples
+
+### Basic example
+
+This example looks for the value of the `name` property for the member
+`bar` in a map when there is no such member. The result is therefore
+`undefined`.
+
+```js
+const myMap = new Map();
+myMap.set("foo", {name: "baz", desc: "inga"});
+
+const nameBar = myMap.get("bar")?.name;
+```
+
+### Dealing with optional callbacks or event handlers
 
 If you use callbacks or fetch methods from an object with
 [a destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), you may have non-existent values that you cannot call as
 functions unless you have tested their existence. Using `?.`, you can avoid this extra test:
 
 ```js
-// Written as of ES2019
+// Code written without optional chaining
 function doSomething(onContent, onError) {
   try {
     // ... do something with the data
-  }
-  catch (err) {
+  } catch (err) {
     if (onError) { // Testing if onError really exists
       onError(err.message);
     }
@@ -133,67 +218,11 @@ function doSomething(onContent, onError) {
 // Using optional chaining with function calls
 function doSomething(onContent, onError) {
   try {
-   // ... do something with the data
-  }
-  catch (err) {
+    // ... do something with the data
+  } catch (err) {
     onError?.(err.message); // no exception if onError is undefined
   }
 }
-```
-
-### Optional chaining with expressions
-
-You can also use the optional chaining operator when accessing properties with an expression using
-[the bracket notation of the property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation):
-
-```js
-let nestedProp = obj?.['prop' + 'Name'];
-```
-
-### Optional chaining not valid on the left-hand side of an assignment
-
-It is invalid to try to assign to the result of an optional chaining expression:
-
-```js
-let object = {};
-object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
-```
-
-### Array item access with optional chaining
-
-You can use [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation) for optional chaining on arrays:
-
-```js
-const arr = ['a', 'b', 'c', 'd']
-let arrayItem = arr?.[42];
-```
-
-## Examples
-
-### Basic example
-
-This example looks for the value of the `name` property for the member
-`bar` in a map when there is no such member. The result is therefore
-`undefined`.
-
-```js
-let myMap = new Map();
-myMap.set("foo", {name: "baz", desc: "inga"});
-
-let nameBar = myMap.get("bar")?.name;
-```
-
-### Short-circuiting evaluation
-
-When using optional chaining with expressions, if the left operand is `null`
-or `undefined`, the expression will not be evaluated. For instance:
-
-```js
-let potentiallyNullObj = null;
-let x = 0;
-let prop = potentiallyNullObj?.[x++];
-
-console.log(x); // 0 as x was not incremented
 ```
 
 ### Stacking the optional chaining operator
@@ -201,17 +230,17 @@ console.log(x); // 0 as x was not incremented
 With nested structures, it is possible to use optional chaining multiple times:
 
 ```js
-let customer = {
+const customer = {
   name: "Carl",
   details: {
     age: 82,
     location: "Paradise Falls" // detailed address is unknown
   }
 };
-let customerCity = customer.details?.address?.city;
+const customerCity = customer.details?.address?.city;
 
 // … this also works with optional chaining function call
-let customerName = customer.name?.getName?.(); // method does not exist, customerName is undefined
+const customerName = customer.name?.getName?.(); // method does not exist, customerName is undefined
 ```
 
 ### Combining with the nullish coalescing operator
@@ -221,7 +250,7 @@ The {{JSxRef("Operators/Nullish_Coalescing_Operator", "nullish coalescing operat
 was found:
 
 ```js
-let customer = {
+const customer = {
   name: "Carl",
   details: { age: 82 }
 };

@@ -9,6 +9,7 @@ tags:
   - URL
 browser-compat: http.data-url
 ---
+
 {{HTTPSidebar}}
 
 **Data URLs**, URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents. They were formerly known as "data URIs" until that name was retired by the WHATWG.
@@ -19,7 +20,7 @@ browser-compat: http.data-url
 
 Data URLs are composed of four parts: a prefix (`data:`), a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) indicating the type of data, an optional `base64` token if non-textual, and the data itself:
 
-```html
+```plain
 data:[<mediatype>][;base64],<data>
 ```
 
@@ -44,7 +45,7 @@ A few examples:
 
 Base64 is a group of binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. By consisting only of ASCII characters, base64 strings are generally url-safe, and that's why they can be used to encode data in Data URLs.
 
-### Encoding in Javascript
+### Encoding in JavaScript
 
 The Web APIs have native methods to encode or decode to base64: [Base64 encoding and decoding](/en-US/docs/Glossary/Base64).
 
@@ -66,9 +67,9 @@ base64 a.txt>b.txt
 
 ### Encoding on Microsoft Windows
 
-On Windows, [Convert.ToBase64String](https://docs.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
+On Windows, [Convert.ToBase64String](https://docs.microsoft.com/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
 
-```bash
+```plain
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
 # outputs to console: aGVsbG8=
 ```
@@ -85,13 +86,14 @@ bash$ echo -n hello | base64
 This section describes problems that commonly occur when creating and using `data` URLs.
 
 ```
-data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=val
+data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
 ```
 
 This represents an HTML resource whose contents are:
 
 ```html
-lots of text...<p><a name="bottom">bottom</a>?arg=val
+lots of text…
+<p><a name="bottom">bottom</a>?arg=val</p>
 ```
 
 - Syntax

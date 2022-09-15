@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.linkProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The {{domxref("WebGLRenderingContext")}} interface's
@@ -18,7 +20,7 @@ program's fragment and vertex shaders.
 
 ## Syntax
 
-```js
+```js-nolint
 linkProgram(program)
 ```
 
@@ -34,7 +36,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -42,9 +44,9 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
-  var info = gl.getProgramInfoLog(program);
-  throw new Error('Could not compile WebGL program. \n\n' + info);
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  const info = gl.getProgramInfoLog(program);
+  throw new Error(`Could not compile WebGL program. \n\n${info}`);
 }
 ```
 

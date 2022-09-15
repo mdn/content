@@ -1,6 +1,7 @@
 ---
 title: CSSScale.y
 slug: Web/API/CSSScale/y
+page-type: web-api-instance-property
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - Property
 browser-compat: api.CSSScale.y
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`y`** property of the

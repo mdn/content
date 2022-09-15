@@ -1,6 +1,7 @@
 ---
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Selectors
@@ -14,6 +15,7 @@ tags:
   - querySelector
 browser-compat: api.Document.querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 The {{domxref("Document")}} method **`querySelector()`**
@@ -26,7 +28,7 @@ selector, or group of selectors. If no matches are found, `null` is returned.
 
 ## Syntax
 
-```js
+```js-nolint
 querySelector(selectors)
 ```
 
@@ -35,8 +37,7 @@ querySelector(selectors)
 - `selectors`
   - : A string containing one or more selectors to match. This string
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
-    is thrown. See [Locating
-    DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more about selectors and how to manage them.
+    is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more about selectors and how to manage them.
 
 > **Note:** Characters that are not part of standard CSS syntax must be
 > escaped using a backslash character. Since JavaScript also uses backslash escaping, be
@@ -46,8 +47,7 @@ querySelector(selectors)
 ### Return value
 
 An {{domxref("Element")}} object representing the first element in the document
-that matches the specified set of [CSS
-selectors](/en-US/docs/Web/CSS/CSS_Selectors), or `null` is returned if there are no matches.
+that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors), or `null` is returned if there are no matches.
 
 If you need a list of all elements matching the specified selectors, you should use
 {{domxref("Document.querySelectorAll", "querySelectorAll()")}} instead.
@@ -78,15 +78,15 @@ JavaScript, if you are entering a literal string, you must escape it _twice_
 <div id="foo:bar"></div>
 
 <script>
-  console.log('#foo\bar');               // "#fooar" (\b is the backspace control character)
-  document.querySelector('#foo\bar');    // Does not match anything
+  console.log("#foo\bar"); // "#fooar" (\b is the backspace control character)
+  document.querySelector("#foo\bar"); // Does not match anything
 
-  console.log('#foo\\bar');              // "#foo\bar"
-  console.log('#foo\\\\bar');            // "#foo\\bar"
-  document.querySelector('#foo\\\\bar'); // Match the first div
+  console.log("#foo\\bar"); // "#foo\bar"
+  console.log("#foo\\\\bar"); // "#foo\\bar"
+  document.querySelector("#foo\\\\bar"); // Match the first div
 
-  document.querySelector('#foo:bar');    // Does not match anything
-  document.querySelector('#foo\\:bar');  // Match the second div
+  document.querySelector("#foo:bar"); // Does not match anything
+  document.querySelector("#foo\\:bar"); // Match the second div
 </script>
 ```
 
@@ -98,10 +98,10 @@ In this example, the first element in the document with the class
 "`myclass`" is returned:
 
 ```js
-var el = document.querySelector(".myclass");
+const el = document.querySelector(".myclass");
 ```
 
-### A more complex selector
+### Complex selectors
 
 Selectors can also be really powerful, as demonstrated in the following example. Here,
 the first {{HTMLElement("input")}} element with the name "login"
@@ -110,7 +110,7 @@ class is "user-panel main" (`<div class="user-panel main">`) in the
 document is returned:
 
 ```js
-var el = document.querySelector("div.user-panel.main input[name='login']");
+const el = document.querySelector("div.user-panel.main input[name='login']");
 ```
 
 ### Negation
@@ -118,7 +118,7 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 As all CSS selector strings are valid, you can also negate selectors:
 
 ```js
-var el = document.querySelector("div.user-panel:not(.main) input[name='login']");
+const el = document.querySelector("div.user-panel:not(.main) input[name='login']");
 ```
 
 This will select an input with a parent div with the `user-panel` class but
@@ -134,8 +134,7 @@ not the `main` class.
 
 ## See also
 
-- [Locating
-  DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Document.querySelectorAll()")}}
 - {{domxref("Element.querySelectorAll()")}}

@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.naturalWidth
 slug: Web/API/HTMLImageElement/naturalWidth
+page-type: web-api-instance-property
 tags:
   - API
   - HTML
@@ -15,6 +16,7 @@ tags:
   - width
 browser-compat: api.HTMLImageElement.naturalWidth
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}} interface's read-only

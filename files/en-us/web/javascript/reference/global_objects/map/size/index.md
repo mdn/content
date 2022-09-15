@@ -8,6 +8,7 @@ tags:
   - Property
 browser-compat: javascript.builtins.Map.size
 ---
+
 {{JSRef}}
 
 The **`size`** accessor property returns the number of elements in a
@@ -31,7 +32,7 @@ myMap.set('a', 'alpha');
 myMap.set('b', 'beta');
 myMap.set('g', 'gamma');
 
-myMap.size // 3
+console.log(myMap.size); // 3
 ```
 
 ## Specifications

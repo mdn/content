@@ -1,15 +1,16 @@
 ---
 title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
+page-type: guide
 tags:
   - Canvas
   - Graphics
   - Guide
   - HTML
-  - HTML5
   - Intermediate
   - Web
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 Earlier in this tutorial we've learned about the [canvas grid](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) and the **coordinate space**. Until now, we only used the default grid and changed the size of the overall canvas for our needs. With transformations there are more powerful ways to translate the origin to a different position, rotate the grid and even scale it.
@@ -37,7 +38,7 @@ This example tries to illustrate how the stack of drawing states functions by dr
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.fillRect(0, 0, 150, 150);   // Draw a rectangle with default settings
   ctx.save();                  // Save the default state
@@ -72,7 +73,7 @@ So far this is pretty similar to what we've done in previous sections. However o
 
 When the second `restore()` statement is called, the original state (the one we set up before the first call to `save`) is restored and the last rectangle is once again drawn in black.
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "190", "canvas_savestate.png")}}
 
 ## Translating
 
@@ -81,7 +82,7 @@ The first of the transformation methods we'll look at is `translate()`. This met
 - {{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}
   - : Moves the canvas and its origin on the grid. `x` indicates the horizontal distance to move, and `y` indicates how far to move the grid vertically.
 
-![](canvas_grid_translate.png)
+![The canvas is pushed down and to the right, or translated, from its origin point on the grid by 'x' units horizontally and 'y' units vertically.](canvas_grid_translate.png)
 
 It's a good idea to save the canvas state before doing any transformations. In most cases, it is just easier to call the `restore` method than having to do a reverse translation to return to the original state. Also if you're translating inside a loop and don't save and restore the canvas state, you might end up missing part of your drawing, because it was drawn outside the canvas edge.
 
@@ -93,11 +94,11 @@ In the `draw()` function, we call the `fillRect()` function nine times using two
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < 3; j++) {
+  const ctx = document.getElementById('canvas').getContext('2d');
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = `rgb(${51 * i}, ${255 - 51 * i}, 255)`;
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -114,7 +115,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}
+{{EmbedLiveSample("A_translate_example", "160", "190", "translate.png")}}
 
 ## Rotating
 
@@ -123,7 +124,7 @@ The second transformation method is `rotate()`. We use it to rotate the canvas a
 - {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
   - : Rotates the canvas clockwise around the current origin by the `angle` number of radians.
 
-![](canvas_grid_rotate.png)
+![The default origin point is at the top left, 0 degrees is horizontal and to the right. The rotation point starts from the origin point and goes clockwise.](canvas_grid_rotate.png)
 
 The rotation center point is always the canvas origin. To change the center point, we will need to move the canvas by using the `translate()` method.
 
@@ -135,7 +136,7 @@ In this example, we'll use the `rotate()` method to first rotate a rectangle fro
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
   // left rectangles, rotate from canvas origin
   ctx.save();
@@ -175,7 +176,7 @@ To rotate the rectangle around its own center, we translate the canvas to the ce
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}
+{{EmbedLiveSample("A_rotate_example", "310", "260", "rotate.png")}}
 
 ## Scaling
 
@@ -194,7 +195,7 @@ In this last example, we'll draw shapes with different scaling factors.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
   // draw a simple rectangle, but scale it.
   ctx.save();
@@ -217,7 +218,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}
+{{EmbedLiveSample("A_scale_example", "160", "190", "scale.png")}}
 
 ## Transforms
 
@@ -235,7 +236,7 @@ The parameters of this function are:
 
 - `a (m11)`
   - : Horizontal scaling.
-- _`b (m12)`_
+- `b (m12)`
   - : Horizontal skewing.
 - `c (m21)`
   - : Vertical skewing.
@@ -254,15 +255,15 @@ The parameters of this function are:
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById('canvas').getContext('2d');
 
-  var sin = Math.sin(Math.PI / 6);
-  var cos = Math.cos(Math.PI / 6);
+  const sin = Math.sin(Math.PI / 6);
+  const cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
-  var c = 0;
-  for (var i = 0; i <= 12; i++) {
+  let c = 0;
+  for (let i = 0; i <= 12; i++) {
     c = Math.floor(255 / 12 * i);
-    ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+    ctx.fillStyle = `rgb(${c}, ${c}, ${c})`;
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
@@ -281,6 +282,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "canvas_transform.png")}}
+{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "290", "canvas_transform.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

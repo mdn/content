@@ -1,6 +1,7 @@
 ---
 title: AudioContext.createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -10,6 +11,7 @@ tags:
   - createMediaStreamDestination
 browser-compat: api.AudioContext.createMediaStreamDestination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createMediaStreamDestination()` method of the {{ domxref("AudioContext") }} Interface is used to create a new {{domxref("MediaStreamAudioDestinationNode")}} object associated with a [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} representing an audio stream, which may be stored in a local file or sent to another computer.
@@ -20,7 +22,7 @@ For more details about media stream destination nodes, check out the {{domxref("
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaStreamDestination()
 ```
 
@@ -42,49 +44,50 @@ From here, you can play and save the opus file.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
     <title>createMediaStreamDestination() demo</title>
   </head>
   <body>
     <h1>createMediaStreamDestination() demo</h1>
 
-    <p>Encoding a pure sine wave to an Opus file </p>
+    <p>Encoding a pure sine wave to an Opus file</p>
     <button>Make sine wave</button>
     <audio controls></audio>
     <script>
-     var b = document.querySelector("button");
-     var clicked = false;
-     var chunks = [];
-     var ac = new AudioContext();
-     var osc = ac.createOscillator();
-     var dest = ac.createMediaStreamDestination();
-     var mediaRecorder = new MediaRecorder(dest.stream);
-     osc.connect(dest);
+      const b = document.querySelector("button");
+      let clicked = false;
+      const chunks = [];
+      const ac = new AudioContext();
+      const osc = ac.createOscillator();
+      const dest = ac.createMediaStreamDestination();
+      const mediaRecorder = new MediaRecorder(dest.stream);
+      osc.connect(dest);
 
-     b.addEventListener("click", function(e) {
-       if (!clicked) {
-           mediaRecorder.start();
-           osc.start(0);
-           e.target.textContent = "Stop recording";
-           clicked = true;
-         } else {
-           mediaRecorder.stop();
-           osc.stop(0);
-           e.target.disabled = true;
-         }
-     });
+      b.addEventListener("click", (e) => {
+        if (!clicked) {
+          mediaRecorder.start();
+          osc.start(0);
+          e.target.textContent = "Stop recording";
+          clicked = true;
+        } else {
+          mediaRecorder.stop();
+          osc.stop(0);
+          e.target.disabled = true;
+        }
+      });
 
-     mediaRecorder.ondataavailable = function(evt) {
-       // push each chunk (blobs) in an array
-       chunks.push(evt.data);
-     };
+      mediaRecorder.ondataavailable = (evt) => {
+        // Push each chunk (blobs) in an array
+        chunks.push(evt.data);
+      };
 
-     mediaRecorder.onstop = function(evt) {
-       // Make blob out of our blobs, and open it.
-       var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-       document.querySelector("audio").src = URL.createObjectURL(blob);
-     };
+      mediaRecorder.onstop = (evt) => {
+        // Make blob out of our blobs, and open it.
+        const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
+        document.querySelector("audio").src = URL.createObjectURL(blob);
+      };
     </script>
   </body>
 </html>

@@ -36,15 +36,15 @@ browser-compat: html.elements.input.type_image
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-        {{htmlattrxref("alt", "input")}},
-        {{htmlattrxref("src", "input")}},
-        {{htmlattrxref("width", "input")}},
-        {{htmlattrxref("height", "input")}},
-        {{htmlattrxref("formaction", "input")}},
-        {{htmlattrxref("formenctype", "input")}},
-        {{htmlattrxref("formmethod", "input")}},
-        {{htmlattrxref("formnovalidate", "input")}},
-        {{htmlattrxref("formtarget", "input")}}
+        <a href="/en-US/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#src"><code>src</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#width"><code>width</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#height"><code>height</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
       </td>
     </tr>
     <tr>
@@ -93,7 +93,7 @@ A string that identifies the encoding method to use when submitting the form dat
 - `application/x-www-form-urlencoded`
   - : This, the default value, sends the form data as a string after URL encoding the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
 - `multipart/form-data`
-  - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of {{htmlattrxref("type", "input")}} `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
+  - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of [`type`](/en-US/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
 - `text/plain`
   - : Plain text; mostly useful only for debugging, so you can easily see the data that's to be submitted.
 
@@ -166,15 +166,20 @@ The `<input type="image">` element is a [replaced element](/en-US/docs/Web/CSS/R
 Let's look at a basic example that includes all the essential features you'd need to use (These work exactly the same as they do on the `<img>` element.):
 
 ```html
-<input id="image" type="image" width="100" height="30" alt="Login"
-       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png">
+<input
+  id="image"
+  type="image"
+  width="100"
+  height="30"
+  alt="Login"
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" />
 ```
 
 {{ EmbedLiveSample('Essential_image_input_features', 600, 50) }}
 
-- The {{htmlattrxref("src", "input")}} attribute is used to specify the path to the image you want to display in the button.
-- The {{htmlattrxref("alt", "input")}} attribute provides alt text for the image, so screen reader users can get a better idea of what the button is used for. It will also display if the image can't be shown for any reason (for example if the path is misspelled). If possible, use text which matches the label you'd use if you were using a standard submit button.
-- The {{htmlattrxref("width", "input")}} and {{htmlattrxref("height", "input")}} attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g. {{cssxref("padding")}}). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original aspect ratio.
+- The [`src`](/en-US/docs/Web/HTML/Element/input#src) attribute is used to specify the path to the image you want to display in the button.
+- The [`alt`](/en-US/docs/Web/HTML/Element/input#alt) attribute provides alt text for the image, so screen reader users can get a better idea of what the button is used for. It will also display if the image can't be shown for any reason (for example if the path is misspelled). If possible, use text which matches the label you'd use if you were using a standard submit button.
+- The [`width`](/en-US/docs/Web/HTML/Element/input#width) and [`height`](/en-US/docs/Web/HTML/Element/input#height) attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g. {{cssxref("padding")}}). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original aspect ratio.
 
 ### Overriding default form behaviors
 
@@ -215,7 +220,7 @@ Let's look at a basic example that includes all the essential features you'd nee
 
 When you submit a form using a button created with `<input type="image">`, two extra data points are submitted to the server automatically by the browser — `x` and `y`. You can see this in action in our [X Y coordinates example](https://mdn.github.io/learning-area/html/forms/image-type-example/xy-coordinates-example.html).
 
-When you click on the image to submit the form, you'll see the data appended to the URL as parameters, for example `?x=52&y=55`. If the image input has a {{htmlattrxref("name", "input")}} attribute, then keep in mind that the specified name is prefixed on every attribute, so if the `name` is `position`, then the returned coordinates would be formatted in the URL as `?position.x=52&position.y=55`. This, of course, applies to all other attributes as well.
+When you click on the image to submit the form, you'll see the data appended to the URL as parameters, for example `?x=52&y=55`. If the image input has a [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute, then keep in mind that the specified name is prefixed on every attribute, so if the `name` is `position`, then the returned coordinates would be formatted in the URL as `?position.x=52&position.y=55`. This, of course, applies to all other attributes as well.
 
 These are the X and Y coordinates of the image that the mouse clicked on to submit the form, where (0,0) is the top-left of the image. These can be used when the position the image was clicked on is significant, for example you might have a map that when clicked, sends the coordinates that were clicked to the server. The server-side code then works out what location was clicked on, and returns information about places nearby.
 
@@ -240,14 +245,19 @@ The following example shows the same button as before, but included in the conte
   <p>Login to your account</p>
   <div>
     <label for="userId">User ID</label>
-    <input type="text" id="userId" name="userId">
+    <input type="text" id="userId" name="userId" />
   </div>
   <div>
     <label for="pwd">Password</label>
-    <input type="password" id="pwd" name="pwd">
+    <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
-    <input id="image" type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" alt="Login" width="100">
+    <input
+      id="image"
+      type="image"
+      src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+      alt="Login"
+      width="100" />
   </div>
 </form>
 ```
@@ -282,16 +292,20 @@ In this example, we adapt the previous example to set aside more space for the i
   <p>Login to your account</p>
   <div>
     <label for="userId">User ID</label>
-    <input type="text" id="userId" name="userId">
+    <input type="text" id="userId" name="userId" />
   </div>
   <div>
     <label for="pwd">Password</label>
-    <input type="password" id="pwd" name="pwd">
+    <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
-    <input id="image" type="image"
+    <input
+      id="image"
+      type="image"
       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
-      alt="Login" width="200" height="100">
+      alt="Login"
+      width="200"
+      height="100" />
   </div>
 </form>
 ```

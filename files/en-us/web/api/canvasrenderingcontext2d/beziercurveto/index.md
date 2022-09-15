@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.bezierCurveTo()
 slug: Web/API/CanvasRenderingContext2D/bezierCurveTo
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.bezierCurveTo
 ---
+
 {{APIRef}}
 
 The
@@ -21,7 +23,7 @@ creating the Bézier curve.
 
 ## Syntax
 
-```js
+```js-nolint
 bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
 ```
 

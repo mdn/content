@@ -1,6 +1,7 @@
 ---
 title: Window.stop()
 slug: Web/API/Window/stop
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - stop
 browser-compat: api.Window.stop
 ---
+
 {{APIRef}}
 
 The **`window.stop()`** stops further resource loading in the current
@@ -22,7 +24,7 @@ objects.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 

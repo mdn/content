@@ -1,6 +1,7 @@
 ---
 title: TreeWalker.previousNode()
 slug: Web/API/TreeWalker/previousNode
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.previousNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.previousNode()`** method moves the current
@@ -19,7 +21,7 @@ construction, returns `null` and the current node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 previousNode()
 ```
 
@@ -34,13 +36,13 @@ A {{domxref("Node")}} object or `null`.
 ## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-var node = treeWalker.previousNode(); // returns null as there is no parent
+const node = treeWalker.previousNode(); // returns null as there is no parent
 ```
 
 ## Specifications

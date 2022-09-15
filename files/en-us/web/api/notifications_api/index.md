@@ -1,6 +1,7 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
+page-type: web-api-overview
 tags:
   - Landing
   - Notifications
@@ -9,6 +10,7 @@ tags:
   - system
 browser-compat: api.Notification
 ---
+
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms.
@@ -18,7 +20,7 @@ The Notifications API allows web pages to control the display of system notifica
 On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initializes, using the {{domxref("Notification.requestPermission()")}} method. This should be done in response to a user gesture, such as clicking a button, for example:
 
 ```js
-btn.addEventListener('click', function() {
+btn.addEventListener('click', () => {
   let promise = Notification.requestPermission();
   // wait for permission
 })

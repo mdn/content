@@ -1,6 +1,7 @@
 ---
 title: Element.requestFullscreen()
 slug: Web/API/Element/requestFullscreen
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -17,6 +18,7 @@ tags:
   - screen
 browser-compat: api.Element.requestFullscreen
 ---
+
 {{APIRef("Fullscreen API")}}
 
 The **`Element.requestFullscreen()`**
@@ -25,9 +27,9 @@ mode.
 
 It's not guaranteed that the element will be put into full screen mode. If permission
 to enter full screen mode is granted, the returned {{JSxRef("Promise")}} will resolve
-and the element will receive a {{Event("fullscreenchange")}} event to let it know that
+and the element will receive a {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event to let it know that
 it's now in full screen mode. If permission is denied, the promise is rejected and the
-element receives a {{Event('fullscreenerror')}} event instead. If the element has been
+element receives a {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} event instead. If the element has been
 detached from the original document, then the document receives these events instead.
 
 > **Note:** This method must be called while responding to a user
@@ -35,7 +37,7 @@ detached from the original document, then the document receives these events ins
 
 ## Syntax
 
-```js
+```js-nolint
 requestFullscreen()
 requestFullscreen(options)
 ```
@@ -102,10 +104,10 @@ be granted.
 
 You can determine whether or not your attempt to switch to fullscreen mode is
 successful by using the {{jsxref("Promise")}} returned by
-`requestFullscreen()`, as seen in the [Example](#example) below.
+`requestFullscreen()`, as seen in the [examples](#examples) below.
 
 To learn when other code has toggled fullscreen mode on and off, you should establish
-listeners for the {{event("fullscreenchange")}} event on the {{domxref("Document")}}.
+listeners for the {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event on the {{domxref("Document")}}.
 It's also important to listen for `fullscreenchange` to be aware when, for
 example, the user manually toggles fullscreen mode, or when the user switches
 applications, causing your application to temporarily exit fullscreen mode.
@@ -122,7 +124,7 @@ function toggleFullscreen() {
   let elem = document.querySelector("video");
 
   if (!document.fullscreenElement) {
-    elem.requestFullscreen().catch(err => {
+    elem.requestFullscreen().catch((err) => {
       alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
     });
   } else {
@@ -140,9 +142,7 @@ presents an alert with an appropriate error message.
 If, on the other hand, fullscreen mode is already in effect, we call
 {{domxref("document.exitFullscreen()")}} to disable fullscreen mode.
 
-You can [see this example
-in action](https://fullscreen-requestfullscreen-demo.glitch.me/) or [view or remix the
-code](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo) on [Glitch](https://glitch.com/).
+You can [see this example in action](https://fullscreen-requestfullscreen-demo.glitch.me/) or [view or remix the code](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo) on [Glitch](https://glitch.com/).
 
 ### Using navigationUI
 
@@ -154,7 +154,7 @@ In this example, the entire document is placed into fullscreen mode by calling
 ```js
 let elem = document.documentElement;
 
-elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch(err => {
+elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch((err) => {
   alert(`An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`);
 });
 ```

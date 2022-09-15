@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.createAnswer()
 slug: Web/API/RTCPeerConnection/createAnswer
+page-type: web-api-instance-method
 tags:
   - API
   - Media
@@ -13,6 +14,7 @@ tags:
   - createAnswer
 browser-compat: api.RTCPeerConnection.createAnswer
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createAnswer()`** method on the
@@ -26,7 +28,7 @@ the negotiation process.
 
 ## Syntax
 
-```js
+```js-nolint
 createAnswer()
 createAnswer(options)
 
@@ -73,8 +75,7 @@ to be delivered to the other peer.
 
 ## Examples
 
-Here is a segment of code taken from the code that goes with the article [Signaling and video
-calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling). This code comes from the handler for the message sent to carry an offer
+Here is a segment of code taken from the code that goes with the article [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling). This code comes from the handler for the message sent to carry an offer
 to another peer across the signaling channel.
 
 > **Note:** Keep in mind that this is part of the signaling process, the transport layer for
@@ -86,10 +87,8 @@ to another peer across the signaling channel.
 > fulfillment handler, depend entirely on your design
 
 ```js
-pc.createAnswer().then(function(answer) {
-  return pc.setLocalDescription(answer);
-})
-.then(function() {
+pc.createAnswer().then((answer) => pc.setLocalDescription(answer))
+.then(() => {
   // Send the answer to the remote peer through the signaling server.
 })
 .catch(handleGetUserMediaError);

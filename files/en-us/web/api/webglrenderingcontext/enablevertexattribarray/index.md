@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.enableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
+page-type: web-api-instance-method
 tags:
   - 3D
   - API
@@ -17,6 +18,7 @@ tags:
   - vertex shader
 browser-compat: api.WebGLRenderingContext.enableVertexAttribArray
 ---
+
 {{APIRef("WebGL")}}
 
 The {{domxref("WebGLRenderingContext")}} method
@@ -24,8 +26,7 @@ The {{domxref("WebGLRenderingContext")}} method
 attribute array at the specified index into the list of attribute arrays.
 
 > **Note:** You can disable the attribute array by calling
-> {{domxref("WebGLRenderingContext.disableVertexAttribArray",
-    "disableVertexAttribArray()")}}.
+> {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.
 
 In WebGL, values that apply to a specific vertex are stored in [attributes](/en-US/docs/Web/API/WebGL_API/Data#attributes). These are only
 available to the JavaScript code and the vertex shader. Attributes are referenced by an
@@ -43,7 +44,7 @@ access the attribute, including {{domxref("WebGLRenderingContext.vertexAttribPoi
 
 ## Syntax
 
-```js
+```js-nolint
 enableVertexAttribArray(index)
 ```
 
@@ -71,8 +72,7 @@ To check for errors after calling `enableVertexAttribArray()`, call
 
 ## Examples
 
-This code — a snippet taken from the full example [A basic 2D WebGL
-animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example) — shows the use of `enableVertexArray()` to activate
+This code — a snippet taken from the full example [A basic 2D WebGL animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example) — shows the use of `enableVertexArray()` to activate
 the attribute that will be used by the WebGL layer to pass individual vertexes from the
 vertex buffer into the vertex shader function.
 
@@ -124,9 +124,7 @@ vertex shader, we're ready to draw the shape by calling
 ## See also
 
 - [Data in WebGL](/en-US/docs/Web/API/WebGL_API/Data)
-- [Adding
-  2D content to a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
-- [A basic 2D WebGL
-  animation sample](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example)
+- [Adding 2D content to a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
+- [A basic 2D WebGL animation sample](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example)
 - {{domxref("WebGLRenderingContext.disableVertexAttribArray",
     "disableVertexAttribArray()")}}

@@ -1,6 +1,7 @@
 ---
 title: Using microtasks in JavaScript with queueMicrotask()
 slug: Web/API/HTML_DOM_API/Microtask_guide
+page-type: guide
 tags:
   - API
   - Batch
@@ -17,6 +18,7 @@ tags:
   - asynchronous
   - queueMicrotask
 ---
+
 {{APIRef("HTML DOM")}}
 
 A **microtask** is a short function which is executed after the function or program which created it exits _and_ only if the [JavaScript execution stack](/en-US/docs/Web/JavaScript/EventLoop#stack) is empty, but before returning control to the event loop being used by the {{Glossary("user agent")}} to drive the script's execution environment.
@@ -86,12 +88,12 @@ The main reason to use microtasks is that: to ensure consistent ordering of task
 One situation in which microtasks can be used to ensure that the ordering of execution is always consistent is when promises are used in one clause of an `if...else` statement (or other conditional statement), but not in the other clause. Consider code such as this:
 
 ```js
-customElement.prototype.getData = url => {
+customElement.prototype.getData = (url) => {
   if (this.cache[url]) {
     this.data = this.cache[url];
     this.dispatchEvent(new Event("load"));
   } else {
-    fetch(url).then(result => result.arrayBuffer()).then(data => {
+    fetch(url).then((result) => result.arrayBuffer()).then((data) => {
       this.cache[url] = data;
       this.data = data;
       this.dispatchEvent(new Event("load"));
@@ -104,7 +106,7 @@ The problem introduced here is that by using a task in one branch of the `if...e
 
 ```js
 element.addEventListener("load", () => console.log("Loaded data"));
-console.log("Fetching data...");
+console.log("Fetching data…");
 element.getData();
 console.log("Data fetched");
 ```
@@ -132,14 +134,14 @@ Even worse, sometimes the element's `data` property will be set and other times 
 We can ensure consistent ordering of these operations by using a microtask in the `if` clause to balance the two clauses:
 
 ```js
-customElement.prototype.getData = url => {
+customElement.prototype.getData = (url) => {
   if (this.cache[url]) {
     queueMicrotask(() => {
       this.data = this.cache[url];
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(result => result.arrayBuffer()).then(data => {
+    fetch(url).then((result) => result.arrayBuffer()).then((data) => {
       this.cache[url] = data;
       this.data = data;
       this.dispatchEvent(new Event("load"));
@@ -159,7 +161,7 @@ The snippet below creates a function that batches multiple messages into an arra
 ```js
 const messageQueue = [];
 
-let sendMessage = message => {
+let sendMessage = (message) => {
   messageQueue.push(message);
 
   if (messageQueue.length === 1) {
@@ -189,15 +191,14 @@ The server will receive the JSON string, then will presumably decode it and proc
 In this simple example, we see that enqueueing a microtask causes the microtask's callback to run after the body of this top-level script is done running.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => logElem.innerHTML += `${s}<br>`;
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -219,15 +220,14 @@ log("After enqueueing the microtask");
 In this example, a timeout is scheduled to fire after zero milliseconds (or "as soon as possible"). This demonstrates the difference between what "as soon as possible" means when scheduling a new task (such as by using `setTimeout()`) versus using a microtask.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => logElem.innerHTML += `${s}<br>`;
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -256,15 +256,14 @@ Note that the output logged from the main program body appears first, followed b
 This example expands slightly on the previous one by adding a function that does some work. This function uses `queueMicrotask()` to schedule a microtask. The important thing to take away from this one is that the microtask isn't processed when the function exits, but when the main program exits.
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => logElem.innerHTML += `${s}<br>`;
 ```
 
 The main program code follows. The `doWork()` function here calls `queueMicrotask()`, yet the microtask still doesn't fire until the entire program exits, since that's when the task exits and there's nothing else on the execution stack.
@@ -289,7 +288,6 @@ log("Main program started");
 setTimeout(callback, 0);
 log(`10! equals ${doWork()}`);
 log("Main program exiting");
-log("Regular timeout callback has run");
 ```
 
 #### Result

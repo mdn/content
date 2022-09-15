@@ -1,6 +1,7 @@
 ---
 title: MediaError.message
 slug: Web/API/MediaError/message
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -13,6 +14,7 @@ tags:
   - message
 browser-compat: api.MediaError.message
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only property **`MediaError.message`** returns a
@@ -37,8 +39,7 @@ or a missing file to the element's {{htmlattrxref("src", "audio")}} attribute. T
 handler outputs a message to a box onscreen describing the error, including both the
 `code` and the `message`.
 
-Only the relevant parts of the code are displayed; you can [see the
-complete source code here](https://github.com/mdn/dom-examples/tree/master/media/mediaerror).
+Only the relevant parts of the code are displayed; you can [see the complete source code here](https://github.com/mdn/dom-examples/tree/main/media/mediaerror).
 
 The example creates an {{HTMLElement("audio")}} element and lets the user assign either
 a valid music file to it, or a link to a file which doesn't exist. This lets us see the
@@ -48,9 +49,9 @@ we add to the `<audio>` element itself.
 The error handler looks like this:
 
 ```js
-  audioElement.onerror = function() {
+  audioElement.onerror = () => {
     let s = "";
-    let err = audioElement.error;
+    const err = audioElement.error;
 
     switch(err.code) {
       case MediaError.MEDIA_ERR_ABORTED:
@@ -70,27 +71,26 @@ The error handler looks like this:
         break;
     }
 
-    let message = err.message;
+    const message = err.message;
 
-    if (message && message.length) {
-      s += " " + message;
+    if (message?.length > 0) {
+      s += ` ${message}`;
     }
 
-    displayErrorMessage("<strong>Error " + err.code + ":</strong> " + s + "<br>");
+    displayErrorMessage(`<strong>Error ${err.code}:</strong> ${s}<br>`);
   };
 ```
 
 This gets the {{domxref("MediaError")}} object describing the error from the
 {{domxref("HTMLMediaElement.error", "error")}} property on the
-{{domxref("HTMLAudioElement")}} representing the audio player.  The error's
+{{domxref("HTMLAudioElement")}} representing the audio player. The error's
 {{domxref("MediaError.code", "code")}} attribute is checked to determine a generic error
 message to display, and, if `message` is not empty, it's appended to provide
 additional details. Then the resulting text is output to the log.
 
 ### Result
 
-You can try out this example below, and can [see the example in action
-outside this page here](https://mdn.github.io/dom-examples/media/mediaerror/).
+You can try out this example below, and can [see the example in action outside this page here](https://mdn.github.io/dom-examples/media/mediaerror/).
 
 {{ EmbedGHLiveSample('dom-examples/media/mediaerror', 650, 200) }}
 

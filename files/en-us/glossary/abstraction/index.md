@@ -8,6 +8,7 @@ tags:
   - Glossary
   - Programming Language
 ---
+
 Abstraction in {{Glossary("computer programming")}} is a way to reduce complexity and allow efficient design and implementation in complex software systems. It hides the technical complexity of systems behind simpler {{Glossary("API", "APIs")}}.
 
 ## Advantages of Data Abstraction
@@ -28,8 +29,8 @@ class ImplementAbstraction {
   }
 
   display() {
-    console.log('a = ' + this.a);
-    console.log('b = ' + this.b);
+    console.log(`a = ${this.a}`);
+    console.log(`b = ${this.b}`);
   }
 }
 
@@ -42,4 +43,4 @@ obj.display();
 
 ## See also
 
-- {{interwiki("wikipedia", "Abstraction (computer science)", "Abstraction")}} on Wikipedia
+- [Abstraction](<https://en.wikipedia.org/wiki/Abstraction_(computer_science)>) on Wikipedia

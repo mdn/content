@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidateStats.url
 slug: Web/API/RTCIceCandidateStats/url
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -20,6 +21,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidateStats.url
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's

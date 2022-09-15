@@ -1,6 +1,7 @@
 ---
 title: CSSStyleDeclaration.length
 slug: Web/API/CSSStyleDeclaration/length
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.length
 ---
+
 {{ APIRef("CSSOM") }}
 
 The read-only property returns an integer that represents the
@@ -23,13 +25,17 @@ the instance.
 The following gets the number of explicitly set styles on the following HTML element:
 
 ```html
-<div id="div1" style="margin: 0 10px; background-color: #CA1; font-family: monospace"></div>
+<div
+  id="div1"
+  style="margin: 0 10px; background-color: #CA1; font-family: monospace"></div>
 ```
 
 JavaScript code:
 
 ```js
-var myDiv = document.getElementById('div1'); var divStyle = myDiv.style; var len = divStyle.length; // 6
+const myDiv = document.getElementById('div1');
+const divStyle = myDiv.style;
+const len = divStyle.length; // 6
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: HTMLObjectElement.height
 slug: Web/API/HTMLObjectElement/height
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - height
 browser-compat: api.HTMLObjectElement.height
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`height`** property of the
@@ -20,7 +22,7 @@ displayed height of the resource in CSS pixels.
 
 ## Value
 
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

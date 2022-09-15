@@ -1,6 +1,7 @@
 ---
 title: SVGAltGlyphItemElement
 slug: Web/API/SVGAltGlyphItemElement
+page-type: web-api-interface
 tags:
   - API
   - Deprecated
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAltGlyphItemElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGAltGlyphItemElement`** interface corresponds to the {{SVGElement("altGlyphItem")}} element.

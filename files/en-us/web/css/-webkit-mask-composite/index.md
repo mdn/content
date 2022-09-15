@@ -13,6 +13,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-composite
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`-webkit-mask-composite`** property specifies the manner in which multiple mask images applied to the same element are composited with one another. Mask images are composited in the opposite order that they are declared with the {{CSSxRef("-webkit-mask-image")}} property.
@@ -72,7 +73,10 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+-webkit-mask-composite =
+  <composite-style>#
+```
 
 ## Examples
 
@@ -80,7 +84,7 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 
 ```css
 .example {
-  -webkit-mask-image: url(mask1.png), url('mask2.png');
+  -webkit-mask-image: url(mask1.png), url("mask2.png");
   -webkit-mask-composite: xor, source-over;
 }
 ```

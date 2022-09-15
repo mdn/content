@@ -1,11 +1,13 @@
 ---
 title: Text.splitText()
 slug: Web/API/Text/splitText
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.Text.splitText
 ---
+
 {{APIRef("DOM")}}
 
 The **`splitText()`** method of the {{domxref("Text")}} interface
@@ -25,7 +27,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 newNode = textNode.splitText(offset)
 ```
 

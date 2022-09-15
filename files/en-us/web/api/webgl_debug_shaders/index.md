@@ -1,6 +1,7 @@
 ---
 title: WEBGL_debug_shaders
 slug: Web/API/WEBGL_debug_shaders
+page-type: webgl-extension
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_debug_shaders
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_debug_shaders`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes a method to debug shaders from privileged contexts.

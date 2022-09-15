@@ -1,6 +1,7 @@
 ---
 title: RTCRtpCodecCapability
 slug: Web/API/RTCRtpCodecCapability
+page-type: web-api-interface
 tags:
   - API
   - Capability
@@ -16,6 +17,7 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCRtpCodecCapability
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The [WebRTC API's](/en-US/docs/Web/API/WebRTC_API) **`RTCRtpCodecCapability`** dictionary provides information describing the capabilities of a single [media codec](/en-US/docs/Web/Media/Formats/WebRTC_codecs).

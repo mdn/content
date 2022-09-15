@@ -1,6 +1,7 @@
 ---
 title: SVGImageElement.preserveAspectRatio
 slug: Web/API/SVGImageElement/preserveAspectRatio
+page-type: web-api-instance-property
 tags:
   - API
   - Image
@@ -13,6 +14,7 @@ tags:
   - preserveAspectRatio
 browser-compat: api.SVGImageElement.preserveAspectRatio
 ---
+
 {{APIRef("SVG")}}
 
 The **`preserveAspectRatio`** read-only

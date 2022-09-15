@@ -1,6 +1,7 @@
 ---
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -15,6 +16,7 @@ tags:
   - pageX
 browser-compat: api.MouseEvent.pageX
 ---
+
 {{APIRef("UI Events")}}
 
 The **`pageX`** read-only property of the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.
@@ -50,15 +52,9 @@ Since this example is presented in an {{HTMLElement("iframe")}}, that top-left c
 
 ```html
 <div class="box">
-  <p>
-    Move the mouse around in this box to watch its coordinates change.
-  </p>
-  <p>
-    <code>pageX</code>: <span id="x">n/a</span>
-  </p>
-  <p>
-    <code>pageY</code>: <span id="y">n/a</span>
-  </p>
+  <p>Move the mouse around in this box to watch its coordinates change.</p>
+  <p><code>pageX</code>: <span id="x">n/a</span></p>
+  <p><code>pageY</code>: <span id="y">n/a</span></p>
 </div>
 ```
 
@@ -84,9 +80,9 @@ The CSS used for this example is shown below.
 #### JavaScript
 
 ```js
-var box = document.querySelector(".box");
-var pageX = document.getElementById("x");
-var pageY = document.getElementById("y");
+const box = document.querySelector(".box");
+const pageX = document.getElementById("x");
+const pageY = document.getElementById("y");
 
 function updateDisplay(event) {
   pageX.innerText = event.pageX;

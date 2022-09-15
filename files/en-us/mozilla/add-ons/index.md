@@ -8,6 +8,7 @@ tags:
   - Landing
   - Mozilla
 ---
+
 {{AddonSidebarMain}}
 
 Add-ons allow developers to extend and modify the functionality of Firefox. They are written using standard Web technologies - JavaScript, HTML, and CSS - plus some dedicated JavaScript APIs.
@@ -46,7 +47,7 @@ In 2020, Mozilla will release a new Firefox for Android experience. This new, hi
 
 If you maintain a legacy extension, such as an XUL overlay, bootstrapped, or Add-on SDK-based extension, you can still port it to use WebExtension APIs. There are some [porting resources on Firefox Extension Workshop](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/), our site for Firefox-specific development resources.
 
-For more information about transition support, please visit our [wiki page.](//wiki.mozilla.org/Add-ons/developer/communication)
+For more information about transition support, please visit our [wiki page.](https://wiki.mozilla.org/Add-ons/developer/communication)
 
 ## Publishing add-ons
 

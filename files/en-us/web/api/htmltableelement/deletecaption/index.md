@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.deleteCaption()
 slug: Web/API/HTMLTableElement/deleteCaption
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.deleteCaption
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.deleteCaption()`** method removes the
@@ -19,7 +21,7 @@ nothing.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteCaption()
 ```
 
@@ -39,9 +41,17 @@ This example uses JavaScript to delete a table's caption.
 
 ```html
 <table>
-  <caption>This caption will be deleted!</caption>
-  <tr><td>Cell 1.1</td><td>Cell 1.2</td></tr>
-  <tr><td>Cell 2.1</td><td>Cell 2.2</td></tr>
+  <caption>
+    This caption will be deleted!
+  </caption>
+  <tr>
+    <td>Cell 1.1</td>
+    <td>Cell 1.2</td>
+  </tr>
+  <tr>
+    <td>Cell 2.1</td>
+    <td>Cell 2.2</td>
+  </tr>
 </table>
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: CSSValue
 slug: Web/API/CSSValue
+page-type: web-api-interface
 tags:
   - API
   - CSSOM
@@ -11,7 +12,8 @@ tags:
   - Deprecated
 browser-compat: api.CSSValue
 ---
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+
+{{APIRef("CSSOM")}}{{Deprecated_Header}}
 
 The **`CSSValue`** interface represents the current computed value of a CSS property.
 
@@ -25,18 +27,18 @@ The **`CSSValue`** interface represents the current computed value of a CSS prop
 
 ## Properties
 
-- {{DOMxRef("CSSValue.cssText")}}
+- {{DOMxRef("CSSValue.cssText")}} {{Deprecated_Inline}}
   - : A string representing the current value.
-- {{DOMxRef("CSSValue.cssValueType")}}{{ReadOnlyInline}}
+- {{DOMxRef("CSSValue.cssValueType")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
 
   - : An `unsigned short` representing a code defining the type of the value. Possible values are:
 
-    | Constant              | Description                                                                                                                                                                                                          |
-    | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `CSS_CUSTOM`          | The value is a custom value.                                                                                                                                                                                         |
-    | `CSS_INHERIT`         | The value is inherited and the `cssText` contains `"inherit"`.                                                                                                                                                       |
+    | Constant              | Description                                                                                                                                                                                              |
+    | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `CSS_CUSTOM`          | The value is a custom value.                                                                                                                                                                             |
+    | `CSS_INHERIT`         | The value is inherited and the `cssText` contains `"inherit"`.                                                                                                                                           |
     | `CSS_PRIMITIVE_VALUE` | The value is a primitive value and an instance of the {{DOMxRef("CSSPrimitiveValue")}} interface can be obtained by using binding-specific casting methods on this instance of the `CSSValue` interface. |
-    | `CSS_VALUE_LIST`      | The value is a `CSSValue` list and an instance of the {{DOMxRef("CSSValueList")}} interface can be obtained by using binding-specific casting methods on this instance of the `CSSValue` interface.         |
+    | `CSS_VALUE_LIST`      | The value is a `CSSValue` list and an instance of the {{DOMxRef("CSSValueList")}} interface can be obtained by using binding-specific casting methods on this instance of the `CSSValue` interface.      |
 
 ## Specifications
 

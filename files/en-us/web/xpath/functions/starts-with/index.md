@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `starts-with` checks whether the first string starts with the second string and returns true or false.
@@ -17,14 +18,14 @@ starts-with(haystack, needle)
 
 ### Arguments
 
-- _`haystack`_
+- `haystack`
   - : The string to look in.
-- _`needle`_
+- `needle`
   - : The string to look for.
 
 ### Returns
 
-`true` if *`haystack`* starts with *`needle`*. Otherwise, `false`.
+`true` if `haystack` starts with `needle`. Otherwise, `false`.
 
 ### Defined
 

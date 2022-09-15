@@ -1,6 +1,7 @@
 ---
 title: Using Pointer Events
 slug: Web/API/Pointer_events/Using_Pointer_Events
+page-type: guide
 tags:
   - Guide
   - Input
@@ -8,15 +9,16 @@ tags:
   - PointerEvent
   - events
   - touch
-spec-urls: https://w3c.github.io/pointerevents/
+browser-compat: api.PointerEvent
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 This guide demonstrates how to use [pointer events](/en-US/docs/Web/API/Pointer_events) and the HTML {{HTMLElement("canvas")}} element to build a multi-touch enabled drawing application. This example is based on the one in the [touch events overview](/en-US/docs/Web/API/Touch_events), except it uses the {{domxref("PointerEvent","pointer events", "", 1)}} input event model. Another difference is that because pointer events are pointer device agnostic, the application accepts coordinate-based inputs from a mouse, a pen, or a fingertip using the same code.
 
 This application will only work on a browser that supports pointer events.
 
-A live version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Using_Pointer_Events.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/blob/master/pointerevents/Using_Pointer_Events.html) and pull requests and bug reports are welcome.
+A live version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Using_Pointer_Events.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/blob/main/pointerevents/Using_Pointer_Events.html) and pull requests and bug reports are welcome.
 
 ## Definitions
 
@@ -34,13 +36,18 @@ A live version of this application is available on [GitHub](https://mdn.github.i
 The {{cssxref("touch-action")}} property is set to `none` to prevent the browser from applying its default touch behavior to the application.
 
 ```html
-<canvas id="canvas" width="600" height="600" style="border:solid black 1px; touch-action:none">
+<canvas
+  id="canvas"
+  width="600"
+  height="600"
+  style="border:solid black 1px; touch-action:none">
   Your browser does not support canvas element.
 </canvas>
-<br>
+<br />
 <button onclick="startup()">Initialize</button>
-<br>
-Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Log:
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ### Setting up the event handlers
@@ -49,7 +56,7 @@ When the page loads, the `startup()` function shown below should be called by ou
 
 ```js
 function startup() {
-  var el = document.getElementsByTagName("canvas")[0];
+  const el = document.getElementsByTagName("canvas")[0];
   el.addEventListener("pointerdown", handleStart, false);
   el.addEventListener("pointerup", handleEnd, false);
   el.addEventListener("pointercancel", handleCancel, false);
@@ -65,7 +72,7 @@ This sets up all the event listeners for our {{HTMLElement("canvas")}} element s
 We'll keep track of the touches in-progress.
 
 ```js
-var ongoingTouches = new Array();
+const ongoingTouches = [];
 ```
 
 When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
@@ -73,12 +80,12 @@ When a {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event occurs,
 ```js
 function handleStart(evt) {
   log("pointerdown.");
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
+  const el = document.getElementsByTagName("canvas")[0];
+  const ctx = el.getContext("2d");
 
-  log("pointerdown: id = " + evt.pointerId);
+  log(`pointerdown: id = ${evt.pointerId}`);
   ongoingTouches.push(copyTouch(evt));
-  var color = colorForTouch(evt);
+  const color = colorForTouch(evt);
   ctx.beginPath();
   ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
   ctx.arc(evt.clientX, evt.clientY, 4, 0, 2 * Math.PI, false);  // a circle at the start
@@ -95,17 +102,17 @@ Each time one or more pointers moves, a {{domxref("HTMLElement/pointermove_event
 
 ```js
 function handleMove(evt) {
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
-  var color = colorForTouch(evt);
-  var idx = ongoingTouchIndexById(evt.pointerId);
+  const el = document.getElementsByTagName("canvas")[0];
+  const ctx = el.getContext("2d");
+  const color = colorForTouch(evt);
+  const idx = ongoingTouchIndexById(evt.pointerId);
 
-  log("continuing touch: idx =  " + idx);
+  log(`continuing touch: idx =  ${idx}`);
   if (idx >= 0) {
     ctx.beginPath();
-    log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
+    log(`ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`);
     ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-    log("ctx.lineTo(" + evt.clientX + ", " + evt.clientY + ");");
+    log(`ctx.lineTo(${evt.clientX}, ${evt.clientY});`);
     ctx.lineTo(evt.clientX, evt.clientY);
     ctx.lineWidth = 4;
     ctx.strokeStyle = color;
@@ -114,7 +121,7 @@ function handleMove(evt) {
     ongoingTouches.splice(idx, 1, copyTouch(evt));  // swap in the new touch record
     log(".");
   } else {
-    log("can't figure out which touch to continue: idx = " + idx);
+    log(`can't figure out which touch to continue: idx = ${idx}`);
   }
 }
 ```
@@ -132,10 +139,10 @@ When the user lifts a finger off the surface, a {{domxref("HTMLElement/pointerup
 ```js
 function handleEnd(evt) {
   log("pointerup");
-  var el = document.getElementsByTagName("canvas")[0];
-  var ctx = el.getContext("2d");
-  var color = colorForTouch(evt);
-  var idx = ongoingTouchIndexById(evt.pointerId);
+  const el = document.getElementsByTagName("canvas")[0];
+  const ctx = el.getContext("2d");
+  const color = colorForTouch(evt);
+  const idx = ongoingTouchIndexById(evt.pointerId);
 
   if (idx >= 0) {
     ctx.lineWidth = 4;
@@ -159,8 +166,8 @@ If the user's finger wanders into browser UI, or the touch otherwise needs to be
 
 ```js
 function handleCancel(evt) {
-  log("pointercancel: id = " + evt.pointerId);
-  var idx = ongoingTouchIndexById(evt.pointerId);
+  log(`pointercancel: id = ${evt.pointerId}`);
+  const idx = ongoingTouchIndexById(evt.pointerId);
   ongoingTouches.splice(idx, 1);  // remove it; we're done
 }
 ```
@@ -177,14 +184,14 @@ In order to make each touch's drawing look different, the `colorForTouch()` func
 
 ```js
 function colorForTouch(touch) {
-  var r = touch.pointerId % 16;
-  var g = Math.floor(touch.pointerId / 3) % 16;
-  var b = Math.floor(touch.pointerId / 7) % 16;
+  let r = touch.pointerId % 16;
+  let g = Math.floor(touch.pointerId / 3) % 16;
+  let b = Math.floor(touch.pointerId / 7) % 16;
   r = r.toString(16); // make it a hex digit
   g = g.toString(16); // make it a hex digit
   b = b.toString(16); // make it a hex digit
-  var color = "#" + r + g + b;
-  log("color for touch with identifier " + touch.pointerId + " = " + color);
+  const color = `#${r}${g}${b}`;
+  log(`color for touch with identifier ${touch.pointerId} = ${color}`);
   return color;
 }
 ```
@@ -207,10 +214,10 @@ The `ongoingTouchIndexById()` function below scans through the `ongoingTouches` 
 
 ```js
 function ongoingTouchIndexById(idToFind) {
-  for (var i = 0; i < ongoingTouches.length; i++) {
-    var id = ongoingTouches[i].identifier;
+  for (let i = 0; i < ongoingTouches.length; i++) {
+    const id = ongoingTouches[i].identifier;
 
-    if (id == idToFind) {
+    if (id === idToFind) {
       return i;
     }
   }
@@ -222,8 +229,8 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  var p = document.getElementById('log');
-  p.innerHTML = msg + "\n" + p.innerHTML;
+  const p = document.getElementById('log');
+  p.innerHTML = `${msg}\n${p.innerHTML}`;
 }
 ```
 
@@ -233,9 +240,7 @@ function log(msg) {
 
 ## Browser compatibility
 
-### `PointerEvent` interface
-
-{{Compat("api.PointerEvent", 0)}}
+{{Compat}}
 
 ## See also
 

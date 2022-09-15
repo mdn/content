@@ -1,6 +1,7 @@
 ---
 title: Element.insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - insertAdjacentHTML
 browser-compat: api.Element.insertAdjacentHTML
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertAdjacentHTML()`** method of the
@@ -18,7 +20,7 @@ the resulting nodes into the DOM tree at a specified position.
 
 ## Syntax
 
-```js
+```js-nolint
 insertAdjacentHTML(position, text)
 ```
 
@@ -96,8 +98,9 @@ content as HTML, but instead inserts it as raw text.
 <button id="insert">Insert HTML</button>
 <button id="reset">Reset</button>
 
-<p>Some text, with a <code id="subject">code-formatted element</code> inside it.</p>
-
+<p>
+  Some text, with a <code id="subject">code-formatted element</code> inside it.
+</p>
 ```
 
 #### CSS
@@ -141,6 +144,5 @@ reset.addEventListener('click', () => {
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentText()")}}
 - {{domxref("XMLSerializer")}}: Serialize a DOM tree into an XML string
-- [hacks.mozilla.org
-  guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) by Henri Sivonen including benchmark showing
+- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) by Henri Sivonen including benchmark showing
   that insertAdjacentHTML can be way faster in some cases.

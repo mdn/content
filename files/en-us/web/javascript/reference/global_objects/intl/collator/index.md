@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Collator
 ---
+
 {{JSRef}}
 
 The **`Intl.Collator`** object enables language-sensitive string comparison.
@@ -52,7 +53,7 @@ Note that the results shown in the code above can vary between browsers and brow
 
 ### Using locales
 
-The results provided by {{jsxref("Intl/Collator/compare")}} vary between languages. In order to get the sort order of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
+The results provided by [`Intl.Collator.prototype.compare()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) vary between languages. In order to get the sort order of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
 
 ```js
 // in German, ä sorts with a
@@ -66,7 +67,7 @@ console.log(new Intl.Collator('sv').compare('ä', 'z'));
 
 ### Using options
 
-The results provided by {{jsxref("Intl/Collator/compare")}} can be customized using the `options` argument:
+The results provided by [`Intl.Collator.prototype.compare()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) can be customized using the `options` argument:
 
 ```js
 // in German, ä has a as the base letter

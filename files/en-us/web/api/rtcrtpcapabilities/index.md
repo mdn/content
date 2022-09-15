@@ -1,6 +1,7 @@
 ---
 title: RTCRtpCapabilities
 slug: Web/API/RTCRtpCapabilities
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -17,6 +18,7 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCRtpCapabilities
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The **`RTCRtpCapabilities`** dictionary is a data type used to describe the capabilities of an {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}} in response to a call to the {{domxref("RTCRtpSender.getCapabilities()")}} or {{domxref("RTCRtpReceiver.getCapabilities()")}} static functions, both of which return an array of `RTCRtpCapabilities` objects.

@@ -1,10 +1,10 @@
 ---
 title: MediaCapabilities.decodingInfo()
 slug: Web/API/MediaCapabilities/decodingInfo
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - Media Capabilities API
   - MediaCapabilities
   - Method
@@ -13,6 +13,7 @@ tags:
   - decodingInfo()
 browser-compat: api.MediaCapabilities.decodingInfo
 ---
+
 {{APIRef("MediaCapabilities")}}
 
 The **`MediaCapabilities.decodingInfo()`** method, part of the [Media Capabilities API](/en-US/docs/Web/API/MediaCapabilities), returns a promise with the tested media configuration's capabilities info.
@@ -20,23 +21,29 @@ This contains the three boolean properties `supported`, `smooth`, and `powereffi
 
 ## Syntax
 
-```js
+```js-nolint
 decodingInfo(configuration)
 ```
 
 ### Parameters
 
 - `configuration`
+
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaDecodingConfiguration in the spec -->
-  
+
     - `type`
+
       - : The type of media being tested. This takes one of three values:
 
-        - `file`: Represents a configuration that is meant to be used for a plain file playback.
-        - `media-source`: Represents a configuration that is meant to be used for playback of a {{domxref("MediaSource")}}.
-        - `webrtc`: Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}}.
+        - `file`
+          - : Represents a configuration that is meant to be used for a plain file playback.
+        - `media-source`
+          - : Represents a configuration that is meant to be used for playback of a {{domxref("MediaSource")}}.
+        - `webrtc`
+          - : Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}}.
 
     - `video`
+
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
 
@@ -72,7 +79,7 @@ A {{jsxref('Promise')}} fulfilling with an object containing three Boolean attri
 - `supported`
   - : `true` if the media content can be decoded at all. Otherwise, it is `false`.
 - `smooth`
-  - : `true` if playback of the media will be smooth (of high quality). Otherwise is is `false`.
+  - : `true` if playback of the media will be smooth (of high quality). Otherwise it is `false`.
 - `powerEfficient`
   - : `true` if playback of the media will be power efficient. Otherwise, it is `false`.
 
@@ -101,11 +108,10 @@ const mediaConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => {
-    console.log('This configuration is ' +
-        (result.supported ? '' : 'not ') + 'supported, ' +
-        (result.smooth ? '' : 'not ') + 'smooth, and ' +
-        (result.powerEfficient ? '' : 'not ') + 'power efficient.')
+navigator.mediaCapabilities.decodingInfo(mediaConfig).then((result) => {
+    console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
+    console.log(`${result.smooth ? '' : 'not '}smooth, and`);
+    console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
 });
 ```
 

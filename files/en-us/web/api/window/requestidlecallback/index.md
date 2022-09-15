@@ -1,6 +1,7 @@
 ---
 title: window.requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -12,7 +13,8 @@ tags:
   - polyfill
 browser-compat: api.Window.requestIdleCallback
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`window.requestIdleCallback()`** method queues a function
 to be called during a browser's idle periods. This enables developers to perform
@@ -31,7 +33,7 @@ loop.
 
 ## Syntax
 
-```js
+```js-nolint
 requestIdleCallback(callback)
 requestIdleCallback(callback, options)
 ```
@@ -47,7 +49,8 @@ requestIdleCallback(callback, options)
 
   - : Contains optional configuration parameters. Currently only one property is defined:
 
-    - `timeout`: If the number of milliseconds represented by this parameter has elapsed and the callback has not already been called, then a task to execute the callback is queued in the event loop (even if doing so risks causing a negative performance impact). `timeout` must be a positive value or it is ignored.
+    - `timeout`
+      - : If the number of milliseconds represented by this parameter has elapsed and the callback has not already been called, then a task to execute the callback is queued in the event loop (even if doing so risks causing a negative performance impact). `timeout` must be a positive value or it is ignored.
 
 ### Return value
 

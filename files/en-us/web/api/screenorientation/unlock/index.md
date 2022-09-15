@@ -1,6 +1,7 @@
 ---
 title: ScreenOrientation.unlock()
 slug: Web/API/ScreenOrientation/unlock
+page-type: web-api-instance-method
 tags:
   - API
   - Orientation
@@ -11,6 +12,7 @@ tags:
   - Unlock
 browser-compat: api.ScreenOrientation.unlock
 ---
+
 {{APIRef("Screen Orientation")}}
 
 The **`unlock()`** property of the
@@ -19,7 +21,7 @@ document from its default orientation.
 
 ## Syntax
 
-```js
+```js-nolint
 unlock()
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: RTCDTMFSender
 slug: Web/API/RTCDTMFSender
+page-type: web-api-interface
 tags:
   - Audio
   - DTMF
@@ -15,11 +16,12 @@ tags:
   - WebRTC API
 browser-compat: api.RTCDTMFSender
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDTMFSender`** interface provides a mechanism for transmitting {{Glossary("DTMF")}} codes on a [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}. You gain access to the connection's `RTCDTMFSender` through the {{domxref("RTCRtpSender.dtmf")}} property on the audio track you wish to send DTMF with.
 
-The primary purpose for WebRTC's DTMF support is to allow WebRTC-based communication clients to be connected to a {{interwiki("wikipedia", "public-switched telephone network")}} (PSTN) or other legacy telephone service, including extant voice over IP (VoIP) services. For that reason, DTMF can't be used between two WebRTC-based devices, because there is no mechanism provided by WebRTC for receiving DTMF codes.
+The primary purpose for WebRTC's DTMF support is to allow WebRTC-based communication clients to be connected to a [public-switched telephone network (PSTN)](https://en.wikipedia.org/wiki/Public_switched_telephone_network) or other legacy telephone service, including extant voice over IP (VoIP) services. For that reason, DTMF can't be used between two WebRTC-based devices, because there is no mechanism provided by WebRTC for receiving DTMF codes.
 
 {{InheritanceDiagram}}
 

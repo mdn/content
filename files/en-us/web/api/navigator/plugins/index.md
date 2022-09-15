@@ -1,6 +1,7 @@
 ---
 title: Navigator.plugins
 slug: Web/API/Navigator/plugins
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.Navigator.plugins
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 Returns a {{DOMxRef("PluginArray")}} object, listing the {{DOMxRef("Plugin")}} objects describing the plugins installed in the application.
@@ -41,7 +43,7 @@ If PDF inline viewing is supported this will contain entries for the following p
 - "Chromium PDF Viewer"
 - "Microsoft Edge PDF Viewer"
 - "WebKit built-in PDF"
-If inline viewing of PDFs is not supported then an empty object is returned.
+  If inline viewing of PDFs is not supported then an empty object is returned.
 
 ## Examples
 

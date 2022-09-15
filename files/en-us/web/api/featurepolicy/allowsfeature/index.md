@@ -1,8 +1,10 @@
 ---
 title: FeaturePolicy.allowsFeature()
 slug: Web/API/FeaturePolicy/allowsFeature
+page-type: web-api-instance-method
 browser-compat: api.FeaturePolicy.allowsFeature
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 The **`allowsFeature()`** method of
@@ -13,14 +15,14 @@ specified context (or the default context if no context is specified).
 
 ## Syntax
 
-```js
-const allowed = FeaturePolicy.allowsFeature(<feature>)
+```js-nolint
+const allowed = FeaturePolicy.allowsFeature(feature)
 ```
 
 or
 
 ```js
-const allowed = FeaturePolicy.allowsFeature(<feature>, <origin>)
+const allowed = FeaturePolicy.allowsFeature(feature, origin);
 ```
 
 ### Parameters

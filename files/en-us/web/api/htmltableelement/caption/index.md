@@ -1,6 +1,7 @@
 ---
 title: HTMLTableElement.caption
 slug: Web/API/HTMLTableElement/caption
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.caption
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.caption`** property represents the

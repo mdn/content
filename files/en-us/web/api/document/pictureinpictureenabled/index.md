@@ -1,6 +1,7 @@
 ---
 title: Document.pictureInPictureEnabled
 slug: Web/API/Document/pictureInPictureEnabled
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -13,6 +14,7 @@ tags:
   - pip
 browser-compat: api.Document.pictureInPictureEnabled
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 The read-only

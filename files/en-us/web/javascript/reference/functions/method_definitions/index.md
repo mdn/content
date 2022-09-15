@@ -10,48 +10,46 @@ tags:
   - Syntax
 browser-compat: javascript.functions.method_definitions
 ---
+
 {{JsSidebar("Functions")}}
 
-Starting with ECMAScript 2015, a shorter syntax for method definitions on objects
-initializers is introduced. It is a shorthand for a function assigned to the method's
-name.
+**Method definition** is a shorter syntax for defining a function property in an object initializer.
 
 {{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 const obj = {
   get property() {},
   set property(value) {},
-  property( parameters… ) {},
-  *generator( parameters… ) {},
-  async property( parameters… ) {},
-  async* generator( parameters… ) {},
+  property(parameters) {},
+  *generator(parameters) {},
+  async property(parameters) {},
+  async *generator(parameters) {},
 
   //  with computed keys
-  get [property]() {},
-  set [property](value) {},
-  [property]( parameters… ) {},
-  *[generator]( parameters… ) {},
-  async [property]( parameters… ) {},
-  async* [generator]( parameters… ) {},
+  get [expression]() {},
+  set [expression](value) {},
+  [expression](parameters) {},
+  *[expression](parameters) {},
+  async [expression](parameters) {},
+  async *[expression](parameters) {},
 };
 ```
 
 ## Description
 
-The shorthand syntax is similar to the [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) syntax introduced
-in ES5.
+The shorthand syntax is similar to the [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) syntax.
 
 Given the following code:
 
 ```js
 const obj = {
-  foo: function() {
+  foo: function () {
     // ...
   },
-  bar: function() {
+  bar: function () {
     // ...
   }
 }
@@ -76,38 +74,33 @@ const obj = {
 
 When doing so:
 
-- The asterisk (`*`) in the shorthand syntax must be _before_ the
-  generator property name. (That is, `* g(){}` will work,
-  but `g *(){}` will not.)
-- Non-generator method definitions cannot contain the `yield` keyword.
-  This means that [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)
-  won't work either, and will throw a {{jsxref("SyntaxError")}}.
-  Always use `yield` in conjunction with the asterisk (`*`).
+- The asterisk (`*`) in the shorthand syntax must be _before_ the generator property name. (That is, `* g(){}` will work, but `g *(){}` will not.)
+- Non-generator method definitions cannot contain the `yield` keyword. Always use `yield` in conjunction with the asterisk (`*`).
 
 ```js
 // Using a named property
 const obj2 = {
   g: function* () {
-    let index = 0
+    let index = 0;
     while (true) {
-      yield index++
+      yield index++;
     }
-  }
+  },
 };
 
 // The same object using shorthand syntax
 const obj2 = {
-  * g() {
-    let index = 0
+  *g() {
+    let index = 0;
     while (true) {
-      yield index++
+      yield index++;
     }
-  }
+  },
 };
 
-const it = obj2.g()
-console.log(it.next().value)  // 0
-console.log(it.next().value)  // 1
+const it = obj2.g();
+console.log(it.next().value); // 0
+console.log(it.next().value); // 1
 ```
 
 ### Async methods
@@ -119,16 +112,16 @@ using the shorthand syntax.
 // Using a named property
 const obj3 = {
   f: async function () {
-    await some_promise
-  }
-}
+    await some_promise;
+  },
+};
 
 // The same object using shorthand syntax
 const obj3 = {
   async f() {
-    await some_promise
-  }
-}
+    await some_promise;
+  },
+};
 ```
 
 ### Async generator methods
@@ -138,20 +131,20 @@ const obj3 = {
 ```js
 const obj4 = {
   f: async function* () {
-    yield 1
-    yield 2
-    yield 3
-  }
+    yield 1;
+    yield 2;
+    yield 3;
+  },
 };
 
 // The same object using shorthand syntax
 const obj4 = {
-  async* f() {
-   yield 1
-   yield 2
-   yield 3
-  }
-}
+  async *f() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
+};
 ```
 
 ### Method definitions are not constructable
@@ -166,9 +159,9 @@ const objA = {
 new objA.method  // TypeError: obj.method is not a constructor
 
 const objB = {
-  * g() {}
+  *g() {}
 }
-new objB.g       // TypeError: obj.g is not a constructor (changed in ES2016)
+new objB.g       // TypeError: obj.g is not a constructor
 ```
 
 ## Examples

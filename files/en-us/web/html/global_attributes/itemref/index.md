@@ -13,7 +13,7 @@ browser-compat: html.global_attributes.itemref
 
 {{HTMLSidebar("Global_attributes")}}
 
-Properties that are not descendants of an element with the {{HTMLAttrxRef("itemscope")}} attribute can be associated with an item using the [global attribute](/en-US/docs/Web/HTML/Global_attributes) **`itemref`**.
+Properties that are not descendants of an element with the [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) attribute can be associated with an item using the [global attribute](/en-US/docs/Web/HTML/Global_attributes) **`itemref`**.
 
 `itemref` provides a list of element IDs (not `itemid`s) elsewhere in the document, with additional properties
 
@@ -43,11 +43,11 @@ This example uses microdata attributes to represent the following structured dat
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span> </p>
+<p id="a">Name: <span itemprop="name">Amanda</span></p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-    <p>Band: <span itemprop="name">Jazz Band</span> </p>
-    <p>Size: <span itemprop="size">12</span> players</p>
+  <p>Band: <span itemprop="name">Jazz Band</span></p>
+  <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
@@ -66,10 +66,9 @@ This example uses microdata attributes to represent the following structured dat
 ## See also
 
 - [Other different global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- Other, microdata related, global attributes:
+- Other microdata related global attributes:
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/en-US/docs/Web/HTML/Global_attributes/itemid)
+  - [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop)
+  - [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope)
+  - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype)

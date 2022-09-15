@@ -1,6 +1,7 @@
 ---
 title: Improving compatibility using WebRTC adapter.js
 slug: Web/API/WebRTC_API/adapter.js
+page-type: guide
 tags:
   - API
   - Audio
@@ -8,6 +9,7 @@ tags:
   - Video
   - WebRTC
 ---
+
 {{WebRTCSidebar}}
 
 The [WebRTC adapter](https://github.com/webrtc/adapter/) is a JavaScript shim which lets you write code to the WebRTC [specification](https://www.w3.org/TR/webrtc/) and have it "just work" in all browsers with WebRTC support.

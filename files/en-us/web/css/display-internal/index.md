@@ -8,8 +8,11 @@ tags:
   - Data Type
   - Reference
   - display-internal
-spec-urls: https://drafts.csswg.org/css-display/#typedef-display-internal
+browser-compat:
+  - css.properties.display.table_values
+  - css.properties.display.ruby_values
 ---
+
 {{CSSRef}}
 
 Some layout models such as `table` and `ruby` have a complex internal structure, with several different roles that their children and descendants can fill. This page defines those "internal" display values, which only have meaning within that particular layout mode.
@@ -43,6 +46,10 @@ Valid `<display-internal>` values:
 - `ruby-text-container` {{Experimental_Inline}}
   - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### CSS tables example
@@ -55,11 +62,11 @@ The following example demonstrates laying out a simple form using CSS table layo
 <main>
   <div>
     <label for="name">Name</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" />
   </div>
   <div>
     <label for="age">Age</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" />
   </div>
 </main>
 ```
@@ -75,7 +82,8 @@ div {
   display: table-row;
 }
 
-label, input {
+label,
+input {
   display: table-cell;
   margin: 5px;
 }
@@ -91,17 +99,7 @@ label, input {
 
 ## Browser compatibility
 
-### Support of table values
-
-`table`, `table-cell`, `table-column`, `table-column-group`, `table-footer-group`, `table-header-group`, `table-row`, and `table-row-group`
-
-{{Compat("css.properties.display.table_values", 10)}}
-
-### Support of ruby values
-
-`ruby`, `ruby-base`, `ruby-base-container`, `ruby-text`, and `ruby-text-container`
-
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## See also
 

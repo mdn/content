@@ -1,6 +1,7 @@
 ---
 title: CSSTransformValue.entries()
 slug: Web/API/CSSTransformValue/entries
+page-type: web-api-instance-method
 tags:
   - API
   - CSS Typed Object Model API
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSTransformValue.entries
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTransformValue.entries()`** method
@@ -22,7 +24,7 @@ properties in the prototype chain as well).
 
 ## Syntax
 
-```js
+```js-nolint
 entries(obj)
 ```
 

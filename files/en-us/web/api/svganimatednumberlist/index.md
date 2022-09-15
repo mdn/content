@@ -1,6 +1,7 @@
 ---
 title: SVGAnimatedNumberList
 slug: Web/API/SVGAnimatedNumberList
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedNumberList
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated number list interface

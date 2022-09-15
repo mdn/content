@@ -1,11 +1,13 @@
 ---
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
+page-type: web-api-instance-method
 tags:
   - Method
   - Reference
 browser-compat: api.Node.cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`cloneNode()`** method of the {{domxref("Node")}} interface
@@ -32,9 +34,9 @@ To clone a node to insert into a _different_ document, use
 
 ## Syntax
 
-```js
-cloneNode();
-cloneNode(deep);
+```js-nolint
+cloneNode()
+cloneNode(deep)
 ```
 
 ### Parameters

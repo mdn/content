@@ -1,6 +1,7 @@
 ---
 title: SVGMPathElement
 slug: Web/API/SVGMPathElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGMPathElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGMPathElement`** interface corresponds to the {{SVGElement("mpath")}} element.

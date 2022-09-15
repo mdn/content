@@ -8,6 +8,7 @@ tags:
   - head
   - metadata
 ---
+
 The **Head** is the part of an {{glossary("HTML")}} document that contains {{glossary("metadata")}} about that document, such as author, description, and links to {{glossary("CSS")}} or {{glossary("JavaScript")}} files that should be applied to the HTML.
 
 ## See also

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.vertexAttribI4[u]i[v]()
 slug: Web/API/WebGL2RenderingContext/vertexAttribI
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.vertexAttribI4i
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.vertexAttribI4[u]i[v]()`**
@@ -17,7 +19,7 @@ values for generic vertex attributes.
 
 ## Syntax
 
-```js
+```js-nolint
 vertexAttribI4i(index, v0, v1, v2, v3)
 vertexAttribI4ui(index, v0, v1, v2, v3)
 vertexAttribI4iv(index, value)

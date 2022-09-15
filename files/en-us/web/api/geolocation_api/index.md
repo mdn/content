@@ -1,6 +1,7 @@
 ---
 title: Geolocation API
 slug: Web/API/Geolocation_API
+page-type: web-api-overview
 tags:
   - Geolocation API
   - Guide
@@ -8,6 +9,7 @@ tags:
   - Overview
 browser-compat: api.Geolocation
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 The **Geolocation API** allows the user to provide their location to web applications if they so desire. For privacy reasons, the user is asked for permission to report location information.

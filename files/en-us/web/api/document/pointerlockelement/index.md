@@ -1,6 +1,7 @@
 ---
 title: Document.pointerLockElement
 slug: Web/API/Document/pointerLockElement
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - mouse lock
 browser-compat: api.Document.pointerLockElement
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`pointerLockElement`** property

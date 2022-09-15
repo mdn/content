@@ -1,6 +1,7 @@
 ---
 title: PromiseRejectionEvent()
 slug: Web/API/PromiseRejectionEvent/PromiseRejectionEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -12,6 +13,7 @@ tags:
   - events
 browser-compat: api.PromiseRejectionEvent.PromiseRejectionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`PromiseRejectionEvent()`**
@@ -29,7 +31,7 @@ emitted if a promise is rejected but the rejection is caught by a rejection hand
 
 ## Syntax
 
-```js
+```js-nolint
 new PromiseRejectionEvent(type, options)
 ```
 

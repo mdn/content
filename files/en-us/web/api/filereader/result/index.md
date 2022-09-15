@@ -1,6 +1,7 @@
 ---
 title: FileReader.result
 slug: Web/API/FileReader/result
+page-type: web-api-instance-property
 tags:
   - API
   - File API
@@ -11,6 +12,7 @@ tags:
   - result
 browser-compat: api.FileReader.result
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("FileReader")}} **`result`** property returns the
@@ -83,13 +85,13 @@ the `result` is obtained and passed to the callback function provided to
 The content is handled as raw text data.
 
 ```js
-var fileInput = document.querySelector('input[type="file"]');
+const fileInput = document.querySelector('input[type="file"]');
 
 function read(callback) {
-  var file = fileInput.files.item(0);
-  var reader = new FileReader();
+  const file = fileInput.files.item(0);
+  const reader = new FileReader();
 
-  reader.onload = function() {
+  reader.onload = () => {
     callback(reader.result);
   }
 

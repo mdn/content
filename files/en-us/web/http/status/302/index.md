@@ -8,6 +8,7 @@ tags:
   - redirects
 browser-compat: http.status.302
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`302 Found`** redirect
@@ -48,4 +49,4 @@ confirmation message such as: 'you successfully uploaded XYZ'.
   where the method used never changes.
 - {{HTTPStatus("303", "303 See Other")}}, a temporary redirect that changes the method
   used to {{HTTPMethod("GET")}}.
-- {{HTTPStatus("301", "301 Moved Permanently")}}, the permanent redirect.
+- {{HTTPStatus("301", "301 Moved Permanently")}}, a permanent redirect.

@@ -12,6 +12,7 @@ tags:
   - onRequestFinished
 browser-compat: webextensions.api.devtools.network.onRequestFinished
 ---
+
 {{AddonSidebar()}}
 
 Fired when a network request has finished and its details are available to the extension.
@@ -22,7 +23,7 @@ Note that although your extension can add a listener at any time, it will only s
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.network.onRequestFinished.addListener(listener)
 browser.devtools.network.onRequestFinished.removeListener(listener)
 browser.devtools.network.onRequestFinished.hasListener(listener)
@@ -72,7 +73,8 @@ browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
 
 > **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,4 +101,4 @@ browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

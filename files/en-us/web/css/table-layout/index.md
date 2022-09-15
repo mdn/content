@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.table-layout
 ---
+
 {{CSSRef}}
 
 The **`table-layout`** CSS property sets the algorithm used to lay out {{htmlelement("table")}} cells, rows, and columns.
@@ -58,10 +59,22 @@ This example uses a fixed table layout, combined with the {{cssxref("width")}} p
 
 ```html
 <table>
-  <tr><td>Ed</td><td>Wood</td></tr>
-  <tr><td>Albert</td><td>Schweitzer</td></tr>
-  <tr><td>Jane</td><td>Fonda</td></tr>
-  <tr><td>William</td><td>Shakespeare</td></tr>
+  <tr>
+    <td>Ed</td>
+    <td>Wood</td>
+  </tr>
+  <tr>
+    <td>Albert</td>
+    <td>Schweitzer</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Fonda</td>
+  </tr>
+  <tr>
+    <td>William</td>
+    <td>Shakespeare</td>
+  </tr>
 </table>
 ```
 

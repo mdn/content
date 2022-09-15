@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.length
 slug: Web/API/HTMLFormElement/length
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.length`**

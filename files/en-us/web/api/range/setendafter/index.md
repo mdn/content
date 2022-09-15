@@ -1,6 +1,7 @@
 ---
 title: Range.setEndAfter()
 slug: Web/API/Range/setEndAfter
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.setEndAfter
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setEndAfter()`** method sets the end position of a
@@ -17,7 +19,7 @@ The **`Range.setEndAfter()`** method sets the end position of a
 
 ## Syntax
 
-```js
+```js-nolint
 setEndAfter(referenceNode)
 ```
 
@@ -33,8 +35,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var range = document.createRange();
-var referenceNode = document.getElementsByTagName('div').item(0);
+const range = document.createRange();
+const referenceNode = document.getElementsByTagName('div').item(0);
 
 range.setEndAfter(referenceNode);
 ```

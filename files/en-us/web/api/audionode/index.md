@@ -1,6 +1,7 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
+page-type: web-api-interface
 tags:
   - API
   - AudioNode
@@ -9,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioNode`** interface is a generic interface for representing an audio processing module.
@@ -52,7 +54,9 @@ const analyserNode = new AnalyserNode(audioCtx, {
   minDecibels: -60,
   smoothingTimeConstant: 0.5,
 });
+```
 
+```js
 // factory method
 const analyserNode = audioCtx.createAnalyser();
 analyserNode.fftSize = 2048;
@@ -71,11 +75,11 @@ _Brief history:_ The first version of the Web Audio spec only defined the factor
 
 ## Properties
 
-- {{domxref("AudioNode.context")}} {{readonlyInline}}
+- {{domxref("AudioNode.context")}} {{ReadOnlyInline}}
   - : Returns the associated {{domxref("BaseAudioContext")}}, that is the object representing the processing graph the node is participating in.
-- {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
+- {{domxref("AudioNode.numberOfInputs")}} {{ReadOnlyInline}}
   - : Returns the number of inputs feeding the node. Source nodes are defined as nodes having a `numberOfInputs` property with a value of `0`.
-- {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
+- {{domxref("AudioNode.numberOfOutputs")}} {{ReadOnlyInline}}
   - : Returns the number of outputs coming out of the node. Destination nodes — like {{ domxref("AudioDestinationNode") }} — have a value of `0` for this attribute.
 - {{domxref("AudioNode.channelCount")}}
   - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.
@@ -96,7 +100,7 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
 ## Example
 
-This simple snippet of code shows the creation of some audio nodes, and how the `AudioNode` properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/violent-theremin)).
+This simple snippet of code shows the creation of some audio nodes, and how the `AudioNode` properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)).
 
 ```js
 const audioCtx = new AudioContext();

@@ -1,6 +1,7 @@
 ---
 title: VideoTrack.kind
 slug: Web/API/VideoTrack/kind
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -15,6 +16,7 @@ tags:
   - track
 browser-compat: api.VideoTrack.kind
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`kind`** property contains a

@@ -1,6 +1,7 @@
 ---
 title: Element.getAttribute()
 slug: Web/API/Element/getAttribute
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getAttribute
 ---
+
 {{APIRef("DOM")}}
 
 The **`getAttribute()`** method of the
@@ -20,7 +22,7 @@ either be `null` or `""` (the empty string); see [Non-existing attributes](#non-
 
 ## Syntax
 
-```js
+```js-nolint
 getAttribute(attributeName)
 ```
 
@@ -34,10 +36,12 @@ A string containing the value of `attributeName`.
 
 ## Examples
 
-```js
+```html
 <!-- example div in an HTML DOC -->
 <div id="div1">Hi Champ!</div>
+```
 
+```js
 // in a console
 const div1 = document.getElementById('div1');
 //=> <div id="div1">Hi Champ!</div>
@@ -60,8 +64,7 @@ When called on an HTML element in a DOM flagged as an HTML document,
 
 Essentially all web browsers (Firefox, Internet Explorer, recent versions of Opera,
 Safari, Konqueror, and iCab, as a non-exhaustive list) return `null` when
-the specified attribute does not exist on the specified element; this is what [the current DOM
-specification draft](https://dom.spec.whatwg.org/#dom-element-getattribute) specifies. The old DOM 3 Core specification, on the other
+the specified attribute does not exist on the specified element; this is what [the current DOM specification draft](https://dom.spec.whatwg.org/#dom-element-getattribute) specifies. The old DOM 3 Core specification, on the other
 hand, says that the correct return value in this case is actually the _empty
 string_, and some DOM implementations implement this behavior. The
 implementation of `getAttribute()` in XUL (Gecko) actually follows the DOM
@@ -73,7 +76,7 @@ does not exist on the specified element.
 ### Retrieving nonce values
 
 For security reasons, [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script
-sources, such as CSS selectors, and  `.getAttribute("nonce")` calls are
+sources, such as CSS selectors, and `.getAttribute("nonce")` calls are
 hidden.
 
 ```js example-bad

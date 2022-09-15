@@ -1,6 +1,7 @@
 ---
 title: DeprecationReportBody.anticipatedRemoval
 slug: Web/API/DeprecationReportBody/anticipatedRemoval
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -8,8 +9,9 @@ tags:
   - Experimental
   - anticipatedRemoval
   - DeprecationReportBody
-spec-urls: https://wicg.github.io/deprecation-reporting/#dom-deprecationreportbody-anticipatedremoval
+browser-compat: api.DeprecationReportBody.anticipatedRemoval
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`anticipatedRemoval`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the date that the browser version which removes the feature will ship. This value can be used to prioritize warnings. If this property returns `null` because the date is unknown, then the deprecation should be considered low priority.
@@ -28,7 +30,7 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.anticipatedRemoval);
@@ -41,4 +43,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-This feature is not yet available by default on any released browser. It can be activated on Firefox by setting `dom_reporting_enabled` to `true` and Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools) in it.
+{{Compat}}

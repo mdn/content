@@ -1,6 +1,7 @@
 ---
 title: InputEvent.inputType
 slug: Web/API/InputEvent/inputType
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -13,6 +14,7 @@ tags:
   - inputType
 browser-compat: api.InputEvent.inputType
 ---
+
 {{APIRef("UI Events")}}
 
 The **`inputType`** read-only property of the
@@ -24,8 +26,7 @@ Possible changes include for example inserting, deleting, and formatting text.
 A string containing the type of input that was made. There are many
 possible values, such as `insertText`, `deleteContentBackward`,
 `insertFromPaste`, and `formatBold`. For a complete list of the
-available input types, see the [Attributes
-section of the Input Events Level 1 spec](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes).
+available input types, see the [Attributes section of the Input Events Level 1 spec](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes).
 
 ## Examples
 
@@ -35,10 +36,15 @@ This example logs the `inputType` for [input events](/en-US/docs/Web/API/HTMLEle
 ### HTML
 
 ```html
-<p id="log">Input type: </p>
-<div contenteditable="true" style="margin: 20px;padding: 20px;border:2px dashed red;">
-  <p>Some sample text. Try inserting line breaks, or deleting text in different ways, or pasting different content in.</p>
-  <hr>
+<p id="log">Input type:</p>
+<div
+  contenteditable="true"
+  style="margin: 20px;padding: 20px;border:2px dashed red;">
+  <p>
+    Some sample text. Try inserting line breaks, or deleting text in different
+    ways, or pasting different content in.
+  </p>
+  <hr />
   <ul>
     <li>A sample</li>
     <li>bulleted</li>

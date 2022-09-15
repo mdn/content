@@ -1,6 +1,7 @@
 ---
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Element.scrollLeft
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollLeft`** property gets or sets the number
@@ -67,14 +69,14 @@ A number.
 ```js
 const button = document.getElementById('slide');
 
-button.onclick = function () {
+button.onclick = () => {
   document.getElementById('container').scrollLeft += 20;
 };
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -86,6 +88,6 @@ button.onclick = function () {
 
 ## See also
 
-- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
+- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx>)
 - {{domxref("Element.scrollTop")}}
 - {{domxref("Element.scrollTo()")}}

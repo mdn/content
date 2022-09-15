@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.availableOutgoingBitrate
 slug: Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate
+page-type: web-api-instance-property
 tags:
   - API
   - Bandwidth
@@ -20,6 +21,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidatePairStats.availableOutgoingBitrate
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

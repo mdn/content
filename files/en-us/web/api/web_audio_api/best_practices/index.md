@@ -1,13 +1,15 @@
 ---
 title: Web Audio API best practices
 slug: Web/API/Web_Audio_API/Best_practices
+page-type: guide
 tags:
   - Audio
   - Best practices
   - Guide
   - Web Audio API
 ---
-{{apiref("Web Audio API")}}
+
+{{DefaultAPISidebar("Web Audio API")}}
 
 There's no strict right or wrong way when writing creative code. As long as you consider security, performance, and accessibility, you can adapt to your own style. In this article, we'll share a number of _best practices_ — guidelines, tips, and tricks for working with the Web Audio API.
 
@@ -15,7 +17,7 @@ There's no strict right or wrong way when writing creative code. As long as you 
 
 There are four main ways to load sound with the Web Audio API and it can be a little confusing as to which one you should use.
 
-When working with files, you are looking at either the grabbing the file from an {{domxref("HTMLMediaElement")}} (i.e. an {{htmlelement("audio")}} or {{htmlelement("video")}} element), or you're looking to fetch the file and decode it into a buffer. Both are legitimate ways of working, however, it's more common to use the former when you are working with full-length tracks, and the latter when working with shorter, more sample-like tracks.
+When working with files, you are looking at either grabbing the file from an {{domxref("HTMLMediaElement")}} (i.e. an {{htmlelement("audio")}} or {{htmlelement("video")}} element), or you're looking to fetch the file and decode it into a buffer. Both are legitimate ways of working, however, it's more common to use the former when you are working with full-length tracks, and the latter when working with shorter, more sample-like tracks.
 
 Media elements have streaming support out of the box. The audio will start playing when the browser determines it can load the rest of the file before playing finishes. You can see an example of how to use this with the Web Audio API in the [Using the Web Audio API tutorial](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 
@@ -51,8 +53,9 @@ When working with an {{domxref("AudioContext")}}, if you create the audio contex
 
 ```js
 const button = document.querySelector('button');
-button.addEventListener('click', function() {
-    const audioCtx = new AudioContext();
+button.addEventListener('click', () => {
+  const audioCtx = new AudioContext();
+  // Do something with the audio context
 }, false);
 ```
 
@@ -62,11 +65,11 @@ If however, you create the context outside of a user gesture, its state will be 
 const audioCtx = new AudioContext();
 const button = document.querySelector('button');
 
-button.addEventListener('click', function() {
-      // check if context is in suspended state (autoplay policy)
-    if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-    }
+button.addEventListener('click', () => {
+  // check if context is in suspended state (autoplay policy)
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
 }, false);
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: SVGSetElement
 slug: Web/API/SVGSetElement
+page-type: web-api-interface
 tags:
   - API
   - NeedsExample
@@ -9,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGSetElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGSetElement`** interface corresponds to the {{SVGElement("set")}} element.

@@ -1,6 +1,7 @@
 ---
 title: USBDevice.selectConfiguration()
 slug: Web/API/USBDevice/selectConfiguration
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,8 +11,10 @@ tags:
   - WebUSB
   - WebUSB API
   - selectConfiguration
+  - Experimental
 browser-compat: api.USBDevice.selectConfiguration
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`selectConfiguration()`** method of the
@@ -20,7 +23,7 @@ the specified configuration is selected.
 
 ## Syntax
 
-```js
+```js-nolint
 selectConfiguration(configurationValue)
 ```
 

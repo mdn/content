@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.getAll()
 slug: Web/API/URLSearchParams/getAll
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - getAll
 browser-compat: api.URLSearchParams.getAll
 ---
+
 {{ApiRef("URL API")}}
 
 The **`getAll()`** method of the {{domxref("URLSearchParams")}}
@@ -18,7 +20,7 @@ interface returns all the values associated with a given search parameter as an 
 
 ## Syntax
 
-```js
+```js-nolint
 getAll(name)
 ```
 

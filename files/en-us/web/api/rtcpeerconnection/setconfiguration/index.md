@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
+page-type: web-api-instance-method
 tags:
   - Configuration
   - Method
@@ -10,6 +11,7 @@ tags:
   - setConfiguration
 browser-compat: api.RTCPeerConnection.setConfiguration
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.setConfiguration()`** method sets the
@@ -33,7 +35,7 @@ this might be done:
 
 ## Syntax
 
-```js
+```js-nolint
 setConfiguration(configuration)
 ```
 
@@ -53,7 +55,7 @@ setConfiguration(configuration)
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown if the `configuration` includes changed identity information, but the connection already has identity information specified.
     This happens if `configuration.peerIdentity` or `configuration.certificates` are set and their values differ from the current configuration.
-    This may also be thrown if there are changes to `configuration.bundlePolicy` or `configuration.rtcpMuxPolicy`, or to `configuration.iceCandidatePoolSize`when {{domxref("RTCPeerConnection.setLocalDescription()")}} has already been called.
+    This may also be thrown if there are changes to `configuration.bundlePolicy` or `configuration.rtcpMuxPolicy`, or to `configuration.iceCandidatePoolSize` when {{domxref("RTCPeerConnection.setLocalDescription()")}} has already been called.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("RTCPeerConnection")}} is closed.
 - `SyntaxError` {{domxref("DOMException")}}
@@ -66,7 +68,7 @@ setConfiguration(configuration)
 In this example, it has already been determined that ICE restart is needed, and that negotiation needs to be done using a different ICE server.
 
 ```js
-var restartConfig = {
+const restartConfig = {
   iceServers: [{
     urls: "turn:asia.myturnserver.net",
     username: "allie@oopcode.com",
@@ -76,13 +78,12 @@ var restartConfig = {
 
 myPeerConnection.setConfiguration(restartConfig);
 
-myPeerConnection.createOffer({"iceRestart": true}).then(function(offer) {
-  return myPeerConnection.setLocalDescription(offer);
-})
-.then(function() {
-  // send the offer to the other peer using the signaling server
-})
-.catch(reportError);
+myPeerConnection.createOffer({ "iceRestart": true })
+  .then((offer) => myPeerConnection.setLocalDescription(offer))
+  .then(() => {
+    // send the offer to the other peer using the signaling server
+  })
+  .catch(reportError);
 ```
 
 First, a new object is created, `restartConfig`,

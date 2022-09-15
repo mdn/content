@@ -1,6 +1,7 @@
 ---
 title: DocumentFragment.children
 slug: Web/API/DocumentFragment/children
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - children
 browser-compat: api.DocumentFragment.children
 ---
+
 {{ APIRef("DOM") }}
 
 The read-only **`children`** property returns a live {{domxref("HTMLCollection")}}

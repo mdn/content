@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.nominated
 slug: Web/API/RTCIceCandidatePairStats/nominated
+page-type: web-api-instance-property
 tags:
   - API
   - Flag
@@ -15,6 +16,7 @@ tags:
   - nominated
 browser-compat: api.RTCIceCandidatePairStats.nominated
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

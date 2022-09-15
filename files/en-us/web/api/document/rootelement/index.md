@@ -1,6 +1,7 @@
 ---
 title: Document.rootElement
 slug: Web/API/Document/rootElement
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - root
 browser-compat: api.Document.rootElement
 ---
+
 {{ApiRef("DOM")}}{{Deprecated_header}}
 
 **`Document.rootElement`** returns the {{domxref("Element")}}

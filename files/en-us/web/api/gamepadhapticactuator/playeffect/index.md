@@ -1,6 +1,7 @@
 ---
 title: GamepadHapticActuator.playEffect()
 slug: Web/API/GamepadHapticActuator/playEffect
+page-type: web-api-instance-method
 tags:
   - API
   - Experimental
@@ -10,21 +11,24 @@ tags:
   - Method
   - Reference
   - playEffect
+  - Non-standard
 browser-compat: api.GamepadHapticActuator.playEffect
 ---
-{{APIRef("Gamepad")}}{{SeeCompatTable}}
+
+{{APIRef("Gamepad")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 The **`playEffect()`** method of the {{domxref("GamepadHapticActuator")}} interface makes the hardware play a specific vibration pattern.
 
 ## Syntax
 
-```js
+```js-nolint
 playEffect(type, params)
 ```
 
 ### Parameters
 
 - `type`
+
   - : A string representing the desired effect. This can vary depending on the hardware type. Possible values are "dual-rumble" or "vibration".
 
 - `params`

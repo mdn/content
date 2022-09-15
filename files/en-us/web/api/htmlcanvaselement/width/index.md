@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.width
 slug: Web/API/HTMLCanvasElement/width
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -8,6 +9,7 @@ tags:
   - Property
 browser-compat: api.HTMLCanvasElement.width
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement.width`** property is a
@@ -34,7 +36,7 @@ Given this {{HTMLElement("canvas")}} element:
 You can get the width of the canvas with the following code:
 
 ```js
-var canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas');
 console.log(canvas.width); // 300
 ```
 

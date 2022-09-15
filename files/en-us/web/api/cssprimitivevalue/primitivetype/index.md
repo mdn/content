@@ -1,6 +1,7 @@
 ---
 title: CSSPrimitiveValue.primitiveType
 slug: Web/API/CSSPrimitiveValue/primitiveType
+page-type: web-api-instance-property
 tags:
   - API
   - CSSPrimitiveValue
@@ -11,6 +12,7 @@ tags:
   - primitiveValue
 browser-compat: api.CSSPrimitiveValue.primitiveType
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`primitiveType`** read-only property of the
@@ -234,8 +236,8 @@ An `unsigned short` representing the type of the value. Possible values are:
 ## Examples
 
 ```js
-var cs = window.getComputedStyle(document.body);
-var cssValue = cs.getPropertyCSSValue("color");
+const cs = window.getComputedStyle(document.body);
+const cssValue = cs.getPropertyCSSValue("color");
 console.log(cssValue.primitiveType);
 ```
 

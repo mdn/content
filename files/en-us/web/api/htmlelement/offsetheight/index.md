@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetHeight`** read-only property returns
@@ -63,7 +65,5 @@ dimensions, or an element's border-box height.
 - {{domxref("Element.clientHeight")}}
 - {{domxref("Element.scrollHeight")}}
 - {{domxref("HTMLElement.offsetWidth")}}
-- [Determining
-  the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-- [MSDN
-  Measuring Element Dimension and Location](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [MSDN Measuring Element Dimension and Location](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)

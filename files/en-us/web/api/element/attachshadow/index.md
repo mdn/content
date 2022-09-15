@@ -1,6 +1,7 @@
 ---
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
+page-type: web-api-instance-method
 tags:
   - API
   - Element
@@ -10,6 +11,7 @@ tags:
   - shadow DOM
 browser-compat: api.Element.attachShadow
 ---
+
 {{APIRef('Shadow DOM')}}
 
 The **`Element.attachShadow()`** method attaches a shadow DOM tree to the specified element and returns a reference to its {{domxref("ShadowRoot")}}.
@@ -21,8 +23,7 @@ There are some that can't have a shadow DOM for security reasons (for example {{
 
 The following is a list of elements you **can** attach a shadow root to:
 
-- Any autonomous custom element with a [valid
-  name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
+- Any autonomous custom element with a [valid name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
 - {{htmlelement("blockquote")}}
@@ -44,7 +45,7 @@ The following is a list of elements you **can** attach a shadow root to:
 
 ## Syntax
 
-```js
+```js-nolint
 attachShadow(options)
 ```
 
@@ -60,6 +61,7 @@ attachShadow(options)
         This can be one of:
 
         - `open`
+
           - : Elements of the shadow root are accessible from JavaScript outside the root,
             for example using {{domxref("Element.shadowRoot")}}:
 
@@ -68,6 +70,7 @@ attachShadow(options)
             ```
 
         - `closed`
+
           - : Denies access to the node(s) of a closed shadow root
             from JavaScript outside it:
 
@@ -76,8 +79,12 @@ attachShadow(options)
             ```
 
     - `delegatesFocus`
+
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
         When a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling.
+
+    - `slotAssignment`
+      - : Either `manual` or `named` (default). When set to `manual`, use {{DOMxRef("HTMLSlotElement.assign()")}} to assign a value to `slot`.
 
 ### Return value
 
@@ -85,9 +92,9 @@ Returns a {{domxref("ShadowRoot")}} object.
 
 ### Exceptions
 
-- `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : The element you are trying to attach to is already a shadow host.
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : You are trying to attach a shadow root to an element outside the HTML namespace, the element cannot have a shadow attached to it,
     or the static property `disabledFeatures` has been given a value of `"shadow"` in the element definition.
 
@@ -108,7 +115,7 @@ class WordCount extends HTMLParagraphElement {
 
     function countWords(node){
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter(a => a.trim().length > 0).length;
+      return text.trim().split(/\s+/g).filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Words: ${countWords(wcParent)}`;
@@ -124,7 +131,7 @@ class WordCount extends HTMLParagraphElement {
     shadow.appendChild(text);
 
     // Update count when element content changes
-    setInterval(function() {
+    setInterval(() => {
       const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
     }, 200);

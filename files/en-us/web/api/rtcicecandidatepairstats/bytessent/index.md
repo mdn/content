@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.bytesSent
 slug: Web/API/RTCIceCandidatePairStats/bytesSent
+page-type: web-api-instance-property
 tags:
   - API
   - Candidate
@@ -18,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCIceCandidatePairStats.bytesSent
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property
@@ -30,8 +32,8 @@ reports the number of bytes received so far on the described connection.
 
 ## Syntax
 
-```js
-sent = rtcIceCandidatePairStats.bytesSent;
+```js-nolint
+sent = rtcIceCandidatePairStats.bytesSent
 ```
 
 ### Value

@@ -16,6 +16,7 @@ tags:
   - get
 browser-compat: webextensions.api.storage.StorageArea.get
 ---
+
 {{AddonSidebar()}}
 
 Retrieves one or more items from the storage area.
@@ -24,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let results = browser.storage.<storageType>.get(
   keys    // null, string, object or array of strings
 )
@@ -137,7 +138,7 @@ let gettingItem = browser.storage.local.get({
 ### Chrome examples
 
 ```js
-chrome.storage.local.get("kitten", function(items){
+chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
 });
 ```
@@ -145,7 +146,7 @@ chrome.storage.local.get("kitten", function(items){
 Or with an arrow function
 
 ```js
-chrome.storage.local.get("kitten", items => {
+chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
@@ -153,7 +154,7 @@ chrome.storage.local.get("kitten", items => {
 Or using a Promise
 
 ```js
-let gettingItem = new Promise(resolve => chrome.storage.local.get("kitten", resolve));
+let gettingItem = new Promise((resolve) => chrome.storage.local.get("kitten", resolve));
 gettingItem.then(onGot); // -> Object { kitten: Object }
 ```
 

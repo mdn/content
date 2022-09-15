@@ -1,6 +1,7 @@
 ---
 title: DeviceOrientationEvent()
 slug: Web/API/DeviceOrientationEvent/DeviceOrientationEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -9,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.DeviceOrientationEvent.DeviceOrientationEvent
 ---
+
 {{APIRef("Device Orientation Events")}}
 
 The **`DeviceOrientationEvent()`** constructor creates a new {{domxref("DeviceOrientationEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new DeviceOrientationEvent(type)
 new DeviceOrientationEvent(type, options)
 ```

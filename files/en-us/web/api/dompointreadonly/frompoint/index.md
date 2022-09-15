@@ -1,6 +1,7 @@
 ---
 title: DOMPointReadOnly.fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint
+page-type: web-api-static-method
 tags:
   - API
   - Coordinates
@@ -15,6 +16,7 @@ tags:
   - fromPoint
 browser-compat: api.DOMPointReadOnly.fromPoint
 ---
+
 {{APIRef("DOM")}}
 
 The static **{{domxref("DOMPointReadOnly")}}**
@@ -26,7 +28,7 @@ You can also create a new `DOMPointReadOnly` object using the
 
 ## Syntax
 
-```js
+```js-nolint
 fromPoint(sourcePoint)
 ```
 

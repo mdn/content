@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
+page-type: web-api-instance-method
 tags:
   - API
   - Intersection Observer
@@ -11,6 +12,7 @@ tags:
   - observe
 browser-compat: api.IntersectionObserver.observe
 ---
+
 {{APIRef("Intersection Observer API")}}
 The {{domxref("IntersectionObserver")}} method
 **`observe()`** adds an element to the set of target elements
@@ -30,7 +32,7 @@ be processed by a single call to the callback.
 
 ## Syntax
 
-```js
+```js-nolint
 observe(targetElement)
 ```
 
@@ -49,14 +51,13 @@ None ({{jsxref("undefined")}}).
 
 ```js
 // Register IntersectionObserver
-const io = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    // Add 'active' class if observation target is inside viewport
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     if (entry.intersectionRatio > 0) {
+      // Add 'active' class if observation target is inside viewport
       entry.target.classList.add('active');
-    }
-    // Remove 'active' class otherwise
-    else {
+    } else {
+      // Remove 'active' class otherwise
       entry.target.classList.remove('active');
     }
   })

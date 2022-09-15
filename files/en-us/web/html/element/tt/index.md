@@ -87,9 +87,11 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 This example uses `<tt>` to show text entered into, and output by, a terminal application.
 
 ```html
-<p>Enter the following at the telnet command prompt: <code>set localecho</code><br />
+<p>
+  Enter the following at the telnet command prompt: <code>set localecho</code><br />
 
-The telnet client should display: <tt>Local Echo is on</tt></p>
+  The telnet client should display: <tt>Local Echo is on</tt>
+</p>
 ```
 
 #### Result
@@ -104,17 +106,18 @@ You can override the browser's default font—if the browser permits you to do s
 
 ```css
 tt {
-  font-family: "Lucida Console", "Menlo", "Monaco", "Courier",
-               monospace;
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
 }
 ```
 
 #### HTML
 
 ```html
-<p>Enter the following at the telnet command prompt: <code>set localecho</code><br />
+<p>
+  Enter the following at the telnet command prompt: <code>set localecho</code><br />
 
-The telnet client should display: <tt>Local Echo is on</tt></p>
+  The telnet client should display: <tt>Local Echo is on</tt>
+</p>
 ```
 
 #### Result

@@ -1,6 +1,7 @@
 ---
 title: Headers.entries()
 slug: Web/API/Headers/entries
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch API
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Headers.entries
 ---
+
 {{APIRef}}
 
 The **`Headers.entries()`** method returns an
@@ -20,7 +22,7 @@ contained in this object. The both the key and value of each pairs are
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
@@ -36,13 +38,13 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
 ```js
 // Create a test Headers object
-var myHeaders = new Headers();
+const myHeaders = new Headers();
 myHeaders.append('Content-Type', 'text/xml');
 myHeaders.append('Vary', 'Accept-Language');
 
 // Display the key/value pairs
-for (var pair of myHeaders.entries()) {
-   console.log(pair[0]+ ': '+ pair[1]);
+for (const pair of myHeaders.entries()) {
+   console.log(`${pair[0]}: ${pair[1]}`);
 }
 ```
 

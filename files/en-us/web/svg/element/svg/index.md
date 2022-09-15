@@ -9,20 +9,29 @@ tags:
   - Web
 browser-compat: svg.elements.svg
 ---
+
 {{SVGRef}}
 
 The `svg` element is a container that defines a new coordinate system and [viewport](/en-US/docs/Web/SVG/Attribute/viewBox). It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.
 
-> **Note:** The `xmlns` attribute is only required on the outermost `svg` element of *SVG documents*. It is unnecessary for inner `svg` elements or inside HTML documents.
+> **Note:** The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_. It is unnecessary for inner `svg` elements or inside HTML documents.
 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
+<svg
+  viewBox="0 0 300 100"
+  xmlns="http://www.w3.org/2000/svg"
+  stroke="red"
+  fill="grey">
   <circle cx="50" cy="50" r="40" />
   <circle cx="150" cy="50" r="4" />
 
@@ -38,36 +47,36 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("baseProfile")}} {{deprecated_inline}}
   - : The minimum SVG language profile that the document requires.
-    *Value type*: **\<string>** ; *Default value*: none; *Animatable*: **no**
+    _Value type_: **\<string>** ; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("contentScriptType")}} {{deprecated_inline}}
   - : The default scripting language used by the SVG fragment.
-    *Value type*: **\<string>** ; *Default value*: `application/ecmascript`; *Animatable*: **no**
+    _Value type_: **\<string>** ; _Default value_: `application/ecmascript`; _Animatable_: **no**
 - {{SVGAttr("contentStyleType")}} {{deprecated_inline}}
   - : The default style sheet language used by the SVG fragment.
-    *Value type*: **\<string>** ; *Default value*: `text/css`; *Animatable*: **no**
+    _Value type_: **\<string>** ; _Default value_: `text/css`; _Animatable_: **no**
 - {{SVGAttr("height")}}
   - : The displayed height of the rectangular viewport. (Not the height of its coordinate system.)
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: `auto`; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
   - : How the `svg` fragment must be deformed if it is displayed with a different aspect ratio.
-    *Value type*: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; *Default value*: `xMidYMid meet`; *Animatable*: **yes**
+    _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("version")}} {{deprecated_inline}}
   - : Which version of SVG is used for the inner content of the element.
-    *Value type*: **[\<number>](/en-US/docs/Web/SVG/Content_type#number)** ; *Default value*: none; *Animatable*: **no**
+    _Value type_: **[\<number>](/en-US/docs/Web/SVG/Content_type#number)** ; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("viewBox")}}
   - : The SVG viewport coordinates for the current SVG fragment.
-    *Value type*: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; *Default value*: none; *Animatable*: **yes**
+    _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("width")}}
   - : The displayed width of the rectangular viewport. (Not the width of its coordinate system.)
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: `auto`; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("x")}}
   - : The displayed x coordinate of the svg container. No effect on outermost `svg` elements.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: `0`; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
   - : The displayed y coordinate of the svg container. No effect on outermost `svg` elements.
-    *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: `0`; *Animatable*: **yes**
+    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
-> **Note:** Starting with SVG2, `x`, `y`, `width`, and `height` are *Geometry Properties*, meaning these attributes can also be used as CSS properties.
+> **Note:** Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning these attributes can also be used as CSS properties.
 
 ### Global attributes
 

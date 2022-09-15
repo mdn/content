@@ -1,6 +1,7 @@
 ---
 title: location.replace()
 slug: Web/API/Location/replace
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Location.replace
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`replace()`** method of the {{DOMXref("Location")}}
@@ -29,7 +31,7 @@ If the provided URL is not valid, a {{domxref("DOMException")}} of the
 
 ## Syntax
 
-```js
+```js-nolint
 replace(url)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.getSyncParameter()
 slug: Web/API/WebGL2RenderingContext/getSyncParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getSyncParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getSyncParameter()`** method of
@@ -17,7 +19,7 @@ information of a {{domxref("WebGLSync")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 getSyncParameter(sync, pname)
 ```
 
@@ -51,7 +53,7 @@ Depends on the `pname` parameter, either a {{domxref("WebGL_API/Types", "GLenum"
 ## Examples
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 gl.getSyncParameter(sync, gl.SYNC_STATUS);
 ```
 

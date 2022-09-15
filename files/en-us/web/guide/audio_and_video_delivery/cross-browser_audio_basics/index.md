@@ -5,13 +5,14 @@ tags:
   - Apps
   - Audio
   - Guide
-  - HTML5
+  - HTML
   - Media
   - events
 ---
+
 This article provides:
 
-- a basic guide to creating a cross-browser HTML5 audio player with all the associated attributes, properties, and events explained
+- a basic guide to creating a cross-browser HTML audio player with all the associated attributes, properties, and events explained
 - a guide to custom controls created using the Media API
 
 ## Basic Audio example
@@ -20,11 +21,13 @@ The code below is an example of a basic audio implementation using HTML5:
 
 ```html
 <audio controls>
-  <source src="audiofile.mp3" type="audio/mpeg">
-  <source src="audiofile.ogg" type="audio/ogg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
+  <source src="audiofile.ogg" type="audio/ogg" />
   <!-- fallback for non supporting browsers goes here -->
-  <p>Your browser does not support HTML5 audio, but you can still
-     <a href="audiofile.mp3">download the music</a>.</p>
+  <p>
+    Your browser does not support HTML audio, but you can still
+    <a href="audiofile.mp3">download the music</a>.
+  </p>
 </audio>
 ```
 
@@ -39,9 +42,9 @@ The code below is an example of a basic audio implementation using HTML5:
 - If the {{ htmlelement("audio") }} element is not supported then {{ htmlelement("audio") }} and {{ htmlelement("source") }} will be ignored. However any supported text or elements that you define within {{ htmlelement("audio") }} will be displayed or acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing `</audio>` tag. In this case, we've provided a simple paragraph including a link to download the audio directly.
 - The `controls` attribute on the {{ htmlelement("audio") }} element is specified when we require the browser to provide us with default playback controls. If you don't specify this attribute, no controls will appear — and you will instead have to create your own controls and program their functionality using the Media API (see below). However, that can be a good approach, because the default controls look different among various browsers. So creating your own controls ensures a consistent look for the controls across all browsers.
 
-## HTML5 audio in detail
+## HTML audio in detail
 
-Now we've looked at a basic example, let's now explore the different aspects of HTML5 audio in more detail.
+Now we've looked at a basic example, let's now explore the different aspects of HTML audio in more detail.
 
 ### Audio HTML attributes
 
@@ -52,9 +55,7 @@ We can specify a number of attributes with the audio tag to further determine th
 Specifying `autoplay` will cause the audio to start playing as soon as possible and without any user interaction — in short, the audio will autoplay.
 
 ```html
-<audio autoplay>
-  ...
-</audio>
+<audio autoplay>…</audio>
 ```
 
 > **Note:** This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Auto-playing audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for details.
@@ -64,9 +65,7 @@ Specifying `autoplay` will cause the audio to start playing as soon as possible 
 The `loop` attribute will ensure that upon getting to the end of the audio clip, the audio clip will loop back to the beginning and start playing again.
 
 ```html
-<audio loop>
-  ...
-</audio>
+<audio loop>…</audio>
 ```
 
 #### muted
@@ -74,9 +73,7 @@ The `loop` attribute will ensure that upon getting to the end of the audio clip,
 If you want the audio to start muted (no volume), add the `muted` attribute.
 
 ```html
-<audio muted>
-  ...
-</audio>
+<audio muted>…</audio>
 ```
 
 > **Note:** This value is often ignored on mobile platforms.
@@ -94,9 +91,7 @@ The `preload` attribute allows you to specify a preference for how the browser p
 > **Note:** This value is often ignored on mobile platforms.
 
 ```html
-<audio preload="auto">
-  ...
-</audio>
+<audio preload="auto">…</audio>
 ```
 
 #### controls
@@ -104,9 +99,7 @@ The `preload` attribute allows you to specify a preference for how the browser p
 We specify the `controls` attribute when we require the browser to provide us with its default playback controls.
 
 ```html
-<audio controls>
-  ...
-</audio>
+<audio controls>…</audio>
 ```
 
 #### src
@@ -114,9 +107,7 @@ We specify the `controls` attribute when we require the browser to provide us wi
 As mentioned above, you can use the {{ htmlelement("source") }} element to specify one or more source audio files. Alternatively, you can include the `src` attribute directly on the {{ htmlelement("audio") }} element to specify a single source file.
 
 ```html
-<audio src="audiofile.mp3">
-  ...
-</audio>
+<audio src="audiofile.mp3">…</audio>
 ```
 
 #### type
@@ -124,9 +115,7 @@ As mentioned above, you can use the {{ htmlelement("source") }} element to speci
 As mentioned above, to be sure that the browser knows what type of file is being specified, it's good practice to specify a `type` attribute alongside the `src` attribute. The `type` attribute specifies the MIME type or Internet Media Type of the file.
 
 ```html
-<audio src="audiofile.mp3" type="audio/mpeg">
-  ...
-</audio>
+<audio src="audiofile.mp3" type="audio/mpeg">…</audio>
 ```
 
 ### Manipulating the Audio Element with JavaScript
@@ -136,42 +125,40 @@ In addition to being able to specify various attributes in HTML, the {{ htmlelem
 Given the following HTML:
 
 ```html
-<audio id="my-audio" src="audiofile.mp3">
-  ...
-</audio>
+<audio id="my-audio" src="audiofile.mp3">…</audio>
 ```
 
 You can grab the {{htmlelement("audio") }} element like this:
 
 ```js
-var myAudio = document.getElementById('my-audio');
+const audio = document.getElementById('my-audio');
 ```
 
 Alternatively, you can create a new element. Here's an example of creating an {{ htmlelement("audio") }} element, setting the media to play, playing and pausing, and then playing from 5 seconds into the audio:
 
 ```js
-var myAudio = document.createElement('audio');
+const audio = document.createElement('audio');
 
-if (myAudio.canPlayType('audio/mpeg')) {
-  myAudio.setAttribute('src','audiofile.mp3');
+if (audio.canPlayType('audio/mpeg')) {
+  audio.setAttribute('src','audiofile.mp3');
 }
 
-if (myAudio.canPlayType('audio/ogg')) {
-  myAudio.setAttribute('src','audiofile.ogg');
+if (audio.canPlayType('audio/ogg')) {
+  audio.setAttribute('src','audiofile.ogg');
 }
 
 alert('play');
 
-myAudio.play();
+audio.play();
 
 alert('stop');
 
-myAudio.pause();
+audio.pause();
 
 alert('play from 5 seconds in');
 
-myAudio.currentTime = 5;
-myAudio.play();
+audio.currentTime = 5;
+audio.play();
 ```
 
 Let's explore the available properties and methods in more detail.
@@ -181,7 +168,7 @@ Let's explore the available properties and methods in more detail.
 The `play()` method is used to tell the audio to play. It takes no parameters.
 
 ```js
-myAudio.play();
+audio.play();
 ```
 
 #### pause
@@ -189,7 +176,7 @@ myAudio.play();
 The `pause()` method is used to tell the audio to pause. It takes no parameters.
 
 ```js
-myAudio.pause();
+audio.pause();
 ```
 
 > **Note:** There is no stop method — to implement a stop function, you'd have to pause the media then set the [`currentTime`](#currenttime) property value to 0.
@@ -199,7 +186,7 @@ myAudio.pause();
 The `canPlayType()` method asks the browser whether a certain audio file type is supported. It takes the mime type of the type to check as a parameter.
 
 ```js
-if (myAudio.canPlayType('audio/mpeg')) {
+if (audio.canPlayType('audio/mpeg')) {
   // It's supported.
   // Do something here!
 }
@@ -222,8 +209,8 @@ The `currentTime` property gets or sets the current time the audio should play a
 The value of `currentTime` is a number which represents the time in seconds.
 
 ```js
-if (myAudio.currentTime > 5) {
-  myAudio.currentTime = 3;
+if (audio.currentTime > 5) {
+  audio.currentTime = 3;
 }
 ```
 
@@ -233,7 +220,7 @@ The `volume` property allows us to set the audio volume, as a number between 0 a
 
 ```js
 // set the volume at 50%
-myAudio.volume = 0.5;
+audio.volume = 0.5;
 ```
 
 ## Creating your own custom audio player
@@ -242,8 +229,8 @@ The JavaScript media API allows you to create your own custom player. Let's take
 
 ```html
 <audio id="my-audio">
-  <source src="audiofile.mp3" type="audio/mpeg">
-  <source src="audiofile.ogg" type="audio/ogg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
+  <source src="audiofile.ogg" type="audio/ogg" />
   <!-- place fallback here as <audio> supporting browsers will ignore it -->
   <p>Download<a href="audiofile.mp3">audiofile.mp3</a></p>
 </audio>
@@ -256,22 +243,21 @@ The JavaScript media API allows you to create your own custom player. Let's take
 Next, we attach some functionality to the player using JavaScript:
 
 ```js
-window.onload = function(){
-
-  var myAudio = document.getElementById('my-audio');
-  var play = document.getElementById('play');
-  var pause = document.getElementById('pause');
+window.onload = () => {
+  const audio = document.getElementById('my-audio');
+  const play = document.getElementById('play');
+  const pause = document.getElementById('pause');
 
   // associate functions with the 'onclick' events
   play.onclick = playAudio;
   pause.onclick = pauseAudio;
 
   function playAudio() {
-    myAudio.play();
+    audio.play();
   }
 
   function pauseAudio() {
-    myAudio.pause();
+    audio.pause();
   }
 
 }
@@ -288,7 +274,7 @@ First, let's take a look at the media loading process in order:
 The `loadstart` event tells us that load process has started and the browser is connecting to the media.
 
 ```js
-myAudio.addEventListener("loadstart", function() {
+audio.addEventListener("loadstart", () => {
   //grabbing the file
 });
 ```
@@ -298,7 +284,7 @@ myAudio.addEventListener("loadstart", function() {
 If you just want to know as soon as the duration of your media is established, this is the event for you. This can be useful because the initial value for duration is `NaN` (Not a Number), which you probably don't want to display to your users.
 
 ```js
-myAudio.addEventListener("durationchange", function() {
+audio.addEventListener("durationchange", () => {
   //you can display the duration now
 });
 ```
@@ -308,7 +294,7 @@ myAudio.addEventListener("durationchange", function() {
 Metadata can consist of more than just duration — if you want to wait for all the metadata to download before doing something, you can detect the `loadedmetadata` event.
 
 ```js
-myAudio.addEventListener("loadedmetadata", function() {
+audio.addEventListener("loadedmetadata", () => {
   //you can display the duration now
 });
 ```
@@ -318,7 +304,7 @@ myAudio.addEventListener("loadedmetadata", function() {
 The `loadeddata` event is fired when the first bit of media arrives. The playhead is in position but not quite ready to play.
 
 ```js
-myAudio.addEventListener("loadeddata", function() {
+audio.addEventListener("loadeddata", () => {
   //you could display the playhead now
 });
 ```
@@ -328,7 +314,7 @@ myAudio.addEventListener("loadeddata", function() {
 The `progress` event indicates that the download of media is still in progress. It is good practice to display some kind of 'loader' at this point.
 
 ```js
-myAudio.addEventListener("progress", function() {
+audio.addEventListener("progress", () => {
   // you could let the user know the media is downloading
 });
 ```
@@ -338,7 +324,7 @@ myAudio.addEventListener("progress", function() {
 `canplay` is a useful event to detect should you want to determine whether the media is ready to play. You could, for example, disable custom controls until this event occurs.
 
 ```js
-myAudio.addEventListener("canplay", function() {
+audio.addEventListener("canplay", () => {
   //audio is ready to play
 });
 ```
@@ -348,7 +334,7 @@ myAudio.addEventListener("canplay", function() {
 `canplaythrough` is similar to `canplay` but it lets you know that the media is ready to be played all the way through (that is to say that the file has completely downloaded, or it is estimated that it will download in time so that buffering stops do not occur).
 
 ```js
-myAudio.addEventListener("canplaythrough", function() {
+audio.addEventListener("canplaythrough", () => {
   //audio is ready to play all the way through
 });
 ```
@@ -383,7 +369,7 @@ We also have another set of events that are useful for reacting to the state of 
 The `timeupdate` event is triggered every time the `currentTime` property changes. In practice, this occurs every 250 milliseconds. This event can be used to trigger the displaying of playback progress.
 
 ```js
-myAudio.addEventListener("timeupdate", function() {
+audio.addEventListener("timeupdate", () => {
   //update something related to playback progress
 });
 ```
@@ -409,7 +395,7 @@ The `pause` event is triggered after the `pause()` method is returned. This is w
 The `ended` event is initiated when the end of the media is reached.
 
 ```js
-myAudio.addEventListener("ended", function() {
+audio.addEventListener("ended", () => {
   //do something once audio track has finished playing
 });
 ```
@@ -424,8 +410,12 @@ Consider this snippet of HTML:
 
 ```html
 <audio id="my-audio">
-  <source src="http://jPlayer.org/audio/mp3/Miaow-07-Bubble.mp3" type="audio/mpeg">
-  <source src="http://jPlayer.org/audio/ogg/Miaow-07-Bubble.ogg" type="audio/ogg">
+  <source
+    src="http://jPlayer.org/audio/mp3/Miaow-07-Bubble.mp3"
+    type="audio/mpeg" />
+  <source
+    src="http://jPlayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+    type="audio/ogg" />
   <!-- place fallback here as <audio> supporting browsers will ignore it -->
   <a href="audiofile.mp3">audiofile.mp3</a>
 </audio>
@@ -433,7 +423,7 @@ Consider this snippet of HTML:
 <div id="controls">
   <span id="loading">loading</span>
   <button id="play" style="display:none">play</button>
-  <button id="pause" style="display:none" >pause</button>
+  <button id="pause" style="display:none">pause</button>
 </div>
 <div id="progress">
   <div id="bar"></div>
@@ -444,67 +434,64 @@ Styled like so:
 
 ```css
 #controls {
-   width: 80px;
-   float: left;
+  width: 80px;
+  float: left;
 }
 
 #progress {
-   margin-left: 80px;
-   border: 1px solid black;
+  margin-left: 80px;
+  border: 1px solid black;
 }
 
 #bar {
-   height: 20px;
-   background-color: green;
-   width: 0;
+  height: 20px;
+  background-color: green;
+  width: 0;
 }
 ```
 
 Now let's wire this thing up with JavaScript:
 
 ```js
-window.onload = function(){
+window.onload = () => {
+  const audio = document.getElementById('my-audio');
+  const play = document.getElementById('play');
+  const pause = document.getElementById('pause');
+  const loading = document.getElementById('loading');
+  const bar = document.getElementById('bar');
 
-   var myAudio = document.getElementById('my-audio');
-   var play = document.getElementById('play');
-   var pause = document.getElementById('pause');
-   var loading = document.getElementById('loading');
-   var bar = document.getElementById('bar');
+  function displayControls() {
+    loading.style.display = "none";
+    play.style.display = "block";
+  }
 
-   function displayControls() {
-      loading.style.display = "none";
-      play.style.display = "block";
-   }
-
-   // check that the media is ready before displaying the controls
-   if (myAudio.paused) {
+  // Check that the media is ready before displaying the controls
+  if (audio.paused) {
+    displayControls();
+  } else {
+    // not ready yet - wait for canplay event
+    audio.addEventListener('canplay', () => {
       displayControls();
-   } else {
-      // not ready yet - wait for canplay event
-      myAudio.addEventListener('canplay', function() {
-         displayControls();
-      });
-   }
+    });
+  }
 
-   play.addEventListener('click', function() {
-      myAudio.play();
-      play.style.display = "none";
-      pause.style.display = "block";
-   });
+  play.addEventListener('click', () => {
+    audio.play();
+    play.style.display = "none";
+    pause.style.display = "block";
+  });
 
-   pause.addEventListener('click', function() {
-      myAudio.pause();
-      pause.style.display = "none";
-      play.style.display = "block";
-   });
+  pause.addEventListener('click', () => {
+    audio.pause();
+    pause.style.display = "none";
+    play.style.display = "block";
+  });
 
-   // display progress
-
-   myAudio.addEventListener('timeupdate', function() {
-      //sets the percentage
-      bar.style.width = parseInt(((myAudio.currentTime / myAudio.duration) * 100), 10) + "%";
-   });
-
+  // Display progress
+  audio.addEventListener('timeupdate', () => {
+    // Sets the percentage
+    bar.style.width = `${Math.floor(audio.currentTime / audio.duration * 100)}%`;
+  });
 }
 ```
 
@@ -520,25 +507,24 @@ First of all, we apply a quick update to the progress bar CSS to display the han
 
 ```css
 #progress {
-   margin-left: 80px;
-   border: 1px solid black;
-   cursor: pointer;
+  margin-left: 80px;
+  border: 1px solid black;
+  cursor: pointer;
 }
 ```
 
 Then we add the code that detects the click and moves the 'playhead' to the correct position:
 
 ```js
-var progress = document.getElementById('progress');
+const progress = document.getElementById('progress');
 
-progress.addEventListener('click', function(e) {
+progress.addEventListener('click', (e) => {
+  // Calculate the normalized position clicked
+  const clickPosition = (e.pageX  - progress.offsetLeft) / progress.offsetWidth;
+  const clickTime = clickPosition * audio.duration;
 
-  // calculate the normalized position clicked
-  var clickPosition = (e.pageX  - this.offsetLeft) / this.offsetWidth;
-  var clickTime = clickPosition * myAudio.duration;
-
-  // move the playhead to the correct position
-  myAudio.currentTime = clickTime;
+  // Move the playhead to the correct position
+  audio.currentTime = clickTime;
 });
 ```
 
@@ -553,7 +539,7 @@ There are a couple of properties we haven't looked at yet, `buffered` and `seeka
 This property lets us know which parts of the audio has been buffered (downloaded in advance). It returns something called a `TimeRanges` object.
 
 ```js
-myBufferedTimeRanges = myAudio.buffered;
+bufferedTimeRanges = audio.buffered;
 ```
 
 #### seekable
@@ -561,7 +547,7 @@ myBufferedTimeRanges = myAudio.buffered;
 The seekable property informs you of whether you can jump directly to that part of the media without further buffering.
 
 ```js
-mySeekableTimeRanges = myAudio.seekable;
+seekableTimeRanges = audio.seekable;
 ```
 
 #### Buffering events
@@ -624,7 +610,6 @@ The following tables list basic audio support across desktop and mobile browsers
 - [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)
 - [HTMLMediaElement events](/en-US/docs/Web/API/HTMLMediaElement#events)
 - [Event reference > Media](/en-US/docs/Web/Events#media)
-- [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
-- [jPlayer](https://jPlayer.org): An open source audio and video library for jQuery and Zepto.
-- [Media Event Inspector](https://jplayer.org/HTML5.Media.Event.Inspector/)
+- [jPlayer](https://jplayer.org): An open source audio and video library for jQuery and Zepto.

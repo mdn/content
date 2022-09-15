@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.receiverId
 slug: Web/API/RTCInboundRtpStreamStats/receiverId
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -19,6 +20,7 @@ tags:
   - receiverId
 browser-compat: api.RTCInboundRtpStreamStats.receiverId
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`receiverId`** property of the

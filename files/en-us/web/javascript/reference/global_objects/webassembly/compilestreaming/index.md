@@ -13,17 +13,18 @@ tags:
   - streaming
 browser-compat: javascript.builtins.WebAssembly.compileStreaming
 ---
+
 {{JSRef}}
 
-The **`WebAssembly.compileStreaming()`** function compiles a
-{{jsxref("WebAssembly.Module")}} directly from a streamed underlying source. This
-function is useful if it is necessary to a compile a module before it can be
-instantiated (otherwise, the {{jsxref("WebAssembly.instantiateStreaming()")}} function
-should be used).
+The **`WebAssembly.compileStreaming()`** function compiles a {{jsxref("WebAssembly.Module")}} directly from a streamed underlying source.
+This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the {{jsxref("WebAssembly.instantiateStreaming()")}} function should be used).
+
+> **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
+> For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.compileStreaming(source)
 ```
 
@@ -41,10 +42,12 @@ representing the compiled module.
 
 ### Exceptions
 
-- If `bufferSource` is not a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays), a
-  {{jsxref("TypeError")}} is thrown.
+- If `source` is not a [`Response`](/en-US/docs/Web/API/Response) or `Promise` resolving to a `Response`,
+  the promise rejects with a {{jsxref("TypeError")}}.
 - If compilation fails, the promise rejects with a
   {{jsxref("WebAssembly.CompileError")}}.
+- If the `source` is a `Promise` that rejects, the promise rejects with the error.
+- If the `source` `Result` has an error (e.g. bad MIME type), the promise rejects an error.
 
 ## Examples
 
@@ -58,11 +61,11 @@ object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch)
 call, and it will pass the response into the function when it fulfills.
 
 ```js
-var importObject = { imports: { imported_func: arg => console.log(arg) } };
+const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(module => WebAssembly.instantiate(module, importObject))
-.then(instance => instance.exports.exported_func());
+WebAssembly.compileStreaming(fetch("simple.wasm"))
+  .then((module) => WebAssembly.instantiate(module, importObject))
+  .then((instance) => instance.exports.exported_func());
 ```
 
 The resulting module instance is then instantiated using

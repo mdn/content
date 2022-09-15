@@ -4,6 +4,7 @@ slug: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 tags:
   - XSLT
 ---
+
 This document describes the JavaScript interface in Mozilla 1.2 and up to the XSLT Processing Engine (TransforMiiX).
 
 ### Creating an XSLTProcessor
@@ -11,7 +12,7 @@ This document describes the JavaScript interface in Mozilla 1.2 and up to the XS
 To start, you need to create an {{domxref("XSLTProcessor")}} object:
 
 ```js
-var processor = new XSLTProcessor();
+const processor = new XSLTProcessor();
 ```
 
 ### Specifying the stylesheet
@@ -21,8 +22,9 @@ Before you can use it, you must import a stylesheet with the {{domxref("XSLTProc
 > **Note:** The import is live, meaning that if you alter the stylesheet DOM after importing it, this will be reflected in the processing. Rather than modifying the DOM it is recommended to use stylesheet parameters which are usually easier and can give better performance.
 
 ```js
-var testTransform = document.implementation.createDocument("", "test", null);
-// just an example to get a transform into a script as a DOM
+const testTransform = document.implementation.createDocument("", "test", null);
+
+// Just an example to get a transform into a script as a DOM
 // XMLDocument.load is asynchronous, so all processing happens in the
 // onload handler
 testTransform.addEventListener("load", onload, false);
@@ -43,7 +45,7 @@ You can use the {{domxref("XSLTProcessor.transformToDocument()")}} or {{domxref(
 {{domxref("XSLTProcessor.transformToDocument()")}} takes one argument, the source node to transform, and returns a new {{domxref("Document")}} with the results of the transformation:
 
 ```js
-var newDocument = processor.transformToDocument(domToBeTransformed);
+const newDocument = processor.transformToDocument(domToBeTransformed);
 ```
 
 The resultant object depends on the [output method](https://www.w3.org/TR/1999/REC-xslt-19991116/#output) of the stylesheet:
@@ -59,8 +61,8 @@ You can also use {{domxref("XSLTProcessor.transformToFragment()")}} which will r
 {{domxref("XSLTProcessor.transformToFragment()")}} takes two arguments: the source document to be transformed (as above) and the {{domxref("Document")}} object that will own the fragment (all fragments must be owned by a document).
 
 ```js
-var ownerDocument = document.implementation.createDocument("", "test", null);
-var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocument);
+const ownerDocument = document.implementation.createDocument("", "test", null);
+const newFragment = processor.transformToFragment(domToBeTransformed, ownerDocument);
 ```
 
 {{domxref("XSLTProcessor.transformToFragment()")}} will only produce HTML DOM objects if the owner document is itself an {{domxref("HTMLDocument")}}, or if the output method of the stylesheet is HTML. It will **not** produce an HTML DOM objects if only the toplevel element of the result is {{HTMLElement("html")}} as {{domxref("XSLTProcessor.transformToFragment()")}} is rarely used to create this element. If you want to override this, you can set the output method normally in the standard way.
@@ -83,25 +85,8 @@ The {{domxref("XSLTProcessor")}} object also implements a {{domxref("XSLTProcess
 
 The following reflect the interface of the {{domxref("XSLTProcessor")}} object:
 
-- {{ Source("dom/xslt/nsIXSLTProcessor.idl", "nsIXSLTProcessor.idl") }}
-- {{ Source("dom/webidl/XSLTProcessor.webidl", "XSLTProcessor.webidl") }}
-
-### Using XSLTProcessor from XPCOM components
-
-Instantiating an {{domxref("XSLTProcessor")}} from an XPCOM component requires a different syntax as the constructor is not defined inside components.
-
-Instead of this:
-
-```js
-var processor = new XSLTProcessor();
-```
-
-Do this:
-
-```js
-var processor = Components.classes["@mozilla.org/document-transformer;1?type=xslt"]
-                          .createInstance(Components.interfaces.nsIXSLTProcessor);
-```
+- [XSLTProcessor.webidl](https://dxr.mozilla.org/mozilla-central/source/dom/webidl/XSLTProcessor.webidl)
+- [txXSLTProcessor.cpp](https://dxr.mozilla.org/mozilla-central/source/dom/xslt/xslt/txXSLTProcessor.cpp)
 
 ### See also
 

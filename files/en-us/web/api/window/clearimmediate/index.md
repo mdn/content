@@ -1,6 +1,7 @@
 ---
 title: Window.clearImmediate()
 slug: Web/API/Window/clearImmediate
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -9,7 +10,8 @@ tags:
   - Polyfill
 browser-compat: api.Window.clearImmediate
 ---
-{{APIRef("HTML DOM")}}{{Non-standard_header}}
+
+{{APIRef("HTML DOM")}}
 
 This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
 
@@ -20,7 +22,7 @@ This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 clearImmediate(immediateID)
 ```
 
@@ -39,7 +41,7 @@ None ({{jsxref("undefined")}}).
 ```js
 let immediateID = setImmediate(() => {
   // Run some code
-}
+});
 
 document.getElementById("button")
   .addEventListener(() => {

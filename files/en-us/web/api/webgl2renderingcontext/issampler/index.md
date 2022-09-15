@@ -1,6 +1,7 @@
 ---
 title: WebGL2RenderingContext.isSampler()
 slug: Web/API/WebGL2RenderingContext/isSampler
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.isSampler
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.isSampler()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
@@ -16,7 +18,7 @@ passed object is a valid {{domxref("WebGLSampler")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 isSampler(sampler)
 ```
 
@@ -36,9 +38,9 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether the given objec
 `WebGLSampler` objects are not available in WebGL 1.
 
 ```js
-var sampler = gl.createSampler();
+const sampler = gl.createSampler();
 
-// ...
+// …
 
 gl.isSampler(sampler);
 ```

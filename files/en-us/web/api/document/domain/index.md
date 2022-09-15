@@ -1,6 +1,7 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -10,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.Document.domain
 ---
+
 {{ApiRef}} {{Deprecated_Header}}
 
 The **`domain`** property of the {{domxref("Document")}}
@@ -87,8 +89,7 @@ have not done the same thing.
 #### Deprecation
 
 The `document.domain` setter is deprecated. It undermines the security
-protections provided by the [same
-origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the origin model in browsers, leading to
+protections provided by the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the origin model in browsers, leading to
 interoperability problems and security bugs.
 
 Attempting to set `document.domain` is dangerous. It opens up full access to
@@ -120,8 +121,7 @@ several cases:
   {{HTTPHeader("Feature-Policy")}} is disabled.
 - The document is inside a sandboxed {{htmlelement("iframe")}}.
 - The document has no {{glossary("browsing context")}}.
-- The document's [effective
-  domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`.
+- The document's [effective domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`.
 - The given value is neither the same as the page's current hostname, nor a parent
   domain of it.
 

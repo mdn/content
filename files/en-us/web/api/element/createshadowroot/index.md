@@ -1,6 +1,7 @@
 ---
 title: Element.createShadowRoot()
 slug: Web/API/Element/createShadowRoot
+page-type: web-api-instance-method
 tags:
   - API
   - Deprecated
@@ -11,6 +12,7 @@ tags:
   - shadow DOM
 browser-compat: api.Element.createShadowRoot
 ---
+
 {{APIRef('Shadow DOM')}}{{non-standard_header}}{{deprecated_header}}
 
 Use `Element.createShadowRoot` to create an instance of [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM). When shadow DOM is
@@ -22,7 +24,7 @@ the element that it is attached to is called the {{glossary("shadow root")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 createShadowRoot()
 ```
 

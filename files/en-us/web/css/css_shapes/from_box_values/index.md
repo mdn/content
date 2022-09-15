@@ -17,6 +17,7 @@ tags:
   - padding-box
   - shapes
 ---
+
 {{CSSRef}}
 
 A straightforward way to create a shape is to use a value from the CSS Box Model. This article explains how to do this.
@@ -66,12 +67,12 @@ The `content-box` value defines the shape enclosed by the outside content edge. 
 
 {{EmbedGHLiveSample("css-examples/shapes/box/content-box.html", '100%', 800)}}
 
-## When to use the box values
+## When to use box values
 
-Using box values is a simple way to create shapes, however this is by nature only going to work with very simple shapes that can be defined using the well-supported `border-radius` property. The examples shown above show one such use case. You can create a circular shape using border-radius and then curve text around it.
+Using box values is a simple way to create shapes; however, this is by nature only going to work with very simple shapes that can be defined using the well-supported `border-radius` property. The examples shown above show one such use case. You can create a circular shape using border-radius and then curve text around it.
 
 You can create some interesting effects however with just this simple technique. In my final example of this section, I have floated two elements left and right, giving each a border-radius of 100% in the direction closest to the text.
 
 {{EmbedGHLiveSample("css-examples/shapes/box/bottom-margin-box.html", '100%', 800)}}
 
-For more complex shapes you will need to use one of the [basic shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) as a value, or define your Shape from an image as covered in other guides in this section.
+For more complex shapes, you will need to use one of the [basic shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) as a value, or define your shape from an image as covered in other guides in this section.

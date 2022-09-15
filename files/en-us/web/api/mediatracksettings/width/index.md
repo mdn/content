@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.width
 slug: Web/API/MediaTrackSettings/width
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -15,6 +16,7 @@ tags:
   - width
 browser-compat: api.MediaTrackSettings.width
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`width`**
@@ -32,13 +34,11 @@ unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
 ## Value
 
-An integer value indicating the width, in pixels, of the video track as currently
-configured.
+An integer value indicating the width, in pixels, of the video track as currently configured.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
 
 ## Specifications
 
@@ -51,7 +51,6 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.width")}}
 - {{domxref("MediaTrackSettings")}}

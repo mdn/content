@@ -1,6 +1,7 @@
 ---
 title: ScriptProcessorNode.bufferSize
 slug: Web/API/ScriptProcessorNode/bufferSize
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -8,9 +9,11 @@ tags:
   - ScriptProcessorNode
   - Web Audio API
   - bufferSize
+  - Deprecated
 browser-compat: api.ScriptProcessorNode.bufferSize
 ---
-{{APIRef("Web Audio API")}}{{deprecated_header}}
+
+{{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
 The `bufferSize` property of the {{domxref("ScriptProcessorNode")}} interface returns an integer representing both the input and output buffer size, in sample-frames. Its value can be a power of 2 value in the range `256`–`16384`.
 

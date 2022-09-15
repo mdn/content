@@ -1,6 +1,7 @@
 ---
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -11,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.Document.execCommand
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 When an HTML document has been switched to
@@ -29,13 +31,14 @@ The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) can be used instead of `e
 
 ## Syntax
 
-```js
+```js-nolint
 execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ```
 
 ### Parameters
 
 - `aCommandName`
+
   - : A string specifying the name of the command to execute. The following commands are specified:
     - `backColor`
       - : Changes the document background color. In `styleWithCss` mode, it affects the background color of the containing block instead. This requires a {{cssxref("&lt;color&gt;")}} value string to be passed in as a value argument. Note that Internet Explorer uses this to set the text background color.
@@ -54,7 +57,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `decreaseFontSize`
       - : Adds a {{HTMLElement("small")}} tag around the selection or at the insertion point. (Not supported by Internet Explorer.)
     - `defaultParagraphSeparator`
-      - : Changes the paragraph separator used when new paragraphs are created in editable text regions.See [Differences in markup generation](/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) for more details.
+      - : Changes the paragraph separator used when new paragraphs are created in editable text regions. See [Differences in markup generation](/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) for more details.
     - `delete`
       - : Deletes the current selection.
     - `enableAbsolutePositionEditor`
@@ -137,7 +140,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `styleWithCSS`
       - : Replaces the `useCSS` command. `true` modifies/generates `style` attributes in markup, false generates presentational elements.
     - `AutoUrlDetect`
-      - : Changes the browser auto-link behavior (Internet Explorer only)
+      - : Changes the browser auto-link behavior (Internet Explorer only).
 
 - `aShowDefaultUI`
   - : A boolean value indicating whether the default user interface should be shown. This is not implemented in Mozilla.
@@ -155,8 +158,7 @@ A boolean value that is `false` if the command is unsupported or disabled.
 
 ## Examples
 
-An example of [how to use
-execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
+An example of [how to use execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
 
 ### Using insertText
 

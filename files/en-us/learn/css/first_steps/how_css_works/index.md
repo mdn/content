@@ -7,6 +7,7 @@ tags:
   - DOM
   - Learn
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Styling_a_biography_page", "Learn/CSS/First_steps")}}
 
@@ -47,7 +48,7 @@ When a browser displays a document, it must combine the document's content with 
 
 1. The browser loads the HTML (e.g. receives it from the network).
 2. It converts the {{Glossary("HTML")}} into a {{Glossary("DOM")}} (_Document Object Model_). The DOM represents the document in the computer's memory. The DOM is explained in a bit more detail in the next section.
-3. The browser then fetches most of the resources that are linked to by the HTML document, such as embedded images and videos ... and linked CSS! JavaScript is handled a bit later on in the process, and we won't talk about it here to keep things simpler.
+3. The browser then fetches most of the resources that are linked to by the HTML document, such as embedded images, videos, and even linked CSS! JavaScript is handled a bit later on in the process, and we won't talk about it here to keep things simpler.
 4. The browser parses the fetched CSS, and sorts the different rules by their selector types into different "buckets", e.g. element, class, ID, and so on. Based on the selectors it finds, it works out which rules should be applied to which nodes in the DOM, and attaches style to them as required (this intermediate step is called a render tree).
 5. The render tree is laid out in the structure it should appear in after the rules have been applied to it.
 6. The visual display of the page is shown on the screen (this stage is called painting).
@@ -90,17 +91,19 @@ P
     └─ "Sheets"
 ```
 
-This is how a browser interprets the previous HTML snippet —it renders the above DOM tree and then outputs it in the browser like so:
+This is how a browser interprets the previous HTML snippet — it renders the above DOM tree and then outputs it in the browser like so:
 
 {{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## Applying CSS to the DOM
 
-Let's say we added some CSS to our document, to style it. Again, the HTML is as follows:
+Let's say we add some CSS to our document, to style it. Again, the HTML is as follows:
 
 ```html
 <p>
@@ -120,7 +123,7 @@ span {
 }
 ```
 
-The browser will parse the HTML and create a DOM from it, then parse the CSS. Since the only rule available in the CSS has a `span` selector, the browser will be able to sort the CSS very quickly! It will apply that rule to each one of the three `<span>`s, then paint the final visual representation to the screen.
+The browser parses the HTML and creates a DOM from it. Next, it parses the CSS. Since the only rule available in the CSS has a `span` selector, the browser sorts the CSS very quickly! It applies that rule to each one of the three `<span>`s, then paints the final visual representation to the screen.
 
 The updated output is as follows:
 
@@ -130,7 +133,7 @@ In our [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) arti
 
 ## What happens if a browser encounters CSS it doesn't understand?
 
-[In an earlier lesson](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#browser_support) I mentioned that browsers do not all implement new CSS at the same time. In addition, many people are not using the latest version of a browser. Given that CSS is being developed all the time, and is therefore ahead of what browsers can recognize, you might wonder what happens if a browser encounters a CSS selector or declaration it doesn't recognize.
+The [browser support section of the what is browser support lesson](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#browser_support) mentioned that browsers do not necessarily implement new CSS features at the same time. In addition, many people are not using the latest version of a browser. Given that CSS is being developed all the time, and is therefore ahead of what browsers can recognize, you might wonder what happens if a browser encounters a CSS selector or declaration it doesn't recognize.
 
 The answer is that it does nothing, and just moves on to the next bit of CSS!
 
@@ -141,7 +144,7 @@ Similarly, if a browser encounters a selector that it doesn't understand, it wil
 In the example below I have used the British English spelling for color, which makes that property invalid as it is not recognized. So my paragraph has not been colored blue. All of the other CSS have been applied however; only the invalid line is ignored.
 
 ```html
-<p> I want this text to be large, bold and blue.</p>
+<p>I want this text to be large, bold and blue.</p>
 ```
 
 ```css

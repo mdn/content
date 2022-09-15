@@ -1,21 +1,24 @@
 ---
 title: BackgroundFetchRegistration.match()
 slug: Web/API/BackgroundFetchRegistration/match
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - match
   - BackgroundFetchRegistration
+  - Experimental
 browser-compat: api.BackgroundFetchRegistration.match
 ---
-{{APIRef("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 match(request)
 match(request, options)
 ```

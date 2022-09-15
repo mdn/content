@@ -1,6 +1,7 @@
 ---
 title: Document Object Model (DOM)
 slug: Web/API/Document_Object_Model
+page-type: web-api-overview
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - Web
 spec-urls: https://dom.spec.whatwg.org/
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **Document Object Model** (**DOM**) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory. Usually it refers to JavaScript, even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.
@@ -35,7 +37,6 @@ To learn more about what the DOM is and how it represents documents, see our art
 - {{DOMxRef("DOMError")}} {{Deprecated_Inline}}
 - {{DOMxRef("DOMException")}}
 - {{DOMxRef("DOMImplementation")}}
-- {{DOMxRef("DOMString")}}
 - {{DOMxRef("DOMTimeStamp")}}
 - {{DOMxRef("DOMStringList")}}
 - {{DOMxRef("DOMTokenList")}}

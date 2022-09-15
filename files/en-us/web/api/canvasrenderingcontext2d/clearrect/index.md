@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.clearRect
 ---
+
 {{APIRef}}
 
 The
@@ -23,7 +25,7 @@ transparent black.
 
 ## Syntax
 
-```js
+```js-nolint
 clearRect(x, y, width, height)
 ```
 

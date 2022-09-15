@@ -1,6 +1,7 @@
 ---
 title: Document.applets
 slug: Web/API/Document/applets
+page-type: web-api-instance-property
 tags:
   - API
   - Deprecated
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Document.applets
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
 The **`applets`** property of the {{domxref("Document")}}

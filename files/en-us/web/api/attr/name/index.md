@@ -1,21 +1,23 @@
 ---
 title: Attr.name
 slug: Web/API/Attr/name
+page-type: web-api-instance-property
 tags:
   - Property
   - Reference
   - Read-only
 browser-compat: api.Attr.name
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`name`** property of the {{domxref("Attr")}} interface returns the _qualified name_ of an attribute, that is the name of the attribute, with the namespace prefix, if any, in front of it. For example, if the local name is `lang` and the namespace prefix is `xml`, the returned qualified name is `xml:lang`.
 
 The qualified name is always in lower case, whatever case at the attribute creation.
 
-### Value
+## Value
 
-A {{jsxref("String")}} representing the attribute's qualified name.
+A string representing the attribute's qualified name.
 
 ## Example
 
@@ -27,29 +29,31 @@ The following example displays the qualified name of the first attribute of the 
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
 <label xml:lang="en-US" class="struct"></label>
 
-<button>Click me for &lt;svg&gt;…</button>
-<button>Click me for &lt;label&gt;…</button>
-<br><br>
-Qualified name of the attribute <code>xml:lang</code>: <output id="result"><i>None.</i></output>
+<p>
+  <button>Show value for &lt;svg&gt;</button>
+  <button>Show value for &lt;label&gt;</button>
+</p>
+
+<p>
+  Qualified name of the attribute <code>xml:lang</code>:
+  <output id="result">None.</output>
+</p>
 ```
 
 ### JavaScript Content
 
 ```js
-const elements = document.getElementsByClassName("struct");
-const buttons = document.getElementsByTagName("button");
-const result  = document.querySelector("#result");
+const elements = document.querySelectorAll(".struct");
+const buttons = document.querySelectorAll("button");
+const outputEl = document.querySelector("#result");
 
-function handleEvent(element) {
-  return function(e) {
-    attribute = element.attributes[0];
-    result.value = attribute.name;
-  }
-}
-
-let i=0;
-for (let button of buttons) {
-  button.addEventListener('click', handleEvent(elements[i]));
+let i = 0;
+for (const button of buttons) {
+  const element = elements[i];
+  button.addEventListener("click", () => {
+    const attribute = element.attributes[0];
+    outputEl.value = attribute.name;
+  });
   i++;
 }
 ```

@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't redefine non-configurable property" occurs when it was
@@ -14,10 +15,10 @@ attempted to redefine a property, but that property is [non-configurable](/en-US
 
 ## Message
 
-```js
-TypeError: Cannot modify non-writable property {x} (Edge)
+```
+TypeError: Cannot redefine property: "x" (V8-based)
 TypeError: can't redefine non-configurable property "x" (Firefox)
-TypeError: Cannot redefine property: "x" (Chrome)
+TypeError: Attempting to change value of a readonly property. (Safari)
 ```
 
 ## Error type
@@ -35,13 +36,13 @@ Usually, properties in an object created by an
 
 ## Examples
 
-### Non-configurable properties created by `Object.defineProperty`
+### Non-configurable properties created by Object.defineProperty
 
 The {{jsxref("Object.defineProperty()")}} creates non-configurable properties if you
 haven't specified them as configurable.
 
 ```js example-bad
-var obj = Object.create({});
+const obj = Object.create({});
 Object.defineProperty(obj, "foo", {value: "bar"});
 
 Object.defineProperty(obj, "foo", {value: "baz"});
@@ -52,7 +53,7 @@ You will need to set the "foo" property to configurable, if you intend to redefi
 later in the code.
 
 ```js example-good
-var obj = Object.create({});
+const obj = Object.create({});
 Object.defineProperty(obj, "foo", {value: "bar", configurable: true});
 Object.defineProperty(obj, "foo", {value: "baz", configurable: true});
 ```

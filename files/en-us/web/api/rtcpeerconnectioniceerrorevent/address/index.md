@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnectionIceErrorEvent.address
 slug: Web/API/RTCPeerConnectionIceErrorEvent/address
+page-type: web-api-instance-property
 tags:
   - API
   - Address
@@ -16,6 +17,7 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCPeerConnectionIceErrorEvent.address
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The {{domxref("RTCPeerConnectionIceErrorEvent")}} property

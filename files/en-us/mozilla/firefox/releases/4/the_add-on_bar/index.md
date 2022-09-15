@@ -9,6 +9,7 @@ tags:
   - NeedsExample
   - Toolbar
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 4 eliminates the status bar from the bottom of the browser window in favor of a new toolbar located at the bottom of the window. This new toolbar, with the ID "addon-bar", is a standard XUL `<toolbar>`; add-ons can insert content into it, and the user can drag buttons into it while customizing their toolbars. This is the primary difference between the add-on bar and the old status bar; you can now put any XUL element into it, since it's a standard toolbar.
@@ -68,7 +69,7 @@ if (firstrun) {
 
 ## How to use one overlay per Firefox version
 
-Adding support for the add-on bar while staying compatible with Firefox 3.6 and older will require using two overlays. The [chrome.manifest](/en-US/docs/Chrome_Registration) file can specify which file is used by which Firefox version by using [manifest flags](/en-US/docs/Chrome_Registration#Manifest_flags):
+Adding support for the add-on bar while staying compatible with Firefox 3.6 and older will require using two overlays. The [chrome.manifest](/en-US/docs/Chrome_Registration) file can specify which file is used by which Firefox version by using [manifest flags](/en-US/docs/Chrome_Registration#manifest_flags):
 
 ```
 overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlayold.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
@@ -79,7 +80,7 @@ Note: the appversion has to be at least 2 digits long or it won't work with vers
 
 ### Adding a button by default
 
-See: [Adding a button by default](/en-US/docs/Code_snippets/Toolbar#Adding_button_by_default)
+See: [Adding a button by default](/en-US/docs/Code_snippets/Toolbar#adding_button_by_default)
 
 ## Appearance differences
 

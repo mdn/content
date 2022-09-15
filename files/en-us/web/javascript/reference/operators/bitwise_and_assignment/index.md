@@ -9,17 +9,18 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_and_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise AND assignment operator (`&=`) uses the binary
 representation of both operands, does a bitwise AND operation on them and assigns the
 result to the variable.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html", "shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 x &= y // x = x & y
 ```
 

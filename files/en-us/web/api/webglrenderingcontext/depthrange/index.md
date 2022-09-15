@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.depthRange()
 slug: Web/API/WebGLRenderingContext/depthRange
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.depthRange
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.depthRange()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the depth range mapping
@@ -16,7 +18,7 @@ from normalized device coordinates to window or viewport coordinates.
 
 ## Syntax
 
-```js
+```js-nolint
 depthRange(zNear, zFar)
 ```
 

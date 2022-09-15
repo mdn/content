@@ -12,6 +12,7 @@ tags:
   - customSections
 browser-compat: javascript.builtins.WebAssembly.Module.customSections
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.customSections()`** function returns a copy
@@ -19,7 +20,7 @@ of the contents of all custom sections in the given module with the given string
 
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.Module.customSections(module, sectionName)
 ```
 
@@ -80,7 +81,7 @@ and [live example](https://mdn.github.io/webassembly-examples/other-examples/cus
 WebAssembly.compileStreaming(fetch('simple-name-section.wasm'))
 .then(function(mod) {
   const nameSections = WebAssembly.Module.customSections(mod, "name");
-  if (nameSections.length != 0) {
+  if (nameSections.length !== 0) {
     console.log("Module contains a name section");
     console.log(nameSections[0]);
   };

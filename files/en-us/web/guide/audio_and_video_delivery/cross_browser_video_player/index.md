@@ -3,11 +3,12 @@ title: Creating a cross-browser video player
 slug: Web/Guide/Audio_and_video_delivery/cross_browser_video_player
 tags:
   - Apps
-  - HTML5
+  - HTML
   - Video
   - full screen
 ---
-This article describes a simple HTML5 video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
+
+This article describes a simple HTML video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
 
 ## Working example
 
@@ -23,26 +24,27 @@ To start off with, let's take a look at the HTML that makes up the player.
 
 ### The video
 
-First of all the {{ htmlelement("video") }} element is defined, contained within a {{ htmlelement("figure") }} element that acts as the video container. To anyone familiar with HTML5 markup and the {{ htmlelement("video") }} element, there should be nothing here that surprises you.
+First of all the {{ htmlelement("video") }} element is defined, contained within a {{ htmlelement("figure") }} element that acts as the video container. To anyone familiar with HTML markup and the {{ htmlelement("video") }} element, there should be nothing here that surprises you.
 
 ```html
 <figure id="videoContainer">
-   <video id="video" controls preload="metadata" poster="img/poster.jpg">
-      <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
-      <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
-      <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg">
-      <!-- Flash fallback -->
-      <object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" width="1024" height="576">
-         <param name="movie" value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-         <param name="allowfullscreen" value="true" />
-         <param name="wmode" value="transparent" />
-         <param name="flashvars" value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-         <img alt="Tears of Steel poster image" src="img/poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" />
-      </object>
-      <!-- Offer download -->
-      <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
-   </video>
-   <figcaption>&copy; Blender Foundation | <a href="http://mango.blender.org">mango.blender.org</a></figcaption>
+  <video id="video" controls preload="metadata" poster="img/poster.jpg">
+    <source
+      src="video/tears-of-steel-battle-clip-medium.mp4"
+      type="video/mp4" />
+    <source
+      src="video/tears-of-steel-battle-clip-medium.webm"
+      type="video/webm" />
+    <source
+      src="video/tears-of-steel-battle-clip-medium.ogg"
+      type="video/ogg" />
+    <!-- Offer download -->
+    <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
+  </video>
+  <figcaption>
+    &copy; Blender Foundation |
+    <a href="http://mango.blender.org">mango.blender.org</a>
+  </figcaption>
 </figure>
 ```
 
@@ -52,9 +54,7 @@ A poster image is defined for the video, and the `preload` attribute is set to `
 
 > **Note:** IE9 behaves differently than most other browsers when a `poster` attribute is set. Most browsers interpret the presence of a `poster` attribute to mean that the specified image is to be displayed until the user chooses to play the video. IE9 will only use the specified poster image in this way if `preload="none"` is set; otherwise, it will take the first still of the video and display that instead.
 
-Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML5 video. For further information on video formats and browser compatibility, see [supported media formats](/en-US/docs/Web/Media/Formats#browser_compatibility).
-
-For browsers that do not support HTML5 video, a Flash player is provided that will allow playback of the MP4 video source, provided the end user has Flash installed. In addition a download link is displayed to allow users to download the MP4 video file, should they wish to (providing those without Flash installed with a method of viewing the video, a fallback for a fallback if you like).
+Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML video. For further information on video formats and browser compatibility, see [supported media formats](/en-US/docs/Web/Media/Formats#browser_compatibility).
 
 The code above would allow playback of the video in most browsers, using the browser's default control set. The next step is to define a custom control set, also in HTML, which will be used to control the video.
 
@@ -75,17 +75,17 @@ Once again the HTML is quite straightforward, using an unordered list with `list
 
 ```html
 <ul id="video-controls" class="controls">
-   <li><button id="playpause" type="button">Play/Pause</button></li>
-   <li><button id="stop" type="button">Stop</button></li>
-   <li class="progress">
-      <progress id="progress" value="0" min="0">
-         <span id="progress-bar"></span>
-      </progress>
-   </li>
-   <li><button id="mute" type="button">Mute/Unmute</button></li>
-   <li><button id="volinc" type="button">Vol+</button></li>
-   <li><button id="voldec" type="button">Vol-</button></li>
-   <li><button id="fs" type="button">Fullscreen</button></li>
+  <li><button id="playpause" type="button">Play/Pause</button></li>
+  <li><button id="stop" type="button">Stop</button></li>
+  <li class="progress">
+    <progress id="progress" value="0" min="0">
+      <span id="progress-bar"></span>
+    </progress>
+  </li>
+  <li><button id="mute" type="button">Mute/Unmute</button></li>
+  <li><button id="volinc" type="button">Vol+</button></li>
+  <li><button id="voldec" type="button">Vol-</button></li>
+  <li><button id="fs" type="button">Fullscreen</button></li>
 </ul>
 ```
 
@@ -97,28 +97,28 @@ Of course this custom control set is currently useless and doesn't do a thing: L
 
 ## Using the Media API
 
-HTML5 comes with a JavaScript [Media API](/en-US/docs/Web/API/HTMLMediaElement) that allows developers access to and control of HTML media. This API will be used to make the custom control set defined above actually do something. In addition, the fullscreen button will use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API), another W3C API that controls the ability of web browsers to show apps using your computer's full screen.
+HTML comes with a JavaScript [Media API](/en-US/docs/Web/API/HTMLMediaElement) that allows developers access to and control of HTML media. This API will be used to make the custom control set defined above actually do something. In addition, the fullscreen button will use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API), another W3C API that controls the ability of web browsers to show apps using your computer's full screen.
 
 ### Setup
 
 Before dealing with the individual buttons, a number of initialization calls are required.
 
-To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML5 {{ htmlelement("video") }} element should.
+To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML {{ htmlelement("video") }} element should.
 
 ```js
-var supportsVideo = !!document.createElement('video').canPlayType;
+const supportsVideo = !!document.createElement('video').canPlayType;
 if (supportsVideo) {
    // set up custom controls
-   // ...
+   // …
 }
 ```
 
-Once it has been confirmed that the browser does indeed support HTML5 video, it's time to set up the custom controls. A number of variables pointing to HTML elements are required:
+Once it has been confirmed that the browser does indeed support HTML video, it's time to set up the custom controls. A number of variables pointing to HTML elements are required:
 
 ```js
-var videoContainer = document.getElementById('videoContainer');
-var video = document.getElementById('video');
-var videoControls = document.getElementById('video-controls');
+const videoContainer = document.getElementById('videoContainer');
+const video = document.getElementById('video');
+const videoControls = document.getElementById('video-controls');
 ```
 
 As mentioned earlier, the browser's default controls now need to be disabled, and the custom controls need to be displayed:
@@ -134,14 +134,14 @@ videoControls.style.display = 'block';
 With that done, a variable pointing to each of the buttons is now required:
 
 ```js
-var playpause = document.getElementById('playpause');
-var stop = document.getElementById('stop');
-var mute = document.getElementById('mute');
-var volinc = document.getElementById('volinc');
-var voldec = document.getElementById('voldec');
-var progress = document.getElementById('progress');
-var progressBar = document.getElementById('progress-bar');
-var fullscreen = document.getElementById('fs');
+const playpause = document.getElementById('playpause');
+const stop = document.getElementById('stop');
+const mute = document.getElementById('mute');
+const volinc = document.getElementById('volinc');
+const voldec = document.getElementById('voldec');
+const progress = document.getElementById('progress');
+const progressBar = document.getElementById('progress-bar');
+const fullscreen = document.getElementById('fs');
 ```
 
 Using these handles, events can now be attached to each of the custom control buttons making them interactive. Most of these buttons require a simple `click` event listener to be added, and a Media API defined method and/or attributes to be called/checked on the video.
@@ -149,9 +149,12 @@ Using these handles, events can now be attached to each of the custom control bu
 ### Play/Pause
 
 ```js
-playpause.addEventListener('click', function(e) {
-   if (video.paused || video.ended) video.play();
-   else video.pause();
+playpause.addEventListener('click', (e) => {
+  if (video.paused || video.ended) {
+    video.play();
+  } else {
+    video.pause();
+  }
 });
 ```
 
@@ -160,10 +163,10 @@ When a `click` event is detected on the play/pause button, the handler first of 
 ### Stop
 
 ```js
-stop.addEventListener('click', function(e) {
-   video.pause();
-   video.currentTime = 0;
-   progress.value = 0;
+stop.addEventListener('click', (e) => {
+  video.pause();
+  video.currentTime = 0;
+  progress.value = 0;
 });
 ```
 
@@ -172,8 +175,8 @@ The Media API doesn't have a `stop` method, so to mimic this the video is paused
 ### Mute
 
 ```js
-mute.addEventListener('click', function(e) {
-   video.muted = !video.muted;
+mute.addEventListener('click', (e) => {
+  video.muted = !video.muted;
 });
 ```
 
@@ -182,25 +185,24 @@ The mute button is a simple toggle button that uses the Media API's `muted` attr
 ### Volume
 
 ```js
-volinc.addEventListener('click', function(e) {
-   alterVolume('+');
+volinc.addEventListener('click', (e) => {
+  alterVolume('+');
 });
-voldec.addEventListener('click', function(e) {
-   alterVolume('-');
+voldec.addEventListener('click', (e) => {
+  alterVolume('-');
 });
 ```
 
 Two volume control buttons have been defined, one for increasing the volume and another for decreasing it. A user defined function, `alterVolume(direction)` has been created that deals with this:
 
 ```js
-var alterVolume = function(dir) {
-   var currentVolume = Math.floor(video.volume * 10) / 10;
-   if (dir === '+') {
-      if (currentVolume < 1) video.volume += 0.1;
-   }
-   else if (dir === '-') {
-      if (currentVolume > 0) video.volume -= 0.1;
-   }
+function alterVolume(dir) {
+  const currentVolume = Math.floor(video.volume * 10) / 10;
+  if (dir === '+' && currentVolume < 1) {
+    video.volume += 0.1;
+  } else if (dir === '-' && currentVolume > 0) {
+    video.volume -= 0.1;
+  }
 }
 ```
 
@@ -213,8 +215,8 @@ When the {{ htmlelement("progress") }} element was defined above in the HTML, on
 Ideally, the correct value of the video's `duration` attribute is available when the `loadedmetadata` event is raised, which occurs when the video's metadata has been loaded:
 
 ```js
-video.addEventListener('loadedmetadata', function() {
-   progress.setAttribute('max', video.duration);
+video.addEventListener('loadedmetadata', () => {
+  progress.setAttribute('max', video.duration);
 });
 ```
 
@@ -223,9 +225,9 @@ Unfortunately in some mobile browsers, when `loadedmetadata` is raised — if it
 Another event, `timeupdate`, is raised periodically as the video is being played through. This event is ideal for updating the progress bar's value, setting it to the value of the video's `currentTime` attribute, which indicates how far through the video the current playback is.
 
 ```js
-video.addEventListener('timeupdate', function() {
-   progress.value = video.currentTime;
-   progressBar.style.width = Math.floor((video.currentTime / video.duration) * 100) + '%';
+video.addEventListener('timeupdate', () => {
+  progress.value = video.currentTime;
+  progressBar.style.width = `${Math.floor(video.currentTime * 100 / video.duration)}%`;
 });
 ```
 
@@ -234,10 +236,10 @@ As the `timeupdate` event is raised, the `progress` element's `value` attribute 
 Coming back to the `video.duration` problem mentioned above, when the `timeupdate` event is raised, in most mobile browsers the video's `duration` attribute should now have the correct value. This can be taken advantage of to set the `progress` element's `max` attribute if it is currently not set:
 
 ```js
-video.addEventListener('timeupdate', function() {
-   if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
-   progress.value = video.currentTime;
-   progressBar.style.width = Math.floor((video.currentTime / video.duration) * 100) + '%';
+video.addEventListener('timeupdate', () => {
+  if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
+  progress.value = video.currentTime;
+  progressBar.style.width = `${Math.floor(video.currentTime * 100 / video.duration)}%`;
 });
 ```
 
@@ -248,10 +250,10 @@ video.addEventListener('timeupdate', function() {
 Another feature of most browser default video control sets is the ability to click on the video's progress bar to "skip ahead" to a different point in the video. This can also be achieved by adding a simple `click` event listener to the `progress` element:
 
 ```js
-progress.addEventListener('click', function(e) {
-   var rect = this.getBoundingClientRect();
-   var pos = (e.pageX  - rect.left) / this.offsetWidth;
-   video.currentTime = pos * video.duration;
+progress.addEventListener('click', (e) => {
+  const rect = progress.getBoundingClientRect();
+  const pos = (e.pageX  - rect.left) / progress.offsetWidth;
+  video.currentTime = pos * video.duration;
 });
 ```
 
@@ -263,98 +265,59 @@ The Fullscreen API should be straight forward to use: the user clicks a button, 
 
 Alas it has been implemented in browsers in a number of weird and wonderful ways which requires a lot of extra code to check for various prefixed versions of attributes and methods so as to call the right one.
 
-To detect if a browser actually supports the Fullscreen API and that it is enabled, the following may be called:
-
-```js
-var fullScreenEnabled = !!(document.fullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled || document.webkitSupportsFullscreen || document.webkitFullscreenEnabled || document.createElement('video').webkitRequestFullScreen);
-```
-
-This tests all the different prefixed (and of course the non-prefixed!) booleans to see if fullscreen is possible. The final tested value, `document.createElement('video').webkitRequestFullScreen` is required for the last Presto version of Opera (12.14). Note the different letter casing in the various values.
-
 The visibility of the fullscreen button depends on whether the browser supports the Fullscreen API and that it is enabled:
 
 ```js
-if (!fullScreenEnabled) {
-   fullscreen.style.display = 'none';
+if (!document?.fullscreenEnabled) {
+  fullscreen.style.display = 'none';
 }
 ```
 
 Naturally the fullscreen button needs to actually do something, so, like the other buttons, a `click` event handler is attached in which we call a user defined function `handleFullscreen`:
 
 ```js
-fullscreen.addEventListener('click', function(e) {
-   handleFullscreen();
+fullscreen.addEventListener('click', (e) => {
+  handleFullscreen();
 });
 ```
 
 The `handleFullscreen` function is defined as follows:
 
 ```js
-var handleFullscreen = function() {
-   if (isFullScreen()) {
-      if (document.exitFullscreen) document.exitFullscreen();
-      else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
-      else if (document.webkitCancelFullScreen) document.webkitCancelFullScreen();
-      else if (document.msExitFullscreen) document.msExitFullscreen();
-      setFullscreenData(false);
-   }
-   else {
-      if (videoContainer.requestFullscreen) videoContainer.requestFullscreen();
-      else if (videoContainer.mozRequestFullScreen) videoContainer.mozRequestFullScreen();
-      else if (videoContainer.webkitRequestFullScreen) videoContainer.webkitRequestFullScreen();
-      else if (videoContainer.msRequestFullscreen) videoContainer.msRequestFullscreen();
-      setFullscreenData(true);
-   }
+function handleFullscreen() {
+  if (document.fullscreenElement !== null) {
+    // The document is in fullscreen mode
+    document.exitFullscreen();
+    setFullscreenData(false);
+  } else {
+    // The document is not in fullscreen mode
+    videoContainer.requestFullscreen();
+    setFullscreenData(true);
+  }
 }
 ```
 
-First of all the function checks if the browser is already in fullscreen mode by calling another function `isFullScreen`:
+If the browser is currently in fullscreen mode, then it must be exited and vice versa. Interestingly `document` must be used for exiting/cancelling fullscreen mode, whereas any HTML element can request fullscreen mode, here the `videoContainer` is used as it also contains the custom controls which should also appear with the video in fullscreen mode.
+
+Another user defined function — `setFullscreenData()` — is also called, which sets the value of a `data-fullscreen` attribute on the `videoContainer` (this makes use of [`data-states`](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states#data-state-attributes)).
 
 ```js
-var isFullScreen = function() {
-   return !!(document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || document.fullscreenElement);
-}
-```
-
-This function checks all the various browser prefixed versions to try and determine the correct result.
-
-If the browser is currently in fullscreen mode, then it must be exited and vice versa. Support for the different prefixed versions of the relevant action are checked in order to call the correct one. Interestingly `document` must be used for exiting/cancelling fullscreen mode, whereas any HTML element can request fullscreen mode, here the `videoContainer` is used as it also contains the custom controls which should also appear with the video in fullscreen mode.
-
-The exception to this is Safari 5.1, which will only allow `webkitRequestFullScreen` to be called on the {{ htmlelement("video") }} element. The custom controls will only appear on this browser in fullscreen mode with some WebKit specific CSS:
-
-1. The default browser controls have to be hidden with `video::-webkit-media-controls { display:none !important; }`
-2. The custom controls container needs to have a special `z-index` value: `.controls { z-index:2147483647; }`
-
-Dealing with WebKit-specific code in this way will affect all WebKit browsers, but everything works as expected in more advanced WebKit browsers such as Chrome and the latest Opera.
-
-Another user defined function — `setFullscreenData()` — is also called, which sets the value of a `data-fullscreen` attribute on the `videoContainer` (this makes use of [`data-states`](http://toddmotto.com/stop-toggling-classes-with-js-use-behavior-driven-dom-manipulation-with-data-states/)).
-
-```js
-var setFullscreenData = function(state) {
-   videoContainer.setAttribute('data-fullscreen', !!state);
+function setFullscreenData(state) {
+  videoContainer.setAttribute('data-fullscreen', !!state);
 }
 ```
 
 This is used to set some basic CSS to improve the styling of the custom controls when they are in fullscreen (see the sample code for further details). When a video goes into fullscreen mode, it usually displays a message indicating that the user can press the _Esc_ key to exit fullscreen mode, so the code also needs to listen for relevant events in order to call the `setFullscreenData()` function to ensure the control styling is correct:
 
 ```js
-document.addEventListener('fullscreenchange', function(e) {
-   setFullscreenData(!!(document.fullscreen || document.fullscreenElement));
-});
-document.addEventListener('webkitfullscreenchange', function() {
-   setFullscreenData(!!document.webkitIsFullScreen);
-});
-document.addEventListener('mozfullscreenchange', function() {
-   setFullscreenData(!!document.mozFullScreen);
-});
-document.addEventListener('msfullscreenchange', function() {
-   setFullscreenData(!!document.msFullscreenElement);
+document.addEventListener('fullscreenchange', (e) => {
+  setFullscreenData(!!document.fullscreenElement);
 });
 ```
 
 ## See also
 
 - {{ htmlelement("video") }} for reference material
-- [Using HTML5 audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) for more techniques
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) for more techniques
 - [Media formats supported by the HTML audio and video elements](/en-US/docs/Web/Media/Formats)
-- [Video for Everybody](http://camendesign.com/code/video_for_everybody): written by Kroc Camen, this is quite old, but still has some good relevant content and is a great starter article for cross-browser HTML5 video.
+- [Video for Everybody](http://camendesign.com/code/video_for_everybody): written by Kroc Camen, this is quite old, but still has some good relevant content and is a great starter article for cross-browser HTML video.

@@ -1,6 +1,7 @@
 ---
 title: PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -8,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.PointerEvent
 ---
+
 {{APIRef("Pointer Events")}}
 
 The **`PointerEvent()`** constructor creates a new synthetic
@@ -15,7 +17,7 @@ and untrusted {{domxref("PointerEvent")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new PointerEvent(type)
 new PointerEvent(type, options)
 ```
@@ -55,9 +57,9 @@ A new {{domxref("PointerEvent")}} object.
 ## Examples
 
 ```js
-var moveEvent = new PointerEvent("pointermove");
+const moveEvent = new PointerEvent("pointermove");
 
-var downEvent = new PointerEvent("pointerdown",
+const downEvent = new PointerEvent("pointerdown",
    {pointerId: 1,
     bubbles: true,
     cancelable: true,

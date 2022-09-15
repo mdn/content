@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.sign()
 slug: Web/API/SubtleCrypto/sign
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - sign
 browser-compat: api.SubtleCrypto.sign
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`sign()`** method of the {{domxref("SubtleCrypto")}}
@@ -24,7 +26,7 @@ signature.
 
 ## Syntax
 
-```js
+```js-nolint
 sign(algorithm, key, data)
 ```
 
@@ -42,12 +44,12 @@ sign(algorithm, key, data)
   - : A {{domxref("CryptoKey")}} object containing the key to be used for signing.
     If `algorithm` identifies a public-key cryptosystem, this is the private key.
 - `data`
-  - : An {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} object containing the data to be signed.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object containing the data to be signed.
 
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with an
-  {{jsxref("ArrayBuffer")}} containing the signature.
+{{jsxref("ArrayBuffer")}} containing the signature.
 
 ### Exceptions
 
@@ -67,7 +69,7 @@ Three of these algorithms — RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA — are
 key for signing and the public key for verification.
 These systems all use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms)
 to hash the message to a short fixed size before signing.
-The choice of digest algorithm is passed into the
+Except for ECDSA (for which it is passed in the `algorithm` object), the choice of digest algorithm is passed into the
 {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.
 
 The fourth algorithm — HMAC — uses the same algorithm and key for signing and for
@@ -124,7 +126,7 @@ that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a private key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsassa-pkcs1.js)
 
 ```js
 /*
@@ -150,7 +152,7 @@ let signature = await window.crypto.subtle.sign(
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a private key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsa-pss.js)
 
 ```js
 /*
@@ -179,7 +181,7 @@ let signature = await window.crypto.subtle.sign(
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a private key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ecdsa.js)
 
 ```js
 /*
@@ -208,7 +210,7 @@ let signature = await window.crypto.subtle.sign(
 
 This code fetches the contents of a text box, encodes it for signing, and signs it with
 a secret key.
-[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js)
+[See the complete source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/hmac.js)
 
 ```js
 /*

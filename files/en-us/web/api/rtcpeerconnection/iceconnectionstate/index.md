@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.iceConnectionState
 slug: Web/API/RTCPeerConnection/iceConnectionState
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -79,8 +80,8 @@ The current state of the ICE agent and its connection. The value is one of the f
 ## Examples
 
 ```js
-var pc = new RTCPeerConnection();
-var state = pc.iceConnectionState;
+const pc = new RTCPeerConnection();
+const state = pc.iceConnectionState;
 ```
 
 ## Specifications

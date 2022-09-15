@@ -1,6 +1,7 @@
 ---
 title: RelativeOrientationSensor()
 slug: Web/API/RelativeOrientationSensor/RelativeOrientationSensor
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -13,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.RelativeOrientationSensor.RelativeOrientationSensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`RelativeOrientationSensor()`**
@@ -26,9 +28,9 @@ instructions.
 
 ## Syntax
 
-```js
-new RelativeOrientationSEnsor()
-new RelativeOrientationSEnsor(options)
+```js-nolint
+new RelativeOrientationSensor()
+new RelativeOrientationSensor(options)
 ```
 
 ### Parameters

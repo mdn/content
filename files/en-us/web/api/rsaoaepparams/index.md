@@ -1,6 +1,7 @@
 ---
 title: RsaOaepParams
 slug: Web/API/RsaOaepParams
+page-type: web-api-interface
 tags:
   - API
   - Dictionary
@@ -9,6 +10,7 @@ tags:
   - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaOaepParams
 ---
+
 {{ APIRef("Web Crypto API") }}
 
 The **`RsaOaepParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}}, when using the [RSA_OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) algorithm.
@@ -19,7 +21,7 @@ The **`RsaOaepParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/W
   - : A string. This should be set to `RSA-OAEP`.
 - `label` {{optional_inline}}
 
-  - : A {{domxref("BufferSource")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext. A digest of the label is part of the input to the encryption operation.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} — an array of bytes that does not itself need to be encrypted but which should be bound to the ciphertext. A digest of the label is part of the input to the encryption operation.
 
     Unless your application calls for a label, you can just omit this argument and it will not affect the security of the encryption operation.
 

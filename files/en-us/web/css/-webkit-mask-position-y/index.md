@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-position-y
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-mask-position-y` CSS property sets the initial vertical position of a mask image.
@@ -45,11 +46,11 @@ The `-webkit-mask-position-y` CSS property sets the initial vertical position of
 
 - `<length-percentage>`
   - : A length indicating the position of the top side of the image relative to the box's top padding edge. Percentages are calculated against the vertical dimension of the box padding area. A value of `0%` means the top edge of the image is aligned with the box's top padding edge and a value of `100%` means the bottom edge of the image is aligned with the box's bottom padding edge.
-- **`top`**
+- `top`
   - : Equivalent to `0%`.
-- **`bottom`**
+- `bottom`
   - : Equivalent to `100%`.
-- **`center`**
+- `center`
   - : Equivalent to `50%`.
 
 ## Formal definition
@@ -58,7 +59,10 @@ The `-webkit-mask-position-y` CSS property sets the initial vertical position of
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-mask-position-y =
+  [ <length-percentage> | top | center | bottom ]#
+```
 
 ## Examples
 

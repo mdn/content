@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.broadcast
 slug: Web/API/BluetoothCharacteristicProperties/broadcast
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -13,7 +14,8 @@ tags:
   - broadcast
 browser-compat: api.BluetoothCharacteristicProperties.broadcast
 ---
-{{securecontext_header}}{{APIRef("Bluetooth API")}}
+
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`broadcast`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a

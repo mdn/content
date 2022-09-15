@@ -1,6 +1,7 @@
 ---
-title: TextEncode.encode()
+title: TextEncoder.encode()
 slug: Web/API/TextEncoder/encode
+page-type: web-api-instance-method
 tags:
   - API
   - Encoding
@@ -10,6 +11,7 @@ tags:
   - encode
 browser-compat: api.TextEncoder.encode
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextEncoder.encode()`** method takes a
@@ -19,7 +21,7 @@ for that {{domxref("TextEncoder")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 encode(string)
 ```
 
@@ -36,7 +38,7 @@ A {{jsxref("Uint8Array")}} object.
 
 ```html
 <p class="source">This is a sample paragraph.</p>
-<p class="result">Encoded result: </p>
+<p class="result">Encoded result:</p>
 ```
 
 ```js

@@ -1,6 +1,7 @@
 ---
 title: URL.host
 slug: Web/API/URL/host
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - URL API
 browser-compat: api.URL.host
 ---
+
 {{ApiRef("URL API")}}
 
 The **`host`** property of the {{domxref("URL")}} interface is

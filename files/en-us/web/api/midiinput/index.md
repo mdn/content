@@ -1,6 +1,7 @@
 ---
 title: MIDIInput
 slug: Web/API/MIDIInput
+page-type: web-api-interface
 tags:
   - API
   - Draft
@@ -11,6 +12,7 @@ tags:
   - Web MIDI API
 browser-compat: api.MIDIInput
 ---
+
 {{APIRef("Web MIDI API")}}{{securecontext_header}}
 
 The **`MIDIInput`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) receives messages from a MIDI input port.
@@ -37,7 +39,7 @@ In the following example the name of each `MIDIInput` is printed to the console.
 ```js
 inputs.forEach((input) => {
   console.log(input.name); /* inherited property from MIDIPort */
-  input.onmidimessage = message => {
+  input.onmidimessage = (message) => {
     console.log(message.data);
   }
 })
