@@ -109,12 +109,7 @@ const result = someInterface.customMethod?.();
 > you have to use `?.` at this position as
 > well: `someInterface?.customMethod?.()`
 
-#### With `eval`
-The global {{JSxRef("eval")}} function has multiple ways of indirect execution, and using it with the optional chaining operator is one of the ways to indirectly call `eval()`. Indirect eval has several quirks:
-
-- It works in the global scope instead of the surrounding lexical scope.
-- Strictness of the surrounding context is not inherited, so strict mode is only enforced if the source string itself has `"use strict";`.
-- If there is a variable declared with `var` or a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function), and the source string is not in strict mode, it will become a global variable.
+`eval?.()` is the shortest way to enter _indirect eval_ mode. For more information, see the [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#description) reference page.
 
 ### Optional chaining with expressions
 
