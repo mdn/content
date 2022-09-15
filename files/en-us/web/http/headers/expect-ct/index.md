@@ -9,8 +9,11 @@ browser-compat: http.headers.Expect-CT
 ---
 
 {{HTTPSidebar}}
+{{Deprecated_Header}}
 
-The `Expect-CT` header allowed sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements before they were enforced by default. Certificate Transparency aims to prevent the use of misissued certificates for that site from going unnoticed. Only Google Chrome and other Chromium-based browsers implemented `Expect-CT` and now Chromium plans to deprecate and eventually remove `Expect-CT` because ["Expect-CT has now outlived its usefulness"](https://chromestatus.com/feature/6244547273687040).
+The `Expect-CT` header lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements. Certificate Transparency (CT) aims to prevent the use of misissued certificates for that site from going unnoticed.
+
+Only Google Chrome and other Chromium-based browsers implemented `Expect-CT`, and Chromium has deprecated the header from version 107, because Chromium now enforces CT by default. See the [Chrome Platform Status](https://chromestatus.com/feature/6244547273687040) update.
 
 CT requirements can be satisfied via any one of the following mechanisms:
 
