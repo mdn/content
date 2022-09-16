@@ -36,9 +36,9 @@ svg {
   <g
     fill="grey"
     transform="rotate(-10 50 100)
-               translate(-36 45.5)
-               skewX(40)
-               scale(1 0.5)">
+                translate(-36 45.5)
+                skewX(40)
+                scale(1 0.5)">
     <path
       id="heart"
       d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
@@ -188,7 +188,7 @@ svg {
     width="40"
     height="40"
     fill="yellow"
-    transform="translate(50 50)" />
+    transform="translate(50,50)" />
 </svg>
 ```
 
@@ -214,10 +214,10 @@ svg {
   <circle cx="0" cy="0" r="10" fill="red" transform="scale(4)" />
 
   <!-- vertical scale -->
-  <circle cx="0" cy="0" r="10" fill="yellow" transform="scale(1, 4)" />
+  <circle cx="0" cy="0" r="10" fill="yellow" transform="scale(1,4)" />
 
   <!-- horizontal scale -->
-  <circle cx="0" cy="0" r="10" fill="pink" transform="scale(4, 1)" />
+  <circle cx="0" cy="0" r="10" fill="pink" transform="scale(4,1)" />
 
   <!-- No scale -->
   <circle cx="0" cy="0" r="10" fill="black" />
@@ -254,7 +254,7 @@ svg {
     width="10"
     height="10"
     fill="green"
-    transform="rotate(100, 10, 10)" />
+    transform="rotate(100,10,10)" />
 </svg>
 ```
 
