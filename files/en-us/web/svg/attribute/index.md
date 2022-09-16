@@ -373,7 +373,68 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 > **Note:** All [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute/Presentation) can be used as CSS properties.
 
-{{SVGAttr("alignment-baseline")}}, {{SVGAttr("baseline-shift")}}, {{SVGAttr("clip")}}, {{SVGAttr("clip-path")}}, {{SVGAttr("clip-rule")}}, {{SVGAttr("color")}}, {{SVGAttr("color-interpolation")}}, {{SVGAttr("color-interpolation-filters")}}, {{SVGAttr("color-profile")}}, {{SVGAttr("color-rendering")}}, {{SVGAttr("cursor")}}, {{SVGAttr("direction")}}, {{SVGAttr("display")}}, {{SVGAttr("dominant-baseline")}}, {{SVGAttr("enable-background")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-opacity")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("filter")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("flood-opacity")}}, {{SVGAttr("font-family")}}, {{SVGAttr("font-size")}}, {{SVGAttr("font-size-adjust")}}, {{SVGAttr("font-stretch")}}, {{SVGAttr("font-style")}}, {{SVGAttr("font-variant")}}, {{SVGAttr("font-weight")}}, {{SVGAttr("glyph-orientation-horizontal")}}, {{SVGAttr("glyph-orientation-vertical")}}, {{SVGAttr("image-rendering")}}, {{SVGAttr("kerning")}}, {{SVGAttr("letter-spacing")}}, {{SVGAttr("lighting-color")}}, {{SVGAttr("marker-end")}}, {{SVGAttr("marker-mid")}}, {{SVGAttr("marker-start")}}, {{SVGAttr("mask")}}, {{SVGAttr("opacity")}}, {{SVGAttr("overflow")}}, {{SVGAttr("pointer-events")}}, {{SVGAttr("shape-rendering")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("stop-opacity")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-opacity")}}, {{SVGAttr("stroke-width")}}, {{SVGAttr("text-anchor")}}, {{SVGAttr("text-decoration")}}, {{SVGAttr("text-rendering")}}, {{SVGAttr("transform")}}, {{SVGAttr("transform-origin")}}, {{SVGAttr("unicode-bidi")}}, {{SVGAttr("vector-effect")}}, {{SVGAttr("visibility")}}, {{SVGAttr("word-spacing")}}, {{SVGAttr("writing-mode")}}
+- {{SVGAttr("alignment-baseline")}}
+- {{SVGAttr("baseline-shift")}}
+- {{SVGAttr("clip")}}
+- {{SVGAttr("clip-path")}}
+- {{SVGAttr("clip-rule")}}
+- {{SVGAttr("color")}}
+- {{SVGAttr("color-interpolation")}}
+- {{SVGAttr("color-interpolation-filters")}}
+- {{SVGAttr("color-profile")}}
+- {{SVGAttr("color-rendering")}}
+- {{SVGAttr("cursor")}}
+- {{SVGAttr("direction")}}
+- {{SVGAttr("display")}}
+- {{SVGAttr("dominant-baseline")}}
+- {{SVGAttr("enable-background")}}
+- {{SVGAttr("fill")}}
+- {{SVGAttr("fill-opacity")}}
+- {{SVGAttr("fill-rule")}}
+- {{SVGAttr("filter")}}
+- {{SVGAttr("flood-color")}}
+- {{SVGAttr("flood-opacity")}}
+- {{SVGAttr("font-family")}}
+- {{SVGAttr("font-size")}}
+- {{SVGAttr("font-size-adjust")}}
+- {{SVGAttr("font-stretch")}}
+- {{SVGAttr("font-style")}}
+- {{SVGAttr("font-variant")}}
+- {{SVGAttr("font-weight")}}
+- {{SVGAttr("glyph-orientation-horizontal")}}
+- {{SVGAttr("glyph-orientation-vertical")}}
+- {{SVGAttr("image-rendering")}}
+- {{SVGAttr("kerning")}}
+- {{SVGAttr("letter-spacing")}}
+- {{SVGAttr("lighting-color")}}
+- {{SVGAttr("marker-end")}}
+- {{SVGAttr("marker-mid")}}
+- {{SVGAttr("marker-start")}}
+- {{SVGAttr("mask")}}
+- {{SVGAttr("opacity")}}
+- {{SVGAttr("overflow")}}
+- {{SVGAttr("pointer-events")}}
+- {{SVGAttr("shape-rendering")}}
+- {{SVGAttr("stop-color")}}
+- {{SVGAttr("stop-opacity")}}
+- {{SVGAttr("stroke")}}
+- {{SVGAttr("stroke-dasharray")}}
+- {{SVGAttr("stroke-dashoffset")}}
+- {{SVGAttr("stroke-linecap")}}
+- {{SVGAttr("stroke-linejoin")}}
+- {{SVGAttr("stroke-miterlimit")}}
+- {{SVGAttr("stroke-opacity")}}
+- {{SVGAttr("stroke-width")}}
+- {{SVGAttr("text-anchor")}}
+- {{SVGAttr("text-decoration")}}
+- {{SVGAttr("text-rendering")}}
+- {{SVGAttr("transform")}}
+- {{SVGAttr("transform-origin")}}
+- {{SVGAttr("unicode-bidi")}}
+- {{SVGAttr("vector-effect")}}
+- {{SVGAttr("visibility")}}
+- {{SVGAttr("word-spacing")}}
+- {{SVGAttr("writing-mode")}}
 
 ### Filters attributes
 
