@@ -4,7 +4,7 @@ slug: Learn/Server-side/Django/Introduction
 tags:
   - Beginner
   - CodingScripting
-  - Intro
+  - Introduction
   - Learn
   - Python
   - Server-side programming
