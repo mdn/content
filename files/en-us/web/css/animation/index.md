@@ -97,13 +97,11 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ## Examples
 
-> **Note:** Animating [CSS Box Model](/en-US/docs/Web/CSS/CSS_Box_Model) properties is discouraged.
-> Animating any box model property is inherently CPU intensive;
-> consider animating the [transform](/en-US/docs/Web/CSS/transform) property instead.
+> **Note:** Animating [CSS Box Model](/en-US/docs/Web/CSS/CSS_Box_Model) properties is discouraged. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/transform) property instead.
 
 ### Sun Rise
 
-Here is a yellow sun on a lightblue background. The sun rises
+Here we animate a a yellow circle representing the sun on a lightblue background representing the sky. The sun rises
 to the center of the viewport and then falls out of sight.
 
 ```html
@@ -142,8 +140,7 @@ to the center of the viewport and then falls out of sight.
 
 ### Animating Multiple Properties
 
-Here is a sun that rises and falls on a lightblue background. The sun starts
-as a dark red below the horizon. At the apex the sun is a bright orange color.
+Adding onto the sun animation in the previous example, we add a second animation changing the color of the sun as it rises and sets. The sun starts as a dark red below the horizon changing to a bright orange color as it reaches the top.
 
 ```html
 <div class="sun"></div>
