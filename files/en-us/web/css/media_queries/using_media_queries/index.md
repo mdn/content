@@ -114,10 +114,10 @@ This example applies styles when the user's _primary_ input mechanism (such as a
 ```
 
 Many media features are _range features_, which means they can be prefixed with "min-" or "max-" to express "minimum condition" or "maximum condition" constraints.
-For example, this CSS will apply styles only if your browser's {{glossary("viewport")}} width is equal to or narrower than 12450px:
+For example, this CSS will apply styles only if your browser's {{glossary("viewport")}} width is equal to or narrower than 1250px:
 
 ```css
-@media (max-width: 12450px) {
+@media (max-width: 1250px) {
   /* … */
 }
 ```
