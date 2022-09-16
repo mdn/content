@@ -1,6 +1,6 @@
 blank_issues_enabled: true
 contact_links:
-  - name: MDN Community Discussion
+  - name: MDN GitHub Discussions
     url: https://github.com/orgs/mdn/discussions
     about: Will the issue require some discussion to define actionable tasks? Consider starting a discussion first.
   - name: MDN Web Docs on Discourse
