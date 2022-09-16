@@ -14,12 +14,22 @@ Programming languages all have built-in data structures, but these often differ 
 
 ## Dynamic typing
 
-JavaScript is a _loosely typed_ and _dynamic_ language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
+JavaScript is a _dynamic_ language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
 
 ```js
 let foo = 42;    // foo is now a number
 foo     = 'bar'; // foo is now a string
 foo     = true;  // foo is now a boolean
+```
+
+## Loosely typing
+
+JavaScript is a _loosely typed_ or _weakly typed_ language, as it has weak typing rules, for ex: It allows implicit type conversion instead of throwing type errors.  
+
+```js
+let foo = "21" ;         // foo is now string
+const result = foo + 1;  // Js coerces "21" to be 21 then added as a number to 1, while in strongly typed languages this will throw an error
+console.log(result);     // 22
 ```
 
 ## JavaScript types
