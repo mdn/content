@@ -12,7 +12,7 @@ tags:
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
-The aim of this lesson is to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/cascade) and [CSS specificity](/en-US/docs/Web/CSS/specificity).
+The aim of this lesson is to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
 
 While working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course, knowing the basics of what cascade layers are should you encounter them is helpful. Knowing you can use them, and how to leverage their power, will save you from a lot of pain if you find yourself managing a code base with CSS from different parties, plugins, and development teams.  
 
@@ -35,7 +35,7 @@ Cascade layers are most relevant when working with CSS from multiple sources, co
   </tbody>
 </table>
 
-For each property applied to an element, there can only be one value. For example, if you inspect an element in a popular web app in your browser developer tools "styles" panel and scroll down, you may notice there are styles crossed out. The crossed-out styles are the property values that match the selected elemnt but were not applied due to the cascade. There may be several declarations crossed out from many different sources.
+For each property applied to an element, there can only be one value. For example, if you inspect an element in a popular web app in your browser developer tools "styles" panel and scroll down, you may notice there are styles crossed out. The crossed-out styles are the property values that match the selected element but were not applied due to the cascade. There may be several declarations crossed out from many different sources.
 
 The selector matching the element with the highest specificity from the origin with precedence has its values applied.
 
