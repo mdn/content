@@ -13,13 +13,7 @@ browser-compat: javascript.operators.optional_chaining
 
 {{JSSidebar("Operators")}}
 
-The **optional chaining** operator (**`?.`**) enables you to read the value of a property located deep within a chain of connected objects without having to check that each reference in the chain is valid.
-
-The `?.` operator is like the `.` chaining operator, except that instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{JSxRef("undefined")}}), the expression short-circuits with a return value of `undefined`. When used with function calls, it returns `undefined` if the given function does not exist.
-
-This results in shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing. It can also be helpful while exploring the content of an object when there's no known guarantee as to which properties are required.
-
-Optional chaining cannot be used on a non-declared root object, but can be used with an undefined root object.
+The **optional chaining** operator (**`?.`**) accesses an object's property or calls a function. If the objectis {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it returns {{jsxref("undefined")}} instead of throwing an error.
 
 {{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
 
@@ -33,25 +27,41 @@ obj.func?.(args)
 
 ## Description
 
-The optional chaining operator provides a way to simplify accessing values through connected objects when it's possible that a reference or function may be `undefined` or `null`.
+The `?.` operator is like the `.` chaining operator, except that instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{JSxRef("undefined")}}), the expression short-circuits with a return value of `undefined`. When used with function calls, it returns `undefined` if the given function does not exist.
 
-For example, consider an object `obj` which has a nested structure. Without optional chaining, looking up a deeply-nested subproperty requires validating the references in between, such as:
+This results in shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing. It can also be helpful while exploring the content of an object when there's no known guarantee as to which properties are required.
+
+For example, consider an object `obj` which has a nested structure. Without
+optional chaining, looking up a deeply-nested subproperty requires validating the
+references in between, such as:
 
 ```js
 const nestedProp = obj.first && obj.first.second;
 ```
 
-The value of `obj.first` is confirmed to be non-`null` (and non-`undefined`) before then accessing the value of `obj.first.second`. This prevents the error that would occur if you accessed `obj.first.second` directly without testing `obj.first`.
+The value of `obj.first` is confirmed to be non-`null` (and
+non-`undefined`) before then accessing the value of
+`obj.first.second`. This prevents the error that would occur if you accessed
+`obj.first.second` directly without testing `obj.first`.
 
-With the optional chaining operator (`?.`), however, you don't have to explicitly test and short-circuit based on the state of `obj.first` before trying to access `obj.first.second`:
+This is an idiomatic pattern in JavaScript, but it gets verbose when the chain is long, and it's not safe. For example, if `obj.first` is a {{glossary("Falsy")}} value that's not `null` or `undefined`, such as `0`, it would still short-circuit and make `nestedProp` become `0`, which may not be desirable.
+
+With the optional chaining operator (`?.`), however, you don't have to
+explicitly test and short-circuit based on the state of `obj.first` before
+trying to access `obj.first.second`:
 
 ```js
 const nestedProp = obj.first?.second;
 ```
 
-By using the `?.` operator instead of just `.`, JavaScript knows to implicitly check to be sure `obj.first` is not `null` or `undefined` before attempting to access `obj.first.second`. If `obj.first` is `null` or `undefined`, the expression automatically short-circuits, returning `undefined`.
+By using the `?.` operator instead of just `.`, JavaScript knows
+to implicitly check to be sure `obj.first` is not `null` or
+`undefined` before attempting to access `obj.first.second`. If
+`obj.first` is `null` or `undefined`, the expression
+automatically short-circuits, returning `undefined`.
 
-This is equivalent to the following, except that the temporary variable is in fact not created:
+This is equivalent to the following, except that the temporary variable is in fact not
+created:
 
 ```js
 const temp = obj.first;
@@ -59,25 +69,41 @@ const nestedProp =
   temp === null || temp === undefined ? undefined : temp.second;
 ```
 
+Optional chaining cannot be used on a non-declared root object, but can be used with a root object with value `undefined`.
+
+```js example-bad
+undeclaredVar?.prop; // ReferenceError: undeclaredVar is not defined
+```
+
 ### Optional chaining with function calls
 
-You can use optional chaining when attempting to call a method which may not exist. This can be helpful, for example, when using an API in which a method might be unavailable, either due to the age of the implementation or because of a feature which isn't available on the user's device.
+You can use optional chaining when attempting to call a method which may not exist.
+This can be helpful, for example, when using an API in which a method might be
+unavailable, either due to the age of the implementation or because of a feature which
+isn't available on the user's device.
 
-Using optional chaining with function calls causes the expression to automatically return `undefined` instead of throwing an exception if the method isn't found:
+Using optional chaining with function calls causes the expression to automatically
+return `undefined` instead of throwing an exception if the method isn't
+found:
 
 ```js
 const result = someInterface.customMethod?.();
 ```
 
-> **Note:** If there is a property with such a name and which is not a function, using `?.` will still raise a {{JSxRef("TypeError")}} exception (`someInterface.customMethod is not a function`).
+However, if there is a property with such a name which is not a function, using `?.` will still raise a {{JSxRef("TypeError")}} exception "someInterface.customMethod is not a function".
 
-> **Note:** If `someInterface` itself is `null` or `undefined`, a {{JSxRef("TypeError")}} exception will still be raised (`someInterface is null`). If you expect that `someInterface` itself may be `null` or `undefined`, you have to use `?.` at this position as well: `someInterface?.customMethod?.()`
+> **Note:** If `someInterface` itself is `null` or
+> `undefined`, a {{JSxRef("TypeError")}} exception will still be
+> raised ("someInterface is null"). If you expect that
+> `someInterface` itself may be `null` or `undefined`,
+> you have to use `?.` at this position as
+> well: `someInterface?.customMethod?.()`.
 
 `eval?.()` is the shortest way to enter _indirect eval_ mode. For more information, see the [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#description) reference page.
 
 ### Optional chaining with expressions
 
-You can also use the optional chaining operator when accessing properties with an expression using [the bracket notation of the property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation):
+You can also use the optional chaining operator with [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation), which allows passing an expression as the property name:
 
 ```js
 const nestedProp = obj?.["prop" + "Name"];
@@ -156,7 +182,9 @@ Except the `temp` variable isn't created.
 
 ### Basic example
 
-This example looks for the value of the `name` property for the member `bar` in a map when there is no such member. The result is therefore `undefined`.
+This example looks for the value of the `name` property for the member
+`bar` in a map when there is no such member. The result is therefore
+`undefined`.
 
 ```js
 const myMap = new Map();
@@ -167,7 +195,9 @@ const nameBar = myMap.get("bar")?.name;
 
 ### Dealing with optional callbacks or event handlers
 
-If you use callbacks or fetch methods from an object with [a destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), you may have non-existent values that you cannot call as functions unless you have tested their existence. Using `?.`, you can avoid this extra test:
+If you use callbacks or fetch methods from an object with
+[a destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), you may have non-existent values that you cannot call as
+functions unless you have tested their existence. Using `?.`, you can avoid this extra test:
 
 ```js
 // Code written without optional chaining
