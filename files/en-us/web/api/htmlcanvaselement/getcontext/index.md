@@ -76,13 +76,12 @@ getContext(contextType, contextAttributes)
         contains an alpha channel. If set to `false`, the browser now knows
         that the backdrop is always opaque, which can speed up drawing of transparent
         content and images.
+        
     - `colorSpace` {{optional_inline}}
       - : Specifies the color space of the rendering context. Possible values are:
-      
         - `"srgb"` {{default_inline}}
         - `"display-p3"`
-    
-    
+     
     - `desynchronized`
       - : A boolean value that hints the user agent
         to reduce the latency by desynchronizing the canvas paint cycle from the event
