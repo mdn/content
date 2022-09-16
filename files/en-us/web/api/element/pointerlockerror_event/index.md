@@ -1,6 +1,6 @@
 ---
-title: 'Document: pointerlockerror event'
-slug: Web/API/Document/pointerlockerror_event
+title: 'Element: pointerlockerror event'
+slug: Web/API/Element/pointerlockerror_event
 page-type: web-api-event
 tags:
   - Document
@@ -8,9 +8,8 @@ tags:
   - Reference
   - Web
   - pointerlockerror
-browser-compat: api.Document.pointerlockerror_event
+browser-compat: api.Element.pointerlockerror_event
 ---
-
 {{APIRef}}
 
 The `pointerlockerror` event is fired when locking the pointer failed (for technical reasons or because the permission was denied).
