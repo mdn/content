@@ -106,7 +106,7 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
 
 ## Formal syntax
 
-```
+```css-nolint
 @font-face {
   <declaration-list>
 }
