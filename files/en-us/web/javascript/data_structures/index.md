@@ -24,7 +24,7 @@ foo     = true;  // foo is now a boolean
 
 ## Loosely typing
 
-JavaScript is a _loosely typed_ or _weakly typed_ language, as it has weak typing rules, for ex: It allows implicit type conversion instead of throwing type errors.  
+JavaScript is a _loosely typed_ or _weakly typed_ language, as it has weak typing rules, for ex: It allows implicit type conversion instead of throwing type errors. 
 
 ```js
 let foo = "21" ;         // foo is now string
