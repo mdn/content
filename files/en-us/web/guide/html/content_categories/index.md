@@ -116,7 +116,8 @@ The flow elements are:
 - {{HTMLElement("u")}}
 - {{HTMLElement("ul")}}
 - {{HTMLElement("var")}}
-- {{HTMLElement("video")}}, and {{HTMLElement("wbr")}}.
+- {{HTMLElement("video")}}
+- {{HTMLElement("wbr")}}
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
