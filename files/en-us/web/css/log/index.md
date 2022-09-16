@@ -35,13 +35,13 @@ The `log(x, y)` function accepts two comma-separated values as its parameters.
   - : A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the value to be logarithmed.
 
 - `y`
-  - : Optional. A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the base of the logarithm. If not deffined, the default logarithm base is `e`.
+  - : Optional. A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the base of the logarithm. If not defined, the default logarithm base is `e`.
 
 ### Return value
 
-The logarithm of `x`, when `y` is deffined.
+The logarithm of `x`, when `y` is defined.
 
-The natural logarithm (base `e`) of `x`, when `y` is not deffined.
+The natural logarithm (base `e`) of `x`, when `y` is not defined.
 
 ### Formal syntax
 
