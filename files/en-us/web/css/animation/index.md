@@ -101,7 +101,7 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ### Sun Rise
 
-Here we animate a a yellow circle representing the sun on a lightblue background representing the sky. The sun rises
+Here we animate a yellow sun across a light blue sky. The sun rises
 to the center of the viewport and then falls out of sight.
 
 ```html
