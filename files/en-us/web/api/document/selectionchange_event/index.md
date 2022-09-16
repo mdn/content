@@ -60,6 +60,6 @@ document.onselectionchange = () => {
 
 ## See also
 
-- {{domxref("Document/selectstart_event", "selectstart")}}
+- {{domxref("Node/selectstart_event", "selectstart")}}
 - {{domxref("Document.getSelection()")}}
 - {{domxref("Selection", "Selection")}}

@@ -96,7 +96,23 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
 Used in almost all roles **except** roles that can not be provided an accessible name by the author.
 
-The `aria-labelledby` attribute is **NOT** supported in [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/code_role), [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/caption_role), [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/deletion_role), [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/emphasis_role), [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role), [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/_role), [`mark`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role), [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/paragraph_role), [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)/[`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role), [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/strong_role), [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/supscript_role), [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/superscript_role), [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role), [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role), and [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/time_role)
+The `aria-labelledby` attribute is **NOT** supported in:
+
+- [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/code_role)
+- [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/caption_role)
+- [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/deletion_role)
+- [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/emphasis_role)
+- [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)
+- [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/_role)
+- [`mark`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role)
+- [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/paragraph_role)
+- [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role)
+- [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/strong_role)
+- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/supscript_role)
+- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/superscript_role)
+- [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
+- [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
+- [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/time_role)
 
 ## Specifications
 

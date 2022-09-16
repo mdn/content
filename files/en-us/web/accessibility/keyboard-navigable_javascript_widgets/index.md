@@ -32,7 +32,7 @@ The following table describes `tabindex` behavior in modern browsers:
   <tbody>
     <tr>
       <td>not present</td>
-      <td>Follows the platform convention of the element (yes for form controls,links, etc.).</td>
+      <td>Follows the platform convention of the element (yes for form controls, links, etc.).</td>
       <td>Follows the platform convention of the element.</td>
     </tr>
     <tr>
