@@ -77,7 +77,7 @@ getContext(contextType, contextAttributes)
         content and images.
     - `colorSpace` {{optional_inline}}
       - : Specifies the color space of the rendering context. Possible values are:
-        - `"srgb"` {{default_inline}}
+        - `"srgb"` - default value
         - `"display-p3"`
     - `desynchronized`
       - : A boolean value that hints the user agent
@@ -192,4 +192,4 @@ Now you have the [2D rendering context](/en-US/docs/Web/API/CanvasRenderingConte
 - Available rendering contexts: {{domxref("CanvasRenderingContext2D")}},
   {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and
   {{domxref("ImageBitmapRenderingContext")}}.
- - Available colorspaces: [sRGB color space](https://en.wikipedia.org/wiki/SRGB) and [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3)
+- Available colorspaces: [sRGB color space](https://en.wikipedia.org/wiki/SRGB) and [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3)
