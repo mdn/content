@@ -14,7 +14,7 @@ browser-compat: api.Event.originalTarget
 
 The read-only **`originalTarget`** property of the {{domxref("Event")}} interface returns the original target of the event before any retargetings. Unlike {{domxref("Event.explicitOriginalTarget")}} it can also be native anonymous content.
 
-See also [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
+See also [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets).
 
 ## Specifications
 
