@@ -931,7 +931,6 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [readystatechange event](/en-US/docs/Web/API/Document/readystatechange_event)
   - [scroll event](/en-US/docs/Web/API/Document/scroll_event)
   - [selectionchange event](/en-US/docs/Web/API/Document/selectionchange_event)
-  - [selectstart event](/en-US/docs/Web/API/Document/selectstart_event)
   - [touchcancel event](/en-US/docs/Web/API/Document/touchcancel_event)
   - [touchend event](/en-US/docs/Web/API/Document/touchend_event)
   - [touchmove event](/en-US/docs/Web/API/Document/touchmove_event)

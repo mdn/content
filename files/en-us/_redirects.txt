@@ -7954,6 +7954,7 @@
 /en-US/docs/Web/API/Document/pointerover_event	/en-US/docs/Web/API/Element/pointerover_event
 /en-US/docs/Web/API/Document/pointerup_event	/en-US/docs/Web/API/Element/pointerup_event
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
+/en-US/docs/Web/API/Document/selectstart_event	/en-US/docs/Web/API/Node/selectstart_event
 /en-US/docs/Web/API/Document/timeline/currentTime	/en-US/docs/Web/API/AnimationTimeline/currentTime
 /en-US/docs/Web/API/Document/touchcancel_event	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/API/Document/touchend_event	/en-US/docs/Web/API/Element/touchend_event
@@ -8300,7 +8301,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onsecuritypolicyviolation	/en-US/docs/Web/API/Element/securitypolicyviolation_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselect	/en-US/docs/Web/API/HTMLInputElement/select_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselectionchange	/en-US/docs/Web/API/HTMLInputElement/selectionchange_event
-/en-US/docs/Web/API/GlobalEventHandlers/onselectstart	/en-US/docs/Web/API/Document/selectstart_event
+/en-US/docs/Web/API/GlobalEventHandlers/onselectstart	/en-US/docs/Web/API/Node/selectstart_event
 /en-US/docs/Web/API/GlobalEventHandlers/onslotchange	/en-US/docs/Web/API/HTMLSlotElement/slotchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel	/en-US/docs/Web/API/Element/touchcancel_event
@@ -11633,7 +11634,7 @@
 /en-US/docs/Web/Events/select	/en-US/docs/Web/API/HTMLInputElement/select_event
 /en-US/docs/Web/Events/selectedcandidatepairchange	/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event
 /en-US/docs/Web/Events/selectionchange	/en-US/docs/Web/API/HTMLInputElement/selectionchange_event
-/en-US/docs/Web/Events/selectstart	/en-US/docs/Web/API/Document/selectstart_event
+/en-US/docs/Web/Events/selectstart	/en-US/docs/Web/API/Node/selectstart_event
 /en-US/docs/Web/Events/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/Events/shippingoptionchange	/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event
 /en-US/docs/Web/Events/show	/en-US/docs/Web/API/Element/show_event
