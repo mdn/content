@@ -30224,30 +30224,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/Document/pointerlockchange_event": {
-    "modified": "2020-10-15T21:20:38.289Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/Document/pointerlockerror_event": {
-    "modified": "2020-10-15T21:20:35.814Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2020-10-15T21:13:11.203Z",
     "contributors": [
@@ -30633,22 +30609,6 @@
       "Ehsan",
       "spencer-brown",
       "Nickolay",
-      "teoli"
-    ]
-  },
-  "Web/API/Document/selectstart_event": {
-    "modified": "2020-10-15T21:39:05.806Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "chrisdavidmills",
-      "irenesmith",
-      "mfluehr",
-      "erikadoyle",
-      "Ehsan",
-      "wirmar",
-      "Nickolay",
-      "Sebastianz",
       "teoli"
     ]
   },
@@ -33667,6 +33627,30 @@
       "rolfedh",
       "Sebastianz",
       "AFBarstow"
+    ]
+  },
+  "Web/API/Element/pointerlockchange_event": {
+    "modified": "2020-10-15T21:20:38.289Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "Sheppy",
+      "ethertank",
+      "louisremi"
+    ]
+  },
+  "Web/API/Element/pointerlockerror_event": {
+    "modified": "2020-10-15T21:20:35.814Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "Sheppy",
+      "ethertank",
+      "louisremi"
     ]
   },
   "Web/API/Element/pointermove_event": {
@@ -51188,6 +51172,22 @@
       "Waldo",
       "Callek",
       "JesseW"
+    ]
+  },
+  "Web/API/Node/selectstart_event": {
+    "modified": "2020-10-15T21:39:05.806Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "chrisdavidmills",
+      "irenesmith",
+      "mfluehr",
+      "erikadoyle",
+      "Ehsan",
+      "wirmar",
+      "Nickolay",
+      "Sebastianz",
+      "teoli"
     ]
   },
   "Web/API/Node/textContent": {

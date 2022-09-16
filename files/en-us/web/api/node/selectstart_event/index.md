@@ -1,6 +1,6 @@
 ---
-title: 'Document: selectstart event'
-slug: Web/API/Document/selectstart_event
+title: 'Node: selectstart event'
+slug: Web/API/Node/selectstart_event
 page-type: web-api-event
 tags:
   - Document
@@ -9,9 +9,8 @@ tags:
   - Selection
   - Selection API
   - selectstart
-browser-compat: api.Document.selectstart_event
+browser-compat: api.Node.selectstart_event
 ---
-
 {{APIRef}}
 
 The **`selectstart`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when a user starts a new selection.

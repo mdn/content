@@ -63,7 +63,7 @@ if (document.pointerLockElement === canvas ||
 }
 ```
 
-The {{domxref("Document.exitPointerLock()")}} method is used to exit pointer lock, and like {{domxref("Element.requestPointerLock","requestPointerLock")}}, works asynchronously using the {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} events, which you'll see more about below.
+The {{domxref("Document.exitPointerLock()")}} method is used to exit pointer lock, and like {{domxref("Element.requestPointerLock","requestPointerLock")}}, works asynchronously using the {{domxref("Element/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Element/pointerlockerror_event", "pointerlockerror")}} events, which you'll see more about below.
 
 ```js
 document.exitPointerLock = document.exitPointerLock    ||
@@ -75,7 +75,7 @@ document.exitPointerLock();
 
 ## pointerlockchange event
 
-When the Pointer lock state changes—for example, when calling {{domxref("Element.requestPointerLock","requestPointerLock()")}}, {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the user pressing the ESC key, etc.—the {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} event is dispatched to the `document`. This is a simple event and contains no extra data.
+When the Pointer lock state changes—for example, when calling {{domxref("Element.requestPointerLock","requestPointerLock()")}}, {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the user pressing the ESC key, etc.—the {{domxref("Element/pointerlockchange_event", "pointerlockchange")}} event is dispatched to the `document`. This is a simple event and contains no extra data.
 
 ```js
 if ("onpointerlockchange" in document) {
@@ -98,7 +98,7 @@ function lockChangeAlert() {
 
 ## pointerlockerror event
 
-When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock()")}} or {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} event is dispatched to the `document`. This is a simple event and contains no extra data.
+When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock()")}} or {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the {{domxref("Element/pointerlockerror_event", "pointerlockerror")}} event is dispatched to the `document`. This is a simple event and contains no extra data.
 
 ```js
 document.addEventListener('pointerlockerror', lockError, false);
