@@ -29,7 +29,7 @@ The **`<altGlyphItem>`** element provides a set of candidates for glyph substitu
 
 ### Specific attributes
 
-_None._
+None.
 
 ## DOM Interface
 
