@@ -192,4 +192,4 @@ Now you have the [2D rendering context](/en-US/docs/Web/API/CanvasRenderingConte
 - Available rendering contexts: {{domxref("CanvasRenderingContext2D")}},
   {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and
   {{domxref("ImageBitmapRenderingContext")}}.
-- Available colorspaces: [sRGB color space](https://en.wikipedia.org/wiki/SRGB) and [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3)
+- Available color spaces: [sRGB color space](https://en.wikipedia.org/wiki/SRGB) and [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
