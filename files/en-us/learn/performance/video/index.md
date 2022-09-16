@@ -46,6 +46,7 @@ For the average website, [25% of bandwidth comes from video](https://discuss.htt
 ## Optimizing video delivery
 
 The sections below describe the following optimization techniques:
+
 - [compress all video](#compress_all_videos)
 - [optimize `<source>` order](#optimize_source_order)
 - [set autoplay](#video_autoplay)
