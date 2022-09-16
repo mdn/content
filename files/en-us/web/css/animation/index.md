@@ -140,7 +140,7 @@ to the center of the viewport and then falls out of sight.
 
 ### Animating Multiple Properties
 
-Adding onto the sun animation in the previous example, we add a second animation changing the color of the sun as it rises and sets. The sun starts as a dark red below the horizon changing to a bright orange color as it reaches the top.
+Adding onto the sun animation in the previous example, we add a second animation changing the color of the sun as it rises and sets. The sun starts off dark red when it is below the horizon and changes to a bright orange as it reaches the top.
 
 ```html
 <div class="sun"></div>
