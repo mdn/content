@@ -93,7 +93,7 @@ When you group selectors in this way, if any selector is syntactically invalid, 
 
 In the following example, the invalid class selector rule will be ignored, whereas the `h1` would still be styled.
 
-```css
+```css-nolint
 h1 {
   color: blue;
 }
@@ -105,9 +105,8 @@ h1 {
 
 When combined however, neither the `h1` nor the class will be styled as the entire rule is deemed invalid.
 
-```css
-h1,
-.special {
+```css-nolint
+h1, ..special {
   color: blue;
 }
 ```
