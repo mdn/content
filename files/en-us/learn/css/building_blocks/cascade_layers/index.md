@@ -35,11 +35,11 @@ Cascade layers are most relevant when working with CSS from multiple sources, co
   </tbody>
 </table>
 
-For each property applied to an element, there can only be one value. For example, if you inspect an element in a popular web app in your browser developer tools “styles” panel and scroll down, you may notice there are styles crossed out. The crossed-out styles are the property values that match the selected elemnt but were not applied due to the cascade. There may be several declarations crossed out from many different sources. 
+For each property applied to an element, there can only be one value. For example, if you inspect an element in a popular web app in your browser developer tools "styles" panel and scroll down, you may notice there are styles crossed out. The crossed-out styles are the property values that match the selected elemnt but were not applied due to the cascade. There may be several declarations crossed out from many different sources.
 
-The selector matching the element with the highest specificity from the origin with precedence has its values applied. 
+The selector matching the element with the highest specificity from the origin with precedence has its values applied.
 
-Often, as the complexity of the site increases, the number of stylesheets increases, which makes source order both more important and more complex. Cascade layers simplifies maintaining such code bases. Cascade layers are explicit specificity containers providing simpler and greater control over which CSS declarations end up being crossed out, enablind the developer to prioritize sections of CSS without having to fight specificity. 
+Often, as the complexity of the site increases, the number of stylesheets increases, which makes source order both more important and more complex. Cascade layers simplifies maintaining such code bases. Cascade layers are explicit specificity containers providing simpler and greater control over which CSS declarations end up being crossed out, enablind the developer to prioritize sections of CSS without having to fight specificity.
 
 To fully understand cascade layers it is important to ensure you understand the CSS cascade:
  
@@ -54,7 +54,7 @@ The C in CSS stands for "Cascading." It is the method by which styles cascade to
   5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/Specificity). <!-- When @scope is supported, uncomment: "6. Scope: If there is a specificity tie, compare element [`@scope`](/en-US/docs/Web/CSS/@scope), if relevant and used." Supported in Chrome 105. Not yet documented -->
   6. **Proximity:** When two selectors in the origin layer with precendence have the same specificity, the property value from the last declared highest specificity selector wins.
    
-For each step, only the declarations “still in the running” move on to “compete” in the next step. If only one declaration is in the running, the following steps are moot.
+For each step, only the declarations "still in the running” move on to "compete” in the next step. If only one declaration is in the running, the following steps are moot.
  
 ### Origin and cascade
  
@@ -71,7 +71,7 @@ There are three [cascade origin types](/en-US/docs/Web/CSS/cascade#origin_types)
    
 The "user-agent" is the browser. The "user" is the site visitor. The "author" is you, the developer. Styles declared directly on an element with the {{HTMLElement('style')}} element are author styles. Ignoring animating and transitioning styles for the moment, user-agent normal styles have the lowest precedence; user-agent important styles the greatest. 
 
-For each property, the declaration that “wins” is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with greatest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins. This will be reiterated a few times as this fundamental concept really needs to be understood.
+For each property, the declaration that "wins” is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with greatest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins. This will be reiterated a few times as this fundamental concept really needs to be understood.
  
 In the below example, we have two links: The first has no author styles applied, so all user-agent styles are applied. The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of `0-0-0`. The reason author styles "win" is because when there are conflicting styles from different origins (layers aren't in play yet), the rules from the origin with precedence are applied, no matter what the specificity is in the origin that doesn’t have precedence.  
  
@@ -83,7 +83,7 @@ Origin precedence always beats selector specificity. If an element property is s
  
 One last thing to note before moving on: order of appearance, or _proximity_ only becomes relevant when the competing declarations in the origin having precedence have the same specificity. 
  
-We now understand “cascade origin precedence,” but what is “cascade layer precedence”? We will answer that question by addressing what cascade layers are, how they are ordered, and how styles are assigned to cascade layers. We'll cover regular layers, nested layers, and anonymous layers. Let's first discuss what cascade layers are and what issues they solve.
+We now understand "cascade origin precedence,” but what is "cascade layer precedence”? We will answer that question by addressing what cascade layers are, how they are ordered, and how styles are assigned to cascade layers. We'll cover regular layers, nested layers, and anonymous layers. Let's first discuss what cascade layers are and what issues they solve.
  
 ## The what and why of cascade layers
  
@@ -99,7 +99,7 @@ Large code bases can have styles coming from multiple teams, component libraries
 
 Having styles from many sources cascade together, especially from teams that aren't working together, can create problems. Different teams may have different methodologies; one may have a best practice of reducing specificity, while another may have a standard of including an `id` in each selector. 
 
-Specificity conflicts can escalate quickly. An engineer may create a “quick fix” by adding an `!important` flag. While this may feel like a easy solution, it often just moves the specificity war from normal to important declarations. 
+Specificity conflicts can escalate quickly. An engineer may create a "quick fix” by adding an `!important` flag. While this may feel like a easy solution, it often just moves the specificity war from normal to important declarations. 
 
 In the same way that cascade origins provide a balance of power between user and author styles, cascade layers provide a structured way to organize and balance concerns within a single origin, as if each layer in an origin were a sub-origin. A layer can be created for each team, component, and 3rd party, with style precedence based on layer order.  
 
@@ -109,7 +109,7 @@ Layer precedence always beats selector specificity. Styles in layers with preced
 
 Cascade layers also allow for nested layers. This serves two main purposes. Within each layer, a team can create nested layers. Not only can you put a component library into a separate layer creating an additional origin obliterating any need for specificity wars, but the component team can include each component in separate nested sub-layers. The ability to nest layers is very useful for component library, framework, and third party widget developers. The ability to nest layers also removes the worry of conflicting layer names. We'll cover this in the nested layer section. 
 
-> From the specification, “Authors can create layers to represent element defaults, third-party libraries, themes, components, overrides, and other styling concerns—and are able to re-order the cascade of layers in an explicit way, without altering selectors or specificity within each layer, or relying on order of appearance to resolve conflicts across layers.”
+> From the specification, "Authors can create layers to represent element defaults, third-party libraries, themes, components, overrides, and other styling concerns—and are able to re-order the cascade of layers in an explicit way, without altering selectors or specificity within each layer, or relying on order of appearance to resolve conflicts across layers.”
 
 ##  Creating Layers
 
