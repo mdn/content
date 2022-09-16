@@ -90,7 +90,10 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
     - {{domxref("Window/resize_event", "resize")}}
     - {{domxref("Element/scroll_event", "scroll")}}
     - {{domxref("SVGAnimationElement/beginEvent_event", "beginEvent")}}
-    - {{domxref("SVGAnimationElement/endEvent_event", "endEvent")}}, and {{domxref("SVGAnimationElement/repeatEvent_event", "repeatEvent")}}. An optional offset value as defined in `<offset-value>` can be appended.
+    - {{domxref("SVGAnimationElement/endEvent_event", "endEvent")}}
+    - {{domxref("SVGAnimationElement/repeatEvent_event", "repeatEvent")}}
+    
+    An optional offset value as defined in `<offset-value>` can be appended.
 
 - `<repeat-value>`
   - : This value defines a qualified repeat event. The element animation start time is defined relative to the time that the repeat event is raised with the specified iteration value.
