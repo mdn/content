@@ -36,7 +36,7 @@ getContext(contextType, contextAttributes)
 
   - : A string containing the context identifier defining the drawing
     context associated to the canvas. Possible values are:
-    
+  
     - `"2d"`, leading to the creation of a
       {{domxref("CanvasRenderingContext2D")}} object representing a two-dimensional
       rendering context.
@@ -76,7 +76,6 @@ getContext(contextType, contextAttributes)
         contains an alpha channel. If set to `false`, the browser now knows
         that the backdrop is always opaque, which can speed up drawing of transparent
         content and images.
-        
     - `colorSpace` {{optional_inline}}
       - : Specifies the color space of the rendering context. Possible values are:
         - `"srgb"` {{default_inline}}
