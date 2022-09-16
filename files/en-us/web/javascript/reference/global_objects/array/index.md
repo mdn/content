@@ -37,7 +37,7 @@ In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but ar
 - {{jsxref("Array/@@species", "get Array[@@species]")}}
   - : Returns the `Array` constructor.
 
-## Static methods
+## Static method
 
 - {{jsxref("Array.from()")}}
   - : Creates a new `Array` instance from an array-like object or iterable object.
