@@ -258,7 +258,7 @@ The following is a brief list of common APIs in web and XML page scripting using
 
 ### Setting text content
 
-In this example we have a {{HTMLElement("textarea")}} and two {{HTMLElement("button")}} elements. When the user clicks the first button we set some text in the `<textarea>`. When the user clicks the second button we clear the text. We use:
+In this example, inside a container {{HTMLElement("div")}}, we have a {{HTMLElement("textarea")}} and two {{HTMLElement("button")}} elements. When the user clicks the first button we set some text in the `<textarea>`. When the user clicks the second button we clear the text. We use:
 
 - {{domxref("Document.querySelector()")}} to access the `<textarea>` and the button
 - {{domxref("EventTarget.addEventListener()")}} to listen for button clicks
@@ -310,7 +310,7 @@ clearText.addEventListener("click", () => {
 
 ### Adding a child element
 
-In this example we have a {{HTMLElement("div")}} element and two {{HTMLElement("button")}} elements. When the user clicks the first button we create a new element and add it as a child of the `<div>`. When the user clicks the second button we remove the child element. We use:
+In this example, inside a container {{HTMLElement("div")}}, we have another {{HTMLElement("div")}} element and two {{HTMLElement("button")}} elements. When the user clicks the first button we create a new element and add it as a child of the `<div>`. When the user clicks the second button we remove the child element. We use:
 
 - {{domxref("Document.querySelector()")}} to access the `<div>` and the buttons
 - {{domxref("EventTarget.addEventListener()")}} to listen for button clicks
