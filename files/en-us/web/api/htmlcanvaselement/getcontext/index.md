@@ -77,8 +77,8 @@ getContext(contextType, contextAttributes)
         content and images.
     - `colorSpace` {{optional_inline}}
       - : Specifies the color space of the rendering context. Possible values are:
-        - `"srgb"` - default value
-        - `"display-p3"`
+        - `"srgb"` selects the [sRGB color space](https://en.wikipedia.org/wiki/SRGB). This is the default value.
+        - `"display-p3"` selects the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
     - `desynchronized`
       - : A boolean value that hints the user agent
         to reduce the latency by desynchronizing the canvas paint cycle from the event
