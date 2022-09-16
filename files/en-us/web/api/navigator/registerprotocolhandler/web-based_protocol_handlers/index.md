@@ -78,7 +78,7 @@ Now, anytime the user activates a link that uses the registered protocol, the br
 ### Example
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Web Protocol Handler Sample - Test</title>
