@@ -29,7 +29,7 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}_.
 - {{domxref("MessagePort.postMessage","postMessage()")}}
   - : Sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.
 - {{domxref("MessagePort.start","start()")}}
-  - : Starts the sending of messages queued on the port (only needed when using {{domxref("EventTarget.addEventListener")}}; it is implied when using {{domxref("MessagePort.message_event", "onmessage")}}.)
+  - : Starts the sending of messages queued on the port (only needed when using {{domxref("EventTarget.addEventListener")}}; it is implied when using {{domxref("MessagePort.message_event", "onmessage")}}).
 - {{domxref("MessagePort.close","close()")}}
   - : Disconnects the port, so it is no longer active.
 
