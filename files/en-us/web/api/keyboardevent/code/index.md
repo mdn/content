@@ -115,7 +115,7 @@ This example establishes an event listener for {{domxref("Element/keydown_event"
 
 #### JavaScript
 
-The first section of the JavaScript code establishes some variables we'll be using. `shipSize` contains the size of the ship the player is moving around, for convenience. `position` is used to track the position of the ship within the . `moveRate` and `turnRate` are the number of pixels forward. Backward each keystroke moves the ship and how many degrees of rotation the left and right steering controls apply per keystroke. The variable `angle` is the current amount of rotation applied to the ship in degrees; it starts at 0° (pointing straight up). Finally, `spaceship` is set to refer to the element with the ID `"spaceship"`, which is the SVG polygon representing the ship the player controls.
+The first section of the JavaScript code establishes some variables we'll be using. `shipSize` contains the size of the ship the player is moving around, for convenience. `position` is used to track the position of the ship within the play field. `moveRate` is the number of pixels each keystroke moves the ship forward and backward, and `turnRate` is how many degrees of rotation the left and right steering controls apply per keystroke. `angle` is the current amount of rotation applied to the ship in degrees; it starts at 0° (pointing straight up). Finally, `spaceship` is set to refer to the element with the ID `"spaceship"`, which is the SVG polygon representing the ship the player controls.
 
 ```js
 let shipSize = {
