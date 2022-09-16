@@ -77,7 +77,7 @@ This property may take one of two forms:
   <option value="column">column</option>
   <option value="row">row</option>
 </select>
-<input id="dense" type="checkbox">
+<input id="dense" type="checkbox" />
 <label for="dense">dense</label>
 ```
 

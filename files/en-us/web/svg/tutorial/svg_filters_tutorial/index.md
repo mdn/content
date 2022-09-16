@@ -36,11 +36,11 @@ This above example will not produced the desired output. Instead we need to add 
 ```html
 <defs>
   <filter id="drop-shadow">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
-    <feoffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+    <feoffset in="blur" dx="4" dy="4" result="offsetBlur" />
     <feMerge>
-      <feMergeNode in="offsetBlur"/>
-      <feMergeNode in="SourceGraphic"/>
+      <feMergeNode in="offsetBlur" />
+      <feMergeNode in="SourceGraphic" />
     </feMerge>
   </filter>
 </defs>

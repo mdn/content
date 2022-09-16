@@ -311,7 +311,7 @@ By combining the align and justify properties we can easily center an item insid
 
 ```html
 <div class="wrapper">
- <div class="item1">Item 1</div>
+  <div class="item1">Item 1</div>
 </div>
 ```
 

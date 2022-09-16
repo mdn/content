@@ -29,26 +29,26 @@ svg {
 <svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="shadow">
-      <feDropShadow dx="0.2" dy="0.4" stdDeviation="0.2"/>
+      <feDropShadow dx="0.2" dy="0.4" stdDeviation="0.2" />
     </filter>
     <filter id="shadow2">
-      <feDropShadow dx="0" dy="0" stdDeviation="0.5"
-          flood-color="cyan"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="0.5" flood-color="cyan" />
     </filter>
     <filter id="shadow3">
-      <feDropShadow dx="-0.8" dy="-0.8" stdDeviation="0"
-          flood-color="pink" flood-opacity="0.5"/>
+      <feDropShadow
+        dx="-0.8"
+        dy="-0.8"
+        stdDeviation="0"
+        flood-color="pink"
+        flood-opacity="0.5" />
     </filter>
   </defs>
 
-  <circle cx="5" cy="50%" r="4"
-      style="fill:pink; filter:url(#shadow);"/>
+  <circle cx="5" cy="50%" r="4" style="fill:pink; filter:url(#shadow);" />
 
-  <circle cx="15" cy="50%" r="4"
-      style="fill:pink; filter:url(#shadow2);"/>
+  <circle cx="15" cy="50%" r="4" style="fill:pink; filter:url(#shadow2);" />
 
-  <circle cx="25" cy="50%" r="4"
-      style="fill:pink; filter:url(#shadow3);"/>
+  <circle cx="25" cy="50%" r="4" style="fill:pink; filter:url(#shadow3);" />
 </svg>
 ```
 

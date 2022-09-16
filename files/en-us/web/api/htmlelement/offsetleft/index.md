@@ -40,13 +40,15 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 ![](offsetleft.jpg)
 
 ```html
-<div style="width: 300px; border-color:blue; border-style:solid; border-width:1;">
+<div
+  style="width: 300px; border-color:blue; border-style:solid; border-width:1;">
   <span>Short span. </span>
   <span id="longspan">Long span that wraps within this div.</span>
 </div>
 
-<div id="box" style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10">
-</div>
+<div
+  id="box"
+  style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10"></div>
 
 <script>
   const box = document.getElementById("box");

@@ -17,7 +17,7 @@ The aim of the CSS Containment specification is to improve performance of web pa
 
 ## Basic example
 
-Many webpages contain a number of sections which are independent of each other. For example a listing of article headlines and content, as in the mark-up below.
+Many webpages contain a number of sections which are independent of each other. For example a listing of article headlines and content, as in the markup below.
 
 ```html
 <h1>My blog</h1>

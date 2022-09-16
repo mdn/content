@@ -123,9 +123,10 @@ When both `left` and `right` are declared, the element will stretch to meet both
 #### HTML
 
 ```html
-<div id="parent">Parent
-    <div id="noWidth">No width</div>
-    <div id="width">width: 100px</div>
+<div id="parent">
+  Parent
+  <div id="noWidth">No width</div>
+  <div id="width">width: 100px</div>
 </div>
 ```
 

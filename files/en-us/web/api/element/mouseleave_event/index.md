@@ -115,10 +115,10 @@ The following trivial example uses the `mouseenter` event to change the border o
 #### HTML
 
 ```html
-<div id='mouseTarget'>
- <ul id="unorderedList">
-  <li>No events yet!</li>
- </ul>
+<div id="mouseTarget">
+  <ul id="unorderedList">
+    <li>No events yet!</li>
+  </ul>
 </div>
 ```
 

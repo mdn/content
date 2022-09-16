@@ -47,7 +47,7 @@ An ASCII string containing decoded data from `encodedData`.
 ## Examples
 
 ```js
-const encodedData = btoa('Hello, world'); // encode a string
+const encodedData = btoa("Hello, world"); // encode a string
 const decodedData = atob(encodedData); // decode the string
 ```
 

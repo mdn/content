@@ -39,9 +39,15 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 ### HTML
 
 ```html
-<div lang="en"><q>This English quote has a <q>nested</q> quote inside.</q></div>
-<div lang="fr"><q>This French quote has a <q>nested</q> quote inside.</q></div>
-<div lang="de"><q>This German quote has a <q>nested</q> quote inside.</q></div>
+<div lang="en">
+  <q>This English quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="fr">
+  <q>This French quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="de">
+  <q>This German quote has a <q>nested</q> quote inside.</q>
+</div>
 ```
 
 ### CSS

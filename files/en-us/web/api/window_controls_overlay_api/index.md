@@ -8,10 +8,11 @@ tags:
   - Overview
   - Reference
   - Progressive Web Apps
+  - Experimental
 browser-compat: api.WindowControlsOverlay
 ---
 
-{{DefaultAPISidebar("Window Controls Overlay API")}}
+{{DefaultAPISidebar("Window Controls Overlay API")}}{{SeeCompatTable}}
 
 The Window Controls Overlay API gives Progressive Web Apps installed on desktop operating systems the ability to hide the default window title bar and display their own content
 over the full surface area of the app window, turning the control buttons (maximize, minimize, and close) into an overlay.

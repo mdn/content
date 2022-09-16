@@ -40,7 +40,7 @@ None.
 ### Return value
 
 A {{jsxref("Promise")}} that will resolve to a {{domxref("PictureInPictureWindow")}}
-object. that can be used to listen when a user will resize that floating window.
+object that can be used to listen when a user will resize that floating window.
 
 ## Examples
 

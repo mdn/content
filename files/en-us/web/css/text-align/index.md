@@ -95,9 +95,8 @@ The inconsistent spacing between words created by justified text can be problema
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -121,9 +120,8 @@ The inconsistent spacing between words created by justified text can be problema
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -147,9 +145,8 @@ The inconsistent spacing between words created by justified text can be problema
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```

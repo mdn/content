@@ -26,7 +26,10 @@ In this example, we are animating squares using {{domxref("WebGLRenderingContext
 In contrast, the color of the square (set with {{domxref("WebGLRenderingContext.clearColor()","clearColor")}}) is only updated when a new square is created. This is a nice demonstration of {{Glossary("WebGL")}} as a state machine. For each square, we set its color once, and then update only its position every frame. The clear color state of WebGL remains at the set value, until we change it again when a new square is created.
 
 ```html hidden
-<p> WebGL animation by clearing the drawing buffer with solid color and applying scissor test.</p>
+<p>
+  WebGL animation by clearing the drawing buffer with solid color and applying
+  scissor test.
+</p>
 <button id="animation-onoff">
   Press here to <strong>[verb goes here]</strong> the animation.
 </button>

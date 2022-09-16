@@ -97,9 +97,7 @@ look something like this:
   <div>
     <label for="yes">Yes please!</label>
 
-    <select id="yes" multiple size="10">
-
-    </select>
+    <select id="yes" multiple size="10"></select>
   </div>
 </main>
 ```

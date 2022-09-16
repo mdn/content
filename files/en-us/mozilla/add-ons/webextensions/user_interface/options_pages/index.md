@@ -26,13 +26,13 @@ To create an options page, write an HTML file defining the page. This page can i
 
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
   </head>
 
   <body>
     <form>
       <label for="color">Favorite color</label>
-      <input type="text" id="color" name="color"/>
+      <input type="text" id="color" name="color" />
       <button type="submit">Save</button>
     </form>
     <script src="options.js"></script>

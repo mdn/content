@@ -34,10 +34,10 @@ svg {
 ```html
 <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
   <filter id="erode">
-    <feMorphology operator="erode" radius="0.4"/>
+    <feMorphology operator="erode" radius="0.4" />
   </filter>
   <filter id="dilate">
-    <feMorphology operator="dilate" radius="0.8"/>
+    <feMorphology operator="dilate" radius="0.8" />
   </filter>
 
   <text x="0" y="15">Normal text</text>

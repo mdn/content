@@ -43,7 +43,7 @@ history.
 ### HTML
 
 ```html
-<button id='go-forward'>Go Forward!</button>
+<button id="go-forward">Go Forward!</button>
 ```
 
 ### JavaScript

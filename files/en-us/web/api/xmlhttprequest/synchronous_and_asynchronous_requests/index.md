@@ -169,11 +169,11 @@ One of the few cases in which a synchronous request does not usually block execu
 **`example.html`** (the main page):
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>MDN Example</title>
     <script>
       const worker = new Worker("myTask.js");
@@ -185,7 +185,7 @@ One of the few cases in which a synchronous request does not usually block execu
     </script>
   </head>
   <body>
-  …
+    …
   </body>
 </html>
 ```

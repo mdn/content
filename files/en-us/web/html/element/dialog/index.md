@@ -125,14 +125,16 @@ This example opens a modal dialog that contains a form, when the "Update details
 <!-- Simple modal dialog containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
-    <p><label>Favorite animal:
-      <select>
-        <option value="default">Choose…</option>
-        <option>Brine shrimp</option>
-        <option>Red panda</option>
-        <option>Spider monkey</option>
-      </select>
-    </label></p>
+    <p>
+      <label>Favorite animal:
+        <select>
+          <option value="default">Choose…</option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select>
+      </label>
+    </p>
     <div>
       <button value="cancel">Cancel</button>
       <button id="confirmBtn" value="default">Confirm</button>

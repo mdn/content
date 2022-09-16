@@ -65,15 +65,15 @@ Here is a little example:
   <fieldset>
     <legend>Fruit juice size</legend>
     <p>
-      <input type="radio" name="size" id="size_1" value="small">
+      <input type="radio" name="size" id="size_1" value="small" />
       <label for="size_1">Small</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_2" value="medium">
+      <input type="radio" name="size" id="size_2" value="medium" />
       <label for="size_2">Medium</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_3" value="large">
+      <input type="radio" name="size" id="size_3" value="large" />
       <label for="size_3">Large</label>
     </p>
   </fieldset>
@@ -93,7 +93,7 @@ Because of its influence over assistive technology, the {{HTMLElement("fieldset"
 As we saw in the previous article, The {{HTMLElement("label")}} element is the formal way to define a label for an HTML form widget. This is the most important element if you want to build accessible forms — when implemented properly, screen readers will speak a form element's label along with any related instructions, as well as it being useful for sighted users. Take this example, which we saw in the previous article:
 
 ```html
-<label for="name">Name:</label> <input type="text" id="name" name="user_name">
+<label for="name">Name:</label> <input type="text" id="name" name="user_name" />
 ```
 
 With the `<label>` associated correctly with the `<input>` via its `for` attribute (which contains the `<input>` element's `id` attribute), a screen reader will read out something like "Name, edit text".
@@ -102,7 +102,7 @@ There is another way to associate a form control with a label — nest the form 
 
 ```html
 <label for="name">
-  Name: <input type="text" id="name" name="user_name">
+  Name: <input type="text" id="name" name="user_name" />
 </label>
 ```
 
@@ -119,11 +119,11 @@ For example, clicking on the "I like cherry" label text in the example below wil
 ```html
 <form>
   <p>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry">
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
     <label for="taste_1">I like cherry</label>
   </p>
   <p>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="banana">
+    <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
     <label for="taste_2">I like banana</label>
   </p>
 </form>
@@ -159,7 +159,7 @@ Let's consider this example:
 <!-- But this is probably best: -->
 <div>
   <label for="username">Name: <span aria-label="required">*</span></label>
-  <input id="username" type="text" name="username">
+  <input id="username" type="text" name="username" />
 </div>
 ```
 
@@ -195,14 +195,14 @@ Let's put these ideas into practice and build a slightly more involved form — 
 2. Apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
 
    ```html
-   <link href="payment-form.css" rel="stylesheet">
+   <link href="payment-form.css" rel="stylesheet" />
    ```
 
 3. Next, create your form by adding the outer {{htmlelement("form")}} element:
 
    ```html
    <form>
-
+     …
    </form>
    ```
 
@@ -210,58 +210,61 @@ Let's put these ideas into practice and build a slightly more involved form — 
 
    ```html
    <h1>Payment form</h1>
-   <p>Required fields are followed by <strong><span aria-label="required">*</span></strong>.</p>
+   <p>
+     Required fields are followed by
+     <strong><span aria-label="required">*</span></strong>.
+   </p>
    ```
 
 5. Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
 
    ```html
    <section>
-       <h2>Contact information</h2>
-       <fieldset>
-         <legend>Title</legend>
-         <ul>
-             <li>
-               <label for="title_1">
-                 <input type="radio" id="title_1" name="title" value="K">
-                 King
-               </label>
-             </li>
-             <li>
-               <label for="title_2">
-                 <input type="radio" id="title_2" name="title" value="Q">
-                 Queen
-               </label>
-             </li>
-             <li>
-               <label for="title_3">
-                 <input type="radio" id="title_3" name="title" value="J">
-                 Joker
-               </label>
-             </li>
-         </ul>
-       </fieldset>
-       <p>
-         <label for="name">
-           <span>Name: </span>
-           <strong><span aria-label="required">*</span></strong>
-         </label>
-         <input type="text" id="name" name="username">
-       </p>
-       <p>
-         <label for="mail">
-           <span>E-mail: </span>
-           <strong><span aria-label="required">*</span></strong>
-         </label>
-         <input type="email" id="mail" name="usermail">
-       </p>
-       <p>
-         <label for="pwd">
-           <span>Password: </span>
-           <strong><span aria-label="required">*</span></strong>
-         </label>
-         <input type="password" id="pwd" name="password">
-       </p>
+     <h2>Contact information</h2>
+     <fieldset>
+       <legend>Title</legend>
+       <ul>
+         <li>
+           <label for="title_1">
+             <input type="radio" id="title_1" name="title" value="K" />
+             King
+           </label>
+         </li>
+         <li>
+           <label for="title_2">
+             <input type="radio" id="title_2" name="title" value="Q" />
+             Queen
+           </label>
+         </li>
+         <li>
+           <label for="title_3">
+             <input type="radio" id="title_3" name="title" value="J" />
+             Joker
+           </label>
+         </li>
+       </ul>
+     </fieldset>
+     <p>
+       <label for="name">
+         <span>Name: </span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="text" id="name" name="username" />
+     </p>
+     <p>
+       <label for="mail">
+         <span>E-mail: </span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="email" id="mail" name="usermail" />
+     </p>
+     <p>
+       <label for="pwd">
+         <span>Password: </span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="password" id="pwd" name="password" />
+     </p>
    </section>
    ```
 
@@ -276,31 +279,36 @@ Let's put these ideas into practice and build a slightly more involved form — 
 
    ```html
    <section>
-       <h2>Payment information</h2>
-       <p>
-         <label for="card">
-           <span>Card type:</span>
-         </label>
-         <select id="card" name="usercard">
-           <option value="visa">Visa</option>
-           <option value="mc">Mastercard</option>
-           <option value="amex">American Express</option>
-         </select>
-       </p>
-       <p>
-         <label for="number">
-           <span>Card number:</span>
-           <strong><span aria-label="required">*</span></strong>
-         </label>
-         <input type="tel" id="number" name="cardnumber">
-       </p>
-       <p>
-         <label for="expiration">
-           <span>Expiration date:</span>
-           <strong><span aria-label="required">*</span></strong>
-         </label>
-         <input type="text" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
-       </p>
+     <h2>Payment information</h2>
+     <p>
+       <label for="card">
+         <span>Card type:</span>
+       </label>
+       <select id="card" name="usercard">
+         <option value="visa">Visa</option>
+         <option value="mc">Mastercard</option>
+         <option value="amex">American Express</option>
+       </select>
+     </p>
+     <p>
+       <label for="number">
+         <span>Card number:</span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="tel" id="number" name="cardnumber" />
+     </p>
+     <p>
+       <label for="expiration">
+         <span>Expiration date:</span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input
+         type="text"
+         id="expiration"
+         required="true"
+         placeholder="MM/YY"
+         pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+     </p>
    </section>
    ```
 
@@ -308,9 +316,9 @@ Let's put these ideas into practice and build a slightly more involved form — 
 
    ```html
    <section>
-       <p>
-         <button type="submit">Validate the payment</button>
-       </p>
+     <p>
+       <button type="submit">Validate the payment</button>
+     </p>
    </section>
    ```
 

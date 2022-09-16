@@ -37,8 +37,7 @@ This example shows how to open an eyedropper tool and wait for the user to eithe
 #### HTML
 
 ```html
-<button id="start-button">Open the eyedropper</button>
-<span id="result"></span>
+<button id="start-button">Open the eyedropper</button> <span id="result"></span>
 ```
 
 #### JavaScript
@@ -74,8 +73,7 @@ This example shows that the eyedropper mode can also be aborted before the user 
 #### HTML
 
 ```html
-<button id="start-button">Open the eyedropper</button>
-<span id="result"></span>
+<button id="start-button">Open the eyedropper</button> <span id="result"></span>
 ```
 
 #### JavaScript

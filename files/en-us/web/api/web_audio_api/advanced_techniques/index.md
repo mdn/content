@@ -1,5 +1,5 @@
 ---
-title: 'Advanced techniques: Creating and sequencing audio'
+title: "Advanced techniques: Creating and sequencing audio"
 slug: Web/API/Web_Audio_API/Advanced_techniques
 page-type: guide
 tags:
@@ -130,10 +130,24 @@ Let's say our envelope has attack and release. We can allow the user to control 
 
 ```html
 <label for="attack">Attack</label>
-<input name="attack" id="attack" type="range" min="0" max="1" value="0.2" step="0.1" />
+<input
+  name="attack"
+  id="attack"
+  type="range"
+  min="0"
+  max="1"
+  value="0.2"
+  step="0.1" />
 
 <label for="release">Release</label>
-<input name="release" id="release" type="range" min="0" max="1" value="0.5" step="0.1" />
+<input
+  name="release"
+  id="release"
+  type="range"
+  min="0"
+  max="1"
+  value="0.5"
+  step="0.1" />
 ```
 
 Now we can create some variables over in JavaScript and have them change when the input values are updated:
@@ -246,7 +260,14 @@ For the UI controls, let's expose both frequencies of our oscillators, allowing 
 
 ```html
 <label for="hz">Hz</label>
-<input name="hz" id="hz" type="range" min="660" max="1320" value="880" step="1" />
+<input
+  name="hz"
+  id="hz"
+  type="range"
+  min="660"
+  max="1320"
+  value="880"
+  step="1" />
 <label for="lfo">LFO</label>
 <input name="lfo" id="lfo" type="range" min="20" max="40" value="30" step="1" />
 ```
@@ -380,10 +401,24 @@ On the UI, we'll expose the noise duration and the frequency we want to band, al
 
 ```html
 <label for="duration">Duration</label>
-<input name="duration" id="duration" type="range" min="0" max="2" value="1" step="0.1" />
+<input
+  name="duration"
+  id="duration"
+  type="range"
+  min="0"
+  max="2"
+  value="1"
+  step="0.1" />
 
 <label for="band">Band</label>
-<input name="band" id="band" type="range" min="400" max="1200" value="1000" step="5" />
+<input
+  name="band"
+  id="band"
+  type="range"
+  min="400"
+  max="1200"
+  value="1000"
+  step="5" />
 ```
 
 ```js
@@ -392,7 +427,7 @@ const durControl = document.querySelector("#duration");
 durControl.addEventListener(
   "input",
   (ev) => {
-    noiseDuration = parseInt(ev.target.value, 10);
+    noiseDuration = parseFloat(ev.target.value);
   },
   false
 );
@@ -511,7 +546,14 @@ The {{domxref("AudioBufferSourceNode")}} comes with a [`playbackRate`](/en-US/do
 
 ```html
 <label for="rate">Rate</label>
-<input name="rate" id="rate" type="range" min="0.1" max="2" value="1" step="0.1" />
+<input
+  name="rate"
+  id="rate"
+  type="range"
+  min="0.1"
+  max="2"
+  value="1"
+  step="0.1" />
 ```
 
 ```js

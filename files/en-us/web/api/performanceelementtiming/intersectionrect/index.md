@@ -27,7 +27,11 @@ For display images this is the display rectangle of the image within the viewpor
 In this example calling `entry.intersectionRect` returns a {{domxref("DOMRectReadOnly")}} object with the display rectangle of the image.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

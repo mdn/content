@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: progress event'
+title: "HTMLMediaElement: progress event"
 slug: Web/API/HTMLMediaElement/progress_event
 page-type: web-api-event
 tags:
@@ -40,15 +40,13 @@ A generic {{domxref("Event")}}.
 
 ```html
 <div class="example">
+  <button type="button">Load video</button>
+  <video controls width="250"></video>
 
-    <button type="button">Load video</button>
-    <video controls width="250"></video>
-
-    <div class="event-log">
-        <label for="eventLog">Event log:</label>
-        <textarea readonly class="event-log-contents" id="eventLog"></textarea>
-    </div>
-
+  <div class="event-log">
+    <label for="eventLog">Event log:</label>
+    <textarea readonly class="event-log-contents" id="eventLog"></textarea>
+  </div>
 </div>
 ```
 

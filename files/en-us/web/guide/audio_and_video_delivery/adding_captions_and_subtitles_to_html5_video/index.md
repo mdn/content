@@ -53,11 +53,24 @@ As mentioned above, we need to make use of the new HTML `<track>` element to add
 
 ```html
 <video id="video" controls preload="metadata">
-   <source src="video/sintel-short.mp4" type="video/mp4">
-   <source src="video/sintel-short.webm" type="video/webm">
-   <track label="English" kind="subtitles" srclang="en" src="captions/vtt/sintel-en.vtt" default>
-   <track label="Deutsch" kind="subtitles" srclang="de" src="captions/vtt/sintel-de.vtt">
-   <track label="Español" kind="subtitles" srclang="es" src="captions/vtt/sintel-es.vtt">
+  <source src="video/sintel-short.mp4" type="video/mp4" />
+  <source src="video/sintel-short.webm" type="video/webm" />
+  <track
+    label="English"
+    kind="subtitles"
+    srclang="en"
+    src="captions/vtt/sintel-en.vtt"
+    default />
+  <track
+    label="Deutsch"
+    kind="subtitles"
+    srclang="de"
+    src="captions/vtt/sintel-de.vtt" />
+  <track
+    label="Español"
+    kind="subtitles"
+    srclang="es"
+    src="captions/vtt/sintel-es.vtt" />
 </video>
 ```
 
@@ -73,18 +86,18 @@ In addition to adding the `<track>` elements, we have also added a new button to
 
 ```html
 <div id="video-controls" class="controls" data-state="hidden">
-   <button id="playpause" type="button" data-state="play">Play/Pause</button>
-   <button id="stop" type="button" data-state="stop">Stop</button>
-   <div class="progress">
-      <progress id="progress" value="0" min="0">
-         <span id="progress-bar"></span>
-      </progress>
-   </div>
-   <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
-   <button id="volinc" type="button" data-state="volup">Vol+</button>
-   <button id="voldec" type="button" data-state="voldown">Vol-</button>
-   <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
-   <button id="subtitles" type="button" data-state="subtitles">CC</button>
+  <button id="playpause" type="button" data-state="play">Play/Pause</button>
+  <button id="stop" type="button" data-state="stop">Stop</button>
+  <div class="progress">
+    <progress id="progress" value="0" min="0">
+      <span id="progress-bar"></span>
+    </progress>
+  </div>
+  <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+  <button id="volinc" type="button" data-state="volup">Vol+</button>
+  <button id="voldec" type="button" data-state="voldown">Vol-</button>
+  <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
+  <button id="subtitles" type="button" data-state="subtitles">CC</button>
 </div>
 ```
 

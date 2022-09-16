@@ -67,9 +67,28 @@ You find this [example live on GitHub](https://mdn.github.io/css-examples/min-ma
 
 ```html
 <h1>Simple responsive test</h1>
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In orci orci, eleifend id risus nec, mattis rutrum velit. Suspendisse fringilla egestas erat eu convallis. Phasellus eu velit ut magna dapibus elementum cursus at ligula. Ut tempus varius nibh, nec auctor sapien iaculis sit amet. Fusce iaculis, libero quis elementum viverra, nulla ante accumsan lectus, sit amet convallis lacus ipsum vel est. Curabitur et urna non est consectetur pulvinar vel id risus. Ut vestibulum, sem in semper aliquet, felis arcu euismod sapien, ac imperdiet massa nisl quis sem. Vestibulum ac elementum felis, in tempor velit. Pellentesque purus ex, mattis at ornare quis, porta condimentum mi. Donec vestibulum ligula vel nulla blandit, quis euismod nulla vestibulum. Suspendisse potenti. Nunc neque mauris, tempor sed facilisis at, ultrices eget nulla. Pellentesque convallis ante nec augue porttitor, id tempus ante luctus.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In orci orci,
+  eleifend id risus nec, mattis rutrum velit. Suspendisse fringilla egestas erat
+  eu convallis. Phasellus eu velit ut magna dapibus elementum cursus at ligula.
+  Ut tempus varius nibh, nec auctor sapien iaculis sit amet. Fusce iaculis,
+  libero quis elementum viverra, nulla ante accumsan lectus, sit amet convallis
+  lacus ipsum vel est. Curabitur et urna non est consectetur pulvinar vel id
+  risus. Ut vestibulum, sem in semper aliquet, felis arcu euismod sapien, ac
+  imperdiet massa nisl quis sem. Vestibulum ac elementum felis, in tempor velit.
+  Pellentesque purus ex, mattis at ornare quis, porta condimentum mi. Donec
+  vestibulum ligula vel nulla blandit, quis euismod nulla vestibulum.
+  Suspendisse potenti. Nunc neque mauris, tempor sed facilisis at, ultrices eget
+  nulla. Pellentesque convallis ante nec augue porttitor, id tempus ante luctus.
+</p>
 
-<p>Integer rutrum sollicitudin tellus, quis cursus nulla scelerisque nec. Nunc eu facilisis lorem. Maecenas faucibus sapien eleifend, semper tellus at, pharetra quam. Cras feugiat vulputate tortor at rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non felis quis sem lobortis sodales vel id libero. Phasellus sit amet placerat lorem. </p>
+<p>
+  Integer rutrum sollicitudin tellus, quis cursus nulla scelerisque nec. Nunc eu
+  facilisis lorem. Maecenas faucibus sapien eleifend, semper tellus at, pharetra
+  quam. Cras feugiat vulputate tortor at rhoncus. Class aptent taciti sociosqu
+  ad litora torquent per conubia nostra, per inceptos himenaeos. Nam non felis
+  quis sem lobortis sodales vel id libero. Phasellus sit amet placerat lorem.
+</p>
 ```
 
 #### CSS

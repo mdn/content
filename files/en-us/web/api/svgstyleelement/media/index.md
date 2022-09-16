@@ -35,7 +35,9 @@ We also define a `button` that will be used to display the current style and cha
 
 ```html
 <button></button>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <circle cx="60" cy="60" r="50" />
 </svg>
 ```

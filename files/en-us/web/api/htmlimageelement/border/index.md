@@ -53,21 +53,21 @@ images.
 For example, if you have the following HTML:
 
 ```html
-<img src="image.png" border="2">
+<img src="image.png" border="2" />
 ```
 
 The following will provide the same appearance using CSS instead of this obsolete
 property:
 
 ```html
-<img src="image.png" style="border: 2px;">
+<img src="image.png" style="border: 2px;" />
 ```
 
 You can further provide additional information to change the color and other features
 of the border:
 
 ```html
-<img src="image.png" style="border: dashed 2px #333388;">
+<img src="image.png" style="border: dashed 2px #333388;" />
 ```
 
 ## Specifications

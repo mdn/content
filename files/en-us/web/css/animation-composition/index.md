@@ -95,13 +95,16 @@ The example below shows the effect of different `animation-composition` values s
 #### HTML
 
 ```html
-<div class="container">replace
+<div class="container">
+  replace
   <div id="replace" class="target"></div>
 </div>
-<div class="container">add
+<div class="container">
+  add
   <div id="add" class="target"></div>
 </div>
-<div class="container">accumulate
+<div class="container">
+  accumulate
   <div id="accumulate" class="target"></div>
 </div>
 ```

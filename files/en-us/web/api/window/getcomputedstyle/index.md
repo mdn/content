@@ -128,17 +128,17 @@ Java.
 ```html
 <style>
   h3::after {
-    content: ' rocks!';
+    content: " rocks!";
   }
 </style>
 
 <h3>Generated content</h3>
 
 <script>
-  const h3 = document.querySelector('h3');
-  const result = getComputedStyle(h3, ':after').content;
+  const h3 = document.querySelector("h3");
+  const result = getComputedStyle(h3, ":after").content;
 
-  console.log('the generated content is: ', result); // returns ' rocks!'
+  console.log("the generated content is: ", result); // returns ' rocks!'
 </script>
 ```
 

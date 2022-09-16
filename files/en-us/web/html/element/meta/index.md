@@ -164,10 +164,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Examples
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- Redirect page after 3 seconds -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
 ## Specifications

@@ -21,7 +21,6 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
 ```html
 <math>
-
   <mn>0</mn>
 
   <mn>1.337</mn>
@@ -31,7 +30,6 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
   <mn>XVI</mn>
 
   <mn>2e10</mn>
-
 </math>
 ```
 

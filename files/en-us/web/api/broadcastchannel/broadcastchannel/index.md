@@ -37,8 +37,8 @@ new BroadcastChannel(channelName)
 ```js
 // create a new channel listening to the "internal_notification" channel.
 
-const bc = new BroadcastChannel('internal_notification');
-bc.postMessage('New listening connected!');
+const bc = new BroadcastChannel("internal_notification");
+bc.postMessage("New listening connected!");
 ```
 
 ## Specifications

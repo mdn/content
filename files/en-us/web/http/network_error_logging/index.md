@@ -128,7 +128,7 @@ The type of the network error may be one of the following pre-defined values fro
 - `tcp.failed`
   - : The TCP connection failed due to reasons not covered by previous errors
 - `http.error`
-  - : The user agent successfully received a response, but it had a [4xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5) or [5xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.6) status code
+  - : The user agent successfully received a response, but it had a [4xx](https://httpwg.org/specs/rfc9110.html#status.4xx) or [5xx](https://httpwg.org/specs/rfc9110.html#status.5xx) status code
 - `http.protocol.error`
   - : The connection was aborted due to an HTTP protocol error
 - `http.response.invalid`

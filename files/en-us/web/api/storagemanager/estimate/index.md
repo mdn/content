@@ -59,8 +59,8 @@ In this example, we obtain the usage estimates and present the percentage of sto
 
 ```html
 <label>
-  You're currently using about <output id="percent">
-  </output>% of your available storage.
+  You're currently using about <output id="percent"> </output>% of your
+  available storage.
 </label>
 ```
 

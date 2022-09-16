@@ -207,13 +207,11 @@ button {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -499,13 +497,11 @@ button {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -732,13 +728,11 @@ button {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -946,13 +940,11 @@ button {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 

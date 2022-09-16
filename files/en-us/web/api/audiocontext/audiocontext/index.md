@@ -95,7 +95,7 @@ This example creates a new {{domxref("AudioContext")}} for interactive audio
 
 ```js
 const audioCtx = new AudioContext({
-  latencyHint: 'interactive',
+  latencyHint: "interactive",
   sampleRate: 44100,
 });
 ```

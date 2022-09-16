@@ -32,18 +32,20 @@ The `:target-within` pseudo-class can be used to highlight the article if anythi
 ```html
 <h3>Table of Contents</h3>
 <ol>
- <li><a href="#p1">Jump to the first paragraph!</a></li>
- <li><a href="#p2">Jump to the second paragraph!</a></li>
-
+  <li><a href="#p1">Jump to the first paragraph!</a></li>
+  <li><a href="#p2">Jump to the second paragraph!</a></li>
 </ol>
 
 <article>
-
-<h3>My Fun Article</h3>
-<p id="p1">You can target <i>this paragraph</i> using a
-  URL fragment. Click on the link above to try out!</p>
-<p id="p2">This is <i>another paragraph</i>, also accessible
-  from the links above. Isn't that delightful?</p>
+  <h3>My Fun Article</h3>
+  <p id="p1">
+    You can target <i>this paragraph</i> using a URL fragment. Click on the link
+    above to try out!
+  </p>
+  <p id="p2">
+    This is <i>another paragraph</i>, also accessible from the links above.
+    Isn't that delightful?
+  </p>
 </article>
 ```
 

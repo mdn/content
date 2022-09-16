@@ -36,13 +36,18 @@ A live version of this application is available on [GitHub](https://mdn.github.i
 The {{cssxref("touch-action")}} property is set to `none` to prevent the browser from applying its default touch behavior to the application.
 
 ```html
-<canvas id="canvas" width="600" height="600" style="border:solid black 1px; touch-action:none">
+<canvas
+  id="canvas"
+  width="600"
+  height="600"
+  style="border:solid black 1px; touch-action:none">
   Your browser does not support canvas element.
 </canvas>
-<br>
+<br />
 <button onclick="startup()">Initialize</button>
-<br>
-Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Log:
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ### Setting up the event handlers

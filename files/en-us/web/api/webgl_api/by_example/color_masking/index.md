@@ -31,8 +31,7 @@ Finally, color masking teaches us that {{Glossary("WebGL")}} is not only a state
 
 ```html
 <p>Tinting the displayed colors with color masking.</p>
-<canvas>Your browser does not seem to support
-    HTML canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
 <button id="red-toggle">On</button>
 <button id="green-toggle">On</button>
 <button id="blue-toggle">On</button>

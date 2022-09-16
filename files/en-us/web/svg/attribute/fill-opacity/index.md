@@ -43,16 +43,13 @@ svg {
   <circle cx="50" cy="50" r="40" />
 
   <!-- Fill opacity as a number -->
-  <circle cx="150" cy="50" r="40"
-          fill-opacity="0.7" />
+  <circle cx="150" cy="50" r="40" fill-opacity="0.7" />
 
   <!-- Fill opacity as a percentage -->
-  <circle cx="250" cy="50" r="40"
-          fill-opacity="50%" />
+  <circle cx="250" cy="50" r="40" fill-opacity="50%" />
 
   <!-- Fill opacity as a CSS property -->
-  <circle cx="350" cy="50" r="40"
-          style="fill-opacity: .25;" />
+  <circle cx="350" cy="50" r="40" style="fill-opacity: .25;" />
 </svg>
 ```
 

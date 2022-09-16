@@ -29,8 +29,7 @@ Finally, all JavaScript code will run within an immediate function, which is a c
 ```html
 <p>[ Some descriptive text about the example. ]</p>
 <button>[ Optional button element. ]</button>
-<canvas>Your browser does not seem to support
-    HTML canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
 ```
 
 ### CSS

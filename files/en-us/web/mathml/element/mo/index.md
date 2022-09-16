@@ -42,7 +42,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 - `movablelimits`
   - : Specifies whether attached under- and overscripts move to sub- and superscript positions when `displaystyle` is `false`.
-    Allowed values are either `true` or `false.`
+    Allowed values are either `true` or `false`.
 - `rspace`
   - : The amount of space after the operator (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units). The constant `thickmathspace` (5/18em) is the default value.
 - `separator`
@@ -59,23 +59,22 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ```html
 <math>
-
-<mrow>
-  <mn>5</mn>
-  <mo>+</mo>
-  <mn>5</mn>
-</mrow>
-
-<mrow>
-  <mo>[</mo> <!-- default form value: prefix -->
   <mrow>
-    <mn>0</mn>
-    <mo>;</mo> <!-- default form value: infix -->
-    <mn>1</mn>
+    <mn>5</mn>
+    <mo>+</mo>
+    <mn>5</mn>
   </mrow>
-  <mo>)</mo> <!-- default form value: postfix -->
-</mrow>
 
+  <mrow>
+    <mo>[</mo> <!-- default form value: prefix -->
+
+    <mrow>
+      <mn>0</mn>
+      <mo>;</mo> <!-- default form value: infix -->
+      <mn>1</mn>
+    </mrow>
+    <mo>)</mo> <!-- default form value: postfix -->
+  </mrow>
 </math>
 ```
 

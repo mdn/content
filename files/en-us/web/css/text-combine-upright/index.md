@@ -87,9 +87,12 @@ The all value requires markup around every piece of horizontal text, but it is c
 #### HTML
 
 ```html
-<p lang="zh-Hant">民國<span class="num">105</span
->年<span class="num">4</span
->月<span class="num">29</span>日</p>
+<p lang="zh-Hant">
+  民國<span class="num">105</span>年<span class="num">4</span>月<span
+    class="num"
+    >29</span
+  >日
+</p>
 ```
 
 #### CSS

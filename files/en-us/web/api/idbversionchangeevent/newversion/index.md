@@ -24,7 +24,7 @@ database.
 
 ## Value
 
-A number that is a 64-bit integer.
+A number that is a 64-bit integer or null if the database is being deleted.
 
 ## Examples
 

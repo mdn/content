@@ -109,6 +109,8 @@ const result = someInterface.customMethod?.();
 > you have to use `?.` at this position as
 > well: `someInterface?.customMethod?.()`
 
+`eval?.()` is the shortest way to enter _indirect eval_ mode. For more information, see the [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#description) reference page.
+
 ### Optional chaining with expressions
 
 You can also use the optional chaining operator when accessing properties with an expression using

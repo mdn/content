@@ -1088,7 +1088,7 @@ You could call `validate` in each form element's `onChange` event handler, using
 
 ```html
 <p>Enter a number between 18 and 99:</p>
-<input type="text" name="age" size=3 onChange="validate(this, 18, 99);">
+<input type="text" name="age" size="3" onChange="validate(this, 18, 99);" />
 ```
 
 ### Grouping operator

@@ -87,11 +87,11 @@ You can however control the size of these rows with the property `grid-auto-rows
 
 ```html
 <div class="wrapper">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -132,17 +132,14 @@ You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-a
 
 ```html
 <div class="wrapper">
-     <div>One</div>
-     <div>Two</div>
-     <div>Three</div>
-     <div>Four
-     <br>This cell
-     <br>Has extra
-     <br>content.
-     <br>Max is auto
-     <br>so the row expands.
-     </div>
-     <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>
+    Four <br />This cell <br />Has extra <br />content. <br />Max is auto
+    <br />so the row expands.
+  </div>
+  <div>Five</div>
 </div>
 ```
 
@@ -183,14 +180,14 @@ You can also pass in a track listing, this will repeat. The following track list
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
 </div>
 ```
 
@@ -243,14 +240,14 @@ In this next example I have created a grid with three row tracks of 200 pixels h
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
 </div>
 ```
 
@@ -290,18 +287,18 @@ The first thing grid will do is place any items that have a position. In the exa
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
@@ -351,18 +348,18 @@ You can see how this then leaves gaps in the grid, as for the auto-placed items 
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
@@ -419,18 +416,18 @@ Having done this, grid will now backfill the gaps, as it moves through the grid 
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven</div>
+  <div>Twelve</div>
 </div>
 ```
 
@@ -497,17 +494,17 @@ Auto-placement can also help you lay out interface items which do have logical o
 
 ```html
 <div class="wrapper">
-   <dl>
-       <dt>Mammals</dt>
-       <dd>Cat</dd>
-       <dd>Dog</dd>
-       <dd>Mouse</dd>
-       <dt>Fish</dt>
-       <dd>Guppy</dd>
-       <dt>Birds</dt>
-       <dd>Pied Wagtail</dd>
-       <dd>Owl</dd>
-   </dl>
+  <dl>
+    <dt>Mammals</dt>
+    <dd>Cat</dd>
+    <dd>Dog</dd>
+    <dd>Mouse</dd>
+    <dt>Fish</dt>
+    <dd>Guppy</dd>
+    <dt>Birds</dt>
+    <dd>Pied Wagtail</dd>
+    <dd>Owl</dd>
+  </dl>
 </div>
 ```
 

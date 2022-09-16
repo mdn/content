@@ -1495,8 +1495,8 @@
 /en-US/docs/DOM/Mozilla_event_reference/pause	/en-US/docs/Web/API/HTMLMediaElement/pause_event
 /en-US/docs/DOM/Mozilla_event_reference/play	/en-US/docs/Web/API/HTMLMediaElement/play_event
 /en-US/docs/DOM/Mozilla_event_reference/playing	/en-US/docs/Web/API/HTMLMediaElement/playing_event
-/en-US/docs/DOM/Mozilla_event_reference/pointerlockchange	/en-US/docs/Web/API/Document/pointerlockchange_event
-/en-US/docs/DOM/Mozilla_event_reference/pointerlockerror	/en-US/docs/Web/API/Document/pointerlockerror_event
+/en-US/docs/DOM/Mozilla_event_reference/pointerlockchange	/en-US/docs/Web/API/Element/pointerlockchange_event
+/en-US/docs/DOM/Mozilla_event_reference/pointerlockerror	/en-US/docs/Web/API/Element/pointerlockerror_event
 /en-US/docs/DOM/Mozilla_event_reference/popstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/DOM/Mozilla_event_reference/progress	/en-US/docs/Web/API/XMLHttpRequest/progress_event
 /en-US/docs/DOM/Mozilla_event_reference/ratechange	/en-US/docs/Web/API/HTMLMediaElement/ratechange_event
@@ -6266,8 +6266,8 @@
 /en-US/docs/Mozilla_event_reference/pause	/en-US/docs/Web/API/HTMLMediaElement/pause_event
 /en-US/docs/Mozilla_event_reference/play	/en-US/docs/Web/API/HTMLMediaElement/play_event
 /en-US/docs/Mozilla_event_reference/playing	/en-US/docs/Web/API/HTMLMediaElement/playing_event
-/en-US/docs/Mozilla_event_reference/pointerlockchange	/en-US/docs/Web/API/Document/pointerlockchange_event
-/en-US/docs/Mozilla_event_reference/pointerlockerror	/en-US/docs/Web/API/Document/pointerlockerror_event
+/en-US/docs/Mozilla_event_reference/pointerlockchange	/en-US/docs/Web/API/Element/pointerlockchange_event
+/en-US/docs/Mozilla_event_reference/pointerlockerror	/en-US/docs/Web/API/Element/pointerlockerror_event
 /en-US/docs/Mozilla_event_reference/popstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Mozilla_event_reference/progress	/en-US/docs/Web/API/XMLHttpRequest/progress_event
 /en-US/docs/Mozilla_event_reference/ratechange	/en-US/docs/Web/API/HTMLMediaElement/ratechange_event
@@ -7949,11 +7949,14 @@
 /en-US/docs/Web/API/Document/pointerdown_event	/en-US/docs/Web/API/Element/pointerdown_event
 /en-US/docs/Web/API/Document/pointerenter_event	/en-US/docs/Web/API/Element/pointerenter_event
 /en-US/docs/Web/API/Document/pointerleave_event	/en-US/docs/Web/API/Element/pointerleave_event
+/en-US/docs/Web/API/Document/pointerlockchange_event	/en-US/docs/Web/API/Element/pointerlockchange_event
+/en-US/docs/Web/API/Document/pointerlockerror_event	/en-US/docs/Web/API/Element/pointerlockerror_event
 /en-US/docs/Web/API/Document/pointermove_event	/en-US/docs/Web/API/Element/pointermove_event
 /en-US/docs/Web/API/Document/pointerout_event	/en-US/docs/Web/API/Element/pointerout_event
 /en-US/docs/Web/API/Document/pointerover_event	/en-US/docs/Web/API/Element/pointerover_event
 /en-US/docs/Web/API/Document/pointerup_event	/en-US/docs/Web/API/Element/pointerup_event
 /en-US/docs/Web/API/Document/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
+/en-US/docs/Web/API/Document/selectstart_event	/en-US/docs/Web/API/Node/selectstart_event
 /en-US/docs/Web/API/Document/timeline/currentTime	/en-US/docs/Web/API/AnimationTimeline/currentTime
 /en-US/docs/Web/API/Document/touchcancel_event	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/API/Document/touchend_event	/en-US/docs/Web/API/Element/touchend_event
@@ -8049,7 +8052,6 @@
 /en-US/docs/Web/API/Element/ongotpointercapture	/en-US/docs/Web/API/Element/gotpointercapture_event
 /en-US/docs/Web/API/Element/onlostpointercapture	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/Element/onwheel	/en-US/docs/Web/API/Element/wheel_event
-/en-US/docs/Web/API/Element/pointerlockchange_event	/en-US/docs/Web/API/Document/pointerlockchange_event
 /en-US/docs/Web/API/Element/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/Element/select_event	/en-US/docs/Web/API/HTMLInputElement/select_event
 /en-US/docs/Web/API/Element/tabStop	/en-US/docs/Web/API/ShadowRoot/delegatesFocus
@@ -8300,7 +8302,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onsecuritypolicyviolation	/en-US/docs/Web/API/Element/securitypolicyviolation_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselect	/en-US/docs/Web/API/HTMLInputElement/select_event
 /en-US/docs/Web/API/GlobalEventHandlers/onselectionchange	/en-US/docs/Web/API/HTMLInputElement/selectionchange_event
-/en-US/docs/Web/API/GlobalEventHandlers/onselectstart	/en-US/docs/Web/API/Document/selectstart_event
+/en-US/docs/Web/API/GlobalEventHandlers/onselectstart	/en-US/docs/Web/API/Node/selectstart_event
 /en-US/docs/Web/API/GlobalEventHandlers/onslotchange	/en-US/docs/Web/API/HTMLSlotElement/slotchange_event
 /en-US/docs/Web/API/GlobalEventHandlers/onsubmit	/en-US/docs/Web/API/HTMLFormElement/submit_event
 /en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel	/en-US/docs/Web/API/Element/touchcancel_event
@@ -8469,6 +8471,7 @@
 /en-US/docs/Web/API/HTMLMediaElement/Web_audio:_ended_event	/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event
 /en-US/docs/Web/API/HTMLMediaElement/mcs_ended_event	/en-US/docs/Web/API/MediaStreamTrack/ended_event
 /en-US/docs/Web/API/HTMLMediaElement/onencrypted	/en-US/docs/Web/API/HTMLMediaElement
+/en-US/docs/Web/API/HTMLMediaElement/onerror	/en-US/docs/Web/API/HTMLMediaElement/error_event
 /en-US/docs/Web/API/HTMLMediaElement/onwaitingforkey	/en-US/docs/Web/API/HTMLMediaElement
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
@@ -11604,8 +11607,8 @@
 /en-US/docs/Web/Events/pointerdown	/en-US/docs/Web/API/Element/pointerdown_event
 /en-US/docs/Web/Events/pointerenter	/en-US/docs/Web/API/Element/pointerenter_event
 /en-US/docs/Web/Events/pointerleave	/en-US/docs/Web/API/Element/pointerleave_event
-/en-US/docs/Web/Events/pointerlockchange	/en-US/docs/Web/API/Document/pointerlockchange_event
-/en-US/docs/Web/Events/pointerlockerror	/en-US/docs/Web/API/Document/pointerlockerror_event
+/en-US/docs/Web/Events/pointerlockchange	/en-US/docs/Web/API/Element/pointerlockchange_event
+/en-US/docs/Web/Events/pointerlockerror	/en-US/docs/Web/API/Element/pointerlockerror_event
 /en-US/docs/Web/Events/pointermove	/en-US/docs/Web/API/Element/pointermove_event
 /en-US/docs/Web/Events/pointerout	/en-US/docs/Web/API/Element/pointerout_event
 /en-US/docs/Web/Events/pointerover	/en-US/docs/Web/API/Element/pointerover_event
@@ -11632,7 +11635,7 @@
 /en-US/docs/Web/Events/select	/en-US/docs/Web/API/HTMLInputElement/select_event
 /en-US/docs/Web/Events/selectedcandidatepairchange	/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event
 /en-US/docs/Web/Events/selectionchange	/en-US/docs/Web/API/HTMLInputElement/selectionchange_event
-/en-US/docs/Web/Events/selectstart	/en-US/docs/Web/API/Document/selectstart_event
+/en-US/docs/Web/Events/selectstart	/en-US/docs/Web/API/Node/selectstart_event
 /en-US/docs/Web/Events/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/Events/shippingoptionchange	/en-US/docs/Web/API/PaymentRequest/shippingoptionchange_event
 /en-US/docs/Web/Events/show	/en-US/docs/Web/API/Element/show_event
@@ -12429,8 +12432,8 @@
 /en-US/docs/Web/Reference/Events/pause	/en-US/docs/Web/API/HTMLMediaElement/pause_event
 /en-US/docs/Web/Reference/Events/play	/en-US/docs/Web/API/HTMLMediaElement/play_event
 /en-US/docs/Web/Reference/Events/playing	/en-US/docs/Web/API/HTMLMediaElement/playing_event
-/en-US/docs/Web/Reference/Events/pointerlockchange	/en-US/docs/Web/API/Document/pointerlockchange_event
-/en-US/docs/Web/Reference/Events/pointerlockerror	/en-US/docs/Web/API/Document/pointerlockerror_event
+/en-US/docs/Web/Reference/Events/pointerlockchange	/en-US/docs/Web/API/Element/pointerlockchange_event
+/en-US/docs/Web/Reference/Events/pointerlockerror	/en-US/docs/Web/API/Element/pointerlockerror_event
 /en-US/docs/Web/Reference/Events/popstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/Reference/Events/progress	/en-US/docs/Web/API/XMLHttpRequest/progress_event
 /en-US/docs/Web/Reference/Events/ratechange	/en-US/docs/Web/API/HTMLMediaElement/ratechange_event

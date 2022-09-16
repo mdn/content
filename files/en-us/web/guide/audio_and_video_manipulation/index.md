@@ -38,9 +38,18 @@ For example, let's process a video to display it in greyscale. In this case, we'
 We can set up our video player and `<canvas>` element like this:
 
 ```html
-<video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+<video
+  id="my-video"
+  controls="true"
+  width="480"
+  height="270"
+  crossorigin="anonymous">
+  <source
+    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 
 <canvas id="my-canvas" width="480" height="270"></canvas>
@@ -126,9 +135,10 @@ Note that the `playbackRate` property works with both `<audio>` and `<video>`, b
 #### HTML
 
 ```html
-<video id="my-video" controls
-  src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
-</video>
+<video
+  id="my-video"
+  controls
+  src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
 ```
 
 #### JavaScript
@@ -142,8 +152,12 @@ myVideo.playbackRate = 2;
 
 ```html hidden
 <video id="my-video" controls="true" width="480" height="270">
-  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+  <source
+    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -151,7 +165,8 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 const myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea>
+myVideo.playbackRate = 2;</textarea
+>
 ```
 
 ```js hidden
@@ -203,9 +218,7 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 #### HTML
 
 ```html
-<video id="my-video" controls
-  src="myvideo.mp4" type="video/mp4">
-</video>
+<video id="my-video" controls src="myvideo.mp4" type="video/mp4"></video>
 ```
 
 #### JavaScript
@@ -226,9 +239,18 @@ filter.gain.value = 25;
 #### Editable example
 
 ```html hidden
-<video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+<video
+  id="my-video"
+  controls="true"
+  width="480"
+  height="270"
+  crossorigin="anonymous">
+  <source
+    src="https://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="https://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />

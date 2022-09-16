@@ -93,16 +93,13 @@ The resulting HTML looks like this:
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
@@ -133,22 +130,18 @@ Let's add a little bit of code to our example so we can examine the data generat
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-           name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
-    <input type="radio" id="contactChoice2"
-           name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
-    <input type="radio" id="contactChoice3"
-           name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
     <button type="submit">Submit</button>
   </div>
 </form>
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 Then we add some [JavaScript](/en-US/docs/Web/JavaScript) to set up an event listener on the {{domxref("HTMLFormElement/submit_event", "submit")}} event, which is sent when the user clicks the "Submit" button:
@@ -197,16 +190,18 @@ To make a radio button selected by default, you include `checked` attribute, as 
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email" checked>
+    <input
+      type="radio"
+      id="contactChoice1"
+      name="contact"
+      value="email"
+      checked />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
@@ -240,16 +235,18 @@ The following example shows a slightly more thorough version of the example we'v
   <fieldset>
     <legend>Please select your preferred contact method:</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
       <label for="contactChoice1">Email</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="phone">
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
       <label for="contactChoice2">Phone</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="mail">
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
       <label for="contactChoice3">Mail</label>
     </div>
     <div>

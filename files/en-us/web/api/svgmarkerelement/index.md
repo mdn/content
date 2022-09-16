@@ -75,9 +75,14 @@ The following SVG will be referenced in the examples.
 ```html
 <svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-        markerWidth="6" markerHeight="6"
-        orient="90">
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="5"
+      refY="5"
+      markerWidth="6"
+      markerHeight="6"
+      orient="90">
       <path d="M 0 0 L 10 5 L 0 10 z" />
     </marker>
   </defs>

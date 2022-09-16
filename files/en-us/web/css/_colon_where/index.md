@@ -73,30 +73,48 @@ Take the following HTML:
 <article>
   <h2>:is()-styled links</h2>
   <section class="is-styling">
-    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.</p>
+    <p>
+      Here is my main content. This
+      <a href="https://mozilla.org">contains a link</a>.
+    </p>
   </section>
 
   <aside class="is-styling">
-    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.</p>
+    <p>
+      Here is my aside content. This
+      <a href="https://developer.mozilla.org">also contains a link</a>.
+    </p>
   </aside>
 
   <footer class="is-styling">
-    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.</p>
+    <p>
+      This is my footer, also containing
+      <a href="https://github.com/mdn">a link</a>.
+    </p>
   </footer>
 </article>
 
 <article>
   <h2>:where()-styled links</h2>
   <section class="where-styling">
-    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.</p>
+    <p>
+      Here is my main content. This
+      <a href="https://mozilla.org">contains a link</a>.
+    </p>
   </section>
 
   <aside class="where-styling">
-    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.</p>
+    <p>
+      Here is my aside content. This
+      <a href="https://developer.mozilla.org">also contains a link</a>.
+    </p>
   </aside>
 
   <footer class="where-styling">
-    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.</p>
+    <p>
+      This is my footer, also containing
+      <a href="https://github.com/mdn">a link</a>.
+    </p>
   </footer>
 </article>
 ```

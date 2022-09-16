@@ -198,7 +198,7 @@ The HTML snippet below actually handles displaying the media itself.
 
 ```html
 <video controls autoplay src="video.webm">
- <track default src="track.vtt">
+  <track default src="track.vtt" />
 </video>
 ```
 

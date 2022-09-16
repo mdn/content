@@ -47,7 +47,13 @@ svg {
 
   <!-- Here the yellow rectangle is not displayed -->
   <rect x="120" y="0" width="100" height="100" fill="skyblue"></rect>
-  <rect x="140" y="20" width="60" height="60" fill="yellow" display="none"></rect>
+  <rect
+    x="140"
+    y="20"
+    width="60"
+    height="60"
+    fill="yellow"
+    display="none"></rect>
 </svg>
 ```
 
