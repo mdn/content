@@ -92,7 +92,7 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
     - {{domxref("SVGAnimationElement/beginEvent_event", "beginEvent")}}
     - {{domxref("SVGAnimationElement/endEvent_event", "endEvent")}}
     - {{domxref("SVGAnimationElement/repeatEvent_event", "repeatEvent")}}
-    
+
     An optional offset value as defined in `<offset-value>` can be appended.
 
 - `<repeat-value>`
