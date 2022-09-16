@@ -36,7 +36,6 @@ getContext(contextType, contextAttributes)
 
   - : A string containing the context identifier defining the drawing
     context associated to the canvas. Possible values are:
-  
     - `"2d"`, leading to the creation of a
       {{domxref("CanvasRenderingContext2D")}} object representing a two-dimensional
       rendering context.
@@ -80,7 +79,6 @@ getContext(contextType, contextAttributes)
       - : Specifies the color space of the rendering context. Possible values are:
         - `"srgb"` {{default_inline}}
         - `"display-p3"`
-     
     - `desynchronized`
       - : A boolean value that hints the user agent
         to reduce the latency by desynchronizing the canvas paint cycle from the event
@@ -194,4 +192,4 @@ Now you have the [2D rendering context](/en-US/docs/Web/API/CanvasRenderingConte
 - Available rendering contexts: {{domxref("CanvasRenderingContext2D")}},
   {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and
   {{domxref("ImageBitmapRenderingContext")}}.
- - Available colorspaces: [sRGB color space](https://en.wikipedia.org/wiki/SRGB) and [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3) 
+ - Available colorspaces: [sRGB color space](https://en.wikipedia.org/wiki/SRGB) and [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3)
