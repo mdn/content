@@ -139,7 +139,7 @@ Often times you will want to have your first line of CSS be this `@layer` declar
 
 If that is the first line of all of a site's CSS, the layer order will be ` theme, layout, utilities`. If layers have already been created, as long as these name aren't duplicative, the three are added to the end of the list of layers. If they are duplicative, for example, if the `layout` layer was already created thru `@layer` block at-rule assignment or `@import`and is the only existing layer, two new layers will be created and the order of layers will be `layout`, `theme` and `utitlities`, in that order.  
 
-### @layer  block at-rule assignment
+### @layer block at-rule assignment
 
 Layers can be created thru @layer block at-rule assignment when it is the first time the layer name is set or if no name is mentioned. 
 
@@ -203,17 +203,19 @@ We now have a total of five layers, `layout, <anonymous(01)>, theme, utilities, 
 
 If we add some CSS, reusing an existing layer name, the CSS gets appended to the already existing layer. It does not create a new layer:
 
-In the following interactive example, we assign styles to two layers, creating them and naming them in the process. Because they already exist, declaring them on the last line does nothing.
+In the following interactive example, we assign styles to two layers, creating them and naming them in the process. Because they already exist, being created when first used, declaring them on the last line does nothing.
 
-{{EmbedGHLiveSample("css-examples/learn/layers/basic-cascade.html", '100%', 500)}}
+{{EmbedGHLiveSample("css-examples/learn/layers/layer-order.html", '100%', 500)}}
  
 Try moving the last line, the `@layer site, page;` to make it the first line. What happens?
+
+#### @layer creation and media queries
  
 If you define a layer using [media](​​/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) or [feature](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries) queries, and the media is not a match or the feature is not supported, the layer is not created. In the following example, we create the site `layer` only in wider browsers. We then assign styles to the `page` and `site` layers, in that order.
  
 {{EmbedGHLiveSample("css-examples/learn/layers/media-order.html", '100%', 500)}}
  
-If you are on a wide screen, the `site` layer was declared in the first line, meaning `site` has less precedence than `page`. Otherwise, `site` has precedence over `page` as it was declared later on narrow screens. Changing the size of your browser will change the layer order.
+If you are on a wide screen, the `site` layer was declared in the first line, meaning `site` has less precedence than `page`. Otherwise, `site` has precedence over `page` as it was declared later on narrow screens. Depending on your device size, changing the size of your browser may change the layer order. If that doesn't work, try changing the `50em` in the media-query to `10em` or `100em`.
 
 ### @import
 
@@ -279,7 +281,7 @@ If we want to add to a named nested layer, we use dot-notation:
 }
 ```
 
-## Ordering layers
+## Ordering layers and precedence order
 
 Layer order matters. A lot. In the same way the cascade sorts by origin and importance, the cascade sorts each CSS declaration by origin layer and importance as well. 
 
@@ -291,53 +293,42 @@ Layer order matters. A lot. In the same way the cascade sorts by origin and impo
 
 The layer order precedence is the order in which layers are created. If the author styles have two declared layers, (assuming there are no layers in C.css), the order of precedence is as follows:
 
-1. firstLayer normal styles (A)
-2. secondLayer normal styles (B)
-3. unlayered normal styles (C)
+1. firstLayer normal styles (A.css)
+2. secondLayer normal styles (B.css)
+3. unlayered normal styles (C.css)
 4. inline normal styles 
 5. animating styles
-6. unlayered important styles (C)
-7. secondLayer important styles (B)
-8. firstLayer important styles (A)
+6. unlayered important styles (C.css)
+7. secondLayer important styles (B.css)
+8. firstLayer important styles (A.css)
 9. inline important styles
 10. transitioning styles
 
-The order of layers is the order in which the layers each first appeared for normal styles, with unlayered styles coming last. For normal styles, later declared layers take precedence over earlier declared layers, with unlayered styles being in a final implicit unnamed layer. This order is inverted for important styles. 
+The order of layers is the order in which the layers each first appeared for normal styles, with unlayered styles coming last. For normal styles, later declared layers take precedence over earlier declared layers, with unlayered styles being in a final implicit unnamed layer. This order is inverted for important styles. Then inline styles, declared using the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style) directly on an element, take precedence over layered and unlayered styles.
 
 {{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
+ 
+In this example, there are two named layers, unlayered styles, an inline styles.  
 
-In the above example, we have two layers, inline styles and unlayered styles. The style attribute sets the normal color and important background color. You'll note that normal inline styles override all layered and unlayered normal styles, and important inline styles override all layered and unlayered normal styles from the author origin. 
+The inline-styles, added with the `style` attribute, sets a normal `color` and an important `background-color`. Normal inline styles override all layered and unlayered normal styles. Important inline styles override all layered and unlayered normal and important author styles. There is no way for author styles to override important inline styles.
 
-The normal `text-decoration` and important `box-shadow` are not set inline. You'll note normal unlayered styles override all normal layered styles. With important styles, however, the precedence order is reversed: unlayered important styles have lower precedence than layered styles.
+The normal `text-decoration` and important `box-shadow` are not part of the `style` inline styles and can therefore be overridden. For normal non-inline styles, unlayered styles have precedence. For important styles, layer order matters! While normal unlayered styles override all normal styles set in a layer, with important styles, the precedence order is reversed; unlayered important styles have lower precedence than layered styles.
 
-There are two styles that are only included within the layers: `font-style` with normal importance and `font-weight` set as important. For normal styles, B overrides A, and for normal styles later layers have precedence over earlier layers. As the order of precedence is reversed for important styles, the first declared layer A has precedence over B.
+The two styles declared only within layers are `font-style`, with normal importance, and `font-weight` with an `!important` flag. For normal styles, the B layer, declared last, overrides styles in the earlier declared layer A.  For normal styles, later layers have precedence over earlier layers. The order of precedence is reversed for important styles. For the important `font-weight` declarations, layer A, being declared first, has precedence over the last declared layer B.
 
-You can reverse the layer order by changing the first line from `@layer A, B;`, to `@layer B, A;`. Which styles get changed by this, and which stay the same? Why?
+You can reverse the layer order by changing the first line from `@layer A, B;`, to `@layer B, A;`. Try that. Which styles get changed by this, and which stay the same? Why?
 
 The order of layers is set by the order in which the layers appear in your CSS. In our first line, we declared layers without assigning any styles using `@layer` followed by the names of our layers, ending with a semi-colon. Had we omitted this line, the results would have been the same. Why? We assigned styles rules in named @layer blocks in the order A then B. The two layers were created in that first line. Had they not been, these rule blocks would have created them, in that order. 
 
 We included that first line for two reasons: first, so you could easily edit the line and switch the order, and second, because often times you'll find declaring the order layer up front to be the best practice for your layer order management.
 
-# END OF NEW CONTENT. STILL A DRAFT
-
-XXX NOTES: 
-
-
-
- The important thing to note is that browsers only consider layers after determining [cascade origin and importance](/en-US/docs/Web/CSS/Cascade), and only consider specificity after determining cascade layers, origin and importance. In other words, for competing property declarations, if the competition is between origins rather than within, layers don't come into play. And, only if there are competing property declarations within a single layer does specificity become relevant and compared between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/@layer) that has precedence for the property. 
-
-
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade](/en-US/docs/Learn/CSS/Building_blocks/cascade_layers/tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Cascade, Task 2](/en-US/docs/Learn/CSS/Building_blocks/Cascade_tasks#task_2).
 
 ## Summary
 
-If you understood most of this article, then well done — you've started getting familiar with the fundamental mechanics of CSS. Next up, we'll look at [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) in detail.
-
-If you didn't fully understand the cascade, specificity, and inheritance, then don't worry! This is definitely the most complicated thing we've covered so far in the course and is something that even professional web developers sometimes find tricky. We'd advise that you return to this article a few times as you continue through the course, and keep thinking about it.
-
-Refer back here if you start to come across strange issues with styles not applying as expected. It could be a specificity issue.
+If you understood most of this article, then well done — you're now familiar with the fundamental mechanics of CSS cascade layers. Next up, we'll look at [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) in detail.
 
 {{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
