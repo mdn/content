@@ -49,16 +49,16 @@ The C in CSS stands for "Cascading." It is the method by which styles cascade to
 
   1. **Relevance:** Find all the declaration blocks with a selector match for each element.
   2. **Importance:** Sort rules based on if they are normal or important. Important styles are those that have the [`!important`](/en-US/docs/Web/CSS/important) flag set.
-  3. **Origin:** Sort rules by author, user, or user-agent origin and by importance 
-  4. **Layers:** Within each origin importance bucket, sort by cascade layer. The layer order for normal declarations is from first layer created to last, followed by unlayered normal styles. This order is inverted for important styles. 
+  3. **Origin:** Sort rules by author, user, or user-agent origin and by importance
+  4. **Layers:** Within each origin importance bucket, sort by cascade layer. The layer order for normal declarations is from first layer created to last, followed by unlayered normal styles. This order is inverted for important styles.
   5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/Specificity). <!-- When @scope is supported, uncomment: "6. Scope: If there is a specificity tie, compare element [`@scope`](/en-US/docs/Web/CSS/@scope), if relevant and used." Supported in Chrome 105. Not yet documented -->
   6. **Proximity:** When two selectors in the origin layer with precendence have the same specificity, the property value from the last declared highest specificity selector wins.
 
-For each step, only the declarations "still in the running” move on to "compete” in the next step. If only one declaration is in the running, the following steps are moot.
+For each step, only the declarations "still in the running” move on to "compete" in the next step. If only one declaration is in the running, the following steps are moot.
 
 ### Origin and cascade
 
-There are three [cascade origin types](/en-US/docs/Web/CSS/cascade#origin_types): user-agent stylesheets, user stylesheets, and author stylesheets. The browser sorts each declaration by origin and importance into size origin buckets. There are eight levels of precedence: the six origin buckets, properties that are transitioning, and properties that are animating. The order of precedence goes from normal user-agent styles, which have the lowest precedence, to styles within currently applied animations, to important user-agent styles, and styles being transitioned, which have the highest precedence: 
+There are three [cascade origin types](/en-US/docs/Web/CSS/Cascade#origin_types): user-agent stylesheets, user stylesheets, and author stylesheets. The browser sorts each declaration by origin and importance into size origin buckets. There are eight levels of precedence: the six origin buckets, properties that are transitioning, and properties that are animating. The order of precedence goes from normal user-agent styles, which have the lowest precedence, to styles within currently applied animations, to important user-agent styles, and styles being transitioned, which have the highest precedence:
 
 1. user-agent normal styles
 2. user normal styles
@@ -71,7 +71,7 @@ There are three [cascade origin types](/en-US/docs/Web/CSS/cascade#origin_types)
 
 The "user-agent" is the browser. The "user" is the site visitor. The "author" is you, the developer. Styles declared directly on an element with the {{HTMLElement('style')}} element are author styles. Ignoring animating and transitioning styles for the moment, user-agent normal styles have the lowest precedence; user-agent important styles the greatest.
 
-For each property, the declaration that "wins” is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with greatest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins. This will be reiterated a few times as this fundamental concept really needs to be understood.
+For each property, the declaration that "wins" is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with the greatest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins. This will be reiterated a few times as this fundamental concept really needs to be understood.
 
 In the below example, we have two links: The first has no author styles applied, so all user-agent styles are applied. The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of `0-0-0`. The reason author styles "win" is because when there are conflicting styles from different origins (layers aren't in play yet), the rules from the origin with precedence are applied, no matter what the specificity is in the origin that doesn’t have precedence.  
 
@@ -83,7 +83,7 @@ Origin precedence always beats selector specificity. If an element property is s
 
 One last thing to note before moving on: order of appearance, or _proximity_ only becomes relevant when the competing declarations in the origin having precedence have the same specificity.
 
-We now understand "cascade origin precedence,” but what is "cascade layer precedence”? We will answer that question by addressing what cascade layers are, how they are ordered, and how styles are assigned to cascade layers. We'll cover regular layers, nested layers, and anonymous layers. Let's first discuss what cascade layers are and what issues they solve.
+We now understand "cascade origin precedence," but what is "cascade layer precedence"? We will answer that question by addressing what cascade layers are, how they are ordered, and how styles are assigned to cascade layers. We'll cover regular layers, nested layers, and anonymous layers. Let's first discuss what cascade layers are and what issues they solve.
 
 ## The what and why of cascade layers
 
