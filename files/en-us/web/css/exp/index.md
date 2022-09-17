@@ -38,7 +38,7 @@ The `exp(number)` function accepts only one value as its parameter.
 
 ### Return value
 
-Returns A {{cssxref("&lt;number&gt;")}} of `e` raised to the power of a `number`.
+Returns a {{cssxref("&lt;number&gt;")}} of `e` raised to the power of a `number`.
 
 ### Formal syntax
 
