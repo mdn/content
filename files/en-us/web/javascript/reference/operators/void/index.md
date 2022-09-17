@@ -48,7 +48,7 @@ void (2 === '2'); // void (2 === '2'), returns undefined
 ### Immediately Invoked Function Expressions
 
 When using an [immediately-invoked function expression](/en-US/docs/Glossary/IIFE),
-`void` can be used to force the `function` keyword
+`void`, or any other [unary operator](en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#unary_operators) can be used to force the `function` keyword
 to be treated as an expression instead of a declaration.
 
 ```js
