@@ -28,10 +28,10 @@ A {{DOMxRef("Storage")}} object which can be used to access the current origin's
 ### Exceptions
 
 - `SecurityError`
+
   - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the `file:` or `data:` schemes, for example). For example, the user may have their browser configured to deny permission to persist data for the specified origin.
 
-- `Uncaught DOMException`
-  - : The request is blocked by user's browser privacy settings. In some browsers, blocking cookies results in disabling many APIs that persist user session data such as localStorage and [sessionStorage](/en-us/web/api/window/sessionStorage).
+    Note that this can happen if the user has blocked cookies.
 
 ## Description
 
