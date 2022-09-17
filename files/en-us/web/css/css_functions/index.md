@@ -130,7 +130,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
 - {{cssxref("sqrt", "sqrt()")}} {{Experimental_Inline}}
   - : An exponential function that returns the square root of a number.
 - {{cssxref("hypot", "hypot()")}} {{Experimental_Inline}}
-  - : An exponential function that returns the square root of a number.
+  - : An exponential function that returns the square root of the sum of squares of its arguments. 
 - {{cssxref("log", "log()")}} {{Experimental_Inline}}
   - : An exponential function that returns the logarithm of a number.
 - {{cssxref("exp", "exp()")}} {{Experimental_Inline}}
