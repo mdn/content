@@ -99,7 +99,7 @@ You won't use this file until [later](/en-US/docs/Learn/Tools_and_testing/Client
 Now that you know what an `item` is, you can give your application some items by adding them to the TypeScript file, `app.component.ts`.
 In `app.component.ts`, replace the contents with the following:
 
-```ts
+```js
 import { Component } from '@angular/core';
 
 @Component({
