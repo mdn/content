@@ -205,7 +205,7 @@ Instead, you're going to have to use `git` or one of the other
    that `git` has assigned to your fork (`https://github.com/octocat/content`).
 
 5. Once you've created your local clone, there's no need to do that
-   again the next time you want to contribute. However, each time 
+   again the next time you want to contribute. However, each time
    you start a new chunk of work make sure you update your local clone.
    The following checks out your local clone's `main` branch, fetches the
    the latest content from the `main` branch of the `mdn` repository and merges

@@ -183,7 +183,7 @@ Adding onto the sun animation in the previous example, we add a second animation
 
 Here is a sun that rises and falls on a lightblue background. The sun
 gradually rotates through a rainbow of colors. The timing of the sun's
-position and color are independent. 
+position and color are independent.
 
 ```html
 <div class="sun"></div>
