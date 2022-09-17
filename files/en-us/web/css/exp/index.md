@@ -29,7 +29,7 @@ width: calc(100px * exp(0));  /* 100px * 1 = 100px */
 width: calc(100px * exp(1));  /* 100px * 2.718281828459045 = 217px */
 ```
 
-### Parameters
+### Parameter
 
 The `exp(number)` function accepts only one value as its parameter.
 
