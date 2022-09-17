@@ -162,13 +162,11 @@ function Rectangle() {
   Shape.call(this); // call super constructor.
 }
 
-// subclass extends superclass
-Rectangle.prototype = Object.create(Shape.prototype);
-
-//If you don't set Rectangle.prototype.constructor to Rectangle,
-//it will take the prototype.constructor of Shape (parent).
-//To avoid that, we set the prototype.constructor to Rectangle (child).
-Rectangle.prototype.constructor = Rectangle;
+// This reassigns the prototype and takes care of updating the constructor property of the child prototype. 
+// This method is ill performing because the prototype is not set when the object is created. Many engines 
+// optimize the prototype and try to guess the location of the method in memory when calling an instance in advance; 
+// but setting the prototype dynamically disrupts all those optimizations.
+Object.setPrototypeOf(Rectangle.prototype, Shape.prototype)
 
 const rect = new Rectangle();
 
