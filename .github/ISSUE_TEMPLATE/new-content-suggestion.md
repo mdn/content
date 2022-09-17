@@ -8,7 +8,7 @@ title: "Content suggestion: <TITLE OF SUGGESTION>"
 
 ## What is the new suggestion?
 
-<!-- include a short description of the content work suggestion  -->
+<!-- include a short description of the content work suggestion -->
 
 ## Why is it important or useful?
 
@@ -26,4 +26,4 @@ Does the content help make the web more ethical?
 ## Other supporting information
 
 <!-- include any other useful supporting information, such as spec URL,
-explainer URL, link to further supporting information  -->
+explainer URL, link to further supporting information -->

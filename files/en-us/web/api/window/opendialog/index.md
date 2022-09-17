@@ -134,7 +134,7 @@ Inside the dialog code, you can set the properties as follows:
 
 ```js
 const retVals = window.arguments[2];
-retVals.address  = enteredAddress;
+retVals.address = enteredAddress;
 retVals.delivery = "immediate";
 ```
 

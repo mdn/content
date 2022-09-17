@@ -26,9 +26,9 @@ The **`mathbackground`** [global attribute](/en-US/docs/Web/MathML/Global_attrib
 <math mathbackground="#bbff00"> <!-- Fully opaque -->
 <math mathbackground="#bf0"> <!-- Fully opaque shorthand -->
 <math mathbackground="#11ffee00"> <!-- Fully transparent -->
-<math mathbackground="#1fe0"> <!-- Fully transparent shorthand  -->
+<math mathbackground="#1fe0"> <!-- Fully transparent shorthand -->
 <math mathbackground="#11ffeeff"> <!-- Fully opaque -->
-<math mathbackground="#1fef"> <!-- Fully opaque shorthand  -->
+<math mathbackground="#1fef"> <!-- Fully opaque shorthand -->
 
 <!-- RGB value -->
 <math mathbackground="rgb(255, 255, 128)"> <!-- Fully opaque -->

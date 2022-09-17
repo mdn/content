@@ -180,7 +180,7 @@ First, strict mode prohibits [`with`](/en-US/docs/Web/JavaScript/Reference/State
 const x = 17;
 with (obj) { // !!! syntax error
   // If this weren't strict mode, would this be const x, or
-  // would it instead be obj.x?  It's impossible in general
+  // would it instead be obj.x? It's impossible in general
   // to say without running the code, so the name can't be
   // optimized.
   x;

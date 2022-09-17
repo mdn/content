@@ -176,7 +176,7 @@ Try our example [table-layout.html](https://mdn.github.io/learning-area/accessib
       <h1 align="center">Header</h1>
     </td>
   </tr>
-  <!-- nav menu row  -->
+  <!-- nav menu row -->
   <tr id="nav" bgcolor="#ffffff">
     <td width="200">
       <a href="#" align="center">Home</a>

@@ -169,7 +169,7 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
 
    ```css
    html {
-     font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
+     font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high */
      font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google Fonts */
    }
    ```

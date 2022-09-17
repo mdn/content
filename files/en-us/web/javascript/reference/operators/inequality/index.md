@@ -67,7 +67,7 @@ the [strict inequality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_in
 ### Comparison with type conversion
 
 ```js
-"1" !=  1;            // false
+"1" != 1;             // false
 1 != "1";             // false
 0 != false;           // false
 0 != null;            // true

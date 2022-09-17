@@ -325,7 +325,7 @@ let pageloadtime = time.loadEventStart - time.navigationStart;
 The DNS lookup time is the time between [`domainLookupStart`](/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupStart) and [`domainLookupEnd`](/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupEnd). These are both available in both the `performanceTiming` and `performanceNavigationTiming` APIs.
 
 ```js
-const dns  = time.domainLookupEnd - time.domainLookupStart;
+const dns = time.domainLookupEnd - time.domainLookupStart;
 ```
 
 ### TCP
@@ -333,7 +333,7 @@ const dns  = time.domainLookupEnd - time.domainLookupStart;
 The time it takes for the [TCP](/en-US/docs/Glossary/TCP) handshake is the time between the connection start and connection end:
 
 ```js
-const tcp  = time.connectEnd - time.connectStart;
+const tcp = time.connectEnd - time.connectStart;
 ```
 
 ### SSL negotiation

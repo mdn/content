@@ -453,7 +453,7 @@ h1 {
   font-size: 1.5em;
 }
 
-/* Handle specific elements nested in the DOM  */
+/* Handle specific elements nested in the DOM */
 div p,
 #id:first-line {
   background-color: red;

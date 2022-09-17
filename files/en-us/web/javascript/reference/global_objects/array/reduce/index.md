@@ -365,7 +365,7 @@ function p2(a) {
   });
 }
 
-// function 3  - will be wrapped in a resolved promise by .then()
+// function 3 - will be wrapped in a resolved promise by .then()
 function f3(a) {
   return a * 3;
 }
