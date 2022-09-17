@@ -46,7 +46,7 @@ Because HTML form control appearance may be quite different from a designer's sp
 This type of field is set using the value `email` for the {{htmlattrxref("type","input")}} attribute:
 
 ```html
-<input type="email" id="email" name="email">
+<input type="email" id="email" name="email" />
 ```
 
 When this {{htmlattrxref("type","input")}} is used, the user is required to type a valid email address into the field. Any other content causes the browser to display an error when the form is submitted. You can see this in action in the below screenshot.
@@ -56,7 +56,7 @@ When this {{htmlattrxref("type","input")}} is used, the user is required to type
 You can also use the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute in combination with the `email` input type to allow several email addresses to be entered in the same input (separated by commas):
 
 ```html
-<input type="email" id="email" name="email" multiple>
+<input type="email" id="email" name="email" multiple />
 ```
 
 On some devices — notably touch devices with dynamic keyboards like smart phones — a different virtual keypad might be presented that is more suitable for entering email addresses, including the `@` key. See the Firefox for Android keyboard screenshot below for an example:
@@ -82,7 +82,7 @@ Note that `a@b` is a valid email address according to the default provided const
 Search fields are intended to be used to create search boxes on pages and apps. This type of field is set by using the value `search` for the {{htmlattrxref("type","input")}} attribute:
 
 ```html
-<input type="search" id="search" name="search">
+<input type="search" id="search" name="search" />
 ```
 
 The main difference between a `text` field and a `search` field is how the browser styles its appearance. Often, `search` fields are rendered with rounded corners; they also sometimes display an "Ⓧ", which clears the field of any value when clicked. Additionally, on devices with dynamic keyboards, the keyboard's enter key may read "**search**", or display a magnifying glass icon.
@@ -98,7 +98,7 @@ Another worth-noting feature is that the values of a `search` field can be autom
 A special field for filling in phone numbers can be created using `tel` as the value of the {{htmlattrxref("type","input")}} attribute:
 
 ```html
-<input type="tel" id="tel" name="tel">
+<input type="tel" id="tel" name="tel" />
 ```
 
 When accessed via a touch device with a dynamic keyboard, most devices will display a numeric keypad when `type="tel"` is encountered, meaning this type is useful whenever a numeric keypad is useful, and doesn't just have to be used for telephone numbers.
@@ -116,7 +116,7 @@ As we mentioned earlier, the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern
 A special type of field for entering URLs can be created using the value `url` for the {{htmlattrxref("type","input")}} attribute:
 
 ```html
-<input type="url" id="url" name="url">
+<input type="url" id="url" name="url" />
 ```
 
 It adds special validation constraints to the field. The browser will report an error if no protocol (such as `http:`) is entered, or if the URL is otherwise malformed. On devices with dynamic keyboards, the default keyboard will often display some or all of the colon, period, and forward slash as default keys.
@@ -142,13 +142,13 @@ You can also use the `step` attribute to set the increment increase and decrease
 Let's look at some examples. The first one below creates a number control whose value is restricted to any value between `1` and `10`, and whose increase and decrease buttons change its value by `2`.
 
 ```html
-<input type="number" name="age" id="age" min="1" max="10" step="2">
+<input type="number" name="age" id="age" min="1" max="10" step="2" />
 ```
 
 The second one creates a number control whose value is restricted to any value between `0` and `1` inclusive, and whose increase and decrease buttons change its value by `0.01`.
 
 ```html
-<input type="number" name="change" id="pennies" min="0" max="1" step="0.01">
+<input type="number" name="change" id="pennies" min="0" max="1" step="0.01" />
 ```
 
 The `number` input type makes sense when the range of valid values is limited, for example a person's age or height. If the range is too large for incremental increases to make sense (such as USA ZIP codes, which range from `00001` to `99999`), the `tel` type might be a better option; it provides the numeric keypad while forgoing the number's spinner UI feature.
@@ -169,7 +169,14 @@ Let's look at the code behind the above example, so you can see how its done. Fi
 
 ```html
 <label for="price">Choose a maximum house price: </label>
-<input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+<input
+  type="range"
+  name="price"
+  id="price"
+  min="50000"
+  max="500000"
+  step="100"
+  value="250000" />
 <output class="price-output" for="price"></output>
 ```
 
@@ -180,12 +187,12 @@ One problem with sliders is that they don't offer any kind of visual feedback as
 To actually display the current value, and update it as it changed, you must use JavaScript, but this is relatively easy to do:
 
 ```js
-const price = document.querySelector('#price');
-const output = document.querySelector('.price-output');
+const price = document.querySelector("#price");
+const output = document.querySelector(".price-output");
 
 output.textContent = price.value;
 
-price.addEventListener('input', () => {
+price.addEventListener("input", () => {
   output.textContent = price.value;
 });
 ```
@@ -211,7 +218,7 @@ Let's look at the different available types in brief. Note that the usage of the
 [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local) creates a widget to display and pick a date with time with no specific time zone information.
 
 ```html
-<input type="datetime-local" name="datetime" id="datetime">
+<input type="datetime-local" name="datetime" id="datetime" />
 ```
 
 ### `month`
@@ -219,7 +226,7 @@ Let's look at the different available types in brief. Note that the usage of the
 [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month) creates a widget to display and pick a month with a year.
 
 ```html
-<input type="month" name="month" id="month">
+<input type="month" name="month" id="month" />
 ```
 
 ### `time`
@@ -227,7 +234,7 @@ Let's look at the different available types in brief. Note that the usage of the
 [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time) creates a widget to display and pick a time value. While time may _display_ in 12-hour format, the _value returned_ is in 24-hour format.
 
 ```html
-<input type="time" name="time" id="time">
+<input type="time" name="time" id="time" />
 ```
 
 ### `week`
@@ -237,7 +244,7 @@ Let's look at the different available types in brief. Note that the usage of the
 Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each year contains the first Thursday of that year — which may not include the first day of the year, or may include the last few days of the previous year.
 
 ```html
-<input type="week" name="week" id="week">
+<input type="week" name="week" id="week" />
 ```
 
 ### Constraining date/time values
@@ -246,7 +253,13 @@ All date and time controls can be constrained using the [`min`](/en-US/docs/Web/
 
 ```html
 <label for="myDate">When are you available this summer?</label>
-<input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate">
+<input
+  type="date"
+  name="myDate"
+  min="2013-06-01"
+  max="2013-08-31"
+  step="7"
+  id="myDate" />
 ```
 
 ## Color picker control
@@ -256,7 +269,7 @@ Colors are always a bit difficult to handle. There are many ways to express them
 A `color` control can be created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value `color`:
 
 ```html
-<input type="color" name="color" id="color">
+<input type="color" name="color" id="color" />
 ```
 
 When supported, clicking a color control will tend to display the operating system's default color picking functionality for you to actually make your choice with. The following screenshot taken on Firefox for macOS provides an example:

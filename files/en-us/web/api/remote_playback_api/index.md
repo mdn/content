@@ -35,7 +35,8 @@ The following example demonstrates a player with custom controls that supports r
 
 ```html
 <video id="videoElement" src="https://example.org/media.ext">
-<button id="deviceBtn" style="display: none;">Pick device</button>
+  <button id="deviceBtn" style="display: none;">Pick device</button>
+</video>
 ```
 
 The {{domxref("RemotePlayback.watchAvailability()")}} method is watches for available remote playback devices. If a device is available, use the callback to show the button.

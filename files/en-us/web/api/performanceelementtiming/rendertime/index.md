@@ -29,7 +29,11 @@ For text nodes this will be the **text rendering timestamp**. This is defined as
 In this example calling `entry.renderTime` returns the render time of the image element.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

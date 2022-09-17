@@ -208,7 +208,7 @@ Using `bind`, we will tell Svelte that any changes made to the `filter` prop in 
 
    ```html
    <script>
-     export let filter = 'all'
+     export let filter = "all";
    </script>
    ```
 
@@ -260,11 +260,11 @@ Our `Todo` component will receive a single `todo` object as a prop. Let's declar
    ```html
    <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
      {#each filterTodos(filter, todos) as todo (todo.id)}
-       <li class="todo">
-         <Todo {todo} />
-       </li>
+     <li class="todo">
+       <Todo {todo} />
+     </li>
      {:else}
-       <li>Nothing to do here!</li>
+     <li>Nothing to do here!</li>
      {/each}
    </ul>
    ```
@@ -387,11 +387,11 @@ The following gives you an idea of what the basic `if` block structure looks lik
 
 ```html
 <div class="stack-small">
-{#if editing}
+  {#if editing}
   <!-- markup for editing to-do: label, input text, Cancel and Save Button -->
-{:else}
+  {:else}
   <!-- markup for displaying to-do: checkbox, label, Edit and Delete Button -->
-{/if}
+  {/if}
 </div>
 ```
 
@@ -519,12 +519,10 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
    ```html
    {#each filterTodos(filter, todos) as todo (todo.id)}
-     <li class="todo">
-       <Todo {todo}
-         on:update={(e) => updateTodo(e.detail)}
-         on:remove={(e) => removeTodo(e.detail)}
-       />
-     </li>
+   <li class="todo">
+     <Todo {todo} on:update={(e) => updateTodo(e.detail)} on:remove={(e) =>
+     removeTodo(e.detail)} />
+   </li>
    ```
 
 4. Try your app again, and you should see that you can delete, add, edit, cancel editing of, and toggle completion status of to-dos. And our "x out of y items completed" status heading will now update appropriately when to-dos are completed.

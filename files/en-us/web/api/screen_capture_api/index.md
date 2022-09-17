@@ -87,7 +87,7 @@ The following dictionaries are defined by the Screen Capture API.
 {{Glossary("User agent", "User agents")}} that support Feature Policy (either using HTTP's {{HTTPHeader("Feature-Policy")}} header or the {{HTMLElement("iframe")}} attribute {{htmlattrxref("allow", "iframe")}}) can specify a desire to use the Screen Capture API using the policy control directive `display-capture`:
 
 ```html
-<iframe allow="display-capture" src="/some-other-document.html">
+<iframe allow="display-capture" src="/some-other-document.html">…</iframe>
 ```
 
 The default allow list is `self`, which lets the any content within the document use Screen Capture.

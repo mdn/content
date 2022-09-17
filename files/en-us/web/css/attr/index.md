@@ -18,6 +18,10 @@ browser-compat: css.types.attr
 
 The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), in which case the value of the attribute on the pseudo-element's originating element is returned.
 
+{{EmbedInteractiveExample("pages/tabbed/function-attr.html", "tabbed-shorter")}}
+
+## Syntax
+
 ```css
 /* Simple usage */
 attr(data-count);
@@ -34,8 +38,6 @@ attr(src url, "");
 attr(data-width px, inherit);
 attr(data-something, "default");
 ```
-
-## Syntax
 
 ### Values
 

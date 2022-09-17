@@ -35,8 +35,8 @@ radioNodeList.value = string
 
 ```html
 <form>
-  <label><input type="radio" name="color" value="blue">Blue</label>
-  <label><input type="radio" name="color" value="red">Red</label>
+  <label><input type="radio" name="color" value="blue" />Blue</label>
+  <label><input type="radio" name="color" value="red" />Red</label>
 </form>
 ```
 

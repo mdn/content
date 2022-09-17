@@ -41,10 +41,12 @@ triggers an animation to highlight them.
 
 ```html
 <ul>
-  <li>Strings
+  <li>
+    Strings
     <ul>
       <li>Cello</li>
-      <li>Violin
+      <li>
+        Violin
         <ul>
           <li>First Chair</li>
           <li>Second Chair</li>
@@ -52,7 +54,8 @@ triggers an animation to highlight them.
       </li>
     </ul>
   </li>
-  <li>Woodwinds
+  <li>
+    Woodwinds
     <ul>
       <li>Clarinet</li>
       <li>Oboe</li>

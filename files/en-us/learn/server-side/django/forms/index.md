@@ -58,9 +58,13 @@ The form is defined in HTML as a collection of elements inside `<form>…</form>
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -139,7 +143,36 @@ class RenewBookForm(forms.Form):
 
 In this case, we have a single [`DateField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#datefield) for entering the renewal date that will render in HTML with a blank value, the default label "_Renewal date:_", and some helpful usage text: "_Enter a date between now and 4 weeks (default 3 weeks)._" As none of the other optional arguments are specified the field will accept dates using the [input_formats](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#django.forms.DateField.input_formats): YYYY-MM-DD (2016-11-06), MM/DD/YYYY (02/26/2016), MM/DD/YY (10/25/16), and will be rendered using the default [widget](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#widget): [DateInput](https://docs.djangoproject.com/en/4.0/ref/forms/widgets/#django.forms.DateInput).
 
-There are many other types of form fields, which you will largely recognize from their similarity to the equivalent model field classes: [`BooleanField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#booleanfield), [`CharField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#charfield), [`ChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#choicefield), [`TypedChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#typedchoicefield), [`DateField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#datefield), [`DateTimeField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#datetimefield), [`DecimalField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#decimalfield), [`DurationField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#durationfield), [`EmailField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#emailfield), [`FileField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#filefield), [`FilePathField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#filepathfield), [`FloatField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#floatfield), [`ImageField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#imagefield), [`IntegerField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#integerfield), [`GenericIPAddressField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#genericipaddressfield), [`MultipleChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#multiplechoicefield), [`TypedMultipleChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#typedmultiplechoicefield), [`NullBooleanField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#nullbooleanfield), [`RegexField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#regexfield), [`SlugField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#slugfield), [`TimeField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#timefield), [`URLField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#urlfield), [`UUIDField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#uuidfield), [`ComboField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#combofield), [`MultiValueField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#multivaluefield), [`SplitDateTimeField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#splitdatetimefield), [`ModelMultipleChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#modelmultiplechoicefield), [`ModelChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#modelchoicefield).
+There are many other types of form fields, which you will largely recognize from their similarity to the equivalent model field classes:
+
+- [`BooleanField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#booleanfield)
+- [`CharField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#charfield)
+- [`ChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#choicefield)
+- [`TypedChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#typedchoicefield)
+- [`DateField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#datefield)
+- [`DateTimeField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#datetimefield)
+- [`DecimalField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#decimalfield)
+- [`DurationField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#durationfield)
+- [`EmailField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#emailfield)
+- [`FileField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#filefield)
+- [`FilePathField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#filepathfield)
+- [`FloatField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#floatfield)
+- [`ImageField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#imagefield)
+- [`IntegerField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#integerfield)
+- [`GenericIPAddressField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#genericipaddressfield)
+- [`MultipleChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#multiplechoicefield)
+- [`TypedMultipleChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#typedmultiplechoicefield)
+- [`NullBooleanField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#nullbooleanfield)
+- [`RegexField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#regexfield)
+- [`SlugField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#slugfield)
+- [`TimeField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#timefield)
+- [`URLField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#urlfield)
+- [`UUIDField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#uuidfield)
+- [`ComboField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#combofield)
+- [`MultiValueField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#multivaluefield)
+- [`SplitDateTimeField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#splitdatetimefield)
+- [`ModelMultipleChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#modelmultiplechoicefield)
+- [`ModelChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#modelchoicefield)
 
 The arguments that are common to most fields are listed below (these have sensible default values):
 
@@ -409,8 +442,13 @@ All that's left is the `\{{ form }}` template variable, which we passed to the t
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required>
-    <br>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
+    <br />
     <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
   </td>
 </tr>
@@ -423,14 +461,19 @@ If you were to enter an invalid date, you'd additionally get a list of the error
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-    <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required>
-      <br>
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+  </td>
 </tr>
 ```
 
@@ -595,7 +638,7 @@ Create the template file `locallibrary/catalog/templates/catalog/author_form.htm
     <table>
     \{{ form.as_table }}
     </table>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" />
   </form>
 {% endblock %}
 ```
@@ -615,7 +658,7 @@ The "delete" view expects to find a template named with the format \_`model_name
 
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" value="Yes, delete.">
+  <input type="submit" value="Yes, delete." />
 </form>
 
 {% endblock %}
