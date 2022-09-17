@@ -31,7 +31,7 @@ width: calc(100px * log(625, 5)); /* 100px * log5(625) =   100px * 4 = 400px */
 
 ### Parameter
 
-The `log(x, y)` function accepts two comma-separated values as its parameters.
+The `log(x, y?)` function accepts two comma-separated values as its parameters.
 
 - `x`
   - : A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the value to be logarithmed.
