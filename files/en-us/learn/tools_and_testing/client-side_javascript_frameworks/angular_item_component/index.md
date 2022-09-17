@@ -83,13 +83,13 @@ Add markup for managing items by replacing the placeholder content in `item.comp
   <input [id]="item.description" type="checkbox" (change)="item.done = !item.done" [checked]="item.done" />
   <label [for]="item.description">\{{item.description}}</label>
 
-  <div class="btn-wrapper" *ngIf="editable">
+  <div class="btn-wrapper" *ngIf="!editable">
     <button class="btn" (click)="editable = !editable">Edit</button>
     <button class="btn btn-warn" (click)="remove.emit()">Delete</button>
   </div>
 
   <!-- This section shows only if user clicks Edit button -->
-  <div *ngIf="!editable">
+  <div *ngIf="editable">
     <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
 
     <div class="btn-wrapper">
@@ -109,24 +109,24 @@ The next section explains how components share data in detail.
 The next two buttons for editing and deleting the current item are within a `<div>`.
 On this `<div>` is an `*ngIf`, a built-in Angular directive that you can use to dynamically change the structure of the DOM.
 
-This `*ngIf` means that if `editable` is `true`, this `<div>` is in the DOM. If `editable` is `false`, Angular removes this `<div>` from the DOM.
+This `*ngIf` means that if `editable` is `false`, this `<div>` is in the DOM. If `editable` is `true`, Angular removes this `<div>` from the DOM.
 
 ```html
-<div class="btn-wrapper" *ngIf="editable">
+<div class="btn-wrapper" *ngIf="!editable">
   <button class="btn" (click)="editable = !editable">Edit</button>
   <button class="btn btn-warn" (click)="remove.emit()">Delete</button>
 </div>
 ```
 
-When a user clicks the **Edit** button, `editable` becomes false, which removes this `<div>` and its children from the DOM.
+When a user clicks the **Edit** button, `editable` becomes true, which removes this `<div>` and its children from the DOM.
 If, instead of clicking **Edit**, a user clicks **Delete**, the `ItemComponent` raises an event that notifies the `AppComponent` of the deletion.
 
-An `*ngIf` is also on the next `<div>`, but is set to an `editable` value of `false`.
-In this case, if `editable` is `false`, Angular puts the `<div>` and its child `<input>` and `<button>` elements in the DOM.
+An `*ngIf` is also on the next `<div>`, but is set to an `editable` value of `true`.
+In this case, if `editable` is `true`, Angular puts the `<div>` and its child `<input>` and `<button>` elements in the DOM.
 
 ```html
 <!-- This section shows only if user clicks Edit button -->
-<div *ngIf="!editable">
+<div *ngIf="editable">
   <input class="sm-text-input" placeholder="edit item" [value]="item.description" #editedItem (keyup.enter)="saveItem(editedItem.value)">
 
   <div class="btn-wrapper">
@@ -144,8 +144,8 @@ This way, when the user edits the item, the value of the `<input>` is already `e
 The template variable, `#editedItem`, on the `<input>` means that Angular stores whatever a user types in this `<input>` in a variable called `editedItem`.
 The `keyup` event calls the `saveItem()` method and passes in the `editedItem` value if the user chooses to press enter instead of click **Save**.
 
-When a user clicks the **Cancel** button, `editable` toggles to `true`, which removes the input and buttons for editing from the DOM.
-When `editable` is `true`, Angular puts `<div>` with the **Edit** and **Delete** buttons back in the DOM.
+When a user clicks the **Cancel** button, `editable` toggles to `false`, which removes the input and buttons for editing from the DOM.
+When `editable` is `false`, Angular puts `<div>` with the **Edit** and **Delete** buttons back in the DOM.
 
 Clicking the **Save** button calls the `saveItem()` method.
 The `saveItem()` method takes the value from the `#editedItem` `<input>` and changes the item's `description` to `editedItem.value` string.
@@ -184,7 +184,7 @@ Further down `item.component.ts`, replace the generated `ItemComponent` class wi
 ```js
 export class ItemComponent {
 
-  editable = true;
+  editable = false;
 
   @Input() item!: Item;
   @Input() newItem!: string;
@@ -192,7 +192,7 @@ export class ItemComponent {
 
   saveItem(description: string) {
     if (!description) return;
-    this.editable = true;
+    this.editable = false;
     this.item.description = description;
   }
 }
@@ -218,7 +218,7 @@ This `description` is the same string from the `<input>` with the `#editedItem` 
 If the user doesn't enter a value but clicks **Save**, `saveItem()` returns nothing and does not update the `description`.
 If you didn't have this `if` statement, the user could click **Save** with nothing in the HTML `<input>`, and the `description` would become an empty string.
 
-If a user enters text and clicks save, `saveItem()` sets `editable` to true, which causes the `*ngIf` in the template to remove the edit feature and render the **Edit** and **Delete** buttons again.
+If a user enters text and clicks save, `saveItem()` sets `editable` to false, which causes the `*ngIf` in the template to remove the edit feature and render the **Edit** and **Delete** buttons again.
 
 Though the application should compile at this point, you need to use the `ItemComponent` in `AppComponent` so you can see the new features in the browser.
 
