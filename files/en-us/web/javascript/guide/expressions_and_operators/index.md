@@ -61,8 +61,7 @@ operator operand
 operand operator
 ```
 
-A `unary operator` can be _prefix_or _postfix_ , meaning that it can come before a variable or constant (_prefix_ such as ++count), or immediately follow a variable or constant (_postfix_ such as count++).
-`++` and `--` are the only postfix operators in JavaScript — all other operators, like `!`, `typeof`, etc. are prefix.
+For example, `x++` or `++x`. The `operator operand` form is called a _prefix_ unary operator, and the `operand operator` form is called a _postfix_ unary operator. `++` and `--` are the only postfix operators in JavaScript — all other operators, like `!`, `typeof`, etc. are prefix.
 
 ## Assignment operators
 
