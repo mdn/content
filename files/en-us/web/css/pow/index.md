@@ -24,9 +24,9 @@ The {{CSSxRef("exp")}} function is a special case of `pow()` where the value of 
 
 ```css
 /* A <number> value */
-width: calc(100px * pow(-1)); /* 100px * 0.367879441171442 = 36px */
-width: calc(100px * pow(0));  /* 100px * 1 = 100px */
-width: calc(100px * pow(1));  /* 100px * 2.718281828459045 = 217px */
+width: calc(10px * pow(5, 2));  /* 10px * 25 = 250px */
+width: calc(10px * pow(5, 3));  /* 10px * 125 = 1250px */
+width: calc(10px * pow(2, 10)); /* 10px * 1024 = 10240px */
 ```
 
 ### Parameters
