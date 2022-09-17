@@ -23,7 +23,7 @@ Web applications should use constructor instead of this if it's available.
 
 ```js-nolint
 initKeyboardEvent(type, canBubble, cancelable,
-                  view,  key, location, ctrlKey,
+                  view, key, location, ctrlKey,
                   altKey, shiftKey, metaKey)
 ```
 

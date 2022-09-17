@@ -105,7 +105,7 @@ In WebKit- and Blink-based browsers, the non-standard and deprecated method
 
 ```js
 setStrokeColor(color);
-setStrokeColor(color,  alpha);
+setStrokeColor(color, alpha);
 setStrokeColor(grayLevel);
 setStrokeColor(grayLevel, alpha);
 setStrokeColor(r, g, b, a);
