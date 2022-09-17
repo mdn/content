@@ -29,7 +29,7 @@ One typical use of this is with a descendant selector expression — for example
   font-weight: bold;
 }
 
-:host-context(main article) {
+:host-context(main, article) {
   font-weight: bold;
 }
 
