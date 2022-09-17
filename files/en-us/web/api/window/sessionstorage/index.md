@@ -59,8 +59,8 @@ session storage space.
     `file:` or `data:` scheme, for example). For example, the user
     may have their browser configured to deny permission to persist data for the specified
     origin.
-- `Uncaught DOMException`
-  - : The request is blocked by user's browser privacy settings. In some browsers, blocking cookies results in disabling many APIs that persist user session data such as [localStorage](/en-us/web/api/window/localStorage) and sessionStorage.
+    
+    Note that thsi can happen if the user has blocked cookies.
 
 ## Examples
 
