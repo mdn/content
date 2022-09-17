@@ -31,21 +31,21 @@ width: calc(100px * log(8, 2));   /* 100px * log2(8) =     100px * 3 = 300px */
 width: calc(100px * log(625, 5)); /* 100px * log5(625) =   100px * 4 = 400px */
 ```
 
-### Parameter
+### Parameters
 
-The `log(x, y?)` function accepts two comma-separated values as its parameters.
+The `log(value, base?)` function accepts two comma-separated values as its parameters.
 
-- `x`
+- `value`
   - : A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the value to be logarithmed.
 
-- `y`
+- `base`
   - : Optional. A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the base of the logarithm. If not defined, the default logarithmic base `e` is used. 
 
 ### Return value
 
-The logarithm of `x`, when `y` is defined.
+The logarithm of `value`, when `base` is defined.
 
-The natural logarithm (base `e`) of `x`, when `y` is not defined.
+The natural logarithm (base `e`) of `value`, when `base` is not defined.
 
 ### Formal syntax
 
