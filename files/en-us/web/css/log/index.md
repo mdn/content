@@ -39,7 +39,7 @@ The `log(value, base?)` function accepts two comma-separated values as its param
   - : A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the value to be logarithmed.
 
 - `base`
-  - : Optional. A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the base of the logarithm. If not defined, the default logarithmic base `e` is used. 
+  - : Optional. A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the base of the logarithm. If not defined, the default logarithmic base `e` is used.
 
 ### Return value
 
