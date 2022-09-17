@@ -24,9 +24,9 @@ The [logarithm, or log](https://en.wikipedia.org/wiki/Logarithm), is the inverse
 
 ```css
 /* A <number> value */
-width: calc(100px * log(7.389));
-width: calc(100px * log(8, 2));
-width: calc(100px * log(625, 5));
+width: calc(100px * log(7.389));  /* 100px * logE(7.389) = 100px * 2 = 200px */
+width: calc(100px * log(8, 2));   /* 100px * log2(8) =     100px * 3 = 300px */
+width: calc(100px * log(625, 5)); /* 100px * log5(625) =   100px * 4 = 400px */
 ```
 
 ### Parameter
