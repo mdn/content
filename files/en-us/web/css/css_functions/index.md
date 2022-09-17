@@ -126,7 +126,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
 ### Exponential functions
 
 - {{cssxref("pow", "pow()")}} {{Experimental_Inline}}
-  - : An exponential function that returns the value of a base raised to a power.
+  - : An exponential function that returns a base raised to a power of a number.
 - {{cssxref("sqrt", "sqrt()")}} {{Experimental_Inline}}
   - : An exponential function that returns the square root of a number.
 - {{cssxref("hypot", "hypot()")}} {{Experimental_Inline}}
