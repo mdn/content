@@ -59,4 +59,4 @@ A new {{domxref("ClipboardEvent")}} object.
 
 - Copy-related events: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
 - The {{domxref("ClipboardEvent")}} interface it belongs to.
-- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- [Clipboard API](https://github.com/mdn/content/tree/main/files/en-us/web/api/clipboard_api)
