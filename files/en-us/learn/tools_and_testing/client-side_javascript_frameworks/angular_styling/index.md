@@ -115,11 +115,6 @@ The next step is to add styles that apply specifically to the `AppComponent`.
 In `app.component.css`, add the following styles:
 
 ```css
-body {
-  background-color: #f5f5f5;
-  color: #4d4d4d;
-}
-
 .main {
   max-width: 500px;
   width: 85%;
