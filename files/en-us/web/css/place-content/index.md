@@ -173,7 +173,7 @@ function update() {
 }
 
 const alignContentAlignment = document.getElementById("alignContentAlignment");
-alignContentAlignment.addEventListener("change",  update);
+alignContentAlignment.addEventListener("change", update);
 
 const justifyContentAlignment = document.getElementById("justifyContentAlignment");
 justifyContentAlignment.addEventListener("change", update);

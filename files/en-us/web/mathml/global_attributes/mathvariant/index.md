@@ -10,7 +10,7 @@ browser-compat: mathml.global_attributes.mathvariant
 
 {{MathMLRef("Global_attributes")}}
 
-The **`mathvariant`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)  attribute sets a logical class for textual elements, which is visually
+The **`mathvariant`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) attribute sets a logical class for textual elements, which is visually
 distinguished by using special [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
 With the exception of [`mi`](/en-US/docs/Web/MathML/Element/mi) elements with a single character,
 which are by convention italic, no special classes are used by default.

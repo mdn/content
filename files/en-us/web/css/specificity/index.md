@@ -111,7 +111,7 @@ input.myClass {
   color: yellow; /* 0-1-1 */
 }
 :root input {
-  color: green; /* 0-1-1  WINS because it comes later */
+  color: green; /* 0-1-1 WINS because it comes later */
 }
 ```
 

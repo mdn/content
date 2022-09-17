@@ -100,7 +100,7 @@ So, if we want to add a slot into our trivial example, we could update our templ
 <p><slot name="my-text">My default text</slot></p>
 ```
 
-If the slot's content isn't defined when the element is included in the markup, or if the browser doesn't support slots, `<my-paragraph>`  just contains the fallback content "My default text".
+If the slot's content isn't defined when the element is included in the markup, or if the browser doesn't support slots, `<my-paragraph>` just contains the fallback content "My default text".
 
 To define the slot's content, we include an HTML structure inside the `<my-paragraph>` element with a {{htmlattrxref("slot")}} attribute whose value is equal to the name of the slot we want it to fill. As before, this can be anything you like, for example:
 

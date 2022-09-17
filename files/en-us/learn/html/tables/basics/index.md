@@ -193,7 +193,7 @@ The point of a table is that it is rigid. Information is easily interpreted by m
       <td>5</td>
       <td>
         Declassified as a planet in 2006, but this
-        <a  href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.
+        <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.
       </td>
     </tr>
   </tbody>

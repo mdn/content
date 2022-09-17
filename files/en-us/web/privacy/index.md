@@ -62,7 +62,7 @@ Web browsers are actively working on improving the privacy space through new fea
 
 ## Privacy and security controls
 
-There are multiple layers of controls for helping to protect users against security and privacy breaches. These start at the web server, include the very communication layer used over the network,  and then extend through the web browser's security offerings before reaching your web app code and the efforts it takes to secure itself and the data the user entrusts to it.
+There are multiple layers of controls for helping to protect users against security and privacy breaches. These start at the web server, include the very communication layer used over the network, and then extend through the web browser's security offerings before reaching your web app code and the efforts it takes to secure itself and the data the user entrusts to it.
 
 There are several web technologies and features at play to manage privacy and security. The following list includes features affecting both, since many of these features are used for both.
 

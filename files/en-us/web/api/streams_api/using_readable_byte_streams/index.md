@@ -597,7 +597,7 @@ readStream(reader);
 
 function readStream(reader) {
   let bytesReceived = 0;
-  let offset =  0;
+  let offset = 0;
 
   while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received

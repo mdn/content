@@ -48,7 +48,7 @@ and you define a 3-by-3 convolution kernel as follows:
 Let's focus on the color value at the second row and second column of the image (source pixel value is 120). Assuming the simplest case (where the input image's pixel grid aligns perfectly with the kernel's pixel grid) and assuming default values for attributes ['divisor'](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute), ['targetX'](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute) and ['targetY'](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute), then resulting color value will be:
 
 ```
-(9*  0 + 8* 20 + 7* 40 +
+(9*0   + 8*20  + 7*40 +
  6*100 + 5*120 + 4*140 +
  3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)
 ```

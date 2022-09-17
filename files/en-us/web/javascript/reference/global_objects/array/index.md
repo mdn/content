@@ -461,7 +461,7 @@ Here we have a simple inventory array that contains "food" objects that have a `
 ```js
 const inventory = [
   { name: 'asparagus', type: 'vegetables' },
-  { name: 'bananas',  type: 'fruit' },
+  { name: 'bananas', type: 'fruit' },
   { name: 'goat', type: 'meat' },
   { name: 'cherries', type: 'fruit' },
   { name: 'fish', type: 'meat' },

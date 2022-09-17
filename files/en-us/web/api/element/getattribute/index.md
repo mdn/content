@@ -80,7 +80,7 @@ sources, such as CSS selectors, and `.getAttribute("nonce")` calls are
 hidden.
 
 ```js example-bad
-let nonce =  script.getAttribute('nonce');
+let nonce = script.getAttribute('nonce');
 // returns empty string
 ```
 
@@ -88,7 +88,7 @@ Instead of retrieving the nonce from the content attribute, use the
 {{domxref("HTMLElement/nonce", "nonce")}} property:
 
 ```js
-let nonce =  script.nonce;
+let nonce = script.nonce;
 ```
 
 ## Specifications

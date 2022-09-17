@@ -249,7 +249,7 @@ In this section, we review a few editing tools providing graphical interfaces.
 
 ### Input box
 
-A simple approach is to integrate [converters from a simple syntax](#conversion_from_a_simple_syntax) as simple input boxes for mathematics. For example,  [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/) provide an **Insert > Math** command that will open a popup window, with a LaTeX-to-MathML input field and a live MathML preview:
+A simple approach is to integrate [converters from a simple syntax](#conversion_from_a_simple_syntax) as simple input boxes for mathematics. For example, [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/) provide an **Insert > Math** command that will open a popup window, with a LaTeX-to-MathML input field and a live MathML preview:
 
 ![LaTeX input box in Thunderbird](thunderbird.png)
 

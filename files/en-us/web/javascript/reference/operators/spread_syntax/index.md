@@ -131,7 +131,7 @@ arr2.push(4);
 > b.shift().shift();
 > //  1
 >
-> //  Oh no!  Now array 'a' is affected as well:
+> //  Oh no! Now array 'a' is affected as well:
 > a
 > //  [[], [2], [3]]
 > ```

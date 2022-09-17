@@ -45,7 +45,7 @@ const obj = {};
 ws.add(window);
 
 ws.delete(obj);    // Returns false. No obj found to be deleted.
-ws.delete(window); // Returns true.  Successfully removed.
+ws.delete(window); // Returns true. Successfully removed.
 
 ws.has(window);    // Returns false. The window is no longer present in the WeakSet.
 ```

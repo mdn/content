@@ -62,7 +62,7 @@ Now you only need some HTML and JavaScript to load your new module:
 
 And you will see the correct version number in the [output](https://googlechrome.github.io/samples/webassembly/version.html):
 
-![  Screenshot of the DevTools console showing the correct version number.](version.png)
+![Screenshot of the DevTools console showing the correct version number.](version.png)
 
 > **Note:** libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.
 

@@ -90,7 +90,7 @@ results = evaluateXPath(people, "/people/person[2]");
 results = evaluateXPath(people, "//person[address/@city='denver']");
 
 // get all the addresses that have "south" in the street name
-results = evaluateXPath(people,  "//address[contains(@street, 'south')]");
+results = evaluateXPath(people, "//address[contains(@street, 'south')]");
 console.log(results.length);
 ```
 

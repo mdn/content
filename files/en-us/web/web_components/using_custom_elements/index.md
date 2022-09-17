@@ -257,7 +257,7 @@ attributeChangedCallback(name, oldValue, newValue) {
 }
 ```
 
-Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside custom element class - this should `return`  an array containing the names of the attributes you want to observe:
+Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside custom element class - this should `return` an array containing the names of the attributes you want to observe:
 
 ```js
 static get observedAttributes() { return ['c', 'l']; }
