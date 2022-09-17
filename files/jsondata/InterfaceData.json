@@ -880,6 +880,10 @@
       "inh": "",
       "impl": []
     },
+    "DOMTransition": {
+      "inh": "",
+      "impl": []
+    },
     "DragEvent": {
       "inh": "MouseEvent",
       "impl": []
@@ -3554,6 +3558,10 @@
     },
     "USBPermissionResult": {
       "inh": "PermissionStatus",
+      "impl": []
+    },
+    "UserActivation": {
+      "inh": "",
       "impl": []
     },
     "ValidityState": {
