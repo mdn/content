@@ -31,7 +31,7 @@ setServerCertificate(serverCertificate)
 
 ### Return value
 
-A {{jsxref('Promise')}} that resolves to a boolean. If the Key System implementation represented by this object's cdm implementation value does not support server certificates, return a promise resolved with false.
+A {{jsxref('Promise')}} that resolves to a boolean. If the Key System implementation represented by this object's content decryption module's implementation value does not support server certificates, return a promise resolved with false.
 
 ## Specifications
 

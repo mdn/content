@@ -88,7 +88,7 @@ on its main menu that offers an option to start the game in WebXR mode.
 
 ### HTML
 
-The HTML for the buttons looks lke this:
+The HTML for the buttons looks like this:
 
 ```html
 <button class="green button" type="button">Start Game</button>

@@ -3,7 +3,7 @@ title: IDBObjectStore.getKey()
 slug: Web/API/IDBObjectStore/getKey
 page-type: web-api-instance-method
 tags:
-  - IBDObjectStore
+  - IDBObjectStore
   - IndexedDB
   - Method
   - Reference

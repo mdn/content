@@ -267,7 +267,7 @@ In addition, each encoder utility may have variations in how they process the so
     <tr>
       <th scope="row">Lossy compression</th>
       <td>
-        To some degree, artifacts and other forms of quality degradation wil
+        To some degree, artifacts and other forms of quality degradation will
         occur, depending on the specific codec and how much compression is being
         applied
       </td>

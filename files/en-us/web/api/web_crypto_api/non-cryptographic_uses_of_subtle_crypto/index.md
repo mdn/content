@@ -82,7 +82,7 @@ async function fileHash(file) {
 
 async function hashTheseFiles(e) {
   let outHTML = ''
-  // iterate ove reach file in file select input
+  // iterate over each file in file select input
   for (const file of this.files) {
 
     // calculate it's hash and list it in the output element.

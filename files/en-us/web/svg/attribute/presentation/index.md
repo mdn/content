@@ -204,7 +204,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
     _Value_: **`visible`**|`hidden|scroll`|`auto`|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('pointer-events')}}
   - : Defines whether or when an element may be the target of a mouse event.
-    _Value_: `bounding-box`|**`visiblePainted`**|`visibleFil`|`visibleStroke`|`visible` |`painted`|`fill`|`stroke`|`all`|`none`; _Animatable_: **Yes**
+    _Value_: `bounding-box`|**`visiblePainted`**|`visibleFill`|`visibleStroke`|`visible` |`painted`|`fill`|`stroke`|`all`|`none`; _Animatable_: **Yes**
 - {{SVGAttr('shape-rendering')}}
   - : Hints about what tradeoffs to make as the browser renders {{SVGElement('path')}} element or basic shapes.
     _Value_: **`auto`**|`optimizeSpeed`|`crispEdges`|`geometricPrecision` |`inherit`; _Animatable_: **Yes**

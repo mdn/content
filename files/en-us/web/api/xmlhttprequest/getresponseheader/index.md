@@ -64,7 +64,7 @@ canceled by calling {{DOMxRef("XMLHttpRequest.abort", "abort()")}}.
 
 ```js
 const client = new XMLHttpRequest();
-client.open("GET", "unicorns-are-teh-awesome.txt", true);
+client.open("GET", "unicorns-are-awesome.txt", true);
 client.send();
 
 client.onreadystatechange = () => {
