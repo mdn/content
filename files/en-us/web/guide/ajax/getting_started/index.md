@@ -34,9 +34,11 @@ const httpRequest = new XMLHttpRequest();
 After making a request, you will receive a response back. At this stage, you need to tell the `XMLHttpRequest` object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object to the function called when the request changes state, like this:
 
 ```js
-httpRequest.onreadystatechange = () => {
+function handler() {
   // Process the server response here.
-};
+}
+
+httpRequest.onreadystatechange = handler;
 ```
 
 Note that there are no parentheses or parameters after the function name, because you're assigning a reference to the function, rather than actually calling it. Alternatively, instead of giving a function name, you can use the JavaScript technique of defining functions on the fly (called "anonymous functions") to define the actions that will process the response, like this:
