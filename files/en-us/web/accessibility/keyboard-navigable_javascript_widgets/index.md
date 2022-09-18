@@ -38,7 +38,7 @@ The following table describes `tabindex` behavior in modern browsers:
     <tr>
       <td>Negative (i.e. <code>tabindex="-1"</code>)</td>
       <td>Yes</td>
-      <td>No; author must focus the element with <a href="/en-US/docs/Web/API/Element/focus_event"><code>focus()</code></a> in response to arrow or other key presses.</td>
+      <td>No; author must focus the element with <a href="/en-US/docs/Web/API/HTMLElement/focus"><code>focus()</code></a> in response to arrow or other key presses.</td>
     </tr>
     <tr>
       <td>Zero (i.e. <code>tabindex="0"</code>)</td>
