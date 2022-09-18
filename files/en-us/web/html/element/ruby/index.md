@@ -112,5 +112,4 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 - {{HTMLElement("rp")}}
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
-- {{HTMLElement("rbc")}}
 - {{CSSxRef("text-transform")}}: full-size-kana
