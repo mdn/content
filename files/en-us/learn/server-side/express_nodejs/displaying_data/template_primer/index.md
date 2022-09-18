@@ -8,6 +8,7 @@ tags:
   - part 5
   - server-side
 ---
+
 A template is a text file defining the _structure_ or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in _Express_, templates are referred to as _views_).
 
 ## Express template choices
@@ -23,9 +24,9 @@ Different template languages use different approaches for defining layout and ma
 The _LocalLibrary_ was configured to use [Pug](https://pugjs.org/api/getting-started.html) when we [created the skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website). You should see the pug module included as a dependency in the website's **package.json** file, and the following configuration settings in the **app.js** file. The settings tell us that we're using pug as the view engine, and that _Express_ should search for templates in the **/views** subdirectory.
 
 ```js
-// View engine setup.
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+// View engine setup
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 If you look in the views directory you will see the .pug files for the project's default views.
@@ -45,7 +46,7 @@ The example template file below shows off many of Pug's most useful features.
 
 The first thing to notice is that the file maps the structure of a typical HTML file, with the first word in (almost) every line being an HTML element, and indentation being used to indicate nested elements. So for example, the `body` element is inside an `html` element, and paragraph elements (`p`) are within the `body` element, etc. Non-nested elements (e.g. individual paragraphs) are on separate lines.
 
-```plain
+```pug
 doctype html
 html(lang="en")
   head
@@ -92,14 +93,14 @@ The values of all attributes are _escaped_ (e.g. characters like "`>`" are conve
 
 If a tag is followed by the equals sign, the following text is treated as a JavaScript _expression_. So for example, in the first line below, the content of the `h1` tag will be _variable_ `title` (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatenated with the `title` variable. In both cases the default behavior is to _escape_ the line.
 
-```plain
+```pug
 h1= title
 p= 'Evaluated and <em>escaped expression</em>:' + title
 ```
 
 If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the `#{}` and `!{}` syntax respectively, as shown below. You can also add raw HTML within the plain text.
 
-```plain
+```pug
 p This is a line with #[em some emphasis] and #[strong strong text] markup.
 p This line has an un-escaped string: !{'<em> is emphasized</em>'}, an escaped string: #{'<em> is not emphasized</em>'}, and escaped variables: #{title}.
 ```
@@ -108,14 +109,14 @@ p This line has an un-escaped string: !{'<em> is emphasized</em>'}, an escaped s
 
 You can use the pipe ('**|**') character at the beginning of a line to indicate "[plain text](https://pugjs.org/language/plain-text.html)". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.
 
-```plain
+```pug
 a(href='http://someurl/') Link text
 | Plain text
 ```
 
-Pug allows you to perform conditional operations using `if`, `else` , `else if` and `unless`—for example:
+Pug allows you to perform conditional operations using `if`, `else`, `else if` and `unless`—for example:
 
-```plain
+```pug
 if title
   p A variable named "title" exists
 else
@@ -124,7 +125,7 @@ else
 
 You can also perform loop/iteration operations using `each-in` or `while` syntax. In the code fragment below we've looped through an array to display a list of variables (note the use of the 'li=' to evaluate the "val" as a variable below. The value you iterate across can also be passed into the template as a variable!
 
-```plain
+```pug
 ul
   each val in [1, 2, 3, 4, 5]
     li= val
@@ -138,7 +139,7 @@ Across a site, it is usual for all pages to have a common structure, including s
 
 For example, the base template **layout.pug** created in our [skeleton project](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website) looks like this:
 
-```plain
+```pug
 doctype html
 html
   head
@@ -152,7 +153,7 @@ The `block` tag is used to mark up sections of content that may be replaced in a
 
 The default **index.pug** (created for our skeleton project) shows how we override the base template. The `extends` tag identifies the base template to use, and then we use `block section_name` to indicate the new content of the section that we will override.
 
-```plain
+```pug
 extends layout
 
 block content

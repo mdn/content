@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.return
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`return`** statement ends function execution and
@@ -16,8 +17,8 @@ specifies a value to be returned to the function caller.
 
 ## Syntax
 
-```js
-return [expression];
+```js-nolint
+return [expression]
 ```
 
 - `expression`
@@ -57,7 +58,7 @@ The `return` statement is affected by
 [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion).
 No line terminator is allowed between the `return` keyword and the expression.
 
-```js
+```js example-bad
 return
 a + b;
 ```

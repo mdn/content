@@ -12,6 +12,7 @@ tags:
   - ServiceWorker
 browser-compat: api.Cache.add
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`add()`** method of the {{domxref("Cache")}} interface takes a URL, retrieves it, and adds the resulting response object to the given cache.
@@ -21,10 +22,10 @@ The `add()` method is functionally equivalent to the following:
 ```js
 fetch(url).then((response) => {
   if (!response.ok) {
-    throw new TypeError('bad response status');
+    throw new TypeError("bad response status");
   }
   return cache.put(url, response);
-})
+});
 ```
 
 For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put()")}} directly.
@@ -33,7 +34,7 @@ For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put
 
 ## Syntax
 
-```js
+```js-nolint
 add(request)
 ```
 
@@ -59,10 +60,8 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 This code block waits for an {{domxref("InstallEvent")}} to fire, then calls {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.add")}} to add an asset to it.
 
 ```js
-this.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open('v1').then((cache) => cache.add('/sw-test/index.html'))
-  );
+this.addEventListener("install", (event) => {
+  event.waitUntil(caches.open("v1").then((cache) => cache.add("/index.html")));
 });
 ```
 

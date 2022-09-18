@@ -4,7 +4,6 @@ slug: Web/API/PushEvent/data
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Push
   - PushEvent
@@ -12,7 +11,8 @@ tags:
   - data
 browser-compat: api.PushEvent.data
 ---
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+
+{{APIRef("Push API")}}
 
 The `data` read-only property of the **`PushEvent`** interface returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
@@ -20,12 +20,12 @@ The `data` read-only property of the **`PushEvent`** interface returns a referen
 
 A {{domxref("PushMessageData")}} object.
 
-**Examples**
+## Examples
 
 The following example takes data from a PushEvent and displays it on all of the service workers' clients.
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener('push', (event) => {
   if (!(self.Notification && self.Notification.permission === 'granted')) {
     return;
   }
@@ -38,13 +38,11 @@ self.addEventListener('push', function(event) {
   const notification = new Notification(title, {
     body: message,
     tag: 'simple-push-demo-notification',
-    icon: icon
+    icon,
   });
 
-  notification.addEventListener('click', function() {
-    if (clients.openWindow) {
-      clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
-    }
+  notification.addEventListener('click', () => {
+    clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
   });
 });
 ```

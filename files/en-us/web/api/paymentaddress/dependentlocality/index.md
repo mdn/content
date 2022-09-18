@@ -10,9 +10,12 @@ tags:
   - Property
   - Reference
   - paymentAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.dependentLocality
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only **`dependentLocality`**
 property of the {{domxref('PaymentAddress')}} interface is a string containing a

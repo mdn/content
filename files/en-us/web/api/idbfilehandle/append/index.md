@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileHandle.append
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -26,7 +27,7 @@ and actually sets the value of this property to `null`.
 
 ## Syntax
 
-```js
+```js-nolint
 append(data)
 ```
 

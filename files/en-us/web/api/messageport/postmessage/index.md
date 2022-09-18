@@ -11,6 +11,7 @@ tags:
   - postMessage
 browser-compat: api.MessagePort.postMessage
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`postMessage()`** method of the
@@ -21,7 +22,7 @@ transfers ownership of objects to other browsing contexts.
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(message, transferList)
 ```
 
@@ -70,13 +71,13 @@ function handleMessage(e) {
 
 // in the iframe…
 
-window.addEventListener('message', function (event) {
+window.addEventListener('message', (event) => {
   const messagePort = event.ports?.[0];
   messagePort.postMessage("Hello from the iframe!");
 });
 ```
 
-For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications
 

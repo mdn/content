@@ -8,15 +8,17 @@ tags:
   - Reference
   - configure
   - VideoDecoder
+  - Experimental
 browser-compat: api.VideoDecoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the video decoder for decoding chunks.
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 
@@ -37,7 +39,7 @@ configure(config)
     - `displayAspectHeight` {{optional_inline}}
       - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}} in pixels when displayed.
     - `colorSpace`
-      - : An object. representing a {{domxref("VideoColorSpace")}}, containing the following members:
+      - : An object representing a {{domxref("VideoColorSpace")}}, containing the following members:
         - `primaries`
           - : A string representing the color {{glossary("gamut")}} of the video sample. One of:
             - `"bt709"`

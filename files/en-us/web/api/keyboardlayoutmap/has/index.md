@@ -14,6 +14,7 @@ tags:
   - keyboard
 browser-compat: api.KeyboardLayoutMap.has
 ---
+
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
 The **`has()`** method of the
@@ -25,7 +26,7 @@ the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#k
 
 ## Syntax
 
-```js
+```js-nolint
 has(key)
 ```
 

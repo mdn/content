@@ -5,13 +5,13 @@ page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
-  - Experimental
   - Property
   - Read-only
   - Screen Orientation
   - screen
 browser-compat: api.Screen.orientation
 ---
+
 {{APIRef("Screen Orientation API")}}
 
 The **`orientation`** read-only property of the
@@ -32,7 +32,7 @@ switch (screen.orientation) {
   case "landscape-primary":
     console.log("That looks good.");
     break;
-  case "landscape-secondary": 
+  case "landscape-secondary":
     console.log("Mmmh… the screen is upside down!");
     break;
   case "portrait-secondary":

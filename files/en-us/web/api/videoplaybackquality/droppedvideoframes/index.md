@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Data Loss
-  - Experimental
   - Frames
   - Media
   - Media Playback Quality
@@ -19,6 +18,7 @@ tags:
   - droppedVideoFrames
 browser-compat: api.VideoPlaybackQuality.droppedVideoFrames
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`droppedVideoFrames`**

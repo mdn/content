@@ -10,13 +10,14 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.pixelStorei
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.pixelStorei()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the pixel storage modes.
 
 ## Syntax
 
-```js
+```js-nolint
 pixelStorei(pname, param)
 ```
 
@@ -26,7 +27,7 @@ pixelStorei(pname, param)
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which parameter to set. See below for possible
     values.
 - `param`
-  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying a value to set the _`pname`_
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying a value to set the `pname`
     parameter to. See below for possible values.
 
 ### Return value

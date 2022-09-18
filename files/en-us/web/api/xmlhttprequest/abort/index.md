@@ -19,6 +19,7 @@ tags:
   - stop
 browser-compat: api.XMLHttpRequest.abort
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The **`XMLHttpRequest.abort()`** method aborts the request if
@@ -29,7 +30,7 @@ it has already been sent. When a request is aborted, its
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

@@ -4,7 +4,6 @@ slug: Web/API/PushMessageData
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Push
   - Push API
@@ -13,7 +12,8 @@ tags:
   - Service Workers
 browser-compat: api.PushMessageData
 ---
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+
+{{APIRef("Push API")}}
 
 The **`PushMessageData`** interface of the [Push API](/en-US/docs/Web/API/Push_API) provides methods which let you retrieve the push data sent by a server in various formats.
 
@@ -39,13 +39,13 @@ None.
 ## Examples
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener('push', (event) => {
   const obj = event.data.json();
 
-  if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === 'subscribe' || obj.action === 'unsubscribe') {
     fireNotification(obj, event);
     port.postMessage(obj);
-  } else if(obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === 'init' || obj.action === 'chatMsg') {
     port.postMessage(obj);
   }
 });

@@ -9,15 +9,17 @@ tags:
   - AR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRMediaBinding.createQuadLayer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`createQuadLayer()`** method of the {{domxref("XRMediaBinding")}} interface returns an {{domxref("XRQuadLayer")}} object which is a layer that takes up a flat rectangular space in the virtual environment.
 
 ## Syntax
 
-```js
+```js-nolint
 createQuadLayer(video, options)
 ```
 
@@ -43,11 +45,11 @@ createQuadLayer(video, options)
           - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
         - `stereo-top-bottom`
           - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
-        The default value is `mono`.
-    - `space`  **Required**
+            The default value is `mono`.
+    - `space` **Required**
       - : An {{domxref("XRSpace")}} object defining the layer's spatial relationship with the user's physical environment.
     - `transform` {{optional_inline}}
-      - :  An {{domxref("XRRigidTransform")}} object defining the offset and orientation relative to `space`.
+      - : An {{domxref("XRRigidTransform")}} object defining the offset and orientation relative to `space`.
     - `width` {{optional_inline}}
       - : A number specifying the width of the layer.
 

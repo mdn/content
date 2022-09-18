@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.findIndex
 ---
+
 {{JSRef}}
 
 The **`findIndex()`** method returns an **index**
@@ -25,7 +26,7 @@ See also the {{jsxref("TypedArray.find", "find()")}} method, which returns the
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findIndex((element) => { /* ... */ } )
 findIndex((element, index) => { /* ... */ } )

@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Strict-Transport-Security
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Strict-Transport-Security`** response header (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS.
@@ -48,15 +49,15 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 
 ## Description
 
-If a website accepts a connection through HTTP and redirects to HTTPS, visitors may initially communicate with the non-encrypted version of the site before being redirected, if, for example, the visitor types http\://www\.foo.com/ or even just foo.com.
+If a website accepts a connection through HTTP and redirects to HTTPS, visitors may initially communicate with the non-encrypted version of the site before being redirected, if, for example, the visitor types `http://www.foo.com/` or even just foo.com.
 This creates an opportunity for a man-in-the-middle attack.
 The redirect could be exploited to direct visitors to a malicious site instead of the secure version of the original site.
 
 The HTTP Strict Transport Security header informs the browser that it should never load a site using HTTP and should automatically convert all attempts to access the site using HTTP to HTTPS requests instead.
 
-> **Note:** The `Strict-Transport-Security` header is **ignored** by the browser when your site is accessed using HTTP;
-> this is because an attacker may intercept HTTP connections and inject the header or remove it.
-> When your site is accessed over HTTPS with no certificate errors, the browser knows your site is HTTPS capable and will honor the `Strict-Transport-Security` header.
+> **Note:** The `Strict-Transport-Security` header is _ignored_ by the browser when your site has only been accessed using HTTP.
+> Once your site is accessed over HTTPS with no certificate errors, the browser knows your site is HTTPS capable and will honor the `Strict-Transport-Security` header.
+> Browsers do this as attackers may intercept HTTP connections to the site and inject or remove the header.
 
 ### An example scenario
 

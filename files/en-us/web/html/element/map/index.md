@@ -95,14 +95,23 @@ Click the left-hand parrot for JavaScript, or the right-hand parrot for CSS.
 ```html
 <!-- Photo by Juliana e Mariana Amorim on Unsplash -->
 <map name="primary">
-  <area shape="circle" coords="75,75,75"
-        href="https://developer.mozilla.org/docs/Web/JavaScript"
-        target="_blank" >
-  <area shape="circle" coords="275,75,75"
-        href="https://developer.mozilla.org/docs/Web/CSS"
-        target="_blank" >
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    target="_blank"
+    alt="JavaScript" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    target="_blank"
+    alt="CSS" />
 </map>
-<img usemap="#primary" src="parrots.jpg" alt="350 x 150 pic">
+<img
+  usemap="#primary"
+  src="parrots.jpg"
+  alt="350 x 150 picture of two parrots" />
 ```
 
 #### Result

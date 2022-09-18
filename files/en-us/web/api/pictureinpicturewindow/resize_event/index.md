@@ -12,6 +12,7 @@ tags:
   - resize
 browser-compat: api.PictureInPictureWindow.resize_event
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 The **`resize`** event fires when the floating video window has been resized.
@@ -30,7 +31,7 @@ onresize = (event) => { };
 
 ## Event type
 
-An {{domxref("PictureInPictureWindow")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PictureInPictureWindow")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureWindow")}}
 

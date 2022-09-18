@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: api.FormDataEvent.FormDataEvent
 ---
+
 {{APIRef("DOM")}}
 
 The **`FormDataEvent()`** constructor creates a new {{domxref("FormDataEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new FormDataEvent(type, formEventInit)
 ```
 
@@ -38,12 +39,12 @@ A new {{domxref("FormDataEvent")}} object.
 ## Examples
 
 ```js
-let fd = new FormData();
+const fd = new FormData();
 fd.append('test', 'test');
 
-let fdEv = new FormDataEvent('formdata', { formData: fd });
+const fdEv = new FormDataEvent('formdata', { formData: fd });
 
-for (let value of fdEv.formData.values()) {
+for (const value of fdEv.formData.values()) {
   console.log(value);
 }
 ```

@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Draft
-  - Experimental
   - NeedsCompatTable
   - NeedsExample
   - Property
@@ -16,7 +15,8 @@ tags:
   - state
 browser-compat: api.RTCSctpTransport.state
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+
+{{APIRef("WebRTC")}}
 
 The **`state`** read-only property of the
 {{DOMxRef("RTCSctpTransport")}} interface provides information which describes a Stream

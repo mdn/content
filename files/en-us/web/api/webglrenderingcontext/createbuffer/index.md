@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.createBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
@@ -17,7 +18,7 @@ The **`WebGLRenderingContext.createBuffer()`** method of the [WebGL API](/en-US/
 
 ## Syntax
 
-```js
+```js-nolint
 createBuffer()
 ```
 

@@ -4,7 +4,6 @@ slug: Web/API/PushSubscription/options
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Push API
   - PushManager
@@ -12,7 +11,8 @@ tags:
   - Service Worker
 browser-compat: api.PushSubscription.options
 ---
-{{SeeCompatTable}}{{APIRef("Push API")}}
+
+{{APIRef("Push API")}}
 
 The **`options`** read-only property
 of the {{domxref("PushSubscription")}} interface is an object containing the options

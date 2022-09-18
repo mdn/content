@@ -10,6 +10,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URLSearchParams.append
 ---
+
 {{ApiRef("URL API")}}
 
 The **`append()`** method of the {{domxref("URLSearchParams")}}
@@ -22,7 +23,7 @@ appear in the parameter string multiple times for each value.
 
 ## Syntax
 
-```js
+```js-nolint
 append(name, value)
 ```
 

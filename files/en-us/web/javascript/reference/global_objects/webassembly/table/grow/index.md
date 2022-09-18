@@ -11,6 +11,7 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table.grow
 ---
+
 {{JSRef}}
 
 The **`grow()`** prototype method of
@@ -19,7 +20,7 @@ specified number of elements.
 
 ## Syntax
 
-```js
+```js-nolint
 grow(number)
 ```
 

@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.deleteProperty
 ---
+
 {{JSRef}}
 
 The **`handler.deleteProperty()`** method is a trap for the
@@ -17,7 +18,7 @@ The **`handler.deleteProperty()`** method is a trap for the
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   deleteProperty(target, property) {
   }
@@ -101,6 +102,6 @@ console.log(result2); // false
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Operators/delete", "delete")}} operator
 - {{jsxref("Reflect.deleteProperty()")}}

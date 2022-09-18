@@ -14,6 +14,7 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPane
 ---
+
 {{AddonSidebar()}}
 
 Adds a new pane to the sidebar in the HTML/CSS inspector.
@@ -28,7 +29,7 @@ This function takes one argument, which is a string representing the pane's titl
 
 ## Syntax
 
-```js
+```js-nolint
 let creating = browser.devtools.panels.elements.createSidebarPane(
   title       // string
 )
@@ -70,7 +71,8 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 
 > **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,4 +99,4 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

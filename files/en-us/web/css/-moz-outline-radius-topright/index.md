@@ -9,9 +9,11 @@ tags:
   - Non-standard
   - Reference
   - recipe:css-property
+  - Deprecated
 browser-compat: css.properties.-moz-outline-radius-topright
 ---
-{{CSSRef}}{{deprecated_header}}
+
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 In Mozilla applications, the **`-moz-outline-radius-topright`** [CSS](/en-US/docs/Web/CSS) property can be used to round the top-right corner of an element's {{cssxref("outline")}}.
 
@@ -32,7 +34,10 @@ The value of `-moz-outline-radius-topright` is either a CSS [`<length>`](/en-US/
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+-moz-outline-radius-topright =
+  <outline-radius>
+```
 
 ## Examples
 

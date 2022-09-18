@@ -4,7 +4,6 @@ slug: Web/API/WritableStreamDefaultWriter/write
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Streams
@@ -12,7 +11,8 @@ tags:
   - write
 browser-compat: api.WritableStreamDefaultWriter.write
 ---
-{{APIRef("Streams")}}{{SeeCompatTable}}
+
+{{APIRef("Streams")}}
 
 The **`write()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface writes a passed chunk of data to a
@@ -26,7 +26,7 @@ destination.
 
 ## Syntax
 
-```js
+```js-nolint
 write(chunk)
 ```
 

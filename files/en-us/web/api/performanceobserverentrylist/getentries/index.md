@@ -10,6 +10,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserverEntryList.getEntries
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`getEntries()`** method of the
@@ -25,7 +26,7 @@ interfaces.
 
 ## Syntax
 
-```js
+```js-nolint
 getEntries()
 getEntries(performanceEntryFilterOptions)
 ```
@@ -65,38 +66,33 @@ function print_perf_entry(pe) {
 }
 
 // Create observer for all performance event types
-const observe_all = new PerformanceObserver(function(list, obs) {
-  let perfEntries;
-
+const observe_all = new PerformanceObserver((list, obs) => {
   // Print all entries
-  perfEntries = list.getEntries();
-  for (let i=0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
-  }
+  let perfEntries = list.getEntries();
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 
   // Print entries named "Begin" with type "mark"
   perfEntries = list.getEntriesByName("Begin", "mark");
-  for (let i=0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
-  }
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 
   // Print entries with type "mark"
   perfEntries = list.getEntriesByType("mark");
-  for (let i=0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
-  }
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 });
-// subscribe to all performance event types
-observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
 
-const observe_frame = new PerformanceObserver(function(list, obs) {
-  const perfEntries = list.getEntries();
-  // Should only have 'frame' entries
-  for (let i=0; i < perfEntries.length; i++) {
-    print_perf_entry(perfEntries[i]);
-  }
+// Subscribe to all performance event types
+observe_all.observe({
+  entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server'],
 });
-// subscribe to frame event only
+
+const observe_frame = new PerformanceObserver((list, obs) => {
+  const perfEntries = list.getEntries();
+
+  // Should only have 'frame' entries
+  perfEntries.forEach((entry) => print_perf_entry(entry));
+});
+
+// Subscribe to frame event only
 observe_frame.observe({entryTypes: ['frame']});
 ```
 

@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.label
 ---
+
 {{jsSidebar("Statements")}}
 
 The **labeled statement** can be used with {{jsxref("Statements/break", "break")}}
@@ -17,7 +18,7 @@ a statement with an identifier which you can refer to.
 
 ## Syntax
 
-```js
+```js-nolint
 label:
   statement
 ```
@@ -165,7 +166,7 @@ L: function F() {}
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code,
 however, this will throw a {{jsxref("SyntaxError")}}:
 
-```js
+```js example-bad
 'use strict';
 L: function F() {}
 // SyntaxError: functions cannot be labelled
@@ -174,7 +175,7 @@ L: function F() {}
 [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 can neither be labeled in strict code, nor in non-strict code:
 
-```js
+```js example-bad
 L: function* F() {}
 // SyntaxError: generator functions cannot be labelled
 ```

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.BroadcastChannel.name
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 The read-only **`BroadcastChannel.name`** property returns a string, which uniquely identifies the given channel with its name. This name is passed to the {{domxref("BroadcastChannel.BroadCastChannel", "BroadcastChannel()")}} constructor at creation time and is therefore read-only.
@@ -23,7 +24,7 @@ A string.
 
 ```js
 // Connect to a channel
-const bc = new BroadcastChannel('test_channel');
+const bc = new BroadcastChannel("test_channel");
 
 // More operations (like postMessage, …)
 

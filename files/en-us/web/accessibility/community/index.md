@@ -4,6 +4,7 @@ slug: Web/Accessibility/Community
 tags:
   - Accessibility
 ---
+
 This document provides links to mailing lists, newsgroups, forums, and other communities related to Accessibility.
 
 If you know of other useful resources, please link to them here.

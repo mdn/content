@@ -10,12 +10,13 @@ tags:
   - drag and drop
 browser-compat: api.DragEvent.dataTransfer
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DragEvent.dataTransfer`** property holds the drag
 operation's data (as a {{domxref("DataTransfer")}} object).
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 

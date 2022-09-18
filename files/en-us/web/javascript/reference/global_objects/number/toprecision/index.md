@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Number.toPrecision
 ---
+
 {{JSRef}}
 
 The **`toPrecision()`** method returns a string representing
@@ -17,7 +18,7 @@ the {{jsxref("Number")}} object to the specified precision.
 
 ## Syntax
 
-```js
+```js-nolint
 toPrecision()
 toPrecision(precision)
 ```

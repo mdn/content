@@ -12,6 +12,7 @@ tags:
   - RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.
@@ -22,15 +23,15 @@ The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** method returns an array c
 
 ## Syntax
 
-```js
-Intl.RelativeTimeFormat.supportedLocalesOf(locales)
-Intl.RelativeTimeFormat.supportedLocalesOf(locales, options)
+```js-nolint
+supportedLocalesOf(locales)
+supportedLocalesOf(locales, options)
 ```
 
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form of the `locales` argument, see the {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `options` {{optional_inline}}
 
   - : An object that may have the following property:

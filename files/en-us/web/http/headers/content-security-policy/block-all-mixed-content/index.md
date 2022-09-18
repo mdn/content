@@ -10,8 +10,10 @@ tags:
   - Reference
   - Security
   - block-all-mixed-content
+  - Deprecated
 browser-compat: http.headers.Content-Security-Policy.block-all-mixed-content
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 > **Warning:** This directive is marked as obsolete in the specification: all mixed content is now blocked if it can't be autoupgraded.
@@ -26,13 +28,13 @@ This also applies to {{HTMLElement("iframe")}} documents, ensuring the entire pa
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: block-all-mixed-content;
 ```
 
 ## Examples
 
-```
+```http
 Content-Security-Policy: block-all-mixed-content;
 
 <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
@@ -41,7 +43,7 @@ Content-Security-Policy: block-all-mixed-content;
 To disallow http assets on a more granular level, you can also set individual directives to `https:`.
 For example, to disallow insecure HTTP images:
 
-```
+```http
 Content-Security-Policy: img-src https:
 ```
 

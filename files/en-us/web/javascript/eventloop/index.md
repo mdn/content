@@ -11,6 +11,7 @@ tags:
   - JavaScript
   - events
 ---
+
 {{JsSidebar("Advanced")}}
 
 JavaScript has a runtime model based on an **event loop**, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
@@ -21,7 +22,7 @@ The following sections explain a theoretical model. Modern JavaScript engines im
 
 ### Visual representation
 
-![Stack, heap, queue](the_javascript_runtime_environment_example.svg)
+![A diagram showing how stacks are comprised of frames, heaps are comprised of objects, and queues are comprised of messages.](the_javascript_runtime_environment_example.svg)
 
 ### Stack
 
@@ -91,15 +92,15 @@ The function [`setTimeout`](/en-US/docs/Web/API/setTimeout) is called with 2 arg
 Here is an example that demonstrates this concept (`setTimeout` does not run immediately after its timer expires):
 
 ```js
-const seconds = new Date().getSeconds();
+const seconds = new Date().getTime() / 1000;
 
 setTimeout(() => {
   // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
-  console.log(`Ran after ${new Date().getSeconds() - seconds} seconds`);
+  console.log(`Ran after ${new Date().getTime() / 1000 - seconds} seconds`);
 }, 500)
 
 while (true) {
-  if (new Date().getSeconds() - seconds >= 2) {
+  if (new Date().getTime() / 1000 - seconds >= 2) {
     console.log("Good, looped for 2 seconds");
     break;
   }

@@ -15,6 +15,7 @@ tags:
   - sound
 browser-compat: api.BaseAudioContext.createGain
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createGain()` method of the {{ domxref("BaseAudioContext") }}
@@ -27,7 +28,7 @@ overall gain (or volume) of the audio graph.
 
 ## Syntax
 
-```js
+```js-nolint
 createGain()
 ```
 
@@ -60,29 +61,28 @@ The below snippet wouldn't work as is — for a complete working example, check 
 ```js
 const audioCtx = new AudioContext();
 const gainNode = audioCtx.createGain();
-const mute = document.querySelector('.mute');
+const mute = document.querySelector(".mute");
 let source;
 
 if (navigator.mediaDevices.getUserMedia) {
- navigator.mediaDevices.getUserMedia (
-   // constraints - only audio needed for this app
-   {
-     audio: true
-   },
+  navigator.mediaDevices.getUserMedia(
+    // constraints - only audio needed for this app
+    {
+      audio: true,
+    },
 
-   // Success callback
-   (stream) => {
-     source = audioCtx.createMediaStreamSource(stream);
+    // Success callback
+    (stream) => {
+      source = audioCtx.createMediaStreamSource(stream);
+    },
 
-   },
-
-   // Error callback
-   (err) => {
-     console.error(`The following gUM error occurred: ${err}`);
-   }
+    // Error callback
+    (err) => {
+      console.error(`The following gUM error occurred: ${err}`);
+    }
   );
 } else {
-  console.error('getUserMedia not supported on your browser!');
+  console.error("getUserMedia not supported on your browser!");
 }
 
 source.connect(gainNode);
@@ -102,7 +102,7 @@ mute.onclick = () => {
     mute.id = "";
     mute.textContent = "Mute";
   }
-}
+};
 ```
 
 ## Specifications

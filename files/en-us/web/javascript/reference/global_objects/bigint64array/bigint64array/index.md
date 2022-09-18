@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.BigInt64Array.BigInt64Array
 ---
+
 {{JSRef}}
 
 The **`BigInt64Array()`** typed array constructor creates a new
@@ -20,16 +21,18 @@ index syntax (that is, using bracket notation).
 
 ## Syntax
 
-```js
-new BigInt64Array();
-new BigInt64Array(length);
-new BigInt64Array(typedArray);
-new BigInt64Array(object);
+```js-nolint
+new BigInt64Array()
+new BigInt64Array(length)
+new BigInt64Array(typedArray)
+new BigInt64Array(object)
 
-new BigInt64Array(buffer);
-new BigInt64Array(buffer, byteOffset);
-new BigInt64Array(buffer, byteOffset, length);
+new BigInt64Array(buffer)
+new BigInt64Array(buffer, byteOffset)
+new BigInt64Array(buffer, byteOffset, length)
 ```
+
+> **Note:** `BigInt64Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

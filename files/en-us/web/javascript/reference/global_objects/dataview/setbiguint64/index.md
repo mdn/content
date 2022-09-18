@@ -12,6 +12,7 @@ tags:
   - setBigUint64
 browser-compat: javascript.builtins.DataView.setBigUint64
 ---
+
 {{JSRef}}
 
 The **`setBigUint64()`** method stores an unsigned 64-bit
@@ -22,7 +23,7 @@ integer (unsigned long long) value at the specified byte offset from the start o
 
 ## Syntax
 
-```js
+```js-nolint
 setBigUint64(byteOffset, value)
 setBigUint64(byteOffset, value, littleEndian)
 ```

@@ -7,6 +7,7 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.set
 ---
+
 {{SVGRef}}
 
 The SVG **`<set>`** element provides a simple means of just setting the value of an attribute for a specified duration.
@@ -18,14 +19,23 @@ It supports all attribute types, including those that cannot reasonably be inter
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
   <style>
-    rect { cursor: pointer }
-    .round { rx: 5px; fill: green; }
+    rect {
+      cursor: pointer;
+    }
+    .round {
+      rx: 5px;
+      fill: green;
+    }
   </style>
 
   <rect id="me" width="10" height="10">
@@ -40,7 +50,7 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("to")}}
   - : This attribute defines the value to be applied to the target attribute for the duration of the animation. The value must match the requirements of the target attribute.
-    *Value type*: [**\<anything>**](/en-US/docs/Web/SVG/Content_type#anything); *Default value*: none; *Animatable*: **no**
+    _Value type_: [**\<anything>**](/en-US/docs/Web/SVG/Content_type#anything); _Default value_: none; _Animatable_: **no**
 
 ### Animation Attributes
 

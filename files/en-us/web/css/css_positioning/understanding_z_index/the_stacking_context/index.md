@@ -8,6 +8,7 @@ tags:
   - Reference
   - z-index
 ---
+
 {{CSSRef}}
 
 The **stacking context** is a three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user, who is assumed to be facing the viewport or the webpage. HTML elements occupy this space in priority order based on element attributes.

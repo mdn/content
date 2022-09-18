@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.createSampler
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.createSampler()`** method of the
@@ -18,7 +19,7 @@ The **`WebGL2RenderingContext.createSampler()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 createSampler()
 ```
 

@@ -17,6 +17,7 @@ tags:
   - writeText
 browser-compat: api.Clipboard.writeText
 ---
+
 {{APIRef("Clipboard API")}}
 
 The {{domxref("Clipboard")}} interface's **`writeText()`**
@@ -29,7 +30,7 @@ automatically to pages when they are in the active tab.
 
 ## Syntax
 
-```js
+```js-nolint
 writeText(newClipText)
 ```
 

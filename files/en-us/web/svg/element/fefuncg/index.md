@@ -9,6 +9,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feFuncG
 ---
+
 {{SVGRef}}
 
 The **`<feFuncG>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the transfer function for the green component of the input graphic of its parent {{SVGElement("feComponentTransfer")}} element.
@@ -26,7 +27,7 @@ The **`<feFuncG>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the tran
 
 ### Specific attributes
 
-*None*
+None.
 
 ## DOM Interface
 

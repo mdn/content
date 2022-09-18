@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: menuitem role'
+title: "ARIA: menuitem role"
 slug: Web/Accessibility/ARIA/Roles/menuitem_role
 tags:
   - Accessibility
@@ -35,7 +35,7 @@ Every `menuitem` must have an accessible name. This name comes from the element'
   - : A widget providing a list of choices. Required context role (or `menubar`)
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role
   - : A presentation of a `menu` that usually remains visible and is usually presented horizontally. Required context role (or `menu`)
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)  role
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
   - : Can be used to identify a set of related `menuitem`s within or otherwise owned by a `menu` or `menubar`
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
   - : Indicates the element is perceivable but disabled, so it is not operable
@@ -78,16 +78,16 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 ```html
 <div>
   <button id="menubutton" aria-haspopup="true" aria-controls="menu">
-    <img src="hamburger.svg" alt="Page Sections">
+    <img src="hamburger.svg" alt="Page Sections" />
   </button>
   <ul id="menu" role="menu" aria-labelledby="menubutton">
     <li role="presentation">
-      <a role="menuitem" href="#description">
-        Description
-      </a>
+      <a role="menuitem" href="#description"> Description </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#associated_wai-aria_roles_states_and_properties">
+      <a
+        role="menuitem"
+        href="#associated_wai-aria_roles_states_and_properties">
         Associated WAI-ARIA roles, states, and properties
       </a>
     </li>
@@ -97,19 +97,13 @@ When items in a `menubar` are arranged vertically and items in menu containers a
       </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#examples">
-        Examples
-      </a>
+      <a role="menuitem" href="#examples"> Examples </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#specifications">
-        Specifications
-      </a>
+      <a role="menuitem" href="#specifications"> Specifications </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#see_also">
-        See Also
-      </a>
+      <a role="menuitem" href="#see_also"> See Also </a>
     </li>
   </ul>
 </div>
@@ -130,6 +124,6 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

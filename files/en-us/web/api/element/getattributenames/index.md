@@ -11,6 +11,7 @@ tags:
   - getAttributeNames
 browser-compat: api.Element.getAttributeNames
 ---
+
 {{APIRef("DOM")}}
 
 The **`getAttributeNames()`** method of the
@@ -26,7 +27,7 @@ The names returned by **`getAttributeNames()`** are _qualified_ attribute names,
 
 ## Syntax
 
-```js
+```js-nolint
 getAttributeNames()
 ```
 
@@ -63,8 +64,8 @@ element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'https://ex
 element.setAttributeNS('http://www.w3.org/1999/xlink', 'show', 'new')
 
 // Iterate over element's attributes
-for (let name of element.getAttributeNames()) {
-  let value = element.getAttribute(name);
+for (const name of element.getAttributeNames()) {
+  const value = element.getAttribute(name);
   console.log(name, value);
 }
 

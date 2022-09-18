@@ -8,6 +8,7 @@ tags:
   - Firefox 10
   - Gecko 10
 ---
+
 {{FirefoxSidebar}}
 
 Although a lot of things have changed in Firefox 10 that, in theory, can cause add-on compatibility breakage, most of them are relatively obscure, so they're not very likely to affect you. This article will help guide you as you update your add-on.
@@ -55,7 +56,7 @@ The following interfaces have been removed:
 
 ### Other interface changes
 
-- `nsNavHistory` no longer implements the `nsICharsetResolver` interface. **Note that `nsICharsetResolver` is no longer used and is being removed in Gecko 11.0 {{ geckoRelease("11.0") }}**.
+- `nsNavHistory` no longer implements the `nsICharsetResolver` interface. **Note that `nsICharsetResolver` is no longer used and is being removed in Firefox 11.0**.
 - The `mozISpellCheckingEngine` and `nsIEditorSpellCheck` interfaces have been updated to let restartless add-ons add dictionaries to the spell checker. See [Using an external spell checker](/en-US/Using_an_External_Spell-checker) for details (note this article has not yet been updated, but will be soon).
 - The `nsIBrowserHistory.lastPageVisited` attribute has been removed, as it hasn't been supported for some time.
 - Several [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) internal interfaces have changed to support revised APIs. This shouldn't affect you but is worth noting on the off chance you were doing something unusual.

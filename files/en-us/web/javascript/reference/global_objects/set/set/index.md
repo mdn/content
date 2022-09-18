@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Set.Set
 ---
+
 {{JSRef}}
 
 The **`Set` constructor** lets you
@@ -19,10 +20,12 @@ references.
 
 ## Syntax
 
-```js
+```js-nolint
 new Set()
 new Set(iterable)
 ```
+
+> **Note:** `Set()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

@@ -11,6 +11,7 @@ tags:
   - Server-side programming
   - Web frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 The previous article showed you what the communication between web clients and servers looks like, the nature of HTTP requests and responses, and what a server-side web application needs to do in order to respond to requests from a web browser. With this knowledge under our belt, it's time to explore how web frameworks can simplify these tasks, and give you an idea of how you'd choose a framework for your first server-side web application.
@@ -106,7 +107,7 @@ Using an ORM has two benefits:
 - You can replace the underlying database without necessarily needing to change the code that uses it. This allows developers to optimize for the characteristics of different databases based on their usage.
 - Basic validation of data can be implemented within the framework. This makes it easier and safer to check that data is stored in the correct type of database field, has the correct format (e.g. an email address), and isn't malicious in any way (hackers can use certain patterns of code to do bad things such as deleting database records).
 
-For example, the Django web framework provides an ORM, and refers to the object used to define the structure of a record as the _model_. The model specifies the field *types* to be stored, which may provide field-level validation on what information can be stored (e.g. an email field would only allow valid email addresses). The field definitions may also specify their maximum size, default values, selection list options, help text for documentation, label text for forms etc. The model doesn't state any information about the underlying database as that is a configuration setting that may be changed separately of our code.
+For example, the Django web framework provides an ORM, and refers to the object used to define the structure of a record as the _model_. The model specifies the field _types_ to be stored, which may provide field-level validation on what information can be stored (e.g. an email field would only allow valid email addresses). The field definitions may also specify their maximum size, default values, selection list options, help text for documentation, label text for forms etc. The model doesn't state any information about the underlying database as that is a configuration setting that may be changed separately of our code.
 
 The first code snippet below shows a very simple Django model for a `Team` object. This stores the team name and team level as character fields and specifies a maximum number of characters to be stored for each record. The `team_level` is a choice field, so we also provide a mapping between choices to be displayed and data to be stored, along with a default value.
 
@@ -149,7 +150,7 @@ Web frameworks often provide templating systems. These allow you to specify the 
 
 Web frameworks often provide a mechanism to make it easy to generate other formats from stored data, including {{glossary("JSON")}} and {{glossary("XML")}}.
 
-For example, the Django template system allows you to specify variables using a "double-handlebars" syntax (e.g. `\{{ variable_name }}`),  which will be replaced by values passed in from the view function when a page is rendered. The template system also provides support for expressions (with syntax: `{% expression %}`), which allow templates to perform simple operations like iterating list values passed into the template.
+For example, the Django template system allows you to specify variables using a "double-handlebars" syntax (e.g. `\{{ variable_name }}`), which will be replaced by values passed in from the view function when a page is rendered. The template system also provides support for expressions (with syntax: `{% expression %}`), which allow templates to perform simple operations like iterating list values passed into the template.
 
 > **Note:** Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
 
@@ -185,7 +186,7 @@ Some of the factors that may affect your decision are:
 - **Effort to learn:** The effort to learn a web framework depends on how familiar you are with the underlying programming language, the consistency of its API, the quality of its documentation, and the size and activity of its community. If you're starting from absolutely no programming experience then consider Django (it is one of the easiest to learn based on the above criteria). If you are part of a development team that already has significant experience with a particular web framework or programming language, then it makes sense to stick with that.
 - **Productivity:** Productivity is a measure of how quickly you can create new features once you are familiar with the framework, and includes both the effort to write and maintain code (since you can't write new features while old ones are broken). Many of the factors affecting productivity are similar to those for "Effort to learn" — e.g. documentation, community, programming experience, etc. — other factors include:
 
-  - _Framework purpose/origin_: Some web frameworks were initially created to solve certain types of problems, and remain *better* at creating web apps with similar constraints. For example, Django was created to support development of a newspaper website, so it's good for blogs and other sites that involve publishing things. By contrast, Flask is a much lighter-weight framework and is great for creating web apps running on embedded devices.
+  - _Framework purpose/origin_: Some web frameworks were initially created to solve certain types of problems, and remain _better_ at creating web apps with similar constraints. For example, Django was created to support development of a newspaper website, so it's good for blogs and other sites that involve publishing things. By contrast, Flask is a much lighter-weight framework and is great for creating web apps running on embedded devices.
   - _Opinionated vs unopinionated_: An opinionated framework is one in which there are recommended "best" ways to solve a particular problem. Opinionated frameworks tend to be more productive when you're trying to solve common problems, because they lead you in the right direction, however they are sometimes less flexible.
   - _Batteries included vs. get it yourself_: Some web frameworks include tools/libraries that address every problem their developers can think "by default", while more lightweight frameworks expect web developers to pick and choose solution to problems from separate libraries (Django is an example of the former, while Flask is an example of a very light-weight framework). Frameworks that include everything are often easier to get started with because you already have everything you need, and the chances are that it is well integrated and well documented. However if a smaller framework has everything you (will ever) need then it can run in more constrained environments and will have a smaller and easier subset of things to learn.
   - _Whether or not the framework encourages good development practices_: For example, a framework that encourages a [Model-View-Controller](/en-US/docs/Glossary/MVC) architecture to separate code into logical functions will result in more maintainable code than one that has no expectations on developers. Similarly, framework design can have a large impact on how easy it is to test and re-use code.
@@ -203,15 +204,15 @@ If you're an absolute beginner at programming then you'll probably choose your f
 >
 > 1. Navigate to the main sites (linked above)
 >
->     - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started", etc.).
->     - Can you see topics showing how to set up URL routing, templates, and databases/models?
->     - Are the documents clear?
+>    - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started", etc.).
+>    - Can you see topics showing how to set up URL routing, templates, and databases/models?
+>    - Are the documents clear?
 >
 > 2. Navigate to mailing lists for each site (accessible from Community links).
 >
->     - How many questions have been posted in the last few days
->     - How many have responses?
->     - Do they have an active community?
+>    - How many questions have been posted in the last few days
+>    - How many have responses?
+>    - Do they have an active community?
 
 ## A few good web frameworks?
 

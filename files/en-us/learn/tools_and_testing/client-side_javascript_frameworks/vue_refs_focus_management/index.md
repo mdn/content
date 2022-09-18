@@ -12,6 +12,7 @@ tags:
   - refs
   - Vue
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 We are nearly done with Vue. The last bit of functionality to look at is focus management, or put another way, how we can improve our app's keyboard accessibility. We'll look at using **Vue refs** to handle this — an advanced feature that allows you to have direct access to the underlying DOM nodes below the virtual DOM, or direct access from one component to the internal DOM structure of a child component.
@@ -49,28 +50,28 @@ We are nearly done with Vue. The last bit of functionality to look at is focus m
 
 ## The focus management problem
 
-While we do have working edit functionality, we aren't providing a great experience for non-mouse users. Specifically, when a user activates the "Edit" Button, we remove the "Edit" Button from the DOM, but we don't move the user's focus anywhere, so in effect it just disappears. This can be disorienting for keyboard and non-visual users.
+While we do have working edit functionality, we aren't providing a great experience for non-mouse users. Specifically, when a user activates the "Edit" button, we remove the "Edit" button from the DOM, but we don't move the user's focus anywhere, so in effect it just disappears. This can be disorienting for keyboard and non-visual users.
 
 To understand what's currently happening:
 
 1. Reload your page, then press
 
-    <kbd>Tab</kbd>
+   <kbd>Tab</kbd>
 
-    . You should see a focus outline on the input for adding new to-do items.
+   . You should see a focus outline on the input for adding new to-do items.
 
 2. Press
 
-    <kbd>Tab</kbd>
+   <kbd>Tab</kbd>
 
-    again. The focus should move to the "Add" button.
+   again. The focus should move to the "Add" button.
 
 3. Hit it again, and it'll be on the first checkbox. One more time, and focus should be on the first "Edit" button.
 4. Activate the "Edit" button by pressing
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    . The checkbox will be replaced with our edit component, but the focus outline will be gone.
+   . The checkbox will be replaced with our edit component, but the focus outline will be gone.
 
 This behavior can be jarring. In addition, what happens when you press <kbd>Tab</kbd> again varies depending on the browser you're using. Similarly, if you save or cancel your edit, focus will disappear again as you move back to the non-edit view.
 
@@ -88,10 +89,14 @@ To use a ref in a component, you add a `ref` attribute to the element that you w
 
 ### Adding a ref to our app
 
-So, let's attach a ref to our "Edit" Button in `ToDoItem.vue`. Update it like this:
+So, let's attach a ref to our "Edit" button in `ToDoItem.vue`. Update it like this:
 
 ```html
-<button type="button" class="btn" ref="editButton" @click="toggleToItemEditForm">
+<button
+  type="button"
+  class="btn"
+  ref="editButton"
+  @click="toggleToItemEditForm">
   Edit
   <span class="visually-hidden">\{{label}}</span>
 </button>
@@ -106,11 +111,11 @@ toggleToItemEditForm() {
 }
 ```
 
-If you activate the "Edit" Button at this point, you should see an HTML `<button>` element referenced in your console.
+If you activate the "Edit" button at this point, you should see an HTML `<button>` element referenced in your console.
 
-## Vue's `$nextTick()` method
+## Vue's $nextTick() method
 
-We want to set focus on the "Edit" Button when a user saves or cancels their edit. To do that, we need to handle focus in the `ToDoItem` component's `itemEdited()` and `editCancelled()` methods.
+We want to set focus on the "Edit" button when a user saves or cancels their edit. To do that, we need to handle focus in the `ToDoItem` component's `itemEdited()` and `editCancelled()` methods.
 
 For convenience, create a new method which takes no arguments called `focusOnEditButton()`. Inside it, assign your `ref` to a variable, and then call the `focus()` method on the ref.
 
@@ -135,11 +140,11 @@ editCancelled() {
 },
 ```
 
-Try editing and then saving/cancelling a to-do item via your keyboard. You'll notice that focus isn't being set, so we still have a problem to solve. If you open your console, you'll see an error raised along the lines of _"can't access property "focus", editButtonRef is undefined"_. This seems weird. Your button ref was defined when you activated the "Edit" Button, but now it's not. What is going on?
+Try editing and then saving/cancelling a to-do item via your keyboard. You'll notice that focus isn't being set, so we still have a problem to solve. If you open your console, you'll see an error raised along the lines of _"can't access property "focus", editButtonRef is undefined"_. This seems weird. Your button ref was defined when you activated the "Edit" button, but now it's not. What is going on?
 
-Well, remember that when we change `isEditing` to `true`, we no longer render the section of the component featuring the "Edit" Button. This means there's no element to bind the ref to, so it becomes `undefined`.
+Well, remember that when we change `isEditing` to `true`, we no longer render the section of the component featuring the "Edit" button. This means there's no element to bind the ref to, so it becomes `undefined`.
 
-You might now be thinking "hey, don't we set `isEditing=false` before we try to access the `ref`, so therefore shouldn't the `v-if` now be displaying the button?" This is where the virtual DOM comes into play. Because Vue is trying to optimize and batch changes, it won't immediately update the DOM when we set `isEditing` to `false`. So when we call `focusOnEditButton()`, the "Edit" Button has not been rendered yet.
+You might now be thinking "hey, don't we set `isEditing=false` before we try to access the `ref`, so therefore shouldn't the `v-if` now be displaying the button?" This is where the virtual DOM comes into play. Because Vue is trying to optimize and batch changes, it won't immediately update the DOM when we set `isEditing` to `false`. So when we call `focusOnEditButton()`, the "Edit" button has not been rendered yet.
 
 Instead, we need to wait until after Vue undergoes the next DOM update cycle. To do that, Vue components have a special method called `$nextTick()`. This method accepts a callback function, which then executes after the DOM updates.
 
@@ -154,11 +159,11 @@ focusOnEditButton() {
 }
 ```
 
-Now when you activate the "Edit" Button and then cancel or save your changes via the keyboard, focus should be returned to the "Edit" Button. Success!
+Now when you activate the "Edit" button and then cancel or save your changes via the keyboard, focus should be returned to the "Edit" button. Success!
 
 ## Vue lifecycle methods
 
-Next, we need to move focus to the edit form's `<input>` element when the "Edit" button is clicked. However, because our edit form is in a different component to our "Edit" button, we can't just set focus inside the "Edit" button's click event handler. Instead, we can use the fact that we remove and re-mount our `ToDoItemEditForm` component whenever the "Edit" Button is clicked to handle this.
+Next, we need to move focus to the edit form's `<input>` element when the "Edit" button is clicked. However, because our edit form is in a different component to our "Edit" button, we can't just set focus inside the "Edit" button's click event handler. Instead, we can use the fact that we remove and re-mount our `ToDoItemEditForm` component whenever the "Edit" button is clicked to handle this.
 
 So how does this work? Well, Vue components undergo a series of events, known as a **lifecycle**. This lifecycle spans from all the way before elements are _created_ and added to the VDOM (_mounted_), until they are removed from the VDOM (_destroyed_).
 
@@ -171,9 +176,9 @@ Vue lets you run methods at various stages of this lifecycle using **lifecycle m
 5. `beforeUpdate()` — Runs whenever data in your component changes, but before the changes are rendered to the DOM.
 6. `updated()` — Runs whenever data in your component has changed and after the changes are rendered to the DOM.
 7. `beforeDestroy()` — Runs before a component is removed from the DOM.
-8. `destroyed()` — Runs after a component has been removed from the DOM
+8. `destroyed()` — Runs after a component has been removed from the DOM.
 9. `activated()` — Only used in components wrapped in a special `keep-alive` tag. Runs after the component is activated.
-10. `deactivated()` — only used in components wrapped in a special `keep-alive` tag. Runs after the component is deactivated.
+10. `deactivated()` — Only used in components wrapped in a special `keep-alive` tag. Runs after the component is deactivated.
 
 > **Note:** The Vue Docs provide a [nice diagram for visualizing when these hooks happen](https://v2.vuejs.org/v2/guide/instance.html#Lifecycle-Diagram). This article from the [Digital Ocean Community Blog dives into the lifecycle methods more deeply](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle).
 
@@ -182,7 +187,12 @@ Now that we've gone over the lifecycle methods, let's use one to trigger focus w
 In `ToDoItemEditForm.vue`, attach `ref="labelInput"` to the `<input>` element, like so:
 
 ```html
-<input :id="id" ref="labelInput" type="text" autocomplete="off" v-model.lazy.trim="newName" />
+<input
+  :id="id"
+  ref="labelInput"
+  type="text"
+  autocomplete="off"
+  v-model.lazy.trim="newName" />
 ```
 
 Next, add a `mounted()` property just inside your component object — **note that this should not be put inside the `methods` property, but rather at the same hierarchy level as `props`, `data()`, and `methods`.** Lifecycle methods are special methods that sit on their own, not alongside the user-defined methods. This should take no inputs. Note that you cannot use an arrow function here since we need access to `this` to access our `labelInput` ref.
@@ -202,11 +212,11 @@ mounted() {
 }
 ```
 
-Now when you activate the "Edit" Button with your keyboard, focus should immediately be moved to the edit `<input>`.
+Now when you activate the "Edit" button with your keyboard, focus should immediately be moved to the edit `<input>`.
 
 ## Handling focus when deleting to-do items
 
-There's one more place we need to consider focus management: when a user deletes a to-do. When clicking the "Edit" Button, it makes sense to move focus to the edit name text box, and back to the "Edit" button when canceling or saving from the edit screen.
+There's one more place we need to consider focus management: when a user deletes a to-do. When clicking the "Edit" button, it makes sense to move focus to the edit name text box, and back to the "Edit" button when canceling or saving from the edit screen.
 
 However, unlike with the edit form, we don't have a clear location for focus to move to when an element is deleted. We also need a way to provide assistive technology users with information that confirms that an element was deleted.
 
@@ -217,7 +227,7 @@ First, we need to add a ref to our list heading. We also need to add a `tabindex
 Inside `App.vue`, update your `<h2>` as follows:
 
 ```html
- <h2 id="list-summary" ref="listSummary" tabindex="-1">\{{listSummary}}</h2>
+<h2 id="list-summary" ref="listSummary" tabindex="-1">\{{listSummary}}</h2>
 ```
 
 > **Note:** [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) is a really powerful tool for handling certain accessibility problems. However, it should be used with caution. Over-using `tabindex="-1"` can cause problems for all sorts of users, so only use it exactly where you need to. You should also almost never use `tabindex` > = `0`, as it can cause problems for users since it can make the DOM flow and the tab-order mismatch, and/or add non-interactive elements to the tab order. This can be confusing to users, especially those using screen readers and other assistive technology.

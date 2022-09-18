@@ -10,11 +10,12 @@ tags:
   - Guide
 browser-compat: api.Gamepad
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}
 
-HTML5 introduced many of the necessary components for rich, interactive game development. Technologies like `<canvas>`, WebGL, `<audio>`, and `<video>`, along with JavaScript implementations, have matured to the point where they can now support many tasks previously requiring native code. The Gamepad API is a way for developers and designers to access and use gamepads and other game controllers.
+HTML provides the necessary components for rich, interactive game development. Technologies like `<canvas>`, WebGL, `<audio>`, and `<video>`, along with JavaScript implementations, support tasks that provide similar, if not the same, features as native code. The Gamepad API allows developers and designers to access and use gamepads and other game controllers.
 
-The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) introduces new events on the {{ domxref("Window") }} object for reading gamepad and controller (hereby referred to as *gamepad*) state. In addition to these events, the API also adds a {{ domxref("Gamepad") }} object, which you can use to query the state of a connected gamepad, and a {{ domxref("navigator.getGamepads()") }} method which you can use to get a list of gamepads known to the page.
+The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) introduces new events on the {{ domxref("Window") }} object for reading gamepad and controller (hereby referred to as _gamepad_) state. In addition to these events, the API also adds a {{ domxref("Gamepad") }} object, which you can use to query the state of a connected gamepad, and a {{ domxref("navigator.getGamepads()") }} method which you can use to get a list of gamepads known to the page.
 
 ## Connecting to a gamepad
 
@@ -217,26 +218,26 @@ function addgamepad(gamepad) {
 
   const b = document.createElement("div");
   b.className = "buttons";
-  for (let i = 0; i < gamepad.buttons.length; i++) {
+  gamepad.buttons.forEach((button, i) => {
     const e = document.createElement("span");
     e.className = "button";
     e.textContent = i;
     b.appendChild(e);
-  }
+  });
 
   d.appendChild(b);
 
   const a = document.createElement("div");
   a.className = "axes";
 
-  for (let i = 0; i < gamepad.axes.length; i++) {
+  gamepad.axes.forEach((axis, i) => {
     const p = document.createElement("progress");
     p.className = "axis";
     p.setAttribute("max", "2");
     p.setAttribute("value", "1");
     p.textContent = i;
     a.appendChild(p);
-  }
+  });
 
   d.appendChild(a);
 
@@ -265,37 +266,32 @@ function updateStatus() {
     scangamepads();
   }
 
-  for (const j in controllers) {
-    const controller = controllers[j];
-    const d = document.getElementById(`controller${j}`);
+  controllers.forEach((controller, i) => {
+    const d = document.getElementById(`controller${i}`);
     const buttons = d.getElementsByClassName("button");
 
-    for (let i = 0; i < controller.buttons.length; i++) {
+    controller.buttons.forEach((button, i) => {
       const b = buttons[i];
-      let val = controller.buttons[i];
-      let pressed = val === 1.0;
-      if (typeof val === "object") {
+      let pressed = button === 1.0;
+      let val = button;
+
+      if (typeof button === "object") {
         pressed = val.pressed;
         val = val.value;
       }
 
       const pct = `${Math.round(val * 100)}%`;
       b.style.backgroundSize = `${pct} ${pct}`;
-
-      if (pressed) {
-        b.className = "button pressed";
-      } else {
-        b.className = "button";
-      }
-    }
+      b.className = pressed ? "button pressed" : "button";
+    });
 
     const axes = d.getElementsByClassName("axis");
-    for (let i = 0; i < controller.axes.length; i++) {
+    controller.axes.forEach((axis, i) => {
       const a = axes[i];
-      a.textContent = `${i}: ${controller.axes[i].toFixed(4)}`;
-      a.setAttribute("value", controller.axes[i] + 1);
-    }
-  }
+      a.textContent = `${i}: ${controller.axis.toFixed(4)}`;
+      a.setAttribute("value", controller.axis + 1);
+    });
+  });
 
   requestAnimationFrame(updateStatus);
 }

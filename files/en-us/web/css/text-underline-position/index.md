@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.text-underline-position
 ---
+
 {{CSSRef}}
 
 The **`text-underline-position`** [CSS](/en-US/docs/Web/CSS) property specifies the position of the underline which is set using the {{cssxref("text-decoration")}} property's `underline` value.
@@ -48,7 +49,7 @@ text-underline-position: unset;
   - : In vertical writing-modes, this keyword forces the line to be placed on the _left_ side of the text. In horizontal writing-modes, it is a synonym of `under`.
 - `right`
   - : In vertical writing-modes, this keyword forces the line to be placed on the _right_ side of the text. In horizontal writing-modes, it is a synonym of `under`.
-- `auto-pos` {{non-standard_inline}}
+- `auto-pos` {{non-standard_inline}} {{Experimental_Inline}}
   - : A synonym of `auto`, which should be used instead.
 - `above` {{non-standard_inline}}
   - : Forces the line to be above the text. When used with East-Asian text, using the `auto` keyword will lead to a similar effect.
@@ -70,15 +71,17 @@ text-underline-position: unset;
 Let's take a couple of simple example paragraphs:
 
 ```html
-<p class="horizontal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nullam consectetur ac turpis vel laoreet. Nullam volutpat pharetra lorem, sit
-amet feugiat tortor volutpat quis. Nam eget sodales quam. Aliquam accumsan
-tellus ac erat posuere.</p>
+<p class="horizontal">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur ac
+  turpis vel laoreet. Nullam volutpat pharetra lorem, sit amet feugiat tortor
+  volutpat quis. Nam eget sodales quam. Aliquam accumsan tellus ac erat posuere.
+</p>
 
-<p class="vertical">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nullam consectetur ac turpis vel laoreet. Nullam volutpat pharetra lorem, sit
-amet feugiat tortor volutpat quis. Nam eget sodales quam. Aliquam accumsan
-tellus ac erat posuere.</p>
+<p class="vertical">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur ac
+  turpis vel laoreet. Nullam volutpat pharetra lorem, sit amet feugiat tortor
+  volutpat quis. Nam eget sodales quam. Aliquam accumsan tellus ac erat posuere.
+</p>
 ```
 
 Our CSS looks like this:

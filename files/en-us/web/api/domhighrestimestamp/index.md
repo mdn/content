@@ -14,6 +14,7 @@ tags:
   - timeStamp
 browser-compat: api.DOMHighResTimestamp
 ---
+
 {{APIRef("High Resolution Time")}}
 
 The **`DOMHighResTimeStamp`** type is a `double` and is used to store a time value in milliseconds.

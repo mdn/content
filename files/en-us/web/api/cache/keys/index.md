@@ -12,6 +12,7 @@ tags:
   - keys
 browser-compat: api.Cache.keys
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`keys()`** method of the {{domxref("Cache")}} interface returns a
@@ -25,7 +26,7 @@ The requests are returned in the same order that they were inserted.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 keys(request)
 keys(request, options)
@@ -43,7 +44,7 @@ keys(request, options)
 
     - `ignoreSearch`
       - : A boolean value that specifies whether the
-        matching process should ignore the query string in the URL.  If set to
+        matching process should ignore the query string in the URL. If set to
         `true`, the `?value=bar` part of
         `http://foo.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
@@ -55,7 +56,7 @@ keys(request, options)
     - `ignoreVary`
       - : A boolean value that, when set to
         `true,` tells the matching operation not to perform `VARY`
-        header matching.  In other words, if the URL matches you will get a match
+        header matching. In other words, if the URL matches you will get a match
         regardless of whether the {{domxref("Response")}} object has a `VARY`
         header. It defaults to `false`.
     - `cacheName`
@@ -71,13 +72,13 @@ objects.
 ## Examples
 
 ```js
-caches.open('v1').then((cache) => {
+caches.open("v1").then((cache) => {
   cache.keys().then((keys) => {
     keys.forEach((request, index, array) => {
       cache.delete(request);
     });
   });
-})
+});
 ```
 
 ## Specifications

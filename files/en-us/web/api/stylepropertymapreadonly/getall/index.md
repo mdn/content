@@ -13,6 +13,7 @@ tags:
   - getAll()
 browser-compat: api.StylePropertyMapReadOnly.getAll
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the
@@ -21,7 +22,7 @@ The **`getAll()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getAll(property)
 ```
 

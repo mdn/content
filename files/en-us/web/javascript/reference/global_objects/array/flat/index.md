@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.flat
 ---
+
 {{JSRef}}
 
 The **`flat()`** method creates a new array with all sub-array
@@ -20,7 +21,7 @@ elements concatenated into it recursively up to the specified depth.
 
 ## Syntax
 
-```js
+```js-nolint
 flat()
 flat(depth)
 ```
@@ -59,8 +60,8 @@ const arr = [1, 2, [3, 4, [5, 6]]];
 
 // to enable deep level flatten use recursion with reduce and concat
 function flatDeep(arr, d = 1) {
-  if (!Array.isArray(val)) {
-    return val;
+  if (!Array.isArray(arr)) {
+    return arr;
   }
   return d > 0
     ? arr.reduce((acc, val) => acc.concat(flatDeep(val, d - 1)), [])

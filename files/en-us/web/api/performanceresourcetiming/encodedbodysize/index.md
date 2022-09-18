@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.encodedBodySize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`encodedBodySize`** read-only property represents the
@@ -31,29 +32,19 @@ The following example, the value of the size properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
 ```js
-function log_sizes(perfEntry){
+function logSizes(entry) {
   // Check for support of the PerformanceEntry.*size properties and print their values
   // if supported.
-  if ("decodedBodySize" in perfEntry)
-    console.log(`decodedBodySize = ${perfEntry.decodedBodySize}`);
-  else
-    console.log("decodedBodySize = NOT supported");
-
-  if ("encodedBodySize" in perfEntry)
-    console.log(`encodedBodySize = ${perfEntry.encodedBodySize}`);
-  else
-    console.log("encodedBodySize = NOT supported");
-
-  if ("transferSize" in perfEntry)
-    console.log(`transferSize = ${perfEntry.transferSize}`);
-  else
-    console.log("transferSize = NOT supported");
+  console.log(`decodedBodySize = ${perfEntry.decodedBodySize ?? "NOT supported"}`);
+  console.log(`encodedBodySize = ${perfEntry.encodedBodySize ?? "NOT supported"}`);
+  console.log(`transferSize = ${perfEntry.transferSize ?? "NOT supported"}`);
 }
-function check_PerformanceEntries() {
+
+function checkPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   const entries = performance.getEntriesByType("resource");
   for (const entry of entries) {
-    log_sizes(entry);
+    logSizes(entry);
   }
 }
 ```

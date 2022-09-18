@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.location
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.location`** read-only property returns an
@@ -67,10 +68,10 @@ Possible values are:
         </p>
         <div class="note">
           <p>
-            <strong>Note:</strong> When <kbd>NumLock</kbd> is locked, Gecko
+            <strong>Note:</strong> When <kbd>NumLock</kbd> is locked, Firefox
             always returns <code>DOM_KEY_LOCATION_NUMPAD</code> for the keys on
             the numeric pad. Otherwise, when <kbd>NumLock</kbd> is unlocked and
-            the keyboard actually has a numeric keypad, Gecko always returns
+            the keyboard actually has a numeric keypad, Firefox always returns
             <code>DOM_KEY_LOCATION_NUMPAD</code> too. On the other hand, if the
             keyboard doesn't have a keypad, such as on a notebook computer, some
             keys become Numpad only when NumLock is locked. When such keys fires
@@ -81,7 +82,7 @@ Possible values are:
         <div class="note">
           <p>
             <strong>Note:</strong> <kbd>NumLock</kbd> key's key events indicate
-            <code>DOM_KEY_LOCATION_STANDARD</code> both on Gecko and Internet
+            <code>DOM_KEY_LOCATION_STANDARD</code> both on Firefox and Internet
             Explorer.
           </p>
         </div>
@@ -98,16 +99,6 @@ Possible values are:
           The key was on a mobile device; this can be on either a physical
           keypad or a virtual keyboard.
         </p>
-        <div class="note">
-          <p>
-            <strong>Note:</strong> Gecko always returns
-            <code>DOM_KEY_LOCATION_MOBILE</code> on Android (Prior to 18),
-            Maemo, and
-            <a href="/en-US/docs/Mozilla/Boot_to_Gecko" title="Boot to Gecko"
-              >Boot to Gecko</a
-            >. However, at {{gecko("38")}}, this is dropped.
-          </p>
-        </div>
       </td>
     </tr>
     <tr>
@@ -121,14 +112,6 @@ Possible values are:
           The key was a button on a game controller or a joystick on a mobile
           device.
         </p>
-        <div class="note">
-          <p>
-            <strong>Note:</strong> Gecko never fires trusted key events with
-            <code>DOM_KEY_LOCATION_JOYSTICK</code> except on Android. Starting
-            18, native key events on Android may have this value. However, at
-            {{gecko("38")}}, this is dropped.
-          </p>
-        </div>
       </td>
     </tr>
   </tbody>

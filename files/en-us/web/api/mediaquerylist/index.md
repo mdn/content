@@ -14,6 +14,7 @@ tags:
   - query
 browser-compat: api.MediaQueryList
 ---
+
 {{APIRef("CSSOM")}}
 
 A **`MediaQueryList`** object stores information on a [media query](/en-US/docs/Web/CSS/Media_Queries) applied to a document, with support for both immediate and event-driven matching against the state of the document.
@@ -72,7 +73,7 @@ function screenTest(e) {
 mql.addEventListener('change', screenTest);
 ```
 
-> **Note:** You can find this example on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html), and also see it [running live](https://mdn.github.io/dom-examples/mediaquerylist/index.html)).
+> **Note:** You can find this example on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/main/mediaquerylist/index.html), and also see it [running live](https://mdn.github.io/dom-examples/mediaquerylist/index.html)).
 
 You can find other examples on the individual property and method pages.
 

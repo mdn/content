@@ -12,6 +12,7 @@ tags:
   - jsx
   - props
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app — learning a bit about how React works in the process.
@@ -125,7 +126,7 @@ In order to use create-react-app, you need to have [Node.js](https://nodejs.org/
 
 You may also use the Yarn package manager as an alternative, but we'll assume you are using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
 
-If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
+If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://docs.microsoft.com/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
 
 Also bear in mind that React and ReactDOM produce apps that only work on a fairly modern set of browsers — IE9+ by way of some polyfills. It is recommended that you use a modern browser like Firefox, Microsoft Edge, Safari, or Chrome when working through these tutorials.
 
@@ -150,7 +151,7 @@ This creates a `moz-todo-react` directory, and does several things inside it:
 - Creates a structure of files and directories that define the basic app architecture.
 - Initializes the directory as a git repository, if you have git installed on your computer.
 
-> **Note:** if you have the Yarn package manager installed, create-react-app will default to using it instead of npm. If you have both package managers installed and explicitly want to use NPM, you can add the flag `--use-npm` when you run create-react-app:
+> **Note:** if you have the Yarn package manager installed, create-react-app will default to using it instead of npm. If you have both package managers installed and explicitly want to use npm, you can add the flag `--use-npm` when you run create-react-app:
 >
 > ```bash
 > npx create-react-app moz-todo-react --use-npm
@@ -315,36 +316,35 @@ Let's open `src/index.js`, because that's where the `App` component is being use
 
 ```js
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
 ```
 
 As with `App.js`, the file starts by importing all the JS modules and other assets it needs to run. `src/index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.js`.
 
-Line 7 calls React's `ReactDOM.render()` function with two arguments:
+Line 7 calls React's `ReactDOM.createRoot()` function with one argument - the DOM element inside which we want the component to be rendered, in this case, the element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`.
 
-- The component we want to render, `<App />` in this case.
-- The DOM element inside which we want the component to be rendered, in this case the element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`.
+Line 8 calls the `render()` method of the root we just created with one argument - the component we want to render, `<App />` in this case.
 
 All of this tells React that we want to render our React application with the `App` component as the root, or first component.
 
 > **Note:** In JSX, React components and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
 
-[Service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers) are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they're not in scope for this article. You can delete line 5, as well as most of the code below it.
+[`reportWebVitals`](https://create-react-app.dev/docs/measuring-performance/) are a set of useful metrics that aim to capture the user experience of a web page, but they're not in scope for this article. You can delete its import line, as well as the `reportWebVitals();` line.
 
 Your final `index.js` file should look like this:
 
@@ -354,7 +354,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(<App />);
 ```
 
 ## Variables and props
@@ -363,7 +364,7 @@ Next, we'll use a few of our JavaScript skills to get a bit more comfortable edi
 
 ### Variables in JSX
 
-Back in `App.js`, let's focus on line 9:
+Back in `App.js`, let's focus on line 5:
 
 ```js
 <img src={logo} className="App-logo" alt="logo" />
@@ -420,7 +421,7 @@ Let's open `index.js` and give our `<App/>` call its first prop.
 Add a prop of `subject` to the `<App/>` component call, with a value of `Clarice`. When you are done, your code should look something like this:
 
 ```js
-ReactDOM.render(<App subject="Clarice" />, document.getElementById('root'));
+root.render(<App subject="Clarice" />);
 ```
 
 Back in `App.js`, let's revisit the App function itself, which reads like this (with the `return` statement shortened for brevity):
@@ -478,7 +479,7 @@ In React:
 - Components can import modules they need and must export themselves at the bottom of their files.
 - Component functions are named with `PascalCase`.
 - You can read JSX variables by putting them between curly braces, like `{so}`.
-- Some JSX attributes are different than HTML attributes so that they don't conflict with JavaScript reserved words. For example, `class` in HTML translates to `className` in JSX. Note that multi-word attributes are camel-cased.
+- Some JSX attributes are different than HTML attributes so that they don't conflict with JavaScript reserved words. For example, `class` in HTML translates to `className` in JSX. Note that multi-word attributes are in `camelCase`.
 - Props are written just like attributes inside component calls and are passed into components.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

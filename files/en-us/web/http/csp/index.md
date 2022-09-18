@@ -10,6 +10,7 @@ tags:
   - access
 browser-compat: http.headers.Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 **Content Security Policy** ({{Glossary("CSP")}}) is an added layer of security that helps to detect and mitigate certain types of attacks,
@@ -26,8 +27,9 @@ To enable CSP, you need to configure your web server to return the {{HTTPHeader(
 Alternatively, the {{HTMLElement("meta")}} element can be used to configure a policy, for example:
 
 ```html
-<meta http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src https://*; child-src 'none';">
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; img-src https://*; child-src 'none';" />
 ```
 
 ## Threats
@@ -174,7 +176,7 @@ The report JSON object contains the following data:
     Some browsers may provide different values, such as Chrome providing `style-src-elem`/`style-src-attr`, even when the actually enforced directive was `style-src`.
 - `original-policy`
   - : The original policy as specified by the `Content-Security-Policy` HTTP header.
-- `referrer`
+- `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The referrer of the document in which the violation occurred.
 - `script-sample`
   - : The first 40 characters of the inline script, event handler, or style that caused the violation.
@@ -197,10 +199,11 @@ The HTML of `signup.html` looks like this:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     Here be content.

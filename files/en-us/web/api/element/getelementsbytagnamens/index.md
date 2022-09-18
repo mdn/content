@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.getElementsByTagNameNS()`** method returns a
@@ -19,7 +20,7 @@ that its search is restricted to descendants of the specified element.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByTagNameNS(namespaceURI, localName)
 ```
 
@@ -40,15 +41,15 @@ A live {{domxref("HTMLCollection")}} of found elements in the order they appear 
 ## Examples
 
 ```js
-// check the alignment on a number of cells in a table in an XHTML document.
+// Check the alignment on a number of cells in a table in an XHTML document.
 const table = document.getElementById("forecast-table");
 const cells = table.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "td");
 
-for (let i = 0; i < cells.length; i++) {
-    const axis = cells[i].getAttribute("axis");
-    if (axis === "year") {
-        // grab the data
-    }
+for (const cell of cells) {
+  const axis = cell.getAttribute("axis");
+  if (axis === "year") {
+    // Grab the data
+  }
 }
 ```
 

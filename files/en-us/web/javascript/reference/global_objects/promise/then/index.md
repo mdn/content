@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Promise.then
 ---
+
 {{JSRef}}
 
 The **`then()`** method returns a {{jsxref("Promise")}}. It
@@ -26,7 +27,7 @@ takes up to two arguments: callback functions for the success and failure cases 
 
 ## Syntax
 
-```js
+```js-nolint
 then(onFulfilled)
 then(onFulfilled, onRejected)
 
@@ -254,7 +255,7 @@ another such function.
 
 ```js
 function fetchCurrentData() {
-  // The fetch() API returns a Promise.  This function
+  // The fetch() API returns a Promise. This function
   // exposes a similar API, except the fulfillment
   // value of this function's Promise has had more
   // work done on it.
@@ -267,7 +268,7 @@ function fetchCurrentData() {
 
     // fulfillment value given to user of
     // fetch_current_data().then()
-    return j; 
+    return j;
   });
 }
 ```

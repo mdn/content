@@ -13,6 +13,7 @@ tags:
   - add()
 browser-compat: api.CSSNumericValue.add
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`add()`** method of the
@@ -21,7 +22,7 @@ The **`add()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 add(number)
 ```
 

@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - Media
   - Media Capture and Streams API
   - Media Streams API
@@ -17,6 +16,7 @@ tags:
   - track
 browser-compat: api.MediaStream.getAudioTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getAudioTracks()`** method of the
@@ -27,7 +27,7 @@ is `audio`.
 
 ## Syntax
 
-```js
+```js-nolint
 getAudioTracks()
 ```
 

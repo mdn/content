@@ -1,4 +1,4 @@
-name: 'Mark new issues with needs-triage label'
+name: "Mark new issues with needs-triage label"
 
 on:
   issues:

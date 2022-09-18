@@ -12,6 +12,7 @@ tags:
   - onInputStarted
 browser-compat: webextensions.api.omnibox.onInputStarted
 ---
+
 {{AddonSidebar()}}
 
 Fired when the user starts interacting with your extension by entering its keyword in the address bar and then pressing the space key.
@@ -20,7 +21,7 @@ This will be sent before any {{WebExtAPIRef("omnibox.onInputChanged")}} events.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.omnibox.onInputStarted.addListener(listener)
 browser.omnibox.onInputStarted.removeListener(listener)
 browser.omnibox.onInputStarted.hasListener(listener)

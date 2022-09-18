@@ -9,6 +9,7 @@ tags:
   - Reference
 spec-urls: https://wicg.github.io/web-otp/
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
 
 The **WebOTP API** provides a method for verifying that a phone number belongs to the user, by generating a one-time password on receipt of a specially formatted SMS message.
@@ -31,7 +32,7 @@ In this example, when an SMS message arrives, and the user grants permission, an
 [Try the demo using a phone here](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
 
 ```html
-<input type="text" autocomplete="one-time-code" inputmode="numeric">
+<input type="text" autocomplete="one-time-code" inputmode="numeric" />
 ```
 
 ```js

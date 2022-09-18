@@ -13,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLTableElement.rules
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The **`HTMLTableElement.rules`** property indicates which cell
@@ -20,7 +21,7 @@ borders to render in the table.
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `none`
   - : No rules

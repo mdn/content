@@ -13,6 +13,7 @@ tags:
   - objectStore
 browser-compat: api.IDBIndex.objectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`objectStore`** property of the {{domxref("IDBIndex")}}
@@ -41,7 +42,7 @@ IDBObjectStore { name: "contactsList", keyPath: "id", indexNames: DOMStringList[
 ```
 
 Finally, we iterate through each record, and insert the data into an HTML table. For a
-complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
+complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {

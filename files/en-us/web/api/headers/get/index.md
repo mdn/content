@@ -11,6 +11,7 @@ tags:
   - get
 browser-compat: api.Headers.get
 ---
+
 {{APIRef("Fetch")}}
 
 The **`get()`** method of the {{domxref("Headers")}} interface
@@ -25,7 +26,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 

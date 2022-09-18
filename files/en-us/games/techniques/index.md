@@ -5,6 +5,7 @@ tags:
   - Games
   - Guide
 ---
+
 {{GamesSidebar}}
 
 This page lists essential core techniques for anyone wanting to develop games using open web technologies.

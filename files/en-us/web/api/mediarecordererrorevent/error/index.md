@@ -11,9 +11,12 @@ tags:
   - MediaStream Recording API
   - Property
   - Reference
+  - Deprecated
+  - Non-standard
 browser-compat: api.MediaRecorderErrorEvent.error
 ---
-{{APIRef("MediaStream Recording")}}
+
+{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only `error` property in the
 **{{domxref("MediaRecorderErrorEvent")}}** interface is a
@@ -70,16 +73,16 @@ function recordStream(stream) {
 
   try {
     recorder = new MediaRecorder(stream);
-  } catch(err) {
+  } catch (err) {
     /* exception while trying to create the recorder; handle that */
   }
 
-  recorder.ondataavailable = function(event) {
+  recorder.ondataavailable = (event) => {
     bufferList.push(event.data);
   };
 
-  recorder.onerror = function(event) {
-    let error = event.error;
+  recorder.onerror = (event) => {
+    console.error(`Error: ${event.error}`);
   };
 
   recorder.start(100);  /* 100ms time slices per buffer */

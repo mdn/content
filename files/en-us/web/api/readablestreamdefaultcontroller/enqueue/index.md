@@ -11,6 +11,7 @@ tags:
   - enqueue
 browser-compat: api.ReadableStreamDefaultController.enqueue
 ---
+
 {{APIRef("Streams")}}
 
 The **`enqueue()`** method of the
@@ -19,7 +20,7 @@ associated stream.
 
 ## Syntax
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 
@@ -65,7 +66,7 @@ const stream = new ReadableStream({
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', () => {
       clearInterval(interval);
       fetchStream();
       controller.close();

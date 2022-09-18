@@ -10,7 +10,8 @@ tags:
   - add to home screen
   - icon
 ---
-Add to Home screen (or A2HS for short) is a feature available in modern browsers that allows a user to "install" a web app, ie. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
+
+Add to Home screen (or A2HS for short) is a feature available in modern browsers that allows a user to "install" a web app, i.e. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
 
 ## Why A2HS?
 
@@ -28,7 +29,7 @@ See [caniuse.com](https://caniuse.com/#feat=web-app-manifest) for exact details.
 
 We've written a very simple example web site ([see our demo live](https://mdn.github.io/pwa-examples/a2hs/), and also [see the source code](https://github.com/mdn/pwa-examples/tree/master/a2hs)) that doesn't do much, but was developed with the necessary code to allow it to be added to a Home screen, as well as a service worker to enable it to be used offline. The example displays a series of fox pictures.
 
-If you have either Firefox for Android or Chrome for Android available, use it to navigate to our demo at https://mdn.github.io/pwa-examples/a2hs/ (the URL bar appears on the top in Chrome and at the bottom in Firefox).
+If you have either Firefox for Android or Chrome for Android available, use it to navigate to our [demo](https://mdn.github.io/pwa-examples/a2hs/) (the URL bar appears on the top in Chrome and at the bottom in Firefox).
 
 ![URL bar menu](url_bar_menu.png)
 
@@ -114,7 +115,7 @@ In terms of how to design the icon, you should follow the same best practices yo
 To finish setting up your manifest, you need to reference it from the HTML of your application's home page:
 
 ```html
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="manifest.webmanifest" />
 ```
 
 Browsers that support A2HS will know where to look for your manifest once this is in place.

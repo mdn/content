@@ -19,6 +19,7 @@ tags:
   - reverse
   - web animations api
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 The Web Animations API lets us construct animations and control their playback with JavaScript. This article will start you off in the right direction with fun demos and tutorials featuring Alice in Wonderland.
@@ -187,7 +188,7 @@ nommingCake.play();
 Specifically, we want to link it to Alice's animation, so she gets bigger as the cupcake gets eaten. We can achieve this via the following function:
 
 ```js
-const growAlice = function() {
+const growAlice = () => {
 
   // Play Alice's animation.
   aliceChange.play();
@@ -216,7 +217,7 @@ In addition to pausing and playing, we can use the following Animation methods:
 Let's take a look at `playbackRate` first — a negative playbackRate will cause an animation to run in reverse. When Alice drinks from the bottle, she grows smaller. This is because the bottle changes her animation's playbackRate from 1 to -1:
 
 ```js
-const shrinkAlice = function() {
+const shrinkAlice = () => {
   aliceChange.playbackRate = -1;
   aliceChange.play();
 }
@@ -243,7 +244,7 @@ setInterval(() => {
 But urging them on by clicking or tapping causes them to speed up by multiplying their playbackRate:
 
 ```js
-const goFaster = function() {
+const goFaster = () => {
   redQueen_alice.updatePlaybackRate(redQueen_alice.playbackRate * 1.1);
 }
 
@@ -258,11 +259,9 @@ The background elements also have `playbackRate`s that are impacted when you cli
 Imagine other ways we could use playbackRate, such as improving accessibility for users with vestibular disorders by letting them slow down animations across an entire site. That's impossible to do with CSS without recalculating durations in every CSS rule, but with the Web Animations API, we could use the {{domxref("Document.getAnimations")}} method to loop over each animation on the page and halve their `playbackRate`s, like so:
 
 ```js
-document.getAnimations().forEach(
-  function (animation) {
-    animation.updatePlaybackRate(animation.playbackRate * .5);
-  }
-);
+document.getAnimations().forEach((animation) => {
+  animation.updatePlaybackRate(animation.playbackRate * 0.5);
+});
 ```
 
 With the Web Animations API, all you need to change is just one little property!
@@ -270,7 +269,12 @@ With the Web Animations API, all you need to change is just one little property!
 Another thing that's tough to do with CSS Animations alone is creating dependencies on values provided by other animations. For instance, in the Growing and Shrinking Alice game example, you might have noticed something odd about the cake's duration:
 
 ```js
-duration: aliceChange.effect.getComputedTiming().duration / 2
+document.getElementById('eat-me_sprite').animate(
+  [],
+  {
+    duration: aliceChange.effect.timing.duration / 2
+  }
+);
 ```
 
 To understand what's happening here, let's take a look at Alice's animation:
@@ -326,7 +330,7 @@ Now all three animations are linked to just one duration, which we can change ea
 We can also use the Web Animations API to figure out the animation's current time. The game ends when you run out of cake to eat or empty the bottle. Which vignette players are presented with depends on how far along Alice was in her animation, whether she grew too big and can't get in the tiny door anymore or too small and cannot reach the key to open the door. We can figure out whether she's on the large end or small end of her animation by getting her animation's [`currentTime`](/en-US/docs/Web/API/Animation/currentTime) and dividing it by her `activeDuration`:
 
 ```js
-const endGame = function() {
+const endGame = () => {
 
   // get Alice's timeline's playhead location
   const alicePlayhead = aliceChange.currentTime;

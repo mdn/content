@@ -21,6 +21,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackConstraints.displaySurface
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's **`displaySurface`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.displaySurface","displaySurface")}} constrainable property.
@@ -58,7 +59,7 @@ if (displaySurface === "monitor" || displaySurface ==="application") {
 }
 ```
 
-Following this code, `mayHaveBackdrop`  is `true` if the display
+Following this code, `mayHaveBackdrop` is `true` if the display
 surface contained in the stream is of type `monitor` or
 `application`; either of these _may_ have non-content backdrop areas.
 Later code can use this flag to determine whether or not to perform special processing,

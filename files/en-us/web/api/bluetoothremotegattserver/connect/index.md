@@ -13,6 +13,7 @@ tags:
   - connect()
 browser-compat: api.BluetoothRemoteGATTServer.connect
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The
@@ -21,7 +22,7 @@ script execution environment to connect to `this.device`.
 
 ## Syntax
 
-```js
+```js-nolint
 connect()
 ```
 

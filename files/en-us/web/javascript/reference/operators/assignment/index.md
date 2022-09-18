@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The simple assignment operator (`=`) is used to assign a value to a
@@ -19,7 +20,7 @@ assignment operator is possible in order to assign a single value to multiple va
 
 ## Syntax
 
-```js
+```js-nolint
 x = y
 ```
 

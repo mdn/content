@@ -5,7 +5,6 @@ tags:
   - Accessibility
   - Developing Mozilla
 ---
-## Introduction
 
 The implementation of text and embedded objects in Mozilla is clever but confusing. Here is a bit of history and an explanation.
 
@@ -38,7 +37,11 @@ While it is odd to call non-link objects a link, this was a necessary compromise
 Take the following HTML code:
 
 ```html
-<div>Hello<a href="http://www.mozilla.org/access">My link<img src="image.gif">is cool</a>Bye</div>
+<div>
+  Hello<a href="http://www.mozilla.org/access"
+    >My link<img src="image.gif" />is cool</a
+  >Bye
+</div>
 ```
 
 Both the {{HTMLElement('a')}} and {{HTMLElement('img')}} are hyperlinks Also, both the {{HTMLElement('div')}} and {{HTMLElement('a')}} are hypertexts So the {{HTMLElement('a')}} is both a hypertext and a hyperlink, because it contains text and is contained within text.
@@ -83,8 +86,8 @@ Here are some notes on the classes we use:
 3. If `ch` == embedded object char (`0xfffc`) then get object for that offset (see A above), then set the current offset to -1, and go to step 2
 4. if `ch == 0` then we must determine whether we're on a hard line break:
 
-    1. If the current accessible's `IA2` role is `SECTION`, `HEADING` or `PARAGRAPH then we are on a hard line break, so stop
-    2. get the offset in the parent text for this object (see B above), and then repeat step (C)2 above
+   1. If the current accessible's `IA2` role is `SECTION`, `HEADING` or `PARAGRAPH then we are on a hard line break, so stop
+   2. get the offset in the parent text for this object (see B above), and then repeat step (C)2 above
 
 5. done
 
@@ -94,17 +97,17 @@ Here are some notes on the classes we use:
 2. If the next character does not exist, proceed to the next accessible in depth first search order and recurse on the first character until a non-embed is found.
 3. If the current character falls within a text substring, locate the line ending of that substring or the next embed, whichever comes first:
 
-    1. Get the current line start and end offsets.
-    2. Compute the item offset relative to the start of this line
-    3. Search forward from the starting offset for an embed character
-    4. If an embed character is found, continue processing with offset = index plus the line start index
-    5. If an embed character is not found:
+   1. Get the current line start and end offsets.
+   2. Compute the item offset relative to the start of this line
+   3. Search forward from the starting offset for an embed character
+   4. If an embed character is found, continue processing with offset = index plus the line start index
+   5. If an embed character is not found:
 
-        1. If the line ending is equal to one less than the length of all text in the accessible, proceed to the next accessible in dept first search order and recurse on the first character until a non-embed is found.
-        2. Otherwise, continue processing with offset = the index at the end of the line.
+      1. If the line ending is equal to one less than the length of all text in the accessible, proceed to the next accessible in dept first search order and recurse on the first character until a non-embed is found.
+      2. Otherwise, continue processing with offset = the index at the end of the line.
 
-    6. If the character at the offset is an embed, proceed to its corresponding accessible and recurse on the first character until a non-embed is found.
-    7. Otherwise, the offset marks the start of a new line.
+   6. If the character at the offset is an embed, proceed to its corresponding accessible and recurse on the first character until a non-embed is found.
+   7. Otherwise, the offset marks the start of a new line.
 
 Navigating to the next word follows a similar pattern. Navigating previous requires returning to the embed character in the parent accessible when the point of regard reaches the end of text in the corresponding child accessible for the embed.
 
@@ -112,7 +115,7 @@ See [http://svn.gnome.org/viewcvs/lsr/tru...py?view=markup](http://svn.gnome.org
 
 ### (E) To grab a subtree of content:
 
-Although under Windows text content is still exposed in leaf nodes of   `ROLE_TEXT`, it is no longer necessary to visit those nodes. Therefore for parent nodes that support the HyperText interface, it is more performant to grab the text from the AccessibleText interface and then only visit the link children. The HyperLink interface can be used to grab the children. Using this technique is about twice as fast as visiting all nodes in the tree, according to tests run by the developers of NVDA.
+Although under Windows text content is still exposed in leaf nodes of `ROLE_TEXT`, it is no longer necessary to visit those nodes. Therefore for parent nodes that support the HyperText interface, it is more performant to grab the text from the AccessibleText interface and then only visit the link children. The HyperLink interface can be used to grab the children. Using this technique is about twice as fast as visiting all nodes in the tree, according to tests run by the developers of NVDA.
 
 ### (F) To get the line of text at the caret:
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.StyleSheet.href
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`href`** property of the {{domxref("StyleSheet")}}
@@ -23,19 +24,23 @@ A string containing the stylesheet's URI.
 On a local machine:
 
 ```html
-<html>
-<head>
-  <link rel="StyleSheet" href="example.css" type="text/css" />
-  <script>
-  function sref() {
-    alert(document.styleSheets[0].href);
-  }
-  </script>
-</head>
-<body>
-  <div class="thunder">Thunder</div>
-  <button onclick="sref()">ss</button>
-</body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>href example</title>
+    <link rel="styleSheet" href="example.css" />
+    <script>
+      function sref() {
+        alert(document.styleSheets[0].href);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="thunder">Thunder</div>
+    <button onclick="sref()">ss</button>
+  </body>
 </html>
 ```
 

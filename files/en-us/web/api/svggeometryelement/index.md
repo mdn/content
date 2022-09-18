@@ -11,6 +11,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement
 ---
+
 {{APIRef("SVG")}}
 
 The `SVGGeometryElement` interface represents SVG elements whose rendering is defined by geometry with an equivalent path, and which can be filled and stroked. This includes paths and the basic shapes.
@@ -21,7 +22,7 @@ The `SVGGeometryElement` interface represents SVG elements whose rendering is de
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
-- {{domxref("SVGGeometryElement.pathLength")}} {{readOnlyInline}}
+- {{domxref("SVGGeometryElement.pathLength")}} {{ReadOnlyInline}}
   - : This property reflects the {{SVGAttr("pathLength")}} attribute.
 
 ## Methods

@@ -14,7 +14,8 @@ tags:
   - takePhoto
 browser-compat: api.ImageCapture.takePhoto
 ---
-{{APIRef("MediaStream Image")}}
+
+{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`takePhoto()`** method of the
 {{domxref("ImageCapture")}} interface takes a single exposure using the video capture
@@ -23,7 +24,7 @@ that resolves with a {{domxref("Blob")}} containing the data.
 
 ## Syntax
 
-```js
+```js-nolint
 takePhoto()
 takePhoto(photoSettings)
 ```

@@ -11,6 +11,7 @@ tags:
   - Exception
 browser-compat: javascript.builtins.WebAssembly.Exception.getArg
 ---
+
 {{JSRef}}
 
 The **`getArg()`** prototype method of the {{jsxref("WebAssembly.Exception", "Exception")}} object can be used to get the value of a specified item in the exception's data arguments.
@@ -23,7 +24,7 @@ Tags that are neither imported into or exported from the WebAssembly code are in
 
 ## Syntax
 
-```js
+```js-nolint
 getArg(exceptionTag, index)
 ```
 
@@ -74,7 +75,7 @@ This imports a tag, which it refers to internally as `$tagname`, and exports a m
 )
 ```
 
-The code below below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) to import the "example.wasm" file, passing in an "import object" (`importObject`) that includes a new {{jsxref("WebAssembly.Tag")}} named `tagToImport`.
+The code below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) to import the "example.wasm" file, passing in an "import object" (`importObject`) that includes a new {{jsxref("WebAssembly.Tag")}} named `tagToImport`.
 The import object defines an object with properties that match the `import` statement in the WebAssembly code.
 
 Once the file is instantiated, the code calls the exported WebAssembly `run()` method, which will immediately throw an exception.

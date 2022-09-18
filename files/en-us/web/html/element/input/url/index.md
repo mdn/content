@@ -184,7 +184,7 @@ It's important, however, to note that this is not enough to ensure that the spec
 Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. In its most basic form, a URL input can be implemented like this:
 
 ```html
-<input id="myURL" name="myURL" type="url">
+<input id="myURL" name="myURL" type="url" />
 ```
 
 {{ EmbedLiveSample('A_simple_URL_input', 600, 40) }}
@@ -200,8 +200,11 @@ Sometimes it's helpful to offer an in-context hint as to what form the input dat
 Here, we have a `url` input with the placeholder `http://www.example.com`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       placeholder="http://www.example.com">
+<input
+  id="myURL"
+  name="myURL"
+  type="url"
+  placeholder="http://www.example.com" />
 ```
 
 {{ EmbedLiveSample('Placeholders', 600, 40) }}
@@ -215,8 +218,7 @@ You can control not only the physical length of the input box, but also the mini
 The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `url` edit box is 30 characters wide:
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       size="30">
+<input id="myURL" name="myURL" type="url" size="30" />
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
@@ -228,8 +230,13 @@ The `size` is separate from the length limitation on the entered URL itself. You
 The example below creates a 30-character wide URL address entry box, requiring that the contents be no shorter than 10 characters and no longer than 80 characters.
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       size="30" minlength="10" maxlength="80">
+<input
+  id="myURL"
+  name="myURL"
+  type="url"
+  size="30"
+  minlength="10"
+  maxlength="80" />
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
@@ -243,8 +250,7 @@ The example below creates a 30-character wide URL address entry box, requiring t
 As always, you can provide a default value for a `url` input box by setting its {{htmlattrxref("value", "input")}} attribute:
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       value="http://www.example.com">
+<input id="myURL" name="myURL" type="url" value="http://www.example.com" />
 ```
 
 {{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
@@ -254,15 +260,14 @@ As always, you can provide a default value for a `url` input box by setting its 
 Taking it a step further, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The `list` attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the URL entry box.
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       list="defaultURLs">
+<input id="myURL" name="myURL" type="url" list="defaultURLs" />
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/">
-  <option value="http://www.google.com/">
-  <option value="http://www.microsoft.com/">
-  <option value="https://www.mozilla.org/">
-  <option value="http://w3.org/">
+  <option value="https://developer.mozilla.org/"></option>
+  <option value="http://www.google.com/"></option>
+  <option value="http://www.microsoft.com/"></option>
+  <option value="https://www.mozilla.org/"></option>
+  <option value="http://w3.org/"></option>
 </datalist>
 ```
 
@@ -275,15 +280,14 @@ With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s 
 You can opt to include the {{htmlattrxref("label", "option")}} attribute on one or all of your `<option>` elements to provide textual labels. Some browsers may display only the labels, while others may display both the label and the URL.
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       list="defaultURLs">
+<input id="myURL" name="myURL" type="url" list="defaultURLs" />
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/" label="MDN Web Docs">
-  <option value="http://www.google.com/" label="Google">
-  <option value="http://www.microsoft.com/" label="Microsoft">
-  <option value="https://www.mozilla.org/" label="Mozilla">
-  <option value="http://w3.org/" label="W3C">
+  <option value="https://developer.mozilla.org/" label="MDN Web Docs"></option>
+  <option value="http://www.google.com/" label="Google"></option>
+  <option value="http://www.microsoft.com/" label="Microsoft"></option>
+  <option value="https://www.mozilla.org/" label="Mozilla"></option>
+  <option value="http://w3.org/" label="W3C"></option>
 </datalist>
 ```
 
@@ -307,7 +311,7 @@ As mentioned earlier, to make a URL entry required before the form can be submit
 
 ```html
 <form>
-  <input id="myURL" name="myURL" type="url" required>
+  <input id="myURL" name="myURL" type="url" required />
   <button>Submit</button>
 </form>
 ```
@@ -328,41 +332,45 @@ Since inputs of type `url` validate against both the standard URL validation _an
 div {
   margin-bottom: 10px;
   position: relative;
-  }
+}
 
-  input[type="number"] {
-    width: 100px;
-  }
+input[type="number"] {
+  width: 100px;
+}
 
-  input + span {
-    padding-right: 30px;
-  }
+input + span {
+  padding-right: 30px;
+}
 
-  input:invalid+span:after {
-    position: absolute; content: '✖';
-    padding-left: 5px;
-  }
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
 
-  input:valid+span:after {
-    position: absolute;
-    content: '✓';
-    padding-left: 5px;
-  }
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
 ```
 
 ```html
 <form>
   <div>
     <label for="myURL">Enter the problem website address:</label>
-    <input id="myURL" name="myURL" type="url"
-           required pattern=".*\.myco\..*"
-           title="The URL must be in a Myco domain">
+    <input
+      id="myURL"
+      name="myURL"
+      type="url"
+      required
+      pattern=".*\.myco\..*"
+      title="The URL must be in a Myco domain" />
     <span class="validity"></span>
   </div>
   <div>
     <label for="myComment">What is the problem?</label>
-    <input id="myComment" name="myComment" type="text"
-           required>
+    <input id="myComment" name="myComment" type="text" required />
     <span class="validity"></span>
   </div>
   <div>

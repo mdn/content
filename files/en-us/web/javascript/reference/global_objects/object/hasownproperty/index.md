@@ -9,6 +9,7 @@ tags:
   - hasOwnProperty
 browser-compat: javascript.builtins.Object.hasOwnProperty
 ---
+
 {{JSRef}}
 
 The **`hasOwnProperty()`** method returns a boolean indicating whether the
@@ -22,15 +23,14 @@ it).
 
 ## Syntax
 
-```js
+```js-nolint
 hasOwnProperty(prop)
 ```
 
 ### Parameters
 
 - `prop`
-  - : The {{jsxref("String")}} name or {{Glossary("Symbol")}} of
-    the property to test.
+  - : The {{jsxref("String")}} name or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) of the property to test.
 
 ### Return value
 

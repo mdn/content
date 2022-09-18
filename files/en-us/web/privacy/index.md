@@ -33,7 +33,7 @@ Before we go into any depth about the various security and privacy features avai
 
   - : The concept of privacy is somewhat hard to define. Everyone has some idea what it means to keep something private, but when talking about the privacy of data, it becomes murky. Fundamentally, privacy of your data on the internet is about ensuring that information that has personal implications is kept out of the hands of unauthorized persons or organizations, regardless of how it's obtained.
 
-    Privacy exceptions may be granted to specific sites or applications, but it may also be granted *conditionally*, such as by permitting only a select group of people to access it, or only allowing the information to be accessed and used for a limited period of time.
+    Privacy exceptions may be granted to specific sites or applications, but it may also be granted _conditionally_, such as by permitting only a select group of people to access it, or only allowing the information to be accessed and used for a limited period of time.
 
 - Security
   - : Security is about the active protection of data or a system against being accessed, downloaded, or operated by people or organizations that don't have permission to do so. Good security practices aim to prevent unauthorized access to systems or data, regardless of what the target is.
@@ -162,7 +162,7 @@ Not all of these are generally directly used within code; notably, the [Permissi
 
 ## Bringing it all together
 
-<!--using Feature Policy with permissions and so forth; how to use them together, how they interact, etc-->
+<!--using Feature Policy with permissions and so forth; how to use them together, how they interact, etc.-->
 
 ### Permission requests in \<iframe> elements
 

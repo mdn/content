@@ -9,6 +9,7 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`TrustedTypePolicy`** interface of the {{domxref('Trusted Types API')}} defines a group of functions which create {{domxref('TrustedType')}} objects.
@@ -41,7 +42,7 @@ The sanitized value can then be used with {{domxref("Element.innerHTML")}} to en
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<")
 });
 
 let el = document.getElementById("myDiv");

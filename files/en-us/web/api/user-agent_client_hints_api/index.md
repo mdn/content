@@ -7,9 +7,11 @@ tags:
   - User-Agent Client Hints API
   - Overview
   - Reference
+  - Experimental
 browser-compat: api.NavigatorUAData
 ---
-{{DefaultAPISidebar("User-Agent Client Hints API")}}
+
+{{DefaultAPISidebar("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
 The User-Agent Client Hints API extends [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to provide a way of exposing browser and platform information via User-Agent response and request headers, and a JavaScript API.
 

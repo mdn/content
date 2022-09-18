@@ -5,14 +5,14 @@ page-type: web-api-instance-property
 tags:
   - API
   - EncryptedMediaExtensions
-  - Experimental
   - MediaKeyMessageEvent
   - Property
   - Reference
   - messageType
 browser-compat: api.MediaKeyMessageEvent.messageType
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeyMessageEvent.messageType`** read-only property indicates the
 type of message. It may be one of `license-request`,
@@ -21,7 +21,7 @@ type of message. It may be one of `license-request`,
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `license-request`
 - `license-renewal`

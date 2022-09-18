@@ -12,6 +12,7 @@ tags:
   - screenLeft
 browser-compat: api.Window.screenLeft
 ---
+
 {{APIRef}}
 
 The **`Window.screenLeft`** read-only property returns the
@@ -66,7 +67,7 @@ supported, and if not, polyfills in `screenLeft`/`screenTop` using
 {{domxref("Window.screenX")}}/{{domxref("Window.screenY")}}.
 
 ```js
-if(!window.screenLeft) {
+if (!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
 }

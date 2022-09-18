@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MessageChannel.MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The `MessageChannel()` constructor of the {{domxref("MessageChannel")}}
@@ -20,7 +21,7 @@ interface returns a new {{domxref("MessageChannel")}} object with two new
 
 ## Syntax
 
-```js
+```js-nolint
 new MessageChannel()
 ```
 
@@ -62,7 +63,7 @@ function handleMessage(e) {
 ```
 
 For a full working example,
-see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic)
+see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)
 on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications

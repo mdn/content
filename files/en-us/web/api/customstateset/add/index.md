@@ -8,15 +8,17 @@ tags:
   - Reference
   - add
   - CustomStateSet
+  - Experimental
 browser-compat: api.CustomStateSet.add
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`add`** method of the {{domxref("CustomStateSet")}} interface adds an item to the `CustomStateSet`, after checking that the value is in the correct format.
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 ```
 

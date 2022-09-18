@@ -11,6 +11,7 @@ tags:
   - playbackRate
 browser-compat: api.AudioBufferSourceNode.playbackRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`playbackRate`** property of
@@ -46,7 +47,13 @@ the `playbackRate` property value on the fly.
 > **Note:** You can [run the example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)). Play the song and alter the playback rate for some fun results.
 
 ```html
-<input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1">
+<input
+  class="playback-rate-control"
+  type="range"
+  min="0.25"
+  max="3"
+  step="0.05"
+  value="1" />
 <span class="playback-rate-value">1.0</span>
 ```
 
@@ -55,14 +62,16 @@ function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
   request.onload = () => {
     const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, (buffer) => {
+    audioCtx.decodeAudioData(
+      audioData,
+      (buffer) => {
         myBuffer = buffer;
         source.buffer = myBuffer;
         source.playbackRate.value = playbackControl.value;
@@ -70,9 +79,9 @@ function getData() {
         source.loop = true;
       },
 
-      (e) => console.error(`Error with decoding audio data: ${e.err}`));
-
-  }
+      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+    );
+  };
 
   request.send();
 }
@@ -82,20 +91,20 @@ function getData() {
 play.onclick = () => {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-  playbackControl.removeAttribute('disabled');
-}
+  play.setAttribute("disabled", "disabled");
+  playbackControl.removeAttribute("disabled");
+};
 
 stop.onclick = () => {
   source.stop(0);
-  play.removeAttribute('disabled');
-  playbackControl.setAttribute('disabled', 'disabled');
-}
+  play.removeAttribute("disabled");
+  playbackControl.setAttribute("disabled", "disabled");
+};
 
 playbackControl.oninput = () => {
   source.playbackRate.value = playbackControl.value;
   playbackValue.innerHTML = playbackControl.value;
-}
+};
 ```
 
 ## Specifications

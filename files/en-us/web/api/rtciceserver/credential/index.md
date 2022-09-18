@@ -4,7 +4,6 @@ slug: Web/API/RTCIceServer/credential
 page-type: web-api-instance-property
 tags:
   - Credential
-  - Experimental
   - Property
   - RTCIceServer
   - Reference
@@ -12,7 +11,8 @@ tags:
   - WebRTC
 browser-compat: api.RTCIceServer.credential
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+
+{{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceServer")}} dictionary's
 **`credential`** property is a string providing the credential
@@ -24,7 +24,7 @@ other secret.
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   // ...
   credential: someCredential,

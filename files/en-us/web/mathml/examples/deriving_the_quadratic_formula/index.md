@@ -6,10 +6,11 @@ tags:
   - Education
   - Example
   - Guide
-  - HTML5
+  - HTML
   - MathML
   - NeedsBeginnerUpdate
 ---
+
 This page outlines the derivation of the [Quadratic Formula](https://en.wikipedia.org/wiki/Quadratic_formula).
 
 We take a quadratic equation in its general form, and solve for x:

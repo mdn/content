@@ -10,6 +10,7 @@ tags:
   - preventing
   - setProperty
 ---
+
 One can override default browser behaviors with the `evt.preventDefault()` method, add event listeners to objects with the syntax `element.addEventListener(event, function, useCapture)`, and set element properties with syntax like `svgElement.style.setProperty("fill-opacity", "0.0", "")`. Note the existence of all three arguments setting properties.
 
 ### Preventing default behavior in event code
@@ -22,24 +23,24 @@ The methods `addEventListener()` and `removeEventListener()` are very useful whe
 
 ```js
 function myRect(x, y, w, h, message) {
-  this.message=message
+  this.message = message;
 
-  this.rect=document.createElementNS("http://www.w3.org/2000/svg","rect")
-  this.rect.setAttributeNS(null,"x",x)
-  this.rect.setAttributeNS(null,"y",y)
-  this.rect.setAttributeNS(null,"width",w)
-  this.rect.setAttributeNS(null,"height",h)
-  document.documentElement.appendChild(this.rect)
+  this.rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  this.rect.setAttributeNS(null, "x", x);
+  this.rect.setAttributeNS(null, "y", y);
+  this.rect.setAttributeNS(null, "width", w);
+  this.rect.setAttributeNS(null, "height", h);
+  document.documentElement.appendChild(this.rect);
 
-  this.rect.addEventListener("click",this,false)
+  this.rect.addEventListener("click", this, false);
 
-  this.handleEvent= function(evt){
-    switch (evt.type){
-    case "click":
-      alert(this.message)
-      break;
+  this.handleEvent = (evt) => {
+    switch (evt.type) {
+      case "click":
+        alert(this.message);
+        break;
     }
-  }
+  };
 }
 ```
 
@@ -48,7 +49,7 @@ function myRect(x, y, w, h, message) {
 When using SVG within HTML, Adobe's SVG Viewer 3.0 automatically includes a window property called `svgDocument` that points to the SVG document. This is not the case for Mozilla's native SVG implementation; therefore, using `window.svgDocument` does not work in Mozilla. Instead, you can use
 
 ```js
-var svgDoc=document.embeds["name_of_svg"].getSVGDocument();
+const svgDoc = document.embeds["name_of_svg"].getSVGDocument();
 ```
 
 to get a reference to an embedded SVG document instead.
@@ -56,7 +57,7 @@ to get a reference to an embedded SVG document instead.
 The best way to get access to the {{domxref("Document")}} representing an SVG document is to look at {{domxref("HTMLIFrameElement.contentDocument")}} (if the document is presented in an {{HTMLElement("iframe")}}) or {{domxref("HTMLObjectElement.contentDocument")}} (if the document is presented in an {{HTMLElement("object")}} element), like this:
 
 ```js
-var svgDoc = document.getElementById("iframe_element").contentDocument;
+const svgDoc = document.getElementById("iframe_element").contentDocument;
 ```
 
 In addition, the {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, and {{HTMLElement("object")}} elements offer a method, `getSVGDocument()`, which returns the {{domxref("XMLDocument")}} representing the element's embedded SVG or `null` if the element doesn't represent an SVG document.

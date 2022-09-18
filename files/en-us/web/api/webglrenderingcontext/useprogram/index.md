@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.useProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.useProgram()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the specified
@@ -17,7 +18,7 @@ The **`WebGLRenderingContext.useProgram()`** method of the [WebGL API](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 useProgram(program)
 ```
 

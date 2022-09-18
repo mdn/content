@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing ) after argument list" occurs when there is an error
@@ -67,7 +68,7 @@ function `console.log`. To fix this, we could put a`'` after the
 "Script" string:
 
 ```js example-good
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\"');
+console.log('"Java" + "Script" = "' + 'Java' + 'Script"');
 // '"Java" + "Script" = "JavaScript"'
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.mozSyntheticDocument
 ---
+
 {{ ApiRef("DOM") }}{{ non-standard_header() }}
 
 The **`Document.mozSyntheticDocument`** property indicates

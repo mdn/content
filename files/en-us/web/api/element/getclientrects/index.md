@@ -15,6 +15,7 @@ tags:
   - scrollHeight
 browser-compat: api.Element.getClientRects
 ---
+
 {{APIRef("DOM")}}
 
 The **`getClientRects()`** method of the {{domxref("Element")}}
@@ -26,7 +27,7 @@ Most elements only have one border box each, but a multiline [inline element](/e
 
 ## Syntax
 
-```js
+```js-nolint
 getClientRects()
 ```
 
@@ -88,9 +89,11 @@ third block.
 
 ```html
 <h3>A paragraph with a span inside</h3>
-<p>Both the span and the paragraph have a border set. The
-  client rects are in red. Note that the p has only one border
-  box, while the span has multiple border boxes.</p>
+<p>
+  Both the span and the paragraph have a border set. The client rects are in
+  red. Note that the p has only one border box, while the span has multiple
+  border boxes.
+</p>
 
 <div>
   <strong>Original</strong>
@@ -109,7 +112,9 @@ third block.
 <div>
   <strong>span's rect</strong>
   <p>
-    <span class="withClientRectsOverlay">Paragraph that spans multiple lines</span>
+    <span class="withClientRectsOverlay"
+      >Paragraph that spans multiple lines</span
+    >
   </p>
 </div>
 ```
@@ -120,8 +125,10 @@ element in the third block.
 
 ```html
 <h3>A list</h3>
-<p>Note that the border box doesn't include the number, so
-  neither do the client rects.</p>
+<p>
+  Note that the border box doesn't include the number, so neither do the client
+  rects.
+</p>
 
 <div>
   <strong>Original</strong>
@@ -153,18 +160,26 @@ Example 3: This HTML creates two tables with captions. Client rects are painted 
 
 ```html
 <h3>A table with a caption</h3>
-<p>Although the table's border box doesn't include the
-  caption, the client rects do include the caption.</p>
+<p>
+  Although the table's border box doesn't include the caption, the client rects
+  do include the caption.
+</p>
 
 <div>
   <strong>Original</strong>
   <table>
-    <caption>caption</caption>
+    <caption>
+      caption
+    </caption>
     <thead>
-      <tr><th>thead</th></tr>
+      <tr>
+        <th>thead</th>
+      </tr>
     </thead>
     <tbody>
-      <tr><td>tbody</td></tr>
+      <tr>
+        <td>tbody</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -172,12 +187,18 @@ Example 3: This HTML creates two tables with captions. Client rects are painted 
 <div>
   <strong>table's rect</strong>
   <table class="withClientRectsOverlay">
-    <caption>caption</caption>
+    <caption>
+      caption
+    </caption>
     <thead>
-      <tr><th>thead</th></tr>
+      <tr>
+        <th>thead</th>
+      </tr>
     </thead>
     <tbody>
-      <tr><td>tbody</td></tr>
+      <tr>
+        <td>tbody</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -199,10 +220,15 @@ div {
   display: inline-block;
   width: 150px;
 }
-div p, ol, table {
+div p,
+ol,
+table {
   border: 1px solid blue;
 }
-span, li, th, td {
+span,
+li,
+th,
+td {
   border: 1px solid green;
 }
 ```
@@ -237,9 +263,9 @@ function addClientRectsOverlay(elt) {
 (() => {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
-  const elt = document.getElementsByClassName('withClientRectsOverlay');
-  for (let i = 0; i < elt.length; i++) {
-    addClientRectsOverlay(elt[i]);
+  const elts = document.getElementsByClassName('withClientRectsOverlay');
+  for (const elt of elts) {
+    addClientRectsOverlay(elt);
   }
 })();
 ```

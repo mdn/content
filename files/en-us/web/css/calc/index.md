@@ -13,6 +13,7 @@ tags:
   - calc
 browser-compat: css.types.calc
 ---
+
 {{CSSRef}}
 
 The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) lets you perform calculations when specifying CSS property values. It can be used anywhere a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, or {{cssxref("&lt;integer&gt;")}} is allowed.
@@ -80,7 +81,7 @@ When **`calc()`** is used where an {{cssxref("&lt;integer&gt;")}} is expected, t
 This will give `.modal` a final `z-index` value of 2.
 
 > **Note:** The Chrome browser currently won't accept some values returned by **`calc()`** when an integer is expected.
-> This includes any division, even if it results in an integer. ie. `z-index: calc(4 / 2);` will not be accepted.
+> This includes any division, even if it results in an integer, i.e. `z-index: calc(4 / 2);` will not be accepted.
 
 ## Examples
 
@@ -133,8 +134,8 @@ Here, the form itself is established to use 1/6 of the available window width. T
 ```html
 <form>
   <div id="formbox">
-  <label for="misc">Type something:</label>
-  <input type="text" id="misc" name="misc">
+    <label for="misc">Type something:</label>
+    <input type="text" id="misc" name="misc" />
   </div>
 </form>
 ```
@@ -166,4 +167,5 @@ After all variables are expanded, `widthC`'s value will be `calc(calc(100px / 2)
 
 ## See also
 
-- [Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2010/06/css3-calc/)
+- [CSS functions](/en-US/docs/Web/CSS/CSS_Functions)
+- [A Complete Guide to calc() in CSS](https://css-tricks.com/a-complete-guide-to-calc-in-css/) (CSS-Tricks)

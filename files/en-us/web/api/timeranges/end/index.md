@@ -11,13 +11,14 @@ tags:
   - TimeRanges
 browser-compat: api.TimeRanges.end
 ---
+
 {{APIRef("DOM")}}
 
 The **`end()`** method of the {{domxref("TimeRanges")}} interface returns the time offset at which a specified time range ends.
 
 ## Syntax
 
-```js
+```js-nolint
 end(index)
 ```
 

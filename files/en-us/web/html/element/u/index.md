@@ -123,8 +123,7 @@ This example uses the `<u>` element and some CSS to display a paragraph which in
 #### HTML
 
 ```html
-<p>This paragraph includes a <u class="spelling">wrnogly</u>
-spelled word.</p>
+<p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
 ```
 
 In the HTML, we see the use of `<u>` with a class, `spelling`, which is used to indicate the misspelling of the word "wrongly".
@@ -157,7 +156,7 @@ To underline text without implying any semantic meaning, use a {{HTMLElement("sp
 
 ```html
 <span class="underline">Today's Special</span>
-<br>
+<br />
 Chicken Noodle Soup With Carrots
 ```
 

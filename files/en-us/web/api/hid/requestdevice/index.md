@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.HID.requestDevice
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`requestDevice()`** method of the {{domxref("HID")}} interface requests access to a HID device.
@@ -19,7 +20,7 @@ The user agent will present a permission dialog including a list of connected de
 
 ## Syntax
 
-```js
+```js-nolint
 requestDevice(options)
 ```
 

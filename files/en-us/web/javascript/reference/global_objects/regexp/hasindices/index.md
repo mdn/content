@@ -2,7 +2,6 @@
 title: RegExp.prototype.hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 tags:
-  - Draft
   - JavaScript
   - Property
   - Prototype
@@ -11,28 +10,27 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.hasIndices
 ---
+
 {{JSRef}}
 
-The **`hasIndices`** property indicates whether or not the `d` flag is used with the regular expression. `hasIndices` is a read-only property of an individual regular expression instance.
+The **`hasIndices`** accessor property indicates whether or not the `d` flag is used with the regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
 
-{{JS_Property_Attributes(0, 0, 1)}}
-
 ## Description
 
-The value of `hasIndices` is a {{JSxRef("Boolean")}} and `true` if the `d` flag was used; otherwise, `false`. The `d` flag indicates that the result of a regular expression match should contain the start and end indices of the substrings of each capture group.
+`RegExp.prototype.hasIndices` has the value `true` if the `d` flag was used; otherwise, `false`. The `d` flag indicates that the result of a regular expression match should contain the start and end indices of the substrings of each capture group. It does not change the regex's interpretation or matching behavior in any way, but only provides additional information in the matching result.
 
-You cannot change this property directly.
+The set accessor of `hasIndices` is `undefined`. You cannot change this property directly.
 
 ## Examples
 
-### Using `hasIndices`
+### Using hasIndices
 
 ```js
 const str1 = 'foo bar foo';
 
-const regex1 = new RegExp('foo', 'gd');
+const regex1 = /foo/gd;
 
 console.log(regex1.hasIndices); // Output: true
 
@@ -41,7 +39,7 @@ console.log(regex1.exec(str1).indices[0]); // Output: Array [8, 11]
 
 const str2 = 'foo bar foo';
 
-const regex2 = new RegExp('foo');
+const regex2 = /foo/;
 
 console.log(regex2.hasIndices); // Output: false
 
@@ -58,7 +56,7 @@ console.log(regex2.exec(str2).indices); // Output: undefined
 
 ## See also
 
-- {{JSxRef("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.exec()")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.global")}}

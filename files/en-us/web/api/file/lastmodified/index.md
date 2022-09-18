@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.File.lastModified
 ---
+
 {{APIRef("File")}}
 
 The **`File.lastModified`** read-only property provides the
@@ -84,7 +85,7 @@ console.log(fileWithoutDate.lastModified); // returns current time
 
 To offer protection against timing attacks and fingerprinting, the precision of
 `someFile.lastModified` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
 ```js

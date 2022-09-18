@@ -16,10 +16,10 @@ tags:
   - closing
   - events
   - Event
-  - Experimental
 browser-compat: api.RTCDataChannel.closing_event
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+
+{{APIRef("WebRTC")}}
 
 The **`closing`** event is sent to an {{domxref("RTCDataChannel")}} just before the channel begins the process of shutting down its underlying data transport.
 

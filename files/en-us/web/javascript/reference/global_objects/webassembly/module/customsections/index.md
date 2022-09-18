@@ -12,6 +12,7 @@ tags:
   - customSections
 browser-compat: javascript.builtins.WebAssembly.Module.customSections
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.customSections()`** function returns a copy
@@ -19,7 +20,7 @@ of the contents of all custom sections in the given module with the given string
 
 ## Syntax
 
-```js
+```js-nolint
 WebAssembly.Module.customSections(module, sectionName)
 ```
 

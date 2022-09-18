@@ -11,9 +11,10 @@ tags:
   - table
 browser-compat: javascript.builtins.WebAssembly.Table.length
 ---
+
 {{JSRef}}
 
-The **`length`** prototype property of the
+The read-only **`length`** prototype property of the
 {{jsxref("WebAssembly.Table")}} object returns the length of the table, i.e. the number
 of elements in the table.
 

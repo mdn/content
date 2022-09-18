@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.findLastIndex
 ---
+
 {{JSRef}}
 
 The **`findLastIndex()`** method returns the index of the last element in an array that satisfies the provided testing function.
@@ -17,11 +18,11 @@ If no elements satisfy the testing function, -1 is returned.
 
 {{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
 
-See also the {{jsxref("Array.findLast()", "findLast()")}} method, which returns the value of last element that satisfies the testing function (rather than its index).
+See also the {{jsxref("Array/findLast", "findLast()")}} method, which returns the value of last element that satisfies the testing function (rather than its index).
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findLastIndex((element) => { /* … */ } )
 findLastIndex((element, index) => { /* … */ } )
@@ -51,7 +52,7 @@ findLastIndex(function(element, index, array) { /* … */ }, thisArg)
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
-      - : The array `findIndex()` was called upon.
+      - : The array `findLastIndex()` was called upon.
 
     The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate an appropriate element has been found.
     The index of this element is then returned by `findLastIndex()`.
@@ -114,7 +115,7 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ### Find index using arrow function
 
 The following example finds the index of a fruit using an arrow function.
-Note that the result would be the same as if using {{jsxref("Array.findIndex()")}}.
+Note that the result would be the same as if using {{jsxref("Array/findIndex", "findIndex()")}}.
 
 ```js
 const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];

@@ -10,8 +10,10 @@ tags:
   - Reference
   - payment
   - paymentRequestOrigin
+  - Experimental
 browser-compat: api.PaymentRequestEvent.paymentRequestOrigin
 ---
+
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
 The **`paymentRequestOrigin`** read-only property of the

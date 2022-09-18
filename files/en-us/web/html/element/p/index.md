@@ -101,14 +101,14 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ### HTML
 
 ```html
-<p>This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.</p>
-<p>This is the second paragraph.
-  This is the second paragraph.
-  This is the second paragraph.
-  This is the second paragraph.</p>
+<p>
+  This is the first paragraph of text. This is the first paragraph of text. This
+  is the first paragraph of text. This is the first paragraph of text.
+</p>
+<p>
+  This is the second paragraph. This is the second paragraph. This is the second
+  paragraph. This is the second paragraph.
+</p>
 ```
 
 ### Result
@@ -150,8 +150,8 @@ p {
 }
 
 p.pilcrow {
-   text-indent: 0;
-   display: inline;
+  text-indent: 0;
+  display: inline;
 }
 p.pilcrow + p.pilcrow::before {
   content: " ¶ ";
@@ -161,14 +161,13 @@ p.pilcrow + p.pilcrow::before {
 ### JavaScript
 
 ```js
-document.querySelector('button').addEventListener('click', function (event) {
-  document.querySelectorAll('p').forEach(function (paragraph) {
+document.querySelector('button').addEventListener('click', (event) => {
+  document.querySelectorAll('p').forEach((paragraph) => {
     paragraph.classList.toggle('pilcrow');
   });
-  var newButtonText = event.target.dataset.toggleText;
-  var oldText = event.target.innerText;
-  event.target.innerText = newButtonText;
-  event.target.dataset.toggleText = oldText;
+
+  [event.target.innerText, event.target.dataset.toggleText] =
+    [event.target.dataset.toggleText, event.target.innerText];
 });
 ```
 

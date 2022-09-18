@@ -10,12 +10,12 @@ tags:
   - Service Workers
   - ServiceWorker
   - activeWorker
+  - Deprecated
+  - Non-standard
 browser-compat: api.InstallEvent.activeWorker
 ---
 
-{{APIRef("Service Workers API")}}
-
-{{non-standard_header}}{{deprecated_header}}
+{{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`activeWorker`** read-only property of the {{domxref("InstallEvent")}} interface returns the {{domxref("ServiceWorker")}} that is currently actively controlling the page.
 

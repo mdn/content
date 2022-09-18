@@ -8,11 +8,14 @@ tags:
   - Reference
   - writable
   - MediaStreamTrackGenerator
+  - Experimental
+  - Non-standard
 browser-compat: api.MediaStreamTrackGenerator.writable
 ---
-{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
-The **`writable`**  property of the {{domxref("MediaStreamTrackGenerator")}} interface returns a {{domxref("WritableStream")}}. This allows the writing of media frames to the `MediaStreamTrackGenerator`. The frames will be audio or video. The type is dictated by the kind of `MediaStreamTrackGenerator` that was created.
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{Non-standard_Header}}
+
+The **`writable`** property of the {{domxref("MediaStreamTrackGenerator")}} interface returns a {{domxref("WritableStream")}}. This allows the writing of media frames to the `MediaStreamTrackGenerator`. The frames will be audio or video. The type is dictated by the kind of `MediaStreamTrackGenerator` that was created.
 
 ## Value
 

@@ -12,6 +12,7 @@ spec-urls:
   - https://drafts.csswg.org/cssom-view/
   - https://drafts.css-houdini.org/css-typed-om/
 ---
+
 {{DefaultAPISidebar("CSSOM")}}
 
 The **CSS Object Model** is a set of APIs allowing the manipulation of CSS from JavaScript. It is much like the DOM, but for the CSS rather than the HTML. It allows users to read and modify CSS style dynamically.
@@ -102,7 +103,7 @@ Several other interfaces are also extended by the CSSOM-related specifications: 
 
 ## Tutorials
 
-- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (it needs some updating as it was made in the DHTML/Ajax era).
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (it needs some updating as it was made in the DHTML/Ajax era)
 - [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## Specifications

@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-border-before
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`-webkit-border-before`** [CSS](/en-US/docs/Web/CSS) property is a shorthand property for setting the individual logical block start border property values in a single place in the style sheet.
@@ -52,7 +53,10 @@ One or more of the following, in any order:
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-border-before =
+  <'border-width'> || <'border-style'> || <color>
+```
 
 ## Examples
 

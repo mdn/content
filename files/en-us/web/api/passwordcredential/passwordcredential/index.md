@@ -9,9 +9,11 @@ tags:
   - PasswordCredential
   - Reference
   - credential management
+  - Experimental
 browser-compat: api.PasswordCredential.PasswordCredential
 ---
-{{APIRef("Credential Management API")}}{{Non-standard_header}}
+
+{{APIRef("Credential Management API")}}{{SeeCompatTable}}
 
 The **`PasswordCredential()`**
 constructor creates a new {{domxref("PasswordCredential")}} object. In
@@ -20,7 +22,7 @@ from the `init` object for global {{domxref('fetch()')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new PasswordCredential(passwordCredentialData)
 new PasswordCredential(htmlFormElement)
 ```
@@ -71,7 +73,7 @@ const form = document.querySelector('#form');
 const creds = new PasswordCredential(form);
 // Store the credentials.
 navigator.credentials.store(creds)
-  .then(function(creds) {
+  .then((creds) => {
   // Do something with the credentials if you need to.
 });
 ```

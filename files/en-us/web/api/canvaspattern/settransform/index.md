@@ -6,11 +6,11 @@ tags:
   - API
   - Canvas
   - CanvasPattern
-  - Experimental
   - Method
   - Reference
 browser-compat: api.CanvasPattern.setTransform
 ---
+
 {{APIRef("Canvas API")}}
 
 The
@@ -20,7 +20,7 @@ pattern's transformation matrix and invokes it on the pattern.
 
 ## Syntax
 
-```js
+```js-nolint
 setTransform(matrix)
 ```
 
@@ -48,8 +48,7 @@ method, for example.
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
-<svg id="svg1"></svg>
+<canvas id="canvas"></canvas> <svg id="svg1"></svg>
 ```
 
 #### JavaScript
@@ -99,7 +98,8 @@ img.onload = () => {
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 400, 400);
-};</textarea>
+};
+</textarea>
 ```
 
 ```js hidden

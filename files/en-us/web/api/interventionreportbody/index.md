@@ -9,8 +9,9 @@ tags:
   - InterventionReportBody
   - Reference
   - Reporting API
-spec-urls: https://wicg.github.io/intervention-reporting/#interventionreportbody
+browser-compat: api.InterventionReportBody
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `InterventionReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of an intervention report.
@@ -74,7 +75,7 @@ const observer = new ReportingObserver((reports, observer) => {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}
 
 ## See also
 

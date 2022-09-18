@@ -10,16 +10,18 @@ tags:
   - Reference
   - editor
   - Deprecated
+  - Non-standard
 browser-compat: api.Document.queryCommandSupported
 ---
-{{ApiRef("DOM")}}{{deprecated_header}}
+
+{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`Document.queryCommandSupported()`** method reports
 whether or not the specified editor command is supported by the browser.
 
 ## Syntax
 
-```js
+```js-nolint
 queryCommandSupported(command)
 ```
 
@@ -44,7 +46,7 @@ the action.
 ```js
 const flg = document.queryCommandSupported("SelectAll");
 
-if(flg) {
+if (flg) {
   // Do something…
 }
 ```

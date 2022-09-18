@@ -10,8 +10,9 @@ tags:
   - JavaScript
   - Learn
   - events
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
 Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can react to them.
@@ -82,7 +83,9 @@ In the following example, we have a single {{htmlelement("button")}}, which when
 ```
 
 ```css hidden
-button { margin: 10px };
+button {
+  margin: 10px;
+}
 ```
 
 The JavaScript looks like so:
@@ -300,7 +303,9 @@ The earliest method of registering event handlers found on the Web involved [_ev
 The above example invokes a function defined inside a {{htmlelement("script")}} element on the same page, but you could also insert JavaScript directly inside the attribute, for example:
 
 ```html
-<button onclick="alert('Hello, this is my old-fashioned event handler!');">Press me</button>
+<button onclick="alert('Hello, this is my old-fashioned event handler!');">
+  Press me
+</button>
 ```
 
 You can find HTML attribute equivalents for many of the event handler properties; however, you shouldn't use these — they are considered bad practice.
@@ -355,8 +360,8 @@ So, in this example, we are setting a random background color on the button, not
 > **Note:** See the [Event delegation](#event_delegation) section below for an example where we use `event.target`.
 
 > **Note:** You can use any name you like for the event object — you just need to choose a name that you can then use to reference it inside the event handler function.
-`e`/`evt`/`event` are most commonly used by developers because they are short and easy to remember.
-It's always good to be consistent — with yourself, and with others if possible.
+> `e`/`evt`/`event` are most commonly used by developers because they are short and easy to remember.
+> It's always good to be consistent — with yourself, and with others if possible.
 
 ### Extra properties of event objects
 
@@ -365,7 +370,7 @@ Most event objects have a standard set of properties and methods available on th
 Some event objects add extra properties that are relevant to that particular type of event. For example, the {{domxref("Element/keydown_event", "keydown")}} event fires when the user presses a key. Its event object is a {{domxref("KeyboardEvent")}}, which is a specialized `Event` object with a `key` property that tells you which key was pressed:
 
 ```html
-<input id="textBox" type="text">
+<input id="textBox" type="text" />
 <div id="output"></div>
 ```
 
@@ -377,7 +382,7 @@ textBox.addEventListener('keydown', (event) => output.textContent = `You pressed
 
 ```css hidden
 div {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
@@ -401,14 +406,14 @@ First, a simple HTML form that requires you to enter your first and last name:
 <form>
   <div>
     <label for="fname">First name: </label>
-    <input id="fname" type="text">
+    <input id="fname" type="text" />
   </div>
   <div>
     <label for="lname">Last name: </label>
-    <input id="lname" type="text">
+    <input id="lname" type="text" />
   </div>
   <div>
-     <input id="submit" type="submit">
+    <input id="submit" type="submit" />
   </div>
 </form>
 <p></p>
@@ -543,9 +548,16 @@ This example shows and hides a {{htmlelement("div")}} with a {{htmlelement("vide
 
 <div class="hidden">
   <video>
-    <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4">
-    <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source
+      src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4"
+      type="video/mp4" />
+    <source
+      src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm"
+      type="video/webm" />
+    <p>
+      Your browser doesn't support HTML video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 </div>
 ```
@@ -569,12 +581,16 @@ btn.addEventListener('click', displayVideo);
 div {
   position: absolute;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 480px;
   height: 380px;
   border-radius: 10px;
   background-color: #eee;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.1)
+  );
 }
 
 .hidden {
@@ -663,21 +679,21 @@ Hover over the numbers and click on them to trigger events, and then observe the
 
 ```css
 p {
-    line-height: 0;
+  line-height: 0;
 }
 
 div {
-    display: inline-block;
-    padding: 5px;
+  display: inline-block;
+  padding: 5px;
 
-    background: #fff;
-    border: 1px solid #aaa;
-    cursor: pointer;
+  background: #fff;
+  border: 1px solid #aaa;
+  cursor: pointer;
 }
 
 div:hover {
-    border: 1px solid #faa;
-    background: #fdd;
+  border: 1px solid #faa;
+  background: #fdd;
 }
 ```
 

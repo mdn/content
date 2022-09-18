@@ -8,6 +8,7 @@ tags:
   - Release
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 42 was released on November 3, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -72,7 +73,7 @@ Our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_
 - The {{domxref('Animation/playbackRate', 'AnimationPlayer.playbackRate')}} property ({{bug(1127380)}}).
 - The {{domxref('CSSAnimation')}} and {{domxref('CSSTransition')}} interfaces ({{bug(1178186)}}).
 - The {{domxref('Animation.reverse()')}} method ({{bug(1150808)}}).
-- The {{domxref('AnimationPlaybackEvent')}} interface has been added and {{domxref("Animation/cancel_event", "cancel")}} and {{domxref("Animation/finish_event" , "finish")}} are now fired on {{domxref('Animation')}} ({{bug(1178664)}}).
+- The {{domxref('AnimationPlaybackEvent')}} interface has been added and {{domxref("Animation/cancel_event", "cancel")}} and {{domxref("Animation/finish_event", "finish")}} are now fired on {{domxref('Animation')}} ({{bug(1178664)}}).
 
 #### Web Components
 

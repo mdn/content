@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.create
 ---
+
 {{JSRef}}
 
 The **`Object.create()`** method creates a new object, using an
@@ -20,7 +21,7 @@ existing object as the prototype of the newly created object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.create(proto)
 Object.create(proto, propertiesObject)
 ```
@@ -235,7 +236,7 @@ for (const prop in o) {
 delete o.p;
 // false
 
-// to specify an ES3 property
+// to specify a property with the same attributes as in an initializer
 o2 = Object.create({}, {
   p: {
     value: 42,
@@ -244,9 +245,9 @@ o2 = Object.create({}, {
     configurable: true
   }
 });
-/* is not equivalent to:
-This will create an object with prototype : {p: 42 }
-o2 = Object.create({p: 42}) */
+// This is not equivalent to:
+// o2 = Object.create({ p: 42 })
+// which will create an object with prototype { p: 42 }
 ```
 
 ## Specifications

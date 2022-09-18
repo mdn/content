@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.BeforeInstallPromptEvent
 ---
+
 {{SeeCompatTable}}{{Non-standard_header}}
 
 The **`BeforeInstallPromptEvent`** is the interface of the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event fired at the {{domxref("Window")}} object before a user is prompted to "install" a website to a home screen on mobile.
@@ -29,9 +30,9 @@ This interface inherits from the {{domxref("Event")}} interface.
 
 _Inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("BeforeInstallPromptEvent.platforms")}} {{readonlyinline}}{{Non-standard_Inline}} {{Experimental_Inline}}
+- {{domxref("BeforeInstallPromptEvent.platforms")}} {{ReadOnlyInline}}{{Non-standard_Inline}} {{Experimental_Inline}}
   - : Returns an array of string items containing the platforms on which the event was dispatched. This is provided for user agents that want to present a choice of versions to the user such as, for example, "web" or "play" which would allow the user to choose between a web version or an Android version.
-- {{domxref("BeforeInstallPromptEvent.userChoice")}} {{readonlyinline}}{{Non-standard_Inline}} {{Experimental_Inline}}
+- {{domxref("BeforeInstallPromptEvent.userChoice")}} {{ReadOnlyInline}}{{Non-standard_Inline}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves to a string containing either "accepted" or "dismissed".
 
 ## Methods

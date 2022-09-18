@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEMergeElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEMergeElement`** interface corresponds to the {{SVGElement("feMerge")}} element.

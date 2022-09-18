@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_and_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise AND assignment operator (`&=`) uses the binary
@@ -19,7 +20,7 @@ result to the variable.
 
 ## Syntax
 
-```js
+```js-nolint
 x &= y // x = x & y
 ```
 

@@ -11,9 +11,11 @@ tags:
   - Performance
   - Reference
   - Web Performance
+  - Experimental
 browser-compat: api.LayoutShiftAttribution
 ---
-{{APIRef("Layout Instability API")}}
+
+{{APIRef("Layout Instability API")}}{{SeeCompatTable}}
 
 The `LayoutShiftAttribution` interface of the [Layout Instability API](/en-US/docs/Web/API/Layout_Instability_API) provides debugging information about elements which have shifted.
 
@@ -23,14 +25,14 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 
 - {{domxref("LayoutShiftAttribution.Node")}} {{ReadOnlyInline}}
   - : Returns the element that has shifted (null if it has been removed).
-- {{domxref("LayoutShiftAttribution.previousRect")}} {{ReadOnlyInline}}
+- {{domxref("LayoutShiftAttribution.previousRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.
-- {{domxref("LayoutShiftAttribution.currentRect")}} {{ReadOnlyInline}}
+- {{domxref("LayoutShiftAttribution.currentRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element after the shift.
 
 ## Methods
 
-- {{domxref("LayoutShiftAttribution.toJSON()")}}
+- {{domxref("LayoutShiftAttribution.toJSON()")}} {{Experimental_Inline}}
   - : Returns a JSON representation of the `LayoutShiftAttribution` object.
 
 ## Examples

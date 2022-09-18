@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media
   - Media Source Extensions
@@ -16,7 +15,8 @@ tags:
   - appendBuffer
 browser-compat: api.SourceBuffer.appendBuffer
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`appendBuffer()`** method of the
 {{domxref("SourceBuffer")}} interface appends media segment data from an
@@ -25,7 +25,7 @@ to the `SourceBuffer`.
 
 ## Syntax
 
-```js
+```js-nolint
 appendBuffer(source)
 ```
 

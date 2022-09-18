@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.NetworkInformation.type
 ---
+
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation.type`** read-only property returns

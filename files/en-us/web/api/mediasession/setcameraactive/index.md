@@ -14,9 +14,11 @@ tags:
   - Video
   - setActionHandler
   - setCameraActive
+  - Experimental
 browser-compat: api.MediaSession.setCameraActive
 ---
-{{APIRef("Media Session API")}}
+
+{{APIRef("Media Session API")}}{{SeeCompatTable}}
 
 The {{domxref("MediaSession")}} method **`setCameraActive()`** is used to indicate to the user agent whether the user's camera is considered to be active.
 
@@ -27,7 +29,7 @@ Note that the status of the camera is not tracked in the {{domxref("MediaSession
 
 ## Syntax
 
-```js
+```js-nolint
 setCameraActive(active)
 ```
 

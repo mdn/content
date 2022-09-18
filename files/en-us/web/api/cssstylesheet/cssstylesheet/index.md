@@ -9,6 +9,7 @@ tags:
   - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet()`** constructor creates a new {{domxref("CSSStyleSheet")}} object which represents a single [Stylesheet](/en-US/docs/Glossary/Stylesheet).
@@ -20,7 +21,7 @@ A constructed stylesheet can be shared between a document and its shadow DOM sub
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSStyleSheet()
 new CSSStyleSheet(options)
 ```
@@ -43,8 +44,8 @@ new CSSStyleSheet(options)
 In the following example, a new {{domxref("CSSStyleSheet")}} is constructed with a media rule of `"print"`.
 Printing {{domxref("StyleSheet.media")}} to the console returns a {{domxref("MediaList")}} with a single entry for this print rule.
 
-```css
-let stylesheet = new CSSStyleSheet({media: 'print'});
+```js
+let stylesheet = new CSSStyleSheet({ media: "print" });
 console.log(stylesheet.media);
 ```
 
@@ -74,8 +75,8 @@ We can modify the stylesheets after they have been added to the array.
 Below we append a new rule to the same sheet using {{domxref("CSSStyleSheet.insertRule()")}}.
 
 ```js
- sheet.insertRule("* { background-color: blue; }");
- // The document will now have blue background.
+sheet.insertRule("* { background-color: blue; }");
+// The document will now have blue background.
 ```
 
 The same sheet can be shared with multiple shadow subtrees in the same document.

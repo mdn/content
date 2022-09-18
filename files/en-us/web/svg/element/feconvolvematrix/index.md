@@ -8,6 +8,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feConvolveMatrix
 ---
+
 {{SVGRef}}
 
 The **`<feConvolveMatrix>`** [SVG](/en-US/docs/Web/SVG) filter primitive applies a matrix convolution filter effect. A convolution combines pixels in the input image with neighboring pixels to produce a resulting image. A wide variety of imaging operations can be achieved through convolutions, including blurring, edge detection, sharpening, embossing and beveling.
@@ -88,19 +89,28 @@ This element implements the {{domxref("SVGFEConvolveMatrixElement")}} interface.
 ### SVG
 
 ```html
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="200"
+  height="200"
+  viewBox="0 0 200 200"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="emboss">
       <feConvolveMatrix
-          kernelMatrix="3 0 0
-                        0 0 0
-                        0 0 -3"/>
+        kernelMatrix="3 0 0
+                      0 0 0
+                      0 0 -3" />
     </filter>
   </defs>
 
-  <image xlink:href="mdn.svg" x="0" y="0"
-      height="200" width="200" style="filter:url(#emboss);" />
+  <image
+    xlink:href="mdn.svg"
+    x="0"
+    y="0"
+    height="200"
+    width="200"
+    style="filter:url(#emboss);" />
 </svg>
 ```
 

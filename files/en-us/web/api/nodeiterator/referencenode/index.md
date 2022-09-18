@@ -5,12 +5,12 @@ page-type: web-api-instance-property
 tags:
   - API
   - DOM
-  - Experimental
   - NodeIterator
   - Property
 browser-compat: api.NodeIterator.referenceNode
 ---
-{{APIRef("DOM")}}{{ SeeCompatTable }}
+
+{{APIRef("DOM")}}
 
 The **`NodeIterator.referenceNode`** read-only returns the
 {{domxref("Node")}} to which the iterator is anchored; as new nodes are inserted, the

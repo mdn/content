@@ -12,6 +12,7 @@ tags:
   - WebSocket API
   - WebSockets
 ---
+
 {{APIRef("Websockets API")}}
 
 WebSocket client applications use the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to communicate with [WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) using the WebSocket protocol.
@@ -85,7 +86,7 @@ As establishing a connection is asynchronous and prone to failure there is no gu
 We can at least be sure that attempting to send data only takes place once a connection is established by defining an {{domxref("WebSocket.onopen", "onopen")}} event handler to do the work:
 
 ```js
-exampleSocket.onopen = function (event) {
+exampleSocket.onopen = (event) => {
   exampleSocket.send("Here's some text that the server is urgently awaiting!");
 };
 ```
@@ -124,7 +125,7 @@ for the `message` event, or use the {{domxref("WebSocket.onmessage",
 like this:
 
 ```js
-exampleSocket.onmessage = function (event) {
+exampleSocket.onmessage = (event) => {
   console.log(event.data);
 }
 ```
@@ -140,14 +141,14 @@ Let's consider the chat client application first alluded to in [Using JSON to tr
 The code that interprets these incoming messages might look like this:
 
 ```js
-exampleSocket.onmessage = function(event) {
+exampleSocket.onmessage = (event) => {
   const f = document.getElementById("chatbox").contentDocument;
   let text = "";
   const msg = JSON.parse(event.data);
   const time = new Date(msg.date);
   const timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
@@ -159,14 +160,10 @@ exampleSocket.onmessage = function(event) {
       text = `(${timeStr}) ${msg.name} : ${msg.text} <br>`;
       break;
     case "rejectusername":
-      text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`
+      text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`;
       break;
     case "userlist":
-      let ul = "";
-      for (let i=0; i < msg.users.length; i++) {
-        ul += `${msg.users[i]}<br>`;
-      }
-      document.getElementById("userlistbox").innerHTML = ul;
+      document.getElementById("userlistbox").innerHTML = msg.users.join("<br>");
       break;
   }
 

@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.wait
 ---
+
 {{JSRef}}
 
 The static **`Atomics.wait()`**
@@ -21,7 +22,7 @@ is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.wait(typedArray, index, value)
 Atomics.wait(typedArray, index, value, timeout)
 ```

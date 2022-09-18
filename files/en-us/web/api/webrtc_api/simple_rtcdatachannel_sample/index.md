@@ -9,6 +9,7 @@ tags:
   - Tutorial
   - WebRTC
 ---
+
 {{WebRTCSidebar}}
 
 The {{domxref("RTCDataChannel")}} interface is a feature of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/en-US/docs/Web/API/WebSockets_API), so that the same programming model can be used for each.
@@ -23,7 +24,11 @@ First, let's take a quick look at the [HTML that's needed](https://github.com/md
 <button id="connectButton" name="connectButton" class="buttonleft">
   Connect
 </button>
-<button id="disconnectButton" name="disconnectButton" class="buttonright" disabled>
+<button
+  id="disconnectButton"
+  name="disconnectButton"
+  class="buttonright"
+  disabled>
   Disconnect
 </button>
 ```
@@ -32,9 +37,17 @@ Then there's a box which contains the text input box into which the user can typ
 
 ```html
 <div class="messagebox">
-  <label for="message">Enter a message:
-    <input type="text" name="message" id="message" placeholder="Message text"
-            inputmode="latin" size=60 maxlength=120 disabled>
+  <label for="message"
+    >Enter a message:
+    <input
+      type="text"
+      name="message"
+      id="message"
+      placeholder="Message text"
+      inputmode="latin"
+      size="60"
+      maxlength="120"
+      disabled />
   </label>
   <button id="sendButton" name="sendButton" class="buttonright" disabled>
     Send
@@ -53,8 +66,6 @@ Finally, there's the little box into which we'll insert the messages. This {{HTM
 ## The JavaScript code
 
 While you can just [look at the code itself on GitHub](https://github.com/mdn/samples-server/blob/master/s/webrtc-simple-datachannel/main.js), below we'll review the parts of the code that do the heavy lifting.
-
-The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy to chain the steps of the connection process together; if you haven't already read up on this functionality of [ECMAScript 2015](/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla), you should read up on them. Similarly, this example uses [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to simplify syntax.
 
 ### Starting up
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.File.File
 ---
+
 {{APIRef("File")}}
 
 The **`File()`** constructor creates a new {{domxref("File")}}
@@ -16,7 +17,7 @@ object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new File(bits, name)
 new File(bits, name, options)
 ```

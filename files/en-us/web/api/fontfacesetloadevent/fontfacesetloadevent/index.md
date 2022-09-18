@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.FontFaceSetLoadEvent.FontFaceSetLoadEvent
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`FontFaceSetLoadEvent()`** constructor creates a new
@@ -20,7 +21,7 @@ The **`FontFaceSetLoadEvent()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new FontFaceSetLoadEvent(type)
 new FontFaceSetLoadEvent(type, options)
 ```

@@ -8,8 +8,9 @@ tags:
   - Guide
   - JavaScript
   - Object
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_Classes")}}
 
 JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, functions, and methods, and how to create your own objects.
@@ -96,7 +97,7 @@ console.log(myObj.myString);
 // [Log] This key is in variable str
 ```
 
-JavaScript object property names (keys) can only be strings or Symbols — all keys in the square bracket notation are converted to strings unless they are Symbols. For example, in the above code, when the key `anotherObj` is added to the `myObj`, JavaScript will call the {{jsxref("Object.toString", "toString()")}} method of `anotherObj`, and use the resulting string as the new key.
+JavaScript object property names (keys) can only be strings or Symbols — all keys in the square bracket notation are converted to strings unless they are Symbols. For example, in the above code, when the key `anotherObj` is added to the `myObj`, JavaScript will call the {{jsxref("Object/toString", "toString()")}} method of `anotherObj`, and use the resulting string as the new key.
 
 You can also access properties with a string value stored in a variable. The variable must be passed in bracket notation. In the example above, the variable `str` held `"myString"` and it is `"myString"` that is the property name. Therefore, `myObj.str` will return as undefined.
 
@@ -539,6 +540,6 @@ For more information about comparison operators, see [equality operators](/en-US
 ## See also
 
 - To dive deeper, read about [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
-- To learn about ECMAScript 2015 classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
+- To learn about classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Using_Classes")}}

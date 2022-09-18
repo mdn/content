@@ -13,7 +13,7 @@ tags:
 browser-compat: api.URLPattern.URLPattern
 ---
 
-{{APIRef("URLPattern API")}}
+{{APIRef("URLPattern API")}}{{SeeCompatTable}}
 
 The **`URLPattern()`** constructor returns a new {{domxref("URLPattern")}}
 object representing the url pattern defined by the parameters.
@@ -22,7 +22,7 @@ object representing the url pattern defined by the parameters.
 
 ## Syntax
 
-```js
+```js-nolint
 new URLPattern(input)
 new URLPattern(input, baseURL)
 ```
@@ -35,7 +35,7 @@ new URLPattern(input, baseURL)
     individually. The object members can be any of `protocol`, `username`,
     `password`, `hostname`, `port`, `pathname`, `search`, `hash`, or `baseURL`.
     Omitted parts in the object will be treated as wildcards (`*`).
-- `baseURL` {{optional_inline}}
+- `baseURL` {{Optional_Inline}}
   - : A string representing the base URL to use in cases where
     `input` is a relative pattern. If not specified, it defaults to `undefined`.
 

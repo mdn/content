@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Element.scrollLeft
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollLeft`** property gets or sets the number
@@ -87,6 +88,6 @@ button.onclick = () => {
 
 ## See also
 
-- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
+- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx>)
 - {{domxref("Element.scrollTop")}}
 - {{domxref("Element.scrollTo()")}}

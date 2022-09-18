@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.updateContentScripts
 ---
+
 {{AddonSidebar()}}
 
 Updates registered content scripts. If there are errors during script parsing and file validation, or if the IDs specified do not exist, no scripts are updated.
@@ -24,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ### Syntax
 
-```js
+```js-nolint
 await browser.scripting.updateContentScripts(
   scripts         // object
 )

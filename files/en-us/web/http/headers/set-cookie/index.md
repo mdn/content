@@ -10,6 +10,7 @@ tags:
   - samesite
 browser-compat: http.headers.Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 The **`Set-Cookie`** HTTP response header is used to send a cookie from the server to the user agent, so that the user agent can send it back to the server later.
@@ -38,7 +39,7 @@ For more information, see the guide on [Using HTTP cookies](/en-US/docs/Web/HTTP
 
 ## Syntax
 
-```
+```http
 Set-Cookie: <cookie-name>=<cookie-value>
 Set-Cookie: <cookie-name>=<cookie-value>; Expires=<date>
 Set-Cookie: <cookie-name>=<cookie-value>; Max-Age=<number>
@@ -108,6 +109,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : Indicates the path that _must_ exist in the requested URL for the browser to send the `Cookie` header.
 
     The forward slash (`/`) character is interpreted as a directory separator, and subdirectories are matched as well. For example, for `Path=/docs`,
+
     - the request paths `/docs`, `/docs/`, `/docs/Web/`, and `/docs/Web/HTTP` will all match.
     - the request paths `/`, `/docsets`, `/fr/docs` will not match.
 
@@ -131,15 +133,17 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     The possible attribute values are:
 
     - `Strict`
+
       - : means that the browser sends the cookie only for same-site requests, that is, requests originating from the same site that set the cookie.
         If a request originates from a different domain or scheme (even with the same domain), no cookies with the `SameSite=Strict` attribute are sent.
 
     - `Lax`
+
       - : means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).
         This is the default behavior if the `SameSite` attribute is not specified.
 
     - `None`
-      - :  means that the browser sends the cookie with both cross-site and same-site requests.
+      - : means that the browser sends the cookie with both cross-site and same-site requests.
         The `Secure` attribute must also be set when setting this value, like so `SameSite=None; Secure`
 
     > **Note:** Standards related to the [SameSite Cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) recently changed, such that:
@@ -156,7 +160,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 **Session cookies** are removed when the client shuts down. Cookies are session cookies if they do not specify the `Expires` or `Max-Age` attribute.
 
-```
+```http
 Set-Cookie: sessionId=38afes7a8
 ```
 
@@ -164,11 +168,11 @@ Set-Cookie: sessionId=38afes7a8
 
 **Permanent cookies** are removed at a specific date (`Expires`) or after a specific length of time (`Max-Age`) and not when the client is closed.
 
-```
+```http
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT
 ```
 
-```
+```http
 Set-Cookie: id=a3fWa; Max-Age=2592000
 ```
 
@@ -178,7 +182,7 @@ A cookie for a domain that does not include the server that set it [should be re
 
 The following cookie will be rejected if set by a server hosted on `originalcompany.com`:
 
-```
+```http
 Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk
 ```
 
@@ -186,7 +190,7 @@ A cookie for a subdomain of the serving domain will be rejected.
 
 The following cookie will be rejected if set by a server hosted on `example.com`:
 
-```
+```http
 Set-Cookie: sessionId=e8bb43229de9; Domain=foo.example.com
 ```
 
@@ -198,7 +202,7 @@ In addition, cookies with the `__Host-` prefix must have a path of `/` (meaning 
 
 > **Warning:** For clients that don't implement cookie prefixes, you cannot count on these additional assurances, and prefixed cookies will always be accepted.
 
-```
+```http
 // Both accepted when from a secure origin (HTTPS)
 Set-Cookie: __Secure-ID=123; Secure; Domain=example.com
 Set-Cookie: __Host-ID=123; Secure; Path=/

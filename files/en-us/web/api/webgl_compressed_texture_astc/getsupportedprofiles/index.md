@@ -11,6 +11,7 @@ tags:
   - WebGL extensions
 browser-compat: api.WEBGL_compressed_texture_astc.getSupportedProfiles
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_compressed_texture_astc.getSupportedProfiles()`**
@@ -19,7 +20,7 @@ by the implementation.
 
 ## Syntax
 
-```js
+```js-nolint
 getSupportedProfiles()
 ```
 

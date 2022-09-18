@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.OscillatorNode.type
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`type`** property of the {{ domxref("OscillatorNode")
@@ -40,7 +41,7 @@ available values are:
 
 ### Exceptions
 
-- `InvalidStateError`  {{domxref("DOMException")}}
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the value `custom` was specified. To set a custom waveform, just call
     {{domxref("OscillatorNode.setPeriodicWave", "setPeriodicWave()")}}. Doing so
     automatically sets the type for you.

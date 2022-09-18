@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.createTBody
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`createTBody()`** method of
@@ -25,7 +26,7 @@ The **`createTBody()`** method of
 
 ## Syntax
 
-```js
+```js-nolint
 createTBody()
 ```
 

@@ -8,9 +8,11 @@ tags:
   - Reference
   - timestamp
   - EncodedAudioChunk
+  - Experimental
 browser-compat: api.EncodedAudioChunk.timestamp
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`timestamp`** read-only property of the {{domxref("EncodedAudioChunk")}} interface returns an integer indicating the timestamp of the audio in microseconds.
 

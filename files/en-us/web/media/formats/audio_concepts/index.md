@@ -17,6 +17,7 @@ tags:
   - mp4
   - sound
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 Representing audio in digital form involves a number of steps and processes, with multiple formats available both for the raw audio and the encoded or compressed audio which is actually used on the web. This guide is an overview examining how audio is represented digitally, and how codecs are used to encode and decode audio for use on the web.
@@ -214,7 +215,7 @@ Some codecs offer special profiles which are specifically intended for particula
 
 ### Joint stereo
 
-Normally, stereo sound is represented by audio frames which contain one sample per channel. This results in audio frames which require 2⨉*sampleSize* bits each, where _sampleSize_ is the number of bits each audio sample takes. Therefore, for a 16-bit stereo audio recording, each sample uses 2⨉16 or 32 bits of space. This is standard left/right (L/R) stereo or **simple stereo**.
+Normally, stereo sound is represented by audio frames which contain one sample per channel. This results in audio frames which require 2⨉_sampleSize_ bits each, where _sampleSize_ is the number of bits each audio sample takes. Therefore, for a 16-bit stereo audio recording, each sample uses 2⨉16 or 32 bits of space. This is standard left/right (L/R) stereo or **simple stereo**.
 
 **Joint stereo** is a method of storing stereo audio samples in a more space-efficient manner by taking into account that usually the sound entering each ear is similar. Thus, rather than storing every bit of each channel's sample, a base amplitude and a per-channel amplitude deviation value are stored, wherein the deviation value may use fewer bits than a complete sample.
 

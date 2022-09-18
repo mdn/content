@@ -14,6 +14,7 @@ browser-compat:
   - api.PushEvent
   - api.PushMessageData
 ---
+
 {{ApiRef("Push API")}}
 
 The **Push API** gives web applications the ability to receive messages pushed to them from a server, whether or not the web app is in the foreground, or even currently loaded, on a user agent. This lets developers deliver asynchronous notifications and updates to users that opt in, resulting in better engagement with timely new content.
@@ -52,7 +53,7 @@ Activating a service worker to deliver a push message can result in increased re
 
 The following additions to the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) have been specified in the Push API spec to provide an entry point for using Push messages. They also monitor and respond to push and subscription change events.
 
-- {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status. This is the entry point into using Push messaging.
 - {{domxref("ServiceWorkerGlobalScope.push_event", "onpush")}}
   - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/push_event", "push")}} event occurs; that is, whenever a server push message is received.

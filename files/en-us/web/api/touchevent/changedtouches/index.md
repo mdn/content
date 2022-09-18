@@ -14,6 +14,7 @@ tags:
   - touch
 browser-compat: api.TouchEvent.changedTouches
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`changedTouches`** read-only property is a {{ domxref("TouchList") }} whose touch points ({{domxref("Touch")}} objects) varies depending on the event type, as follows:
@@ -33,7 +34,7 @@ This example illustrates the {{domxref("TouchEvent")}} object's {{domxref("Touch
 In following code snippet, the {{domxref("Element/touchmove_event", "touchmove")}} event handler iterates through the `changedTouches` list and prints the identifier of each touch point that changed since the last event.
 
 ```js
-someElement.addEventListener('touchmove', function(e) {
+someElement.addEventListener('touchmove', (e) => {
    // Iterate through the list of touch points that changed
    // since the last event and print each touch point's identifier.
    for (let i = 0; i < e.changedTouches.length; i++) {

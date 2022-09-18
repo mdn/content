@@ -16,6 +16,7 @@ tags:
   - payment
 browser-compat: api.PaymentMethodChangeEvent.methodName
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The read-only **`methodName`** property of the {{domxref("PaymentMethodChangeEvent")}} interface is a string which
@@ -41,17 +42,18 @@ the payment method selected for Apple Pay, in order to compute a discount if the
 chooses to use a Visa card as their payment method.
 
 ```js
-request.onpaymentmethodchange = function(ev) {
+request.onpaymentmethodchange = (ev) => {
   const { type: cardType } = ev.methodDetails;
   const newStuff = {};
   if (ev.methodName === "https://apple.com/apple-pay") {
     switch (cardType) {
-      case "visa":
+      case "visa": {
         // do Apple Pay specific handling for Visa card…
         // methodDetails contains the card information
-        const result = calculateDiscount(ev.methodDetails);
-        Object.assign(newStuff, result);
+        const discount = calculateDiscount(ev.methodDetails);
+        Object.assign(newStuff, discount);
         break;
+      }
     }
   }
   // finally…
@@ -59,6 +61,8 @@ request.onpaymentmethodchange = function(ev) {
 };
 const response = await request.show();
 ```
+
+Note that the `methodDetails` property is being used by the `calculateDiscount()` function to compute any payment discount, then {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} is called to update the event with the computed update.
 
 ## Specifications
 

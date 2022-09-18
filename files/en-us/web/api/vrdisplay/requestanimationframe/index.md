@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - requestAnimationFrame()
+  - Non-standard
 browser-compat: api.VRDisplay.requestAnimationFrame
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`requestAnimationFrame()`** method of the {{domxref("VRDisplay")}} interface is a special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the `VRDisplay` presentation is rendered:
 
@@ -25,7 +27,7 @@ The **`requestAnimationFrame()`** method of the {{domxref("VRDisplay")}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 requestAnimationFrame(callback)
 ```
 
@@ -44,12 +46,12 @@ A long representing the handle of the `requestAnimationFrame()` call. This can t
 const frameData = new VRFrameData();
 let vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
   console.log('Display found');
   // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-  btn.addEventListener('click', function() {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+  btn.addEventListener('click', () => {
+    vrDisplay.requestPresent([{ source: canvas }]).then(() => {
       drawVRScene();
     });
   });

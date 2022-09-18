@@ -1,5 +1,5 @@
 ---
-title: 'Element: animationcancel event'
+title: "Element: animationcancel event"
 slug: Web/API/Element/animationcancel_event
 tags:
   - API
@@ -13,7 +13,8 @@ tags:
 browser-compat: api.Element.animationcancel_event
 page-type: web-api-event
 ---
-{{APIRef}}{{SeeCompatTable}}
+
+{{APIRef}}
 
 The **`animationcancel`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) unexpectedly aborts. In other words, any time it stops running without sending an {{domxref("Element/animationend_event", "animationend")}} event. This might happen when the {{cssxref("animation-name")}} is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.
 
@@ -39,11 +40,11 @@ An {{domxref("AnimationEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
+- {{domxref("AnimationEvent.animationName")}} {{ReadOnlyInline}}
   - : A string containing the value of the {{cssxref("animation-name")}} that generated the animation.
-- {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
+- {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : A `float` giving the amount of time the animation has been running, in seconds, when this event fired, excluding any time the animation was paused. For an `animationstart` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}}, in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`.
-- {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
+- {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
   - : A string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
 ## Examples
@@ -77,11 +78,11 @@ animated.style.display = 'none';
 
 ```html
 <div class="animation-example">
-    <div class="container">
-        <p class="animation">You chose a cold night to visit our planet.</p>
-    </div>
-    <button class="activate" type="button">Activate animation</button>
-    <div class="event-log"></div>
+  <div class="container">
+    <p class="animation">You chose a cold night to visit our planet.</p>
+  </div>
+  <button class="activate" type="button">Activate animation</button>
+  <div class="event-log"></div>
 </div>
 ```
 
@@ -116,7 +117,7 @@ animated.style.display = 'none';
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const animation = document.querySelector('p.animation');
@@ -147,12 +148,8 @@ applyAnimation.addEventListener('click', () => {
   animation.classList.toggle('active');
   animationEventLog.textContent = '';
   iterationCount = 0;
-  let active = animation.classList.contains('active');
-  if (active) {
-    applyAnimation.textContent = "Cancel animation";
-  } else {
-    applyAnimation.textContent = "Activate animation";
-  }
+  const active = animation.classList.contains('active');
+  applyAnimation.textContent = active ? "Cancel animation" : "Activate animation";
 });
 ```
 

@@ -11,6 +11,7 @@ tags:
   - relList
 browser-compat: api.HTMLAnchorElement.relList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.relList`** read-only property reflects
@@ -24,20 +25,18 @@ The property itself is read-only, meaning you can't substitute the
 
 ## Value
 
-A string.
+A live {{domxref("DOMTokenList")}} of strings.
 
 ## Examples
 
 ```js
 const anchors = document.getElementsByTagName("a");
-const length = anchors.length;
-for (let i = 0; i < length; i++) {
-  const list = anchors[i].relList;
-  const listLength = list.length;
-  console.log("New anchor node found with", listLength, "link types in relList.");
-  for (let j = 0; j < listLength; j++) {
-    console.log(list[j]);
-  }
+for (const anchor of anchors) {
+  const list = anchor.relList;
+  console.log(`New anchor node found with ${list.length} link types in relList.`);
+  list.forEach((relValue) => {
+    console.log(relValue);
+  });
 }
 ```
 

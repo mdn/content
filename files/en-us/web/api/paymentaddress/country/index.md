@@ -13,9 +13,12 @@ tags:
   - country
   - payment
   - paymentAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.country
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`country`** read-only property of the
 {{domxref('PaymentAddress')}} interface is a string identifying the address's country

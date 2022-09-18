@@ -10,6 +10,7 @@ tags:
   - WebSockets
 browser-compat: api.WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The `WebSocket` object provides the API for creating and managing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection to a server, as well as for sending and receiving data on the connection.
@@ -29,15 +30,15 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 
 - {{domxref("WebSocket.binaryType")}}
   - : The binary data type used by the connection.
-- {{domxref("WebSocket.bufferedAmount")}} {{readonlyinline}}
+- {{domxref("WebSocket.bufferedAmount")}} {{ReadOnlyInline}}
   - : The number of bytes of queued data.
-- {{domxref("WebSocket.extensions")}} {{readonlyinline}}
+- {{domxref("WebSocket.extensions")}} {{ReadOnlyInline}}
   - : The extensions selected by the server.
-- {{domxref("WebSocket.protocol")}} {{readonlyinline}}
+- {{domxref("WebSocket.protocol")}} {{ReadOnlyInline}}
   - : The sub-protocol selected by the server.
-- {{domxref("WebSocket.readyState")}} {{readonlyinline}}
+- {{domxref("WebSocket.readyState")}} {{ReadOnlyInline}}
   - : The current state of the connection.
-- {{domxref("WebSocket.url")}} {{readonlyinline}}
+- {{domxref("WebSocket.url")}} {{ReadOnlyInline}}
   - : The absolute URL of the WebSocket.
 
 ## Methods
@@ -71,12 +72,12 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 const socket = new WebSocket('ws://localhost:8080');
 
 // Connection opened
-socket.addEventListener('open', function (event) {
+socket.addEventListener('open', (event) => {
     socket.send('Hello Server!');
 });
 
 // Listen for messages
-socket.addEventListener('message', function (event) {
+socket.addEventListener('message', (event) => {
     console.log('Message from server ', event.data);
 });
 ```

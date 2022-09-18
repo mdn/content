@@ -11,6 +11,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.leftContext
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The non-standard **leftContext** property is a static and read-only property of regular expressions that contains the substring preceding the most recent match. `` RegExp.$` `` is an alias for this property.

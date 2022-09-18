@@ -15,9 +15,11 @@ tags:
   - Property
   - Reference
   - validationURL
+  - Deprecated
 browser-compat: api.MerchantValidationEvent.validationURL
 ---
-{{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{SecureContext_Header}}
 
 The {{domxref("MerchantValidationEvent")}} property
 **`validationURL`** is a read-only string value providing the

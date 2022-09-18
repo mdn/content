@@ -117,10 +117,11 @@ This example shows a simple `<details>` element with a `<summary>`.
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -135,10 +136,11 @@ To start the `<details>` box in its open state, add the Boolean `open` attribute
 ```html
 <details open>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -189,10 +191,11 @@ The selector `details[open]` can be used to style the element which is open.
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -240,10 +243,11 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 

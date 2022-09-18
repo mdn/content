@@ -9,6 +9,9 @@ tags:
   - sizing
 browser-compat: css.properties.width.min-content
 ---
+
+{{CSSRef}}
+
 The `min-content` sizing keyword represents the intrinsic minimum width of the content. For text content this means that the content will take all soft-wrapping opportunities, becoming as small as the longest word.
 
 ## Syntax
@@ -64,9 +67,7 @@ min-content: unset;
 ```html
 <div id="container">
   <div>Item</div>
-  <div>
-    Item with more text in it.
-  </div>
+  <div>Item with more text in it.</div>
   <div>Flexible item</div>
 </div>
 ```

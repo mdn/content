@@ -4,7 +4,6 @@ slug: Web/API/PaymentResponse/complete
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Payment Request
   - Payment Request API
@@ -14,6 +13,7 @@ tags:
   - complete
 browser-compat: api.PaymentResponse.complete
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentRequest")}} method
@@ -27,7 +27,7 @@ the payment request and the {{jsxref("Promise")}} returned by the
 
 ## Syntax
 
-```js
+```js-nolint
 complete()
 complete(result)
 ```
@@ -81,7 +81,7 @@ calls `complete()` with an answer appropriate to the status in the response.
 //   sake of brevity.
 const payment = new PaymentRequest(supportedInstruments, details, options);
 
-payment.show().then(function(paymentResponse) {
+payment.show().then((paymentResponse) => {
   const fetchOptions = {
     method: 'POST',
     credentials: include,
@@ -97,7 +97,7 @@ payment.show().then(function(paymentResponse) {
   }).catch((reason) => {
     paymentResponse.complete("fail");
   });
-}).catch(function(err) {
+}).catch((err) => {
   console.error("Uh oh, something bad happened", err.message);
 });
 ```

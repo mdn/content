@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.has
 ---
+
 {{JSRef}}
 
 The **`has()`** method returns a boolean indicating whether an element with the
@@ -19,7 +20,7 @@ specified key exists or not.
 
 ## Syntax
 
-```js
+```js-nolint
 has(key)
 ```
 
@@ -39,10 +40,10 @@ otherwise `false`.
 
 ```js
 const myMap = new Map();
-myMap.set('bar', "foo");
+myMap.set("bar", "foo");
 
-myMap.has('bar'); // returns true
-myMap.has('baz'); // returns false
+console.log(myMap.has("bar")); // true
+console.log(myMap.has("baz")); // false
 ```
 
 ## Specifications

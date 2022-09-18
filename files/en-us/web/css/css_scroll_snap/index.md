@@ -9,13 +9,14 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-scroll-snap/
 ---
+
 {{CSSRef}}
 
 **CSS Scroll Snap** is a module of CSS that introduces scroll snap positions, which enforce the scroll positions that a {{Glossary("scroll container")}}'s {{Glossary("scrollport")}} may end at after a scrolling operation has completed.
 
 ## Reference
 
-### CSS Properties on Containers
+### Properties on containers
 
 - {{cssxref("scroll-snap-type")}}
 - {{cssxref("scroll-padding")}}
@@ -30,7 +31,7 @@ spec-urls: https://drafts.csswg.org/css-scroll-snap/
 - {{cssxref("scroll-padding-block-start")}}
 - {{cssxref("scroll-padding-block-end")}}
 
-### CSS Properties on Children
+### Properties on children
 
 - {{cssxref("scroll-snap-align")}}
 - {{cssxref("scroll-margin")}}

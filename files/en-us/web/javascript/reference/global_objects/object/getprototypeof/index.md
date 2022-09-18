@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`Object.getPrototypeOf()`** method returns the prototype
@@ -19,7 +20,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getPrototypeOf(obj)
 ```
 
@@ -68,6 +69,6 @@ Object.getPrototypeOf('foo');
 - [Polyfill of `Object.getPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object/proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - John Resig's post on [getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/)
 - {{jsxref("Reflect.getPrototypeOf()")}}

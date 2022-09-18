@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEvent.interval
 ---
+
 {{APIRef("Device Orientation Events")}}
 
 The **`DeviceMotionEvent.interval`** property returns the interval, in milliseconds, at which data is obtained from the underlying
@@ -35,5 +36,5 @@ A number representing the interval of time, in milliseconds.
 - {{DOMxRef("window.devicemotion_event", "devicemotion") }} event
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
 - {{DOMxRef("DeviceOrientationEvent")}}
-- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

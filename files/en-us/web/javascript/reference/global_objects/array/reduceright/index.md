@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.reduceRight
 ---
+
 {{JSRef}}
 
 The **`reduceRight()`** method applies a function against an
@@ -22,7 +23,7 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduceRight((accumulator, currentValue) => { /* … */ } )
 reduceRight((accumulator, currentValue, index) => { /* … */ } )
@@ -111,65 +112,14 @@ Some example run-throughs of the function would look like this:
 The callback would be invoked four times, with the arguments and return values in each
 call being as follows:
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code>
-      </th>
-      <th scope="col">
-        <code><var>accumulator</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>index</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">return value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">first call</th>
-      <td><code>4</code></td>
-      <td><code>3</code></td>
-      <td><code>3</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>7</code></td>
-    </tr>
-    <tr>
-      <th scope="row">second call</th>
-      <td><code>7</code></td>
-      <td><code>2</code></td>
-      <td><code>2</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>9</code></td>
-    </tr>
-    <tr>
-      <th scope="row">third call</th>
-      <td><code>9</code></td>
-      <td><code>1</code></td>
-      <td><code>1</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>10</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fourth call</th>
-      <td><code>10</code></td>
-      <td><code>0</code></td>
-      <td><code>0</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>10</code></td>
-    </tr>
-  </tbody>
-</table>
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `4`           | `3`            | `3`     | `7`          |
+| Second call | `7`           | `2`            | `2`     | `9`          |
+| Third call  | `9`           | `1`            | `1`     | `10`         |
+| Fourth call | `10`          | `0`            | `0`     | `10`         |
 
-The value returned by `reduceRight` would be that of the last callback
-invocation (`10`).
+The `array` parameter never changes through the process — it's always `[0, 1, 2, 3, 4]`. The value returned by `reduceRight` would be that of the last callback invocation (`10`).
 
 And if you were to provide an `initialValue`, the result would
 look like this:
@@ -181,73 +131,15 @@ look like this:
 );
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code>
-      </th>
-      <th scope="col">
-        <code><var>accumulator</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>index</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">return value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">first call</th>
-      <td><code>10</code></td>
-      <td><code>4</code></td>
-      <td><code>4</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>14</code></td>
-    </tr>
-    <tr>
-      <th scope="row">second call</th>
-      <td><code>14</code></td>
-      <td><code>3</code></td>
-      <td><code>3</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>17</code></td>
-    </tr>
-    <tr>
-      <th scope="row">third call</th>
-      <td><code>17</code></td>
-      <td><code>2</code></td>
-      <td><code>2</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>19</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fourth call</th>
-      <td><code>19</code></td>
-      <td><code>1</code></td>
-      <td><code>1</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>20</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fifth call</th>
-      <td><code>20</code></td>
-      <td><code>0</code></td>
-      <td><code>0</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>20</code></td>
-    </tr>
-  </tbody>
-</table>
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `10`          | `4`            | `4`     | `14`         |
+| Second call | `14`          | `3`            | `3`     | `17`         |
+| Third call  | `17`          | `2`            | `2`     | `19`         |
+| Fourth call | `19`          | `1`            | `1`     | `20`         |
+| Fifth call  | `20`          | `0`            | `0`     | `20`         |
 
-The value returned by `reduceRight` this time would be, of course,
-`20`.
+The value returned by `reduceRight` this time would be, of course, `20`.
 
 ## Examples
 

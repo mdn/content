@@ -12,6 +12,7 @@ tags:
   - replaceChildren
 browser-compat: api.DocumentFragment.replaceChildren
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentFragment.replaceChildren()`** method replaces the
@@ -20,7 +21,7 @@ can be string or {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceChildren(param1)
 replaceChildren(param1, param2)
 replaceChildren(param1, param2, /* … ,*/ paramN)

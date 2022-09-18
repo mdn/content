@@ -10,6 +10,7 @@ tags:
   - VideoColorSpace
 browser-compat: api.VideoColorSpace.fullRange
 ---
+
 {{DefaultAPISidebar("WebCodecs API")}}
 
 The **`fullRange`** read-only property of the {{domxref("VideoColorSpace")}} interface returns `true` if full-range color values are used.

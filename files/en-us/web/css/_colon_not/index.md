@@ -12,16 +12,12 @@ tags:
   - Web
 browser-compat: css.selectors.not
 ---
+
 {{CSSRef}}
 
 The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
 
-```css
-/* Selects any element that is NOT a paragraph */
-:not(p) {
-  color: blue;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-not.html", "tabbed-shorter")}}
 
 The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected results](#description) that you should be aware of before using it.
 
@@ -43,6 +39,7 @@ There are several unusual effects and outcomes when using `:not()` that you shou
 - `:not(.foo)` will match anything that isn't `.foo`, _including {{HTMLElement("html")}} and {{HTMLElement("body")}}._
 - This selector will match everything that is "not an X". This may be surprising when used with [descendant combinators](/en-US/docs/Web/CSS/Descendant_combinator), since there are multiple paths to select a target element. For instance, `body :not(table) a` will still apply to links inside a {{HTMLElement("table")}}, since {{HTMLElement("tr")}}, {{HTMLElement("tbody")}}, {{HTMLElement("th")}}, {{HTMLElement("td")}}, {{HTMLElement("caption")}}, etc. can all match the `:not(table)` part of the selector.
 - You can negate several selectors at the same time. Example: `:not(.foo, .bar)` is equivalent to `:not(.foo):not(.bar)`.
+- If any selector passed to the `:not()` pseudo-class is invalid or not supported by the browser, the whole rule will be invalidated. The effective way to overcome this behavior is to use [`:is`](/en-US/docs/Web/CSS/:is) pseudo-class, which accepts a forgiving selector list. For example `:not(.foo, :invalid-pseudo-class)` will invalidate a whole rule, but `:is(:not(.foo), :not(:invalid-pseudo-class))` will match any element that isn't `.foo`.
 
 ## Examples
 

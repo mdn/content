@@ -12,6 +12,7 @@ tags:
   - onShown
 browser-compat: webextensions.api.menus.onShown
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser has shown a menu.
@@ -56,7 +57,7 @@ Note that it is possible to call menus API functions synchronously, and in this 
 ```js
 browser.menus.onShown.addListener(async (info, tab) => {
   browser.menus.update(menuId /*, …*/);
-   // Note: Not waiting for returned promise.
+  // Note: Not waiting for returned promise.
   browser.menus.refresh();
 });
 ```
@@ -81,7 +82,7 @@ Firefox makes this event available via the `contextMenus` namespace as well as t
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.onShown.addListener(listener)
 browser.menus.onShown.removeListener(listener)
 browser.menus.onShown.hasListener(listener)
@@ -115,8 +116,6 @@ Events have three functions:
 
         The `contexts`, `menuIds`, `frameId`, and `editable` properties are always provided. All the other properties in `info` are only provided if the extension has the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the page.
 
-    <!---->
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.
 
@@ -127,7 +126,7 @@ This example listens for the context menu to be shown over a link, then updates 
 ```js
 function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
-    title: `Open (${linkHostname})`
+    title: `Open (${linkHostname})`,
   });
   browser.menus.refresh();
 }

@@ -7,6 +7,7 @@ tags:
   - Guide
   - HTML
 ---
+
 While using {{Glossary("HTML")}} it can be very handy to have an easy way to remember how to use HTML tags properly and how to apply them. MDN provides you with an extended [HTML documentation](/en-US/docs/Web/HTML/Element) as well as a deep instructional [HTML how-to](/en-US/docs/Learn/HTML/Howto). However, in many cases we just need some quick hints as we go. That's the whole purpose of the cheatsheet, to give you some quick accurate ready to use code snippets for common usages.
 
 > **Note:** HTML tags must be used for their semantic, not their appearance. It's always possible to totally change the look and feel of a given tag using {{Glossary("CSS")}} so, when using HTML, take the time to focus on the meaning rather than the appearance.
@@ -212,7 +213,7 @@ format&#x3C;/code>.</pre
         <pre class="brush: html">
 &#x3C;audio controls="controls">
   &#x3C;source="t-rex-roar.mp3" type="audio/mpeg">
-  Your browser does not support Audio.
+  &#x3C;a href="t-rex-roar.mp3">Download MP3&#x3C;/a>
 &#x3C;/audio></pre
         >
         {{EmbedLiveSample("audio-example", 100, 80)}}
@@ -225,7 +226,7 @@ format&#x3C;/code>.</pre
         <pre class="brush: html">
 &#x3C;video controls width="250"
   src="https://archive.org/download/ElephantsDream/ed_hd.ogv" >
-  The &#x3C;code>video&#x3C;/code> element is unsupported.
+  &#x3C;a href="https://archive.org/download/ElephantsDream/ed_hd.ogv">Download OGV video&#x3C;/a>
 &#x3C;/video></pre
         >
         {{EmbedLiveSample("video-example", 100, 200)}}

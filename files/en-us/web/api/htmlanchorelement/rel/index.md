@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.rel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.rel`** property reflects the
@@ -26,9 +27,8 @@ A string.
 
 ```js
 const anchors = document.getElementsByTagName("a");
-const length = anchors.length;
-for (let i = 0; i < length; i++) {
-  alert(`Rel: ${anchors[i].rel}`);
+for (const anchor of anchors) {
+  alert(`Rel: ${anchor.rel}`);
 }
 ```
 

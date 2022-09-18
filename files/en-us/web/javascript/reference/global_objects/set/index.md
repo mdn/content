@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Set
 ---
+
 {{JSRef}}
 
 The **`Set`** object lets you store unique values of any type, whether {{Glossary("Primitive", "primitive values")}} or object references.
@@ -24,9 +25,7 @@ The specification requires sets to be implemented "that, on average, provide acc
 
 ### Value equality
 
-Because each value in the `Set` has to be unique, the value equality will be checked. In an earlier version of ECMAScript specification, this was not based on the same algorithm as the one used in the `===` operator. Specifically, for `Set`s, `+0` (which is strictly equal to `-0`) and `-0` were different values. However, this was changed in the ECMAScript 2015 specification. See _"Key equality for -0 and 0"_ in the [browser compatibility](#browser_compatibility) table for details.
-
-{{jsxref("NaN")}} and {{jsxref("undefined")}} can also be stored in a Set. All `NaN` values are equated (i.e. `NaN` is considered the same as `NaN`, even though `NaN !== NaN`).
+Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
 
 ### Performance
 
@@ -49,22 +48,19 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 
 ## Instance methods
 
-- {{jsxref("Set.add", "Set.prototype.add(<var>value</var>)")}}
+- {{jsxref("Set.prototype.add()")}}
   - : Inserts a new element with a specified value in to a `Set` object, if there isn't an element with the same value already in the `Set`.
 - {{jsxref("Set.prototype.clear()")}}
   - : Removes all elements from the `Set` object.
-- {{jsxref("Set.delete", "Set.prototype.delete(<var>value</var>)")}}
+- {{jsxref("Set.prototype.delete()")}}
   - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
-- {{jsxref("Set.has", "Set.prototype.has(<var>value</var>)")}}
+- {{jsxref("Set.prototype.has()")}}
   - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
-
-### Iteration methods
-
 - {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.values", " Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
 
@@ -72,7 +68,7 @@ The `Set` [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) m
 
     This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
 
-- {{jsxref("Set.forEach", "Set.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}
+- {{jsxref("Set.prototype.forEach()")}}
   - : Calls `callbackFn` once for each value present in the `Set` object, in insertion order. If a `thisArg` parameter is provided, it will be used as the `this` value for each invocation of `callbackFn`.
 
 ## Examples
@@ -145,15 +141,15 @@ mySet1.add(document.body)
 mySet1.has(document.querySelector('body')) // true
 
 // converting between Set and Array
-const mySet2 = new Set([1, 2, 3, 4])
-mySet2.size                    // 4
-[...mySet2]                    // [1, 2, 3, 4]
+const mySet2 = new Set([1, 2, 3, 4]);
+console.log(mySet2.size); // 4
+console.log([...mySet2]); // [1, 2, 3, 4]
 
 // intersect can be simulated via
-const intersection = new Set([...mySet1].filter((x) => mySet2.has(x)))
+const intersection = new Set([...mySet1].filter((x) => mySet2.has(x)));
 
 // difference can be simulated via
-const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)))
+const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)));
 
 // Iterate set entries with forEach()
 mySet2.forEach((value) => {
@@ -238,7 +234,7 @@ const mySet = new Set(myArray);
 
 mySet.has('value1')     // returns true
 
-// Use the spread operator to transform a set into an Array.
+// Use the spread syntax to transform a set into an Array.
 console.log([...mySet]); // Will show you exactly the same Array as myArray
 ```
 
@@ -275,7 +271,7 @@ const array = Array
   .map((e) => e.id);
 
 const set = new Set(array);
-console.assert(set.size == array.length);
+console.assert(set.size === array.length);
 ```
 
 ## Specifications

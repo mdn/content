@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: article role'
+title: "ARIA: article role"
 slug: Web/Accessibility/ARIA/Roles/article_role
 tags:
   - ARIA
@@ -13,6 +13,7 @@ spec-urls:
   - https://w3c.github.io/aria/#article
   - https://w3c.github.io/aria-practices/#feed
 ---
+
 The `article` role indicates a section of a page that could easily stand on its own on a page, in a document, or on a website. It is usually set on related content items such as comments, forum posts, newspaper articles or other items grouped together on one page.
 
 ```html
@@ -22,7 +23,7 @@ The `article` role indicates a section of a page that could easily stand on its 
   <p>Another paragraph.</p>
   Controls to interact with the article, share it, etc.
 </div>
-<div role="article"> … </div>
+<div role="article">…</div>
 ```
 
 This example shows two articles side by side on one page that could be structured similarly and are related.
@@ -38,7 +39,7 @@ Don't use `role="article"`. Instead use the `<article>` element.
   <p>Another paragraph.</p>
   Controls to interact with the article, share it, etc.
 </article>
-<article> … </article>
+<article>…</article>
 ```
 
 ## Description
@@ -99,6 +100,6 @@ This role corresponds to the {{HTMLElement('article')}} element in HTML, and tha
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -4,9 +4,11 @@ slug: Web/SVG/Attribute/xml:lang
 tags:
   - SVG
   - SVG Attribute
+  - Deprecated
 browser-compat: svg.attributes.core.xml_lang
 ---
-{{SVGRef}}
+
+{{SVGRef}}{{Deprecated_Header}}
 
 The **`xml:lang`** attribute specifies the primary language used in contents and attributes containing text content of particular elements.
 

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.Collator.prototype.resolvedOptions()`** method
@@ -24,7 +25,7 @@ computed during initialization of this {{jsxref("Intl.Collator")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

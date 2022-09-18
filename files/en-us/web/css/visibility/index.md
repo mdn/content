@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.visibility
 ---
+
 {{CSSRef}}
 
 The **`visibility`** CSS property shows or hides an element without changing the layout of a document. The property can also hide rows or columns in a {{HTMLElement("table")}}.
@@ -81,7 +82,10 @@ When animated, visibility values are interpolated between _visible_ and _not-vis
 ```html
 <p class="visible">The first paragraph is visible.</p>
 <p class="not-visible">The second paragraph is NOT visible.</p>
-<p class="visible">The third paragraph is visible. Notice the second paragraph is still occupying space.</p>
+<p class="visible">
+  The third paragraph is visible. Notice the second paragraph is still occupying
+  space.
+</p>
 ```
 
 #### CSS

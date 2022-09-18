@@ -5,7 +5,6 @@ page-type: web-api-static-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - MediaSource
@@ -17,6 +16,7 @@ tags:
   - isTypeSupported
 browser-compat: api.MediaSource.isTypeSupported
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`MediaSource.isTypeSupported()`** static method returns a boolean value which is `true` if the given MIME type and (optional) codec are _likely_ to be supported by the current {{Glossary("user agent")}}.
@@ -26,7 +26,7 @@ If the returned value is `false`, then the user agent is certain that it _cannot
 
 ## Syntax
 
-```js
+```js-nolint
 isTypeSupported(type)
 ```
 
@@ -47,32 +47,32 @@ This is because media files are complex, intricate constructs with far too many 
 
 ## Examples
 
-The following snippet is from an example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation).
+The following snippet is from an example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
 const assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+let mediaSource;
 
 if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  let mediaSource = new MediaSource;
-  //console.log(mediaSource.readyState); // closed
+  mediaSource = getMediaSource();
+  console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
 } else {
   console.error('Unsupported MIME type or codec: ', mimeCodec);
 }
 
-function sourceOpen (_) {
-  //console.log(this.readyState); // open
-  let mediaSource = this;
-  let sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+function sourceOpen() {
+  console.log(this.readyState); // open
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  fetchAB(assetURL, (buf) => {
+    sourceBuffer.addEventListener('updateend', () => {
       mediaSource.endOfStream();
       video.play();
-      //console.log(mediaSource.readyState); // ended
+      console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });

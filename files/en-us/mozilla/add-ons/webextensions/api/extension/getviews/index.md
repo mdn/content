@@ -13,6 +13,7 @@ tags:
   - getViews
 browser-compat: webextensions.api.extension.getViews
 ---
+
 {{AddonSidebar()}}
 
 Returns an array of the [Window](/en-US/docs/Web/API/Window) objects for each of the pages running inside the current extension. This includes, for example:
@@ -26,7 +27,7 @@ In Firefox, if this method is called from a page that is part of a private brows
 
 ## Syntax
 
-```js
+```js-nolint
 let windows = browser.extension.getViews(
   fetchProperties // optional object
 )
@@ -56,9 +57,9 @@ let windows = browser.extension.getViews(
 Get all windows belonging to this extension, and log their URLs:
 
 ```js
-let windows = browser.extension.getViews();
+const windows = browser.extension.getViews();
 
-for (let extensionWindow of windows) {
+for (const extensionWindow of windows) {
   console.log(extensionWindow.location.href);
 }
 ```
@@ -66,13 +67,13 @@ for (let extensionWindow of windows) {
 Get only windows in browser tabs hosting content packaged with the extension:
 
 ```js
-let windows = browser.extension.getViews({type: "tab"});
+const windows = browser.extension.getViews({ type: "tab" });
 ```
 
 Get only windows in popups:
 
 ```js
-let windows = browser.extension.getViews({type: "popup"});
+const windows = browser.extension.getViews({ type: "popup" });
 ```
 
 {{WebExtExamples}}
@@ -81,7 +82,8 @@ let windows = browser.extension.getViews({type: "popup"});
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,4 +110,4 @@ let windows = browser.extension.getViews({type: "popup"});
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

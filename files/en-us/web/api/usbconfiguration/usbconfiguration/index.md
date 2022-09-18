@@ -14,6 +14,7 @@ tags:
   - WebUSB API
 browser-compat: api.USBConfiguration.USBConfiguration
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`USBConfiguration()`** constructor
@@ -22,7 +23,7 @@ the configuration on the provided USBDevice with the given configuration value.
 
 ## Syntax
 
-```js
+```js-nolint
 new USBConfiguration(device, configurationValue)
 ```
 

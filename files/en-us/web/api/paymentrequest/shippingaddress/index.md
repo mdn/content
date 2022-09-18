@@ -4,7 +4,6 @@ slug: Web/API/PaymentRequest/shippingAddress
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentRequest
@@ -12,8 +11,11 @@ tags:
   - Reference
   - Secure context
   - shippingAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentRequest.shippingAddress
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`shippingAddress`** read-only property of
@@ -40,15 +42,15 @@ shipping cost.
 //   brevity.
 const payment = new PaymentRequest(supportedInstruments, details, options);
 
-payment.addEventListener('shippingaddresschange', function(evt) {
-  evt.updateWith(new Promise(function(resolve) {
+payment.addEventListener('shippingaddresschange', (evt) => {
+  evt.updateWith(new Promise((resolve) => {
     updateDetails(details, request.shippingAddress, resolve);
   }));
 });
 
-payment.show().then(function(paymentResponse) {
+payment.show().then((paymentResponse) => {
     // Processing of paymentResponse excerpted for brevity.
-}).catch(function(err) {
+}).catch((err) => {
     console.error("Uh oh, something bad happened", err.message);
 });
 

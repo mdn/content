@@ -13,6 +13,7 @@ tags:
   - only
 browser-compat: api.IDBKeyRange.only
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`only()`** method of the {{domxref("IDBKeyRange")}}
@@ -22,7 +23,7 @@ interface creates a new key range containing a single value.
 
 ## Syntax
 
-```js
+```js-nolint
 only(value)
 ```
 
@@ -50,7 +51,7 @@ declaring `keyRangeValue` as its optional key range value. This means that
 the cursor will only retrieve the record with the key value "A".
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbkeyrange)
+> key range, have a look at our [IDBKeyRange](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange)
 > repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js

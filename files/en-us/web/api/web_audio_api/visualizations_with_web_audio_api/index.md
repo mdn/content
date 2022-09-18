@@ -11,6 +11,7 @@ tags:
   - visualization
   - waveform
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 One of the most interesting features of the Web Audio API is the ability to extract frequency, waveform, and other data from your audio source, which can then be used to create visualizations. This article explains how, and provides a couple of basic use cases.
@@ -59,7 +60,7 @@ To actually retrieve the data and copy it into our array, we then call the data 
 analyser.getByteTimeDomainData(dataArray);
 ```
 
-We now have the audio data for that moment in time captured in our array, and can proceed to visualize it however we like, for example by plotting it onto an HTML5 {{ htmlelement("canvas") }}.
+We now have the audio data for that moment in time captured in our array, and can proceed to visualize it however we like, for example by plotting it onto an HTML {{ htmlelement("canvas") }}.
 
 Let's go on to look at some specific examples.
 
@@ -127,7 +128,7 @@ Now we run through a loop, defining the position of a small segment of the wave 
         const v = dataArray[i] / 128.0;
         const y = v * HEIGHT/2;
 
-        if(i === 0) {
+        if (i === 0) {
           canvasCtx.moveTo(x, y);
         } else {
           canvasCtx.lineTo(x, y);

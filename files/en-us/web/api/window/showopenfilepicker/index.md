@@ -8,9 +8,11 @@ tags:
   - Method
   - Window
   - working with files
+  - Experimental
 browser-compat: api.Window.showOpenFilePicker
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`showOpenFilePicker()`** method of the
 {{domxref("Window")}} interface shows a file picker that allows a user to select a file
@@ -18,13 +20,13 @@ or multiple files and returns a handle for the file(s).
 
 ## Syntax
 
-```js
+```js-nolint
 showOpenFilePicker()
 ```
 
 ### Parameters
 
-- `options` {{optional_inline}}
+- `options` {{Optional_Inline}}
 
   - : An object containing options, which are as follows:
 
@@ -37,6 +39,7 @@ showOpenFilePicker()
         any file type filters (instigated with the type option below). Setting this option
         to `true` means that option is _not_ available.
     - `types`
+
       - : An {{jsxref('Array')}} of allowed file types to pick. Each
         item is an object with the following options:
 

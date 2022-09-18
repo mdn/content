@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}
 
 The following links point to solutions to common problems you may encounter when writing JavaScript.
@@ -85,9 +86,6 @@ const myObject = {
 - [What are strings?](/en-US/docs/Learn/JavaScript/First_steps/Strings)
 - [What is an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array)
 - [What is a loop?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-
-<!---->
-
 - [What is a function?](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
 - [What is an event?](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 - [What is an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#object_basics)

@@ -23,7 +23,7 @@ If permission is granted then the {{jsxref('Promise')}} resolves and a [`MIDIAcc
 
 ## Syntax
 
-```js
+```js-nolint
 requestMIDIAccess()
 requestMIDIAccess(MIDIOptions)
 ```
@@ -57,11 +57,11 @@ A {{jsxref('Promise')}} that resolves with a [`MIDIAccess`](/en-US/docs/Web/API/
 In the following example, the {{domxref("Navigator.requestMIDIAccess()")}} method returns the {{domxref("MIDIAccess")}} object, which gives access to information about the input and output MIDI ports.
 
 ```js
-navigator.requestMIDIAccess().then(function (access) {
+navigator.requestMIDIAccess().then((access) => {
   // Get lists of available MIDI controllers
   const inputs = access.inputs.values();
   const outputs = access.outputs.values();
-
+  // …
 });
 ```
 

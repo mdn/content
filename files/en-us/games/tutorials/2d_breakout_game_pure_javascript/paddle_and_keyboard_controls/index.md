@@ -11,6 +11,7 @@ tags:
   - Tutorial
   - keyboard
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
@@ -26,7 +27,7 @@ So, we need a paddle to hit the ball. Let's define a few variables for that. Add
 ```js
 const paddleHeight = 10;
 const paddleWidth = 75;
-const paddleX = (canvas.width - paddleWidth) / 2;
+let paddleX = (canvas.width - paddleWidth) / 2;
 ```
 
 Here we're defining the height and width of the paddle and its starting point on the `x` axis for use in calculations further on down the code. Let's create a function that will draw the paddle on the screen. Add the following just below your `drawBall()` function:
@@ -78,7 +79,7 @@ function keyDownHandler(e) {
 function keyUpHandler(e) {
   if (e.key === "Right" || e.key === "ArrowRight") {
     rightPressed = false;
-  } else if(e.key === "Left" || e.key === "ArrowLeft") {
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
     leftPressed = false;
   }
 }
@@ -86,11 +87,11 @@ function keyUpHandler(e) {
 
 When we press a key down, this information is stored in a variable. The relevant variable in each case is set to `true`. When the key is released, the variable is set back to `false`.
 
-Both functions take an event as a parameter, represented by the `e` variable. From that you can get useful information: the `key` holds the information about the key that was pressed.  Most browsers use `ArrowRight` and `ArrowLeft` for the left/right cursor keys, but we need to also include `Right` and `Left` checks to support IE/Edge browsers. If the left cursor is pressed, then the `leftPressed` variable is set to `true`, and when it is released, the `leftPressed` variable is set to `false`. The same pattern follows with the right cursor and the `rightPressed` variable.
+Both functions take an event as a parameter, represented by the `e` variable. From that you can get useful information: the `key` holds the information about the key that was pressed. Most browsers use `ArrowRight` and `ArrowLeft` for the left/right cursor keys, but we need to also include `Right` and `Left` checks to support IE/Edge browsers. If the left cursor is pressed, then the `leftPressed` variable is set to `true`, and when it is released, the `leftPressed` variable is set to `false`. The same pattern follows with the right cursor and the `rightPressed` variable.
 
 ### The paddle moving logic
 
-We've now set up the variables for storing the info about the pressed keys, event listeners, and relevant functions. Next we'll get into the code to use all of the things we just set up and to move the paddle on the screen. Inside the `draw()` function, we will check if the left or right cursor keys are pressed when each frame is rendered. Our code might look like this:
+We've now set up the variables for storing the info about the pressed keys, event listeners, and relevant functions. Next we'll get into the code to use all the things we just set up and to move the paddle on the screen. Inside the `draw()` function, we will check if the left or right cursor keys are pressed when each frame is rendered. Our code might look like this:
 
 ```js
 if (rightPressed) {

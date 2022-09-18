@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderPrecisionFormat
 ---
+
 {{APIRef("WebGL")}}
 
 The
@@ -20,7 +21,7 @@ the specified shader numeric format.
 
 ## Syntax
 
-```js
+```js-nolint
 getShaderPrecisionFormat(shaderType, precisionType)
 ```
 

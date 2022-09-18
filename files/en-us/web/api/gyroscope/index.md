@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.Gyroscope
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`Gyroscope`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides on each reading the angular velocity of the device along all three axes.
@@ -31,11 +32,11 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 
 ## Properties
 
-- {{domxref('Gyroscope.x')}} {{readonlyinline}}
+- {{domxref('Gyroscope.x')}} {{ReadOnlyInline}}
   - : Returns a double, containing the angular velocity of the device along the device's x axis.
-- {{domxref('Gyroscope.y')}} {{readonlyinline}}
+- {{domxref('Gyroscope.y')}} {{ReadOnlyInline}}
   - : Returns a double, containing the angular velocity of the device along the device's y axis.
-- {{domxref('Gyroscope.z')}} {{readonlyinline}}
+- {{domxref('Gyroscope.z')}} {{ReadOnlyInline}}
   - : Returns a double, containing the angular velocity of the device along the device's z axis.
 
 ## Methods

@@ -15,6 +15,7 @@ tags:
   - web console
 browser-compat: api.console.log
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.log()`** method outputs a message to the web console.
@@ -25,7 +26,7 @@ or more JavaScript objects.
 
 ## Syntax
 
-```js
+```js-nolint
 log(obj1)
 log(obj1, /* …, */ objN)
 log(msg)
@@ -72,5 +73,5 @@ change. This may not be what you want.
 
 ## See also
 
-- [MSDN: Using the F12 Tools Console to View Errors and Status](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
 - [NodeJS: Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)

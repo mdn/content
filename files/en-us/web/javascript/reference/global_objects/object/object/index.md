@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Object.Object
 ---
+
 {{JSRef}}
 
 The **`Object` constructor** turns the input into an object. Its behavior depends on the input's type.
@@ -17,15 +18,14 @@ The **`Object` constructor** turns the input into an object. Its behavior depend
 - Otherwise, it will return an object of a Type that corresponds to the given value.
 - If the value is an object already, it will return the value.
 
-When called in a non-constructor context, `Object` behaves identically to
-`new Object()`.
-
 ## Syntax
 
-```js
-new Object()
+```js-nolint
 new Object(value)
+Object(value)
 ```
+
+> **Note:** `Object()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new object.
 
 ### Parameters
 

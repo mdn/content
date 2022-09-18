@@ -6,6 +6,7 @@ tags:
   - Security
   - Web
 ---
+
 Ensuring that your website or open web application is secure is critical. Even simple bugs in your code can result in private information being leaked, and bad people are out there trying to find ways to steal data. The web security-oriented articles listed here provide information that may help you secure your site and its code from attacks and data theft.
 
 ## Content security
@@ -120,9 +121,6 @@ In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clic
 - {{Glossary("SQL injection")}}
 - {{Glossary("Symmetric-key cryptography")}}
 - {{Glossary("TOFU")}}
-
-<!---->
-
 - {{Glossary("TLS")}}
 
 ## See also

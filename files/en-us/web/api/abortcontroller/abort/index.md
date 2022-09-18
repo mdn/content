@@ -5,13 +5,13 @@ page-type: web-api-instance-method
 tags:
   - API
   - AbortController
-  - Experimental
   - Fetch
   - Method
   - Reference
   - abort()
 browser-compat: api.AbortController.abort
 ---
+
 {{APIRef("DOM")}}
 
 The **`abort()`** method of the {{domxref("AbortController")}} interface aborts a DOM request before it has completed.
@@ -19,7 +19,7 @@ This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), the consumpti
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 abort(reason)
 ```
@@ -46,21 +46,21 @@ When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the
 const controller = new AbortController();
 const signal = controller.signal;
 
-const url = 'video.mp4';
-const downloadBtn = document.querySelector('.download');
-const abortBtn = document.querySelector('.abort');
+const url = "video.mp4";
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', () => {
+abortBtn.addEventListener("click", () => {
   controller.abort();
-  console.log('Download aborted');
+  console.log("Download aborted");
 });
 
 function fetchVideo() {
   fetch(url, { signal })
     .then((response) => {
-      console.log('Download complete', response);
+      console.log("Download complete", response);
     })
     .catch((err) => {
       console.error(`Download error: ${err.message}`);
@@ -70,7 +70,7 @@ function fetchVideo() {
 
 > **Note:** When `abort()` is called, the `fetch()` promise rejects with an `Error` of type `DOMException`, with name `AbortError`.
 
-You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/master/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
+You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/main/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
 
 ## Specifications
 

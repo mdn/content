@@ -7,6 +7,7 @@ tags:
   - Java
   - Programming Language
 ---
+
 Java is a {{glossary("Compile", "compiled")}}, {{glossary("OOP", "object-oriented")}}, highly portable {{Glossary("computer programming", "programming")}} language.
 
 Java is statically typed and features a similar syntax to C. It comes with a large library of readily usable functions, the Java Software Development Kit (SDK).
@@ -15,4 +16,4 @@ Programs are {{glossary("Compile", "compiled")}} only once ahead of time into a 
 
 ## See also
 
-- [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) on Wikipedia
+- [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>) on Wikipedia

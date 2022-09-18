@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-errormessage
 ---
+
 The `aria-errormessage` attribute on an object identifies the element that provides an error message for that object.
 
 ## Description
@@ -53,8 +54,12 @@ When an object is invalid, we use JavaScript to add `aria-invalid="true"`. The a
 ```html
 <p>
   <label for="email">Email address:</label>
-  <input type="email" name="email" id="email"
-    aria-invalid="true" aria-errormessage="err1" />
+  <input
+    type="email"
+    name="email"
+    id="email"
+    aria-invalid="true"
+    aria-errormessage="err1" />
   <span id="err1" class="errormessage">Error: Enter a valid email address</span>
 </p>
 ```

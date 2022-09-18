@@ -13,6 +13,7 @@ tags:
   - web animations api
 browser-compat: api.Animation.startTime
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`Animation.startTime`** property of the {{domxref("Animation")}} interface is a double-precision floating-point value which indicates the scheduled time when an animation's playback should begin.
@@ -28,10 +29,12 @@ A floating-point number representing the current time in milliseconds, or `null`
 In the [Running on Web Animations API example](https://codepen.io/rachelnabors/pen/zxYexJ?editors=0010), the we can sync all new animated cats by giving them all the same `startTime` as the original running cat:
 
 ```js
-const catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
+const catRunning = document
+  .getElementById("withWAAPI")
+  .animate(keyframes, timing);
 
 /* A function that makes new cats. */
-function addCat(){
+function addCat() {
   const newCat = document.createElement("div");
   newCat.classList.add("cat");
   return newCat;
@@ -56,7 +59,7 @@ function animateNewCatWithWAAPI() {
 ## Reduced time precision
 
 To offer protection against timing attacks and fingerprinting, the precision of `animation.startTime` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20 µs in Firefox 59; in 60 it will be 2 ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60

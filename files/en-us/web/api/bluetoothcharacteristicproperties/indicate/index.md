@@ -14,6 +14,7 @@ tags:
   - indicate
 browser-compat: api.BluetoothCharacteristicProperties.indicate
 ---
+
 {{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`indicate`** read-only property of the

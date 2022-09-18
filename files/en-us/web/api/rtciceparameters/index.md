@@ -20,6 +20,7 @@ tags:
   - username
 browser-compat: api.RTCIceParameters
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCIceParameters`** dictionary specifies the username fragment and password assigned to an {{Glossary("ICE")}} session.

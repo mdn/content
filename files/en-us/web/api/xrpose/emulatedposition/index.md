@@ -26,6 +26,7 @@ tags:
   - tracking
 browser-compat: api.XRPose.emulatedPosition
 ---
+
 {{APIRef}}
 
 The `emulatedPosition` read-only attribute of the

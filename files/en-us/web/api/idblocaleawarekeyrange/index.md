@@ -11,9 +11,11 @@ tags:
   - Interface
   - Reference
   - Storage
+  - Non-standard
 browser-compat: api.IDBLocaleAwareKeyRange
 ---
-{{non-standard_header}}{{APIRef("IndexedDB")}}{{SeeCompatTable}}
+
+{{APIRef("IndexedDB")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 The **`IDBLocaleAwareKeyRange`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) is a Firefox-specific version of {{domxref("IDBKeyRange")}} — it functions in exactly the same fashion, and has the same properties and methods, but it is intended for use with {{domxref("IDBIndex")}} objects when the original index had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters)) — that is, it has [locale aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) enabled.
 

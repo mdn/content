@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.speechend_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`speechend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when speech recognized by the speech recognition service has stopped being detected.
@@ -33,7 +34,7 @@ You can use the `speechend` event in an [`addEventListener`](/en-US/docs/Web/API
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('speechend', function() {
+recognition.addEventListener('speechend', () => {
   console.log('Speech has stopped being detected');
 });
 ```
@@ -41,7 +42,7 @@ recognition.addEventListener('speechend', function() {
 Or use the `onspeechend` event handler property:
 
 ```js
-recognition.onspeechend = function() {
+recognition.onspeechend = () => {
   console.log('Speech has stopped being detected');
 }
 ```

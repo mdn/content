@@ -9,8 +9,9 @@ tags:
   - Experimental
   - lineNumber
   - DeprecationReportBody
-spec-urls: https://wicg.github.io/deprecation-reporting/#dom-deprecationreportbody-linenumber
+browser-compat: api.DeprecationReportBody.lineNumber
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`lineNumber`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.
@@ -45,4 +46,4 @@ let observer = new ReportingObserver((reports, observer) => {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}

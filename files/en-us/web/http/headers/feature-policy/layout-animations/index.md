@@ -11,13 +11,14 @@ tags:
   - Non-standard
 browser-compat: http.headers.Feature-Policy.layout-animations
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `layout-animations` directive controls whether the current document is allowed to show layout animations.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: layout-animations <allowlist>;
 ```
 

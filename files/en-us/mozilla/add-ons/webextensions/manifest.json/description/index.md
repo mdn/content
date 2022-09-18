@@ -7,9 +7,10 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.description
 ---
+
 {{AddonSidebar}}
 
-<table class="fullwidth-table standard-table">
+<table class="fullwidth-table">
   <tbody>
     <tr>
       <th scope="row">Type</th>
@@ -34,7 +35,7 @@ browser-compat: webextensions.manifest.description
   </tbody>
 </table>
 
-A short description of the extension, intended for display in the browser's user interface.
+A short description of the extension, intended for display in the browser's user interface. In Firefox and Chrome this value can be up to 132 characters. The limit in other browsers may differ.
 
 This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 

@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.WaveShaperNode.WaveShaperNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`WaveShaperNode()`** constructor
@@ -21,7 +22,7 @@ represents a non-linear distorter.
 
 ## Syntax
 
-```js
+```js-nolint
 new WaveShaperNode(context, options)
 ```
 

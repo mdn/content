@@ -17,6 +17,7 @@ tags:
   - track
 browser-compat: api.AudioTrack.label
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrack")}}**
@@ -44,7 +45,11 @@ only allow certain track kinds through.
 function getTrackList(el) {
   const trackList = [];
   const wantedKinds = [
-    "main", "alternative", "main-desc", "translation", "commentary"
+    "main",
+    "alternative",
+    "main-desc",
+    "translation",
+    "commentary",
   ];
 
   el.audioTracks.forEach((track) => {
@@ -52,7 +57,7 @@ function getTrackList(el) {
       trackList.push({
         id: track.id,
         kind: track.kind,
-        label: track.label
+        label: track.label,
       });
     }
   });

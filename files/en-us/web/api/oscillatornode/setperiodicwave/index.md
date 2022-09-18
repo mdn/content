@@ -11,6 +11,7 @@ tags:
   - setPeriodicWave
 browser-compat: api.OscillatorNode.setPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`setPeriodicWave()`** method of the {{
@@ -20,7 +21,7 @@ defining a periodic waveform that can be used to shape the oscillator's output, 
 
 ## Syntax
 
-```js
+```js-nolint
 setPeriodicWave(wave)
 ```
 

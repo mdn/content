@@ -12,6 +12,7 @@ tags:
   - overrideDocumentColors
 browser-compat: webextensions.api.browserSettings.overrideDocumentColors
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a string.
@@ -21,7 +22,7 @@ Firefox enables the user to set their own colors for document backgrounds and te
 Its underlying value is a string that may take any one of the following values:
 
 - "high-contrast-only": Apply the user's choices only when a high-contrast theme is selected. This is the default.
-- "never":  Never apply the user's choices.
+- "never": Never apply the user's choices.
 - "always": Always apply the user's choices.
 
 ## Browser compatibility
@@ -37,8 +38,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.overrideDocumentColors.set({value: "always"}).
-  then(logResult);
+browser.browserSettings.overrideDocumentColors
+  .set({ value: "always" })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

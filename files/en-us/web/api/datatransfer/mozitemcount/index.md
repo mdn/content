@@ -11,9 +11,8 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozItemCount
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{ Non-standard_header() }}{{deprecated_header}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozItemCount`** property returns the number
 of items being dragged. This can be used, for example, to get the number of files being
@@ -21,7 +20,7 @@ dragged.
 
 > **Note:** This property is Gecko-specific.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 

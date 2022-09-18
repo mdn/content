@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing name after . operator" occurs when there is a problem
@@ -61,6 +62,8 @@ obj["foo"]["bar"]; // "baz"
 
 // computed properties require square brackets
 obj.foo["bar" + i]; // "baz2"
+// or as template literal
+obj.foo[`bar${i}`]; // "baz2"
 ```
 
 ### Property access vs. concatenation

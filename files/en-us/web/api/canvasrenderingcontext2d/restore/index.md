@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.restore
 ---
+
 {{APIRef}}
 
 The
@@ -22,7 +23,7 @@ For more information about the [drawing state](/en-US/docs/Web/API/CanvasRenderi
 
 ## Syntax
 
-```js
+```js-nolint
 restore()
 ```
 

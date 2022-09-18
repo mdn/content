@@ -12,6 +12,7 @@ tags:
   - requestIdleCallback
 browser-compat: api.Window.requestIdleCallback
 ---
+
 {{DefaultAPISidebar("Background Tasks")}}
 
 The **Cooperative Scheduling of Background Tasks API** (also referred to as the Background Tasks API or the `requestIdleCallback()` API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.
@@ -67,7 +68,8 @@ In order to be oriented about what we're trying to accomplish, let's have a look
   <button class="button" id="startButton">Start</button>
 
   <div class="label counter">
-    Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
+    Task <span id="currentTaskNumber">0</span> of
+    <span id="totalTaskCount">0</span>
   </div>
 </div>
 
@@ -88,7 +90,7 @@ body {
 #logBox {
   margin-top: 16px;
   width: 400px;
-  height:500px;
+  height: 500px;
   border-radius: 6px;
   border: 1px solid black;
   box-shadow: 4px 4px 2px black;
@@ -159,7 +161,7 @@ Now that the document structure is defined, construct the JavaScript code that w
 #### Variable declarations
 
 ```js
-let taskList = [];
+const taskList = [];
 let totalTaskCount = 0;
 let currentTaskNumber = 0;
 let taskHandle = null;
@@ -173,11 +175,11 @@ These variables are used to manage the list of tasks that are waiting to be perf
 - `taskHandle` is a reference to the task currently being processed.
 
 ```js
-let totalTaskCountElem = document.getElementById("totalTaskCount");
-let currentTaskNumberElem = document.getElementById("currentTaskNumber");
-let progressBarElem = document.getElementById("progress");
-let startButtonElem = document.getElementById("startButton");
-let logElem = document.getElementById("log");
+const totalTaskCountElem = document.getElementById("totalTaskCount");
+const currentTaskNumberElem = document.getElementById("currentTaskNumber");
+const progressBarElem = document.getElementById("progress");
+const startButtonElem = document.getElementById("startButton");
+const logElem = document.getElementById("log");
 ```
 
 Next we have variables which reference the DOM elements we need to interact with. These elements are:
@@ -199,22 +201,26 @@ Finally, we set up a couple of variables for other items:
 - `statusRefreshScheduled` is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame
 
 ```js hidden
-window.requestIdleCallback = window.requestIdleCallback || ((handler) => {
-  let startTime = Date.now();
+requestIdleCallback =
+  requestIdleCallback ||
+  ((handler) => {
+    const startTime = Date.now();
 
-  return setTimeout(() => {
-    handler({
-      didTimeout: false,
-      timeRemaining() {
-        return Math.max(0, 50.0 - (Date.now() - startTime));
-      }
-    });
-  }, 1);
-});
+    return setTimeout(() => {
+      handler({
+        didTimeout: false,
+        timeRemaining() {
+          return Math.max(0, 50.0 - (Date.now() - startTime));
+        },
+      });
+    }, 1);
+  });
 
-window.cancelIdleCallback = window.cancelIdleCallback || ((id) => {
-  clearTimeout(id);
-});
+cancelIdleCallback =
+  cancelIdleCallback ||
+  ((id) => {
+    clearTimeout(id);
+  });
 ```
 
 #### Managing the task queue
@@ -229,7 +235,7 @@ First, we need a function that enqueues tasks for future execution. That functio
 function enqueueTask(taskHandler, taskData) {
   taskList.push({
     handler: taskHandler,
-    data: taskData
+    data: taskData,
   });
 
   totalTaskCount++;
@@ -257,8 +263,11 @@ Our idle callback handler, `runTaskQueue()`, gets called when the browser determ
 
 ```js
 function runTaskQueue(deadline) {
-  while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && taskList.length) {
-    let task = taskList.shift();
+  while (
+    (deadline.timeRemaining() > 0 || deadline.didTimeout) &&
+    taskList.length
+  ) {
+    const task = taskList.shift();
     currentTaskNumber++;
 
     task.handler(task.data);
@@ -266,7 +275,7 @@ function runTaskQueue(deadline) {
   }
 
   if (taskList.length) {
-    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000} );
+    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000 });
   } else {
     taskHandle = 0;
   }
@@ -294,9 +303,9 @@ DOM changes are scheduled by calling the `scheduleStatusRefresh()` function.
 
 ```js
 function scheduleStatusRefresh() {
-    if (!statusRefreshScheduled) {
-      requestAnimationFrame(updateDisplay);
-      statusRefreshScheduled = true;
+  if (!statusRefreshScheduled) {
+    requestAnimationFrame(updateDisplay);
+    statusRefreshScheduled = true;
   }
 }
 ```
@@ -309,7 +318,8 @@ The `updateDisplay()` function is responsible for drawing the contents of the pr
 
 ```js
 function updateDisplay() {
-  let scrolledToEnd = logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
+  const scrolledToEnd =
+    logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
 
   if (totalTaskCount) {
     if (progressBarElem.max !== totalTaskCount) {
@@ -329,7 +339,7 @@ function updateDisplay() {
   }
 
   if (scrolledToEnd) {
-      logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
+    logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
   }
 
   statusRefreshScheduled = false;
@@ -354,7 +364,7 @@ The `log()` function adds the specified text to the log. Since we don't know at 
 ```js
 function log(text) {
   if (!logFragment) {
-      logFragment = document.createDocumentFragment();
+    logFragment = document.createDocumentFragment();
   }
 
   const el = document.createElement("div");
@@ -379,8 +389,8 @@ The function we'll be using as our task handler—that is, the function that wil
 function logTaskHandler(data) {
   log(`Running task #${currentTaskNumber}`);
 
-  for (i=0; i<data.count; i+=1) {
-    log(`${(i+1).toString()}. ${data.text}`);
+  for (let i = 0; i < data.count; i += 1) {
+    log(`${(i + 1).toString()}. ${data.text}`);
   }
 }
 ```
@@ -403,19 +413,21 @@ function decodeTechnoStuff() {
   currentTaskNumber = 0;
   updateDisplay();
 
-  let n = getRandomIntInclusive(100, 200);
+  const n = getRandomIntInclusive(100, 200);
 
-  for (i=0; i<n; i++) {
-    let taskData = {
+  for (let i = 0; i < n; i++) {
+    const taskData = {
       count: getRandomIntInclusive(75, 150),
-      text: `This text is from task number ${(i+1).toString()} of ${n}`
+      text: `This text is from task number ${i + 1} of ${n}`,
     };
 
     enqueueTask(logTaskHandler, taskData);
   }
 }
 
-document.getElementById("startButton").addEventListener("click", decodeTechnoStuff, false);
+document
+  .getElementById("startButton")
+  .addEventListener("click", decodeTechnoStuff, false);
 ```
 
 `decodeTechnoStuff()` starts by zeroing the values of totalTaskCount (the number of tasks added to the queue so far) and currentTaskNumber (the task currently being run), and then calls `updateDisplay()` to reset the display to its "nothing's happened yet" state.

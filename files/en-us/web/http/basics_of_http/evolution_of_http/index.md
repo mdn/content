@@ -7,6 +7,7 @@ tags:
   - NeedsUpdate
   - NeedsUpdate(HTTP/3)
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** (HyperText Transfer Protocol) is the underlying protocol of the World Wide Web. Developed by Tim Berners-Lee and his team between 1989-1991, HTTP has gone through many changes that have helped maintain its simplicity while shaping its flexibility. Keep reading to learn how HTTP evolved from a protocol designed to exchange files in a semitrusted laboratory environment into a modern internet maze that carries images and videos in high resolution and 3D.
@@ -28,7 +29,7 @@ The HTTP protocol used in those early phases was very simple. It was later dubbe
 
 The initial version of HTTP had no version number; it was later called 0.9 to differentiate it from later versions. HTTP/0.9 was extremely simple: requests consisted of a single line and started with the only possible method {{HTTPMethod("GET")}} followed by the path to the resource. The full URL wasn't included as the protocol, server, and port weren't necessary once connected to the server.
 
-```
+```http
 GET /mypage.html
 ```
 
@@ -36,7 +37,7 @@ The response was extremely simple, too: it only consisted of the file itself.
 
 ```html
 <html>
-A very simple HTML page
+  A very simple HTML page
 </html>
 ```
 
@@ -53,7 +54,7 @@ HTTP/0.9 was very limited, but browsers and servers quickly made it more versati
 
 At this point in time, a typical request and response looked like this:
 
-```
+```http
 GET /mypage.html HTTP/1.0
 User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
@@ -69,15 +70,15 @@ A page with an image
 
 It was followed by a second connection and a request to fetch the image (with the corresponding response):
 
-```
-  GET /myimage.gif HTTP/1.0
-  User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
+```http
+GET /myimage.gif HTTP/1.0
+User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
-  200 OK
-  Date: Tue, 15 Nov 1994 08:12:32 GMT
-  Server: CERN/3.0 libwww/2.17
-  Content-Type: text/gif
-  (image content)
+200 OK
+Date: Tue, 15 Nov 1994 08:12:32 GMT
+Server: CERN/3.0 libwww/2.17
+Content-Type: text/gif
+(image content)
 ```
 
 Between 1991-1995, these were introduced with a try-and-see approach. A server and a browser would add a feature and see if it got traction. Interoperability problems were common. In an effort to solve these issues, an informational document that described the common practices was published in November 1996. This was known as {{RFC(1945)}} and defined HTTP/1.0.
@@ -97,7 +98,7 @@ HTTP/1.1 clarified ambiguities and introduced numerous improvements:
 
 A typical flow of requests, all through one single connection, looked like this:
 
-```
+```http
 GET /en-US/docs/Glossary/Simple_header HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0

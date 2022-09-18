@@ -13,9 +13,11 @@ tags:
   - Virtual Reality
   - WebVR
   - activeVRDisplays
+  - Non-standard
 browser-compat: api.Navigator.activeVRDisplays
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
+
+{{APIRef("WebVR API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`activeVRDisplays`** read-only property of the
 {{domxref("Navigator")}} interface returns an array containing every
@@ -33,8 +35,8 @@ An array of {{domxref("VRDisplay")}} objects.
 ```js
 function showActive() {
   const displays = navigator.activeVRDisplays;
-  for (let i = 0; i < displays.length; i++) {
-    console.log(`Display ${displays[i].displayId} is active.`);
+  for (const display of displays) {
+    console.log(`Display ${display.displayId} is active.`);
   }
 }
 ```

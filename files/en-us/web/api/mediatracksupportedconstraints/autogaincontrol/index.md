@@ -18,6 +18,7 @@ tags:
   - autoGainControl
 browser-compat: api.MediaTrackSupportedConstraints.autoGainControl
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`autoGainControl`** property is a read-only Boolean value which is present (and set to `true`) in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the {{Glossary("user agent")}} supports the **`autoGainControl`** constraint.
@@ -37,8 +38,7 @@ If the property isn't present, this property is missing from the supported const
 This example displays whether or not your browser supports the `autoGainControl` constraint.
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
@@ -48,13 +48,9 @@ This example displays whether or not your browser supports the `autoGainControl`
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().autoGainControl) {
-    result.textContent = "Supported!";
-} else {
-    result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().autoGainControl;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result

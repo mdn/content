@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - hasExternalDisplay
+  - Non-standard
 browser-compat: api.VRDisplayCapabilities.hasExternalDisplay
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 

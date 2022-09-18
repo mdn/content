@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 54 was released on June 13, 2017. This article lists key changes that are useful for web developers.
@@ -20,7 +21,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 ### CSS
 
 - {{cssxref("clip-path")}} now supports [basic shapes](/en-US/docs/Web/CSS/CSS_Shapes) ({{bug(1247229)}}).
-- Firefox's implementations of CSS Flexbox and CSS alignment now implement updated spec language for interactions between the properties {{cssxref("align-items")}} and {{cssxref("align-self")}}  as well as between {{cssxref("justify-items")}} and {{cssxref("justify-self")}} ({{bug(1340309)}}).
+- Firefox's implementations of CSS Flexbox and CSS alignment now implement updated spec language for interactions between the properties {{cssxref("align-items")}} and {{cssxref("align-self")}} as well as between {{cssxref("justify-items")}} and {{cssxref("justify-self")}} ({{bug(1340309)}}).
 - {{htmlelement("input")}} elements of types `checkbox` and `radio` with {{cssxref("appearance", "-moz-appearance")}}`: none;` set on them are now non-replaced elements, for compatibility with other browsers ({{bug(605985)}}).
 - Previously, an element styled with {{cssxref("display")}}: `inline-block` with a child element of type {{domxref("HTMLInputElement")}} styled with `display:block` had a wrong baseline ({{bug(1330962)}}). This is now fixed.
 - When Mozilla introduced dedicated content threads to Firefox (through the Electrolysis or e10s project), support for styling {{HTMLElement("option")}} elements was removed temporarily. Starting in Firefox 54, you can apply foreground and background colors to `<option>` elements again, using the {{cssxref("color")}} and {{cssxref("background-color")}} attributes. See {{bug(910022)}} for more information. Note that this is still disabled in Linux due to lack of contrast (see {{bug(1338283)}} for progress on this).
@@ -60,7 +61,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 #### General
 
-- 5.1 surround sound playback is now enabled by default on Windows, macOS, and Linux ({{bug(1334508)}}, {{bug(1321502)}} , and {{bug(1323659)}}).
+- 5.1 surround sound playback is now enabled by default on Windows, macOS, and Linux ({{bug(1334508)}}, {{bug(1321502)}}, and {{bug(1323659)}}).
 
 #### Media Capture and Streams API
 

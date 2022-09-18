@@ -8,6 +8,7 @@ tags:
   - Success
 browser-compat: http.status.204
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`204 No Content`** success status response code

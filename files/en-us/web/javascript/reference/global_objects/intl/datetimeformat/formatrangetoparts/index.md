@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.formatRangeToParts()`**
@@ -24,7 +25,7 @@ range produced by {{jsxref("Intl.DateTimeFormat")}} formatters.
 
 ## Syntax
 
-```js
+```js-nolint
 formatRangeToParts(startDate, endDate)
 ```
 

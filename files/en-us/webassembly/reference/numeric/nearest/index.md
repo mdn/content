@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Something
 ---
+
 {{WebAssemblySidebar}}
 
 The **`nearest`** instructions, are used for getting the value of a number rounded to the nearest integer.

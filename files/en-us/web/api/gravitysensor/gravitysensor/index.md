@@ -14,6 +14,7 @@ tags:
   - Sensors
 browser-compat: api.GravitySensor.GravitySensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`GravitySensor()`**
@@ -22,7 +23,7 @@ provides on each reading the gravity applied to the device along all three axes.
 
 ## Syntax
 
-```js
+```js-nolint
 new GravitySensor()
 new GravitySensor(options)
 ```

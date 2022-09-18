@@ -7,15 +7,17 @@ tags:
   - Constructor
   - Reference
   - NDEFMessage
+  - Experimental
 browser-compat: api.NDEFMessage.NDEFMessage
 ---
-{{securecontext_header}}{{APIRef()}}
+
+{{SecureContext_Header}}{{APIRef}}{{SeeCompatTable}}
 
 The **`NDEFMessage()`** constructor creates a new {{domxref("NDEFMessage")}} object, initialized with the given NDEF records.
 
 ## Syntax
 
-```js
+```js-nolint
 new NDEFMessage(records)
 ```
 

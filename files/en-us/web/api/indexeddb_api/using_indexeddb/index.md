@@ -12,6 +12,7 @@ tags:
   - Tutorial
   - jsstore
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB is a way for you to persistently store data inside a user's browser. Because it lets you create web applications with rich query abilities regardless of network availability, your applications can work both online and offline.
@@ -36,28 +37,6 @@ With these big concepts under our belts, we can get to more concrete stuff.
 
 ## Creating and structuring the store
 
-### Using an experimental version of IndexedDB
-
-In case you want to test your code in browsers that still use a prefix, you can use the following code:
-
-```js
-// In the following line, you should include the prefixes of implementations you want to test.
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-// DON'T use "var indexedDB = …" if you're not in a function.
-// Moreover, you may need references to some window.IDB* objects:
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction || {READ_WRITE: "readwrite"}; // This line should only be needed if it is needed to support the object's constants for older browsers
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-// (Mozilla has never prefixed these objects, so we don't need window.mozIDB*)
-```
-
-Beware that implementations that use a prefix may be buggy, or incomplete, or following an old version of the specification. Therefore, it is not recommended to use it in production code. It may be preferable to not support a browser than to claim to support it and fail:
-
-```js
-if (!window.indexedDB) {
-    console.log("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.");
-}
-```
-
 ### Opening a database
 
 We start the whole process like this:
@@ -69,12 +48,12 @@ const request = window.indexedDB.open("MyTestDatabase", 3);
 
 See that? Opening a database is just like any other operation — you have to "request" it.
 
-The open request doesn't open the database or start the transaction right away. The call to the `open()` function returns an [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) object with a result (success) or error value that you handle as an event. Most other asynchronous functions in IndexedDB do the same thing - return an [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) object with the result or error. The result for the open function is an instance of an `IDBDatabase.`
+The open request doesn't open the database or start the transaction right away. The call to the `open()` function returns an [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) object with a result (success) or error value that you handle as an event. Most other asynchronous functions in IndexedDB do the same thing - return an [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) object with the result or error. The result for the open function is an instance of an `IDBDatabase`.
 
 The second parameter to the open method is the version of the database. The version of the database determines the database schema — the object stores in the database and their structure. If the database doesn't already exist, it is created by the `open` operation, then an `onupgradeneeded` event is triggered and you create the database schema in the handler for this event. If the database does exist but you are specifying an upgraded version number, an `onupgradeneeded` event is triggered straight away, allowing you to provide an updated schema in its handler. More on this later in [Creating or updating the version of the database](#creating_or_updating_the_version_of_the_database) below, and the {{ domxref("IDBFactory.open") }} reference page.
 
 > **Warning:** The version number is an `unsigned long long` number, which means that it can be a very big integer. It also means that you can't use a float, otherwise it will be converted to the closest lower integer and the transaction may not start, nor the `upgradeneeded` event trigger. So for example, don't use 2.4 as a version number:
-> `var request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2`
+> `const request = indexedDB.open("MyTestDatabase", 2.4); // don't do this, as the version will be rounded to 2`
 
 #### Generating handlers
 
@@ -314,7 +293,7 @@ If you've just created a database, then you probably want to write to it. Here's
 const transaction = db.transaction(["customers"], "readwrite");
 // Note: Older experimental implementations use the deprecated constant IDBTransaction.READ_WRITE instead of "readwrite".
 // In case you want to support such an implementation, you can write:
-// var transaction = db.transaction(["customers"], IDBTransaction.READ_WRITE);
+// const transaction = db.transaction(["customers"], IDBTransaction.READ_WRITE);
 ```
 
 The `transaction()` function takes two arguments (though one is optional) and returns a transaction object. The first argument is a list of object stores that the transaction will span. You can pass an empty array if you want the transaction to span all object stores, but don't do it because the spec says an empty array should generate an InvalidAccessError. If you don't specify anything for the second argument, you get a read-only transaction. Since you want to write to it here you need to pass the `"readwrite"` flag.
@@ -436,8 +415,7 @@ objectStore.openCursor().onsuccess = (event) => {
   if (cursor) {
     console.log(`Name for SSN ${cursor.key} is ${cursor.value.name}`);
     cursor.continue();
-  }
-  else {
+  } else {
     console.log("No more entries!");
   }
 };
@@ -455,14 +433,13 @@ objectStore.openCursor().onsuccess = (event) => {
   if (cursor) {
     customers.push(cursor.value);
     cursor.continue();
-  }
-  else {
+  } else {
     console.log(`Got all customers: ${customers}`);
   }
 };
 ```
 
-> **Note:** Alternatively, you can use `getAll()` to handle this case (and `getAllKeys()`) . The following code does precisely the same thing as above:
+> **Note:** Alternatively, you can use `getAll()` to handle this case (and `getAllKeys()`). The following code does precisely the same thing as above:
 >
 > ```js
 > objectStore.getAll().onsuccess = (event) => {
@@ -673,7 +650,7 @@ This new functionality enables developers to specify a locale when creating an i
 We have a complete example using the IndexedDB API. The example uses IndexedDB to store and retrieve publications.
 
 - [Try the example](https://mdn.github.io/dom-examples/indexeddb-api/index.html)
-- [See the source code](https://github.com/mdn/dom-examples/tree/master/indexeddb-api)
+- [See the source code](https://github.com/mdn/dom-examples/tree/main/indexeddb-api)
 
 ## See also
 
@@ -687,8 +664,8 @@ Further reading for you to find out more information if desired.
 
 ### Tutorials and guides
 
-- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
-- [IndexedDB — The Store in Your Browser](https://docs.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10))
+- [Databinding UI Elements with IndexedDB (2012)](https://web.dev/indexeddb-uidatabinding/)
+- [IndexedDB — The Store in Your Browser](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)
 
 ### Libraries
 

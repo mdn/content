@@ -9,9 +9,11 @@ tags:
   - Method
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.HTMLCanvasElement.mozFetchAsStream
 ---
-{{APIRef("Canvas API")}} {{deprecated_header}}
+
+{{APIRef("Canvas API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLCanvasElement.mozFetchAsStream()`** internal method
 used to create a new input stream that, when ready, would provide the contents of the
@@ -19,7 +21,7 @@ canvas as image data. However, this non-standard and internal method has been re
 
 ## Syntax
 
-```js
+```js-nolint
 mozFetchAsStream(callback)
 mozFetchAsStream(callback, type)
 ```

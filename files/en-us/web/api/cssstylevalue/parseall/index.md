@@ -13,6 +13,7 @@ tags:
   - parseAll()
 browser-compat: api.CSSStyleValue.parseAll
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`parseAll()`** method of the {{domxref("CSSStyleValue")}}
@@ -22,7 +23,7 @@ supplied values.
 
 ## Syntax
 
-```js
+```js-nolint
 parseAll(property, value)
 ```
 

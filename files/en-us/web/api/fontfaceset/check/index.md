@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.FontFaceSet.check
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The `check()` method of the {{domxref("FontFaceSet")}} returns whether all
@@ -18,7 +19,7 @@ fonts in the given font list have been loaded and are available.
 
 ## Syntax
 
-```js
+```js-nolint
 check(font)
 check(font, text)
 ```

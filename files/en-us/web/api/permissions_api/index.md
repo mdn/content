@@ -12,6 +12,7 @@ tags:
   - access
 browser-compat: api.Permissions
 ---
+
 {{DefaultAPISidebar("Permissions API")}}
 
 The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.
@@ -43,7 +44,7 @@ Read more about how it works in our article [Using the Permissions API](/en-US/d
 
 ## Interfaces
 
-- {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{readonlyinline}}
+- {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{ReadOnlyInline}}
   - : Provides access to the {{domxref("Permissions")}} object from the main context and worker context respectively.
 - {{domxref("Permissions")}}
   - : Provides the core Permission API functionality, such as methods for querying and revoking permissions.

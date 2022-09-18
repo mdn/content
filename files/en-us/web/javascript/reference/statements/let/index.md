@@ -11,6 +11,7 @@ tags:
   - let
 browser-compat: javascript.statements.let
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`let`** declaration declares a block-scoped local variable, optionally initializing it to a value.
@@ -19,8 +20,8 @@ The **`let`** declaration declares a block-scoped local variable, optionally ini
 
 ## Syntax
 
-```js
-let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN];
+```js-nolint
+let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN]
 ```
 
 ### Parameters
@@ -138,7 +139,7 @@ switch(x) {
 
 ### Temporal dead zone (TDZ)
 
-A `let` or `const` variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared.
+A `let` or `const` variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared and initialized.
 
 While inside the TDZ, the variable has not been initialized with a value, and any attempt to access it will result in a {{jsxref("ReferenceError")}}.
 The variable is initialized with a value when execution reaches the line of code where it was declared.

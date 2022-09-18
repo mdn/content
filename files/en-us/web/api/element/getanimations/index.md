@@ -9,7 +9,6 @@ tags:
   - CSS Animations
   - CSS Transitions
   - Element
-  - Experimental
   - Method
   - Reference
   - Transitions
@@ -19,7 +18,8 @@ tags:
   - web animations api
 browser-compat: api.Element.getAnimations
 ---
-{{ SeeCompatTable() }}{{APIRef("Web Animations")}}
+
+{{APIRef("Web Animations")}}
 
 The `getAnimations()` method of the {{domxref("Element")}} interface
 (specified on the `Animatable` mixin) returns an array of all
@@ -31,7 +31,7 @@ elements too.
 
 ## Syntax
 
-```js
+```js-nolint
 getAnimations()
 getAnimations(options)
 ```

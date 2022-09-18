@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.division_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The division assignment operator (`/=`) divides a variable by the value of
@@ -18,7 +19,7 @@ the right operand and assigns the result to the variable.
 
 ## Syntax
 
-```js
+```js-nolint
 x /= y // x = x / y
 ```
 

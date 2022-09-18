@@ -6,10 +6,10 @@ tags:
   - Property
   - Reference
   - TaskPriorityChangeEvent
-  - Experimental
 browser-compat: api.TaskPriorityChangeEvent.previousPriority
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}
 
 The readonly **`previousPriority`** property of the {{domxref("TaskPriorityChangeEvent")}} interface returns the priority of the corresponding {{domxref("TaskSignal")}} before it was changed and this [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event was emitted.
 

@@ -8,6 +8,7 @@ tags:
   - Request header
 browser-compat: http.headers.Expect
 ---
+
 {{HTTPSidebar}}
 
 The **`Expect`** HTTP request header indicates expectations
@@ -42,7 +43,7 @@ cURL do so by default.
 
 ## Syntax
 
-```
+```http
 Expect: 100-continue
 ```
 
@@ -62,7 +63,7 @@ There is only one defined expectation:
 A client sends a request with `Expect` header and waits for the server to respond
 before sending the message body.
 
-```
+```http
 PUT /somewhere/fun HTTP/1.1
 Host: origin.example.com
 Content-Type: video/h264

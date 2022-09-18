@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.ownKeys
 ---
+
 {{JSRef}}
 
 The static **`Reflect.ownKeys()`** method returns an array of
@@ -19,7 +20,7 @@ the `target` object's own property keys.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.ownKeys(target)
 ```
 

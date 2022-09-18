@@ -16,6 +16,7 @@ tags:
   - send
 browser-compat: api.XMLHttpRequest.send
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method
@@ -37,7 +38,7 @@ If no {{HTTPHeader("Accept")}} header has been set using the
 
 ## Syntax
 
-```js
+```js-nolint
 send()
 send(body)
 ```
@@ -75,7 +76,7 @@ None ({{jsxref("undefined")}}).
 const xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
-xhr.onload = function () {
+xhr.onload = () => {
   // Request finished. Do processing here.
 };
 
@@ -95,10 +96,10 @@ xhr.open("POST", '/server', true);
 //Send the proper header information along with the request
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-xhr.onreadystatechange = function() { // Call a function when the state changes.
-    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-        // Request finished. Do processing here.
-    }
+xhr.onreadystatechange = () => { // Call a function when the state changes.
+  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+    // Request finished. Do processing here.
+  }
 }
 xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(new Int8Array());

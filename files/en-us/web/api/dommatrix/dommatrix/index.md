@@ -5,13 +5,13 @@ page-type: web-api-constructor
 tags:
   - API
   - Constructor
-  - Experimental
   - Geometry
   - Geometry Interfaces
   - Reference
   - matrix
 browser-compat: api.DOMMatrix.DOMMatrix
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`DOMMatrix`** constructor creates a new
@@ -20,7 +20,7 @@ operations.
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMMatrix()
 new DOMMatrix(init)
 ```
@@ -28,9 +28,11 @@ new DOMMatrix(init)
 ### Parameters
 
 - `init` {{optional_inline}}
+
   - : An array of numbers specifying the matrix you want to create, or a CSS transform string.
 
     In case an array of numbers is passed, the behavior depends on the length of the array:
+
     - for a 6-element array of components in the form `[a, b, c, d, e, f]`, a 2D matrix is created, initialized with the provided components.
     - for a 16-element array of components (in the column-major order) in the form `[m11, m12, m13, …, m42, m43, m44]`, a 3D matrix is created, initialized with the provided components.
 
@@ -47,8 +49,8 @@ const translateX = 12;
 const translateY = 8;
 const angle = Math.PI / 2;
 const matrix = new DOMMatrix([
-  Math.sin(angle) * scaleX,
   Math.cos(angle) * scaleX,
+  Math.sin(angle) * scaleX,
   -Math.sin(angle) * scaleY,
   Math.cos(angle) * scaleY,
   translateX,

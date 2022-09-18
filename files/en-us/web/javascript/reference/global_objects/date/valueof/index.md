@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of a
@@ -18,7 +19,7 @@ The **`valueOf()`** method returns the primitive value of a
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 

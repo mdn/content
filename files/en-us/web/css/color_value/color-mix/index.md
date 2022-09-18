@@ -8,9 +8,11 @@ tags:
   - Reference
   - Web
   - color-mix
+  - Experimental
 browser-compat: css.types.color.color-mix
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`color-mix()`** functional notation takes two {{cssxref("color_value","color")}} values and returns the result of mixing them in a given colorspace by a given amount.
 
@@ -47,18 +49,17 @@ color-mix(in srgb, #34c9eb 20%, white);
 
 ```css hidden
 ul {
-    display: flex;
-    list-style-type: none;
-    font-size: 150%;
-    gap: 10px;
-    border: 2px solid #34c9eb;
-    padding: 10px;
-  }
+  display: flex;
+  list-style-type: none;
+  font-size: 150%;
+  gap: 10px;
+  border: 2px solid #34c9eb;
+  padding: 10px;
+}
 
-  li {
-    padding: 10px;
-  }
-
+li {
+  padding: 10px;
+}
 ```
 
 ```css

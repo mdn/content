@@ -3,7 +3,6 @@ title: Introduction
 slug: Web/API/XSLTProcessor/Introduction
 page-type: guide
 ---
-## Introduction
 
 One noticeable trend in W3C standards has been the effort to separate content from style. This would allow the same style to be reused for multiple content, as well as simplify maintenance and allow a quick (only modify one file) way to change the look of content.
 

@@ -16,6 +16,7 @@ tags:
   - querySelector
 browser-compat: api.Element.querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} method **`querySelectorAll()`**
@@ -25,7 +26,7 @@ the method was called.
 
 ## Syntax
 
-```js
+```js-nolint
 querySelectorAll(selectors)
 ```
 
@@ -153,8 +154,7 @@ Consider this HTML, with its three nested {{HTMLElement("div")}} blocks.
 ```html
 <div class="outer">
   <div class="select">
-    <div class="inner">
-    </div>
+    <div class="inner"></div>
   </div>
 </div>
 ```

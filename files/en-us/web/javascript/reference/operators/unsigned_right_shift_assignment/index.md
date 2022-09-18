@@ -9,16 +9,17 @@ tags:
   - Reference
 browser-compat: javascript.operators.unsigned_right_shift_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The unsigned right shift assignment operator (_`>>>=`_)
+The **unsigned right shift assignment operator** (`>>>=`)
 moves the specified amount of bits to the right and assigns the result to the variable.
 
 {{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift-assignment.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 x >>>= y // x = x >>> y
 ```
 

@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - DOM
-  - Experimental
   - Method
   - NeedsExample
   - PointerEvent
@@ -13,18 +12,19 @@ tags:
   - mouse lock
 browser-compat: api.Element.requestPointerLock
 ---
-{{ APIRef("DOM") }}{{ SeeCompatTable }}
+
+{{ APIRef("DOM") }}
 
 The **`Element.requestPointerLock()`** method lets you
 asynchronously ask for the pointer to be locked on the given element.
 
 To track the success or failure of the request, it is necessary to listen for the
-{{domxref("Document/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} events at the
+{{domxref("Element/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Element/pointerlockerror_event", "pointerlockerror")}} events at the
 {{domxref("Document")}} level.
 
 ## Syntax
 
-```js
+```js-nolint
 requestPointerLock()
 ```
 

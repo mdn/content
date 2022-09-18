@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createPattern
 ---
+
 {{APIRef}}
 
 The
@@ -24,7 +25,7 @@ applied to any subsequent drawing.
 
 ## Syntax
 
-```js
+```js-nolint
 createPattern(image, repetition)
 ```
 
@@ -142,15 +143,6 @@ document.body.appendChild(canvas);
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying a `null` or
-  `undefined` image correctly throws a `TYPE_MISMATCH_ERR`
-  exception.
-- Starting with Gecko 16.0 {{geckoRelease("16.0")}}, specifying `null` for
-  the `repetition` parameter is now allowed and results in the repetition
-  being set to `"repeat"` ({{bug(762657)}}).
 
 ## See also
 

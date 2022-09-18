@@ -15,9 +15,10 @@ tags:
   - paintWorklet
 browser-compat: api.CSS.paintWorklet
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The static, read-only **`paintWorklet`**  property of the {{DOMxRef("CSS")}} interface provides access to the
+The static, read-only **`paintWorklet`** property of the {{DOMxRef("CSS")}} interface provides access to the
 {{DOMxRef("PaintWorklet")}}, which programmatically generates an image where a CSS
 property expects a file.
 

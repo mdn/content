@@ -12,6 +12,7 @@ tags:
   - has
 browser-compat: api.CacheStorage.has
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`has()`** method of the {{domxref("CacheStorage")}}
@@ -22,7 +23,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Syntax
 
-```js
+```js-nolint
 has(cacheName)
 ```
 
@@ -42,15 +43,18 @@ The following example first checks whether a cache called 'v1' exists. If so, we
 list of assets to it. If not then we run some kind of cache set-up function.
 
 ```js
-caches.has('v1').then((hasCache) => {
-  if (!hasCache) {
-    someCacheSetupFunction();
-  } else {
-    caches.open('v1').then((cache) => cache.addAll(myAssets));
-  }
-}).catch(() => {
-  // Handle exception here.
-});
+caches
+  .has("v1")
+  .then((hasCache) => {
+    if (!hasCache) {
+      someCacheSetupFunction();
+    } else {
+      caches.open("v1").then((cache) => cache.addAll(myAssets));
+    }
+  })
+  .catch(() => {
+    // Handle exception here.
+  });
 ```
 
 ## Specifications

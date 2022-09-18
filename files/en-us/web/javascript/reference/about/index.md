@@ -5,6 +5,7 @@ tags:
   - Guide
   - JavaScript
 ---
+
 {{JsSidebar}}
 
 The JavaScript reference serves as a repository of facts about the JavaScript language. The entire language is described here in detail. As you write JavaScript code, you'll refer to these pages often (thus the title "JavaScript reference"). If you're learning JavaScript, or need help understanding some of its capabilities or features, check out the [JavaScript guide](/en-US/docs/Web/JavaScript/Guide).
@@ -13,7 +14,7 @@ The JavaScript language is intended to be used within some larger environment, b
 
 ## Where to find JavaScript information
 
-JavaScript documentation of core language features (pure [ECMAScript](/en-US/docs/Web/JavaScript/Language_Resources), for the most part) includes the following:
+JavaScript documentation of core language features (pure [ECMAScript](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview), for the most part) includes the following:
 
 - The [JavaScript guide](/en-US/docs/Web/JavaScript/Guide)
 - The [JavaScript reference](/en-US/docs/Web/JavaScript/Reference)
@@ -33,7 +34,7 @@ In the JavaScript reference you can find the following chapters:
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
   - : Chapter about JavaScript functions.
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-  - : Chapter about JavaScript classes introduced in ECMAScript 2015.
+  - : Chapter about JavaScript classes.
 - [Errors](/en-US/docs/Web/JavaScript/Reference/Errors)
   - : Chapter about specific errors, exceptions and warnings thrown by JavaScript.
 

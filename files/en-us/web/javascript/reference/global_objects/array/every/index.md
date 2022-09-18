@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.every
 ---
+
 {{JSRef}}
 
 The **`every()`** method tests whether
@@ -20,7 +21,7 @@ returns a Boolean value.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 every((element) => { /* … */ } )
 every((element, index) => { /* … */ } )
@@ -146,9 +147,9 @@ array is modified.
 // ---------------
 let arr = [1, 2, 3, 4];
 arr.every((elem, index, arr) => {
-  arr[index+1] -= 1
-  console.log(`[${arr}][${index}] -> ${elem}`)
-  return elem < 2
+  arr[index+1]--;
+  console.log(`[${arr}][${index}] -> ${elem}`);
+  return elem < 2;
 })
 
 // Loop runs for 3 iterations, but would
@@ -163,9 +164,9 @@ arr.every((elem, index, arr) => {
 // ---------------
 arr = [1, 2, 3];
 arr.every((elem, index, arr) => {
-  arr.push('new')
-  console.log(`[${arr}][${index}] -> ${elem}`)
-  return elem < 4
+  arr.push('new');
+  console.log(`[${arr}][${index}] -> ${elem}`);
+  return elem < 4;
 })
 
 // Loop runs for 3 iterations, even after appending new items
@@ -179,9 +180,9 @@ arr.every((elem, index, arr) => {
 // ---------------
 arr = [1, 2, 3, 4];
 arr.every((elem, index, arr) => {
-  arr.pop()
-  console.log(`[${arr}][${index}] -> ${elem}`)
-  return elem < 4
+  arr.pop();
+  console.log(`[${arr}][${index}] -> ${elem}`);
+  return elem < 4;
 })
 
 // Loop runs for 2 iterations only, as the remaining

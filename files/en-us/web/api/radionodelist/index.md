@@ -9,6 +9,7 @@ tags:
   - RadioNodeList
 browser-compat: api.RadioNodeList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`RadioNodeList`** interface represents a collection of radio elements in a {{HTMLElement("form")}} or a {{HTMLElement("fieldset")}} element.

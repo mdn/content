@@ -11,13 +11,14 @@ tags:
   - text alternatives
   - time-based media
 ---
+
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
 > **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
 
 ## Guideline 1.1 — Providing text alternatives for non-text content
 
-The key here is that text can be converted to other forms that people with disabilities can use. For example, it can be spoken by a screenreader, converted to large print, or represented on a braille display. Non-text content refers to multimedia such as images, audio, and video.
+The key here is that text can be converted to other forms that people with disabilities can use. For example, it can be spoken by a screen reader, converted to large print, or represented on a braille display. Non-text content refers to multimedia such as images, audio, and video.
 
 <table class="standard-table">
   <thead>
@@ -114,7 +115,7 @@ The key here is that text can be converted to other forms that people with disab
             >Backgrounds</a
           >). If you have to include an image via an
           {{htmlelement("img")}} element, give it a blank alt
-          (`alt=""`). Otherwise, screenreaders may try to read out
+          (`alt=""`). Otherwise, screen readers may try to read out
           the filepath, etc.
         </p>
         <p>
@@ -149,12 +150,12 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
     </tr>
     <tr>
        <td>1.2.2 Provide captions for web-based video (A)</td>
-       <td>You should provide captions for video presented on the web (e.g., HTML5 video). This is for the benefit of people who can't hear the audio part of the video.</td>
-       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML5 video captions, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content">Other multimedia content</a> for other technologies. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
+       <td>You should provide captions for video presented on the web (e.g., HTML video). This is for the benefit of people who can't hear the audio part of the video.</td>
+       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML video captions, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content">Other multimedia content</a> for other technologies. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
     </tr>
     <tr>
        <td>1.2.3 Provide text transcript or audio description for web-based video (A)</td>
-       <td>You should provide text transcripts or audio descriptions for video presented on the web (e.g., HTML5 video. This is for the benefit of people who can't see the visual part of the video, and don't get the full content from the audio alone.</td>
+       <td>You should provide text transcripts or audio descriptions for video presented on the web (e.g., HTML video. This is for the benefit of people who can't see the visual part of the video, and don't get the full content from the audio alone.</td>
        <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
     </tr>
     <tr>
@@ -215,7 +216,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           <li>
             Text labels and the form elements they describe. These are
             associated unambiguously using the {{htmlelement("label")}}
-            element, which can be picked up by screenreaders, etc.
+            element, which can be picked up by screen readers, etc.
           </li>
           <li>
             Image alt text. Content images should have text available that
@@ -287,7 +288,7 @@ This guideline refers to the ability of content to be consumed by users in multi
             "Listen to the audio instructions for guidance"<br />This is
             obviously problematic—audio will be inaccessible to those with
             hearing impairments, whereas text can be read, but also spoken by a
-            screenreader if required.
+            screen reader if required.
           </li>
           <li>
             "Swipe from the right-hand side of the screen to reveal the menu"<br />Some

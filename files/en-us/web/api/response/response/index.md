@@ -10,13 +10,14 @@ tags:
   - Response
 browser-compat: api.Response.Response
 ---
+
 {{APIRef("Fetch")}}
 
 The **`Response()`** constructor creates a new {{domxref("Response")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new Response()
 new Response(body)
 new Response(body, options)
@@ -56,7 +57,7 @@ new Response(body, options)
 
 ## Examples
 
-In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/))
+In our [Fetch Response example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (see [Fetch Response live](https://mdn.github.io/dom-examples/fetch/fetch-response/))
 we create a new `Response` object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom `status` and `statusText`:
 
 ```js

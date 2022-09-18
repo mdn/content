@@ -11,6 +11,7 @@ tags:
   - rsync
   - SFTP
 ---
+
 This article shows you how to publish your site online using file transfer tools.
 
 <table>
@@ -54,11 +55,11 @@ If you have built a simple web page (see [HTML basics](/en-US/docs/Learn/Getting
 
 There are several SFTP clients out there. Our demo covers [FileZilla](https://filezilla-project.org/), since it's free and available for Windows, macOS and Linux. To install FileZilla go to the [FileZilla downloads page](https://filezilla-project.org/download.php?type=client), click the big Download button, then install from the installer file in the usual way.
 
-> **Note:** Of course there are lots of other options. See [Publishing tools](/en-US/docs/Learn/Common_questions/How_much_does_it_cost#publishing_tools.3a_ftp_client) for more information.
+> **Note:** Of course there are lots of other options. See [Publishing tools](/en-US/docs/Learn/Common_questions/How_much_does_it_cost#publishing_tools) for more information.
 
 Open the FileZilla application; you should see something like this:
 
-![](filezilla-ui.png)
+![Screenshot of the user interface of Filezilla FTP application. Host input has focus.](filezilla-ui.png)
 
 ### Logging in
 
@@ -96,7 +97,7 @@ To connect your SFTP client to the distant server, follow these steps:
 
 Your window should look something like this:
 
-![](site-manager.png)
+![Screenshot of default landing page of a fictitious website when the file directory is empty](site-manager.png)
 
 Now press _Connect_ to connect to the SFTP server.
 
@@ -106,7 +107,7 @@ Note: Make sure your hosting provider offers SFTP (Secure FTP) connection to you
 
 Once connected, your screen should look something like this (we've connected to an example of our own to give you an idea):
 
-![](connected.png)
+![SFTP client displaying website contents once it has been connected to the SFTP server. Local files are on the left. Remote files are on the right.](connected.png)
 
 Let's examine what you're seeing:
 

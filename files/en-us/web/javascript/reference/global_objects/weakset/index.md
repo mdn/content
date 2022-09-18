@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.WeakSet
 ---
+
 {{JSRef}}
 
 The **`WeakSet`** object lets you store weakly held _objects_ in a collection.
@@ -69,11 +70,11 @@ The number of objects or their traversal order is immaterial, so a `WeakSet` is 
 
 ## Instance methods
 
-- {{jsxref("WeakSet.add", "WeakSet.prototype.add(<var>value</var>)")}}
+- {{jsxref("WeakSet.prototype.add()")}}
   - : Appends `value` to the `WeakSet` object.
-- {{jsxref("WeakSet.delete", "WeakSet.prototype.delete(<var>value</var>)")}}
+- {{jsxref("WeakSet.prototype.delete()")}}
   - : Removes `value` from the `WeakSet`. `WeakSet.prototype.has(value)` will return `false` afterwards.
-- {{jsxref("WeakSet.has", "WeakSet.prototype.has(<var>value</var>)")}}
+- {{jsxref("WeakSet.prototype.has()")}}
   - : Returns a boolean asserting whether `value` is present in the `WeakSet` object or not.
 
 ## Examples

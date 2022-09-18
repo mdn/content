@@ -9,9 +9,11 @@ tags:
   - Sensors
   - Window
   - orientationchange
+  - Deprecated
 browser-compat: api.Window.orientationchange_event
 ---
-{{APIRef}} {{Deprecated_Header}}
+
+{{APIRef}}{{Deprecated_Header}}
 
 The `orientationchange` event is fired when the orientation of the device has changed.
 

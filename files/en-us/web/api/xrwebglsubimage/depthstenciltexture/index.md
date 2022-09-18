@@ -11,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XRWebGLSubImage.depthStencilTexture
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`depthStencilTexture`** property of the {{domxref("XRWebGLSubImage")}} interface represents the depth/stencil {{domxref("WebGLTexture")}} object for the {{domxref("XRCompositionLayer")}} to render.
 
@@ -37,11 +39,11 @@ function onXRFrame(time, xrFrame) {
   xrSession.requestAnimationFrame(onXRFrame);
 
   gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
-  let viewport = xrGlBinding.getSubImage(layer, xrFrame).viewport;
+  const viewport = xrGlBinding.getSubImage(layer, xrFrame).viewport;
   gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
-  for (let view in xrViewerPose.views) {
-    let subImage = xrGlBinding.getViewSubImage(layer, view);
+  for (const view in xrViewerPose.views) {
+    const subImage = xrGlBinding.getViewSubImage(layer, view);
     gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
       subImage.colorTexture, 0, subImage.imageIndex);
     gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT,

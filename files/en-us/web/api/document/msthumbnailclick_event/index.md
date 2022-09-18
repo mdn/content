@@ -7,6 +7,7 @@ tags:
   - Event
   - Non-standard
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}
@@ -17,7 +18,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
+```js-nolint
 object.addEventListener("msthumbnailclick", handler, useCapture)
 ```
 

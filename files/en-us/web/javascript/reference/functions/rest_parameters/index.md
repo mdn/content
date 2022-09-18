@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 The **rest parameter** syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent [variadic functions](https://en.wikipedia.org/wiki/Variadic_function) in JavaScript.
@@ -16,7 +17,7 @@ The **rest parameter** syntax allows a function to accept an indefinite number o
 
 ## Syntax
 
-```js
+```js-nolint
 function f(a, b, ...theArgs) {
   // …
 }
@@ -68,8 +69,8 @@ There are three main differences between rest parameters and the
 
 - The `arguments` object is **not a real array**, while rest
   parameters are {{jsxref("Array")}} instances, meaning methods
-  like {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}},
-  {{jsxref("Array.forEach", "forEach")}} or {{jsxref("Array/pop", "pop")}} can be
+  like {{jsxref("Array/sort", "sort()")}}, {{jsxref("Array/map", "map()")}},
+  {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/pop", "pop()")}} can be
   applied on it directly.
 - The `arguments` object has additional functionality specific to itself
   (like the `callee` property).
@@ -81,26 +82,27 @@ There are three main differences between rest parameters and the
 
 ### From arguments to an array
 
-Rest parameters were introduced to reduce the boilerplate code that was commonly used
-for converting a set of arguments to an array.
+Rest parameters were introduced to reduce the boilerplate code that was commonly used for converting a set of arguments to an array.
+
+Before rest parameters, `arguments` need to be converted to a normal array before calling array methods on them:
 
 ```js
-// Before rest parameters, "arguments" could be converted to a normal array using:
-
-function f(a, b) {
+function fn(a, b) {
   const normalArray = Array.prototype.slice.call(arguments);
   // — or —
-  const normalArray = [].slice.call(arguments);
+  const normalArray2 = [].slice.call(arguments);
   // — or —
-  const normalArray = Array.from(arguments);
+  const normalArrayFrom = Array.from(arguments);
 
   const first = normalArray.shift(); // OK, gives the first argument
-  const first = arguments.shift(); // ERROR (arguments is not a normal array)
+  const firstBad = arguments.shift(); // ERROR (arguments is not a normal array)
 }
+```
 
-// Now, you can easily gain access to a normal array using a rest parameter
+Now, you can easily gain access to a normal array using a rest parameter:
 
-function f(...args) {
+```js
+function fn(...args) {
   const normalArray = args;
   const first = normalArray.shift(); // OK, gives the first argument
 }
@@ -158,7 +160,7 @@ myFun("one", "two");
 
 ### Argument length
 
-Since `theArgs` is an array, a count of its elements is given by the {{jsxref("Array.length", "length")}} property.
+Since `theArgs` is an array, a count of its elements is given by the {{jsxref("Array/length", "length")}} property.
 
 ```js
 function fun1(...theArgs) {

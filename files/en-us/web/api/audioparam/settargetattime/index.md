@@ -11,6 +11,7 @@ tags:
   - setTargetAtTime
 browser-compat: api.AudioParam.setTargetAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `setTargetAtTime()` method of the
@@ -20,7 +21,7 @@ envelopes.
 
 ## Syntax
 
-```js
+```js-nolint
 setTargetAtTime(target, startTime, timeConstant)
 ```
 
@@ -110,10 +111,10 @@ timeConstant.
 const audioCtx = new AudioContext();
 
 // set basic variables for example
-const myAudio = document.querySelector('audio');
+const myAudio = document.querySelector("audio");
 
-const atTimePlus = document.querySelector('.at-time-plus');
-const atTimeMinus = document.querySelector('.at-time-minus');
+const atTimePlus = document.querySelector(".at-time-plus");
+const atTimeMinus = document.querySelector(".at-time-minus");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
@@ -133,12 +134,12 @@ gainNode.connect(audioCtx.destination);
 atTimePlus.onclick = () => {
   currGain = 1.0;
   gainNode.gain.setTargetAtTime(1.0, audioCtx.currentTime + 1, 0.5);
-}
+};
 
 atTimeMinus.onclick = () => {
   currGain = 0;
   gainNode.gain.setTargetAtTime(0, audioCtx.currentTime + 1, 0.5);
-}
+};
 ```
 
 ## Specifications

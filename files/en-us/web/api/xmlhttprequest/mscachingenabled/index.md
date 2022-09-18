@@ -7,6 +7,7 @@ tags:
   - Method
   - Non-standard
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -15,7 +16,7 @@ The **`msCachingEnabled()`** method gets the current caching state for an [XMLHt
 
 ## Syntax
 
-```js
+```js-nolint
 msCachingEnabled()
 ```
 

@@ -45,7 +45,7 @@ Aside from the specific system for presenting the live samples, there are style 
 
 ## Static examples
 
-By static examples, we are talking about static code blocks that show how a feature might be used in code. These are put on a page using Markdown "code fences", as described in [Example code blocks](/en-US/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks). An example result might look like this:
+By static examples, we are talking about static code blocks that show how a feature might be used in code. These are put on a page using Markdown "code fences", as described in [Example code blocks](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks). An example result might look like this:
 
 ```js
 // This is a JS example
@@ -78,7 +78,7 @@ The [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/main/kumascript
 
 ## Traditional live samples
 
-Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Structures/Live_samples) for more information.
+Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) for more information.
 
 ### Formatting live samples
 
@@ -88,9 +88,9 @@ If you write a live sample in the "Examples" section, provide a descriptive H3 h
 - CSS
 - JavaScript
 - Result
-Write the code blocks in the respective subsections listed above.
-In the **Result** subsection, add the call to the [`EmbedLiveSample` macro](/en-US/docs/MDN/Structures/Live_samples#live_sample_macros). Preferably, include some more prose in this subsection to describe the result.
-If you're not using a particular language type (for example, if you are not using JavaScript) or if you are hiding it, then you should omit the corresponding heading.
+  Write the code blocks in the respective subsections listed above.
+  In the **Result** subsection, add the call to the [`EmbedLiveSample` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros). Preferably, include some more prose in this subsection to describe the result.
+  If you're not using a particular language type (for example, if you are not using JavaScript) or if you are hiding it, then you should omit the corresponding heading.
 
 For example:
 
@@ -122,7 +122,6 @@ p.fancy {
 \{{EmbedLiveSample("Styling a paragraph")}}
 
 Only the `<p>` element with `class="fancy"` will get styled `red`.
-
 ````
 
 ### Hidden code
@@ -161,7 +160,6 @@ p.fancy {
 \{{EmbedLiveSample("Styling a paragraph")}}
 
 Only the `<p>` element with `class="fancy"` will get styled `red`.
-
 ````
 
 ## GitHub live samples
@@ -188,5 +186,5 @@ This looks like so when rendered:
 
 ### Tips for using GitHub live samples
 
-- You obviously need to get a suitable code sample onto the [MDN GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Using_Github_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data) for more advanced uses.
-- Your code sample needs to be suitable to show what you are trying to demonstrate — it should contain one simple example that does one thing well, should have no offensive content in it, and should follow the MDN [Code sample guidelines](/en-US/docs/MDN/Guidelines/Code_guidelines).
+- You obviously need to get a suitable code sample onto the [MDN GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Using_Github_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#preparing_to_add_the_data) for more advanced uses.
+- Your code sample needs to be suitable to show what you are trying to demonstrate — it should contain one simple example that does one thing well, should have no offensive content in it, and should follow the MDN [Code sample guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).

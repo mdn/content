@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getInt8
 ---
+
 {{JSRef}}
 
 The **`getInt8()`** method gets a signed 8-bit integer (byte)
@@ -18,7 +19,7 @@ at the specified byte offset from the start of the {{jsxref("DataView")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getInt8(byteOffset)
 ```
 

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.createRadialGradient
 ---
+
 {{APIRef}}
 
 The
@@ -29,7 +30,7 @@ properties.
 
 ## Syntax
 
-```js
+```js-nolint
 createRadialGradient(x0, y0, r0, x1, y1, r1)
 ```
 
@@ -53,8 +54,14 @@ defining the gradient's start circle, and three defining the end circle.
 
 ### Return value
 
-- {{domxref("CanvasGradient")}}
-  - : A radial `CanvasGradient` initialized with the two specified circles.
+A radial {{domxref("CanvasGradient")}} initialized with the two specified circles.
+
+### Exceptions
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown when non-finite values are passed in parameter.
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown when a negative radius is passed in parameter.
 
 ## Examples
 
@@ -103,13 +110,6 @@ ctx.fillRect(20, 20, 160, 160);
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with Gecko 2.0 {{geckoRelease("2.0")}}, specifying non-finite values now
-  throws `NOT_SUPPORTED_ERR` instead of `SYNTAX_ERR`.
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying a negative radius
-  correctly throws `INDEX_SIZE_ERR`.
 
 ## See also
 

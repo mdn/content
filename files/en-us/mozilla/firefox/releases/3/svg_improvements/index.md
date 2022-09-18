@@ -5,6 +5,7 @@ tags:
   - Firefox 3
   - SVG
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3 offers improved [Scalable Vector Graphics](/en-US/docs/Web/SVG) (SVG) support over prior versions of Firefox. While these features are documented elsewhere, this article serves as a convenient list so you can easily determine which features were added in Firefox 3.

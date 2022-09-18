@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.arrow_functions
 ---
+
 {{jsSidebar("Functions")}}
 
 An **arrow function expression** is a compact alternative to a traditional
@@ -72,16 +73,15 @@ arguments**, you'll need to re-introduce parentheses around the arguments:
 // Arrow Function
 (a, b) => a + b + 100;
 
-// Traditional Anonymous Function (no arguments)
 const a = 4;
 const b = 2;
-(function () {
+
+// Traditional Anonymous Function (no arguments)
+(function() {
   return a + b + 100;
 });
 
 // Arrow Function (no arguments)
-const a = 4;
-const b = 2;
 () => a + b + 100;
 ```
 
@@ -113,7 +113,7 @@ function bob(a) {
 }
 
 // Arrow Function
-const bob = (a) => a + 100;
+const bob2 = (a) => a + 100;
 ```
 
 ## Syntax
@@ -292,17 +292,17 @@ const add = function (a, b, c) {
 };
 
 // call
-const result = add.call(obj, 1, 2, 3); // establishing the scope as "obj"
-console.log(result); // result 106
+const resultCall = add.call(obj, 1, 2, 3); // establishing the scope as "obj"
+console.log(resultCall); // result 106
 
 // apply
 const arr = [1, 2, 3];
-const result = add.apply(obj, arr); // establishing the scope as "obj"
-console.log(result); // result 106
+const resultApply = add.apply(obj, arr); // establishing the scope as "obj"
+console.log(resultApply); // result 106
 
 // bind
-const result = add.bind(obj); // establishing the scope as "obj"
-console.log(result(1, 2, 3)); // result 106
+const resultBind = add.bind(obj); // establishing the scope as "obj"
+console.log(resultBind(1, 2, 3)); // result 106
 ```
 
 With arrow functions, since our `add` function is essentially created on the
@@ -336,7 +336,7 @@ const bound = add.bind(obj);
 console.log(bound(1, 2, 3)); // result 2026
 ```
 
-Perhaps the greatest benefit of using Arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.addEventListener()")}} that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
+Perhaps the greatest benefit of using Arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.prototype.addEventListener()")}} that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
 
 #### Traditional function example
 

@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.BarcodeDetector
 ---
+
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{SeeCompatTable}}
 
 The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.
@@ -42,13 +43,15 @@ This example creates a new barcode detector object, with specified supported for
 
 ```js
 // create new detector
-const barcodeDetector = new BarcodeDetector({ formats: ['code_39', 'codabar', 'ean_13'] });
+const barcodeDetector = new BarcodeDetector({
+  formats: ["code_39", "codabar", "ean_13"],
+});
 
 // check compatibility
 if (barcodeDetector) {
-  console.log('Barcode Detector supported!');
+  console.log("Barcode Detector supported!");
 } else {
-  console.log('Barcode Detector is not supported by this browser.');
+  console.log("Barcode Detector is not supported by this browser.");
 }
 ```
 
@@ -58,10 +61,9 @@ The following example calls the `getSupportFormat()` static method and logs the 
 
 ```js
 // check supported types
-BarcodeDetector.getSupportedFormats()
-  .then((supportedFormats) => {
-    supportedFormats.forEach((format) => console.log(format));
-  });
+BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
+  supportedFormats.forEach((format) => console.log(format));
+});
 ```
 
 ### Detect Barcodes
@@ -69,14 +71,14 @@ BarcodeDetector.getSupportedFormats()
 This example uses the `detect()` method to detect the barcodes within the given image. These are iterated over and the barcode data is logged to the console.
 
 ```js
-  barcodeDetector.detect(imageEl)
-    .then((barcodes) => {
-      barcodes.forEach((barcode) => console.log(barcode.rawData));
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-
+barcodeDetector
+  .detect(imageEl)
+  .then((barcodes) => {
+    barcodes.forEach((barcode) => console.log(barcode.rawData));
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 ## Specifications

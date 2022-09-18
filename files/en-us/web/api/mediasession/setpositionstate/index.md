@@ -19,6 +19,7 @@ tags:
   - speed
 browser-compat: api.MediaSession.setPositionState
 ---
+
 {{APIRef("Media Session API")}}
 
 The {{domxref("MediaSession")}} method
@@ -33,7 +34,7 @@ Call this method on the `navigator` object's
 
 ## Syntax
 
-```js
+```js-nolint
 setPositionState()
 setPositionState(stateDict)
 ```

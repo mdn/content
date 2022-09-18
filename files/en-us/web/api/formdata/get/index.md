@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.get
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`get()`** method of the {{domxref("FormData")}} interface
@@ -21,7 +22,7 @@ object. If you expect multiple values and want all of them, use the
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 

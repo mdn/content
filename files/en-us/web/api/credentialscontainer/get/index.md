@@ -12,7 +12,8 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer.get
 ---
-{{APIRef("Credential Management API")}}{{SeeCompatTable}}
+
+{{APIRef("Credential Management API")}}
 
 The **`get()`** method of the
 {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} to a
@@ -35,7 +36,7 @@ example: if options.password exists, then the
 
 ## Syntax
 
-```js
+```js-nolint
 get()
 get(options)
 ```
@@ -54,6 +55,7 @@ get(options)
         {{domxref("Credential")}} instances should include user (as opposed to federated)
         credentials.
     - `federated`
+
       - : An object containing requirements for returned federated credentials. The available
         options are:
 

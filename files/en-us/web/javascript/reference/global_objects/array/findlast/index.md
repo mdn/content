@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.findLast
 ---
+
 {{JSRef}}
 
 The **`findLast()`** method returns the value of the last element in an array that satisfies the provided testing function.
@@ -20,17 +21,17 @@ If no elements satisfy the testing function, {{jsxref("undefined")}} is returned
 
 If you need to find:
 
-- the _first_ element that matches, use {{jsxref("Array.findIndex", "find()")}}.
-- the _index_ of the last matching element in the array, use {{jsxref("Array.findLastIndex", "findLastIndex()")}}.
-- the _index of a value_, use {{jsxref("Array.prototype.indexOf()")}}.
-  (It's similar to {{jsxref("Array.findIndex", "findIndex()")}}, but checks each element for equality with the value instead of using a testing function.)
-- whether a value _exists_ in an array, use {{jsxref("Array.prototype.includes()")}}.
+- the _first_ element that matches, use {{jsxref("Array/find", "find()")}}.
+- the _index_ of the last matching element in the array, use {{jsxref("Array/findLastIndex", "findLastIndex()")}}.
+- the _index of a value_, use {{jsxref("Array/indexOf", "indexOf()")}}.
+  (It's similar to {{jsxref("Array/findIndex", "findIndex()")}}, but checks each element for equality with the value instead of using a testing function.)
+- whether a value _exists_ in an array, use {{jsxref("Array/includes", "includes()")}}.
   Again, it checks each element for equality with the value instead of using a testing function.
-- if any element satisfies the provided testing function, use {{jsxref("Array.prototype.some()")}}.
+- if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findLast((element) => { /* … */ } )
 findLast((element, index) => { /* … */ } )

@@ -10,6 +10,7 @@ tags:
   - Stylesheets
 browser-compat: api.ShadowRoot.styleSheets
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`styleSheets`** read-only property of the {{domxref("ShadowRoot")}} interface

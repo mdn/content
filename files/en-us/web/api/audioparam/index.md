@@ -13,6 +13,7 @@ tags:
   - sound
 browser-compat: api.AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 The Web Audio API's `AudioParam` interface represents an audio-related parameter, usually a parameter of an {{domxref("AudioNode")}} (such as {{ domxref("GainNode.gain") }}).
@@ -35,11 +36,11 @@ A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whol
 
 ## Properties
 
-- {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
+- {{domxref("AudioParam.defaultValue")}} {{ReadOnlyInline}}
   - : Represents the initial value of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
-- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
+- {{domxref("AudioParam.maxValue")}} {{ReadOnlyInline}}
   - : Represents the maximum possible value for the parameter's nominal (effective) range.
-- {{domxref("AudioParam.minValue")}} {{readonlyinline}}
+- {{domxref("AudioParam.minValue")}} {{ReadOnlyInline}}
   - : Represents the minimum possible value for the parameter's nominal (effective) range.
 - {{domxref("AudioParam.value")}}
   - : Represents the parameter's current value as of the current time; initially set to the value of {{domxref("AudioParam.defaultValue", "defaultValue")}}.

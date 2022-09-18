@@ -8,9 +8,11 @@ tags:
   - Reference
   - decodeQueueSize
   - VideoDecoder
+  - Experimental
 browser-compat: api.VideoDecoder.decodeQueueSize
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`decodeQueueSize`** read-only property of the {{domxref("VideoDecoder")}} interface returns the number of pending decode requests in the queue.
 

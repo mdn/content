@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.MediaQueryListEvent
 ---
+
 {{APIRef("CSSOM")}}
 
 The `MediaQueryListEvent` object stores information on the changes that have happened to a {{DOMxRef("MediaQueryList")}} object — instances are available as the event object on a function referenced by a {{DOMxRef("MediaQueryList.change_event", "change")}} event.
@@ -38,21 +39,20 @@ _The `MediaQueryListEvent` interface inherits methods from its parent interface,
 ## Examples
 
 ```js
+const para = document.querySelector("p"); // This is the UI element where to display the text
 const mql = window.matchMedia('(max-width: 600px)');
 
-function screenTest(e) {
-  if (e.matches) {
-    /* the viewport is 600 pixels wide or less */
+mql.addEventListener("change", (event) => {
+  if (event.matches) {
+    // The viewport is 600 pixels wide or less
     para.textContent = 'This is a narrow screen — less than 600px wide.';
     document.body.style.backgroundColor = 'red';
   } else {
-    /* the viewport is more than 600 pixels wide */
+    // The viewport is more than 600 pixels wide
     para.textContent = 'This is a wide screen — more than 600px wide.';
     document.body.style.backgroundColor = 'blue';
   }
-}
-
-mql.addListener(screenTest);
+});
 ```
 
 ## Specifications

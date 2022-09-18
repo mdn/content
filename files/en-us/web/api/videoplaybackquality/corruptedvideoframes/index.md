@@ -6,7 +6,6 @@ tags:
   - API
   - Corruption
   - Data Loss
-  - Experimental
   - Frames
   - Media
   - Media Playback Quality
@@ -18,8 +17,10 @@ tags:
   - Video
   - VideoPlaybackQuality
   - corruptedVideoFrames
+  - Deprecated
 browser-compat: api.VideoPlaybackQuality.corruptedVideoFrames
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The {{domxref("VideoPlaybackQuality")}} interface's read-only

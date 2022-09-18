@@ -11,6 +11,7 @@ tags:
   - setConfiguration
 browser-compat: api.RTCPeerConnection.setConfiguration
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.setConfiguration()`** method sets the
@@ -34,7 +35,7 @@ this might be done:
 
 ## Syntax
 
-```js
+```js-nolint
 setConfiguration(configuration)
 ```
 
@@ -77,13 +78,12 @@ const restartConfig = {
 
 myPeerConnection.setConfiguration(restartConfig);
 
-myPeerConnection.createOffer({"iceRestart": true}).then(function(offer) {
-  return myPeerConnection.setLocalDescription(offer);
-})
-.then(function() {
-  // send the offer to the other peer using the signaling server
-})
-.catch(reportError);
+myPeerConnection.createOffer({ "iceRestart": true })
+  .then((offer) => myPeerConnection.setLocalDescription(offer))
+  .then(() => {
+    // send the offer to the other peer using the signaling server
+  })
+  .catch(reportError);
 ```
 
 First, a new object is created, `restartConfig`,

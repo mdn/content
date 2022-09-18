@@ -11,6 +11,7 @@ tags:
   - download
 browser-compat: api.HTMLAnchorElement.download
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.download`** property is a

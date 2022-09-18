@@ -10,6 +10,7 @@ tags:
   - WebAssembly
 browser-compat: javascript.builtins.WebAssembly.Exception.Exception
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Exception()`** constructor is used to create a new [`WebAssembly.Exception`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception).
@@ -22,7 +23,7 @@ The `options.traceStack` property can be set `true` (by default it is `false`) t
 
 ## Syntax
 
-```js
+```js-nolint
 new Exception(tag, payload)
 new Exception(tag, payload, options)
 ```
@@ -39,7 +40,7 @@ new Exception(tag, payload, options)
   - : An object with the following optional fields:
     - `traceStack` {{optional_inline}} {{non-standard_inline}}
       - : `true` if the `Exception` may have a stack trace attached to its [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) property, otherwise `false`.
-         This is `false` by default (if `options` or `options.traceStack` are not provided).
+        This is `false` by default (if `options` or `options.traceStack` are not provided).
 
 ### Exceptions
 

@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - timeStamp
+  - Non-standard
 browser-compat: api.VRPose.timestamp
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}
+
+{{Deprecated_Header}}{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 The **`timestamp`** read-only property of the {{domxref("VRPose")}} interface returns the current time stamp of the system — a monotonically increasing value representing the time since the current app was started.
 

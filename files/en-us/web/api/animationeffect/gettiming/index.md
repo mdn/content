@@ -12,13 +12,14 @@ tags:
   - web animations api
 browser-compat: api.AnimationEffect.getTiming
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+
+{{ APIRef("Web Animations API") }}
 
 The `AnimationEffect.getTiming()` method of the {{domxref("AnimationEffect")}} interface returns an object containing the timing properties for the Animation Effect.
 
 ## Syntax
 
-```js
+```js-nolint
 getTiming()
 ```
 

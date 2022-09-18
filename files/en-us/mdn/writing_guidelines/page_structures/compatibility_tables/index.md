@@ -7,13 +7,14 @@ tags:
   - writing-guide
 browser-compat: api.AbortController
 ---
+
 {{MDNSidebar}}
 
 MDN has a standard format for compatibility tables for our open web documentation; that is, documentation of technologies such as the DOM, HTML, CSS, JavaScript, SVG, and so forth, that are shared across all browsers. This article is a "getting started" guide to how to add to and maintain the database from which the compatibility tables are generated, as well as how to integrate the tables into articles.
 
 For more advanced documentation, as well as the very latest changes to the processes and JSON schemas used to represent the data, take a look at the data repository's [contributor guide](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md) as well as the [data guidelines guide](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md).
 
-If you have questions or discover problems, you are welcome to [ask for help](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+If you have questions or discover problems, you are welcome to [ask for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
 ## How to access the data repository
 
@@ -45,27 +46,27 @@ Now, whenever you want to update your fork, you can do so by:
 
 1. Making sure you are in the main branch:
 
-    ```bash
-    git checkout main
-    ```
+   ```bash
+   git checkout main
+   ```
 
 2. fetching the up-to-date repo contents using the following:
 
-    ```bash
-    git fetch upstream
-    ```
+   ```bash
+   git fetch upstream
+   ```
 
 3. rebasing the contents of your main branch with the official repo's contents:
 
-    ```bash
-    git rebase upstream/main
-    ```
+   ```bash
+   git rebase upstream/main
+   ```
 
 4. pushing these updates back to your remote fork using this:
 
-    ```bash
-    git push
-    ```
+   ```bash
+   git push
+   ```
 
 ### Creating a new branch to do your work in
 
@@ -154,9 +155,9 @@ In a basic browser compat data file, you'll only need to include "version_added"
 
 Inside the `status` member, you'll include three submembers:
 
-- `experimental`: This should be set to `true` if the feature is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental), or `false` otherwise.
+- `experimental`: This should be set to `true` if the feature is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), or `false` otherwise.
 - `standard_track`: This should be set to `true` if a feature is on some kind of standards track (most commonly W3C/WHATWG, but there are also other standards efforts such as Khronos, TC39, etc.) or `false` otherwise.
-- `deprecated`: This should be set to `true` if the feature is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete), or `false` otherwise.
+- `deprecated`: This should be set to `true` if the feature is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete), or `false` otherwise.
 
 The feature data for [border-width](/en-US/docs/Web/CSS/border-width#browser_compatibility) (also see [border-width.json](https://github.com/mdn/browser-compat-data/blob/main/css/properties/border-width.json)) is shown below as an example:
 
@@ -308,7 +309,7 @@ Often compat tables will include footnotes related to certain entries that expla
 
 ### Including a vendor prefix
 
-If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. imagine you had a feature that was supported with a `-moz-` prefix in Firefox. To specify this in the compat data, you'd need to add a "prefix" submember inside the relevant "firefox" submember. It would look something like this:
+If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. Imagine you had a feature that was supported with a `-moz-` prefix in Firefox. To specify this in the compat data, you'd need to add a "prefix" submember inside the relevant "firefox" submember. It would look something like this:
 
 ```json
 "firefox": {
@@ -473,6 +474,7 @@ For example, for the {{domxref("AbortController")}} this would be added as shown
 
 ```plain
 ---
+
 title: AbortController
 slug: Web/API/AbortController
 
@@ -480,6 +482,7 @@ slug: Web/API/AbortController
 
 browser-compat: api.AbortController
 ---
+
 ```
 
 The compatibility and specification tables corresponding to the key are then automatically rendered in place of the `\{{Compat}}` and `\{{Specifications}}` macros in the source.
@@ -488,10 +491,10 @@ You can also specify the desired API as the first argument to the macro as shown
 
 The macro calls generate the following tables (and corresponding set of notes):
 
-#### Compatibility table example
+### Compatibility table example
 
 {{Compat}}
 
-#### Specifications table examples
+### Specifications table examples
 
 {{Specifications}}

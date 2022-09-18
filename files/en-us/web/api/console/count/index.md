@@ -12,6 +12,7 @@ tags:
   - web console
 browser-compat: api.console.count
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.count()`** method logs the number of times that
@@ -21,7 +22,7 @@ this particular call to `count()` has been called.
 
 ## Syntax
 
-```js
+```js-nolint
 count()
 count(label)
 ```

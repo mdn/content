@@ -11,9 +11,8 @@ tags:
   - Deprecated
 browser-compat: api.DataTransfer.mozGetDataAt
 ---
-{{APIRef("HTML Drag and Drop API")}}
 
-{{ Non-standard_header() }}{{deprecated_header}}
+{{APIRef("HTML Drag and Drop API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`DataTransfer.mozGetDataAt()`** method is used to
 retrieve an item in the drag event's {{domxref("DataTransfer","data transfer")}} object,
@@ -25,7 +24,7 @@ range from zero to the number of items minus one.
 
 ## Syntax
 
-```js
+```js-nolint
 mozGetDataAt(index)
 mozGetDataAt(type, index)
 ```

@@ -4,7 +4,6 @@ slug: Web/API/Navigator/getGamepads
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Gamepad API
   - Games
   - Method
@@ -12,7 +11,8 @@ tags:
   - Reference
 browser-compat: api.Navigator.getGamepads
 ---
-{{APIRef("Gamepad API")}}{{SeeCompatTable}}{{securecontext_header}}
+
+{{APIRef("Gamepad API")}}{{securecontext_header}}
 
 The **`Navigator.getGamepads()`** method returns an array of
 {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.
@@ -24,7 +24,7 @@ Calls to this method will throw a `SecurityError` {{domxref('DOMException')}} if
 
 ## Syntax
 
-```js
+```js-nolint
 getGamepads()
 ```
 
@@ -34,17 +34,14 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+An {{jsxref("Array")}} of {{domxref("Gamepad")}} objects, eventually empty.
 
 ## Examples
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", (e) => {
   const gp = navigator.getGamepads()[e.gamepad.index];
-  console.log(
-    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    gp.index, gp.id, gp.buttons.length, gp.axes.length
-  );
+  console.log(`Gamepad connected at index ${gp.index}: ${gpid} with ${gp.buttons.length} buttons, ${gp.axes.length} axes.`);
 });
 ```
 

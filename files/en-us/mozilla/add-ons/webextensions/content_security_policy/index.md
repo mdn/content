@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Extensions developed with WebExtension APIs have a Content Security Policy (CSP) applied to them by default. This restricts the sources from which they can load [\<script>](/en-US/docs/Web/HTML/Element/script) and [\<object>](/en-US/docs/Web/HTML/Element/object) resources, and disallows potentially unsafe practices such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). This article explains briefly what a CSP is, what the default policy is and what it means for an extension, and how an extension can change the default CSP.
@@ -14,16 +15,12 @@ Like websites, extensions can load content from different sources. For example, 
 
 ```html
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
-
   <body>
-
     <!--Some HTML content here-->
-
     <!--
       Include a third-party script.
       See also https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity.
@@ -31,13 +28,11 @@ Like websites, extensions can load content from different sources. For example, 
     <script
       src="https://code.jquery.com/jquery-2.2.4.js"
       integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"></script>
 
     <!-- Include my popup's own script-->
     <script src="popup.js"></script>
   </body>
-
 </html>
 ```
 
@@ -66,7 +61,7 @@ These policies are applied to any extension that has not explicitly set its own 
 Under the default CSP you may only load [\<script>](/en-US/docs/Web/HTML/Element/script) and [\<object>](/en-US/docs/Web/HTML/Element/object) resources that are local to the extension. For example, consider a line like this in an extension's document:
 
 ```html
- <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 ```
 
 This doesn't load the requested resource: it fails silently, and any object that you expect to be present from the resource is not found. There are two main solutions to this:
@@ -83,11 +78,11 @@ eval("console.log('some output');");
 ```
 
 ```js
-window.setTimeout("alert('Hello World!');", 500);
+setTimeout("alert('Hello World!');", 500);
 ```
 
 ```js
-let f = new Function("console.log('foo');");
+const f = new Function("console.log('foo');");
 ```
 
 ### Inline JavaScript
@@ -95,7 +90,9 @@ let f = new Function("console.log('foo');");
 Under the default CSP, inline JavaScript is not executed. This disallows both JavaScript placed directly in `<script>` tags and inline event handlers, meaning that the following are not permitted:
 
 ```html
-<script>console.log("foo");</script>
+<script>
+  console.log("foo");
+</script>
 ```
 
 ```html

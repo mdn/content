@@ -11,9 +11,11 @@ tags:
   - Web
   - Web Speech API
   - speech
+  - Non-standard
 browser-compat: api.SpeechGrammar.SpeechGrammar
 ---
-{{APIRef("Web Speech API")}}{{Non-standard_header}}
+
+{{APIRef("Web Speech API")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`SpeechGrammar()`** constructor of the
 {{domxref("SpeechGrammar")}} interface creates a new `SpeechGrammar` object
@@ -21,7 +23,7 @@ instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new SpeechGrammar()
 ```
 

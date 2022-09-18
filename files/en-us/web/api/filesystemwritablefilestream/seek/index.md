@@ -9,9 +9,11 @@ tags:
   - Method
   - stream
   - write
+  - Experimental
 browser-compat: api.FileSystemWritableFileStream.seek
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`seek()`** method of the
 {{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor
@@ -19,8 +21,8 @@ offset to the position (in bytes) specified when calling the method.
 
 ## Syntax
 
-```js
-FileSystemWritableStream.seek(position).then(/* … */);
+```js-nolint
+seek(position)
 ```
 
 ### Parameters

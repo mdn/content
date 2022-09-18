@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Audio
-  - Experimental
   - Interface
   - MSE
   - Media Source Extensions
@@ -14,7 +13,8 @@ tags:
   - Video
 browser-compat: api.SourceBufferList
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`SourceBufferList`** interface represents a simple container list for multiple {{domxref("SourceBuffer")}} objects.
 
@@ -26,7 +26,7 @@ The individual source buffers can be accessed using the [array operator](/en-US/
 
 ## Properties
 
-- {{domxref("SourceBufferList.length")}} {{readonlyInline}}
+- {{domxref("SourceBufferList.length")}} {{ReadOnlyInline}}
   - : Returns the number of {{domxref("SourceBuffer")}} objects in the list.
 
 ## Methods

@@ -7,11 +7,12 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.cause
 ---
+
 {{JSRef}}
 
 The **`cause`** property indicates the specific original cause of an error.
 
-It is used when catching and re-throwing an error with a more-specific or useful error message in order to still have access to the the original error.
+It is used when catching and re-throwing an error with a more-specific or useful error message in order to still have access to the original error.
 
 ## Value
 

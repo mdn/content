@@ -9,6 +9,7 @@ tags:
   - Guide
   - Permissions
 ---
+
 {{DefaultAPISidebar("Permissions API")}}
 
 This article provides a basic guide to using the W3C Permissions API, which provides a programmatic way to query the status of API permissions attributed to the current context.
@@ -54,7 +55,7 @@ In our example, the Permissions functionality is handled by one function — `ha
 
 ```js
 function handlePermission() {
-  navigator.permissions.query({name:'geolocation'}).then(function(result) {
+  navigator.permissions.query({ name: 'geolocation' }).then((result) => {
     if (result.state === 'granted') {
       report(result.state);
       geoBtn.style.display = 'none';
@@ -66,7 +67,7 @@ function handlePermission() {
       report(result.state);
       geoBtn.style.display = 'inline';
     }
-    result.addEventListener('change', function() {
+    result.addEventListener('change', () => {
       report(result.state);
     });
   });
@@ -92,14 +93,14 @@ const revokeBtn = document.querySelector('.revoke');
 
 // ...
 
-revokeBtn.onclick = function() {
+revokeBtn.onclick = () => {
   revokePermission();
 }
 
 // ...
 
 function revokePermission() {
-  navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
+  navigator.permissions.revoke({ name: 'geolocation' }).then((result) => {
     report(result.state);
   });
 }
@@ -116,6 +117,6 @@ You'll notice that we're listening to the {{domxref("PermissionStatus.change_eve
 At the moment this doesn't offer much more than what we had already. If we choose to never share our location from the permission prompt (deny permission), then we can't get back to the permission prompt without using the browser menu options:
 
 - **Firefox**: _Tools > Page Info > Permissions > Access Your Location_. Select _Always Ask_.
-- **Chrome**: _Hamburger Menu > Settings > Show advanced settings_. In the _Privacy_ section, click _Content Settings_. In the resulting dialog, find the _Location_ section and select _Ask when a site tries to…_ . Finally, click _Manage Exceptions_ and remove the permissions you granted to the sites you are interested in.
+- **Chrome**: _Hamburger Menu > Settings > Show advanced settings_. In the _Privacy_ section, click _Content Settings_. In the resulting dialog, find the _Location_ section and select _Ask when a site tries to…_. Finally, click _Manage Exceptions_ and remove the permissions you granted to the sites you are interested in.
 
 However, future additions to browser functionality should provide the `request()` method, which will allow us to programmatically request permissions, any time we like. These should hopefully be available soon.

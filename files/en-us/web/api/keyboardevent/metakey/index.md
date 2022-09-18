@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.metaKey
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.metaKey`** read-only property returning a
@@ -26,7 +27,7 @@ systems may intercept the key so it is never detected.
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Examples
 
@@ -42,7 +43,7 @@ function ismetaKey(e) {
 }
 ```
 
-#### Result
+### Result
 
 {{ EmbedLiveSample('Examples', 400, 90) }}
 

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.BluetoothRemoteGATTServer.device
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer.device`** read-only property

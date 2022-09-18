@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.icons
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -64,20 +65,24 @@ You can use SVG and the browser will scale your icon appropriately. There are cu
 
 1. You need to specify a viewBox in the image. E.g.:
 
-    ```html
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
-      <!-- your svg content -->
-    </svg>
-    ```
+   ```html
+   <svg
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 48 48"
+     width="48"
+     height="48">
+     <!-- your svg content -->
+   </svg>
+   ```
 
 2. Even though you can use one file, you still need to specify various size of the icon in your manifest. E.g.:
 
-    ```json
-    "icons": {
-      "48": "icon.svg",
-      "96": "icon.svg"
-    }
-    ```
+   ```json
+   "icons": {
+     "48": "icon.svg",
+     "96": "icon.svg"
+   }
+   ```
 
 > **Note:** Remember to include the `xmlns` attribute when creating the SVG. Otherwise, Firefox won't be able to display the icon.
 

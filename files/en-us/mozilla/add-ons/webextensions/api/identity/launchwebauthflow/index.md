@@ -12,6 +12,7 @@ tags:
   - launchWebAuthFlow
 browser-compat: webextensions.api.identity.launchWebAuthFlow
 ---
+
 {{AddonSidebar()}}
 
 Performs the first part of an [OAuth2](https://oauth.net/2/) flow, including user authentication and client authorization.
@@ -38,7 +39,7 @@ If there's any error, the promise is rejected with an error message. Error condi
 
 ## Syntax
 
-```js
+```js-nolint
 let authorizing = browser.identity.launchWebAuthFlow(
   details   // object
 )

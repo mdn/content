@@ -11,13 +11,14 @@ tags:
   - BluetoothUUID
 browser-compat: api.BluetoothUUID.getCharacteristic
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The **`getCharacteristic()`**  method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered characteristic when passed a name or the 16- or 32-bit UUID alias.
+The **`getCharacteristic()`** method of the {{domxref("BluetoothUUID")}} interface returns a UUID representing a registered characteristic when passed a name or the 16- or 32-bit UUID alias.
 
 ## Syntax
 
-```js
+```js-nolint
 getCharacteristic(name)
 ```
 
@@ -40,7 +41,7 @@ A 128-bit UUID.
 In the following example the UUID representing the characteristic named `apparent_wind_direction` is returned and printed to the console.
 
 ```js
-let result = BluetoothUUID.getCharacteristic('apparent_wind_direction');
+let result = BluetoothUUID.getCharacteristic("apparent_wind_direction");
 console.log(result); // "00002a73-0000-1000-8000-00805f9b34fb"
 ```
 

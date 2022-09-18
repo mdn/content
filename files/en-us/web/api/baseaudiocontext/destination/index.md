@@ -12,6 +12,7 @@ tags:
   - destination
 browser-compat: api.BaseAudioContext.destination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `destination` property of the {{ domxref("BaseAudioContext") }}

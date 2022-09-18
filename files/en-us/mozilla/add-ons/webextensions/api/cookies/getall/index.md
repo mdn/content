@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.cookies.getAll
 ---
+
 {{AddonSidebar()}}
 
 The **`getAll()`** method of the {{WebExtAPIRef("cookies")}} API retrieves all cookies from a single cookie store that match the given information.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getting = browser.cookies.getAll(
   details                // object
 )
@@ -69,7 +70,7 @@ let getting = browser.cookies.getAll(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of  `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned will be sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time will be first.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned will be sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time will be first.
 
 ## Browser compatibility
 
@@ -81,15 +82,16 @@ In the following snippet, we are making a call to get all of the cookies the bro
 
 ```js
 function logCookies(cookies) {
-  for (let cookie of cookies) {
+  for (const cookie of cookies) {
     console.log(cookie.value);
   }
 }
 
-let gettingAll = browser.cookies.getAll({
-  name: "favorite-color"
-});
-gettingAll.then(logCookies);
+browser.cookies
+  .getAll({
+    name: "favorite-color",
+  })
+  .then(logCookies);
 ```
 
 {{WebExtExamples}}
@@ -98,7 +100,8 @@ gettingAll.then(logCookies);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -125,4 +128,4 @@ gettingAll.then(logCookies);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -15,6 +15,7 @@ tags:
   - events
 browser-compat: api.PromiseRejectionEvent.promise
 ---
+
 {{APIRef("HTML DOM") }}
 
 The {{domxref("PromiseRejectionEvent")}} interface's
@@ -39,9 +40,9 @@ callback that will retry the task that failed to execute correctly.
 been handled.
 
 ```js
-window.onunhandledrejection = function(event) {
-  if (event.reason.code && event.reason.code === "Module not ready") {
-    window.requestIdleCallback(function(deadline) {
+window.onunhandledrejection = (event) => {
+  if (event.reason?.code === "Module not ready") {
+    requestIdleCallback((deadline) => {
       loadModule(event.reason.moduleName)
         .then(performStartup);
     });

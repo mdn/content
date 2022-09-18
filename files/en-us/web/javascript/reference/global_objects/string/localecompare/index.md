@@ -10,6 +10,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.localeCompare
 ---
+
 {{JSRef}}
 
 The **`localeCompare()`** method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order. In implementations with [`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) support, this method simply calls `Intl.Collator`.
@@ -18,7 +19,7 @@ The **`localeCompare()`** method returns a number indicating whether a reference
 
 ## Syntax
 
-```js
+```js-nolint
 localeCompare(compareString)
 localeCompare(compareString, locales)
 localeCompare(compareString, locales, options)
@@ -33,10 +34,13 @@ In implementations that support the [`Intl.Collator` API](/en-US/docs/Web/JavaSc
 - `compareString`
   - : The string against which the `referenceStr` is compared.
 - `locales` {{optional_inline}}
+
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) parameter of the `Intl.Collator()` constructor.
 
     In implementations without `Intl.Collator` support, this parameter is ignored and the host's locale is usually used.
+
 - `options` {{optional_inline}}
+
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options) parameter of the `Intl.Collator()` constructor.
 
     In implementations without `Intl.Collator` support, this parameter is ignored.
@@ -69,9 +73,7 @@ before, after or is equivalent to the `compareString`.
 
 ## Performance
 
-When comparing large numbers of strings, such as in sorting large arrays, it is better
-to create an {{jsxref("Global_Objects/Collator", "Intl.Collator")}} object and use the
-function provided by its {{jsxref("Collator.prototype.compare", "compare")}} property.
+When comparing large numbers of strings, such as in sorting large arrays, it is better to create an [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) object and use the function provided by its [`compare()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) method.
 
 ## Examples
 
@@ -166,4 +168,4 @@ console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 
 ## See also
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)

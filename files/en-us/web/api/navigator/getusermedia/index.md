@@ -15,6 +15,7 @@ tags:
   - getusermedia
 browser-compat: api.Navigator.getUserMedia
 ---
+
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
 The deprecated **`Navigator.getUserMedia()`** method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a {{domxref("MediaStream")}}.
@@ -29,7 +30,7 @@ If the user instead doesn't make a choice at all, neither callback is executed.
 
 ## Syntax
 
-```js
+```js-nolint
 getUserMedia(constraints, successCallback, errorCallback)
 ```
 
@@ -52,7 +53,7 @@ getUserMedia(constraints, successCallback, errorCallback)
     function successCallback(stream) {
        const video = document.querySelector('video');
        video.srcObject = stream;
-       video.onloadedmetadata = function(e) {
+       video.onloadedmetadata = (e) => {
           // Do something with the video here.
        };
     }
@@ -84,14 +85,14 @@ navigator.getUserMedia = navigator.getUserMedia ||
 
 if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
-      function(stream) {
+      (stream) => {
          const video = document.querySelector('video');
          video.srcObject = stream;
-         video.onloadedmetadata = function(e) {
+         video.onloadedmetadata = (e) => {
            video.play();
          };
       },
-      function(err) {
+      (err) => {
          console.error(`The following error occurred: ${err.name}`);
       }
    );

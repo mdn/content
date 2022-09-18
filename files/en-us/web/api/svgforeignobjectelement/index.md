@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGForeignObjectElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGForeignObjectElement`** interface provides access to the properties of {{SVGElement("foreignObject")}} elements, as well as methods to manipulate them.

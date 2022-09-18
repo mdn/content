@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.finally
 ---
+
 {{JSRef}}
 
 The **`finally()`** method of a {{jsxref("Promise")}} schedules a function,
@@ -18,14 +19,14 @@ the _callback function_, to be called when the promise is settled.
 Like `then()` and `catch()`, it immediately returns an equivalent {{jsxref("Promise")}} object,
 allowing you to chain calls to another promise method, an operation called _composition_.
 
-This lets you avoid duplicating code in both the promise's {{jsxref("Promise.then",
-  "then()")}} and {{jsxref("Promise.catch", "catch()")}} handlers.
+This lets you avoid duplicating code in both the promise's {{jsxref("Promise/then",
+  "then()")}} and {{jsxref("Promise/catch", "catch()")}} handlers.
 
 {{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
 
 ## Syntax
 
-```js
+```js-nolint
 promise.finally(onFinally)
 
 promise.finally(() => {

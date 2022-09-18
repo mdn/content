@@ -12,6 +12,7 @@ tags:
   - contentWindow
 browser-compat: api.HTMLObjectElement.contentWindow
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`contentWindow`** read-only property of

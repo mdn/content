@@ -6,13 +6,13 @@ tags:
   - API
   - Audio
   - AudioWorkletProcessor
-  - Experimental
   - Property
   - Reference
   - Web Audio API
 browser-compat: api.AudioWorkletProcessor.port
 ---
-{{APIRef("Web Audio API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Audio API")}}
 
 The read-only **`port`** property of the
 {{domxref("AudioWorkletProcessor")}} interface returns the associated

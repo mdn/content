@@ -16,6 +16,7 @@ tags:
   - data
 browser-compat: api.ReadableStream
 ---
+
 {{APIRef("Streams")}}
 
 The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a readable stream of byte data. The [Fetch API](/en-US/docs/Web/API/Fetch_API) offers a concrete instance of a `ReadableStream` through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.
@@ -29,8 +30,8 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 
 ## Properties
 
-- {{domxref("ReadableStream.locked")}} {{readonlyInline}}
-  - : The `locked` getter returns whether or not the readable stream is locked to a reader.
+- {{domxref("ReadableStream.locked")}} {{ReadOnlyInline}}
+  - : Returns a boolean indicating whether or not the readable stream is locked to a reader.
 
 ## Methods
 

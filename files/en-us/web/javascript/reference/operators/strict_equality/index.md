@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.strict_equality
 ---
+
 {{jsSidebar("Operators")}}
 
 The strict equality operator (`===`) checks whether its two operands are
@@ -19,13 +20,13 @@ different.
 
 ## Syntax
 
-```js
+```js-nolint
 x === y
 ```
 
 ## Description
 
-The strict equality operators (`===` and `!==`) use the [`IsStrictlyEqual` Abstract Operation](https://tc39.es/ecma262/#sec-isstrictlyequal) to compare two operands.
+The strict equality operators (`===` and `!==`) provide the [IsStrictlyEqual](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using) semantic.
 
 - If the operands are of different types, return `false`.
 - If both operands are objects, return `true` only if they refer to the

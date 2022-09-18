@@ -19,9 +19,11 @@ tags:
   - XRWebGLLayer
   - augmented
   - framebuffer
+  - Experimental
 browser-compat: api.XRWebGLLayer.framebuffer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`framebuffer`** is an opaque {{domxref("WebGLFramebuffer")}}

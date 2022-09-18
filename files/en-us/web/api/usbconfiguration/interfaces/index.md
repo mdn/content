@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBConfiguration.interfaces
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`interfaces`** read-only property of the

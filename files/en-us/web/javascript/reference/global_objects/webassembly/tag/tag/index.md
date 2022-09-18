@@ -9,13 +9,14 @@ tags:
   - Tag
 browser-compat: javascript.builtins.WebAssembly.Tag.Tag
 ---
+
 {{JSRef}}
 
 The **`WebAssembly.Tag()`** constructor creates a new [`WebAssembly.Tag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) object.
 
 ## Syntax
 
-```js
+```js-nolint
 new WebAssembly.Tag(type)
 ```
 
@@ -31,6 +32,7 @@ new WebAssembly.Tag(type)
 ### Exceptions
 
 - {{jsxref("TypeError")}}:
+
   - : Thrown if at least one of these conditions are met:
     - The `type` parameter is not an object.
     - The `type.parameters` property is not supplied.

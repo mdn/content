@@ -8,9 +8,11 @@ tags:
   - Reference
   - renderTime
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.renderTime
 ---
-{{DefaultAPISidebar("Element Timing")}}
+
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`renderTime`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the render time of the associated element.
 
@@ -27,12 +29,16 @@ For text nodes this will be the **text rendering timestamp**. This is defined as
 In this example calling `entry.renderTime` returns the render time of the image element.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.renderTime);
     }

@@ -12,6 +12,7 @@ tags:
   - themeName
 browser-compat: webextensions.api.devtools.panels.themeName
 ---
+
 {{AddonSidebar()}}
 
 The name of the currently selected devtools theme.

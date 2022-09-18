@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.values
 ---
+
 {{JSRef}}
 
 The **`Object.values()`** method
@@ -21,7 +22,7 @@ chain as well.)
 
 ## Syntax
 
-```js
+```js-nolint
 Object.values(obj)
 ```
 

@@ -13,6 +13,7 @@ tags:
   - get
 browser-compat: webextensions.api.windows.get
 ---
+
 {{AddonSidebar()}}
 
 Gets details about a window, given its ID. The details are passed into a callback.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getting = browser.windows.get(
   windowId,              // integer
   getInfo                // optional object
@@ -59,18 +60,17 @@ This example gets the current window and logs the URLs of the tabs it contains. 
 
 ```js
 function logTabs(windowInfo) {
-  for (tabInfo of windowInfo.tabs) {
+  for (const tabInfo of windowInfo.tabs) {
     console.log(tabInfo.url);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  let getting = browser.windows.get(tab.windowId, {populate: true});
-  getting.then(logTabs, onError);
+  browser.windows.get(tab.windowId, { populate: true }).then(logTabs, onError);
 });
 ```
 
@@ -80,7 +80,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,4 +108,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

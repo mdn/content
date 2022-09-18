@@ -10,6 +10,7 @@ tags:
   - Vibration API
 browser-compat: api.Navigator.vibrate
 ---
+
 {{APIRef("Vibration API")}}
 
 The **`Navigator.vibrate()`** method pulses the vibration
@@ -23,7 +24,7 @@ long vibration, it is truncated: the max length depends on the implementation.
 
 ## Syntax
 
-```js
+```js-nolint
 vibrate(pattern)
 ```
 

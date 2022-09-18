@@ -14,6 +14,7 @@ tags:
   - speech
 browser-compat: api.SpeechGrammarList.addFromString
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 The **`addFromString()`** method of the
@@ -23,7 +24,7 @@ the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 addFromString(string)
 addFromString(string, weight)
 ```

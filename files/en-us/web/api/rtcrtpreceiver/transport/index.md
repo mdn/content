@@ -19,6 +19,7 @@ tags:
   - receiver
 browser-compat: api.RTCRtpReceiver.transport
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The read-only **`transport`** property of an
@@ -31,8 +32,8 @@ This transport is responsible for receiving the data for the media on the receiv
 
 ## Syntax
 
-```js
-let transport = rtcRtpReceiver.transport;
+```js-nolint
+rtcRtpReceiver.transport
 ```
 
 ### Value

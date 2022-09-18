@@ -11,6 +11,7 @@ tags:
   - import.meta
 browser-compat: javascript.operators.import_meta
 ---
+
 {{JSSidebar("Operators")}}
 
 The **`import.meta`** object exposes context-specific metadata
@@ -18,7 +19,7 @@ to a JavaScript module. It contains information about the module, like the modul
 
 ## Syntax
 
-```js
+```js-nolint
 import.meta
 ```
 
@@ -61,7 +62,7 @@ For example, with the following HTML:
 
 ```html
 <script type="module">
-import './index.mjs?someURLInfo=5';
+  import "./index.mjs?someURLInfo=5";
 </script>
 ```
 

@@ -7,11 +7,12 @@ tags:
   - Location
   - Property
   - Reference
+  - Deprecated
+  - Non-standard
 browser-compat: api.Location.password
 ---
-{{APIRef("HTML DOM")}}
 
-{{deprecated_header}}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`password`** property of the {{domxref("Location")}}
 interface is a string containing the password specified before the

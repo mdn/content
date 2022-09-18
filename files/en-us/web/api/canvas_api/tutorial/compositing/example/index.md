@@ -7,9 +7,9 @@ tags:
   - Example
   - Graphics
   - HTML
-  - HTML5
   - Tutorial
 ---
+
 {{CanvasSidebar}}
 
 This sample program demonstrates a number of [compositing operations](/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). The output looks like this:
@@ -235,7 +235,7 @@ Color.HSV_RGB = (o) => {
         R = G = B = Math.round(V * 255);
     } else {
         if (H >= 1) H = 0;
-        H = 6 * H;
+        H *= 6;
         D = H - Math.floor(H);
         A = Math.round(255 * V * (1 - S));
         B = Math.round(255 * V * (1 - (S * D)));
@@ -274,11 +274,7 @@ Color.HSV_RGB = (o) => {
                 break;
         }
     }
-    return {
-        R: R,
-        G: G,
-        B: B
-    };
+    return { R, G, B };
 };
 
 const createInterlace = (size, color1, color2) => {

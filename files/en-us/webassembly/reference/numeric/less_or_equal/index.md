@@ -8,9 +8,10 @@ tags:
   - Numeric
   - Comparison
 ---
+
 {{WebAssemblySidebar}}
 
-The **`le`** instructions, short for *less or equal*, check if a number is less than or equal to another number. If the first number is less than or equal to the second number equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
+The **`le`** instructions, short for _less or equal_, check if a number is less than or equal to another number. If the first number is less than or equal to the second number equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
 
 The integer types have separate less or equal instructions for signed (**`le_s`**) and unsigned (**`le_u`**) numbers.
 

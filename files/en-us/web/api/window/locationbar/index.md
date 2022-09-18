@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.locationbar
 ---
+
 {{APIRef}}
 
 Returns the `locationbar` object, whose visibility can be checked.
@@ -28,18 +29,17 @@ The following complete HTML example shows how the `visible` property of the
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Various DOM Tests</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Various DOM Tests</title>
 
-<script>
-var visible = window.locationbar.visible;
-</script>
-
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
+    <script>
+      const visible = window.locationbar.visible;
+    </script>
+  </head>
+  <body>
+    <p>Various DOM Tests</p>
+  </body>
 </html>
 ```
 

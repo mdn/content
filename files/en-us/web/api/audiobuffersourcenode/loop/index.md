@@ -14,6 +14,7 @@ tags:
   - sound
 browser-compat: api.AudioBufferSourceNode.loop
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `loop` property of the {{ domxref("AudioBufferSourceNode") }}
@@ -48,14 +49,16 @@ function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
   request.onload = () => {
     const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, (buffer) => {
+    audioCtx.decodeAudioData(
+      audioData,
+      (buffer) => {
         myBuffer = buffer;
         source.buffer = myBuffer;
         source.playbackRate.value = playbackControl.value;
@@ -63,9 +66,9 @@ function getData() {
         source.loop = true;
       },
 
-      (e) => console.error(`Error with decoding audio data: ${e.err}`));
-
-  }
+      (e) => console.error(`Error with decoding audio data: ${e.err}`)
+    );
+  };
 
   request.send();
 }
@@ -75,9 +78,9 @@ function getData() {
 play.onclick = () => {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-  playbackControl.removeAttribute('disabled');
-}
+  play.setAttribute("disabled", "disabled");
+  playbackControl.removeAttribute("disabled");
+};
 ```
 
 ## Specifications

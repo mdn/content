@@ -13,6 +13,7 @@ tags:
   - lowerBound
 browser-compat: api.IDBKeyRange.lowerBound
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`lowerBound()`** method of the
@@ -23,7 +24,7 @@ By default, it includes the lower endpoint value and is closed.
 
 ## Syntax
 
-```js
+```js-nolint
 lowerBound(lower)
 lowerBound(lower, open)
 ```
@@ -58,7 +59,7 @@ the key value "F" and all that come after it. If we used
 only the values after it.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbkeyrange) repo
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo
 > ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js

@@ -8,9 +8,11 @@ tags:
   - Reference
   - role
   - ElementInternals
+  - Experimental
 browser-compat: api.ElementInternals.role
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`role`** read-only property of the {{domxref("ElementInternals")}} interface returns the [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles) for the element. For example, a checkbox might have [`role="checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 

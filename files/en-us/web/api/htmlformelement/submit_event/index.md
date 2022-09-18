@@ -1,5 +1,5 @@
 ---
-title: 'HTMLFormElement: submit event'
+title: "HTMLFormElement: submit event"
 slug: Web/API/HTMLFormElement/submit_event
 page-type: web-api-event
 tags:
@@ -12,6 +12,7 @@ tags:
   - submit
 browser-compat: api.HTMLFormElement.submit_event
 ---
+
 {{APIRef}}
 
 The **`submit`** event fires when a {{HtmlElement("form")}} is submitted.
@@ -34,7 +35,7 @@ onsubmit = (event) => { };
 
 ## Event type
 
-An {{domxref("SubmitEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SubmitEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SubmitEvent")}}
 
@@ -53,8 +54,8 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text"></label>
-  <br><br>
+  <label>Test field: <input type="text" /></label>
+  <br /><br />
   <button type="submit">Submit form</button>
 </form>
 <p id="log"></p>

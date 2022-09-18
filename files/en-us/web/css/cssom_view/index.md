@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.properties.scroll-behavior
 ---
+
 {{CSSRef}}
 
 **CSSOM View** is a module of CSS that lets you manipulate the visual view of a document, in particular its scrolling behavior.

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Event
 ---
+
 {{APIRef("DOM")}}
 
 The **`Event`** interface represents an event which takes place in the DOM.
@@ -42,6 +43,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("ErrorEvent")}}
 - {{domxref("FetchEvent")}}
 - {{domxref("FocusEvent")}}
+- {{domxref("FontFaceSetLoadEvent")}}
 - {{domxref("FormDataEvent")}}
 - {{domxref("GamepadEvent")}}
 - {{domxref("HashChangeEvent")}}
@@ -80,40 +82,40 @@ Note that all event interfaces have names which end in "Event".
 
 ## Properties
 
-- {{domxref("Event.bubbles")}} {{readonlyinline}}
+- {{domxref("Event.bubbles")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether or not the event bubbles up through the DOM.
-- {{domxref("Event.cancelable")}} {{readonlyinline}}
+- {{domxref("Event.cancelable")}} {{ReadOnlyInline}}
   - : A boolean value indicating whether the event is cancelable.
-- {{domxref("Event.composed")}} {{readonlyinline}}
+- {{domxref("Event.composed")}} {{ReadOnlyInline}}
   - : A boolean indicating whether or not the event can bubble across the boundary between the shadow DOM and the regular DOM.
-- {{domxref("Event.currentTarget")}} {{readonlyinline}}
+- {{domxref("Event.currentTarget")}} {{ReadOnlyInline}}
   - : A reference to the currently registered target for the event. This is the object to which the event is currently slated to be sent. It's possible this has been changed along the way through _retargeting_.
-- {{domxref("Event.defaultPrevented")}} {{readonlyinline}}
+- {{domxref("Event.defaultPrevented")}} {{ReadOnlyInline}}
   - : Indicates whether or not the call to {{domxref("event.preventDefault()")}} canceled the event.
-- {{domxref("Event.eventPhase")}} {{readonlyinline}}
+- {{domxref("Event.eventPhase")}} {{ReadOnlyInline}}
   - : Indicates which phase of the event flow is being processed. It is one of the following numbers: `NONE`, `CAPTURING_PHASE`, `AT_TARGET`, `BUBBLING_PHASE`.
-- {{domxref("Event.isTrusted")}} {{readonlyinline}}
+- {{domxref("Event.isTrusted")}} {{ReadOnlyInline}}
   - : Indicates whether or not the event was initiated by the browser (after a user click, for instance) or by a script (using an event creation method, for example).
-- {{domxref("Event.target")}} {{readonlyinline}}
+- {{domxref("Event.target")}} {{ReadOnlyInline}}
   - : A reference to the object to which the event was originally dispatched.
-- {{domxref("Event.timeStamp")}} {{readonlyinline}}
+- {{domxref("Event.timeStamp")}} {{ReadOnlyInline}}
   - : The time at which the event was created (in milliseconds). By specification, this value is time since epoch—but in reality, browsers' definitions vary. In addition, work is underway to change this to be a {{domxref("DOMHighResTimeStamp")}} instead.
-- {{domxref("Event.type")}} {{readonlyinline}}
+- {{domxref("Event.type")}} {{ReadOnlyInline}}
   - : The case-insensitive name identifying the type of the event.
 
 ### Legacy and non-standard properties
 
 - {{domxref("Event.cancelBubble")}} {{deprecated_inline}}
   - : A historical alias to {{domxref("Event.stopPropagation()")}} that should be used instead. Setting its value to `true` before returning from an event handler prevents propagation of the event.
-- {{domxref("Event.explicitOriginalTarget")}} {{non-standard_inline}} {{readonlyinline}}
+- {{domxref("Event.explicitOriginalTarget")}} {{non-standard_inline}} {{ReadOnlyInline}}
   - : The explicit original target of the event.
-- {{domxref("Event.originalTarget")}} {{non-standard_inline}} {{readonlyinline}}
+- {{domxref("Event.originalTarget")}} {{non-standard_inline}} {{ReadOnlyInline}}
   - : The original target of the event, before any retargetings.
 - {{domxref("Event.returnValue")}} {{deprecated_inline}}
   - : A historical property still supported in order to ensure existing sites continue to work. Use {{domxref("Event.preventDefault()")}} and {{domxref("Event.defaultPrevented")}} instead.
-- {{domxref("Event.composed", "Event.scoped")}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref("Event.composed", "Event.scoped")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A boolean value indicating whether the given event will bubble across through the shadow root into the standard DOM. Use {{domxref("Event.composed", "composed")}} instead.
-- {{domxref("Event.srcElement")}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxref("Event.srcElement")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : An alias (from old versions of Microsoft Internet Explorer) for {{domxref("Event.target")}}. Use {{domxref("Event.target")}} instead.
 
 ## Methods

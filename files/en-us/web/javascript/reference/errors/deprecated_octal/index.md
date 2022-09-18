@@ -7,6 +7,7 @@ tags:
   - Strict Mode
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "0-prefixed octal literals and octal escape sequences are
@@ -32,7 +33,7 @@ SyntaxError: The only valid numeric escape in strict mode is '\0' (Safari)
 ## What went wrong?
 
 Octal literals and octal escape sequences are deprecated and will throw a
-{{jsxref("SyntaxError")}} in strict mode. With ECMAScript 2015 and later, the
+{{jsxref("SyntaxError")}} in strict mode. The
 standardized syntax uses a leading zero followed by a lowercase or uppercase Latin
 letter "O" (`0o` or `0O`).
 

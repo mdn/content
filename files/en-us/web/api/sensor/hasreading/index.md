@@ -13,6 +13,7 @@ tags:
   - hasReading
 browser-compat: api.Sensor.hasReading
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`hasReading`** read-only

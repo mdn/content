@@ -19,6 +19,7 @@ tags:
   - iceconnectionstatechange
 browser-compat: api.RTCPeerConnection.iceconnectionstatechange_event
 ---
+
 {{APIRef("WebRTC")}}
 
 An **`iceconnectionstatechange`** event is sent to an {{domxref("RTCPeerConnection")}} object each time the {{Glossary("ICE")}} connection state changes during the negotiation process.

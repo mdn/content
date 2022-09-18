@@ -17,6 +17,7 @@ tags:
   - sound
 browser-compat: api.AudioWorkletGlobalScope
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioWorkletGlobalScope`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) represents a global execution context for user-supplied code, which defines custom {{domxref("AudioWorkletProcessor")}}-derived classes.
@@ -29,11 +30,11 @@ As the global execution context is shared across the current `BaseAudioContext`,
 
 ## Properties
 
-- {{domxref("AudioWorkletGlobalScope.currentFrame", "currentFrame")}} {{readonlyinline}}
+- {{domxref("AudioWorkletGlobalScope.currentFrame", "currentFrame")}} {{ReadOnlyInline}}
   - : Returns an integer that represents the ever-increasing current sample-frame of the audio block being processed. It is incremented by 128 (the size of a render quantum) after the processing of each audio block.
-- {{domxref("AudioWorkletGlobalScope.currentTime", "currentTime")}} {{readonlyinline}}
+- {{domxref("AudioWorkletGlobalScope.currentTime", "currentTime")}} {{ReadOnlyInline}}
   - : Returns a double that represents the ever-increasing context time of the audio block being processed. It is equal to the {{domxref("BaseAudioContext.currentTime", "currentTime")}} property of the {{domxref("BaseAudioContext")}} the worklet belongs to.
-- {{domxref("AudioWorkletGlobalScope.sampleRate", "sampleRate")}} {{readonlyinline}}
+- {{domxref("AudioWorkletGlobalScope.sampleRate", "sampleRate")}} {{ReadOnlyInline}}
   - : Returns a float that represents the sample rate of the associated {{domxref("BaseAudioContext")}}.
 
 ## Methods

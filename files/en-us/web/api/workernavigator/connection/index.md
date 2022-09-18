@@ -5,13 +5,13 @@ page-type: web-api-instance-property
 tags:
   - API
   - Connection
-  - Experimental
   - Property
   - Reference
   - WorkerNavigator
 browser-compat: api.WorkerNavigator.connection
 ---
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+
+{{APIRef("Network Information API")}}
 
 The **`WorkerNavigator.connection`** read-only property returns
 a {{domxref("NetworkInformation")}} object containing information about the system's

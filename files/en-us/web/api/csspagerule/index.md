@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSPageRule
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSPageRule`** represents a single CSS {{cssxref("@page")}} rule.
@@ -21,7 +22,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
 - {{domxref("CSSPageRule.selectorText")}}
   - : Represents the text of the page selector associated with the at-rule.
-- {{domxref("CSSPageRule.style")}} {{readonlyinline}}
+- {{domxref("CSSPageRule.style")}} {{ReadOnlyInline}}
   - : Returns the [declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block) associated with the at-rule.
 
 ## Methods

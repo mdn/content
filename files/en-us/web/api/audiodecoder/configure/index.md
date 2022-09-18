@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.AudioDecoder.configure
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 
@@ -54,7 +55,11 @@ None ({{jsxref("undefined")}}).
 The following example configures the `AudioDecoder` with the `opus` codec.
 
 ```js
-AudioDecoder.configure({ codec: 'opus', sampleRate: 44100, numberOfChannels: 2 });
+AudioDecoder.configure({
+  codec: "opus",
+  sampleRate: 44100,
+  numberOfChannels: 2,
+});
 ```
 
 ## Specifications

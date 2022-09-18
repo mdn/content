@@ -21,6 +21,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackSupportedConstraints.displaySurface
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`displaySurface`** property indicates whether or not the {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is supported by the user agent and the device on which the content is being used.
@@ -54,7 +55,7 @@ async function capture() {
 
   try {
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }

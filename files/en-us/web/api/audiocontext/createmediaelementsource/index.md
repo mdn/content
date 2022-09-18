@@ -11,6 +11,7 @@ tags:
   - createMediaElementSource
 browser-compat: api.AudioContext.createMediaElementSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createMediaElementSource()` method of the {{ domxref("AudioContext") }} Interface is used to create a new {{ domxref("MediaElementAudioSourceNode") }} object, given an existing HTML {{htmlelement("audio")}} or {{htmlelement("video")}} element, the audio from which can then be played and manipulated.
@@ -19,7 +20,7 @@ For more details about media element audio source nodes, check out the {{ domxre
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaElementSource(myMediaElement)
 ```
 
@@ -40,7 +41,7 @@ This simple example creates a source from an {{htmlelement("audio") }} element u
 
 ```js
 const audioCtx = new AudioContext();
-const myAudio = document.querySelector('audio');
+const myAudio = document.querySelector("audio");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
@@ -51,21 +52,19 @@ const gainNode = audioCtx.createGain();
 
 // Create variables to store mouse pointer Y coordinate
 // and HEIGHT of screen
-let CurY;
+let curY;
 const HEIGHT = window.innerHeight;
 
 // Get new mouse pointer coordinates when mouse is moved
 // then set new gain value
-
 document.onmousemove = updatePage;
 
 function updatePage(e) {
-    CurY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-
-    gainNode.gain.value = CurY/HEIGHT;
+  curY = e.pageY;
+  gainNode.gain.value = curY / HEIGHT;
 }
 
-// connect the AudioBufferSourceNode to the gainNode
+// Connect the AudioBufferSourceNode to the gainNode
 // and the gainNode to the destination, so we can play the
 // music and adjust the volume using the mouse cursor
 source.connect(gainNode);

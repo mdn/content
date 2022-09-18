@@ -6,9 +6,11 @@ tags:
   - NDEF
   - Reference
   - Web NFC
+  - Experimental
 browser-compat: api.NDEFReader
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`NDEFReader`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) is used to read from and write data to compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.
 
@@ -68,8 +70,8 @@ function write(data) {
 await ndef.scan();
 try {
   await write("Hello World");
-  console.log("We wrote to a tag!")
-} catch(err) {
+  console.log("We wrote to a tag!");
+} catch (err) {
   console.error("Something went wrong", err);
 }
 ```

@@ -4,7 +4,6 @@ slug: Web/API/HMDVRDevice/getEyeParameters
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HMDVRDevice
   - Method
   - Reference
@@ -12,9 +11,11 @@ tags:
   - Virtual Reality
   - WebVR
   - Deprecated
+  - Non-standard
 browser-compat: api.HMDVRDevice.getEyeParameters
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+
+{{deprecated_header}}{{APIRef("WebVR API")}}{{Non-standard_header}}
 
 The **`getEyeParameters()`** method of the {{domxref("HMDVRDevice")}} interface returns current parameters for the eye specified as its argument ("left" or "right") — stored in a {{domxref("VREyeParameters")}} object.
 
@@ -22,7 +23,7 @@ This includes field of view information, and more.
 
 ## Syntax
 
-```js
+```js-nolint
 getEyeParameters(whichEye)
 ```
 

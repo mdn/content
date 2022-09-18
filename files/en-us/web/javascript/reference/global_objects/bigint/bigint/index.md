@@ -8,41 +8,38 @@ tags:
   - Reference
 browser-compat: javascript.builtins.BigInt.BigInt
 ---
+
 {{JSRef}}
 
-The **`BigInt()`** constructor returns a value of type
-**bigint**.
+The **`BigInt()`** function returns a value of type **bigint**.
 
 ## Syntax
 
-```js
-BigInt(value);
+```js-nolint
+BigInt(value)
 ```
+
+> **Note:** `BigInt()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
 - `value`
   - : The numeric value of the object being created. It may be a string, an integer, a boolean, or another `BigInt`.
 
-> **Note:** `BigInt()` is not used with the
-> {{JSxRef("Operators/new", "new")}} operator.
+### Return value
+
+A {{jsxref("BigInt")}} value. Number values must be integers and are converted to BigInts. The boolean value `true` becomes `1n`, and `false` becomes `0n`. Strings are parsed as if they are source text for integer literals, which means they can have leading and trailing whitespaces and can be prefixed with `0b`, `0o`, or `0x`.
 
 ### Exceptions
 
-- {{jsxref("RangeError")}}:
+- {{jsxref("RangeError")}}
   - : Thrown if the parameter is a non-integral number.
-
-- {{jsxref("TypeError")}}:
+- {{jsxref("TypeError")}}
   - : Thrown if at least one of these conditions is met:
     - The parameter cannot be converted to a primitive.
     - After conversion to a primitive, the result is {{jsxref("undefined")}}, {{jsxref("Operators/null", "null")}}, {{jsxref("symbol")}}.
-
-- {{jsxref("SyntaxError")}}:
+- {{jsxref("SyntaxError")}}
   - : Thrown if the parameter is a string that cannot be parsed as a `BigInt`.
-
-## Description
-
-The `BigInt` constructor converts its input to a BigInt value. Number values must be integers. `true` becomes `1n`, and `false` becomes `0n`. Strings are parsed as if they are source text for integer literals, which means they can have leading and trailing whitespaces, and can be prefixed with `0b`, `0o`, or `0x`.
 
 ## Examples
 

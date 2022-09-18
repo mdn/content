@@ -9,6 +9,7 @@ tags:
   - aria-colindextext
 spec-urls: https://w3c.github.io/aria/#aria-colindextext
 ---
+
 The `aria-colindextext` attribute defines a human readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex).
 
 ## Description
@@ -37,9 +38,21 @@ This table is not very complex. Had this been a 100+ column spreadsheet or a gri
 <table aria-colcount="128">
   <thead>
     <tr>
-      <th aria-colindex="1" aria-colindextext="NYSE stock symbol" scope="col">NYSE</th>
-      <th aria-colindex="110" aria-colindextext="Value at start of 2021" scope="col">01/21</th>
-      <th aria-colindex="122" aria-colindextext="Value at start of 2022" scope="col">01/22</th>
+      <th aria-colindex="1" aria-colindextext="NYSE stock symbol" scope="col">
+        NYSE
+      </th>
+      <th
+        aria-colindex="110"
+        aria-colindextext="Value at start of 2021"
+        scope="col">
+        01/21
+      </th>
+      <th
+        aria-colindex="122"
+        aria-colindextext="Value at start of 2022"
+        scope="col">
+        01/22
+      </th>
       <th aria-colindex="124" scope="col">Recommendation</th>
     </tr>
   </thead>

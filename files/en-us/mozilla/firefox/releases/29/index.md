@@ -5,6 +5,7 @@ tags:
   - firefox developers
   - firefox29
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 29 was released on April 29, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -31,17 +32,17 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 - Flexboxes now support {{cssxref("visibility")}}`: collapse` ({{bug(783470)}}).
 - The {{cssxref("box-sizing")}} property has been unprefixed ({{bug(243412)}}).
 - The {{cssxref("will-change")}} property, a hint to that something will animate has been added. The preference `layout.css.will-change.enabled` must be switched to `true` to enable it. ({{bug(940842)}})
-- Scientific exponential notation, like `3e1` or `10e+0`, is now supported for {{cssxref("&lt;number&gt;")}} values and derivatives, like {{cssxref("&lt;percentage&gt;")}} and unit values, but not {{cssxref("&lt;integer&gt;")}}  ({{bug(964529)}}).
+- Scientific exponential notation, like `3e1` or `10e+0`, is now supported for {{cssxref("&lt;number&gt;")}} values and derivatives, like {{cssxref("&lt;percentage&gt;")}} and unit values, but not {{cssxref("&lt;integer&gt;")}} ({{bug(964529)}}).
 - Images of type {{cssxref("&lt;gradient&gt;")}} are now supported in {{cssxref("border-image")}} ({{bug(709587)}}).
 - The {{cssxref("touch-action")}} property has been implemented. It is not activated by default; the `layout.css.touch_action.enabled` pref controls it. ({{bug(795567)}})
 - Remove redundant default style for \<pre> element from quirk.css ({{bug(948914)}}).
-- CSS Variables fallback incorrectly implemented (primary cycles)  ({{bug(950497)}}).
+- CSS Variables fallback incorrectly implemented (primary cycles) ({{bug(950497)}}).
 - @supports conditions with tokens after a declaration's priority should evaluate to false ({{bug(909170)}}).
 
 ### HTML
 
 - `<input type=color>` and `<input type=number>` are available by default.
-- Support for the non standard `<pre cols>` has been removed, as well as the layout effect of `<pre wrap>` . Both effects can, and should, be achieved using CSS. ({{bug("949879")}})
+- Support for the non standard `<pre cols>` has been removed, as well as the layout effect of `<pre wrap>`. Both effects can, and should, be achieved using CSS. ({{bug("949879")}})
 
 ### JavaScript
 

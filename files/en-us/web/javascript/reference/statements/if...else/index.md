@@ -10,6 +10,7 @@ tags:
   - if
 browser-compat: javascript.statements.if_else
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`if`** statement executes a statement if a specified condition is {{Glossary("truthy")}}. If the condition is {{Glossary("falsy")}}, another statement in the optional `else` clause will be executed.
@@ -18,7 +19,7 @@ The **`if`** statement executes a statement if a specified condition is {{Glossa
 
 ## Syntax
 
-```js
+```js-nolint
 if (condition)
   statement1
 
@@ -128,10 +129,10 @@ if (b) // this condition is truthy
 
 ```js
 if (cipherChar === fromChar) {
-  result = result + toChar;
+  result += toChar;
   x++;
 } else {
-  result = result + clearChar;
+  result += clearChar;
 }
 ```
 
