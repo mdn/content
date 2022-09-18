@@ -39,7 +39,7 @@ The runtime is intended for use outside of a browser context (i.e. running direc
 
 From a web server development perspective Node has a number of benefits:
 
-- Great performance! Node was designed to optimize throughput and scalability in web applications and is a good solution for many common web-development problems (e.g. real-time web applications).
+- Great performance! Node was designed to optimize throughout and scalability in web applications and is a good solution for many common web-development problems (e.g. real-time web applications).
 - Code is written in "plain old JavaScript", which means that less time is spent dealing with "context shift" between languages when you're writing both client-side and server-side code.
 - JavaScript is a relatively new programming language and benefits from improvements in language design when compared to other traditional web-server languages (e.g. Python, PHP, etc.) Many other new and popular languages compile/convert into JavaScript so you can also use TypeScript, CoffeeScript, ClojureScript, Scala, LiveScript, etc.
 - The node package manager (npm) provides access to hundreds of thousands of reusable packages. It also has best-in-class dependency resolution and can also be used to automate most of the build toolchain.
