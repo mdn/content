@@ -193,7 +193,7 @@ private keys, as well as AES and HMAC secret keys.
 JSON Web Key format is defined in [RFC 7517](https://datatracker.ietf.org/doc/html/rfc7517).
 It describes a way to represent public, private, and secret keys as JSON objects.
 
-A JSON Web Key looks something like this (this is an EC private key):
+A JSON Web Key looks something like this (it is an EC private key):
 
 ```json
 {
