@@ -45,7 +45,7 @@ There's one last essential concept about functions for us to discuss — return 
 
 ## What are return values?
 
-**Return values** are just what they sound like — the values that a function returns when it has been completed. You've already met return values several times, although you may not have thought about them explicitly.
+**Return values** are just what they sound like — the values that a function returns when it completes. You've already met return values several times, although you may not have thought about them explicitly.
 
 Let's return to a familiar example (from a [previous article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#built-in_browser_functions) in this series):
 
