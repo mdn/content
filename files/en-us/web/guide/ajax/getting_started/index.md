@@ -31,7 +31,7 @@ To make an [HTTP](/en-US/docs/Web/HTTP) request to the server with JavaScript, y
 const httpRequest = new XMLHttpRequest();
 ```
 
-After making a request, you will receive a response back. At this stage, you need to tell the `XMLHttpRequest` object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object and naming it after the function to call when the request changes state, like this:
+After making a request, you will receive a response back. At this stage, you need to tell the `XMLHttpRequest` object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object to the function called when the request changes state, like this:
 
 ```js
 httpRequest.onreadystatechange = () => {
