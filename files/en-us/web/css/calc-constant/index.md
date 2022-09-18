@@ -14,13 +14,13 @@ browser-compat: css.types.calc-constant
 {{CSSRef}}
 
 The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a well-known constants, such as `e` and `π`.
-  
+
 Rather than require authors to manually type out several digits of these constants, a few of them are provided directly by CSS.
 
-* `e` is the base of the natural logarithm, approximately equal to `2.7182818284590452354`.
-* `pi` is the ratio of a circle’s circumference to its diameter, approximately equal to `3.1415926535897932`.
-  
-> Note: These keywords are only usable within a calculation, such as `calc(pow(e, pi) - pi)`, or `min(pi, 5, e)`. If used outside of a calculation, they’re treated like any other keyword: `animation-name: pi`; refers to an animation named "pi"; `line-height: e`; is invalid (not similar to `line-height: 2.7`, but `line-height: calc(e);` is).
+- `e` is the base of the natural logarithm, approximately equal to `2.7182818284590452354`.
+- `pi` is the ratio of a circle's circumference to its diameter, approximately equal to `3.1415926535897932`.
+
+> Note: These keywords are only usable within a calculation, such as `calc(pow(e, pi) - pi)`, or `min(pi, 5, e)`. If used outside of a calculation, they're treated like any other keyword: `animation-name: pi`; refers to an animation named "pi"; `line-height: e`; is invalid (not similar to `line-height: 2.7`, but `line-height: calc(e);` is).
 
 When a calculation or a subtree of a calculation becomes infinite or NaN, representing it with a numeric value is no longer possible. To aid in serialization of these degenerate values, the additional math constants `infinity` (with the value `+∞`), `-infinity` (with the value `−∞`), and `NaN` (with the value `NaN`) are defined.
 
