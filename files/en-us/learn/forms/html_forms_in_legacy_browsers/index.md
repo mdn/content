@@ -138,10 +138,11 @@ Before styling a replaced form control widget, you can check to see if the brows
 
 ```css
 @supports (appearance: none) {
- input[type="search"] {
-   appearance: none;
-   /* restyle the search input */
- }
+  input[type="search"] {
+    appearance: none;
+    /* restyle the search input */
+  }
+}
 ```
 
 The {{cssxref('appearance')}} property can be used to display an element using platform-native styling, or, as is done with the value of `none`, remove default platform-native based styling.

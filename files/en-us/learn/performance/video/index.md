@@ -45,7 +45,14 @@ For the average website, [25% of bandwidth comes from video](https://discuss.htt
 
 ## Optimizing video delivery
 
-It's best to [compress all video](#compress), [optimize `<source>` order](#omptimize), set [autoplay](/en-US/docs/Learn/Performance/Multimedia#video_autoplay), [remove audio from muted video](#muted), [optimize video preload](/en-US/docs/Learn/Performance/Multimedia#video_preload), and [consider streaming](/en-US/docs/Learn/Performance/Multimedia#consider_streaming) the video. The sections below describe each of these optimization techniques.
+The sections below describe the following optimization techniques:
+
+- [compress all video](#compress_all_videos)
+- [optimize `<source>` order](#optimize_source_order)
+- [set autoplay](#video_autoplay)
+- [remove audio from muted video](#remove_audio_from_muted_hero_videos)
+- [optimize video preload](#video_preload)
+- [consider streaming](#consider_streaming)
 
 ### Compress all videos
 

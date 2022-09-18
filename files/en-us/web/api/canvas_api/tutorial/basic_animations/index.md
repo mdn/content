@@ -320,7 +320,7 @@ function draw() {
   }
 
   // Draw image
-  ctx.drawImage(img, x, y,imgW, imgH);
+  ctx.drawImage(img, x, y, imgW, imgH);
 
   // Amount to move
   x += dx;

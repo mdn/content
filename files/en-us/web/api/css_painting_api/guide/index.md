@@ -552,7 +552,7 @@ li {
 
 li:nth-of-type(3n) {
    --boxColor: hsla(255, 90%, 60%, 0.5);
-   background-image: paint(hollowHighlights, filled,  3px);
+   background-image: paint(hollowHighlights, filled, 3px);
 }
 
 li:nth-of-type(3n+1) {
