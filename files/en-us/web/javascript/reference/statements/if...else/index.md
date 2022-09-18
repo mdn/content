@@ -31,7 +31,7 @@ else
 ```
 
 - `condition`
-  - : An [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions) that is considered to be either {{Glossary("truthy")}} or {{Glossary("falsy")}}.
+  - : An expression that is considered to be either {{Glossary("truthy")}} or {{Glossary("falsy")}}.
 - `statement1`
   - : Statement that is executed if _condition_ is {{Glossary("truthy")}}. Can be any statement, including further nested `if` statements. To execute multiple statements, use a [block](/en-US/docs/Web/JavaScript/Reference/Statements/block) statement (`{ /* ... */ }`) to group those statements. To execute no statements, use an [empty](/en-US/docs/Web/JavaScript/Reference/Statements/Empty) statement.
 - `statement2`

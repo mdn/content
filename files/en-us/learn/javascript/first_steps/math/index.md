@@ -251,7 +251,7 @@ If you want to override operator precedence, you can put parentheses around the 
 
 Try it and see.
 
-> **Note:** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#operator_precedence).
+> **Note:** A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
 ## Increment and decrement operators
 
