@@ -36,7 +36,7 @@ namedItem(str)
 
 ### Return value
 
-- `item` is a {{domxref("RadioNodeList")}} , {{domxref("Element")}}, or
+- `item` is a {{domxref("RadioNodeList")}}, {{domxref("Element")}}, or
   [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
