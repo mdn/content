@@ -178,6 +178,9 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 - {{htmlattrdef("value")}}
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `radio`: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
+- {{htmlattrdef("required")}}
+  - : The `required` attribute is one which most {{HTMLElement("input")}}s share. If any radio button in a same named group of radio buttons has the required attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute is applied.
+
 ## Using radio inputs
 
 We already covered the fundamentals of radio buttons above. Let's now look at the other common radio-button-related features and techniques you may need to know about.
