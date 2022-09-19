@@ -639,7 +639,7 @@ See {{bug(1774589)}} for more details.
 
 ### @font-face src feature checking checking
 
-The `@font-face` [`src` descriptor](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src) now supports the `tech()` function, allowing fallback of whether a font resource is downloaded based on whether the user-agent supports a particular font feature or technology.
+The `@font-face` [`src` descriptor](/en-US/docs/Web/CSS/@font-face/src) now supports the `tech()` function, allowing fallback of whether a font resource is downloaded based on whether the user-agent supports a particular font feature or technology.
 See {{bug(1715546)}} for more details.
 
 <table>
