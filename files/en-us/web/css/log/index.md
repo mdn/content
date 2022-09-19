@@ -26,9 +26,9 @@ In CSS, when a single parameter is passed, the natural logarithm `e`, or approxi
 
 ```css
 /* A <number> value */
-width: calc(100px * log(7.389));  /* 100px * logE(7.389) = 100px * 2 = 200px */
-width: calc(100px * log(8, 2));   /* 100px * log2(8) =     100px * 3 = 300px */
-width: calc(100px * log(625, 5)); /* 100px * log5(625) =   100px * 4 = 400px */
+width: calc(100px * log(7.389));  /* 200px */
+width: calc(100px * log(8, 2));   /* 300px */
+width: calc(100px * log(625, 5)); /* 400px */
 ```
 
 ### Parameters
