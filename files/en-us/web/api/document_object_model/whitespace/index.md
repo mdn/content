@@ -73,7 +73,7 @@ Most whitespace characters are ignored, not all of them are. In the earlier exam
 
 #### Example
 
-Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:
+Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥, and all line breaks with ⏎:
 
 This example:
 

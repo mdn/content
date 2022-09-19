@@ -56,7 +56,7 @@ The `alert` function takes a single argument — the string that is displayed in
 
 The `alert` function is limited: you can alter the message, but you can't easily vary anything else, such as the color, icon, or anything else. We'll build one that will prove to be more fun.
 
-> **Note:** This example should work in all modern browsers fine, but the styling might look a bit funny in slightly older browsers. We'd recommend you doing this exercise in a modern browser like Firefox, Opera, or Chrome.
+> **Note:** This example should work in all modern browsers fine, but the styling might look a bit funny in slightly older browsers. We'd recommend you do this exercise in a modern browser like Firefox, Opera, or Chrome.
 
 ## The basic function
 
@@ -129,7 +129,7 @@ panel.appendChild(closeBtn);
 
 Finally, we call {{domxref("EventTarget/addEventListener", "addEventListener()")}} to add a function that will be called when the user clicks the "close" button. The code will delete the whole panel from the page — to close the message box.
 
-Briefly, the `addEventListener()` method is provided by the button (or in fact, any element on the page) that can be passed a function and the name of an event. In this case the name of the event is 'click', meaning that when the user clicks the button, the function will be run. You'll learn a lot more about events in our [events article](/en-US/docs/Learn/JavaScript/Building_blocks/Events). The line inside the function uses the {{domxref("Node.removeChild()")}} DOM API function to specify that we want to remove a specific child element of the HTML element — in this case the panel `<div>`.
+Briefly, the `addEventListener()` method is provided by the button (or in fact, any element on the page) that can be passed a function and the name of an event. In this case, the name of the event is 'click', meaning that when the user clicks the button, the function will run. You'll learn a lot more about events in our [events article](/en-US/docs/Learn/JavaScript/Building_blocks/Events). The line inside the function uses the {{domxref("Node.removeChild()")}} DOM API function to specify that we want to remove a specific child element of the HTML element — in this case, the panel `<div>`.
 
 ```js
 closeBtn.addEventListener('click', () => panel.parentNode.removeChild(panel));
@@ -300,11 +300,11 @@ On to the next parameter. This one is going to involve slightly more work — we
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions). These tests require skills that are covered in the next article, so you might want to read those first before trying it.
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Functions](/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions). These tests require skills that are covered in the next article, so you might want to read that first before trying the test.
 
 ## Conclusion
 
-Congratulations on reaching the end! This article took you through the entire process of building up a practical custom function, which with a bit more work could be transplanted into a real project. In the next article we'll wrap up functions by explaining another essential related concept — return values.
+Congratulations on reaching the end! This article took you through the entire process of building up a practical custom function, which with a bit more work could be transplanted into a real project. In the next article, we'll wrap up functions by explaining another essential related concept — return values.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
