@@ -110,7 +110,7 @@ let myAge;
 
 Here we're creating two variables called `myName` and `myAge`. Try typing these lines into your web browser's console. After that, try creating a variable (or two) with your own name choices.
 
-> **Note:** In JavaScript, all code instructions should end with a semi-colon (`;`) — your code may work correctly for single lines, but probably won't when you are writing multiple lines of code together. Try to get into the habit of including it.
+> **Note:** In JavaScript, semicolons are implicitly inserted automatically. You may explicitly insert them manually but it's not required. If you decide to omit explicitly semicolons insertions, have in mind that in some rare cases JavaScript can execute your code differently than if you would put semicolons explicitly. This usually happens when the line of code starts from `[` or `(`.
 
 You can test whether these values now exist in the execution environment by typing just the variable's name, e.g.
 
