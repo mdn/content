@@ -108,7 +108,7 @@ fn(10, 20).then((v) => {
 
 ## See also
 
-- {{jsxref("Statements/async_function", "async function function", "", 1)}}
+- {{jsxref("Statements/async_function", "async function", "", 1)}}
 - {{jsxref("Operators/async_function", "async function expression", "", 1)}}
 - {{jsxref("Global_Objects/Function", "Function")}}
 - {{jsxref("Statements/function", "function statement", "", 1)}}
