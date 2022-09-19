@@ -199,7 +199,7 @@ First, we use an `onconnect` handler to fire code when a connection to the port 
 
 We use the `ports` attribute of this event object to grab the port and store it in a variable.
 
-Next, we add a `message` handler on the port to do the calculation and return the result to the main thread. Setting up this `message` handler in the worker thread also implicitly opens the port connection back to the parent thread, so the call to `port.start()` is not actually needed, as noted above.
+Next, we add an `onmessage` handler on the port to do the calculation and return the result to the main thread. Setting up this `onmessage` handler in the worker thread also implicitly opens the port connection back to the parent thread, so the call to `port.start()` is not actually needed, as noted above.
 
 Finally, back in the main script, we deal with the message (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/square.js)):
 

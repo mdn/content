@@ -84,7 +84,7 @@ If the number in the _ID_ columns of competing selectors is the same, then the n
 
 ```css
 #myElement {
-  color: yellow; /* 1-0-0  */
+  color: yellow; /* 1-0-0 */
 }
 #myApp [id="myElement"] {
   color: green; /* 1-1-0  - WINS!! */
@@ -111,7 +111,7 @@ input.myClass {
   color: yellow; /* 0-1-1 */
 }
 :root input {
-  color: green; /* 0-1-1  WINS because it comes later */
+  color: green; /* 0-1-1 WINS because it comes later */
 }
 ```
 

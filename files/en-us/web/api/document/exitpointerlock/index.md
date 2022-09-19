@@ -16,7 +16,7 @@ The **`exitPointerLock()`** method asynchronously releases a
 pointer lock previously requested through {{domxref("Element.requestPointerLock")}}.
 
 To track the success or failure of the request, it is necessary to listen for the
-{{domxref("Document/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} events.
+{{domxref("Element/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Element/pointerlockerror_event", "pointerlockerror")}} events.
 
 ## Syntax
 

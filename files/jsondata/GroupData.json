@@ -1026,7 +1026,7 @@
       "interfaces": [],
       "methods": ["Element.requestPointerLock()", "Document.exitPointerLock()"],
       "properties": ["Document.pointerLockElement"],
-      "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
+      "events": ["Element: pointerlockchange", "Element: pointerlockerror"]
     },
     "Presentation API": {
       "overview": ["Presentation API"],

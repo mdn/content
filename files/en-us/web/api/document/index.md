@@ -400,9 +400,9 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
 - {{DOMxRef("Document/pointerleave_event", "pointerleave")}}
   - : Fired when a pointer is moved out of the hit test boundaries of an element.
-- {{DOMxRef("Document/pointerlockchange_event", "pointerlockchange")}}
+- {{DOMxRef("Element/pointerlockchange_event", "pointerlockchange")}}
   - : Fired when the pointer is locked/unlocked.
-- {{DOMxRef("Document/pointerlockerror_event", "pointerlockerror")}}
+- {{DOMxRef("Element/pointerlockerror_event", "pointerlockerror")}}
   - : Fired when locking the pointer failed.
 - {{DOMxRef("Document/pointermove_event", "pointermove")}}
   - : Fired when a pointer changes coordinates.

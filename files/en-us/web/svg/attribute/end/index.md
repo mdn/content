@@ -50,7 +50,44 @@ The `<end-value-list>` is a semicolon-separated list of values. Each value can b
 - `<event-value>`
   - : This value defines an event and an optional offset that determines the time at which the element's animation should end. The animation end time is defined relative to the time that the specified event is fired.
 
-    A valid event-value consists of an element ID followed by a dot and one of the supported events for that element. All valid events (not necessarily supported by all elements) are defined by the DOM and HTML specifications. Those are: {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}, {{domxref("Element/activate_event", "activate")}}, {{domxref("Element/auxclick_event", "auxclick")}}, {{domxref("Element/click_event", "click")}}, {{domxref("Element/dblclick_event", "dblclick")}}, {{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mouseleave_event", "mouseleave")}}, {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/mouseout_event", "mouseout")}}, {{domxref("Element/mouseover_event", "mouseover")}}, {{domxref("Element/mouseup_event", "mouseup")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/beforeinput_event", "beforeinput")}}, {{domxref("Element/input_event", "input")}}, {{domxref("Element/keydown_event", "keydown")}}, {{domxref("Element/keyup_event", "keyup")}}, {{domxref("Element/compositionstart_event", "compositionstart")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}, {{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("SVGElement/load_event", "load")}}, {{domxref("SVGElement/unload_event", "unload")}}, {{domxref("SVGElement/abort_event", "abort")}}, {{domxref("Element/error_event", "error")}}, {{domxref("Element/select_event", "select")}}, {{domxref("Window/resize_event", "resize")}}, {{domxref("Element/scroll_event", "scroll")}}, {{domxref("SVGAnimationElement/beginEvent_event", "beginEvent")}}, {{domxref("SVGAnimationElement/endEvent_event", "endEvent")}}, and {{domxref("SVGAnimationElement/repeatEvent_event", "repeatEvent")}}. An optional offset value as defined in `<offset-value>` can be appended.
+    A valid event-value consists of an element ID followed by a dot and one of the supported events for that element. All valid events (not necessarily supported by all elements) are defined by the DOM and HTML specifications. Those are:
+
+    - {{domxref("Element/focus_event", "focus")}}
+    - {{domxref("Element/blur_event", "blur")}}
+    - {{domxref("Element/focusin_event", "focusin")}}
+    - {{domxref("Element/focusout_event", "focusout")}}
+    - {{domxref("Element/activate_event", "activate")}}
+    - {{domxref("Element/auxclick_event", "auxclick")}}
+    - {{domxref("Element/click_event", "click")}}
+    - {{domxref("Element/dblclick_event", "dblclick")}}
+    - {{domxref("Element/mousedown_event", "mousedown")}}
+    - {{domxref("Element/mouseenter_event", "mouseenter")}}
+    - {{domxref("Element/mouseleave_event", "mouseleave")}}
+    - {{domxref("Element/mousemove_event", "mousemove")}}
+    - {{domxref("Element/mouseout_event", "mouseout")}}
+    - {{domxref("Element/mouseover_event", "mouseover")}}
+    - {{domxref("Element/mouseup_event", "mouseup")}}
+    - {{domxref("Element/wheel_event", "wheel")}}
+    - {{domxref("Element/beforeinput_event", "beforeinput")}}
+    - {{domxref("Element/input_event", "input")}}
+    - {{domxref("Element/keydown_event", "keydown")}}
+    - {{domxref("Element/keyup_event", "keyup")}}
+    - {{domxref("Element/compositionstart_event", "compositionstart")}}
+    - {{domxref("Element/compositionupdate_event", "compositionupdate")}}
+    - {{domxref("Element/compositionend_event", "compositionend")}}
+    - {{domxref("SVGElement/load_event", "load")}}
+    - {{domxref("SVGElement/unload_event", "unload")}}
+    - {{domxref("SVGElement/abort_event", "abort")}}
+    - {{domxref("Element/error_event", "error")}}
+    - {{domxref("Element/select_event", "select")}}
+    - {{domxref("Window/resize_event", "resize")}}
+    - {{domxref("Element/scroll_event", "scroll")}}
+    - {{domxref("SVGAnimationElement/beginEvent_event", "beginEvent")}}
+    - {{domxref("SVGAnimationElement/endEvent_event", "endEvent")}}
+    - {{domxref("SVGAnimationElement/repeatEvent_event", "repeatEvent")}}
+
+    An optional offset value as defined in `<offset-value>` can be appended.
+
 - `<repeat-value>`
   - : This value defines a qualified repeat event. The element animation end time is defined relative to the time that the repeat event is raised with the specified iteration value.
 

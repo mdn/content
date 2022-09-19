@@ -34,6 +34,6 @@ DELETE /idX/delete HTTP/1.1
 
 ## See also
 
-- Definition of [safe](https://datatracker.ietf.org/doc/html/rfc7231#section-4.2.1) in the HTTP specification.
+- Definition of [safe](https://httpwg.org/specs/rfc9110.html#safe.methods) in the HTTP specification.
 - Description of common safe methods: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}}
 - Description of common unsafe methods: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("POST")}}
