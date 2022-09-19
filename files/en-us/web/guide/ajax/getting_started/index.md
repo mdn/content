@@ -191,7 +191,7 @@ function alertContents() {
 
 ## Step 4 – Working with the XML response
 
-In the previous example, after receiving the response to the HTTP request we used the request object's `responseText` property , which contained the contents of the `test.html` file. Now let's try the `responseXML` property.
+In the previous example, after receiving the response to the HTTP request we used the request object's `responseText` property, which contained the contents of the `test.html` file. Now let's try the `responseXML` property.
 
 First off, let's create a valid XML document that we'll request later on. The document (`test.xml`) contains the following:
 
