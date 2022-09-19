@@ -12,7 +12,6 @@ tags:
 
 {{CSSRef}}
 
-
 ## What problem do container queries solve?
 
 When creating [a responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) you often use a media query to change the document layout based on the size of the viewport.
