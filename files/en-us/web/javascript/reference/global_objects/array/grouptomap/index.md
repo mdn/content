@@ -149,7 +149,7 @@ For this reason it is important that anything that needs to use the map keeps a 
 
 ```js
 // The key can be modified and still used
-restock['fast'] = true ;
+restock['fast'] = true;
 console.log(result.get(restock));
 // expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
 
