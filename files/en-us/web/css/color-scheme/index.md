@@ -82,6 +82,7 @@ To opt the entire page into the user's color scheme preferences declare `color-s
 
 ## See also
 
+- [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query to detect user preferences for color schemes.
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
