@@ -1,5 +1,5 @@
 ---
-title: Documentation priority
+title: Documentation priorities
 slug: MDN/Community/Documentation_priorities
 page-type: mdn-community-guide
 tags:
