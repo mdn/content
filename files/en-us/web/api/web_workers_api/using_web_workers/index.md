@@ -763,7 +763,7 @@ The worker sets the property `onmessage` to a function which will receive messag
 </html>
 ```
 
-The web page creates a `<div>` element with the ID `result` , which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<div>` element, and the `onerror` handler is set to log the error message to the devtools console.
+The web page creates a `<div>` element with the ID `result`, which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<div>` element, and the `onerror` handler is set to log the error message to the devtools console.
 
 Finally, a message is sent to the worker to start it.
 
