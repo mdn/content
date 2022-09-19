@@ -41,7 +41,7 @@ This simple example creates a source from an {{htmlelement("audio") }} element u
 
 ```js
 const audioCtx = new AudioContext();
-const myAudio = document.querySelector('audio');
+const myAudio = document.querySelector("audio");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it

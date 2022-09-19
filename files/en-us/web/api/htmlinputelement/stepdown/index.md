@@ -40,7 +40,7 @@ parameter, would have resulted in `16:45`, as `n` defaults to
 `1`.
 
 ```html
-<!--  decrements by intervals of 900 seconds (15 minute) -->
+<!-- decrements by intervals of 900 seconds (15 minute) -->
 <input type="time" max="17:00" step="900" />
 
 <!-- decrements by intervals of 7 days (one week) -->

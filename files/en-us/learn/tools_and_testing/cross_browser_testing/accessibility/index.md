@@ -81,7 +81,8 @@ Semantic HTML (where the elements are used for their correct purpose) is accessi
 The most important quick win in semantic HTML is to use a structure of headings and paragraphs for your content; this is because screen reader users tend to use the headings of a document as signposts to find the content they need more quickly. If your content has no headings, all they will get is a huge wall of text with no signposts to find anything. Examples of bad and good HTML:
 
 ```html example-bad
-<font size="7">My heading</font> <br /><br />
+<font size="7">My heading</font>
+<br /><br />
 This is the first section of my document.
 <br /><br />
 I'll add another paragraph here too.

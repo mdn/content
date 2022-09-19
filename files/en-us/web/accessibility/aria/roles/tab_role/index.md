@@ -163,22 +163,22 @@ To accomplish the first, we listen for the [`keydown`](/en-US/docs/Web/API/Eleme
 To handle changing the active `tab` and `tabpanel`, we have a function that takes in the event, gets the element that triggered the event, the triggering element's parent element, and its grandparent element. We then find all tabs with `aria-selected="true"` inside the parent element and sets it to `false`, then sets the triggering element's `aria-selected` to `true`. After that, we find all `tabpanel` elements in the grandparent element, make them all `hidden`, and finally select the element whose `id` is equal to the triggering `tab`'s `aria-controls` and removes the `hidden` attribute, making it visible.
 
 ```js
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll('[role="tab"]');
   const tabList = document.querySelector('[role="tablist"]');
 
   // Add a click event handler to each tab
   tabs.forEach((tab) => {
-    tab.addEventListener('click', changeTabs);
+    tab.addEventListener("click", changeTabs);
   });
 
   // Enable arrow navigation between tabs in the tab list
   let tabFocus = 0;
 
-  tabList.addEventListener('keydown', (e) => {
+  tabList.addEventListener("keydown", (e) => {
     // Move right
     if (e.keyCode === 39 || e.keyCode === 37) {
-      tabs[tabFocus].setAttribute('tabindex', -1);
+      tabs[tabFocus].setAttribute("tabindex", -1);
       if (e.keyCode === 39) {
         tabFocus++;
         // If we're at the end, go to the start
@@ -194,7 +194,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      tabs[tabFocus].setAttribute('tabindex', 0);
+      tabs[tabFocus].setAttribute("tabindex", 0);
       tabs[tabFocus].focus();
     }
   });
@@ -208,20 +208,20 @@ function changeTabs(e) {
   // Remove all current selected tabs
   parent
     .querySelectorAll('[aria-selected="true"]')
-    .forEach((t) => t.setAttribute('aria-selected', false));
+    .forEach((t) => t.setAttribute("aria-selected", false));
 
   // Set this tab as selected
-  target.setAttribute('aria-selected', true);
+  target.setAttribute("aria-selected", true);
 
   // Hide all tab panels
   grandparent
     .querySelectorAll('[role="tabpanel"]')
-    .forEach((p) => p.setAttribute('hidden', true));
+    .forEach((p) => p.setAttribute("hidden", true));
 
   // Show the selected panel
   grandparent.parentNode
-    .querySelector(`#${target.getAttribute('aria-controls')}`)
-    .removeAttribute('hidden');
+    .querySelector(`#${target.getAttribute("aria-controls")}`)
+    .removeAttribute("hidden");
 }
 ```
 

@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mfrac
 
 {{MathMLRef}}
 
-The MathML `<mfrac>` element is used to display fractions.  It can also be used
+The MathML `<mfrac>` element is used to display fractions. It can also be used
 to mark up fraction-like objects such as
 [binomial coefficients](https://en.wikipedia.org/wiki/Binomial_coefficient)
 and [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol).

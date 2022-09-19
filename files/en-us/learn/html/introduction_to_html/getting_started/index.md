@@ -213,7 +213,7 @@ There is a right and wrong way to do nesting. In the example above, we opened th
 
 The following is an example of the _wrong_ way to do nesting:
 
-```html example-bad
+```html-nolint example-bad
 <p>My cat is <strong>very grumpy.</p></strong>
 ```
 
@@ -454,7 +454,7 @@ If you look at code for a lot of other sites, you might come across a number of 
 
 However, as soon as we add the `title` attribute in this way, there are problems:
 
-```html example-bad
+```html-nolint example-bad
 <a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
 ```
 
@@ -469,14 +469,14 @@ Always include the attribute quotes. It avoids such problems, and results in mor
 In this article you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent:
 
 ```html
-<a href="https://www.example.com">A link to my example.</a>
+<a href='https://www.example.com'>A link to my example.</a>
 
 <a href="https://www.example.com">A link to my example.</a>
 ```
 
 Make sure you don't mix single quotes and double quotes. This example (below) shows a kind of mixing quotes that will go wrong:
 
-```html example-bad
+```html-nolint example-bad
 <a href="https://www.example.com'>A link to my example.</a>
 ```
 
@@ -488,7 +488,7 @@ However, if you use one type of quote, you can include the other type of quote _
 
 To use quote marks inside other quote marks of the same type (single quote or double quote), use [HTML entities](#entity_references_including_special_characters_in_html). For example, this will break:
 
-```html example-bad
+```html-nolint example-bad
 <a href='https://www.example.com' title='Isn't this fun?'>A link to my example.</a>
 ```
 

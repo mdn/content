@@ -108,7 +108,7 @@ Estimate the time and cost of getting these things. If you'll need to work to ea
 
 #### How many hours per week do I need to dedicate?
 
-Once you know what you need to do, and how long you think it'll take you, you can start writing out a plan to follow to achieve your goal. It can be as simple as:
+Once you know what you need to do and how long you think it'll take, you can start writing out a plan to achieve your goal. It can be as simple as:
 
 "It'll take me 500 hours to learn what I need to know, and I have a year to do it. If I assume 2 weeks of holiday, I'll need to do work on this for 10 hours per week. I am free on evenings and weekends, so I'll plan my time around those."
 

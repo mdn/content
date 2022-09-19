@@ -646,7 +646,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
 The above example already shows how to create an app that will store large assets in an IndexedDB database, avoiding the need to download them more than once. This is already a great improvement to the user experience, but there is still one thing missing — the main HTML, CSS, and JavaScript files still need to be downloaded each time the site is accessed, meaning that it won't work when there is no network connection.
 
-![Firefox offline screen with an illustration of a cartoon character to the left-hand side holding a two-pin plug in its right hand and a two-pin socket in its left hand. On the right-hand side there is an Offline Mode message and  a button labeled 'Try again'.](ff-offline.png)
+![Firefox offline screen with an illustration of a cartoon character to the left-hand side holding a two-pin plug in its right hand and a two-pin socket in its left hand. On the right-hand side there is an Offline Mode message and a button labeled 'Try again'.](ff-offline.png)
 
 This is where [Service workers](/en-US/docs/Web/API/Service_Worker_API) and the closely-related [Cache API](/en-US/docs/Web/API/Cache) come in.
 

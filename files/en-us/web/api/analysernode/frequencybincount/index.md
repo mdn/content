@@ -46,7 +46,7 @@ function draw() {
 
   analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+  canvasCtx.fillStyle = "rgb(0, 0, 0)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
   const barWidth = (WIDTH / bufferLength) * 2.5 - 1;
@@ -57,11 +57,11 @@ function draw() {
     barHeight = dataArray[i];
 
     canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
-    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
+    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
 
     x += barWidth;
   }
-};
+}
 
 draw();
 ```
