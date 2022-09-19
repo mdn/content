@@ -72,7 +72,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 
 - {{domxref("Animation.cancel_event", "cancel")}}
   - : Fires when the {{domxref("Animation.cancel()")}} method is called or when the animation enters the `"idle"` play state from another state.
-- {{domxref("Animation.finish_event" , "finish")}}
+- {{domxref("Animation.finish_event", "finish")}}
   - : Fires when the animation finishes playing.
 - {{domxref("animation.remove_event", "remove")}}
   - : Fires when the animation is removed (i.e., put into an `active` replace state).
