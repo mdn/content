@@ -778,16 +778,6 @@ lines.'
 console.log(str);   // this string is broken across multiple lines.
 ```
 
-There is also a [**template literal**](/en-US/docs/Web/JavaScript/Reference/Template_literals) syntax. This allows for many advanced text formatting use cases, including multiline strings!
-
-```js
-const poem =
-`Roses are red,
-Violets are blue.
-Sugar is sweet,
-and so is foo.`
-```
-
 ## More information
 
 This chapter focuses on basic syntax for declarations and types. To learn more about JavaScript's language constructs, see also the following chapters in this guide:
