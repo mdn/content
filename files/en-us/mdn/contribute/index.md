@@ -127,7 +127,7 @@ We will add more tasks here as time goes on.
 
 You can also look at priority ratings to give you an idea of what the most important work is to work on — we've started giving content bug issues labels of P0, P1, P2, P3, and P4 to signify how important they are, with lower numbers being more important than higher numbers.
 
-These are figured out during the regular MDN bug triage process, based on the [MDN documentation priority list](/en-US/docs/MDN/Community/Documentation_priority/).
+These are figured out during the regular MDN bug triage process, based on the [MDN documentation priority list](/en-US/docs/MDN/Community/Documentation_priorities/).
 
 ### Other task types
 
