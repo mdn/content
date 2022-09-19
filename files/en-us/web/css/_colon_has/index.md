@@ -96,6 +96,7 @@ This example shows two similar texts side-by-side for comparison – the left on
 ### With the :is() pseudo-class
 
 This example builds on the previous example to show how to select multiple elements with `:has()`.
+
 #### HTML
 
 ```html
@@ -177,7 +178,7 @@ The form in this example contains three `<fieldset>` groups. The first two are i
     <input type="radio" name="activity" id="activity3">
     <label for="activity3">Swimming</label>
   </fieldset>
-  
+
   <fieldset class="required">
     <legend>What days work for you?</legend>
     <input type="checkbox" id="day1">
@@ -187,7 +188,7 @@ The form in this example contains three `<fieldset>` groups. The first two are i
     <input type="checkbox" id="day3">
     <label for="day3">Friday</label>
   </fieldset>
-  
+
   <fieldset>
     <legend>Join our newsletter</legend>
     <input type="radio" name="newsletter" id="newsweekly">
@@ -246,7 +247,7 @@ fieldset.required:not(:has(input:checked)) legend::after {
 
 - After you select an option in the first two groups, the `:has()` selection no longer applies and the initial formatting and asterisk are removed.
 
-Be careful about the order of `:has()` and [`:not()`](/en-US/docs/Web/CSS/:not) pseudo-classes because swapping the order does not select the same elements. For example, in the following rule, a [selector list](/en-US/docs/Web/CSS/Selector_list) is passed as an argument to `:has()`. The `:has()` and `:not()` pseudo-classes here will select only those `<section>` elements that don’t contain any heading elements.
+Be careful about the order of `:has()` and [`:not()`](/en-US/docs/Web/CSS/:not) pseudo-classes because swapping the order does not select the same elements. For example, in the following rule, a [selector list](/en-US/docs/Web/CSS/Selector_list) is passed as an argument to `:has()`. The `:has()` and `:not()` pseudo-classes here will select only those `<section>` elements that don't contain any heading elements.
 
 ```css
 section:not(:has(h1, h2, h3, h4, h5, h6)) {...}
@@ -258,7 +259,7 @@ However, if you swap the order of the two pseudo-classes as shown below:
 section:has(:not(h1, h2, h3, h4, h5, h6)) {...}
 ```
 
-The `:not()` pseudo-class will select any element that’s not a heading element, such as `<p>`, `<a>`, or `<button>` and pass that as an argument to `:has()`, which in turn, will select any `<section>` element that contains those other non-heading elements. This might eventually end up selecting even those `<section>` elements that do have a heading element along with other non-heading elements.
+The `:not()` pseudo-class will select any element that's not a heading element, such as `<p>`, `<a>`, or `<button>` and pass that as an argument to `:has()`, which in turn, will select any `<section>` element that contains those other non-heading elements. This might eventually end up selecting even those `<section>` elements that do have a heading element along with other non-heading elements.
 
 ## Specifications
 
