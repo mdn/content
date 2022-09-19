@@ -128,7 +128,7 @@ CSS selectors can be grouped into the following categories based on the type of 
 The term 'selector' can refer to one of the following:
 
 - Simple selector
-  - : An individual selector. A simple selector represents a single condition on an element. A given element is said to match a simple selector when that simple selector accurately describes the element. All [basic selectors](#basic-selectors) and [pseudo-classes](#pseudo-classes-and-pseudo-elements) are simple selectors.
+  - : An individual selector. A simple selector represents a single condition on an element. A given element is said to match a simple selector when that simple selector accurately describes the element. All [basic selectors](#basic_selectors) and [pseudo-classes](#pseudo-classes_and_pseudo-elements) are simple selectors.
 
 - Compound selector
   - : A sequence of [simple selectors](/en-US/docs/Web/CSS/CSS_Selectors#simple_selector) that are not separated by a [combinator](#combinators). A compound selector represents a set of simultaneous conditions on a single element. A given element is said to match a compound selector when the element matches all the simple selectors in the compound selector.
