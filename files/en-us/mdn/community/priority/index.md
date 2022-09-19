@@ -1,6 +1,6 @@
 ---
 title: Documentation priority
-slug: MDN/Community/Documentation_priority
+slug: MDN/Community/Documentation_priorities
 page-type: mdn-community-guide
 tags:
   - meta
