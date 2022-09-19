@@ -2,7 +2,7 @@
 title: Firefox 105 for developers
 slug: Mozilla/Firefox/Releases/105
 tags:
-  - '105'
+  - "105"
   - Firefox
   - Mozilla
   - Release
@@ -21,6 +21,9 @@ This article provides information about the changes in Firefox 105 that will aff
 #### Removals
 
 ### CSS
+
+- Embedded SVG and iframe content can use the `prefers-color-scheme` media query via the `svg.embedder-prefers-color-scheme.content` preference which now defaults to `true`.
+  This allows embedded content to directly use the `color-scheme` of the embedding element instead of OS or browser preferences ({{bug(1779457)}}).
 
 #### Removals
 
