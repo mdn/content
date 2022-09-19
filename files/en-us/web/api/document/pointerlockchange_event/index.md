@@ -1,6 +1,6 @@
 ---
-title: 'Element: pointerlockchange event'
-slug: Web/API/Element/pointerlockchange_event
+title: 'Document: pointerlockchange event'
+slug: Web/API/Document/pointerlockchange_event
 page-type: web-api-event
 tags:
   - Document
@@ -8,8 +8,9 @@ tags:
   - Reference
   - Web
   - pointerlockchange
-browser-compat: api.Element.pointerlockchange_event
+browser-compat: api.Document.pointerlockchange_event
 ---
+
 {{APIRef}}
 
 The `pointerlockchange` event is fired when the pointer is locked/unlocked.
