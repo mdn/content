@@ -12,7 +12,6 @@ tags:
 
 {{CSSRef}}
 
-> **Note:** This document is an explanation of an early stage specification that is attracting a lot of interest from web developers. The examples and syntax below should be seen as an explainer to an evolving specification, in order to encourage experimentation and feedback. Once the specification matures, this will be the location of the full MDN documentation for container queries. Last updated on 15 September 2021 to add details of the new properties `container-type`, `container-name`, and `container`.
 
 ## What problem do container queries solve?
 
