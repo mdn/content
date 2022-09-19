@@ -32,4 +32,4 @@ Cache-Control: max-age=0
 ## See also
 
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
-- [RFC 7231, section 5: Request header fields](https://datatracker.ietf.org/doc/html/rfc7231#section-5)
+- [RFC 9110, section 6.3: Header Fields](https://httpwg.org/specs/rfc9110.html#header.fields)

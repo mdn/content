@@ -62,7 +62,7 @@ This method is subject to the same [same-origin policy](/en-US/docs/Web/Security
 ## Three-argument document.open()
 
 There is a lesser-known and little-used three-argument version of
-`document.open()` , which is an alias of {{domxref("Window.open()")}} (see
+`document.open()`, which is an alias of {{domxref("Window.open()")}} (see
 its page for full details).
 
 This call, for example opens github.com in a new window, with its opener set to

@@ -109,7 +109,15 @@ where
 
 ```css
 @page {
-  size: 4in 6in landscape;
+  size: A4 landscape;
+}
+```
+
+### Specifying a custom size
+
+```css
+@page {
+  size: 4in 6in;
 }
 ```
 

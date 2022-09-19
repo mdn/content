@@ -13,7 +13,7 @@ tags:
 
 {{WebAssemblySidebar}}
 
-> **Warning:** Experimental {{jsxref("WebAssembly.Module")}} IndexedDB serialization support is being removed from browsers; see {{bug("1469395")}} and [this spec issue](https://github.com/WebAssembly/spec/issues/821).
+> **Warning:** Experimental [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) IndexedDB serialization support is being removed from browsers; see {{bug("1469395")}} and [this spec issue](https://github.com/WebAssembly/spec/issues/821).
 
 Caching is useful for improving the performance of an app — we can store compiled WebAssembly modules on the client, so they don't have to be downloaded and compiled every time. This article explains the best practices around this.
 
@@ -21,7 +21,7 @@ Caching is useful for improving the performance of an app — we can store compi
 
 [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) is a transactional database system that allows you to store and retrieve structured data on the client-side. It is ideal for persisting assets locally for the saved state of an application, including text, blobs, and any other type of cloneable object.
 
-This includes compiled wasm modules ({{jsxref("WebAssembly.Module")}} JavaScript objects).
+This includes compiled wasm modules ([`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) JavaScript objects).
 
 ## Setting up a caching library
 
@@ -132,7 +132,7 @@ If not, we compile it from scratch and then store the compiled Module in the dat
   },
 ```
 
-> **Note:** It is for this kind of usage that {{jsxref("WebAssembly.instantiate()")}} returns both a {{jsxref("WebAssembly.Module()", "Module")}} and an {{jsxref("WebAssembly.Instance()", "Instance")}}: the Module represents the compiled code and can be stored/retrieved in IDB or shared between Workers via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage); the Instance is stateful and contains the callable JavaScript functions, therefore it cannot be stored/shared.
+> **Note:** It is for this kind of usage that [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) returns both a [`Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) and an [`Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance): the Module represents the compiled code and can be stored/retrieved in IDB or shared between Workers via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage); the Instance is stateful and contains the callable JavaScript functions, therefore it cannot be stored/shared.
 
 If opening the database failed (for example due to permissions or quota), we fall back to fetching and compiling the module and don't try to store the results (since there is no database to store them into).
 

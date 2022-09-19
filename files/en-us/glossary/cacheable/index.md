@@ -47,6 +47,6 @@ Cache-Control: no-cache
 
 ## See also
 
-- Definition of [cacheable](https://datatracker.ietf.org/doc/html/rfc7231#section-4.2.3) in the HTTP specification.
+- Details about [methods and caching](https://httpwg.org/specs/rfc9110.html#rfc.section.9.2.3) are provided in the HTTP specification.
 - Description of common cacheable methods: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}
 - Description of common non-cacheable methods: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, often {{HTTPMethod("POST")}}

@@ -235,7 +235,7 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 
 As an example, our [Snapshot](https://github.com/chrisdavidmills/snapshot) demo makes use of it to selectively apply the Brick JavaScript library and use it to handle the UI layout, but only for the small screen layout (480px wide or less). We first use the `media` attribute to only apply the Brick CSS to the page if the page width is 480px or less:
 
-```css
+```html
 <link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)">
 ```
 

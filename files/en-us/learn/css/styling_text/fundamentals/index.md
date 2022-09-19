@@ -349,44 +349,6 @@ Things become more tricky when you start altering the font size of nested elemen
 
 You would need to set its `em` value to 20/24, or 0.83333333 `em`. The maths can be complicated, so you need to be careful about how you style things. It is best to use `rem` where you can to keep things simple, and avoid setting the `font-size` of container elements where possible.
 
-#### A simple sizing example
-
-When sizing your text, it is usually a good idea to set the base `font-size` of the document to 10 `px` to make the maths a lot easier to work out — required `(r)em` values are then the pixel font size divided by 10, not 16. After doing that, you can easily size the different types of text in your document to what you want. It is a good idea to list all your `font-size` rulesets in a designated area in your stylesheet, so they are easy to find.
-
-Our new result is like so:
-
-```html hidden
-<h1>Tommy the cat</h1>
-
-<p>Well I remember it as though it were a meal ago…</p>
-
-<p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
-</p>
-```
-
-```css
-html {
-  font-size: 10px;
-}
-
-h1 {
-  font-size: 5rem;
-}
-
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-}
-```
-
-{{ EmbedLiveSample('A_simple_sizing_example', '100%', 260) }}
-
 ### Font style, font weight, text transform, and text decoration
 
 CSS provides four common properties to alter the visual weight/emphasis of text:
