@@ -469,7 +469,7 @@ Always include the attribute quotes. It avoids such problems, and results in mor
 In this article you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent:
 
 ```html
-<a href="https://www.example.com">A link to my example.</a>
+<a href='https://www.example.com'>A link to my example.</a>
 
 <a href="https://www.example.com">A link to my example.</a>
 ```
