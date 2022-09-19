@@ -14,11 +14,10 @@ browser-compat: css.at-rules.media.prefers-color-scheme
 {{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
 
 The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested a light or dark color theme.
-
 The user might indicate this preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
 
-To avoid cases where OS and browser preferences are conflicting, `prefers-color-scheme` passes the `color-scheme` of the embedding element in the embedding document to the embedded content when acceptable from security standpoint.
-This applies to both same and cross-origin SVG and iframe elements.
+For embedded elements, `prefers-color-scheme` passes the `color-scheme` of the embedding element to the embedded content when acceptable from security standpoint.
+This applies to both same and cross-origin SVG and iframe elements and prevents cases where OS and browser preferences for color schemes are conflicting.
 
 ## Syntax
 
@@ -29,9 +28,10 @@ This applies to both same and cross-origin SVG and iframe elements.
 
 ## Examples
 
-The elements below have an initial color theme. They can be further themed according to the user's color scheme preference.
+### Detecting a dark theme
 
-### HTML
+The elements below have an initial color theme.
+They can be further themed according to the user's color scheme preference.
 
 ```html
 <div class="day">Day (initial)</div>
@@ -44,7 +44,7 @@ The elements below have an initial color theme. They can be further themed accor
 <div class="night dark-scheme">Night (changes in dark scheme)</div>
 ```
 
-### CSS
+The following CSS is used to style the elements above:
 
 ```css
 .day {
@@ -88,9 +88,49 @@ The elements below have an initial color theme. They can be further themed accor
 }
 ```
 
-### Result
+{{EmbedLiveSample("Detecting_a_dark_theme")}}
 
-{{EmbedLiveSample("Examples")}}
+### Color scheme inheritance
+
+The following example shows how to use `prefers-color-scheme` with the `color-scheme` property can inherited from the embedding element.
+A script is used to specify the source of the image elements, this would normally be done in HTML as `<img src="circle.svg" />` or similar.
+
+The first circle inherits the `color-scheme` from the browser or OS and can be toggled using this page's theme switcher.
+The second and third circle inherit the `color-scheme` from the embedding element and so the `@media` query allows to specify styles of the embedded content based on the parent element's `color-scheme`.
+
+```html
+<div>
+  <img />
+</div>
+
+<div style="color-scheme: light">
+  <img />
+</div>
+<div style="color-scheme: dark">
+  <img />
+</div>
+
+<!-- Embed an SVG for all <img> elements -->
+<script>
+  for (let img of document.querySelectorAll("img")) {
+    img.src =
+      "data:image/svg+xml;base64," +
+      btoa(`
+      <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          :root { color: blue }
+          @media (prefers-color-scheme: dark) {
+            :root { color: purple }
+          }
+        </style>
+        <circle fill="currentColor" cx="16" cy="16" r="16"/>
+      </svg>
+    `);
+  }
+</script>
+```
+
+{{EmbedLiveSample("Color_scheme_inheritance")}}
 
 ## Specifications
 
