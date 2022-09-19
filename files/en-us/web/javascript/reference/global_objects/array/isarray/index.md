@@ -28,11 +28,11 @@ Array.isArray(value)
 
 ### Return value
 
-`true` if the value is an {{jsxref("Array")}}; otherwise, `false`. `false` is always returned if `value` is a {{jsxref("TypedArray")}} instance.
+`true` if `value` is an {{jsxref("Array")}}; otherwise, `false`. `false` is always returned if `value` is a {{jsxref("TypedArray")}} instance.
 
 ## Description
 
-`Array.isArray()` checks if the passed value is an {{jsxref("Array")}}. It does not check `value`'s prototype chain, nor does it rely on the `Array` constructor it is attached to. It returns `true` for any `value` that was created using the array literal syntax or the `Array` constructor. This makes it safe to use with cross-realm objects, where the identity of the `Array` constructor is different and would therefore cause [`instanceof Array`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) to fail.
+`Array.isArray()` checks if the passed value is an {{jsxref("Array")}}. It does not check the value's prototype chain, nor does it rely on the `Array` constructor it is attached to. It returns `true` for any value that was created using the array literal syntax or the `Array` constructor. This makes it safe to use with cross-realm objects, where the identity of the `Array` constructor is different and would therefore cause [`instanceof Array`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) to fail.
 
 See the article ["Determining with absolute accuracy whether or not a JavaScript object is an array"](https://web.mit.edu/jwalden/www/isArray.html) for more details.
 
