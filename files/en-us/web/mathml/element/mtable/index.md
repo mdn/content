@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mtable
 
 {{MathMLRef}}
 
-The MathML `<mtable>` element allows you to create tables or matrices. Inside a `<mtable>` only {{ MathMLElement("mtr") }} and {{ MathMLElement("mtd") }} elements may appear. These elements are similar to {{ HTMLElement("table") }} , {{ HTMLElement("tr") }} and {{ HTMLElement("td") }} elements of [HTML](/en-US/docs/Web/HTML).
+The MathML `<mtable>` element allows you to create tables or matrices. Inside a `<mtable>` only {{ MathMLElement("mtr") }} and {{ MathMLElement("mtd") }} elements may appear. These elements are similar to {{ HTMLElement("table") }}, {{ HTMLElement("tr") }} and {{ HTMLElement("td") }} elements of [HTML](/en-US/docs/Web/HTML).
 
 > **Note:** The `<mtable>` element resets the `displaystyle` attribute to `false`. If you want to use this element as an inline-block, you might want to set `<mtable displaystyle="true">...</mtable>`.
 

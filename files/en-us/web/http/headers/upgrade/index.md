@@ -79,7 +79,7 @@ Notes:
 
 ```http
 Connection: upgrade
-Upgrade: a_protocol/1, example ,another_protocol/2.2
+Upgrade: a_protocol/1, example, another_protocol/2.2
 ```
 
 ## Directives

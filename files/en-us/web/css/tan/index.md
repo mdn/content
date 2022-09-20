@@ -11,7 +11,6 @@ tags:
   - tan
   - Experimental
 browser-compat: css.types.tan
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

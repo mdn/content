@@ -100,7 +100,7 @@ const iirFilter = audioCtx.createIIRFilter(feedforwardCoefficients, feedbackCoef
 function calcFrequencyResponse() {
   iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
 
-  for (i = 0; i <= myFrequencyArray.length-1;i++){
+  for (let i = 0; i < myFrequencyArray.length; i++) {
     const listItem = document.createElement('li');
     listItem.textContent = `${myFrequencyArray[i]}Hz: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
     freqResponseOutput.appendChild(listItem);
