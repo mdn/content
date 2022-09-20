@@ -477,7 +477,8 @@ a {
 a:link,
 a:visited,
 a:focus {
-  background: dodgerblue;
+  background: palegoldenrod;
+  color: black;
 }
 
 a:hover {
@@ -485,7 +486,7 @@ a:hover {
 }
 
 a:active {
-  background: hotpink;
+  background: darkred;
   color: white;
 }
 ```
