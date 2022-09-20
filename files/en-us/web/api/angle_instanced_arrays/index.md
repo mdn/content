@@ -46,12 +46,19 @@ The following example shows how to draw a given geometry multiple times with a s
 
 ```js
 // enable the extension
-const ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 
 // binding the geometry buffer as usual
 gl.bindBuffer(gl.ARRAY_BUFFER, geometryVertexBuffer);
 gl.enableVertexAttribArray(vertexPositionAttributeLocation);
-gl.vertexAttribPointer(vertexPositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
+gl.vertexAttribPointer(
+  vertexPositionAttributeLocation,
+  3,
+  gl.FLOAT,
+  false,
+  0,
+  0
+);
 
 // build position buffer
 const instancePositions = [];
@@ -67,13 +74,25 @@ const instancePositionBuffer = createWebGLBufferFromData(instancePositions);
 // binding the instance position buffer as you would with any attribute
 gl.bindBuffer(gl.ARRAY_BUFFER, instancePositionBuffer);
 gl.enableVertexAttribArray(instancePositionAttributeLocation);
-gl.vertexAttribPointer(instancePositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
+gl.vertexAttribPointer(
+  instancePositionAttributeLocation,
+  3,
+  gl.FLOAT,
+  false,
+  0,
+  0
+);
 
 // mark the attribute as instanced and advance it every single(1) instance rather than every vertex
 ext.vertexAttribDivisorANGLE(instancePositionAttributeLocation, 1);
 
 // draw geometry for each instance
-ext.drawArraysInstancedANGLE(gl.TRIANGLES, 0, numGeometryVertices, instances.length);
+ext.drawArraysInstancedANGLE(
+  gl.TRIANGLES,
+  0,
+  numGeometryVertices,
+  instances.length
+);
 ```
 
 ## Specifications

@@ -46,7 +46,7 @@ None.
 In the following example the UUID representing the service named `device_information` is returned and printed to the console.
 
 ```js
-let result = BluetoothUUID.getService('device_information');
+let result = BluetoothUUID.getService("device_information");
 console.log(result); // "0000180a-0000-1000-8000-00805f9b34fb"
 ```
 

@@ -52,15 +52,9 @@ Since this example is presented in an {{HTMLElement("iframe")}}, that top-left c
 
 ```html
 <div class="box">
-  <p>
-    Move the mouse around in this box to watch its coordinates change.
-  </p>
-  <p>
-    <code>pageX</code>: <span id="x">n/a</span>
-  </p>
-  <p>
-    <code>pageY</code>: <span id="y">n/a</span>
-  </p>
+  <p>Move the mouse around in this box to watch its coordinates change.</p>
+  <p><code>pageX</code>: <span id="x">n/a</span></p>
+  <p><code>pageY</code>: <span id="y">n/a</span></p>
 </div>
 ```
 

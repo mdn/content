@@ -28,8 +28,8 @@ The value is a {{domxref("DOMHighResTimeStamp")}} accurate to
 
 ```html
 <p>
-  Focus this iframe and press any key to get the
-  current timestamp for the keypress event.
+  Focus this iframe and press any key to get the current timestamp for the
+  keypress event.
 </p>
 <p>timeStamp: <span id="time">-</span></p>
 ```

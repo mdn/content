@@ -88,7 +88,10 @@ blockquote {
 #### A. No `all` property
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
@@ -110,7 +113,10 @@ This is the scenario in which no `all` property is set inside the `blockquote` r
 #### B. `all: initial`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
@@ -135,7 +141,10 @@ With the `all` property set to `initial` in the `blockquote` rule, the {{HTMLEle
 #### C. `all: inherit`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
@@ -160,7 +169,10 @@ In this case, the {{HTMLElement("blockquote")}} element doesn't use the browser 
 #### D. `all: unset`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
@@ -185,7 +197,10 @@ When the `unset` value is applied to the `all` property in the `blockquote` rule
 #### E. `all: revert`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
@@ -210,7 +225,10 @@ When the `all` property is set to `revert` in the `blockquote` rule, the `blockq
 #### F. `all: revert-layer`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden

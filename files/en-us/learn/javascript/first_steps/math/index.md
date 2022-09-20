@@ -19,7 +19,7 @@ tags:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
-At this point in the course we discuss math in JavaScript — how we can use {{Glossary("Operator","operators")}} and other features to successfully manipulate numbers to do our bidding.
+At this point in the course, we discuss math in JavaScript — how we can use {{Glossary("Operator","operators")}} and other features to successfully manipulate numbers to do our bidding.
 
 <table>
   <tbody>
@@ -243,7 +243,7 @@ But the browser does _"10 divided by 8 equals 1.25"_, then _"50 plus 1.25 plus 2
 
 This is because of **operator precedence** — some operators are applied before others when calculating the result of a calculation (referred to as an _expression_, in programming). Operator precedence in JavaScript is the same as is taught in math classes in school — multiply and divide are always done first, then add and subtract (the calculation is always evaluated from left to right).
 
-If you want to override operator precedence, you can put parentheses round the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:
+If you want to override operator precedence, you can put parentheses around the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:
 
 ```js
 (num2 + num1) / (8 + 2);
@@ -251,7 +251,7 @@ If you want to override operator precedence, you can put parentheses round the p
 
 Try it and see.
 
-> **Note:** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#operator_precedence).
+> **Note:** A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
 ## Increment and decrement operators
 
@@ -406,7 +406,7 @@ If you try entering some of these values in a console, you'll see that they all 
 
 - Display the correct text label on a button depending on whether a feature is turned on or off
 - Display a game over message if a game is over or a victory message if the game has been won
-- Display the correct seasonal greeting depending what holiday season it is
+- Display the correct seasonal greeting depending on what holiday season it is
 - Zoom a map in or out depending on what zoom level is selected
 
 We'll look at how to code such logic when we look at conditional statements in a future article. For now, let's look at a quick example:
@@ -447,7 +447,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-In this article we have covered the fundamental information you need to know about numbers in JavaScript, for now. You'll see numbers used again and again, all the way through your JavaScript learning, so it's a good idea to get this out of the way now. If you are one of those people that doesn't enjoy math, you can take comfort in the fact that this chapter was pretty short.
+In this article, we have covered the fundamental information you need to know about numbers in JavaScript, for now. You'll see numbers used again and again, all the way through your JavaScript learning, so it's a good idea to get this out of the way now. If you are one of those people that doesn't enjoy math, you can take comfort in the fact that this chapter was pretty short.
 
 In the next article, we'll explore text and how JavaScript allows us to manipulate it.
 

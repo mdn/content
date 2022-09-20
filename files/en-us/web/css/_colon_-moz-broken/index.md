@@ -1,5 +1,5 @@
 ---
-title: ':-moz-broken'
+title: ":-moz-broken"
 slug: Web/CSS/:-moz-broken
 tags:
   - CSS
@@ -29,7 +29,7 @@ The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 ### HTML
 
 ```html
-<img src="broken.jpg" alt="This image is broken. :-(">
+<img src="broken.jpg" alt="This image is broken. :-(" />
 ```
 
 ### CSS

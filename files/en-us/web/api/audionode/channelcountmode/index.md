@@ -87,7 +87,7 @@ const gainNode = audioCtx.createGain();
 oscillator.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-oscillator.channelCountMode = 'explicit';
+oscillator.channelCountMode = "explicit";
 ```
 
 ## Specifications

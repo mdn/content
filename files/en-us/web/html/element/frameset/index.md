@@ -29,8 +29,10 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 ```html
 <frameset cols="50%,50%">
-  <frame src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset" />
-  <frame src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame" />
+  <frame
+    src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frameset" />
+  <frame
+    src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame" />
 </frameset>
 ```
 

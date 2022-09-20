@@ -23,6 +23,8 @@ The **`color-scheme`** CSS property allows an element to indicate which color sc
 
 Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes form controls, scrollbars, and the used values of CSS system colors.
 
+{{EmbedInteractiveExample("pages/css/color-scheme.html")}}
+
 ## Syntax
 
 ```css

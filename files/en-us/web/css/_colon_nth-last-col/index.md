@@ -40,7 +40,7 @@ See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
     <td>four</td>
   </tr>
   <tr>
-  <td>one</td>
+    <td>one</td>
     <td>two</td>
     <td>three</td>
     <td>four</td>

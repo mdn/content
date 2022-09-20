@@ -45,7 +45,10 @@ encapsulate the image within a link using the {{HTMLElement("a")}} element.
 Consider the following older HTML:
 
 ```html
-<img src="taco-tuesday.jpg" alt="Taco Tuesday" longDesc="image-descriptions/taco-tuesday.html">
+<img
+  src="taco-tuesday.jpg"
+  alt="Taco Tuesday"
+  longdesc="image-descriptions/taco-tuesday.html" />
 ```
 
 Here, the `longDesc` is used to indicate that the user should be able to
@@ -56,7 +59,7 @@ This can be easily converted into modern HTML:
 
 ```html
 <a href="image-descriptions/taco-tuesday.html">
-  <img src="taco-tuesday.jpg" alt="Taco Tuesday" >
+  <img src="taco-tuesday.jpg" alt="Taco Tuesday" />
 </a>
 ```
 

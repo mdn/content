@@ -43,8 +43,8 @@ We return the keys of the caches in the {{domxref("CacheStorage")}} object using
 If not, we delete it using {{domxref("CacheStorage.delete()")}}.
 
 ```js
-this.addEventListener('activate', (event) => {
-  const cacheAllowlist = ['v2'];
+this.addEventListener("activate", (event) => {
+  const cacheAllowlist = ["v2"];
 
   event.waitUntil(
     caches.keys().then((keyList) =>

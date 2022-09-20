@@ -94,7 +94,9 @@ In this example, we will apply a diamond pattern to an element's borders. The so
 #### HTML
 
 ```html
-<div id="bitmap">This element is surrounded by a bitmap-based border image!</div>
+<div id="bitmap">
+  This element is surrounded by a bitmap-based border image!
+</div>
 ```
 
 #### CSS
@@ -109,12 +111,8 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
   margin: 30px;
   padding: 10px;
 
-  border-image:
-      url("border.png")  /* source */
-      27 /                    /* slice */
-      36px 28px 18px 8px /    /* width */
-      18px 14px 9px 4px       /* outset */
-      round;                  /* repeat */
+  border-image: url("border.png") /* source */ 27 / /* slice */ 36px 28px 18px
+    8px / /* width */ 18px 14px 9px 4px /* outset */ round; /* repeat */
 }
 ```
 
@@ -127,7 +125,9 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 #### HTML
 
 ```html
-<div id="gradient">This element is surrounded by a gradient-based border image!</div>
+<div id="gradient">
+  This element is surrounded by a gradient-based border image!
+</div>
 ```
 
 #### CSS

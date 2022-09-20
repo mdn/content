@@ -64,27 +64,42 @@ This example compares the results of `overflow-wrap`, `word-break`, and `hyphens
 #### HTML
 
 ```html
-<p>They say the fishing is excellent at
-  Lake <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>normal</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>overflow-wrap: anywhere</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>overflow-wrap: break-word</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>word-break</code>)</p>
-<p>They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, without <code>lang</code> attribute)</p>
-<p lang="en">They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, English rules)</p>
-<p class="hyphens" lang="de">They say the fishing is excellent at
-  Lake <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
-  though I've never been there myself. (<code>hyphens</code>, German rules)</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>normal</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: anywhere</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>overflow-wrap: break-word</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. (<code>word-break</code>)
+</p>
+<p>
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, without
+  <code>lang</code> attribute)
+</p>
+<p lang="en">
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, English rules)
+</p>
+<p class="hyphens" lang="de">
+  They say the fishing is excellent at Lake
+  <em class="hyphens">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>, though
+  I've never been there myself. (<code>hyphens</code>, German rules)
+</p>
 ```
 
 #### CSS

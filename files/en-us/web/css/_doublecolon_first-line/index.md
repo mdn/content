@@ -41,11 +41,15 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 ### HTML
 
 ```html
-<p>Styles will only be applied to the first line of this paragraph.
-After that, all text will be styled like normal. See what I mean?</p>
+<p>
+  Styles will only be applied to the first line of this paragraph. After that,
+  all text will be styled like normal. See what I mean?
+</p>
 
-<span>The first line of this text will not receive special styling
-because it is not a block-level element.</span>
+<span>
+  The first line of this text will not receive special styling because it is
+  not a block-level element.
+</span>
 ```
 
 ### CSS

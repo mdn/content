@@ -78,7 +78,7 @@ Instead of specifying background scripts, you can specify a background page. Thi
   <!DOCTYPE html>
   <html lang="en">
     <head>
-      <meta charset="utf-8">
+      <meta charset="utf-8" />
       <script type="module" src="background-script.js"></script>
     </head>
   </html>

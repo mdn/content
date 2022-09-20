@@ -40,7 +40,7 @@ A generic {{domxref("Event")}}.
 
 ```html
 <dialog class="example-dialog">
-    <button class="close" type="reset">Close</button>
+  <button class="close" type="reset">Close</button>
 </dialog>
 
 <button class="open-dialog">Open dialog</button>

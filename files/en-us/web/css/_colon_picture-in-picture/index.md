@@ -38,8 +38,10 @@ The page's HTML looks like this:
 ```html
 <h1>MDN Web Docs Demo: :picture-in-picture pseudo-class</h1>
 
-<p>This demo uses the <code>:picture-in-picture</code> pseudo-class to automatically
-  change the style of a video entirely using CSS.</p>
+<p>
+  This demo uses the <code>:picture-in-picture</code> pseudo-class to
+  automatically change the style of a video entirely using CSS.
+</p>
 
 <video id="pip-video"></video>
 ```

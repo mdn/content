@@ -232,9 +232,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
    ```html
    <script>
-
      // JavaScript goes here
-
    </script>
    ```
 

@@ -52,12 +52,12 @@ const style = window.getDefaultComputedStyle(elem1);
 
 ```html
 <style>
-#elem-container {
-  position: absolute;
-  left:     100px;
-  top:      200px;
-  height:   100px;
-}
+  #elem-container {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    height: 100px;
+  }
 </style>
 
 <div id="elem-container">dummy</div>
@@ -77,18 +77,18 @@ pseudo-elements (e.g., {{cssxref("::before")}} or {{cssxref("::after")}}).
 
 ```html
 <style>
- h3:after {
-   content: ' rocks!';
- }
+  h3:after {
+    content: " rocks!";
+  }
 </style>
 
 <h3>generated content</h3>
 
 <script>
-  const h3 = document.querySelector('h3');
-  const result = getDefaultComputedStyle(h3, ':after').content;
+  const h3 = document.querySelector("h3");
+  const result = getDefaultComputedStyle(h3, ":after").content;
 
-  console.log('the generated content is: ', result); // returns 'none'
+  console.log("the generated content is: ", result); // returns 'none'
 </script>
 ```
 

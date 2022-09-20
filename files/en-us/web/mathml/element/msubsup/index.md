@@ -27,13 +27,11 @@ Rendering in your browser: <math><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msub
 
 ```html
 <math displaystyle="true">
-
   <msubsup>
     <mo>&#x222B;<!--Integral --></mo>
     <mn>0</mn>
     <mn>1</mn>
   </msubsup>
-
 </math>
 ```
 

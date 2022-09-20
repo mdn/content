@@ -27,23 +27,33 @@ svg {
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <mask id="myMask1" maskUnits="userSpaceOnUse"
-        x="20%" y="20%" width="60%" height="60%">
-    <rect   fill="black" x="0" y="0" width="100%" height="100%" />
+  <mask
+    id="myMask1"
+    maskUnits="userSpaceOnUse"
+    x="20%"
+    y="20%"
+    width="60%"
+    height="60%">
+    <rect fill="black" x="0" y="0" width="100%" height="100%" />
     <circle fill="white" cx="50" cy="50" r="35" />
   </mask>
 
-  <mask id="myMask2" maskUnits="objectBoundingBox"
-        x="20%" y="20%" width="60%" height="60%">
-    <rect   fill="black" x="0" y="0" width="100%" height="100%" />
+  <mask
+    id="myMask2"
+    maskUnits="objectBoundingBox"
+    x="20%"
+    y="20%"
+    width="60%"
+    height="60%">
+    <rect fill="black" x="0" y="0" width="100%" height="100%" />
     <circle fill="white" cx="50" cy="50" r="35" />
   </mask>
 
   <!-- Some reference rect to materialized the mask -->
-  <rect id="r1" x="0"  y="0"  width="45" height="45" />
-  <rect id="r2" x="0"  y="55" width="45" height="45" />
+  <rect id="r1" x="0" y="0" width="45" height="45" />
+  <rect id="r2" x="0" y="55" width="45" height="45" />
   <rect id="r3" x="55" y="55" width="45" height="45" />
-  <rect id="r4" x="55" y="0"  width="45" height="45" />
+  <rect id="r4" x="55" y="0" width="45" height="45" />
 
   <!-- The first 3 rect are masked with useSpaceOnUse units -->
   <use mask="url(#myMask1)" xlink:href="#r1" fill="red" />

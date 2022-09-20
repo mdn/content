@@ -40,10 +40,14 @@ document.
 ### HTML
 
 ```html
- <img src="/files/16797/clock-demo-400px.png"
-      alt="Clock"
-      srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w, /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w"
-      sizes="(max-width: 400px) 50%, 90%">
+<img
+  src="/files/16797/clock-demo-400px.png"
+  alt="Clock"
+  srcset="
+    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
+    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+  "
+  sizes="(max-width: 400px) 50%, 90%" />
 ```
 
 ### JavaScript

@@ -43,10 +43,9 @@ svg {
       context of an SVG document
     -->
     <div xmlns="http://www.w3.org/1999/xhtml">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed mollis mollis mi ut ultricies. Nullam magna ipsum,
-      porta vel dui convallis, rutrum imperdiet eros. Aliquam
-      erat volutpat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis mollis
+      mi ut ultricies. Nullam magna ipsum, porta vel dui convallis, rutrum
+      imperdiet eros. Aliquam erat volutpat.
     </div>
   </foreignObject>
 </svg>

@@ -86,10 +86,9 @@ p.abc {
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns.
-  Take note of how the `column-rule` property is used
-  to adjust the style, width, and color of the rule
-  that appears between the columns.
+  This is a bunch of text split into three columns. Take note of how the
+  `column-rule` property is used to adjust the style, width, and color of the
+  rule that appears between the columns.
 </p>
 ```
 

@@ -33,7 +33,7 @@ In this example, the CSS {{cssxref("cursor")}} is changed to `pointer` whenever 
 #### HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 #### CSS

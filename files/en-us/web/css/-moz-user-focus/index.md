@@ -1,8 +1,8 @@
 ---
-title: '-moz-user-focus'
+title: "-moz-user-focus"
 slug: Web/CSS/-moz-user-focus
 tags:
-  - '-moz-user-focus'
+  - "-moz-user-focus"
   - CSS
   - CSS:Mozilla Extensions
   - NeedsContent
@@ -68,7 +68,7 @@ By setting its value to `ignore`, you can disable focusing the element, which me
 ### HTML
 
 ```html
-<input class="ignored" value="The user cannot focus on this element.">
+<input class="ignored" value="The user cannot focus on this element." />
 ```
 
 ### CSS

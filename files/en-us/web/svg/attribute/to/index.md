@@ -37,8 +37,13 @@ svg {
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <rect x="10" y="10" width="100" height="100">
-    <animate attributeType="XML" attributeName="width" fill="freeze"
-        from="100" to="150" dur="3s"/>
+    <animate
+      attributeType="XML"
+      attributeName="width"
+      fill="freeze"
+      from="100"
+      to="150"
+      dur="3s" />
   </rect>
 </svg>
 ```

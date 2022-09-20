@@ -149,17 +149,17 @@ We've inserted some simple control buttons below our video. These controls of co
 We will first need to store references to each of the controls — add the following to the top of your JavaScript file:
 
 ```js
-const playPauseBtn = document.querySelector('.playpause');
-const stopBtn = document.querySelector('.stop');
-const rwdBtn = document.querySelector('.rwd');
-const fwdBtn = document.querySelector('.fwd');
-const timeLabel = document.querySelector('.time');
+const playPauseBtn = document.querySelector(".playpause");
+const stopBtn = document.querySelector(".stop");
+const rwdBtn = document.querySelector(".rwd");
+const fwdBtn = document.querySelector(".fwd");
+const timeLabel = document.querySelector(".time");
 ```
 
 Next, we need to grab a reference to the video/audio player itself — add this line below the previous lines:
 
 ```js
-const player = document.querySelector('video');
+const player = document.querySelector("video");
 ```
 
 This holds a reference to a {{domxref("HTMLMediaElement")}} object, which has several useful properties and methods available on it that can be used to wire up functionality to our buttons.
@@ -167,7 +167,7 @@ This holds a reference to a {{domxref("HTMLMediaElement")}} object, which has se
 Before moving onto creating our button functionality, let's remove the native controls so they don't get in the way of our custom controls. Add the following, again at the bottom of your JavaScript:
 
 ```js
-player.removeAttribute('controls');
+player.removeAttribute("controls");
 ```
 
 Doing it this way round rather than just not including the controls attribute in the first place has the advantage that if our JavaScript fails for any reason, the user still has some controls available.
@@ -180,10 +180,10 @@ First, let's set up the play/pause button. We can get this to toggle between pla
 playPauseBtn.onclick = () => {
   if (player.paused) {
     player.play();
-    playPauseBtn.textContent = 'Pause';
+    playPauseBtn.textContent = "Pause";
   } else {
     player.pause();
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
@@ -194,7 +194,7 @@ Next, add this code to the bottom, which controls the stop button:
 stopBtn.onclick = () => {
   player.pause();
   player.currentTime = 0;
-  playPauseBtn.textContent = 'Play';
+  playPauseBtn.textContent = "Play";
 };
 ```
 
@@ -212,7 +212,7 @@ fwdBtn.onclick = () => {
   if (player.currentTime >= player.duration || player.paused) {
     player.pause();
     player.currentTime = 0;
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```

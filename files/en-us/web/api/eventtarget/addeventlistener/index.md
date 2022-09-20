@@ -219,8 +219,12 @@ clicks on an element.
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -255,8 +259,12 @@ This example demonstrates how to add an `addEventListener()` that can be aborted
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -295,8 +303,12 @@ event listener.
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -331,8 +343,12 @@ notation.
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -577,7 +593,8 @@ attribute value is effectively wrapped in a handler function that binds the valu
 occurrence of `this` within the code represents a reference to the element.
 
 ```html
-<table id="my_table" onclick="console.log(this.id);"><!-- `this` refers to the table; logs 'my_table' -->
+<table id="my_table" onclick="console.log(this.id);">
+  <!-- `this` refers to the table; logs 'my_table' -->
   …
 </table>
 ```
@@ -588,9 +605,12 @@ shown in the following example:
 
 ```html
 <script>
-  function logID() { console.log(this.id); }
+  function logID() {
+    console.log(this.id);
+  }
 </script>
-<table id="my_table" onclick="logID();"><!-- when called, `this` will refer to the global object -->
+<table id="my_table" onclick="logID();">
+  <!-- when called, `this` will refer to the global object -->
   …
 </table>
 ```

@@ -43,7 +43,11 @@ Simulate a mouse-click when moving the mouse pointer over a checkbox:
 
 ```html
 <form>
-  <input type="checkbox" id="myCheck" onmouseover="myFunction()" onclick="alert('click event occurred')">
+  <input
+    type="checkbox"
+    id="myCheck"
+    onmouseover="myFunction()"
+    onclick="alert('click event occurred')" />
 </form>
 ```
 

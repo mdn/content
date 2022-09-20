@@ -68,22 +68,22 @@ The value name of `flow-root` makes sense when you understand you are creating s
 
 ```html
 <section>
-    <div class="box">
-        <div class="float">I am a floated box!</div>
-        <p>I am content inside the container.</p>
-    </div>
+  <div class="box">
+    <div class="float">I am a floated box!</div>
+    <p>I am content inside the container.</p>
+  </div>
 </section>
 <section>
-    <div class="box" style="overflow:auto">
-        <div class="float">I am a floated box!</div>
-        <p>I am content inside the <code>overflow:auto</code> container.</p>
-    </div>
+  <div class="box" style="overflow:auto">
+    <div class="float">I am a floated box!</div>
+    <p>I am content inside the <code>overflow:auto</code> container.</p>
+  </div>
 </section>
 <section>
-    <div class="box" style="display:flow-root">
-        <div class="float">I am a floated box!</div>
-        <p>I am content inside the <code>display:flow-root</code> container.</p>
-    </div>
+  <div class="box" style="display:flow-root">
+    <div class="float">I am a floated box!</div>
+    <p>I am content inside the <code>display:flow-root</code> container.</p>
+  </div>
 </section>
 ```
 
@@ -126,7 +126,9 @@ In the following example, we are using `display:flow-root` and floats to impleme
 </section>
 <section>
   <div class="float">Try to resize this outer float</div>
-  <div class="box" style="display:flow-root"><p><code>display:flow-root</code></p></div>
+  <div class="box" style="display:flow-root">
+    <p><code>display:flow-root</code></p>
+  </div>
 </section>
 ```
 

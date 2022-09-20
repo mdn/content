@@ -29,12 +29,12 @@ A {{jsxref('Number')}} indicating the current light level in lux.
 ## Examples
 
 ```js
-if ('AmbientLightSensor' in window) {
+if ("AmbientLightSensor" in window) {
   const sensor = new AmbientLightSensor();
-  sensor.addEventListener('reading', (event) => {
-    console.log('Current light level:', sensor.illuminance);
+  sensor.addEventListener("reading", (event) => {
+    console.log("Current light level:", sensor.illuminance);
   });
-  sensor.addEventListener('error', (event) => {
+  sensor.addEventListener("error", (event) => {
     console.log(event.error.name, event.error.message);
   });
   sensor.start();

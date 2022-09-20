@@ -84,24 +84,24 @@ This example require font "Yu Gothic" installed in your OS, other fonts may not 
 
 ```html
 <table>
-<thead></thead>
-<tbody style="border:0;">
-  <tr>
-    <th>normal/jis78:</th>
-    <td>麹町</td>
-    <td class="jis78">麹町</td>
-  </tr>
-  <tr>
-    <th>normal/ruby:</th>
-    <td>しんかんせん</td>
-    <td class="ruby">しんかんせん</td>
-  </tr>
-  <tr>
-    <th>normal/traditional:</th>
-    <td>大学</td>
-    <td class="traditional">大学</td>
-  </tr>
-</tbody>
+  <thead></thead>
+  <tbody style="border:0;">
+    <tr>
+      <th>normal/jis78:</th>
+      <td>麹町</td>
+      <td class="jis78">麹町</td>
+    </tr>
+    <tr>
+      <th>normal/ruby:</th>
+      <td>しんかんせん</td>
+      <td class="ruby">しんかんせん</td>
+    </tr>
+    <tr>
+      <th>normal/traditional:</th>
+      <td>大学</td>
+      <td class="traditional">大学</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

@@ -125,7 +125,7 @@ Object.hasOwn(fruits, 4);   // false - not defined
 
 ### Problematic cases for hasOwnProperty
 
-This section demonstrate that `hasOwn()` is immune to the problems that affect
+This section demonstrates that `hasOwn()` is immune to the problems that affect
 `hasOwnProperty`. Firstly, it can be used with objects that have reimplemented
 `hasOwnProperty()`:
 

@@ -23,11 +23,13 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 10 10"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="myGradient" gradientTransform="rotate(90)">
-      <stop offset="5%"  stop-color="gold" />
+      <stop offset="5%" stop-color="gold" />
       <stop offset="95%" stop-color="red" />
     </linearGradient>
   </defs>
@@ -58,16 +60,16 @@ svg {
     _Value type_: {{cssxref("length-percentage")}} | {{cssxref("number")}}; _Default value_: `0%`; _Animatable_: **yes**
 - {{SVGAttr("x2")}}
   - : This attribute defines the x coordinate of the ending point of the vector gradient along which the linear gradient is drawn.
-    _Value type_:  {{cssxref("length-percentage")}} | {{cssxref("number")}}; _Default value_: `100%`; _Animatable_: **yes**
+    _Value type_: {{cssxref("length-percentage")}} | {{cssxref("number")}}; _Default value_: `100%`; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}}
   - : {{Deprecated_Header}}An [\<IRI>](/en-US/docs/Web/SVG/Content_type#iri) reference to another `<linearGradient>` element that will be used as a template.
     _Value type_: [**\<IRI>**](/en-US/docs/Web/SVG/Content_type#iri) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("y1")}}
   - : This attribute defines the y coordinate of the starting point of the vector gradient along which the linear gradient is drawn.
-    _Value type_:  {{cssxref("length-percentage")}} | {{cssxref("number")}}; _Default value_: `0%`; _Animatable_: **yes**
+    _Value type_: {{cssxref("length-percentage")}} | {{cssxref("number")}}; _Default value_: `0%`; _Animatable_: **yes**
 - {{SVGAttr("y2")}}
   - : This attribute defines the y coordinate of the ending point of the vector gradient along which the linear gradient is drawn.
-    _Value type_:  {{cssxref("length-percentage")}} | {{cssxref("number")}}; _Default value_: `0%`; _Animatable_: **yes**
+    _Value type_: {{cssxref("length-percentage")}} | {{cssxref("number")}}; _Default value_: `0%`; _Animatable_: **yes**
 
 ### Global attributes
 

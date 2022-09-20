@@ -45,17 +45,28 @@ This element implements the {{domxref("SVGFESpecularLightingElement")}} interfac
 ## Example
 
 ```html
-<svg height="200" width="200" viewBox="0 0 220 220"
-    xmlns="http://www.w3.org/2000/svg">
-  <filter id = "filter">
-    <feSpecularLighting result="specOut"
-        specularExponent="20" lighting-color="#bbbbbb">
-      <fePointLight x="50" y="75" z="200"/>
+<svg
+  height="200"
+  width="200"
+  viewBox="0 0 220 220"
+  xmlns="http://www.w3.org/2000/svg">
+  <filter id="filter">
+    <feSpecularLighting
+      result="specOut"
+      specularExponent="20"
+      lighting-color="#bbbbbb">
+      <fePointLight x="50" y="75" z="200" />
     </feSpecularLighting>
-    <feComposite in="SourceGraphic" in2="specOut"
-        operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    <feComposite
+      in="SourceGraphic"
+      in2="specOut"
+      operator="arithmetic"
+      k1="0"
+      k2="1"
+      k3="1"
+      k4="0" />
   </filter>
-  <circle cx="110" cy="110" r="100" style="filter:url(#filter)"/>
+  <circle cx="110" cy="110" r="100" style="filter:url(#filter)" />
 </svg>
 ```
 

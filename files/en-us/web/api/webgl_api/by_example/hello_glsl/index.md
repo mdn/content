@@ -30,8 +30,7 @@ A very simple first shader program.
 ```
 
 ```html hidden
-<canvas>Your browser does not seem to support
-    HTML canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
 ```
 
 ```css hidden
@@ -56,20 +55,20 @@ button {
 
 ```html
 <script type="x-shader/x-vertex" id="vertex-shader">
-#version 100
-void main() {
-  gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
-  gl_PointSize = 64.0;
-}
+  #version 100
+  void main() {
+    gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
+    gl_PointSize = 64.0;
+  }
 </script>
 ```
 
 ```html
 <script type="x-shader/x-fragment" id="fragment-shader">
-#version 100
-void main() {
-  gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
-}
+  #version 100
+  void main() {
+    gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
+  }
 </script>
 ```
 

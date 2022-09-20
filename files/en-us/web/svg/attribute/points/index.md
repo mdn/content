@@ -31,12 +31,14 @@ svg {
 ```html
 <svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polyline is an open shape -->
-  <polyline stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
 
   <!-- polygon is a closed shape -->
-  <polygon stroke="black" fill="none" transform="translate(100,0)"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polygon
+    stroke="black"
+    fill="none"
+    transform="translate(100,0)"
+    points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
   It is usually considered best practices to separate a X and Y
@@ -82,8 +84,7 @@ svg {
 ```html
 <svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polyline is an open shape -->
-  <polyline stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 
@@ -123,8 +124,7 @@ svg {
 ```html
 <svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polygon is an closed shape -->
-  <polygon stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90" />
+  <polygon stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 

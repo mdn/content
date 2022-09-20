@@ -33,7 +33,7 @@ In this example, a 2px black border is added around the progress bar.
 #### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 #### CSS

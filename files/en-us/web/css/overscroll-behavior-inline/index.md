@@ -67,7 +67,11 @@ By default, when the inner box is scrolled and a scroll boundary is reached, the
 <main>
   <div>
     <div>
-      <p><code>overscroll-behavior-inline</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
+      <p>
+        <code>overscroll-behavior-inline</code> has been used to make it so that
+        when the scroll boundaries of the yellow inner box are reached, the
+        whole page does not begin to scroll.
+      </p>
     </div>
   </div>
 </main>

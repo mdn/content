@@ -61,7 +61,7 @@ An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/inpu
 ### Setting the value attribute
 
 ```html
-<input type="submit" value="Send Request">
+<input type="submit" value="Send Request" />
 ```
 
 {{EmbedLiveSample("Setting_the_value_attribute", 650, 30)}}
@@ -71,7 +71,7 @@ An `<input type="submit">` element's [`value`](/en-US/docs/Web/HTML/Element/inpu
 If you don't specify a `value`, the button will have a default label, chosen by the user agent. This label is likely to be something along the lines of "Submit" or "Submit Query." Here's an example of a submit button with a default label in your browser:
 
 ```html
-<input type="submit">
+<input type="submit" />
 ```
 
 {{EmbedLiveSample("Omitting_the_value_attribute", 650, 30)}}
@@ -151,10 +151,10 @@ We'll begin by creating a form with a simple submit button:
 <form>
   <div>
     <label for="example">Let's submit some text</label>
-    <input id="example" type="text" name="text">
+    <input id="example" type="text" name="text" />
   </div>
   <div>
-    <input type="submit" value="Send">
+    <input type="submit" value="Send" />
   </div>
 </form>
 ```
@@ -179,11 +179,10 @@ Here's the previous example with the <kbd>s</kbd> access key added:
 <form>
   <div>
     <label for="example">Let's submit some text</label>
-    <input id="example" type="text" name="text">
+    <input id="example" type="text" name="text" />
   </div>
   <div>
-    <input type="submit" value="Send"
-     accesskey="s">
+    <input type="submit" value="Send" accesskey="s" />
   </div>
 </form>
 ```
@@ -199,7 +198,7 @@ The problem with the above example is that the user will not know what the acces
 To disable a submit button, specify the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute on it, like so:
 
 ```html
-<input type="submit" value="Send" disabled>
+<input type="submit" value="Send" disabled />
 ```
 
 You can enable and disable buttons at run time by setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.

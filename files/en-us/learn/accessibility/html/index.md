@@ -127,7 +127,8 @@ We've prepared a version with longer text for you to try out with a screen reade
 People sometimes write headings, paragraphs, etc. using line breaks and adding HTML elements purely for styling, something like the following:
 
 ```html example-bad
-<span style="font-size: 3em">My heading</span> <br /><br />
+<span style="font-size: 3em">My heading</span>
+<br /><br />
 This is the first section of my document.
 <br /><br />
 I'll add another paragraph here too.
@@ -175,7 +176,7 @@ Try our example [table-layout.html](https://mdn.github.io/learning-area/accessib
       <h1 align="center">Header</h1>
     </td>
   </tr>
-  <!-- nav menu row  -->
+  <!-- nav menu row -->
   <tr id="nav" bgcolor="#ffffff">
     <td width="200">
       <a href="#" align="center">Home</a>
@@ -369,7 +370,8 @@ While the above addition allows us to tab to the buttons, it does not allow us t
 
 ```js
 document.onkeydown = (e) => {
-  if (e.key === "Enter") { // The Enter/Return key
+  // The Enter/Return key
+  if (e.key === "Enter") {
     document.activeElement.click();
   }
 };

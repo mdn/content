@@ -62,28 +62,26 @@ The `overflow-inline` property is specified as a single keyword chosen from the 
 
 ```html
 <ul>
-  <li><code>overflow-inline:hidden</code> — hides the text outside the box
-    <div id="div1">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:hidden</code> — hides the text outside the box
+    <div id="div1">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:scroll</code> — always adds a scrollbar
-    <div id="div2">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:scroll</code> — always adds a scrollbar
+    <div id="div2">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:visible</code> — displays the text outside the box if needed
-    <div id="div3">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:visible</code> — displays the text outside the box if
+    needed
+    <div id="div3">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-inline:auto</code> — on most browsers, equivalent to <code>scroll</code>
-    <div id="div4">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-inline:auto</code> — on most browsers, equivalent to
+    <code>scroll</code>
+    <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 </ul>
 ```

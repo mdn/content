@@ -40,14 +40,14 @@ parameter, would have resulted in `16:45`, as `n` defaults to
 `1`.
 
 ```html
-<!--  decrements by intervals of 900 seconds (15 minute) -->
-<input type="time" max="17:00" step="900">
+<!-- decrements by intervals of 900 seconds (15 minute) -->
+<input type="time" max="17:00" step="900" />
 
 <!-- decrements by intervals of 7 days (one week) -->
-<input type="date" max="2019-12-25" step="7">
+<input type="date" max="2019-12-25" step="7" />
 
 <!-- decrements by intervals of 12 months (one year) -->
-<input type="month" max="2019-12" step="12">
+<input type="month" max="2019-12" step="12" />
 ```
 
 However, calling `stepDown` on `<input type="time" max="17:00" step="900">` would not set the value to `17:00`, as one would expect — and as it does for `stepUp` when the input is `<input type="time" min="17:00" step="900">`. Instead, the first call to `stepDown` will set the initial value to `23:45` even though the `max` attribute is set. The second call will set the value to `17:00`. And the third call to will set the value to `16:45`.
@@ -137,16 +137,16 @@ Click the button in this example to decrement the {{HTMLElement("input/number",
 
 ```html
 <p>
-  <label>Enter a number between 0 and 400 that is divisible by 5:
-   <input type="number" step="5" id="theNumber" min="0" max="400">
-  </label>
+  <label for="theNumber">Enter a number between 0 and 400 that is divisible by 5:</label>
+  <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
-  <label>Enter how many values of step you would like to decrement by or leave it blank:
-   <input type="number" step="1" id="decrementer" min="-2" max="15">
+  <label for="decrementer">
+    Enter how many values of step you would like to decrement by or leave it blank:
   </label>
+  <input type="number" step="1" id="decrementer" min="-2" max="15" />
 </p>
-<input type="button" value="Decrement" id="theButton">
+<input type="button" value="Decrement" id="theButton" />
 ```
 
 ### JavaScript

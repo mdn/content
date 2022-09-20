@@ -54,7 +54,7 @@ Undefined.
 The following example copies the plane at index `1` to a destination buffer.
 
 ```js
-AudioData.copyTo(AudioBuffer, {planeIndex: 1});
+AudioData.copyTo(AudioBuffer, { planeIndex: 1 });
 ```
 
 ## Specifications

@@ -55,7 +55,7 @@ function onError() {
 browser.menus.create({
   id: "remove-me",
   title: "Remove me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {

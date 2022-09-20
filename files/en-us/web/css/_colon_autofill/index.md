@@ -1,5 +1,5 @@
 ---
-title: ':autofill'
+title: ":autofill"
 slug: Web/CSS/:autofill
 tags:
   - CSS
@@ -51,7 +51,8 @@ input:autofill {
 
 ```html
 <form method="post" action="">
-  <label for="email">Email</label> <input type="email" name="email" id="email" autocomplete="email">
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" autocomplete="email" />
 </form>
 ```
 

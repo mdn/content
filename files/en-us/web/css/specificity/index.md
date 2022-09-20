@@ -53,7 +53,7 @@ input:focus,
 
 The `[type="password"]` selector in the above selector list, with a specificity weight of `0-1-0`, applies the `color: blue` declaration to all password input types.
 
-All inputs, no matter the type, when receiving focus, match the second selector in the list, `input:focus`, with a specificity weight of `0-1-1`; this weight is made up of the `:focus` pseudo-class (0-1-0) and the `input` type (0-1-1). If the password input has focus, it will match `input:focus`, and the specificity weight for the `color: blue` style declaration will be `0-1-1`. When that password doesn't have focus, the specificity weight remains at `0-1-0`.
+All inputs, no matter the type, when receiving focus, match the second selector in the list, `input:focus`, with a specificity weight of `0-1-1`; this weight is made up of the `:focus` pseudo-class (0-1-0) and the `input` type (0-0-1). If the password input has focus, it will match `input:focus`, and the specificity weight for the `color: blue` style declaration will be `0-1-1`. When that password doesn't have focus, the specificity weight remains at `0-1-0`.
 
 The specificity for a required input nested in an element with attribute `id="myApp"` is `1-2-1`, based on one ID, two pseudo-classes, and one element type.
 
@@ -84,7 +84,7 @@ If the number in the _ID_ columns of competing selectors is the same, then the n
 
 ```css
 #myElement {
-  color: yellow; /* 1-0-0  */
+  color: yellow; /* 1-0-0 */
 }
 #myApp [id="myElement"] {
   color: green; /* 1-1-0  - WINS!! */
@@ -111,7 +111,7 @@ input.myClass {
   color: yellow; /* 0-1-1 */
 }
 :root input {
-  color: green; /* 0-1-1  WINS because it comes later */
+  color: green; /* 0-1-1 WINS because it comes later */
 }
 ```
 
@@ -172,7 +172,7 @@ The only way to override inline styles is by using `!important`.
 Many JavaScript frameworks and libraries add inline styles. Using `!important` with a very targeted selector, such as an attribute selector using the inline style, is one way to override these inline styles.
 
 ```html
-<p style="color: purple">
+<p style="color: purple">…</p>
 ```
 
 ```css

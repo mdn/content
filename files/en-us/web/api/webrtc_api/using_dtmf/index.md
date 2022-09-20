@@ -54,14 +54,16 @@ The HTML for this example is very basic; there are only three elements of import
 - A {{HTMLElement("div")}} to receive and display log text to show status information.
 
 ```html
-  <p>This example demonstrates the use of DTMF in WebRTC. Note that this
-     example is "cheating" by generating both peers in one code stream,
-     rather than having each be a truly separate entity.</p>
+<p>
+  This example demonstrates the use of DTMF in WebRTC. Note that this example is
+  "cheating" by generating both peers in one code stream, rather than having
+  each be a truly separate entity.
+</p>
 
-  <audio id="audio" autoplay controls></audio><br/>
-  <button name="dial" id="dial">Dial</button>
+<audio id="audio" autoplay controls></audio><br />
+<button name="dial" id="dial">Dial</button>
 
-  <div class="log"></div>
+<div class="log"></div>
 ```
 
 ### JavaScript
