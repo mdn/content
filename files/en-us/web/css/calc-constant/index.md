@@ -13,7 +13,7 @@ browser-compat: css.types.calc-constant
 
 {{CSSRef}}
 
-The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a well-known constants, such as `e` and `π`.
+The **`<calc-constant>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents well-known constants such as `e` and `π`.
 
 Rather than require authors to manually type out several digits of these constants, a few of them are provided directly by CSS.
 
