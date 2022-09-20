@@ -9,6 +9,7 @@ tags:
   - Interface
 browser-compat: api.DocumentType
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType`** interface represents a {{domxref("Node")}} containing a doctype.

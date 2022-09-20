@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.IdleDetector
 ---
+
 {{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`IdleDetector`** interface of the {{domxref('idle_detection_api','Idle
@@ -22,16 +23,17 @@ This interface requires a secure context.
 ## Constructor
 
 - {{domxref("IdleDetector.IdleDetector", "IdleDetector()")}} {{Experimental_Inline}}
-  _ : Creates a new `IdleDetector` object.
+  - : Creates a new `IdleDetector` object.
 
 ## Properties
 
 - {{domxref("IdleDetector.userState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+
   - : Returns a string indicating whether the users has interacted with either the screen or the device since the call to `start()`.
 
-  _ : Returns either `"active"` to indicate that the user has interacted with the
-device within the threshold provided to `start()` or `"idle"` if they have not.
-This attribute returns `null` before `start()` is called.
+  - : Returns either `"active"` to indicate that the user has interacted with the
+  device within the threshold provided to `start()` or `"idle"` if they have not.
+  This attribute returns `null` before `start()` is called.
 
 - {{domxref("IdleDetector.screenState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string indicating whether the screen is locked, one of
@@ -46,6 +48,7 @@ This attribute returns `null` before `start()` is called.
 ## Methods
 
 - {{domxref("IdleDetector.requestPermission()")}} {{Experimental_Inline}}
+
   - : Returns a {{jsxref('Promise')}} that resolves when the user has chosen
     whether to grant the origin access to their idle state. Resolves with
     `"granted"` on acceptance and `"denied"` on refusal.

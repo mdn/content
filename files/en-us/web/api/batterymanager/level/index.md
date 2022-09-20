@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.BatteryManager.level
 ---
+
 {{APIRef("Battery API")}}
 
 The **`BatteryManager.level`** property indicates the current battery charge level as a value between `0.0` and `1.0`.
@@ -35,12 +36,12 @@ A number.
 #### JavaScript
 
 ```js
-const getLevel = document.querySelector('#get-level');
-const output = document.querySelector('#output');
+const getLevel = document.querySelector("#get-level");
+const output = document.querySelector("#output");
 
-getLevel.addEventListener('click', async () => {
+getLevel.addEventListener("click", async () => {
   if (!navigator.getBattery) {
-    output.textContent = 'Battery manager is unsupported';
+    output.textContent = "Battery manager is unsupported";
   } else {
     const manager = await navigator.getBattery();
     const level = manager.level;

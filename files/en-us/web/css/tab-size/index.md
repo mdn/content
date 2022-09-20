@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.tab-size
 ---
+
 {{CSSRef}}
 
 The **`tab-size`** CSS property is used to customize the width of tab characters (U+0009).

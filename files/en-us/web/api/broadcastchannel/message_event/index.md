@@ -1,5 +1,5 @@
 ---
-title: 'BroadcastChannel: message event'
+title: "BroadcastChannel: message event"
 slug: Web/API/BroadcastChannel/message_event
 page-type: web-api-event
 tags:
@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.BroadcastChannel.message_event
 ---
+
 {{APIRef}}
 
 The `message` event is fired on a {{domxref('BroadcastChannel')}} object when a message arrives on that channel.
@@ -15,8 +16,8 @@ The `message` event is fired on a {{domxref('BroadcastChannel')}} object when a 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('message', (event) => { })
+```js-nolint
+addEventListener("message", (event) => { })
 onmessage = (event) => { }
 ```
 
@@ -49,7 +50,7 @@ In this example there's a "sender" [`<iframe>`](/en-US/docs/Web/HTML/Element/ifr
 
 ```html hidden
 <h1>Sender</h1>
-<label for="message">Type a message to broadcast:</label><br/>
+<label for="message">Type a message to broadcast:</label><br />
 <textarea id="message" name="message" rows="1" cols="40">Hello</textarea>
 <button id="broadcast-message" type="button">Broadcast message</button>
 ```
@@ -82,13 +83,13 @@ button {
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-const messageControl = document.querySelector('#message');
-const broadcastMessageButton = document.querySelector('#broadcast-message');
+const channel = new BroadcastChannel("example-channel");
+const messageControl = document.querySelector("#message");
+const broadcastMessageButton = document.querySelector("#broadcast-message");
 
-broadcastMessageButton.addEventListener('click', () => {
-    channel.postMessage(messageControl.value);
-})
+broadcastMessageButton.addEventListener("click", () => {
+  channel.postMessage(messageControl.value);
+});
 ```
 
 ### Receiver 1
@@ -113,8 +114,8 @@ h1 {
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) => {
+const channel = new BroadcastChannel("example-channel");
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 ```
@@ -141,8 +142,8 @@ h1 {
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) => {
+const channel = new BroadcastChannel("example-channel");
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 ```

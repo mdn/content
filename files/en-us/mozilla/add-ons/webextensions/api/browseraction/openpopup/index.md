@@ -13,6 +13,7 @@ tags:
   - openPopup
 browser-compat: webextensions.api.browserAction.openPopup
 ---
+
 {{AddonSidebar()}}
 
 Open the browser action's popup.
@@ -21,7 +22,7 @@ You can only call this function from inside the handler for a [user action](/en-
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.openPopup()
 ```
 

@@ -13,6 +13,7 @@ tags:
   - contextMenus
 browser-compat: webextensions.api.menus.update
 ---
+
 {{AddonSidebar()}}
 
 Updates a previously created menu item.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let updating = browser.menus.update(
   id,               // integer or string
   updateProperties // object

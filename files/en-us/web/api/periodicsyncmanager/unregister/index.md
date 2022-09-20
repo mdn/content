@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.PeriodicSyncManager.unregister
 ---
+
 {{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`unregister()`** method of the
@@ -22,7 +23,7 @@ when unregistration completes.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister(tag)
 ```
 

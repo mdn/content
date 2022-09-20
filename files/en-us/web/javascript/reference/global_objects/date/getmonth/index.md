@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getMonth
 ---
+
 {{JSRef}}
 
 The **`getMonth()`** method returns the month in the specified
@@ -19,7 +20,7 @@ month of the year).
 
 ## Syntax
 
-```js
+```js-nolint
 getMonth()
 ```
 

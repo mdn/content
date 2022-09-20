@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry.startTime
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`startTime`** property returns the first recorded

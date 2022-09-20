@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string representing
@@ -20,7 +21,7 @@ String (such as a comma ",").
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 toLocaleString(locales)
 toLocaleString(locales, options)

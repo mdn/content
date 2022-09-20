@@ -10,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.outline
 ---
+
 {{CSSRef}}
 
 The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets most of the outline properties in a single declaration.

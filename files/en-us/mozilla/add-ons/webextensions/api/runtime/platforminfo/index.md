@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.PlatformInfo
 ---
+
 {{AddonSidebar()}}
 
 An object containing information about the current platform.

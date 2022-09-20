@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.PlatformNaclArch
 ---
+
 {{AddonSidebar()}}
 
 The native client architecture. This may be different from arch on some platforms.

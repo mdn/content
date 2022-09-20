@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.proxy.settings
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to change the browser's proxy settings.

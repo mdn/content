@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: css.properties.-moz-float-edge
 ---
+
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
 The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property specifies whether the height and width properties of the element include the margin, border, or padding thickness.

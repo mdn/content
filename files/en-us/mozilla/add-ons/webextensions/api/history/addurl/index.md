@@ -13,6 +13,7 @@ tags:
   - addUrl
 browser-compat: webextensions.api.history.addUrl
 ---
+
 {{AddonSidebar()}}
 
 Adds a record to the browser's history of a visit to the given URL. The visit's time is recorded as the time of the call, and the {{WebExtAPIRef("history.TransitionType", "TransitionType")}} is recorded as "link".
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let addingUrl = browser.history.addUrl(
   details         // object
 )

@@ -10,6 +10,7 @@ tags:
   - web console
 browser-compat: api.console
 ---
+
 {{APIRef("Console API")}}
 
 The **`console`** object provides access to the browser's
@@ -116,7 +117,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 The output will look like this:
 
 ```bash
-My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+My first car was a Dodge Charger. The object is: ({str:"Some text", id:5})
 ```
 
 #### Using string substitutions

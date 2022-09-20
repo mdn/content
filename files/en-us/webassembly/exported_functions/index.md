@@ -10,6 +10,7 @@ tags:
   - exported wasm functions
   - wasm
 ---
+
 {{WebAssemblySidebar}}
 
 Exported WebAssembly functions are how WebAssembly functions are represented in JavaScript. This article describes what they are in a little more detail.
@@ -20,10 +21,10 @@ Exported WebAssembly functions are basically just JavaScript wrappers that repre
 
 You can retrieve exported WebAssembly functions in two ways:
 
-- By calling [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) on an existing table.
-- By accessing a function exported from a wasm module instance via [`Instance.exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports).
+- By calling [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get) on an existing table.
+- By accessing a function exported from a wasm module instance via [`Instance.exports`](/en-US/docs/WebAssembly/JavaScript_interface/Instance/exports).
 
-Either way, you get the same kind of wrapper for the underlying function.  From a JavaScript point of view, it's as if every wasm function _is_ a JavaScript function too — but they are encapsulated by the exported wasm function object instance and there are only limited ways to access them.
+Either way, you get the same kind of wrapper for the underlying function. From a JavaScript point of view, it's as if every wasm function _is_ a JavaScript function too — but they are encapsulated by the exported wasm function object instance and there are only limited ways to access them.
 
 ## An example
 
@@ -32,27 +33,26 @@ Let's look at an example to clear things up (you can find this on GitHub as [tab
 ```js
 const otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
-WebAssembly.instantiateStreaming(fetch('table.wasm'))
-  .then((obj) => {
-    const tbl = obj.instance.exports.tbl;
-    console.log(tbl.get(0)());  // 13
-    console.log(tbl.get(1)());  // 42
-    otherTable.set(0,tbl.get(0));
-    otherTable.set(1,tbl.get(1));
-    console.log(otherTable.get(0)());
-    console.log(otherTable.get(1)());
-  });
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
+  const tbl = obj.instance.exports.tbl;
+  console.log(tbl.get(0)()); // 13
+  console.log(tbl.get(1)()); // 42
+  otherTable.set(0, tbl.get(0));
+  otherTable.set(1, tbl.get(1));
+  console.log(otherTable.get(0)());
+  console.log(otherTable.get(1)());
+});
 ```
 
-Here we create a table (`otherTable`) from JavaScript using the {{jsxref("WebAssembly.Table")}} constructor, then we load `table.wasm` into our page using the {{jsxref("WebAssembly.instantiateStreaming()")}} method.
+Here we create a table (`otherTable`) from JavaScript using the [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table) constructor, then we load `table.wasm` into our page using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method.
 
-We then get the function exported from the module, retrieve the functions it references via [`tbl.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) and log the result of invoking each one to the console. Next, we use `set()` to make the `otherTable` table contain references to the same functions as the `tbl` table.
+We then get the function exported from the module, retrieve the functions it references via [`tbl.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get) and log the result of invoking each one to the console. Next, we use `set()` to make the `otherTable` table contain references to the same functions as the `tbl` table.
 
 To prove this, we then retrieve these references back from `otherTable` and print their results to console too, which gives the same results.
 
 ## They are real functions
 
-In the previous example, the return value of each [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) call is an exported WebAssembly function — exactly what we have been talking about.
+In the previous example, the return value of each [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get) call is an exported WebAssembly function — exactly what we have been talking about.
 
 It is worth noting that these are real JavaScript functions, in addition to being wrappers for WebAssembly functions. If you load the above example in a [WebAssembly-supporting browser](/en-US/docs/WebAssembly#browser_compatibility), and run the following lines in your console:
 

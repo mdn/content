@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.GamepadEvent.gamepad
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`GamepadEvent.gamepad`** property of the

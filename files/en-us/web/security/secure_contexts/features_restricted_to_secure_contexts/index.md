@@ -11,6 +11,7 @@ tags:
   - features
   - support
 ---
+
 This reference lists the web platform features available only in secure contexts — see [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts) for a definition and more details.
 
 ## Current features available only in secure contexts

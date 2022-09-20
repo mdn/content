@@ -15,6 +15,7 @@ tags:
   - XRSession
 browser-compat: api.XRSession.domOverlayState
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`domOverlayState`** property of an `immersive-ar`

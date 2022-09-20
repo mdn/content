@@ -9,6 +9,7 @@ tags:
   - Primary Expressions
 browser-compat: javascript.operators.function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`function`** keyword can be used to define a function inside an expression.

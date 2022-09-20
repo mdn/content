@@ -10,6 +10,7 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_frag_depth
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_frag_depth`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables to set a depth value of a fragment from within the fragment shader.
@@ -30,10 +31,10 @@ Now the output variable `gl_FragDepthEXT` is available to set a depth value of a
 
 ```html
 <script type="x-shader/x-fragment">
-void main() {
-  gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
-  gl_FragDepthEXT = 0.5;
-}
+  void main() {
+    gl_FragColor = vec4(1.0, 0.0, 1.0, 1.0);
+    gl_FragDepthEXT = 0.5;
+  }
 </script>
 ```
 

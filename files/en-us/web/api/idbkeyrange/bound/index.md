@@ -13,6 +13,7 @@ tags:
   - bound
 browser-compat: api.IDBKeyRange.bound
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`bound()`** method of the {{domxref("IDBKeyRange")}}
@@ -24,7 +25,7 @@ is, the bounds include the endpoint values). By default, the bounds are closed.
 
 ## Syntax
 
-```js
+```js-nolint
 bound(lower, upper)
 bound(lower, upper, lowerOpen)
 bound(lower, upper, lowerOpen, upperOpen)

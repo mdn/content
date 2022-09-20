@@ -13,13 +13,14 @@ tags:
   - onChildrenReordered
 browser-compat: webextensions.api.bookmarks.onChildrenReordered
 ---
+
 {{AddonSidebar()}}
 
 Fired when the children of a folder have changed their order due to the order being sorted in the UI. This is not called as a result of a call to {{WebExtAPIRef("bookmarks.move()")}} or a drag operation in the UI.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onChildrenReordered.addListener(listener)
 browser.bookmarks.onChildrenReordered.removeListener(listener)
 browser.bookmarks.onChildrenReordered.hasListener(listener)

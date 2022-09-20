@@ -12,6 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`SpeechSynthesisVoice`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a voice that the system supports.

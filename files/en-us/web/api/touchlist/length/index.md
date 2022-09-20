@@ -13,6 +13,7 @@ tags:
   - touch
 browser-compat: api.TouchList.length
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`length`** read-only property indicates the number of

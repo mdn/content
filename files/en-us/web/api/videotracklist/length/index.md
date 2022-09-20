@@ -16,6 +16,7 @@ tags:
   - track
 browser-compat: api.VideoTrackList.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrackList")}}**

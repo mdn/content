@@ -13,6 +13,7 @@ tags:
   - web animations api
 browser-compat: api.AnimationTimeline
 ---
+
 {{ APIRef("Web Animations") }}
 
 The `AnimationTimeline` interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) represents the timeline of an animation. This interface exists to define timeline features (inherited by {{domxref("DocumentTimeline")}} and future timeline types) and is not itself directly used by developers. Anywhere you see `AnimationTimeline`, you should use `DocumentTimeline` or any other timeline type instead.

@@ -11,6 +11,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.stalled_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `stalled` event is fired when the user agent is trying to fetch media data, but data is unexpectedly not forthcoming.

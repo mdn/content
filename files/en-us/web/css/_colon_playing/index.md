@@ -8,6 +8,7 @@ tags:
   - playing
 browser-compat: css.selectors.playing
 ---
+
 {{CSSRef}}
 
 The **`:playing`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector is a resource state pseudo-class that will match an audio, video, or similar resource that is capable of being "played" or "paused", when that element is "playing".
@@ -16,7 +17,6 @@ A resource is playing even if in buffering state or paused for any reason other 
 
 ```css
 :playing {
-
 }
 ```
 

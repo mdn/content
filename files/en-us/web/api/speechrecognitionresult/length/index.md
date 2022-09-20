@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResult.length
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`length`** read-only property of the

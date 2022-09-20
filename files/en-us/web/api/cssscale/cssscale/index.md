@@ -13,6 +13,7 @@ tags:
   - Houdini
 browser-compat: api.CSSScale.CSSScale
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSScale()`** constructor creates a new
@@ -21,7 +22,7 @@ individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSScale(x, y)
 new CSSScale(x, y, z)
 ```

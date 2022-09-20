@@ -11,6 +11,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTRefElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGTRefElement`** interface corresponds to the {{SVGElement("tref")}} elements.

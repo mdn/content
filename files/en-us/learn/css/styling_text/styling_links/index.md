@@ -15,6 +15,7 @@ tags:
   - menus
   - tabs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 When styling [links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), it's important to understand how to make use of pseudo-classes to style their states effectively. It's also important to know how to style links for use in common interface features whose content varies, such as navigation menus and tabs. We'll look at both these topics in this article.
@@ -129,27 +130,21 @@ To start off with, we'll write out our empty rulesets:
 
 ```css
 a {
-
 }
 
 a:link {
-
 }
 
 a:visited {
-
 }
 
 a:focus {
-
 }
 
 a:hover {
-
 }
 
 a:active {
-
 }
 ```
 
@@ -180,31 +175,32 @@ a:link {
 }
 
 a:visited {
-  color: #437A16;
+  color: #437a16;
 }
 
 a:focus {
   border-bottom: 1px solid;
-  background: #BAE498;
+  background: #bae498;
 }
 
 a:hover {
   border-bottom: 1px solid;
-  background: #CDFEAA;
+  background: #cdfeaa;
 }
 
 a:active {
   background: #265301;
-  color: #CDFEAA;
+  color: #cdfeaa;
 }
 ```
 
 We'll also provide some sample HTML to apply the CSS to:
 
 ```html
-<p>There are several browsers available, such as <a href="#">Mozilla
-Firefox</a>, <a href="#">Google Chrome</a>, and
-<a href="#">Microsoft Edge</a>.</p>
+<p>
+  There are several browsers available, such as <a href="#">Mozilla Firefox</a>,
+  <a href="#">Google Chrome</a>, and <a href="#">Microsoft Edge</a>.
+</p>
 ```
 
 Putting the two together gives us this result:
@@ -230,14 +226,24 @@ In this active learning session, we'd like you to take our empty set of rules an
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to insert the example we showed above.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><p>There are several browsers available, such as <a href="#">Mozilla
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<p>There are several browsers available, such as <a href="#">Mozilla
  Firefox</a>, <a href="#">Google Chrome</a>, and
 <a href="#">Microsoft Edge</a>.</p></textarea>
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">a {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+a {
 
 }
 
@@ -259,13 +265,24 @@ a:hover {
 
 a:active {
 
-}</textarea>
+}
+  </textarea>
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
-    <input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
+    <input
+      id="solution"
+      type="button"
+      value="Show solution"
+      style="margin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
@@ -279,8 +296,8 @@ const cssCode = cssInput.value;
 const output = document.querySelector(".output");
 const solution = document.getElementById("solution");
 
-const styleElem = document.createElement('style');
-const headElem = document.querySelector('head');
+const styleElem = document.createElement("style");
+const headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -347,9 +364,14 @@ A common practice is to include icons on links to provide more of an indicator a
 Let's look at some HTML and CSS that will give us the effect we want. First, some simple HTML to style:
 
 ```html
-<p>For more information on the weather, visit our <a href="#">weather page</a>,
-look at <a href="https://en.wikipedia.org/">weather on Wikipedia</a>, or check
-out <a href="https://www.nationalgeographic.org/topics/resource-library-weather/">weather on National Geographic</a>.</p>
+<p>
+  For more information on the weather, visit our <a href="#">weather page</a>,
+  look at <a href="https://en.wikipedia.org/">weather on Wikipedia</a>, or check
+  out
+  <a href="https://www.nationalgeographic.org/topics/resource-library-weather/">
+    weather on National Geographic
+  </a>.
+</p>
 ```
 
 Next, the CSS:
@@ -379,7 +401,8 @@ a:visited {
   color: purple;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   border-bottom: 1px solid;
 }
 
@@ -388,7 +411,7 @@ a:active {
 }
 
 a[href^="http"] {
-  background: url('external-link-52.png') no-repeat 100% 0;
+  background: url("external-link-52.png") no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
 }
@@ -431,7 +454,8 @@ First, some HTML:
 And now our CSS:
 
 ```css
-body,html {
+body,
+html {
   margin: 0;
   font-family: sans-serif;
 }
@@ -450,7 +474,9 @@ a {
   color: black;
 }
 
-a:link, a:visited, a:focus {
+a:link,
+a:visited,
+a:focus {
   background: yellow;
 }
 

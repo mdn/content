@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CaretPosition
 ---
+
 {{SeeCompatTable}} {{ APIRef("CSSOM") }}
 
 The `CaretPosition` interface represents the caret position, an indicator for the text insertion point. You can get a `CaretPosition` using the {{domxref("Document.caretPositionFromPoint()")}} method.

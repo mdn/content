@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: css.types.global_keywords.revert-layer
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`revert-layer`** CSS keyword rolls back the value of a property in a {{cssxref("@layer", "cascade layer")}} to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.

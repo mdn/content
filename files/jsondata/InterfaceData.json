@@ -880,6 +880,10 @@
       "inh": "",
       "impl": []
     },
+    "DOMTransition": {
+      "inh": "",
+      "impl": []
+    },
     "DragEvent": {
       "inh": "MouseEvent",
       "impl": []
@@ -1537,6 +1541,10 @@
       "impl": []
     },
     "HTMLMeterElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
+    "HTMLModelElement": {
       "inh": "HTMLElement",
       "impl": []
     },
@@ -3552,6 +3560,10 @@
       "inh": "PermissionStatus",
       "impl": []
     },
+    "UserActivation": {
+      "inh": "",
+      "impl": []
+    },
     "ValidityState": {
       "inh": "",
       "impl": []
@@ -3906,6 +3918,10 @@
     },
     "XRBoundedReferenceSpace": {
       "inh": "XRReferenceSpace",
+      "impl": []
+    },
+    "XRCamera": {
+      "inh": "",
       "impl": []
     },
     "XRCompositionLayer": {

@@ -10,6 +10,7 @@ tags:
   - WebDriver
 browser-compat: api.Navigator.webdriver
 ---
+
 {{APIRef("WebDriver")}}
 
 The **`webdriver`** read-only property

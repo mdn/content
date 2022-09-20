@@ -11,6 +11,7 @@ tags:
   - part 5
   - server-side
 ---
+
 The first page we'll create will be the website home page, which is accessible from either the site (`'/'`) or catalog (`catalog/`) root. This will display some static text describing the site, along with dynamically calculated "counts" of different record types in the database.
 
 We've already created a route for the home page. In order to complete the page we need to update our controller function to fetch "counts" of records from the database, and create a view (template) that we can use to render the page.
@@ -21,15 +22,15 @@ We created our index page routes in a [previous tutorial.](/en-US/docs/Learn/Ser
 
 ```js
 // GET catalog home page.
-router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix
+router.get("/", book_controller.index); //This actually maps to /catalog/ because we import the route with a /catalog prefix
 ```
 
 Where the callback function parameter (`book_controller.index`) is defined in **/controllers/bookController.js**:
 
 ```js
 exports.index = (req, res, next) => {
-  res.send('NOT IMPLEMENTED: Site Home Page');
-}
+  res.send("NOT IMPLEMENTED: Site Home Page");
+};
 ```
 
 It is this controller function that we extend to get information from our models and then render it using a template (view).
@@ -41,20 +42,20 @@ The index controller function needs to fetch information about how many `Book`, 
 > **Note:** We use the [`countDocuments()`](https://mongoosejs.com/docs/api.html#model_Model.countDocuments) method to get the number of instances of each model. This is called on a model, with an optional set of conditions to match against in the first argument, and a callback in the second argument (as discussed in [Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose), and you can also return a `Query` and then execute it with a callback later). The callback will be invoked when the database returns the count, with an error value as the first parameter (or `null`) and the count of documents as the second parameter (or `null` if there was an error) .
 >
 > ```js
-> SomeModel.countDocuments({ a_model_field: 'match_value' }, (err, count) => {
->  // Do something if there is an err
->  // Do something with the count if there was no error
->  });
+> SomeModel.countDocuments({ a_model_field: "match_value" }, (err, count) => {
+>   // Do something if there is an err
+>   // Do something with the count if there was no error
+> });
 > ```
 
 Open **/controllers/bookController.js**. Near the top of the file you should see the exported `index()` function.
 
-```python
-const Book = require('../models/book')
+```js
+const Book = require("../models/book");
 
 exports.index = (req, res, next) => {
- res.send('NOT IMPLEMENTED: Site Home Page');
-}
+  res.send("NOT IMPLEMENTED: Site Home Page");
+};
 ```
 
 Replace all the code above with the following code fragment.
@@ -63,34 +64,40 @@ We need to do this because we'll be using them to get our counts of documents.
 It then imports the _async_ module (which we discussed previously in [Asynchronous flow control using async](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)).
 
 ```js
-const Book = require('../models/book');
-const Author = require('../models/author');
-const Genre = require('../models/genre');
-const BookInstance = require('../models/bookinstance');
+const Book = require("../models/book");
+const Author = require("../models/author");
+const Genre = require("../models/genre");
+const BookInstance = require("../models/bookinstance");
 
-const async = require('async');
+const async = require("async");
 
-exports.index = (req, res) =>{
-  async.parallel({
-    book_count(callback) {
-      Book.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
+exports.index = (req, res) => {
+  async.parallel(
+    {
+      book_count(callback) {
+        Book.countDocuments({}, callback); // Pass an empty object as match condition to find all documents of this collection
+      },
+      book_instance_count(callback) {
+        BookInstance.countDocuments({}, callback);
+      },
+      book_instance_available_count(callback) {
+        BookInstance.countDocuments({ status: "Available" }, callback);
+      },
+      author_count(callback) {
+        Author.countDocuments({}, callback);
+      },
+      genre_count(callback) {
+        Genre.countDocuments({}, callback);
+      },
     },
-    book_instance_count(callback) {
-      BookInstance.countDocuments({}, callback);
-    },
-    book_instance_available_count(callback) {
-      BookInstance.countDocuments({ status:'Available' }, callback);
-    },
-    author_count(callback) {
-      Author.countDocuments({}, callback);
-    },
-    genre_count(callback) {
-      Genre.countDocuments({}, callback);
+    (err, results) => {
+      res.render("index", {
+        title: "Local Library Home",
+        error: err,
+        data: results,
+      });
     }
-  },
-  (err, results) => {
-    res.render('index', { title: 'Local Library Home', error: err, data: results });
-  });
+  );
 };
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`CSSStyleRule`** interface represents a single CSS style rule.

@@ -7,6 +7,7 @@ tags:
   - scope
 browser-compat: html.manifest.scope
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">

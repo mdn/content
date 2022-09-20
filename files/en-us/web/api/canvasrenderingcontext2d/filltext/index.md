@@ -18,6 +18,7 @@ tags:
   - fillText
 browser-compat: api.CanvasRenderingContext2D.fillText
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
@@ -43,7 +44,7 @@ The text is rendered using the font and text layout configuration as defined by 
 
 ## Syntax
 
-```js
+```js-nolint
 fillText(text, x, y)
 fillText(text, x, y, maxWidth)
 ```

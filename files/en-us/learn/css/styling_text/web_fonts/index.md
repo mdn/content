@@ -16,6 +16,7 @@ tags:
   - font-family
   - web fonts
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
 In the first article of the module, we explored the basic CSS features available for styling fonts and text. In this article we will go further, exploring web fonts in detail. We'll see how to use custom fonts with your web page to allow for more varied, custom text styling.
@@ -150,19 +151,19 @@ To implement these fonts in your demo, follow these steps:
 3. Each of the `url()` functions points to a font file that we want to import into our CSS. We need to make sure the paths to the files are correct, so add `fonts/` to the start of each path (adjust as necessary).
 4. Now you can use these fonts in your font stacks, just like any web safe or default system font. For example:
 
-    ```css
-    @font-face {
-        font-family: 'zantrokeregular';
-        src: url('fonts/zantroke-webfont.woff2') format('woff2'),
-             url('fonts/zantroke-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-    ```
+   ```css
+   @font-face {
+     font-family: "zantrokeregular";
+     src: url("fonts/zantroke-webfont.woff2") format("woff2"), url("fonts/zantroke-webfont.woff")
+         format("woff");
+     font-weight: normal;
+     font-style: normal;
+   }
+   ```
 
-    ```css
-    font-family: 'zantrokeregular', serif;
-    ```
+   ```css
+   font-family: "zantrokeregular", serif;
+   ```
 
 You should end up with a demo page with some nice fonts implemented on them. Because different fonts are created at different sizes, you may have to adjust the size, spacing, etc., to sort out the look and feel.
 
@@ -191,9 +192,9 @@ Let's explore that `@font-face` syntax generated for you by Fontsquirrel. This i
 
 ```css
 @font-face {
-  font-family: 'zantrokeregular';
-  src: url('zantroke-webfont.woff2') format('woff2'),
-       url('zantroke-webfont.woff') format('woff');
+  font-family: "zantrokeregular";
+  src: url("zantroke-webfont.woff2") format("woff2"), url("zantroke-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
 }

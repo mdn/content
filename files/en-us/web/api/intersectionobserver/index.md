@@ -11,6 +11,7 @@ tags:
   - observers
 browser-compat: api.IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The **`IntersectionObserver`** interface of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's {{Glossary('viewport')}}. The ancestor element or viewport is referred to as the root.

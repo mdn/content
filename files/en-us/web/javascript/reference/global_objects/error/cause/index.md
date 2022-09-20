@@ -7,6 +7,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.cause
 ---
+
 {{JSRef}}
 
 The **`cause`** property indicates the specific original cause of an error.

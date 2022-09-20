@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.lang
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.lang`** property gets or sets the base

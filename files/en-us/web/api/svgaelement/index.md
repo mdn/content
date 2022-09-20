@@ -9,6 +9,7 @@ tags:
   - SVGAElement
 browser-compat: api.SVGAElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGAElement`** interface provides access to the properties of an {{SVGElement("a")}} element, as well as methods to manipulate them.

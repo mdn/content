@@ -12,6 +12,7 @@ tags:
   - websites
 browser-compat: webextensions.api.privacy.websites
 ---
+
 {{AddonSidebar}}
 
 The {{WebExtAPIRef("privacy.websites")}} property contains privacy-related settings controlling the way to browser interacts with websites. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.

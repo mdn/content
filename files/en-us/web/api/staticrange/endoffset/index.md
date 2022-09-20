@@ -16,6 +16,7 @@ tags:
   - startContainer
 browser-compat: api.StaticRange.endOffset
 ---
+
 {{APIRef("DOM")}}
 
 The **`endOffset`** property of the {{domxref("StaticRange")}}

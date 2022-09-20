@@ -13,6 +13,7 @@ tags:
   - clear
 browser-compat: webextensions.api.notifications.clear
 ---
+
 {{AddonSidebar()}}
 
 Clears a notification, given its ID.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let clearing = browser.notifications.clear(
   id                            // string
 )

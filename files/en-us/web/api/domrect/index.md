@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 A **`DOMRect`** describes the size and position of a rectangle.

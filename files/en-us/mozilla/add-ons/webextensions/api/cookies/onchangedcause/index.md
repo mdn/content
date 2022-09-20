@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.cookies.OnChangedCause
 ---
+
 {{AddonSidebar()}}
 
 The `OnChangedCause` type of the {{WebExtAPIRef("cookies")}} API represents the reason a cookie changed.

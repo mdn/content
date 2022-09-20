@@ -13,6 +13,7 @@ tags:
   - transaction
 browser-compat: api.IDBRequest.transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`transaction`** read-only property of the IDBRequest

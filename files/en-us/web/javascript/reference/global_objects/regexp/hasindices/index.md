@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.hasIndices
 ---
+
 {{JSRef}}
 
 The **`hasIndices`** accessor property indicates whether or not the `d` flag is used with the regular expression.

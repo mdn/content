@@ -9,6 +9,7 @@ tags:
   - main
 browser-compat: html.elements.main
 ---
+
 {{HTMLRef}}
 
 The **`<main>`** [HTML](/en-US/docs/Web/HTML) element represents the dominant content of the {{HTMLElement("body")}} of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
@@ -99,16 +100,16 @@ The content of a `<main>` element should be unique to the document. Content that
 
   <article>
     <h2>Red Delicious</h2>
-    <p>These bright red apples are the most common found in many
-    supermarkets.</p>
+    <p>
+      These bright red apples are the most common found in many supermarkets.
+    </p>
     <p>…</p>
     <p>…</p>
   </article>
 
   <article>
     <h2>Granny Smith</h2>
-    <p>These juicy, green apples make a great filling for
-    apple pies.</p>
+    <p>These juicy, green apples make a great filling for apple pies.</p>
     <p>…</p>
     <p>…</p>
   </article>

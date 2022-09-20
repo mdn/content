@@ -13,6 +13,7 @@ tags:
   - topSites
 browser-compat: webextensions.api.topSites.get
 ---
+
 {{AddonSidebar()}}
 
 Gets an array containing information about pages that the user has visited often and recently.
@@ -31,7 +32,7 @@ To use the topSites API you must have the "topSites" [API permission](/en-US/doc
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingTopSites = browser.topSites.get(
     options  // object
 )

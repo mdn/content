@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.EncodedAudioChunk
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' ')}} represents a chunk of encoded audio data.

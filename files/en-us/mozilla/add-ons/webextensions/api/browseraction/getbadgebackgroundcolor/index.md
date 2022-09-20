@@ -13,6 +13,7 @@ tags:
   - getBadgeBackgroundColor
 browser-compat: webextensions.api.browserAction.getBadgeBackgroundColor
 ---
+
 {{AddonSidebar()}}
 
 Gets the background color of the browser action's badge.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.getBadgeBackgroundColor(
   details // object
 )

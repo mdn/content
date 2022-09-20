@@ -8,6 +8,7 @@ tags:
   - Ogg
   - Video
 ---
+
 {{HTTPSidebar}}
 
 HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install any plug-ins or other software to do so.
@@ -52,7 +53,7 @@ By default, [`ffmpeg2theora`](http://v2v.cc/~j/ffmpeg2theora/) uses one key fram
 
 The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide the `preload` attribute, which tells the browser to attempt to download the entire media when the page loads. Without `preload`, the browser only downloads enough of the media to display the first video frame, and to determine the media's duration.
 
-`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements. using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
+`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements. Using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
 
 ## Configuration for older Firefox versions
 

@@ -10,6 +10,7 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.isScript
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`isScript()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedScript")}} object.
@@ -18,7 +19,7 @@ The **`isScript()`** method of the {{domxref("TrustedTypePolicyFactory")}} inter
 
 ## Syntax
 
-```js
+```js-nolint
 isScript(value)
 ```
 

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.justify-self
 ---
+
 {{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-self`** property sets the way a box is justified inside its alignment container along the appropriate axis.
@@ -160,11 +161,11 @@ span:nth-child(2) {
 }
 
 span:nth-child(3) {
-justify-self: center;
+  justify-self: center;
 }
 
 span:nth-child(4) {
-justify-self: end;
+  justify-self: end;
 }
 
 article span {
@@ -174,7 +175,8 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }

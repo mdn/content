@@ -10,6 +10,7 @@ tags:
   - contentScripts
 browser-compat: webextensions.api.contentScripts
 ---
+
 {{AddonSidebar}}
 
 Use this API to register content scripts. Registering a content script instructs the browser to insert the given content scripts into pages that match the given URL patterns.

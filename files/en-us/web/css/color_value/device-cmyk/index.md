@@ -10,6 +10,7 @@ tags:
   - device-cmyk
 browser-compat: css.types.color.device-cmyk
 ---
+
 {{CSSRef}}
 
 The **`device-cmyk()`** functional notation is used to express CMYK colors in a device independent way, specifying the cyan, magenta, yellow, and black components.

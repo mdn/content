@@ -10,6 +10,7 @@ tags:
   - Request header
 browser-compat: http.headers.Sec-Fetch-Site
 ---
+
 {{HTTPSidebar}}
 
 The **`Sec-Fetch-Site`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the relationship between a request initiator's origin and the origin of the requested resource.

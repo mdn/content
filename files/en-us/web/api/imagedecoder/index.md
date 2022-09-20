@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.ImageDecoder
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}} provides a way to unpack and decode encoded image data.

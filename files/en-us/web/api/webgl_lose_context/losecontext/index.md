@@ -10,6 +10,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_lose_context.loseContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **WEBGL_lose_context.loseContext()** method is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows you to simulate losing
@@ -21,7 +22,7 @@ called.
 
 ## Syntax
 
-```js
+```js-nolint
 loseContext()
 ```
 

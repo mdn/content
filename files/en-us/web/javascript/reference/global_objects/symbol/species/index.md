@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.species
 ---
+
 {{JSRef}}
 
 The well-known symbol **`Symbol.species`** specifies a function-valued property that the constructor function uses to create derived objects.

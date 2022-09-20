@@ -17,9 +17,9 @@ The **`getNamedItem()`** method of the {{domxref("NamedNodeMap")}} interface ret
 
 ## Syntax
 
-```js
-getNamedItem(name);
-[name];
+```js-nolint
+getNamedItem(name)
+[name]
 ```
 
 ### Parameters

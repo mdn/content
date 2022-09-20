@@ -13,13 +13,14 @@ tags:
   - isAllowedFileSchemeAccess
 browser-compat: webextensions.api.extension.isAllowedFileSchemeAccess
 ---
+
 {{AddonSidebar()}}Returns `true` if the extension can access the "file://" scheme, `false` otherwise.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
-```js
+```js-nolint
 let isAllowed = browser.extension.isAllowedFileSchemeAccess()
 ```
 

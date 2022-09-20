@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.canvas
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.canvas`** property, part of the

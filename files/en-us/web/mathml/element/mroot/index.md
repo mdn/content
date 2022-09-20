@@ -8,6 +8,7 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mroot
 ---
+
 {{MathMLRef}}
 
 The MathML `<mroot>` element is used to display roots with an explicit index. Two arguments are accepted, which leads to the syntax: `<mroot> base index </mroot>`.
@@ -24,12 +25,10 @@ Rendering in your browser: <math><mroot><mi>x</mi> <mn>3</mn></mroot></math>
 
 ```html
 <math>
-
- <mroot>
+  <mroot>
     <mi>x</mi>
     <mn>3</mn>
- </mroot>
-
+  </mroot>
 </math>
 ```
 

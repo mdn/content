@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 58 that will affect developers. Firefox 58 was released on January 23, 2018.
@@ -92,7 +93,7 @@ _No changes._
 ### Other
 
 - "Add to home screen" is now supported in Firefox for Android, part of the [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) effort ({{bug(1212648)}}).
-- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ({{bug(1277562)}}), and new streaming APIs — {{jsxref("WebAssembly.compileStreaming()")}} and {{jsxref("WebAssembly.installStreaming()")}} {{bug(1347644)}}.
+- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ({{bug(1277562)}}), and new streaming APIs — [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) and [`WebAssembly.installStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/installStreaming) {{bug(1347644)}}.
 
 ## Removals from the web platform
 

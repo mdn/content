@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.join
 ---
+
 {{JSRef}}
 
 The **`join()`** method creates and
@@ -21,7 +22,7 @@ only one item, then that item will be returned without using the separator.
 
 ## Syntax
 
-```js
+```js-nolint
 join()
 join(separator)
 ```

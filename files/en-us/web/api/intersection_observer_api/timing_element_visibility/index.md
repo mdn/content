@@ -10,6 +10,7 @@ tags:
   - Intersection Observer API
   - Tutorial
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 In this article, we'll build a mock blog which has a number of ads interspersed among the contents of the page, then use the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) to track how much time each ad is visible to the user. When an ad exceeds one minute of visible time, it will be replaced with a new one.
@@ -43,8 +44,7 @@ The site's structure is not too complicated. We'll be using [CSS Grid](/en-US/do
     </nav>
   </aside>
 
-  <main>
-  </main>
+  <main>…</main>
 </div>
 ```
 
@@ -289,7 +289,7 @@ function handleVisibilityChange() {
 }
 ```
 
-Since the event itself doesn't state whether the document has switched from visible to invisible or vice-versa, the {{domxref("document.hidden")}} property is checked to see if the document is not currently visible. Since it's theoretically possible to get called multiple times, we only proceed if we haven't already paused the timers and saved the visibility states of the existing ads.
+Since the event itself doesn't state whether the document has switched from visible to invisible or vice versa, the {{domxref("document.hidden")}} property is checked to see if the document is not currently visible. Since it's theoretically possible to get called multiple times, we only proceed if we haven't already paused the timers and saved the visibility states of the existing ads.
 
 To pause the timers, all we need to do is remove the ads from the set of visible ads (`visibleAds`) and mark them as inactive. To do so, we begin by saving the set of visible ads into a variable known as `previouslyVisibleAds` to be sure we can restore them when the user tabs back into the document, and we then empty the `visibleAds` set so they won't be treated as visible. Then, for each of the ads that are being suspended, we call our `updateAdTimer()` function, which handles updating the ad's total visible time counter, then we set their `dataset.lastViewStarted` property to 0, which indicates that the tab's timer isn't running.
 
@@ -462,29 +462,29 @@ First, the `<article>` element is created and its ID is set to the unique value 
 
 #### Creating an ad
 
-The `loadRandomAd()` function simulates loading an ad and adding it to the page. If you don't pass a value for `replaceBox`, a new element is created to contain the ad; the ad is then appended to the page. if you specify a `replaceBox`, that box is treated as an existing ad element; instead of creating a new one, the existing element is changed to contain the new ad's style, content, and other data. This avoids the risk of lengthy layout work being done when you update the ad, which could happen if you first delete the old element then insert a new one.
+The `loadRandomAd()` function simulates loading an ad and adding it to the page. If you don't pass a value for `replaceBox`, a new element is created to contain the ad; the ad is then appended to the page. If you specify a `replaceBox`, that box is treated as an existing ad element; instead of creating a new one, the existing element is changed to contain the new ad's style, content, and other data. This avoids the risk of lengthy layout work being done when you update the ad, which could happen if you first delete the old element then insert a new one.
 
 ```js
 function loadRandomAd(replaceBox) {
   const ads = [
     {
       bgcolor: "#cec",
-      title: "Eat Green Beans",
+      title: 'Eat Green Beans',
       body: "Make your mother proud—they're good for you!"
     },
     {
       bgcolor: "aquamarine",
-      title: "MillionsOfFreeBooks.whatever",
+      title: 'MillionsOfFreeBooks.whatever',
       body: "Read classic literature online free!"
     },
     {
       bgcolor: "lightgrey",
-      title: "3.14 Shades of Gray: A novel",
+      title: '3.14 Shades of Gray: A novel',
       body: "Love really does make the world go round…"
     },
     {
       bgcolor: "#fee",
-      title: "Flexbox Florist",
+      title: 'Flexbox Florist',
       body: "When life's layout gets complicated, send flowers."
     }
   ];

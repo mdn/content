@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Conversion
 ---
+
 {{WebAssemblySidebar}}
 
 The **`promote`** instruction, is used to convert (promote) numbers of type `f32` to type `f64`.

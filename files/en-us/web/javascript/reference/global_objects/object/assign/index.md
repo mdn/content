@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.assign
 ---
+
 {{JSRef}}
 
 The **`Object.assign()`** method
@@ -22,7 +23,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.assign(target, ...sources)
 ```
 

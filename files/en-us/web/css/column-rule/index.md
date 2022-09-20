@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.column-rule
 ---
+
 {{CSSRef}}
 
 The **`column-rule`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width, style, and color of the line drawn between columns in a multi-column layout.
@@ -60,15 +61,23 @@ The `column-rule` property is specified as one, two, or three of the values list
 
 ```css
 /* Same as "medium dotted currentcolor" */
-p.foo { column-rule: dotted; }
+p.foo {
+  column-rule: dotted;
+}
 
 /* Same as "medium solid blue" */
-p.bar { column-rule: solid blue; }
+p.bar {
+  column-rule: solid blue;
+}
 
 /* Same as "8px solid currentcolor" */
-p.baz { column-rule: solid 8px; }
+p.baz {
+  column-rule: solid 8px;
+}
 
-p.abc { column-rule: thick inset blue; }
+p.abc {
+  column-rule: thick inset blue;
+}
 ```
 
 ### Example 2
@@ -77,10 +86,9 @@ p.abc { column-rule: thick inset blue; }
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns.
-  Take note of how the `column-rule` property is used
-  to adjust the style, width, and color of the rule
-  that appears between the columns.
+  This is a bunch of text split into three columns. Take note of how the
+  `column-rule` property is used to adjust the style, width, and color of the
+  rule that appears between the columns.
 </p>
 ```
 

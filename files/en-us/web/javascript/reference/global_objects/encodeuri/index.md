@@ -11,6 +11,7 @@ tags:
   - encodeURI
 browser-compat: javascript.builtins.encodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`encodeURI()`** function encodes a {{glossary("URI")}} by
@@ -22,7 +23,7 @@ four escape sequences for characters composed of two "surrogate" characters).
 
 ## Syntax
 
-```js
+```js-nolint
 encodeURI(URI)
 ```
 

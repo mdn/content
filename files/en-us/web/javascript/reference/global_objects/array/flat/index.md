@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.flat
 ---
+
 {{JSRef}}
 
 The **`flat()`** method creates a new array with all sub-array
@@ -20,7 +21,7 @@ elements concatenated into it recursively up to the specified depth.
 
 ## Syntax
 
-```js
+```js-nolint
 flat()
 flat(depth)
 ```

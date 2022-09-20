@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.renderbufferStorageMultisample
 ---
+
 {{APIRef("WebGL")}}
 
 The
@@ -20,7 +21,7 @@ samples to be used.
 
 ## Syntax
 
-```js
+```js-nolint
 renderbufferStorageMultisample(target, samples, internalFormat, width, height)
 ```
 

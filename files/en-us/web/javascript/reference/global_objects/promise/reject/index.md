@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Promise.reject
 ---
+
 {{JSRef}}
 
 The **`Promise.reject()`** method returns a
@@ -18,7 +19,7 @@ The **`Promise.reject()`** method returns a
 
 ## Syntax
 
-```js
+```js-nolint
 Promise.reject(reason)
 ```
 

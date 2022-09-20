@@ -6,6 +6,7 @@ tags:
   - Extensions
   - XUL
 ---
+
 {{FirefoxSidebar}}
 
 This page contains a list of changes in [Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5), affecting XUL developers.

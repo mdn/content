@@ -7,6 +7,7 @@ tags:
   - Guide
   - concepts
 ---
+
 {{CSSRef}}
 
 The [CSS Scroll Snap specification](https://drafts.csswg.org/css-scroll-snap-1/) gives us a way to snap scrolling to certain points as the user scrolls through a document. This can be helpful in creating a more app-like experience on mobile or even on the desktop for some types of applications.

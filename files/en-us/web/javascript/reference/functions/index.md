@@ -10,6 +10,7 @@ tags:
   - parameters
 browser-compat: javascript.functions
 ---
+
 {{jsSidebar("Functions")}}
 
 Generally speaking, a function is a "subprogram" that can be _called_ by code
@@ -165,7 +166,7 @@ When functions are used only once, a common pattern is an [IIFE (Immediately Inv
 
 IIFE are function expressions that are invoked as soon as the function is declared.
 
-### The generator function (function*) declaration
+### The generator function (function\*) declaration
 
 There is a special syntax for generator function declarations (see
 {{jsxref('Statements/function*', 'function* statement')}} for details):
@@ -183,7 +184,7 @@ function* name([param[, param[, ... param]]]) {
 - `statements`
   - : The statements comprising the body of the function.
 
-### The generator function (function*) expression
+### The generator function (function\*) expression
 
 A generator function expression is similar to and has the same syntax as a generator
 function declaration (see {{jsxref('Operators/function*', 'function* expression')}} for

@@ -11,6 +11,7 @@ tags:
   - createProcessInstruction
 browser-compat: api.Document.createProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 `createProcessingInstruction()` generates a new [processing instruction](/en-US/docs/Web/API/ProcessingInstruction) node and returns it.
@@ -19,7 +20,7 @@ The new node usually will be inserted into an XML document in order to accomplis
 
 ## Syntax
 
-```js
+```js-nolint
 createProcessingInstruction(target, data)
 ```
 

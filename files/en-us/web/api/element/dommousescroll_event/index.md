@@ -16,6 +16,7 @@ tags:
   - scrolling
 browser-compat: api.Element.DOMMouseScroll_event
 ---
+
 {{APIRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The DOM `DOMMouseScroll` event is fired asynchronously when mouse wheel or similar device is operated and the accumulated scroll amount is over 1 line or 1 page since last event. It's represented by the {{ domxref("MouseScrollEvent") }} interface. This event was only implemented by Firefox. You should instead use the standard {{domxref("Element.wheel_event", "wheel")}} event.

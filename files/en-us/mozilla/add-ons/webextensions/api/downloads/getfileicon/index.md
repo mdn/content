@@ -13,6 +13,7 @@ tags:
   - getFileIcon
 browser-compat: webextensions.api.downloads.getFileIcon
 ---
+
 {{AddonSidebar()}}
 
 The **`getFileIcon()`** function of the {{WebExtAPIRef("downloads")}} API retrieves an icon for the specified download.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingIcon = browser.downloads.getFileIcon(
   downloadId,           // integer
   options               // optional object

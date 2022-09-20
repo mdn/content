@@ -8,6 +8,7 @@ tags:
   - Response Header
 browser-compat: http.headers.X-Content-Type-Options
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Content-Type-Options`** response HTTP header is a

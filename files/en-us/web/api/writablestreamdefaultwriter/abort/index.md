@@ -11,6 +11,7 @@ tags:
   - abort
 browser-compat: api.WritableStreamDefaultWriter.abort
 ---
+
 {{APIRef("Streams")}}
 
 The **`abort()`** method of the
@@ -24,7 +25,7 @@ rejected promise.
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 abort(reason)
 ```

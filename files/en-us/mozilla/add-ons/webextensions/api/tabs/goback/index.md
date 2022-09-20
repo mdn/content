@@ -12,6 +12,7 @@ tags:
   - goBack
 browser-compat: webextensions.api.tabs.goBack
 ---
+
 {{AddonSidebar()}}
 
 Navigate to the previous page in tab's history, if available.
@@ -20,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let withGoingBack = browser.tabs.goBack(
   tabId,                  // optional integer
   callback                  // optional function

@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.windows.getAll
 ---
+
 {{AddonSidebar()}}
 
 Gets information about all open windows, passing them into a callback.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingAll = browser.windows.getAll(
   getInfo                // optional object
 )

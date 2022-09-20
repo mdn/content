@@ -5,6 +5,7 @@ tags:
   - Glossary
   - WebMechanics
 ---
+
 An HTTP method is **idempotent** if an identical request can be made once or several times in a row with the same effect while leaving the server in the same state. In other words, an idempotent method should not have any side effects — unless those side effects are also idempotent. Implemented correctly, the {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, and {{HTTPMethod("DELETE")}} methods are **idempotent**, but not the {{HTTPMethod("POST")}} method. All {{glossary("Safe/HTTP", "safe")}} methods are also idempotent.
 
 To be idempotent, only the actual back-end state of the server is considered, the status code returned by each request may differ: the first call of a {{HTTPMethod("DELETE")}} will likely return a {{HTTPStatus("200")}}, while successive ones will likely return a {{HTTPStatus("404")}}. Another implication of {{HTTPMethod("DELETE")}} being idempotent is that developers should not implement RESTful APIs with a _delete last entry_ functionality using the `DELETE` method.
@@ -38,6 +39,6 @@ DELETE /idX/delete HTTP/1.1   -> Returns 404
 
 ## See also
 
-- Definition of [idempotent](https://datatracker.ietf.org/doc/html/rfc7231#section-4.2.2) in the HTTP specification.
+- Definition of [idempotent](https://httpwg.org/specs/rfc9110.html#idempotent.methods) in the HTTP specification.
 - Description of common idempotent methods: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("TRACE")}}
 - Description of common non-idempotent methods: {{HTTPMethod("POST")}}, {{HTTPMethod("PATCH")}}, {{HTTPMethod("CONNECT")}}

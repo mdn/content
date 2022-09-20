@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: webextensions.api.events.Rule
 ---
+
 {{AddonSidebar()}}
 
 Description of a declarative rule for handling events.

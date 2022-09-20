@@ -13,6 +13,7 @@ tags:
   - track
 browser-compat: api.AudioTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`AudioTrack`** interface represents a single audio track from one of the HTML media elements, {{HTMLElement("audio")}} or {{HTMLElement("video")}}.

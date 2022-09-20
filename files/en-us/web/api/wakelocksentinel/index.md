@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.WakeLockSentinel
 ---
+
 {{securecontext_header}}{{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}
 
 The **`WakeLockSentinel`** interface of the [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) provides a handle to the underlying platform wake lock and can be manually released and reacquired. An {{jsxref('Object')}} representing the wake lock is returned via the {{domxref('WakeLock.request()','navigator.wakelock.request()')}} method.

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getTime
 ---
+
 {{JSRef}}
 
 The **`getTime()`** method returns the number of milliseconds
@@ -22,7 +23,7 @@ object. This method is functionally equivalent to the {{jsxref("Date/valueof",
 
 ## Syntax
 
-```js
+```js-nolint
 getTime()
 ```
 

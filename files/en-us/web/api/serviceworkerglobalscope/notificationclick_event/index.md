@@ -11,6 +11,7 @@ tags:
   - notificationclick
 browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event
 ---
+
 {{APIRef}}
 
 The **`notificationclick`** event is fired to indicate that a system notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}} has been clicked.

@@ -11,13 +11,14 @@ tags:
   - open
 browser-compat: api.Window.open
 ---
+
 {{APIRef}}
 
 The **`open()`** method of the [`Window`](/en-US/docs/Web/API/Window) interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an [iframe](/en-US/docs/Web/HTML/Element/iframe)) under a specified name.
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 open(url)
 open(url, target)
@@ -27,16 +28,21 @@ open(url, target, windowFeatures)
 ### Parameters
 
 - `url` {{optional_inline}}
+
   - : A string indicating the URL or path of the resource to be loaded. If an empty string (`""`) is specified or this parameter is omitted, a blank page is opened into the targeted browsing context.
 
 - `target` {{optional_inline}}
+
   - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#attr-target), `_self`, `_blank`, `_parent`, and `_top`, can also be used.
 
     This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Element/a#attr-target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#attr-target) elements.
 
 - `windowFeatures` {{optional_inline}}
+
   - : A string containing a comma-separated list of window features in the form `name=value` — or for boolean features, just `name`. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
+
     - `popup`
+
       - : If this feature is enabled, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only.
 
         If `popup` is not enabled, and there are no window features declared, the new browsing context will be a tab.
@@ -48,18 +54,23 @@ open(url, target, windowFeatures)
         Example: `popup=yes`, `popup=1`, `popup=true`, and `popup` all have identical results.
 
     - `width` or `innerWidth`
+
       - : Specifies the width of the content area, including scrollbars. The minimum required value is 100.
 
     - `height` or `innerHeight`
+
       - : Specifies the height of the content area, including scrollbars. The minimum required value is 100.
 
     - `left` or `screenX`
+
       - : Specifies the distance in pixels from the left side of the work area as defined by the user's operating system where the new window will be generated.
 
     - `top` or `screenY`
+
       - : Specifies the distance in pixels from the top side of the work area as defined by the user's operating system where the new window will be generated.
 
     - `noopener`
+
       - : If this feature is set, the new window will not have access to the originating window via [`Window.opener`](/en-US/docs/Web/API/Window/opener) and returns `null`.
 
         When `noopener` is used, non-empty target names, other than `_top`, `_self`, and `_parent`, are treated like `_blank` in terms of deciding whether to open a new browsing context.
@@ -122,7 +133,8 @@ If JavaScript support is disabled or non-existent, then the user agent will crea
 
 ```html
 <a href="https://www.wikipedia.org/" target="OpenWikipediaWindow">
-  Wikipedia, a free encyclopedia (opens in another, possibly already existing, tab)
+  Wikipedia, a free encyclopedia (opens in another, possibly already existing,
+  tab)
 </a>
 ```
 
@@ -160,11 +172,14 @@ Here is an example where a secondary window can be opened and reused for other l
 ```html
 <p>
   <a href="https://www.wikipedia.org/" target="SingleSecondaryWindowName">
-    Wikipedia, a free encyclopedia (opens in another, possibly already existing, tab)
+    Wikipedia, a free encyclopedia (opens in another, possibly already existing,
+    tab)
   </a>
 </p>
 <p>
-  <a href="https://support.mozilla.org/products/firefox" target="SingleSecondaryWindowName">
+  <a
+    href="https://support.mozilla.org/products/firefox"
+    target="SingleSecondaryWindowName">
     Firefox FAQ (opens in another, possibly already existing, tab)
   </a>
 </p>

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.WorkerNavigator.userAgent
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`WorkerNavigator.userAgent`** read-only property returns the

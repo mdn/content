@@ -7,6 +7,7 @@ tags:
   - Security
   - XUL
 ---
+
 {{FirefoxSidebar}}
 This article covers security-related changes in Firefox 3.5.
 

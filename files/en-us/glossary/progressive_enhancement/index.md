@@ -6,6 +6,7 @@ tags:
   - Design
   - Glossary
 ---
+
 **Progressive enhancement** is a design philosophy that provides a baseline of essential content and functionality to as many users as possible, while delivering the best possible experience only to users of the most modern browsers that can run all the required code.
 
 The word _progressive_ in _progressive enhancement_ means creating a design that achieves a simpler-but-still-usable experience for users of older browsers and devices with limited capabilities, while at the same time being a design that **progresses the user experience up** to a more-compelling, fully-featured experience for users of newer browsers and devices with richer capabilities.

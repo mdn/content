@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEventAcceleration.z
 ---
+
 {{ APIRef("Device Orientation Events") }}
 
 The **`DeviceMotionEventAcceleration.x`** read-only property indicates the amount of acceleration that occurred along the Z

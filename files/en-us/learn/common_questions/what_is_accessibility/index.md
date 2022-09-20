@@ -8,6 +8,7 @@ tags:
   - NeedsActiveLearning
   - Web
 ---
+
 This article introduces the basic concepts behind web accessibility.
 
 <table class="standard-table">

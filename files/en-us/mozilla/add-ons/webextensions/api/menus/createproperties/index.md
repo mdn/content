@@ -10,6 +10,7 @@ tags:
   - createProperties
 browser-compat: webextensions.api.menus.createProperties
 ---
+
 {{AddonSidebar()}}
 
 An `object` passed to the {{WebExtAPIRef("menus.create()", "menus.create()")}} or {{WebExtAPIRef("menus.update()", "menus.update()")}} methods to describe the properties of the new or updated menu item.

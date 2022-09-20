@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.preventExtensions
 ---
+
 {{JSRef}}
 
 The **`Object.preventExtensions()`** method prevents new
@@ -19,7 +20,7 @@ object). It also prevents the object's prototype from being re-assigned.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.preventExtensions(obj)
 ```
 

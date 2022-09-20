@@ -13,6 +13,7 @@ tags:
 browser-compat: css.types.tan
 spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`tan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the tangent of a number, which is a value between `−infinity` and `infinity`. The function contains a single calculation that must resolve to either a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}} by interpreting the result of the argument as radians.

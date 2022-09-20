@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplayEvent.display
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`display`** read-only property of the {{domxref("VRDisplayEvent")}} interface returns the {{domxref("VRDisplay")}} associated with this event.

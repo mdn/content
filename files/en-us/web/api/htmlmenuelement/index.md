@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLMenuElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMenuElement`** interface provides special properties (beyond those defined on the regular {{DOMxRef("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("menu")}} elements.

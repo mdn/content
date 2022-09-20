@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: api.Request.mode
 ---
+
 {{APIRef("Fetch")}}
 
 The **`mode`** read-only property of the {{domxref("Request")}}

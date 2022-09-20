@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.history.HistoryItem
 ---
+
 {{AddonSidebar()}}
 
 A `HistoryItem` object provides information about a page in the browser history.

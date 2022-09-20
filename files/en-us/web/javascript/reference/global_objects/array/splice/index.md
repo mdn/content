@@ -12,6 +12,7 @@ tags:
   - splice
 browser-compat: javascript.builtins.Array.splice
 ---
+
 {{JSRef}}
 
 The **`splice()`** method changes the contents of an array by
@@ -21,7 +22,7 @@ removing or replacing existing elements and/or adding new elements [in place](ht
 
 ## Syntax
 
-```js
+```js-nolint
 splice(start)
 splice(start, deleteCount)
 splice(start, deleteCount, item1)
@@ -51,6 +52,7 @@ splice(start, deleteCount, item1, item2, itemN)
     In this case, you should specify at least one new element (see below).
 
 - `item1`, …, `itemN` {{optional_inline}}
+
   - : The elements to add to the array, beginning from `start`.
 
     If you do not specify any elements, `splice()` will only remove elements from the array.

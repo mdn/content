@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: http.headers.Sec-CH-UA-Full-Version
 ---
+
 {{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}
 
 > **Note:** This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.

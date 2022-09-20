@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.responseEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`responseEnd`** read-only property returns a
@@ -48,7 +49,7 @@ function printStartAndEndProperties(perfEntry) {
                 "requestStart",
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
- 
+
  for (const property of properties) {
     // Log the property
     console.log(`… ${property} = ${perfEntry[property] ?? "NOT supported"}`);

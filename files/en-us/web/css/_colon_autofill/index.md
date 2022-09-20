@@ -1,5 +1,5 @@
 ---
-title: ':autofill'
+title: ":autofill"
 slug: Web/CSS/:autofill
 tags:
   - CSS
@@ -8,6 +8,7 @@ tags:
   - Selector
 browser-compat: css.selectors.autofill
 ---
+
 {{CSSRef}}
 
 The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when an {{HTMLElement("input")}} element has its value autofilled by the browser. The class stops matching if the user edits the field.
@@ -50,7 +51,8 @@ input:autofill {
 
 ```html
 <form method="post" action="">
-  <label for="email">Email</label> <input type="email" name="email" id="email" autocomplete="email">
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" autocomplete="email" />
 </form>
 ```
 

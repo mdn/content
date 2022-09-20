@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.NetworkInformation
 ---
+
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation`** interface of the [Network Information API](/en-US/docs/Web/API/Network_Information_API) provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes.

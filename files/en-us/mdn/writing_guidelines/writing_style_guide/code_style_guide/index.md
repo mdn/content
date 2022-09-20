@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 The guidelines described in this article apply to the styling and formatting of code examples, irrespective of the language. For guidelines about what content to include while writing the code examples, see the [writing style guide](/en-US/docs/MDN/Writing_guidelines/writing_style_guide#code_examples).
@@ -69,11 +70,11 @@ function myFunc() {
 
 Add a space between a control statement or loop keyword and its opening parenthesis.
 
- ```js example-good
+```js example-good
 if (condition) {
-  /* handle the condition */
+ /* handle the condition */
 } else {
-  /* handle the "else" case */
+ /* handle the "else" case */
 }
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getDay
 ---
+
 {{JSRef}}
 
 The **`getDay()`** method returns the
@@ -19,7 +20,7 @@ Sunday. For the day of the month, see {{jsxref("Date.prototype.getDate()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getDay()
 ```
 

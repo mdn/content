@@ -10,6 +10,7 @@ tags:
   - camera
 browser-compat: http.headers.Feature-Policy.camera
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header

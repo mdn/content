@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.clearMarks
 ---
+
 {{APIRef("User Timing API")}}
 
 The **`clearMarks()`** method removes the _named mark_
@@ -21,7 +22,7 @@ removed from the performance entry buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 clearMarks()
 clearMarks(name)
 ```

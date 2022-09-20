@@ -12,6 +12,7 @@ tags:
   - getRedirectURL
 browser-compat: webextensions.api.identity.getRedirectURL
 ---
+
 {{AddonSidebar()}}
 
 Generates a URL that you can use as a redirect URL.
@@ -22,7 +23,7 @@ See [Getting a redirect URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/ident
 
 ## Syntax
 
-```js
+```js-nolint
 let redirectURL = browser.identity.getRedirectURL()
 ```
 

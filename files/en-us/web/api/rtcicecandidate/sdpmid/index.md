@@ -18,6 +18,7 @@ tags:
   - stream
 browser-compat: api.RTCIceCandidate.sdpMid
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`sdpMid`** on the {{domxref("RTCIceCandidate")}} interface returns a string

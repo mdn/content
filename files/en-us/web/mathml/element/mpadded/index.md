@@ -8,6 +8,7 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mpadded
 ---
+
 {{MathMLRef}}
 
 The MathML `<mpadded>` element is used to add extra padding and to set the general adjustment of position and size of enclosed contents.
@@ -35,13 +36,11 @@ It is possible to use the keywords `"depth`", `"height"`, and `"width"` as a pse
 
 ```html
 <math>
-
   <mpadded height="+150px" width="100px" lspace="2height">
     <mi>x</mi>
     <mo>+</mo>
     <mi>y</mi>
   </mpadded>
-
 </math>
 ```
 

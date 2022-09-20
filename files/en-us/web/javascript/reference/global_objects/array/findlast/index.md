@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.findLast
 ---
+
 {{JSRef}}
 
 The **`findLast()`** method returns the value of the last element in an array that satisfies the provided testing function.
@@ -30,7 +31,7 @@ If you need to find:
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findLast((element) => { /* … */ } )
 findLast((element, index) => { /* … */ } )

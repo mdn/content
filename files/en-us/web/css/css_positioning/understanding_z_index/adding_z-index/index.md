@@ -9,6 +9,7 @@ tags:
   - Understanding_CSS_z-index
   - z-index
 ---
+
 {{CSSRef}}
 
 The first part of this article, [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index), explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/en-US/docs/Web/CSS/position#types_of_positioning) element.
@@ -43,32 +44,27 @@ In the following example, the layers' stacking order is rearranged using `z-inde
 ```html
 <div id="abs1">
   <strong>DIV #1</strong>
-  <br />position: absolute;
-  <br />z-index: 5;
+  <br />position: absolute; <br />z-index: 5;
 </div>
 
 <div id="rel1">
   <strong>DIV #2</strong>
-  <br />position: relative;
-  <br />z-index: 3;
+  <br />position: relative; <br />z-index: 3;
 </div>
 
 <div id="rel2">
   <strong>DIV #3</strong>
-  <br />position: relative;
-  <br />z-index: 2;
+  <br />position: relative; <br />z-index: 2;
 </div>
 
 <div id="abs2">
   <strong>DIV #4</strong>
-  <br />position: absolute;
-  <br />z-index: 1;
+  <br />position: absolute; <br />z-index: 1;
 </div>
 
 <div id="sta1">
   <strong>DIV #5</strong>
-  <br />no positioning
-  <br />z-index: 8;
+  <br />no positioning <br />z-index: 8;
 </div>
 ```
 

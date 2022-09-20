@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Range.comparePoint
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.comparePoint()`** method returns `-1`,
@@ -25,7 +26,7 @@ node_.
 
 ## Syntax
 
-```js
+```js-nolint
 comparePoint(referenceNode, offset)
 ```
 

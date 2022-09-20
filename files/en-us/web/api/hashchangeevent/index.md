@@ -12,6 +12,7 @@ tags:
   - events
 browser-compat: api.HashChangeEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HashChangeEvent`** interface represents events that fire when the fragment identifier of the URL has changed.

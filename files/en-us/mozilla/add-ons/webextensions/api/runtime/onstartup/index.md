@@ -13,13 +13,14 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onStartup
 ---
+
 {{AddonSidebar()}}
 
 Fired when a profile that has this extension installed first starts up. This event is not fired when a private browsing/incognito profile is started, even if this extension is operating in 'split' incognito mode.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onStartup.addListener(listener)
 browser.runtime.onStartup.removeListener(listener)
 browser.runtime.onStartup.hasListener(listener)

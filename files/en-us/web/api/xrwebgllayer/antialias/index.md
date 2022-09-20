@@ -25,6 +25,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLLayer.antialias
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
@@ -36,8 +37,8 @@ the web site or web app.
 
 ## Syntax
 
-```js
-let antialiasingSupported = xrWebGLLayer.antialias;
+```js-nolint
+xrWebGLLayer.antialias
 ```
 
 ### Value

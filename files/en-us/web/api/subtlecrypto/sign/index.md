@@ -11,6 +11,7 @@ tags:
   - sign
 browser-compat: api.SubtleCrypto.sign
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`sign()`** method of the {{domxref("SubtleCrypto")}}
@@ -25,7 +26,7 @@ signature.
 
 ## Syntax
 
-```js
+```js-nolint
 sign(algorithm, key, data)
 ```
 
@@ -48,7 +49,7 @@ sign(algorithm, key, data)
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with an
-  {{jsxref("ArrayBuffer")}} containing the signature.
+{{jsxref("ArrayBuffer")}} containing the signature.
 
 ### Exceptions
 

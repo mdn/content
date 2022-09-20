@@ -14,6 +14,7 @@ tags:
   - getURL
 browser-compat: webextensions.api.extension.getURL
 ---
+
 {{AddonSidebar}}
 
 > **Warning:** This function is deprecated. Please use [`runtime.getURL`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL).
@@ -22,7 +23,7 @@ Converts a relative path within an extension's install directory to a fully-qual
 
 ## Syntax
 
-```js
+```js-nolint
 browser.extension.getURL(
   path // string
 )

@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLSubImage
 ---
+
 {{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRWebGLSubImage`** interface is used during rendering of WebGL layers.

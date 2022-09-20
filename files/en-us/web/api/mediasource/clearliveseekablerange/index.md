@@ -15,6 +15,7 @@ tags:
   - clearLiveSeekableRange()
 browser-compat: api.MediaSource.clearLiveSeekableRange
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`clearLiveSeekableRange()`** method of the
@@ -23,7 +24,7 @@ to {{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 clearLiveSeekableRange()
 ```
 

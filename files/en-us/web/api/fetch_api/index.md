@@ -12,6 +12,7 @@ tags:
   - request
 browser-compat: api.fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 The Fetch API provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used {{DOMxRef("XMLHttpRequest")}}, but the new API provides a more powerful and flexible feature set.

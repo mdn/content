@@ -10,13 +10,14 @@ tags:
   - Experimental
 browser-compat: api.EncodedVideoChunk.EncodedVideoChunk
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`EncodedVideoChunk()`** constructor creates a new {{domxref("EncodedVideoChunk")}} object representing a chunk of encoded video.
 
 ## Syntax
 
-```js
+```js-nolint
 new EncodedVideoChunk(options)
 ```
 

@@ -11,6 +11,7 @@ tags:
   - Reporting API
 browser-compat: api.Report
 ---
+
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
 The `Report` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a single report.

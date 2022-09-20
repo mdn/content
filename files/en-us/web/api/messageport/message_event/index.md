@@ -6,6 +6,7 @@ tags:
   - Event
 browser-compat: api.MessagePort.message_event
 ---
+
 {{APIRef}}
 
 The `message` event is fired on a {{domxref('MessagePort')}} object when a message arrives on that channel.

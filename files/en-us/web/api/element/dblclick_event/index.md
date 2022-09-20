@@ -18,6 +18,7 @@ tags:
   - mouse
 browser-compat: api.Element.dblclick_event
 ---
+
 {{APIRef}}
 
 The **`dblclick`** event fires when a pointing device button (such as a mouse's primary button) is double-clicked; that is, when it's rapidly clicked twice on a single element within a very short span of time.
@@ -126,9 +127,9 @@ aside {
   border-radius: 1em;
   display: inline-block;
   padding: 1em;
-  transform: scale(.9);
+  transform: scale(0.9);
   transform-origin: 0 0;
-  transition: transform .6s;
+  transition: transform 0.6s;
   user-select: none;
 }
 

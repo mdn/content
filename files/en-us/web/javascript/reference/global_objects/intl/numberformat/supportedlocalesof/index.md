@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat.supportedLocalesOf()`** method returns
@@ -23,7 +24,7 @@ formatting without having to fall back to the runtime's default locale.
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.NumberFormat.supportedLocalesOf(locales)
 Intl.NumberFormat.supportedLocalesOf(locales, options)
 ```

@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBTransaction.durability
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
 
 The **`durability`** read-only property of the

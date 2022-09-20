@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.core.lang
 ---
+
 {{SVGRef}}
 
 The **`lang`** attribute specifies the primary language used in contents and attributes containing text content of particular elements.

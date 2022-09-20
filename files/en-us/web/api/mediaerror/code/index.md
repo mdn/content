@@ -16,6 +16,7 @@ tags:
   - Video
 browser-compat: api.MediaError.code
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only property **`MediaError.code`** returns a numeric

@@ -12,6 +12,7 @@ tags:
   - observers
 browser-compat: api.PerformanceObserver
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`PerformanceObserver`** interface is used to _observe_ performance measurement events and be notified of new {{domxref("PerformanceEntry","performance entries", '', 'true')}} as they are recorded in the browser's _performance timeline_.

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.formatRange()`** formats a
@@ -26,7 +27,7 @@ date range in the most concise way based on the **`locale`** and
 
 ## Syntax
 
-```js
+```js-nolint
 formatRange(startDate, endDate)
 ```
 

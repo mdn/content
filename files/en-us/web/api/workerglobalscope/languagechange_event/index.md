@@ -9,6 +9,7 @@ tags:
   - WorkerGlobalScope
 browser-compat: api.WorkerGlobalScope.languagechange_event
 ---
+
 {{APIRef}}
 
 The **`languagechange`** event is fired at the global scope object when the user's preferred language changes.

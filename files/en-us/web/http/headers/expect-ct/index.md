@@ -7,13 +7,17 @@ tags:
   - header
 browser-compat: http.headers.Expect-CT
 ---
-{{HTTPSidebar}}
 
-The `Expect-CT` header lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements, to prevent the use of misissued certificates for that site from going unnoticed.
+{{HTTPSidebar}}
+{{Deprecated_Header}}
+
+The `Expect-CT` header lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements. Certificate Transparency (CT) aims to prevent the use of misissued certificates for that site from going unnoticed.
+
+Only Google Chrome and other Chromium-based browsers implemented `Expect-CT`, and Chromium has deprecated the header from version 107, because Chromium now enforces CT by default. See the [Chrome Platform Status](https://chromestatus.com/feature/6244547273687040) update.
 
 CT requirements can be satisfied via any one of the following mechanisms:
 
-- X.509v3 certificate extension to allow embedding of signed certificate timestamps issued by individual logs
+- X.509v3 certificate extension to allow embedding of signed certificate timestamps issued by individual logs. Most TLS certificates issued by publicly-trusted CAs and used online contain embedded CT.
 - A TLS extension of type `signed_certificate_timestamp` sent during the handshake
 - Supporting OCSP stapling (that is, the `status_request` TLS extension) and providing a `SignedCertificateTimestampList`
 
@@ -21,7 +25,7 @@ CT requirements can be satisfied via any one of the following mechanisms:
 
 > **Note:** Browsers **ignore** the `Expect-CT` header over HTTP; the header only has effect on HTTPS connections.
 
-> **Note:** The `Expect-CT` will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
+> **Note:** The `Expect-CT` is mostly obsolete since June 2021. Since May 2018, all new TLS certificates are expected to support SCTs by default. Certificates issued before March 2018 were allowed to have a lifetime of 39 months, so they had expired in June 2021. Chromium plans to deprecate `Expect-CT` header and to eventually remove it.
 
 <table class="properties">
   <tbody>

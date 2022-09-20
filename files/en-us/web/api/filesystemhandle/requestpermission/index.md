@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.FileSystemHandle.requestPermission
 ---
+
 {{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the
@@ -19,8 +20,8 @@ file handle.
 
 ## Syntax
 
-```js
-requestPermission(FileSystemHandlePermissionDescriptor)
+```js-nolint
+requestPermission(fileSystemHandlePermissionDescriptor)
 ```
 
 ### Parameters

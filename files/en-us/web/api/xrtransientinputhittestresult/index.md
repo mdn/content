@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRTransientInputHitTestResult
 ---
+
 {{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRTransientInputHitTestResult`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) contains an array of results of a hit test for transient input, grouped by input source.
@@ -48,7 +49,7 @@ function onXRFrame(time, xrFrame) {
     });
   });
  }
- ```
+```
 
 ### Filtering input sources
 
@@ -65,7 +66,7 @@ function onXRFrame(time, xrFrame) {
     }
   });
  }
- ```
+```
 
 ## Specifications
 

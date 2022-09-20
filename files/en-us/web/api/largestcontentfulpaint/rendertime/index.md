@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.LargestContentfulPaint.renderTime
 ---
+
 {{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
 The **`renderTime`** read-only property of the {{domxref("LargestContentfulPaint")}} interface represents the time that the element was rendered to the screen.

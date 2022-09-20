@@ -5,6 +5,7 @@ tags:
   - CodingScripting
   - Glossary
 ---
+
 Polymorphism is the presentation of one interface for multiple data types.
 
 For example, integers, floats, and doubles are implicitly polymorphic: regardless of their different types, they can all be added, subtracted, multiplied, and so on.

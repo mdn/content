@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.clearHalt
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`clearHalt()`** method of the {{domxref("USBDevice")}}
@@ -24,7 +25,7 @@ terminology) to clear that condition. See the for details.
 
 ## Syntax
 
-```js
+```js-nolint
 clearHalt(direction, endpointNumber)
 ```
 

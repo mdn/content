@@ -12,6 +12,7 @@ tags:
   - muted
 browser-compat: api.MediaStreamTrack.muted
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`muted`** read-only property of the

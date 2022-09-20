@@ -7,6 +7,7 @@ tags:
 browser-compat: api.Element.pointerover_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The `pointerover` event is fired when a pointing device is moved into an element's hit test boundaries.

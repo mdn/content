@@ -8,6 +8,7 @@ tags:
   - Infrastructure
   - Security
 ---
+
 **HTTPS RR** (**_HTTPS Resource Records_**) are a type of DNS record that delivers configuration information and parameters for how to access a service via {{Glossary("HTTPS")}}.
 
 An _HTTPS RR_ can be used to optimize the process of connecting to a service using HTTPS.

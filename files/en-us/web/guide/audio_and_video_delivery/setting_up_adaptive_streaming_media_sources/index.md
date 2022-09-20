@@ -10,6 +10,7 @@ tags:
   - Video
   - adaptive streaming
 ---
+
 Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)
 
 ## Choosing formats
@@ -101,10 +102,10 @@ it might be wise to provide a fallback for browsers that don't yet support MPEG-
 
 ```html
 <video>
-  <source src="my.mpd" type="application/dash+xml">
+  <source src="my.mpd" type="application/dash+xml" />
   <!-- fallback -->
-  <source src="my.mp4" type="video/mp4">
-  <source src="my.webm" type="video/webm">
+  <source src="my.mp4" type="video/mp4" />
+  <source src="my.webm" type="video/webm" />
 </video>
 ```
 
@@ -138,7 +139,7 @@ The playlist or `.mpd` file contains XML that explicitly lists where all the var
 
 ```xml
 <?xml version="1.0"?>
-  <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011"  xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S">
+  <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S">
     <BaseURL>
       http://example.com/segments
     </BaseURL>
@@ -199,10 +200,10 @@ it might be wise to provide a fallback:
 
 ```html
 <video>
-  <source src="my.mpd" type="application/dash+xml">
+  <source src="my.mpd" type="application/dash+xml" />
   <!-- fallback -->
-  <source src="my.mp4" type="video/mp4">
-  <source src="my.webm" type="video/webm">
+  <source src="my.mp4" type="video/mp4" />
+  <source src="my.webm" type="video/webm" />
 </video>
 ```
 

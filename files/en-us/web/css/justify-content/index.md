@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.justify-content
 ---
+
 {{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-content`** property defines how the browser distributes space between and around content items along the {{Glossary("Main Axis", "main-axis")}} of a flex container, and the inline axis of a grid container.

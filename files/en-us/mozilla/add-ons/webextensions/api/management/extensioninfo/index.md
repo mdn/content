@@ -12,6 +12,7 @@ tags:
   - management
 browser-compat: webextensions.api.management.ExtensionInfo
 ---
+
 {{AddonSidebar()}}
 
 An `ExtensionInfo` object contains information about an add-on.

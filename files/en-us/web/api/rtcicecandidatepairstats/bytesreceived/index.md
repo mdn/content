@@ -19,6 +19,7 @@ tags:
   - data
 browser-compat: api.RTCIceCandidatePairStats.bytesReceived
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

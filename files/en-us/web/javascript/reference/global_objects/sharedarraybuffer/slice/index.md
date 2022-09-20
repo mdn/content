@@ -10,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer.slice
 ---
+
 {{JSRef}}
 
 The **`SharedArrayBuffer.prototype.slice()`** method returns a
@@ -23,7 +24,7 @@ opposed to from the beginning. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(begin)
 slice(begin, end)

@@ -102,6 +102,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > **Note:** This attribute is considered a legacy attribute and redefined as `allow="payment"`.
 
 - {{htmlattrdef("csp")}} {{experimental_inline}}
+
   - : A [Content Security Policy](/en-US/docs/Web/HTTP/CSP) enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.
 
 - {{htmlattrdef("fetchpriority")}} {{Experimental_Inline}}
@@ -216,8 +217,11 @@ This example embeds the page at <https://example.org> in an iframe.
 #### HTML
 
 ```html
-<iframe src="https://example.org"
-            title="iframe Example 1" width="400" height="300">
+<iframe
+  src="https://example.org"
+  title="iframe Example 1"
+  width="400"
+  height="300">
 </iframe>
 ```
 
@@ -230,7 +234,9 @@ This example embeds the page at <https://example.org> in an iframe.
 People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<iframe>` to label its content. The title's value should concisely describe the embedded content:
 
 ```html
-<iframe title="Wikipedia page for Avocados" src="https://en.wikipedia.org/wiki/Avocado"></iframe>
+<iframe
+  title="Wikipedia page for Avocados"
+  src="https://en.wikipedia.org/wiki/Avocado"></iframe>
 ```
 
 Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.

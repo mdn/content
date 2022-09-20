@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.set
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`set()`** method of the {{domxref("FormData")}} interface sets a new value for an existing key inside a `FormData` object, or adds the key/value if it does not already exist.
@@ -20,7 +21,7 @@ The difference between `set()` and {{domxref("FormData.append", "append()")}} is
 
 ## Syntax
 
-```js
+```js-nolint
 set(name, value)
 set(name, value, filename)
 ```

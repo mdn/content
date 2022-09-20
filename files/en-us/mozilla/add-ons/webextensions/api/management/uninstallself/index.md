@@ -11,6 +11,7 @@ tags:
   - uninstallSelf
 browser-compat: webextensions.api.management.uninstallSelf
 ---
+
 {{AddonSidebar()}}
 
 Uninstalls the calling add-on.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let uninstallingSelf = browser.management.uninstallSelf(
   options              // object
 )

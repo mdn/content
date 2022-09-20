@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DocumentFragment.querySelectorAll
 ---
+
 {{ApiRef("DOM")}}
 
 The **`DocumentFragment.querySelectorAll()`** method returns a
@@ -22,7 +23,7 @@ a `SYNTAX_ERR` value is raised.
 
 ## Syntax
 
-```js
+```js-nolint
 querySelectorAll(selectors)
 ```
 

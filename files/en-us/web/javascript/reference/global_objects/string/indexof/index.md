@@ -10,6 +10,7 @@ tags:
   - indexOf
 browser-compat: javascript.builtins.String.indexOf
 ---
+
 {{JSRef}}
 
 The **`indexOf()`** method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the first occurrence of the specified substring. Given a second argument: a number, the method returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
@@ -18,7 +19,7 @@ The **`indexOf()`** method, given one argument: a substring to search for, searc
 
 ## Syntax
 
-```js
+```js-nolint
 indexOf(searchString)
 indexOf(searchString, position)
 ```

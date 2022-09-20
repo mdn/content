@@ -6,6 +6,7 @@ tags:
   - Event
 browser-compat: api.MessagePort.messageerror_event
 ---
+
 {{APIRef}}
 
 The `messageerror` event is fired on a {{domxref('MessagePort')}} object when it receives a message that can't be deserialized.

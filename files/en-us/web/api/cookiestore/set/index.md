@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.CookieStore.set
 ---
+
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object. (See below.)
 
 ## Syntax
 
-```js
+```js-nolint
 set(name, value)
 set(options)
 ```

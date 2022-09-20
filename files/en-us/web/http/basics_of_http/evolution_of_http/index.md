@@ -7,6 +7,7 @@ tags:
   - NeedsUpdate
   - NeedsUpdate(HTTP/3)
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** (HyperText Transfer Protocol) is the underlying protocol of the World Wide Web. Developed by Tim Berners-Lee and his team between 1989-1991, HTTP has gone through many changes that have helped maintain its simplicity while shaping its flexibility. Keep reading to learn how HTTP evolved from a protocol designed to exchange files in a semitrusted laboratory environment into a modern internet maze that carries images and videos in high resolution and 3D.
@@ -36,7 +37,7 @@ The response was extremely simple, too: it only consisted of the file itself.
 
 ```html
 <html>
-A very simple HTML page
+  A very simple HTML page
 </html>
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.spread
 ---
+
 {{jsSidebar("Operators")}}
 
 **Spread syntax** (`...`) allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.
@@ -19,7 +20,7 @@ Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opp
 
 ## Syntax
 
-```js
+```js-nolint
 myFunction(a, ...iterableObj, b)
 [1, ...iterableObj, '4', 'five', 6]
 { ...obj, key: 'value' }
@@ -130,7 +131,7 @@ arr2.push(4);
 > b.shift().shift();
 > //  1
 >
-> //  Oh no!  Now array 'a' is affected as well:
+> //  Oh no! Now array 'a' is affected as well:
 > a
 > //  [[], [2], [3]]
 > ```

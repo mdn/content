@@ -13,6 +13,7 @@ tags:
   - Video
 browser-compat: api.SourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`SourceBuffer`** interface represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} and played, via a {{domxref("MediaSource")}} object. This can be made up of one or several media segments.

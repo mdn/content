@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onConnectExternal
 ---
+
 {{AddonSidebar()}}
 
 Fired when an extension receives a connection request from a different extension.
@@ -23,7 +24,7 @@ The listener is passed a {{WebExtAPIRef('runtime.Port')}} object which it can th
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onConnectExternal.addListener(listener)
 browser.runtime.onConnectExternal.removeListener(listener)
 browser.runtime.onConnectExternal.hasListener(listener)

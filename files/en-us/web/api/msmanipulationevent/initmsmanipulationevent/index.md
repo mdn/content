@@ -11,6 +11,7 @@ tags:
   - Reference
   - initMSManipulationEvent
 ---
+
 {{APIRef("UI Events")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`initMSManipulationEvent`** method is used to create a {{DOMxRef("MSManipulationEvent")}} that can be called from JavaScript.
@@ -19,28 +20,34 @@ This proprietary method is specific to Internet Explorer. Beginning with the Mic
 
 ## Syntax
 
-```js
+```js-nolint
 initMSManipulationEvent(type, canBubble, cancelable, view, detail, lastState, currentState)
 ```
 
 ### Parameters
 
 - `type`
+
   - : A string that represents the type of the event being created.
 
 - `canBubble`
+
   - : A boolean value that indicates whether the event can bubble. When `true` the event should propagate upward. When `false` the event does not propagate upward.
 
 - `cancelable`
+
   - : A boolean value that indicates whether the event's default action can be prevented. When `true`, the default action can be canceled. When `false`, the default action cannot be canceled.
 
 - `view`
+
   - : An {{domxref("AbstractView")}} representing the view in which the event is taking place.
 
 - `detail`
+
   - : An integer that specifies some detailed information depending upon the event.
 
 - `lastState`
+
   - : An integer that indicates the last state of the manipulation event.
 
 - `currentState`

@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRMediaBinding
 ---
+
 {{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRMediaBinding`** interface is used to create layers that display the content of an {{domxref("HTMLVideoElement")}}.

@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.OnRestartRequiredReason
 ---
+
 {{AddonSidebar()}}
 
 The reason that the {{WebExtAPIRef("runtime.onRestartRequired", "onRestartRequired")}} event is being dispatched.

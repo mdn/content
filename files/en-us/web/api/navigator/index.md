@@ -12,6 +12,7 @@ tags:
   - Web Performance
 browser-compat: api.Navigator
 ---
+
 {{APIRef("DOM")}}
 
 The **`Navigator`** interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.
@@ -87,6 +88,8 @@ _Doesn't inherit any properties._
   - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. `20181001000000` in Firefox 64 onwards.
 - {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref('ContactsManager')}} interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
+- {{domxref("Navigator.globalPrivacyControl")}} {{Non-standard_Inline}}
+  - : Returns a boolean indicating a user's consent to their information being shared or sold.
 - {{domxref("Navigator.securitypolicy")}} {{Non-standard_Inline}}
   - : Returns an empty string. In Netscape 4.7x, returns "US & CA domestic policy" or "Export policy".
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}

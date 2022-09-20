@@ -7,6 +7,7 @@ tags:
   - community-guidelines
   - governance
 ---
+
 {{MDNSidebar}}
 
 We are always interested in hearing from our community about new content or feature suggestions you may have for MDN Web Docs. However, even though we are open to suggestions, we have to keep the following in mind:

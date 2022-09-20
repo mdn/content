@@ -13,6 +13,7 @@ tags:
   - messaging
 browser-compat: api.MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`MessageEvent`** interface represents a message received by a target object.

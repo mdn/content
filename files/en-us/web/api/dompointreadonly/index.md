@@ -15,6 +15,7 @@ tags:
   - Reference
 browser-compat: api.DOMPointReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`DOMPointReadOnly`** interface specifies the coordinate and perspective fields used by {{domxref("DOMPoint")}} to define a 2D or 3D point in a coordinate system.

@@ -13,6 +13,7 @@ tags:
   - SVGImageElement
 browser-compat: api.SVGImageElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGImageElement`** interface corresponds to the {{SVGElement("image")}} element.

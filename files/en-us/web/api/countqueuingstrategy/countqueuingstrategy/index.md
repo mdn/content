@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.CountQueuingStrategy.CountQueuingStrategy
 ---
+
 {{APIRef("Streams")}}
 
 The **`CountQueuingStrategy()`** constructor
@@ -17,7 +18,7 @@ creates and returns a `CountQueuingStrategy` object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new CountQueuingStrategy(highWaterMark)
 ```
 

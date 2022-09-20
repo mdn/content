@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.charAt
 ---
+
 {{JSRef}}
 
 The {{jsxref("String")}} object's
@@ -19,7 +20,7 @@ single UTF-16 code unit located at the specified offset into the string.
 
 ## Syntax
 
-```js
+```js-nolint
 charAt(index)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - js13kGames
   - progressive
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 In the last article, we read about how the example application, [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), works offline thanks to its [service worker](/en-US/docs/Web/API/Service_Worker_API), but we can go even further and allow users to install the web app on mobile and desktop browsers that support doing so. The installed web app can then be launched by users just as if it were any native app. This article explains how to achieve this using the web app's manifest.
@@ -36,7 +37,7 @@ It usually resides in the root folder of a web app. It contains useful informati
 The `js13kpwa.webmanifest` file of the [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) web app is included in the {{HTMLElement("head")}} block of the `index.html` file using the following line of code:
 
 ```html
-<link rel="manifest" href="js13kpwa.webmanifest">
+<link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
 > **Note:** There are a few common kinds of manifest file that have been used in the past: `manifest.webapp` was popular in Firefox OS app manifests, and many use `manifest.json` for web manifests as the contents are organized in a JSON structure. However, the `.webmanifest` file format is explicitly mentioned in the [W3C manifest specification](https://w3c.github.io/manifest/), so that's what we'll use here.

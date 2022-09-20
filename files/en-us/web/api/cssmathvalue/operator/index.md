@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathValue.operator
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathValue.operator`** read-only
@@ -25,15 +26,15 @@ subtype is `CSSMathSum`, this property will return the string
 
 A {{jsxref('String')}}.
 
-| Interface                         | Value       |
-|-----------------------------------| ----------- |
-| {{domxref('CSSMathSum')}}         | `"sum"`     |
-| {{domxref('CSSMathProduct')}}     | `"product"` |
-| {{domxref('CSSMathMin')}}         | `"min"`     |
-| {{domxref('CSSMathMax')}}         | `"max"`     |
-| {{domxref('CSSMathClamp')}}     | `"clamp"`   |
-| {{domxref('CSSMathNegate')}}      | `"negate"`  |
-| {{domxref('CSSMathInvert')}}      | `"invert"`  |
+| Interface                     | Value       |
+| ----------------------------- | ----------- |
+| {{domxref('CSSMathSum')}}     | `"sum"`     |
+| {{domxref('CSSMathProduct')}} | `"product"` |
+| {{domxref('CSSMathMin')}}     | `"min"`     |
+| {{domxref('CSSMathMax')}}     | `"max"`     |
+| {{domxref('CSSMathClamp')}}   | `"clamp"`   |
+| {{domxref('CSSMathNegate')}}  | `"negate"`  |
+| {{domxref('CSSMathInvert')}}  | `"invert"`  |
 
 ## Examples
 

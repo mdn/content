@@ -16,6 +16,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceNavigation
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 The legacy **`PerformanceNavigation`** interface represents information about how the navigation to the current document was done.

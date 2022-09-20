@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Part 2: Creating a skeleton website'
+title: "Express Tutorial Part 2: Creating a skeleton website"
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 tags:
   - Beginner
@@ -12,6 +12,7 @@ tags:
   - npm
   - server-side
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
@@ -181,32 +182,32 @@ At this point, we have a complete skeleton project. The website doesn't actually
 
 1. First, install the dependencies (the `install` command will fetch all the dependency packages listed in the project's **package.json** file).
 
-    ```bash
-    cd express-locallibrary-tutorial
-    npm install
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   npm install
+   ```
 
 2. Then run the application.
 
-    - On the Windows CMD prompt, use this command:
+   - On the Windows CMD prompt, use this command:
 
-      ```bash
-      SET DEBUG=express-locallibrary-tutorial:* & npm start
-      ```
+     ```bash
+     SET DEBUG=express-locallibrary-tutorial:* & npm start
+     ```
 
-    - On Windows Powershell, use this command:
+   - On Windows Powershell, use this command:
 
-      ```bash
-      $ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
-      ```
+     ```bash
+     $ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
+     ```
 
-      > **Note:** Powershell commands are not covered further in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
+     > **Note:** Powershell commands are not covered further in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
 
-    - On macOS or Linux, use this command:
+   - On macOS or Linux, use this command:
 
-      ```bash
-      DEBUG=express-locallibrary-tutorial:* npm start
-      ```
+     ```bash
+     DEBUG=express-locallibrary-tutorial:* npm start
+     ```
 
 3. Then load `http://localhost:3000/` in your browser to access the app.
 
@@ -373,7 +374,7 @@ The file **/bin/www** is the application entry point! The very first thing this 
  * Module dependencies.
  */
 
-const app = require('../app');
+const app = require("../app");
 ```
 
 > **Note:** `require()` is a global node function that is used to import modules into the current file. Here we specify **app.js** module using a relative path and omitting the optional (.**js**) file extension.
@@ -385,7 +386,7 @@ The remainder of the code in this file sets up a node HTTP server with `app` set
 This file creates an `express` application object (named `app`, by convention), sets up the application with various settings and middleware, and then exports the app from the module. The code below shows just the parts of the file that create and export the app object:
 
 ```js
-const express = require('express');
+const express = require("express");
 const app = express();
 // …
 module.exports = app;
@@ -396,18 +397,18 @@ Back in the **www** entry point file above, it is this `module.exports` object t
 Let's work through the **app.js** file in detail. First, we import some useful node libraries into the file using `require()`, including _http-errors_, _express_, _morgan_ and _cookie-parser_ that we previously downloaded for our application using npm; and _path_, which is a core Node library for parsing file and directory paths.
 
 ```js
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+const createError = require("http-errors");
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 ```
 
 Then we `require()` modules from our routes directory. These modules/files contain code for handling particular sets of related "routes" (URL paths). When we extend the skeleton application, for example to list all books in the library, we will add a new file for dealing with book-related routes.
 
 ```js
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const indexRouter = require("./routes/index");
+const usersRouter = require("./routes/users");
 ```
 
 > **Note:** At this point, we have just _imported_ the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
@@ -418,8 +419,8 @@ Next, we create the `app` object using our imported _express_ module, and then u
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 The next set of functions call `app.use()` to add the _middleware_ libraries that we imported above into the request handling chain.
@@ -427,19 +428,19 @@ For example, `express.json()` and `express.urlencoded()` are needed to populate 
 After these libraries we also use the `express.static` middleware, which makes _Express_ serve all the static files in the **/public** directory in the project root.
 
 ```js
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 ```
 
 Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different _parts_ of the site:
 
 ```js
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
 ```
 
 > **Note:** The paths specified above (`'/'` and '`/users'`) are treated as a prefix to routes defined in the imported files.
@@ -457,11 +458,11 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get("env") === "development" ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render("error");
 });
 ```
 
@@ -478,12 +479,12 @@ First, it loads the _express_ module and uses it to get an `express.Router` obje
 Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into **app.js**).
 
 ```js
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 /* GET users listing. */
-router.get('/', (req, res, next) => {
-  res.send('respond with a resource');
+router.get("/", (req, res, next) => {
+  res.send("respond with a resource");
 });
 
 module.exports = router;
@@ -501,8 +502,8 @@ The views (templates) are stored in the **/views** directory (as specified in **
 
 ```js
 /* GET home page. */
-router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Express' });
+router.get("/", (req, res, next) => {
+  res.render("index", { title: "Express" });
 });
 ```
 

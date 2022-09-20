@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.History.scrollRestoration
 ---
+
 {{APIRef("History API")}}
 
 The **`scrollRestoration`** property of {{DOMxRef("History")}}

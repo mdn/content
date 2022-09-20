@@ -1,5 +1,5 @@
 ---
-title: 'AudioScheduledSourceNode: ended event'
+title: "AudioScheduledSourceNode: ended event"
 slug: Web/API/AudioScheduledSourceNode/ended_event
 page-type: web-api-event
 tags:
@@ -15,6 +15,7 @@ tags:
   - ended
 browser-compat: api.AudioScheduledSourceNode.ended_event
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 The `ended` event of the {{domxref("AudioScheduledSourceNode")}} interface is fired when the source node has stopped playing.
@@ -27,10 +28,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('ended', (event) => { });
+```js-nolint
+addEventListener("ended", (event) => { })
 
-onended = (event) => { };
+onended = (event) => { }
 ```
 
 ## Event type
@@ -42,9 +43,9 @@ A generic {{domxref("Event")}}.
 In this simple example, an event listener for the `ended` event is set up to enable a "Start" button in the user interface when the node stops playing:
 
 ```js
-node.addEventListener('ended', () => {
+node.addEventListener("ended", () => {
   document.getElementById("startButton").disabled = false;
-})
+});
 ```
 
 You can also set up the event handler using the `onended` property:
@@ -52,7 +53,7 @@ You can also set up the event handler using the `onended` property:
 ```js
 node.onended = () => {
   document.getElementById("startButton").disabled = false;
-}
+};
 ```
 
 For an example of the ended event in use, see our [audio-buffer example on GitHub](https://mdn.github.io/webaudio-examples/audio-buffer/).

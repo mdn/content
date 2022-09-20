@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.AudioEncoder.flush
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`flush()`** method of the {{domxref("AudioEncoder")}} interface returns a Promise that resolves once all pending messages in the queue have been completed.
 
 ## Syntax
 
-```js
+```js-nolint
 flush()
 ```
 

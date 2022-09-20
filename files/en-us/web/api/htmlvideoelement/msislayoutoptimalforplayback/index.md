@@ -11,6 +11,7 @@ tags:
   - msIsLayoutOptimalForPlayback
   - onMSVideoOptimalLayoutChanged
 ---
+
 {{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}
 
 **`msIsLayoutOptimalForPlayback`** is a read-only property
