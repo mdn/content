@@ -83,7 +83,7 @@ Origin precedence always beats selector specificity. If an element property is s
 
 One last thing to note before moving on: order of appearance or _proximity_ becomes relevant only when the competing declarations in the origin of precedence have the same specificity.
 
-We now understand "cascade origin precedence," but what is "cascade layer precedence"? We will answer that question by addressing what cascade layers are, how they are ordered, and how styles are assigned to cascade layers. We'll cover regular layers, nested layers, and anonymous layers. Let's first discuss what cascade layers are and what issues they solve.
+We now understand "cascade origin precedence", but what is "cascade layer precedence"? We will answer that question by addressing what cascade layers are, how they are ordered, and how styles are assigned to cascade layers. We'll cover [regular layers](#creating_layers), [nested layers](#nested_layers), and anonymous layers. Let's first discuss what cascade layers are and what issues they solve.
 
 ## Overview of cascade layers
 
