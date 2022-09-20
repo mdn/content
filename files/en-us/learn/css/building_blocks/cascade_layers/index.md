@@ -115,7 +115,7 @@ Cascade layers also allow for nested layers. This serves two main purposes. With
 
 Layers can be created in the following ways:
 
-* Declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
+- Declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
 * Using an @layer block at-rule, with or without a name, which assigns style rules into that layer.
 * Including the `layer` keyword or `layer()` function in an [`@import`](/en-US/docs/Web/CSS/@import) rule. This assigns the contents of the imported file into that layer.
 
