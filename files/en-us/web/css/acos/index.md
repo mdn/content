@@ -11,7 +11,6 @@ tags:
   - acos
   - Experimental
 browser-compat: css.types.acos
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
