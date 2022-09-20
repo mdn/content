@@ -55,7 +55,7 @@ If a single value is specified it applies to both width and height.
 
 ## Description
 
-Size containment allows a user agent to layout an element as though it had a fixed size, avoiding the computational cost of rendering the child elements to determine the actual size.
+Size containment allows a user agent to layout an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
 By default, size containment assumes that elements have no contents, and hence may collapse the layout to zero inner height and width.
 The `contain-intrinsic-size` allows authors to specify an appropriate value to be used as the size for layout.
 
