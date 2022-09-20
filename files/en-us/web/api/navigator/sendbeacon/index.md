@@ -14,6 +14,7 @@ tags:
   - sendBeacon
 browser-compat: api.Navigator.sendBeacon
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`navigator.sendBeacon()`**
@@ -26,7 +27,7 @@ legacy techniques for sending analytics, such as the use of
 
 ## Syntax
 
-```js
+```js-nolint
 sendBeacon(url)
 sendBeacon(url, data)
 ```

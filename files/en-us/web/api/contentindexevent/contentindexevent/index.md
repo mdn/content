@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndexEvent.ContentIndexEvent
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`ContentIndexEvent()`** constructor creates a new {{domxref("ContentIndexEvent")}} object
@@ -21,7 +22,7 @@ whose type and other options are configured as specified.
 
 ## Syntax
 
-```js
+```js-nolint
 new ContentIndexEvent(type, options)
 ```
 

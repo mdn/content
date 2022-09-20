@@ -4,8 +4,9 @@ slug: Web/JavaScript/Guide
 tags:
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 The JavaScript Guide shows you how to use [JavaScript](/en-US/docs/Web/JavaScript) and gives an overview of the language. If you need exhaustive information about a language feature, have a look at the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).

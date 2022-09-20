@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 74 that will affect developers. Firefox 74 was released on March 10, 2020.

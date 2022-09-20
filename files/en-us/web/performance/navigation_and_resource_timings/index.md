@@ -8,6 +8,7 @@ tags:
   - Web Performance
   - performance APIs
 ---
+
 **Navigation timings** are metrics measuring a browser's document navigation events. **Resource timings** are detailed network timing measurements regarding the loading of an application's resources. Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.
 
 The general performance timings below have been deprecated in favor of the Performance Entry API, which provides for marking and measuring times along the navigation and resource loading process. While deprecated, they are supported in all browsers.
@@ -16,7 +17,7 @@ The general performance timings below have been deprecated in favor of the Perfo
 
 The [performanceTiming API](/en-US/docs/Web/API/PerformanceTiming), a JavaScript API for measuring the loading performance of the requested page, is deprecated but supported in all browsers. It has been replaced with the [performanceNavigationTiming](/en-US/docs/Web/API/PerformanceNavigationTiming) API.
 
-The performance timing API provided read only times, in milliseconds(ms), describing at what time each point in the page loading process was reached. As displayed in the image below, the navigation process goes from [`navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart), [`unloadEventStart`](/en-US/docs/Web/API/PerformanceTiming/unloadEventStart), [`unloadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd), [`redirectStart`](/en-US/docs/Web/API/PerformanceTiming/redirectStart), [`redirectEnd`](/en-US/docs/Web/API/PerformanceTiming/redirectEnd), [`fetchStart`](/en-US/docs/Web/API/PerformanceTiming/fetchStart), [`domainLookupStart`](/en-US/docs/Web/API/PerformanceTiming/domainLookupStart), [`domainLookupEnd`](/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd), [`connectStart`](/en-US/docs/Web/API/PerformanceTiming/connectStart) , [`connectEnd`](/en-US/docs/Web/API/PerformanceTiming/connectEnd), [`secureConnectionStart`](/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart), [`requestStart`](/en-US/docs/Web/API/PerformanceTiming/requestStart), [`responseStart`](/en-US/docs/Web/API/PerformanceTiming/responseStart), [`responseEnd`](/en-US/docs/Web/API/PerformanceTiming/responseEnd), [`domLoading`](/en-US/docs/Web/API/PerformanceTiming/domLoading), [`domInteractive`](/en-US/docs/Web/API/PerformanceTiming/domInteractive), [`domContentLoadedEventStart`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart), [`domContentLoadedEventEnd`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventEnd), [`domComplete`](/en-US/docs/Web/API/PerformanceTiming/domComplete), [`loadEventStart`](/en-US/docs/Web/API/PerformanceTiming/loadEventStart), and [`loadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/loadEventEnd).
+The performance timing API provided read only times, in milliseconds(ms), describing at what time each point in the page loading process was reached. As displayed in the image below, the navigation process goes from [`navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart), [`unloadEventStart`](/en-US/docs/Web/API/PerformanceTiming/unloadEventStart), [`unloadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd), [`redirectStart`](/en-US/docs/Web/API/PerformanceTiming/redirectStart), [`redirectEnd`](/en-US/docs/Web/API/PerformanceTiming/redirectEnd), [`fetchStart`](/en-US/docs/Web/API/PerformanceTiming/fetchStart), [`domainLookupStart`](/en-US/docs/Web/API/PerformanceTiming/domainLookupStart), [`domainLookupEnd`](/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd), [`connectStart`](/en-US/docs/Web/API/PerformanceTiming/connectStart), [`connectEnd`](/en-US/docs/Web/API/PerformanceTiming/connectEnd), [`secureConnectionStart`](/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart), [`requestStart`](/en-US/docs/Web/API/PerformanceTiming/requestStart), [`responseStart`](/en-US/docs/Web/API/PerformanceTiming/responseStart), [`responseEnd`](/en-US/docs/Web/API/PerformanceTiming/responseEnd), [`domLoading`](/en-US/docs/Web/API/PerformanceTiming/domLoading), [`domInteractive`](/en-US/docs/Web/API/PerformanceTiming/domInteractive), [`domContentLoadedEventStart`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart), [`domContentLoadedEventEnd`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventEnd), [`domComplete`](/en-US/docs/Web/API/PerformanceTiming/domComplete), [`loadEventStart`](/en-US/docs/Web/API/PerformanceTiming/loadEventStart), and [`loadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/loadEventEnd).
 
 ![Navigation Timing event metrics](screen_shot_2019-05-03_at_1.06.27_pm.png)
 
@@ -324,7 +325,7 @@ let pageloadtime = time.loadEventStart - time.navigationStart;
 The DNS lookup time is the time between [`domainLookupStart`](/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupStart) and [`domainLookupEnd`](/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupEnd). These are both available in both the `performanceTiming` and `performanceNavigationTiming` APIs.
 
 ```js
-const dns  = time.domainLookupEnd - time.domainLookupStart;
+const dns = time.domainLookupEnd - time.domainLookupStart;
 ```
 
 ### TCP
@@ -332,7 +333,7 @@ const dns  = time.domainLookupEnd - time.domainLookupStart;
 The time it takes for the [TCP](/en-US/docs/Glossary/TCP) handshake is the time between the connection start and connection end:
 
 ```js
-const tcp  = time.connectEnd - time.connectStart;
+const tcp = time.connectEnd - time.connectStart;
 ```
 
 ### SSL negotiation

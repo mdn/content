@@ -23,6 +23,7 @@ tags:
   - augmented
 browser-compat: api.XRInputSourcesChangeEvent.session
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The {{domxref("XRInputSourcesChangeEvent")}} property

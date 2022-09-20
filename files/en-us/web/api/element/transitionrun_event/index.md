@@ -13,6 +13,7 @@ tags:
 browser-compat: api.Element.transitionrun_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The **`transitionrun`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created, i.e. before any {{cssxref("transition-delay")}} has begun.
@@ -77,7 +78,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 .transition {
   width: 100px;
   height: 100px;
-  background: rgba(255,0,0,1);
+  background: rgba(255, 0, 0, 1);
   transition-property: transform, background;
   transition-duration: 2s;
   transition-delay: 1s;
@@ -85,7 +86,7 @@ In the following example, we have a simple {{htmlelement("div")}} element, style
 
 .transition:hover {
   transform: rotate(90deg);
-  background: rgba(255,0,0,0);
+  background: rgba(255, 0, 0, 0);
 }
 ```
 

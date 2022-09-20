@@ -13,6 +13,7 @@ tags:
   - getSubTree
 browser-compat: webextensions.api.bookmarks.getSubTree
 ---
+
 {{AddonSidebar()}}
 
 The **`bookmarks.getSubTree()`** method asynchronously retrieves a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, given its ID.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingSubTree = browser.bookmarks.getSubTree(
   id                     // string
 )

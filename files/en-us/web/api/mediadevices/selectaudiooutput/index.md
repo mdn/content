@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.MediaDevices.selectAudioOutput
 ---
+
 {{APIRef("WebRTC")}} {{SeeCompatTable}}
 
 The {{domxref("MediaDevices")}} method **`selectAudioOutput()`** prompts the user to select a specific audio output device, for example a speaker or headset.
@@ -24,7 +25,7 @@ The prompt will not be displayed if the `speaker-selection` permission has not b
 
 ## Syntax
 
-```js
+```js-nolint
 selectAudioOutput()
 selectAudioOutput(options)
 ```

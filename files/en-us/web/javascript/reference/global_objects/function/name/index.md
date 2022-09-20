@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Function.name
 ---
+
 {{JSRef}}
 
 A {{jsxref("Function")}} object's read-only **`name`** property indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.

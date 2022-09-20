@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.allSettled
 ---
+
 {{JSRef}}
 
 The **`Promise.allSettled()`** method returns a promise that
@@ -29,8 +30,8 @@ reject upon any of them rejecting.
 
 ## Syntax
 
-```js
-Promise.allSettled(iterable);
+```js-nolint
+Promise.allSettled(iterable)
 ```
 
 ### Parameters

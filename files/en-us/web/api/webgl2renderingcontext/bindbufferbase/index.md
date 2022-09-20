@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.bindBufferBase
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.bindBufferBase()`** method of the
@@ -19,7 +20,7 @@ The **`WebGL2RenderingContext.bindBufferBase()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 bindBufferBase(target, index, buffer)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - WorkerNavigator
 browser-compat: api.WorkerNavigator.connection
 ---
+
 {{APIRef("Network Information API")}}
 
 The **`WorkerNavigator.connection`** read-only property returns

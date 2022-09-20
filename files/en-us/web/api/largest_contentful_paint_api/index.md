@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.LargestContentfulPaint
 ---
+
 {{DefaultAPISidebar("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
 The **Largest Contentful Paint API** provides [perceived performance](/en-US/docs/Learn/Performance/Perceived_performance) data that allows you to know exactly how long a user waits, after navigating to your page, before seeing the main content of the page in their browser viewport — in contrast to just knowing when the user can first see a loading indicator or background image or other such initial/early-loading content (which is what the related [Paint Timing API](/en-US/docs/Web/API/Paint_Timing_API) provides).
@@ -40,8 +41,8 @@ The Largest Contentful Paint metric provides the render time of the largest imag
 The following example shows an image and a large paragraph of text. An observer is registered to get the largest contentful paint while the page is loading.
 
 ```html
-<img src="large_image.jpg">
-<p id='large-paragraph'>This is large body of text.</p>
+<img src="large_image.jpg" />
+<p id="large-paragraph">This is large body of text.</p>
 ```
 
 ```js

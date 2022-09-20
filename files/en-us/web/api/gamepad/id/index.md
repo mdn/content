@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.id
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.id`** property of the {{domxref("Gamepad") }}

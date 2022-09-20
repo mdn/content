@@ -5,6 +5,7 @@ tags:
   - Accessibility
   - Landing
 ---
+
 **Accessibility** (often abbreviated to **A11y** — as in, "a", then 11 characters, and then "y") in web development means enabling as many people as possible to use websites, even when those people's abilities are limited in some way.
 
 For many people, technology makes things easier. For people with disabilities, technology makes things possible. Accessibility means developing content to be as accessible as possible, no matter an individual's physical and cognitive abilities and how they access the web.

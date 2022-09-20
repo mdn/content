@@ -11,6 +11,7 @@ tags:
   - source
 browser-compat: api.ExtendableMessageEvent.source
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`source`** read-only property of the

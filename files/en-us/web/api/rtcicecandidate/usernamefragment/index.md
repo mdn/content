@@ -17,6 +17,7 @@ tags:
   - usernameFragment
 browser-compat: api.RTCIceCandidate.usernameFragment
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`usernameFragment`** property on the {{domxref("RTCIceCandidate")}} interface is a string indicating the

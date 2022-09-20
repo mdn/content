@@ -11,6 +11,7 @@ tags:
   - Web Animations
 browser-compat: api.AnimationEvent.elapsedTime
 ---
+
 {{APIRef("Web Animations API")}}
 
 The **`AnimationEvent.elapsedTime`** read-only property is a

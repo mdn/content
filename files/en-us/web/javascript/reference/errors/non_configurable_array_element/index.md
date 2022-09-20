@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't delete non-configurable array element" occurs when it

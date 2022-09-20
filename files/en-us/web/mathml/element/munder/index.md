@@ -8,6 +8,7 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.munder
 ---
+
 {{MathMLRef}}
 
 The MathML `<munder>` element is used to attach an accent or a limit under an expression. It uses the following syntax: `<munder> base underscript </munder>`
@@ -28,18 +29,16 @@ Rendering in your browser: <math><munder accentunder="true"><mrow><mi>x</mi><mo>
 
 ```html
 <math>
-
-<munder accentunder="true">
-  <mrow>
-    <mi>x</mi>
-    <mo>+</mo>
-    <mi>y</mi>
-    <mo>+</mo>
-    <mi>z</mi>
-  </mrow>
-  <mo>&#x23DF;<!--BOTTOM CURLY BRACKET--></mo>
-</munder>
-
+  <munder accentunder="true">
+    <mrow>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>y</mi>
+      <mo>+</mo>
+      <mi>z</mi>
+    </mrow>
+    <mo>&#x23DF;<!--BOTTOM CURLY BRACKET--></mo>
+  </munder>
 </math>
 ```
 

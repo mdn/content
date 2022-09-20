@@ -15,6 +15,7 @@ tags:
   - selectedOptions
 browser-compat: api.HTMLSelectElement.selectedOptions
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **read-only** {{domxref("HTMLSelectElement")}} property
@@ -50,7 +51,7 @@ The HTML that creates the selection box and the {{HTMLElement("option")}} elemen
 representing each of the food choices looks like this:
 
 ```html
-<label for="foods">What do you want to eat?</label><br>
+<label for="foods">What do you want to eat?</label><br />
 <select id="foods" name="foods" size="7" multiple>
   <option value="1">Burrito</option>
   <option value="2">Cheeseburger</option>
@@ -58,12 +59,9 @@ representing each of the food choices looks like this:
   <option value="4">Pepperoni Pizza</option>
   <option value="5">Taco</option>
 </select>
-<br>
-<button name="order" id="order">
-  Order Now
-</button>
-<p id="output">
-</p>
+<br />
+<button name="order" id="order">Order Now</button>
+<p id="output"></p>
 ```
 
 The `<select>` element is set to allow multiple items to be selected,

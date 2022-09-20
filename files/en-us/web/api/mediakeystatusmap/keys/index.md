@@ -11,6 +11,7 @@ tags:
   - keys()
 browser-compat: api.MediaKeyStatusMap.keys
 ---
+
 {{APIRef("EncryptedMediaExtensions API")}}
 
 The **`keys`** property of the
@@ -19,7 +20,7 @@ keys for each element in the status map, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

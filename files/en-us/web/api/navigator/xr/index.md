@@ -18,6 +18,7 @@ tags:
   - Experimental
 browser-compat: api.Navigator.xr
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The read-only **`xr`** property

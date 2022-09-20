@@ -7,6 +7,7 @@ tags:
   - color
 browser-compat: css.types.color.color_keywords
 ---
+
 {{CSSRef}}
 
 The **`<named-color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) is the name of a color, such as `red`, `blue`, `black`, or `lightseagreen`. Syntactically, a `<named-color>` is an [`<ident>`](/en-US/docs/Web/CSS/ident).
@@ -895,7 +896,7 @@ Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/
   padding: 20px;
 }
 
-#container>div {
+#container > div {
   height: 100px;
   width: 100px;
   margin: 3px;

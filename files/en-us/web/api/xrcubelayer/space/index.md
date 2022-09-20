@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XRCubeLayer.space
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`space`** property of the {{domxref("XRCubeLayer")}} interface represents the layer's spatial relationship with the user's physical environment.

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array
 ---
+
 {{JSRef}}
 
 The **`Array`** object, as with arrays in other programming languages, enables [storing a collection of multiple items under a single variable name](/en-US/docs/Learn/JavaScript/First_steps/Arrays), and has members for [performing common array operations](#examples).
@@ -460,7 +461,7 @@ Here we have a simple inventory array that contains "food" objects that have a `
 ```js
 const inventory = [
   { name: 'asparagus', type: 'vegetables' },
-  { name: 'bananas',  type: 'fruit' },
+  { name: 'bananas', type: 'fruit' },
   { name: 'goat', type: 'meat' },
   { name: 'cherries', type: 'fruit' },
   { name: 'fish', type: 'meat' },

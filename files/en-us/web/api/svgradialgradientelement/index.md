@@ -9,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGRadialGradientElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGRadialGradientElement`** interface corresponds to the {{SVGElement("RadialGradient")}} element.

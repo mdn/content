@@ -13,6 +13,7 @@ tags:
   - theme manifest
 browser-compat: webextensions.manifest.theme
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -380,7 +381,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>, <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -410,7 +411,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>, <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -1493,10 +1494,10 @@ Multiple images can be used to fill the header. Before Firefox version 60, use a
 ```json
  "theme": {
    "images": {
-     "additional_backgrounds": [ "images/left.png" , "images/middle.png", "images/right.png"]
+     "additional_backgrounds": [ "images/left.png", "images/middle.png", "images/right.png"]
    },
    "properties": {
-     "additional_backgrounds_alignment": [ "left top" , "top", "right top"]
+     "additional_backgrounds_alignment": [ "left top", "top", "right top"]
    },
    "colors": {
      "frame": "blue",

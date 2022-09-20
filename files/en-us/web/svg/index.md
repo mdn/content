@@ -13,8 +13,9 @@ tags:
   - Scalable Images
   - Vector Graphics
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{SVGRef}}
 
 ## Getting Started with SVG

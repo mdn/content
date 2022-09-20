@@ -18,6 +18,7 @@ tags:
   - totalVideoFrames
 browser-compat: api.VideoPlaybackQuality.totalVideoFrames
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("VideoPlaybackQuality")}} interface's

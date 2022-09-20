@@ -11,6 +11,7 @@ tags:
   - google chrome
 browser-compat: webextensions.manifest.offline_enabled
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

@@ -10,6 +10,7 @@ tags:
   - JavaScript
   - Protocols
 ---
+
 {{jsSidebar("More")}}
 
 **Iteration protocols** aren't new built-ins or syntax, but _protocols_. These protocols can be implemented by any object by following some conventions.
@@ -43,9 +44,11 @@ An object is an iterator when it implements a **`next()`** method with the follo
 All iterator protocol methods (`next()`, `return()`, and `throw()`) are expected to return an object implementing the `IteratorResult` interface. It must have the following properties:
 
 - `done` {{optional_inline}}
+
   - : A boolean that's `false` if the iterator was able to produce the next value in the sequence. (This is equivalent to not specifying the `done` property altogether.)
 
     Has the value `true` if the iterator has completed its sequence. In this case, `value` optionally specifies the return value of the iterator.
+
 - `value` {{optional_inline}}
   - : Any JavaScript value returned by the iterator. Can be omitted when `done` is `true`.
 

@@ -14,6 +14,7 @@ tags:
   - query
 browser-compat: api.MediaQueryList
 ---
+
 {{APIRef("CSSOM")}}
 
 A **`MediaQueryList`** object stores information on a [media query](/en-US/docs/Web/CSS/Media_Queries) applied to a document, with support for both immediate and event-driven matching against the state of the document.

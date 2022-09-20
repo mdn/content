@@ -13,6 +13,7 @@ tags:
   - setObject
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setObject
 ---
+
 {{AddonSidebar()}}
 
 Displays a JSON object in the extension's sidebar pane.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let setting = browser.devtools.panels.setObject(
   jsonObject,       // string, array, or JSON object
   rootTitle         // string

@@ -11,6 +11,7 @@ tags:
   - onDisabled
 browser-compat: webextensions.api.management.onDisabled
 ---
+
 {{AddonSidebar()}}
 
 Fired when an add-on is disabled.
@@ -19,7 +20,7 @@ This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/
 
 ## Syntax
 
-```js
+```js-nolint
 browser.management.onDisabled.addListener(listener)
 browser.management.onDisabled.removeListener(listener)
 browser.management.onDisabled.hasListener(listener)

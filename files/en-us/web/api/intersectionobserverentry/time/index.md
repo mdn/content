@@ -12,6 +12,7 @@ tags:
   - Time
 browser-compat: api.IntersectionObserverEntry.time
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's

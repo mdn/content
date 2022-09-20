@@ -10,6 +10,7 @@ tags:
   - display-box
 browser-compat: css.properties.display.contents
 ---
+
 {{CSSRef}}
 
 These keywords define whether an element generates display boxes at all.

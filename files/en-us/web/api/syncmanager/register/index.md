@@ -12,6 +12,7 @@ tags:
   - register
 browser-compat: api.SyncManager.register
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`SyncManager.register`** method of the
@@ -20,7 +21,7 @@ The **`SyncManager.register`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 register()
 register(options)
 ```

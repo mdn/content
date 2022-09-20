@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onCompleted
 ---
+
 {{AddonSidebar()}}
 
 Fired when a request has completed.
@@ -21,7 +22,7 @@ This event is informational only.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onCompleted.addListener(
   listener,             // function
   filter,               //  object

@@ -18,6 +18,7 @@ tags:
   - web animations api
 browser-compat: api.Document.getAnimations
 ---
+
 {{APIRef("Web Animations")}}
 
 The `getAnimations()` method of the {{domxref("Document")}} interface
@@ -26,7 +27,7 @@ target elements are descendants of the document. This array includes [CSS Animat
 
 ## Syntax
 
-```js
+```js-nolint
 getAnimations()
 ```
 

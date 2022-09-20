@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCMonth
 ---
+
 {{JSRef}}
 
 The **`getUTCMonth()`** returns the month of the specified date
@@ -19,7 +20,7 @@ of the year).
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCMonth()
 ```
 

@@ -18,6 +18,7 @@ tags:
   - setRequestHeader
 browser-compat: api.XMLHttpRequest.setRequestHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method
@@ -46,7 +47,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 
 ## Syntax
 
-```js
+```js-nolint
 setRequestHeader(header, value)
 ```
 

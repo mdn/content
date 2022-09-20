@@ -10,6 +10,7 @@ tags:
   - part
 browser-compat: api.Element.part
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`part`** property of the {{domxref("Element")}} interface

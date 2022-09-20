@@ -12,6 +12,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaStreamTrack.label
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaStreamTrack.label`** read-only property returns a string containing a {{glossary("user agent")}}-assigned label that identifies the track source, as in `"internal microphone"`.
@@ -21,7 +22,7 @@ When the track is disassociated from its source, the label is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 const label = track.label
 ```
 

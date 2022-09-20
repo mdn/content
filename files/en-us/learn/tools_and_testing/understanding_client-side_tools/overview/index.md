@@ -8,6 +8,7 @@ tags:
   - Tools
   - client-side
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
 In this article we provide an overview of modern web tooling, what kinds of tools are available and where you'll meet them in the lifecycle of web app development, and how to find help with individual tools.
@@ -108,14 +109,14 @@ Generally web development is thought of as three languages: [HTML](/en-US/docs/L
 
 1. The ability to write code using the latest language features and have that transformed into code that works on everyday devices. For example, you might want to write JavaScript using cutting-edge new language features, but still have your final production code work on older browsers that don't support those features. Good examples here include:
 
-    - [Babel](https://babeljs.io/): A JavaScript compiler that allows developers to write their code using cutting-edge JavaScript, which Babel then takes and converts into old-fashioned JavaScript that more browsers can understand. Developers can also write and publish [plugins for Babel](https://babeljs.io/docs/en/plugins).
-    - [PostCSS](https://postcss.org/): Does the same kind of thing as Babel, but for cutting-edge CSS features. If there isn't an equivalent way to do something using older CSS features, PostCSS will install a JavaScript polyfill to emulate the CSS effect you want.
+   - [Babel](https://babeljs.io/): A JavaScript compiler that allows developers to write their code using cutting-edge JavaScript, which Babel then takes and converts into old-fashioned JavaScript that more browsers can understand. Developers can also write and publish [plugins for Babel](https://babeljs.io/docs/en/plugins).
+   - [PostCSS](https://postcss.org/): Does the same kind of thing as Babel, but for cutting-edge CSS features. If there isn't an equivalent way to do something using older CSS features, PostCSS will install a JavaScript polyfill to emulate the CSS effect you want.
 
 2. The option to write your code in an entirely different language and have it transformed into a web-compatible language. For example:
 
-    - [Sass/SCSS](https://sass-lang.com/): This CSS extension allows you to use variables, nested rules, mixins, functions, and many other features, some of which are available in native CSS (such as variables), and some of which aren't.
-    - [TypeScript](https://www.typescriptlang.org/): TypeScript is a superset of JavaScript that offers a bunch of additional features. The TypeScript compiler converts TypeScript code to JavaScript when building for production.
-    - Frameworks such as [React](https://reactjs.org/), [Ember](https://emberjs.com/), and [Vue](https://vuejs.org/): Frameworks provide a lot of functionality for free and allow you to use it via custom syntax built on top of vanilla JavaScript. In the background, the framework's JavaScript code works hard to interpret this custom syntax and render it as a final web app.
+   - [Sass/SCSS](https://sass-lang.com/): This CSS extension allows you to use variables, nested rules, mixins, functions, and many other features, some of which are available in native CSS (such as variables), and some of which aren't.
+   - [TypeScript](https://www.typescriptlang.org/): TypeScript is a superset of JavaScript that offers a bunch of additional features. The TypeScript compiler converts TypeScript code to JavaScript when building for production.
+   - Frameworks such as [React](https://reactjs.org/), [Ember](https://emberjs.com/), and [Vue](https://vuejs.org/): Frameworks provide a lot of functionality for free and allow you to use it via custom syntax built on top of vanilla JavaScript. In the background, the framework's JavaScript code works hard to interpret this custom syntax and render it as a final web app.
 
 ### Post development
 

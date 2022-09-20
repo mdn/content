@@ -9,6 +9,7 @@ tags:
   - asIntN
 browser-compat: javascript.builtins.BigInt.asIntN
 ---
+
 {{JSRef}}
 
 The **`BigInt.asIntN`** static method clamps a `BigInt` value to the given number of bits, and returns that value as a signed integer.
@@ -17,8 +18,8 @@ The **`BigInt.asIntN`** static method clamps a `BigInt` value to the given numbe
 
 ## Syntax
 
-```js
-BigInt.asIntN(bits, bigint);
+```js-nolint
+BigInt.asIntN(bits, bigint)
 ```
 
 ### Parameters

@@ -21,6 +21,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLImageElement.hspace
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The

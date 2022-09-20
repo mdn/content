@@ -11,12 +11,13 @@ browser-compat:
   - css.properties.contain
   - css.properties.content-visibility
 ---
+
 {{CSSRef}}
 The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved. The specification defines a single CSS property {{cssxref("contain")}}. This document describes the basic aims of the specification.
 
 ## Basic example
 
-Many webpages contain a number of sections which are independent of each other. For example a listing of article headlines and content, as in the mark-up below.
+Many webpages contain a number of sections which are independent of each other. For example a listing of article headlines and content, as in the markup below.
 
 ```html
 <h1>My blog</h1>

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-block-style
 ---
+
 {{CSSRef}}
 
 The **`border-block-style`** [CSS](/en-US/docs/Web/CSS) property defines the style of the logical block borders of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-style")}} and {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}} and {{cssxref("border-right-style")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.

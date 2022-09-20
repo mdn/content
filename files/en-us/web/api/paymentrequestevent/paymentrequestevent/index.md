@@ -12,6 +12,7 @@ tags:
   - payment
 browser-compat: api.PaymentRequestEvent.PaymentRequestEvent
 ---
+
 {{APIRef("Payment Request API")}}{{SeeCompatTable}}
 
 The **`PaymentRequestEvent`** constructor creates a new
@@ -21,7 +22,7 @@ a {{domxref("PaymentRequest")}} is made.
 
 ## Syntax
 
-```js
+```js-nolint
 new PaymentRequestEvent(type)
 new PaymentRequestEvent(type, options)
 ```

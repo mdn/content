@@ -11,6 +11,7 @@ tags:
   - eviction
   - limit
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 There are a number of web technologies that store data of one kind or another on the client-side (i.e., on your local disk). The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. This article describes how browsers determine what local content to purge and when in order to free up needed local storage space.

@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.IdleDetector
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}{{SeeCompatTable}}
 
 The Idle Detection API provides a means to detect the user's idle status, active, idle, and locked, specifically, and to be notified of changes to idle status without polling from a script.

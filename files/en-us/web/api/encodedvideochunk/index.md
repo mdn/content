@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.EncodedVideoChunk
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`EncodedVideoChunk`** interface of the {{domxref('WebCodecs API','','',' ')}} represents a chunk of encoded video data.

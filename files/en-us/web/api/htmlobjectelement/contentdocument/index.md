@@ -12,6 +12,7 @@ tags:
   - contentDocument
 browser-compat: api.HTMLObjectElement.contentDocument
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`contentDocument`** read-only property of

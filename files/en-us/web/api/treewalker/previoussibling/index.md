@@ -12,6 +12,7 @@ tags:
   - treeWalker.previousSibling
 browser-compat: api.TreeWalker.previousSibling
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.previousSibling()`** method moves the current
@@ -20,7 +21,7 @@ there is no such node, return `null` and the current node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 previousSibling()
 ```
 

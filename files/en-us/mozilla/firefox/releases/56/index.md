@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 56 was released on September 28, 2017. This article lists key changes that are useful for web developers.

@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.WeakSet
 ---
+
 {{JSRef}}
 
 The **`WeakSet`** object lets you store weakly held _objects_ in a collection.

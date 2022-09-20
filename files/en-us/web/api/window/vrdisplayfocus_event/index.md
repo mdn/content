@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.Window.vrdisplayfocus_event
 ---
+
 {{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`vrdisplayfocus`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when presentation to a VR display has resumed after being blurred.

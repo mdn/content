@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.xlink.xlink_show
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`xlink:show`** attribute indicates how a linked resource should be opened and is meant for {{Glossary("XLink")}}-aware processors. In case of a conflict, the {{SVGAttr("target")}} attribute has priority, since it can express a wider range of values.

@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 tags:
   - Configuration management
 ---
+
 {{FirefoxSidebar}}
 
 Starting with Firefox 2, Firefox has support for selecting different RSS or Atom feed readers to use when you try to read a feed. This article provides information about how to add support for additional readers not supported by default.

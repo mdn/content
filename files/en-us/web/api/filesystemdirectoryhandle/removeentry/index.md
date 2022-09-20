@@ -10,6 +10,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.removeEntry
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`removeEntry()`** method of the
@@ -18,7 +19,7 @@ directory handle contains a file or directory called the name specified.
 
 ## Syntax
 
-```js
+```js-nolint
 removeEntry(name)
 removeEntry(name, options)
 ```

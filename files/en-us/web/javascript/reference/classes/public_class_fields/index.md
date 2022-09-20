@@ -7,6 +7,7 @@ tags:
   - Language feature
 browser-compat: javascript.classes.public_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 Both static and instance public fields are writable, enumerable, and configurable
@@ -15,7 +16,7 @@ inheritance.
 
 ## Syntax
 
-```js
+```js-nolint
 class ClassWithInstanceField {
   instanceField = 'instance field';
 }

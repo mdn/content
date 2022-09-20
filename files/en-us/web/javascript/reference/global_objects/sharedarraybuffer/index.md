@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 The **`SharedArrayBuffer`** object is used to represent a generic, fixed-length raw binary data buffer, similar to the {{jsxref("ArrayBuffer")}} object, but in a way that they can be used to create views on shared memory. A `SharedArrayBuffer` is not a {{Glossary("Transferable Objects", "Transferable Object")}}, unlike an `ArrayBuffer` which is transferable.

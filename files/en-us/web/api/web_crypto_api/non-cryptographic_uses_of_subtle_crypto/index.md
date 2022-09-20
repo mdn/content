@@ -5,6 +5,7 @@ page-type: guide
 tags:
   - Web Crypto API
 ---
+
 {{APIRef("Web Crypto API")}}
 This article will focus on uses of the [`digest`](/en-US/docs/Web/API/SubtleCrypto/digest) method of the [SubtleCrypto interface](/en-US/docs/Web/API/SubtleCrypto). A lot of other methods within the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) have very specific cryptographic use cases, creating hashes of content (which is what the digest method does) has lots of very useful purposes.
 
@@ -42,7 +43,9 @@ First we add some HTML elements for loading some files and displaying the SHA-25
 ```html
 <h3>Demonstration of hashing a file with SHA256</h3>
 
-<label>Choose file(s) to hash <input type="file" id="file" name="file" multiple></label>
+<label
+  >Choose file(s) to hash <input type="file" id="file" name="file" multiple
+/></label>
 <output style="display:block;font-family:monospace;"></output>
 ```
 
@@ -89,7 +92,7 @@ async function hashTheseFiles(e) {
 }
 ```
 
- {{EmbedLiveSample("hashing_a_file")}}
+{{EmbedLiveSample("hashing_a_file")}}
 
 ### Where would you use this?
 
@@ -134,7 +137,9 @@ The code below, like our SHA256 example, can be used to generate these hashes fr
 ```html
 <h3>Demonstration of how git uses SHA1 for files</h3>
 
-<label>Choose file(s) to hash <input type="file" id="file" name="file" multiple></label>
+<label
+  >Choose file(s) to hash <input type="file" id="file" name="file" multiple
+/></label>
 
 <output style="display:block;font-family:monospace;"></output>
 ```
@@ -167,7 +172,7 @@ async function fileHash(file) {
   const arrayBufferToHash = await newBlob.arrayBuffer();
 
   // Finally we perform the hash this time as SHA1 which is what Git uses.
-  // Then we return it as a string. to be displayed.
+  // Then we return it as a string to be displayed.
   return hashToString(await crypto.subtle.digest('SHA-1', arrayBufferToHash));
 }
 

@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.set
 ---
+
 {{JSRef}}
 
 The **`handler.set()`** method is a trap for setting a property
@@ -17,7 +18,7 @@ value.
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   set(target, property, value, receiver) {
   }

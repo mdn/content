@@ -14,6 +14,7 @@ tags:
   - WebRTC
   - WebRTC API
 ---
+
 {{APIRef("WebRTC")}}
 
 In order to more fully support audio/video conferencing, [WebRTC](/en-US/docs/Web/API/WebRTC_API) supports sending {{Glossary("DTMF")}} to the remote peer on an {{domxref("RTCPeerConnection")}}. This article offers a brief high-level overview of how DTMF works over WebRTC, then provides a guide for everyday developers about how to send DTMF over an `RTCPeerConnection`. The DTMF system is often referred to as "touch tone," after an old trade name for the system.
@@ -53,14 +54,16 @@ The HTML for this example is very basic; there are only three elements of import
 - A {{HTMLElement("div")}} to receive and display log text to show status information.
 
 ```html
-  <p>This example demonstrates the use of DTMF in WebRTC. Note that this
-     example is "cheating" by generating both peers in one code stream,
-     rather than having each be a truly separate entity.</p>
+<p>
+  This example demonstrates the use of DTMF in WebRTC. Note that this example is
+  "cheating" by generating both peers in one code stream, rather than having
+  each be a truly separate entity.
+</p>
 
-  <audio id="audio" autoplay controls></audio><br/>
-  <button name="dial" id="dial">Dial</button>
+<audio id="audio" autoplay controls></audio><br />
+<button name="dial" id="dial">Dial</button>
 
-  <div class="log"></div>
+<div class="log"></div>
 ```
 
 ### JavaScript

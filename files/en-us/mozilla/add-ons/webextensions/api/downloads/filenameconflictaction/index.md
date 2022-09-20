@@ -13,6 +13,7 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.FilenameConflictAction
 ---
+
 {{AddonSidebar()}}
 
 The `FilenameConflictAction` type of the {{WebExtAPIRef("downloads")}} API specifies what to do if the name of a downloaded file conflicts with an existing file.

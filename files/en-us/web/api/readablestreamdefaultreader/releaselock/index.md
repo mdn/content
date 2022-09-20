@@ -11,6 +11,7 @@ tags:
   - releaseLock
 browser-compat: api.ReadableStreamDefaultReader.releaseLock
 ---
+
 {{APIRef("Streams")}}
 
 The **`releaseLock()`** method of the {{domxref("ReadableStreamDefaultReader")}} interface releases the reader's lock on the stream.
@@ -22,7 +23,7 @@ Unread chunks remain in the stream's internal queue and can be read later by acq
 
 ## Syntax
 
-```js
+```js-nolint
 releaseLock()
 ```
 

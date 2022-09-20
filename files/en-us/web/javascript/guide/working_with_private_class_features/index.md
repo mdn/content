@@ -7,6 +7,7 @@ tags:
   - JavaScript
 browser-compat: javascript.classes
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 It's common to want to make fields or methods private, but JavaScript has lacked such a feature since its inception. Conventions have arisen — such as prefixing fields and methods that should be treated as private with an underscore, like `_hidden` — but these are merely conventions. The underscored features are still fully public.

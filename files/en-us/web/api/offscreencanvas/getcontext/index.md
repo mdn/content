@@ -18,7 +18,7 @@ The **`OffscreenCanvas.getContext()`** method returns a drawing context for an o
 
 ## Syntax
 
-```js
+```js-nolint
 getContext(contextType, contextAttributes)
 ```
 

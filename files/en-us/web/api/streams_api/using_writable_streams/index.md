@@ -11,6 +11,7 @@ tags:
   - writable streams
   - writer
 ---
+
 {{apiref("Streams")}}
 
 As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the [Streams API](/en-US/docs/Web/API/Streams_API)'s writable stream functionality.

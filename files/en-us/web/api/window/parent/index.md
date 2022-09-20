@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.parent
 ---
+
 {{APIRef}}
 
 The **`Window.parent`** property is a reference to the parent

@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.@@species
 ---
+
 {{JSRef}}
 
 The **`RegExp[@@species]`** accessor property returns the `RegExp` constructor.

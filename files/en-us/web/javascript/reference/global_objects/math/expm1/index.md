@@ -20,7 +20,7 @@ The **`Math.expm1()`** function returns [e](/en-US/docs/Web/JavaScript/Reference
 
 ## Syntax
 
-```js
+```js-nolint
 Math.expm1(x)
 ```
 

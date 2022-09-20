@@ -23,7 +23,7 @@ A menu is a widget that offers a list of choices to the user, such as a set of a
 
 The `menubar` role is used to create a menu bar similar to those found near the top of the window in many desktop applications, visually persistent, typically horizontal, bar of menu items offering the user quick access to a consistent set of commands.
 
-A `menubar` contains three types of menu items, including [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) and  [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role). These menu items may optionally be nested in one or more  [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) containers. Groups or items may optionally by separated with [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) elements. While every menu item must be able to receive focus, even if disabled, the `group` and `separator` elements are not focusable.
+A `menubar` contains three types of menu items, including [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) and [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role). These menu items may optionally be nested in one or more [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) containers. Groups or items may optionally by separated with [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) elements. While every menu item must be able to receive focus, even if disabled, the `group` and `separator` elements are not focusable.
 
 An example of a native menubar is the bar which may be present at the top of the screen if you are reading this in a desktop browser. An example of a web-based menubar is the horizontal menu bar that reads "File Edit View Insert Format", etc., which is usually visible under the document name in a Google doc.
 
@@ -103,6 +103,6 @@ Note: The above interactions assumed the `menubar` is horizontal. If the `menuba
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

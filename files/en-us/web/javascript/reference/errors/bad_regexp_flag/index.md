@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid regular expression flag" occurs when the flags in a regular expression contain any flag that is not one of: `g`, `i`, `m`, `s`, `u`, `y` or `d`.
@@ -31,7 +32,7 @@ The regular expression contains invalid flags, or valid flags have been used mor
 The valid (allowed) flags are listed in [Regular expressions > Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags), and reproduced below:
 
 | Flag | Description                                                                                                                             |
-| ---- | ----------------------------------------------------------------------------------------------------------------------------------------|
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | `g`  | Global search. See {{jsxref("RegExp/global", "global")}}                                                                                |
 | `i`  | Case-insensitive search. See {{jsxref("RegExp/sticky", "ignoreCase")}}.                                                                 |
 | `m`  | Multi-line search. See {{jsxref("RegExp/multiline", "multiline")}}.                                                                     |

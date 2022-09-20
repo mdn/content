@@ -89,7 +89,7 @@ You can set a default value for the input by including a value inside the {{html
 
 ```html
 <label for="week">What week would you like to start?</label>
-<input id="week" type="week" name="week" value="2017-W01">
+<input id="week" type="week" name="week" value="2017-W01" />
 ```
 
 {{EmbedLiveSample('Value', 600, 60)}}
@@ -150,7 +150,7 @@ The simplest use of `<input type="week">` involves a basic `<input>` and {{htmle
 ```html
 <form>
   <label for="week">What week would you like to start?</label>
-  <input id="week" type="week" name="week">
+  <input id="week" type="week" name="week" />
 </form>
 ```
 
@@ -175,8 +175,7 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 ```html
 <form>
   <label for="week">What week would you like to start?</label>
-  <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52">
+  <input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
   <span class="validity"></span>
 </form>
 ```
@@ -224,12 +223,17 @@ Let's look at an example; here we've set minimum and maximum weeks, and also mad
 <form>
   <div>
     <label for="week">What week would you like to start?</label>
-    <input id="week" type="week" name="week"
-         min="2017-W01" max="2017-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2017-W52"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -250,7 +254,7 @@ As mentioned above, the major problem with using week inputs right now is browse
 
 Mobile platforms such as Android and iOS make really good use of such input types, providing specialist UI controls that make it really easy to select values in a touchscreen environment. For example, the `week` picker on Chrome for Android looks like this:
 
-![A modal popup. The header reads 'set week'. There are two columns: the left has 36 in the middle at full opacity, with 35 above it and  37 below being semi-opaque. On the right side, 2017 is fully opaque. There are no other options. Three text links or buttons on the bottom include 'clear' on the 'left' and 'cancel' and 'set' on the right.](week-chrome-android.png)
+![A modal popup. The header reads 'set week'. There are two columns: the left has 36 in the middle at full opacity, with 35 above it and 37 below being semi-opaque. On the right side, 2017 is fully opaque. There are no other options. Three text links or buttons on the bottom include 'clear' on the 'left' and 'cancel' and 'set' on the right.](week-chrome-android.png)
 
 Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 
@@ -275,8 +279,13 @@ The HTML looks like so:
 <form>
   <div class="nativeWeekPicker">
     <label for="week">What week would you like to start?</label>
-    <input id="week" type="week" name="week"
-           min="2017-W01" max="2018-W52" required>
+    <input
+      id="week"
+      type="week"
+      name="week"
+      min="2017-W01"
+      max="2018-W52"
+      required />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">What week would you like to start?</p>
@@ -284,8 +293,7 @@ The HTML looks like so:
     <div>
       <span>
         <label for="week">Week:</label>
-        <select id="fallbackWeek" name="week">
-        </select>
+        <select id="fallbackWeek" name="week"></select>
       </span>
       <span>
         <label for="year">Year:</label>

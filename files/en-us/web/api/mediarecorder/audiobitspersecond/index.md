@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.MediaRecorder.audioBitsPerSecond
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The **`audioBitsPerSecond`** read-only

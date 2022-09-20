@@ -12,6 +12,7 @@ tags:
   - applyConstraints
 browser-compat: api.MediaStreamTrack.applyConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The
@@ -30,7 +31,7 @@ in [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_A
 
 ## Syntax
 
-```js
+```js-nolint
 applyConstraints()
 applyConstraints(constraints)
 ```

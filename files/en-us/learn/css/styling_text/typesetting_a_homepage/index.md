@@ -12,6 +12,7 @@ tags:
   - list
   - web font
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 In this assessment, we'll test your understanding of all the text styling techniques we've covered throughout this module by getting you to style the text for a community school's homepage. You might just have some fun along the way.
@@ -98,10 +99,10 @@ If you would like your work assessed or are stuck and want to ask for help:
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Typesetting a community school homepage".
-    - Details of what you have already tried and what you would like us to do; for example, tell us if you're stuck and need help or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+   - A descriptive title such as "Assessment wanted for Typesetting a community school homepage".
+   - Details of what you have already tried and what you would like us to do; for example, tell us if you're stuck and need help or want an assessment.
+   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+   - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 

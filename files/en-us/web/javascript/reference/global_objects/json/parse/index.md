@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.JSON.parse
 ---
+
 {{JSRef}}
 
 The **`JSON.parse()`** method parses a
@@ -20,7 +21,7 @@ on the resulting object before it is returned.
 
 ## Syntax
 
-```js
+```js-nolint
 JSON.parse(text)
 JSON.parse(text, reviver)
 ```

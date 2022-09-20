@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEComponentTransferElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEComponentTransferElement`** interface corresponds to the {{SVGElement("feComponentTransfer")}} element.

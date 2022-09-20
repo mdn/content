@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLOptGroupElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLOptGroupElement`** interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} object interface they also have available to them by inheritance) for manipulating the layout and presentation of {{HTMLElement("optgroup")}} elements.

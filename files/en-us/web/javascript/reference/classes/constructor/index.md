@@ -8,6 +8,7 @@ tags:
   - Language feature
 browser-compat: javascript.classes.constructor
 ---
+
 {{jsSidebar("Classes")}}
 
 The `constructor` method is a special method of a {{jsxref("Statements/class", "class")}} for creating and initializing an object instance of that class.
@@ -16,7 +17,7 @@ The `constructor` method is a special method of a {{jsxref("Statements/class", "
 
 ## Syntax
 
-```js
+```js-nolint
 constructor() { /* … */ }
 constructor(argument0) { /* … */ }
 constructor(argument0, argument1) { /* … */ }

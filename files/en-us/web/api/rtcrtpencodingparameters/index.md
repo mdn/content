@@ -17,6 +17,7 @@ tags:
   - parameters
 browser-compat: api.RTCRtpEncodingParameters
 ---
+
 {{APIRef("WebRTC")}}
 
 An instance of the [WebRTC](/en-US/docs/Web/API/WebRTC_API) API's **`RTCRtpEncodingParameters`** dictionary describes a single configuration of a {{Glossary("codec")}} for an {{domxref("RTCRtpSender")}}.

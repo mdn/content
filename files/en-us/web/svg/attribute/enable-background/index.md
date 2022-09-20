@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.enable-background
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`enable-background`** attribute specifies how the accumulation of the background image is managed.

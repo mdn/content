@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toUpperCase
 ---
+
 {{JSRef}}
 
 The **`toUpperCase()`** method returns the calling string value
@@ -18,7 +19,7 @@ converted to uppercase (the value will be converted to a string if it isn't one)
 
 ## Syntax
 
-```js
+```js-nolint
 toUpperCase()
 ```
 

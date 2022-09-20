@@ -12,6 +12,7 @@ tags:
   - events
 browser-compat: api.UIEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`UIEvent`** interface represents simple user interface events.

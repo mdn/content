@@ -11,6 +11,7 @@ tags:
   - transferFromImageBitmap
 browser-compat: api.ImageBitmapRenderingContext.transferFromImageBitmap
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`ImageBitmapRenderingContext.transferFromImageBitmap()`**
@@ -23,7 +24,7 @@ a spec change. The old name is being kept as an alias to avoid code breakage.
 
 ## Syntax
 
-```js
+```js-nolint
 transferFromImageBitmap(bitmap)
 ```
 

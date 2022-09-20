@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onMoved
 ---
+
 {{AddonSidebar()}}
 
 Fired when a tab is moved within a window.
@@ -21,7 +22,7 @@ Only one move event is fired, representing the tab the user directly moved. Move
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onMoved.addListener(listener)
 browser.tabs.onMoved.removeListener(listener)
 browser.tabs.onMoved.hasListener(listener)

@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.for
 ---
+
 {{JSRef}}
 
 The **`Symbol.for(key)`** method searches for existing symbols
@@ -18,8 +19,8 @@ a new symbol gets created in the global symbol registry with this key.
 
 ## Syntax
 
-```js
-Symbol.for(key);
+```js-nolint
+Symbol.for(key)
 ```
 
 ### Parameters

@@ -6,6 +6,7 @@ tags:
   - Glossary
   - NeedsContent
 ---
+
 A {{glossary("variable")}} whose name is bound to its {{glossary("value")}} only within a {{Glossary("local scope")}}.
 
 ## Example

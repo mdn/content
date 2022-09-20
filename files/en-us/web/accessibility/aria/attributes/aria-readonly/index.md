@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-readonly
 ---
+
 The `aria-readonly` attribute indicates that the element is not editable, but is otherwise operable.
 
 ## Description

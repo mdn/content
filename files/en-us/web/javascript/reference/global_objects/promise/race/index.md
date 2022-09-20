@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Promise.race
 ---
+
 {{JSRef}}
 
 The **`Promise.race()`** method returns a promise that fulfills
@@ -19,7 +20,7 @@ value or reason from that promise.
 
 ## Syntax
 
-```js
+```js-nolint
 Promise.race(iterable)
 ```
 

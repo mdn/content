@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.pictureInPictureElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`pictureInPictureElement`** read-only property of the

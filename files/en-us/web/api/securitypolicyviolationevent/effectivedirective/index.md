@@ -13,6 +13,7 @@ tags:
   - effectiveDirective
 browser-compat: api.SecurityPolicyViolationEvent.effectiveDirective
 ---
+
 {{HTTPSidebar}}
 
 The **`effectiveDirective`** read-only property of the

@@ -15,6 +15,7 @@ tags:
   - screen
 browser-compat: api.Document.fullscreenEnabled
 ---
+
 {{APIRef("Fullscreen API")}}
 
 The read-only **`fullscreenEnabled`**

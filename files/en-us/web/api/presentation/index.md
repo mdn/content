@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Presentation
 ---
+
 {{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}
 
 The **`Presentation`** can be defined as two possible user agents in the context: _Controlling user agent_ and _Receiving user agent_.

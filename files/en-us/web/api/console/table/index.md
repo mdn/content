@@ -11,6 +11,7 @@ tags:
   - web console
 browser-compat: api.console.table
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.table()`** method displays tabular data as a table.
@@ -132,7 +133,7 @@ You can sort the table by a particular column by clicking on that column's label
 
 ## Syntax
 
-```js
+```js-nolint
 table(data)
 table(data, columns)
 ```

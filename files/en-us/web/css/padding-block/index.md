@@ -8,6 +8,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.padding-block
 ---
+
 {{CSSRef}}
 
 The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
@@ -25,8 +26,8 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* <length> values */
-padding-block: 10px 20px;  /* An absolute length */
-padding-block: 1em 2em;   /* relative to the text size */
+padding-block: 10px 20px; /* An absolute length */
+padding-block: 1em 2em; /* relative to the text size */
 padding-block: 10px; /* sets both start and end values */
 
 /* <percentage> values */

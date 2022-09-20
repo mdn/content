@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.rate
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`rate`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the speed at which the utterance will be spoken at.
@@ -41,7 +42,7 @@ In this example we can adjust the playback rate using the slider, then play the 
 
 <div id="rate-control">
   <label for="rate">Rate:</label>
-  <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+  <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
 </div>
 
 <button id="play">Play</button>

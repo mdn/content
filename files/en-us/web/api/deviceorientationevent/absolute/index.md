@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.DeviceOrientationEvent.absolute
 ---
+
 {{ apiref("Device Orientation Events") }}
 
 Indicates whether or not the device is providing orientation data absolutely (that is,

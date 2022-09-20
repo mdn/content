@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.NDEFReader.NDEFReader
 ---
+
 {{SecureContext_Header}}{{APIRef}}{{SeeCompatTable}}
 
 The **`NDEFReader()`**
@@ -20,8 +21,8 @@ field.
 
 ## Syntax
 
-```js
-new NDEFReader();
+```js-nolint
+new NDEFReader()
 ```
 
 ### Parameters

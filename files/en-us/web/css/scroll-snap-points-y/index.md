@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: css.properties.scroll-snap-points-y
 ---
+
 {{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`scroll-snap-points-y`** [CSS](/en-US/docs/Web/CSS) property defines the vertical positioning of snap points within the content of the scroll container they are applied to.
@@ -85,11 +86,11 @@ scroll-snap-points-y =
 }
 
 #container > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 #container > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 

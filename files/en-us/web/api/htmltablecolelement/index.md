@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableColElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableColElement`** interface provides properties for manipulating single or grouped table column elements.

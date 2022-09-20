@@ -13,6 +13,7 @@ tags:
   - onImportEnded
 browser-compat: webextensions.api.bookmarks.onImportEnded
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser has finished importing a set of bookmarks.
@@ -21,7 +22,7 @@ See {{WebExtAPIRef("bookmarks.onImportBegan")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onImportEnded.addListener(listener)
 browser.bookmarks.onImportEnded.removeListener(listener)
 browser.bookmarks.onImportEnded.hasListener(listener)

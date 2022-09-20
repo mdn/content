@@ -12,6 +12,7 @@ tags:
   - TransitionEvent
 browser-compat: api.TransitionEvent.pseudoElement
 ---
+
 {{ apiref("CSSOM") }}
 
 The **`TransitionEvent.pseudoElement`** read-only property is a

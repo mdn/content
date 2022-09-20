@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.getPropertyCSSValue
 ---
+
 {{ APIRef("CSSOM") }} {{deprecated_header}}
 
 The **CSSStyleDeclaration.getPropertyCSSValue()**
@@ -27,7 +28,7 @@ shorthand property.
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyCSSValue(property)
 ```
 

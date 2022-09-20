@@ -12,6 +12,7 @@ tags:
   - visibilitychange
 browser-compat: api.Document.visibilitychange_event
 ---
+
 {{APIRef}}
 
 The `visibilitychange` event is fired at the document when the contents of its tab have become visible or have been hidden.

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLInputElement.labels`** read-only property returns a
@@ -28,7 +29,7 @@ with the `<input>` element.
 
 ```html
 <label id="label1" for="test">Label 1</label>
-<input id="test"/>
+<input id="test" />
 <label id="label2" for="test">Label 2</label>
 ```
 

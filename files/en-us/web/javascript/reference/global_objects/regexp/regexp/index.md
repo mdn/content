@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.RegExp
 ---
+
 {{JSRef}}
 
 The **`RegExp`** constructor creates a regular expression object for matching text with a pattern.
@@ -19,7 +20,7 @@ For an introduction to regular expressions, read the [Regular Expressions chapte
 
 ## Syntax
 
-```js
+```js-nolint
 new RegExp(pattern)
 new RegExp(pattern, flags)
 RegExp(pattern)

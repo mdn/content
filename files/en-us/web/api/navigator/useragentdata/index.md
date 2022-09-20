@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.Navigator.userAgentData
 ---
+
 {{securecontext_header}}{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
 The **`userAgentData`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("NavigatorUAData")}} object

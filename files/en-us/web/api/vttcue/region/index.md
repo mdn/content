@@ -10,6 +10,7 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.region
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`region`** property of the {{domxref("VTTCue")}} interface returns and sets the {{domxref("VTTRegion")}} that this cue belongs to.

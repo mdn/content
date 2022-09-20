@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/3/Updating_extensions
 tags:
   - Firefox 3
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 3.

@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendFuncSeparate
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.blendFuncSeparate()`** method of
@@ -18,7 +19,7 @@ for blending pixel arithmetic for RGB and alpha components separately.
 
 ## Syntax
 
-```js
+```js-nolint
 blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha)
 ```
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.Segmenter.supportedLocalesOf()`** method returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
@@ -17,7 +18,7 @@ The **`Intl.Segmenter.supportedLocalesOf()`** method returns an array containing
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.Segmenter.supportedLocalesOf(locales)
 Intl.Segmenter.supportedLocalesOf(locales, options)
 ```

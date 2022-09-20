@@ -16,6 +16,7 @@ tags:
   - paymentmethodchange
 browser-compat: api.PaymentMethodChangeEvent.methodDetails
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The read-only **`methodDetails`** property of the {{domxref("PaymentMethodChangeEvent")}} interface is an object

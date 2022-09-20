@@ -91,23 +91,25 @@ The resulting HTML looks like this:
 
 ```html
 <form>
-  <p>Please select your preferred contact method:</p>
-  <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
-    <label for="contactChoice1">Email</label>
+  <fieldset>
+  <legend>Please select your preferred contact method:</legend>
+    <div>
+      <input type="radio" id="contactChoice1"
+       name="contact" value="email">
+      <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
-    <label for="contactChoice2">Phone</label>
+      <input type="radio" id="contactChoice2"
+       name="contact" value="phone">
+      <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
-    <label for="contactChoice3">Mail</label>
-  </div>
-  <div>
-    <button type="submit">Submit</button>
-  </div>
+      <input type="radio" id="contactChoice3"
+       name="contact" value="mail">
+      <label for="contactChoice3">Mail</label>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </fieldset>
 </form>
 ```
 
@@ -131,24 +133,25 @@ Let's add a little bit of code to our example so we can examine the data generat
 
 ```html
 <form>
-  <p>Please select your preferred contact method:</p>
-  <div>
-    <input type="radio" id="contactChoice1"
-           name="contact" value="email">
-    <label for="contactChoice1">Email</label>
-    <input type="radio" id="contactChoice2"
-           name="contact" value="phone">
-    <label for="contactChoice2">Phone</label>
-    <input type="radio" id="contactChoice3"
-           name="contact" value="mail">
-    <label for="contactChoice3">Mail</label>
-  </div>
-  <div>
-    <button type="submit">Submit</button>
-  </div>
+  <fieldset>
+    <legend>Please select your preferred contact method:</legend>
+    <div>
+      <input type="radio" id="contactChoice1"
+       name="contact" value="email">
+      <label for="contactChoice1">Email</label>
+      <input type="radio" id="contactChoice2"
+       name="contact" value="phone">
+      <label for="contactChoice2">Phone</label>
+      <input type="radio" id="contactChoice3"
+       name="contact" value="mail">
+      <label for="contactChoice3">Mail</label>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </fieldset>
 </form>
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 Then we add some [JavaScript](/en-US/docs/Web/JavaScript) to set up an event listener on the {{domxref("HTMLFormElement/submit_event", "submit")}} event, which is sent when the user clicks the "Submit" button:
@@ -195,23 +198,26 @@ To make a radio button selected by default, you include `checked` attribute, as 
 
 ```html
 <form>
-  <p>Please select your preferred contact method:</p>
-  <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email" checked>
-    <label for="contactChoice1">Email</label>
+  <fieldset>
+    <legend>Please select your preferred contact method:</legend>
+    <div>
+      <input type="radio" id="contactChoice1"
+       name="contact" value="email" checked>
+      <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
-    <label for="contactChoice2">Phone</label>
+      <input type="radio" id="contactChoice2"
+       name="contact" value="phone">
+      <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
-    <label for="contactChoice3">Mail</label>
-  </div>
-  <div>
-    <button type="submit">Submit</button>
-  </div>
+      <input type="radio" id="contactChoice3"
+       name="contact" value="mail">
+      <label for="contactChoice3">Mail</label>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </fieldset>
+
 </form>
 ```
 
@@ -240,16 +246,18 @@ The following example shows a slightly more thorough version of the example we'v
   <fieldset>
     <legend>Please select your preferred contact method:</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
       <label for="contactChoice1">Email</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="phone">
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
       <label for="contactChoice2">Phone</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="mail">
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
       <label for="contactChoice3">Mail</label>
     </div>
     <div>
@@ -259,9 +267,7 @@ The following example shows a slightly more thorough version of the example we'v
 </form>
 ```
 
-There's not much new to note here except for the addition of {{htmlelement("fieldset")}} and {{htmlelement("legend")}} elements, which help to group the functionality nicely and in a semantic way.
-
-The CSS involved is a bit more significant:
+The CSS involved in this example is a bit more significant:
 
 ```css
 html {

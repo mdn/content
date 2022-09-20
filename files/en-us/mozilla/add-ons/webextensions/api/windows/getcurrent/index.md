@@ -13,6 +13,7 @@ tags:
   - getCurrent
 browser-compat: webextensions.api.windows.getCurrent
 ---
+
 {{AddonSidebar()}}
 
 Gets the current browser window, passing its details into a callback.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingCurrent = browser.windows.getCurrent(
   getInfo               // optional object
 )

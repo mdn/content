@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: http.headers.Viewport-Width
 ---
+
 {{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
 
 The **`Viewport-Width`** [device client hint](/en-US/docs/Web/HTTP/Client_hints) request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).

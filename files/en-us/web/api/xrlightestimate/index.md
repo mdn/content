@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRLightEstimate
 ---
+
 {{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRLightEstimate`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) provides the estimated lighting values for an {{domxref("XRLightProbe")}} at the time represented by an {{domxref("XRFrame")}}.

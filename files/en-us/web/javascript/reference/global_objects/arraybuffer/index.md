@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.ArrayBuffer
 ---
+
 {{JSRef}}
 
 The **`ArrayBuffer`** object is used to represent a generic, fixed-length raw binary data buffer.

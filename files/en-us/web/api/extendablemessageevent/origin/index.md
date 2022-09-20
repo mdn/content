@@ -11,6 +11,7 @@ tags:
   - origin
 browser-compat: api.ExtendableMessageEvent.origin
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`origin`** read-only property of the

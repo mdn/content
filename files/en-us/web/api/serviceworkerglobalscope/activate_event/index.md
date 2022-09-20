@@ -10,6 +10,7 @@ tags:
   - ServiceWorkerGlobalScope
 browser-compat: api.ServiceWorkerGlobalScope.activate_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`activate`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.

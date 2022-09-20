@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 104 that will affect developers. Firefox 104 was released on August 23, 2022.
@@ -60,7 +61,7 @@ No notable changes.
 #### Removals
 
 - The `options` argument to the [`IDBFactory.open()`](/en-US/docs/Web/API/IDBFactory/open) method has been removed.
-  This this option provided a non-standard, and Firefox-only way to make the indicated database persistent.
+  This option provided a non-standard, and Firefox-only way to make the indicated database persistent.
   The option was previously deprecated, and users that need this functionality should already have migrated to {{domxref("StorageManager.persist()")}}.
   (See {{bug(1354500)}} for more details.)
 

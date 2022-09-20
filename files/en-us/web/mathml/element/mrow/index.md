@@ -8,6 +8,7 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mrow
 ---
+
 {{MathMLRef}}
 
 The MathML `<mrow>` element is used to group sub-expressions, which usually contain one or more [operators](/en-US/docs/Web/MathML/Element/mo) with their respective operands (such as {{ MathMLElement("mi") }} and {{ MathMLElement("mn") }}). This element renders as a horizontal row containing its arguments.
@@ -25,7 +26,6 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
 ```html
 <math>
-
   <mrow>
     <mn>1</mn>
     <mo>+</mo>
@@ -41,7 +41,6 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
     </mrow>
     <mo>)</mo>
   </mrow>
-
 </math>
 ```
 

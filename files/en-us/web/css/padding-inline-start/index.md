@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.padding-inline-start
 ---
+
 {{CSSRef}}
 
 The **`padding-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.
@@ -80,7 +81,7 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-inline-start: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 

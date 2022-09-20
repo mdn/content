@@ -11,6 +11,7 @@ tags:
   - let
 browser-compat: javascript.statements.let
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`let`** declaration declares a block-scoped local variable, optionally initializing it to a value.
@@ -19,8 +20,8 @@ The **`let`** declaration declares a block-scoped local variable, optionally ini
 
 ## Syntax
 
-```js
-let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN];
+```js-nolint
+let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN]
 ```
 
 ### Parameters

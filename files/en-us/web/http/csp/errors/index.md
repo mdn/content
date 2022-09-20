@@ -11,6 +11,7 @@ tags:
   - console
   - log
 ---
+
 {{HTTPSidebar}}
 
 When you see any of the following messages logged in the browser devtools console, it indicates that a problem related to [CSP](/en-US/docs/Web/HTTP/CSP) has occurred.

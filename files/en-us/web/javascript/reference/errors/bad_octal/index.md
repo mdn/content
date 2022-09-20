@@ -8,6 +8,7 @@ tags:
   - SyntaxError
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "08 (or 09) is not a legal ECMA-262 octal constant" occurs when

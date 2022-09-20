@@ -10,6 +10,7 @@ tags:
   - management
 browser-compat: webextensions.api.management
 ---
+
 {{AddonSidebar}}
 
 Get information about installed add-ons.

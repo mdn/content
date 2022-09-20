@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `translate` function evaluates a string and a set of characters to translate and returns the translated string.

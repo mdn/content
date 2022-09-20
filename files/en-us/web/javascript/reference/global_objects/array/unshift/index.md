@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.unshift
 ---
+
 {{JSRef}}
 
 The **`unshift()`** method adds one or more elements to the
@@ -19,7 +20,7 @@ beginning of an array and returns the new length of the array.
 
 ## Syntax
 
-```js
+```js-nolint
 unshift(element0)
 unshift(element0, element1)
 unshift(element0, element1, /* … ,*/ elementN)

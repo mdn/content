@@ -18,7 +18,7 @@ The **`Math.round()`** function returns the value of a number rounded to the nea
 
 ## Syntax
 
-```js
+```js-nolint
 Math.round(x)
 ```
 

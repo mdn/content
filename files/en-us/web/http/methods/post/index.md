@@ -7,6 +7,7 @@ tags:
   - Request method
 browser-compat: http.methods.POST
 ---
+
 {{HTTPSidebar}}
 
 The **HTTP `POST` method** sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.

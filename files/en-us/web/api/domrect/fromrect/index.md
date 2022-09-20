@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DOMRect.fromRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 The **`fromRect()`** static method of the
@@ -18,7 +19,7 @@ object with a given location and dimensions.
 
 ## Syntax
 
-```js
+```js-nolint
 fromRect()
 fromRect(rectangle)
 ```

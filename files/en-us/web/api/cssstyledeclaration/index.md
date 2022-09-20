@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleDeclaration`** interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties.

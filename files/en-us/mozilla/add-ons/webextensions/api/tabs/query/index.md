@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.query
 ---
+
 {{AddonSidebar()}}
 
 Gets all tabs that have the specified properties, or all tabs if no properties are specified.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let querying = browser.tabs.query(queryObj)
 ```
 

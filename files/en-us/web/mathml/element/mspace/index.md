@@ -8,6 +8,7 @@ tags:
   - MathML:Token Elements
 browser-compat: mathml.elements.mspace
 ---
+
 {{MathMLRef}}
 
 The MathML `<mspace>` element is used to display a blank space, whose size is set by its attributes.
@@ -29,11 +30,9 @@ Note that some common attributes like `mathcolor`, `mathvariant` or `dir` have n
 
 ```html
 <math>
-
   <mspace depth="40px" height="20px" />
 
   <mspace width="100px" />
-
 </math>
 ```
 

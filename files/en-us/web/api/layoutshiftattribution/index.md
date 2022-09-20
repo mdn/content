@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.LayoutShiftAttribution
 ---
+
 {{APIRef("Layout Instability API")}}{{SeeCompatTable}}
 
 The `LayoutShiftAttribution` interface of the [Layout Instability API](/en-US/docs/Web/API/Layout_Instability_API) provides debugging information about elements which have shifted.

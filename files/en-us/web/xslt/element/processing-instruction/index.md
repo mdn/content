@@ -7,6 +7,7 @@ tags:
   - XSLT
   - processing-instruction
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:processing-instruction>` element writes a processing instruction to the output document.

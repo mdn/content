@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.deleteFramebuffer()`** method of
@@ -19,7 +20,7 @@ has already been deleted.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteFramebuffer(framebuffer)
 ```
 

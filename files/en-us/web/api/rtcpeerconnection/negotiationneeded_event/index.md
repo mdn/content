@@ -16,6 +16,7 @@ tags:
   - rtc
 browser-compat: api.RTCPeerConnection.negotiationneeded_event
 ---
+
 {{APIRef("WebRTC")}}
 
 A **`negotiationneeded`** event is sent to the {{domxref("RTCPeerConnection")}} when negotiation of the connection through the signaling channel is required.

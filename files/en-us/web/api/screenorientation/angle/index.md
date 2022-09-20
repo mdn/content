@@ -12,6 +12,7 @@ tags:
   - angle
 browser-compat: api.ScreenOrientation.angle
 ---
+
 {{APIRef("Screen Orientation")}}
 
 The **`angle`** read-only property of the

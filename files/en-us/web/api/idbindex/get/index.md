@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBIndex.get
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`get()`** method of the {{domxref("IDBIndex")}}
@@ -28,7 +29,7 @@ with.
 
 ## Syntax
 
-```js
+```js-nolint
 get()
 get(key)
 ```

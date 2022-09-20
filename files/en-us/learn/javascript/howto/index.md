@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}
 
 The following links point to solutions to common problems you may encounter when writing JavaScript.

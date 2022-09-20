@@ -14,6 +14,7 @@ tags:
   - Video
 browser-compat: api.MediaError
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`MediaError`** interface represents an error which occurred while handling media in an HTML media element based on {{domxref("HTMLMediaElement")}}, such as {{HTMLElement("audio")}} or {{HTMLElement("video")}}.

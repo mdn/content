@@ -11,6 +11,7 @@ tags:
   - request()
 browser-compat: api.LockManager.request
 ---
+
 {{APIRef("Web Locks")}}
 
 The **`request()`** method of the {{domxref("LockManager")}} interface requests a {{domxref('Lock')}} object with parameters specifying its name and characteristics.
@@ -31,7 +32,7 @@ In the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), this is exposed as `"
 
 ## Syntax
 
-```js
+```js-nolint
 request(name, callback)
 request(name, options, callback)
 ```
@@ -39,12 +40,13 @@ request(name, options, callback)
 ### Parameters
 
 - `name`
+
   - : An identifier for the lock you want to request.
 
 - `options` {{optional_inline}}
 
   - : An object describing characteristics of the lock you want to create.
-     Valid values are:
+    Valid values are:
 
     - `mode` {{optional_inline}}
 
@@ -71,8 +73,8 @@ request(name, options, callback)
 
 - `callback`
   - : Method called when the lock is granted.
-     The lock is automatically released when the callback returns (or an exception is thrown).
-     Usually the callback is an async function, which causes the lock to be released only when the async function has completely finished.
+    The lock is automatically released when the callback returns (or an exception is thrown).
+    Usually the callback is an async function, which causes the lock to be released only when the async function has completely finished.
 
 ### Return value
 

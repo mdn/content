@@ -8,6 +8,7 @@ tags:
   - Web
   - Web Standards
 ---
+
 {{learnsidebar}}
 
 This article provides some useful background on the Web — how it came about, what web standard technologies are, how they work together, why "web developer" is a great career to choose, and what kinds of best practices you'll learn about through the course.
@@ -93,7 +94,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
   <p>This is a paragraph of text.</p>
 
-  <img src="cat.jpg" alt="A picture of my cat">
+  <img src="cat.jpg" alt="A picture of my cat" />
   ```
 
   If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
@@ -111,8 +112,8 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 - **JavaScript** is the programming language we use to add interactivity to web sites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics. The following simple JavaScript will store a reference to our paragraph in memory and change the text inside it:
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  'We changed the text!';
+  let pElem = document.querySelector("p");
+  pElem.textContent = "We changed the text!";
   ```
 
   In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality

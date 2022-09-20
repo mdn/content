@@ -1,11 +1,12 @@
 ---
-title: 'BroadcastChannel: messageerror event'
+title: "BroadcastChannel: messageerror event"
 slug: Web/API/BroadcastChannel/messageerror_event
 page-type: web-api-event
 tags:
   - Event
 browser-compat: api.BroadcastChannel.messageerror_event
 ---
+
 {{APIRef}}
 
 The `messageerror` event is fired on a {{domxref('BroadcastChannel')}} object when a message that can't be deserialized arrives on the channel.
@@ -14,8 +15,8 @@ The `messageerror` event is fired on a {{domxref('BroadcastChannel')}} object wh
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('messageerror', (event) => { })
+```js-nolint
+addEventListener("messageerror", (event) => { })
 onmessageerror = (event) => { }
 ```
 
@@ -45,13 +46,13 @@ _In addition to the properties listed below, properties from the parent interfac
 This code uses [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) to listen for messages and errors:
 
 ```js
-const channel = new BroadcastChannel('example-channel');
+const channel = new BroadcastChannel("example-channel");
 
-channel.addEventListener('message', (event) => {
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 
-channel.addEventListener('messageerror', (event) => {
+channel.addEventListener("messageerror", (event) => {
   console.error(event);
 });
 ```
@@ -59,7 +60,7 @@ channel.addEventListener('messageerror', (event) => {
 The same, but using the `onmessage` and `onmessageerror` event handler properties:
 
 ```js
-const channel = new BroadcastChannel('example-channel');
+const channel = new BroadcastChannel("example-channel");
 
 channel.onmessage = (event) => {
   received.textContent = event.data;

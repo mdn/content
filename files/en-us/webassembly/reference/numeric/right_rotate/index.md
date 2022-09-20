@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Bitwise
 ---
+
 {{WebAssemblySidebar}}
 
 The **`rotr`** instructions, short for _rotate-right_, are used for performing a bitwise right-rotate.

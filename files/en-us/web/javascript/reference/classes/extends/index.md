@@ -8,6 +8,7 @@ tags:
   - Language feature
 browser-compat: javascript.classes.extends
 ---
+
 {{jsSidebar("Classes")}}
 
 The **`extends`** keyword is used in [class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class) or
@@ -18,7 +19,7 @@ create a class that is a child of another class.
 
 ## Syntax
 
-```js
+```js-nolint
 class ChildClass extends ParentClass { /* … */ }
 ```
 

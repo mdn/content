@@ -11,6 +11,7 @@ tags:
   - WebMechanics
   - troubleshooting
 ---
+
 In this article, we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
 
 <table>

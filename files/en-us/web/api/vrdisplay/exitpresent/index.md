@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplay.exitPresent
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`exitPresent()`** method of the {{domxref("VRDisplay")}} interface stops the `VRDisplay` presenting a scene.
@@ -23,7 +24,7 @@ The **`exitPresent()`** method of the {{domxref("VRDisplay")}} interface stops t
 
 ## Syntax
 
-```js
+```js-nolint
 exitPresent()
 ```
 

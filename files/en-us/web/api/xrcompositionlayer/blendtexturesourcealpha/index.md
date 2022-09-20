@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XRCompositionLayer.blendTextureSourceAlpha
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`blendTextureSourceAlpha`** property of the {{domxref("XRCompositionLayer")}} interface is a boolean enabling the layer's texture {{Glossary("Alpha", "alpha channel")}}.

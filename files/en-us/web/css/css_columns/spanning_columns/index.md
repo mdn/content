@@ -7,6 +7,7 @@ tags:
   - Guide
   - Layout
 ---
+
 {{CSSRef}}
 
 In this guide, we look at how to make elements span across columns inside the multi-column (_multicol_) container and how to control how the columns are filled.

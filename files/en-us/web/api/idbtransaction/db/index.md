@@ -13,6 +13,7 @@ tags:
   - db
 browser-compat: api.IDBTransaction.db
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`db`** read-only property of the {{domxref("IDBTransaction")}} interface returns the database connection

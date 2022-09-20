@@ -11,6 +11,7 @@ tags:
   - ReportingObserver
 browser-compat: api.ReportingObserver
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `ReportingObserver` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) allows you to collect and access reports.

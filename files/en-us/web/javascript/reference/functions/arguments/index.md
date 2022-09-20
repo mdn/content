@@ -9,6 +9,7 @@ tags:
   - arguments
 browser-compat: javascript.functions.arguments
 ---
+
 {{JSSidebar("Functions")}}
 
 **`arguments`** is an `Array`-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.
@@ -53,7 +54,7 @@ Each argument index can also be set or reassigned:
 arguments[1] = 'new value';
 ```
 
-Non-strict functions that only has simple parameters (that is, no rest, default, or restructured parameters) will sync the new value of parameters with the `arguments` object, and vice versa:
+Non-strict functions that only has simple parameters (that is, no rest, default, or destructured parameters) will sync the new value of parameters with the `arguments` object, and vice versa:
 
 ```js
 function func(a) {

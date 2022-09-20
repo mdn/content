@@ -15,6 +15,7 @@ tags:
   - changeType
 browser-compat: api.SourceBuffer.changeType
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`changeType()`** method of the
@@ -29,7 +30,7 @@ constraints change.
 
 ## Syntax
 
-```js
+```js-nolint
 changeType(type)
 ```
 

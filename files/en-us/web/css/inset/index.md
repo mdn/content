@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.inset
 ---
+
 {{CSSRef}}
 
 The **`inset`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and/or {{cssxref("left")}} properties. It has the same multi-value syntax of the {{cssxref("margin")}} shorthand.

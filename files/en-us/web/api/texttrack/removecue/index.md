@@ -10,13 +10,14 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.removeCue
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`removeCue()`** method of the {{domxref("TextTrack")}} interface removes a cue from the list of cues.
 
 ## Syntax
 
-```js
+```js-nolint
 removeCue(cue)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.bufferedAmount
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.bufferedAmount`** read-only property returns

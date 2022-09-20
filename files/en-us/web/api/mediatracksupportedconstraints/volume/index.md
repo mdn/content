@@ -17,6 +17,7 @@ tags:
   - Non-standard
 browser-compat: api.MediaTrackSupportedConstraints.volume
 ---
+
 {{APIRef("Media Capture and Streams")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
@@ -40,8 +41,7 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ## Examples
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden

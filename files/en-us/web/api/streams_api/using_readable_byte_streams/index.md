@@ -15,6 +15,7 @@ tags:
   - reader
   - tee
 ---
+
 {{apiref("Streams")}}
 
 Readable _byte streams_ are [readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) that have an underlying byte source of `type: "bytes"`, and which support efficient zero-copy transfer of data from the underlying source to a consumer (bypassing the stream's internal queues).
@@ -206,13 +207,11 @@ button {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -498,13 +497,11 @@ button {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -600,7 +597,7 @@ readStream(reader);
 
 function readStream(reader) {
   let bytesReceived = 0;
-  let offset =  0;
+  let offset = 0;
 
   while (offset < buffer.byteLength) {
     // read() returns a promise that resolves when a value has been received
@@ -731,13 +728,11 @@ button {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -936,7 +931,7 @@ class MockUnderlyingFileHandle {
   width: 50%;
   overflow-wrap: break-word;
 }
- button {
+button {
   display: block;
 }
 ```
@@ -945,13 +940,11 @@ class MockUnderlyingFileHandle {
 <button>Cancel stream</button>
 <div class="input">
   <h2>Underlying source</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 <div class="output">
   <h2>Consumer</h2>
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 

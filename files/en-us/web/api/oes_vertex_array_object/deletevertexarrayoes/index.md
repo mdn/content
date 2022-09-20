@@ -11,6 +11,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_vertex_array_object.deleteVertexArrayOES
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_vertex_array_object.deleteVertexArrayOES()`** method
@@ -19,7 +20,7 @@ of the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
 
 ## Syntax
 
-```js
+```js-nolint
 deleteVertexArrayOES(arrayObject)
 ```
 

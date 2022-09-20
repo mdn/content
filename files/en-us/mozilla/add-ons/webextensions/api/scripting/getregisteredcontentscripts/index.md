@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.getRegisteredContentScripts
 ---
+
 {{AddonSidebar()}}
 
 Returns all the content scripts registered with {{WebExtAPIRef("scripting.registerContentScripts()")}} or a subset of the registered scripts when using a filter.
@@ -24,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let scripts = await browser.scripting.getRegisteredContentScripts(
   filter          // object
 )

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.BluetoothDevice.gatt
 ---
+
 {{APIRef("Bluetooth API") }}{{SeeCompatTable}}
 
 The

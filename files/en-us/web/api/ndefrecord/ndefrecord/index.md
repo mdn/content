@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.NDEFRecord.NDEFRecord
 ---
+
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`NDEFRecord()`**
@@ -18,8 +19,8 @@ read from, or written to, compatible NFC devices; e.g. NFC tags supporting NDEF.
 
 ## Syntax
 
-```js
-writer = new NDEFRecord(options);
+```js-nolint
+new NDEFRecord(options)
 ```
 
 ### Parameters

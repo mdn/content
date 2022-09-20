@@ -11,6 +11,7 @@ tags:
   - read
 browser-compat: api.ReadableStreamBYOBReader.read
 ---
+
 {{APIRef("Streams")}}
 
 The **`read()`** method of the {{domxref("ReadableStreamBYOBReader")}} interface is used to read data into a view on a user-supplied buffer from an associated [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
@@ -32,7 +33,7 @@ The value is set `true` if the stream is closed or cancelled, and `false` otherw
 
 ## Syntax
 
-```js
+```js-nolint
 read(view)
 ```
 

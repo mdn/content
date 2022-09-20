@@ -12,6 +12,7 @@ tags:
   - subtitles
   - track
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 Now that we are comfortable with adding simple images to a webpage, the next step is to start adding video and audio players to your HTML documents! In this article we'll look at doing just that with the {{htmlelement("video")}} and {{htmlelement("audio")}} elements; we'll then finish off by looking at how to add captions/subtitles to your videos.
@@ -62,7 +63,10 @@ The {{htmlelement("video")}} element allows you to embed a video very easily. A 
 
 ```html
 <video src="rabbit320.webm" controls>
-  <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.webm">link to the video</a> instead.</p>
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="rabbit320.webm">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -125,9 +129,12 @@ So how do we do this? Take a look at the following [updated example](https://git
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support this video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support this video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -142,12 +149,21 @@ Refer to our [guide to media types and formats](/en-US/docs/Web/Media/Formats) f
 There are a number of other features you can include when displaying an HTML video. Take a look at our next example:
 
 ```html
-<video controls width="400" height="400"
-       autoplay loop muted preload="auto"
-       poster="poster.png">
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support this video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  preload="auto"
+  poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support this video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -183,9 +199,12 @@ The {{htmlelement("audio")}} element works just like the {{htmlelement("video")}
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support this audio file. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support this audio file. Here is a
+    <a href="viper.mp3">link to the audio</a> instead.
+  </p>
 </audio>
 ```
 
@@ -249,9 +268,9 @@ Here's an example:
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish" />
 </video>
 ```
 

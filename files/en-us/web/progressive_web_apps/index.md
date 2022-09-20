@@ -10,6 +10,7 @@ tags:
   - Web app
   - Web applications
 ---
+
 **Progressive Web Apps** (PWAs) are web apps that use [service workers](/en-US/docs/Web/API/Service_Worker_API), [manifests](/en-US/docs/Web/Manifest), and other web-platform features in combination with {{glossary("progressive enhancement")}} to give users an experience on par with native apps.
 
 PWAs provide a number of [advantages](/en-US/docs/Web/Progressive_web_apps/Introduction#advantages_of_web_applications) to users — including being [installable](/en-US/docs/Web/Progressive_web_apps/Introduction#installability), [progressively enhanced](/en-US/docs/Web/Progressive_web_apps/Introduction#progressive_enhancement_support), [responsively designed](/en-US/docs/Web/Progressive_web_apps/Introduction#responsiveness), [re-engageable](/en-US/docs/Web/Progressive_web_apps/Introduction#re-engageability), [linkable](/en-US/docs/Web/Progressive_web_apps/Introduction#linkability), [discoverable](/en-US/docs/Web/Progressive_web_apps/Introduction#discoverability), [network independent](/en-US/docs/Web/Progressive_web_apps/Introduction#network_independence), and [secure](/en-US/docs/Web/Progressive_web_apps/Introduction#secure).

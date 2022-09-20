@@ -8,6 +8,7 @@ tags:
   - Success
 browser-compat: http.status.201
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`201 Created`** success status response code

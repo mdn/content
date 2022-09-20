@@ -12,6 +12,7 @@ tags:
   - Non-standard
 browser-compat: api.Window.vrdisplaypointerunrestricted_event
 ---
+
 {{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`vrdisplaypointerunrestricted`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when the VR display's pointer input is no longer restricted to consumption via a [pointerlocked element](/en-US/docs/Web/API/Pointer_Lock_API).

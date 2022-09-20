@@ -8,6 +8,7 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.mover
 ---
+
 {{MathMLRef}}
 
 The MathML `<mover>` element is used to attach an accent or a limit over an expression. Use the following syntax: `<mover> base overscript </mover>`
@@ -28,18 +29,16 @@ Rendering in your browser: <math><mover accent="true"><mrow><mi>x</mi><mo>+</mo>
 
 ```html
 <math>
-
-<mover accent="true">
-  <mrow>
-    <mi>x</mi>
-    <mo>+</mo>
-    <mi>y</mi>
-    <mo>+</mo>
-    <mi>z</mi>
-  </mrow>
-  <mo>&#x23DE;<!--TOP CURLY BRACKET--></mo>
-</mover>
-
+  <mover accent="true">
+    <mrow>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>y</mi>
+      <mo>+</mo>
+      <mi>z</mi>
+    </mrow>
+    <mo>&#x23DE;<!--TOP CURLY BRACKET--></mo>
+  </mover>
 </math>
 ```
 

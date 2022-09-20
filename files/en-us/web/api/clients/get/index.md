@@ -11,6 +11,7 @@ tags:
   - get
 browser-compat: api.Clients.get
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`get()`** method of the
@@ -19,7 +20,7 @@ The **`get()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 get(id)
 ```
 

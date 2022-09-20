@@ -7,6 +7,7 @@ tags:
   - User Interface
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Commonly referred to as a [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) button, this user interface option is a button added to the browser address bar. Users click the button to interact with extensions.

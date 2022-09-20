@@ -8,6 +8,7 @@ tags:
   - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#AdditiveAttribute
 ---
+
 {{SVGRef}}
 
 The **`additive`** attribute controls whether or not an animation is additive.

@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRTransientInputHitTestSource
 ---
+
 {{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRTransientInputHitTestSource`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) handles transient input hit test subscriptions. You can get an `XRTransientInputHitTestSource` object by calling the {{domxref("XRSession.requestHitTestSourceForTransientInput()")}}.

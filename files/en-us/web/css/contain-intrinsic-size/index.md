@@ -3,6 +3,7 @@ title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
 browser-compat: css.properties.contain-intrinsic-size
 ---
+
 {{CSSRef}}
 
 The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) property controls the natural size of an element specified by [`content-visibility`](/en-US/docs/Web/CSS/content-visibility).

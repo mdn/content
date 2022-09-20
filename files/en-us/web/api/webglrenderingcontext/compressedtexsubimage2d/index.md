@@ -12,6 +12,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.compressedTexSubImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.compressedTexSubImage2D()`**
@@ -23,7 +24,7 @@ using this method or a {{domxref("WebGL2RenderingContext")}} must be used.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL 1:
 compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, srcData)
 
