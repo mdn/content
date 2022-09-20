@@ -11,7 +11,6 @@ tags:
   - exp
   - Experimental
 browser-compat: css.types.exp
-spec-urls: https://www.w3.org/TR/css-values-4/#exponent-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
