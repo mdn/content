@@ -14,51 +14,51 @@ tags:
 
 The aim of this lesson is to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
 
-While working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course, knowing the basics of what cascade layers are should you encounter them is helpful. Knowing you can use them, and how to leverage their power, will save you from a lot of pain if you find yourself managing a code base with CSS from different parties, plugins, and development teams.
+While working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course, knowing the basics of what cascade layers are should you encounter them is helpful. Knowing how to use them and how to leverage their power will save you from a lot of pain if you find yourself managing a code base with CSS from different parties, plugins, and development teams.
 
-Cascade layers are most relevant when working with CSS from multiple sources, conflicting CSS selectors and competing specificity, or any time you considering using [`!important`](/en-US/docs/Web/CSS/important).
+Cascade layers are most relevant when you're working with CSS from multiple sources, when there are conflicting CSS selectors and competing specificities, or when you're considering using [`!important`](/en-US/docs/Web/CSS/important).
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>An idea of how CSS works, including the cascade and specificity work (study
+      <td>An idea of how CSS works, including cascade and specificity (study
         <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a> and <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade, specificity, and inheritance</a>).
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To fully understand the CSS cascade and how cascade layers work.
+        To learn how cascade layers work.
       </td>
     </tr>
   </tbody>
 </table>
 
-For each property applied to an element, there can only be one value. For example, if you inspect an element in a popular web app in your browser developer tools "styles" panel and scroll down, you may notice there are styles crossed out. The crossed-out styles are the property values that match the selected element but were not applied due to the cascade. There may be several declarations crossed out from many different sources.
+For each property applied to an element, there can only be one value. You can view a property's value on an element by inspecting the element in your browser's developer tools. In the "Styles" panel, you may notice that there are styles crossed out. The crossed-out styles are the property values that match the selected element but were not applied due to the cascade. There may be several declarations crossed out from many different sources.
 
-The selector matching the element with the highest specificity from the origin with precedence has its values applied.
+The selector with the highest specificity and from an origin with precedence has its values applied to the matching element.
 
-Often, as the complexity of the site increases, the number of stylesheets increases, which makes source order both more important and more complex. Cascade layers simplifies maintaining such code bases. Cascade layers are explicit specificity containers providing simpler and greater control over which CSS declarations end up being crossed out, enablind the developer to prioritize sections of CSS without having to fight specificity.
+Often, as the complexity of a site increases, the number of stylesheets increase, which makes the source order both more important and more complex. Cascade layers simplify maintaining stylesheets across such code bases. Cascade layers are explicit specificity containers providing simpler and greater control over which CSS declarations end up being crossed out, enabling web developers to prioritize sections of CSS without having to fight specificity.
 
-To fully understand cascade layers it is important to ensure you understand the CSS cascade:
+To understand cascade layers, it is important that you understand the CSS cascade well. The sections below provide a quick recap of the important cascade concepts.
 
-## Review: Cascade
+## Review of the cascade concept
 
-The C in CSS stands for "Cascading." It is the method by which styles cascade together. The user agent goes through several very clearly defined steps to determine which single value gets assigned for every property of every element. We will briefly list the steps, then dig deeper into step 4, cascade layers, which is what you came here to learn:
+The C in CSS stands for "Cascading". It is the method by which styles cascade together. The user agent goes through several, very clearly-defined steps to determine the values that get assigned to every property of every element. We will briefly list these steps here and then dig deeper into step 4, cascade layers, which is what you came here to learn:
 
   1. **Relevance:** Find all the declaration blocks with a selector match for each element.
   2. **Importance:** Sort rules based on if they are normal or important. Important styles are those that have the [`!important`](/en-US/docs/Web/CSS/important) flag set.
-  3. **Origin:** Sort rules by author, user, or user-agent origin and by importance
+  3. **Origin:** Sort rules by author, user, or user-agent origin and by importance.
   4. **Layers:** Within each origin importance bucket, sort by cascade layer. The layer order for normal declarations is from first layer created to last, followed by unlayered normal styles. This order is inverted for important styles.
-  5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/Specificity). <!-- When @scope is supported, uncomment: "6. Scope: If there is a specificity tie, compare element [`@scope`](/en-US/docs/Web/CSS/@scope), if relevant and used." Supported in Chrome 105. Not yet documented -->
-  6. **Proximity:** When two selectors in the origin layer with precendence have the same specificity, the property value from the last declared highest specificity selector wins.
+  5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/Specificity).
+  6. **Proximity:** When two selectors in the origin layer with precedence have the same specificity, the property value from the last declared, highest specificity selector wins.
 
 For each step, only the declarations "still in the running” move on to "compete" in the next step. If only one declaration is in the running, the following steps are moot.
 
 ### Origin and cascade
 
-There are three [cascade origin types](/en-US/docs/Web/CSS/Cascade#origin_types): user-agent stylesheets, user stylesheets, and author stylesheets. The browser sorts each declaration by origin and importance into size origin buckets. There are eight levels of precedence: the six origin buckets, properties that are transitioning, and properties that are animating. The order of precedence goes from normal user-agent styles, which have the lowest precedence, to styles within currently applied animations, to important user-agent styles, and styles being transitioned, which have the highest precedence:
+There are three [cascade origin types](/en-US/docs/Web/CSS/Cascade#origin_types): user-agent stylesheets, user stylesheets, and author stylesheets. The browser sorts each declaration by origin and importance into six origin buckets. There are eight levels of precedence: the six origin buckets, properties that are transitioning, and properties that are animating. The order of precedence goes from normal user-agent styles, which have the lowest precedence, to styles within currently applied animations, to important user-agent styles, and styles being transitioned, which have the highest precedence:
 
 1. user-agent normal styles
 2. user normal styles
@@ -69,51 +69,51 @@ There are three [cascade origin types](/en-US/docs/Web/CSS/Cascade#origin_types)
 7. user-agent important styles
 8. styles being transitioned
 
-The "user-agent" is the browser. The "user" is the site visitor. The "author" is you, the developer. Styles declared directly on an element with the {{HTMLElement('style')}} element are author styles. Ignoring animating and transitioning styles for the moment, user-agent normal styles have the lowest precedence; user-agent important styles the greatest.
+The "user-agent" is the browser. The "user" is the site visitor. The "author" is you, the developer. Styles declared directly on an element with the {{HTMLElement('style')}} element are author styles. Ignoring animating and transitioning styles for the moment, user-agent normal styles have the lowest precedence; user-agent important styles the highest.
+### Origin and specificity
+For each property, the declaration that "wins" is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with the highest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins.
 
-For each property, the declaration that "wins" is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with the greatest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins. This will be reiterated a few times as this fundamental concept really needs to be understood.
-
-In the below example, we have two links: The first has no author styles applied, so all user-agent styles are applied. The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of `0-0-0`. The reason author styles "win" is because when there are conflicting styles from different origins (layers aren't in play yet), the rules from the origin with precedence are applied, no matter what the specificity is in the origin that doesn’t have precedence.  
+In the example below, there are two links. The first has no author styles applied, so all user-agent styles are applied. The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of [`0-0-0`](/en-US/docs/Web/CSS/Specificity#selector_weight_categories). The reason why author styles "win" is because when there are conflicting styles from different origins (layers aren't in play yet), the rules from the origin with precedence are applied, irrespective of the specificity in the origin that doesn’t have precedence.  
 
 {{EmbedGHLiveSample("css-examples/learn/layers/basic-cascade.html", '100%', 500)}}
 
-At the time of this writing, the "competing" selector in the user-agent stylesheet is `a:any-link`, which has a specificity weight of `0-1-1`. While this is greater than the `0-0-0` selector in the author stylesheet, the two specificity weights are never compared. Learn more about [how specificity weight is calculated](/en-US/docs/Web/CSS/Specificity#how_is_specificity_calculated).
+The "competing" selector in the user-agent stylesheet is `a:any-link`, which has a specificity weight of `0-1-1`. While this is greater than the `0-0-0` selector in the author stylesheet, the two specificity weights are never compared. Learn more about [how specificity weight is calculated](/en-US/docs/Web/CSS/Specificity#how_is_specificity_calculated).
 
-Origin precedence always beats selector specificity. If an element property is styled with a normal style declaration in multiple stylesheet origins, the author style sheet will override the redundant normal properties declared in a user agent stylesheet. Every. Single. Time. If the style is important, the user agent stylesheet wins. Every. Single. Time.  Cascade origin precedence ensures there are no specificity conflicts between origins.
+Origin precedence always beats selector specificity. If an element property is styled with a normal style declaration in multiple stylesheet origins, the author style sheet will override the redundant normal properties declared in a user agent stylesheet. If the style is important, the user agent stylesheet will win. Cascade origin precedence ensures there are no specificity conflicts between origins.
 
-One last thing to note before moving on: order of appearance, or _proximity_ only becomes relevant when the competing declarations in the origin having precedence have the same specificity.
+One last thing to note before moving on: order of appearance or _proximity_ becomes relevant only when the competing declarations in the origin of precedence have the same specificity.
 
 We now understand "cascade origin precedence," but what is "cascade layer precedence"? We will answer that question by addressing what cascade layers are, how they are ordered, and how styles are assigned to cascade layers. We'll cover regular layers, nested layers, and anonymous layers. Let's first discuss what cascade layers are and what issues they solve.
 
-## The what and why of cascade layers
+## Overview of cascade layers
 
 Similar to how we have six levels of priority based on origin and importance, cascade layers enable us to create sub-origin level of priority within any of those origins.
 
-Within each of the six origin buckets there can be multiple cascade layers. The [order of layer creation](/en-US/docs/Web/CSS/@layer) matters. A lot. It is the order or creation that sets the precedence order between layers within an origin.
+Within each of the six origin buckets, there can be multiple cascade layers. The [order of layer creation](/en-US/docs/Web/CSS/@layer) matters a lot. It is the order of creation that sets the precedence order between layers within an origin.
 
-In normal origin buckets, layers are sorted in the order of each layer's creation. The order of precedence is from first layer created to last, followed by unlayered normal styles. This order is inverted for important styles; with all unlayered important styles being in an implicit layer having precedence over all non-transitioning normal styles, but with the lower precedence than any important layered styles. The important styles in earlier declared layers having precedence over important styles in subsequently declared layers within the same origin.
+In normal origin buckets, layers are sorted in the order of each layer's creation. The order of precedence is from the first layer created to the last, followed by unlayered normal styles. This order is inverted for important styles; with all unlayered important styles being in an implicit layer having precedence over all non-transitioning normal styles, but with lower precedence than any important layered styles. The important styles in earlier declared layers have precedence over important styles in subsequent declared layers within the same origin.
 
-For the rest of this tutorial, we will limit our discussion to author styles, but realize layers can also exist in user and user-agent stylesheets.
+For the rest of this tutorial, we will limit our discussion to author styles, but keep in mind that layers can also exist in user and user-agent stylesheets.
 
-Large code bases can have styles coming from multiple teams, component libraries, frameworks, and 3rd parties. No matter how many stylesheets are included, all these styles cascade together in a single origin: the _author_ style sheet.
+Large code bases can have styles coming from multiple teams, component libraries, frameworks, and third parties. No matter how many stylesheets are included, all these styles cascade together in a single origin: the _author_ style sheet.
 
 Having styles from many sources cascade together, especially from teams that aren't working together, can create problems. Different teams may have different methodologies; one may have a best practice of reducing specificity, while another may have a standard of including an `id` in each selector.
 
-Specificity conflicts can escalate quickly. An engineer may create a "quick fix” by adding an `!important` flag. While this may feel like a easy solution, it often just moves the specificity war from normal to important declarations.
+Specificity conflicts can escalate quickly. A web developer may create a "quick fix” by adding an `!important` flag. While this may feel like a easy solution, it often just moves the specificity war from normal to important declarations.
 
-In the same way that cascade origins provide a balance of power between user and author styles, cascade layers provide a structured way to organize and balance concerns within a single origin, as if each layer in an origin were a sub-origin. A layer can be created for each team, component, and 3rd party, with style precedence based on layer order.
+In the same way that cascade origins provide a balance of power between user and author styles, cascade layers provide a structured way to organize and balance concerns within a single origin, as if each layer in an origin were a sub-origin. A layer can be created for each team, component, and third party, with style precedence based on layer order.
 
 Rules within a layer cascade together, without competing with style rules outside the layer. Cascade layers enable the prioritizing of entire stylesheets over other stylesheets, without having to worry about specificity between these sub-origins.
 
-Layer precedence always beats selector specificity. Styles in layers with precedence "win" over layers with less precedence. The specificity of a selector in a losing layer is irrelevant. Specificity still matters for competing property values within a layer, but there are no specificity concerns between layers as only the highest-priority layer for each property is considered.
+Layer precedence always beats selector specificity. Styles in layers with precedence "win" over layers with less precedence. The specificity of a selector in a losing layer is irrelevant. Specificity still matters for competing property values within a layer, but there are no specificity concerns between layers because only the highest-priority layer for each property is considered.
 
 Cascade layers also allow for nested layers. This serves two main purposes. Within each layer, a team can create nested layers. Not only can you put a component library into a separate layer creating an additional origin obliterating any need for specificity wars, but the component team can include each component in separate nested sub-layers. The ability to nest layers is very useful for component library, framework, and third party widget developers. The ability to nest layers also removes the worry of conflicting layer names. We'll cover this in the nested layer section.
 
 > "Authors can create layers to represent element defaults, third-party libraries, themes, components, overrides, and other styling concerns—and are able to re-order the cascade of layers in an explicit way, without altering selectors or specificity within each layer, or relying on order of appearance to resolve conflicts across layers." - From the specification.
 
-##  Creating Layers
+##  Creating layers
 
-Layers can be created in the following ways:
+Layers can be created using any one of the following methods:
 
 - Declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
 * Using an @layer block at-rule, with or without a name, which assigns style rules into that layer.
