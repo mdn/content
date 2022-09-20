@@ -30224,6 +30224,30 @@
       "Jeremie"
     ]
   },
+  "Web/API/Document/pointerlockchange_event": {
+    "modified": "2020-10-15T21:20:38.289Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "Sheppy",
+      "ethertank",
+      "louisremi"
+    ]
+  },
+  "Web/API/Document/pointerlockerror_event": {
+    "modified": "2020-10-15T21:20:35.814Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "fscholz",
+      "teoli",
+      "Sheppy",
+      "ethertank",
+      "louisremi"
+    ]
+  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2020-10-15T21:13:11.203Z",
     "contributors": [
@@ -33627,30 +33651,6 @@
       "rolfedh",
       "Sebastianz",
       "AFBarstow"
-    ]
-  },
-  "Web/API/Element/pointerlockchange_event": {
-    "modified": "2020-10-15T21:20:38.289Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/API/Element/pointerlockerror_event": {
-    "modified": "2020-10-15T21:20:35.814Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
     ]
   },
   "Web/API/Element/pointermove_event": {

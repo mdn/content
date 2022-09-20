@@ -1495,8 +1495,8 @@
 /en-US/docs/DOM/Mozilla_event_reference/pause	/en-US/docs/Web/API/HTMLMediaElement/pause_event
 /en-US/docs/DOM/Mozilla_event_reference/play	/en-US/docs/Web/API/HTMLMediaElement/play_event
 /en-US/docs/DOM/Mozilla_event_reference/playing	/en-US/docs/Web/API/HTMLMediaElement/playing_event
-/en-US/docs/DOM/Mozilla_event_reference/pointerlockchange	/en-US/docs/Web/API/Element/pointerlockchange_event
-/en-US/docs/DOM/Mozilla_event_reference/pointerlockerror	/en-US/docs/Web/API/Element/pointerlockerror_event
+/en-US/docs/DOM/Mozilla_event_reference/pointerlockchange	/en-US/docs/Web/API/Document/pointerlockchange_event
+/en-US/docs/DOM/Mozilla_event_reference/pointerlockerror	/en-US/docs/Web/API/Document/pointerlockerror_event
 /en-US/docs/DOM/Mozilla_event_reference/popstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/DOM/Mozilla_event_reference/progress	/en-US/docs/Web/API/XMLHttpRequest/progress_event
 /en-US/docs/DOM/Mozilla_event_reference/ratechange	/en-US/docs/Web/API/HTMLMediaElement/ratechange_event
@@ -6266,8 +6266,8 @@
 /en-US/docs/Mozilla_event_reference/pause	/en-US/docs/Web/API/HTMLMediaElement/pause_event
 /en-US/docs/Mozilla_event_reference/play	/en-US/docs/Web/API/HTMLMediaElement/play_event
 /en-US/docs/Mozilla_event_reference/playing	/en-US/docs/Web/API/HTMLMediaElement/playing_event
-/en-US/docs/Mozilla_event_reference/pointerlockchange	/en-US/docs/Web/API/Element/pointerlockchange_event
-/en-US/docs/Mozilla_event_reference/pointerlockerror	/en-US/docs/Web/API/Element/pointerlockerror_event
+/en-US/docs/Mozilla_event_reference/pointerlockchange	/en-US/docs/Web/API/Document/pointerlockchange_event
+/en-US/docs/Mozilla_event_reference/pointerlockerror	/en-US/docs/Web/API/Document/pointerlockerror_event
 /en-US/docs/Mozilla_event_reference/popstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Mozilla_event_reference/progress	/en-US/docs/Web/API/XMLHttpRequest/progress_event
 /en-US/docs/Mozilla_event_reference/ratechange	/en-US/docs/Web/API/HTMLMediaElement/ratechange_event
@@ -7949,8 +7949,6 @@
 /en-US/docs/Web/API/Document/pointerdown_event	/en-US/docs/Web/API/Element/pointerdown_event
 /en-US/docs/Web/API/Document/pointerenter_event	/en-US/docs/Web/API/Element/pointerenter_event
 /en-US/docs/Web/API/Document/pointerleave_event	/en-US/docs/Web/API/Element/pointerleave_event
-/en-US/docs/Web/API/Document/pointerlockchange_event	/en-US/docs/Web/API/Element/pointerlockchange_event
-/en-US/docs/Web/API/Document/pointerlockerror_event	/en-US/docs/Web/API/Element/pointerlockerror_event
 /en-US/docs/Web/API/Document/pointermove_event	/en-US/docs/Web/API/Element/pointermove_event
 /en-US/docs/Web/API/Document/pointerout_event	/en-US/docs/Web/API/Element/pointerout_event
 /en-US/docs/Web/API/Document/pointerover_event	/en-US/docs/Web/API/Element/pointerover_event
@@ -8052,6 +8050,7 @@
 /en-US/docs/Web/API/Element/ongotpointercapture	/en-US/docs/Web/API/Element/gotpointercapture_event
 /en-US/docs/Web/API/Element/onlostpointercapture	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/Element/onwheel	/en-US/docs/Web/API/Element/wheel_event
+/en-US/docs/Web/API/Element/pointerlockchange_event	/en-US/docs/Web/API/Document/pointerlockchange_event
 /en-US/docs/Web/API/Element/resourcetimingbufferfull_event	/en-US/docs/Web/API/Performance/resourcetimingbufferfull_event
 /en-US/docs/Web/API/Element/select_event	/en-US/docs/Web/API/HTMLInputElement/select_event
 /en-US/docs/Web/API/Element/tabStop	/en-US/docs/Web/API/ShadowRoot/delegatesFocus
@@ -9573,6 +9572,7 @@
 /en-US/docs/Web/API/ServiceWorker_API	/en-US/docs/Web/API/Service_Worker_API
 /en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers:_The_Basics	/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
+/en-US/docs/Web/API/ShadowRoot/onslotchange	/en-US/docs/Web/API/HTMLSlotElement/slotchange_event
 /en-US/docs/Web/API/SharedWorker.SharedWorker	/en-US/docs/Web/API/SharedWorker/SharedWorker
 /en-US/docs/Web/API/SharedWorker.port	/en-US/docs/Web/API/SharedWorker/port
 /en-US/docs/Web/API/SharedWorker/onerror	/en-US/docs/Web/API/SharedWorker/error_event
@@ -11607,8 +11607,8 @@
 /en-US/docs/Web/Events/pointerdown	/en-US/docs/Web/API/Element/pointerdown_event
 /en-US/docs/Web/Events/pointerenter	/en-US/docs/Web/API/Element/pointerenter_event
 /en-US/docs/Web/Events/pointerleave	/en-US/docs/Web/API/Element/pointerleave_event
-/en-US/docs/Web/Events/pointerlockchange	/en-US/docs/Web/API/Element/pointerlockchange_event
-/en-US/docs/Web/Events/pointerlockerror	/en-US/docs/Web/API/Element/pointerlockerror_event
+/en-US/docs/Web/Events/pointerlockchange	/en-US/docs/Web/API/Document/pointerlockchange_event
+/en-US/docs/Web/Events/pointerlockerror	/en-US/docs/Web/API/Document/pointerlockerror_event
 /en-US/docs/Web/Events/pointermove	/en-US/docs/Web/API/Element/pointermove_event
 /en-US/docs/Web/Events/pointerout	/en-US/docs/Web/API/Element/pointerout_event
 /en-US/docs/Web/Events/pointerover	/en-US/docs/Web/API/Element/pointerover_event
@@ -12472,8 +12472,8 @@
 /en-US/docs/Web/Reference/Events/pause	/en-US/docs/Web/API/HTMLMediaElement/pause_event
 /en-US/docs/Web/Reference/Events/play	/en-US/docs/Web/API/HTMLMediaElement/play_event
 /en-US/docs/Web/Reference/Events/playing	/en-US/docs/Web/API/HTMLMediaElement/playing_event
-/en-US/docs/Web/Reference/Events/pointerlockchange	/en-US/docs/Web/API/Element/pointerlockchange_event
-/en-US/docs/Web/Reference/Events/pointerlockerror	/en-US/docs/Web/API/Element/pointerlockerror_event
+/en-US/docs/Web/Reference/Events/pointerlockchange	/en-US/docs/Web/API/Document/pointerlockchange_event
+/en-US/docs/Web/Reference/Events/pointerlockerror	/en-US/docs/Web/API/Document/pointerlockerror_event
 /en-US/docs/Web/Reference/Events/popstate	/en-US/docs/Web/API/Window/popstate_event
 /en-US/docs/Web/Reference/Events/progress	/en-US/docs/Web/API/XMLHttpRequest/progress_event
 /en-US/docs/Web/Reference/Events/ratechange	/en-US/docs/Web/API/HTMLMediaElement/ratechange_event

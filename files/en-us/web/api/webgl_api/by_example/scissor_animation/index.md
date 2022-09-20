@@ -110,7 +110,7 @@ function setupAnimation (evt) {
 const size = [60, 60];
 let velocity = 3.0;
 function drawAnimation () {
-  gl.scissor(position[0], position[1], size[0] , size[1]);
+  gl.scissor(position[0], position[1], size[0], size[1]);
   gl.clear(gl.COLOR_BUFFER_BIT);
   // Every frame the vertical position of the square is
   // decreased, to create the illusion of movement.
