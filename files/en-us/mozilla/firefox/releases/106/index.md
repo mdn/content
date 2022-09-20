@@ -54,6 +54,8 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ## Changes for add-on developers
 
+- The ability to set the [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` to `false` for Manifest V2 (to make a background page non-persistent) is now available by default. It is no longer under the control of the  <code>extensions.eventPages.enabled</code> preference.
+
 ### Removals
 
 ### Other
