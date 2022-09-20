@@ -150,7 +150,7 @@ To handle shared file data, see the `POST` example above and the [`FileReader`](
 
 ## Security & Privacy
 
-Your PWA can only act as a web share target if it has been installed. See also [How to make PWAs installabe](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs).
+Your PWA can only act as a web share target if it has been installed. See also [How to make PWAs installable](/en-US/docs/Web/Progressive_web_apps/Installable_PWAs).
 
 Similar to HTML form submissions, you should be cautious about data that is sent to your application via the share target. Be sure to validate incoming data before using it.
 
