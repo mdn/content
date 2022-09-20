@@ -16,7 +16,7 @@ browser-compat: css.at-rules.media.prefers-color-scheme
 The **`prefers-color-scheme`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested a light or dark color theme.
 The user might indicate this preference through an operating system setting (e.g. light or dark mode) or a user agent setting.
 
-For embedded elements, `prefers-color-scheme` passes the `color-scheme` of the embedding element to the embedded content when acceptable from security standpoint.
+Using `prefers-color-scheme` in embedded elements allows you to style a component based on the `color-scheme` of the parent element when acceptable from security standpoint.
 This applies to both same and cross-origin SVG and iframe elements and prevents cases where OS and browser preferences for color schemes are conflicting.
 
 ## Syntax
@@ -95,6 +95,7 @@ The following CSS is used to style the elements above:
 The following example shows how to use `prefers-color-scheme` with the `color-scheme` property can inherited from the embedding element.
 A script is used to specify the source of the image elements, this would normally be done in HTML as `<img src="circle.svg" />` or similar.
 
+On browsers that support this feature (such as Firefox), you should see three circles, with one drawn in a different color.
 The first circle inherits the `color-scheme` from the browser or OS and can be toggled using this page's theme switcher.
 The second and third circle inherit the `color-scheme` from the embedding element and so the `@media` query allows to specify styles of the embedded content based on the parent element's `color-scheme`.
 
