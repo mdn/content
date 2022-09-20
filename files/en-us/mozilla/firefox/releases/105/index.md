@@ -22,8 +22,8 @@ This article provides information about the changes in Firefox 105 that will aff
 
 ### CSS
 
-- Embedded SVG and iframe content can use the `prefers-color-scheme` media query via the `svg.embedder-prefers-color-scheme.content` and `layout.css.iframe-embedder-prefers-color-scheme.content.enabled` preferences which both default to `true`.
-  This allows embedded content to directly use the `color-scheme` of the embedding element instead of inheriting OS or browser preferences which may conflict with document preferences ({{bug(1779457)}}).
+- Embedded content, such as SVG definitions and content in an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), now respects the theme preferences of the elements in which it is embedded, rather than OS or browser preferences (which may be different).
+  Specifically, embedded content now inherits the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the embedding element, and [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media queries in the embedded content respect this value rather than the OS/browser level theme setting ({{bug(1779457)}}).
 
 #### Removals
 
