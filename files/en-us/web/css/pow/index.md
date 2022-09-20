@@ -80,7 +80,7 @@ h6 {
 }
 ```
 
-{{EmbedLiveSample('example', '100%', '400px')}}
+{{EmbedLiveSample('example', '100%', '300px')}}
 
 ## Specifications
 
