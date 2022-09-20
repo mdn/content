@@ -50,7 +50,7 @@ const y = x++;
 
 ```js
 let x = 3;
-const y = ++a;
+const y = ++x;
 
 // x = 4
 // y = 4

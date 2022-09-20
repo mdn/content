@@ -169,7 +169,7 @@ There are already some styles present in the file. Let's remove those and replac
 
 Update your `App.vue` file's `<style>` element so it looks like so:
 
-```css
+```html
 <style>
 /* Global styles */
 .btn {

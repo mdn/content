@@ -33,8 +33,8 @@ Although the `classList` property itself is read-only, you can modify its associ
 ## Examples
 
 ```js
-const div = document.createElement('div');
-div.className = 'foo';
+const div = document.createElement("div");
+div.className = "foo";
 
 // our starting state: <div class="foo"></div>
 console.log(div.outerHTML);
@@ -50,7 +50,7 @@ console.log(div.outerHTML);
 div.classList.toggle("visible");
 
 // add/remove visible, depending on test conditional, i less than 10
-div.classList.toggle("visible", i < 10 );
+div.classList.toggle("visible", i < 10);
 
 console.log(div.classList.contains("foo"));
 
@@ -66,9 +66,6 @@ div.classList.remove(...cls);
 // replace class "foo" with class "bar"
 div.classList.replace("foo", "bar");
 ```
-
-> **Note:** Versions of Firefox before 26 do not implement the use of several arguments in the
-> add/remove/toggle methods. See <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
 ## Specifications
 
