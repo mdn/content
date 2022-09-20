@@ -51,7 +51,7 @@ If a single value is specified it applies to both width and height.
 - `<length>`
   - : The element has the specified {{cssxref("&lt;length&gt;")}} in the given dimension(s).
 - `auto <length>`
-  - : A remembered value of the "normally rendered" element size if one exists; otherwise the specified `<length>`.
+  - : A remembered value of the "normally rendered" element size if one exists and the element is skipping its contents (for example, when it is offscreen); otherwise the specified `<length>`.
 
 ## Description
 
@@ -59,9 +59,10 @@ Size containment allows a user agent to layout an element as though it had a fix
 By default, size containment treats elements as though they had no contents, and may collapse the layout in the same way as if the contents had no width or height.
 The `contain-intrinsic-size` allows authors to specify an appropriate value to be used as the size for layout.
 
-Determining the size for the element when it is rendered with all its child elements can be difficult, and odd layout effects may result if an incorrect value is used.
-This can be mitigated by specifying the `auto <length>` value, which saves the normal "fully rendered" size of the element (if the element is ever outside of size containment) and uses it as the intrinsic size.
-In particular this is recommended with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) as elements are only in size containment when offscreen, and will hence may have  a remembered value.
+Determining the correct size to specify for an element can be difficult, and odd layout effects may result if an incorrect value is used.
+The `auto <length>` value can help.
+If the element is ever rendered with all its child elements (if the element is ever outside of size containment) then setting `auto` saves the size and can use it instead of the `<length>`.
+In particular this is recommended with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) as elements are only in size containment when offscreen, and will hence may have a remembered value.
 
 ## Formal definition
 
