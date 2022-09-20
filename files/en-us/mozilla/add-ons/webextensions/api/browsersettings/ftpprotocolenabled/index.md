@@ -32,10 +32,9 @@ Toggle the setting:
 
 ```js
 function toggleAllowFtp() {
-
   function toggle(current) {
     console.log(`Current value: ${current.value}`);
-    browser.browserSettings.ftpProtocolEnabled.set({value: !current.value});
+    browser.browserSettings.ftpProtocolEnabled.set({ value: !current.value });
   }
 
   browser.browserSettings.ftpProtocolEnabled.get({}).then(toggle);

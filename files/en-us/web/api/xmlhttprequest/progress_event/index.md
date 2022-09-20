@@ -1,5 +1,5 @@
 ---
-title: 'XMLHttpRequest: progress event'
+title: "XMLHttpRequest: progress event"
 slug: Web/API/XMLHttpRequest/progress_event
 page-type: web-api-event
 tags:
@@ -52,9 +52,21 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```html
 <div class="controls">
-    <input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" />
-    <input class="xhr error" type="button" name="xhr" value="Click to start XHR (error)" />
-    <input class="xhr abort" type="button" name="xhr" value="Click to start XHR (abort)" />
+  <input
+    class="xhr success"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (success)" />
+  <input
+    class="xhr error"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (error)" />
+  <input
+    class="xhr abort"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (abort)" />
 </div>
 
 <textarea readonly class="event-log"></textarea>

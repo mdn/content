@@ -239,32 +239,36 @@ tbody td[role="gridcell"]:focus {
 ```js
 const selectables = document.querySelectorAll('table td[role="gridcell"]');
 
-selectables[0].setAttribute('tabindex', 0);
+selectables[0].setAttribute("tabindex", 0);
 
-const trs = document.querySelectorAll('table tbody tr');
+const trs = document.querySelectorAll("table tbody tr");
 let row = 0;
 let col = 0;
 let maxrow = trs.length - 1;
 let maxcol = 0;
 
 trs.forEach((gridrow) => {
-  gridrow.querySelectorAll('td').forEach((el) => {
+  gridrow.querySelectorAll("td").forEach((el) => {
     el.dataset.row = row;
     el.dataset.col = col;
     col++;
   });
-  if (col > maxcol) { maxcol = col - 1; }
+  if (col > maxcol) {
+    maxcol = col - 1;
+  }
   col = 0;
   row++;
 });
 
 function moveto(newrow, newcol) {
-  const tgt = document.querySelector(`[data-row="${newrow}"][data-col="${newcol}"]`);
-  if (tgt?.getAttribute('role') === 'gridcell') {
-    document.querySelectorAll('[role=gridcell]').forEach((el) => {
-      el.setAttribute('tabindex', '-1');
+  const tgt = document.querySelector(
+    `[data-row="${newrow}"][data-col="${newcol}"]`
+  );
+  if (tgt?.getAttribute("role") === "gridcell") {
+    document.querySelectorAll("[role=gridcell]").forEach((el) => {
+      el.setAttribute("tabindex", "-1");
     });
-    tgt.setAttribute('tabindex', '0');
+    tgt.setAttribute("tabindex", "0");
     tgt.focus();
     return true;
   } else {
@@ -272,7 +276,7 @@ function moveto(newrow, newcol) {
   }
 }
 
-document.querySelector('table').addEventListener("keydown", (event) => {
+document.querySelector("table").addEventListener("keydown", (event) => {
   const col = parseInt(event.target.dataset.col, 10);
   const row = parseInt(event.target.dataset.row, 10);
   switch (event.key) {
@@ -324,7 +328,12 @@ document.querySelector('table').addEventListener("keydown", (event) => {
           i--;
         } while (!result);
       } else {
-        moveto(row, document.querySelector(`[data-row="${event.target.dataset.row}"]:last-of-type`).dataset.col);
+        moveto(
+          row,
+          document.querySelector(
+            `[data-row="${event.target.dataset.row}"]:last-of-type`
+          ).dataset.col
+        );
       }
       break;
     }

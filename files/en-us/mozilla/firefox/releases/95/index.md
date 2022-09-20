@@ -46,6 +46,8 @@ No notable changes
 
 - Added `overrideContentColorScheme` in {{WebExtAPIRef("browserSettings")}} to provide the ability to control the preference `layout.css.prefers-color-scheme.content-override` and set pages' preferred color scheme (light or dark) independently of the browser theme ({{bug(1733461)}}).
 
+- Added `globalPrivacyControl` in {{WebExtAPIRef("privacy.network")}} to provide visibility into whether the user has enabled Global Privacy Control inside the browser. ({{bug(1670058)}}).
+
 ## Older versions
 
 {{Firefox_for_developers(94)}}

@@ -95,7 +95,9 @@ A {{domxref("DOMStringMap")}}.
 ## Examples
 
 ```html
-<div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>John Doe</div>
+<div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>
+  John Doe
+</div>
 ```
 
 ```js

@@ -126,8 +126,10 @@ if (elem.requestFullscreen) {
 Here is an example that allows a section of content to be dragged.
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
-    This text <strong>may</strong> be dragged.
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+  This text <strong>may</strong> be dragged.
 </div>
 ```
 
@@ -151,9 +153,7 @@ div {
 ```
 
 ```html
-<div contenteditable="true">
-    This text can be edited by the user.
-</div>
+<div contenteditable="true">This text can be edited by the user.</div>
 ```
 
 {{EmbedLiveSample("contentEditable")}}

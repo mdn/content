@@ -101,14 +101,14 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ### HTML
 
 ```html
-<p>This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.</p>
-<p>This is the second paragraph.
-  This is the second paragraph.
-  This is the second paragraph.
-  This is the second paragraph.</p>
+<p>
+  This is the first paragraph of text. This is the first paragraph of text. This
+  is the first paragraph of text. This is the first paragraph of text.
+</p>
+<p>
+  This is the second paragraph. This is the second paragraph. This is the second
+  paragraph. This is the second paragraph.
+</p>
 ```
 
 ### Result

@@ -91,14 +91,27 @@ Let's create a simple example that presents text you can resize using an {{HTMLE
 Let's start with the SVG. It's pretty basic, with a 1000-by-300 pixel space mapped into a 10 centimeter by 3 centimeter box.
 
 ```html
-<svg width="10cm" height="3cm" viewBox="0 0 1000 300"
-    xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="10cm"
+  height="3cm"
+  viewBox="0 0 1000 300"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect
+    x="1"
+    y="1"
+    width="998"
+    height="298"
+    fill="none"
+    stroke="green"
+    stroke-width="2" />
 
-  <rect x="1" y="1" width="998" height="298"
-      fill="none" stroke="green" stroke-width="2"/>
-
-  <text id="hello" x="10" y="150"
-      font-family="sans-serif" font-size="60" fill="green">
+  <text
+    id="hello"
+    x="10"
+    y="150"
+    font-family="sans-serif"
+    font-size="60"
+    fill="green">
     Hello world!
   </text>
 </svg>
@@ -112,7 +125,7 @@ The HTML is also simple, with only two displayed elements contained inside a gro
 
 ```html
 <div class="controls">
-  <input type="range" id="widthSlider" min="80" max="978">
+  <input type="range" id="widthSlider" min="80" max="978" />
   <span id="widthDisplay"></span>
 </div>
 ```

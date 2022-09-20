@@ -173,9 +173,9 @@ In this example we provide a `<div>` and a text input. Entering a valid color in
 
 ```html
 <div></div>
-<hr>
+<hr />
 <label for="color">Enter a valid color value:</label>
-<input type="text" id="color">
+<input type="text" id="color" />
 ```
 
 #### CSS

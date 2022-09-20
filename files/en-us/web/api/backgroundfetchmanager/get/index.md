@@ -39,7 +39,7 @@ The following examples shows how to use `get()` to retrieve a {{domxref("Backgro
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.get('my-fetch');
+  const bgFetch = await swReg.backgroundFetch.get("my-fetch");
 });
 // my code block
 ```

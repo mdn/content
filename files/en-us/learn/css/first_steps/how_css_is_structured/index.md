@@ -62,9 +62,9 @@ You reference an external CSS stylesheet from an HTML `<link>` element:
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -91,13 +91,13 @@ The `href` attribute of the {{htmlelement("link")}} element needs to reference a
 
 ```html
 <!-- Inside a subdirectory called styles inside the current directory -->
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/style.css" />
 
 <!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory -->
-<link rel="stylesheet" href="styles/general/style.css">
+<link rel="stylesheet" href="styles/general/style.css" />
 
 <!-- Go up one directory level, then inside a subdirectory called styles -->
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../styles/style.css" />
 ```
 
 ### Internal stylesheet
@@ -110,7 +110,7 @@ The HTML for an internal stylesheet might look like this:
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
     <style>
       h1 {
@@ -143,11 +143,13 @@ Inline styles are CSS declarations that affect a single HTML element, contained 
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
   </head>
   <body>
-    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">Hello World!</h1>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">
+      Hello World!
+    </h1>
     <p style="color:red;">This is my first CSS example</p>
   </body>
 </html>
@@ -167,14 +169,12 @@ For the exercise that follows, create a folder on your computer. You can name th
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiments</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
     <p>Create your test HTML here</p>
-
   </body>
 </html>
 ```
@@ -453,7 +453,7 @@ h1 {
   font-size: 1.5em;
 }
 
-/* Handle specific elements nested in the DOM  */
+/* Handle specific elements nested in the DOM */
 div p,
 #id:first-line {
   background-color: red;

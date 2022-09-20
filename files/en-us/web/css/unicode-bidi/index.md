@@ -77,12 +77,8 @@ unicode-bidi: unset;
 ### HTML
 
 ```html
-<div class="bible-quote">
-  A line of text
-</div>
-<div>
-  Another line of text
-</div>
+<div class="bible-quote">A line of text</div>
+<div>Another line of text</div>
 ```
 
 ### Result

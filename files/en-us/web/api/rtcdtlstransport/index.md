@@ -48,7 +48,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
 ## Methods
 
-_Also inherits properties from {{DOMxRef("EventTarget")}}._
+_Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDtlsTransport.getRemoteCertificates", "getRemoteCertificates()")}}
   - : Returns an array of {{jsxref("ArrayBuffer")}} containing the certificates of the remote peer of the connection.

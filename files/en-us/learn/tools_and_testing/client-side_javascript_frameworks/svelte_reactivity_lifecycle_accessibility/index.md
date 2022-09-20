@@ -104,17 +104,17 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
 
    ```html
    <script>
-     import { createEventDispatcher } from 'svelte';
+     import { createEventDispatcher } from "svelte";
      const dispatch = createEventDispatcher();
 
      let completed = true;
 
      const checkAll = () => {
-       dispatch('checkAll', completed);
+       dispatch("checkAll", completed);
        completed = !completed;
-     }
+     };
 
-     const removeCompleted = () => dispatch('removeCompleted');
+     const removeCompleted = () => dispatch("removeCompleted");
    </script>
 
    <div class="btn-group">
@@ -503,7 +503,13 @@ Now we will take care of the `Todo` component's focus management details. First 
 3. And finally, bind `nameEl` to the `<input>` field by updating it like so:
 
    ```html
-   <input bind:value={name} bind:this={nameEl} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" />
+   <input
+     bind:value={name}
+     bind:this={nameEl}
+     type="text"
+     id="todo-{todo.id}"
+     autocomplete="off"
+     class="todo-text" />
    ```
 
 4. However, when you try the updated app, you'll get an error along the lines of "TypeError: nameEl is undefined" in the console when you press a to-do's _Edit_ button.
@@ -591,8 +597,14 @@ In our immediate use case, we will define a function called `selectOnFocus()` th
 
    ```html
    <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
-   <input bind:value={name} bind:this={nameEl} use:selectOnFocus type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text"
-   />
+   <input
+     bind:value={name}
+     bind:this={nameEl}
+     use:selectOnFocus
+     type="text"
+     id="todo-{todo.id}"
+     autocomplete="off"
+     class="todo-text" />
    ```
 
 3. Let's try it out. Go to your app, press a to-do's _Edit_ button, then <kbd>Tab</kbd> to take focus away from the `<input>`. Now click on the `<input>`, and you'll see that the entire input text is selected.
@@ -610,7 +622,7 @@ Now let's make this function truly reusable across components. `selectOnFocus()`
        const onFocus = (event) => node.select(); // event handler
        node.addEventListener('focus', onFocus); // when node gets focus call onFocus()
        return {
-         destroy: () => node.removeEventListener('focus', onFocus); // this will be executed when the node is removed from the DOM
+         destroy: () => node.removeEventListener('focus', onFocus), // this will be executed when the node is removed from the DOM
        }
      }
    }
@@ -637,9 +649,14 @@ To demonstrate our action's reusability, let's make use of it in `NewTodo.svelte
 2. Add the `use:selectOnFocus` directive to the `<input>`, like this:
 
    ```html
-   <input bind:value={name} bind:this={nameEl} use:selectOnFocus
-     type="text" id="todo-0" autoComplete="off" class="input input__lg"
-   />
+   <input
+     bind:value={name}
+     bind:this={nameEl}
+     use:selectOnFocus
+     type="text"
+     id="todo-0"
+     autocomplete="off"
+     class="input input__lg" />
    ```
 
 With a few lines of code we can add functionality to regular HTML elements in a very reusable and declarative way. It just takes an `import` and a short directive like `use:selectOnFocus` that clearly describes its purpose. And we can achieve this without the need to create a custom wrapper element like `TextInput`, `MyInput`, or similar. Moreover, you can add as many `use:action` directives as you want to an element.
@@ -659,7 +676,7 @@ In the previous section, while working with the `Todo` components, we had to dea
 2. And then in our markup we just need to add another `use:` directive:
 
    ```html
-   <input bind:value={name} use:selectOnFocus use:focusOnInit>
+   <input bind:value={name} use:selectOnFocus use:focusOnInit />
    ```
 
 3. Our `onEdit()` function can now be much simpler:
@@ -731,7 +748,9 @@ First we'll extract the status heading to its own component.
      $: completedTodos = todos.filter((todo) => todo.completed).length;
    </script>
 
-   <h2 id="list-heading">{completedTodos} out of {totalTodos} items completed</h2>
+   <h2 id="list-heading">
+     {completedTodos} out of {totalTodos} items completed
+   </h2>
    ```
 
 3. Import the file at the beginning of `Todos.svelte`, adding the following `import` statement below the others:
@@ -764,14 +783,15 @@ We've already seen that Svelte uses `export let varname = …` to [declare props
 
 ```html
 <script>
-  export let bar = 'optional default initial value'; // prop
+  export let bar = "optional default initial value"; // prop
   export let baz = undefined; // prop
   export let format = (n) => n.toFixed(2); // prop
 
   // these are readonly
-  export const thisIs = 'readonly'; // read-only export
+  export const thisIs = "readonly"; // read-only export
 
-  export function greet(name) { // read-only export
+  export function greet(name) {
+    // read-only export
     alert(`Hello, ${name}!`);
   }
 
@@ -792,12 +812,15 @@ With this in mind, let's go back to our use case. We'll create a function called
 
      let headingEl;
 
-     export function focus() { // shorter version: export const focus = () => headingEl.focus()
+     export function focus() {
+       // shorter version: export const focus = () => headingEl.focus()
        headingEl.focus();
      }
    </script>
 
-   <h2 id="list-heading" bind:this={headingEl} tabindex="-1">{completedTodos} out of {totalTodos} items completed</h2>
+   <h2 id="list-heading" bind:this={headingEl} tabindex="-1">
+     {completedTodos} out of {totalTodos} items completed
+   </h2>
    ```
 
    Note that we've added a `tabindex` attribute to the `<h2>` to allow the element to receive focus programmatically.

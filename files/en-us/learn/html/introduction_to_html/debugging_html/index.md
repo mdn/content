@@ -120,8 +120,10 @@ It's time to study the permissive nature of HTML code.
 
      ```html
      <li>
-       <strong>Unclosed attributes: Another common source of HTML problems.
-       Let's look at an example: </strong>
+       <strong>
+         Unclosed attributes: Another common source of HTML problems. Let's
+         look at an example:
+       </strong>
      </li>
      ```
 

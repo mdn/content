@@ -35,13 +35,20 @@ If the requested `prefix` is `null`, it returns the default namespace URI.
 ## Example
 
 ```html
-Namespace URL for <code>xlink</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Namespace URL for <code>xml</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Namespace URL for <code>html</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Namespace URL for <code>``</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Namespace URL for <code>svg</code> on &lt;svg&gt;: <output>Not tested</output>.<br/>
-Namespace URL for <code>xlink</code> on &lt;svg&gt;: <output>Not tested</output>.<br/>
-Namespace URL for <code>xml</code> on &lt;svg&gt;: <output>Not tested</output>.<br/>
+Namespace URL for <code>xlink</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Namespace URL for <code>xml</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Namespace URL for <code>html</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Namespace URL for <code>``</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Namespace URL for <code>svg</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
+Namespace URL for <code>xlink</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
+Namespace URL for <code>xml</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
 <svg xmlns:svg="http://www.w3.org/2000/svg" height="1"></svg>
 <button>Click to see the results</button>
 ```

@@ -15,11 +15,11 @@ This is the second example that explain [how to build custom form widgets](/en-U
 ```html
 <form class="no-widget">
   <select name="myFruit">
-      <option>Cherry</option>
-      <option>Lemon</option>
-      <option>Banana</option>
-      <option>Strawberry</option>
-      <option>Apple</option>
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
   </select>
 
   <div class="select">
@@ -32,7 +32,7 @@ This is the second example that explain [how to build custom form widgets](/en-U
       <li class="option">Apple</li>
     </ul>
   </div>
-<form>
+</form>
 ```
 
 ### CSS Content
@@ -162,7 +162,7 @@ This is the second example that explain [how to build custom form widgets](/en-U
 
 ```js
 window.addEventListener("load", () => {
-  const form = document.querySelector('form');
+  const form = document.querySelector("form");
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
@@ -180,11 +180,11 @@ window.addEventListener("load", () => {
 ```html
 <form class="no-widget">
   <select name="myFruit">
-      <option>Cherry</option>
-      <option>Lemon</option>
-      <option>Banana</option>
-      <option>Strawberry</option>
-      <option>Apple</option>
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
   </select>
 
   <div class="select">
@@ -197,7 +197,7 @@ window.addEventListener("load", () => {
       <li class="option">Apple</li>
     </ul>
   </div>
-<form>
+</form>
 ```
 
 ### CSS Content

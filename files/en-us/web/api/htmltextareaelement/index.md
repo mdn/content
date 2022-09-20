@@ -437,14 +437,19 @@ HTML:
 
 ```html
 <form name="myForm">
-<p>[&nbsp;
-  <span class="intLink" id="format-strong"><strong>Bold</strong></span> |
-  <span class="intLink" id="format-em"><em>Italic</em></span> |
-  <span class="intLink" id="format-link">URL</span> |
-  <span class="intLink" id="format-code">code</span> &nbsp;]
-</p>
+  <p>
+    [&nbsp;
+    <span class="intLink" id="format-strong"><strong>Bold</strong></span> |
+    <span class="intLink" id="format-em"><em>Italic</em></span> |
+    <span class="intLink" id="format-link">URL</span> |
+    <span class="intLink" id="format-code">code</span> &nbsp;]
+  </p>
 
-<p><textarea name="myTxtArea" rows="10" cols="50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem. </textarea></p>
+  <p>
+    <textarea name="myTxtArea" rows="10" cols="50">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem. 
+    </textarea>
+  </p>
 </form>
 ```
 
@@ -484,9 +489,13 @@ In the HTML we just need to hook our function to the \`onkeypress\` event and sp
 
 ```html
 <form>
-  <p>Textarea with fixed number of characters per line:<br />
-    <textarea cols="50" rows="10" onkeypress="return checkRows(this, event);"
-              onpaste="return false;"></textarea>
+  <p>
+    Textarea with fixed number of characters per line:<br />
+    <textarea
+      cols="50"
+      rows="10"
+      onkeypress="return checkRows(this, event);"
+      onpaste="return false;"></textarea>
   </p>
 </form>
 ```

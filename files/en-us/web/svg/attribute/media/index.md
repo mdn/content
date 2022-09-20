@@ -28,10 +28,14 @@ svg {
 ```html
 <svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
   <style>
-    rect { fill: black; }
+    rect {
+      fill: black;
+    }
   </style>
   <style media="all and (min-width: 600px)">
-    rect { fill: seagreen; }
+    rect {
+      fill: seagreen;
+    }
   </style>
 
   <text y="15">Resize the window to see the effect</text>

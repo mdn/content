@@ -30,22 +30,40 @@ svg {
 ```html
 <svg viewBox="0 0 440 160" xmlns="http://www.w3.org/2000/svg">
   <filter id="displacementFilter">
-    <feImage xlink:href="mdn.svg"
-        x="0" y="0" width="100%" height="100%" result="abc"/>
-    <feDisplacementMap in2="abc" in="SourceGraphic"
-        scale="30" xChannelSelector="R"/>
+    <feImage
+      xlink:href="mdn.svg"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      result="abc" />
+    <feDisplacementMap
+      in2="abc"
+      in="SourceGraphic"
+      scale="30"
+      xChannelSelector="R" />
   </filter>
   <filter id="displacementFilter2">
-    <feImage xlink:href="mdn.svg"
-        x="0" y="0" width="100%" height="100%" result="abc"/>
-    <feDisplacementMap in2="abc" in="SourceGraphic"
-        scale="30" xChannelSelector="B"/>
+    <feImage
+      xlink:href="mdn.svg"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      result="abc" />
+    <feDisplacementMap
+      in2="abc"
+      in="SourceGraphic"
+      scale="30"
+      xChannelSelector="B" />
   </filter>
 
-  <text x="10" y="60" font-size="50"
-      filter="url(#displacementFilter)">Some displaced text</text>
-  <text x="10" y="120" font-size="50"
-      filter="url(#displacementFilter2)">Some displaced text</text>
+  <text x="10" y="60" font-size="50" filter="url(#displacementFilter)">
+    Some displaced text
+  </text>
+  <text x="10" y="120" font-size="50" filter="url(#displacementFilter2)">
+    Some displaced text
+  </text>
 </svg>
 ```
 

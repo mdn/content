@@ -89,12 +89,10 @@ The HTML used to present the results looks like this:
 
 ```html
 <p>
-  Your location is <span id="latitude">0.00</span>°
-  latitude by <span id="longitude">0.00</span>° longitude.
+  Your location is <span id="latitude">0.00</span>° latitude by
+  <span id="longitude">0.00</span>° longitude.
 </p>
-<button id="get-location">
-  Get My Location
-</button>
+<button id="get-location">Get My Location</button>
 ```
 
 ### Result

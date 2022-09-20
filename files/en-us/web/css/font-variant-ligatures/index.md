@@ -90,49 +90,49 @@ The `font-variant-ligatures` property is specified as one of the keyword values 
 #### HTML
 
 ```html
-<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet" />
 <p class="normal">
-  normal<br>
+  normal<br />
   if fi ff tf ft jf fj
 </p>
 <p class="none">
-  none<br>
+  none<br />
   if fi ff tf ft jf fj
 </p>
 <p class="common-ligatures">
-  common-ligatures<br>
+  common-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-common-ligatures">
-  no-common-ligatures<br>
+  no-common-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="discretionary-ligatures">
-  discretionary-ligatures<br>
+  discretionary-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-discretionary-ligatures">
-  no-discretionary-ligatures<br>
+  no-discretionary-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="historical-ligatures">
-  historical-ligatures<br>
+  historical-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-historical-ligatures">
-  no-historical-ligatures<br>
+  no-historical-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="contextual">
-  contextual<br>
+  contextual<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-contextual">
-  no-contextual<br>
+  no-contextual<br />
   if fi ff tf ft jf fj
 </p>
 <p class="contextual">
-  contextual<br>
+  contextual<br />
   if fi ff tf ft jf fj
 </p>
 ```

@@ -37,8 +37,7 @@ In the following example, span elements (normally displayed as inline elements) 
 ### HTML
 
 ```html
-<span>span 1</span>
-<span>span 2</span>
+<span>span 1</span> <span>span 2</span>
 ```
 
 ### CSS

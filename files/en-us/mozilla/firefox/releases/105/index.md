@@ -2,7 +2,7 @@
 title: Firefox 105 for developers
 slug: Mozilla/Firefox/Releases/105
 tags:
-  - '105'
+  - "105"
   - Firefox
   - Mozilla
   - Release
@@ -21,6 +21,9 @@ This article provides information about the changes in Firefox 105 that will aff
 #### Removals
 
 ### CSS
+
+- Embedded content, such as SVG definitions and content in an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), now respects the theme preferences of the elements in which it is embedded, rather than OS or browser preferences (which may be different).
+  Specifically, embedded content now inherits the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the embedding element, and [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media queries in the embedded content respect this value rather than the OS/browser level theme setting ({{bug(1779457)}}).
 
 #### Removals
 
@@ -52,7 +55,15 @@ This article provides information about the changes in Firefox 105 that will aff
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Removals
+#### WebDriver BiDi
+
+- On systems with IPv6 preferred DNS resolution clients will no longer fail to connect when `localhost` is used as host for the WebSocket server ({{bug("1769994")}}).
+
+- Improved `RemoteValue` support to allow plain JS objects with simple JSON-serializable fields to be serialized ({{bug("1779226")}}).
+
+#### Marionette
+
+- The `WebDriver:GetElementProperty` command is now able to return node properties as set by web content ({{bug("1398792")}}).
 
 ## Changes for add-on developers
 

@@ -30,11 +30,9 @@ Note that some common attributes like `mathcolor`, `mathvariant` or `dir` have n
 
 ```html
 <math>
-
   <mspace depth="40px" height="20px" />
 
   <mspace width="100px" />
-
 </math>
 ```
 

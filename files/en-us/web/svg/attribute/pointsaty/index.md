@@ -28,7 +28,6 @@ svg {
 
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
-
   <filter id="lighting1" x="0" y="0" width="100%" height="100%">
     <feDiffuseLighting in="SourceGraphic">
       <feSpotLight x="60" y="60" z="50" pointsAtY="0" />
@@ -41,7 +40,12 @@ svg {
   </filter>
 
   <rect x="0" y="0" width="200" height="200" style="filter: url(#lighting1);" />
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#lighting2); transform: translateX(220px);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#lighting2); transform: translateX(220px);" />
 </svg>
 ```
 

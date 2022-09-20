@@ -26,8 +26,8 @@ a:local-link {
 ### HTML
 
 ```html
-<a href="#target">This is a link on the current page.</a><br>
-<a href="https://example.com">This is an external link</a><br>
+<a href="#target">This is a link on the current page.</a><br />
+<a href="https://example.com">This is an external link</a><br />
 ```
 
 ### CSS

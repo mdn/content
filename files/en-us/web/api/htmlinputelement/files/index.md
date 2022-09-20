@@ -28,7 +28,7 @@ The example below shows how you can access the **`HTMLInputElement.files`** prop
 ### HTML
 
 ```html
-<input id="files" type="file" multiple>
+<input id="files" type="file" multiple />
 ```
 
 ### JavaScript

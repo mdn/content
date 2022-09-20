@@ -31,12 +31,12 @@ background-color: red;
 background-color: indigo;
 
 /* Hexadecimal value */
-background-color: #bbff00;    /* Fully opaque */
-background-color: #bf0;       /* Fully opaque shorthand */
-background-color: #11ffee00;  /* Fully transparent */
-background-color: #1fe0;      /* Fully transparent shorthand  */
-background-color: #11ffeeff;  /* Fully opaque */
-background-color: #1fef;      /* Fully opaque shorthand  */
+background-color: #bbff00; /* Fully opaque */
+background-color: #bf0; /* Fully opaque shorthand */
+background-color: #11ffee00; /* Fully transparent */
+background-color: #1fe0; /* Fully transparent shorthand */
+background-color: #11ffeeff; /* Fully opaque */
+background-color: #1fef; /* Fully opaque shorthand */
 
 /* RGB value */
 background-color: rgb(255, 255, 128); /* Fully opaque */
@@ -93,17 +93,11 @@ Color contrast ratio is determined by comparing the luminance of the text and ba
 ### HTML
 
 ```html
-<div class="exampleone">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exampletwo">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="examplethree">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 ### CSS

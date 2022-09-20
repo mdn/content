@@ -91,7 +91,10 @@ When both `left` and {{cssxref("right")}} are defined, and width constraints don
       left: 20px;
       top: 20px;
     </pre>
-    <p>The only containing element for this div is the main window, so it positions itself in relation to it.</p>
+    <p>
+      The only containing element for this div is the main window, so it
+      positions itself in relation to it.
+    </p>
   </div>
 
   <div id="example_2">
@@ -128,7 +131,8 @@ When both `left` and {{cssxref("right")}} are defined, and width constraints don
         left: 0;
         top: 200px;
       </pre>
-      <p>Absolute position with both left and right declared</p> </div>
+      <p>Absolute position with both left and right declared</p>
+    </div>
   </div>
 </div>
 ```
