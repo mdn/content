@@ -72,7 +72,7 @@ There are three [cascade origin types](/en-US/docs/Web/CSS/Cascade#origin_types)
 The "user-agent" is the browser. The "user" is the site visitor. The "author" is you, the developer. Styles declared directly on an element with the {{HTMLElement('style')}} element are author styles. Ignoring animating and transitioning styles for the moment, user-agent normal styles have the lowest precedence; user-agent important styles the highest.
 ### Origin and specificity
 For each property, the declaration that "wins" is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with the highest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins.
-
+### Origin and specificity
 In the example below, there are two links. The first has no author styles applied, so all user-agent styles are applied. The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of [`0-0-0`](/en-US/docs/Web/CSS/Specificity#selector_weight_categories). The reason why author styles "win" is because when there are conflicting styles from different origins (layers aren't in play yet), the rules from the origin with precedence are applied, irrespective of the specificity in the origin that doesn’t have precedence.  
 
 {{EmbedGHLiveSample("css-examples/learn/layers/basic-cascade.html", '100%', 500)}}
