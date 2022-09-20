@@ -54,18 +54,18 @@ We present three scenarios that demonstrate how Cross-Origin Resource Sharing wo
 
 ### Simple requests
 
-Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}.
+Some requests don’t trigger a {{Glossary("Preflight_request","CORS preflight")}}.
 Those are called _simple requests_
 from the obsolete [CORS spec](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology),
 though the [Fetch spec](https://fetch.spec.whatwg.org/) (which now defines CORS) doesn’t use that term.
-The idea is that the {HTMLElement("form")}} element can submit simple requests to any origin,
+
+The idea is that the {{HTMLElement("form")}} element from HTML 4.0 (1998) can submit simple requests to any origin,
 so anyone writing a server must already protect against {{Glossary("CSRF", "cross-site request forgery")}}.
-Therefore, when cross-site {{domxref("XMLHttpRequest")}} was invented in 2005,
-if the request is no worse than a form submission,
-then servers don’t have to opt-in (by responding to a preflight request) to receive a request
-from {{domxref("XMLHttpRequest")}} or {{domxref("fetch")}}
-that could just as easily have come from a form submission,
-though they still must opt-in using {{HTTPHeader("Access-Control-Allow-Origin")}} to _sharing_ the response with the script.
+Then, when cross-site {{domxref("XMLHttpRequest")}} was invented in 2005 followed by {{domxref("fetch")}},
+if the request looks like a form submission,
+then the server doesn’t have to opt-in (by responding to a preflight request) to receive the request,
+since the threat of CSRF is no worse than a form submission.
+However, the server still must opt-in using {{HTTPHeader("Access-Control-Allow-Origin")}} to _sharing_ the response with the script.
 
 A _simple request_ is one that **meets all the following conditions**:
 
