@@ -14,7 +14,9 @@ tags:
 browser-compat: webextensions.api.webNavigation.TransitionQualifier
 ---
 
-{{AddonSidebar()}}Extra information about a transition. Note that many values here are not currently supported in Firefox: see the [browser compatibility table](#browser_compatibility) for details.
+{{AddonSidebar()}}
+
+Extra information about a transition. Note that many values here are not currently supported in Firefox: see the [browser compatibility table](#browser_compatibility) for details.
 
 ## Type
 
