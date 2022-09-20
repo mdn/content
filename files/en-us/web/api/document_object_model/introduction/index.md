@@ -310,7 +310,7 @@ clearText.addEventListener("click", () => {
 
 ### Adding a child element
 
-In this example, inside a container {{HTMLElement("div")}}, we have another {{HTMLElement("div")}} element and two {{HTMLElement("button")}} elements. When the user clicks the first button we create a new element and add it as a child of the `<div>`. When the user clicks the second button we remove the child element. We use:
+This example uses a {{HTMLElement("div")}} element containing a {{HTMLElement("div")}} and two {{HTMLElement("button")}} elements. When the user clicks the first button we create a new element and add it as a child of the `<div>`. When the user clicks the second button we remove the child element. We use:
 
 - {{domxref("Document.querySelector()")}} to access the `<div>` and the buttons
 - {{domxref("EventTarget.addEventListener()")}} to listen for button clicks
