@@ -50,18 +50,37 @@ Returns a {{cssxref("&lt;number&gt;")}} representing `base` taken to the power o
 
 The `pow()` function can be useful for strategies like CSS Modular Scale, which relates all the font-sizes on a page to each other by a fixed ratio.
 
-These sizes can be easily written into custom properties like:
+```html hidden
+<h1> Heading 1 </h1>
+<h2> Heading 2 </h2>
+<h3> Heading 3 </h3>
+<h4> Heading 4 </h4>
+<h5> Heading 5 </h5>
+<h6> Heading 6 </h6>
+```
 
 ```css
-:root {
-  --h1: calc(1rem * pow(1.5, 4));
-  --h2: calc(1rem * pow(1.5, 3));
-  --h3: calc(1rem * pow(1.5, 2));
-  --h4: calc(1rem * pow(1.5, 1));
-  --h5: calc(1rem * pow(1.5, 0));
-  --h6: calc(1rem * pow(1.5, -1));
+h1 {
+  font-size: calc(1rem * pow(1.5, 4));
+}
+h2 {
+  font-size: calc(1rem * pow(1.5, 3));
+}
+h3 {
+  font-size: calc(1rem * pow(1.5, 2));
+}
+h4 {
+  font-size: calc(1rem * pow(1.5, 1));
+}
+h5 {
+  font-size: calc(1rem * pow(1.5, 0));
+}
+h6 {
+  font-size: calc(1rem * pow(1.5, -1));
 }
 ```
+
+{{EmbedLiveSample('example', '100%', '400px')}}
 
 ## Specifications
 
