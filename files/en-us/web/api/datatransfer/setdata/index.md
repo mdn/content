@@ -58,7 +58,7 @@ In this example we can drag a {{HTMLElement("p")}} element into a target {{HTMLE
 ```html
 <div>
   <p id="source" draggable="true">
-    Select this element, drag it to the Drop Zone and then release the selection
+    Select this element, drag it to the drop zone and then release the selection
     to move the element.
   </p>
 </div>
