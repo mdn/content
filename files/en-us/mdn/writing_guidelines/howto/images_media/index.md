@@ -11,7 +11,7 @@ page-type: mdn-writing-guide
 
 ## Adding images
 
-To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's  `index.md` file, using an `<img>` or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
+To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.md` file using an `<img>` element or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
 
 Let's walk through an example:
 
@@ -35,14 +35,14 @@ Let's walk through an example:
    cp ../some/path/my-cool-image.png files/en-us/web/css/
    ```
 
-3. Run `filecheck` on each image which will complain if something's wrong.
+3. Run `filecheck` on each image, which might complain if something's wrong.
    For more details, see the [Compressing images](#compressing-images) section.
 
    ```sh
    yarn filecheck files/en-us/web/css/my-cool-image.png
    ```
 
-4. Reference your image in a document, for example, with an `<img>` element inside `files/en-us/web/css/index.html`:
+4. Reference your image in the document with an `<img>` element inside `files/en-us/web/css/index.md`:
 
    ```html
    <img src="my-cool-image.png" alt="My cool image" />
@@ -62,10 +62,10 @@ Let's walk through an example:
 
 ## Compressing images
 
-When you add images to MDN, you should make sure that they are compressed as much as possible without degrading quality, to save on download size for our readers.
-In fact, if you don't do this our CI process will fail and the build results will warn you that some of your images are too big.
+When you add images to a page on MDN Web Docs, you should make sure that they are compressed as much as possible (without degrading quality) to save on the download size for our readers.
+In fact, if you don't do this, our CI process will fail and the build results will warn you that some of your images are too big.
 
-The best way to compress them is by using the built-in compression tool.
+The best way to compress the images is by using the built-in compression tool.
 You can compress an image appropriately by using the `filecheck` command with the `--save-compression` option.
 This option compresses the image as much as possible and replaces the original with the compressed version.
 For example:
