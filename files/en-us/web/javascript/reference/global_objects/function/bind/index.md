@@ -90,7 +90,7 @@ The bound function has the following properties:
 - [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : The `name` of the target function plus a `"bound "` prefix.
 
-The bound function also inherits the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of the target function. However, it doesn't have other properties of the target function (such as [static properties](/en-US/docs/Web/JavaScript/Reference/Classes/static) if the target function is a class).
+The bound function also inherits the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of the target function. However, it doesn't have other own properties of the target function (such as [static properties](/en-US/docs/Web/JavaScript/Reference/Classes/static) if the target function is a class).
 
 ## Examples
 
@@ -284,7 +284,7 @@ slice(arguments);
 
 ### Binding classes
 
-Using `bind()` on classes preserves most of the class's semantics, except that all static properties of the current class are lost. However, because the prototype chain is preserved, you can still access the static properties of the parent class.
+Using `bind()` on classes preserves most of the class's semantics, except that all static own properties of the current class are lost. However, because the prototype chain is preserved, you can still access static properties inherited from the parent class.
 
 ```js
 class Base {
