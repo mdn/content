@@ -107,7 +107,9 @@ Rules within a layer cascade together, without competing with style rules outsid
 
 Layer precedence always beats selector specificity. Styles in layers with precedence "win" over layers with less precedence. The specificity of a selector in a losing layer is irrelevant. Specificity still matters for competing property values within a layer, but there are no specificity concerns between layers because only the highest-priority layer for each property is considered.
 
-Cascade layers also allow for nested layers. This serves two main purposes. Within each layer, a team can create nested layers. Not only can you put a component library into a separate layer creating an additional origin obliterating any need for specificity wars, but the component team can include each component in separate nested sub-layers. The ability to nest layers is very useful for component library, framework, and third party widget developers. The ability to nest layers also removes the worry of conflicting layer names. We'll cover this in the nested layer section.
+Cascade layers also allow the creation of nested layers. This serves two main purposes:
+- Within each layer, a team can create nested layers. For example, a component library can be added to a separate layer creating an additional origin and removing any need for competing specificity. Alternatively, the component team can include each component in a separate nested layer. The ability to nest layers is very useful for component library, framework, and third-party widget developers.
+- The ability to create nested layers removes the worry of having conflicting layer names. We'll cover this in the nested layer section.
 
 > "Authors can create layers to represent element defaults, third-party libraries, themes, components, overrides, and other styling concerns—and are able to re-order the cascade of layers in an explicit way, without altering selectors or specificity within each layer, or relying on order of appearance to resolve conflicts across layers." - From the specification.
 
