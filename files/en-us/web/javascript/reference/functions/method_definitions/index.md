@@ -10,6 +10,7 @@ tags:
   - Syntax
 browser-compat: javascript.functions.method_definitions
 ---
+
 {{JsSidebar("Functions")}}
 
 **Method definition** is a shorter syntax for defining a function property in an object initializer.
@@ -18,7 +19,7 @@ browser-compat: javascript.functions.method_definitions
 
 ## Syntax
 
-```js
+```js-nolint
 const obj = {
   get property() {},
   set property(value) {},

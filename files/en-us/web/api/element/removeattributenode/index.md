@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.removeAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`removeAttributeNode()`** method of the
@@ -18,7 +19,7 @@ The **`removeAttributeNode()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 removeAttributeNode(attributeNode)
 ```
 

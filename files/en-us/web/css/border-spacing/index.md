@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-spacing
 ---
+
 {{CSSRef}}
 
 The **`border-spacing`** [CSS](/en-US/docs/Web/CSS) property sets the distance between the borders of adjacent cells in a {{htmlelement("table")}}. This property applies only when {{cssxref("border-collapse")}} is `separate`.
@@ -65,13 +66,19 @@ This example applies a spacing of `.5em` vertically and `1em` horizontally betwe
 ```html
 <table>
   <tr>
-    <td>1</td><td>2</td><td>3</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
   </tr>
   <tr>
-    <td>4</td><td>5</td><td>6</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
   </tr>
   <tr>
-    <td>7</td><td>8</td><td>9</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
   </tr>
 </table>
 ```
@@ -80,7 +87,7 @@ This example applies a spacing of `.5em` vertically and `1em` horizontally betwe
 
 ```css
 table {
-  border-spacing: 1em .5em;
+  border-spacing: 1em 0.5em;
   padding: 0 2em 1em 0;
   border: 1px solid orange;
 }

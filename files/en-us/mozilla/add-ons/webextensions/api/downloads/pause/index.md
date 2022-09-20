@@ -13,6 +13,7 @@ tags:
   - pause
 browser-compat: webextensions.api.downloads.pause
 ---
+
 {{AddonSidebar()}}
 
 The **`pause()`** function of the {{WebExtAPIRef("downloads")}} API pauses a download.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let pausing = browser.downloads.pause(
   downloadId      // integer
 )

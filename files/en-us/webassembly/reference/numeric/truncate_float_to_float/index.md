@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Something
 ---
+
 {{WebAssemblySidebar}}
 
 The **`trunc`** instructions, short for _truncate_, are used for getting the value of a number without its fractional part.

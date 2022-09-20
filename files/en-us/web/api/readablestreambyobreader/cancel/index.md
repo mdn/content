@@ -11,6 +11,7 @@ tags:
   - cancel
 browser-compat: api.ReadableStreamBYOBReader.cancel
 ---
+
 {{APIRef("Streams")}}
 
 The **`cancel()`** method of the {{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled.
@@ -20,7 +21,7 @@ Calling this method signals a loss of interest in the stream by a consumer.
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 cancel(reason)
 ```

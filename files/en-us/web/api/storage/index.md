@@ -11,6 +11,7 @@ tags:
   - data
 browser-compat: api.Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`Storage`** interface of the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.

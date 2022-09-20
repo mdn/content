@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.WaveShaperNode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`WaveShaperNode`** interface represents a non-linear distorter.

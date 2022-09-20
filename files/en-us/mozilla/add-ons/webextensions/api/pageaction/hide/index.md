@@ -13,6 +13,7 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction.hide
 ---
+
 {{AddonSidebar()}}
 
 Hides the page action for a given tab.
@@ -21,7 +22,7 @@ Hides the page action for a given tab.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.pageAction.hide(
   tabId // integer
 )

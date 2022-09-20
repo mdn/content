@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.scrollPathIntoView
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 The
@@ -20,7 +21,7 @@ to {{domxref("Element.scrollIntoView()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollPathIntoView()
 scrollPathIntoView(path)
 ```
@@ -63,7 +64,7 @@ Edit the code below to see your changes update live in the canvas:
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas">
-<input id="button" type="range" min="1" max="12">
+  <input id="button" type="range" min="1" max="12" />
 </canvas>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />

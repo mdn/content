@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Sec-CH-UA-Full-Version-List
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sec-CH-UA-Full-Version-List`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and full version information.
@@ -57,7 +58,7 @@ Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", ...
 
 - `<brand>`
   - : A brand associated with the user agent, like "Chromium", "Google Chrome".
-     This may be an intentionally incorrect brand like `" Not A;Brand"` or `"(Not(A:Brand"` (the actual value is expected change over time and be unpredictable).
+    This may be an intentionally incorrect brand like `" Not A;Brand"` or `"(Not(A:Brand"` (the actual value is expected change over time and be unpredictable).
 - `<full version>`
   - : A full version number, such as 98.0.4750.0.
 

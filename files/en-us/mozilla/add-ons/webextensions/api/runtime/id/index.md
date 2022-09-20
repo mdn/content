@@ -13,19 +13,20 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.id
 ---
+
 {{AddonSidebar()}}
 
 The ID of the extension.
 
 ## Syntax
 
-```js
+```js-nolint
 let myAddonId = browser.runtime.id;
 ```
 
 ### Value
 
-A `string` representing the add-on ID. If the extension specifies an ID in its [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json key, `runtime.id` contains that value. Otherwise, `runtime.id`  contains the ID that was generated for the extension.
+A `string` representing the add-on ID. If the extension specifies an ID in its [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json key, `runtime.id` contains that value. Otherwise, `runtime.id` contains the ID that was generated for the extension.
 
 ## Browser compatibility
 

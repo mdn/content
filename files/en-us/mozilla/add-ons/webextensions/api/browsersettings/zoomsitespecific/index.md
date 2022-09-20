@@ -11,6 +11,7 @@ tags:
   - zoomSiteSpecific
 browser-compat: webextensions.api.browserSettings.zoomSiteSpecific
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
@@ -44,8 +45,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.zoomSiteSpecific.set({value: false}).
-  then(logResult);
+browser.browserSettings.zoomSiteSpecific.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

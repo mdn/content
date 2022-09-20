@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onReplaced
 ---
+
 {{AddonSidebar()}}
 
 Fired when a tab is replaced with another tab due to prerendering or instant.
@@ -21,7 +22,7 @@ This event may not be relevant for or supported by browsers other than Chrome.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onReplaced.addListener(listener)
 browser.tabs.onReplaced.removeListener(listener)
 browser.tabs.onReplaced.hasListener(listener)

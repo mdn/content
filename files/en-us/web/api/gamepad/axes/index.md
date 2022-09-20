@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.axes
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.axes`** property of the {{domxref("Gamepad") }}

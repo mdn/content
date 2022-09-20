@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEvent.acceleration
 ---
+
 {{APIRef("Device Orientation Events")}}
 
 The **`acceleration`** property returns the amount of acceleration recorded by

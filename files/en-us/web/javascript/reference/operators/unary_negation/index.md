@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.unary_negation
 ---
+
 {{jsSidebar("Operators")}}
 
 The unary negation operator (`-`) precedes its operand and negates it.
@@ -16,7 +17,7 @@ The unary negation operator (`-`) precedes its operand and negates it.
 
 ## Syntax
 
-```js
+```js-nolint
 -x
 ```
 

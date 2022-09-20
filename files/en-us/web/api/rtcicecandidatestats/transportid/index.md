@@ -23,6 +23,7 @@ tags:
   - transportID
 browser-compat: api.RTCIceCandidateStats.transportId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's

@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.source
 ---
+
 {{JSRef}}
 
 The **`source`** accessor property is a string containing the source text of the regex object, without the two forward slashes on both sides or any flags.

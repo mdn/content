@@ -9,6 +9,7 @@ tags:
   - touch
 browser-compat: api.Touch.force
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`Touch.force`** read-only property returns the amount of

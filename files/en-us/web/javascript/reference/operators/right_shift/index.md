@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 The **right shift operator (`>>`)** returns the signed number represented by the result of performing a sign-extending shift of the binary representation of the first operand (evaluated as a [two's complement](https://en.wikipedia.org/wiki/Two's_complement) bit string) to the right by the number of bits, modulo 32, specified in the second operand. Excess bits shifted off to the right are discarded, and copies of the leftmost bit are shifted in from the left.
@@ -19,7 +20,7 @@ The resulting binary representation is evaluated as a [two's complement](https:/
 
 ## Syntax
 
-```js
+```js-nolint
 a >> b
 ```
 

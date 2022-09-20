@@ -10,6 +10,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceMark
 ---
+
 {{APIRef("User Timing API")}}
 
 **`PerformanceMark`** is an _abstract_ interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`". Entries of this type are created by calling {{domxref("Performance.mark","performance.mark()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _mark_) to the browser's _performance timeline_.

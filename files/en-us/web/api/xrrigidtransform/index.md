@@ -22,6 +22,7 @@ tags:
   - transform
 browser-compat: api.XRRigidTransform
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The **`XRRigidTransform`** is a [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) interface that represents the 3D geometric transform described by a position and orientation.

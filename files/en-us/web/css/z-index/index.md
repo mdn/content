@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.z-index
 ---
+
 {{CSSRef}}
 
 The **`z-index`** CSS property sets the z-order of a [positioned](/en-US/docs/Web/CSS/position) element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one.

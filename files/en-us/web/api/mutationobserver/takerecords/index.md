@@ -18,6 +18,7 @@ tags:
   - takeRecords
 browser-compat: api.MutationObserver.takeRecords
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The {{domxref("MutationObserver")}} method
@@ -32,7 +33,7 @@ observer.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 

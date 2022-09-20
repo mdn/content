@@ -21,7 +21,7 @@ The **`Math.sinh()`** function returns the hyperbolic sine of a number. That is,
 
 ## Syntax
 
-```js
+```js-nolint
 Math.sinh(x)
 ```
 

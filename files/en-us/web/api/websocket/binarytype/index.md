@@ -10,6 +10,7 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.binaryType
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.binaryType`** property controls the type of

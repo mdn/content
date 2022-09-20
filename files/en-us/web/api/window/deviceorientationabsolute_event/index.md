@@ -10,6 +10,7 @@ tags:
   - Event
 browser-compat: api.Window.deviceorientationabsolute_event
 ---
+
 {{ApiRef}}
 
 The **`deviceorientationabsolute`** event is sent to the `ondeviceorientationabsolute` event handler on a {{domxref('Window')}} event when absolute device orientation changes.

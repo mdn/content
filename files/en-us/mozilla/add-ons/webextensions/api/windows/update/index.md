@@ -13,6 +13,7 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.update
 ---
+
 {{AddonSidebar()}}
 
 Updates the properties of a window. Use this to move, resize, and (un)focus a window, etc.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let updating = browser.windows.update(
   windowId,              // integer
   updateInfo             // object

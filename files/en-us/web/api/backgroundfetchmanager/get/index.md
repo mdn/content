@@ -13,13 +13,14 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager.get
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`get()`** method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with the {{domxref("BackgroundFetchRegistration")}} associated with the provided `id` or {{jsxref("undefined")}} if the `id` is not found.
 
 ## Syntax
 
-```js
+```js-nolint
 get(id)
 ```
 
@@ -38,7 +39,7 @@ The following examples shows how to use `get()` to retrieve a {{domxref("Backgro
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.get('my-fetch');
+  const bgFetch = await swReg.backgroundFetch.get("my-fetch");
 });
 // my code block
 ```

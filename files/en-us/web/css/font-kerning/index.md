@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-kerning
 ---
+
 {{CSSRef}}
 
 The **`font-kerning`** CSS property sets the use of the kerning information stored in a font.

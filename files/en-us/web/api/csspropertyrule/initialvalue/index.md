@@ -13,6 +13,7 @@ tags:
   - Read-only
 browser-compat: api.CSSPropertyRule.initialValue
 ---
+
 {{APIRef("CSS Properties and Values API")}}
 
 The read-only **`initialValue`** nullable property of the {{domxref("CSSPropertyRule")}} interface returns the initial value of the custom property registration represented by the {{cssxref("@property")}} rule, controlling the property's initial value.

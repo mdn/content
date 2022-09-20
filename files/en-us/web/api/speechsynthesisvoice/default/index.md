@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice.default
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`default`** read-only property of the

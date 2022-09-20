@@ -8,6 +8,7 @@ tags:
   - SVG
 browser-compat: svg.elements.view
 ---
+
 {{SVGRef}}
 
 A view is a defined way to view the image, like a zoom level or a detail view.

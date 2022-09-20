@@ -12,6 +12,7 @@ tags:
   - validationMessage
 browser-compat: api.HTMLObjectElement.validationMessage
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`validationMessage`** read-only property

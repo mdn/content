@@ -12,6 +12,7 @@ tags:
   - takeRecords()
 browser-compat: api.PerformanceObserver.takeRecords
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`takeRecords()`** method of the
@@ -21,7 +22,7 @@ observer, emptying it out.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 

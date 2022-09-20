@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.Notification.image
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The `image` read-only property of the

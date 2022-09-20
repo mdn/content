@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XRProjectionLayer.textureWidth
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`textureWidth`** property of the {{domxref("XRProjectionLayer")}} interface indicates the width in pixels of the color textures of this layer.

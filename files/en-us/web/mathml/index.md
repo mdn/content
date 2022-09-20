@@ -9,6 +9,7 @@ tags:
   - XML
 browser-compat: mathml.elements.math
 ---
+
 {{MathMLRef}}
 
 **Mathematical Markup Language (MathML)** is an [XML](/en-US/docs/Web/XML)-based language for describing mathematical notation.

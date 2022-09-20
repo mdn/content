@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.moveTo
 ---
+
 {{APIRef}}
 
 The
@@ -19,7 +20,7 @@ method of the Canvas 2D API begins a new sub-path at the point specified by the 
 
 ## Syntax
 
-```js
+```js-nolint
 moveTo(x, y)
 ```
 

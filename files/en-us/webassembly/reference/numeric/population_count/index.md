@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Bitwise
 ---
+
 {{WebAssemblySidebar}}
 
 The **`popcnt`** instructions, short for _population count_, are used to count the amount of `1`s in a numbers binary representation.
@@ -27,6 +28,6 @@ i32.popcnt
 ```
 
 | Instruction  | Binary opcode |
-| -----------  | ------------- |
+| ------------ | ------------- |
 | `i32.popcnt` | `0x69`        |
 | `i64.popcnt` | `0x7b`        |

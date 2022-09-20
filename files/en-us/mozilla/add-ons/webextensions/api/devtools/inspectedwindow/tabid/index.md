@@ -12,6 +12,7 @@ tags:
   - tabId
 browser-compat: webextensions.api.devtools.inspectedWindow.tabId
 ---
+
 {{AddonSidebar()}}
 
 The ID of the {{WebExtAPIRef("tabs.Tab", "tab")}} that this instance of the devtools is attached to, represented as a number.

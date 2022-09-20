@@ -9,6 +9,7 @@ tags:
   - Successful response
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.203
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`203 Non-Authoritative Information`** response

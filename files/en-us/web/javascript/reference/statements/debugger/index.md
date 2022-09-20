@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.debugger
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`debugger` statement** invokes any available debugging
@@ -15,7 +16,7 @@ this statement has no effect.
 
 ## Syntax
 
-```js
+```js-nolint
 debugger;
 ```
 

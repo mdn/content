@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.NodeIterator.filter
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.filter`** read-only method returns a

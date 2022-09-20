@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 ---
+
 {{JSRef}}
 
 The **`Intl.PluralRules()`** constructor creates
@@ -18,7 +19,7 @@ The **`Intl.PluralRules()`** constructor creates
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.PluralRules()
 new Intl.PluralRules(locales)
 new Intl.PluralRules(locales, options)

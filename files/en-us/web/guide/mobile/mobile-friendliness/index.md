@@ -5,6 +5,7 @@ tags:
   - Mobile
   - Web Development
 ---
+
 ## What is Mobile Friendliness?
 
 Mobile friendliness can mean a multitude of things, depending on who you're talking to. It can be helpful to think of it in terms of three goals for improving your site's user experience: Presentation, Content, and Performance.
@@ -18,7 +19,7 @@ These days, users can access the web on devices in a wide range of form factors,
 ### Goal #2 (Content)
 
 **Adjust your content for mobile users.**
-![Screen shot of the Alaska Air desktop site on the left, and an iPhone showing the mobile version of the same page](alaska_air_mobile_and_desktop-300x225.png)_
+![Screen shot of the Alaska Air desktop site on the left, and an iPhone showing the mobile version of the same page](alaska_air_mobile_and_desktop-300x225.png)
 
 Think about what your users want to do at your site if they are on a phone. A great example of this is [Alaska Air's website](https://www.alaskaair.com/). Their desktop site focuses on getting visitors to book trips. Mobile users, however, are probably more interested in checking-in for a flight or seeing if their flight is delayed. They've adjusted their site's content to reflect this, and it meets the needs of mobile users.
 

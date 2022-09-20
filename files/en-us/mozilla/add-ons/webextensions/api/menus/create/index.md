@@ -13,6 +13,7 @@ tags:
   - contextMenus
 browser-compat: webextensions.api.menus.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a new menu item, given an options object defining properties for the item.
@@ -23,7 +24,7 @@ For compatibility with other browsers, Firefox makes this method available via t
 
 ## Syntax
 
-```js
+```js-nolint
 browser.menus.create(
   createProperties, // object
   () => {/* … */}   // optional function
@@ -80,7 +81,7 @@ browser.menus.create(
 
         > **Note:** The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
-    - `id` {{optional_inline}}1
+    - `id` {{optional_inline}}
       - : `string`. The unique ID to assign to this item. Is mandatory for non-persistent [background (event) pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) in Manifest V2 and in Manifest V3. Cannot be the same as another ID for this extension.
     - `onclick` {{optional_inline}}
       - : `function`. A function that will be called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.

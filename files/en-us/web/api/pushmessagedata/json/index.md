@@ -12,13 +12,14 @@ tags:
   - Service Workers
 browser-compat: api.PushMessageData.json
 ---
+
 {{APIRef("Push API")}}
 
 The **`json()`** method of the {{domxref("PushMessageData")}} interface extracts push message data by parsing it as a [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) string and returning the result.
 
 ## Syntax
 
-```js
+```js-nolint
 json()
 ```
 

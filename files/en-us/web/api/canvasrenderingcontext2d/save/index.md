@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.save
 ---
+
 {{APIRef}}
 
 The
@@ -47,7 +48,7 @@ The drawing state that gets saved onto a stack consists of:
 
 ## Syntax
 
-```js
+```js-nolint
 save()
 ```
 

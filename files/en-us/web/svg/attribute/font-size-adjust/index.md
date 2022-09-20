@@ -24,22 +24,33 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
-<svg width="600" height="80" viewBox="0 0 500 80"
-    xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="600"
+  height="80"
+  viewBox="0 0 500 80"
+  xmlns="http://www.w3.org/2000/svg">
   <text y="20" font-family="Times, serif" font-size="10px">
     This text uses the Times font (10px), which is hard to read in small sizes.
   </text>
   <text y="40" font-family="Verdana, sans-serif" font-size="10px">
-    This text uses the Verdana font (10px), which has relatively large lowercase letters.
+    This text uses the Verdana font (10px), which has relatively large lowercase
+    letters.
   </text>
-  <text y="60" font-family="Times, serif" font-size="10px" font-size-adjust="0.58">
-    This is the 10px Times, but now adjusted to the same aspect ratio as the Verdana.
+  <text
+    y="60"
+    font-family="Times, serif"
+    font-size="10px"
+    font-size-adjust="0.58">
+    This is the 10px Times, but now adjusted to the same aspect ratio as the
+    Verdana.
   </text>
 </svg>
 ```

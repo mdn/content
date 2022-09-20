@@ -14,6 +14,7 @@ tags:
   - request
 browser-compat: api.fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for accessing and manipulating parts of the [protocol](/en-US/docs/Glossary/Protocol), such as requests and responses. It also provides a global {{domxref("fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.

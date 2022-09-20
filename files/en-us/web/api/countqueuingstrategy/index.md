@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.CountQueuingStrategy
 ---
+
 {{APIRef("Streams")}}
 
 The **`CountQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in chunk counting queuing strategy that can be used when constructing streams.

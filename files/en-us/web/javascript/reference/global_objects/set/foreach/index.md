@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once
@@ -19,7 +20,7 @@ for each value in the `Set` object, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach(() => { /* ... */ } )
 forEach((value) => { /* ... */ } )

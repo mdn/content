@@ -11,6 +11,7 @@ tags:
   - browsingData
 browser-compat: webextensions.api.browsingData
 ---
+
 {{AddonSidebar}}
 
 Enables extensions to clear the data that is accumulated while the user is browsing.

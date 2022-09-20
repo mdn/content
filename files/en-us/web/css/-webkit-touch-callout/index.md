@@ -12,6 +12,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-touch-callout
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-touch-callout` [CSS](/en-US/docs/Web/CSS) property controls the display of the default callout shown when you touch and hold a touch target.

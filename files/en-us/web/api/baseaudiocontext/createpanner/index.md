@@ -12,6 +12,7 @@ tags:
   - createPanner
 browser-compat: api.BaseAudioContext.createPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createPanner()` method of the {{ domxref("BaseAudioContext") }}
@@ -29,7 +30,7 @@ audio.
 
 ## Syntax
 
-```js
+```js-nolint
 createPanner()
 ```
 
@@ -44,7 +45,7 @@ A {{domxref("PannerNode")}}.
 ## Examples
 
 In the following example, you can see an example of how the `createPanner()`
-method, {{domxref("AudioListener")}}  and {{domxref("PannerNode")}} would be used to
+method, {{domxref("AudioListener")}} and {{domxref("PannerNode")}} would be used to
 control audio spatialization. Generally you will define the position in 3D space that
 your audio listener and panner (source) occupy initially, and then update the position
 of one or both of these as the application is used. You might be moving a character
@@ -70,8 +71,8 @@ new properties.
 const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight;
 
-const xPos = Math.floor(WIDTH/2);
-const yPos = Math.floor(HEIGHT/2);
+const xPos = Math.floor(WIDTH / 2);
+const yPos = Math.floor(HEIGHT / 2);
 const zPos = 295;
 
 // define other variables
@@ -79,8 +80,8 @@ const zPos = 295;
 const audioCtx = new AudioContext();
 
 const panner = audioCtx.createPanner();
-panner.panningModel = 'HRTF';
-panner.distanceModel = 'inverse';
+panner.panningModel = "HRTF";
+panner.distanceModel = "inverse";
 panner.refDistance = 1;
 panner.maxDistance = 10000;
 panner.rolloffFactor = 1;
@@ -93,7 +94,7 @@ if (panner.orientationX) {
   panner.orientationY.setValueAtTime(0, audioCtx.currentTime);
   panner.orientationZ.setValueAtTime(0, audioCtx.currentTime);
 } else {
-  panner.setOrientation(1,0,0);
+  panner.setOrientation(1, 0, 0);
 }
 
 const listener = audioCtx.listener;
@@ -106,23 +107,23 @@ if (listener.forwardX) {
   listener.upY.setValueAtTime(1, audioCtx.currentTime);
   listener.upZ.setValueAtTime(0, audioCtx.currentTime);
 } else {
-  listener.setOrientation(0,0,-1,0,1,0);
+  listener.setOrientation(0, 0, -1, 0, 1, 0);
 }
 
 let source;
 
-const play = document.querySelector('.play');
-const stop = document.querySelector('.stop');
+const play = document.querySelector(".play");
+const stop = document.querySelector(".stop");
 
-const boomBox = document.querySelector('.boom-box');
+const boomBox = document.querySelector(".boom-box");
 
-const listenerData = document.querySelector('.listener-data');
-const pannerData = document.querySelector('.panner-data');
+const listenerData = document.querySelector(".listener-data");
+const pannerData = document.querySelector(".panner-data");
 
-leftBound = (-xPos) + 50;
+leftBound = -xPos + 50;
 rightBound = xPos - 50;
 
-xIterator = WIDTH/150;
+xIterator = WIDTH / 150;
 
 // listener will always be in the same place for this demo
 
@@ -131,7 +132,7 @@ if (listener.positionX) {
   listener.positionY.setValueAtTime(yPos, audioCtx.currentTime);
   listener.positionZ.setValueAtTime(300, audioCtx.currentTime);
 } else {
-  listener.setPosition(xPos,yPos,300);
+  listener.setPosition(xPos, yPos, 300);
 }
 
 listenerData.textContent = `Listener data: X ${xPos} Y ${yPos} Z 300`;
@@ -143,7 +144,7 @@ function positionPanner() {
     panner.positionY.setValueAtTime(yPos, audioCtx.currentTime);
     panner.positionZ.setValueAtTime(zPos, audioCtx.currentTime);
   } else {
-    panner.setPosition(xPos,yPos,zPos);
+    panner.setPosition(xPos, yPos, zPos);
   }
   pannerData.textContent = `Panner data: X ${xPos} Y ${yPos} Z ${zPos}`;
 }

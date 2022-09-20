@@ -10,6 +10,7 @@ tags:
   - samesite
 browser-compat: http.headers.Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 The **`Set-Cookie`** HTTP response header is used to send a cookie from the server to the user agent, so that the user agent can send it back to the server later.
@@ -108,6 +109,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : Indicates the path that _must_ exist in the requested URL for the browser to send the `Cookie` header.
 
     The forward slash (`/`) character is interpreted as a directory separator, and subdirectories are matched as well. For example, for `Path=/docs`,
+
     - the request paths `/docs`, `/docs/`, `/docs/Web/`, and `/docs/Web/HTTP` will all match.
     - the request paths `/`, `/docsets`, `/fr/docs` will not match.
 
@@ -131,15 +133,17 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     The possible attribute values are:
 
     - `Strict`
+
       - : means that the browser sends the cookie only for same-site requests, that is, requests originating from the same site that set the cookie.
         If a request originates from a different domain or scheme (even with the same domain), no cookies with the `SameSite=Strict` attribute are sent.
 
     - `Lax`
+
       - : means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).
         This is the default behavior if the `SameSite` attribute is not specified.
 
     - `None`
-      - :  means that the browser sends the cookie with both cross-site and same-site requests.
+      - : means that the browser sends the cookie with both cross-site and same-site requests.
         The `Secure` attribute must also be set when setting this value, like so `SameSite=None; Secure`
 
     > **Note:** Standards related to the [SameSite Cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) recently changed, such that:

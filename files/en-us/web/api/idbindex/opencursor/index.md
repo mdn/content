@@ -13,6 +13,7 @@ tags:
   - openCursor
 browser-compat: api.IDBIndex.openCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openCursor()`** method of the {{domxref("IDBIndex")}}
@@ -29,7 +30,7 @@ If the key range is not specified or is null, then the range includes all the re
 
 ## Syntax
 
-```js
+```js-nolint
 openCursor()
 openCursor(range)
 openCursor(range, direction)

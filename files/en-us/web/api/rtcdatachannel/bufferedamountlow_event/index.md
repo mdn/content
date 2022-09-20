@@ -19,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCDataChannel.bufferedamountlow_event
 ---
+
 {{APIRef("WebRTC")}}
 
 A **`bufferedamountlow`** event is sent to an {{domxref("RTCDataChannel")}} when the number of bytes currently in the outbound data transfer buffer falls below the threshold specified in {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}. `bufferedamountlow` events aren't sent if `bufferedAmountLowThreshold` is 0.

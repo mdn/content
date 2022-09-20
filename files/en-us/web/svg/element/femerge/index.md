@@ -8,6 +8,7 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feMerge
 ---
+
 {{SVGRef}}
 
 The **`<feMerge>`** SVG element allows filter effects to be applied concurrently instead of sequentially. This is achieved by other filters storing their output via the {{ SVGAttr("result") }} attribute and then accessing it in a {{ SVGElement("feMergeNode") }} child.
@@ -21,9 +22,7 @@ The **`<feMerge>`** SVG element allows filter effects to be applied concurrently
 ### SVG
 
 ```html
-<svg width="200" height="200"
-  xmlns="http://www.w3.org/2000/svg">
-
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <filter id="feOffset" x="-40" y="-20" width="100" height="200">
     <feOffset in="SourceGraphic" dx="60" dy="60" />
     <feGaussianBlur stdDeviation="5" result="blur2" />
@@ -33,7 +32,11 @@ The **`<feMerge>`** SVG element allows filter effects to be applied concurrently
     </feMerge>
   </filter>
 
-  <rect x="40" y="40" width="100" height="100"
+  <rect
+    x="40"
+    y="40"
+    width="100"
+    height="100"
     style="stroke: #000000; fill: green; filter: url(#feOffset);" />
 </svg>
 ```
@@ -54,7 +57,7 @@ The **`<feMerge>`** SVG element allows filter effects to be applied concurrently
 
 ### Specific attributes
 
-_None._
+None.
 
 ## DOM Interface
 

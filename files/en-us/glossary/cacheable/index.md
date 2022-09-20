@@ -5,6 +5,7 @@ tags:
   - Glossary
   - WebMechanics
 ---
+
 A **cacheable** response is an HTTP response that can be cached, that is stored to be retrieved and used later, saving a new request to the server. Not all HTTP responses can be cached, these are the following constraints for an HTTP response to be cached:
 
 - The method used in the request is itself _cacheable_, that is either a {{HTTPMethod("GET")}} or a {{HTTPMethod("HEAD")}} method. A response to a {{HTTPMethod("POST")}} or {{HTTPMethod("PATCH")}} request can also be cached if freshness is indicated and the {{HTTPHeader("Content-Location")}} header is set, but this is rarely implemented. (For example, Firefox does not support it per <https://bugzilla.mozilla.org/show_bug.cgi?id=109553>.) Other methods, like {{HTTPMethod("PUT")}} or {{HTTPMethod("DELETE")}} are not cacheable and their result cannot be cached.
@@ -46,6 +47,6 @@ Cache-Control: no-cache
 
 ## See also
 
-- Definition of [cacheable](https://datatracker.ietf.org/doc/html/rfc7231#section-4.2.3) in the HTTP specification.
+- Details about [methods and caching](https://httpwg.org/specs/rfc9110.html#rfc.section.9.2.3) are provided in the HTTP specification.
 - Description of common cacheable methods: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}
 - Description of common non-cacheable methods: {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, often {{HTTPMethod("POST")}}

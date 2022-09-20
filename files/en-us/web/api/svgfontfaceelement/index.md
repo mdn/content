@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFontFaceElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGFontFaceElement`** interface corresponds to the {{SVGElement("font-face")}} elements.

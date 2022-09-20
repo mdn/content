@@ -8,6 +8,7 @@ tags:
   - Tutorial
   - WebSockets
 ---
+
 {{DefaultAPISidebar("Websockets API")}}
 
 If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.

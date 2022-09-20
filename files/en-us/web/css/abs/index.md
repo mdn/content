@@ -12,6 +12,7 @@ tags:
   - abs
 browser-compat: css.types.abs
 ---
+
 {{CSSRef}}
 
 The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) contains one calculation, and returns the absolute value of the argument, as the same type as the input.

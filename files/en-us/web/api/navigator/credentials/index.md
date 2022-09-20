@@ -10,6 +10,7 @@ tags:
   - credentials
 browser-compat: api.Navigator.credentials
 ---
+
 {{securecontext_header}}{{APIRef("")}}
 
 The **`credentials`** property of the {{domxref("Navigator")}}

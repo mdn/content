@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Conversion
 ---
+
 {{WebAssemblySidebar}}
 
 The **`demote`** instruction, is used to convert (demote) numbers of type `f64` to type `f32`.

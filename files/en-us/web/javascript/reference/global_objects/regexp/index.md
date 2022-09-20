@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp
 ---
+
 {{JSRef}}
 
 The **`RegExp`** object is used for matching text with a pattern.

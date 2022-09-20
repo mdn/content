@@ -10,6 +10,7 @@ tags:
   - Web
   - Web Standards
 ---
+
 {{AddonSidebar}}
 
 The **[OpenSearch description format](https://github.com/dewitt/opensearch)** lets a website describe a search engine for itself, so that a browser or other client application can use that search engine. OpenSearch is supported by (at least) Firefox, Edge, Internet Explorer, Safari, and Chrome. (See [Reference Material](#reference_material) for links to other browsers' documentation.)
@@ -88,10 +89,11 @@ Web sites with search plugins can advertise them so Firefox users can easily ins
 To support autodiscovery, add a `<link>` element for each plugin to the `<head>` of your web page:
 
 ```html
-<link rel="search"
-      type="application/opensearchdescription+xml"
-      title="searchTitle"
-      href="pluginURL">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="searchTitle"
+  href="pluginURL" />
 ```
 
 Replace the bolded items as explained below:
@@ -104,11 +106,17 @@ Replace the bolded items as explained below:
 If your site offers multiple search plugins, you can support autodiscovery for them all. For example:
 
 ```html
-<link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: By Author" href="http://example.com/mysiteauthor.xml">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="MySite: By Author"
+  href="http://example.com/mysiteauthor.xml" />
 
-<link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: By Title" href="http://example.com/mysitetitle.xml">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="MySite: By Title"
+  href="http://example.com/mysitetitle.xml" />
 ```
 
 This way, your site can offer plugins to search by author, or by title.

@@ -15,6 +15,7 @@ tags:
   - Reference
 browser-compat: api.CSSUnparsedValue.entries
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue.entries()`** method
@@ -25,7 +26,7 @@ prototype chain as well).
 
 ## Syntax
 
-```js
+```js-nolint
 entries(obj)
 ```
 

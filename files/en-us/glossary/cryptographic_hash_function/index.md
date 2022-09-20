@@ -6,6 +6,7 @@ tags:
   - Glossary
   - Security
 ---
+
 A cryptographic hash function, also sometimes called a _digest function_, is a {{glossary("cryptography", "cryptographic")}} primitive transforming a message of arbitrary size into a message of fixed size, called a {{glossary("digest")}}. Cryptographic hash functions are used for authentication, {{Glossary("digital signature", "digital signatures")}}, and {{Glossary("HMAC", "message authentication codes")}}.
 
 To be used for cryptography, a hash function must have these qualities:

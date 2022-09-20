@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.ImageTrackList.ready
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`ready`** property of the {{domxref("ImageTrackList")}} interface returns a {{jsxref("Promise")}} that resolves when the `ImageTrackList` is populated with {{domxref("ImageTrack","tracks")}}.

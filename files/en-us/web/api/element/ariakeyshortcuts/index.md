@@ -12,6 +12,7 @@ tags:
   - Element
 browser-compat: api.Element.ariaKeyShortcuts
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaKeyShortcuts`** property of the {{domxref("Element")}} interface reflects the value of the `aria-keyshortcuts` attribute, which indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
@@ -25,7 +26,9 @@ A string.
 In this example the `aria-keyshortcuts` attribute on the element with an ID of `skip-link` is set to "Alt+Shift+A". Using `ariaKeyShortcuts` we update the value to "Alt+Shift+M".
 
 ```html
-<a id="skip-link" href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
+<a id="skip-link" href="#content" aria-keyshortcuts="Alt+Shift+A">
+  Skip to content
+</a>
 ```
 
 ```js

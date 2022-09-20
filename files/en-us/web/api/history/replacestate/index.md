@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.History.replaceState
 ---
+
 {{APIRef("History API")}}
 
 The **`History.replaceState()`** method modifies the current
@@ -21,7 +22,7 @@ to some user action.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceState(stateObj, unused)
 replaceState(stateObj, unused, url)
 ```

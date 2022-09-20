@@ -13,6 +13,7 @@ tags:
   - details
   - google
 ---
+
 A search engine is a software system that collects information from the {{Glossary("World Wide Web")}} and presents it to users who are looking for specific information.
 
 A search engine conducts the following processes:

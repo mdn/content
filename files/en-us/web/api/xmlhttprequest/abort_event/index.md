@@ -1,5 +1,5 @@
 ---
-title: 'XMLHttpRequest: abort event'
+title: "XMLHttpRequest: abort event"
 slug: Web/API/XMLHttpRequest/abort_event
 page-type: web-api-event
 tags:
@@ -11,6 +11,7 @@ tags:
   - abort
 browser-compat: api.XMLHttpRequest.abort_event
 ---
+
 {{APIRef}}
 
 The `abort` event is fired when a request has been aborted, for example because the program called {{domxref("XMLHttpRequest.abort()")}}.
@@ -50,9 +51,21 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```html
 <div class="controls">
-    <input class="xhr success" type="button" name="xhr" value="Click to start XHR (success)" />
-    <input class="xhr error" type="button" name="xhr" value="Click to start XHR (error)" />
-    <input class="xhr abort" type="button" name="xhr" value="Click to start XHR (abort)" />
+  <input
+    class="xhr success"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (success)" />
+  <input
+    class="xhr error"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (error)" />
+  <input
+    class="xhr abort"
+    type="button"
+    name="xhr"
+    value="Click to start XHR (abort)" />
 </div>
 
 <textarea readonly class="event-log"></textarea>
@@ -60,16 +73,16 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```css hidden
 .event-log {
-    width: 25rem;
-    height: 4rem;
-    border: 1px solid black;
-    margin: .5rem;
-    padding: .2rem;
+  width: 25rem;
+  height: 4rem;
+  border: 1px solid black;
+  margin: 0.5rem;
+  padding: 0.2rem;
 }
 
 input {
-    width: 11rem;
-    margin: .5rem;
+  width: 11rem;
+  margin: 0.5rem;
 }
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.types.time
 ---
+
 {{CSSRef}}
 
 The **`<time>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a time value expressed in seconds or milliseconds. It is used in {{cssxref("animation")}}, {{cssxref("transition")}}, and related properties.

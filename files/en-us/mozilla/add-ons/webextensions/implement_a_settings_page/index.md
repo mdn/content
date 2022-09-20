@@ -7,6 +7,7 @@ tags:
   - Web
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 A settings page gives users a way to see and change settings (sometimes also called "preferences" or "options") for the extension.
@@ -101,12 +102,12 @@ Next, because we've promised to provide `options.html`, let's create it. Create 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
 
   <body>
     <form>
-      <label>Border color <input type="text" id="color" name="color"></label>
+      <label>Border color <input type="text" id="color" name="color" /></label>
       <button type="submit">Save</button>
     </form>
 

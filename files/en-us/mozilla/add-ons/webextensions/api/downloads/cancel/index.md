@@ -13,6 +13,7 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.cancel
 ---
+
 {{AddonSidebar()}}
 
 The **`cancel()`** function of the {{WebExtAPIRef("downloads")}} API cancels a download. The call will fail if the download is not active: for example, because it has completed downloading.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let canceling = browser.downloads.cancel(
   downloadId      // integer
 )

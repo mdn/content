@@ -10,6 +10,7 @@ tags:
   - Payload header
 browser-compat: http.headers.Transfer-Encoding
 ---
+
 {{HTTPSidebar}}
 
 The **`Transfer-Encoding`** header specifies the form of

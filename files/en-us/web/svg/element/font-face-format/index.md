@@ -10,6 +10,7 @@ tags:
   - SVG Font
 browser-compat: svg.elements.font-face-format
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<font-face-format>`** [SVG](/en-US/docs/Web/SVG) element describes the type of font referenced by its parent {{SVGElement("font-face-uri")}}.

@@ -34,21 +34,11 @@ This protocol is also utilized by DOM APIs, such as [`Element.prototype.append()
 The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside a `with` environment, "keys" would now be the method and not the variable. That's why the `@@unscopables` symbol was introduced. A built-in `@@unscopables` setting is implemented as {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} to prevent some of the Array methods being scoped into the `with` statement.
 
 ```js
-const keys = [];
+var keys = [];
 
 with (Array.prototype) {
   keys.push("something");
 }
-
-Object.keys(Array.prototype[Symbol.unscopables]);
-// [
-//   'copyWithin', 'entries',
-//   'fill',       'find',
-//   'findIndex',  'flat',
-//   'flatMap',    'includes',
-//   'keys',       'values',
-//   'at'
-// ]
 ```
 
 ### Unscopables in objects

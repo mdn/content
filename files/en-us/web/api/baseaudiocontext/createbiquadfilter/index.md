@@ -12,6 +12,7 @@ tags:
   - createBiquadFilter
 browser-compat: api.BaseAudioContext.createBiquadFilter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createBiquadFilter()` method of the {{ domxref("BaseAudioContext") }}
@@ -24,7 +25,7 @@ filter configurable as several different common filter types.
 
 ## Syntax
 
-```js
+```js-nolint
 createBiquadFilter()
 ```
 

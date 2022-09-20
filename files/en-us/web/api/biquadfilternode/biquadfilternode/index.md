@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.BiquadFilterNode.BiquadFilterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`BiquadFilterNode()`**
@@ -21,7 +22,7 @@ low-order filter.
 
 ## Syntax
 
-```js
+```js-nolint
 new BiquadFilterNode(context, options)
 ```
 

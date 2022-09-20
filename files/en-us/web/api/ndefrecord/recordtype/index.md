@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.NDEFRecord.recordType
 ---
+
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`recordType`**
@@ -16,7 +17,7 @@ property of the {{DOMxRef("NDEFRecord")}} interface returns the record type of t
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.recordType
 ```
 

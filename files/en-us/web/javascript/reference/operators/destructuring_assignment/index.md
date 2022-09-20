@@ -12,6 +12,7 @@ tags:
   - Operator
 browser-compat: javascript.operators.destructuring
 ---
+
 {{jsSidebar("Operators")}}
 
 The **destructuring assignment** syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
@@ -20,7 +21,7 @@ The **destructuring assignment** syntax is a JavaScript expression that makes it
 
 ## Syntax
 
-```js
+```js-nolint
 const [a, b] = array;
 const [a, , b] = array;
 const [a = aDefault, b] = array;

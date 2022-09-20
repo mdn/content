@@ -14,13 +14,14 @@ tags:
   - Non-standard
 browser-compat: api.Document.createTouchList
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`Document.createTouchList()`** method creates and returns a new {{DOMxRef("TouchList")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 createTouchList(touch1)
 createTouchList(touch1, touch2)
 createTouchList(touch1, touch2, /* … ,*/ touchN)

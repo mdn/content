@@ -12,6 +12,7 @@ tags:
   - onInputChanged
 browser-compat: webextensions.api.omnibox.onInputChanged
 ---
+
 {{AddonSidebar()}}
 
 Fired whenever the user changes their input, after they have started interacting with your extension by entering its keyword in the address bar and then pressing the space key.
@@ -23,7 +24,7 @@ This is the event you'll use to populate the address bar's drop-down list with s
 
 ## Syntax
 
-```js
+```js-nolint
 browser.omnibox.onInputChanged.addListener(listener)
 browser.omnibox.onInputChanged.removeListener(listener)
 browser.omnibox.onInputChanged.hasListener(listener)

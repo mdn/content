@@ -9,6 +9,7 @@ tags:
   - Response Header
 browser-compat: http.headers.Accept-Ranges
 ---
+
 {{HTTPSidebar}}
 
 The **`Accept-Ranges`** HTTP response header is a marker used

@@ -11,6 +11,7 @@ tags:
   - Interface
 browser-compat: api.XSLTProcessor
 ---
+
 {{APIRef("XSLT")}}
 
 An **`XSLTProcessor`** applies an [XSLT](/en-US/docs/Web/XSLT) stylesheet transformation to an XML document to
@@ -34,14 +35,15 @@ transformation to documents.
     {{domxref("XSLTProcessor.importStylesheet()")}} function. The owner document of the
     resulting document fragment is the owner node.
 - {{domxref("XSLTProcessor.transformToDocument()")}}
+
   - : Transforms the node source applying the stylesheet given importing using the
     {{domxref("XSLTProcessor.importStylesheet()")}} function.
 
     The resultant object depends on the [output method](https://www.w3.org/TR/xslt/#output) of the stylesheet:
 
-    | Output method | Result type                                                                                                      |
-    | ------------- | ---------------------------------------------------------------------------------------------------------------- |
-    | `html`        | {{domxref("HTMLDocument")}}                                                                             |
+    | Output method | Result type                                                                                            |
+    | ------------- | ------------------------------------------------------------------------------------------------------ |
+    | `html`        | {{domxref("HTMLDocument")}}                                                                            |
     | `xml`         | {{domxref("XMLDocument")}}                                                                             |
     | `text`        | {{domxref("XMLDocument")}} with a single root element `<transformiix:result>` with the text as a child |
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 spec-urls: https://www.w3.org/TR/CSS22/box.html#collapsing-margins
 ---
+
 {{CSSRef}}
 
 The [top](/en-US/docs/Web/CSS/margin-top) and [bottom](/en-US/docs/Web/CSS/margin-bottom) margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of the individual margins (or just one of them, if they are equal), a behavior known as **margin collapsing**. Note that the margins of [floating](/en-US/docs/Web/CSS/float) and [absolutely positioned](/en-US/docs/Web/CSS/position#types_of_positioning) elements never collapse.
@@ -35,11 +36,21 @@ Some things to note:
 
 ```html
 <p>The bottom margin of this paragraph is collapsed …</p>
-<p>… with the top margin of this paragraph, yielding a margin of <code>1.2rem</code> in between.</p>
+<p>
+  … with the top margin of this paragraph, yielding a margin of
+  <code>1.2rem</code> in between.
+</p>
 
-<div>This parent element contains two paragraphs!
-  <p>This paragraph has a <code>.4rem</code> margin between it and the text above.</p>
-  <p>My bottom margin collapses with my parent, yielding a bottom margin of <code>2rem</code>.</p>
+<div>
+  This parent element contains two paragraphs!
+  <p>
+    This paragraph has a <code>.4rem</code> margin between it and the text
+    above.
+  </p>
+  <p>
+    My bottom margin collapses with my parent, yielding a bottom margin of
+    <code>2rem</code>.
+  </p>
 </div>
 
 <p>I am <code>2rem</code> below the element above.</p>
@@ -54,7 +65,7 @@ div {
 }
 
 p {
-  margin: .4rem 0 1.2rem 0;
+  margin: 0.4rem 0 1.2rem 0;
   background: yellow;
 }
 ```

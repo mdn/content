@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 The **`CustomEvent`** interface represents events initialized by an application for any purpose.

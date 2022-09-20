@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.AudioData.copyTo
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`copyTo()`** method of the {{domxref("AudioData")}} interface copies a plane of an `AudioData` object to a destination buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 copyTo(destination, options)
 ```
 
@@ -53,7 +54,7 @@ Undefined.
 The following example copies the plane at index `1` to a destination buffer.
 
 ```js
-AudioData.copyTo(AudioBuffer, {planeIndex: 1});
+AudioData.copyTo(AudioBuffer, { planeIndex: 1 });
 ```
 
 ## Specifications

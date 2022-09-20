@@ -9,13 +9,14 @@ tags:
   - CompressionStream
 browser-compat: api.CompressionStream.CompressionStream
 ---
+
 {{APIRef("Compression Streams API")}}
 
 The **`CompressionStream()`** constructor creates a new {{domxref("CompressionStream")}} object which compresses a stream of data.
 
 ## Syntax
 
-```js
+```js-nolint
 new CompressionStream(format)
 ```
 

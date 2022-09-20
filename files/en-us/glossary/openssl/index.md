@@ -5,6 +5,7 @@ tags:
   - Glossary
   - Security
 ---
+
 OpenSSL is an open-source implementation of {{glossary("SSL")}} and {{glossary("TLS")}}.
 
 ## See also

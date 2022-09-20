@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.NodeIterator.referenceNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.referenceNode`** read-only returns the

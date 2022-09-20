@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Content-Security-Policy.navigate-to
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -63,7 +64,7 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 ### Meta tag configuration
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="navigate-to 'none'">
+<meta http-equiv="Content-Security-Policy" content="navigate-to 'none'" />
 ```
 
 ### Violation case
@@ -72,11 +73,11 @@ Using a {{HTMLElement("form")}} element with an action set to inline JavaScript 
 result in a CSP violation.
 
 ```html example-bad
-<meta http-equiv="Content-Security-Policy" content="navigate-to 'none'">
+<meta http-equiv="Content-Security-Policy" content="navigate-to 'none'" />
 
 <form action="javascript:alert('Foo')" id="form1" method="post">
-  <input type="text" name="fieldName" value="fieldValue">
-  <input type="submit" id="submit" value="submit">
+  <input type="text" name="fieldName" value="fieldValue" />
+  <input type="submit" id="submit" value="submit" />
 </form>
 ```
 

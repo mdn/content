@@ -13,13 +13,14 @@ tags:
   - browserAction
 browser-compat: webextensions.api.browserAction.enable
 ---
+
 {{AddonSidebar()}}
 
 Enables the browser action for a tab. By default, browser actions are enabled for all tabs.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.enable(
   tabId // optional integer
 )

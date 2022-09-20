@@ -10,6 +10,7 @@ tags:
   - Non-standard
 browser-compat: http.headers.Feature-Policy.unsized-media
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader('Feature-Policy')}} header `unsized-media` directive controls whether the current document is allowed to change the size of media elements after the initial layout is complete.

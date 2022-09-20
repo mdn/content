@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.unary_plus
 ---
+
 {{jsSidebar("Operators")}}
 
 The unary plus operator (`+`) precedes its operand and evaluates to its
@@ -17,7 +18,7 @@ operand but attempts to convert it into a number, if it isn't already.
 
 ## Syntax
 
-```js
+```js-nolint
 +x
 ```
 

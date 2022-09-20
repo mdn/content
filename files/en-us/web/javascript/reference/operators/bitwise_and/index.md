@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_and
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise AND operator (`&`) returns a `1` in each bit
@@ -18,7 +19,7 @@ position for which the corresponding bits of both operands are `1`s.
 
 ## Syntax
 
-```js
+```js-nolint
 a & b
 ```
 

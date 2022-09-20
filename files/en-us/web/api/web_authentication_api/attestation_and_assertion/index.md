@@ -8,6 +8,7 @@ tags:
   - Web Authentication API
   - WebAuthn
 ---
+
 {{SeeCompatTable}}{{DefaultAPISidebar("Web Authentication API")}}
 
 There are two different types of certificates used in WebAuthn for registration and authentication. They have similar names and similar purposes, but understanding the differences may be an initial point of confusion. The sections below describe attestation, which happens during registration, and assertion which happens during authentication.

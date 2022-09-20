@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.SpeechRecognitionEvent.emma
 ---
+
 {{APIRef("Web Speech API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`emma`** read-only property of the

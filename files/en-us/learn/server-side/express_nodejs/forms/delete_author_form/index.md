@@ -7,6 +7,7 @@ tags:
   - Node
   - server-side
 ---
+
 This subarticle shows how to define a page to delete `Author` objects.
 
 As discussed in the [form design](/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design) section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an `Author` to be deleted if it is referenced by a `Book`).

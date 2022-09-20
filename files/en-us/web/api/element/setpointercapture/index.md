@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.setPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 The **`setPointerCapture()`** method of the
@@ -38,7 +39,7 @@ moves off the element (such as by scrolling or panning).
 
 ## Syntax
 
-```js
+```js-nolint
 setPointerCapture(pointerId)
 ```
 

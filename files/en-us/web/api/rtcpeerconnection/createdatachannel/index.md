@@ -12,6 +12,7 @@ tags:
   - createDataChannel
 browser-compat: api.RTCPeerConnection.createDataChannel
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`createDataChannel()`** method
@@ -27,7 +28,7 @@ started by delivering a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "
 
 ## Syntax
 
-```js
+```js-nolint
 createDataChannel(label)
 createDataChannel(label, options)
 ```

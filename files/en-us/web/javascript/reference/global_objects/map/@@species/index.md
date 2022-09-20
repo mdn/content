@@ -8,6 +8,7 @@ tags:
   - Property
 browser-compat: javascript.builtins.Map.@@species
 ---
+
 {{JSRef}}
 
 The **`Map[@@species]`** accessor property returns the `Map` constructor.

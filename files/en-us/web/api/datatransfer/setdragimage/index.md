@@ -11,6 +11,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.setDragImage
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 When a drag occurs, a translucent image is generated from the drag target (the element
@@ -30,7 +31,7 @@ This method must be called in the {{domxref("HTMLElement/dragstart_event", "drag
 
 ## Syntax
 
-```js
+```js-nolint
 setDragImage(imgElement, xOffset, yOffset)
 ```
 

@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.findLastIndex
 ---
+
 {{JSRef}}
 
 The **`findLastIndex()`** method returns the index of the last element in an array that satisfies the provided testing function.
@@ -21,7 +22,7 @@ See also the {{jsxref("Array/findLast", "findLast()")}} method, which returns th
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findLastIndex((element) => { /* … */ } )
 findLastIndex((element, index) => { /* … */ } )
@@ -51,7 +52,7 @@ findLastIndex(function(element, index, array) { /* … */ }, thisArg)
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
-      - : The array `findIndex()` was called upon.
+      - : The array `findLastIndex()` was called upon.
 
     The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate an appropriate element has been found.
     The index of this element is then returned by `findLastIndex()`.

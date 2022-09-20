@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.glyph-orientation-vertical
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`glyph-orientation-vertical`** attribute affects the amount that hte current text position advances as each {{Glossary("glyph")}} is rendered.

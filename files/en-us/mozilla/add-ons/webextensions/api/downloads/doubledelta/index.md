@@ -13,6 +13,7 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.DoubleDelta
 ---
+
 {{AddonSidebar()}}
 
 The `DoubleDelta` type of the {{WebExtAPIRef("downloads")}} API represents the difference between two doubles.

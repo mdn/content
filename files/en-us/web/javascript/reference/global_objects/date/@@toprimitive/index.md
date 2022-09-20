@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.@@toPrimitive
 ---
+
 {{JSRef}}
 
 The **`[@@toPrimitive]()`** method converts a `Date`
@@ -18,8 +19,8 @@ object to a primitive value.
 
 ## Syntax
 
-```js
-Date()[Symbol.toPrimitive](hint);
+```js-nolint
+Date()[Symbol.toPrimitive](hint)
 ```
 
 ### Return value

@@ -9,6 +9,7 @@ tags:
   - fit-content
 browser-compat: css.properties.width.fit-content
 ---
+
 {{CSSRef}}
 
 The **`fit-content`** behaves as `fit-content(stretch)`. In practice this means that the box will use the available space, but never more than {{cssxref("max-content")}}.
@@ -34,7 +35,10 @@ block-size: fit-content;
 <div class="container">
   <div class="item">Item</div>
   <div class="item">Item with more text in it.</div>
-  <div class="item">Item with more text in it, hopefully we have added enough text so the text will start to wrap.</div>
+  <div class="item">
+    Item with more text in it, hopefully we have added enough text so the text
+    will start to wrap.
+  </div>
 </div>
 ```
 

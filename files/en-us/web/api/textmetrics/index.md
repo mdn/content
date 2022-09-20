@@ -9,6 +9,7 @@ tags:
   - TextMetrics
 browser-compat: api.TextMetrics
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`TextMetrics`** interface represents the dimensions of a piece of text in the canvas; a `TextMetrics` instance can be retrieved using the {{domxref("CanvasRenderingContext2D.measureText()")}} method.

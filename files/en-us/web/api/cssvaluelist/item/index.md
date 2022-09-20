@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSValueList.item
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 
 The **`item()`** method of the {{domxref("CSSValueList")}}
@@ -30,7 +31,7 @@ this method returns `null`.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

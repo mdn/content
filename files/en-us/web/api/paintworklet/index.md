@@ -14,6 +14,7 @@ tags:
   - paintWorklet
 browser-compat: api.PaintWorkletGlobalScope
 ---
+
 {{APIRef("CSS Painting API")}}
 
 The **`PaintWorklet`** interface of the {{domxref('CSS Painting API','','',' ')}} programmatically generates an image where a CSS property expects a file. Access this interface through {{DOMxRef("CSS.paintWorklet")}}.

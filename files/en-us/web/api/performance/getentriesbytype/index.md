@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.getEntriesByType
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`getEntriesByType()`** method returns a list of
@@ -21,7 +22,7 @@ method) at explicit points in time.
 
 ## Syntax
 
-```js
+```js-nolint
 getEntriesByType(type)
 ```
 
@@ -34,9 +35,9 @@ getEntriesByType(type)
 ### Return value
 
 A list of {{domxref("PerformanceEntry")}} objects that have the specified
-    `type`. The items will be in chronological order based on the entries'
-    {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects have the
-    specified `type`, or no argument is provided, an empty list is returned.
+`type`. The items will be in chronological order based on the entries'
+{{domxref("PerformanceEntry.startTime","startTime")}}. If no objects have the
+specified `type`, or no argument is provided, an empty list is returned.
 
 ## Examples
 

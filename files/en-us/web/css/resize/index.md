@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.resize
 ---
+
 {{CSSRef}}
 
 The **`resize`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is resizable, and if so, in which directions.
@@ -97,8 +98,8 @@ You can use the `resize` property to make any element resizable. In the example 
 ```html
 <div class="resizable">
   <p class="resizable">
-    This paragraph is resizable in all directions, because
-    the CSS `resize` property is set to `both` on this element.
+    This paragraph is resizable in all directions, because the CSS `resize`
+    property is set to `both` on this element.
   </p>
 </div>
 ```

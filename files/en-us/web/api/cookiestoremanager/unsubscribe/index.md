@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.CookieStoreManager.unsubscribe
 ---
+
 {{securecontext_header}}{{APIRef("Cookie Store")}}{{SeeCompatTable}}
 
 The **`unsubscribe()`** method of the {{domxref("CookieStoreManager")}} interface stops the {{domxref("ServiceWorkerRegistration")}} from receiving previously subscribed events.
 
 ## Syntax
 
-```js
+```js-nolint
 unsubscribe(subscriptions)
 ```
 

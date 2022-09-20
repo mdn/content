@@ -10,6 +10,7 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.connecting_event
 ---
+
 {{APIRef()}}
 
 The **`connecting`** event of the {{domxref("RemotePlayback")}} interface fires when the user agent initiates remote playback.

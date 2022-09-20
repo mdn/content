@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLSubImage.depthStencilTexture
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`depthStencilTexture`** property of the {{domxref("XRWebGLSubImage")}} interface represents the depth/stencil {{domxref("WebGLTexture")}} object for the {{domxref("XRCompositionLayer")}} to render.

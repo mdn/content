@@ -10,6 +10,7 @@ tags:
   - SVG
 browser-compat: svg.attributes.events.global
 ---
+
 Event attributes always have their name starting with "on" followed by the name of the event for which they are intended. They specifies some script to run when the event of the given type is dispatched to the element on which the attributes are specified.
 
 For every event type that the browser supports, SVG supports that as an event attribute, following the same requirements as for HTML event attributes.

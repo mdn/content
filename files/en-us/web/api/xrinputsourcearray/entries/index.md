@@ -20,6 +20,7 @@ tags:
   - Experimental
 browser-compat: api.XRInputSourceArray.entries
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRInputSourceArray")}} interface's
@@ -33,7 +34,7 @@ Most frequently, you will use this in tandem with statements such as
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

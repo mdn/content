@@ -21,7 +21,7 @@ This includes the current [transformation](/en-US/docs/Web/API/CanvasRenderingCo
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 

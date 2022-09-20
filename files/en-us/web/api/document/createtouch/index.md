@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.Document.createTouch
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`Document.createTouch()`** method creates and returns a new {{DOMxRef("Touch")}} object.
@@ -22,7 +23,7 @@ The **`Document.createTouch()`** method creates and returns a new {{DOMxRef("Tou
 
 ## Syntax
 
-```js
+```js-nolint
 createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 ```
 

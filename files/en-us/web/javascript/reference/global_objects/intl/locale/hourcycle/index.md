@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.hourCycle
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.hourCycle`** property is an accessor property that returns the time keeping format convention used by the locale.

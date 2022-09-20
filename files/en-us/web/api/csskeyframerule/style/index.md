@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframeRule.style
 ---
+
 {{ APIRef("CSSOM") }}
 
 The read-only **`CSSKeyframeRule.style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) of the {{ domxref("CSSKeyframeRule") }}.

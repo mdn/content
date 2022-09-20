@@ -9,6 +9,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.has
 ---
+
 {{JSRef}}
 
 The **`has()`** method returns a boolean indicating whether an
@@ -18,7 +19,7 @@ element with the specified value exists in a `Set` object or not.
 
 ## Syntax
 
-```js
+```js-nolint
 has(value)
 ```
 

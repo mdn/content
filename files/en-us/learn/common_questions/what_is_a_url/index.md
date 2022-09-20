@@ -8,6 +8,7 @@ tags:
   - resources
   - urls
 ---
+
 This article discusses Uniform Resource Locators (URLs), explaining what they are and how they're structured.
 
 <table>
@@ -210,4 +211,4 @@ Linguistic semantics are of course irrelevant to computers. You've probably ofte
 
 ## See also
 
-[Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) — Data URLs, URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.
+[Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs): URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.

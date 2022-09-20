@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: api.Request.referrerPolicy
 ---
+
 {{APIRef("Fetch")}}
 
 The **`referrerPolicy`** read-only property of the

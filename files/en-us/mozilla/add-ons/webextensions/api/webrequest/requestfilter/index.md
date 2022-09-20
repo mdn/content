@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.RequestFilter
 ---
+
 {{AddonSidebar()}}
 
 An object describing filters to apply to webRequest events.

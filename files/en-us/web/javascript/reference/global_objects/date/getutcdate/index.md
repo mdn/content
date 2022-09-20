@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCDate
 ---
+
 {{JSRef}}
 
 The **`getUTCDate()`** method returns the day of the month (from
@@ -18,7 +19,7 @@ The **`getUTCDate()`** method returns the day of the month (from
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCDate()
 ```
 

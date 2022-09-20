@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGMissingGlyphElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGMissingGlyphElement`** interface corresponds to the {{SVGElement("missing-glyph")}} elements.

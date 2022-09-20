@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Object.setPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`Object.setPrototypeOf()`** method sets the prototype (i.e., the internal `[[Prototype]]` property) of a specified object to another object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
@@ -19,7 +20,7 @@ The **`Object.setPrototypeOf()`** method sets the prototype (i.e., the internal 
 
 ## Syntax
 
-```js
+```js-nolint
 Object.setPrototypeOf(obj, prototype)
 ```
 

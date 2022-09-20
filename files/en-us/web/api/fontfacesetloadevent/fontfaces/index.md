@@ -13,6 +13,7 @@ tags:
   - fontfaces
 browser-compat: api.FontFaceSetLoadEvent.fontfaces
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`fontfaces`** read-only property of the

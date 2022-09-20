@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.text
 ---
+
 {{APIRef("Fetch")}}
 
 The **`text()`** method of the {{domxref("Response")}} interface takes a {{domxref("Response")}} stream and reads it to completion.
@@ -19,7 +20,7 @@ The response is _always_ decoded using UTF-8.
 
 ## Syntax
 
-```js
+```js-nolint
 text()
 ```
 

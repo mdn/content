@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.strokeRect
 ---
+
 {{APIRef}}
 
 The
@@ -25,7 +26,7 @@ on it.
 
 ## Syntax
 
-```js
+```js-nolint
 strokeRect(x, y, width, height)
 ```
 

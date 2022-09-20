@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.CharacterData.substringData
 ---
+
 {{APIRef("DOM")}}
 
 The **`substringData()`** method of the {{domxref("CharacterData")}} interface
@@ -16,7 +17,7 @@ and extending for a given number of characters afterwards.
 
 ## Syntax
 
-```js
+```js-nolint
   domString = characterData.substringData(offset, count)
 ```
 

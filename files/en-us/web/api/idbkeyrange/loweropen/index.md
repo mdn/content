@@ -13,6 +13,7 @@ tags:
   - lowerOpen
 browser-compat: api.IDBKeyRange.lowerOpen
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`lowerOpen`** read-only property of the

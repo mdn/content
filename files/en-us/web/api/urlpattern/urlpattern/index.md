@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.URLPattern.URLPattern
 ---
+
 {{APIRef("URLPattern API")}}{{SeeCompatTable}}
 
 The **`URLPattern()`** constructor returns a new {{domxref("URLPattern")}}
@@ -21,7 +22,7 @@ object representing the url pattern defined by the parameters.
 
 ## Syntax
 
-```js
+```js-nolint
 new URLPattern(input)
 new URLPattern(input, baseURL)
 ```

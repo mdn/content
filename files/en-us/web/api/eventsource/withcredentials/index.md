@@ -11,6 +11,7 @@ tags:
   - withCredentials
 browser-compat: api.EventSource.withCredentials
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`withCredentials`** read-only property of the

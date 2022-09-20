@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.replaceAll
 ---
+
 {{JSRef}}
 
 The **`replaceAll()`** method returns a new string with all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function to be called for each match. The original string is left unchanged.
@@ -19,16 +20,18 @@ The **`replaceAll()`** method returns a new string with all matches of a `patter
 
 ## Syntax
 
-```js
+```js-nolint
 replaceAll(pattern, replacement)
 ```
 
 ### Parameters
 
 - `pattern`
+
   - : Can be a string or an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method — the typical example being a [regular expression](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Any value that doesn't have the `Symbol.replace` method will be coerced to a string.
 
     If `pattern` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes), then it must have the global (`g`) flag set, or a {{jsxref("TypeError")}} is thrown.
+
 - `replacement`
   - : Can be a string or a function. The replacement has the same semantics as that of [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace).
 

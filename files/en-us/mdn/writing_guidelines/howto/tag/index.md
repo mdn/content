@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 **Article tags** are an important way to put readers in touch with helpful content. Each page should normally have several tags to help keep content organized. This article explains the best way to tag pages so that our readers can find information and we can keep the content organized.
@@ -179,7 +180,7 @@ Generally, all articles should have at _least_ a "[document type](#document_type
 ### Tags that don't follow our tagging standards
 
 Please fix any documents that have tags that don't follow the standards described on this page.
-    Note that you may occasionally see some localized tags (such as `Référence`) showing up on some English pages. This was due to a [bug in Kuma](https://bugzilla.mozilla.org/show_bug.cgi?id=776048), which caused the tags to reappear even if they were deleted. That bug has [since been fixed](https://bugzilla.mozilla.org/show_bug.cgi?id=776048#c37), so any remaining localized tags can be cleaned up if they're spotted.
+Note that you may occasionally see some localized tags (such as `Référence`) showing up on some English pages. This was due to a [bug in Kuma](https://bugzilla.mozilla.org/show_bug.cgi?id=776048), which caused the tags to reappear even if they were deleted. That bug has [since been fixed](https://bugzilla.mozilla.org/show_bug.cgi?id=776048#c37), so any remaining localized tags can be cleaned up if they're spotted.
 
 ### Incorrect tags
 

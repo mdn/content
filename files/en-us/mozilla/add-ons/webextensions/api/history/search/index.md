@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.history.search
 ---
+
 {{AddonSidebar()}}
 
 Searches the browser's history for {{WebExtAPIRef("history.HistoryItem")}} objects matching the given criteria.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let searching = browser.history.search(
   query                  // object
 )

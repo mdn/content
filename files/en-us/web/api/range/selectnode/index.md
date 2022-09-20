@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.selectNode
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.selectNode()`** method sets the
@@ -18,7 +19,7 @@ the parent of the _referenceNode_.
 
 ## Syntax
 
-```js
+```js-nolint
 selectNode(referenceNode)
 ```
 

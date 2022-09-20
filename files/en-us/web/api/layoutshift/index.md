@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.LayoutShift
 ---
+
 {{APIRef("Layout Instability API")}}{{SeeCompatTable}}
 
 The `LayoutShift` interface of the [Layout Instability API](/en-US/docs/Web/API/Layout_Instability_API) provides insights into the stability of web pages based on movements of the elements on the page.

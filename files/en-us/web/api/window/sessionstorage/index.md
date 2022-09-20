@@ -12,6 +12,7 @@ tags:
   - sessionStorage
 browser-compat: api.Window.sessionStorage
 ---
+
 {{APIRef("Web Storage API")}}
 
 The read-only **`sessionStorage`**

@@ -11,6 +11,7 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.-webkit-transition
 ---
+
 {{ CSSRef }} {{deprecated_header}} {{ Non-standard_header }}
 
 > **Note:** All browsers support the [`transition`](/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers support the `-webkit-transition` media feature. No browsers support `transition` without the prefix as a media query (though some browsers do support - {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}). Use the [`@supports (transition)`](/en-US/docs/Web/CSS/@supports) feature query instead.

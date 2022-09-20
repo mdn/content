@@ -13,6 +13,7 @@ tags:
   - XPathEvaluator
 browser-compat: api.XPathEvaluator.createNSResolver
 ---
+
 {{APIRef("DOM XPath")}}
 
 This method adapts any DOM node to resolve namespaces so that an XPath expression can
@@ -26,7 +27,7 @@ called, also correctly resolving the implicit `xml` prefix.
 
 ## Syntax
 
-```js
+```js-nolint
 createNSResolver(nodeResolver)
 ```
 

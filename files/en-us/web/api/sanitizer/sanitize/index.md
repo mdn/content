@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.Sanitizer.sanitize
 ---
+
 {{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`sanitize()`** method of the {{domxref("Sanitizer")}} interface is used to sanitize a tree of DOM nodes, removing any unwanted elements or attributes.
@@ -24,7 +25,7 @@ The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitiz
 
 ## Syntax
 
-```js
+```js-nolint
 sanitize(input)
 ```
 

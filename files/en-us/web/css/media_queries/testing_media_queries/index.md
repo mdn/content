@@ -14,6 +14,7 @@ tags:
   - matchMedia
 browser-compat: api.MediaQueryList
 ---
+
 {{CSSRef}}
 
 The {{Glossary("DOM")}} provides features that can test the results of a [media query](/en-US/docs/Web/CSS/Media_Queries) programmatically, via the {{domxref("MediaQueryList")}} interface and its methods and properties. Once you've created a `MediaQueryList` object, you can check the result of the query or receive notifications when the result changes.

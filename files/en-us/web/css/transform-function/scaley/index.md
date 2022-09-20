@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scaleY
 ---
+
 {{CSSRef}}
 
 The **`scaleY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element along the
@@ -25,7 +26,7 @@ property).
 > `scale(1, sy)` or
 > `scale3d(1, sy, 1)`.
 >
-> `transform: rotateX(180deg);`  === `transform: scaleY(-1);`
+> `transform: rotateX(180deg);` === `transform: scaleY(-1);`
 
 ## Syntax
 

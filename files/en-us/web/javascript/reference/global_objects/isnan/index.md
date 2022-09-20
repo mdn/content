@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.isNaN
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`isNaN()`** function determines whether a value is
@@ -18,7 +19,7 @@ want to use {{jsxref("Number.isNaN()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 isNaN(value)
 ```
 

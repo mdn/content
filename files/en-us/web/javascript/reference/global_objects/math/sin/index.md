@@ -17,7 +17,7 @@ The **`Math.sin()`** function returns the sine of a number in radians.
 
 ## Syntax
 
-```js
+```js-nolint
 Math.sin(x)
 ```
 

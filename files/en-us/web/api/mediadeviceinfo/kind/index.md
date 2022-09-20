@@ -10,6 +10,7 @@ tags:
   - kind
 browser-compat: api.MediaDeviceInfo.kind
 ---
+
 {{APIRef("Media Capture")}}
 
 The **`kind`** readonly property of

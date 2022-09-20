@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: api.Request.cache
 ---
+
 {{APIRef("Fetch")}}
 
 The **`cache`** read-only property of the {{domxref("Request")}} interface contains the cache mode of the request. It controls how the request will interact with the browser's [HTTP cache](/en-US/docs/Web/HTTP/Caching).
@@ -65,7 +66,7 @@ fetch("some.json", { cache: "reload" })
 fetch("some.json", { cache: "no-cache" })
   .then((response) => { /* consume the response */ });
 
-// Download a resource with economics in mind!  Prefer a cached
+// Download a resource with economics in mind! Prefer a cached
 // albeit stale response to conserve as much bandwidth as possible.
 fetch("some.json", { cache: "force-cache" })
   .then((response) => { /* consume the response */ });

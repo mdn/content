@@ -14,6 +14,7 @@ tags:
   - activeSourceBuffers
 browser-compat: api.MediaSource.activeSourceBuffers
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`activeSourceBuffers`** read-only property of the
