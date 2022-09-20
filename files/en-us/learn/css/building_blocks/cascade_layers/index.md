@@ -119,7 +119,7 @@ Layers can be created in the following ways:
 * Using an @layer block at-rule, with or without a name, which assigns style rules into that layer.
 * Including the `layer` keyword or `layer()` function in an [`@import`](/en-US/docs/Web/CSS/@import) rule. This assigns the contents of the imported file into that layer.
 
-All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` block at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer.
+All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.
 
 > **Note:** The order of precedence of layers is the order in which they are created. Styles not in a layer, or "unlayered styles", cascade together into a final implicit label.
 
