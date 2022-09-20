@@ -38,8 +38,7 @@ This example styles a modal dialog that opens when the "Update details" button i
 <dialog id="favDialog">
   <form method="dialog">
     <p>
-      <label
-        >Favorite animal:
+      <label>Favorite animal:
         <select>
           <option value="default">Choose…</option>
           <option>Brine shrimp</option>
