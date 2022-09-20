@@ -38,7 +38,7 @@ The stretch value is also displayed for each case by reading the property.
 
 ### JavaScript
 
-First we get the canvas declared in the HTML file and use it to get the "2d context" that will later be used for drawing text.
+First we get the canvas declared in the HTML file and use it to get the `CanvasRenderingContext2D` that will later be used for drawing text.
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -48,7 +48,7 @@ const ctx = canvas.getContext("2d");
 The next step in the example is to load a variable font that can be varied in the width axis.
 This is needed because `fontStretch` can only stretch a font that contains information about how glyphs are drawn when stretched — otherwise text will be drawn using the closest available font stretch value for the font, which will often be the normal width.
 
-In this case we use [`FontFace`](/en-US/docs/Web/API/FontFace) to define a font face for the [Inconsolata](https://fonts.google.com/specimen/Inconsolata/tester) Google Font, which can be stretched from 50% to 200% (the full range).
+In this case we use [`FontFace`](/en-US/docs/Web/API/FontFace) to define a font face for the [Inconsolata](https://fonts.google.com/specimen/Inconsolata/tester) Google Font, which supports font widths from 50% to 200% (allowing us to demonstrate `fontStretch` values from `ultra-condensed` to `ultra-expanded`).
 We then add this to the document's [`FontFaceSet`](/en-US/docs/Web/API/FontFaceSet) ([`document.fonts`](/en-US/docs/Web/API/Document/fonts)) so that it can be used for drawing.
 
 ```js
@@ -61,12 +61,11 @@ const fontFile = new FontFace(
 document.fonts.add(fontFile);
 ```
 
-The code below then calls [`FontFaceSet.load()`](/en-US/docs/Web/API/FontFaceSet/load) to fetch and load the google font.
+The code below then calls [`FontFaceSet.load()`](/en-US/docs/Web/API/FontFaceSet/load) to fetch and load the Google Font.
 Note that this call sets the size of the font that is needed, and returns a promise that resolves when the font has been loaded.
 
 We then assign the font face we downloaded to the context, and use the context to draw text to the canvas at each of the keyword stretch levels.
-Note that again the size of the desired font is specified.
-This does not have to match the loaded font size; but may not render as well if there is a mismatch.
+Note that again the size of the desired font is specified (this does not have to match the loaded font size).
 
 ```js
 document.fonts.load("30px Inconsolata").then(
@@ -75,40 +74,30 @@ document.fonts.load("30px Inconsolata").then(
     // Default (normal)
     ctx.fillText(`Hello world (default: ${ctx.fontStretch})`, 5, 20);
 
-    // Font stretch: ultra-condensed
-    ctx.fontStretch = "60%";
-    //ctx.fontStretch = 'ultra-condensed';
+    ctx.fontStretch = "ultra-condensed";
     ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 50);
 
-    // Font stretch: extra-condensed
     ctx.fontStretch = "extra-condensed";
     ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 80);
 
-    // Font stretch: condensed
     ctx.fontStretch = "condensed";
     ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 110);
 
-    // Font stretch: semi-condensed
     ctx.fontStretch = "semi-condensed";
     ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 140);
 
-    // Font stretch: extra-condensed
     ctx.fontStretch = "extra-condensed";
     ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 170);
 
-    // Font stretch: semi-expanded
     ctx.fontStretch = "semi-expanded";
     ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 200);
 
-    // Font stretch: expanded
     ctx.fontStretch = "expanded";
     ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 230);
 
-    // Font stretch: extra-expanded
     ctx.fontStretch = "extra-expanded";
     ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 260);
 
-    // Font stretch: ultra-expanded
     ctx.fontStretch = "ultra-expanded";
     ctx.fillText(`Hello world (${ctx.fontStretch})`, 5, 290);
   },
