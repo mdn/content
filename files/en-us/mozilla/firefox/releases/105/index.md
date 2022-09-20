@@ -2,7 +2,7 @@
 title: Firefox 105 for developers
 slug: Mozilla/Firefox/Releases/105
 tags:
-  - '105'
+  - "105"
   - Firefox
   - Mozilla
   - Release
@@ -21,6 +21,9 @@ This article provides information about the changes in Firefox 105 that will aff
 #### Removals
 
 ### CSS
+
+- Embedded content, such as SVG definitions and content in an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), now respects the theme preferences of the elements in which it is embedded, rather than OS or browser preferences (which may be different).
+  Specifically, embedded content now inherits the [`color-scheme`](/en-US/docs/Web/CSS/color-scheme) of the embedding element, and [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media queries in the embedded content respect this value rather than the OS/browser level theme setting ({{bug(1779457)}}).
 
 #### Removals
 
