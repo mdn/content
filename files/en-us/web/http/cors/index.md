@@ -57,7 +57,7 @@ We present three scenarios that demonstrate how Cross-Origin Resource Sharing wo
 Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}.
 Those are called _simple requests_
 from the obsolete [CORS spec](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology),
-though the [Fetch spec](https://fetch.spec.whatwg.org/) (which now defines CORS) doesn’t use that term.
+though the [Fetch spec](https://fetch.spec.whatwg.org/) (which now defines CORS) doesn't use that term.
 
 The idea is that the {{HTMLElement("form")}} element from HTML 4.0 (1998) can submit simple requests to any origin,
 so anyone writing a server must already protect against {{Glossary("CSRF", "cross-site request forgery")}}.
