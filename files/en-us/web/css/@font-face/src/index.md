@@ -71,14 +71,19 @@ As with other URLs in CSS, the URL may be relative, in which case it is resolved
 /* a regular font face: */
 @font-face {
   font-family: examplefont;
-  src: local(Example Font), url("examplefont.woff") format("woff"), url("examplefont.otf")
+  src: local(Example Font),
+       url('examplefont.woff') format("woff"),
+       url('examplefont.otf') format("opentype");
       format("opentype");
 }
 
 /* a bold font face of the same family: */
 @font-face {
   font-family: examplefont;
-  src: local(Example Font Bold), /* full font name */ local(Example Font-Bold), /* postscript name */
+src: local(Example Font Bold), /* full font name */
+       local(Example Font-Bold), /* postscript name */
+       url('examplefont.woff') format("woff"),
+       url('examplefont.otf') format("opentype");
       url("examplefont.woff") format("woff"),
     url("examplefont.otf") format("opentype");
   font-weight: bold;
