@@ -49,7 +49,7 @@ None ({{jsxref("undefined")}}).
 
 In this example we can drag a {{HTMLElement("p")}} element into a target {{HTMLElement("div")}} element.
 
-- In the `dragstart` handler, we use {{domxref("DataTransfer.setData","setData()")}} to add the `id` of the {{HTMLElement("p")}} element to the {{domxref("DataTransfer")}} object.
+- In the `dragstart` handler, we use {{domxref("DataTransfer.setData","setData()")}} to add the `id` of the `<p>` element to the {{domxref("DataTransfer")}} object.
 
 - In the `drop` handler we retrieve the `id` and use it to move the `<p>` element into the target.
 
