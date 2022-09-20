@@ -9571,6 +9571,7 @@
 /en-US/docs/Web/API/ServiceWorker_API	/en-US/docs/Web/API/Service_Worker_API
 /en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers:_The_Basics	/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
+/en-US/docs/Web/API/ShadowRoot/onslotchange	/en-US/docs/Web/API/HTMLSlotElement/slotchange_event
 /en-US/docs/Web/API/SharedWorker.SharedWorker	/en-US/docs/Web/API/SharedWorker/SharedWorker
 /en-US/docs/Web/API/SharedWorker.port	/en-US/docs/Web/API/SharedWorker/port
 /en-US/docs/Web/API/SharedWorker/onerror	/en-US/docs/Web/API/SharedWorker/error_event

@@ -76,7 +76,9 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
         console.log("dragStart");
         // Change the source element's background color to signify drag has started
         ev.currentTarget.style.border = "dashed";
-        // Set the drag's format and data. Use the event target's id for the data
+      // Clear the drag data cache (for all formats/types)
+        ev.dataTransfer.clearData();
+      // Set the drag's format and data. Use the event target's id for the data
         ev.dataTransfer.setData("text/plain", ev.target.id);
       }
 
@@ -91,8 +93,6 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
         // Get the data, which is the id of the drop target
         const data = ev.dataTransfer.getData("text");
         ev.target.appendChild(document.getElementById(data));
-        // Clear the drag data cache (for all formats/types)
-        ev.dataTransfer.clearData();
       }
     </script>
   </head>

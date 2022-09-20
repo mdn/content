@@ -63,7 +63,7 @@ svg {
   - : This attribute contains the definition of an optional additional transformation from the pattern coordinate system onto the target coordinate system.
     _Value type_: **[\<transform-list>](/en-US/docs/Web/SVG/Content_type#transform-list)**; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("patternUnits")}}
-  - : This attribute defines the coordinate system for attributes `x`, `y`, `width` , and `height`.
+  - : This attribute defines the coordinate system for attributes `x`, `y`, `width`, and `height`.
     _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
   - : This attribute defines how the SVG fragment must be deformed if it is embedded in a container with a different aspect ratio.
