@@ -66,7 +66,7 @@ Add a badge indicating how many times the user clicked the button:
 let clicks = 0;
 
 function increment() {
-  browser.action.setBadgeText({text: (++clicks).toString()});
+  browser.action.setBadgeText({ text: (++clicks).toString() });
 }
 
 browser.action.onClicked.addListener(increment);

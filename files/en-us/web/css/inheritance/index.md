@@ -51,7 +51,7 @@ p {
 ```
 
 ```html
-  <p>This paragraph has <em>emphasized text</em> in it.</p>
+<p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
 The words "emphasized text" will not have a border (since the initial value of {{ Cssxref("border-style") }} is `none`).

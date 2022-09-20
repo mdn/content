@@ -82,18 +82,20 @@ The most important quick win in semantic HTML is to use a structure of headings 
 
 ```html example-bad
 <font size="7">My heading</font>
-<br><br>
+<br /><br />
 This is the first section of my document.
-<br><br>
+<br /><br />
 I'll add another paragraph here too.
-<br><br>
+<br /><br />
 <font size="5">My subheading</font>
-<br><br>
-This is the first subsection of my document. I'd love people to be able to find this content!
-<br><br>
+<br /><br />
+This is the first subsection of my document. I'd love people to be able to find
+this content!
+<br /><br />
 <font size="5">My 2nd subheading</font>
-<br><br>
-This is the second subsection of my content. I think it is more interesting than the last one.
+<br /><br />
+This is the second subsection of my content. I think it is more interesting than
+the last one.
 ```
 
 ```html example-good
@@ -105,11 +107,17 @@ This is the second subsection of my content. I think it is more interesting than
 
 <h2>My subheading</h2>
 
-<p>This is the first subsection of my document. I'd love people to be able to find this content!</p>
+<p>
+  This is the first subsection of my document. I'd love people to be able to
+  find this content!
+</p>
 
 <h2>My 2nd subheading</h2>
 
-<p>This is the second subsection of my content. I think it is more interesting than the last one.</p>
+<p>
+  This is the second subsection of my content. I think it is more interesting
+  than the last one.
+</p>
 ```
 
 In addition, your content should make logical sense in its source order — you can always place it where you want using CSS later on, but you should get the source order right to start with.

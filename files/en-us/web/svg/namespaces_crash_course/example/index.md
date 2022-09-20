@@ -268,7 +268,7 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
       }
 
       this.elt.setAttributeNS(null, 'x1', old_x);
-      this.elt.setAttributeNS(null, 'y1' ,old_y);
+      this.elt.setAttributeNS(null, 'y1', old_y);
 
       this.elt.setAttributeNS(null, 'x2', this.x);
       this.elt.setAttributeNS(null, 'y2', this.y);

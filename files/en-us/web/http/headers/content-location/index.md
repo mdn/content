@@ -109,13 +109,13 @@ money to another user of a site.
 <form action="/send-payment" method="post">
   <p>
     <label>Who do you want to send the money to?
-      <input type="text" name="recipient">
+      <input type="text" name="recipient" />
     </label>
   </p>
 
   <p>
     <label>How much?
-      <input type="number" name="amount">
+      <input type="number" name="amount" />
     </label>
   </p>
 

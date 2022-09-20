@@ -66,7 +66,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 ext.drawElementsInstancedANGLE(gl.POINTS, 2, gl.UNSIGNED_SHORT, 0, 4);
 ```
 

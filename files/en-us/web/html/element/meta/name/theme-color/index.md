@@ -17,7 +17,7 @@ The **`theme-color`** value for the {{htmlattrxref("name", "meta")}} attribute o
 ## Example
 
 ```html
-<meta name="theme-color" content="#4285f4">
+<meta name="theme-color" content="#4285f4" />
 ```
 
 The following image shows the effect that the {{htmlelement("meta")}} element above will have on a document displayed in Chrome running on an Android mobile device.
@@ -29,8 +29,11 @@ _Image credit: from [Icons & Browser Colors](https://web.dev/icons-and-browser-c
 You can provide a media type or query inside the {{htmlattrxref("media", "meta")}} attribute; the color will then only be set if the media condition is true. For example:
 
 ```html
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+<meta
+  name="theme-color"
+  media="(prefers-color-scheme: light)"
+  content="white" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
 ```
 
 ## Specifications

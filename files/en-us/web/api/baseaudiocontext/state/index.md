@@ -42,7 +42,7 @@ current state to the console every time it changes.
 ```js
 audioCtx.onstatechange = () => {
   console.log(audioCtx.state);
-}
+};
 ```
 
 ### Resuming interrupted play states in iOS Safari
@@ -53,7 +53,7 @@ the audio context's state changes to "interrupted" and needs to be resumed. For 
 
 ```js
 function play() {
-  if (audioCtx.state === 'interrupted') {
+  if (audioCtx.state === "interrupted") {
     audioCtx.resume().then(() => play());
     return;
   }

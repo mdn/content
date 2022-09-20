@@ -49,11 +49,11 @@ Next, create the "icons" directory inside the "buttons" directory, and save the 
 
 **"page-16.png":**
 
-![](page-16.png)
+!["16 pixel icon of a lined sheet of paper"](page-16.png)
 
 **"page-32.png":**
 
-![](page-32.png)
+!["32 pixel icon of a lined sheet of paper"](page-32.png)
 
 > **Note:** These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
 
@@ -64,7 +64,7 @@ Next, create "background.js" in the extension's root directory, and give it the 
 ```js
 function openPage() {
   browser.tabs.create({
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
 }
 
@@ -122,8 +122,8 @@ So now we need to create that popup. Create a directory called "popup" then crea
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_page.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_page.css" />
   </head>
   <body>
     <div class="page-choice">developer.mozilla.org</div>
@@ -169,7 +169,7 @@ document.addEventListener("click", (event) => {
 
   const chosenPage = `https://${event.target.textContent}`;
   browser.tabs.create({
-    url: chosenPage
+    url: chosenPage,
   });
 });
 ```

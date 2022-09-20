@@ -36,7 +36,7 @@ A 128-bit UUID.
 In the following example the UUID represented by the alias `0x110A` is returned and printed to the console.
 
 ```js
-let result = BluetoothUUID.canonicalUUID('0x110A');
+let result = BluetoothUUID.canonicalUUID("0x110A");
 console.log(result); // "0000110a-0000-1000-8000-00805f9b34fb"
 ```
 

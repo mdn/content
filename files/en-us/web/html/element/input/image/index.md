@@ -166,8 +166,13 @@ The `<input type="image">` element is a [replaced element](/en-US/docs/Web/CSS/R
 Let's look at a basic example that includes all the essential features you'd need to use (These work exactly the same as they do on the `<img>` element.):
 
 ```html
-<input id="image" type="image" width="100" height="30" alt="Login"
-       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png">
+<input
+  id="image"
+  type="image"
+  width="100"
+  height="30"
+  alt="Login"
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" />
 ```
 
 {{ EmbedLiveSample('Essential_image_input_features', 600, 50) }}
@@ -240,14 +245,19 @@ The following example shows the same button as before, but included in the conte
   <p>Login to your account</p>
   <div>
     <label for="userId">User ID</label>
-    <input type="text" id="userId" name="userId">
+    <input type="text" id="userId" name="userId" />
   </div>
   <div>
     <label for="pwd">Password</label>
-    <input type="password" id="pwd" name="pwd">
+    <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
-    <input id="image" type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" alt="Login" width="100">
+    <input
+      id="image"
+      type="image"
+      src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+      alt="Login"
+      width="100" />
   </div>
 </form>
 ```
@@ -282,16 +292,20 @@ In this example, we adapt the previous example to set aside more space for the i
   <p>Login to your account</p>
   <div>
     <label for="userId">User ID</label>
-    <input type="text" id="userId" name="userId">
+    <input type="text" id="userId" name="userId" />
   </div>
   <div>
     <label for="pwd">Password</label>
-    <input type="password" id="pwd" name="pwd">
+    <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
-    <input id="image" type="image"
+    <input
+      id="image"
+      type="image"
       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
-      alt="Login" width="200" height="100">
+      alt="Login"
+      width="200"
+      height="100" />
   </div>
 </form>
 ```

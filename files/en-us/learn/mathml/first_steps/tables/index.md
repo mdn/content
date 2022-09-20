@@ -49,10 +49,9 @@ The MathML tabular elements are similar to the ones for [HTML tables](/en-US/doc
 Tables are typically used for matrix-like expressions (including vectors). Here is a basic example taken from the [article about the CSS `matrix()` function](/en-US/docs/Web/CSS/transform-function/matrix):
 
 ```html hidden
-    <link
-      rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
 ```
 
 ```html
@@ -142,8 +141,7 @@ This is again similar to [HTML tables](/en-US/docs/Learn/HTML/Tables/Basics#allo
     <title>My matrix with columnspan</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math display="block">
@@ -234,8 +232,7 @@ Besides representing matrix-like objects, MathML tables are sometimes used for a
     <title>My first matrix</title>
     <link
       rel="stylesheet"
-      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-    />
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
     <math display="block">

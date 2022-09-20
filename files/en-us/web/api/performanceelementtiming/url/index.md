@@ -25,7 +25,11 @@ A string which is the initial URL of the resources request for images or 0 for t
 In this example calling `entry.url` returns `https://example.com/image.jpg`.
 
 ```html
-<img src="https://example.com/image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="https://example.com/image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

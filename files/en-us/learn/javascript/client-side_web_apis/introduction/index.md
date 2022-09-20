@@ -128,8 +128,8 @@ So how do these objects interact? If you look at our [simple web audio example](
 <audio src="outfoxing.mp3"></audio>
 
 <button class="paused">Play</button>
-<br>
-<input type="range" min="0" max="1" step="0.01" value="1" class="volume">
+<br />
+<input type="range" min="0" max="1" step="0.01" value="1" class="volume" />
 ```
 
 We, first of all, include an `<audio>` element with which we embed an MP3 into the page. We don't include any default browser controls. Next, we include a {{htmlelement("button")}} that we'll use to play and stop the music, and an {{htmlelement("input")}} element of type range, which we'll use to adjust the volume of the track while it's playing.

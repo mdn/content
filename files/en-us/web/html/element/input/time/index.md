@@ -105,7 +105,7 @@ You can set a default value for the input by including a valid time in the {{htm
 
 ```html
 <label for="appt-time">Choose an appointment time: </label>
-<input id="appt-time" type="time" name="appt-time" value="13:30">
+<input id="appt-time" type="time" name="appt-time" value="13:30" />
 ```
 
 {{ EmbedLiveSample('Setting_the_value_attribute', 600, 60) }}
@@ -130,10 +130,10 @@ First, a look at the HTML. This is simple enough, with the label and input as we
 ```html
 <form>
   <label for="startTime">Start time: </label>
-  <input type="time" id="startTime">
+  <input type="time" id="startTime" />
   <p>
-    Value of the <code>time</code> input: <code>
-            "<span id="value">n/a</span>"</code>.
+    Value of the <code>time</code> input:
+    <code> "<span id="value">n/a</span>"</code>.
   </p>
 </form>
 ```
@@ -198,7 +198,7 @@ The simplest use of `<input type="time">` involves a basic `<input>` and {{htmle
 ```html
 <form>
   <label for="appt-time">Choose an appointment time: </label>
-  <input id="appt-time" type="time" name="appt-time">
+  <input id="appt-time" type="time" name="appt-time" />
 </form>
 ```
 
@@ -219,7 +219,7 @@ It takes an integer value that equates to the number of seconds you want to incr
 ```html
 <form>
   <label for="appt-time">Choose an appointment time: </label>
-  <input id="appt-time" type="time" name="appt-time" step="2">
+  <input id="appt-time" type="time" name="appt-time" step="2" />
 </form>
 ```
 
@@ -243,9 +243,10 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 
 ```html
 <form>
-  <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00): </label>
-  <input id="appt-time" type="time" name="appt-time"
-         min="12:00" max="18:00">
+  <label for="appt-time">
+    Choose an appointment time (opening hours 12:00 to 18:00):
+  </label>
+  <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
   <span class="validity"></span>
 </form>
 ```
@@ -313,13 +314,20 @@ Let's look at an example; here we've set minimum and maximum times, and also mad
 ```html
 <form>
   <div>
-    <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00): </label>
-    <input id="appt-time" type="time" name="appt-time"
-           min="12:00" max="18:00" required>
+    <label for="appt-time">
+      Choose an appointment time (opening hours 12:00 to 18:00):
+    </label>
+    <input
+      id="appt-time"
+      type="time"
+      name="appt-time"
+      min="12:00"
+      max="18:00"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -351,14 +359,21 @@ One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute o
 ```html
 <form>
   <div>
-    <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00): </label>
-    <input id="appt-time" type="time" name="appt-time"
-           min="12:00" max="18:00" required
-           pattern="[0-9]{2}:[0-9]{2}">
+    <label for="appt-time">
+      Choose an appointment time (opening hours 12:00 to 18:00):
+    </label>
+    <input
+      id="appt-time"
+      type="time"
+      name="appt-time"
+      min="12:00"
+      max="18:00"
+      required
+      pattern="[0-9]{2}:[0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -409,23 +424,30 @@ The HTML looks like so:
 ```html
 <form>
   <div class="nativeTimePicker">
-    <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00): </label>
-      <input id="appt-time" type="time" name="appt-time"
-             min="12:00" max="18:00" required>
-      <span class="validity"></span>
-    </div>
-  <p class="fallbackLabel">Choose an appointment time (opening hours 12:00 to 18:00):</p>
+    <label for="appt-time">
+      Choose an appointment time (opening hours 12:00 to 18:00):
+    </label>
+    <input
+      id="appt-time"
+      type="time"
+      name="appt-time"
+      min="12:00"
+      max="18:00"
+      required />
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">
+    Choose an appointment time (opening hours 12:00 to 18:00):
+  </p>
   <div class="fallbackTimePicker">
     <div>
       <span>
         <label for="hour">Hour:</label>
-        <select id="hour" name="hour">
-        </select>
+        <select id="hour" name="hour"></select>
       </span>
       <span>
         <label for="minute">Minute:</label>
-        <select id="minute" name="minute">
-        </select>
+        <select id="minute" name="minute"></select>
       </span>
     </div>
   </div>

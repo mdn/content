@@ -28,16 +28,18 @@ svg {
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Apply a transform on the tile -->
-  <pattern id="p1" width=".25" height=".25"
-           patternTransform="rotate(20)
-                             skewX(30)
-                             scale(1 0.5)">
+  <pattern
+    id="p1"
+    width=".25"
+    height=".25"
+    patternTransform="rotate(20)
+                      skewX(30)
+                      scale(1 0.5)">
     <circle cx="10" cy="10" r="10" />
   </pattern>
 
   <!-- Apply the transformed pattern tile -->
-  <rect x="10" y="10" width="80" height="80"
-        fill="url(#p1)" />
+  <rect x="10" y="10" width="80" height="80" fill="url(#p1)" />
 </svg>
 ```
 

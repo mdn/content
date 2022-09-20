@@ -42,7 +42,7 @@ SVG makes use of a number of data types. This article lists these types along wi
     anything ::= Char*
     ```
 
-    where [Char](https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) is the production for a character, as defined in XML 1.0 , section 2.2.
+    where [Char](https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) is the production for a character, as defined in XML 1.0, section 2.2.
 
 ## Clock-value
 

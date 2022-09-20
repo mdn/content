@@ -39,9 +39,18 @@ svg {
     </feSpecularLighting>
   </filter>
 
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#specularLighting1);" />
-  <rect x="0" y="0" width="200" height="200"
-      style="filter: url(#specularLighting2); transform: translateX(220px);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#specularLighting1);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#specularLighting2); transform: translateX(220px);" />
 </svg>
 ```
 

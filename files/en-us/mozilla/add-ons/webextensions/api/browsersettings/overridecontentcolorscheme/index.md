@@ -39,8 +39,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.overrideContentColorScheme.set({value: "dark"}).
-  then(logResult);
+browser.browserSettings.overrideContentColorScheme
+  .set({ value: "dark" })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

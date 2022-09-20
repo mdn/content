@@ -78,8 +78,8 @@ object-position: unset;
 Here we see HTML that includes two {{HTMLElement("img")}} elements, each displaying the MDN logo.
 
 ```html
-<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
 
 #### CSS

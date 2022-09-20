@@ -17,23 +17,22 @@ To include an inline SVG in an HTML file, paste the entire SVG file into the HTM
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="utf-8">
-  <title>SVG Demo</title>
-  <meta name="viewport" content="width=device-width">
-</head>
-<body>
-  <svg
-    viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" role="img">
-    <title>A gradient</title>
-    <linearGradient id="gradient">
-      <stop class="begin" offset="0%"/>
-      <stop class="end" offset="100%"/>
-    </linearGradient>
-    <rect x="0" y="0" width="100" height="100" style="fill:url(#gradient)" />
-    <circle cx="50" cy="50" r="30" style="fill:url(#gradient)" />
-  </svg>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>SVG Demo</title>
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" role="img">
+      <title>A gradient</title>
+      <linearGradient id="gradient">
+        <stop class="begin" offset="0%" />
+        <stop class="end" offset="100%" />
+      </linearGradient>
+      <rect x="0" y="0" width="100" height="100" style="fill:url(#gradient)" />
+      <circle cx="50" cy="50" r="30" style="fill:url(#gradient)" />
+    </svg>
+  </body>
 </html>
 ```
 
@@ -61,24 +60,62 @@ If the SVG can be labeled by visible text, reference that text with an [`aria-la
 
 ```html
 <svg viewBox="0 0 100 125" role="img" aria-labelledby="svgTitle svgDescription">
-   <title id="svgTitle">Manual</title>
-   <desc id="svgDescription">A non-descript twelve page booklet opened to the middle page</desc>
-   <defs>
-     <style>
-     rect {
-       fill:#cccccc;
-       stroke: #666;
-       transform-origin: top;
-     }
-     </style>
-   </defs>
+  <title id="svgTitle">Manual</title>
+  <desc id="svgDescription">
+    A non-descript twelve page booklet opened to the middle page
+  </desc>
+  <defs>
+    <style>
+      rect {
+        fill: #cccccc;
+        stroke: #666;
+        transform-origin: top;
+      }
+    </style>
+  </defs>
 
-   <rect width="36" height="60" x="13" y="18" ry="2" style="transform: skewy(24deg)"/>
-   <rect width="39" height="60" x="11" y="20" ry="2" style="transform: skewy(18deg)"/>
-   <rect width="42" height="90" x="8"  y="22" ry="2" style="transform: skewy(12deg)"/>
-   <rect width="36" height="60" x="50" y="18" ry="2" style="transform: skewy(-24deg)"/>
-   <rect width="39" height="60" x="50" y="20" ry="2"  style="transform: skewy(-18deg)" />
-   <rect width="42" height="90" x="50" y="22" ry="2" style="transform: skewy(-12deg)" />
+  <rect
+    width="36"
+    height="60"
+    x="13"
+    y="18"
+    ry="2"
+    style="transform: skewy(24deg)" />
+  <rect
+    width="39"
+    height="60"
+    x="11"
+    y="20"
+    ry="2"
+    style="transform: skewy(18deg)" />
+  <rect
+    width="42"
+    height="90"
+    x="8"
+    y="22"
+    ry="2"
+    style="transform: skewy(12deg)" />
+  <rect
+    width="36"
+    height="60"
+    x="50"
+    y="18"
+    ry="2"
+    style="transform: skewy(-24deg)" />
+  <rect
+    width="39"
+    height="60"
+    x="50"
+    y="20"
+    ry="2"
+    style="transform: skewy(-18deg)" />
+  <rect
+    width="42"
+    height="90"
+    x="50"
+    y="22"
+    ry="2"
+    style="transform: skewy(-12deg)" />
 </svg>
 ```
 

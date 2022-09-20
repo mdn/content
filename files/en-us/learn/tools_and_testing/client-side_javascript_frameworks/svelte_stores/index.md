@@ -213,14 +213,14 @@ This works, but you'll have to copy and paste all this code every time you want 
 
 ```html
 <script>
-  import myStore from './stores.js'
-  import { onDestroy } from 'svelte'
+  import myStore from "./stores.js";
+  import { onDestroy } from "svelte";
 
-  let myStoreContent = ''
+  let myStoreContent = "";
 
-  const unsubscribe = myStore.subscribe((value) => myStoreContent = value)
+  const unsubscribe = myStore.subscribe((value) => (myStoreContent = value));
 
-  onDestroy(unsubscribe)
+  onDestroy(unsubscribe);
 </script>
 
 {myStoreContent}
@@ -230,7 +230,7 @@ That's too much boilerplate for Svelte! Being a compiler, Svelte has more resour
 
 ```html
 <script>
-  import myStore from './stores.js'
+  import myStore from "./stores.js";
 </script>
 
 {$myStore}
@@ -443,17 +443,16 @@ So let's start by using a regular writable store to save our to-dos.
 
    ```html
    <script>
-     import Todos from './components/Todos.svelte'
-     import Alert from './components/Alert.svelte'
+     import Todos from "./components/Todos.svelte";
+     import Alert from "./components/Alert.svelte";
 
-     import { todos } from './stores.js'
+     import { todos } from "./stores.js";
 
      $todos = [
-       { id: 1, name: 'Create a Svelte starter app', completed: true },
-       { id: 2, name: 'Create your first component', completed: true },
-       { id: 3, name: 'Complete the rest of the tutorial', completed: false }
-     ]
-
+       { id: 1, name: "Create a Svelte starter app", completed: true },
+       { id: 2, name: "Create your first component", completed: true },
+       { id: 3, name: "Complete the rest of the tutorial", completed: false }
+     ];
    </script>
 
    <Alert />

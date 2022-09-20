@@ -98,9 +98,9 @@ And finally, should you want to include animated images into your page, then kno
 
 ```html
 <picture>
-   <source type="video/mp4" src="giphy.mp4">
-   <source type="image/webp" src="giphy.webp">
-   <img src="giphy.gif" alt="" />
+  <source type="video/mp4" src="giphy.mp4" />
+  <source type="image/webp" src="giphy.webp" />
+  <img src="giphy.gif" alt="" />
 </picture>
 ```
 

@@ -70,19 +70,23 @@ selection into the output paragraph at the very bottom of the HTML.
 ```html
 <h1>setBaseAndExtent example</h1>
 <div>
-  <p class="one"><span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span></p>
+  <p class="one">
+    <span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span>
+  </p>
   <p>MIDDLE</p>
-  <p class="two"><span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span></p>
+  <p class="two">
+    <span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span>
+  </p>
 </div>
 
 <div>
   <p>
     <label for="aOffset">Anchor offset</label>
-    <input id="aOffset" name="aOffset" type="number" value="0">
+    <input id="aOffset" name="aOffset" type="number" value="0" />
   </p>
   <p>
     <label for="fOffset">Focus offset</label>
-    <input id="fOffset" name="fOffset" type="number" value="0">
+    <input id="fOffset" name="fOffset" type="number" value="0" />
   </p>
   <p><button>Capture selection</button></p>
 </div>

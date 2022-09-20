@@ -62,7 +62,7 @@ This example listens for clicks on a menu item, then log the item's ID and the t
 browser.menus.create({
   id: "click-me",
   title: "Click me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {

@@ -143,7 +143,7 @@ The HTML file looks like this:
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="choose_beast.css" />
   </head>
 

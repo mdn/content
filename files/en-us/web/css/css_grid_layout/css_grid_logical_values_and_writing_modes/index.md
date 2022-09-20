@@ -82,8 +82,12 @@ The value `horizontal-tb` is the default for text on the web. It is the directio
 
 ```html
 <div class="wrapper">
-   <p style="writing-mode: horizontal-tb">I have writing mode set to the default <code>horizontal-tb</code></p>
-  <p style="writing-mode: vertical-rl">I have writing mode set to <code>vertical-rl</code></p>
+  <p style="writing-mode: horizontal-tb">
+    I have writing mode set to the default <code>horizontal-tb</code>
+  </p>
+  <p style="writing-mode: vertical-rl">
+    I have writing mode set to <code>vertical-rl</code>
+  </p>
 </div>
 ```
 
@@ -309,10 +313,10 @@ In this next example, I have a grid which is in the default `ltr` direction. I h
 
 ```html
 <div class="wrapper">
-        <div class="item1">Item 1</div>
-        <div class="item2">Item 2</div>
-        <div class="item3">Item 3</div>
-    </div>
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+</div>
 ```
 
 {{ EmbedLiveSample('Line-based_placement_with_left_to_right_text', '500', '330') }}
@@ -363,10 +367,10 @@ If I now add the {{cssxref("direction")}} property with a value of `rtl` to the 
 
 ```html
 <div class="wrapper">
-        <div class="item1">Item 1</div>
-        <div class="item2">Item 2</div>
-        <div class="item3">Item 3</div>
-    </div>
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+</div>
 ```
 
 {{ EmbedLiveSample('Line-based_placement_with_right_to_left_text', '500', '330') }}
@@ -421,18 +425,33 @@ In addition to displaying documents, using the correct writing mode for the lang
 
 ```html
 <div class="wrapper">
-        <div class="content">
-            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
-            <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">Link 1</a></li>
-                <li><a href="">Link 2</a></li>
-                <li><a href="">Link 3</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="content">
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo
+      shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.
+      Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi
+      beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki
+      bean chickweed potato bell pepper artichoke.
+    </p>
+    <p>
+      Nori grape silver beet broccoli kombu beet greens fava bean potato
+      quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
+      turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter
+      purslane fennel azuki bean earthnut pea sierra leone bologi leek soko
+      chicory celtuce parsley jícama salsify.
+    </p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="">Link 1</a></li>
+      <li><a href="">Link 2</a></li>
+      <li><a href="">Link 3</a></li>
+    </ul>
+  </nav>
+</div>
 ```
 
 {{ EmbedLiveSample('Mixed_writing_modes_and_grid_layout', '500', '330') }}

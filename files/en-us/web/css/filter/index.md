@@ -94,7 +94,7 @@ filter: blur(5px)
 ```
 
 ```html hidden
-  <table class="standard-table">
+<table class="standard-table">
   <thead>
     <tr>
       <th style="text-align: left;" scope="col">Original image</th>
@@ -105,19 +105,45 @@ filter: blur(5px)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_2.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_2.jpeg" style="width: 100%;" /></td>
+      <td>
+        <img
+          id="img1"
+          class="internal default"
+          src="test_form_2.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          id="img2"
+          class="internal default"
+          src="test_form_2.jpeg"
+          style="width: 100%;" />
+      </td>
       <td>
         <div class="svg-container">
-          <svg id="img3" overflow="visible" viewBox="0 0 212 161" color-interpolation-filters="sRGB">
+          <svg
+            id="img3"
+            overflow="visible"
+            viewBox="0 0 212 161"
+            color-interpolation-filters="sRGB">
             <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="3.5"/>
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" />
             </filter>
-            <image xlink:href="test_form_2.jpeg" filter="url(#svgBlur)" width="212px" height="161px"/>
+            <image
+              xlink:href="test_form_2.jpeg"
+              filter="url(#svgBlur)"
+              width="212px"
+              height="161px" />
           </svg>
         </div>
       </td>
-      <td><img id="img4" class="internal default" src="test_form_2_s.jpg" style="width: 100%;" /></td>
+      <td>
+        <img
+          id="img4"
+          class="internal default"
+          src="test_form_2_s.jpg"
+          style="width: 100%;" />
+      </td>
     </tr>
   </tbody>
 </table>
@@ -412,51 +438,142 @@ filter: drop-shadow(16px 16px 10px black)
   </thead>
   <tbody>
     <tr>
-      <td><img alt="A rectangular image of a pencil marking a multiple choice Optical Mark Recognition, or OMR, form." id="img1" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /></td>
-      <td><img alt="The OMR photo with a black drop shadow visible below the image and to the right. The offset and blur-radius values produce a soft, rounded shadow." id="img2" class="internal default" src="test_form_4.jpeg" style="width: 100%;" /></td>
+      <td>
+        <img
+          alt="A rectangular image of a pencil marking a multiple choice Optical Mark Recognition, or OMR, form."
+          id="img1"
+          class="internal default"
+          src="test_form_4.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          alt="The OMR photo with a black drop shadow visible below the image and to the right. The offset and blur-radius values produce a soft, rounded shadow."
+          id="img2"
+          class="internal default"
+          src="test_form_4.jpeg"
+          style="width: 100%;" />
+      </td>
       <td>
         <div class="svg-container">
-          <svg aria-labelledby="svg-drop-shadow-title svg-drop-shadow-desc" role="img" xmlns="http://www.w3.org/2000/svg" id="img3" overflow="visible" viewBox="0 0 213 161" color-interpolation-filters="sRGB">
+          <svg
+            aria-labelledby="svg-drop-shadow-title svg-drop-shadow-desc"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            id="img3"
+            overflow="visible"
+            viewBox="0 0 213 161"
+            color-interpolation-filters="sRGB">
             <title id="svg-drop-shadow-title">Rectangular OMR photo</title>
-            <desc id="svg-drop-shadow-desc">The same image as the previous two examples, but embedded within an SVG element. A filter element with a gaussian blur and offset is applied. The offset and blur values (set with the stdDeviation attribute on the feGaussianBlur element) produce a shadow that has less spread and is more rectangular than the CSS example. The shadow is visible below and to the right of the image, but with a smaller spread. The result is a shadow that is closer to the rectangular shape of the original image.</desc>
+            <desc id="svg-drop-shadow-desc">
+              The same image as the previous two examples, but embedded within
+              an SVG element. A filter element with a gaussian blur and offset
+              is applied. The offset and blur values (set with the stdDeviation
+              attribute on the feGaussianBlur element) produce a shadow that has
+              less spread and is more rectangular than the CSS example. The
+              shadow is visible below and to the right of the image, but with a
+              smaller spread. The result is a shadow that is closer to the
+              rectangular shape of the original image.
+            </desc>
             <defs>
-              <image id="MyImage" xlink:href="test_form_4.jpeg" width="213px" height="161px"/>
+              <image
+                id="MyImage"
+                xlink:href="test_form_4.jpeg"
+                width="213px"
+                height="161px" />
             </defs>
-            <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
-              <feOffset dx="9" dy="9" in="SourceAlpha"/>
-              <feGaussianBlur stdDeviation="5"/>
+            <filter
+              id="drop-shadow"
+              x="-50%"
+              y="-50%"
+              width="200%"
+              height="200%">
+              <feOffset dx="9" dy="9" in="SourceAlpha" />
+              <feGaussianBlur stdDeviation="5" />
             </filter>
-            <use xlink:href="#MyImage" filter="url(#drop-shadow)"/>
-            <use xlink:href="#MyImage"/>
+            <use xlink:href="#MyImage" filter="url(#drop-shadow)" />
+            <use xlink:href="#MyImage" />
           </svg>
         </div>
       </td>
-      <td><img alt="A screenshot of the OMR image with drop shadow applied to show the effect for browsers that do not support the CSS or SVG filters." id="img4" class="internal default" src="test_form_4_s.jpg" style="width: 100%;" /></td>
+      <td>
+        <img
+          alt="A screenshot of the OMR image with drop shadow applied to show the effect for browsers that do not support the CSS or SVG filters."
+          id="img4"
+          class="internal default"
+          src="test_form_4_s.jpg"
+          style="width: 100%;" />
+      </td>
     </tr>
     <tr>
-      <td><img alt="An edited version of the original image that uses transparency to achieve an irregular shape at the bottom and add a small hole. The image also has a gradient transparency that starts on the right edge and fades towards the other side." id="img11" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
-      <td><img alt="Image with black drop shadow applied which is visible below and to the right of the image. The shadow follows the curves of the irregularly shaped bottom and is also visible through the holes The shadow color is not fully opaque, so it displays as a dark gray over the white background of the page and is visible below most of the image, which makes it appear more gray than the original example." id="img12" class="internal default" src="test_form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
+      <td>
+        <img
+          alt="An edited version of the original image that uses transparency to achieve an irregular shape at the bottom and add a small hole. The image also has a gradient transparency that starts on the right edge and fades towards the other side."
+          id="img11"
+          class="internal default"
+          src="test_form_4_irregular-shape_opacity-gradient.png"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          alt="Image with black drop shadow applied which is visible below and to the right of the image. The shadow follows the curves of the irregularly shaped bottom and is also visible through the holes The shadow color is not fully opaque, so it displays as a dark gray over the white background of the page and is visible below most of the image, which makes it appear more gray than the original example."
+          id="img12"
+          class="internal default"
+          src="test_form_4_irregular-shape_opacity-gradient.png"
+          style="width: 100%;" />
+      </td>
       <td>
         <div class="svg-container">
-          <svg aria-labelledby="svg-irregular-drop-shadow-title svg-irregular-drop-shadow-desc" role="img" xmlns="http://www.w3.org/2000/svg" id="img13" overflow="visible" viewBox="0 0 213 161" color-interpolation-filters="sRGB">
-            <title id="svg-irregular-drop-shadow-title">OMR photo with irregular bottom edge</title>
-            <desc  id="svg-irregular-drop-shadow-desc">The same image as the previous two examples, but embedded within an SVG element. A drop shadow has been added with a filter element using a feGaussianBlur and an feOffset element. The shadow follows the irregular shape of the image and is visible under the transparent gradient of the image.</desc>
+          <svg
+            aria-labelledby="svg-irregular-drop-shadow-title svg-irregular-drop-shadow-desc"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            id="img13"
+            overflow="visible"
+            viewBox="0 0 213 161"
+            color-interpolation-filters="sRGB">
+            <title id="svg-irregular-drop-shadow-title">
+              OMR photo with irregular bottom edge
+            </title>
+            <desc id="svg-irregular-drop-shadow-desc">
+              The same image as the previous two examples, but embedded within
+              an SVG element. A drop shadow has been added with a filter element
+              using a feGaussianBlur and an feOffset element. The shadow follows
+              the irregular shape of the image and is visible under the
+              transparent gradient of the image.
+            </desc>
             <defs>
-              <image id="MyImage2" xlink:href="test_form_4_irregular-shape_opacity-gradient.png" width="213px" height="161px"/>
+              <image
+                id="MyImage2"
+                xlink:href="test_form_4_irregular-shape_opacity-gradient.png"
+                width="213px"
+                height="161px" />
             </defs>
-            <filter id="drop-shadow2" x="-50%" y="-50%" width="200%" height="200%">
-              <feOffset dx="5" dy="5.5" in="SourceAlpha"/>
-              <feGaussianBlur stdDeviation="2.5"/>
+            <filter
+              id="drop-shadow2"
+              x="-50%"
+              y="-50%"
+              width="200%"
+              height="200%">
+              <feOffset dx="5" dy="5.5" in="SourceAlpha" />
+              <feGaussianBlur stdDeviation="2.5" />
               <feComponentTransfer>
-                <feFuncA type="table" tableValues="0 0.8"/>
+                <feFuncA type="table" tableValues="0 0.8" />
               </feComponentTransfer>
             </filter>
-            <use xlink:href="#MyImage2" filter="url(#drop-shadow2)"/>
-            <use xlink:href="#MyImage2"/>
+            <use xlink:href="#MyImage2" filter="url(#drop-shadow2)" />
+            <use xlink:href="#MyImage2" />
           </svg>
         </div>
       </td>
-      <td><img alt="A screenshot of the previous example image with drop shadow applied to show the effect in browsers that do not support the CSS or SVG filters." id="img14" class="internal default" src="test_form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /></td>
+      <td>
+        <img
+          alt="A screenshot of the previous example image with drop shadow applied to show the effect in browsers that do not support the CSS or SVG filters."
+          id="img14"
+          class="internal default"
+          src="test_form_4_irregular-shape_opacity-gradient_drop-shadow.png"
+          style="width: 100%;" />
+      </td>
     </tr>
   </tbody>
 </table>
@@ -682,9 +799,11 @@ table.standard-table td {
 ```
 
 ```html
-<svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg">
+<svg
+  style="position: absolute; top: -999999px"
+  xmlns="http://www.w3.org/2000/svg">
   <filter id="svgHueRotate">
-    <feColorMatrix type="hueRotate" values="90"/>
+    <feColorMatrix type="hueRotate" values="90" />
   </filter>
 </svg>
 ```
@@ -1041,9 +1160,27 @@ filter: contrast(175%) brightness(103%)
   </thead>
   <tbody>
     <tr>
-      <td><img id="img1" class="internal default" src="test_form_8.jpeg" style="width: 100%;" /></td>
-      <td><img id="img2" class="internal default" src="test_form_8.jpeg" style="width: 100%;" /></td>
-      <td><img id="img4" class="internal default" src="test_form_8_s.jpg" style="width: 100%;" /></td>
+      <td>
+        <img
+          id="img1"
+          class="internal default"
+          src="test_form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          id="img2"
+          class="internal default"
+          src="test_form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          id="img4"
+          class="internal default"
+          src="test_form_8_s.jpg"
+          style="width: 100%;" />
+      </td>
     </tr>
   </tbody>
 </table>

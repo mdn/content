@@ -68,8 +68,12 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 Third party APIs, on the other hand, are located on third party servers. To access them from JavaScript you first need to connect to the API functionality and make it available on your page. This typically involves first linking to a JavaScript library available on the server via a {{htmlelement("script")}} element, as seen in our Mapquest example:
 
 ```html
-<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js" defer></script>
-<link rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+<script
+  src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"
+  defer></script>
+<link
+  rel="stylesheet"
+  href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
 ```
 
 You can then start using the objects available in that library. For example:

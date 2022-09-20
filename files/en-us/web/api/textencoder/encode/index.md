@@ -38,7 +38,7 @@ A {{jsxref("Uint8Array")}} object.
 
 ```html
 <p class="source">This is a sample paragraph.</p>
-<p class="result">Encoded result: </p>
+<p class="result">Encoded result:</p>
 ```
 
 ```js

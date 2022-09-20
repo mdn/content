@@ -74,10 +74,11 @@ caret-color: unset;
 #### HTML
 
 ```html
-<input value="This field uses a default caret." size="64"/>
-<input class="custom" value="I have a custom caret color!" size="64"/>
-<p contenteditable class="custom">This paragraph can be
-   edited, and its caret has a custom color as well!</p>
+<input value="This field uses a default caret." size="64" />
+<input class="custom" value="I have a custom caret color!" size="64" />
+<p contenteditable class="custom">
+  This paragraph can be edited, and its caret has a custom color as well!
+</p>
 ```
 
 #### CSS

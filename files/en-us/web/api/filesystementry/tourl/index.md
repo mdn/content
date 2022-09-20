@@ -67,7 +67,8 @@ Assuming the scenario mentioned before the code, the result would be HTML that l
 like this being appended to the end of the document:
 
 ```html
-<img src="filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg">
+<img
+  src="filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg" />
 ```
 
 ## Browser compatibility
