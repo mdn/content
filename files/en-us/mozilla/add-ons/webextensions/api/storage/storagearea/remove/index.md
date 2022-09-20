@@ -40,6 +40,13 @@ let removingItem = browser.storage.<storageType>.remove(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments if the operation succeeded. If the operation failed, the promise will be rejected with an error message.
 
+## Safari empty key bug
+
+Safari has a bug which prevents this method from deleting the data associated with the empty key `""`. Specifically, `StorageArea.remove("")` and `StorageArea.remove([""])` will both throw `Error: Invalid empty key found in array passed to storage.StorageArea.remove()`. Instead, storage can be cleared via two other alternatives:
+
+- call to {{WebExtAPIRef("storage.StorageArea.clear")}} which will remove all data from the storge area, including this recod, or
+- call to {{WebExtAPIRef("storage.StorageArea.set")}} to overwrite this this data with some blank value like empty string `""` (record consumes 2 bytes from quota), or number `0` (record consmes 1 byte from quota).
+
 ## Browser compatibility
 
 {{Compat}}

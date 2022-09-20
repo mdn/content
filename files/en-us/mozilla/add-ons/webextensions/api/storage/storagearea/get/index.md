@@ -52,6 +52,15 @@ If managed storage is not set, `undefined` will be returned.
 >
 > When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
 
+## Safari empty key bug
+
+Safari has a bug which prevents this method from retreiving the data associated with the empty key `""` if it is explicitly specified. Specifically, Safari will throw an error `Error: Invalid empty key found in array passed to StorageArea.get()`. Instead, developers can pass `null` as the first argument to retreive all data in the storage area and then choose the desired data:
+
+```js
+const data = await StorageArea.get(null);
+cosnole.log(data['']);
+```
+
 ## Browser compatibility
 
 {{Compat}}
