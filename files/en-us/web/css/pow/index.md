@@ -11,7 +11,6 @@ tags:
   - pow
   - Experimental
 browser-compat: css.types.pow
-spec-urls: https://www.w3.org/TR/css-values-4/#exponent-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
