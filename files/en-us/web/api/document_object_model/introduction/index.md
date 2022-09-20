@@ -258,7 +258,7 @@ The following is a brief list of common APIs in web and XML page scripting using
 
 ### Setting text content
 
-In this example, inside a container {{HTMLElement("div")}}, we have a {{HTMLElement("textarea")}} and two {{HTMLElement("button")}} elements. When the user clicks the first button we set some text in the `<textarea>`. When the user clicks the second button we clear the text. We use:
+This example uses a {{HTMLElement("div")}} element containing a {{HTMLElement("textarea")}} and two {{HTMLElement("button")}} elements. When the user clicks the first button we set some text in the `<textarea>`. When the user clicks the second button we clear the text. We use:
 
 - {{domxref("Document.querySelector()")}} to access the `<textarea>` and the button
 - {{domxref("EventTarget.addEventListener()")}} to listen for button clicks
