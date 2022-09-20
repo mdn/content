@@ -156,7 +156,7 @@ function clock() {
   // Minute marks
   ctx.save();
   ctx.lineWidth = 5;
-  for (i = 0; i < 60; i++) {
+  for (let i = 0; i < 60; i++) {
     if (i % 5 !== 0) {
       ctx.beginPath();
       ctx.moveTo(117, 0);
@@ -320,7 +320,7 @@ function draw() {
   }
 
   // Draw image
-  ctx.drawImage(img, x, y,imgW, imgH);
+  ctx.drawImage(img, x, y, imgW, imgH);
 
   // Amount to move
   x += dx;

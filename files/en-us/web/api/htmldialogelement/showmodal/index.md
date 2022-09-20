@@ -51,27 +51,25 @@ button.
 <!-- Simple pop-up dialog box, containing a form -->
 <dialog id="favDialog">
   <form method="dialog">
-    <section>
-      <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal" name="favAnimal">
-          <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
-      </p>
-    </section>
-    <menu>
+    <p>
+      <label for="favAnimal">Favorite animal:</label>
+      <select id="favAnimal" name="favAnimal">
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select>
+    </p>
+    <div>
       <button id="cancel" type="reset">Cancel</button>
       <button type="submit">Confirm</button>
-    </menu>
+    </div>
   </form>
 </dialog>
 
-<menu>
+<div>
   <button id="updateDetails">Update details</button>
-</menu>
+</div>
 
 <script>
   (() => {

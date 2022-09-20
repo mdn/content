@@ -11,7 +11,6 @@ tags:
   - atan
   - Experimental
 browser-compat: css.types.atan
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -24,7 +24,7 @@ and `false` if it's not.
 You can also use {{domxref("FileSystemEntry.isFile", "isFile")}} to determine if the
 entry is a file.
 
-> **Warning:** You should not assume that any entry which isn't a directory is a file or vice-versa.
+> **Warning:** You should not assume that any entry which isn't a directory is a file or vice versa.
 > There are other types of file descriptors on many operating systems. Be sure to use
 > both `isDirectory` and `isFile` as needed to ensure that the
 > entry is something you know how to work with.
