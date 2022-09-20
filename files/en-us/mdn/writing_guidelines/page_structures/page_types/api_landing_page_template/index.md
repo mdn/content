@@ -139,6 +139,8 @@ The _name of interface_ extends the following APIs, adding the listed features.
 
 ## Examples
 
+Note that we use the plural "Examples" even if the page only contains one example.
+
 ### A descriptive heading
 
 Each example must have an H3 heading naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
