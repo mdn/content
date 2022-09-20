@@ -107,6 +107,10 @@ Note that several of the {{JSxRef("RegExp")}} properties have both long and shor
 
 - {{jsxref("RegExp.@@species", "get RegExp[@@species]")}}
   - : The constructor function that is used to create derived objects.
+- {{JSxRef("RegExp.n", "RegExp.$1-$9")}}
+  - : The legacy read-only static properties that contain parenthesized substring matches.
+- {{JSxRef("RegExp.input", "RegExp.input ($_)")}} {{Non-standard_Inline}}
+  - : A static property that contains the last string against which a regular expression was successfully matched.
 
 ## Instance properties
 
@@ -252,7 +256,7 @@ console.log(regex.lastIndex); // logs '15'
 
 The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature introduces a solution, by allowing for a statement as simple as `\p{scx=Cyrl}`.
 
-### Extracting sub-domain name from URL
+### Extracting subdomain name from URL
 
 ```js
 const url = "http://xxx.domain.com";
