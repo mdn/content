@@ -134,7 +134,7 @@ WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_de
       …
     </ul>
     <form>
-      <!-- search form  -->
+      <!-- search form -->
     </form>
   </nav>
 </header>
@@ -172,7 +172,7 @@ Let's improve it by the use of some ARIA features. First, we'll add some [`role`
       …
     </ul>
     <form role="search">
-      <!-- search form  -->
+      <!-- search form -->
     </form>
   </nav>
 </header>

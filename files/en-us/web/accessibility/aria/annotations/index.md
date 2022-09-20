@@ -56,7 +56,7 @@ We have already alluded to the difference between these two above — `aria-desc
 <p id="description-id">An extended text description of some kind.</p>
 
 <div aria-describedby="description-id">
-  <!-- Some kind of UI feature that needs an accessible description  -->
+  <!-- Some kind of UI feature that needs an accessible description -->
 </div>
 ```
 
@@ -70,7 +70,7 @@ We have already alluded to the difference between these two above — `aria-desc
 </div>
 
 <div aria-details="detail-id">
-  <!-- Some kind of UI feature where additional details might be useful  -->
+  <!-- Some kind of UI feature where additional details might be useful -->
 </div>
 ```
 

@@ -46,11 +46,6 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{domxref("ShadowRoot.styleSheets")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.
 
-### Event handlers
-
-- {{domxref("ShadowRoot.onslotchange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event is raised.
-
 ## Methods
 
 - {{DOMxRef("ShadowRoot.getAnimations()")}}
@@ -61,6 +56,13 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : Returns the topmost element at the specified coordinates.
 - {{domxref("ShadowRoot.elementsFromPoint()")}}
   - : Returns an array of all elements at the specified coordinates.
+
+## Events
+
+The following events are available to `ShadowRoot` via event bubbling from {{domxref("HTMLSlotElement")}}:
+
+- `HTMLSlotElement` {{domxref("HTMLSlotElement.slotchange_event", "slotchange")}} event
+  - : An event fired when the node(s) contained in that slot change.
 
 ## Examples
 
