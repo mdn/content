@@ -96,7 +96,6 @@ function workerPortListener(e) {
 globalThis.addEventListener("message", workerPortListener);
 ```
 
-For a full runing example, see [message channel demo](https://github.com/kavitshah8/messageChnannel).
 
 ## Specifications
 
