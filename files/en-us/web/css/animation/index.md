@@ -162,7 +162,7 @@ Adding onto the sun animation in the previous example, we add a second animation
   animation: 4s linear 0s infinite alternate animating-multiple-properties;
 }
 
-/* it is possible to animate mulitple properties in a single animation */
+/* it is possible to animate multiple properties in a single animation */
 @keyframes animating-multiple-properties {
   from {
     transform: translateY(110vh);
@@ -183,7 +183,7 @@ Adding onto the sun animation in the previous example, we add a second animation
 
 Here is a sun that rises and falls on a lightblue background. The sun
 gradually rotates through a rainbow of colors. The timing of the sun's
-position and color are independent. 
+position and color are independent.
 
 ```html
 <div class="sun"></div>
@@ -202,8 +202,8 @@ position and color are independent.
   border-radius: 50%;
   height: 100vh;
   aspect-ratio: 1 / 1;
-  /* multiple animations are seperated by commas */
-  animation: 
+  /* multiple animations are separated by commas */
+  animation:
     4s linear 0s infinite alternate rise,
     /* animation parameters are set independently */
     24s linear 0s infinite psychedelic;

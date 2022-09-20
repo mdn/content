@@ -81,7 +81,7 @@ img {
     align-self: end;
 }
 
-\* old code we can't remove *\
+/* old code we can't remove */
 .media .image {
     float: left;
     width: 150px;

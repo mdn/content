@@ -66,7 +66,7 @@ fetch("some.json", { cache: "reload" })
 fetch("some.json", { cache: "no-cache" })
   .then((response) => { /* consume the response */ });
 
-// Download a resource with economics in mind!  Prefer a cached
+// Download a resource with economics in mind! Prefer a cached
 // albeit stale response to conserve as much bandwidth as possible.
 fetch("some.json", { cache: "force-cache" })
   .then((response) => { /* consume the response */ });

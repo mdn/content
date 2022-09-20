@@ -51,7 +51,7 @@ This is the difference between one and two-dimensional layout. In a one dimensio
 
 Typically flexbox-based grid systems work by taking flexbox back to the familiar world of float-based layouts. If you assign percentage widths to flex items — either as `flex-basis` or by adding a width to the item itself leaving the value of `flex-basis` as `auto` — you can get the impression of a two dimensional layout. You can see this working in the example below.
 
-Here I have set `flex-grow` and `flex-shrink` to `0` to make inflexible flex items and am then controlling flexibility using percentages, just like we used to do in float layouts.
+Here I have set `flex-grow` and `flex-shrink` to `0` to make inflexible flex items and I'm then controlling flexibility using percentages, just like we used to do in float layouts.
 
 {{EmbedGHLiveSample("css-examples/flexbox/wrapping/flex-grid.html", '100%', 650)}}
 

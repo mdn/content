@@ -384,7 +384,7 @@ The cue settings are added to the right of the cue timings. There must be one or
     - `rl`
       - : The writing direction is right to left
     - `lr`
-      - : The writing direction is left ot right
+      - : The writing direction is left to right
 - `line`
 
   - : If vertical is not set, specifies where the text appears vertically. If vertical is set, line specifies where text appears horizontally. Its value can be:

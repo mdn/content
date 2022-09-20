@@ -11,7 +11,6 @@ tags:
   - asin
   - Experimental
 browser-compat: css.types.asin
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
