@@ -123,7 +123,7 @@ All three methods create a layer if a layer with that name has not already been 
 
 > **Note:** The order of the layers is the order in which they are created. Styles not in a layer, or "unlayered styles", cascade together into a final implicit label.
 
-Let’s cover the three ways of creating a layer in a little more detail, before discussing nested rules.
+Let’s cover the three ways of creating a layer in a little more detail before discussing nested layers.
 
 ### @layer
 
