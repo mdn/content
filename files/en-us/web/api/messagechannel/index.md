@@ -83,8 +83,8 @@ mainPort.onmessage = (e) => console.log(e.data);
 // worker-code.js
 let workerPort;
 const data = {
-  type:"eventFromWoker", 
-  payload: {name:"init"}
+  type: "eventFromWoker", 
+  payload: { name:"init" },
 };
 function workerPortListener(e) {
   workerPort = e.ports[0];
