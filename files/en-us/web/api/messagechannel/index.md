@@ -96,7 +96,6 @@ function workerPortListener(e) {
 globalThis.addEventListener("message", workerPortListener);
 ```
 
-
 ## Specifications
 
 {{Specifications}}
