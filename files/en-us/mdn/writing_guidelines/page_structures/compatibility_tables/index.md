@@ -12,17 +12,19 @@ browser-compat: api.AbortController
 
 MDN has a standard format for compatibility tables for our open web documentation; that is, documentation of technologies such as the DOM, HTML, CSS, JavaScript, SVG, and so forth, that are shared across all browsers. This article is a "getting started" guide to how to add to and maintain the database from which the compatibility tables are generated, as well as how to integrate the tables into articles.
 
-For more advanced documentation, as well as the very latest changes to the processes and JSON schemas used to represent the data, take a look at the data repository's [contributor guide](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md) as well as the [data guidelines guide](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md).
+To make this data available in multiple projects programmatically, a Node.js package is built from the [`browser-compat-data` repository](https://github.com/mdn/browser-compat-data) and published to npm.
+For comprehensive documentation, as well as the very latest changes to the processes and JSON schemas used to represent the data, take a look at the data repository's [contributor guide](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md) as well as the [data guidelines guide](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md).
 
 If you have questions or discover problems, you are welcome to [ask for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
 ## How to access the data repository
 
-The data is stored in a GitHub repository — see <https://github.com/mdn/browser-compat-data>. To access it, you need to get a GitHub account, fork the browser-compat-data repo over to your own account, then clone your fork onto your local machine.
+The browser compatibility table shown near the bottom of many MDN document pages is generated from the [`browser-compat-data` repository](https://github.com/mdn/browser-compat-data).
+To access it, [fork the repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo) to your GitHub account and make changes to the fork through GitHub's UI or [on a clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 ## Preparing to add the data
 
-Before adding some new data, you should make sure that your fork is up-to-date with the main repo (it contains the same content), create a new branch inside your fork to contain your additions, then pull that branch into your local clone so you can start working inside it:
+Before adding new data, you should make sure that your fork is up-to-date with the main repo (it contains the same content), create a new branch inside your fork to contain your additions, then pull that branch into your local clone so you can start working inside it:
 
 Let's look at a simple way to make sure your fork is to-to-date is as follows:
 
@@ -255,7 +257,7 @@ As an example, see the [compat data](https://github.com/mdn/browser-compat-data/
         "alpha_ch_for_hex": {
           "__compat": {
             // …
-          },
+          }
         }
       }
     }
@@ -281,10 +283,9 @@ For an API, you've got the top two levels defined as `api.name-of-the-interface`
         "__compat": {
           // …
         }
-      },
+      }
 
       // …
-
     }
   }
 }
