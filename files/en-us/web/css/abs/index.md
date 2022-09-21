@@ -29,7 +29,7 @@ width: abs(20% - 100px);
 The `abs(x)` function accepts only one value as its parameter.
 
 - `x`
-  - : A number.
+  - : A calculation which resolves to a number.
 
 ### Return value
 
