@@ -41,7 +41,9 @@ Valid `<display-internal>` values:
   - : These elements behave like {{HTMLElement("rb")}} HTML elements.
 - `ruby-text` {{Experimental_Inline}}
   - : These elements behave like {{HTMLElement("rt")}} HTML elements.
-- `ruby-text-container` {{Deprecated_Inline}}
+- `ruby-base-container` {{Experimental_Inline}}
+  - : These elements are generated as anonymous boxes.
+- `ruby-text-container` {{Experimental_Inline}}
   - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
 ## Formal syntax
