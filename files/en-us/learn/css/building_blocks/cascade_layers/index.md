@@ -35,17 +35,17 @@ Cascade layers are most relevant when you're working with CSS from multiple sour
   </tbody>
 </table>
 
-For each property applied to an element, there can only be one value. You can view a property's value on an element by inspecting the element in your browser's developer tools. In the "Styles" panel, you may notice that there are styles crossed out. The crossed-out styles are the property values that match the selected element but were not applied due to the cascade. There may be several declarations crossed out from many different sources.
+For each CSS property applied to an element, there can only be one value. The selector from the origin with precedence "wins", having its values applied to the matching element. If there is more than one matching selector with that property defined in the origin with precendence, then the value applied comes from the matching style block with the highest specificity. If there is a specificity tie in the winning origin, the source order of the tied leaders matters, with the winning value being the last one declared. 
 
-The selector with the highest specificity and from an origin with precedence has its values applied to the matching element.
+You can view a property's value on an element by inspecting the element in your browser's developer tools. The "Styles" panel shows all the property values applied on the currently inspected element, along with the selectors that match and the stylesheet in which the applied CSS came from.In the Styles panel, you may notice that there are styles crossed out. The crossed-out styles are the property values that match the selected element but were not applied due to the cascade, specificity, and source order. There may be several declarations crossed out from many different sources.
 
-Often, as the complexity of a site increases, the number of stylesheets increase, which makes the source order both more important and more complex. Cascade layers simplify maintaining stylesheets across such code bases. Cascade layers are explicit specificity containers providing simpler and greater control over which CSS declarations end up being crossed out, enabling web developers to prioritize sections of CSS without having to fight specificity.
+Often, as the complexity of a site increases, the number of stylesheets increase, which makes the source order of the stylesheets both more important and more complex. Cascade layers simplify maintaining stylesheets across such code bases. Cascade layers are explicit specificity containers providing simpler and greater control over which CSS declarations end up being crossed out, enabling web developers to prioritize sections of CSS without having to fight specificity.
 
 To understand cascade layers, it is important that you understand the CSS cascade well. The sections below provide a quick recap of the important cascade concepts.
 
 ## Review of the cascade concept
 
-The C in CSS stands for "Cascading". It is the method by which styles cascade together. The user agent goes through several, very clearly-defined steps to determine the values that get assigned to every property of every element. We will briefly list these steps here and then dig deeper into step 4, cascade layers, which is what you came here to learn:
+The C in CSS stands for "Cascading". It is the method by which styles cascade together. The user agent goes through several, very clearly-defined steps to determine the values that get assigned to every property for every element. We will briefly list these steps here and then dig deeper into step 4, cascade layers, which is what you came here to learn:
 
   1. **Relevance:** Find all the declaration blocks with a selector match for each element.
   2. **Importance:** Sort rules based on if they are normal or important. Important styles are those that have the [`!important`](/en-US/docs/Web/CSS/important) flag set.
@@ -74,8 +74,6 @@ The "user-agent" is the browser. The "user" is the site visitor. The "author" is
 ### Origin and specificity
 
 For each property, the declaration that "wins" is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with the highest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins.
-
-### Origin and specificity
 
 In the example below, there are two links. The first has no author styles applied, so all user-agent styles are applied. The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of [`0-0-0`](/en-US/docs/Web/CSS/Specificity#selector_weight_categories). The reason why author styles "win" is because when there are conflicting styles from different origins (layers aren't in play yet), the rules from the origin with precedence are applied, irrespective of the specificity in the origin that doesn't have precedence.
 
