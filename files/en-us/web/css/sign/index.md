@@ -26,7 +26,22 @@ The **`sign()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 top: sign(--value);
 ```
 
-The `sign()` function takes only one expression as its argument.
+### Parameters
+
+The `sign(x)` function accepts only one value as its parameter.
+
+- `x`
+  - : A number.
+
+### Return value
+
+A number representing the sign of `A`:
+
+- If `x` is positive, returns `1`.
+- If `x` is negative, returns `-1`.
+- If `x` is positive zero, returns `0`.
+- If `x` is negative zero, returns `-0`.
+- Otherwise, returns `NaN`.
 
 ## Formal syntax
 
