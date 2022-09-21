@@ -14,7 +14,7 @@ tags:
 
 The aim of this lesson is to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/cascade) and [CSS specificity](/en-US/docs/Web/CSS/specificity).
 
-If you are new to CSS, working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course. However, knowing the basics of what cascade layers are should you encounter them is helpful. As you work with CSS, especially if you are including CSS you aren't writing, understanding cascade layers and knowing how to leverage their power will save you from a lot of pain managing a code base with CSS from different parties, plugins, and development teams.  
+If you are new to CSS, working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course. However, knowing the basics of what cascade layers are should you encounter them is helpful. The more you work with CSS, especially if you include CSS you aren't writing in your projects, understanding cascade layers and knowing how to leverage their power will save you from a lot of pain managing a code base with CSS from different parties, plugins, and development teams.  
 
 Cascade layers are most relevant when working with CSS from multiple sources, conflicting CSS selectors and competing specificity, or any time you considering using [`!important`](/en-US/docs/Web/CSS/important).
 
