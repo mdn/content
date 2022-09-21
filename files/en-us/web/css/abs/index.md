@@ -15,7 +15,7 @@ browser-compat: css.types.abs
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) contains one calculation, and returns the absolute value of the argument, as the same type as the input.
+The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns the absolute value of the argument, as the same type as the input.
 
 ## Syntax
 
@@ -26,11 +26,17 @@ width: abs(20% - 100px);
 
 ### Parameters
 
-The `abs(A)` function accepts only one value as its parameter.
+The `abs(x)` function accepts only one value as its parameter.
+
+- `x`
+  - : A number.
 
 ### Return value
 
-The `abs(A)` statement will return `A` if `A`'s numeric value is positive or 0⁺. Otherwise it will return the value of `-1 * A`.
+The absolute value of `x`.
+
+- if `x`'s numeric value is positive or `0⁺`, return `x`.
+-  Otherwise, returns `-1 * x`.
 
 ## Formal syntax
 
