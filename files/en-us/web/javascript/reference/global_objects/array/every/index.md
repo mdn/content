@@ -128,6 +128,7 @@ console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 
 ```js
 console.log([1, , 3].every((x) => x !== undefined)); // true
+console.log([2, , 2].every((x) => x === 2)); // true
 ```
 
 ### Affecting Initial Array (modifying, appending, and deleting)
