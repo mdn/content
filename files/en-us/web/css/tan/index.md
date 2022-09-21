@@ -45,7 +45,7 @@ The `tan(angle)` function accepts only one value as its parameter.
 
 {{CSSSyntax}}
 
-## Example
+## Examples
 
 ### Draw parallelograms
 
