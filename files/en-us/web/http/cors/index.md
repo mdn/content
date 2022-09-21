@@ -60,7 +60,7 @@ from the obsolete [CORS spec](https://www.w3.org/TR/2014/REC-cors-20140116/#term
 though the [Fetch spec](https://fetch.spec.whatwg.org/) (which now defines CORS) doesn't use that term.
 
 The idea is that the {{HTMLElement("form")}} element from HTML 4.0 (1998) can submit simple requests to any origin,
-so anyone writing a server must already protect against {{Glossary("CSRF", "cross-site request forgery")}}.
+so anyone writing a server must already protect against {{Glossary("CSRF", "cross-site request forgery")}} (CSRF).
 Then, when cross-site {{domxref("XMLHttpRequest")}} was invented in 2005 followed by {{domxref("fetch")}},
 if the request looks like a form submission,
 then the server doesn't have to opt-in (by responding to a preflight request) to receive the request,
