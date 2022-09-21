@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRDisplay.requestAnimationFrame
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`requestAnimationFrame()`** method of the {{domxref("VRDisplay")}} interface is a special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the `VRDisplay` presentation is rendered:
@@ -26,7 +27,7 @@ The **`requestAnimationFrame()`** method of the {{domxref("VRDisplay")}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 requestAnimationFrame(callback)
 ```
 

@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.CSSTransformValue.entries
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTransformValue.entries()`** method
@@ -23,7 +24,7 @@ properties in the prototype chain as well).
 
 ## Syntax
 
-```js
+```js-nolint
 entries(obj)
 ```
 

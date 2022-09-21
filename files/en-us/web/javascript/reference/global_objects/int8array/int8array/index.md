@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Int8Array.Int8Array
 ---
+
 {{JSRef}}
 
 The **`Int8Array()`** constructor creates a typed array of
@@ -18,7 +19,7 @@ using standard array index syntax (that is, using bracket notation).
 
 ## Syntax
 
-```js
+```js-nolint
 new Int8Array()
 new Int8Array(length)
 new Int8Array(typedArray)

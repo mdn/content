@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-duration
 ---
+
 {{CSSRef}}
 
 The **`animation-duration`** [CSS](/en-US/docs/Web/CSS) property sets the length of time that an animation takes to complete one cycle.

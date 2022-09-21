@@ -27,9 +27,9 @@ and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/
 
 ## Syntax
 
-```js
-new MediaRecorder(stream);
-new MediaRecorder(stream, options);
+```js-nolint
+new MediaRecorder(stream)
+new MediaRecorder(stream, options)
 ```
 
 ### Parameters

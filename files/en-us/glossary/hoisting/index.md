@@ -3,9 +3,9 @@ title: Hoisting
 slug: Glossary/Hoisting
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
+
 JavaScript **Hoisting** refers to the process whereby the interpreter appears to move the _declaration_ of functions, variables or classes to the top of their scope, prior to execution of the code.
 
 Hoisting allows functions to be safely used in code before they are declared.
@@ -89,8 +89,8 @@ Note however that initialization also causes declaration (if not already declare
 The code snippet below will work, because even though it isn't hoisted, the variable is initialized and effectively declared before it is used.
 
 ```js
-a = 'Cran'; // Initialize a
-b = 'berry'; // Initialize b
+a = "Cran"; // Initialize a
+b = "berry"; // Initialize b
 
 console.log(`${a}${b}`); // 'Cranberry'
 ```

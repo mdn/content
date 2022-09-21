@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.FetchEvent.isReload
 ---
+
 {{APIRef("Service Workers API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`isReload`** read-only property of the

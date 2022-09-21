@@ -9,6 +9,7 @@ tags:
   - Deprecated
 browser-compat: mathml.elements.maction
 ---
+
 {{MathMLRef}}{{Deprecated_Header}}
 
 The deprecated MathML **`<maction>`** element used to provide a possibility to bind an actions to mathematical expressions. Nowadays, it is recommended to rely on [JavaScript](/en-US/docs/Web/JavaScript) and other Web technologies to implement this use case. Some browsers will just render the first child of an `<maction>` element and ignore its `actiontype` and `selection` attributes.
@@ -35,34 +36,30 @@ The following example uses the "toggle" `actiontype`:
 
 ```html
 <math>
+  <maction actiontype="toggle">
+    <mfrac>
+      <mn>6</mn>
+      <mn>8</mn>
+    </mfrac>
 
-<maction actiontype="toggle">
+    <mfrac>
+      <mrow>
+        <mn>3</mn>
+        <mo>×</mo>
+        <mn>2</mn>
+      </mrow>
+      <mrow>
+        <mn>4</mn>
+        <mo>×</mo>
+        <mn>2</mn>
+      </mrow>
+    </mfrac>
 
-  <mfrac>
-    <mn>6</mn>
-    <mn>8</mn>
-  </mfrac>
-
-  <mfrac>
-    <mrow>
+    <mfrac>
       <mn>3</mn>
-      <mo>×</mo>
-      <mn>2</mn>
-    </mrow>
-    <mrow>
       <mn>4</mn>
-      <mo>×</mo>
-      <mn>2</mn>
-    </mrow>
-  </mfrac>
-
-  <mfrac>
-    <mn>3</mn>
-    <mn>4</mn>
-  </mfrac>
-
-</maction>
-
+    </mfrac>
+  </maction>
 </math>
 ```
 

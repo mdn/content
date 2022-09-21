@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.@@iterator
 ---
+
 {{JSRef}}
 
 The **`@@iterator`** method is part of
@@ -27,7 +28,7 @@ function object as the initial value of the {{jsxref("Array.prototype.values()",
 
 ## Syntax
 
-```js
+```js-nolint
 [Symbol.iterator]()
 ```
 
@@ -44,8 +45,7 @@ return the {{jsxref("Array.prototype.values()", "values()")}} function.
 #### HTML
 
 ```html
-<ul id="letterResult">
-</ul>
+<ul id="letterResult"></ul>
 ```
 
 #### JavaScript

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PresentationRequest.PresentationRequest
 ---
+
 {{APIRef("Presentation API")}}{{SeeCompatTable}}
 
 The **`PresentationRequest()`**
@@ -19,7 +20,7 @@ new PresentationRequest.
 
 ## Syntax
 
-```js
+```js-nolint
 new PresentationRequest(url)
 new PresentationRequest(urls)
 ```

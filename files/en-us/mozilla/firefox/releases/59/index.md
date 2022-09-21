@@ -2,10 +2,11 @@
 title: Firefox 59 for developers
 slug: Mozilla/Firefox/Releases/59
 tags:
-  - '59'
+  - "59"
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 59 that will affect developers. Firefox 59 was released on March 13, 2018.
@@ -162,7 +163,7 @@ Support for the non-standard `pcast:` and `feed:` protocols has been removed fro
 - New [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), [`SidebarAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) APIs:
 
   - `browserAction/pageAction/sidebarAction.set*` functions now accept `null` to undo changes.
-  - [`browserAction.isEnabled()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled), [`pageAction.isShown()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/isShown) , [`sidebarAction.isOpen()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen) functions.
+  - [`browserAction.isEnabled()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled), [`pageAction.isShown()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/isShown), [`sidebarAction.isOpen()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen) functions.
 
 - New option in [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) to show page actions by default.
 - New values for `protocol_handlers`:

@@ -11,6 +11,7 @@ tags:
   - Secure context
 browser-compat: api.PaymentResponse
 ---
+
 {{SecureContext_Header}}{{APIRef("Payment Request API")}}
 
 The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is returned after a user selects a payment method and approves a payment request.

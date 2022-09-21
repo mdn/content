@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Node.lastChild
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`lastChild`** property of the {{domxref("Node")}} interface

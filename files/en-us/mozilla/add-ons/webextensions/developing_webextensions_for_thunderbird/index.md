@@ -8,6 +8,7 @@ tags:
   - WebExtensions
   - thunderbird
 ---
+
 {{AddonSidebar}}
 
 You'll approach the coding of an extension for Thunderbird in the same way as you would for a Firefox extension; using a text editor or tool of your choice to write the code.

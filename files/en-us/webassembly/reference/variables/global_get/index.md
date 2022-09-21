@@ -7,6 +7,7 @@ tags:
   - Reference
   - Variable
 ---
+
 {{WebAssemblySidebar}}
 
 The **`global.get`** instruction loads the value of a global variable onto the stack.

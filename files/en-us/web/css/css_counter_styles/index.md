@@ -13,6 +13,7 @@ browser-compat:
   - css.properties.counter-increment
   - css.properties.counter-reset
 ---
+
 {{CSSRef}}
 
 **CSS Counter Styles** is a module of CSS that lets you define your own counter styles.

@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.MediaStreamTrackGenerator
 ---
+
 {{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 The **`MediaStreamTrackGenerator`** interface of the {{domxref('Insertable Streams for MediaStreamTrack API')}} creates a {{domxref("WritableStream")}} that acts as a {{domxref("MediaStreamTrack")}} source.

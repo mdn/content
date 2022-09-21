@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRRay
 ---
+
 {{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRRay`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is a geometric ray described by an origin point and a direction vector.

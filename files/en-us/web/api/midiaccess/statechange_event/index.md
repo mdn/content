@@ -11,6 +11,7 @@ tags:
   - Secure context
 browser-compat: api.MIDIAccess.statechange_event
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`statechange`** event of the {{domxref("MIDIAccess")}} interface is fired when a new MIDI port is added or when an existing port changes state.

@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEBlendElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEBlendElement`** interface corresponds to the {{SVGElement("feBlend")}} element.

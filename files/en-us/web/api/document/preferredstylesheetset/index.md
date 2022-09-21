@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.Document.preferredStyleSheetSet
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`preferredStyleSheetSet`** property returns the preferred style sheet set as set by the page

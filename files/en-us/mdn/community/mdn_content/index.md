@@ -8,6 +8,7 @@ tags:
   - governance
   - mdn-content
 ---
+
 {{MDNSidebar}}
 
 Problems with MDN Web Docs are reported as [content repo issues](https://github.com/mdn/content/issues). This article helps you find the _best_ issues to work on, based on your expertise and how much time you have available, and outlines the main steps to fixing them.

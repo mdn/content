@@ -13,6 +13,7 @@ tags:
   - transcript
 browser-compat: api.SpeechRecognitionAlternative.transcript
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`transcript`** read-only property of the

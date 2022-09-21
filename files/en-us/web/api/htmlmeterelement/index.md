@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLMeterElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The HTML {{HTMLElement("meter")}} elements expose the **`HTMLMeterElement`** interface, which provides special properties and methods (beyond the {{domxref("HTMLElement")}} object interface they also have available to them by inheritance) for manipulating the layout and presentation of {{HTMLElement("meter")}} elements.

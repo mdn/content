@@ -19,6 +19,7 @@ tags:
   - mouse
 browser-compat: api.Element.contextmenu_event
 ---
+
 {{APIRef}}
 
 The **`contextmenu`** event fires when the user attempts to open a context menu. This event is typically triggered by clicking the right mouse button, or by pressing the context menu key.

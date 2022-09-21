@@ -12,6 +12,7 @@ tags:
   - getCurrentPosition
 browser-compat: api.Geolocation.getCurrentPosition
 ---
+
 {{securecontext_header}}{{ APIRef("Geolocation API") }}
 
 The
@@ -20,7 +21,7 @@ the current position of the device.
 
 ## Syntax
 
-```js
+```js-nolint
 getCurrentPosition(success)
 getCurrentPosition(success, error)
 getCurrentPosition(success, error, options)

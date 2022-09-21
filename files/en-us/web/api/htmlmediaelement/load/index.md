@@ -16,6 +16,7 @@ tags:
   - reset
 browser-compat: api.HTMLMediaElement.load
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}} method
@@ -36,7 +37,7 @@ causing the changes to take effect.
 
 ## Syntax
 
-```js
+```js-nolint
 load()
 ```
 

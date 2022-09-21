@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XRSubImage.viewport
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`viewport`** property of the {{domxref("XRSubImage")}} interface represents the {{domxref("XRViewport")}} that is used when rendering the sub image.

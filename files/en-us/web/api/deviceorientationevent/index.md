@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.DeviceOrientationEvent
 ---
+
 {{apiref("Device Orientation Events")}}
 The **`DeviceOrientationEvent`** object provides web developers with information from the physical orientation of the device running the web page.
 

@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.idle.IdleState
 ---
+
 {{AddonSidebar()}}
 
 String describing the device's idle state.

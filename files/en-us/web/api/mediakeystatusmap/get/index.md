@@ -11,6 +11,7 @@ tags:
   - get()
 browser-compat: api.MediaKeyStatusMap.get
 ---
+
 {{APIRef("EncryptedMediaExtensions API")}}
 
 The **`get`** property of the
@@ -19,7 +20,7 @@ key, or `undefined` if there is none.
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 

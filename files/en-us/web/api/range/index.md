@@ -7,6 +7,7 @@ tags:
   - DOM
 browser-compat: api.Range
 ---
+
 {{APIRef("DOM")}}
 
 The **`Range`** interface represents a fragment of a document that can contain nodes and parts of text nodes.

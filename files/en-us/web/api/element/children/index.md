@@ -11,6 +11,7 @@ tags:
   - children
 browser-compat: api.Element.children
 ---
+
 {{ APIRef("DOM") }}
 
 The read-only **`children`** property returns a live {{domxref("HTMLCollection")}}

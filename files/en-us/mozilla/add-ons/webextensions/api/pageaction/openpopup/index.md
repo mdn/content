@@ -12,13 +12,14 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.pageAction.openPopup
 ---
+
 {{AddonSidebar()}}Open the page action's popup.
 
 You can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions).
 
 ## Syntax
 
-```js
+```js-nolint
 browser.pageAction.openPopup()
 ```
 

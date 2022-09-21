@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.IdleDetector.screenState
 ---
+
 {{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`screenState`** read-only property of the {{domxref("IdleDetector")}} interface

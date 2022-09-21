@@ -2,11 +2,12 @@
 title: Firefox 77 for developers
 slug: Mozilla/Firefox/Releases/77
 tags:
-  - '77'
+  - "77"
   - Firefox
   - Mozilla
   - Releases
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 77 that will affect developers. Firefox 77 was released on [June 2, 2020](https://wiki.mozilla.org/RapidRelease/Calendar).

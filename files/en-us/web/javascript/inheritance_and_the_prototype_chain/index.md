@@ -8,6 +8,7 @@ tags:
   - JavaScript
   - OOP
 ---
+
 {{jsSidebar("Advanced")}}
 
 JavaScript is a bit confusing for developers experienced in class-based languages (like Java or C++), as it is dynamic and does not have static types.
@@ -318,7 +319,7 @@ const obj = new Derived();
 // obj ---> Derived.prototype ---> Base.prototype ---> Object.prototype ---> null
 ```
 
-You may also see some legacy code using [`Object.create`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create). However, because this re-assigns the `prototype` property, it's a bad practice, for the reasons previously described here.
+You may also see some legacy code using {{jsxref("Object.create()")}} to build the inheritance chain. However, because this reassigns the `prototype` property and removes the [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) property, it can be more error-prone, while performance gains may not be apparent if the constructors haven't created any instances yet.
 
 ```js example-bad
 function Base() {}
@@ -711,7 +712,7 @@ Object.setPrototypeOf(obj, anotherObj);
   </tbody>
 </table>
 
-### With the \_\_proto__ accessor
+### With the \_\_proto\_\_ accessor
 
 All objects inherit the [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) setter, which can be used to set the `[[Prototype]]` of an existing object (if the `__proto__` key is not overridden on the object).
 

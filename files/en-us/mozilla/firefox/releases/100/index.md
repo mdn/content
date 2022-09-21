@@ -2,11 +2,12 @@
 title: Firefox 100 for developers
 slug: Mozilla/Firefox/Releases/100
 tags:
-  - '100'
+  - "100"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 100 that will affect developers. Firefox 100 was released on May 3, 2022.
@@ -43,7 +44,7 @@ No notable changes.
 ### WebAssembly
 
 - WebAssembly now supports exceptions that can be thrown and caught in either WebAssembly or JavaScript (or some other runtime), crossing between the environment boundaries if not handled.
-  The JavaScript representations of WebAssembly exceptions are [WebAssembly.Exception](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) and [WebAssembly.Tag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) ({{bug(1759217)}}).
+  The JavaScript representations of WebAssembly exceptions are [WebAssembly.Exception](/en-US/docs/WebAssembly/JavaScript_interface/Exception) and [WebAssembly.Tag](/en-US/docs/WebAssembly/JavaScript_interface/Tag) ({{bug(1759217)}}).
 
 ### WebDriver conformance (Marionette)
 

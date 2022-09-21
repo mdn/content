@@ -17,6 +17,7 @@ tags:
   - track
 browser-compat: api.RTCRtpSender.replaceTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpSender")}} method
@@ -34,8 +35,8 @@ the example [Switching cameras](#switching_cameras) below.
 
 ## Syntax
 
-```js
-trackReplacedPromise = sender.replaceTrack(newTrack);
+```js-nolint
+replaceTrack(newTrack)
 ```
 
 ### Parameters

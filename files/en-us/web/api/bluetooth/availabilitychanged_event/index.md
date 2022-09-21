@@ -1,5 +1,5 @@
 ---
-title: 'Bluetooth: availabilitychanged event'
+title: "Bluetooth: availabilitychanged event"
 slug: Web/API/Bluetooth/availabilitychanged_event
 page-type: web-api-event
 tags:
@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.Bluetooth.availabilitychanged_event
 ---
+
 {{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The `availabilitychanged` event fires when the Bluetooth system as a whole becomes available or unavailable to the {{Glossary("User Agent")}}.
@@ -19,10 +20,10 @@ The `availabilitychanged` event fires when the Bluetooth system as a whole becom
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('availabilitychanged', (event) => { });
+```js-nolint
+addEventListener("availabilitychanged", (event) => { })
 
-onavailabilitychanged = (event) => { };
+onavailabilitychanged = (event) => { }
 ```
 
 ## Event type
@@ -43,8 +44,8 @@ Alternatively, you can use the `Bluetooth.onavailabilitychanged` event handler p
 
 ```js
 Bluetooth.onavailabilitychanged = (event) => {
- const availability = event.value;
-}
+  const availability = event.value;
+};
 ```
 
 ## Specifications

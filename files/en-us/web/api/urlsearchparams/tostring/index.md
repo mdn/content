@@ -10,6 +10,7 @@ tags:
   - toString
 browser-compat: api.URLSearchParams.toString
 ---
+
 {{ApiRef("URL API")}}
 
 The **`toString()`** method of the
@@ -24,7 +25,7 @@ URL.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

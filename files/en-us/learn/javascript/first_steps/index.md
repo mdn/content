@@ -14,10 +14,11 @@ tags:
   - Numbers
   - Operators
   - Variables
-  - l10n:priority
+  - "l10n:priority"
   - maths
   - strings
 ---
+
 {{LearnSidebar}}
 
 In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key building blocks in detail, such as variables, strings, numbers and arrays.

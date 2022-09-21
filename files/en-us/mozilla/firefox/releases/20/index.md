@@ -7,6 +7,7 @@ tags:
   - Gecko
   - Mozilla
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 20 was released on April, 2nd 2013. This article provides information about the changes in this release that will affect developers.

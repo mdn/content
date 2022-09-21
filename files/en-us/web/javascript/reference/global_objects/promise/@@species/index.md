@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Promise.@@species
 ---
+
 {{JSRef}}
 
 The **`Promise[@@species]`** accessor property returns the constructor used to construct return values from promise methods.

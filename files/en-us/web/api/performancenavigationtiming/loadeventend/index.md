@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.loadEventEnd
 ---
+
 {{APIRef("Navigation Timing")}}
 
 The **`loadEventEnd`** read-only property returns a

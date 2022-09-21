@@ -12,6 +12,7 @@ tags:
   - ServiceWorkerRegistration
 browser-compat: api.ServiceWorkerRegistration.pushManager
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`pushManager`** property of the

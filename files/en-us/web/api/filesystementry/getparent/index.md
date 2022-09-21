@@ -12,6 +12,7 @@ tags:
   - getParent
 browser-compat: api.FileSystemEntry.getParent
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemEntry")}} interface's method
@@ -20,7 +21,7 @@ The {{domxref("FileSystemEntry")}} interface's method
 
 ## Syntax
 
-```js
+```js-nolint
 getParent(successCallback, errorCallback)
 getParent(successCallback)
 ```

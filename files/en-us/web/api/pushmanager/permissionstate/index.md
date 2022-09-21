@@ -11,19 +11,20 @@ tags:
   - permissionState
 browser-compat: api.PushManager.permissionState
 ---
+
 {{ApiRef("Push API")}}
 
 The **`permissionState()`** method of the
 {{domxref("PushManager")}} interface returns a {{jsxref("Promise")}} that resolves to a
 string indicating the permission state of the push manager. Possible
-values are  `'prompt'`, `'denied'`, or `'granted'`.
+values are `'prompt'`, `'denied'`, or `'granted'`.
 
 > **Note:** As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is
 > granted for notifications, push will also be enabled.
 
 ## Syntax
 
-```js
+```js-nolint
 permissionState()
 permissionState(options)
 ```

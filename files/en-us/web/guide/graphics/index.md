@@ -12,6 +12,7 @@ tags:
   - WebGL
   - WebRTC
 ---
+
 Websites and applications often need to present graphics, such as images. Static images can easily be displayed using the {{HTMLElement("img")}} element, or by setting the background of HTML elements using the {{cssxref("background-image")}} property. You can also construct graphics on-the-fly, or manipulate images after the fact. These articles provide insight into how you can accomplish this.
 
 ## 2D Graphics

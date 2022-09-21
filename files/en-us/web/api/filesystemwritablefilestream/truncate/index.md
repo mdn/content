@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.FileSystemWritableFileStream.truncate
 ---
+
 {{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
 
 The **`truncate()`** method of the
@@ -30,8 +31,8 @@ Changes are typically written to a temporary file instead.
 
 ## Syntax
 
-```js
-FileSystemWritableFileStream.truncate().then(/* … */);
+```js-nolint
+truncate()
 ```
 
 ### Parameters

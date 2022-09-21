@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.RTCDtlsTransport
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDtlsTransport`** interface provides access to information about the Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport over which a {{domxref("RTCPeerConnection")}}'s {{Glossary("RTP")}} and {{Glossary("RTCP")}} packets are sent and received by its {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}} objects.
@@ -47,7 +48,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
 ## Methods
 
-_Also inherits properties from {{DOMxRef("EventTarget")}}._
+_Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDtlsTransport.getRemoteCertificates", "getRemoteCertificates()")}}
   - : Returns an array of {{jsxref("ArrayBuffer")}} containing the certificates of the remote peer of the connection.

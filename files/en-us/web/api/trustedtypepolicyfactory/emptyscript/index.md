@@ -10,6 +10,7 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.emptyScript
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`emptyScript`** read-only property of the {{domxref("TrustedTypePolicyFactory")}} interface returns a {{domxref("TrustedScript")}} object containing an empty string.

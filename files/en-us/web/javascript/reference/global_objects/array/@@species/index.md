@@ -9,13 +9,14 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.@@species
 ---
+
 {{JSRef}}
 
 The **`Array[@@species]`** accessor property returns the constructor used to construct return values from array methods.
 
 ## Syntax
 
-```js
+```js-nolint
 Array[Symbol.species]
 ```
 

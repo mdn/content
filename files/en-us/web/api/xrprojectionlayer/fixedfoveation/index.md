@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XRProjectionLayer.fixedFoveation
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`fixedFoveation`** property of the {{domxref("XRProjectionLayer")}} interface is a number indicating the amount of foveation used by the XR compositor for the layer. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.

@@ -13,6 +13,7 @@ tags:
   - setBadgeBackgroundColor
 browser-compat: webextensions.api.browserAction.setBadgeBackgroundColor
 ---
+
 {{AddonSidebar()}}
 
 Sets the background color for the badge. Tabs without a specific badge background color will inherit the global badge background color, which defaults to `[217, 0, 0, 255]` in Firefox.
@@ -23,7 +24,7 @@ Other browsers always use a white text color, so setting a dark background may b
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.setBadgeBackgroundColor(
   details // object
 )

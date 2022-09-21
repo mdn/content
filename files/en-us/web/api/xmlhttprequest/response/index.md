@@ -17,6 +17,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.response
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}}

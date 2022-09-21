@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.WebGLRenderingContext.commit
 ---
+
 {{APIRef("WebGL")}}{{SeeCompatTable}}
 
 The
@@ -20,7 +21,7 @@ context is not directly fixed to a specific canvas.
 
 ## Syntax
 
-```js
+```js-nolint
 commit()
 ```
 

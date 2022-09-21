@@ -18,6 +18,7 @@ tags:
   - rendering
 browser-compat: api.WebGLRenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext`** interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.

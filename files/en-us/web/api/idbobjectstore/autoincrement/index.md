@@ -13,6 +13,7 @@ tags:
   - autoIncrement
 browser-compat: api.IDBObjectStore.autoIncrement
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`autoIncrement`** read-only property of the
@@ -27,10 +28,10 @@ Note that every object store has its own separate auto increment counter.
 
 A boolean value:
 
-| Value   | Meaning                                     |
-| ------- | ------------------------------------------- |
-| `true`  | The object store auto increments.           |
-| `false` | The object store does not auto increment.   |
+| Value   | Meaning                                   |
+| ------- | ----------------------------------------- |
+| `true`  | The object store auto increments.         |
+| `false` | The object store does not auto increment. |
 
 ## Examples
 

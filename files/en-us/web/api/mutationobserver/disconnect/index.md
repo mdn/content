@@ -21,6 +21,7 @@ tags:
   - stop
 browser-compat: api.MutationObserver.disconnect
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The {{domxref("MutationObserver")}} method
@@ -32,7 +33,7 @@ The observer can be reused by calling its
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

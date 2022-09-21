@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.@@iterator
 ---
+
 {{JSRef}}
 
 The **`[@@iterator]()`** method returns a new iterator object
@@ -22,7 +23,7 @@ String value.
 
 ## Syntax
 
-```js
+```js-nolint
 str[Symbol.iterator]
 ```
 

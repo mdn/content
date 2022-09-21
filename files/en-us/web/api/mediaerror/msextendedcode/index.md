@@ -3,6 +3,7 @@ title: MediaError.msExtendedCode
 slug: Web/API/MediaError/msExtendedCode
 page-type: web-api-instance-property
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}

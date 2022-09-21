@@ -19,6 +19,7 @@ tags:
   - XR
   - controllers
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 A full WebXR experience isn't just about showing the user a wholly virtual scene or augmenting reality by adding to or altering the world around them. In order to make an experience that's fulfilling and engaging, the user needs to be able to interact with it. To that end, WebXR provides support for a variety of kinds of input devices.
@@ -104,7 +105,7 @@ The input source's {{domxref("XRInputSource.gripSpace", "gripSpace")}} property 
 **Figure: The coordinate system for the right hand's grip space.**
 ![A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world.](dark_right.svg)
 
-The grip space's native origin, located around the center of the player's fist, is (0, 0, 0) within the input source's local coordinate system, while the {{domxref("XRSpace")}} specified by `gripSpace` can be used at any time to convert coordinates or vectors from the input source's space into world coordinates (or vice-versa).
+The grip space's native origin, located around the center of the player's fist, is (0, 0, 0) within the input source's local coordinate system, while the {{domxref("XRSpace")}} specified by `gripSpace` can be used at any time to convert coordinates or vectors from the input source's space into world coordinates (or vice versa).
 
 This means that if you use a 3D model to represent your controller, your player's avatar's hands, or anything else representative of the controller's position in space, the `gripSpace` can be used as the transform matrix that correctly positions and orients the object's model for rendering. To do this, it's necessary to use the transform to convert the grip space to the world coordinate system used by WebGL for rendering purposes.
 
@@ -510,7 +511,7 @@ Because this use of the `Gamepad` interface is a convenience rather than a true 
 
 ## Incorporating input from non-WebXR sources
 
-Sometimes, you need to have a way to let the user provide input using controllers which are external to WebXR.  Most commonly, these inputs are from keyboards and mice, but you could also use non-XR gamepad devices, network inputs, or other sources of data to simulate user controls. While WebXR offers no support for directly interfacing these input devices with the XR scene, you can collect the input data yourself and apply it yourself.
+Sometimes, you need to have a way to let the user provide input using controllers which are external to WebXR. Most commonly, these inputs are from keyboards and mice, but you could also use non-XR gamepad devices, network inputs, or other sources of data to simulate user controls. While WebXR offers no support for directly interfacing these input devices with the XR scene, you can collect the input data yourself and apply it yourself.
 
 Assuming inputs are used to control an avatar within the simulation, which is the most common use case, WebXR inputs are used to affect the avatar in the following ways, using data collected from the non-XR input device:
 

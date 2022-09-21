@@ -13,6 +13,7 @@ tags:
   - sendMessage
 browser-compat: webextensions.api.runtime.sendMessage
 ---
+
 {{AddonSidebar()}}
 
 Sends a single message to event listeners within your extension or a different extension.
@@ -29,7 +30,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let sending = browser.runtime.sendMessage(
   extensionId,             // optional string
   message,                 // any

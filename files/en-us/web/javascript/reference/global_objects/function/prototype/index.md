@@ -7,6 +7,7 @@ tags:
   - Property
 spec-urls: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-instances-prototype
 ---
+
 {{JSRef}}
 
 A {{jsxref("Function")}} object's **`prototype`** property is used when the function is used as a constructor with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. It will become the new object's prototype.

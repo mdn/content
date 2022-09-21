@@ -15,6 +15,7 @@ tags:
   - appendBuffer
 browser-compat: api.SourceBuffer.appendBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`appendBuffer()`** method of the
@@ -24,7 +25,7 @@ to the `SourceBuffer`.
 
 ## Syntax
 
-```js
+```js-nolint
 appendBuffer(source)
 ```
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.insertBefore
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertBefore()`** method of the {{domxref("Node")}} interface
@@ -29,8 +30,8 @@ node.
 
 ## Syntax
 
-```js
-insertBefore(newNode, referenceNode);
+```js-nolint
+insertBefore(newNode, referenceNode)
 ```
 
 ### Parameters
@@ -60,30 +61,30 @@ Pre-insert validity
 
 ```html
 <div id="parentElement">
-   <span id="childElement">foo bar</span>
+  <span id="childElement">foo bar</span>
 </div>
 
 <script>
-// Create the new node to insert
-const newNode = document.createElement("span");
+  // Create the new node to insert
+  const newNode = document.createElement("span");
 
-// Get a reference to the parent node
-const parentDiv = document.getElementById("childElement").parentNode;
+  // Get a reference to the parent node
+  const parentDiv = document.getElementById("childElement").parentNode;
 
-// Begin test case [ 1 ] : Existing childElement (all works correctly)
-const sp2 = document.getElementById("childElement");
-parentDiv.insertBefore(newNode, sp2);
-// End test case [ 1 ]
+  // Begin test case [ 1 ] : Existing childElement (all works correctly)
+  let sp2 = document.getElementById("childElement");
+  parentDiv.insertBefore(newNode, sp2);
+  // End test case [ 1 ]
 
-// Begin test case [ 2 ] : childElement is of Type undefined
-const sp2 = undefined; // Non-existent node of id "childElement"
-parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
-// End test case [ 2 ]
+  // Begin test case [ 2 ] : childElement is of Type undefined
+  sp2 = undefined; // Non-existent node of id "childElement"
+  parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
+  // End test case [ 2 ]
 
-// Begin test case [ 3 ] : childElement is of Type "undefined" (string)
-const sp2 = "undefined"; // Non-existent node of id "childElement"
-parentDiv.insertBefore(newNode, sp2); // Generates "Type Error: Invalid Argument"
-// End test case [ 3 ]
+  // Begin test case [ 3 ] : childElement is of Type "undefined" (string)
+  sp2 = "undefined"; // Non-existent node of id "childElement"
+  parentDiv.insertBefore(newNode, sp2); // Generates "Type Error: Invalid Argument"
+  // End test case [ 3 ]
 </script>
 ```
 
@@ -95,16 +96,16 @@ parentDiv.insertBefore(newNode, sp2); // Generates "Type Error: Invalid Argument
 </div>
 
 <script>
-// Create a new, plain <span> element
-let sp1 = document.createElement("span")
+  // Create a new, plain <span> element
+  let sp1 = document.createElement("span");
 
-// Get the reference element
-let sp2 = document.getElementById("childElement")
-// Get the parent element
-let parentDiv = sp2.parentNode
+  // Get the reference element
+  let sp2 = document.getElementById("childElement");
+  // Get the parent element
+  let parentDiv = sp2.parentNode;
 
-// Insert the new element into before sp2
-parentDiv.insertBefore(sp1, sp2)
+  // Insert the new element into before sp2
+  parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 

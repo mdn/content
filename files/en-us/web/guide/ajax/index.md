@@ -9,6 +9,7 @@ tags:
   - References
   - XMLHttpRequest
 ---
+
 ## Getting Started
 
 **Asynchronous JavaScript and XML**, while not a technology in itself, is a term coined in 2005 by Jesse James Garrett, that describes a "new" approach to using a number of existing technologies together, including [HTML](/en-US/docs/Web/HTML) or [XHTML](/en-US/docs/Glossary/XHTML), [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), [DOM](/en-US/docs/Web/API/Document_Object_Model), [XML](/en-US/docs/Web/XML), [XSLT](/en-US/docs/Web/XSLT), and most importantly the {{domxref("XMLHttpRequest")}} object.

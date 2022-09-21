@@ -27,6 +27,7 @@ tags:
   - rotation
   - transform
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 The first and most important thing to understand when considering the code to manage point-of-view and cameras in your application is this: _WebXR does not have cameras_. There's no magic object provided by either the [WebGL](/en-US/docs/Web/API/WebGL_API) or the [WebXR](/en-US/docs/Web/API/WebXR_Device_API) API that represents the viewer that you can rotate and move around to automatically change what's seen on the screen. In this guide we show how use [WebGL](/en-US/docs/Web/API/WebGL_API) to simulate camera movements without having a camera to move. These techniques can be used in any WebGL (or WebXR) project.
@@ -265,7 +266,7 @@ If `panAngle` is positive, this transform will pan the camera to the right; a ne
 
 ### Tilting (Pitching up or down)
 
-When you **tilt** or **pitch** the camera, you keep it fixed in space at the same coordinates while changing the direction in which it's facing vertically without altering the horizontal portion of its facing at all. It adjusts the direction it's pointing up and down. Tilting is good for capturing the scope of a tall object or scene, such as a forest or a mountain, but is also a popular way to introduce a character or locale of importance or which inspires awe. it's also of course useful for implementing support for a player looking up and down.
+When you **tilt** or **pitch** the camera, you keep it fixed in space at the same coordinates while changing the direction in which it's facing vertically without altering the horizontal portion of its facing at all. It adjusts the direction it's pointing up and down. Tilting is good for capturing the scope of a tall object or scene, such as a forest or a mountain, but is also a popular way to introduce a character or locale of importance or which inspires awe. It's also of course useful for implementing support for a player looking up and down.
 
 ![A diagram showing a camera tilting up and down](camera-tilt.png)
 
@@ -295,7 +296,7 @@ Here, `[0, 0, dollyDistance]` is a vector wherein `dollyDistance` is the distanc
 
 ### Trucking (Moving left or right)
 
-**Trucking** using a physical camera uses the same kind of rigging as dollying, but instead of moving the camera forward and backward, it moves from left to right or vice-versa. The camera doesn't rotate at all, so the focus of the shot slowly glides off the screen. This can suggest concentration, time passing, or contemplation when attempting to establish emotion in a scene. It's also used frequently in "walk-and-talk" scenes, wherein the camera glides alongside the characters and they walk through the scene.
+**Trucking** using a physical camera uses the same kind of rigging as dollying, but instead of moving the camera forward and backward, it moves from left to right or vice versa. The camera doesn't rotate at all, so the focus of the shot slowly glides off the screen. This can suggest concentration, time passing, or contemplation when attempting to establish emotion in a scene. It's also used frequently in "walk-and-talk" scenes, wherein the camera glides alongside the characters and they walk through the scene.
 
 ![A diagram showing how a camera trucks left and right](camera-truck.png)
 

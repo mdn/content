@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.appendChild
 ---
+
 {{APIRef("DOM")}}
 
 The **`appendChild()`** method of the {{domxref("Node")}} interface adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, `appendChild()` moves it from its current position to the new position.
@@ -19,7 +20,7 @@ If the given child is a {{domxref("DocumentFragment")}}, the entire contents of 
 
 ## Syntax
 
-```js
+```js-nolint
 appendChild(aChild)
 ```
 
@@ -42,7 +43,7 @@ A {{domxref("Node")}} that is the appended child (`aChild`), except when `aChild
     - If the current node is a {{domxref("Text")}}, and its parent is a {{domxref("Document")}}.
     - If the current node is a {{domxref("DocumentType")}} and its parent is _not_ a {{domxref("Document")}}, as a _doctype_ should always be a direct descendant of a _document_.
     - If the parent of the node is a {{domxref("Document")}} and `aChild` is a {{domxref("DocumentFragment")}} with more than one {{domxref("Element")}} child, or that has a {{domxref("Text")}} child.
-    - If the insertion of `aChild`  would lead to {{domxref("Document")}} with more than one {{domxref("Element")}} as child.
+    - If the insertion of `aChild` would lead to {{domxref("Document")}} with more than one {{domxref("Element")}} as child.
 
 ## Description
 

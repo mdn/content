@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.pending
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`pending`** read-only property of the

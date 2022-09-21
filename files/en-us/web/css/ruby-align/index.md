@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: css.properties.ruby-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`ruby-align`** CSS property defines the distribution of the different ruby elements over the base.

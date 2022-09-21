@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ImageData.height
 ---
+
 {{APIRef("Canvas API")}}
 
 The readonly **`ImageData.height`** property returns the number

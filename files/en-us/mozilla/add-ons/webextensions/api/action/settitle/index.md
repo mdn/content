@@ -12,6 +12,7 @@ tags:
   - setTitle
 browser-compat: webextensions.api.action.setTitle
 ---
+
 {{AddonSidebar}}
 
 Sets the browser action's title. The title is displayed in a tooltip over the browser action's icon. You can pass a `tabId` in or a `windowId` as an optional parameter — if you do this then the title is changed only for the specified tab or window. Tabs or windows without a specific title inherit the global title text, which defaults to the [`default_title`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) specified in the manifest.
@@ -20,7 +21,7 @@ Sets the browser action's title. The title is displayed in a tooltip over the br
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.setTitle(
   details // object
 )
@@ -61,9 +62,9 @@ This code switches the title between "this" and "that" each time the user clicks
 ```js
 function toggleTitle(title) {
   if (title === "this") {
-    browser.action.setTitle({title: "that"});
+    browser.action.setTitle({ title: "that" });
   } else {
-    browser.action.setTitle({title: "this"});
+    browser.action.setTitle({ title: "this" });
   }
 }
 

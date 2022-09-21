@@ -7,6 +7,7 @@ tags:
   - PAC
   - Proxy
 ---
+
 {{HTTPSidebar}}
 
 A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
@@ -126,7 +127,7 @@ These functions can be used in building the PAC file:
 
 #### Syntax
 
-```js
+```js-nolint
 isPlainHostName(host)
 ```
 
@@ -150,7 +151,7 @@ isPlainHostName("www") // true
 
 #### Syntax
 
-```js
+```js-nolint
 dnsDomainIs(host, domain)
 ```
 
@@ -176,7 +177,7 @@ dnsDomainIs("www", ".mozilla.org") // false
 
 #### Syntax
 
-```js
+```js-nolint
 localHostOrDomainIs(host, hostdom)
 ```
 
@@ -204,7 +205,7 @@ localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mi
 
 #### Syntax
 
-```js
+```js-nolint
 isResolvable(host)
 ```
 
@@ -225,7 +226,7 @@ isResolvable("www.mozilla.org") // true
 
 #### Syntax
 
-```js
+```js-nolint
 isInNet(host, pattern, mask)
 ```
 
@@ -277,7 +278,7 @@ dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"
 
 #### Syntax
 
-```js
+```js-nolint
 convert_addr(ipaddr)
 ```
 
@@ -298,7 +299,7 @@ convert_addr("104.16.41.2"); // returns the decimal number 1745889538
 
 #### Syntax
 
-```js
+```js-nolint
 myIpAddress()
 ```
 
@@ -322,7 +323,7 @@ myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on th
 
 #### Syntax
 
-```js
+```js-nolint
 dnsDomainLevels(host)
 ```
 
@@ -345,7 +346,7 @@ dnsDomainLevels("www.mozilla.org"); // 2
 
 #### Syntax
 
-```js
+```js-nolint
 shExpMatch(str, shexp)
 ```
 
@@ -375,7 +376,7 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 
 #### Syntax
 
-```js
+```js-nolint
 weekdayRange(wd1, wd2, [gmt])
 ```
 
@@ -481,7 +482,7 @@ dateRange(1995, 1997);
 
 #### Syntax
 
-```js
+```js-nolint
 // The full range of expansions is analogous to dateRange.
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
@@ -518,7 +519,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 #### Syntax
 
-```js
+```js-nolint
 alert(message)
 ```
 

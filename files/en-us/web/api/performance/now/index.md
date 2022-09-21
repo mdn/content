@@ -10,6 +10,7 @@ tags:
   - Web Performance API
 browser-compat: api.Performance.now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 The **`performance.now()`** method
@@ -38,7 +39,7 @@ are alleviated through other means.
 
 ## Syntax
 
-```js
+```js-nolint
 now()
 ```
 

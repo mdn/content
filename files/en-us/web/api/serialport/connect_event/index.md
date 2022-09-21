@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.SerialPort.connect_event
 ---
+
 {{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`connect`** event of the {{domxref("SerialPort")}} interface is fired when a port has connected to the device. This event is only fired for ports associated with removable devices such as those connected via USB.

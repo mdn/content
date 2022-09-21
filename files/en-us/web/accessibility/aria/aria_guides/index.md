@@ -4,6 +4,7 @@ slug: Web/Accessibility/ARIA/ARIA_Guides
 tags:
   - ARIA
 ---
+
 Accessible Rich Internet Applications (**ARIA**) defines ways to make the Web more accessible to people with disabilities. A few guidelines to follow that ensure better accessibility, like using drag and drop for placement of the widgets.
 
 - Error Handling in Forms

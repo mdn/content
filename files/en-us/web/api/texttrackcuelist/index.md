@@ -11,6 +11,7 @@ tags:
   - Media
 browser-compat: api.TextTrackCueList
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`TextTrackCueList`** array-like object represents a dynamically updating list of {{domxref("TextTrackCue")}} objects.

@@ -6,6 +6,7 @@ tags:
   - writing-guide
 page-type: mdn-writing-guide
 ---
+
 {{MDNSidebar}}
 
 This article gives you some handy information about approaching how to document technologies.

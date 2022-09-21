@@ -11,6 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.focusNode
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.focusNode`** read-only property returns the

@@ -13,6 +13,7 @@ tags:
   - cookie
 browser-compat: webextensions.api.cookies.Cookie
 ---
+
 {{AddonSidebar()}}
 
 The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information about an HTTP cookie.

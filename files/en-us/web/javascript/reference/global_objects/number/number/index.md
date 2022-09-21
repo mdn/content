@@ -9,13 +9,14 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Number.Number
 ---
+
 {{JSRef}}
 
 The **`Number()` constructor** creates a {{jsxref("Number")}} object. When called instead as a function, it performs type conversion to a {{Glossary("number", "primitive number")}}, which is usually more useful.
 
 ## Syntax
 
-```js
+```js-nolint
 new Number(value)
 Number(value)
 ```
@@ -29,7 +30,7 @@ Number(value)
 
 ### Return value
 
-When `Number` is called as a constructor (with [`new`]((/en-US/docs/Web/JavaScript/Reference/Operators/new))), it creates a {{jsxref("Number")}} object, which is **not** a primitive.
+When `Number` is called as a constructor (with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)), it creates a {{jsxref("Number")}} object, which is **not** a primitive.
 
 When `Number` is called as a function, it coerces the parameter to a number primitive. If the value can't be converted, it returns {{jsxref("NaN")}}.
 

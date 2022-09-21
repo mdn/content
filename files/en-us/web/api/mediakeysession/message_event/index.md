@@ -10,6 +10,7 @@ tags:
   - MediaKeySession
 browser-compat: api.MediaKeySession.message_event
 ---
+
 {{APIRef("Encrypted Media Extensions")}}
 
 The **`message`** event of the

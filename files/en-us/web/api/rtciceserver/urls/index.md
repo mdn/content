@@ -10,6 +10,7 @@ tags:
   - urls
 browser-compat: api.RTCIceServer.urls
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceServer")}} dictionary's **`urls`**
@@ -18,7 +19,7 @@ are typically STUN and/or TURN servers.
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   urls: iceServerUrl, /* or an array or URLs: [ url1, ..., urlN ] */
   username: "webrtc", // optional

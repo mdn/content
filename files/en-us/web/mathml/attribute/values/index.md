@@ -7,6 +7,7 @@ tags:
   - MathML Reference
 browser-compat: mathml.attribute_values
 ---
+
 {{MathMLRef}}
 
 ## MathML-specific types

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Screen
 ---
+
 {{APIRef("CSSOM")}}
 
 The `Screen` interface represents a screen, usually the one on which the current window is being rendered, and is obtained using {{DOMxRef("window.screen")}}.

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.getPropertyValue
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **CSSStyleDeclaration.getPropertyValue()** method interface returns a
@@ -16,7 +17,7 @@ string containing the value of a specified CSS property.
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyValue(property)
 ```
 

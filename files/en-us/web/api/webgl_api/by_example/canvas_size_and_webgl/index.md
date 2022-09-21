@@ -9,6 +9,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}
 
 This WebGL example explores the effect of setting (or not setting) the canvas size to its element size in {{Glossary("CSS")}} pixels, as it appears in the browser window.
@@ -27,24 +28,22 @@ The effect is clearly visible when using {{domxref("WebGLRenderingContext.scisso
 
 ```html
 <p>Compare the two canvases.</p>
-<canvas>Your browser does not seem to support
-    HTML canvas.</canvas>
-<canvas>Your browser does not seem to support
-    HTML canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : inline-block;
-  width : 120px;
-  height : 80px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 ```
 

@@ -12,6 +12,7 @@ tags:
   - Web Audio API
 browser-compat: api.IIRFilterNode.IIRFilterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`IIRFilterNode()`** constructor
@@ -21,7 +22,7 @@ which implements a general infinite impulse response filter.
 
 ## Syntax
 
-```js
+```js-nolint
 new IIRFilterNode(context, options)
 ```
 

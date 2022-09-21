@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry
 ---
+
 {{JSRef}}
 
 A **`FinalizationRegistry`** object lets you request a callback when an object is garbage-collected.

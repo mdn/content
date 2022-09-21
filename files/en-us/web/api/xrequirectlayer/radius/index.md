@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.XREquirectLayer.radius
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`radius`** property of the {{domxref("XREquirectLayer")}} interface represents the radius of the sphere.

@@ -11,6 +11,7 @@ tags:
   - Storage
 browser-compat: api.Navigator.storage
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 The **`Navigator.storage`**

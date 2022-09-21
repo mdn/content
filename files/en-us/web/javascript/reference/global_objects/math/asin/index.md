@@ -19,7 +19,7 @@ The **`Math.asin()`** function returns the inverse sine (in radians) of a number
 
 ## Syntax
 
-```js
+```js-nolint
 Math.asin(x)
 ```
 

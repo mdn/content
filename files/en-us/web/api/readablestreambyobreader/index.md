@@ -11,6 +11,7 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamBYOBReader
 ---
+
 {{APIRef("Streams")}}
 
 The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) defines a reader for a {{domxref("ReadableStream")}} that supports zero-copy reading from an underlying byte source.

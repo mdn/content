@@ -12,6 +12,7 @@ tags:
   - django_admin
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
 Now that we've created models for the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, we'll use the Django Admin site to add some "real" book data. First we'll show you how to register the models with the admin site, then we'll show you how to login and create some data. At the end of the article we will show some of the ways you can further improve the presentation of the Admin site.
@@ -338,7 +339,7 @@ That's it! You've now learned how to set up the administration site in both its 
 
 ## Further reading
 
-- [Writing your first Django app, part 2: Introducing the Django Admin](https://docs.djangoproject.com/en/4.0/intro/tutorial02/#introducing-the-django-admin)  (Django docs)
+- [Writing your first Django app, part 2: Introducing the Django Admin](https://docs.djangoproject.com/en/4.0/intro/tutorial02/#introducing-the-django-admin) (Django docs)
 - [The Django Admin site](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}

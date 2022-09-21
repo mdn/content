@@ -3,10 +3,10 @@ title: Main Axis
 slug: Glossary/Main_Axis
 tags:
   - CSS
-  - Glossary
   - Main axis
   - flexbox
 ---
+
 The main axis in {{glossary("flexbox")}} is defined by the direction set by the {{cssxref("flex-direction")}} property. There are four possible values for `flex-direction`. These are:
 
 - `row`

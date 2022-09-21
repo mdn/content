@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Element.namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.namespaceURI`** read-only property returns the namespace URI of the element, or `null` if the element is not in a namespace.

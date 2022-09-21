@@ -18,15 +18,15 @@ plan with the MDN team first:
 1. Include a comment on the relevant repo issue that explains your intention — say
    what you would like to copy (include the URL) and explain why you think this
    is appropriate.
-1. If the content is published under a closed license:
+2. If the content is published under a closed license:
    - If you hold the rights to the content, state this, and say that you are
      happy to republish it on MDN.
    - If you do not hold the rights to the content, include the author/publisher
      on the issue if possible, or include details of how they could be contacted
      so we can ask them for permission to republish the content.
-1. If the content is published under an open license, say what it is, and link
+3. If the content is published under an open license, say what it is, and link
    to the license so we can check whether it is compatible with [MDN's license](https://developer.mozilla.org/en-US/docs/MDN/About#using_mdn_web_docs_content).
-1. @-mention chrisdavidmills on the issue, so he can review the request.
+4. @-mention chrisdavidmills on the issue, so he can review the request.
 
 Be warned that unless there is a good reason to republish the content, we will
 probably say "no". The MDN writing team's decision is final.

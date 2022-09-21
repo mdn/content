@@ -8,6 +8,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.child
 ---
+
 {{CSSRef("Selectors")}}
 
 The **child combinator** (`>`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first.

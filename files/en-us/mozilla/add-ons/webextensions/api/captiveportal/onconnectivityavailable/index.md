@@ -11,13 +11,14 @@ tags:
   - captivePortal
 browser-compat: webextensions.api.captivePortal.onConnectivityAvailable
 ---
+
 {{AddonSidebar()}}
 
 Fires when the captive portal service determines that the user can connect to the internet.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.captivePortal.onConnectivityAvailable.addListener(callback)
 browser.captivePortal.onConnectivityAvailable.removeListener(listener)
 browser.captivePortal.onConnectivityAvailable.hasListener(listener)

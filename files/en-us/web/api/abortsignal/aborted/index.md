@@ -10,6 +10,7 @@ tags:
   - aborted
 browser-compat: api.AbortSignal.aborted
 ---
+
 {{APIRef("DOM")}}
 
 The **`aborted`** read-only property returns a value that indicates whether the DOM requests the signal is communicating with are aborted (`true`) or not (`false`).
@@ -30,9 +31,9 @@ const signal = controller.signal;
 // …
 
 if (signal.aborted) {
-  console.log('Request has been aborted');
+  console.log("Request has been aborted");
 } else {
-  console.log('Request not aborted');
+  console.log("Request not aborted");
 }
 ```
 

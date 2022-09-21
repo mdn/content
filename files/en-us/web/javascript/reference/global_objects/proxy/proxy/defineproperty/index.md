@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.defineProperty
 ---
+
 {{JSRef}}
 
 The **`handler.defineProperty()`** method is a trap for
@@ -17,7 +18,7 @@ The **`handler.defineProperty()`** method is a trap for
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   defineProperty(target, property, descriptor) {
   }

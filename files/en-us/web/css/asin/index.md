@@ -11,8 +11,8 @@ tags:
   - asin
   - Experimental
 browser-compat: css.types.asin
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`asin()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse sine of a number between `-1` and `1`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.

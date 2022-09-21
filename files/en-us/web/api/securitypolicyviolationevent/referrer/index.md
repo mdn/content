@@ -13,6 +13,7 @@ tags:
   - referrer
 browser-compat: api.SecurityPolicyViolationEvent.referrer
 ---
+
 {{HTTPSidebar}}
 
 The **`referrer`** read-only property of the

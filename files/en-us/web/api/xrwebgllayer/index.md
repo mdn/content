@@ -17,6 +17,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLLayer
 ---
+
 {{SecureContext_Header}}{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`XRWebGLLayer`** interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device. In particular, it provides access to the WebGL framebuffer and viewport to ease access to the context.

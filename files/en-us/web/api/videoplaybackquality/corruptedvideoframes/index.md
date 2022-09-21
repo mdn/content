@@ -20,6 +20,7 @@ tags:
   - Deprecated
 browser-compat: api.VideoPlaybackQuality.corruptedVideoFrames
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The {{domxref("VideoPlaybackQuality")}} interface's read-only

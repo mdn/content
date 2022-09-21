@@ -12,6 +12,7 @@ tags:
   - ServiceWorker
 browser-compat: api.Navigator.serviceWorker
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`Navigator.serviceWorker`**

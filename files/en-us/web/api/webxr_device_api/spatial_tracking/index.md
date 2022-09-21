@@ -23,6 +23,7 @@ tags:
   - movement
   - tracking
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 The WebXR APIs used for implementing augmented and virtual reality is designed specifically to provide the ability to insert a human into a virtual environment. To accomplish this, software needs the ability to not only track the locations, orientation, and movements of objects in the virtual world, but the user's location, orientation, and movement as well. But WebXR goes beyond that by adding the ability to track the location, orientation, and motion of the input devices which generate data used to determine the position and movement of individual parts of the viewer's body (with appropriate equipment).
@@ -46,7 +47,7 @@ Because each of these is defined using a reference space as its foundation, the 
 
 ## Describing a position relative to a space
 
-There are two scenarios in which you may need to describe a position and/or orientation relative to a space.  The first is [described above](#offsetting_or_moving_reference_spaces): applying a reference space to an offset (or vice-versa, since the result is the same) to determine the transform matrix that represents the resulting location in the space's coordinate system.
+There are two scenarios in which you may need to describe a position and/or orientation relative to a space. The first is [described above](#offsetting_or_moving_reference_spaces): applying a reference space to an offset (or vice versa, since the result is the same) to determine the transform matrix that represents the resulting location in the space's coordinate system.
 
 ### Poses
 

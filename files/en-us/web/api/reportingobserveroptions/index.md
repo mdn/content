@@ -11,6 +11,7 @@ tags:
   - ReportingObserverOptions
 browser-compat: api.ReportingObserverOptions
 ---
+
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
 The `ReportingObserverOptions` dictionary of the [Reporting API](/en-US/docs/Web/API/Reporting_API) allows options to be set in the constructor when creating a {{domxref("ReportingObserver")}}.

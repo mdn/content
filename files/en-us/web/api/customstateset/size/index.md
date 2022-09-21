@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.CustomStateSet.size
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`size`** property of the {{domxref("CustomStateSet")}} interface returns the number of values in the `CustomStateSet`.

@@ -15,6 +15,7 @@ tags:
   - size
 browser-compat: api.ResizeObserver
 ---
+
 {{DefaultAPISidebar("Resize Observer API")}}
 
 The Resize Observer API provides a performant mechanism by which code can monitor an element for changes to its size, with notifications being delivered to the observer each time the size changes.

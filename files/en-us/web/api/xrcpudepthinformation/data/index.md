@@ -14,6 +14,7 @@ tags:
   - WebXR Device API
 browser-compat: api.XRCPUDepthInformation.data
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`data`** property of the {{DOMxRef("XRCPUDepthInformation")}} interface is an {{jsxref("ArrayBuffer")}} containing depth-buffer information in raw format.

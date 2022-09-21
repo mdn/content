@@ -11,6 +11,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_vertex_array_object.createVertexArrayOES
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_vertex_array_object.createVertexArrayOES()`** method
@@ -21,7 +22,7 @@ data.
 
 ## Syntax
 
-```js
+```js-nolint
 createVertexArrayOES()
 ```
 

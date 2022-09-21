@@ -16,6 +16,7 @@ tags:
   - WebRTC API
 browser-compat: api.MediaDeviceInfo
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`MediaDeviceInfo`** interface contains information that describes a single media input or output device.

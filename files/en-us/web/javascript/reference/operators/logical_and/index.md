@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_and
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical AND (`&&`) operator (logical conjunction) for a set of boolean operands will be `true` if and only if all the operands are `true`. Otherwise it will be `false`.
@@ -19,7 +20,7 @@ More generally, the operator returns the value of the first {{Glossary("falsy")}
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 && expr2
 ```
 

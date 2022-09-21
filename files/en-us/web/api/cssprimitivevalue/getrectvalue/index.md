@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.CSSPrimitiveValue.getRectValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getRectValue()`** method of the
@@ -28,7 +29,7 @@ Modification to the corresponding style property can be achieved using the
 
 ## Syntax
 
-```js
+```js-nolint
 getRectValue()
 ```
 

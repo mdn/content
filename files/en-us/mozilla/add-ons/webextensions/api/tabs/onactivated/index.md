@@ -13,13 +13,14 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onActivated
 ---
+
 {{AddonSidebar()}}
 
 Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to {{WebExtAPIRef("tabs.onUpdated")}} events to be notified when a URL is set.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onActivated.addListener(listener)
 browser.tabs.onActivated.removeListener(listener)
 browser.tabs.onActivated.hasListener(listener)

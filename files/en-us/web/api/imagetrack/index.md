@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.ImageTrack
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`ImageTrack`** interface of the {{domxref('WebCodecs API','','','true')}} represents an individual image track.

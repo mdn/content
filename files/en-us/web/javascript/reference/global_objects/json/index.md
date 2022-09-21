@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.JSON
 ---
+
 {{JSRef}}
 
 The **`JSON`** object contains methods

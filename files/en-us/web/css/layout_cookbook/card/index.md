@@ -12,6 +12,7 @@ browser-compat:
   - css.properties.grid-template-columns
   - css.properties.grid-template-rows
 ---
+
 {{CSSRef}}
 
 This pattern is a list of "card" components with optional footers.

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Proxy.Proxy
 ---
+
 {{JSRef}}
 
 The **`Proxy()`** constructor is used to create
@@ -15,7 +16,7 @@ The **`Proxy()`** constructor is used to create
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, handler)
 ```
 

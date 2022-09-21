@@ -13,6 +13,7 @@ tags:
   - extensionTypes
 browser-compat: webextensions.api.extensionTypes.ImageFormat
 ---
+
 {{AddonSidebar()}}
 
 The format of an image.

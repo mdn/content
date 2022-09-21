@@ -11,6 +11,7 @@ tags:
   - JavaScript
 browser-compat: javascript.classes
 ---
+
 {{JsSidebar("Classes")}}
 
 Classes are a template for creating objects.

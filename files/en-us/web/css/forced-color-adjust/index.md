@@ -17,6 +17,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.forced-color-adjust
 ---
+
 {{CSSRef}}
 
 The **`forced-color-adjust`** CSS property allows authors to opt certain elements out of forced colors mode. This then restores the control of those values to CSS.

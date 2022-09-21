@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleRule.selectorText
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`selectorText`** property of the {{domxref("CSSStyleRule")}} interface gets and sets the selectors associated with the `CSSStyleRule`.

@@ -10,6 +10,7 @@ tags:
   - Property
 browser-compat: api.HTMLCollection.length
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLCollection.length`** property returns the number of

@@ -12,6 +12,7 @@ tags:
   - UI Events
 browser-compat: api.KeyboardEvent.key
 ---
+
 {{APIRef("UI Events")}}
 
 The {{domxref("KeyboardEvent")}} interface's **`key`** read-only property returns the value of the key pressed by the user, taking into consideration the state of modifier keys such as <kbd>Shift</kbd> as well as the keyboard locale and layout.
@@ -50,35 +51,35 @@ Try experimenting using the following two test cases:
 
 1. Press and hold the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key, then press
+   key, then press
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    and release it. Next, release the
+   and release it. Next, release the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key.
+   key.
 
 2. Press and hold the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key, then press and hold
+   key, then press and hold
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    . Release the
+   . Release the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key. Finally, release
+   key. Finally, release
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    .
+   .
 
 ### HTML
 
@@ -110,7 +111,7 @@ Try experimenting using the following two test cases:
 }
 
 .fx > div:first-child {
-   width: 30%;
+  width: 30%;
 }
 
 .flex {

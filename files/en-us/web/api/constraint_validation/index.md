@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.ValidityState
 ---
+
 {{apiref()}}
 
 The Constraint Validation API enables checking values that users have entered into form controls, before submitting the values to the server.
@@ -67,7 +68,7 @@ Take the following form:
 ```html
 <form>
   <label for="name">Enter username (upper and lowercase letters): </label>
-  <input type="text" name="name" id="name" required pattern="[A-Za-z]+">
+  <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Submit</button>
 </form>
 ```

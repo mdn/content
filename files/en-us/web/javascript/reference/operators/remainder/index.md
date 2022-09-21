@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.remainder
 ---
+
 {{jsSidebar("Operators")}}
 
 The remainder operator (`%`) returns the remainder left over when one
@@ -17,7 +18,7 @@ operand is divided by a second operand. It always takes the sign of the dividend
 
 ## Syntax
 
-```js
+```js-nolint
 x % y
 ```
 
@@ -85,4 +86,3 @@ Infinity % Infinity // NaN
 - [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 - [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
 - [Remainder operator vs. modulo operator](https://2ality.com/2019/08/remainder-vs-modulo.html)
-- [Mod and Remainder are not the Same](https://bigmachine.io/2018/08/21/mod-and-remainder-are-not-the-same-2/)

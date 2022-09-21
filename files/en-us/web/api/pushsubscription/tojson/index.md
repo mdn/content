@@ -14,6 +14,7 @@ tags:
   - toJSON
 browser-compat: api.PushSubscription.toJSON
 ---
+
 {{APIRef("Push API")}}
 
 The `toJSON()` method of the {{domxref("PushSubscription")}} interface is a
@@ -22,7 +23,7 @@ providing a useful shortcut.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

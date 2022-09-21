@@ -15,6 +15,7 @@ tags:
   - touchstart
 browser-compat: api.Element.touchend_event
 ---
+
 {{APIRef}}
 
 The `touchend` event fires when one or more touch points are removed from the touch surface.

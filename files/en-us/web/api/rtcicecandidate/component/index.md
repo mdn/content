@@ -18,6 +18,7 @@ tags:
   - component
 browser-compat: api.RTCIceCandidate.component
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`component`** property

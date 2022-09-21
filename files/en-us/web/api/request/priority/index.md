@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.Request.priority
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 The **`priority`** read-only property of the {{domxref("Request")}}

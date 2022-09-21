@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.types.BrowserSetting
 ---
+
 {{AddonSidebar()}}
 
 A `BrowserSetting` is an object representing a browser setting.

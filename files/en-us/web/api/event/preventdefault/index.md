@@ -25,8 +25,8 @@ non-cancelable event, such as one dispatched via
 
 ## Syntax
 
-```js
-event.preventDefault();
+```js-nolint
+event.preventDefault()
 ```
 
 ## Examples

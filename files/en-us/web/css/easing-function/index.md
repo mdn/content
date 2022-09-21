@@ -13,6 +13,7 @@ tags:
   - easing-function
 browser-compat: css.types.easing-function
 ---
+
 {{CSSRef}}
 
 The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a mathematical function that describes the rate at which a numerical value changes.
@@ -45,9 +46,11 @@ step-end;
 ### Values
 
 - _list-of-points_
+
   - : List of linear stops
 
 - _x1, y1, x2, y2_
+
   - : {{cssxref("&lt;number&gt;")}} values representing the abscissas and ordinates of the [P1 and P2 points](#cubic_bézier_functions) defining the cubic Bézier curve. x1 and x2 must be in the range `[0, 1]`, otherwise the value is invalid.
 
 - `ease`
@@ -71,9 +74,11 @@ step-end;
 ![A 2D graph of 'Time ratio' to 'Output ratio' shows a straight diagonal line that slightly curves as it gets close to X1 Y1.](cubic-bezer-ease-out.png)
 
 - _number-of-steps_
+
   - : A strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.
 
 - _direction_
+
   - : One of the following keywords that indicate when the jumps occur:
     - `jump-start` denotes that the first step or jump happens when the interpolation begins.
     - `jump-end` denotes that the last step or jump happens when the interpolation ends.
@@ -149,26 +154,26 @@ steps(2, jump-start)
 steps(2, start)
 ```
 
-  ![A 2D graph of 'Time ratio' to 'Output ratio' with points at X0 Y0, X0.5 Y0.5, and X1 Y1. Horizontal lines from the second and third points extend 0.5 units towards the Y axis.](steps-2-start.png)
+![A 2D graph of 'Time ratio' to 'Output ratio' with points at X0 Y0, X0.5 Y0.5, and X1 Y1. Horizontal lines from the second and third points extend 0.5 units towards the Y axis.](steps-2-start.png)
 
 ```css
 steps(4, jump-end)
 steps(4, end)
 ```
 
-  ![A 2D steps graph showing four steps, with a jump from the fourth step to the final value at the 100% mark.](steps-4-end.png)
+![A 2D steps graph showing four steps, with a jump from the fourth step to the final value at the 100% mark.](steps-4-end.png)
 
 ```css
 steps(5, jump-none)
 ```
 
-  ![A 2D steps graph showing five steps with no jump. Beginning 20% of the time is at the 0% mark, and the last 20% is at the 100% mark.](step5none.png)
+![A 2D steps graph showing five steps with no jump. Beginning 20% of the time is at the 0% mark, and the last 20% is at the 100% mark.](step5none.png)
 
 ```css
 steps(3, jump-both)
 ```
 
-  ![A 2D steps graph showing points at X0 Y0, X0 Y0.25, X0.25 Y0.5, X0.75 Y0.75 and X1 Y1. The second, third, and fourth points have horizontal lines extending 0.25 units away from the Y axis.](step3both.png)
+![A 2D steps graph showing points at X0 Y0, X0 Y0.25, X0.25 Y0.5, X0.75 Y0.75 and X1 Y1. The second, third, and fourth points have horizontal lines extending 0.25 units away from the Y axis.](step3both.png)
 
 The `steps()` function can also be specified using these keywords, each of which represent a specific `steps()` notation: [`step-start`](#step-start) and [`step-end`](#step-end).
 
@@ -224,7 +229,11 @@ div > div {
   width: 50px;
   height: 50px;
   background-color: blue;
-  background-image: radial-gradient(circle at 10px 10px, rgba(25,255,255,0.8),rgba(25,255,255,0.4));
+  background-image: radial-gradient(
+    circle at 10px 10px,
+    rgba(25, 255, 255, 0.8),
+    rgba(25, 255, 255, 0.4)
+  );
   border-radius: 50%;
   top: 25px;
   animation: 1.5s infinite alternate;

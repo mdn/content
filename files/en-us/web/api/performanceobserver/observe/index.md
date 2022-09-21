@@ -11,6 +11,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserver.observe
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`observe()`** method of the
@@ -28,7 +29,7 @@ function—set when creating the {{domxref("PerformanceObserver")}}—is invoked
 
 ## Syntax
 
-```js
+```js-nolint
 observe(options)
 ```
 

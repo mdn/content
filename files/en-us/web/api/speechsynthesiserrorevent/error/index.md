@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisErrorEvent.error
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`error`** property of the

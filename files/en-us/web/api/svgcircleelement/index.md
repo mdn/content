@@ -11,6 +11,7 @@ tags:
   - SVGCircleElement
 browser-compat: api.SVGCircleElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGCircleElement`** interface is an interface for the {{SVGElement("circle")}} element.
@@ -41,9 +42,18 @@ In this example we draw a circle and randomly increase or decrease its radius wh
 #### HTML
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="250" height="250">
-  <circle cx="100" cy="100" r="50" fill="gold" id="circle"
-      onclick="clickCircle();"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 250 250"
+  width="250"
+  height="250">
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    fill="gold"
+    id="circle"
+    onclick="clickCircle();" />
 </svg>
 ```
 

@@ -16,6 +16,7 @@ tags:
   - priority
 browser-compat: api.RTCIceCandidate.priority
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`priority`** property specifies the candidate's priority according to the remote peer; the higher this value is, the better the remote peer considers the candidate to be.

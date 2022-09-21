@@ -12,6 +12,7 @@ tags:
   - cut
 browser-compat: api.Element.cut_event
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`cut`** event fires when the user initiates a cut action through the browser's user interface.
@@ -53,7 +54,9 @@ allow text to be cut. It also logs each copy and cut attempt.
 
 ```html
 <h3>Play with this text area:</h3>
-<textarea id="editor" rows="3">Try copying and cutting the text in this field!</textarea>
+<textarea id="editor" rows="3">
+Try copying and cutting the text in this field!
+</textarea>
 
 <h3>Log:</h3>
 <p id="log"></p>

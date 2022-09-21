@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.type
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.type`**

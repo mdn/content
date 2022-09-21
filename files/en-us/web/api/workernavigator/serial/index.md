@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.WorkerNavigator.serial
 ---
+
 {{APIRef("Web Workers API")}}{{SeeCompatTable}}
 
 The **`serial`** read-only property of the {{domxref("WorkerNavigator")}} interface returns a {{domxref("Serial")}} object which represents the entry point into the {{domxref("Web Serial API")}}.

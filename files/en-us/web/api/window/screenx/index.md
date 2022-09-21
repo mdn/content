@@ -12,6 +12,7 @@ tags:
   - screenX
 browser-compat: api.Window.screenX
 ---
+
 {{APIRef}}
 
 The **`Window.screenX`** read-only property returns the

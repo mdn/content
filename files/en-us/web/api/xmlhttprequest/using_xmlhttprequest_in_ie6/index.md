@@ -6,6 +6,7 @@ tags:
   - Web Development
   - Web Standards
 ---
+
 [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) was first introduced by Microsoft in Internet Explorer 5.0 as an ActiveX control. However, in IE7 and other browsers XMLHttpRequest is a native JavaScript object.
 
 In all modern browsers, you can create a new XMLHttpRequest object using the following code:

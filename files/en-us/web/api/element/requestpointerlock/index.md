@@ -12,6 +12,7 @@ tags:
   - mouse lock
 browser-compat: api.Element.requestPointerLock
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Element.requestPointerLock()`** method lets you
@@ -23,7 +24,7 @@ To track the success or failure of the request, it is necessary to listen for th
 
 ## Syntax
 
-```js
+```js-nolint
 requestPointerLock()
 ```
 

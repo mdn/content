@@ -8,6 +8,7 @@ tags:
   - add-on
 browser-compat: webextensions.api.theme
 ---
+
 {{AddonSidebar}}
 
 Enables browser extensions to update the browser theme.

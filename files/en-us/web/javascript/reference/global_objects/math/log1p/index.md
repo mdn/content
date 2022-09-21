@@ -21,7 +21,7 @@ The **`Math.log1p()`** function returns the natural logarithm (base [e](/en-US/d
 
 ## Syntax
 
-```js
+```js-nolint
 Math.log1p(x)
 ```
 

@@ -27,6 +27,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The static method
@@ -51,8 +52,8 @@ superscaling or anti-aliasing techniques to improve perceived image quality.
 
 ## Syntax
 
-```js
-let nativeScaling = XRWebGLLayer.getNativeFramebufferScaleFactor(session);
+```js-nolint
+getNativeFramebufferScaleFactor(session)
 ```
 
 ### Parameters

@@ -11,6 +11,7 @@ tags:
   - commands
 browser-compat: webextensions.api.commands
 ---
+
 {{AddonSidebar}}
 
 Listen for the user executing commands that you have registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).

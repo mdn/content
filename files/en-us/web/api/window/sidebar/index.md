@@ -10,6 +10,7 @@ tags:
   - Non-standard
   - Deprecated
 ---
+
 {{APIRef}} {{Deprecated_Header}}
 
 > **Warning:** This non-standard Firefox-only alias of the [`window.external`](/en-US/docs/Web/API/Window/external) property [has been removed](#browser_compatibility).

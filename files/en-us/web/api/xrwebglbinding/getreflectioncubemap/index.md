@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.XRWebGLBinding.getReflectionCubeMap
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getReflectionCubeMap()`** method of the {{domxref("XRWebGLBinding")}} interface returns a {{domxref("WebGLTexture")}} object containing a reflection cube map texture.
@@ -20,7 +21,7 @@ The texture format is specified by the session's `reflectionFormat`. See the `op
 
 ## Syntax
 
-```js
+```js-nolint
 getReflectionCubeMap(lightProbe)
 ```
 

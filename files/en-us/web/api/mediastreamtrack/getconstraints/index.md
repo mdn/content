@@ -12,6 +12,7 @@ tags:
   - getConstraints
 browser-compat: api.MediaStreamTrack.getConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getConstraints()`** method of
@@ -29,7 +30,7 @@ can also specify ideal and/or acceptable sizes or ranges of sizes. See [Capabili
 
 ## Syntax
 
-```js
+```js-nolint
 getConstraints()
 ```
 

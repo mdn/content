@@ -3,9 +3,9 @@ title: LTR (Left To Right)
 slug: Glossary/ltr
 tags:
   - Composing
-  - Glossary
   - Localization
 ---
+
 **LTR** (**Left To Right**) is a {{Glossary("locale")}} property indicating that text is written from left to right. For example, the `en-US` locale (for US English) specifies left-to-right.
 
 Most Western languages, as well as many others around the world, are written LTR.

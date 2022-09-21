@@ -10,6 +10,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.loadedmetadata_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `loadedmetadata` event is fired when the metadata has been loaded.

@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 tags:
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 A sidebar is a pane that is displayed at the side of the browser window, next to the web page. This page describes sidebars, specifying them, designing them, and examples of use.

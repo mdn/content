@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.setCustomValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.setCustomValidity()`** method sets the
@@ -20,7 +21,7 @@ error.
 
 ## Syntax
 
-```js
+```js-nolint
 setCustomValidity(string)
 ```
 

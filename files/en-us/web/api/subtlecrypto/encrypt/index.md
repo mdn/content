@@ -11,6 +11,7 @@ tags:
   - encrypt
 browser-compat: api.SubtleCrypto.encrypt
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`encrypt()`** method of the {{domxref("SubtleCrypto")}}
@@ -23,13 +24,14 @@ known as "ciphertext").
 
 ## Syntax
 
-```js
+```js-nolint
 encrypt(algorithm, key, data)
 ```
 
 ### Parameters
 
 - `algorithm`
+
   - : An object specifying the [algorithm](#supported_algorithms) to be used and any extra parameters if required:
     - To use [RSA-OAEP](#rsa-oaep), pass an {{domxref("RsaOaepParams")}} object.
     - To use [AES-CTR](#aes-ctr), pass an {{domxref("AesCtrParams")}} object.
@@ -45,7 +47,7 @@ encrypt(algorithm, key, data)
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with an
-  {{jsxref("ArrayBuffer")}} containing the "ciphertext".
+{{jsxref("ArrayBuffer")}} containing the "ciphertext".
 
 ### Exceptions
 

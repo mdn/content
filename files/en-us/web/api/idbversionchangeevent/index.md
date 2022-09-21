@@ -14,6 +14,7 @@ tags:
   - Storage
 browser-compat: api.IDBVersionChangeEvent
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBVersionChangeEvent`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) indicates that the version of the database has changed, as the result of an {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} event handler function.
@@ -38,7 +39,7 @@ _Also inherits properties from its parent, {{domxref("Event")}} interface._
 
 ### Methods
 
-_No specific method, but inherits properties from its parent, {{domxref("Event")}} interface._
+_No specific method, but inherits methods from its parent, {{domxref("Event")}} interface._
 
 ## Example
 

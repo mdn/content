@@ -11,6 +11,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry.entryType
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`entryType`** property returns

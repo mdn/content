@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBTransaction.error
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`IDBTransaction.error`** property of the {{domxref("IDBTransaction")}} interface

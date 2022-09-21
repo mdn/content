@@ -12,6 +12,7 @@ tags:
   - databases
 browser-compat: api.IDBFactory.databases
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a list representing all the available databases, including their names and versions.
@@ -22,7 +23,7 @@ The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a 
 
 ## Syntax
 
-```js
+```js-nolint
 databases()
 ```
 

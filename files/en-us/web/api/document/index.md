@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document`** interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the [DOM tree](/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core).

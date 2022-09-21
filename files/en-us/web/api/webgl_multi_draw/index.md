@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_multi_draw
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_multi_draw`** extension is part of the
@@ -60,10 +61,10 @@ as `gl_DrawID`. For non-`multi*` calls, the value of
 
 ```html
 <script type="x-shader/x-vertex">
-#extension GL_ANGLE_multi_draw : require
-void main() {
-  gl_Position = vec4(gl_DrawID, 0, 0, 1);
-}
+  #extension GL_ANGLE_multi_draw : require
+  void main() {
+    gl_Position = vec4(gl_DrawID, 0, 0, 1);
+  }
 </script>
 ```
 

@@ -7,6 +7,7 @@ tags:
   - Strict Mode
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception

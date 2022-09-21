@@ -3,10 +3,10 @@ title: Loop
 slug: Glossary/loop
 tags:
   - CodingScripting
-  - Glossary
   - control flow
   - programming
 ---
+
 A loop is a sequence of instructions that is continually repeated until a certain condition is met in {{Glossary("computer programming")}}. An example would be the process of getting an item of data and changing it, and then making sure some {{Glossary("conditional", "condition")}} is checked such as, if a counter has reached a prescribed number.
 
 ## Examples
@@ -29,7 +29,7 @@ for (statement 1; statement 2; statement 3) {
 
 ```js
 for (let i = 0; i < 10; i++) {
-  console.log(i)
+  console.log(i);
 }
 //This loop will print numbers 0-9, will stop when condition is met (i = 10)
 ```
@@ -56,7 +56,7 @@ while (condition) {
 
 ```js
 let i = 0;
-while (i < 5){ 
+while (i < 5) {
   console.log(i);
   i++;
 }

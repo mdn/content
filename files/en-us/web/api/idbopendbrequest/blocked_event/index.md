@@ -9,6 +9,7 @@ tags:
   - blocked
 browser-compat: api.IDBOpenDBRequest.blocked_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `blocked` handler is executed when an open connection to a database is blocking a `versionchange` transaction on the same database.

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.types.basic-shape.ellipse
 ---
+
 {{CSSRef}}
 
 The **`ellipse()`** [CSS](/en-US/docs/Web/CSS) function is one of the {{cssxref("&lt;basic-shape&gt;")}} [data types](/en-US/docs/Web/CSS/CSS_Types).

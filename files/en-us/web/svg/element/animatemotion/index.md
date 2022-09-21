@@ -7,6 +7,7 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.animateMotion
 ---
+
 {{SVGRef}}
 
 The SVG **`<animateMotion>`** element provides a way to define how an element moves along a motion path.
@@ -16,16 +17,27 @@ The SVG **`<animateMotion>`** element provides a way to define how an element mo
 ## Example
 
 ```css hidden
-html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 ```
 
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="lightgrey"
+  <path
+    fill="none"
+    stroke="lightgrey"
     d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
 
   <circle r="5" fill="red">
-    <animateMotion dur="10s" repeatCount="indefinite"
+    <animateMotion
+      dur="10s"
+      repeatCount="indefinite"
       path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
   </circle>
 </svg>

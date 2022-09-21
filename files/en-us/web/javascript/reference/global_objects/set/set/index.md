@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Set.Set
 ---
+
 {{JSRef}}
 
 The **`Set` constructor** lets you
@@ -19,7 +20,7 @@ references.
 
 ## Syntax
 
-```js
+```js-nolint
 new Set()
 new Set(iterable)
 ```

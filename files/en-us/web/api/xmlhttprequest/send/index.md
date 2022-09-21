@@ -16,6 +16,7 @@ tags:
   - send
 browser-compat: api.XMLHttpRequest.send
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method
@@ -37,7 +38,7 @@ If no {{HTTPHeader("Accept")}} header has been set using the
 
 ## Syntax
 
-```js
+```js-nolint
 send()
 send(body)
 ```

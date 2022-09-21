@@ -12,6 +12,7 @@ tags:
   - getBigUint64
 browser-compat: javascript.builtins.DataView.getBigUint64
 ---
+
 {{JSRef}}
 
 The **`getBigUint64()`** method gets an unsigned 64-bit integer
@@ -22,7 +23,7 @@ The **`getBigUint64()`** method gets an unsigned 64-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 getBigUint64(byteOffset)
 getBigUint64(byteOffset, littleEndian)
 ```

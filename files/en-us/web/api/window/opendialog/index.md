@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.openDialog
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 `window.openDialog()` is an extension to {{domxref("window.open()")}}. It
@@ -32,7 +33,7 @@ to interact with the opener window until they close the modal dialog.
 
 ## Syntax
 
-```js
+```js-nolint
 openDialog(url)
 openDialog(url, name)
 openDialog(url, name, features)
@@ -133,7 +134,7 @@ Inside the dialog code, you can set the properties as follows:
 
 ```js
 const retVals = window.arguments[2];
-retVals.address  = enteredAddress;
+retVals.address = enteredAddress;
 retVals.delivery = "immediate";
 ```
 

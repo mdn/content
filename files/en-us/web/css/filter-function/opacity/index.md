@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.opacity
 ---
+
 {{CSSRef}}
 
 The **`opacity()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) applies transparency to the samples in the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.

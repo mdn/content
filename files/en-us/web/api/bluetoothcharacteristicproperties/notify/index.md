@@ -14,6 +14,7 @@ tags:
   - notify
 browser-compat: api.BluetoothCharacteristicProperties.notify
 ---
+
 {{securecontext_header}}{{APIRef("")}}{{SeeCompatTable}}
 
 The **`notify`** read-only property of the

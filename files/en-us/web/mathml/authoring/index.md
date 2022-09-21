@@ -6,6 +6,7 @@ tags:
   - MathML
   - MathML Project
 ---
+
 {{MathMLRef}}
 
 This page explains how to write mathematics using the MathML language, which is described with tags and attributes in text format. Just like for HTML or SVG, this text can become very verbose for complex content and so requires [proper authoring tools](https://www.w3.org/wiki/Math_Tools#Authoring_tools) such as converters from a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) equation editors. Many such tools are available and it is impossible to provide an exhaustive list. Instead, this article focuses on common approaches and examples.
@@ -21,39 +22,37 @@ Each MathML equation is represented by a root [`math`](/en-US/docs/Web/MathML/El
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>MathML in HTML5</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>MathML in HTML5</title>
+  </head>
+  <body>
+    <h1>MathML in HTML5</h1>
 
-  <h1>MathML in HTML5</h1>
+    <p>
+      One over square root of two (inline style):
+      <math>
+        <mfrac>
+          <mn>1</mn>
+          <msqrt>
+            <mn>2</mn>
+          </msqrt>
+        </mfrac>
+      </math>
+    </p>
 
-  <p>
-    One over square root of two (inline style):
-    <math>
-      <mfrac>
-        <mn>1</mn>
-        <msqrt>
-          <mn>2</mn>
-        </msqrt>
-      </mfrac>
-    </math>
-  </p>
-
-  <p>
-    One over square root of two (display style):
-    <math display="block">
-      <mfrac>
-        <mn>1</mn>
-        <msqrt>
-          <mn>2</mn>
-        </msqrt>
-      </mfrac>
-    </math>
-  </p>
-
-</body>
+    <p>
+      One over square root of two (display style):
+      <math display="block">
+        <mfrac>
+          <mn>1</mn>
+          <msqrt>
+            <mn>2</mn>
+          </msqrt>
+        </mfrac>
+      </math>
+    </p>
+  </body>
 </html>
 ```
 
@@ -90,13 +89,17 @@ As explained on the [MathML Fonts](/en-US/docs/Web/MathML/Fonts) article, mathem
 The [MathFonts page](https://fred-wang.github.io/MathFonts/) provides such Web fonts together with proper style sheets. For example, just insert the following line in your document header in order to select the Latin Modern fonts with fallback Web fonts:
 
 ```html
- <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
 ```
 
 Several fonts are proposed and you can just select a different style, for example STIX:
 
 ```html
- <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css">
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css" />
 ```
 
 > **Note:** The fonts and stylesheets from that MathFonts page are distributed under open source licenses, so feel free to copy them on your own server and adapt them to your need.
@@ -115,7 +118,7 @@ A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) can be 
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>MathML in HTML5</title>
     <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
     <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
@@ -141,33 +144,29 @@ For authors not familiar with LaTeX, alternative input methods are available suc
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-<meta charset="utf-8"> 
-<meta name="viewport" content="width=device-width">
-<title>ASCII MathML</title>
-...
-<!-- ASCIIMathML.js -->
-<script src="/path/to/ASCIIMathML.js"></script>
-...
-<!-- jqMath -->
-<script src="https://mathscribe.com/mathscribe/jquery-1.4.3.min.js"></script>
-<script src="https://mathscribe.com/mathscribe/jqmath-etc-0.4.6.min.js"></script>
-...
-</head>
-<body>
-...
-    <p>
-      One over square root of two (inline style, ASCIIMath): `1/(sqrt 2)`
-    </p>
-...
-    <p>
-      One over square root of two (inline style, jqMath): $1/√2$
-    </p>
-...
-    <p>
-      One over square root of two (display style, jqMath): $$1/√2$$
-    </p>
-...
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ASCII MathML</title>
+    …
+    <!-- ASCIIMathML.js -->
+    <script src="/path/to/ASCIIMathML.js"></script>
+    …
+    <!-- jqMath -->
+    <script src="https://mathscribe.com/mathscribe/jquery-1.4.3.min.js"></script>
+    <script src="https://mathscribe.com/mathscribe/jqmath-etc-0.4.6.min.js"></script>
+    …
+  </head>
+  <body>
+    …
+    <p>One over square root of two (inline style, ASCIIMath): `1/(sqrt 2)`</p>
+    …
+    <p>One over square root of two (inline style, jqMath): $1/√2$</p>
+    …
+    <p>One over square root of two (display style, jqMath): $$1/√2$$</p>
+    …
+  </body>
+</html>
 ```
 
 ### Command-line programs
@@ -178,7 +177,7 @@ Instead of generating MathML expression at page load, you can instead rely on co
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>MathML in HTML5</title>
   </head>
   <body>
@@ -209,7 +208,7 @@ After running that command, a file `output.html` containing the following HTML o
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>MathML in HTML5</title>
   </head>
   <body>
@@ -250,7 +249,7 @@ In this section, we review a few editing tools providing graphical interfaces.
 
 ### Input box
 
-A simple approach is to integrate [converters from a simple syntax](#conversion_from_a_simple_syntax) as simple input boxes for mathematics. For example,  [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/) provide an **Insert > Math** command that will open a popup window, with a LaTeX-to-MathML input field and a live MathML preview:
+A simple approach is to integrate [converters from a simple syntax](#conversion_from_a_simple_syntax) as simple input boxes for mathematics. For example, [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/) provide an **Insert > Math** command that will open a popup window, with a LaTeX-to-MathML input field and a live MathML preview:
 
 ![LaTeX input box in Thunderbird](thunderbird.png)
 

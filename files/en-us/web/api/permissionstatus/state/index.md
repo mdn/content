@@ -13,6 +13,7 @@ tags:
   - status
 browser-compat: api.PermissionStatus.state
 ---
+
 {{APIRef("Permissions API")}}
 
 The **`state`** read-only property of the

@@ -11,6 +11,7 @@ tags:
   - scroll-padding-top
 browser-compat: css.properties.scroll-padding-top
 ---
+
 {{CSSRef}}
 
 The **`scroll-padding-top`** property defines offsets for the top of the _optimal viewing region_ of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or to put more breathing room between a targeted element and the edges of the scrollport.

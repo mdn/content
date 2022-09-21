@@ -18,6 +18,7 @@ tags:
   - requestSession
 browser-compat: api.XRSystem.requestSession
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **{{domxref("XRSystem")}}** interface's
@@ -30,7 +31,7 @@ inline sessions can be in progress at once.
 
 ## Syntax
 
-```js
+```js-nolint
 requestSession(mode)
 requestSession(mode, options)
 ```

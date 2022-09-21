@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLFontElement.size
 ---
+
 {{deprecated_header}}{{ APIRef("HTML DOM") }}
 
 The obsolete

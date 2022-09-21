@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.strokeStyle
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.strokeStyle`** property of the
@@ -104,7 +105,7 @@ In WebKit- and Blink-based browsers, the non-standard and deprecated method
 
 ```js
 setStrokeColor(color);
-setStrokeColor(color,  alpha);
+setStrokeColor(color, alpha);
 setStrokeColor(grayLevel);
 setStrokeColor(grayLevel, alpha);
 setStrokeColor(r, g, b, a);

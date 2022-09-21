@@ -13,6 +13,7 @@ tags:
   - delete
 browser-compat: api.IDBCursor.delete
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`delete()`** method of the {{domxref("IDBCursor")}}
@@ -29,7 +30,7 @@ Be aware that you can't call `delete()` (or
 
 ## Syntax
 
-```js
+```js-nolint
 delete()
 ```
 

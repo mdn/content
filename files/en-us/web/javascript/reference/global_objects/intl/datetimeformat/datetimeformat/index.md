@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat()`** constructor creates
@@ -23,7 +24,7 @@ language-sensitive date and time formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.DateTimeFormat()
 new Intl.DateTimeFormat(locales)
 new Intl.DateTimeFormat(locales, options)
@@ -51,6 +52,7 @@ Intl.DateTimeFormat(locales, options)
         `"mymr"`, `"orya"`, `"tamldec"`,
         `"telu"`, `"thai"`, `"tibt"`.
     - `ca`
+
       - : Calendar. Possible values include: `"buddhist"`,
         `"chinese"`, `"coptic"`, `"dangi"`,
         `"ethioaa"`, `"ethiopic"`, `"gregory"`,
@@ -97,6 +99,7 @@ Intl.DateTimeFormat(locales, options)
         > `hour`, `month`, etc.).
 
     - `calendar`
+
       - : Calendar. Possible values include: `"buddhist"`,
         `"chinese"`, `"coptic"`, `"dangi"`,
         `"ethioaa"`, `"ethiopic"`, `"gregory"`,
@@ -306,17 +309,17 @@ console.log(new Intl.DateTimeFormat().format(date));
 ### Using timeStyle and dateStyle
 
 ```js
-const shortTime = new Intl.DateTimeFormat("en" , {
+const shortTime = new Intl.DateTimeFormat("en", {
   timeStyle: "short"
 });
 console.log(shortTime.format(Date.now())); // "13:31 AM"
 
-const shortDate = new Intl.DateTimeFormat("en" , {
+const shortDate = new Intl.DateTimeFormat("en", {
   dateStyle: "short"
 });
 console.log(shortDate.format(Date.now())); // "07/07/20"
 
-const mediumTime = new Intl.DateTimeFormat("en" , {
+const mediumTime = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
   dateStyle: "short"
 });
@@ -333,7 +336,7 @@ const date = Date.UTC(2012, 11, 17, 4, 0, 42);
 console.log(new Intl.DateTimeFormat('en-GB', {
   hour: 'numeric',
   hourCycle: 'h12',
-  dayPeriod: 'short', 
+  dayPeriod: 'short',
   timeZone: 'UTC',
 }).format(date));
 // > 4 at night"  (same formatting in en-GB for all dayPeriod values)

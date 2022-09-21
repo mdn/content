@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ImageData.width
 ---
+
 {{APIRef("Canvas API")}}
 
 The readonly **`ImageData.width`** property returns the number

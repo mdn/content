@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.unloadEventStart
 ---
+
 {{APIRef("Navigation Timing")}}
 
 The **`unloadEventStart`** read-only property returns a

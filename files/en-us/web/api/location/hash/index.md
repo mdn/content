@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Location.hash
 ---
+
 {{ APIRef("Location") }}
 
 The **`hash`** property of the

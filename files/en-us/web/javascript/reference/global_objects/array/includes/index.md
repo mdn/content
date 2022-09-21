@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.includes
 ---
+
 {{JSRef}}
 
 The **`includes()`** method determines whether an array
@@ -22,7 +23,7 @@ includes a certain value among its entries, returning `true` or
 
 ## Syntax
 
-```js
+```js-nolint
 includes(searchElement)
 includes(searchElement, fromIndex)
 ```

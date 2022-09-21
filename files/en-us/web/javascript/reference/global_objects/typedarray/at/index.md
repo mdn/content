@@ -12,6 +12,7 @@ tags:
   - at
 browser-compat: javascript.builtins.TypedArray.at
 ---
+
 {{JSRef}}
 
 The **`at()`** method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
@@ -22,14 +23,14 @@ This is not to suggest there is anything wrong with using the square bracket not
 
 ## Syntax
 
-```js
+```js-nolint
 at(index)
 ```
 
 ### Parameters
 
 - `index`
-  - : The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index. i.e. If a negative number is used the element returned will be found by counting back from the end of the array.
+  - : The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index; that is, if a negative number is used, the element returned will be found by counting back from the end of the array.
 
 ### Return value
 

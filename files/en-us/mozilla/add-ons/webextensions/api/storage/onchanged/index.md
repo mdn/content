@@ -13,6 +13,7 @@ tags:
   - onChanged
 browser-compat: webextensions.api.storage.onChanged
 ---
+
 {{AddonSidebar()}}
 
 Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area.
@@ -21,7 +22,7 @@ When this event is triggered by {{WebExtAPIRef('storage.StorageArea.set','storag
 
 ## Syntax
 
-```js
+```js-nolint
 browser.storage.onChanged.addListener(callback)
 browser.storage.onChanged.removeListener(listener)
 browser.storage.onChanged.hasListener(listener)

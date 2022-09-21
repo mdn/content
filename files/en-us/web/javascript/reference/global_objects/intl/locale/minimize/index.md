@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.minimize
 ---
+
 {{JSRef}}
 
 The
@@ -23,7 +24,7 @@ remove information about the locale that would be added by calling
 
 ## Syntax
 
-```js
+```js-nolint
 minimize()
 ```
 

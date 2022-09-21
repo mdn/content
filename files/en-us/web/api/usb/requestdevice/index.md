@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.USB.requestDevice
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`requestDevice()`** method of the {{domxref("USB")}}
@@ -22,7 +23,7 @@ triggers the user agent's pairing flow.
 
 ## Syntax
 
-```js
+```js-nolint
 requestDevice(filters)
 ```
 

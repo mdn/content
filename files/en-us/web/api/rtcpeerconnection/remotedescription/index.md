@@ -26,8 +26,8 @@ code calling {{domxref("RTCPeerConnection.setRemoteDescription()")}} in response
 
 ## Syntax
 
-```js
-const sessionDescription = peerConnection.remoteDescription;
+```js-nolint
+const sessionDescription = peerConnection.remoteDescription
 ```
 
 On a more fundamental level, the returned value is the value of

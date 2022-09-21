@@ -8,6 +8,7 @@ tags:
   - Tutorial
   - userScripts
 ---
+
 {{AddonSidebar}}
 
 By implementing userScripts, extension developers can modify how sites look and/or work to better meet user needs.

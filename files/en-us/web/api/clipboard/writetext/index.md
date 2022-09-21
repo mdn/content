@@ -17,6 +17,7 @@ tags:
   - writeText
 browser-compat: api.Clipboard.writeText
 ---
+
 {{APIRef("Clipboard API")}}
 
 The {{domxref("Clipboard")}} interface's **`writeText()`**
@@ -26,7 +27,7 @@ using either {{domxref("Clipboard.read", "read()")}} or {{domxref("Clipboard.rea
 
 ## Syntax
 
-```js
+```js-nolint
 writeText(newClipText)
 ```
 

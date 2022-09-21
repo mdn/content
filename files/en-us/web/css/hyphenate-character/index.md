@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: css.properties.hyphenate-character
 ---
+
 {{CSSRef}}
 
 The **`hyphenate-character`** [CSS](/en-US/docs/Web/CSS) property sets the character (or string) used at the end of a line before a hyphenation break.

@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.add
 ---
+
 {{JSRef}}
 
 The static **`Atomics.add()`**
@@ -19,7 +20,7 @@ modified value is written back.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.add(typedArray, index, value)
 ```
 

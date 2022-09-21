@@ -11,6 +11,7 @@ tags:
   - Storage
 browser-compat: api.IDBIndex.getAll
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getAll()`** method of the {{domxref("IDBIndex")}}
@@ -26,7 +27,7 @@ use `getAll()`.
 
 ## Syntax
 
-```js
+```js-nolint
 getAll()
 getAll(query)
 getAll(query, count)

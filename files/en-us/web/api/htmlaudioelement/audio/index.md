@@ -14,6 +14,7 @@ tags:
   - sound
 browser-compat: api.HTMLAudioElement.Audio
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`Audio()`** constructor creates
@@ -23,7 +24,7 @@ offscreen to manage and play audio.
 
 ## Syntax
 
-```js
+```js-nolint
 new Audio()
 new Audio(url)
 ```

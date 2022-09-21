@@ -12,6 +12,7 @@ tags:
   - postMessage
 browser-compat: api.Window.postMessage
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`window.postMessage()`** method safely enables
@@ -31,7 +32,7 @@ receiving window is then free to [handle this event](/en-US/docs/Web/Events/Even
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(message, targetOrigin)
 postMessage(message, targetOrigin, transfer)
 ```

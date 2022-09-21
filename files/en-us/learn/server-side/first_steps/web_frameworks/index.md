@@ -11,6 +11,7 @@ tags:
   - Server-side programming
   - Web frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 The previous article showed you what the communication between web clients and servers looks like, the nature of HTTP requests and responses, and what a server-side web application needs to do in order to respond to requests from a web browser. With this knowledge under our belt, it's time to explore how web frameworks can simplify these tasks, and give you an idea of how you'd choose a framework for your first server-side web application.
@@ -203,15 +204,15 @@ If you're an absolute beginner at programming then you'll probably choose your f
 >
 > 1. Navigate to the main sites (linked above)
 >
->     - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started", etc.).
->     - Can you see topics showing how to set up URL routing, templates, and databases/models?
->     - Are the documents clear?
+>    - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started", etc.).
+>    - Can you see topics showing how to set up URL routing, templates, and databases/models?
+>    - Are the documents clear?
 >
 > 2. Navigate to mailing lists for each site (accessible from Community links).
 >
->     - How many questions have been posted in the last few days
->     - How many have responses?
->     - Do they have an active community?
+>    - How many questions have been posted in the last few days
+>    - How many have responses?
+>    - Do they have an active community?
 
 ## A few good web frameworks?
 

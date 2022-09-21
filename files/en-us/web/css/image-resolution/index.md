@@ -10,6 +10,7 @@ tags:
   - image-resolution
 spec-urls: https://drafts.csswg.org/css-images-4/#the-image-resolution
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`image-resolution`** [CSS](/en-US/docs/Web/CSS) property specifies the intrinsic resolution of all raster images used in or on the element. It affects content images such as replaced elements and generated content, and decorative images such as `background-image` images.

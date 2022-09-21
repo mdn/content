@@ -19,6 +19,7 @@ tags:
   - reverse
   - web animations api
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 The Web Animations API lets us construct animations and control their playback with JavaScript. This article will start you off in the right direction with fun demos and tutorials featuring Alice in Wonderland.

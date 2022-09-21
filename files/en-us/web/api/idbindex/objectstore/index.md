@@ -13,6 +13,7 @@ tags:
   - objectStore
 browser-compat: api.IDBIndex.objectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`objectStore`** property of the {{domxref("IDBIndex")}}

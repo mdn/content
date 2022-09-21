@@ -6,6 +6,7 @@ tags:
   - storage access policy
   - tracking protection
 ---
+
 Firefox includes a new storage access policy that blocks cookies and other site data from third-party tracking resources. This policy is designed as an alternative to the older cookie policies, which have been available in Firefox for many years. This policy protects against cross-site tracking while minimizing the site breakage associated with traditional cookie blocking. This article explains how the policy works and how you can test it.
 
 ## Testing in Firefox
