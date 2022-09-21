@@ -12,6 +12,7 @@ tags:
   - Mobile Development
   - Mobile first
 ---
+
 This article provides a guide to implementing a website layout that follows the principle of **mobile first**. This means creating a layout where the default configuration is for narrow screen/mobile devices, and layout features for wider viewports are then layered on top of that default.
 
 ## First things first — mobile as a default
@@ -188,7 +189,7 @@ The above layout is fine for narrower layouts, but it doesn't work very well whe
   }
 
   nav li a {
-    border-right: 1px solid #AD66D5;
+    border-right: 1px solid #ad66d5;
     border-bottom: none;
     display: inline-block;
     padding: 0 5px;
@@ -210,7 +211,11 @@ The above layout is fine for narrower layouts, but it doesn't work very well whe
     width: 600px;
     height: inherit;
     margin: 0 auto;
-    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(to bottom, #fff, #eee);
+    background: url(../img/firefox-os.png) bottom left no-repeat, linear-gradient(
+        to bottom,
+        #fff,
+        #eee
+      );
   }
 
   .main > p {
@@ -260,7 +265,7 @@ if (window.matchMedia("(min-width: 481px)").matches) {
 
 We can, therefore, save the bandwidth for browsers that don't need it.
 
-#### Modernizr CSS and JS
+#### Modernizr CSS and JavaScript
 
 Back to Modernizr! The reason why it is so useful is that it provides a mechanism to selectively serve both CSS and JavaScript. Modernizr stores the results of all its feature tests as classes on the HTML element. For example, the Modernizr in our example app is testing for multiple background image and rgba support. When they are not supported, the `<html>` tag looks like this:
 

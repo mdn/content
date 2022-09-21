@@ -22,6 +22,7 @@ tags:
   - right
 browser-compat: api.XRInputSource.handedness
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSource")}} property

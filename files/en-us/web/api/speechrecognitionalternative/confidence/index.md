@@ -13,6 +13,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionAlternative.confidence
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`confidence`** read-only property of the
@@ -29,7 +30,7 @@ A number between 0 and 1.
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

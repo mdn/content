@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Releases
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 77 that will affect developers. Firefox 77 was released on [June 2, 2020](https://wiki.mozilla.org/RapidRelease/Calendar).
@@ -50,7 +51,7 @@ This article provides information about the changes in Firefox 77 that will affe
 
 ### WebDriver conformance (Marionette)
 
-- Certain commands could have caused a hang of Marionette when the currently selected top-level browsing context gets removed, eg. closing the window by a click ({{bug(1619481)}}).
+- Certain commands could have caused a hang of Marionette when the currently selected top-level browsing context gets removed (e.g., closing the window by a click) ({{bug(1619481)}}).
 - Known issue: Because of changes in Firefox 77 an open user prompt could be closed too early when navigating away from the current page. This problem will be fixed in Firefox 78 ({{bug(1631362)}}).
 
 ## Changes for add-on developers

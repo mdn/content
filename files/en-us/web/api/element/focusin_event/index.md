@@ -12,6 +12,7 @@ tags:
   - focusin
 browser-compat: api.Element.focusin_event
 ---
+
 {{APIRef}}
 
 The **`focusin`** event fires when an element is about to receive focus. The main difference between this event and {{domxref("Element/focus_event", "focus")}} is that `focusin` bubbles while `focus` does not.
@@ -51,8 +52,8 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <input type="text" placeholder="text input" />
+  <input type="password" placeholder="password" />
 </form>
 ```
 

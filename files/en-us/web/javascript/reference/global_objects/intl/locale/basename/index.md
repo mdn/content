@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.baseName
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.baseName`** property returns a substring of the `Locale`'s string representation, containing core information about the `Locale`.

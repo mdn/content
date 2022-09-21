@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.WebKitPoint
 ---
+
 {{APIRef("CSS3 Transforms")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 **`Point`** is an interface which represents a point in 2-dimensional space. It is non-standard, not broadly compatible, and should not be used.

@@ -13,6 +13,7 @@ tags:
   - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.disposition
 ---
+
 {{HTTPSidebar}}")}}
 
 The **`disposition`** read-only property of the

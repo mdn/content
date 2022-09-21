@@ -11,6 +11,7 @@ tags:
   - events
 browser-compat: api.SharedWorkerGlobalScope.connect_event
 ---
+
 {{APIRef}}
 
 The **`connect`** event is fired in shared workers at their {{domxref("SharedWorkerGlobalScope")}} when a new client connects.
@@ -67,7 +68,7 @@ self.onconnect = (e) => {
 }
 ```
 
-For a complete running example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
+For a complete running example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
 ### addEventListener equivalent
 

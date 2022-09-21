@@ -10,6 +10,7 @@ tags:
   - concepts
   - cross browser
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 This article starts the module off by providing an overview of the topic of (cross) browser testing, answering questions such as "what is cross browser testing?", "what are the most common types of problems you'll encounter?", and "what are the main approaches for testing, identifying, and fixing problems?"
@@ -61,7 +62,7 @@ There are many different reasons why cross browser issues occur, and note that h
 Cross browser issues commonly occur because:
 
 - sometimes browsers have bugs, or implement features differently. This situation is a lot less bad than it used to be; back when IE4 and Netscape 4 were competing to be the dominant browser in the 1990s, browser companies deliberately implemented things differently to each other to try to gain competitive advantage, which made life hell for developers. Browsers are much better at following standards these days, but differences and bugs still creep through sometimes.
-- some browsers may have different levels of support for technology features than others. This is inevitable when you are dealing with bleeding edge features that browsers are just getting round to implementing, or if you have to support really old browsers that are no longer being developed, which may have been frozen (i.e. no more new work done on them) a long time before a new feature was even invented. As an example, if you want to use cutting edge JavaScript features in your site, they might not work in older browsers. If you need to support older browsers, you might have to not use those, or convert your code to old fashioned syntax using some kind of cross-compiler where needed.
+- some browsers may have different levels of support for technology features than others. This is inevitable when you are dealing with bleeding edge features that browsers are just getting round to implementing, or if you have to support really old browsers that are no longer being developed, which may have been frozen (i.e. no more new work done on them) a long time before a new feature was even invented. As an example, if you want to use cutting edge JavaScript features in your site, they might not work in older browsers. If you need to support older browsers, you might have to not use those, or convert your code to old-fashioned syntax using some kind of cross-compiler where needed.
 - some devices may have constraints that cause a web site to run slowly, or display badly. For example, if a site has been designed to look nice on a desktop PC, it will probably look tiny and be hard to read on a mobile device. If your site includes a load of big animations, it might be OK on a high spec tablet, but might be sluggish or jerky on a low end device.
 
 and more reasons besides.
@@ -76,7 +77,7 @@ If you leave all the testing to the end of a project, any bugs you uncover will 
 
 The workflow for testing and bug fixes on a project can be broken down into roughly the following four phases (this is only very rough — different people may do things quite differently to this):
 
-**Initial planning > Development > Testing/discovery > Fixes/iteration**
+**Initial planning** > **Development** > **Testing/discovery** > **Fixes/iteration**
 
 Steps 2–4 will tend to be repeated as many times as necessary to get all of the implementation done. We will look at the different parts of the testing process in much greater detail in subsequent articles, but for now let's just summarize what may occur in each step.
 

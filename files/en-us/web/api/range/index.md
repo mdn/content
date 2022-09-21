@@ -7,6 +7,7 @@ tags:
   - DOM
 browser-compat: api.Range
 ---
+
 {{APIRef("DOM")}}
 
 The **`Range`** interface represents a fragment of a document that can contain nodes and parts of text nodes.
@@ -36,7 +37,7 @@ _There are no inherited properties._
 
 ## Constructor
 
-- {{ domxref("Range.Range()", "Range()") }} {{experimental_inline}}
+- {{ domxref("Range.Range()", "Range()") }}
   - : Returns a `Range` object with the global {{domxref("Document")}} as its start and end.
 
 ## Methods
@@ -47,15 +48,15 @@ _There are no inherited methods._
   - : Collapses the `Range` to one of its boundary points.
 - {{ domxref("Range.compareBoundaryPoints()")}}
   - : Compares the boundary points of the `Range` with another `Range`.
-- {{ domxref("Range.compareNode()")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{ domxref("Range.compareNode()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns a constant representing whether the {{domxref("Node")}} is before, after, inside, or surrounding the range.
-- {{ domxref("Range.comparePoint()")}} {{experimental_inline}}
+- {{ domxref("Range.comparePoint()")}}
   - : Returns -1, 0, or 1 indicating whether the point occurs before, inside, or after the `Range`.
 - {{ domxref("Range.cloneContents()")}}
   - : Returns a {{ domxref("DocumentFragment") }} copying the nodes of a `Range`.
 - {{ domxref("Range.cloneRange()")}}
   - : Returns a `Range` object with boundary points identical to the cloned `Range`.
-- {{ domxref("Range.createContextualFragment()")}} {{experimental_inline}}
+- {{ domxref("Range.createContextualFragment()")}}
   - : Returns a {{ domxref("DocumentFragment") }} created from a given string of code.
 - {{ domxref("Range.deleteContents()")}}
   - : Removes the contents of a `Range` from the {{ domxref("Document") }}.
@@ -63,15 +64,15 @@ _There are no inherited methods._
   - : Releases the `Range` from use to improve performance.
 - {{ domxref("Range.extractContents()")}}
   - : Moves contents of a `Range` from the document tree into a {{ domxref("DocumentFragment") }}.
-- {{ domxref("Range.getBoundingClientRect()") }} {{experimental_inline}}
+- {{ domxref("Range.getBoundingClientRect()") }}
   - : Returns a {{ domxref("DOMRect") }} object which bounds the entire contents of the `Range`; this would be the union of all the rectangles returned by {{ domxref("range.getClientRects()") }}.
-- {{ domxref("Range.getClientRects()") }} {{experimental_inline}}
+- {{ domxref("Range.getClientRects()") }}
   - : Returns a list of {{ domxref("DOMRect") }} objects that aggregates the results of {{ domxref("Element.getClientRects()") }} for all the elements in the `Range`.
-- {{ domxref("Range.isPointInRange()")}} {{experimental_inline}}
+- {{ domxref("Range.isPointInRange()")}}
   - : Returns a `boolean` indicating whether the given point is in the `Range`.
 - {{ domxref("Range.insertNode()")}}
   - : Insert a {{ domxref("Node") }} at the start of a `Range`.
-- {{ domxref("Range.intersectsNode()")}} {{experimental_inline}}
+- {{ domxref("Range.intersectsNode()")}}
   - : Returns a `boolean` indicating whether the given node intersects the `Range`.
 - {{ domxref("Range.selectNode()")}}
   - : Sets the `Range` to contain the {{ domxref("Node") }} and its contents.

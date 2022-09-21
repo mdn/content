@@ -11,8 +11,9 @@ tags:
   - Learn
   - Objects
   - Tutorial
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 In previous articles we looked at all the essential JavaScript object theory and syntax details, giving you a solid base to start from. In this article we dive into a practical exercise, giving you some more practice in building custom JavaScript objects, with a fun and colorful result.
@@ -146,18 +147,18 @@ You can start testing your object out already.
 2. Open the browser's JavaScript console, and then refresh the page so that the canvas size changes to the smaller visible viewport that remains when the console opens.
 3. Type in the following to create a new ball instance:
 
-    ```js
-    const testBall = new Ball(50, 100, 4, 4, 'blue', 10);
-    ```
+   ```js
+   const testBall = new Ball(50, 100, 4, 4, 'blue', 10);
+   ```
 
 4. Try calling its members:
 
-    ```js
-    testBall.x
-    testBall.size
-    testBall.color
-    testBall.draw()
-    ```
+   ```js
+   testBall.x
+   testBall.size
+   testBall.color
+   testBall.draw()
+   ```
 
 5. When you enter the last line, you should see the ball draw itself somewhere on the canvas.
 
@@ -188,7 +189,7 @@ update() {
 }
 ```
 
-The first four parts of the function check whether the ball has reached the edge of the canvas. If it has, we reverse the polarity of the relevant velocity to make the ball travel in the opposite direction. So for example, if the ball was traveling upwards (positive `velY`), then the vertical velocity is changed so that it starts to travel downwards instead (negative `velY`).
+The first four parts of the function check whether the ball has reached the edge of the canvas. If it has, we reverse the polarity of the relevant velocity to make the ball travel in the opposite direction. So for example, if the ball was traveling upwards (negative `velY`), then the vertical velocity is changed so that it starts to travel downwards instead (positive `velY`).
 
 In the four cases, we are checking to see:
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.GamepadEvent.gamepad
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`GamepadEvent.gamepad`** property of the
@@ -32,10 +33,6 @@ window.addEventListener("gamepadconnected", (e) => {
   e.gamepad.buttons.length, e.gamepad.axes.length);
 });
 ```
-
-## Value
-
-A {{domxref("Gamepad")}} object.
 
 ## Specifications
 

@@ -11,6 +11,7 @@ tags:
   - touch
 browser-compat: api.TouchEvent.metaKey
 ---
+
 {{ APIRef("Touch Events") }}
 
 ## Summary

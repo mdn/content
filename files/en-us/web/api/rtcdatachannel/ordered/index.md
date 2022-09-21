@@ -11,6 +11,7 @@ tags:
   - ordered
 browser-compat: api.RTCDataChannel.ordered
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property **`ordered`** indicates

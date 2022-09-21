@@ -11,6 +11,7 @@ tags:
   - management
 browser-compat: webextensions.api.management.getPermissionWarningsByManifest
 ---
+
 {{AddonSidebar()}}When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardized across browsers.
 
 Given the text of a [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, this function returns the permission warnings that would be given for the resulting add-on, as an array of strings.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingWarnings = browser.management.getPermissionWarningsByManifest(
   manifestString      // string
 )
@@ -72,7 +73,8 @@ gettingWarnings.then(gotWarnings, gotError);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,4 +101,4 @@ gettingWarnings.then(gotWarnings, gotError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

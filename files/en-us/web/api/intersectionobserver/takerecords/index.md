@@ -13,6 +13,7 @@ tags:
   - takeRecords
 browser-compat: api.IntersectionObserver.takeRecords
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} method
@@ -28,7 +29,7 @@ call to the observer's callback.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 

@@ -13,6 +13,7 @@ tags:
   - saveData
 browser-compat: api.NetworkInformation.saveData
 ---
+
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation.saveData`** read-only

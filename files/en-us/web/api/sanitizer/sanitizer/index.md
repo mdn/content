@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.Sanitizer.Sanitizer
 ---
+
 {{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sanitizer()`** constructor creates a new {{domxref("Sanitizer")}} object, which can be used to sanitize untrusted strings of HTML, or untrusted {{domxref("Document")}} or {{domxref("DocumentFragment")}} objects, making them safe for insertion into a document's DOM.
@@ -19,7 +20,7 @@ The constructor `config` option can be used to customize the sanitizer behavior.
 
 ## Syntax
 
-```js
+```js-nolint
 new Sanitizer()
 new Sanitizer(config)
 ```
@@ -74,7 +75,7 @@ This example shows the result of sanitizing a string with disallowed `script` el
 
 ```js
 const unsanitized = "abc <script>alert(1)<" + "/script> def";
-const sanitized =  new Sanitizer().sanitizeFor("div", unsanitized);
+const sanitized = new Sanitizer().sanitizeFor("div", unsanitized);
 // Result (innerHTML of 'sanitized'): script will be removed: "abc alert(1) def"
 ```
 

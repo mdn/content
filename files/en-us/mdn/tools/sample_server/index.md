@@ -9,6 +9,7 @@ tags:
   - Site-wide
   - Tools
 ---
+
 {{MDNSidebar}}
 
 While MDN provides a built-in [live sample system](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) for presenting simple (and even not-so-simple) code samples with the code's output displayed in-context, there are samples that require a server to talk to. For those things, we have the MDN sample server, which solves these and other problems. This article is a guide to the use of the sample server.
@@ -29,7 +30,7 @@ Each sample's code is [maintained on GitHub](https://github.com/mdn/dom-examples
 
 To contribute to the samples located on the [sample server](https://mdn.github.io/dom-examples/), you need to fork the [mdn/dom-examples repository](https://github.com/mdn/dom-examples) on GitHub. Most of the samples are currently kept in the same repository on GitHub.
 
-Each API has its own directory, e.g. [canvas](https://github.com/mdn/dom-examples/tree/master/canvas). To create a new sample, add an appropriately named directory under the API's directory there. For example, if your example shows how to use 'drop a file to upload feature', then you might put your sample in [drag-and-drop](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) directory.
+Each API has its own directory, e.g. [canvas](https://github.com/mdn/dom-examples/tree/main/canvas). To create a new sample, add an appropriately named directory under the API's directory there. For example, if your example shows how to use 'drop a file to upload feature', then you might put your sample in [drag-and-drop](https://github.com/mdn/dom-examples/tree/main/drag-and-drop) directory.
 
 ### Submitting your sample
 

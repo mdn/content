@@ -7,6 +7,7 @@ tags:
   - writing-guide
 browser-compat: path.to.feature.NameOfTheMethod
 ---
+
 {{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
@@ -46,14 +47,18 @@ browser-compat: path.to.feature.NameOfTheMethod
 > - **page-type**
 >   - : The `page-type` key for Web/API methods is either `web-api-instance-method` (for instance methods) or `web-api-static-method` (for static methods).
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Method**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the method (e.g. **count()**).
+>
+>   - : Always include the following tags: **API**, **Reference**, **Method**, the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the method (e.g. **count()**).
 >
 >     Include the following tags as appropriate:
+>
 >     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
 >     - Special requirements: **Secure context** (if it is available in a secure context only)
 >     - Any other tags that represent terms people might search for related to the technology.
 >       For example on WebVR interface pages we include **VR** and **Virtual reality**.
+>
 > - **browser-compat**
+>
 >   - : Replace the placeholder value `path.to.feature.NameOfTheMethod` with the query string for the method in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
 >     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >
@@ -142,25 +147,27 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 >
 > Include an H3 heading (`###`) for each example on this page and then a final H3 heading (`###`) with the text "More examples", under which you can link to the examples on other pages. For example:
 >
->  ```md
->  ## Examples
+> ```md
+> ## Examples
 >
->  ### Using the fetch API
->  Example of Fetch
+> ### Using the fetch API
 >
->  ### More examples
->  Links to more examples on other pages
->  ```
+> Example of Fetch
+>
+> ### More examples
+>
+> Links to more examples on other pages
+> ```
 >
 > **Scenario 2:** If you _only_ have examples on another page and none on this page:
 >
 > Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
 >
->  ```md
->   ## Examples
+> ```md
+> ## Examples
 >
->   For examples of this API, see [the page on fetch()](https://example.org).
->
+> For examples of this API, see [the page on fetch()](https://example.org).
+> ```
 
 ## Specifications
 

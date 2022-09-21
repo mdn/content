@@ -13,6 +13,7 @@ tags:
   - upperOpen
 browser-compat: api.IDBKeyRange.upperOpen
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`upperOpen`** read-only property of the
@@ -45,7 +46,7 @@ console, which should appear as "true": the upper bound is open, so won't be inc
 the range.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/blob/master/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/blob/main/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {

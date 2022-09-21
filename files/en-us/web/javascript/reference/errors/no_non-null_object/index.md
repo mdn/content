@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{JSSidebar("Errors")}}
 
 The JavaScript exception "is not a non-null object" occurs when an object is expected

@@ -6,6 +6,7 @@ tags:
   - Guide
   - drag and drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 The HTML Drag and Drop API supports dragging various types of data, including plain text, URLs, HTML code, files, etc. The document describes best practices for common draggable data types.
@@ -99,22 +100,23 @@ Multiple files will be received during a drop as multiple items in the data tran
 
 The following example shows how to create an area for receiving dropped files:
 
-```xml
-<listbox ondragenter="return checkDrag(event)"
-         ondragover="return checkDrag(event)"
-         ondrop="doDrop(event)"/>
+```html
+<listbox
+  ondragenter="return checkDrag(event)"
+  ondragover="return checkDrag(event)"
+  ondrop="doDrop(event)" />
 
 <script>
-function checkDrag(event) {
-  return event.dataTransfer.types.contains("application/x-moz-file");
-}
-
-function doDrop(event) {
-  const file = event.dataTransfer.mozGetDataAt("application/x-moz-file", 0);
-  if (file instanceof Components.interfaces.nsIFile) {
-    event.currentTarget.appendItem(file.leafName);
+  function checkDrag(event) {
+    return event.dataTransfer.types.contains("application/x-moz-file");
   }
-}
+
+  function doDrop(event) {
+    const file = event.dataTransfer.mozGetDataAt("application/x-moz-file", 0);
+    if (file instanceof Components.interfaces.nsIFile) {
+      event.currentTarget.appendItem(file.leafName);
+    }
+  }
 </script>
 ```
 

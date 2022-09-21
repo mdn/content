@@ -11,17 +11,16 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.@@iterator
 ---
+
 {{JSRef}}
 
-<p class="seoSummary">The initial value of the <strong><code>@@iterator</code></strong>
-property is the same function object as the initial value of the
-{{jsxref("Map.prototype.entries()", "entries")}} method.</p>
+The initial value of the **`@@iterator`** property is the same function object as the initial value of the {{jsxref("Map.prototype.entries()")}} method.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 myMap[Symbol.iterator]
 ```
 
@@ -48,7 +47,7 @@ console.log(mapIter.next().value) // [1, "bar"]
 console.log(mapIter.next().value) // [Object, "baz"]
 ```
 
-### Using \[@@iterator]\() with for..of
+### Using \[@@iterator]\() with for...of
 
 ```js
 const myMap = new Map()

@@ -10,6 +10,7 @@ tags:
   - Deprecated
 browser-compat: api.ScriptProcessorNode.audioprocess_event
 ---
+
 {{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
 The `audioprocess` event of the {{domxref("ScriptProcessorNode")}} interface is fired when an input buffer of a script processor is ready to be processed.
@@ -30,7 +31,7 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}.
 
 - `playbackTime` {{ReadOnlyInline}}
   - : A double representing the time when the audio will be played,
-     as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
+    as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
 - `inputBuffer` {{ReadOnlyInline}}
   - : An {{domxref("AudioBuffer")}} that is the buffer containing the input audio data to be processed.
     The number of channels is defined as a parameter `numberOfInputChannels`,

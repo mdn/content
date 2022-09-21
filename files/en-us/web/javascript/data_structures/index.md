@@ -7,25 +7,37 @@ tags:
   - JavaScript
   - Types
 ---
+
 {{jsSidebar("More")}}
 
 Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.
 
-## Dynamic typing
+## Dynamic and weak typing
 
-JavaScript is a *loosely typed* and *dynamic* language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
+JavaScript is a [dynamic](https://en.wikipedia.org/wiki/Dynamic_programming_language) language with [dynamic types](https://en.wikipedia.org/wiki/Type_system#DYNAMIC). Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
 
 ```js
-let foo = 42;    // foo is now a number
-foo     = 'bar'; // foo is now a string
-foo     = true;  // foo is now a boolean
+let foo = 42; // foo is now a number
+foo = "bar"; // foo is now a string
+foo = true; // foo is now a boolean
 ```
+
+JavaScript is also a [weakly typed](https://en.wikipedia.org/wiki/Strong_and_weak_typing) language, which means it allows implicit type conversion when an operation involves mismatched types, instead of throwing type errors.
+
+```js
+const foo = 42; // foo is a number
+const result = foo + "1"; // JavaScript coerces foo to a string, so it can be concatenated with the other operand
+console.log(result); // 421
+```
+
+Implicit coercions is very convenient, but can be a potential footgun if developers didn't intend to do the conversion, or intend to convert in the other direction (for example, string to number instead of number to string). For [symbols](#symbol_type) and [BigInts](#bigint_type), JavaScript has intentionally disallowed certain implicit type conversions.
 
 ## JavaScript types
 
 The set of types in the JavaScript language consists of [_primitive values_](#primitive_values) and [_objects_](#objects).
 
 - [Primitive values](#primitive_values) (immutable datum represented directly at the lowest level of the language)
+
   - [Boolean type](#boolean_type)
   - [Null type](#null_type)
   - [Undefined type](#undefined_type)
@@ -78,7 +90,7 @@ console.log(42 / +0); // Infinity
 console.log(42 / -0); // -Infinity
 ```
 
-Although a number often represents only its value, JavaScript provides {{jsxref("Operators", "binary (bitwise) operators")}}.
+Although a number often represents only its value, JavaScript provides [bitwise operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators).
 
 > **Note:** Although bitwise operators _can_ be used to represent several Boolean values within a single number using [bit masking](https://en.wikipedia.org/wiki/Mask_%28computing%29), this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.
 
@@ -121,8 +133,8 @@ JavaScript strings are immutable. This means that once a string is created, it i
 
 However, it is still possible to create another string based on an operation on the original string. For example:
 
-- A substring of the original by picking individual letters or using {{jsxref("String.substr()")}}.
-- A concatenation of two strings using the concatenation operator (`+`) or {{jsxref("String.concat()")}}.
+- A substring of the original by picking individual letters or using [`substring()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
+- A concatenation of two strings using the concatenation operator (`+`) or [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
 
 #### Beware of "stringly-typing" your code!
 

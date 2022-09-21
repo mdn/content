@@ -14,6 +14,7 @@ tags:
   - move
 browser-compat: api.Element.mouseleave_event
 ---
+
 {{APIRef}}
 
 The **`mouseleave`** event is fired at an {{domxref("Element")}} when the cursor of a pointing device (usually a mouse) is moved out of it.
@@ -91,13 +92,13 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
   - : Alias for {{domxref("MouseEvent.clientY")}}
 
-#### Behavior of `mouseleave` events:
+### Behavior of `mouseleave` events:
 
 ![](mouseleave.png)
 
 One `mouseleave` event is sent to each element of the hierarchy when leaving them. Here four events are sent to the four elements of the hierarchy when the pointer moves from the text to an area outside of the most outer div represented here.
 
-#### Behavior of `mouseout` events:
+### Behavior of `mouseout` events:
 
 ![](mouseout.png)
 
@@ -114,10 +115,10 @@ The following trivial example uses the `mouseenter` event to change the border o
 #### HTML
 
 ```html
-<div id='mouseTarget'>
- <ul id="unorderedList">
-  <li>No events yet!</li>
- </ul>
+<div id="mouseTarget">
+  <ul id="unorderedList">
+    <li>No events yet!</li>
+  </ul>
 </div>
 ```
 
@@ -128,8 +129,8 @@ Styling the `<div>` to make it more visible.
 ```css
 #mouseTarget {
   box-sizing: border-box;
-  width:15rem;
-  border:1px solid #333;
+  width: 15rem;
+  border: 1px solid #333;
 }
 ```
 

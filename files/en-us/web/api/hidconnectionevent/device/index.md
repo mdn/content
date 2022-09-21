@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.HIDConnectionEvent.device
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`device`** read-only property of the {{domxref("HIDConnectionEvent")}} interface returns the {{domxref("HIDDevice")}} associated with this connection event.

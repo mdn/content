@@ -13,6 +13,7 @@ tags:
   - Interface
 browser-compat: api.CSSScale
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSScale`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the [scale()](/en-US/docs/Web/CSS/transform-function/scale) and [scale3d()](/en-US/docs/Web/CSS/transform-function/scale) values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
@@ -21,16 +22,16 @@ The **`CSSScale`** interface of the {{domxref('CSS_Object_Model#css_typed_object
 
 ## Constructor
 
-- {{domxref("CSSScale.CSSScale", "CSSScale()")}}
+- {{domxref("CSSScale.CSSScale", "CSSScale()")}} {{Experimental_Inline}}
   - : Creates a new `CSSScale` object.
 
 ## Properties
 
-- {{domxref('CSSScale.x','x')}}
+- {{domxref('CSSScale.x','x')}} {{Experimental_Inline}}
   - : Returns or sets the x-axis value.
-- {{domxref('CSSScale.y','y')}}
+- {{domxref('CSSScale.y','y')}} {{Experimental_Inline}}
   - : Returns or sets the y-axis value.
-- {{domxref('CSSScale.z','z')}}
+- {{domxref('CSSScale.z','z')}} {{Experimental_Inline}}
   - : Returns or sets the z-axis value.
 
 ## Examples

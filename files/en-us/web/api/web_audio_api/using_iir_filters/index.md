@@ -10,6 +10,7 @@ tags:
   - Using
   - Web Audio API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 The **`IIRFilterNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is an {{domxref("AudioNode")}} processor that implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response) (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers, and the filter response parameters can be specified, so that it can be tuned as needed. This article looks at how to implement one, and use it in a simple example.
@@ -40,7 +41,7 @@ With the IIRFIlter node it's up to you to set what `feedforward` and `feedback` 
 
 If you are looking to learn more there's some [information about the maths behind IIR filters here](http://ece.uccs.edu/~mwickert/ece2610/lecture_notes/ece2610_chap8.pdf). This enters the realms of signal processing theory — don't worry if you look at it and feel like it's not for you.
 
-If you want to play with the IIR filter node and need some values to help along the way, there's [a table of already calculated values here](https://www.dspguide.com/CH20.PDF); on pages 4 & 5 of the linked PDF the a*n* values refer to the `feedForward` values and the b*n* values refer to the `feedback`. [musicdsp.org](https://www.musicdsp.org/en/latest/) is also a great resource if you want to read more about different filters and how they are implemented digitally.
+If you want to play with the IIR filter node and need some values to help along the way, there's [a table of already calculated values here](https://www.dspguide.com/CH20.PDF); on pages 4 & 5 of the linked PDF the `an` values refer to the `feedForward` values and the `bn` values refer to the `feedback`. [musicdsp.org](https://www.musicdsp.org/en/latest/) is also a great resource if you want to read more about different filters and how they are implemented digitally.
 
 With that all in mind, let's take a look at the code to create an IIR filter with the Web Audio API.
 
@@ -87,7 +88,13 @@ function playSourceNode(audioContext, audioBuffer) {
 This function is called when the play button is pressed. The play button HTML looks like this:
 
 ```html
-<button class="button-play" role="switch" data-playing="false" aria-pressed="false">Play</button>
+<button
+  class="button-play"
+  role="switch"
+  data-playing="false"
+  aria-pressed="false">
+  Play
+</button>
 ```
 
 And the `click` event listener starts like so:
@@ -104,7 +111,13 @@ playButton.addEventListener('click', () => {
 The toggle that turns the IIR filter on and off is set up in the similar way. First, the HTML:
 
 ```html
-<button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
+<button
+  class="button-filter"
+  role="switch"
+  data-filteron="false"
+  aria-pressed="false"
+  aria-describedby="label"
+  disabled></button>
 ```
 
 The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the destination:

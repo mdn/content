@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.test
 ---
+
 {{JSRef}}
 
 The **`test()`** method executes a search for a match between a
@@ -17,9 +18,9 @@ regular expression and a specified string. Returns `true` or
 `false`.
 
 JavaScript {{jsxref("RegExp")}} objects are **stateful** when they have
-the {{jsxref("RegExp.global", "global")}} or {{jsxref("RegExp.sticky", "sticky")}} flags
+the {{jsxref("RegExp/global", "global")}} or {{jsxref("RegExp/sticky", "sticky")}} flags
 set (e.g., `/foo/g` or `/foo/y`). They store a
-{{jsxref("RegExp.lastIndex", "lastIndex")}} from the previous match. Using this
+{{jsxref("RegExp/lastIndex", "lastIndex")}} from the previous match. Using this
 internally, `test()` can be used to iterate over multiple matches in a string
 of text (with capture groups).
 
@@ -27,7 +28,7 @@ of text (with capture groups).
 
 ## Syntax
 
-```js
+```js-nolint
 test(str)
 ```
 
@@ -74,7 +75,7 @@ The following example logs a message which depends on the success of the test:
 
 ```js
 function testInput(re, str) {
-  const midstring  = re.test(str) ? 'contains' : 'does not contain';
+  const midstring = re.test(str) ? 'contains' : 'does not contain';
   console.log(`${str} ${midstring} ${re.source}`);
 }
 ```
@@ -82,7 +83,7 @@ function testInput(re, str) {
 ### Using test() on a regex with the "global" flag
 
 When a regex has the [global flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags_2) set,
-`test()` will advance the {{jsxref("RegExp.lastIndex", "lastIndex")}} of the regex.
+`test()` will advance the {{jsxref("RegExp/lastIndex", "lastIndex")}} of the regex.
 ({{jsxref("RegExp.prototype.exec()")}} also advances the `lastIndex` property.)
 
 Further calls to `test(str)` will resume searching

@@ -11,6 +11,7 @@ tags:
   - Authentication
 browser-compat: http.headers.Authorization
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Authorization`** request header can be used to provide credentials that authenticate a user agent with a server, allowing access to a protected resource.
@@ -66,6 +67,7 @@ Authorization: Digest username=<username>,
 ## Directives
 
 - `<auth-scheme>`
+
   - : The [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) that defines how the credentials are encoded.
     Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
 

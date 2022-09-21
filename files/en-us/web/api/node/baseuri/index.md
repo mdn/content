@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Node.baseURI
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`baseURI`** property of the {{domxref("Node")}} interface
@@ -40,7 +41,7 @@ A string representing the base URL of the {{domxref("Node")}}.
 ```
 
 ```js
-const output = document.getElementsByTagName("output")[0];
+const output = document.querySelector("output");
 output.value = output.baseURI;
 ```
 
@@ -49,12 +50,12 @@ output.value = output.baseURI;
 ### With \<base>
 
 ```html
-<base href="https://developer.mozilla.org/modified_base_uri/">
+<base href="https://developer.mozilla.org/modified_base_uri/" />
 <output>Not calculated</output>
 ```
 
 ```js
-const output = document.getElementsByTagName("output")[0];
+const output = document.querySelector("output");
 output.value = output.baseURI;
 ```
 

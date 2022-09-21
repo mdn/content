@@ -13,6 +13,7 @@ tags:
   - weekInfo
 browser-compat: javascript.builtins.Intl.Locale.weekInfo
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.weekInfo`** property is an accessor property which returns a `weekInfo` object with the properties `firstDay`, `weekend` and `minimalDays` for the associated `Locale`.

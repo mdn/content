@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEMorphologyElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEMorphologyElement`** interface corresponds to the {{SVGElement("feMorphology")}} element.

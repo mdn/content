@@ -11,6 +11,7 @@ tags:
   - Request
 browser-compat: api.Request.body
 ---
+
 {{APIRef("Fetch")}}
 
 The read-only **`body`** property of the {{domxref("Request")}}

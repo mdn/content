@@ -8,9 +8,11 @@ tags:
   - Reference
   - box-flex
   - recipe:css-property
+  - Deprecated
 browser-compat: css.properties.box-flex
 ---
-{{CSSRef}}{{Non-standard_Header}}
+
+{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 > **Warning:** This is a property for controlling parts of the XUL box model. It does not match either the old CSS Flexible Box Layout Module drafts for '`box-flex`' (which were based on this property) or the behavior of '`-webkit-box-flex`' (which is based on those drafts). See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
 
@@ -64,7 +66,10 @@ A trick to make all content elements in a containing box the same size, is to gi
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+box-flex =
+  <number>
+```
 
 ## Examples
 
@@ -74,7 +79,7 @@ A trick to make all content elements in a containing box the same size, is to gi
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>-moz-box-flex example</title>
     <style>
       div.example {
@@ -84,13 +89,13 @@ A trick to make all content elements in a containing box the same size, is to gi
         width: 100%;
       }
       div.example > p:nth-child(1) {
-        -moz-box-flex: 1;       /* Mozilla */
-        -webkit-box-flex: 1;    /* WebKit */
+        -moz-box-flex: 1; /* Mozilla */
+        -webkit-box-flex: 1; /* WebKit */
         border: 1px solid black;
       }
       div.example > p:nth-child(2) {
-        -moz-box-flex: 0;       /* Mozilla */
-        -webkit-box-flex: 0;    /* WebKit */
+        -moz-box-flex: 0; /* Mozilla */
+        -webkit-box-flex: 0; /* WebKit */
         border: 1px solid black;
       }
     </style>

@@ -9,6 +9,7 @@ tags:
   - hasOwnProperty
 browser-compat: javascript.builtins.Object.hasOwnProperty
 ---
+
 {{JSRef}}
 
 The **`hasOwnProperty()`** method returns a boolean indicating whether the
@@ -22,7 +23,7 @@ it).
 
 ## Syntax
 
-```js
+```js-nolint
 hasOwnProperty(prop)
 ```
 

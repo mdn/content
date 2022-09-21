@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.contextualIdentities
 ---
+
 {{AddonSidebar}}
 
 Work with contextual identities: list, create, remove, and update contextual identities.

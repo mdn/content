@@ -22,6 +22,7 @@ tags:
   - Property
 browser-compat: api.MediaTrackSettings.logicalSurface
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's

@@ -20,6 +20,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaDevices`** interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.
@@ -42,7 +43,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
   - : Prompts the user to select a display or portion of a display (such as a window) to capture as a {{domxref("MediaStream")}} for sharing or recording purposes. Returns a promise that resolves to a `MediaStream`.
 - {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}
   - : With the user's permission through a prompt, turns on a camera and/or a microphone on the system and provides a {{domxref("MediaStream")}} containing a video track and/or an audio track with the input.
-- {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }}
+- {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }} {{Experimental_Inline}}
   - : Prompts the user to select a specific audio output device.
 
 ## Events

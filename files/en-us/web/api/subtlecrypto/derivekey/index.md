@@ -12,6 +12,7 @@ tags:
   - deriveKey
 browser-compat: api.SubtleCrypto.deriveKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`deriveKey()`** method of the {{domxref("SubtleCrypto")}}
@@ -26,7 +27,7 @@ different characteristics and are appropriate in quite different situations. See
 
 ## Syntax
 
-```js
+```js-nolint
 deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
 ```
 
@@ -134,7 +135,7 @@ PBKDF2 is specified in [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898)
 
 In this example Alice and Bob each generate an ECDH key pair, then exchange public
 keys. They then use `deriveKey()` to derive a shared AES key, that they could
-use to encrypt messages. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-key/ecdh.js)
+use to encrypt messages. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/ecdh.js)
 
 ```js
 /*
@@ -204,7 +205,7 @@ async function agreeSharedSecretKey() {
 
 In this example we ask the user for a password, then use it to derive an AES key using
 PBKDF2, then use the AES key to encrypt a message.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-key/pbkdf2.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/pbkdf2.js)
 
 ```js
 /*

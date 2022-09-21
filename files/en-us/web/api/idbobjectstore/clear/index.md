@@ -13,6 +13,7 @@ tags:
   - clear
 browser-compat: api.IDBObjectStore.clear
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`clear()`** method of the {{domxref("IDBObjectStore")}}
@@ -29,7 +30,7 @@ or {{domxref("IDBKeyRange")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 
@@ -67,7 +68,7 @@ DBOpenRequest.onsuccess = (event) => {
   // This is used a lot below
   db = DBOpenRequest.result;
 
-  // Clear all the data form the object store
+  // Clear all the data from the object store
   clearData();
 };
 

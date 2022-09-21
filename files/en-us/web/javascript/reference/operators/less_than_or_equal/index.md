@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.less_than_or_equal
 ---
+
 {{jsSidebar("Operators")}}
 
 The less than or equal operator (`<=`) returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
@@ -16,13 +17,13 @@ The less than or equal operator (`<=`) returns `true` if the left operand is les
 
 ## Syntax
 
-```js
+```js-nolint
 x <= y
 ```
 
 ## Description
 
-The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm. See the documentation for the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator for a summary of this algorithm.
+The operands are compared using the same algorithm as the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator, except that equal values return `true`.
 
 ## Examples
 

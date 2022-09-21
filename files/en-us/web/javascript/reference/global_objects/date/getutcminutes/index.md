@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getUTCMinutes
 ---
+
 {{JSRef}}
 
 The **`getUTCMinutes()`** method returns the minutes in the
@@ -18,13 +19,13 @@ specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCMinutes()
 ```
 
 ### Return value
 
-A `number`.
+A number.
 If the `Date` object represents a valid date, an integer between 0 and 59,
 representing the minutes in the given date according to universal time.
 Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)

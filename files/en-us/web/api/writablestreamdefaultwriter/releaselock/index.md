@@ -11,6 +11,7 @@ tags:
   - releaseLock
 browser-compat: api.WritableStreamDefaultWriter.releaseLock
 ---
+
 {{APIRef("Streams")}}
 
 The **`releaseLock()`** method of the
@@ -21,7 +22,7 @@ in the same way from now on; otherwise, the writer will appear closed.
 
 ## Syntax
 
-```js
+```js-nolint
 releaseLock()
 ```
 

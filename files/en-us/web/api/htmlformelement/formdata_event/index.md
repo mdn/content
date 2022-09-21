@@ -9,6 +9,7 @@ tags:
   - formevent
 browser-compat: api.HTMLFormElement.formdata_event
 ---
+
 {{APIRef}}
 
 The **`formdata`** event fires after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.

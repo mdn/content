@@ -12,6 +12,7 @@ tags:
   - requestStorageAccess
 browser-compat: api.Document.requestStorageAccess
 ---
+
 {{APIRef("Storage Access API")}}
 
 The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
@@ -31,7 +32,7 @@ Storage access is granted based on a series of checks described here:
 7. If the sub frame doesn't have the token `allow-storage-access-by-user-activation`, reject.
 8. If the sub frame's parent frame is not the top frame, reject.
 9. Check any additional rules that the browser has. Examples: allow lists, block lists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
-  Reject if some rule is not fulfilled.
+   Reject if some rule is not fulfilled.
 10. Grant the document access to cookies and other site storage and store that fact for the purposes of future calls to {{domxref("Document.hasStorageAccess()")}} and `requestStorageAccess()`.
 
 Assuming all of the requirements above are satisfied, Firefox will automatically grant storage access to the requesting origin on up to a threshold number of first-party sites in the current session for the duration of user's session, up to a maximum of 24 hours.
@@ -84,7 +85,7 @@ To make testing easier, we have added two preferences in `about:config` that con
 
 ## Syntax
 
-```js
+```js-nolint
 requestStorageAccess()
 ```
 
@@ -99,7 +100,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to first-pa
 When the promise gets resolved, the resolve handler will run as if a user gesture is being processed, whether the promise was fulfilled or rejected:
 
 - In the former case, code can then start to call APIs that require user activation and things can move forward.
-- In the latter case, code can run to inform the user of why the request failed and  what they can do to continue (for example asking them to log in, if that is a requirement).
+- In the latter case, code can run to inform the user of why the request failed and what they can do to continue (for example asking them to log in, if that is a requirement).
 
 ## Examples
 

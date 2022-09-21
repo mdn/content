@@ -106,8 +106,7 @@ The `<em>` element is often used to indicate an implicit or explicit contrast.
 ```html
 <p>
   In HTML 5, what was previously called
-  <em>block-level</em> content is now called
-  <em>flow</em> content.
+  <em>block-level</em> content is now called <em>flow</em> content.
 </p>
 ```
 

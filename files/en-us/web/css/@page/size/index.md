@@ -6,13 +6,13 @@ tags:
   - At-rule descriptor
   - CSS
   - CSS Descriptor
-  - Experimental
   - NeedsBrowserCompatibility
   - Reference
   - Web
 browser-compat: css.at-rules.page.size
 ---
-{{CSSRef}}{{SeeCompatTable}}
+
+{{CSSRef}}
 
 The **`size`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) descriptor, used with the {{cssxref("@page")}} at-rule, defines the size and orientation of the box which is used to represent a page. Most of the time, this size corresponds to the target size of the printed page if applicable.
 
@@ -109,7 +109,15 @@ where
 
 ```css
 @page {
-  size: 4in 6in landscape;
+  size: A4 landscape;
+}
+```
+
+### Specifying a custom size
+
+```css
+@page {
+  size: 4in 6in;
 }
 ```
 

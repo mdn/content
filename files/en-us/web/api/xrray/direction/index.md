@@ -14,6 +14,7 @@ tags:
   - WebXR Device API
 browser-compat: api.XRRay.direction
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`direction`** property of the {{DOMxRef("XRRay")}} interface is a {{domxref("DOMPointReadOnly")}} representing the ray's 3-dimensional directional vector, normalized to a [unit vector](https://en.wikipedia.org/wiki/Unit_vector) with a length of 1.0.

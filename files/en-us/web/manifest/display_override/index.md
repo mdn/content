@@ -6,9 +6,11 @@ tags:
   - Web
   - display
   - display_override
+  - Experimental
 browser-compat: html.manifest.display_override
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>

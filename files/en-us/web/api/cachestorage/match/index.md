@@ -29,9 +29,9 @@ You can access `CacheStorage` through the global
 
 ## Syntax
 
-```js
-match(request);
-match(request, options);
+```js-nolint
+match(request)
+match(request, options)
 ```
 
 ### Parameters
@@ -73,7 +73,7 @@ with `undefined`.
 
 ## Examples
 
-This example is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker) (see [simple service worker running live](https://bncb2v.csb.app/)).
+This example is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (see [simple service worker running live](https://bncb2v.csb.app/)).
 Here we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response
 like so:
 

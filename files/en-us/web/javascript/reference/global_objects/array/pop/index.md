@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.pop
 ---
+
 {{JSRef}}
 
 The **`pop()`** method removes the **last**
@@ -19,7 +20,7 @@ array.
 
 ## Syntax
 
-```js
+```js-nolint
 pop()
 ```
 
@@ -35,11 +36,7 @@ The `pop()` method removes the last element from an array and returns that value
 
 The `pop()` method is a mutating method. It changes the length and the content of `this`. In case you want the value of `this` to be the same, but return a new array with the last element removed, you can use [`arr.slice(0, -1)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) instead.
 
-`Array.prototype.pop()` is intentionally generic; this method can be {{jsxref("Function.call",
-  "called", "", 1)}} or {{jsxref("Function.apply", "applied", "", 1)}} to objects
-resembling arrays. Objects which do not contain a `length` property
-reflecting the last in a series of consecutive, zero-based numerical properties may not
-behave in any meaningful manner.
+`Array.prototype.pop()` is intentionally generic; this method can be called on objects resembling arrays. Objects which do not contain a `length` property reflecting the last in a series of consecutive, zero-based numerical properties may not behave in any meaningful manner.
 
 ## Examples
 

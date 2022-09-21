@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing = in const declaration" occurs when a const

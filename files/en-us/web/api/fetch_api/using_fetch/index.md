@@ -14,9 +14,10 @@ tags:
   - request
 browser-compat: api.fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
-The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global {{domxref("fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.
+The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for accessing and manipulating parts of the [protocol](/en-US/docs/Glossary/Protocol), such as requests and responses. It also provides a global {{domxref("fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.
 
 This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as {{domxref("Service_Worker_API", "Service Workers")}}. Fetch also provides a single logical place to define other HTTP-related concepts such as [CORS](/en-US/docs/Web/HTTP/CORS) and extensions to HTTP.
 
@@ -459,4 +460,4 @@ if (window.fetch) {
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch examples on GitHub](https://github.com/mdn/fetch-examples/)
+- [Fetch examples on GitHub](https://github.com/mdn/dom-examples/tree/main/fetch)

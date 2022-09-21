@@ -10,6 +10,7 @@ tags:
   - web console
 browser-compat: api.console
 ---
+
 {{APIRef("Console API")}}
 
 The **`console`** object provides access to the browser's
@@ -116,7 +117,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 The output will look like this:
 
 ```bash
-My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+My first car was a Dodge Charger. The object is: ({str:"Some text", id:5})
 ```
 
 #### Using string substitutions
@@ -279,5 +280,5 @@ The output in the console looks something like this:
 ### Other implementations
 
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
-- [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
+- [Microsoft Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
 - [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

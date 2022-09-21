@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.length
 ---
+
 {{ ApiRef() }}
 
 Returns the number of frames (either {{HTMLElement("frame")}} or

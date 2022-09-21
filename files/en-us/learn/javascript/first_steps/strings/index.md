@@ -10,9 +10,10 @@ tags:
   - Join
   - Quotes
   - concatenation
-  - l10n:priority
+  - "l10n:priority"
   - strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
 Next, we'll turn our attention to strings — this is what pieces of text are called in programming. In this article, we'll look at all the common things that you really ought to know about strings when learning JavaScript, such as creating strings, escaping quotes in strings, and joining strings together.
@@ -47,65 +48,65 @@ Strings are dealt with similarly to numbers at first glance, but when you dig de
 
 1. To start with, enter the following lines:
 
-    ```js
-    const string = 'The revolution will not be televised.';
-    console.log(string);
-    ```
+   ```js
+   const string = 'The revolution will not be televised.';
+   console.log(string);
+   ```
 
-    Just like we did with numbers, we are declaring a variable, initializing it with a string value, and then returning the value. The only difference here is that when writing a string, you need to surround the value with quotes.
+   Just like we did with numbers, we are declaring a variable, initializing it with a string value, and then returning the value. The only difference here is that when writing a string, you need to surround the value with quotes.
 
 2. If you don't do this, or miss one of the quotes, you'll get an error. Try entering the following lines:
 
-    ```js example-bad
-    const badString1 = This is a test;
-    const badString2 = 'This is a test;
-    const badString3 = This is a test';
-    ```
+   ```js example-bad
+   const badString1 = This is a test;
+   const badString2 = 'This is a test;
+   const badString3 = This is a test';
+   ```
 
-    These lines don't work because any text without quotes around it is assumed to be a variable name, property name, a reserved word, or similar. If the browser can't find it, then an error is raised (e.g. "missing; before statement"). If the browser can see where a string starts, but can't find the end of the string, as indicated by the 2nd quote, it complains with an error (with "unterminated string literal"). If your program is raising such errors, then go back and check all your strings to make sure you have no missing quote marks.
+   These lines don't work because any text without quotes around it is assumed to be a variable name, property name, a reserved word, or similar. If the browser can't find it, then an error is raised (e.g. "missing; before statement"). If the browser can see where a string starts, but can't find the end of the string, as indicated by the 2nd quote, it complains with an error (with "unterminated string literal"). If your program is raising such errors, then go back and check all your strings to make sure you have no missing quote marks.
 
 3. The following will work if you previously defined the variable `string` — try it now:
 
-    ```js
-    const badString = string;
-    console.log(badString);
-    ```
+   ```js
+   const badString = string;
+   console.log(badString);
+   ```
 
-    `badString` is now set to have the same value as `string`.
+   `badString` is now set to have the same value as `string`.
 
 ### Single quotes vs. double quotes
 
 1. In JavaScript, you can choose single quotes or double quotes to wrap your strings in. Both of the following will work okay:
 
-    ```js
-    const sgl = 'Single quotes.';
-    const dbl = "Double quotes";
-    console.log(sgl);
-    console.log(dbl);
-    ```
+   ```js
+   const sgl = 'Single quotes.';
+   const dbl = "Double quotes";
+   console.log(sgl);
+   console.log(dbl);
+   ```
 
 2. There is very little difference between the two, and which you use is down to personal preference. You should choose one and stick to it, however; differently quoted code can be confusing, especially if you use two different quotes on the same string! The following will return an error:
 
-    ```js example-bad
-    const badQuotes = 'What on earth?";
-    ```
+   ```js example-bad
+   const badQuotes = 'What on earth?";
+   ```
 
 3. The browser will think the string has not been closed because the other type of quote you are not using to contain your strings can appear in the string. For example, both of these are okay:
 
-    ```js
-    const sglDbl = 'Would you eat a "fish supper"?';
-    const dblSgl = "I'm feeling blue.";
-    console.log(sglDbl);
-    console.log(dblSgl);
-    ```
+   ```js
+   const sglDbl = 'Would you eat a "fish supper"?';
+   const dblSgl = "I'm feeling blue.";
+   console.log(sglDbl);
+   console.log(dblSgl);
+   ```
 
 4. However, you can't include the same quote mark inside the string if it's being used to contain them. The following will error, as it confuses the browser as to where the string ends:
 
-    ```js example-bad
-    const bigmouth = 'I've got no right to take my place…';
-    ```
+   ```js example-bad
+   const bigmouth = 'I've got no right to take my place…';
+   ```
 
-    This leads us very nicely into our next subject.
+   This leads us very nicely into our next subject.
 
 ### Escaping characters in a string
 
@@ -120,9 +121,9 @@ This works fine. You can escape other characters in the same way, e.g. `\"`, and
 
 ## Concatenating strings
 
-Concatenate just means "join together". To join together strings in JavaScript you can use a different type of string, called a *template literal*.
+Concatenate just means "join together". To join together strings in JavaScript you can use a different type of string, called a _template literal_.
 
-A template literal looks just like a normal string, but instead of using single or double quote marks  (`'` or `"`), you use backtick characters (`` ` ``):
+A template literal looks just like a normal string, but instead of using single or double quote marks (`'` or `"`), you use backtick characters (`` ` ``):
 
 ```js
 const greeting = `Hello`;

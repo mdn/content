@@ -14,6 +14,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.contain
 ---
+
 {{CSSRef}}
 
 The **`contain`** [CSS](/en-US/docs/Web/CSS) property allows an author to indicate that an element and its contents are, as much as possible, _independent_ of the rest of the document tree.
@@ -102,7 +103,7 @@ The markup below consists of two articles, each with content:
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -133,11 +134,11 @@ In the previous example, if we insert another image at the bottom of the first a
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
+  <img src="i-just-showed-up.jpg" alt="social" />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -166,11 +167,11 @@ If we give each `article` the `contain` property with a value of `content`, when
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
+  <img src="i-just-showed-up.jpg" alt="social" />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -229,20 +230,17 @@ CSS quotes are similarly affected in that the [`content`](/en-US/docs/Web/CSS/co
 
 ```html
 <span class="open-quote">
-   outer
+  outer
   <span style="contain: style;">
-    <span class="open-quote">
-    inner
-    </span>
+    <span class="open-quote"> inner </span>
   </span>
 </span>
 <span class="close-quote">close</span>
-
 ```
 
 ```css
 body {
-  quotes: "«" "»" "‹" "›"
+  quotes: "«" "»" "‹" "›";
 }
 .open-quote:before {
   content: open-quote;

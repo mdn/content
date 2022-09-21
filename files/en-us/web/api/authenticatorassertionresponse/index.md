@@ -12,6 +12,7 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`AuthenticatorAssertionResponse`** interface of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is returned by {{domxref('CredentialsContainer.get()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides proof to a service that it has a key pair and that the authentication request is valid and approved.
@@ -41,11 +42,14 @@ None.
 
 ```js
 const options = {
-  challenge: new Uint8Array([/* bytes sent from the server */])
+  challenge: new Uint8Array([
+    /* bytes sent from the server */
+  ]),
 };
 
-navigator.credentials.get({ "publicKey": options })
-    .then((credentialInfoAssertion) => {
+navigator.credentials
+  .get({ publicKey: options })
+  .then((credentialInfoAssertion) => {
     const assertionResponse = credentialInfoAssertion.response;
     // Do something specific with the response
 

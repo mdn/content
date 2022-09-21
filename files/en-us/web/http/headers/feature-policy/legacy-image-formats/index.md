@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: http.headers.Feature-Policy.legacy-image-formats
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `legacy-image-formats` directive controls whether the current document is allowed to display images in legacy formats.

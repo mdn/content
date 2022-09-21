@@ -8,6 +8,7 @@ tags:
   - Reference
   - WAI-ARIA
 ---
+
 Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** is a set of [roles](/en-US/docs/Web/Accessibility/ARIA/Roles) and [attributes](/en-US/docs/Web/Accessibility/ARIA/Attributes) that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
 
 It supplements HTML so that interactions and widgets commonly used in applications can be passed to assistive technologies when there is not otherwise a mechanism. For example, ARIA enables accessible JavaScript widgets, form hints and error messages, live content updates, and more.
@@ -21,9 +22,12 @@ It supplements HTML so that interactions and widgets commonly used in applicatio
 Here's the markup for a progress bar widget:
 
 ```html
-<div id="percent-loaded" role="progressbar" aria-valuenow="75"
-     aria-valuemin="0" aria-valuemax="100">
-</div>
+<div
+  id="percent-loaded"
+  role="progressbar"
+  aria-valuenow="75"
+  aria-valuemin="0"
+  aria-valuemax="100"></div>
 ```
 
 This progress bar is built using a {{HTMLElement("div")}}, which has no meaning. We include ARIA roles and properties to add meaning. In this example, the [`role="progressbar"`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) attribute informs the browser that this element is actually a JavaScript-powered progress bar widget. The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attributes specify the minimum and maximum values for the progress bar, and the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) describes the current state of it and therefore must be kept updated with JavaScript.

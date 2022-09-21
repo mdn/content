@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.Window.mozInnerScreenX
 ---
+
 {{APIRef}}{{Non-standard_Header}}
 
 ## Summary

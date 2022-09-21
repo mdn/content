@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.counter-increment
 ---
+
 {{CSSRef}}
 
 The **`counter-increment`** [CSS](/en-US/docs/Web/CSS) property increases or decreases the value of a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) by a given value.

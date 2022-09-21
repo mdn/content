@@ -8,6 +8,9 @@ tags:
   - Web
   - WebDriver
 ---
+
+{{QuickLinksWithSubpages}}
+
 Any WebDriver [command](/en-US/docs/Web/WebDriver/Commands) that is sent to might plausibly receive an error [response](/en-US/docs/Web/WebDriver/Response). An error is represented by an [HTTP response](/en-US/docs/Web/HTTP) with an [HTTP status code](/en-US/docs/Web/HTTP/Status) in the 4xx or 5xx range, and a JSON payload holding details of the error.
 
 ## Payload
@@ -94,5 +97,3 @@ In most [clients](/en-US/docs/Web/WebDriver/Clients) the error would be represen
 
 - [WebDriver responses](/en-US/docs/Web/WebDriver/Response)
 - [WebDriver commands](/en-US/docs/Web/WebDriver/Commands)
-
-{{QuickLinksWithSubpages}}

@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.empty
 ---
+
 {{jsSidebar("Statements")}}
 
 An **empty statement** is used to provide no statement, although the
@@ -16,7 +17,7 @@ JavaScript syntax would expect one.
 
 ## Syntax
 
-```js
+```js-nolint
 ;
 ```
 
@@ -68,4 +69,4 @@ if (condition);      // Caution, this "if" does nothing!
 
 ## See also
 
-- {{jsxref("Statements/block", "Block statement")}}
+- [Block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)

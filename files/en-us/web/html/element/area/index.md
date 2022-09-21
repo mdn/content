@@ -93,7 +93,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : The hyperlink target for the area.
     Its value is a valid URL.
     This attribute may be omitted; if so, the `<area>` element does not represent a hyperlink.
-- {{htmlattrdef("hreflang")}}
+- {{htmlattrdef("hreflang")}} {{Deprecated_Inline}}
   - : Indicates the language of the linked resource. Allowed values are defined by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
     Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
 - {{htmlattrdef("ping")}}
@@ -153,10 +153,21 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html" alt="Click to go Left">
-  <area shape="circle" coords="275,75,75" href="right.html" alt="Click to go Right">
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="left.html"
+    alt="Click to go Left" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="right.html"
+    alt="Click to go Right" />
 </map>
-<img usemap="#primary" src="https://via.placeholder.com/350x150" alt="350 x 150 pic">
+<img
+  usemap="#primary"
+  src="https://via.placeholder.com/350x150"
+  alt="350 x 150 pic" />
 ```
 
 ### Result

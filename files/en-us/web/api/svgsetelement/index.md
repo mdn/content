@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGSetElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGSetElement`** interface corresponds to the {{SVGElement("set")}} element.

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.MutationRecord
 ---
+
 {{APIRef("DOM")}}
 
 A **`MutationRecord`** represents an individual DOM mutation. It is the object that is inside the array passed to {{domxref("MutationObserver")}}'s callback.

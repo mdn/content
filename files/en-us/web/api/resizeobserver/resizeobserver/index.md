@@ -11,6 +11,7 @@ tags:
   - observers
 browser-compat: api.ResizeObserver.ResizeObserver
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`ResizeObserver`** constructor creates a
@@ -20,7 +21,7 @@ content or border box of an {{domxref('Element')}} or the bounding box of an
 
 ## Syntax
 
-```js
+```js-nolint
 new ResizeObserver(callback)
 ```
 
@@ -54,7 +55,7 @@ new ResizeObserver(callback)
 ## Examples
 
 The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)
-([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
+([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) example:
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {

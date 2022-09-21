@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.WakeLock
 ---
+
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`WakeLock`** interface of the [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) prevents device screens from dimming or locking when an application needs to keep running.

@@ -6,13 +6,14 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 **Article tags** are an important way to put readers in touch with helpful content. Each page should normally have several tags to help keep content organized. This article explains the best way to tag pages so that our readers can find information and we can keep the content organized.
 
 Please use tags properly as explained below. If you don't, our automated tools will not correctly generate lists of content, landing pages, and cross-linking of articles.
 
-> **Warning:** Note to translators and localizers: You should *not* translate any tags listed on this page. They are used for specific purposes such as certain site management tasks and automated data processing, and translating them would break these processes.
+> **Warning:** Note to translators and localizers: You should _not_ translate any tags listed on this page. They are used for specific purposes such as certain site management tasks and automated data processing, and translating them would break these processes.
 
 Tags used on MDN Web Docs can be classified into the following categories based on what the tags are used for or the information they convey:
 
@@ -179,7 +180,7 @@ Generally, all articles should have at _least_ a "[document type](#document_type
 ### Tags that don't follow our tagging standards
 
 Please fix any documents that have tags that don't follow the standards described on this page.
-    Note that you may occasionally see some localized tags (such as `Référence`) showing up on some English pages. This was due to a [bug in Kuma](https://bugzilla.mozilla.org/show_bug.cgi?id=776048), which caused the tags to reappear even if they were deleted. That bug has [since been fixed](https://bugzilla.mozilla.org/show_bug.cgi?id=776048#c37), so any remaining localized tags can be cleaned up if they're spotted.
+Note that you may occasionally see some localized tags (such as `Référence`) showing up on some English pages. This was due to a [bug in Kuma](https://bugzilla.mozilla.org/show_bug.cgi?id=776048), which caused the tags to reappear even if they were deleted. That bug has [since been fixed](https://bugzilla.mozilla.org/show_bug.cgi?id=776048#c37), so any remaining localized tags can be cleaned up if they're spotted.
 
 ### Incorrect tags
 

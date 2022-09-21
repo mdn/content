@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - Reference
 ---
+
 {{DefaultAPISidebar("Web Workers API") }}
 
 The **structured clone algorithm** copies complex JavaScript objects.

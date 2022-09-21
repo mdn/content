@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.NamedNodeMap.getNamedItem
 ---
+
 {{APIRef("DOM")}}
 
 The **`getNamedItem()`** method of the {{domxref("NamedNodeMap")}} interface returns the {{domxref("Attr")}} corresponding to the given name, or `null` if there is no corresponding attribute.
@@ -16,9 +17,9 @@ The **`getNamedItem()`** method of the {{domxref("NamedNodeMap")}} interface ret
 
 ## Syntax
 
-```js
-getNamedItem(name);
-[name];
+```js-nolint
+getNamedItem(name)
+[name]
 ```
 
 ### Parameters
@@ -37,10 +38,10 @@ An {{domxref("Attr")}} corresponding to the `name` given in parameter, or `null`
 ```
 
 ```js
-const pre = document.getElementsByTagName("pre")[0];
+const pre = document.querySelector("pre");
 const attrMap = pre.attributes;
-
-pre.textContent = `The 'test' attribute contains ${attrMap.getNamedItem("test").value}
+const value = attrMap.getNamedItem("test").value;
+pre.textContent = `The 'test' attribute contains ${value}.
 And 'boum' has ${attrMap["boum"] ? "been" : "not been"} found.`;
 ```
 

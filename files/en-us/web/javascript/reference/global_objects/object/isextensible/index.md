@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.isExtensible
 ---
+
 {{JSRef}}
 
 The **`Object.isExtensible()`** method determines if an object
@@ -18,7 +19,7 @@ is extensible (whether it can have new properties added to it).
 
 ## Syntax
 
-```js
+```js-nolint
 Object.isExtensible(obj)
 ```
 
@@ -57,11 +58,9 @@ const frozen = Object.freeze({});
 Object.isExtensible(frozen); // === false
 ```
 
-### Non-object coercion
+### Non-object argument
 
-In ES5, if the argument to this method is not an object (a primitive), then it will
-cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-it was a non-extensible ordinary object, return `false`.
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, it will return `false` without any errors if a non-object argument is passed, since primitives are, by definition, immutable.
 
 ```js
 Object.isExtensible(1);

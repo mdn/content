@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBIndex
 ---
+
 {{APIRef("IndexedDB")}}
 
 `IDBIndex` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides asynchronous access to an [index](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.
@@ -26,9 +27,9 @@ You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyR
 
 ## Properties
 
-- {{domxref("IDBIndex.isAutoLocale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }}
+- {{domxref("IDBIndex.isAutoLocale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }} {{Experimental_Inline}}
   - : Returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
-- {{domxref("IDBIndex.locale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }}
+- {{domxref("IDBIndex.locale")}} {{ReadOnlyInline}} {{ Non-Standard_inline() }} {{Experimental_Inline}}
   - : Returns the locale of the index (for example `en-US`, or `pl`) if it had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
 - {{domxref("IDBIndex.name")}}
   - : The name of this index.
@@ -64,7 +65,7 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
 
-Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/).)
+Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/).)
 
 ```js
 function displayDataByIndex() {

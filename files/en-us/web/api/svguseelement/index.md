@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGUseElement
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG use DOM interface

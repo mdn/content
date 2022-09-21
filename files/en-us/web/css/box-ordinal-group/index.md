@@ -7,9 +7,11 @@ tags:
   - Non-standard
   - Reference
   - recipe:css-property
+  - Deprecated
 browser-compat: css.properties.box-ordinal-group
 ---
-{{CSSRef}}{{Non-standard_Header}}
+
+{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 > **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
 
@@ -38,7 +40,10 @@ The `box-ordinal-group` property is specified as any positive {{CSSxRef("&lt;int
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+box-ordinal-group =
+  <integer>
+```
 
 ## Examples
 

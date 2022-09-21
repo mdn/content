@@ -8,6 +8,7 @@ tags:
   - Symbol
 browser-compat: javascript.builtins.Symbol.species
 ---
+
 {{JSRef}}
 
 The well-known symbol **`Symbol.species`** specifies a function-valued property that the constructor function uses to create derived objects.
@@ -24,7 +25,7 @@ The `species` accessor property allows subclasses to override the default constr
 
 ### Using species
 
-You might want to return {{jsxref("Array")}} objects in your derived array class `MyArray`. For example, when using methods such as {{jsxref("Array.map", "map()")}} that return the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object. The `species` symbol lets you do this:
+You might want to return {{jsxref("Array")}} objects in your derived array class `MyArray`. For example, when using methods such as {{jsxref("Array/map", "map()")}} that return the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object. The `species` symbol lets you do this:
 
 ```js
 class MyArray extends Array {

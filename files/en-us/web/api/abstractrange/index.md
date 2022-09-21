@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.AbstractRange
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbstractRange`** abstract interface is the base class upon which all {{Glossary("DOM")}} range types are defined. A **range** is an object that indicates the start and end points of a section of content within the document.
@@ -76,7 +77,7 @@ To illustrate this, consider the HTML below:
 ```html
 <div class="container">
   <div class="header">
-    <img src="" class="sitelogo">
+    <img src="" class="sitelogo" />
     <h1>The Ultimate Website</h1>
   </div>
   <article>
@@ -135,7 +136,7 @@ The resulting document fragment looks like this:
 
 ![A DocumentFragment representing the cloned content](dom-fragment.svg)
 
-Notice especially that the contents of this fragment are all *below* the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it isn't included.
+Notice especially that the contents of this fragment are all _below_ the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it isn't included.
 
 ## Example
 

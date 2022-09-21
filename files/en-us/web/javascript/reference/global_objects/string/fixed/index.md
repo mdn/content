@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fixed
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`fixed()`** method creates a {{HTMLElement("tt")}} HTML
@@ -19,7 +20,7 @@ element that causes a string to be displayed in fixed-pitch font.
 
 ## Syntax
 
-```js
+```js-nolint
 fixed()
 ```
 

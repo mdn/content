@@ -12,6 +12,7 @@ tags:
   - Workers
 spec-urls: https://html.spec.whatwg.org/multipage/#workers
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) (although the `responseXML` and `channel` attributes are always null) or [`fetch`](/en-US/docs/Web/API/Fetch_API) (with no such restrictions). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
@@ -34,13 +35,13 @@ Workers may, in turn, spawn new workers, as long as those workers are hosted wit
 
 ## Dedicated workers
 
-As mentioned above, a dedicated worker is only accessible by the script that called it. In this section we'll discuss the JavaScript found in our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)): This allows you to enter two numbers to be multiplied together. The numbers are sent to a dedicated worker, multiplied together, and the result is returned to the page and displayed.
+As mentioned above, a dedicated worker is only accessible by the script that called it. In this section we'll discuss the JavaScript found in our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)): This allows you to enter two numbers to be multiplied together. The numbers are sent to a dedicated worker, multiplied together, and the result is returned to the page and displayed.
 
 This example is rather trivial, but we decided to keep it simple while introducing you to basic worker concepts. More advanced details are covered later on in the article.
 
 ### Worker feature detection
 
-For slightly more controlled error handling and backwards compatibility, it is a good idea to wrap your worker accessing code in the following ([main.js](https://github.com/mdn/dom-examples/blob/master/web-workers/simple-web-worker/main.js)):
+For slightly more controlled error handling and backwards compatibility, it is a good idea to wrap your worker accessing code in the following ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)):
 
 ```js
 if (window.Worker) {
@@ -50,7 +51,7 @@ if (window.Worker) {
 
 ### Spawning a dedicated worker
 
-Creating a new worker is simple. All you need to do is call the {{domxref("Worker.Worker", "Worker()")}} constructor, specifying the URI of a script to execute in the worker thread ([main.js](https://github.com/mdn/dom-examples/blob/master/web-workers/simple-web-worker/main.js)):
+Creating a new worker is simple. All you need to do is call the {{domxref("Worker.Worker", "Worker()")}} constructor, specifying the URI of a script to execute in the worker thread ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)):
 
 ```js
 const myWorker = new Worker('worker.js');
@@ -58,7 +59,7 @@ const myWorker = new Worker('worker.js');
 
 ### Sending messages to and from a dedicated worker
 
-The magic of workers happens via the {{domxref("Worker.postMessage", "postMessage()")}} method and the {{domxref("Worker.message_event", "onmessage")}} event handler. When you want to send a message to the worker, you post messages to it like this ([main.js](https://github.com/mdn/dom-examples/blob/master/web-workers/simple-web-worker/main.js)):
+The magic of workers happens via the {{domxref("Worker.postMessage", "postMessage()")}} method and the {{domxref("Worker.message_event", "onmessage")}} event handler. When you want to send a message to the worker, you post messages to it like this ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)):
 
 ```js
 first.onchange = () => {
@@ -74,7 +75,7 @@ second.onchange = () => {
 
 So here we have two {{htmlelement("input")}} elements represented by the variables `first` and `second`; when the value of either is changed, `myWorker.postMessage([first.value,second.value])` is used to send the value inside both to the worker, as an array. You can send pretty much anything you like in the message.
 
-In the worker, we can respond when the message is received by writing an event handler block like this ([worker.js](https://github.com/mdn/dom-examples/blob/master/web-workers/simple-web-worker/worker.js)):
+In the worker, we can respond when the message is received by writing an event handler block like this ([worker.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/worker.js)):
 
 ```js
 onmessage = (e) => {
@@ -144,11 +145,11 @@ importScripts('//example.com/hello.js'); /* You can import scripts from other or
 
 The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, `NETWORK_ERROR` is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{domxref("setTimeout()")}}) will still be functional though. Function declarations **after** the `importScripts()` method are also kept, since these are always evaluated before the rest of the code.
 
-> **Note:** Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into `importScripts()` . This is done synchronously; `importScripts()` does not return until all the scripts have been loaded and executed.
+> **Note:** Scripts may be downloaded in any order, but will be executed in the order in which you pass the filenames into `importScripts()`. This is done synchronously; `importScripts()` does not return until all the scripts have been loaded and executed.
 
 ## Shared workers
 
-A shared worker is accessible by multiple scripts — even if they are being accessed by different windows, iframes or even workers. In this section we'll discuss the JavaScript found in our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)): This is very similar to the basic dedicated worker example, except that it has two functions available handled by different script files: _multiplying two numbers_, or _squaring a number_. Both scripts use the same worker to do the actual calculation required.
+A shared worker is accessible by multiple scripts — even if they are being accessed by different windows, iframes or even workers. In this section we'll discuss the JavaScript found in our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)): This is very similar to the basic dedicated worker example, except that it has two functions available handled by different script files: _multiplying two numbers_, or _squaring a number_. Both scripts use the same worker to do the actual calculation required.
 
 Here we'll concentrate on the differences between dedicated and shared workers. Note that in this example we have two HTML pages, each with JavaScript applied that uses the same single worker file.
 
@@ -158,7 +159,7 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 
 ### Spawning a shared worker
 
-Spawning a new shared worker is pretty much the same as with a dedicated worker, but with a different constructor name (see [index.html](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/index.html) and [index2.html](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/index2.html)) — each one has to spin up the worker using code like the following:
+Spawning a new shared worker is pretty much the same as with a dedicated worker, but with a different constructor name (see [index.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index.html) and [index2.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index2.html)) — each one has to spin up the worker using code like the following:
 
 ```js
 const myWorker = new SharedWorker('worker.js');
@@ -172,7 +173,7 @@ The port connection needs to be started either implicitly by use of the `onmessa
 
 ### Sending messages to and from a shared worker
 
-Now messages can be sent to the worker as before, but the `postMessage()` method has to be invoked through the port object (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/square.js)):
+Now messages can be sent to the worker as before, but the `postMessage()` method has to be invoked through the port object (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/square.js)):
 
 ```js
 squareNumber.onchange = () => {
@@ -181,7 +182,7 @@ squareNumber.onchange = () => {
 }
 ```
 
-Now, on to the worker. There is a bit more complexity here as well ([worker.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/worker.js)):
+Now, on to the worker. There is a bit more complexity here as well ([worker.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/worker.js)):
 
 ```js
 onconnect = (e) => {
@@ -198,9 +199,9 @@ First, we use an `onconnect` handler to fire code when a connection to the port 
 
 We use the `ports` attribute of this event object to grab the port and store it in a variable.
 
-Next, we add a `message` handler on the port to do the calculation and return the result to the main thread. Setting up this `message` handler in the worker thread also implicitly opens the port connection back to the parent thread, so the call to `port.start()` is not actually needed, as noted above.
+Next, we add an `onmessage` handler on the port to do the calculation and return the result to the main thread. Setting up this `onmessage` handler in the worker thread also implicitly opens the port connection back to the parent thread, so the call to `port.start()` is not actually needed, as noted above.
 
-Finally, back in the main script, we deal with the message (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker/square.js)):
+Finally, back in the main script, we deal with the message (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/square.js)):
 
 ```js
 myWorker.port.onmessage = (e) => {
@@ -427,11 +428,11 @@ Here are the full implementation:
 **example.html** (the main page):
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>MDN Example - Queryable worker</title>
     <script type="text/javascript">
       // QueryableWorker instances methods:
@@ -449,69 +450,90 @@ Here are the full implementation:
 
         this.defaultListener = defaultListener ?? (() => {});
 
-        if (onError) { worker.onerror = onError; }
+        if (onError) {
+          worker.onerror = onError;
+        }
 
         this.postMessage = (message) => {
           worker.postMessage(message);
-        }
+        };
 
         this.terminate = () => {
           worker.terminate();
-        }
+        };
 
         this.addListener = (name, listener) => {
           listeners[name] = listener;
-        }
+        };
 
         this.removeListener = (name) => {
           delete listeners[name];
-        }
+        };
 
         // This functions takes at least one argument, the method name we want to query.
         // Then we can pass in the arguments that the method needs.
         this.sendQuery = (queryMethod, ...queryMethodArguments) => {
           if (!queryMethod) {
-            throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
+            throw new TypeError(
+              "QueryableWorker.sendQuery takes at least one argument"
+            );
           }
           worker.postMessage({
             queryMethod,
             queryMethodArguments,
           });
-        }
+        };
 
         worker.onmessage = (event) => {
           if (
             event.data instanceof Object &&
-            Object.hasOwn(event.data, 'queryMethodListener') &&
-            Object.hasOwn(event.data, 'queryMethodArguments')
+            Object.hasOwn(event.data, "queryMethodListener") &&
+            Object.hasOwn(event.data, "queryMethodArguments")
           ) {
-            listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
+            listeners[event.data.queryMethodListener].apply(
+              instance,
+              event.data.queryMethodArguments
+            );
           } else {
             this.defaultListener.call(instance, event.data);
           }
-        }
+        };
       }
 
       // your custom "queryable" worker
-      const myTask = new QueryableWorker('my_task.js');
+      const myTask = new QueryableWorker("my_task.js");
 
       // your custom "listeners"
-      myTask.addListener('printStuff', (result) => {
-        document.getElementById('firstLink')
-          .parentNode
-          .appendChild(document.createTextNode(`The difference is ${result}!`));
+      myTask.addListener("printStuff", (result) => {
+        document
+          .getElementById("firstLink")
+          .parentNode.appendChild(
+            document.createTextNode(`The difference is ${result}!`)
+          );
       });
 
-      myTask.addListener('doAlert', (time, unit) => {
+      myTask.addListener("doAlert", (time, unit) => {
         alert(`Worker waited for ${time} ${unit} :-)`);
       });
     </script>
   </head>
   <body>
     <ul>
-      <li><a id="firstLink" href="javascript:myTask.sendQuery('getDifference', 5, 3);">What is the difference between 5 and 3?</a></li>
-      <li><a href="javascript:myTask.sendQuery('waitSomeTime');">Wait 3 seconds</a></li>
-      <li><a href="javascript:myTask.terminate();">terminate() the Worker</a></li>
+      <li>
+        <a
+          id="firstLink"
+          href="javascript:myTask.sendQuery('getDifference', 5, 3);"
+          >What is the difference between 5 and 3?</a
+        >
+      </li>
+      <li>
+        <a href="javascript:myTask.sendQuery('waitSomeTime');"
+          >Wait 3 seconds</a
+        >
+      </li>
+      <li>
+        <a href="javascript:myTask.terminate();">terminate() the Worker</a>
+      </li>
     </ul>
   </body>
 </html>
@@ -584,8 +606,8 @@ There is not an "official" way to embed the code of a worker within a web page, 
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>MDN Example - Embedded worker</title>
     <script type="text/js-worker">
       // This script WON'T be parsed by JS engines because its MIME type is text/js-worker.
@@ -598,8 +620,8 @@ There is not an "official" way to embed the code of a worker within a web page, 
         // Use a fragment: browser will only render/reflow once.
         const frag = document.createDocumentFragment();
         frag.appendChild(document.createTextNode(sMsg));
-        frag.appendChild(document.createElement('br'));
-        document.querySelector('#logDisplay').appendChild(frag);
+        frag.appendChild(document.createElement("br"));
+        document.querySelector("#logDisplay").appendChild(frag);
       }
     </script>
     <script type="text/js-worker">
@@ -615,7 +637,7 @@ There is not an "official" way to embed the code of a worker within a web page, 
       // In the past blob builder existed, but now we use Blob
       const blob = new Blob(Array.prototype.map.call(
         document.querySelectorAll("script[type='text\/js-worker']"),
-        (script) => script.textContent, 
+        (script) => script.textContent,
         { type: 'text/javascript' }
       );
 
@@ -685,14 +707,15 @@ The worker sets the property `onmessage` to a function which will receive messag
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8"  />
+    <meta charset="UTF-8" />
     <title>Fibonacci number generator</title>
     <style>
       body {
         width: 500px;
       }
 
-      div, p {
+      div,
+      p {
         margin-bottom: 20px;
       }
     </style>
@@ -700,21 +723,25 @@ The worker sets the property `onmessage` to a function which will receive messag
   <body>
     <form>
       <div>
-        <label for="number">Enter a number that is an index position in the fibonacci sequence to see what number is in that position (e.g. enter 5 and you'll get a result of 8 — fibonacci index position 5 is 8).</label>
-        <input type="number" id="number">
+        <label for="number"
+          >Enter a number that is an index position in the fibonacci sequence to
+          see what number is in that position (e.g. enter 5 and you'll get a
+          result of 8 — fibonacci index position 5 is 8).</label
+        >
+        <input type="number" id="number" />
       </div>
       <div>
-        <input type="submit">
+        <input type="submit" />
       </div>
     </form>
 
     <p id="result"></p>
 
     <script>
-      const form = document.querySelector('form');
+      const form = document.querySelector("form");
       const input = document.querySelector('input[type="number"]');
-      const result = document.querySelector('p#result');
-      const worker = new Worker('fibonacci.js');
+      const result = document.querySelector("p#result");
+      const worker = new Worker("fibonacci.js");
 
       worker.onmessage = (event) => {
         result.textContent = event.data;
@@ -729,14 +756,14 @@ The worker sets the property `onmessage` to a function which will receive messag
       form.onsubmit = (e) => {
         e.preventDefault();
         worker.postMessage(input.value);
-        input.value = '';
-      }
+        input.value = "";
+      };
     </script>
   </body>
 </html>
 ```
 
-The web page creates a `<div>` element with the ID `result` , which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<div>` element, and the `onerror` handler is set to log the error message to the devtools console.
+The web page creates a `<div>` element with the ID `result`, which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<div>` element, and the `onerror` handler is set to log the error message to the devtools console.
 
 Finally, a message is sent to the worker to start it.
 
@@ -773,7 +800,7 @@ You can use most standard JavaScript features inside a web worker, including:
 
 The main thing you _can't_ do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then actioning the changes from there.
 
-> **Note:** You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/> . For example, if you enter [EventSource](/en-US/docs/Web/API/EventSource) into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
+> **Note:** You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/>. For example, if you enter [EventSource](/en-US/docs/Web/API/EventSource) into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
 
 > **Note:** For a complete list of functions available to workers, see [Functions and interfaces available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
@@ -786,3 +813,4 @@ The main thing you _can't_ do in a Worker is directly affect the parent page. Th
 - [`Worker`](/en-US/docs/Web/API/Worker) interface
 - [`SharedWorker`](/en-US/docs/Web/API/SharedWorker) interface
 - [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) interface

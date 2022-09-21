@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.isNaN
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`isNaN()`** function determines whether a value is
@@ -18,7 +19,7 @@ want to use {{jsxref("Number.isNaN()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 isNaN(value)
 ```
 
@@ -67,7 +68,7 @@ a number", has a specific meaning for numbers represented as IEEE-754 floating-p
 values. The function should be interpreted as answering the question, "is this value,
 when coerced to a numeric value, an IEEE-754 'Not A Number' value?"
 
-{{jsxref("Number.isNaN()")}} is a more reliable way to test whether a value is the number value `NaN` or not. Alternatively, the expression `x !== x` can be used, and both of of the solutions are not subject to the false positives that make the global `isNaN()` unreliable.
+{{jsxref("Number.isNaN()")}} is a more reliable way to test whether a value is the number value `NaN` or not. Alternatively, the expression `x !== x` can be used, and both of the solutions are not subject to the false positives that make the global `isNaN()` unreliable.
 
 ## Examples
 

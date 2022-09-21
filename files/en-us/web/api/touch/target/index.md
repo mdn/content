@@ -11,9 +11,10 @@ tags:
   - touch
 browser-compat: api.Touch.target
 ---
+
 {{ APIRef("Touch Events") }}
 
-The read-only **`target`**  property of the `Touch` interface returns the ({{domxref("EventTarget")}}) on which the touch contact started when it was first placed on the surface, even if the touch point has since moved outside the interactive area of that element or even been removed from the document. Note that if the target element is removed from the document, events will still be targeted at it, and hence won't necessarily bubble up to the window or document anymore. If there is any risk of an element being removed while it is being touched, the best practice is to attach the touch listeners directly to the target.
+The read-only **`target`** property of the `Touch` interface returns the ({{domxref("EventTarget")}}) on which the touch contact started when it was first placed on the surface, even if the touch point has since moved outside the interactive area of that element or even been removed from the document. Note that if the target element is removed from the document, events will still be targeted at it, and hence won't necessarily bubble up to the window or document anymore. If there is any risk of an element being removed while it is being touched, the best practice is to attach the touch listeners directly to the target.
 
 ## Value
 

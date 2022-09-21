@@ -10,6 +10,7 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.vertical
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`vertical`** property of the {{domxref("VTTCue")}} interface is a string representing the cue's writing direction.

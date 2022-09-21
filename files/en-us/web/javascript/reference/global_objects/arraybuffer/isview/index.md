@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.ArrayBuffer.isView
 ---
+
 {{JSRef}}
 
 The **`ArrayBuffer.isView()`** method determines whether the
@@ -20,7 +21,7 @@ or a {{jsxref("DataView")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 ArrayBuffer.isView(value)
 ```
 

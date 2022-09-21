@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.less_than
 ---
+
 {{jsSidebar("Operators")}}
 
 The less than operator (`<`) returns `true` if the left operand is less than the right operand, and `false` otherwise.
@@ -16,25 +17,23 @@ The less than operator (`<`) returns `true` if the left operand is less than the
 
 ## Syntax
 
-```js
+```js-nolint
 x < y
 ```
 
 ## Description
 
-The operands are compared using the [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) algorithm, which is roughly summarized below:
+The operands are compared with multiple rounds of coercion, which can be summarized as follows:
 
-- First, objects are converted to primitives using [`Symbol.toPrimitive`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) with the `hint` parameter being `'number'`.
+- First, objects are converted to primitives using [`@@toPrimitive()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one.
 - If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.
 - Otherwise JavaScript attempts to convert non-numeric types to numeric values:
-
   - Boolean values `true` and `false` are converted to 1 and 0 respectively.
   - `null` is converted to 0.
   - `undefined` is converted to `NaN`.
   - Strings are converted based on the values they contain, and are converted as `NaN` if they do not contain numeric values.
-
 - If either value is [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), the operator returns `false`.
-- Otherwise the values are compared as numeric values.
+- Otherwise the values are compared as numeric values. BigInt and number values can be compared together.
 
 ## Examples
 

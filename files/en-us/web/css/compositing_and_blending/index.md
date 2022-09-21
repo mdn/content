@@ -12,6 +12,7 @@ browser-compat:
   - css.properties.isolation
   - css.properties.mix-blend-mode
 ---
+
 {{CSSRef}}
 
 **Compositing and Blending** is a CSS module that defines how shapes of different elements are combined into a single image.

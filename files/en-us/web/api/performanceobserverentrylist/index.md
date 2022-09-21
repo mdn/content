@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserverEntryList
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`PerformanceObserverEntryList`** interface is a list of {{domxref("PerformanceEntry","performance events", '', 'true')}} that were explicitly _observed_ via the {{domxref("PerformanceObserver.observe","observe()")}} method.

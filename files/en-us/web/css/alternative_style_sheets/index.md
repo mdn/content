@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: html.elements.link.rel.alternate_stylesheet
 ---
+
 {{CSSRef}}
 
 Specifying **alternative style sheets** in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.
@@ -21,11 +22,11 @@ Firefox lets the user select the stylesheet using the _View > Page Style_ submen
 The alternate stylesheets are commonly specified using a {{HTMLElement("link")}} element with `rel="alternate stylesheet"` and `title="…"` attributes. For example:
 
 ```html
-<link href="reset.css" rel="stylesheet">
+<link href="reset.css" rel="stylesheet" />
 
-<link href="default.css" rel="stylesheet" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" title="Basic">
+<link href="default.css" rel="stylesheet" title="Default Style" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+<link href="basic.css" rel="alternate stylesheet" title="Basic" />
 ```
 
 In this example, the styles "Default Style", "Fancy", and "Basic" will be listed in the _Page Style_ submenu, with "Default Style" pre-selected. When the user selects a different style, the page will immediately be re-rendered using that style sheet.

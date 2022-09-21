@@ -11,6 +11,7 @@ tags:
   - name
 browser-compat: api.DOMException.name
 ---
+
 {{ APIRef("DOM") }}
 
 The **`name`** read-only property of the

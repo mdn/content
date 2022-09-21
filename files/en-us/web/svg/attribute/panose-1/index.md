@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.panose-1
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`panose-1`** attribute indicates the Panose-1 number of a font face.

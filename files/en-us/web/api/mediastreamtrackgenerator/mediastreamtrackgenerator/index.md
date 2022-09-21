@@ -11,13 +11,14 @@ tags:
   - Non-standard
 browser-compat: api.MediaStreamTrackGenerator.MediaStreamTrackGenerator
 ---
+
 {{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 The **`MediaStreamTrackGenerator()`** constructor creates a new {{domxref("MediaStreamTrackGenerator")}} object which consumes a stream of media frames and exposes a {{domxref("MediaStreamTrack")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamTrackGenerator(options)
 ```
 

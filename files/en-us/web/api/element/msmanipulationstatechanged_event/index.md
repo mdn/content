@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.MSManipulationStateChanged_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 **`MSManipulationStateChanged`** fires when the state of an element being manipulated has changed (i.e. whenever you start or finish panning or zooming an element).

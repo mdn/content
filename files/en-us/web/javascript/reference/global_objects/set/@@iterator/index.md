@@ -11,6 +11,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.@@iterator
 ---
+
 {{JSRef}}
 
 The initial value of the **`@@iterator`** property is the same
@@ -21,7 +22,7 @@ function object as the initial value of the {{jsxref("Set.prototype.values()",
 
 ## Syntax
 
-```js
+```js-nolint
 mySet[Symbol.iterator]
 ```
 
@@ -47,7 +48,7 @@ console.log(setIter.next().value); // 1
 console.log(setIter.next().value); // Object
 ```
 
-### Using \[@@iterator]\() with for..of
+### Using \[@@iterator]\() with for...of
 
 ```js
 const mySet = new Set();

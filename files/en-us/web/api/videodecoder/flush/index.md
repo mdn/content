@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.VideoDecoder.flush
 ---
+
 {{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`flush()`** method of the {{domxref("VideoDecoder")}} interface returns a Promise that resolves once all pending messages in the queue have been completed.
 
 ## Syntax
 
-```js
+```js-nolint
 flush()
 ```
 

@@ -13,6 +13,7 @@ tags:
   - lineNumber
 browser-compat: api.SecurityPolicyViolationEvent.lineNumber
 ---
+
 {{HTTPSidebar}}")}}
 
 The **`lineNumber`** read-only property of the

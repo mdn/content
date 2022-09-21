@@ -19,6 +19,7 @@ tags:
   - augmented
   - rendering
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 In this article, we'll make use of information introduced in the previous articles in our [WebXR](/en-US/docs/Web/API/WebXR_Device_API) tutorial series to construct an example which animates a rotating cube around which the user can move freely using a VR headset, keyboard, and/or mouse. This will help to solidify your understanding of how the geometry of 3D graphics and VR work, as well as to help ensure you understand the way the functions and data that are used during XR rendering work together.
@@ -525,7 +526,7 @@ We copy the transform's {{domxref("XRRigidTransform.matrix", "matrix")}} into `m
 
 The `renderScene()` function is called to actually render the parts of the world that are visible to the user at the moment. It's called once for each eye, with slightly different positions for each eye, in order to establish the 3D effect needed for XR gear.
 
-Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example \[[view the code on GitHub](https://github.com/mdn/dom-examples/blob/master/webgl-examples/tutorial/sample7/webgl-demo.js)]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.
+Most of this code is typical WebGL rendering code, taken directly from the `drawScene()` function in the [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL) article, and it's there that you should look for details on the WebGL rendering parts of this example \[[view the code on GitHub](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample7/webgl-demo.js)]. But here it begins with some code specific to this example, so we'll take a deeper look at that part.
 
 ```js
 const normalMatrix = mat4.create();

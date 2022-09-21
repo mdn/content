@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Float32Array.Float32Array
 ---
+
 {{JSRef}}
 
 The **`Float32Array()`** typed array constructor creates a new
@@ -21,7 +22,7 @@ notation).
 
 ## Syntax
 
-```js
+```js-nolint
 new Float32Array()
 new Float32Array(length)
 new Float32Array(typedArray)

@@ -12,6 +12,7 @@ tags:
   - setImageData
 browser-compat: webextensions.api.clipboard.setImageData
 ---
+
 {{AddonSidebar()}}
 
 Copies an image to the clipboard. The image is re-encoded before it is written to the clipboard. If the image is invalid, the clipboard is not modified.
@@ -29,7 +30,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.clipboard.setImageData(imageData, imageType)
 ```
 

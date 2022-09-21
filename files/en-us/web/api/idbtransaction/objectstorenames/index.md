@@ -13,6 +13,7 @@ tags:
   - db
 browser-compat: api.IDBTransaction.objectStoreNames
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`objectStoreNames`** read-only property of the

@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.sup
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`sup()`** method creates a {{HTMLElement("sup")}} HTML
@@ -19,7 +20,7 @@ element that causes a string to be displayed as superscript.
 
 ## Syntax
 
-```js
+```js-nolint
 sup()
 ```
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 The **rest parameter** syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent [variadic functions](https://en.wikipedia.org/wiki/Variadic_function) in JavaScript.
@@ -16,7 +17,7 @@ The **rest parameter** syntax allows a function to accept an indefinite number o
 
 ## Syntax
 
-```js
+```js-nolint
 function f(a, b, ...theArgs) {
   // …
 }
@@ -28,7 +29,7 @@ A function definition's last parameter can be prefixed with `...` (three U+002E 
 Only the last parameter in a function definition can be a rest parameter.
 
 ```js
-function myFun(a,  b, ...manyMoreArgs) {
+function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a);
   console.log("b", b);
   console.log("manyMoreArgs", manyMoreArgs);
@@ -68,8 +69,8 @@ There are three main differences between rest parameters and the
 
 - The `arguments` object is **not a real array**, while rest
   parameters are {{jsxref("Array")}} instances, meaning methods
-  like {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}},
-  {{jsxref("Array.forEach", "forEach")}} or {{jsxref("Array/pop", "pop")}} can be
+  like {{jsxref("Array/sort", "sort()")}}, {{jsxref("Array/map", "map()")}},
+  {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/pop", "pop()")}} can be
   applied on it directly.
 - The `arguments` object has additional functionality specific to itself
   (like the `callee` property).
@@ -159,7 +160,7 @@ myFun("one", "two");
 
 ### Argument length
 
-Since `theArgs` is an array, a count of its elements is given by the {{jsxref("Array.length", "length")}} property.
+Since `theArgs` is an array, a count of its elements is given by the {{jsxref("Array/length", "length")}} property.
 
 ```js
 function fun1(...theArgs) {

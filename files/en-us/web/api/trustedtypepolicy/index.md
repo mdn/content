@@ -9,6 +9,7 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`TrustedTypePolicy`** interface of the {{domxref('Trusted Types API')}} defines a group of functions which create {{domxref('TrustedType')}} objects.

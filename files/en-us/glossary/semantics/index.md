@@ -3,10 +3,10 @@ title: Semantics
 slug: Glossary/Semantics
 tags:
   - CodingScripting
-  - Glossary
   - HTML
   - semantics
 ---
+
 In programming, **Semantics** refers to the _meaning_ of a piece of code — for example "what effect does running that line of JavaScript have?", or "what purpose or role does that HTML element have" (rather than "what does it look like?".)
 
 ## Semantics in JavaScript
@@ -30,7 +30,7 @@ By default, most browser's [user agent stylesheet](/en-US/docs/Web/CSS/Cascade#u
 On the other hand, you could make any element _look_ like a top level heading. Consider the following:
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Is this a top level heading?</span>
+<span style="font-size: 32px; margin: 21px 0;">Not a top-level heading!</span>
 ```
 
 This will render it to look like a top level heading, but it has no semantic value, so it will not get any extra benefits as described above. It is therefore a good idea to use the right HTML element for the right job.

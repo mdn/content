@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.StyleSheet.parentStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`parentStyleSheet`** property of the

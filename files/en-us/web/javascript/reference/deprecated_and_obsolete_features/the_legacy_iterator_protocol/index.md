@@ -8,9 +8,10 @@ tags:
   - JavaScript
   - Legacy Iterator
 ---
+
 {{jsSidebar("More")}}
 
-> **Warning:** The legacy iterator protocol was a SpiderMonkey-specific feature, which is removed in Firefox 58+. For future-facing usages, consider using [for..of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
+> **Warning:** The legacy iterator protocol was a SpiderMonkey-specific feature, which is removed in Firefox 58+. For future-facing usages, consider using [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ## The deprecated Firefox-only iterator protocol
 

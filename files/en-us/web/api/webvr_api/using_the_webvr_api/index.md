@@ -12,6 +12,7 @@ tags:
   - WebGL
   - WebVR
 ---
+
 {{APIRef("WebVR API")}}{{deprecated_header}}
 
 > **Note:** WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
@@ -286,7 +287,7 @@ We now clear the canvas before we start drawing on it, so that the next frame is
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 ```
 
-We now render the view for both the left and right eyes. First of all we need to create projection and view locations for use in the rendering. these are {{domxref("WebGLUniformLocation")}} objects, created using the {{domxref("WebGLRenderingContext.getUniformLocation()")}} method, passing it the shader program's identifier and an identifying name as parameters.
+We now render the view for both the left and right eyes. First of all we need to create projection and view locations for use in the rendering. These are {{domxref("WebGLUniformLocation")}} objects, created using the {{domxref("WebGLRenderingContext.getUniformLocation()")}} method, passing it the shader program's identifier and an identifying name as parameters.
 
 ```js
   // WebVR: Create the required projection and view matrix locations needed

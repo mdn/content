@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.media
 ---
+
 {{CSSRef}}
 
 The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
@@ -75,7 +76,7 @@ Media feature expressions test for their presence or value, and are entirely opt
     Added in Media Queries Level 4.
 - {{cssxref("@media/color-index", "color-index")}}
   - : Number of entries in the output device's color lookup table, or zero if the device does not use such a table
-- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}  {{deprecated_inline}}
+- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
   - : Width-to-height aspect ratio of the output device.
     Deprecated in Media Queries Level 4.
 - {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
@@ -128,7 +129,7 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/scripting", "scripting")}}
   - : Detects whether scripting (i.e. JavaScript) is available.
     Added in Media Queries Level 5.
-- {{cssxref("@media/update-frequency", "update")}}
+- {{cssxref("@media/update-frequency", "update")}} {{Experimental_Inline}}
   - : How frequently the output device can modify the appearance of content.
     Added in Media Queries Level 4.
 - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
@@ -145,11 +146,13 @@ You can also combine multiple media queries into a single rule by separating the
   - : Used for combining multiple media features together into a single media query, requiring each chained feature to return `true` for the query to be `true`.
     It is also used for joining media features with media types.
 - `not`
+
   - : Used to negate a media query, returning `true` if the query would otherwise return `false`.
     If present in a comma-separated list of queries, it will only negate the specific query to which it is applied.
     If you use the `not` operator, you _must also_ specify a media type.
 
     > **Note:** In Level 3, the `not` keyword can't be used to negate an individual media feature expression, only an entire media query.
+
 - `only`
   - : Applies a style only if an entire query matches.
     It is useful for preventing older browsers from applying selected styles.
@@ -158,8 +161,8 @@ You can also combine multiple media queries into a single rule by separating the
 - `,` (comma)
   - : Commas are used to combine multiple media queries into a single rule.
     Each query in a comma-separated list is treated separately from the others
-     Thus, if any of the queries in a list is `true`, the entire media statement returns `true`.
-     In other words, lists behave like a logical `or` operator.
+    Thus, if any of the queries in a list is `true`, the entire media statement returns `true`.
+    In other words, lists behave like a logical `or` operator.
 
 ## Accessibility concerns
 
@@ -189,22 +192,27 @@ Because of this potential, a browser may opt to fudge the returned values in som
 
 ```css
 @media print {
-  body { font-size: 10pt; }
+  body {
+    font-size: 10pt;
+  }
 }
 
 @media screen {
-  body { font-size: 13px; }
+  body {
+    font-size: 13px;
+  }
 }
 
 @media screen, print {
-  body { line-height: 1.2; }
+  body {
+    line-height: 1.2;
+  }
 }
 
-@media only screen
-  and (min-width: 320px)
-  and (max-width: 480px)
-  and (resolution: 150dpi) {
-    body { line-height: 1.4; }
+@media only screen and (min-width: 320px) and (max-width: 480px) and (resolution: 150dpi) {
+  body {
+    line-height: 1.4;
+  }
 }
 ```
 
@@ -212,11 +220,15 @@ Introduced in Media Queries Level 4 is a new range syntax that allows for less v
 
 ```css
 @media (height > 600px) {
-    body { line-height: 1.4; }
+  body {
+    line-height: 1.4;
+  }
 }
 
 @media (400px <= width <= 700px) {
-    body { line-height: 1.4; }
+  body {
+    line-height: 1.4;
+  }
 }
 ```
 

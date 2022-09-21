@@ -6,6 +6,9 @@ tags:
   - WebDriver
   - capabilities
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver")}}
+
 WebDriver **_capabilities_** are used to communicate the features supported by a [session](/en-US/docs/Web/WebDriver). A client may also use capabilities to define which features it requires the driver to satisfy when [creating a new session](/en-US/docs/Web/WebDriver/Commands/NewSession).
 
 When a WebDriver session is created it returns a set of capabilities describing the negotiated, effective capabilities of the session. Some of the capabilities included in this set are [standard and shared between all browsers](#list-of-capabilities), but the set may also contain [browser-specific capabilities](#vendor-specific-capabilities) and these are always prefixed.
@@ -154,5 +157,3 @@ But because there is only one `firstMatch` arm, and we know that session creatio
 
 - [New Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command
 - [Delete Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command
-
-{{QuickLinksWithSubpages}}

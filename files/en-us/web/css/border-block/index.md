@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-block
 ---
+
 {{CSSRef}}
 
 The **`border-block`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical block border property values in a single place in the style sheet.
@@ -102,5 +103,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -10,6 +10,7 @@ tags:
   - Svelte
   - client-side
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -92,7 +93,7 @@ Since Svelte is a compiler, you can't just add a `<script src="svelte.js">` tag 
 
 In order to work with Svelte, you need to have [Node.js](https://nodejs.org/en/) installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner). Note that you can also use the Yarn package manager in place of npm, but we'll assume you are using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
 
-If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. Gitbash (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
+If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. Gitbash (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/about) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
 
 Also see the following for more information:
 
@@ -200,7 +201,10 @@ With this in mind, let's have a look at the `src/App.svelte` file that came with
 
 <main>
   <h1>Hello {name}!</h1>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 
 <style>
@@ -245,7 +249,10 @@ In the markup section you can insert any HTML you like, and in addition you can 
 ```html
 <main>
   <h1>Hello {name}!</h1>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 ```
 
@@ -315,18 +322,21 @@ Try updating your `<script>` and markup sections like so:
   export let name;
 
   function toggleName() {
-    if (name === 'world') {
-      name = 'Svelte'
+    if (name === "world") {
+      name = "Svelte";
     } else {
-      name = 'world'
+      name = "world";
     }
   }
 </script>
 
 <main>
   <h1>Hello {name}!</h1>
-  <button on:click={toggleName}>Toggle name</button>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <button on:click="{toggleName}">Toggle name</button>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 ```
 
@@ -371,21 +381,20 @@ Finally the file `public/index.html` includes the generated `bundle.css` and `bu
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Svelte app</title>
+    <title>Svelte app</title>
 
-  <link rel='icon' type='image/png' href='/favicon.png'>
-  <link rel='stylesheet' href='/global.css'>
-  <link rel='stylesheet' href='/build/bundle.css'>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/build/bundle.css" />
 
-  <script defer src='/build/bundle.js'></script>
-</head>
+    <script defer src="/build/bundle.js"></script>
+  </head>
 
-<body>
-</body>
+  <body></body>
 </html>
 ```
 

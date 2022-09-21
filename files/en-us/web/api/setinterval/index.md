@@ -16,6 +16,7 @@ tags:
   - Polyfill
 browser-compat: api.setInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`setInterval()`** method,
@@ -29,7 +30,7 @@ can remove it later by calling {{domxref("clearInterval",
 
 ## Syntax
 
-```js
+```js-nolint
 setInterval(code)
 setInterval(code, delay)
 

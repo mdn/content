@@ -6,8 +6,9 @@ tags:
   - Guide
   - Overview
   - Reference
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{CSSRef}}
 
 Use this **CSS reference** to browse an [alphabetical index](#index) of all of the standard [CSS](/en-US/docs/Web/CSS) properties, [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), [data types](/en-US/docs/Web/CSS/CSS_Types), [functional notations](/en-US/docs/Web/CSS/CSS_Functions) and [at-rules](/en-US/docs/Web/CSS/At-rule). You can also browse [key CSS concepts](#concepts) and a list of [selectors organized by type](#selectors). Also included is a brief [DOM-CSS / CSSOM reference](#dom-css_cssom).

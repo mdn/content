@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.description
 ---
+
 {{JSRef}}
 
 The read-only **`description`** property is a string returning the optional description of {{JSxRef("Symbol")}} objects.

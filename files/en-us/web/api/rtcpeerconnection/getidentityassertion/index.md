@@ -9,6 +9,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.getIdentityAssertion
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.getIdentityAssertion()`** method
@@ -24,8 +25,8 @@ this is automatically done; an explicit call only allows to anticipate the need.
 
 ## Syntax
 
-```js
-pc.getIdentityAssertion();
+```js-nolint
+getIdentityAssertion()
 ```
 
 _There is neither parameter nor return value for this method._

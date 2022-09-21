@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.TransitionEvent
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`TransitionEvent`** interface represents events providing information related to [transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
@@ -45,7 +46,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 ## Methods
 
-_Also inherits properties from its parent {{domxref("Event")}}_.
+_Also inherits methods from its parent {{domxref("Event")}}_.
 
 - {{domxref("TransitionEvent.initTransitionEvent()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Initializes a `TransitionEvent` created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent('TransitionEvent')")}} method.

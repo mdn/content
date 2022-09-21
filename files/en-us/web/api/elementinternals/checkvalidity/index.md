@@ -10,6 +10,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.checkValidity
 ---
+
 {{DefaultAPISidebar("")}}
 
 The **`checkValidity()`** method of the {{domxref("ElementInternals")}} interface checks if the element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it.
@@ -18,7 +19,7 @@ If `checkValidity` returns `false` then a cancelable [invalid event](/en-US/docs
 
 ## Syntax
 
-```js
+```js-nolint
 checkValidity()
 ```
 

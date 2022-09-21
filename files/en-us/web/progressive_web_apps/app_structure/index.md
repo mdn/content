@@ -11,6 +11,7 @@ tags:
   - js13kGames
   - progressive
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
 Now that we know the theory behind PWAs, let's look at the recommended structure of an actual app. We will start with analyzing the [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) application, why it is built that way, and what benefits it brings.
@@ -73,36 +74,53 @@ From the HTML point of view, the app shell is everything outside the content sec
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>js13kGames A-Frame entries</title>
-  <meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
-  <meta name="author" content="end3r">
-  <meta name="theme-color" content="#B12A34">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="https://js13kgames.com/img/js13kgames-banner.png">
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="js13kpwa.webmanifest">
-  <script src="data/games.js" defer></script>
-  <script src="app.js" defer></script>
-</head>
-<body>
-<header>
-  <p><a class="logo" href="https://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
-</header>
-<main>
-  <h1>js13kGames A-Frame entries</h1>
-  <p class="description">List of games submitted to the <a href="https://js13kgames.com/aframe">A-Frame category</a> in the <a href="https://2017.js13kgames.com">js13kGames 2017</a> competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a> to check its source code.</p>
-  <button id="notifications">Request dummy notifications</button>
-  <section id="content">
-    // Content inserted in here
-  </section>
-</main>
-<footer>
-  <p>© js13kGames 2012-2018, created and maintained by <a href="https://end3r.com">Andrzej Mazur</a> from <a href="https://enclavegames.com">Enclave Games</a>.</p>
-</footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>js13kGames A-Frame entries</title>
+    <meta
+      name="description"
+      content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps." />
+    <meta name="author" content="end3r" />
+    <meta name="theme-color" content="#B12A34" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      property="og:image"
+      content="https://js13kgames.com/img/js13kgames-banner.png" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="js13kpwa.webmanifest" />
+    <script src="data/games.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p>
+        <a class="logo" href="https://js13kgames.com">
+          <img src="img/js13kgames.png" alt="js13kGames" />
+        </a>
+      </p>
+    </header>
+    <main>
+      <h1>js13kGames A-Frame entries</h1>
+      <p class="description">
+        List of games submitted to the
+        <a href="https://js13kgames.com/aframe">A-Frame category</a> in the
+        <a href="https://2017.js13kgames.com">js13kGames 2017</a> competition.
+        You can
+        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a>
+        to check its source code.
+      </p>
+      <button id="notifications">Request dummy notifications</button>
+      <section id="content">// Content inserted in here</section>
+    </main>
+    <footer>
+      <p>
+        © js13kGames 2012-2018, created and maintained by
+        <a href="https://end3r.com">Andrzej Mazur</a> from
+        <a href="https://enclavegames.com">Enclave Games</a>.
+      </p>
+    </footer>
+  </body>
 </html>
 ```
 

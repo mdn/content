@@ -7,6 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 91 that will affect developers. Firefox 91 was released on August 10, 2021.

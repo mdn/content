@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.lineWidth
 ---
+
 {{APIRef}}
 
 The
@@ -17,8 +18,8 @@ The
 property of the Canvas 2D API sets the thickness of lines.
 
 > **Note:** Lines can be drawn with the
-> {{domxref("CanvasRenderingContext2D.stroke()",
-    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
+> {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}},
+> {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
 ## Value

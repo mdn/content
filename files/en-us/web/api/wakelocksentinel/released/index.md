@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.WakeLockSentinel.released
 ---
+
 {{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}
 
 The read-only **`released`** property of the
@@ -18,8 +19,8 @@ a {{domxref("WakeLockSentinel")}} has been released yet.
 
 ## Syntax
 
-```js
-const released = sentinel.released;
+```js-nolint
+const released = sentinel.released
 ```
 
 ### Value

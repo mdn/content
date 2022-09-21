@@ -14,6 +14,7 @@ tags:
   - setLineDash
 browser-compat: api.CanvasRenderingContext2D.setLineDash
 ---
+
 {{APIRef}}
 
 The **`setLineDash()`** method of the Canvas 2D API's
@@ -26,7 +27,7 @@ and gaps which describe the pattern.
 
 ## Syntax
 
-```js
+```js-nolint
 setLineDash(segments)
 ```
 

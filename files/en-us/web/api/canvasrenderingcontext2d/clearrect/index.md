@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.clearRect
 ---
+
 {{APIRef}}
 
 The
@@ -24,7 +25,7 @@ transparent black.
 
 ## Syntax
 
-```js
+```js-nolint
 clearRect(x, y, width, height)
 ```
 

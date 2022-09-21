@@ -10,9 +10,8 @@ tags:
   - HTML
   - JavaScript
 ---
-{{DefaultAPISidebar("DOM")}}
 
-## Introduction
+{{DefaultAPISidebar("DOM")}}
 
 This article is an overview of some powerful, fundamental DOM level 1 methods and how to use them from JavaScript. You will learn how to create, access and control, and remove HTML elements dynamically. The DOM methods presented here are not specific to HTML; they also apply to XML. The demonstrations provided here will work fine in any modern browser.
 
@@ -27,7 +26,7 @@ In this example we add a new table to the page when a button is clicked.
 #### HTML
 
 ```html
-<input type="button" value="Generate a table" onclick="generateTable()">
+<input type="button" value="Generate a table" onclick="generateTable()" />
 ```
 
 #### JavaScript
@@ -157,7 +156,10 @@ In this example we change the background color of a paragraph when a button is c
 
 ```html
 <body>
-  <input type="button" value="Set paragraph background color" onclick="setBackground()">
+  <input
+    type="button"
+    value="Set paragraph background color"
+    onclick="setBackground()" />
   <p>hi</p>
   <p>hello</p>
 </body>
@@ -303,7 +305,9 @@ The basic steps to create the table in sample1.html are:
             // creates a <td> element
             const myCurrentCell = document.createElement("td");
             // creates a Text Node
-            const currentText = document.createTextNode(`cell is row ${j}, column ${i}`);
+            const currentText = document.createTextNode(
+              `cell is row ${j}, column ${i}`
+            );
             // appends the Text Node we created into the cell <td>
             myCurrentCell.appendChild(currentText);
             // appends the cell <td> into the row <tr>

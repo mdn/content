@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.IDBTransaction.abort_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `abort` event is fired when an `IndexedDB` transaction is aborted.

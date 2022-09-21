@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.EncodedAudioChunk.byteLength
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`byteLength`** read-only property of the {{domxref("EncodedAudioChunk")}} interface returns the length in bytes of the encoded audio data.

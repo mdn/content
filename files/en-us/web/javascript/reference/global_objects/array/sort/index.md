@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.sort
 ---
+
 {{JSRef}}
 
 The **`sort()`** method sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
@@ -22,7 +23,7 @@ implementation.
 
 ## Syntax
 
-```js
+```js-nolint
 // Functionless
 sort()
 
@@ -71,11 +72,11 @@ elements are sorted according to the return value of the compare function (all
 `undefined` elements are sorted to the end of the array, with no call to
 `compareFn`).
 
-| `compareFn(a, b)` return value       | sort order                         |
-|--------------------------------------|------------------------------------|
-| > 0                                  | sort `a` after `b`                 |
-| < 0                                  | sort `a` before `b`                |
-| === 0                                | keep original order of `a` and `b` |
+| `compareFn(a, b)` return value | sort order                         |
+| ------------------------------ | ---------------------------------- |
+| > 0                            | sort `a` after `b`                 |
+| < 0                            | sort `a` before `b`                |
+| === 0                          | keep original order of `a` and `b` |
 
 So, the compare function has the following form:
 
@@ -201,7 +202,7 @@ mixedNumericArray.sort(compareNumbers); // [1, 5, '9', 40, '80', 200, '700']
 
 For sorting strings with non-ASCII characters, i.e. strings with accented characters
 (e, é, è, a, ä, etc.), strings from languages other than English, use
-{{jsxref("String.localeCompare")}}. This function can compare those characters so they
+{{jsxref("String.prototype.localeCompare()")}}. This function can compare those characters so they
 appear in the right order.
 
 ```js
@@ -270,7 +271,7 @@ console.log(numbers[0]); // 3
 
 ### Sort stability
 
-Since version 10 (or EcmaScript 2019), the [specification](https://tc39.es/ecma262/#sec-array.prototype.sort) dictates that `Array.prototype.sort` is stable.
+Since version 10 (or ECMAScript 2019), the [specification](https://tc39.es/ecma262/#sec-array.prototype.sort) dictates that `Array.prototype.sort` is stable.
 
 For example, say you had a list of students alongside their grades. Note that the list of students is already pre-sorted by name in alphabetical order:
 
@@ -302,7 +303,7 @@ The `students` variable will then have the following value:
 
 It's important to note that students that have the same grade (for example, Alex and Devlin), will remain in the same order as before calling the sort. This is what a stable sorting algorithm guarantees.
 
-Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meaning that you could end up with the following:
+Before version 10 (or ECMAScript 2019), sort stability was not guaranteed, meaning that you could end up with the following:
 
 ```js
 [

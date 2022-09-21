@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onMessageExternal
 ---
+
 {{AddonSidebar()}}
 
 Use this event to listen for messages from another extension.
@@ -28,7 +29,7 @@ This API can't be used in a content script.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onMessageExternal.addListener()
 browser.runtime.onMessageExternal.removeListener(listener)
 browser.runtime.onMessageExternal.hasListener(listener)
@@ -53,14 +54,8 @@ Events have three functions:
 
     - `message`
       - : `object`. The message itself. This is a JSON-ifiable object.
-
-    <!---->
-
     - `sender`
       - : A {{WebExtAPIRef('runtime.MessageSender')}} object representing the sender of the message.
-
-    <!---->
-
     - `sendResponse`
 
       - : A function to call, at most once, to send a response to the message. The function takes a single argument, which may be any JSON-ifiable object. This argument is passed back to the message sender.
@@ -109,7 +104,8 @@ browser.runtime.onMessageExternal.addListener(handleMessage);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -136,4 +132,4 @@ browser.runtime.onMessageExternal.addListener(handleMessage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

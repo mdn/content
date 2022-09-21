@@ -10,13 +10,14 @@ tags:
   - TrustedScriptURL
 browser-compat: api.TrustedScriptURL.toString
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`toString()`** method of the {{domxref("TrustedScriptURL")}} interface returns a string which may safely inserted into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks).
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

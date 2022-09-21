@@ -11,6 +11,7 @@ tags:
   - writing modes
 browser-compat: css.properties.border-end-end-radius
 ---
+
 {{CSSRef}}
 
 The **`border-end-end-radius`** [CSS](/en-US/docs/Web/CSS) property defines a logical border radius on an element, which maps to a physical border radius that depends on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the [text orientation](/en-US/docs/Web/CSS/text-orientation) and [writing mode](/en-US/docs/Web/CSS/CSS_Writing_Modes).
@@ -95,5 +96,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical property: {{CSSxRef("border-bottom-right-radius")}}
 - {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

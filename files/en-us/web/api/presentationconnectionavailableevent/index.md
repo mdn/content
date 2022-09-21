@@ -12,7 +12,8 @@ tags:
   - events
 browser-compat: api.PresentationConnectionAvailableEvent
 ---
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}
+
+{{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}
 
 The **`PresentationConnectionAvailableEvent`** interface of the [Presentation API](/en-US/docs/Web/API/Presentation_API) is fired on a {{domxref("PresentationRequest")}} when a connection associated with the object is created.
 
@@ -22,12 +23,12 @@ A [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlli
 
 ## Constructor
 
-- {{domxref("PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent", "PresentationConnectionAvailableEvent()")}}
+- {{domxref("PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent", "PresentationConnectionAvailableEvent()")}} {{Experimental_Inline}}
   - : Creates a new PresentationConnectionAvailableEvent.
 
 ## Properties
 
-- {{domxref("PresentationConnectionAvailableEvent.connection")}} {{ReadOnlyInline}}
+- {{domxref("PresentationConnectionAvailableEvent.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a references to the {{domxref("PresentationConnection")}} object that fired the event.
 
 ## Specifications

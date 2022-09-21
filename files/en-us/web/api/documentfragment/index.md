@@ -11,6 +11,7 @@ tags:
   - Web Components
 browser-compat: api.DocumentFragment
 ---
+
 {{ APIRef("DOM") }}
 
 The **`DocumentFragment`** interface represents a minimal document object that has no parent.

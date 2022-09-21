@@ -1,5 +1,5 @@
 ---
-title: 'HTMLTextAreaElement: selectionchange event'
+title: "HTMLTextAreaElement: selectionchange event"
 slug: Web/API/HTMLTextAreaElement/selectionchange_event
 page-type: web-api-event
 tags:
@@ -12,6 +12,7 @@ tags:
   - Experimental
 browser-compat: api.HTMLTextAreaElement.selectionchange_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within an {{HTMLElement("textarea")}} element is changed.
@@ -44,7 +45,12 @@ The example below shows how to get the text selected in an {{HTMLElement("textar
 ### HTML
 
 ```html
-<div>Enter and select text here:<br><textarea id="mytext" rows="2" cols="20"></textarea></div>
+<div>
+  Enter and select text here:<br /><textarea
+    id="mytext"
+    rows="2"
+    cols="20"></textarea>
+</div>
 <div>selectionStart: <span id="start"></span></div>
 <div>selectionEnd: <span id="end"></span></div>
 <div>selectionDirection: <span id="direction"></span></div>

@@ -13,6 +13,7 @@ tags:
   - forEach()
 browser-compat: api.StylePropertyMapReadOnly.forEach
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`StylePropertyMapReadOnly.forEach()`** method executes a
@@ -20,7 +21,7 @@ provided function once for each element of {{domxref('StylePropertyMapReadOnly')
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((currentValue) => { /* … */ } )
 forEach((currentValue, index) => { /* … */ } )

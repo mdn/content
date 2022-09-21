@@ -23,6 +23,7 @@ tags:
   - inputsourceschange
 browser-compat: api.XRInputSourcesChangeEvent
 ---
+
 {{APIRef("WebXR Device API")}} {{SecureContext_Header}}
 
 The WebXR Device API interface **`XRInputSourcesChangeEvent`** is used to represent the {{domxref("XRSession.inputsourceschange_event", "inputsourceschange")}} event sent to an {{domxref("XRSession")}} when the set of available WebXR input controllers changes.

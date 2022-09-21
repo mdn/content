@@ -18,6 +18,7 @@ tags:
   - state
 browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`icegatheringstatechange`** event is sent to the `onicegatheringstatechange` event handler on an {{domxref("RTCPeerConnection")}} when the state of the {{Glossary("ICE")}} candidate gathering process changes.

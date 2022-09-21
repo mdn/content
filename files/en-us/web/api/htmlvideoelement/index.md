@@ -11,6 +11,7 @@ tags:
   - Video
 browser-compat: api.HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLVideoElement`** interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of {{domxref("HTMLMediaElement")}} and {{domxref("HTMLElement")}}.
@@ -72,7 +73,7 @@ _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")
 
 _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}
+- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}}
   - : Returns a {{domxref("VideoPlaybackQuality")}} object that contains the current playback metrics. This information includes things like the number of dropped or corrupted frames, as well as the total number of frames.
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
   - : Requests that the user agent make video enters picture-in-picture mode

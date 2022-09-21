@@ -29,7 +29,7 @@ You can access `CacheStorage` through the global
 
 ## Syntax
 
-```js
+```js-nolint
 open(cacheName)
 ```
 
@@ -44,7 +44,7 @@ A {{jsxref("Promise")}} that resolves to the requested {{domxref("Cache")}} obje
 
 ## Examples
 
-This example is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker) (see [simple service worker running live](https://bncb2v.csb.app/)).
+This example is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (see [simple service worker running live](https://bncb2v.csb.app/)).
 Here we wait for an {{domxref("InstallEvent")}} to fire, then runs
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for
 the app. This consists of calling `CacheStorage.open()` to create a new

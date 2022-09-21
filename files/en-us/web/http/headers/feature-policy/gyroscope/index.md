@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.gyroscope
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `gyroscope` directive controls whether the current document is allowed to gather information about the orientation of the device through the {{domxref("Gyroscope")}} interface.

@@ -13,6 +13,7 @@ tags:
   - editor
 browser-compat: api.Document.designMode
 ---
+
 {{ApiRef()}}
 
 **`document.designMode`** controls whether the entire document

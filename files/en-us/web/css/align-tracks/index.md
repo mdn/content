@@ -12,9 +12,8 @@ tags:
   - masonry
 browser-compat: css.properties.align-tracks
 ---
-{{CSSRef}}
 
-{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`align-tracks`** CSS property sets the alignment in the masonry axis for grid containers that have [masonry](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) in their block axis.
 
@@ -25,7 +24,7 @@ The **`align-tracks`** CSS property sets the alignment in the masonry axis for g
 align-tracks: start;
 align-tracks: space-between;
 align-tracks: center;
-align-tracks: start,center,end;
+align-tracks: start, center, end;
 
 /* Global values */
 align-tracks: inherit;

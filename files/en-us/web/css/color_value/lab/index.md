@@ -9,9 +9,11 @@ tags:
   - Web
   - color
   - lab
+  - Experimental
 browser-compat: css.types.color.lab
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`lab()`** functional notation expresses a given color in the CIE L\*a\*b\* color space. Lab represents the entire range of color that humans can see.
 

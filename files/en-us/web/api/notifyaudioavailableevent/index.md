@@ -10,6 +10,7 @@ tags:
   - Non-standard
   - Reference
 ---
+
 {{APIRef("Web Audio API")}}{{Non-standard_header}}{{Deprecated_header}}
 
 The non-standard, obsolete, **`NotifyAudioAvailableEvent`** interface defines the event sent to audio elements when the audio buffer is full.

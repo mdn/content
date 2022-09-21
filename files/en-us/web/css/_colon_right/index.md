@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.right
 ---
+
 {{ CSSRef() }}
 
 The **`:right`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule), represents all right-hand pages of a printed document.

@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.Document.adoptNode
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.adoptNode()`** transfers a {{Glossary("node/dom",
@@ -23,7 +24,7 @@ current document. The node can then be inserted into the current document.
 
 ## Syntax
 
-```js
+```js-nolint
 adoptNode(externalNode)
 ```
 

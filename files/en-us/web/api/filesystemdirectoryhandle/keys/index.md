@@ -11,6 +11,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.keys
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`keys()`** method of the
@@ -19,8 +20,8 @@ containing the keys for each item in `FileSystemDirectoryHandle`.
 
 ## Syntax
 
-```js
-FileSystemDirectoryHandle.keys();
+```js-nolint
+FileSystemDirectoryHandle.keys()
 ```
 
 ### Parameters

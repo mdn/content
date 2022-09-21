@@ -11,6 +11,7 @@ tags:
   - Non-standard
 browser-compat: api.RTCPeerConnection.getStreamById
 ---
+
 {{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`RTCPeerConnection.getStreamById()`** method returns the
@@ -26,7 +27,7 @@ stream matches, it returns `null`.
 
 ## Syntax
 
-```js
+```js-nolint
 getStream(id)
 ```
 

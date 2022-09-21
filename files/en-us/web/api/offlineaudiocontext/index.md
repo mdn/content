@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.OfflineAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `OfflineAudioContext` interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard {{domxref("AudioContext")}}, an `OfflineAudioContext` doesn't render the audio to the device hardware; instead, it generates it, as fast as it can, and outputs the result to an {{domxref("AudioBuffer")}}.

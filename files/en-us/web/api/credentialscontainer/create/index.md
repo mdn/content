@@ -11,6 +11,7 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer.create
 ---
+
 {{APIRef("Credential Management API")}}
 
 The **`create()`** method of the
@@ -23,7 +24,7 @@ resolves with a new {{domxref("Credential")}} instance based on the provided opt
 
 ## Syntax
 
-```js
+```js-nolint
 create()
 create(options)
 ```
@@ -37,6 +38,7 @@ create(options)
     "password", "federated", or "publicKey". The options are:
 
     - `password` {{optional_inline}}
+
       - : Either an
         {{domxref("HTMLFormElement")}}, or a {{domxref("PasswordCredentialData")}} object.
         TBD
@@ -48,6 +50,7 @@ create(options)
         - `password`: (required) string TBD
 
     - `federated` {{optional_inline}}
+
       - : An
         {{domxref("FederatedCredentialInit")}} object. Contains requirements for
         creating/obtaining federated credentials. The available options are:
@@ -67,7 +70,7 @@ create(options)
           - : An object describing the user account for which the credential is generated.
         - `challenge`
           - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}
-          emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.
+            emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.
         - `pubKeyCredParams`
           - : An {{jsxref("Array")}} of element which specify the desired features of the credential, including its type and the algorithm used for the cryptographic signature operations. This array is sorted by descending order of preference.
         - `timeout` {{optional_inline}}

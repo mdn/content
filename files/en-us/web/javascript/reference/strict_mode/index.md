@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - Strict Mode
 ---
+
 {{JsSidebar("More")}}
 
 ## Strict Mode Overview
@@ -179,7 +180,7 @@ First, strict mode prohibits [`with`](/en-US/docs/Web/JavaScript/Reference/State
 const x = 17;
 with (obj) { // !!! syntax error
   // If this weren't strict mode, would this be const x, or
-  // would it instead be obj.x?  It's impossible in general
+  // would it instead be obj.x? It's impossible in general
   // to say without running the code, so the name can't be
   // optimized.
   x;
@@ -335,7 +336,7 @@ function baz() { // kosher
 }
 ```
 
-However, [Appendix B of the specification](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) recognizes *on-the-ground reality* of how code has behaved historically in the majority of JS engines/environments, particularly JS engines used by web browsers (including the engine used by Node.js). As such, while strict mode in the specification in proper restricts function declarations *not* at the top level of a script or function, [Appendix B's "Block-Level Function Declarations Web Legacy Compatibility Semantics"](https://tc39.es/ecma262/#sec-block-level-function-declarations-web-legacy-compatibility-semantics) modifies (reduces or removes) this restriction for the applicable JS environments.
+However, [Appendix B of the specification](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) recognizes _on-the-ground reality_ of how code has behaved historically in the majority of JS engines/environments, particularly JS engines used by web browsers (including the engine used by Node.js). As such, while strict mode in the specification in proper restricts function declarations _not_ at the top level of a script or function, [Appendix B's "Block-Level Function Declarations Web Legacy Compatibility Semantics"](https://tc39.es/ecma262/#sec-block-level-function-declarations-web-legacy-compatibility-semantics) modifies (reduces or removes) this restriction for the applicable JS environments.
 
 ## See also
 

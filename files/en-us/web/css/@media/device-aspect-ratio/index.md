@@ -11,6 +11,7 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.device-aspect-ratio
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 > **Note:** To query for the aspect ratio of the viewport, developers should use the [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media feature instead.

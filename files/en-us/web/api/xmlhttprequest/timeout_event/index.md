@@ -12,6 +12,7 @@ tags:
   - timeout
 browser-compat: api.XMLHttpRequest.timeout_event
 ---
+
 {{APIRef}}
 
 The **`timeout`** event is fired when progression is terminated due to preset time expiring.

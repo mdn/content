@@ -10,6 +10,7 @@ tags:
   - WeakMap
 browser-compat: javascript.builtins.WeakMap.delete
 ---
+
 {{JSRef}}
 
 The **`delete()`** method removes the specified element from a
@@ -19,7 +20,7 @@ The **`delete()`** method removes the specified element from a
 
 ## Syntax
 
-```js
+```js-nolint
 delete(key)
 ```
 

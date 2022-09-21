@@ -14,6 +14,7 @@ tags:
   - Non-standard
 browser-compat: api.PositionSensorVRDevice
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`PositionSensorVRDevice`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents VR hardware's position sensor. You can access information such as the current position and orientation of the sensor in relation to the head mounted display through the {{domxref("PositionSensorVRDevice.getState()")}} method.

@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.IdleDetector.requestPermission
 ---
+
 {{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the {{domxref("IdleDetector")}}
@@ -20,7 +21,7 @@ whether to grant the origin access to their idle state. Resolves with
 
 ## Syntax
 
-```js
+```js-nolint
 requestPermission()
 ```
 

@@ -11,9 +11,10 @@ tags:
   - pointer lock
 browser-compat: api.Element.requestPointerLock
 ---
+
 {{DefaultAPISidebar("Pointer Lock API")}}
 
-The **Pointer Lock API** (formerly called _Mouse Lock API_) provides input methods based on the movement of the mouse over time (i.e., deltas), not just the absolute position of the mouse cursor in the viewport. It gives you access to raw mouse movement, locks the target of mouse events to a single element, eliminates limits on how far mouse movement can go in a single direction, and removes the cursor from view. It is ideal for first person 3D games, for example.
+The **Pointer Lock API** (formerly called _Mouse Lock API_) provides input methods based on the movement of the mouse over time (i.e., deltas), not just the absolute position of the mouse cursor in the viewport. It gives you access to raw mouse movement, locks the target of mouse events to a single element, eliminates limits on how far mouse movement can go in a single direction, and removes the cursor from view. It is ideal for first-person 3D games, for example.
 
 More than that, the API is useful for any applications that require significant mouse input to control movements, rotate objects, and change entries, for example allowing users to control the viewing angle by moving the mouse around without any button clicking. The buttons are then freed up for other actions. Other examples include apps for viewing maps or satellite imagery.
 
@@ -126,7 +127,7 @@ When the mouse is unlocked, the system cursor can exit and re-enter the browser 
 
 ## Simple example walkthrough
 
-We've written a [simple pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) to show you how to use it to set up a simple control system ([see source code](https://github.com/mdn/dom-examples/tree/master/pointer-lock)). The demo looks like this:
+We've written a [simple pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) to show you how to use it to set up a simple control system ([see source code](https://github.com/mdn/dom-examples/tree/main/pointer-lock)). The demo looks like this:
 
 ![A red circle on top of a black background.](pointer-lock.png)
 

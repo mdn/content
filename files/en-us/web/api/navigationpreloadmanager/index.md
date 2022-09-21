@@ -12,6 +12,7 @@ tags:
   - Service Workers
 browser-compat: api.NavigationPreloadManager
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides methods for managing the preloading of resources in parallel with service worker bootup.

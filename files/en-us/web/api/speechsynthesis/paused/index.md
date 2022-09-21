@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.paused
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`paused`** read-only property of the

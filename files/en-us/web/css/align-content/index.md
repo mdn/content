@@ -9,6 +9,9 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.align-content
 ---
+
+{{CSSRef}}
+
 The [CSS](/en-US/docs/Web/CSS) **`align-content`** property sets the distribution of space between and around content items along a [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)'s cross-axis or a [grid](/en-US/docs/Web/CSS/CSS_Grid_Layout)'s block axis.
 
 The interactive example below uses Grid Layout to demonstrate some of the values of this property.
@@ -112,7 +115,7 @@ align-content: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
   background-color: #8c8c8c;
@@ -260,5 +263,3 @@ display.addEventListener('change', (evt) => {
 - CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
 - CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
 - [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
-
-{{CSSRef}}

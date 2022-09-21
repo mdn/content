@@ -9,6 +9,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.has
 ---
+
 {{JSRef}}
 
 The **`has()`** method returns a boolean indicating whether an
@@ -18,7 +19,7 @@ element with the specified value exists in a `Set` object or not.
 
 ## Syntax
 
-```js
+```js-nolint
 has(value)
 ```
 
@@ -29,11 +30,7 @@ has(value)
 
 ### Return value
 
-Returns `true` if an element with the specified value exists in the
-`Set` object; otherwise `false`.
-
-> **Note:** Technically speaking, `has()` uses the [Same-value-zero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)
-> algorithm to determine whether the given element is found.
+Returns `true` if an element with the specified value exists in the `Set` object; otherwise `false`.
 
 ## Examples
 

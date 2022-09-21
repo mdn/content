@@ -6,6 +6,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 The {{SVGElement('path')}} element is the most powerful element in the SVG library of [basic shapes](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). It can be used to create lines, curves, arcs, and more.
@@ -18,7 +19,7 @@ The shape of a `<path>` element is defined by one parameter: {{ SVGAttr("d") }}.
 
 Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (`10`, `10`). The "Move to" command is called with the letter `M`. When the parser runs into this letter, it knows it needs to move to a point. So, to move to (`10`,`10`) the command to use would be `M 10 10`. After that, the parser begins reading for the next command.
 
-All of the commands also come in two variants. An **uppercase letter** specifies absolute coordinates on the page, and a **lowercase letter** specifies relative coordinates (e.g., *move 10px up and 7px to the left from the last point*).
+All of the commands also come in two variants. An **uppercase letter** specifies absolute coordinates on the page, and a **lowercase letter** specifies relative coordinates (e.g., _move 10px up and 7px to the left from the last point_).
 
 Coordinates in the `d` parameter are **always unitless** and hence in the user coordinate system. Later, we will learn how paths can be transformed to suit other needs.
 

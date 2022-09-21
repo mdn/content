@@ -11,13 +11,14 @@ tags:
   - ServiceWorker
 browser-compat: api.ExtendableEvent.ExtendableEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ExtendableEvent()`** constructor creates a new {{domxref("ExtendableEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new ExtendableEvent(type)
 new ExtendableEvent(type, options)
 ```
@@ -47,7 +48,7 @@ A new {{domxref("ExtendableEvent")}} object.
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

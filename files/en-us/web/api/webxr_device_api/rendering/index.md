@@ -24,6 +24,7 @@ tags:
   - rendering
   - requestAnimationFrame
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 Once your WebXR environment has been set up and an {{domxref("XRSession")}} created to represent an ongoing XR environment session, you need to provide frames of the scene to the XR device for rendering. This article covers the process of driving the frames of the XR scene to the device in the rendering loop, using the {{domxref("XRSession")}} to obtain an {{domxref("XRFrame")}} object representing each frame, which is then used to prepare the framebuffer for delivery to the XR device.

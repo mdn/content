@@ -16,6 +16,7 @@ tags:
   - server-side
   - sessions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
 In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.

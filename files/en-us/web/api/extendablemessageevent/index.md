@@ -10,6 +10,7 @@ tags:
   - Service Workers
 browser-compat: api.ExtendableMessageEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ExtendableMessageEvent`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the event object of a {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} event fired on a service worker (when a message is received on the {{domxref("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.
@@ -87,6 +88,6 @@ addEventListener('message', (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Channel Messaging](/en-US/docs/Web/API/Channel_Messaging_API)

@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.apply
 ---
+
 {{JSRef}}
 
 The **`handler.apply()`** method is a trap for a function call.
@@ -16,7 +17,7 @@ The **`handler.apply()`** method is a trap for a function call.
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   apply(target, thisArg, argumentsList) {
   }

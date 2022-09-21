@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The `Notification` interface of the [Notifications API](/en-US/docs/Web/API/Notifications_API) is used to configure and display desktop notifications to the user.
@@ -37,16 +38,16 @@ These properties are available only on the `Notification` object itself.
     - `granted` — The user accepts having notifications displayed.
     - `default` — The user choice is unknown and therefore the browser will act as if the value were denied.
 
-- {{domxref("Notification.maxActions")}} {{ReadOnlyInline}}
+- {{domxref("Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The maximum number of actions supported by the device and the User Agent.
 
 ### Instance properties
 
 These properties are available only on instances of the `Notification` object.
 
-- {{domxref("Notification.actions")}} {{ReadOnlyInline}}
+- {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The actions array of the notification as specified in the constructor's `options` parameter.
-- {{domxref("Notification.badge")}} {{ReadOnlyInline}}
+- {{domxref("Notification.badge")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The URL of the image used to represent the notification when there is not enough space to display the notification itself.
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : The body string of the notification as specified in the constructor's `options` parameter.
@@ -60,19 +61,19 @@ These properties are available only on instances of the `Notification` object.
   - : The ID of the notification (if any) as specified in the constructor's `options` parameter.
 - {{domxref("Notification.icon")}} {{ReadOnlyInline}}
   - : The URL of the image used as an icon of the notification as specified in the constructor's `options` parameter.
-- {{domxref("Notification.image")}} {{ReadOnlyInline}}
+- {{domxref("Notification.image")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The URL of an image to be displayed as part of the notification, as specified in the constructor's `options` parameter.
-- {{domxref("Notification.renotify")}} {{ReadOnlyInline}}
+- {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies whether the user should be notified after a new notification replaces an old one.
-- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}}
+- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
-- {{domxref("Notification.silent")}} {{ReadOnlyInline}}
+- {{domxref("Notification.silent")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies whether the notification should be silent — i.e., no sounds or vibrations should be issued, regardless of the device settings.
-- {{domxref("Notification.timestamp")}} {{ReadOnlyInline}}
+- {{domxref("Notification.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies the time at which a notification is created or applicable (past, present, or future).
 - {{domxref("Notification.title")}} {{ReadOnlyInline}}
   - : The title of the notification as specified in the first parameter of the constructor.
-- {{domxref("Notification.vibrate")}} {{ReadOnlyInline}}
+- {{domxref("Notification.vibrate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies a vibration pattern for devices with vibration hardware to emit.
 
 ## Methods

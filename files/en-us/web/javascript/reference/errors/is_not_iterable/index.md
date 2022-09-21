@@ -7,6 +7,7 @@ tags:
   - Reference
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not iterable" occurs when the value which is given as the

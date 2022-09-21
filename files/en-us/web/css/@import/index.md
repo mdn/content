@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.import
 ---
+
 {{CSSRef}}
 
 The **`@import`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to import style rules from other stylesheets.

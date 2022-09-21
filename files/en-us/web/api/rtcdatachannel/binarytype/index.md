@@ -10,6 +10,7 @@ tags:
   - binaryType
 browser-compat: api.RTCDataChannel.binaryType
 ---
+
 {{APIRef("WebRTC")}}
 
 The property **`binaryType`** on the
