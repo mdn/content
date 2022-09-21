@@ -4,20 +4,18 @@ slug: Web/CSS/abs
 tags:
   - CSS
   - CSS Function
-  - Sign-Related
   - Function
   - Layout
   - Reference
   - Web
   - abs
+  - Experimental
 browser-compat: css.types.abs
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) contains one calculation, and returns the absolute value of the argument, as the same type as the input.
-
-The `abs(A)` statement will return `A` if `A`'s numeric value is positive or 0⁺. Otherwise it will return the value of `-1 * A`.
 
 ## Syntax
 
@@ -26,9 +24,15 @@ The `abs(A)` statement will return `A` if `A`'s numeric value is positive or 0�
 width: abs(20% - 100px);
 ```
 
-The `abs()` function takes only one expression as its argument.
+### Parameters
 
-### Formal syntax
+The `abs(A)` function accepts only one value as its parameter.
+
+### Return value
+
+The `abs(A)` statement will return `A` if `A`'s numeric value is positive or 0⁺. Otherwise it will return the value of `-1 * A`.
+
+## Formal syntax
 
 {{CSSSyntax}}
 
