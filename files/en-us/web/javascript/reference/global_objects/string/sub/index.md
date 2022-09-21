@@ -14,8 +14,9 @@ browser-compat: javascript.builtins.String.sub
 
 {{JSRef}} {{deprecated_header}}
 
-The **`sub()`** method creates a {{HTMLElement("sub")}} HTML
-element that causes a string to be displayed as subscript.
+The **`sub()`** method creates a string that embeds a string in a {{HTMLElement("sub")}} element (`<sub>str</sub>`), which causes a string to be displayed as subscript.
+
+> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 ## Syntax
 
@@ -25,23 +26,17 @@ sub()
 
 ### Return value
 
-A string containing a {{HTMLElement("sub")}} HTML element.
-
-## Description
-
-The `sub()` method embeds a string in a `<sub>` element:
-"`<sub>str</sub>`".
+A string beginning with a `<sub>` start tag, then the text `str`, and then a `</sub>` end tag.
 
 ## Examples
 
 ### Using sub() and sup() methods
 
-The following example uses the `sub()` and
-{{jsxref("String.prototype.sup()", "sup()")}} methods to format a string:
+The following example uses the `sub()` and {{jsxref("String/sup", "sup()")}} methods to format a string:
 
 ```js
-const superText = 'superscript';
-const subText = 'subscript';
+const superText = "superscript";
+const subText = "subscript";
 
 console.log(`This is what a ${superText.sup()} looks like.`);
 // "This is what a <sup>superscript</sup> looks like."
