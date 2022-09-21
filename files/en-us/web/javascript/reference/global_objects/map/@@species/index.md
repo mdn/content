@@ -41,7 +41,7 @@ Map[Symbol.species]; // function Map()
 
 ### Species in derived objects
 
-In a derived collection object (e.g. your custom map `MyMap`), the `MyMap` species is the `MyMap` constructor. However, you might want to overwrite this, in order to return parent `Map` objects in your derived class methods:
+In a derived collection object such as the custom map `MyMap`, the `MyMap` species is the `MyMap` constructor. However, you might want to overwrite this, in order to return parent `Map` objects in your derived class methods:
 
 ```js
 class MyMap extends Map {
