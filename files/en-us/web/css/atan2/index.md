@@ -15,11 +15,7 @@ browser-compat: css.types.atan2
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`atan2()`** [CSS](/en-US/docs/Web/CSS)
-[function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that
-returns the inverse tangent of two values between `-infinity` and `infinity`.
-The function accepts two arguments and returns the number of radians
-representing an {{cssxref("&lt;angle&gt;")}} between `-180deg` and `180deg`.
+The **`atan2()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse tangent of two values between `-infinity` and `infinity`. The function accepts two arguments and returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-180deg` and `180deg`.
 
 ## Syntax
 
@@ -40,43 +36,39 @@ transform: rotate(atan2(e, 30));
 
 ### Parameters
 
-The `atan2(y, x)` function accepts two comma-separated values as its parameters.
-The values can be a {{cssxref("&lt;number&gt;")}},
-{{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage&gt;")}}, but both
-must be the same type.
+The `atan2(y, x)` function accepts two comma-separated values as its parameters. The values can be a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage&gt;")}}, but both must be the same type.
 
 - `y`
-
-  - : The y coordinate of the point. A {{cssxref("&lt;number&gt;")}},
-    {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage&gt;")}}.
+  - : The y coordinate of the point. A {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage&gt;")}}.
 
 - `x`
-  - : The y coordinate of the point. A {{cssxref("&lt;number&gt;")}},
-    {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage&gt;")}}.
+  - : The y coordinate of the point. A {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage&gt;")}}.
 
-### Return value
+## Return value
 
-Given two points `x` and `y`, the function `atan2(y, x)` calculates and returns
-the {{cssxref("&lt;angle&gt;")}} between the positive `x` axis and the ray from
-the origin to the point `(x, y)`.
+Given two points `x` and `y`, the function `atan2(y, x)` calculates and returns the {{cssxref("&lt;angle&gt;")}} between the positive `x` axis and the ray from the origin to the point `(x, y)`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
-## Example
+## Examples
 
-The `atan2()` function can be used to
-{{cssxref("transform-function/rotate", "rotate")}} elements as it return an
-{{cssxref("&lt;angle&gt;")}}.
+### Rotate elements
 
-```html hidden
+The `atan2()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("&lt;angle&gt;")}}.
+
+#### HTML
+
+```html
 <div class="box box-1"></div>
 <div class="box box-2"></div>
 <div class="box box-3"></div>
 <div class="box box-4"></div>
 <div class="box box-5"></div>
 ```
+
+#### CSS
 
 ```css hidden
 body {
@@ -111,7 +103,9 @@ div.box-5 {
 }
 ```
 
-{{EmbedLiveSample('example', '100%', '200px')}}
+#### Result
+
+{{EmbedLiveSample('Rotate elements', '100%', '200px')}}
 
 ## Specifications
 
