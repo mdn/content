@@ -6,8 +6,13 @@ tags:
   - HTTP
   - Reference
   - header
+  - Experimental
+  - Non-standard
 browser-compat: http.headers.Sec-GPC
 ---
+
+{{SeeCompatTable}}{{Non-standard_header}}
+
 The **`Sec-GPC`** (**G**lobal **P**rivacy **C**ontrol) request header indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
 
 <table class="properties">
