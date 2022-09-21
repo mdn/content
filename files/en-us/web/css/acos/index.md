@@ -34,7 +34,7 @@ transform: rotate(acos(e / 3));
 The `acos(number)` function accepts only one value as its parameter.
 
 - `number`
-  - : A {{cssxref("&lt;number&gt;")}} between `-1` and `1`. When specifying exactly `1`, the result is `0`.
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} between `-1` and `1`. When specifying exactly `1`, the result is `0`.
 
 ## Formal syntax
 
