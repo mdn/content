@@ -3,7 +3,6 @@ title: Opera Browser
 slug: Glossary/Opera_Browser
 tags:
   - Browser
-  - Glossary
   - Navigation
   - Opera
   - Opera Browser

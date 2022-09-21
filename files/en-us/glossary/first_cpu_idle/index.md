@@ -2,7 +2,6 @@
 title: First CPU idle
 slug: Glossary/First_CPU_idle
 tags:
-  - Glossary
   - Lighthouse
   - Performance
   - Web Performance

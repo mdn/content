@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Selector
   - CodingScripting
-  - Glossary
   - HTML
   - Selector
 ---

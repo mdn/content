@@ -2,7 +2,6 @@
 title: Synthetic monitoring
 slug: Glossary/Synthetic_monitoring
 tags:
-  - Glossary
   - RUM
   - Reference
   - Synthetic monitoring

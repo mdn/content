@@ -2,7 +2,6 @@
 title: TLD
 slug: Glossary/TLD
 tags:
-  - Glossary
   - Web
   - WebMechanics
 ---

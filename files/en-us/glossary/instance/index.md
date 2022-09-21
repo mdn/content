@@ -4,7 +4,6 @@ slug: Glossary/Instance
 tags:
   - Beginner
   - CodingScripting
-  - Glossary
   - JavaScript
   - NeedsExample
   - OOP

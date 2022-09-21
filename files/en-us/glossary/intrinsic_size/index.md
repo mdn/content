@@ -3,7 +3,6 @@ title: Intrinsic size
 slug: Glossary/Intrinsic_Size
 tags:
   - CSS
-  - Glossary
   - Intrinsic size
 ---
 

@@ -2,7 +2,6 @@
 title: Prefetch
 slug: Glossary/Prefetch
 tags:
-  - Glossary
   - Prefetch
   - Reference
   - Web Performance

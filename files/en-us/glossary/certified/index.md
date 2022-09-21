@@ -5,7 +5,6 @@ tags:
   - Apps
   - B2G
   - Firefox OS
-  - Glossary
   - Security
   - Trustworthy
 ---

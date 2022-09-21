@@ -2,7 +2,6 @@
 title: RSS
 slug: Glossary/RSS
 tags:
-  - Glossary
   - OpenPractices
   - RSS
   - Sharing

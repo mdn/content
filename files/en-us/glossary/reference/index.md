@@ -3,7 +3,6 @@ title: Reference
 slug: Glossary/Reference
 tags:
   - CodingScripting
-  - Glossary
   - NeedsContent
 ---
 

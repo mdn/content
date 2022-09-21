@@ -5,7 +5,6 @@ tags:
   - Accessibility
   - Composing
   - Design
-  - Glossary
   - Navigation
 ---
 

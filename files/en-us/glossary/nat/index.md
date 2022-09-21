@@ -3,7 +3,6 @@ title: NAT
 slug: Glossary/NAT
 tags:
   - Beginner
-  - Glossary
   - Infrastructure
   - WebMechanics
   - WebRTC

@@ -2,7 +2,6 @@
 title: Second-level Domain
 slug: Glossary/Second-level_Domain
 tags:
-  - Glossary
   - Infrastructure
 ---
 

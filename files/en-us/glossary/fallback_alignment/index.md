@@ -3,7 +3,6 @@ title: Fallback alignment
 slug: Glossary/Fallback_Alignment
 tags:
   - CSS
-  - Glossary
   - alignment
 ---
 

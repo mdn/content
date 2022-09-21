@@ -4,7 +4,6 @@ slug: Glossary/FTP
 tags:
   - CodingScripting
   - FTP
-  - Glossary
   - Protocol
 ---
 

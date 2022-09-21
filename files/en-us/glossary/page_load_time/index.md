@@ -2,7 +2,6 @@
 title: Page load time
 slug: Glossary/Page_load_time
 tags:
-  - Glossary
   - Timings
   - Web Performance
   - metrics

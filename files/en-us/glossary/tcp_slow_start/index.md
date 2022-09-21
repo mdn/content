@@ -2,7 +2,6 @@
 title: TCP slow start
 slug: Glossary/TCP_slow_start
 tags:
-  - Glossary
   - Infrastructure
   - Networking
   - TCP
