@@ -3,7 +3,6 @@ title: Polymorphism
 slug: Glossary/Polymorphism
 tags:
   - CodingScripting
-  - Glossary
 ---
 
 Polymorphism is the presentation of one interface for multiple data types.

@@ -2,7 +2,6 @@
 title: Protocol
 slug: Glossary/Protocol
 tags:
-  - Glossary
   - Infrastructure
   - Protocols
 ---

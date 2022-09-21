@@ -4,7 +4,6 @@ slug: Glossary/String
 tags:
   - Beginner
   - CodingScripting
-  - Glossary
   - String
 ---
 

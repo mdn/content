@@ -4,7 +4,6 @@ slug: Glossary/SMTP
 tags:
   - Beginner
   - Collaboration
-  - Glossary
   - Infrastructure
   - Sharing
 ---

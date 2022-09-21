@@ -2,7 +2,6 @@
 title: Cache
 slug: Glossary/Cache
 tags:
-  - Glossary
   - HTTP
 ---
 

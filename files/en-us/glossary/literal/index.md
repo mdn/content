@@ -4,7 +4,6 @@ slug: Glossary/Literal
 tags:
   - Literal
   - JavaScript
-  - Glossary
 ---
 
 **Literals** represent values in JavaScript. These are fixed values—not variables—that you _literally_ provide in your script.

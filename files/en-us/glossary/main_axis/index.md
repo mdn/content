@@ -3,7 +3,6 @@ title: Main Axis
 slug: Glossary/Main_Axis
 tags:
   - CSS
-  - Glossary
   - Main axis
   - flexbox
 ---

@@ -2,7 +2,6 @@
 title: First Meaningful Paint
 slug: Glossary/first_meaningful_paint
 tags:
-  - Glossary
   - Reference
   - Web Performance
 ---

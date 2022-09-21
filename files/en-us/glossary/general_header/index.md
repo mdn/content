@@ -2,7 +2,6 @@
 title: General header
 slug: Glossary/General_header
 tags:
-  - Glossary
   - WebMechanics
 ---
 

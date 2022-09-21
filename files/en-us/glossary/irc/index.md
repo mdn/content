@@ -2,7 +2,6 @@
 title: IRC
 slug: Glossary/IRC
 tags:
-  - Glossary
   - Infrastructure
   - Internet Relay Chat
   - Open Protocol

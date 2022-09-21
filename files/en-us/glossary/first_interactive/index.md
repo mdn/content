@@ -2,7 +2,6 @@
 title: First interactive
 slug: Glossary/First_interactive
 tags:
-  - Glossary
   - Lighthouse
   - Web Performance
 ---

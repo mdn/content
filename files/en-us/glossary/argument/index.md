@@ -3,7 +3,6 @@ title: Argument
 slug: Glossary/Argument
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

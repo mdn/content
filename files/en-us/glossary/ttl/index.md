@@ -4,7 +4,6 @@ slug: Glossary/TTL
 tags:
   - Caching
   - Domain Name System
-  - Glossary
   - Infrastructure
   - Networking
   - Performance

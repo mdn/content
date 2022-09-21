@@ -4,7 +4,6 @@ slug: Glossary/lossy_compression
 tags:
   - Beginner
   - Composing
-  - Glossary
   - Images
   - JPEG
   - Lossy

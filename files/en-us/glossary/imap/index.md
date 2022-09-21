@@ -3,7 +3,6 @@ title: IMAP
 slug: Glossary/IMAP
 tags:
   - Beginner
-  - Glossary
   - Infrastructure
   - MailNews
 ---
