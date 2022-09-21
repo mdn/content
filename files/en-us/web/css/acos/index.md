@@ -36,21 +36,27 @@ The `acos(number)` function accepts only one value as its parameter.
 - `number`
   - : A {{cssxref("&lt;number&gt;")}} between `-1` and `1`. When specifying exactly `1`, the result is `0`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
-## Example
+## Examples
+
+### Rotate elements
 
 The `acos()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("&lt;angle&gt;")}}.
 
-```html hidden
-<div class="box"></div>
+#### HTML
+
+```html
 <div class="box box-1"></div>
 <div class="box box-2"></div>
 <div class="box box-3"></div>
 <div class="box box-4"></div>
+<div class="box box-5"></div>
 ```
+
+#### CSS
 
 ```css hidden
 body {
@@ -68,25 +74,26 @@ div.box {
   height: 100px;
   background: linear-gradient(orange, red);
 }
-
 div.box-1 {
-  transform: rotate(acos(-0.2));
+  transform: rotate(acos(1));
 }
-
 div.box-2 {
-  transform: rotate(acos(2 * 0.125));
+  transform: rotate(acos(0.5));
 }
-
 div.box-3 {
-  transform: rotate(acos(pi / 5));
+  transform: rotate(acos(0));
 }
-
 div.box-4 {
-  transform: rotate(acos(e / 3));
+  transform: rotate(acos(-0.5));
+}
+div.box-5 {
+  transform: rotate(acos(-1));
 }
 ```
 
-{{EmbedLiveSample('example', '100%', '200px')}}
+#### Result
+
+{{EmbedLiveSample('Rotate elements', '100%', '200px')}}
 
 ## Specifications
 
