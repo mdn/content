@@ -55,7 +55,7 @@ When the element is rotated using {{cssxref("transform-function/rotate", "rotate
 
 For example, if you rotate a `100px`/`100px` square `45deg`, the diamond it creates will be wider and taller than the original square. To shrink the diamond into the box allotted for the original square, you would have to scale down the diamond using this formula: `width = height = 100px * cos(45deg) = 100px * 0.707 = 70.7px`. You need to also adjust the {{cssxref("transform-origin")}} and add {{cssxref("transform-function/translate", "translate()")}} to correct the position:
 
-#### CSS
+#### HTML
 
 ```html
 <div class="original-square"></div>
