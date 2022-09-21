@@ -42,15 +42,19 @@ The `pow(base, number)` function accepts two comma-separated values as its param
 
 Returns a {{cssxref("&lt;number&gt;")}} representing `base` taken to the power of `number`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
-## Example
+## Examples
+
+## Scale headings by fixed ratio
 
 The `pow()` function can be useful for strategies like CSS Modular Scale, which relates all the font-sizes on a page to each other by a fixed ratio.
 
-```html hidden
+#### HTML
+
+```html
 <h1> Heading 1 </h1>
 <h2> Heading 2 </h2>
 <h3> Heading 3 </h3>
@@ -58,6 +62,8 @@ The `pow()` function can be useful for strategies like CSS Modular Scale, which 
 <h5> Heading 5 </h5>
 <h6> Heading 6 </h6>
 ```
+
+#### CSS
 
 ```css
 h1 {
@@ -80,7 +86,9 @@ h6 {
 }
 ```
 
-{{EmbedLiveSample('example', '100%', '300px')}}
+#### Result
+
+{{EmbedLiveSample('Scale headings by fixed ratio', '100%', '300px')}}
 
 ## Specifications
 
