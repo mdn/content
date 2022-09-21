@@ -3,7 +3,6 @@ title: Latency
 slug: Glossary/Latency
 tags:
   - Audio
-  - Glossary
   - Media
   - Networking
   - Reference

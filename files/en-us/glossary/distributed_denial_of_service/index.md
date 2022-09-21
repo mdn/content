@@ -5,7 +5,6 @@ tags:
   - Attack
   - DDoS
   - Denial of Service
-  - Glossary
   - Intro
   - Security
 ---

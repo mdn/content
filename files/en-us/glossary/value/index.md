@@ -3,7 +3,6 @@ title: Value
 slug: Glossary/Value
 tags:
   - CodingScripting
-  - Glossary
   - NeedsContent
 ---
 

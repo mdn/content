@@ -1,5 +1,5 @@
 ---
-title: '<a>: The Anchor element'
+title: "<a>: The Anchor element"
 slug: Web/HTML/Element/a
 tags:
   - Content
@@ -370,7 +370,9 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Link_t
 A sadly common mistake is to only link the words "click here" or "here":
 
 ```html example-bad
-<p>Learn more about our products <a href="/products">here</a>.</p>
+<p>
+  Learn more about our products <a href="/products">here</a>.
+</p>
 ```
 
 #### Strong link text
@@ -378,7 +380,9 @@ A sadly common mistake is to only link the words "click here" or "here":
 Luckily, this is an easy fix, and it's actually shorter than the inaccessible version!
 
 ```html example-good
-<p>Learn more <a href="/products">about our products</a>.</p>
+<p>
+  Learn more <a href="/products">about our products</a>.
+</p>
 ```
 
 Assistive software has shortcuts to list all links on a page. However, strong link text benefits all users — the "list all links" shortcut emulates how sighted users quickly scan pages.

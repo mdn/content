@@ -57,7 +57,7 @@ In the previous examples, a screen reader user may hear "Quarterly Report, slide
 ## Values
 
 - `<string>`
-  - : A non-empty string, an unconstrained value type,containing more than just white space.
+  - : A non-empty string, an unconstrained value type, containing more than just white space.
 
 ## ARIAMixin API
 

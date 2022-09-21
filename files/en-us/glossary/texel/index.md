@@ -4,7 +4,6 @@ slug: Glossary/Texel
 tags:
   - 3D
   - Drawing
-  - Glossary
   - Graphics
   - Texel
   - Texture

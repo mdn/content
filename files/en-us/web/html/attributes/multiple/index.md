@@ -120,7 +120,7 @@ When `multiple` is set on the {{HTMLElement("input/file", "file")}} input type, 
 
 Note the difference in appearance between the example with `multiple` set and the other `file` input without.
 
-When the form is submitted,had we used [`method="get"`](/en-US/docs/Web/HTML/Element/form) each selected file's name would have been added to URL parameters as`?uploads=img1.jpg&uploads=img2.svg`. However, since we are submitting [multipart](/en-US/docs/Web/API/XMLHttpRequest/multipart) form data, we much use post. See the {{htmlelement('form')}} element and [sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_method_attribute) for more information.
+When the form is submitted, had we used [`method="get"`](/en-US/docs/Web/HTML/Element/form) each selected file's name would have been added to URL parameters as`?uploads=img1.jpg&uploads=img2.svg`. However, since we are submitting [multipart](/en-US/docs/Web/API/XMLHttpRequest/multipart) form data, we much use post. See the {{htmlelement('form')}} element and [sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_method_attribute) for more information.
 
 ### select
 
@@ -177,7 +177,7 @@ select[multiple]:active {
 */
 ```
 
-There are a few ways to select multiple options in a `<select>` element with a `multiple` attribute. Depending on the operating system, mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd> keys and then click multiple options to select/deselect them. Keyboard users can select multiple contiguous items by focusing on the `<select>` element, selecting an item at the top or bottom of the range they want to select using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to go up and down the options. The selection of non-contiguous is not as well-supported: items should be able to be selected and deselected by pressing <kbd>Space</kbd> , but support varies between browsers.
+There are a few ways to select multiple options in a `<select>` element with a `multiple` attribute. Depending on the operating system, mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd> keys and then click multiple options to select/deselect them. Keyboard users can select multiple contiguous items by focusing on the `<select>` element, selecting an item at the top or bottom of the range they want to select using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to go up and down the options. The selection of non-contiguous is not as well-supported: items should be able to be selected and deselected by pressing <kbd>Space</kbd>, but support varies between browsers.
 
 ## Specifications
 

@@ -1273,7 +1273,7 @@ If it contains multiple values, `x` defines the x coordinate of each individual 
 
 ## tspan
 
-For {{SVGElement('tspan')}}, if it contains a single value, `x` defines the x coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as  {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
+For {{SVGElement('tspan')}}, if it contains a single value, `x` defines the x coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
 If it contains multiple values, `x` defines the x coordinate of each individual glyph from the text. If there are fewer values than glyphs, the remaining glyphs are placed in line with the last positioned glyph. If there are more values than glyphs, the extra values are ignored.
 

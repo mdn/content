@@ -3,7 +3,6 @@ title: Transient activation
 slug: Glossary/Transient_activation
 tags:
   - Transient activation
-  - Glossary
   - JavaScript
 ---
 

@@ -33,7 +33,7 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 
 ## Properties
 
-_No specific properties; inherits methods from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
+_No specific properties; inherits properties from its ancestors {{domxref('OrientationSensor')}} and {{domxref('Sensor')}}._
 
 ## Methods
 

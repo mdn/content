@@ -4,7 +4,6 @@ slug: Glossary/webp
 tags:
   - Beginner
   - Composing
-  - Glossary
   - Infrastructure
   - WebP
 ---

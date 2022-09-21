@@ -3,7 +3,6 @@ title: Netscape Navigator
 slug: Glossary/Netscape_Navigator
 tags:
   - Browser
-  - Glossary
   - Navigation
   - Netscape
   - Netscape Navigator

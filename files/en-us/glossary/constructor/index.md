@@ -3,7 +3,6 @@ title: Constructor
 slug: Glossary/Constructor
 tags:
   - CodingScripting
-  - Glossary
 ---
 
 A **constructor** belongs to a particular class {{glossary("object")}} that is instantiated. The constructor initializes this object and can provide access to its private information. The concept of a constructor can be applied to most {{glossary("OOP","object-oriented programming")}} languages. Essentially, a constructor in {{glossary("JavaScript")}} is usually declared at the instance of a {{glossary("class")}}.

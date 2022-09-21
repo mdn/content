@@ -3,7 +3,6 @@ title: Style origin
 slug: Glossary/Style_origin
 tags:
   - CSS
-  - Glossary
   - Style
   - Style Origin
   - origin

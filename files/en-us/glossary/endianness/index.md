@@ -4,7 +4,6 @@ slug: Glossary/Endianness
 tags:
   - Coding
   - CodingScripting
-  - Glossary
 ---
 
 **Endian** and **endianness** (or "byte-order") describe how computers organize the bytes that make up numbers.

@@ -2,7 +2,6 @@
 title: IPv6
 slug: Glossary/IPv6
 tags:
-  - Glossary
   - IPv6
   - Infrastructure
   - Intermediate

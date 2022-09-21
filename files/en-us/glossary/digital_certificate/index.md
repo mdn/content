@@ -3,7 +3,6 @@ title: Digital certificate
 slug: Glossary/Digital_certificate
 tags:
   - Cryptography
-  - Glossary
   - Security
 ---
 

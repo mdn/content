@@ -4,7 +4,6 @@ slug: Glossary/Firefox_OS
 tags:
   - B2G
   - Firefox OS
-  - Glossary
   - Infrastructure
   - Intro
 ---

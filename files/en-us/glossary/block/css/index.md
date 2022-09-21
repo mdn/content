@@ -5,7 +5,6 @@ tags:
   - CSS
   - CodingScripting
   - Design
-  - Glossary
   - HTML
 ---
 

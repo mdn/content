@@ -2,7 +2,6 @@
 title: URN
 slug: Glossary/URN
 tags:
-  - Glossary
   - Intro
   - Navigation
   - urn

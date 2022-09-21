@@ -3,7 +3,6 @@ title: Java
 slug: Glossary/Java
 tags:
   - CodingScripting
-  - Glossary
   - Java
   - Programming Language
 ---

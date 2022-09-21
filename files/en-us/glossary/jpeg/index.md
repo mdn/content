@@ -4,7 +4,6 @@ slug: Glossary/jpeg
 tags:
   - Beginner
   - Composing
-  - Glossary
   - Images
   - JPEG
 ---

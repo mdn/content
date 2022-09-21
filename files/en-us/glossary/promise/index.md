@@ -2,7 +2,6 @@
 title: Promise
 slug: Glossary/Promise
 tags:
-  - Glossary
   - Promise
   - Promises
   - asynchronous

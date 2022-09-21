@@ -38,7 +38,7 @@ You should use the HTML5 doctype. It is short, easy to remember, and backwards c
 Set the document language using the {{htmlattrxref('lang')}} attribute on your {{htmlelement("html")}} element:
 
 ```html example-good
-<html lang="en-US">
+<html lang="en-US"></html>
 ```
 
 This is good for accessibility and search engines, helps with localizing content, and reminds people to use best practices.
@@ -73,7 +73,7 @@ You should put all attribute values in double quotes. It is tempting to omit quo
 
 …than this:
 
-```html example-bad
+```html-nolint example-bad
 <img src=images/logo.jpg alt=A circular globe icon class=no-border>
 ```
 
@@ -89,7 +89,7 @@ required
 
 This is perfectly understandable and works fine; the longer version with the value is supported but not necessary:
 
-```html example-bad
+```html-nolint example-bad
 required="required"
 ```
 
@@ -101,7 +101,7 @@ Use lowercase for all element names and attribute names/values because it looks 
 <p class="nice">This looks nice and neat</p>
 ```
 
-```html example-bad
+```html-nolint example-bad
 <P CLASS="WHOA-THERE">Why is my markup shouting?</P>
 ```
 
@@ -125,7 +125,7 @@ Use double quotes for HTML, not single quotes, like so:
 <p class="important">Yes</p>
 ```
 
-```html example-bad
+```html-nolint example-bad
 <p class='important'>Nope</p>
 ```
 

@@ -137,7 +137,7 @@ function NavigatorExample() {
 
 ```html
 <figure>
-  <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
+  <figcaption><b>Edsger Dijkstra:</b></figcaption>
   <blockquote>
     If debugging is the process of removing software bugs, then programming must
     be the process of putting them in.

@@ -2,7 +2,6 @@
 title: Favicon
 slug: Glossary/Favicon
 tags:
-  - Glossary
   - Intro
   - favicon
   - user agent
