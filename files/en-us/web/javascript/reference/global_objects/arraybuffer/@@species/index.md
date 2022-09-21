@@ -23,7 +23,7 @@ ArrayBuffer[Symbol.species]
 
 ### Return value
 
-The value of the constructor (`this`) on which `get @@species` was called. The return value is used to construct return values from array buffer methods that create new array buffer.
+The value of the constructor (`this`) on which `get @@species` was called. The return value is used to construct return values from array buffer methods that create new array buffers.
 
 ## Description
 
