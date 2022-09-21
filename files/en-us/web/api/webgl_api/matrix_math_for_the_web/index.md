@@ -344,7 +344,7 @@ let transformMatrix = MDN.multiplyArrayOfMatrices([
   translate(0, -200, 0),               // Step 5: move back up
   rotateAroundZAxis(-Math.PI * 0.5),   // Step 4: rotate back
   rotateAroundZAxis(Math.PI * 0.5),    // Step 3: rotate around 90 degrees
-  translate(0, 200, 0),                // Step 2: move down 100 pixels
+  translate(0, 200, 0),                // Step 2: move down 200 pixels
   scale(0.8, 0.8, 0.8),                // Step 1: scale down
 ]);
 ```
