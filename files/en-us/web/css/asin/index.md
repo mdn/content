@@ -34,7 +34,7 @@ transform: rotate(asin(e / 3));
 The `asin(number)` function accepts only one value as its parameter.
 
 - `number`
-  - : A {{cssxref("&lt;number&gt;")}} between `-1` and `1`. When specifying a number less than `-1` or greater than `1`, or `NaN`, the result is `NaN`.
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} between `-1` and `1`. When specifying a number less than `-1` or greater than `1`, or `NaN`, the result is `NaN`.
 
 ## Formal syntax
 
