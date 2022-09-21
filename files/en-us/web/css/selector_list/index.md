@@ -36,12 +36,7 @@ element, element, element { style properties }
 Grouping selectors in a single line using a comma-separated lists.
 
 ```css
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: helvetica;
 }
 ```
