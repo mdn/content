@@ -36,21 +36,27 @@ The `atan(number)` function accepts only one value as its parameter.
 - `number`
   - : A {{cssxref("&lt;number&gt;")}} between `-∞` and `∞`. When specifying `+∞` the result is `90deg`. When specifying `-∞` the result is `-90deg`. That is, `atan(0)` representing `0deg`, `atan(1)` representing `45deg`, and `atan(infinity)` representing `90deg`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
-## Example
+## Examples
+
+### Rotate elements
 
 The `atan()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("&lt;angle&gt;")}}.
 
-```html hidden
+#### HTML
+
+```html
 <div class="box box-1"></div>
 <div class="box box-2"></div>
 <div class="box box-3"></div>
 <div class="box box-4"></div>
 <div class="box box-5"></div>
 ```
+
+#### CSS
 
 ```css hidden
 body {
@@ -85,7 +91,9 @@ div.box-5 {
 }
 ```
 
-{{EmbedLiveSample('example', '100%', '200px')}}
+#### Result
+
+{{EmbedLiveSample('Rotate elements', '100%', '200px')}}
 
 ## Specifications
 
