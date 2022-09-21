@@ -4,17 +4,16 @@ slug: Web/CSS/sign
 tags:
   - CSS
   - CSS Function
-  - Sign-Related
   - Function
   - Layout
   - Reference
   - Web
   - sign
+  - Experimental
 browser-compat: css.types.sign
-spec-urls: https://drafts.csswg.org/css-values/#sign-funcs
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`sign()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) contains one calculation, and returns `-1` if the numeric value of the argument is negative, `+1` if the numeric value of the argument is positive, `0⁺` if the numeric value of the argument is 0⁺, and `0⁻` if the numeric value of the argument is 0⁻.
 
@@ -29,7 +28,7 @@ top: sign(--value);
 
 The `sign()` function takes only one expression as its argument.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
