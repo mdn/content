@@ -37,7 +37,7 @@ You can do this either for an entire form, or for specific input elements in a f
   …
   <div>
     <label for="cc">Credit card:</label>
-    <input type="text" id="cc" name="cc" autocomplete="off" />
+    <input type="text" id="cc" name="cc" autocomplete="off">
   </div>
 </form>
 ```
