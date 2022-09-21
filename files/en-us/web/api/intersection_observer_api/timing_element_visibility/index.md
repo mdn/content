@@ -447,7 +447,6 @@ function createArticle(contents) {
   articleElem.id = nextArticleID;
 
   const titleElem = document.createElement("h2");
-  titleElem.id = nextArticleID;
   titleElem.innerText = `Article ${nextArticleID} title`;
   articleElem.appendChild(titleElem);
 
