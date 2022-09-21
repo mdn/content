@@ -39,10 +39,10 @@ transform: rotate(atan2(e, 30));
 The `atan2(y, x)` function accepts two comma-separated values as its parameters. The values can be a {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage&gt;")}}, but both must be the same type.
 
 - `y`
-  - : The y coordinate of the point. A {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage&gt;")}}.
+  - : The y coordinate of the point. A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, a {{cssxref("&lt;dimension&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}.
 
 - `x`
-  - : The y coordinate of the point. A {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}} or {{cssxref("&lt;percentage&gt;")}}.
+  - : The y coordinate of the point. A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, a {{cssxref("&lt;dimension&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}.
 
 ## Return value
 
