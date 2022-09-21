@@ -24,7 +24,7 @@ browser-compat: api.RTCIceCandidatePairStats.bytesReceived
 
 The {{domxref("RTCIceCandidatePairStats")}} property
 **`bytesReceived`** indicates the total number of payload
-bytes—that is, bytes which aren't overhead such as headers or padding—that hve been
+bytes—that is, bytes which aren't overhead such as headers or padding—that have been
 received to date on the connection described by the candidate pair.
 
 The {{domxref("RTCIceCandidatePairStats.bytesSent", "bytesSent")}} property reports the
