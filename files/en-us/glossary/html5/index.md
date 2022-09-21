@@ -3,7 +3,6 @@ title: HTML5
 slug: Glossary/HTML5
 tags:
   - CodingScripting
-  - Glossary
   - HTML
   - Markup
 ---

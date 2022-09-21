@@ -2,7 +2,6 @@
 title: Perceived performance
 slug: Glossary/Perceived_performance
 tags:
-  - Glossary
   - Perceived Performance
   - Reference
   - Web Performance

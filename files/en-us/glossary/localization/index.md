@@ -3,7 +3,6 @@ title: Localization
 slug: Glossary/Localization
 tags:
   - Collaborating
-  - Glossary
   - Intro
   - Localization
   - WebMechanics

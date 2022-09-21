@@ -2,7 +2,6 @@
 title: URI
 slug: Glossary/URI
 tags:
-  - Glossary
   - HTTP
   - Search
   - URI

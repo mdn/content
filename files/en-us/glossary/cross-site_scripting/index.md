@@ -4,7 +4,6 @@ slug: Glossary/Cross-site_scripting
 tags:
   - Cross Site Scripting
   - DOM
-  - Glossary
   - Security
   - XSS
   - exploit

@@ -3,7 +3,6 @@ title: frame rate (FPS)
 slug: Glossary/FPS
 tags:
   - Animation
-  - Glossary
   - Web Performance
   - requestAnimationFrame
 ---

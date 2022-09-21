@@ -3,7 +3,6 @@ title: Preflight request
 slug: Glossary/Preflight_request
 tags:
   - CORS
-  - Glossary
   - HTTP
   - Preflight
   - request

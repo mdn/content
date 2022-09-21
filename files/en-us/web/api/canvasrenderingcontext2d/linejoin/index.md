@@ -32,7 +32,7 @@ ignored.
 
 There are three possible values for this property: `"round"`, `"bevel"`, and `"miter"`. The default is `"miter"`.
 
-![](canvas_linejoin.png)
+![Three horizontal zigzag lines with round, bevel, and miter values, shown from top to bottom respectively.](canvas_linejoin.png)
 
 - `"round"`
   - : Rounds off the corners of a shape by filling an additional sector of disc centered

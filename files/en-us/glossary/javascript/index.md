@@ -3,7 +3,6 @@ title: JavaScript
 slug: Glossary/JavaScript
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
   - "l10n:priority"
 ---

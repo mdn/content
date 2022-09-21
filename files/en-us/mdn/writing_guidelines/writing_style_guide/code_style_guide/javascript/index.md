@@ -223,7 +223,7 @@ When writing code, you usually omit parameters you don't need. But in some code 
 To do so, use `/* … */` in the parameter list. This is an exception to the rule to only use single-line comments (`//`).
 
 ```js
-array.forEach((value, /* index, array */) => {
+array.forEach((value /* , index, array */) => {
   // …
 });
 ```

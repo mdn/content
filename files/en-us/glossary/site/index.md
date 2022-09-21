@@ -2,7 +2,6 @@
 title: Site
 slug: Glossary/Site
 tags:
-  - Glossary
   - Security
   - WebMechanics
 ---

@@ -4,7 +4,6 @@ slug: Glossary/NaN
 tags:
   - CodingScripting
   - Computing
-  - Glossary
   - NaN
 ---
 

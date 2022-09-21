@@ -2,7 +2,6 @@
 title: Cookie
 slug: Glossary/Cookie
 tags:
-  - Glossary
   - WebMechanics
 ---
 

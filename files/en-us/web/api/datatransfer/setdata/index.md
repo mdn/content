@@ -45,77 +45,87 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-This example shows the use of the {{domxref("DataTransfer")}} object's
-{{domxref("DataTransfer.getData","getData()")}},
-{{domxref("DataTransfer.setData","setData()")}} and
-{{domxref("DataTransfer.clearData","clearData()")}} methods.
+### Dragging an element
+
+In this example we can drag a {{HTMLElement("p")}} element into a target {{HTMLElement("div")}} element.
+
+- In the `dragstart` handler, we use {{domxref("DataTransfer.setData","setData()")}} to add the `id` of the `<p>` element to the {{domxref("DataTransfer")}} object.
+
+- In the `drop` handler we retrieve the `id` and use it to move the `<p>` element into the target.
+
+#### HTML
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>
-      Examples of DataTransfer's setData(), getData() and clearData()
-    </title>
-    <meta content="width=device-width" />
-    <style>
-      div {
-        margin: 0em;
-        padding: 2em;
-      }
-      #source {
-        color: blue;
-        border: 1px solid black;
-      }
-      #target {
-        border: 1px solid black;
-      }
-    </style>
-    <script>
-      function dragStartHandler(ev) {
-        console.log("dragStart");
-        // Change the source element's background color to signify drag has started
-        ev.currentTarget.style.border = "dashed";
-        // Set the drag's format and data. Use the event target's id for the data
-        ev.dataTransfer.setData("text/plain", ev.target.id);
-      }
+<div>
+  <p id="source" draggable="true">
+    Select this element, drag it to the drop zone and then release the selection
+    to move the element.
+  </p>
+</div>
+<div id="target">Drop Zone</div>
 
-      function dragOverHandler(ev) {
-        console.log("dragOver");
-        ev.preventDefault();
-      }
-
-      function dropHandler(ev) {
-        console.log("Drop");
-        ev.preventDefault();
-        // Get the data, which is the id of the drop target
-        const data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-        // Clear the drag data cache (for all formats/types)
-        ev.dataTransfer.clearData();
-      }
-    </script>
-  </head>
-  <body>
-    <h1>
-      Examples of <code>DataTransfer</code>: <code>setData()</code>,
-      <code>getData()</code>, <code>clearData()</code>
-    </h1>
-    <div>
-      <p id="source" ondragstart="dragStartHandler(event);" draggable="true">
-        Select this element, drag it to the Drop Zone and then release the
-        selection to move the element.
-      </p>
-    </div>
-    <div
-      id="target"
-      ondrop="dropHandler(event);"
-      ondragover="dragOverHandler(event);">
-      Drop Zone
-    </div>
-  </body>
-</html>
+<button id="reset">Reset example</button>
 ```
+
+#### CSS
+
+```css
+div {
+  margin: 0.5em 0;
+  padding: 2em;
+}
+
+#target,
+#source {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+.dragging {
+  background-color: pink;
+}
+```
+
+#### JavaScript
+
+```js
+const source = document.querySelector("#source");
+source.addEventListener("dragstart", (ev) => {
+  console.log("dragStart");
+  // Change the source element's background color
+  // to show that drag has started
+  ev.currentTarget.classList.add("dragging");
+  // Clear the drag data cache (for all formats/types)
+  ev.dataTransfer.clearData();
+  // Set the drag's format and data.
+  // Use the event target's id for the data
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+});
+source.addEventListener("dragend", (ev) =>
+  ev.target.classList.remove("dragging")
+);
+
+const target = document.querySelector("#target");
+target.addEventListener("dragover", (ev) => {
+  console.log("dragOver");
+  ev.preventDefault();
+});
+target.addEventListener("drop", (ev) => {
+  console.log("Drop");
+  ev.preventDefault();
+  // Get the data, which is the id of the source element
+  const data = ev.dataTransfer.getData("text");
+  const source = document.getElementById(data);
+  ev.target.appendChild(source);
+});
+
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => document.location.reload());
+```
+
+#### Result
+
+{{EmbedLiveSample("Dragging an element", "", 250)}}
 
 ## Specifications
 

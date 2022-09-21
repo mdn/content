@@ -61,7 +61,7 @@ operator operand
 operand operator
 ```
 
-For example, `x++` or `++x`. The `operator operand` form is called a _postfix_ unary operator, and the `operand operator` form is called a _prefix_ unary operator. `++` and `--` are the only postfix operators in JavaScript — all other operators, like `!`, `typeof`, etc. are prefix.
+For example, `x++` or `++x`. The `operator operand` form is called a _prefix_ unary operator, and the `operand operator` form is called a _postfix_ unary operator. `++` and `--` are the only postfix operators in JavaScript — all other operators, like `!`, `typeof`, etc. are prefix.
 
 ## Assignment operators
 

@@ -1,5 +1,5 @@
 ---
-title: ':is() (:matches(), :any())'
+title: ':is()'
 slug: Web/CSS/:is
 tags:
   - ':is'
@@ -14,26 +14,11 @@ browser-compat: css.selectors.is
 
 {{CSSRef}}
 
-> **Note:** `:matches()` was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
-
 The **`:is()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. This is useful for writing large selectors in a more compact form.
 
-```css
-/* Selects any paragraph inside a header, main
-   or footer element that is being hovered */
-:is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
+> **Note:** Originally named `:matches()` (and `:any()`), this selector was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
-/* The above is equivalent to the following */
-header p:hover,
-main p:hover,
-footer p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
 
 Pseudo-elements are not valid in the selector list for `:is()`.
 
