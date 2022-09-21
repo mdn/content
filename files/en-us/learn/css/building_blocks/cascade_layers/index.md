@@ -54,7 +54,7 @@ The C in CSS stands for "Cascading". It is the method by which styles cascade to
   5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/Specificity).
   6. **Proximity:** When two selectors in the origin layer with precedence have the same specificity, the property value from the last declared, highest specificity selector wins.
 
-For each step, only the declarations "still in the running” move on to "compete" in the next step. If only one declaration is in the running, the following steps are moot.
+For each step, only the declarations "still in the running" move on to "compete" in the next step. If only one declaration is in the running, the following steps are moot.
 
 ### Origin and cascade
 
@@ -70,10 +70,14 @@ There are three [cascade origin types](/en-US/docs/Web/CSS/Cascade#origin_types)
 8. styles being transitioned
 
 The "user-agent" is the browser. The "user" is the site visitor. The "author" is you, the developer. Styles declared directly on an element with the {{HTMLElement('style')}} element are author styles. Ignoring animating and transitioning styles for the moment, user-agent normal styles have the lowest precedence; user-agent important styles the highest.
+
 ### Origin and specificity
+
 For each property, the declaration that "wins" is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with the highest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins.
+
 ### Origin and specificity
-In the example below, there are two links. The first has no author styles applied, so all user-agent styles are applied. The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of [`0-0-0`](/en-US/docs/Web/CSS/Specificity#selector_weight_categories). The reason why author styles "win" is because when there are conflicting styles from different origins (layers aren't in play yet), the rules from the origin with precedence are applied, irrespective of the specificity in the origin that doesn’t have precedence.  
+
+In the example below, there are two links. The first has no author styles applied, so all user-agent styles are applied. The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of [`0-0-0`](/en-US/docs/Web/CSS/Specificity#selector_weight_categories). The reason why author styles "win" is because when there are conflicting styles from different origins (layers aren't in play yet), the rules from the origin with precedence are applied, irrespective of the specificity in the origin that doesn't have precedence.
 
 {{EmbedGHLiveSample("css-examples/learn/layers/basic-cascade.html", '100%', 500)}}
 
@@ -99,7 +103,7 @@ Large code bases can have styles coming from multiple teams, component libraries
 
 Having styles from many sources cascade together, especially from teams that aren't working together, can create problems. Different teams may have different methodologies; one may have a best practice of reducing specificity, while another may have a standard of including an `id` in each selector.
 
-Specificity conflicts can escalate quickly. A web developer may create a "quick fix” by adding an `!important` flag. While this may feel like a easy solution, it often just moves the specificity war from normal to important declarations.
+Specificity conflicts can escalate quickly. A web developer may create a "quick fix" by adding an `!important` flag. While this may feel like a easy solution, it often just moves the specificity war from normal to important declarations.
 
 In the same way that cascade origins provide a balance of power between user and author styles, cascade layers provide a structured way to organize and balance concerns within a single origin, as if each layer in an origin were a sub-origin. A layer can be created for each team, component, and third party, with style precedence based on layer order.
 
@@ -109,6 +113,7 @@ Layer precedence always beats selector specificity. Styles in layers with preced
 
 Cascade layers also allow the creation of nested layers. This serves two main purposes:
 - Within each layer, a team can create nested layers. For example, a component library can be added to a separate layer creating an additional origin and removing any need for competing specificity. Alternatively, the component team can include each component in a separate nested layer. The ability to nest layers is very useful for component library, framework, and third-party widget developers.
+
 - The ability to create nested layers removes the worry of having conflicting layer names. We'll cover this in the nested layer section.
 
 > "Authors can create layers to represent element defaults, third-party libraries, themes, components, overrides, and other styling concerns—and are able to re-order the cascade of layers in an explicit way, without altering selectors or specificity within each layer, or relying on order of appearance to resolve conflicts across layers." - From the specification.
@@ -129,25 +134,25 @@ Let’s cover the three ways of creating a layer in a little more detail before 
 
 ### @layer
 
-The order of layers is set by the order in which the layers appear in your CSS. Declaring layers without assigning any styles using `@layer` followed by the names of one or more layers is a one way to set [layer order](#ordering-layers).
+The order of layers is set by the order in which the layers appear in your CSS. Declaring layers using `@layer` followed by the names of one or more layers without assigning any styles is one way to define the [layer order](#ordering-layers).
 
-The [`@layer`](/en-US/docs/Web/CSS/@layer) CSS at-rule is used to declare a cascade layer and to define the order of precedence when there are multiple cascade layers. The following declares three layers, in the order listed:
+The [`@layer`](/en-US/docs/Web/CSS/@layer) CSS at-rule is used to declare a cascade layer and to define the order of precedence when there are multiple cascade layers. The following at-rule declares three layers, in the order listed:
 
 ```css
 @layer theme, layout, utilities;
 ```
 
-Often times you will want to have your first line of CSS be this `@layer` declaration (with layer names that make sense for your site, of course) to have full control over layer ordering.
+Often times, you will want to have your first line of CSS be this `@layer` declaration (with layer names that make sense for your site, of course) to have full control over layer ordering.
 
-If that is the first line of all of a site's CSS, the layer order will be ` theme, layout, utilities`. If layers have already been created, as long as these name aren't duplicative, the three are added to the end of the list of layers. If they are duplicative, for example, if the `layout` layer was already created thru `@layer` block at-rule assignment or `@import`and is the only existing layer, two new layers will be created and the order of layers will be `layout`, `theme` and `utitlities`, in that order.
+If that is the first line of all of a site's CSS, the layer order will be `theme, layout, utilities`. If layers have already been created, as long as layers with these names don't already exist, these three layers will be added to the end of the list of layers. If they are duplicative, for example, if the `layout` layer was already created through `@layer` block at-rule assignment or `@import` and is the only existing layer, two new layers will be created and the order of layers will be `layout`, `theme` and `utilities`, in that order.
 
 ### @layer block at-rule assignment
 
-Layers can be created thru @layer block at-rule assignment when it is the first time the layer name is set or if no name is mentioned.
+Layers can be created by using the @layer block at-rule assignment when a layer name is defined or no name is mentioned.
 
 Creating a layer without naming it creates an anonymous layer.
 
-Elaborating on our example from above, the following creates four layers, including an anonymous layer. We use `@layer` three times: creating a named layer, creating an anonymous layer, and declaring a list of layers which only creates two layers since once of the layer names was already created in preceding CSS:
+Elaborating on our example from above, the following creates four layers, including an anonymous layer. We use `@layer` three times, creating a named layer, an anonymous layer, and declaring a list of layers that creates only two layers since one of the layer names was already created in the preceding CSS.
 
 ```css
 /* file: layers1.css */
@@ -187,29 +192,31 @@ main {
 } 
 ```
 
-In the above code, we created five layers, `layout, <anonymous(01)>, theme, utilities, <anonymous(02)>` – in that order - with a sixth, implicit layer of unlayered styles containing the `body` style block.
+In the above CSS, we created five layers: `layout`, `<anonymous(01)>`, `theme`, `utilities`, and `<anonymous(02)>` – in that order - with a sixth, implicit layer of unlayered styles containing the `body` style block.
 
-We assigned some styles to a layer named `layout`. When a named layer doesn’t already exist, using the name in an `@layer` at-rule, whether assigning styles to the layer or not, creates it.
+We assigned some styles to the layer named `layout`. When a named layer doesn’t already exist, using the name in an `@layer` at-rule, whether assigning styles to the layer or not, creates the layer.
 
-We then created an anonymous layer by assigning styles to a layer without naming the layer.  Styles can only be added to an unnamed layer at the time of it's creation. Subsequent use of `@layer` with no layer name creates additional unnamed layers; it does not append to an existing one.
+We then created an anonymous layer by assigning styles to a layer without naming the layer. Styles can only be added to an unnamed layer at the time of it's creation.
 
-The `@layer` at rule creates a layer, named or not, or appends styles to a layer if the named layer has already been created. While we called the first anonymous layer `<anonymous(01)>` and the second `<anonymous(02)>`, this is just so we can explain it. These are unnamed layers. There is no way to reference them or add additional styles to them.
+> **Note:** Subsequent use of `@layer` with no layer name creates additional unnamed layers; it does not append styles to the same unnamed layer.
 
-The first declaration of the block, where we set the `color: #333` on  `body`, was declared outside of any layer. All styles declared outside of a layer are joined together in an implicit layer.  Normal unlayered declarations take precedence over the normal layered declarations even if the unlayered styles have a lower specificity and come first in the order of appearance.
+The `@layer` at-rule creates a layer, named or not, or appends styles to a layer if the named layer has already been created. While we called the first anonymous layer `<anonymous(01)>` and the second `<anonymous(02)>`, this is just so we can explain it. These are actually unnamed layers. There is no way to reference them or add additional styles to them.
 
-In the line `@layer theme, layout, utilities;`, in which we declared the series of layers, only the `theme` and `utilities` layers are created, as `layout` was created in our first line. Note that this line does not change the order of already created layers. There is currently no way to re-order layers once declared.
+The first declaration of the block, where we set the `color: #333` property on  `body`, was declared outside of any layer. All styles declared outside of a layer are joined together in an implicit layer. Normal unlayered declarations take precedence over the normal layered declarations even if the unlayered styles have a lower specificity and come first in the order of appearance.
 
-We then declare our fifth layer, which is our second anonymous layer.
+In the line `@layer theme, layout, utilities;`, in which we declared a series of layers, only the `theme` and `utilities` layers are created;`layout` was already created in the first line. Note that this declaration does not change the order of already created layers. There is currently no way to re-order layers once declared.
 
-We now have a total of five layers, `layout, <anonymous(01)>, theme, utilities, <anonymous(02)>` – in that order - with a sixth, implicit layer of unlayered styles containing `body` and `main` color declarations.
+We then declared the fifth layer, which is the second anonymous layer.
 
-If we add some CSS, reusing an existing layer name, the CSS gets appended to the already existing layer. It does not create a new layer:
+So that's how there's a total of five layers, : `layout`, `<anonymous(01)>`, `theme`, `utilities`, and `<anonymous(02)>` – in that order - with a sixth, implicit layer of unlayered styles containing `body` and `main` color declarations.
+
+If we add some CSS by reusing an existing layer name, the CSS gets appended to the already existing layer. It does not create a new layer.
 
 In the following interactive example, we assign styles to two layers, creating them and naming them in the process. Because they already exist, being created when first used, declaring them on the last line does nothing.
 
 {{EmbedGHLiveSample("css-examples/learn/layers/layer-order.html", '100%', 500)}}
 
-Try moving the last line, the `@layer site, page;` to make it the first line. What happens?
+Try moving the last line, `@layer site, page;`, to make it the first line. What happens?
 
 #### @layer creation and media queries
 
@@ -221,7 +228,7 @@ If you are on a wide screen, the `site` layer was declared in the first line, me
 
 ### @import
 
-The [`@import`](/en-US/docs/Web/CSS/@import) rule allows users to import style rules from other style sheets either directly into a CSS file or into a {{htmlelement('style')}}. Generally, when importing stylesheets, the `@import` must be before any CSS styles within the stylesheet or `<style>` block. An exception to the "@import must come first" rule are that `@import` may be preceded by an `@layer` rule that creates one or more layers without assigning any styles.
+The [`@import`](/en-US/docs/Web/CSS/@import) rule allows users to import style rules from other style sheets either directly into a CSS file or into a {{htmlelement('style')}} element. Generally, when importing stylesheets, the `@import` statement must be defined before any CSS styles within the stylesheet or `<style>` block. An exception to the "@import must come first" rule is that `@import` may be preceded by an `@layer` at-rule that creates one or more layers without assigning any styles.
 
 You can import a stylesheet into a named layer, a nested named layer, or an anonymous layer. The following layer imports the style sheets into a `components` layer, a nested `dialog` layer within the `components` layer, and an un-named layer, respectively:
 
@@ -231,7 +238,7 @@ You can import a stylesheet into a named layer, a nested named layer, or an anon
 @import url("marketing.css") layer();
 ```
 
-You can import more than one CSS file into a single layer. The following imports two separate files into a single `social` layer:
+You can import more than one CSS file into a single layer. The following declaration imports two separate files into a single `social` layer:
 
 ```css
 @import url(comments.css) layer(social);
@@ -245,15 +252,15 @@ You can import styles and create layers based on specific conditions using [medi
 @import url("ruby-wide.css") layer(international) supports(display: ruby) and (width >= 32rem);
 ```
 
-There is no equivalent, yet, for the {{HTMLElement('link')}} method of linking stylesheets. Creating a `layer` attribute is being considered, but, as of this writing (September 2022), there is no specification or support. For now, use `@import` to import a stylesheet into a layer when you can’t use `@layer` within the stylesheet.
+There is no equivalent of the {{HTMLElement('link')}} method of linking stylesheets. Use `@import` to import a stylesheet into a layer when you can’t use `@layer` within the stylesheet.
 
 ## Nested layers
 
-Do you have to worry if a 3rd party stylesheet you're importing into a new layer has layers? No. The layers become nested layers. Nested layers are layers within a named or anonymous layer. 
+Nested layers are layers within a named or anonymous layer. If you're importing a third party stylesheet that has layers into a new layer, you don't need to worry. The imported layers become nested layers. 
 
-Nested layers are created the same ways as described for regular layers above. They can be created using `@layer` followed by the names of one or more layers; the nested layer being a period-separated list of layer names.
+Nested layers are created using the same methods as described for regular layers. They can be created using `@layer` followed by the names of one or more layers, the nested layer being a period-separated list of layer names.
 
-If you nest a `@layer` block at-rule inside `@layer` block at-rule, with or without a name, the nested block becomes a nested layer. Similarly, when a stylsheet is imported with an `@import` declaration containing the `layer` keyword or `layer()` function, the styles get assigned to that named or anonymous layer. If that import contains layers, those layers become nested layers within that anonymous or named layer.
+If you nest a `@layer` block at-rule inside another `@layer` block at-rule, with or without a name, the nested block becomes a nested layer. Similarly, when a stylsheet is imported with an `@import` declaration containing the `layer` keyword or `layer()` function, the styles get assigned to that named or anonymous layer. If that import contains layers, those layers become nested layers within that anonymous or named layer.
 
 Digging a bit deeper into the example we included above:
 
@@ -262,9 +269,9 @@ Digging a bit deeper into the example we included above:
 @import url("dialog.css") layer(components.dialog);
 ```
 
-In the first line we imported `components-lib.css` into the `components` layer. If that file included any layers, named or not, those layers are nested layers withing the components layer. Named layers can be added to via `components.layerName`. Unnamed layers can not be accessed.
+In the first line, we imported `components-lib.css` into the `components` layer. If that file contains any layers, named or not, those layers become nested layers within the `components` layer. Named layers can be added via `components.layerName`. As mentioned before, unnamed layers cannot be accessed.
 
-The second line imports `dialog.css` into the `dialog` layer, which is a sub-layer of `components`. `dialog` gets created as the last layer within the `components` layer, unless `components-lib.css` already had a `dialog` layer. If `components-lib.css` had layers, all the layers become nested layers. If one of the layers was `dialog`, that layer is now accessible via `components.dialog`, and the styles from dialog.css are appended to it.
+The second line imports `dialog.css` into the `dialog` layer, which is a sub-layer of `components`. `dialog` gets created as the last layer within the `components` layer, unless `components-lib.css` already had a `dialog` layer. If `components-lib.css` had layers, all the layers become nested layers. If one of the layers was `dialog`, that layer is now accessible via `components.dialog`, and styles from `dialog.css` are appended to it.
 
 Let's look at another example. If we imported `layers1.css` into a named layer with the following:
 
@@ -272,7 +279,7 @@ Let's look at another example. If we imported `layers1.css` into a named layer w
 @import url(layers1.css) layer(example);
 ```
 
-This would create a single layer named `example` containing some declarations and five nested layers --  `example.layout`, `example.<anonymous(01)>`, `example.theme`, `example.utilities`, and `example.<anonymous(02)>`.
+This would create a single layer named `example` containing some declarations and five nested layers -  `example.layout`, `example.<anonymous(01)>`, `example.theme`, `example.utilities`, and `example.<anonymous(02)>`.
 
 If we want to add to a named nested layer, we use dot-notation:
 
@@ -286,7 +293,7 @@ If we want to add to a named nested layer, we use dot-notation:
 
 ## Ordering layers and precedence order
 
-Layer order matters. A lot. In the same way the cascade sorts by origin and importance, the cascade sorts each CSS declaration by origin layer and importance as well.
+Layer order matters. A lot. In the same way as the cascade sorts by origin and importance, the cascade sorts each CSS declaration by origin layer and importance.
 
 ```css
 @import url(A.css) layer(firstLayer);
@@ -294,7 +301,7 @@ Layer order matters. A lot. In the same way the cascade sorts by origin and impo
 @import url(C.css);
 ```
 
-The layer order precedence is the order in which layers are created. If the author styles have two declared layers, (assuming there are no layers in C.css), the order of precedence is as follows:
+The layer order precedence is the order in which layers are created. If the author styles have two declared layers, and assuming there are no layers in `C.css`, the order of precedence would be as follows:
 
 1. firstLayer normal styles (A.css)
 2. secondLayer normal styles (B.css)
@@ -311,15 +318,15 @@ The order of layers is the order in which the layers each first appeared for nor
 
 {{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
 
-In this example, there are two named layers, unlayered styles, an inline styles.
+In this example, there are two named layers, unlayered styles and inline styles.
 
 The inline-styles, added with the `style` attribute, sets a normal `color` and an important `background-color`. Normal inline styles override all layered and unlayered normal styles. Important inline styles override all layered and unlayered normal and important author styles. There is no way for author styles to override important inline styles.
 
 The normal `text-decoration` and important `box-shadow` are not part of the `style` inline styles and can therefore be overridden. For normal non-inline styles, unlayered styles have precedence. For important styles, layer order matters! While normal unlayered styles override all normal styles set in a layer, with important styles, the precedence order is reversed; unlayered important styles have lower precedence than layered styles.
 
-The two styles declared only within layers are `font-style`, with normal importance, and `font-weight` with an `!important` flag. For normal styles, the B layer, declared last, overrides styles in the earlier declared layer A.  For normal styles, later layers have precedence over earlier layers. The order of precedence is reversed for important styles. For the important `font-weight` declarations, layer A, being declared first, has precedence over the last declared layer B.
+The two styles declared only within layers are `font-style`, with normal importance, and `font-weight` with an `!important` flag. For normal styles, the B layer, declared last, overrides styles in the earlier declared layer A. For normal styles, later layers have precedence over earlier layers. The order of precedence is reversed for important styles. For the important `font-weight` declarations, layer A, being declared first, has precedence over the last declared layer B.
 
-You can reverse the layer order by changing the first line from `@layer A, B;`, to `@layer B, A;`. Try that. Which styles get changed by this, and which stay the same? Why?
+You can reverse the layer order by changing the first line from `@layer A, B;` to `@layer B, A;`. Try that. Which styles get changed by this, and which stay the same? Why?
 
 The order of layers is set by the order in which the layers appear in your CSS. In our first line, we declared layers without assigning any styles using `@layer` followed by the names of our layers, ending with a semi-colon. Had we omitted this line, the results would have been the same. Why? We assigned styles rules in named @layer blocks in the order A then B. The two layers were created in that first line. Had they not been, these rule blocks would have created them, in that order.
 
