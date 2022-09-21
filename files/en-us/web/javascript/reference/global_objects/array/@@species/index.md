@@ -74,7 +74,7 @@ Array[Symbol.species]; // [Function: Array]
 
 ### Species in derived objects
 
-In a derived collection object such as the custom array `MyArray`, the `MyArray` species is the `MyArray` constructor. However, you might want to overwrite this, in order to return parent `Array` objects in your derived class methods:
+In an instance of a custom `Array` subclass, such as `MyArray`, the `MyArray` species is the `MyArray` constructor. However, you might want to overwrite this, in order to return parent `Array` objects in your derived class methods:
 
 ```js
 class MyArray extends Array {

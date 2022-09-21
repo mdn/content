@@ -82,7 +82,7 @@ Float32Array[Symbol.species]; // function Float32Array()
 
 ### Species in derived objects
 
-In a derived collection object (e.g. your custom typed array `MyTypedArray`), the `MyTypedArray` species is the `MyTypedArray` constructor. However, you might want to overwrite this, in order to return a parent [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) object in your derived class methods:
+In an instance of a custom `TypedArray` subclass, such as `MyTypedArray`, the `MyTypedArray` species is the `MyTypedArray` constructor. However, you might want to overwrite this, in order to return a parent [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) object in your derived class methods:
 
 ```js
 class MyTypedArray extends Uint8Array {

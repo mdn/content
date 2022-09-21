@@ -60,7 +60,7 @@ Promise[Symbol.species]; // [Function: Promise]
 
 ### Species in derived objects
 
-In an instance of a derived class from `Promise` (e.g. your custom `MyPromise`), the `MyPromise` species is the `MyPromise` constructor. However, you might want to override this, in order to return parent `Promise` objects in your derived class methods.
+In an instance of a custom `Promise` subclass, such as `MyPromise`, the `MyPromise` species is the `MyPromise` constructor. However, you might want to override this, in order to return parent `Promise` objects in your derived class methods.
 
 ```js
 class MyPromise extends Promise {

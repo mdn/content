@@ -58,7 +58,7 @@ SharedArrayBuffer[Symbol.species]; // function SharedArrayBuffer()
 
 ### Species in derived objects
 
-In a derived collection object (e.g. your custom array buffer `MySharedArrayBuffer`), the `MySharedArrayBuffer` species is the `MySharedArrayBuffer` constructor. However, you might want to overwrite this, in order to return parent `SharedArrayBuffer` objects in your derived class methods:
+In an instance of a custom `SharedArrayBuffer` subclass, such as `MySharedArrayBuffer`, the `MySharedArrayBuffer` species is the `MySharedArrayBuffer` constructor. However, you might want to overwrite this, in order to return parent `SharedArrayBuffer` objects in your derived class methods:
 
 ```js
 class MySharedArrayBuffer extends SharedArrayBuffer {

@@ -66,7 +66,7 @@ RegExp[Symbol.species]; // function RegExp()
 
 ### Species in derived objects
 
-In a derived regex object (e.g. your custom regex `MyRegExp`), the `MyRegExp` species is the `MyRegExp` constructor. However, you might want to overwrite this, in order to return parent `RegExp` objects in your derived class methods:
+In an instance of a custom `RegExp` subclass, such as `MyRegExp`, the `MyRegExp` species is the `MyRegExp` constructor. However, you might want to overwrite this, in order to return parent `RegExp` objects in your derived class methods:
 
 ```js
 class MyRegExp extends RegExp {

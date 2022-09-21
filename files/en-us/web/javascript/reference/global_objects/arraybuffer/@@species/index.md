@@ -59,7 +59,7 @@ ArrayBuffer[Symbol.species]; // function ArrayBuffer()
 
 ### Species in derived objects
 
-In a derived collection object (e.g. your custom array buffer `MyArrayBuffer`), the `MyArrayBuffer` species is the `MyArrayBuffer` constructor. However, you might want to overwrite this, in order to return parent `ArrayBuffer` objects in your derived class methods:
+In an instance of a custom `ArrayBuffer` subclass, such as `MyArrayBuffer`, the `MyArrayBuffer` species is the `MyArrayBuffer` constructor. However, you might want to overwrite this, in order to return parent `ArrayBuffer` objects in your derived class methods:
 
 ```js
 class MyArrayBuffer extends ArrayBuffer {
