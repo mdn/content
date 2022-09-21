@@ -2,12 +2,12 @@
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 tags:
-- Class
-- JavaScript
-- Reference
-- RegExp
-- Regular Expressions
-- Polyfill
+  - Class
+  - JavaScript
+  - Reference
+  - RegExp
+  - Regular Expressions
+  - Polyfill
 browser-compat: javascript.builtins.RegExp
 ---
 
