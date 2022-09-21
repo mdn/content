@@ -42,8 +42,8 @@ In addition the draft specification proposes some new properties:
   - : Defines an element as a **query container**. Descendants can query aspects of its sizing, layout, style and state.
 - `container-name`
   - : Specifies a list of **query container names** for `@container` rules to use to filter which query containers are targeted.
-- `container`: `<'container-name'> [ / <'container-type'> ]?`
-  - : A shorthand property to set both `container-name` and `container-type` (use slash as separate sign).
+- `container`:
+  - : A shorthand property to set both `container-name` and `container-type`. The syntax is `<'container-name'> [ / <'container-type'> ]?`,  with a slash between values when both are present.
 
 ### The container-type property
 
