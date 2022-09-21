@@ -23,14 +23,14 @@ One of the most interesting features of the Web Audio API is the ability to extr
 To extract data from your audio source, you need an {{ domxref("AnalyserNode") }}, which is created using the {{ domxref("BaseAudioContext.createAnalyser") }} method, for example:
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 const analyser = audioCtx.createAnalyser();
 ```
 
 This node is then connected to your audio source at some point between your source and your destination, for example:
 
 ```js
-source = audioCtx.createMediaStreamSource(stream);
+const source = audioCtx.createMediaStreamSource(stream);
 source.connect(analyser);
 analyser.connect(distortion);
 distortion.connect(audioCtx.destination);
@@ -101,7 +101,7 @@ Next, we grab the time domain data and copy it into our array
 Next, fill the canvas with a solid color to start
 
 ```js
-  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+  canvasCtx.fillStyle = "rgb(200, 200, 200)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
@@ -109,7 +109,7 @@ Set a line width and stroke color for the wave we will draw, then begin drawing 
 
 ```js
   canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
   canvasCtx.beginPath();
 ```
 
@@ -177,7 +177,7 @@ function draw() {
 
   analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+  canvasCtx.fillStyle = "rgb(0, 0, 0)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
