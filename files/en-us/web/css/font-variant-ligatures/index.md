@@ -182,10 +182,6 @@ p {
 .no-contextual {
   font-variant-ligatures: no-contextual;
 }
-
-.contextual {
-  font-variant-ligatures: contextual;
-}
 ```
 
 #### Result
