@@ -57,7 +57,7 @@ Object.setPrototypeOf(Object.prototype, {}); // TypeError: Immutable prototype o
 
 ## Examples
 
-### Pseudoclassical inheritance using Object.setPrototypeOf
+### Pseudoclassical inheritance using Object.setPrototypeOf()
 
 Inheritance in JS using classes.
 
@@ -88,23 +88,25 @@ Object.setPrototypeOf(SuperHero.prototype, Human.prototype);
 
 Human.prototype.speak = function () {
   return `${this.name} says hello.`;
-}
+};
 
 SuperHero.prototype.fly = function () {
   return `${this.name} is flying.`;
-}
+};
 
-const superMan = new SuperHero('Clark Kent', 1);
+const superMan = new SuperHero("Clark Kent", 1);
 
 console.log(superMan.fly());
-console.log(superMan.speak())
+console.log(superMan.speak());
 ```
 
 The similarity between classical inheritance (with classes) and pseudoclassical inheritance (with constructors' `prototype` property) as done above is mentioned in [Inheritance chains](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains).
 
-In the example below, which also uses classes, `SuperHero` is made to inherit from `Human` without using `extends` by using `setPrototypeOf` instead.
+Since function constructors' [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property is writable, you can reassign it to a new object created with [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#classical_inheritance_with_object.create) to achieve the same inheritance chain as well. There are caveats to watch out when using `create()`, such as remembering to re-add the [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) property.
 
-> **Warning:** It is not advisable to use `setPrototypeOf` instead of `extends` due to performance and readability reasons.
+In the example below, which also uses classes, `SuperHero` is made to inherit from `Human` without using `extends` by using `setPrototypeOf()` instead.
+
+> **Warning:** It is not advisable to use `setPrototypeOf()` instead of `extends` due to performance and readability reasons.
 
 ```js
 class Human {}
@@ -119,7 +121,7 @@ Object.setPrototypeOf(SuperHero, Human);
 const superMan = new SuperHero();
 ```
 
-Subclassing without extends is mentioned in [ES-6 subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/).
+Subclassing without `extends` is mentioned in [ES-6 subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/).
 
 ## Specifications
 
