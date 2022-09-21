@@ -201,7 +201,7 @@ CreatedConstructor.prototype.create = function () {
 new CreatedConstructor().create().create(); // still works without re-creating constructor property
 ```
 
-`Object.setPrototypeOf()` comes with its potential performance downsides because all previously created objects involved in the prototype chain have to be re-compiled, but if the above initialization code happens before `Parent` or `CreatedConstructor` are constructed, the effect should be minimal.
+`Object.setPrototypeOf()` comes with its potential performance downsides because all previously created objects involved in the prototype chain have to be re-compiled; but if the above initialization code happens before `Parent` or `CreatedConstructor` are constructed, the effect should be minimal.
 
 Let's consider one more involved case.
 
