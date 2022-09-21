@@ -252,7 +252,7 @@ You can import styles and create layers based on specific conditions using [medi
 @import url("ruby-wide.css") layer(international) supports(display: ruby) and (width >= 32rem);
 ```
 
-There is no equivalent of the {{HTMLElement('link')}} method of linking stylesheets. Use `@import` to import a stylesheet into a layer when you can’t use `@layer` within the stylesheet.
+There is no equivalent of the {{HTMLElement('link')}} method of linking stylesheets. Use `@import` to import a stylesheet into a layer when you can't use `@layer` within the stylesheet.
 
 ## Nested layers
 
