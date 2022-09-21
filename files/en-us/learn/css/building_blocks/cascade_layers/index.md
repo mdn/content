@@ -201,7 +201,7 @@ We then declare our fifth layer, which is our second anonymous layer.
 
 We now have a total of five layers, `layout, <anonymous(01)>, theme, utilities, <anonymous(02)>` – in that order - with a sixth, implicit layer of unlayered styles containing `body` and `main` color declarations. 
 
-If we add some CSS, reusing an existing layer name, the CSS gets appended to the already existing layer. It does not create a new layer:
+If we add some CSS by reusing an existing layer name, the CSS gets appended to the already existing layer. It does not create a new layer.
 
 In the following interactive example, we assign styles to two layers, creating them and naming them in the process. Because they already exist, being created when first used, declaring them on the last line does nothing.
 
