@@ -373,7 +373,7 @@ Add this inside your `App()` definition, before the return statement:
 const headingText = `${taskList.length} tasks remaining`;
 ```
 
-Hrm. This is almost right, except that if our list ever contains a single task, the heading will still use the word "tasks". We can make this a variable, too. Update the code you just added as follows:
+This is almost right, except that if our list ever contains a single task, the heading will still use the word "tasks". We can make this a variable, too. Update the code you just added as follows:
 
 ```jsx
 const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
