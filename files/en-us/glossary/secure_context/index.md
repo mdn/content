@@ -2,7 +2,6 @@
 title: Secure Context
 slug: Glossary/Secure_Context
 tags:
-  - Glossary
   - Security
   - Secure contexts
 ---

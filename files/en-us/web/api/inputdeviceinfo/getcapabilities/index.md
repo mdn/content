@@ -17,7 +17,7 @@ The **`getCapabilities()`** method of the {{domxref("InputDeviceInfo")}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 getCapabilities()
 ```
 

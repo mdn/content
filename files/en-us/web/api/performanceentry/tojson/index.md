@@ -19,7 +19,7 @@ a JSON representation of the {{domxref("PerformanceEntry","performance entry")}}
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

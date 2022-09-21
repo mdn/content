@@ -11,8 +11,8 @@ tags:
   - atan
   - Experimental
 browser-compat: css.types.atan
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`atan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse tangent of a number between `-∞` and `∞`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.

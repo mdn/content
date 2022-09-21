@@ -22,7 +22,7 @@ _marks_ or _measures_ (for example by calling the
 
 ## Syntax
 
-```js
+```js-nolint
 getEntriesByName(name)
 getEntriesByName(name, type)
 ```

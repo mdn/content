@@ -21,7 +21,7 @@ The **`getState()`** method of the {{domxref("PositionSensorVRDevice")}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 getState()
 ```
 

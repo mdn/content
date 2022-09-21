@@ -18,7 +18,7 @@ The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/
 
 ## Syntax
 
-```js
+```js-nolint
 switch (expression) {
   case value1:
     //Statements executed when the

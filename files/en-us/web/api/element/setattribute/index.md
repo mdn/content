@@ -26,7 +26,7 @@ To get the current value of an attribute, use {{domxref("Element.getAttribute",
 
 ## Syntax
 
-```js
+```js-nolint
 setAttribute(name, value)
 ```
 

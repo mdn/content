@@ -26,7 +26,7 @@ object, when they are once again initialized to 0.
 
 ## Syntax
 
-```js
+```js-nolint
 uniform1f(location, v0)
 uniform1fv(location, value)
 uniform1i(location, v0)

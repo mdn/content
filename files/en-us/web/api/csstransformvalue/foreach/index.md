@@ -20,7 +20,7 @@ The **`CSSTransformValue.forEach()`** method executes a provided function once f
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((currentValue) => { /* … */ } )
 forEach((currentValue, index) => { /* … */ } )

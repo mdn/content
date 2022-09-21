@@ -169,7 +169,7 @@ There are already some styles present in the file. Let's remove those and replac
 
 Update your `App.vue` file's `<style>` element so it looks like so:
 
-```css
+```html
 <style>
 /* Global styles */
 .btn {
@@ -316,11 +316,8 @@ Update your `ToDoForm` template so that it looks like this:
       name="new-todo"
       autocomplete="off"
       v-model.lazy.trim="label"
-      class="input__lg"
-    />
-    <button type="submit" class="btn btn__primary btn__lg">
-      Add
-    </button>
+      class="input__lg" />
+    <button type="submit" class="btn btn__primary btn__lg">Add</button>
   </form>
 </template>
 ```
@@ -330,7 +327,7 @@ Let's also add the `stack-large` class to the `<ul>` tag in our `App.vue` file. 
 Update it as follows:
 
 ```html
-<ul aria-labelledby="list-summary" class="stack-large">
+<ul aria-labelledby="list-summary" class="stack-large">…</ul>
 ```
 
 ## Adding scoped styles
@@ -340,8 +337,7 @@ The last component we want to style is our `ToDoItem` component. To keep the sty
 To use the `scoped` modifier, create a `<style>` element inside `ToDoItem.vue`, at the bottom of the file, and give it a `scoped` attribute:
 
 ```html
-<style scoped>
-</style>
+<style scoped>/* … */</style>
 ```
 
 Next, copy the following CSS into the newly created `<style>` element:

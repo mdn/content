@@ -25,7 +25,7 @@ digest. It returns a {{jsxref("Promise")}} which will be fulfilled with the dige
 
 ## Syntax
 
-```js
+```js-nolint
 digest(algorithm, data)
 ```
 

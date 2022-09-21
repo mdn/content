@@ -24,7 +24,7 @@ algorithm is invoked with `body` as the context instead.
 
 ## Syntax
 
-```js
+```js-nolint
 createContextualFragment(tagString)
 ```
 

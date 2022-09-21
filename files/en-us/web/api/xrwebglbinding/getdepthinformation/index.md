@@ -19,7 +19,7 @@ The **`getDepthInformation()`** method of the {{domxref("XRWebGLBinding")}} inte
 
 ## Syntax
 
-```js
+```js-nolint
 getDepthInformation(view)
 ```
 

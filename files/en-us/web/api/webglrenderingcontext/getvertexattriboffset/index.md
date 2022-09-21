@@ -19,7 +19,7 @@ specified vertex attribute.
 
 ## Syntax
 
-```js
+```js-nolint
 getVertexAttribOffset(index, pname)
 ```
 

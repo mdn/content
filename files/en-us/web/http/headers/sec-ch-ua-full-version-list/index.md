@@ -58,7 +58,7 @@ Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", ...
 
 - `<brand>`
   - : A brand associated with the user agent, like "Chromium", "Google Chrome".
-     This may be an intentionally incorrect brand like `" Not A;Brand"` or `"(Not(A:Brand"` (the actual value is expected change over time and be unpredictable).
+    This may be an intentionally incorrect brand like `" Not A;Brand"` or `"(Not(A:Brand"` (the actual value is expected change over time and be unpredictable).
 - `<full version>`
   - : A full version number, such as 98.0.4750.0.
 

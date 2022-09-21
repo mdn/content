@@ -22,7 +22,7 @@ the directory.
 
 ## Syntax
 
-```js
+```js-nolint
 createReader()
 ```
 

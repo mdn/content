@@ -18,7 +18,7 @@ The **`reset()`** method of the {{domxref("ImageDecoder")}} interface aborts all
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 

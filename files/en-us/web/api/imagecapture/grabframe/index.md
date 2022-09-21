@@ -25,7 +25,7 @@ a {{domxref("ImageBitmap")}} containing the snapshot.
 
 ## Syntax
 
-```js
+```js-nolint
 grabFrame()
 ```
 

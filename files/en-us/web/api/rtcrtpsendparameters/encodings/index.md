@@ -31,10 +31,10 @@ encoder being used for the {{domxref("RTCRtpSender")}}'s {{domxref("RTCRtpSender
 
 ## Syntax
 
-```js
-sendParameters.encodings = encodingParameterList;
+```js-nolint
+sendParameters.encodings = encodingParameterList
 
-encodingParameterList = sendParameters.encodings;
+encodingParameterList = sendParameters.encodings
 ```
 
 ### Value

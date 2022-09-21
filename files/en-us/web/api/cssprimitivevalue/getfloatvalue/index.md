@@ -28,7 +28,7 @@ specified unit, a {{domxref("DOMException")}} is raised.
 
 ## Syntax
 
-```js
+```js-nolint
 getFloatValue(unit)
 ```
 

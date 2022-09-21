@@ -3,7 +3,6 @@ title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
 tags:
   - Browser
-  - Glossary
   - Internet Explorer
   - Microsoft
   - Microsoft Internet Explorer

@@ -19,7 +19,7 @@ method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) attaches a
 
 ## Syntax
 
-```js
+```js-nolint
 framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
 ```
 

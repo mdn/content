@@ -25,7 +25,7 @@ The latest version of the spec settled to force this method to always return
 
 ## Syntax
 
-```js
+```js-nolint
 hasFeature(feature, version)
 ```
 

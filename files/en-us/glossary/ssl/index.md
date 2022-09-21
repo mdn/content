@@ -2,7 +2,6 @@
 title: Secure Sockets Layer (SSL)
 slug: Glossary/SSL
 tags:
-  - Glossary
   - SSL
   - Security
   - TLS

@@ -16,7 +16,7 @@ The **`for...in` statement** iterates over all [enumerable string properties](/e
 
 ## Syntax
 
-```js
+```js-nolint
 for (variable in object)
   statement
 ```

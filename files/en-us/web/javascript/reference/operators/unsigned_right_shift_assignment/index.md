@@ -19,7 +19,7 @@ moves the specified amount of bits to the right and assigns the result to the va
 
 ## Syntax
 
-```js
+```js-nolint
 x >>>= y // x = x >>> y
 ```
 
@@ -45,5 +45,5 @@ b >>>= 2;   // 1073741822 (00111111111111111111111111111110)
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
 - [Unsigned right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)

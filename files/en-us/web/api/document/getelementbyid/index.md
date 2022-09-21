@@ -23,7 +23,7 @@ If you need to get access to an element which doesn't have an ID, you can use {{
 
 ## Syntax
 
-```js
+```js-nolint
 getElementById(id)
 ```
 
@@ -78,7 +78,7 @@ Unlike some other element-lookup methods such as {{domxref("Document.querySelect
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Document</title>
   </head>
   <body>

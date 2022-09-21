@@ -2,7 +2,6 @@
 title: MVC
 slug: Glossary/MVC
 tags:
-  - Glossary
   - Infrastructure
   - Intro
   - MVC

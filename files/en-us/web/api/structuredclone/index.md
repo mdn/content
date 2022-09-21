@@ -22,7 +22,7 @@ Transferred objects are detached from the original object and attached to the ne
 
 ## Syntax
 
-```js
+```js-nolint
 structuredClone(value)
 structuredClone(value, transferables)
 ```

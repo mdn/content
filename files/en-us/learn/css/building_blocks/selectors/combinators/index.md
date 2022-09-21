@@ -98,7 +98,8 @@ In the example below we are selecting all `<p>` elements that come after the `<h
 You can combine any of the selectors that we discovered in previous lessons with combinators in order to pick out part of your document. For example, to select list items with a class of "a" which are direct children of a `<ul>`, try the following:
 
 ```css
-ul > li[class="a"] {  }
+ul > li[class="a"] {
+}
 ```
 
 Take care, however, when creating big lists of selectors that select very specific parts of your document. It will be hard to reuse the CSS rules since you have made the selector very specific to the location of that element in the markup.

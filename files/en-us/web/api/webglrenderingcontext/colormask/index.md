@@ -18,7 +18,7 @@ enable or to disable when drawing or rendering to a {{domxref("WebGLFramebuffer"
 
 ## Syntax
 
-```js
+```js-nolint
 colorMask(red, green, blue, alpha)
 ```
 

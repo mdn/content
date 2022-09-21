@@ -24,7 +24,7 @@ returns the number of records within a key range.
 
 ## Syntax
 
-```js
+```js-nolint
 count()
 count(key)
 ```

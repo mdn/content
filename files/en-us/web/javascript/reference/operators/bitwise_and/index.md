@@ -19,7 +19,7 @@ position for which the corresponding bits of both operands are `1`s.
 
 ## Syntax
 
-```js
+```js-nolint
 a & b
 ```
 

@@ -17,8 +17,8 @@ whether the given {{domxref("Node")}} has [child nodes](/en-US/docs/Web/API/Node
 
 ## Syntax
 
-```js
-hasChildNodes();
+```js-nolint
+hasChildNodes()
 ```
 
 ### Parameters

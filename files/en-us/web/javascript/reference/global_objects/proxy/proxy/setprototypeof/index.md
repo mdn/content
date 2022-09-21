@@ -19,7 +19,7 @@ The **`handler.setPrototypeOf()`** method is a trap for
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   setPrototypeOf(target, prototype) {
   }

@@ -26,7 +26,7 @@ a function to be called when that property is looked up.
 
 ## Syntax
 
-```js
+```js-nolint
 __defineGetter__(prop, func)
 ```
 

@@ -20,7 +20,7 @@ the `target` object's own property keys.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.ownKeys(target)
 ```
 

@@ -29,7 +29,6 @@ Find the exported `author_create_get()` controller method and replace it with th
 // Display Author create form on GET.
 exports.author_create_get = (req, res, next) => {
   res.render("author_form", { title: "Create Author" });
-
 };
 ```
 

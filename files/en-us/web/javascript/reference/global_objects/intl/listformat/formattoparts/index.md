@@ -23,7 +23,7 @@ can be used to format a list of values in a locale-aware fashion.
 
 ## Syntax
 
-```js
+```js-nolint
 formatToParts(list)
 ```
 

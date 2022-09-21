@@ -21,7 +21,7 @@ String (such as a comma ",").
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 toLocaleString(locales)
 toLocaleString(locales, options)

@@ -18,7 +18,7 @@ The **`getPorts()`** method of the {{domxref("Serial")}} interface returns a {{j
 
 ## Syntax
 
-```js
+```js-nolint
 getPorts()
 ```
 

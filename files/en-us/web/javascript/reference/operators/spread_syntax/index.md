@@ -20,7 +20,7 @@ Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opp
 
 ## Syntax
 
-```js
+```js-nolint
 myFunction(a, ...iterableObj, b)
 [1, ...iterableObj, '4', 'five', 6]
 { ...obj, key: 'value' }
@@ -131,7 +131,7 @@ arr2.push(4);
 > b.shift().shift();
 > //  1
 >
-> //  Oh no!  Now array 'a' is affected as well:
+> //  Oh no! Now array 'a' is affected as well:
 > a
 > //  [[], [2], [3]]
 > ```

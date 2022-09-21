@@ -255,7 +255,7 @@ another such function.
 
 ```js
 function fetchCurrentData() {
-  // The fetch() API returns a Promise.  This function
+  // The fetch() API returns a Promise. This function
   // exposes a similar API, except the fulfillment
   // value of this function's Promise has had more
   // work done on it.
@@ -268,7 +268,7 @@ function fetchCurrentData() {
 
     // fulfillment value given to user of
     // fetch_current_data().then()
-    return j; 
+    return j;
   });
 }
 ```

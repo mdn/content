@@ -23,7 +23,7 @@ String value.
 
 ## Syntax
 
-```js
+```js-nolint
 str[Symbol.iterator]
 ```
 

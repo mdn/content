@@ -18,30 +18,42 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
   <!-- All geometry properties are relative to the current user space -->
-  <pattern id="p1" x="12.5" y="12.5" width="25" height="25"
-           patternUnits="userSpaceOnUse">
+  <pattern
+    id="p1"
+    x="12.5"
+    y="12.5"
+    width="25"
+    height="25"
+    patternUnits="userSpaceOnUse">
     <circle cx="10" cy="10" r="10" />
   </pattern>
 
   <!-- All geometry properties are relative to the target bounding box -->
-  <pattern id="p2" x=".125" y=".125" width=".25" height=".25"
-           patternUnits="objectBoundingBox">
+  <pattern
+    id="p2"
+    x=".125"
+    y=".125"
+    width=".25"
+    height=".25"
+    patternUnits="objectBoundingBox">
     <circle cx="10" cy="10" r="10" />
   </pattern>
 
   <!-- Left square with user space tiles -->
-  <rect x="10"  y="10" width="80" height="80"
-        fill="url(#p1)" />
+  <rect x="10" y="10" width="80" height="80" fill="url(#p1)" />
 
   <!-- Right square with bounding box tiles -->
-  <rect x="110" y="10" width="80" height="80"
-        fill="url(#p2)" />
+  <rect x="110" y="10" width="80" height="80" fill="url(#p2)" />
 </svg>
 ```
 

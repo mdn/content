@@ -22,7 +22,7 @@ Example data types are `text/plain` and `text/uri-list`.
 
 ## Syntax
 
-```js
+```js-nolint
 getData(format)
 ```
 
@@ -56,7 +56,9 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 
 ```html
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <span id="drag" draggable="true" ondragstart="drag(event)">drag me to the other box</span>
+  <span id="drag" draggable="true" ondragstart="drag(event)"
+    >drag me to the other box</span
+  >
 </div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 ```

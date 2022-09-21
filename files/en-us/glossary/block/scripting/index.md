@@ -3,7 +3,6 @@ title: Block (scripting)
 slug: Glossary/Block/Scripting
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

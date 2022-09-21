@@ -20,7 +20,7 @@ an array and returns the new length of the array.
 
 ## Syntax
 
-```js
+```js-nolint
 push(element0)
 push(element0, element1)
 push(element0, element1, /* … ,*/ elementN)

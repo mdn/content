@@ -29,7 +29,7 @@ with the `<input>` element.
 
 ```html
 <label id="label1" for="test">Label 1</label>
-<input id="test"/>
+<input id="test" />
 <label id="label2" for="test">Label 2</label>
 ```
 

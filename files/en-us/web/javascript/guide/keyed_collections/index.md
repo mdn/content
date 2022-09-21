@@ -6,7 +6,7 @@ tags:
   - Guide
   - JavaScript
   - Map
-  - l10n:priority
+  - "l10n:priority"
   - set
 ---
 

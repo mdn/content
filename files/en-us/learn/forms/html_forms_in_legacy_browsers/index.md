@@ -35,7 +35,7 @@ All HTML input types are useable in all browsers, even ancient ones, because the
 ```html
 <label for="myColor">
   Pick a color
-  <input type="color" id="myColor" name="color">
+  <input type="color" id="myColor" name="color" />
 </label>
 ```
 
@@ -76,7 +76,7 @@ There are two ways to define buttons within HTML forms:
 The {{HTMLElement("input")}} element can make things a little difficult if you want to apply some CSS by using the element selector:
 
 ```html
-<input type="button" value="click me">
+<input type="button" value="click me" />
 ```
 
 If we remove the border on all inputs, can we restore the default appearance on input buttons only?
@@ -85,7 +85,7 @@ If we remove the border on all inputs, can we restore the default appearance on 
 input {
   /* This rule turns off the default rendering for the input types that have a border,
      including buttons defined with an input element */
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 input[type="button"] {
   /* This does NOT restore the default rendering */
@@ -138,10 +138,11 @@ Before styling a replaced form control widget, you can check to see if the brows
 
 ```css
 @supports (appearance: none) {
- input[type="search"] {
-   appearance: none;
-   /* restyle the search input */
- }
+  input[type="search"] {
+    appearance: none;
+    /* restyle the search input */
+  }
+}
 ```
 
 The {{cssxref('appearance')}} property can be used to display an element using platform-native styling, or, as is done with the value of `none`, remove default platform-native based styling.

@@ -18,7 +18,7 @@ The **`Array[@@species]`** accessor property returns the constructor used to con
 
 ## Syntax
 
-```js
+```js-nolint
 Array[Symbol.species]
 ```
 

@@ -23,7 +23,7 @@ Sends a single request to other listeners within the extension. Similar to {{Web
 
 ## Syntax
 
-```js
+```js-nolint
 chrome.extension.sendRequest(
   extensionId,             // optional string
   request,                 // any

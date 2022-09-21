@@ -19,8 +19,8 @@ If it has not yet been set, this is `null`.
 
 ## Syntax
 
-```js
-const sessionDescription = peerConnection.localDescription;
+```js-nolint
+const sessionDescription = peerConnection.localDescription
 ```
 
 On a more fundamental level, the returned value is the value of {{domxref("RTCPeerConnection.pendingLocalDescription")}} if that property isn't `null`;

@@ -19,7 +19,7 @@ The **`Notification()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new Notification(title)
 new Notification(title, options)
 ```

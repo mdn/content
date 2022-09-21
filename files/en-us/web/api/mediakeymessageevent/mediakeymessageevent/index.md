@@ -17,7 +17,7 @@ The **`MediaKeyMessageEvent`** constructor creates a new {{domxref("MediaKeyMess
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaKeyMessageEvent(type)
 new MediaKeyMessageEvent(type, options)
 ```

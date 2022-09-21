@@ -30,7 +30,7 @@ If the user instead doesn't make a choice at all, neither callback is executed.
 
 ## Syntax
 
-```js
+```js-nolint
 getUserMedia(constraints, successCallback, errorCallback)
 ```
 

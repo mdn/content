@@ -27,7 +27,7 @@ use. The returned {{domxref("FileSystem")}} is then available for use with the o
 
 ## Syntax
 
-```js
+```js-nolint
 requestFileSystem(type, size, successCallback)
 requestFileSystem(type, size, successCallback, errorCallback)
 ```

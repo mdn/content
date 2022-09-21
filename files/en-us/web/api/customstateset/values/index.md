@@ -18,7 +18,7 @@ The **`values()`** method of the {{domxref("CustomStateSet")}} interface returns
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

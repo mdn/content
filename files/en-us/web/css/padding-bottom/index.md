@@ -63,8 +63,12 @@ The `padding-bottom` property is specified as a single value chosen from the lis
 ### Setting padding bottom with pixels and percentages
 
 ```css
-.content { padding-bottom: 5%; }
-.sidebox { padding-bottom: 10px; }
+.content {
+  padding-bottom: 5%;
+}
+.sidebox {
+  padding-bottom: 10px;
+}
 ```
 
 ## Specifications

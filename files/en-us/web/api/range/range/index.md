@@ -20,7 +20,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 new Range()
 ```
 

@@ -23,7 +23,7 @@ The `MediaKeySystemAccess.createMediaKeys()` method returns a
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaKeys()
 ```
 

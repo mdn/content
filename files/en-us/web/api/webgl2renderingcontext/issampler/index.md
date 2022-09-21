@@ -18,7 +18,7 @@ passed object is a valid {{domxref("WebGLSampler")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 isSampler(sampler)
 ```
 

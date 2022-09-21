@@ -24,7 +24,7 @@ If the given base URL or the resulting URL are not valid URLs, the JavaScript
 
 ## Syntax
 
-```js
+```js-nolint
 new URL(url)
 new URL(url, base)
 ```

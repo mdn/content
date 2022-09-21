@@ -22,7 +22,7 @@ messages to that port.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

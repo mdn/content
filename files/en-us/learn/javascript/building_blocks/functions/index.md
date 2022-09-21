@@ -15,7 +15,7 @@ tags:
   - Method
   - anonymous
   - invoke
-  - l10n:priority
+  - "l10n:priority"
   - parameters
 ---
 
@@ -308,7 +308,7 @@ textBox.addEventListener('keydown', (event) => output.textContent = `You pressed
 
 ```css hidden
 div {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 

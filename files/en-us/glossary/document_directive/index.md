@@ -5,7 +5,6 @@ tags:
   - CSP
   - Directive
   - Document
-  - Glossary
   - HTTP
   - Security
 ---

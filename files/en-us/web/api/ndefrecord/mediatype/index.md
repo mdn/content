@@ -17,7 +17,7 @@ property of the {{DOMxRef("NDEFRecord")}} interface returns the {{Glossary("MIME
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.mediaType
 ```
 

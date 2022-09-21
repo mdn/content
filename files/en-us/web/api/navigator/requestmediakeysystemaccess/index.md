@@ -35,7 +35,7 @@ returned {{domxref("MediaKeySystemAccess")}} object's
 
 ## Syntax
 
-```js
+```js-nolint
 requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 ```
 

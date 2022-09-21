@@ -33,7 +33,7 @@ This is covered in more detail in the articles [WebRTC connectivity](/en-US/docs
 
 ## Syntax
 
-```js
+```js-nolint
 addIceCandidate(candidate)
 addIceCandidate(candidate, successCallback)
 addIceCandidate(candidate, successCallback, failureCallback) // deprecated

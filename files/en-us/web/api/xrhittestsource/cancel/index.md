@@ -20,7 +20,7 @@ The **`cancel()`** method of the {{domxref("XRHitTestSource")}} interface unsubs
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 ```
 

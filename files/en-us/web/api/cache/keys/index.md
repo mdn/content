@@ -26,7 +26,7 @@ The requests are returned in the same order that they were inserted.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 keys(request)
 keys(request, options)
@@ -72,13 +72,13 @@ objects.
 ## Examples
 
 ```js
-caches.open('v1').then((cache) => {
+caches.open("v1").then((cache) => {
   cache.keys().then((keys) => {
     keys.forEach((request, index, array) => {
       cache.delete(request);
     });
   });
-})
+});
 ```
 
 ## Specifications

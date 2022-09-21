@@ -23,7 +23,7 @@ the current service worker does not have an existing subscription.
 
 ## Syntax
 
-```js
+```js-nolint
 subscribe(options)
 ```
 

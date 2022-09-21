@@ -44,7 +44,7 @@ invoked to do so.
 
 ## Syntax
 
-```js
+```js-nolint
 process(inputs, outputs, parameters)
 ```
 

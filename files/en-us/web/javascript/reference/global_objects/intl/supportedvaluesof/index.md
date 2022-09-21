@@ -26,7 +26,7 @@ It can also be used to build UIs that allow users to select their preferred loca
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.supportedValuesOf(key)
 ```
 
@@ -34,7 +34,7 @@ Intl.supportedValuesOf(key)
 
 - `key`
   - : A key string indicating the category of values to be returned.
-      This is one of: `"calendar"`, `"collation"`, `"currency"`,`"numberingSystem"`, `"timeZone"`, `"unit"`.
+    This is one of: `"calendar"`, `"collation"`, `"currency"`,`"numberingSystem"`, `"timeZone"`, `"unit"`.
 
 ### Return value
 

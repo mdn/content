@@ -2,7 +2,6 @@
 title: Nullish value
 slug: Glossary/Nullish
 tags:
-  - Glossary
   - JavaScript
   - "Null"
   - Primitive

@@ -49,7 +49,7 @@ This process continues until an ICE restart has been successfully completed.
 
 ## Syntax
 
-```js
+```js-nolint
 restartIce()
 ```
 

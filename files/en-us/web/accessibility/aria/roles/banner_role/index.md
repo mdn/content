@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: banner role'
+title: "ARIA: banner role"
 slug: Web/Accessibility/ARIA/Roles/banner_role
 tags:
   - ARIA
@@ -44,7 +44,7 @@ Here's a fake simple banner with a skip to navigation link, a logo, a title and 
 ```html
 <div role="banner">
   <a href="#main" id="skipToMain" class="skiptocontent">Skip To main content</a>
-  <img src="images/w3c.png" alt="W3C Logo">
+  <img src="images/w3c.png" alt="W3C Logo" />
   <h1>ARIA Landmarks</h1>
   <p>Identifying page subsections for easy navigation</p>
   <nav>…</nav>
@@ -56,7 +56,7 @@ We could also have written the above with the HTML `header` element:
 ```html
 <header>
   <a href="#main" id="skipToMain" class="skiptocontent">Skip To main content</a>
-  <img src="images/w3c.png" alt="W3C Logo">
+  <img src="images/w3c.png" alt="W3C Logo" />
   <h1>ARIA Landmarks</h1>
   <p>Identifying page subsections for easy navigation</p>
   <nav>…</nav>

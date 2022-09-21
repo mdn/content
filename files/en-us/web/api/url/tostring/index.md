@@ -22,7 +22,7 @@ of {{domxref("URL.href")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

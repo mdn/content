@@ -18,7 +18,7 @@ target.
 
 ## Syntax
 
-```js
+```js-nolint
 endQuery(target)
 ```
 

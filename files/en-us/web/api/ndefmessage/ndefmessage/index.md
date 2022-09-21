@@ -17,7 +17,7 @@ The **`NDEFMessage()`** constructor creates a new {{domxref("NDEFMessage")}} obj
 
 ## Syntax
 
-```js
+```js-nolint
 new NDEFMessage(records)
 ```
 

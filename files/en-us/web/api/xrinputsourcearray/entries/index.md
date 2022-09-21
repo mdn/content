@@ -34,7 +34,7 @@ Most frequently, you will use this in tandem with statements such as
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

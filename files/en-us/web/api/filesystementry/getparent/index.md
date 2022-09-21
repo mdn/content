@@ -21,7 +21,7 @@ The {{domxref("FileSystemEntry")}} interface's method
 
 ## Syntax
 
-```js
+```js-nolint
 getParent(successCallback, errorCallback)
 getParent(successCallback)
 ```

@@ -2,7 +2,6 @@
 title: ECMA
 slug: Glossary/ECMA
 tags:
-  - Glossary
   - Stub
   - WebMechanics
 ---

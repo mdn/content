@@ -23,7 +23,7 @@ four escape sequences for characters composed of two "surrogate" characters).
 
 ## Syntax
 
-```js
+```js-nolint
 encodeURI(URI)
 ```
 

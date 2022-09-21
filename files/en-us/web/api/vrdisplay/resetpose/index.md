@@ -28,7 +28,7 @@ The VRDisplay's reported roll and pitch do not change when `resetPose()` is call
 
 ## Syntax
 
-```js
+```js-nolint
 resetPose()
 ```
 

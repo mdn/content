@@ -20,7 +20,7 @@ browser-compat: webextensions.api.userScripts.onBeforeScript
 
 ## Syntax
 
-```js
+```js-nolint
 browser.userScripts.onBeforeScript.addListener(listener)
 browser.userScripts.onBeforeScript.removeListener(listener)
 browser.userScripts.onBeforeScript.hasListener(listener)

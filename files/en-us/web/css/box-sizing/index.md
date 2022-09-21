@@ -83,7 +83,7 @@ This example shows how different `box-sizing` values alter the rendered size of 
 
 ```html
 <div class="content-box">Content box</div>
-<br>
+<br />
 <div class="border-box">Border box</div>
 ```
 

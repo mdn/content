@@ -21,7 +21,7 @@ relative to the element it is invoked upon.
 
 ## Syntax
 
-```js
+```js-nolint
 insertAdjacentElement(position, element)
 ```
 

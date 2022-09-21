@@ -83,7 +83,7 @@ Adding the `container-type` property with a size value creates a **containment c
 A container query is created using `@container`. This will query the nearest containment context. To cause the card to display as two columns only if the sidebar is wider than 700px, we use the following CSS:
 
 ```css
-@container (min-width: 700px){
+@container (min-width: 700px) {
   .card {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -107,7 +107,7 @@ The previous example allows a component to query the nearest containment context
 You can then target just that query container by adding the name to the container query:
 
 ```css
-@container sidebar (min-width: 400px){
+@container sidebar (min-width: 400px) {
   .card {
     display: grid;
     grid-template-columns: 2fr 1fr;

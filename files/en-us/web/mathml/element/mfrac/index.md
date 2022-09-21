@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mfrac
 
 {{MathMLRef}}
 
-The MathML `<mfrac>` element is used to display fractions.  It can also be used
+The MathML `<mfrac>` element is used to display fractions. It can also be used
 to mark up fraction-like objects such as
 [binomial coefficients](https://en.wikipedia.org/wiki/Binomial_coefficient)
 and [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol).
@@ -44,7 +44,6 @@ The following MathML code should render as a fraction with numerator "a + 2" and
 denominator "3 − b":
 
 ```html
-
 <math display="block">
   <mfrac>
     <mrow>
@@ -58,6 +57,7 @@ denominator "3 − b":
       <mi>b</mi>
     </mrow>
   </mfrac>
+</math>
 ```
 
 {{ EmbedLiveSample('simple_fraction', 700, 200, "", "") }}
@@ -67,10 +67,9 @@ denominator "3 − b":
 The following MathML code should render as a [binomial coefficient](https://en.wikipedia.org/wiki/Binomial_coefficient):
 
 ```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
 ```
 
 ```html

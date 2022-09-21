@@ -21,7 +21,7 @@ This method will cause an `INVALID_STATE_ERR` exception to be thrown if called o
 
 ## Syntax
 
-```js
+```js-nolint
 suspend()
 ```
 
@@ -39,16 +39,16 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 
 ```js
 susresBtn.onclick = () => {
-  if (audioCtx.state === 'running') {
+  if (audioCtx.state === "running") {
     audioCtx.suspend().then(() => {
-      susresBtn.textContent = 'Resume context';
+      susresBtn.textContent = "Resume context";
     });
-  } else if (audioCtx.state === 'suspended') {
+  } else if (audioCtx.state === "suspended") {
     audioCtx.resume().then(() => {
-      susresBtn.textContent = 'Suspend context';
+      susresBtn.textContent = "Suspend context";
     });
   }
-}
+};
 ```
 
 ## Specifications

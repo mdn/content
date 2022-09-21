@@ -21,7 +21,7 @@ error.
 
 ## Syntax
 
-```js
+```js-nolint
 setCustomValidity(string)
 ```
 

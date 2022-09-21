@@ -22,7 +22,7 @@ To define a right-click action, use the [`contextMenus`](/en-US/docs/Mozilla/Add
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.onClicked.addListener(listener)
 browser.browserAction.onClicked.removeListener(listener)
 browser.browserAction.onClicked.hasListener(listener)

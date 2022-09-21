@@ -20,8 +20,7 @@ The `buffered` attribute will tell us which parts of the media has been download
 This will work with {{htmlelement("audio") }} or {{htmlelement("video") }}; for now let's consider a simple audio example:
 
 ```html
-<audio id="my-audio" controls src="music.mp3">
-</audio>
+<audio id="my-audio" controls src="music.mp3"></audio>
 ```
 
 We can access these attributes like so:
@@ -65,12 +64,11 @@ To try out and visualize buffered time ranges we can write a little bit of HTML:
 ```html
 <p>
   <audio id="my-audio" controls>
-    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg" />
   </audio>
 </p>
 <p>
-  <canvas id="my-canvas" width="300" height="20">
-  </canvas>
+  <canvas id="my-canvas" width="300" height="20"> </canvas>
 </p>
 ```
 
@@ -135,7 +133,7 @@ So let's build this. The HTML for our player looks like this:
 
 ```html
 <audio id="my-audio" preload controls>
-  <source src="music.mp3" type="audio/mpeg">
+  <source src="music.mp3" type="audio/mpeg" />
 </audio>
 <div class="buffered">
   <span id="buffered-amount"></span>

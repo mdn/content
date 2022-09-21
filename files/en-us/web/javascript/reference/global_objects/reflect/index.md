@@ -35,7 +35,7 @@ Some of these methods are also the same as corresponding methods on {{jsxref("Ob
 - {{jsxref("Reflect.get()")}}
   - : Returns the value of the property. Works like getting a property from an object (`target[propertyKey]`) as a function.
 - {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
-  - : Similar to {{jsxref("Object.getOwnPropertyDescriptor()")}}. Returns a property descriptor of the given property if it exists on the object,  {{jsxref("undefined")}} otherwise.
+  - : Similar to {{jsxref("Object.getOwnPropertyDescriptor()")}}. Returns a property descriptor of the given property if it exists on the object, {{jsxref("undefined")}} otherwise.
 - {{jsxref("Reflect.getPrototypeOf()")}}
   - : Same as {{jsxref("Object.getPrototypeOf()")}}.
 - {{jsxref("Reflect.has()")}}

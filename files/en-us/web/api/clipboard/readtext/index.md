@@ -32,7 +32,7 @@ you can read data from the clipboard.
 
 ## Syntax
 
-```js
+```js-nolint
 readText()
 ```
 

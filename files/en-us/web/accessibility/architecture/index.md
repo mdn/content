@@ -37,7 +37,11 @@ While it is odd to call non-link objects a link, this was a necessary compromise
 Take the following HTML code:
 
 ```html
-<div>Hello<a href="http://www.mozilla.org/access">My link<img src="image.gif">is cool</a>Bye</div>
+<div>
+  Hello<a href="http://www.mozilla.org/access"
+    >My link<img src="image.gif" />is cool</a
+  >Bye
+</div>
 ```
 
 Both the {{HTMLElement('a')}} and {{HTMLElement('img')}} are hyperlinks Also, both the {{HTMLElement('div')}} and {{HTMLElement('a')}} are hypertexts So the {{HTMLElement('a')}} is both a hypertext and a hyperlink, because it contains text and is contained within text.

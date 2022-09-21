@@ -22,7 +22,7 @@ function. It returns true if, in the array, it finds an element for which the pr
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 some((element) => { /* … */ } )
 some((element, index) => { /* … */ } )

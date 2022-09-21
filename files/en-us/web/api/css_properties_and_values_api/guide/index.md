@@ -37,7 +37,7 @@ The same registration can take place in CSS. The following will register a {{css
 
 ```css
 @property --my-prop {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }

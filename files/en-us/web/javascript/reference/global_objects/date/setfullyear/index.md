@@ -19,7 +19,7 @@ specified date according to local time. Returns new timestamp.
 
 ## Syntax
 
-```js
+```js-nolint
 setFullYear(yearValue)
 setFullYear(yearValue, monthValue)
 setFullYear(yearValue, monthValue, dateValue)

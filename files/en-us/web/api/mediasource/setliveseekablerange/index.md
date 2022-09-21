@@ -24,7 +24,7 @@ media element.
 
 ## Syntax
 
-```js
+```js-nolint
 setLiveSeekableRange(start, end)
 ```
 

@@ -26,7 +26,7 @@ All you have to do is call `complete()` from your handler for the {{domxref("Pay
 
 ## Syntax
 
-```js
+```js-nolint
 complete(validationData)
 complete(merchantSessionPromise)
 ```

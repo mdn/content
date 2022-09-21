@@ -18,7 +18,7 @@ The **`Number.isInteger()`** method determines whether the passed value is an in
 
 ## Syntax
 
-```js
+```js-nolint
 Number.isInteger(value)
 ```
 

@@ -19,7 +19,7 @@ The **`createEquirectLayer()`** method of the {{domxref("XRMediaBinding")}} inte
 
 ## Syntax
 
-```js
+```js-nolint
 createEquirectLayer(video, options)
 ```
 

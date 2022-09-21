@@ -22,7 +22,7 @@ The **`getMetadata()`** method of the {{domxref("IDBFileHandle")}} allows retrie
 
 ## Syntax
 
-```js
+```js-nolint
 getMetaData()
 getMetaData(options)
 ```

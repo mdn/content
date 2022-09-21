@@ -21,7 +21,6 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
 ```html
 <math>
-
   <!-- Multiple characters, default mathvariant is "normal". -->
   <mi>sin</mi>
 
@@ -30,7 +29,6 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
   <!-- Overriding default mathvariant. -->
   <mi mathvariant="normal">F</mi>
-
 </math>
 ```
 

@@ -18,7 +18,7 @@ The **`close()`** method of the {{domxref("AudioData")}} interface clears all st
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

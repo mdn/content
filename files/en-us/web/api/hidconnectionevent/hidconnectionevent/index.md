@@ -17,7 +17,7 @@ The **`HIDConnectionEvent()`** constructor creates a new {{domxref("HIDConnectio
 
 ## Syntax
 
-```js
+```js-nolint
 new HIDConnectionEvent(type, options)
 ```
 

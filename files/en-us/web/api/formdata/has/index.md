@@ -19,7 +19,7 @@ The **`has()`** method of the {{domxref("FormData")}} interface returns whether 
 
 ## Syntax
 
-```js
+```js-nolint
 has(name)
 ```
 

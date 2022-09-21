@@ -31,7 +31,7 @@ animation-timing-function: step-start;
 animation-timing-function: step-end;
 
 /* Function values */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 animation-timing-function: steps(4, end);
 
 /* Steps Function keywords */
@@ -43,7 +43,7 @@ animation-timing-function: steps(6, start);
 animation-timing-function: steps(8, end);
 
 /* Multiple animations */
-animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Global values */
 animation-timing-function: inherit;
@@ -128,47 +128,47 @@ Within a keyframe, `animating-timing-function` is an at-rule-specific descriptor
 
 ```css hidden
 .parent > div[class] {
-    animation-name: changeme;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    margin-bottom: 4px;
+  animation-name: changeme;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-bottom: 4px;
 }
 @keyframes changeme {
-   0% {
-      min-width: 12em;
-      width: 12em;
-      background-color: black;
-      border: 1px solid red;
-      color: white;
-   }
-   100% {
-      width: 90vw;
-      min-width: 24em;
-      background-color: magenta;
-      color: yellow;
-      border: 1px solid orange;
-   }
+  0% {
+    min-width: 12em;
+    width: 12em;
+    background-color: black;
+    border: 1px solid red;
+    color: white;
+  }
+  100% {
+    width: 90vw;
+    min-width: 24em;
+    background-color: magenta;
+    color: yellow;
+    border: 1px solid orange;
+  }
 }
 ```
 
 ```css
 .ease {
-   animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 .easein {
-   animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
 }
 .easeout {
-   animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
 }
 .easeinout {
-   animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 .linear {
-   animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 .cb {
-   animation-timing-function: cubic-bezier(0.2,-2,0.8,2);
+  animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
 }
 ```
 
@@ -191,53 +191,53 @@ Within a keyframe, `animating-timing-function` is an at-rule-specific descriptor
 
 ```css hidden
 .parent > div[class] {
-    animation-name: changeme;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    margin-bottom: 4px;
+  animation-name: changeme;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  margin-bottom: 4px;
 }
 @keyframes changeme {
-   0% {
-      min-width: 12em;
-      width: 12em;
-      background-color: black;
-      border: 1px solid red;
-      color: white;
-   }
-   100% {
-      width: 90vw;
-      min-width: 24em;
-      background-color: magenta;
-      color: yellow;
-      border: 1px solid orange;
-   }
+  0% {
+    min-width: 12em;
+    width: 12em;
+    background-color: black;
+    border: 1px solid red;
+    color: white;
+  }
+  100% {
+    width: 90vw;
+    min-width: 24em;
+    background-color: magenta;
+    color: yellow;
+    border: 1px solid orange;
+  }
 }
 ```
 
 ```css
 .jump-start {
-   animation-timing-function: steps(5, jump-start);
+  animation-timing-function: steps(5, jump-start);
 }
 .jump-end {
-   animation-timing-function: steps(5, jump-end);
+  animation-timing-function: steps(5, jump-end);
 }
 .jump-none {
-   animation-timing-function: steps(5, jump-none);
+  animation-timing-function: steps(5, jump-none);
 }
 .jump-both {
-   animation-timing-function: steps(5, jump-both);
+  animation-timing-function: steps(5, jump-both);
 }
 .start {
-   animation-timing-function: steps(5, start);
+  animation-timing-function: steps(5, start);
 }
 .end {
-   animation-timing-function: steps(5, end);
+  animation-timing-function: steps(5, end);
 }
 .step-start {
-   animation-timing-function: step-start;
+  animation-timing-function: step-start;
 }
 .step-end {
-   animation-timing-function: step-end;
+  animation-timing-function: step-end;
 }
 ```
 

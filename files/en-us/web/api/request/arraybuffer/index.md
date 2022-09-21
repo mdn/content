@@ -19,7 +19,7 @@ reads the request body and returns it as a promise that resolves with an {{jsxre
 
 ## Syntax
 
-```js
+```js-nolint
 arrayBuffer()
 ```
 

@@ -25,7 +25,7 @@ In Chrome a policy with a name of "default" creates a special policy that will b
 
 ## Syntax
 
-```js
+```js-nolint
 createPolicy(policyName, policyOptions)
 ```
 

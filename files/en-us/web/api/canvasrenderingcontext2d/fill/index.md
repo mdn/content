@@ -20,7 +20,7 @@ method of the Canvas 2D API fills the current or given path with the current
 
 ## Syntax
 
-```js
+```js-nolint
 fill()
 fill(path)
 fill(fillRule)

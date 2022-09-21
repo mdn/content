@@ -24,7 +24,7 @@ object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 animate(keyframes, options)
 ```
 
@@ -55,13 +55,14 @@ In this example we use the `animate()` method to rotate and scale an element.
 #### HTML
 
 ```html
-<div class="newspaper">Spinning newspaper<br>causes dizziness</div>
+<div class="newspaper">Spinning newspaper<br />causes dizziness</div>
 ```
 
 #### CSS
 
 ```css
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -73,7 +74,7 @@ body {
 }
 
 .newspaper {
-  padding: .5rem;
+  padding: 0.5rem;
   text-transform: uppercase;
   text-align: center;
   background-color: white;

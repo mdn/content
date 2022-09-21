@@ -17,7 +17,7 @@ The **`with` statement** extends the scope chain for a statement.
 
 ## Syntax
 
-```js
+```js-nolint
 with (expression)
   statement
 ```

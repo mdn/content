@@ -21,7 +21,7 @@ list of all search parameters.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(name)
 ```
 

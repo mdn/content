@@ -29,7 +29,7 @@ Note that the status of the camera is not tracked in the {{domxref("MediaSession
 
 ## Syntax
 
-```js
+```js-nolint
 setCameraActive(active)
 ```
 

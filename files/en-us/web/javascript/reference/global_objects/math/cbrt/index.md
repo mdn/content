@@ -20,7 +20,7 @@ The **`Math.cbrt()`** function returns the cube root of a number. That is
 
 ## Syntax
 
-```js
+```js-nolint
 Math.cbrt(x)
 ```
 

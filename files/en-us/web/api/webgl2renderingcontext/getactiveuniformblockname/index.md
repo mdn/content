@@ -19,7 +19,7 @@ of the active uniform block at a given index within a {{domxref("WebGLProgram")}
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveUniformBlockName(program, uniformBlockIndex)
 ```
 

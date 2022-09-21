@@ -20,7 +20,7 @@ The `MediaKeySession.generateRequest()` method returns a
 
 ## Syntax
 
-```js
+```js-nolint
 generateRequest()
 ```
 

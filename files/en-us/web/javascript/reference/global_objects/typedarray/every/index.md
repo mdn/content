@@ -23,7 +23,7 @@ of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/T
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 every((element) => { /* ... */ } )
 every((element, index) => { /* ... */ } )

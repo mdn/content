@@ -17,7 +17,7 @@ The **`send()`** method of the {{domxref("MIDIOutput")}} interface queues messag
 
 ## Syntax
 
-```js
+```js-nolint
 send(data)
 send(data, timestamp)
 ```

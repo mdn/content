@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: combobox role'
+title: "ARIA: combobox role"
 slug: Web/Accessibility/ARIA/Roles/combobox_role
 tags:
   - Accessibility
@@ -81,7 +81,15 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 ```html
 <label for="jokes">Pick what type of jokes you like</label>
 <div class="combo-wrap">
-  <input type="text" id="jokes" role="combobox" aria-controls="joketypes" aria-autocomplete="list" aria-expanded="false" data-active-option="item1" aria-activedescendant="">
+  <input
+    type="text"
+    id="jokes"
+    role="combobox"
+    aria-controls="joketypes"
+    aria-autocomplete="list"
+    aria-expanded="false"
+    data-active-option="item1"
+    aria-activedescendant="" />
   <span aria-hidden="true" data-trigger="multiselect"></span>
   <ul id="joketypes" role="listbox" aria-label="Jokes">
     <li class="active" role="option" id="item1">Puns</li>

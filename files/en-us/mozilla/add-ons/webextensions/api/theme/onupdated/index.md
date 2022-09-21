@@ -22,7 +22,7 @@ Note that this event is not fired for changes to the built-in themes.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.theme.onUpdated.addListener(listener)
 browser.theme.onUpdated.removeListener(listener)
 browser.theme.onUpdated.hasListener(listener)

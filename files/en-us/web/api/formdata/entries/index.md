@@ -20,7 +20,7 @@ The **`FormData.entries()`** method returns an [iterator](/en-US/docs/Web/JavaSc
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

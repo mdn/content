@@ -19,7 +19,7 @@ currently bound framebuffer or the drawingbuffer if no framebuffer is bound.
 
 ## Syntax
 
-```js
+```js-nolint
 drawBuffers(buffers)
 ```
 

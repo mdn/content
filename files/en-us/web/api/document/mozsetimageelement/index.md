@@ -20,7 +20,7 @@ element ID.
 
 ## Syntax
 
-```js
+```js-nolint
 mozSetImageElement(imageElementId, imageElement)
 ```
 

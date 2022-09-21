@@ -42,7 +42,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ## Syntax
 
-```js
+```js-nolint
 let toggling = browser.tabs.toggleReaderMode(
   tabId            // optional integer
 )

@@ -20,7 +20,7 @@ The **`InstallEvent()`** constructor creates a new {{domxref("InstallEvent")}} o
 
 ## Syntax
 
-```js
+```js-nolint
 new InstallEvent(type, options)
 ```
 

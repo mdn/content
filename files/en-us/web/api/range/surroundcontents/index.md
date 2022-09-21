@@ -28,7 +28,7 @@ instead the operation will fail.
 
 ## Syntax
 
-```js
+```js-nolint
 surroundContents(newParent)
 ```
 

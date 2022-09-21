@@ -19,7 +19,7 @@ The **`CSSAnimation`** interface of the {{domxref('Web Animations API','','',' '
 
 ## Properties
 
-Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("animationName")}}.
+Inherits properties from its ancestor {{domxref("Animation")}} and adds {{domxref("animationName")}}.
 
 - {{domxref("CSSAnimation.animationName")}} {{ReadOnlyInline}}
   - : Returns the animation name as a string.

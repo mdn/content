@@ -18,7 +18,7 @@ To mark a declaration important, add the _important flag_ (`!important`) after t
 selector {
   property: value; /* normal declaration */
   property: value !important; /* important declaration (standard) */
-  property: value ! important; /* important declaration (non-standard) */
+  property: value !important; /* important declaration (non-standard) */
 }
 ```
 
@@ -78,11 +78,11 @@ When two important declarations from the same origin and layer apply to the same
 
 ```css
 #myElement p {
-    color: green !important;
+  color: green !important;
 }
 
 p {
-    color: purple !important;
+  color: purple !important;
 }
 ```
 

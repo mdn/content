@@ -22,7 +22,7 @@ within the directory subtree rooted at the directory on which it's called.
 
 ## Syntax
 
-```js
+```js-nolint
 getFile()
 getFile(path)
 getFile(path, options)

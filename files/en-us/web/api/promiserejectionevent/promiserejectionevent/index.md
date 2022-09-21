@@ -31,7 +31,7 @@ emitted if a promise is rejected but the rejection is caught by a rejection hand
 
 ## Syntax
 
-```js
+```js-nolint
 new PromiseRejectionEvent(type, options)
 ```
 

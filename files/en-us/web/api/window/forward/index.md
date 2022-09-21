@@ -22,7 +22,7 @@ Moves the window one document forward in history. This was a Firefox-specific me
 
 ## Syntax
 
-```js
+```js-nolint
 forward()
 ```
 

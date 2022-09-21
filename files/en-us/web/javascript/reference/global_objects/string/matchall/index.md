@@ -20,7 +20,7 @@ The **`matchAll()`** method returns an iterator of all results matching a string
 
 ## Syntax
 
-```js
+```js-nolint
 matchAll(regexp)
 ```
 

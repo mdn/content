@@ -21,7 +21,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 [Symbol.iterator]()
 ```
 

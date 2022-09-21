@@ -23,7 +23,7 @@ Updates the state of commands of the current chrome window (UI).
 
 ## Syntax
 
-```js
+```js-nolint
 updateCommands("sCommandName")
 ```
 

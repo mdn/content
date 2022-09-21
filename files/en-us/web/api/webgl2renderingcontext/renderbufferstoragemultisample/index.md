@@ -21,7 +21,7 @@ samples to be used.
 
 ## Syntax
 
-```js
+```js-nolint
 renderbufferStorageMultisample(target, samples, internalFormat, width, height)
 ```
 

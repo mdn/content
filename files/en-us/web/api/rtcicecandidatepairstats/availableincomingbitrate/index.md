@@ -37,8 +37,8 @@ You can get the outgoing available bitrate from
 
 ## Syntax
 
-```js
-availableIncomingBitrate = rtcIceCandidatePairStats.availableIncomingBitrate;
+```js-nolint
+availableIncomingBitrate = rtcIceCandidatePairStats.availableIncomingBitrate
 ```
 
 ### Value

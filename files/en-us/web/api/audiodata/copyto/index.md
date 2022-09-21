@@ -18,7 +18,7 @@ The **`copyTo()`** method of the {{domxref("AudioData")}} interface copies a pla
 
 ## Syntax
 
-```js
+```js-nolint
 copyTo(destination, options)
 ```
 
@@ -54,7 +54,7 @@ Undefined.
 The following example copies the plane at index `1` to a destination buffer.
 
 ```js
-AudioData.copyTo(AudioBuffer, {planeIndex: 1});
+AudioData.copyTo(AudioBuffer, { planeIndex: 1 });
 ```
 
 ## Specifications

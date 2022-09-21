@@ -111,7 +111,7 @@ Try experimenting using the following two test cases:
 }
 
 .fx > div:first-child {
-   width: 30%;
+  width: 30%;
 }
 
 .flex {

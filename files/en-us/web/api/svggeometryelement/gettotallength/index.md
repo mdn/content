@@ -20,7 +20,7 @@ the user agent's computed value for the total length of the path in user units.
 
 ## Syntax
 
-```js
+```js-nolint
 getTotalLength()
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'HTMLInputElement: invalid event'
+title: "HTMLInputElement: invalid event"
 slug: Web/API/HTMLInputElement/invalid_event
 page-type: web-api-event
 tags:
@@ -46,12 +46,12 @@ If a form is submitted with an invalid value, the submittable elements are check
   <div>
     <label>
       Enter an integer between 1 and 10:
-      <input type="number" min="1" max="10" required>
+      <input type="number" min="1" max="10" required />
     </label>
   </div>
-  <div><input type="submit" value="submit"></div>
+  <div><input type="submit" value="submit" /></div>
 </form>
-<hr>
+<hr />
 Invalid values:
 <ul id="log"></ul>
 ```

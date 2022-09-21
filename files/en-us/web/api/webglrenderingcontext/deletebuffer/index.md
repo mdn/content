@@ -19,7 +19,7 @@ deleted. Normally you don't need to call this method yourself, when the buffer o
 
 ## Syntax
 
-```js
+```js-nolint
 deleteBuffer(buffer)
 ```
 

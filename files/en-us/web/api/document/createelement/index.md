@@ -18,7 +18,7 @@ In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** 
 
 ## Syntax
 
-```js
+```js-nolint
 createElement(tagName)
 createElement(tagName, options)
 ```
@@ -50,13 +50,13 @@ This creates a new `<div>` and inserts it before the element with the ID "`div1`
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>||Working with elements||</title>
-</head>
-<body>
-  <div id="div1">The text above has been created dynamically.</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>||Working with elements||</title>
+  </head>
+  <body>
+    <div id="div1">The text above has been created dynamically.</div>
+  </body>
 </html>
 ```
 

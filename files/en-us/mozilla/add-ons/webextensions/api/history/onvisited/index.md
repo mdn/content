@@ -20,7 +20,7 @@ Fired each time the user visits a page. A {{WebExtAPIRef("history.HistoryItem")}
 
 ## Syntax
 
-```js
+```js-nolint
 browser.history.onVisited.addListener(listener)
 browser.history.onVisited.removeListener(listener)
 browser.history.onVisited.hasListener(listener)

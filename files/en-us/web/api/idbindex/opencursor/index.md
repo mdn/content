@@ -30,7 +30,7 @@ If the key range is not specified or is null, then the range includes all the re
 
 ## Syntax
 
-```js
+```js-nolint
 openCursor()
 openCursor(range)
 openCursor(range, direction)

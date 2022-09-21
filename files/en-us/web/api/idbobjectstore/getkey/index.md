@@ -26,7 +26,7 @@ result of the request object.
 
 ## Syntax
 
-```js
+```js-nolint
 getKey(key)
 ```
 

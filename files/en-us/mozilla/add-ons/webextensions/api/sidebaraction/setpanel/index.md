@@ -29,7 +29,7 @@ If you set a new panel using `setPanel()`, and omit both the `tabId` and `window
 
 ## Syntax
 
-```js
+```js-nolint
 browser.sidebarAction.setPanel(
   details // object
 )

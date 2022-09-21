@@ -72,7 +72,7 @@ The following {{HTMLElement("audio")}}, {{HTMLElement("video")}} and
 <audio src="https://not-example.com/audio"></audio>
 
 <video src="https://not-example.com/video">
-  <track kind="subtitles" src="https://not-example.com/subtitles">
+  <track kind="subtitles" src="https://not-example.com/subtitles" />
 </video>
 ```
 

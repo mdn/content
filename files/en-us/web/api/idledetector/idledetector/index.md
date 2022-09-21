@@ -19,7 +19,7 @@ with their device or the screen has locked.
 
 ## Syntax
 
-```js
+```js-nolint
 new IdleDetector()
 ```
 

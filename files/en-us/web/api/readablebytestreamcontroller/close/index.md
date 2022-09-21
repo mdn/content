@@ -23,7 +23,7 @@ This might be called by the underlying source when its data source has been exha
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

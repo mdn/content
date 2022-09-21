@@ -20,7 +20,7 @@ The **`getUint16()`** method gets an unsigned 16-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 getUint16(byteOffset)
 getUint16(byteOffset, littleEndian)
 ```

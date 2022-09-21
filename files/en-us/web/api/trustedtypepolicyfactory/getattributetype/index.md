@@ -17,7 +17,7 @@ The **`getAttributeType()`** method of the {{domxref("TrustedTypePolicyFactory")
 
 ## Syntax
 
-```js
+```js-nolint
 getAttributeType(tagName, attribute)
 getAttributeType(tagName, attribute, elementNS)
 getAttributeType(tagName, attribute, elementNS, attrNS)

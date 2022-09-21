@@ -20,7 +20,7 @@ generator.
 
 ## Syntax
 
-```js
+```js-nolint
 generatorObject.next(value)
 ```
 

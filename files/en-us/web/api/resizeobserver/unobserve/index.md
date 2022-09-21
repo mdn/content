@@ -21,7 +21,7 @@ The **`unobserve()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 unobserve(target)
 ```
 

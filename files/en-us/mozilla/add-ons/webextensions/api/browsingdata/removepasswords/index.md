@@ -26,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removePasswords(
   removalOptions            // RemovalOptions object
 )
@@ -58,10 +58,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removePasswords({since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removePasswords({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Remove all saved passwords:

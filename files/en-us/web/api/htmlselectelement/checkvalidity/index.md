@@ -21,7 +21,7 @@ element, and then returns `false`.
 
 ## Syntax
 
-```js
+```js-nolint
 checkValidity()
 ```
 

@@ -24,7 +24,7 @@ known as "ciphertext").
 
 ## Syntax
 
-```js
+```js-nolint
 encrypt(algorithm, key, data)
 ```
 

@@ -23,7 +23,7 @@ The **`ClipboardItem()`** constructor of the {{domxref("Clipboard API")}} create
 
 ## Syntax
 
-```js
+```js-nolint
 new ClipboardItem(data)
 new ClipboardItem(data, options)
 ```

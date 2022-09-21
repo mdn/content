@@ -25,7 +25,11 @@ A string.
 In this example calling `entry.id` will log to the console `myImage`, this being the {{htmlattrxref("id")}} of the image element.
 
 ```html
-<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

@@ -58,9 +58,9 @@ In this example, we see how to obtain the list of form controls as well as how t
 
 ```html
 <form id="my-form">
-  <input type="text" name="username">
-  <input type="text" name="full-name">
-  <input type="password" name="password">
+  <input type="text" name="username" />
+  <input type="text" name="full-name" />
+  <input type="password" name="password" />
 </form>
 ```
 
@@ -81,7 +81,7 @@ form of processing can be performed on them.
 const inputs = document.getElementById("my-form").elements;
 
 // Iterate over the form controls
-for (i = 0; i < inputs.length; i++) {
+for (let i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" && inputs[i].type === "text") {
     // Update text input
     inputs[i].value.toLocaleUpperCase();
@@ -95,7 +95,7 @@ for (i = 0; i < inputs.length; i++) {
 const inputs = document.getElementById("my-form").elements;
 
 // Iterate over the form controls
-for (i = 0; i < inputs.length; i++) {
+for (let i = 0; i < inputs.length; i++) {
   // Disable all form controls
   inputs[i].setAttribute("disabled", "");
 }

@@ -23,7 +23,7 @@ values for uniform variables.
 
 ## Syntax
 
-```js
+```js-nolint
 uniformMatrix2fv(location, transpose, data)
 uniformMatrix2fv(location, transpose, data, srcOffset)
 uniformMatrix2fv(location, transpose, data, srcOffset, srcLength)

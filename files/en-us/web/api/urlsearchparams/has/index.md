@@ -21,7 +21,7 @@ specified name exists.
 
 ## Syntax
 
-```js
+```js-nolint
 has(name)
 ```
 

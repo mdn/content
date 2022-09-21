@@ -20,7 +20,7 @@ The **`toString()`** method of the {{domxref("CSSTransformComponent")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

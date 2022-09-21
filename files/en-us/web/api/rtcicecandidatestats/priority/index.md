@@ -18,8 +18,8 @@ the more desirable the candidate is.
 
 ## Syntax
 
-```js
-priority = rtcIceCandidateStats.priority;
+```js-nolint
+priority = rtcIceCandidateStats.priority
 ```
 
 ### Value

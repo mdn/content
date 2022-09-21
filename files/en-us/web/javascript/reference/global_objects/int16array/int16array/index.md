@@ -21,7 +21,7 @@ notation).
 
 ## Syntax
 
-```js
+```js-nolint
 new Int16Array()
 new Int16Array(length)
 new Int16Array(typedArray)

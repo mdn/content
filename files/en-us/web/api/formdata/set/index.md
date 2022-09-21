@@ -21,7 +21,7 @@ The difference between `set()` and {{domxref("FormData.append", "append()")}} is
 
 ## Syntax
 
-```js
+```js-nolint
 set(name, value)
 set(name, value, filename)
 ```

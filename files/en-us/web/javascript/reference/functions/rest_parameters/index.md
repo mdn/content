@@ -17,7 +17,7 @@ The **rest parameter** syntax allows a function to accept an indefinite number o
 
 ## Syntax
 
-```js
+```js-nolint
 function f(a, b, ...theArgs) {
   // …
 }
@@ -29,7 +29,7 @@ A function definition's last parameter can be prefixed with `...` (three U+002E 
 Only the last parameter in a function definition can be a rest parameter.
 
 ```js
-function myFun(a,  b, ...manyMoreArgs) {
+function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a);
   console.log("b", b);
   console.log("manyMoreArgs", manyMoreArgs);

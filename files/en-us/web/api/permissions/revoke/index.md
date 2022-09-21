@@ -23,7 +23,7 @@ This method is called on the global {{domxref("Permissions")}} object
 
 ## Syntax
 
-```js
+```js-nolint
 revoke(descriptor)
 ```
 

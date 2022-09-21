@@ -19,7 +19,7 @@ information of a {{domxref("WebGLSampler")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 getSamplerParameter(sampler, pname)
 ```
 

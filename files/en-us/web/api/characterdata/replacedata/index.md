@@ -14,7 +14,7 @@ The **`replaceData()`** method of the {{domxref("CharacterData")}} interface rem
 
 ## Syntax
 
-```js
+```js-nolint
 characterData.replaceData(offset, count, data)
 ```
 

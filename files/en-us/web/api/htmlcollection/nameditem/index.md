@@ -20,8 +20,8 @@ In JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like 
 
 ## Syntax
 
-```js
-const item = collection.namedItem(key);
+```js-nolint
+namedItem(key)
 ```
 
 ### Parameters

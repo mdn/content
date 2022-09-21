@@ -21,7 +21,7 @@ Fired when an update for the browser is available, but it isn't installed immedi
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onBrowserUpdateAvailable.addListener(listener)
 browser.runtime.onBrowserUpdateAvailable.removeListener(listener)
 browser.runtime.onBrowserUpdateAvailable.hasListener(listener)

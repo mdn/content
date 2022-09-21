@@ -12,7 +12,7 @@ tags:
   - Style Sheets
   - Styles
   - Stylesheets
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{CSSRef}}

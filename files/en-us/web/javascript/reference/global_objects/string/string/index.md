@@ -18,7 +18,7 @@ useful.
 
 ## Syntax
 
-```js
+```js-nolint
 new String(thing)
 String(thing)
 ```

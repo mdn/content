@@ -26,7 +26,7 @@ Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
 
 ## Syntax
 
-```js
+```js-nolint
 readAsBinaryString(blob)
 ```
 

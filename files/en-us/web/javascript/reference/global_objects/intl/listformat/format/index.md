@@ -24,7 +24,7 @@ language-specific representation of the list.
 
 ## Syntax
 
-```js
+```js-nolint
 format()
 format(list)
 ```

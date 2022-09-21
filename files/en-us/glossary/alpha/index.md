@@ -5,7 +5,6 @@ tags:
   - Alpha
   - Alpha Channel
   - Drawing
-  - Glossary
   - Graphics
   - Translucency
   - Translucent

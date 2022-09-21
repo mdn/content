@@ -66,7 +66,7 @@ body {
   color: #000;
   background-color: #fff;
   border: 2px solid #cecece;
-  padding: .35rem 1rem .25rem 1rem;
+  padding: 0.35rem 1rem 0.25rem 1rem;
   font-size: 1rem;
 }
 
@@ -87,7 +87,7 @@ body {
   color: #fff;
   background-color: #000;
   width: 100%;
-  padding: .75rem;
+  padding: 0.75rem;
   font-size: 1.3rem;
   border: black solid 2px;
   margin: 1rem 0;
@@ -115,18 +115,13 @@ The next step is to add styles that apply specifically to the `AppComponent`.
 In `app.component.css`, add the following styles:
 
 ```css
-body {
-  background-color: #f5f5f5;
-  color: #4d4d4d;
-}
-
 .main {
   max-width: 500px;
   width: 85%;
   margin: 2rem auto;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 2.5rem 5rem 0 rgba(0,0,0,.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (min-width: 600px) {
@@ -138,7 +133,7 @@ body {
 label {
   font-size: 1.5rem;
   font-weight: bold;
-  display:block;
+  display: block;
   padding-bottom: 1rem;
 }
 
@@ -167,8 +162,8 @@ ul {
   padding-inline-start: 0;
 }
 
- ul li {
-    list-style: none;
+ul li {
+  list-style: none;
 }
 ```
 

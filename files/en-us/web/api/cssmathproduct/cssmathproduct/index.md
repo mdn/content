@@ -22,7 +22,7 @@ a new {{domxref("CSSMathProduct")}} object which creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMathProduct(args)
 ```
 

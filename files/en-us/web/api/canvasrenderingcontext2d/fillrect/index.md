@@ -25,7 +25,7 @@ on it.
 
 ## Syntax
 
-```js
+```js-nolint
 fillRect(x, y, width, height)
 ```
 

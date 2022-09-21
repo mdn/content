@@ -19,7 +19,7 @@ passed {{domxref("WebGLTransformFeedback")}} object to the current GL state.
 
 ## Syntax
 
-```js
+```js-nolint
 bindTransformFeedback(target, transformFeedback)
 ```
 

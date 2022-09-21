@@ -18,7 +18,7 @@ The **`WebGL2RenderingContext.deleteQuery()`** method of the [WebGL 2 API](/en-U
 
 ## Syntax
 
-```js
+```js-nolint
 deleteQuery(query)
 ```
 

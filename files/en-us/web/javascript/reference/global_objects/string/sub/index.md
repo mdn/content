@@ -19,7 +19,7 @@ element that causes a string to be displayed as subscript.
 
 ## Syntax
 
-```js
+```js-nolint
 sub()
 ```
 

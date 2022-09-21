@@ -21,7 +21,7 @@ Fires when the user selects a different page element for inspection with the bro
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.panels.elements.onSelectionChanged.addListener(listener)
 browser.devtools.panels.elements.onSelectionChanged.removeListener(listener)
 browser.devtools.panels.elements.onSelectionChanged.hasListener(listener)

@@ -23,7 +23,7 @@ providing a useful shortcut.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

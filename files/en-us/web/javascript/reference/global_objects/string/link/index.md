@@ -20,7 +20,7 @@ for an {{HTMLElement("a")}} HTML element to be used as a hypertext link to anoth
 
 ## Syntax
 
-```js
+```js-nolint
 link(url)
 ```
 

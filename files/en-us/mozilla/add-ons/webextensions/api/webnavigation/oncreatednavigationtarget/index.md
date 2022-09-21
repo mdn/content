@@ -27,7 +27,7 @@ If this event is fired, it will be fired before {{WebExtAPIRef("webNavigation.on
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onCreatedNavigationTarget.addListener(
   listener,                   // function
   filter                      // optional object

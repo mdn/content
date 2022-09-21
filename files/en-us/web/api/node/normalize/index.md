@@ -16,8 +16,8 @@ In a normalized sub-tree, no text nodes in the sub-tree are empty and there are 
 
 ## Syntax
 
-```js
-normalize();
+```js-nolint
+normalize()
 ```
 
 ### Parameters

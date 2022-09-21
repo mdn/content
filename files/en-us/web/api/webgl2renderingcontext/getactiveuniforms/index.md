@@ -19,7 +19,7 @@ active uniforms within a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveUniforms(program, uniformIndices, pname)
 ```
 

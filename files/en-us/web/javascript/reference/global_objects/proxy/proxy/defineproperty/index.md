@@ -18,7 +18,7 @@ The **`handler.defineProperty()`** method is a trap for
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   defineProperty(target, property, descriptor) {
   }

@@ -22,7 +22,7 @@ a {{domxref("ServiceWorkerRegistration")}} or `undefined`.
 
 ## Syntax
 
-```js
+```js-nolint
 getRegistration()
 getRegistration(clientURL)
 ```

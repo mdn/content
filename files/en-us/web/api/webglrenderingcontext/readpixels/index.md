@@ -18,7 +18,7 @@ specified rectangle of the current color framebuffer into a {{jsxref("TypedArray
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL1:
 readPixels(x, y, width, height, format, type, pixels)
 

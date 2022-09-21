@@ -20,8 +20,8 @@ one of the children's direct children, and so on.
 
 ## Syntax
 
-```js
-contains(otherNode);
+```js-nolint
+contains(otherNode)
 ```
 
 ### Parameters

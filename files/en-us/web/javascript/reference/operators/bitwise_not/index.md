@@ -18,7 +18,7 @@ The bitwise NOT operator (`~`) inverts the bits of its operand. Like other bitwi
 
 ## Syntax
 
-```js
+```js-nolint
 ~a
 ```
 

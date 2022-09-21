@@ -29,7 +29,7 @@ To avoid that, it's possible to force a write onto the disk by calling the `flus
 
 ## Syntax
 
-```js
+```js-nolint
 flush()
 ```
 

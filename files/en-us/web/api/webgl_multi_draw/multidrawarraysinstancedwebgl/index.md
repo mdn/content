@@ -22,8 +22,8 @@ method.
 
 ## Syntax
 
-```js
-void ext.multiDrawArraysInstancedWEBGL(mode,
+```js-nolint
+multiDrawArraysInstancedWEBGL(mode,
     firstsList, firstsOffset,
     countsList, countsOffset,
     instanceCountsList, instanceCountsOffset,

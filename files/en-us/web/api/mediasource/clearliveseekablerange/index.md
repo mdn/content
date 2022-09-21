@@ -24,7 +24,7 @@ to {{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 clearLiveSeekableRange()
 ```
 

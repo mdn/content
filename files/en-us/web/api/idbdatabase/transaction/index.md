@@ -24,7 +24,7 @@ object store.
 
 ## Syntax
 
-```js
+```js-nolint
 transaction(storeNames)
 transaction(storeNames, mode)
 transaction(storeNames, mode, options)

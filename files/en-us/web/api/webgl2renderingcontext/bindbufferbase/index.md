@@ -20,7 +20,7 @@ The **`WebGL2RenderingContext.bindBufferBase()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 bindBufferBase(target, index, buffer)
 ```
 

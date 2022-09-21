@@ -18,7 +18,7 @@ The **`get()`** method of the {{domxref("CookieStore")}} interface returns a sin
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 get(options)
 ```

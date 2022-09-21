@@ -24,7 +24,7 @@ values for each index in the CSSUnparsedValue object.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

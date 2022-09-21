@@ -17,7 +17,7 @@ The **`Document.createNodeIterator()`** method returns a new [`NodeIterator`](/e
 
 ## Syntax
 
-```js
+```js-nolint
 createNodeIterator(root)
 createNodeIterator(root, whatToShow)
 createNodeIterator(root, whatToShow, filter)

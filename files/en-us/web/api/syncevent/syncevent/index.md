@@ -19,7 +19,7 @@ The **`SyncEvent()`** constructor creates a new {{domxref("SyncEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new SyncEvent(type, options)
 ```
 

@@ -34,7 +34,7 @@ To release an object URL, call {{domxref("URL.revokeObjectURL", "revokeObjectURL
 
 ## Syntax
 
-```js
+```js-nolint
 createObjectURL(object)
 ```
 

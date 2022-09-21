@@ -19,7 +19,7 @@ The **`arrayBuffer()`** method of the {{domxref("PushMessageData")}} interface e
 
 ## Syntax
 
-```js
+```js-nolint
 arrayBuffer()
 ```
 

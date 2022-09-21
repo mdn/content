@@ -17,7 +17,7 @@ Returns the specified attribute of the specified element, as an `Attr` node.
 
 ## Syntax
 
-```js
+```js-nolint
 getAttributeNode(attrName)
 ```
 

@@ -19,7 +19,7 @@ The logical OR assignment (`x ||= y`) operator only assigns if
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 ||= expr2
 ```
 

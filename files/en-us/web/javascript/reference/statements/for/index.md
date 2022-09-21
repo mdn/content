@@ -19,7 +19,7 @@ The **for statement** creates a loop that consists of three optional expressions
 
 ## Syntax
 
-```js
+```js-nolint
 for (initialization; condition; afterthought)
   statement
 ```

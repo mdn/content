@@ -20,7 +20,7 @@ If the given child is a {{domxref("DocumentFragment")}}, the entire contents of 
 
 ## Syntax
 
-```js
+```js-nolint
 appendChild(aChild)
 ```
 

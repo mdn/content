@@ -24,7 +24,7 @@ HTML element that causes a string to blink.
 
 ## Syntax
 
-```js
+```js-nolint
 blink()
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Part 5: Displaying library data'
+title: "Express Tutorial Part 5: Displaying library data"
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
 tags:
   - Beginner
@@ -21,17 +21,13 @@ We're now ready to add the pages that display the [LocalLibrary](/en-US/docs/Lea
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete previous tutorial topics (including
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes"
-          >Express Tutorial Part 4: Routes and controllers</a
-        >).
+        Complete previous tutorial topics (including<a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a>).
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand how to use the async module and Pug template language, and
-        how to get data from the URL in our controller functions.
+        To understand how to use the async module and Pug template language, and how to get data from the URL in our controller functions.
       </td>
     </tr>
   </tbody>

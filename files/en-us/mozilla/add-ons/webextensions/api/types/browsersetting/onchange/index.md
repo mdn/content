@@ -22,7 +22,7 @@ On Firefox, it doesn't fire if the change has been made through `about:config`.
 
 ## Syntax
 
-```js
+```js-nolint
 BrowserSetting.onChange.addListener(listener)
 BrowserSetting.onChange.removeListener(listener)
 BrowserSetting.onChange.hasListener(listener)

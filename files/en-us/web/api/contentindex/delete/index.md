@@ -27,8 +27,8 @@ content.
 
 ## Syntax
 
-```js
-ContentIndex.delete(id).then(/* … */);
+```js-nolint
+ContentIndex.delete(id).then(/* … */)
 ```
 
 ### Parameters

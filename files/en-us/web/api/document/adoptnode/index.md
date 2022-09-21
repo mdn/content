@@ -24,7 +24,7 @@ current document. The node can then be inserted into the current document.
 
 ## Syntax
 
-```js
+```js-nolint
 adoptNode(externalNode)
 ```
 

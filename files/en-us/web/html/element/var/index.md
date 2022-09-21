@@ -115,8 +115,7 @@ var {
 Here's a simple example, using `<var>` to denote variable names in a mathematical equation.
 
 ```html
-<p>A simple equation:
-  <var>x</var> = <var>y</var> + 2 </p>
+<p>A simple equation: <var>x</var> = <var>y</var> + 2</p>
 ```
 
 The output:
@@ -138,9 +137,10 @@ var {
 #### HTML
 
 ```html
-<p>The variables <var>minSpeed</var> and <var>maxSpeed</var> control
-   the minimum and maximum speed of the apparatus in revolutions
-   per minute (RPM).</p>
+<p>
+  The variables <var>minSpeed</var> and <var>maxSpeed</var> control the minimum
+  and maximum speed of the apparatus in revolutions per minute (RPM).
+</p>
 ```
 
 This HTML uses `<var>` to enclose the names of two variables.

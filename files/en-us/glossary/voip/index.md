@@ -2,7 +2,6 @@
 title: VoIP
 slug: Glossary/VoIP
 tags:
-  - Glossary
   - Infrastructure
   - VoIP
 ---

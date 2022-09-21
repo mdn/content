@@ -25,7 +25,7 @@ The {{domxref("DOMPointReadOnly")}} method
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

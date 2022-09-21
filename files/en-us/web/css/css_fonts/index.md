@@ -32,10 +32,12 @@ p {
 ```
 
 ```html
-<p>Three hundred years ago<br>
-  I thought I might get some sleep<br>
-  I stretched myself out on an antique bed<br>
-  An' my spirit did a midnite creep</p>
+<p>
+  Three hundred years ago<br />
+  I thought I might get some sleep<br />
+  I stretched myself out on an antique bed<br />
+  An' my spirit did a midnite creep
+</p>
 ```
 
 The result is as follows:

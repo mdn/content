@@ -21,7 +21,7 @@ content or border box of an {{domxref('Element')}} or the bounding box of an
 
 ## Syntax
 
-```js
+```js-nolint
 new ResizeObserver(callback)
 ```
 

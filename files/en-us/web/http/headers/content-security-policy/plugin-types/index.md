@@ -68,7 +68,7 @@ To disallow all plugins, the {{CSP("object-src")}} directive should be set to
 is only used if you are allowing plugins with `object-src` at all.
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'" />
 ```
 
 ### Allowing Java applets

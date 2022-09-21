@@ -15,7 +15,7 @@ tags:
   - Loops
   - Module
   - events
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}

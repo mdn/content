@@ -25,7 +25,7 @@ available.
 
 ## Syntax
 
-```js
+```js-nolint
 getStats()
 ```
 

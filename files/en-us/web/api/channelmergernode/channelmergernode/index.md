@@ -18,7 +18,7 @@ The **`ChannelMergerNode()`** constructor creates a new {{domxref("ChannelMerger
 
 ## Syntax
 
-```js
+```js-nolint
 new ChannelMergerNode(context)
 new ChannelMergerNode(context, options)
 ```

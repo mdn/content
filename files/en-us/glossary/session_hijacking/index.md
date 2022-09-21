@@ -2,7 +2,6 @@
 title: Session Hijacking
 slug: Glossary/Session_Hijacking
 tags:
-  - Glossary
   - Security
   - session hijacking
 ---

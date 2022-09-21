@@ -29,7 +29,7 @@ value will be unchanged and a {{domxref("DOMException")}} will be raised.
 
 ## Syntax
 
-```js
+```js-nolint
 setStringValue(stringType, stringValue)
 ```
 

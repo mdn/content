@@ -56,7 +56,7 @@ In this section we'll demonstrate the five registered axes defined with examples
 1. When using `font-variation-settings` it is important to note that axis names are case-sensitive. The registered axis names must be in lower case, and custom axes must be in upper case. For example:
 
    ```css
-   font-variation-settings: 'wght' 375, 'GRAD' 88;
+   font-variation-settings: "wght" 375, "GRAD" 88;
    ```
 
    `wght` (weight) is a registered axis, and `GRAD` (grade) is a custom one.
@@ -72,7 +72,7 @@ It should be noted that at this point there is no way in the `@font-face` declar
 ```css
 font-weight: 375;
 
-font-variation-settings: 'wght' 375;
+font-variation-settings: "wght" 375;
 ```
 
 The following live example's CSS can be edited to allow you to play with font-weight values.
@@ -88,7 +88,7 @@ Width (represented by the `wdth` tag) defines the design axis of how narrow or w
 ```css
 font-stretch: 115%;
 
-font-variation-settings: 'wdth' 115;
+font-variation-settings: "wdth" 115;
 ```
 
 The following live example's CSS can be edited to allow you to play with font width values.
@@ -104,7 +104,7 @@ In CSS, both italic and oblique are applied to text using the {{cssxref("font-st
 ```css
 font-style: italic;
 
-font-variation-settings: 'ital' 1;
+font-variation-settings: "ital" 1;
 
 font-synthesis: none;
 ```
@@ -122,7 +122,7 @@ Slant (represented by the `slnt` tag), or as it's often referred to, 'oblique' â
 ```css
 font-style: oblique 14deg;
 
-font-variation-settings: 'slnt' 14;
+font-variation-settings: "slnt" 14;
 ```
 
 The following live example's CSS can be edited to allow you to play with font slant/oblique values.
@@ -142,7 +142,7 @@ There is a new attribute, {{cssxref("font-optical-sizing")}}, created to support
 ```css
 font-optical-sizing: auto;
 
-font-variation-settings: 'opsz' 36;
+font-variation-settings: "opsz" 36;
 ```
 
 The following live example's CSS can be edited to allow you to play with optical size values.
@@ -158,7 +158,7 @@ Custom axes are just that: they can be any axis of design variation that the typ
 Grade may become one of the more common custom axes as it has a known history in typeface design. The practice of designing different grades of a typeface was often done in reaction to intended use and printing technique. The term 'grade' refers to the relative weight or density of the typeface design, but differs from traditional 'weight' in that the physical space the text occupies does not change, so changing the text grade doesn't change the overall layout of the text or elements around it. This makes grade a useful axis of variation as it can be varied or animated without causing a reflow of the text itself.
 
 ```css
-font-variation-settings: 'GRAD' 88;
+font-variation-settings: "GRAD" 88;
 ```
 
 The following live example's CSS can be edited to allow you to play with font grade values.
@@ -175,11 +175,11 @@ The basic syntax is the same, but the font technology can be specified, and allo
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: normal;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
 }
 ```
 
@@ -187,11 +187,11 @@ The basic syntax is the same, but the font technology can be specified, and allo
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: oblique 0deg 20deg;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 20deg;
 }
 ```
 
@@ -201,11 +201,11 @@ The basic syntax is the same, but the font technology can be specified, and allo
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: italic;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
 }
 ```
 
@@ -213,11 +213,11 @@ The basic syntax is the same, but the font technology can be specified, and allo
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: oblique 0deg 12deg;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 12deg;
 }
 ```
 
@@ -231,13 +231,13 @@ Variable font support can be checked with CSS Feature Queries (see {{cssxref("@s
 
 ```css
 h1 {
- font-family: some-non-variable-font-family;
+  font-family: some-non-variable-font-family;
 }
 
-@supports (font-variation-settings: 'wdth' 115) {
- h1 {
+@supports (font-variation-settings: "wdth" 115) {
+  h1 {
     font-family: some-variable-font-family;
- }
+  }
 }
 ```
 

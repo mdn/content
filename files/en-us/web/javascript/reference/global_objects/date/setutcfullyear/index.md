@@ -19,7 +19,7 @@ specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCFullYear(yearValue)
 setUTCFullYear(yearValue, monthValue)
 setUTCFullYear(yearValue, monthValue, dayValue)

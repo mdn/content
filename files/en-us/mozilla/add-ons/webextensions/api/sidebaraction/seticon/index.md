@@ -37,7 +37,7 @@ If you set a new icon using `setIcon()`, and omit both the `tabId` and `windowId
 
 ## Syntax
 
-```js
+```js-nolint
 let settingIcon = browser.sidebarAction.setIcon(
   details         // object
 )

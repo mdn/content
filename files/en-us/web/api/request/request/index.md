@@ -18,7 +18,7 @@ The **`Request()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new Request(input)
 new Request(input, options)
 ```

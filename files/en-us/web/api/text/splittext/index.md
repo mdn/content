@@ -27,7 +27,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 newNode = textNode.splitText(offset)
 ```
 

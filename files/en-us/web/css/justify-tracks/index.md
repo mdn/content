@@ -23,7 +23,7 @@ The **`justify-tracks`** CSS property sets the alignment in the masonry axis for
 justify-tracks: start;
 justify-tracks: space-between;
 justify-tracks: center;
-justify-tracks: start,center,end;
+justify-tracks: start, center, end;
 
 /* Global values */
 justify-tracks: inherit;

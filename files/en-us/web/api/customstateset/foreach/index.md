@@ -18,7 +18,7 @@ The **`forEach()`** method of the {{domxref("CustomStateSet")}} interface execut
 
 ## Syntax
 
-```js
+```js-nolint
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 ```

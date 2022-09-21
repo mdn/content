@@ -34,7 +34,7 @@ particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/v
 
 ## Syntax
 
-```js
+```js-nolint
 // For the current standard:
 deleteDatabase(name)
 

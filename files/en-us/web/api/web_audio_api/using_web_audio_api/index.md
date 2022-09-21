@@ -94,7 +94,7 @@ Since our scripts are playing audio in response to a user input event (a click o
 
 ```html
 <button data-playing="false" role="switch" aria-checked="false">
-    <span>Play/Pause</span>
+  <span>Play/Pause</span>
 </button>
 ```
 
@@ -166,7 +166,7 @@ The default value for gain is 1; this keeps the current volume the same. Gain ca
 Let's give the user control to do this — we'll use a [range input](/en-US/docs/Web/HTML/Element/input/range):
 
 ```html
-<input type="range" id="volume" min="0" max="2" value="1" step="0.01">
+<input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
 ```
 
 > **Note:** Range inputs are a really handy input type for updating values on audio nodes. You can specify a range's values and use them directly with the audio node's parameters.
@@ -211,7 +211,7 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 Here our values range from -1 (far left) and 1 (far right). Again let's use a range type input to vary this parameter:
 
 ```html
-<input type="range" id="panner" min="-1" max="1" value="0" step="0.01">
+<input type="range" id="panner" min="-1" max="1" value="0" step="0.01" />
 ```
 
 We use the values from that input to adjust our panner values in the same way as we did before:

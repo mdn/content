@@ -21,7 +21,7 @@ on the resulting object before it is returned.
 
 ## Syntax
 
-```js
+```js-nolint
 JSON.parse(text)
 JSON.parse(text, reviver)
 ```

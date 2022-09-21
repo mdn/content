@@ -19,7 +19,7 @@ The **`Intl.PluralRules()`** constructor creates
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.PluralRules()
 new Intl.PluralRules(locales)
 new Intl.PluralRules(locales, options)

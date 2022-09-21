@@ -29,7 +29,7 @@ providing statistics about either the overall connection or about the specified
 
 ## Syntax
 
-```js
+```js-nolint
 getStats()
 getStats(selector)
 ```

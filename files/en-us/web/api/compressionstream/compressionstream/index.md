@@ -16,7 +16,7 @@ The **`CompressionStream()`** constructor creates a new {{domxref("CompressionSt
 
 ## Syntax
 
-```js
+```js-nolint
 new CompressionStream(format)
 ```
 

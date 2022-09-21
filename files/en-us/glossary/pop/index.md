@@ -3,7 +3,6 @@ title: POP3
 slug: Glossary/POP
 tags:
   - Beginner
-  - Glossary
   - Infrastructure
 ---
 

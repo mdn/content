@@ -3,7 +3,6 @@ title: Local scope
 slug: Glossary/Local_scope
 tags:
   - CodingScripting
-  - Glossary
   - NeedsContent
 ---
 

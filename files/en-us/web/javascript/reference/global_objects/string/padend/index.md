@@ -21,7 +21,7 @@ padding is applied from the end of the current string.
 
 ## Syntax
 
-```js
+```js-nolint
 padEnd(targetLength)
 padEnd(targetLength, padString)
 ```

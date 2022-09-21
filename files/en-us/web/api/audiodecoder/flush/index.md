@@ -18,7 +18,7 @@ The **`flush()`** method of the {{domxref("AudioDecoder")}} interface returns a 
 
 ## Syntax
 
-```js
+```js-nolint
 flush()
 ```
 

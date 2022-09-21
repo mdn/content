@@ -20,8 +20,8 @@ the child entry as the last array item.
 
 ## Syntax
 
-```js
-const pathArr = FileSystemDirectoryHandle.resolve(possibleDescendant);
+```js-nolint
+resolve(possibleDescendant)
 ```
 
 ### Parameters

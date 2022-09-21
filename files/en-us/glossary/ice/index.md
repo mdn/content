@@ -3,7 +3,6 @@ title: ICE
 slug: Glossary/ICE
 tags:
   - CodingScripting
-  - Glossary
   - Networking
   - Protocols
   - WebRTC

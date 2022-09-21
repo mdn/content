@@ -25,7 +25,7 @@ resolution until a 1x1 dimension texture image is created.
 
 ## Syntax
 
-```js
+```js-nolint
 generateMipmap(target)
 ```
 

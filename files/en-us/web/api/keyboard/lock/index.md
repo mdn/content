@@ -24,7 +24,7 @@ system.
 
 ## Syntax
 
-```js
+```js-nolint
 lock()
 lock(keyCodes)
 ```

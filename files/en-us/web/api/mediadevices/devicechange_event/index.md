@@ -47,10 +47,8 @@ media device is attached to or removed from the device running the sample.
 
 ```html hidden
 <p>Click the start button below to begin the demonstration.</p>
-<div id="startButton" class="button">
-  Start
-</div>
-<video id="video" width="160" height="120" autoplay></video><br>
+<div id="startButton" class="button">Start</div>
+<video id="video" width="160" height="120" autoplay></video><br />
 
 <div class="left">
   <h2>Audio devices:</h2>

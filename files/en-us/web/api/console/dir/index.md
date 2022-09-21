@@ -30,7 +30,7 @@ properties of the object.
 
 ## Syntax
 
-```js
+```js-nolint
 dir(object)
 ```
 

@@ -22,7 +22,7 @@ low-order filter.
 
 ## Syntax
 
-```js
+```js-nolint
 new BiquadFilterNode(context, options)
 ```
 

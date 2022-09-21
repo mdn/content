@@ -24,12 +24,20 @@ It can be used as both a setter and getter.
 ```html
 <textarea id="log" rows="4" cols="100"></textarea>
 <map name="infographic">
-    <area id="area1" shape="rect" coords="184,6,253,27"
-          href="/en-US/docs/HTMLAreaElement"
-          target="_blank" alt="Mozilla" />
-    <area id="area2" shape="circle" coords="130,136,60"
-          href="https://coolexample.com/"
-          target="_blank" alt="MDN" />
+  <area
+    id="area1"
+    shape="rect"
+    coords="184,6,253,27"
+    href="/en-US/docs/HTMLAreaElement"
+    target="_blank"
+    alt="Mozilla" />
+  <area
+    id="area2"
+    shape="circle"
+    coords="130,136,60"
+    href="https://coolexample.com/"
+    target="_blank"
+    alt="MDN" />
 </map>
 ```
 

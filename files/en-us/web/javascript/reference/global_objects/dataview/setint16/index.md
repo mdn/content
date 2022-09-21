@@ -19,7 +19,7 @@ The **`setInt16()`** method stores a signed 16-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 setInt16(byteOffset, value)
 setInt16(byteOffset, value, littleEndian)
 ```

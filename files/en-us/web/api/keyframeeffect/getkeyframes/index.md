@@ -20,7 +20,7 @@ The **`getKeyframes()`** method of a {{domxref("KeyframeEffect")}} returns an Ar
 
 ## Syntax
 
-```js
+```js-nolint
 getKeyframes()
 ```
 

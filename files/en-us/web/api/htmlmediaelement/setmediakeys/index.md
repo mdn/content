@@ -23,7 +23,7 @@ playback.
 
 ## Syntax
 
-```js
+```js-nolint
 setMediaKeys(mediaKeys)
 ```
 

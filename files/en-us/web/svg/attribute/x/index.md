@@ -64,12 +64,16 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20"  y="20" width="60" height="60" />
+  <rect x="20" y="20" width="60" height="60" />
   <rect x="120" y="20" width="60" height="60" />
   <rect x="220" y="20" width="60" height="60" />
 </svg>
@@ -1189,7 +1193,11 @@ If it contains multiple values, `x` defines the x coordinate of each individual 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1219,7 +1227,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```
@@ -1265,7 +1273,7 @@ If it contains multiple values, `x` defines the x coordinate of each individual 
 
 ## tspan
 
-For {{SVGElement('tspan')}}, if it contains a single value, `x` defines the x coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as  {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
+For {{SVGElement('tspan')}}, if it contains a single value, `x` defines the x coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
 If it contains multiple values, `x` defines the x coordinate of each individual glyph from the text. If there are fewer values than glyphs, the remaining glyphs are placed in line with the last positioned glyph. If there are more values than glyphs, the extra values are ignored.
 
@@ -1299,7 +1307,11 @@ If it contains multiple values, `x` defines the x coordinate of each individual 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1331,7 +1343,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```

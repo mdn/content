@@ -31,7 +31,7 @@ To use `proxy.onRequest`, an extension must have the "proxy" [API permission](/e
 
 ## Syntax
 
-```js
+```js-nolint
 browser.proxy.onRequest.addListener(
   listener,             //  function
   filter,               //  object

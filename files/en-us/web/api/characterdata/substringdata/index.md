@@ -17,7 +17,7 @@ and extending for a given number of characters afterwards.
 
 ## Syntax
 
-```js
+```js-nolint
   domString = characterData.substringData(offset, count)
 ```
 

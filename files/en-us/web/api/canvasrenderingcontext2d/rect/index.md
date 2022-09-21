@@ -28,7 +28,7 @@ anything. To draw the rectangle onto a canvas, you can use the
 
 ## Syntax
 
-```js
+```js-nolint
 rect(x, y, width, height)
 ```
 

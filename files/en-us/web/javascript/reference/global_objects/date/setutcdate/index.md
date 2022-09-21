@@ -20,7 +20,7 @@ To instead change the day of the month for a given {{jsxref("Date")}} instance b
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCDate(dayValue)
 ```
 

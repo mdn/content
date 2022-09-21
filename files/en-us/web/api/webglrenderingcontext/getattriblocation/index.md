@@ -19,7 +19,7 @@ attribute variable in a given {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getAttribLocation(program, name)
 ```
 

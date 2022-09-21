@@ -25,7 +25,7 @@ This operator is frequently used as an alternative to an [`if...else`](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 condition ? exprIfTrue : exprIfFalse
 ```
 

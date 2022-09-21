@@ -19,7 +19,7 @@ a connection between the local device and a remote peer.
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCPeerConnection()
 new RTCPeerConnection(configuration)
 ```

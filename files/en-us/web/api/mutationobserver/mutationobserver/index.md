@@ -30,7 +30,7 @@ establish which portion of the DOM to watch and what kinds of changes to watch f
 
 ## Syntax
 
-```js
+```js-nolint
 new MutationObserver(callback)
 ```
 

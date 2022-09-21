@@ -19,7 +19,7 @@ string containing the contents of the blob, interpreted as UTF-8.
 
 ## Syntax
 
-```js
+```js-nolint
 text()
 ```
 

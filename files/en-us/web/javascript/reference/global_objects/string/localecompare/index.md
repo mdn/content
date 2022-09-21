@@ -19,7 +19,7 @@ The **`localeCompare()`** method returns a number indicating whether a reference
 
 ## Syntax
 
-```js
+```js-nolint
 localeCompare(compareString)
 localeCompare(compareString, locales)
 localeCompare(compareString, locales, options)
@@ -34,10 +34,13 @@ In implementations that support the [`Intl.Collator` API](/en-US/docs/Web/JavaSc
 - `compareString`
   - : The string against which the `referenceStr` is compared.
 - `locales` {{optional_inline}}
+
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) parameter of the `Intl.Collator()` constructor.
 
     In implementations without `Intl.Collator` support, this parameter is ignored and the host's locale is usually used.
+
 - `options` {{optional_inline}}
+
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options) parameter of the `Intl.Collator()` constructor.
 
     In implementations without `Intl.Collator` support, this parameter is ignored.

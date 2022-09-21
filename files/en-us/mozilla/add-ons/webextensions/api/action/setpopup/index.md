@@ -22,7 +22,7 @@ Sets the HTML document that is opened as a popup when the user clicks on the bro
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.setPopup(
   details // object
 )

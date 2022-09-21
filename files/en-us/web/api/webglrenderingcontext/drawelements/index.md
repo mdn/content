@@ -17,7 +17,7 @@ The **`WebGLRenderingContext.drawElements()`** method of the [WebGL API](/en-US/
 
 ## Syntax
 
-```js
+```js-nolint
 drawElements(mode, count, type, offset)
 ```
 

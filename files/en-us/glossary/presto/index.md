@@ -2,7 +2,6 @@
 title: Presto
 slug: Glossary/Presto
 tags:
-  - Glossary
   - Infrastructure
 ---
 

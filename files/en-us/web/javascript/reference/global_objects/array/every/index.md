@@ -21,7 +21,7 @@ returns a Boolean value.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 every((element) => { /* … */ } )
 every((element, index) => { /* … */ } )

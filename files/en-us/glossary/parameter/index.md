@@ -3,7 +3,6 @@ title: Parameter
 slug: Glossary/Parameter
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

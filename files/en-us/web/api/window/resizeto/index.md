@@ -18,7 +18,7 @@ window.
 
 ## Syntax
 
-```js
+```js-nolint
 resizeTo(width, height)
 ```
 

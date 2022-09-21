@@ -24,7 +24,7 @@ well).
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

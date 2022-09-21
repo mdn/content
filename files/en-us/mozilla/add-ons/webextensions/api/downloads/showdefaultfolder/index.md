@@ -20,7 +20,7 @@ The **`showDefaultFolder()`** function of the {{WebExtAPIRef("downloads")}} API 
 
 ## Syntax
 
-```js
+```js-nolint
 browser.downloads.showDefaultFolder();
 ```
 

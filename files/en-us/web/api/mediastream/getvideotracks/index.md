@@ -25,7 +25,7 @@ The **`getVideoTracks()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getVideoTracks()
 ```
 

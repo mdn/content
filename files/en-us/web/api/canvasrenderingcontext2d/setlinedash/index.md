@@ -27,7 +27,7 @@ and gaps which describe the pattern.
 
 ## Syntax
 
-```js
+```js-nolint
 setLineDash(segments)
 ```
 

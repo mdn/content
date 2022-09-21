@@ -23,7 +23,7 @@ On success it will fire the [`contextrestored` event](/en-US/docs/Web/API/HTMLCa
 
 ## Syntax
 
-```js
+```js-nolint
 isContextLost()
 ```
 

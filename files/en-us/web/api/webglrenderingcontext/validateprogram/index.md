@@ -20,7 +20,7 @@ used in the current WebGL state.
 
 ## Syntax
 
-```js
+```js-nolint
 validateProgram(program)
 ```
 

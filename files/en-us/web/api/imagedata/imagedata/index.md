@@ -22,7 +22,7 @@ This constructor is the preferred way of creating such an object in a
 
 ## Syntax
 
-```js
+```js-nolint
 new ImageData(width, height)
 new ImageData(width, height, settings)
 

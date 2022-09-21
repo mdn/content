@@ -24,7 +24,7 @@ that allows to safely write in the file.
 
 ## Syntax
 
-```js
+```js-nolint
 open(mode)
 ```
 

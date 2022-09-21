@@ -21,7 +21,7 @@ object at the specified index in the {{ domxref("TouchList") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

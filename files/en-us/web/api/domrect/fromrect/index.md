@@ -19,7 +19,7 @@ object with a given location and dimensions.
 
 ## Syntax
 
-```js
+```js-nolint
 fromRect()
 fromRect(rectangle)
 ```

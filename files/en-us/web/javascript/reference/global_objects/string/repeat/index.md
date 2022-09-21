@@ -22,7 +22,7 @@ concatenated together.
 
 ## Syntax
 
-```js
+```js-nolint
 repeat(count)
 ```
 

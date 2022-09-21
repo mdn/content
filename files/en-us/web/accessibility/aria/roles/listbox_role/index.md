@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: listbox role'
+title: "ARIA: listbox role"
 slug: Web/Accessibility/ARIA/Roles/listbox_role
 tags:
   - ARIA
@@ -172,17 +172,23 @@ The snippet below shows how the listbox role is added directly into the HTML sou
 
 ```html
 <p id="listbox1label" role="label">Select a color:</p>
-<div role="listbox" tabindex="0" id="listbox1" aria-labelledby="listbox1label"
+<div
+  role="listbox"
+  tabindex="0"
+  id="listbox1"
+  aria-labelledby="listbox1label"
   onclick="return listItemClick(event);"
   onkeydown="return listItemKeyEvent(event);"
   onkeypress="return listItemKeyEvent(event);"
   aria-activedescendant="listbox1-1">
-    <div role="option" id="listbox1-1" class="selected" aria-selected="true">Green</div>
-    <div role="option" id="listbox1-2">Orange</div>
-    <div role="option" id="listbox1-3">Red</div>
-    <div role="option" id="listbox1-4">Blue</div>
-    <div role="option" id="listbox1-5">Violet</div>
-    <div role="option" id="listbox1-6">Periwinkle</div>
+  <div role="option" id="listbox1-1" class="selected" aria-selected="true">
+    Green
+  </div>
+  <div role="option" id="listbox1-2">Orange</div>
+  <div role="option" id="listbox1-3">Red</div>
+  <div role="option" id="listbox1-4">Blue</div>
+  <div role="option" id="listbox1-5">Violet</div>
+  <div role="option" id="listbox1-6">Periwinkle</div>
 </div>
 ```
 
@@ -191,12 +197,12 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 ```html
 <label for="listbox1">Select a color:</label>
 <select id="listbox1">
-   <option selected>Green</option>
-   <option>Orange</option>
-   <option>Red</option>
-   <option>Blue</option>
-   <option>Violet</option>
-   <option>Periwinkle</option>
+  <option selected>Green</option>
+  <option>Orange</option>
+  <option>Red</option>
+  <option>Blue</option>
+  <option>Violet</option>
+  <option>Periwinkle</option>
 </select>
 ```
 

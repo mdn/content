@@ -36,7 +36,7 @@ A Boolean which is `true` if the element is inert; otherwise, the value is `fals
 
 ```css
 [inert] > * {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 

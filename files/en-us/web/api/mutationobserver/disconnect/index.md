@@ -33,7 +33,7 @@ The observer can be reused by calling its
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

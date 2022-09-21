@@ -20,7 +20,7 @@ server certificate to be used to encrypt messages to the license server.
 
 ## Syntax
 
-```js
+```js-nolint
 setServerCertificate(serverCertificate)
 ```
 

@@ -21,8 +21,8 @@ in this object. The keys are `unsigned integer`.
 
 ## Syntax
 
-```js
-nodeList.keys();
+```js-nolint
+keys()
 ```
 
 ### Return value

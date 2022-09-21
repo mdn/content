@@ -19,7 +19,7 @@ parameters for anti-aliasing effects.
 
 ## Syntax
 
-```js
+```js-nolint
 sampleCoverage(value, invert)
 ```
 

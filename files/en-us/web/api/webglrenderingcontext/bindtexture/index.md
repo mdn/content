@@ -19,7 +19,7 @@ The **`WebGLRenderingContext.bindTexture()`** method of the [WebGL API](/en-US/d
 
 ## Syntax
 
-```js
+```js-nolint
 bindTexture(target, texture)
 ```
 

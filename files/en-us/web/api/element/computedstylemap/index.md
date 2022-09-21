@@ -24,7 +24,7 @@ an alternative to {{domxref("CSSStyleDeclaration")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 computedStyleMap()
 ```
 
@@ -43,7 +43,7 @@ we will add all the CSS Property / Value pairs.
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```

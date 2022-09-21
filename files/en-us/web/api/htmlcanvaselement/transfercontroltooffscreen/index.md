@@ -21,7 +21,7 @@ thread or on a worker.
 
 ## Syntax
 
-```js
+```js-nolint
 transferControlToOffscreen()
 ```
 

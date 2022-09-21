@@ -19,7 +19,7 @@ The **`removeAttributeNS()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 removeAttributeNS(namespace, attrName)
 ```
 

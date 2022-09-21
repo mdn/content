@@ -37,7 +37,7 @@ on it.
 
 ## Syntax
 
-```js
+```js-nolint
 strokeText(text, x, y)
 strokeText(text, x, y, maxWidth)
 ```

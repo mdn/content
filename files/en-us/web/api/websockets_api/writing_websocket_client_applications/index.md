@@ -193,5 +193,5 @@ If this value isn't 0, there's pending data still, so you may wish to wait befor
 
 ## Security considerations
 
-WebSockets should not be used in a mixed content environment; that is, you shouldn't open a non-secure WebSocket connection from a page loaded using HTTPS or vice-versa.
+WebSockets should not be used in a mixed content environment; that is, you shouldn't open a non-secure WebSocket connection from a page loaded using HTTPS or vice versa.
 Most browsers now only allow secure WebSocket connections, and no longer support using them in insecure contexts.

@@ -22,7 +22,7 @@ See {{WebExtAPIRef("bookmarks.onImportBegan")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onImportEnded.addListener(listener)
 browser.bookmarks.onImportEnded.removeListener(listener)
 browser.bookmarks.onImportEnded.hasListener(listener)

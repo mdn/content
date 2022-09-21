@@ -31,7 +31,7 @@ This method must be called in the {{domxref("HTMLElement/dragstart_event", "drag
 
 ## Syntax
 
-```js
+```js-nolint
 setDragImage(imgElement, xOffset, yOffset)
 ```
 

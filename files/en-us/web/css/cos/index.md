@@ -11,7 +11,6 @@ tags:
   - cos
   - Experimental
 browser-compat: css.types.cos
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -85,9 +84,9 @@ div.rotated-diamond {
 }
 
 div.rotated-scaled-diamond {
-  width: calc( 100px * cos(45deg) );
-  height: calc( 100px * cos(45deg) );
-  margin: calc( 100px / 4 * cos(45deg) );
+  width: calc(100px * cos(45deg));
+  height: calc(100px * cos(45deg));
+  margin: calc(100px / 4 * cos(45deg));
   transform: rotate(45deg);
   transform-origin: center;
   background-color: green;

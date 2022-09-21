@@ -21,7 +21,7 @@ The **`stop`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 

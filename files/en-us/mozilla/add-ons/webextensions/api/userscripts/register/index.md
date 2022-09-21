@@ -22,7 +22,7 @@ This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 const registeredUserScript = await browser.userScripts.register(
   userScriptOptions       // object
 );

@@ -3,7 +3,6 @@ title: "Null"
 slug: Glossary/Null
 tags:
   - CodingScripting
-  - Glossary
 ---
 
 In computer science, a **`null`** value represents a reference that points, generally intentionally, to a nonexistent or invalid {{glossary("object")}} or address. The meaning of a null reference varies among language implementations.

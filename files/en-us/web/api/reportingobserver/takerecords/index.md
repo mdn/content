@@ -20,7 +20,7 @@ in the observer's report queue, and empties the queue.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 

@@ -32,7 +32,7 @@ from the user in order to identify them. Common user-verifying platform authenti
 
 ## Syntax
 
-```js
+```js-nolint
 isUserVerifyingPlatformAuthenticatorAvailable()
 ```
 

@@ -30,7 +30,7 @@ non-standard and _should not be used_.
 
 ## Syntax
 
-```js
+```js-nolint
 convertPointFromNodeToPage(node, nodePoint)
 ```
 

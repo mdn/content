@@ -57,7 +57,11 @@ body {
 /* Fallback */
 /* In the component's style: */
 .component .header {
-  color: var(--header-color, blue); /* header-color isn't set, and so remains blue, the fallback value */
+  /* header-color isn't set, and so remains blue, the fallback value */
+  color: var(
+    --header-color,
+    blue
+  );
 }
 
 .component .text {

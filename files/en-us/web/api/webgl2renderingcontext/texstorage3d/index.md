@@ -19,7 +19,7 @@ three-dimensional texture or two-dimensional array texture.
 
 ## Syntax
 
-```js
+```js-nolint
 texStorage3D(target, levels, internalformat, width, height, depth)
 ```
 

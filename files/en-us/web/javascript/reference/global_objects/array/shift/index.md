@@ -20,7 +20,7 @@ of the array.
 
 ## Syntax
 
-```js
+```js-nolint
 shift()
 ```
 
@@ -70,7 +70,7 @@ The shift() method is often used in condition inside while loop. In the followin
 example every iteration will remove the next element from an array, until it is empty:
 
 ```js
-const names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
+const names = ["Andrew", "Edward", "Paul", "Chris", "John"];
 
 while (typeof (i = names.shift()) !== 'undefined') {
   console.log(i);

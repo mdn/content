@@ -20,7 +20,7 @@ The **`get()`** method of the {{domxref("BackgroundFetchManager")}} interface re
 
 ## Syntax
 
-```js
+```js-nolint
 get(id)
 ```
 
@@ -39,7 +39,7 @@ The following examples shows how to use `get()` to retrieve a {{domxref("Backgro
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.get('my-fetch');
+  const bgFetch = await swReg.backgroundFetch.get("my-fetch");
 });
 // my code block
 ```

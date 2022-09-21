@@ -4,7 +4,6 @@ slug: Glossary/SDP
 tags:
   - Advanced
   - Collaborating
-  - Glossary
   - Infrastructure
   - Protocol
   - WebRTC

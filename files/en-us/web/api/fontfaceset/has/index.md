@@ -17,7 +17,7 @@ The **`has()`** method of the {{domxref("FontFaceSet")}} interface returns a {{j
 
 ## Syntax
 
-```js
+```js-nolint
 has(value)
 ```
 

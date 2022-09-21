@@ -147,22 +147,22 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 
 ```css
 #ajax-loader {
-    position: fixed;
-    display: table;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #ajax-loader > div {
-    display: table-cell;
-    width: 100%;
-    height: 100%;
-    vertical-align: middle;
-    text-align: center;
-    background-color: #000000;
-    opacity: 0.65;
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #000000;
+  opacity: 0.65;
 }
 ```
 

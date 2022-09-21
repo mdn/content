@@ -20,7 +20,7 @@ element that causes a string to be displayed as superscript.
 
 ## Syntax
 
-```js
+```js-nolint
 sup()
 ```
 

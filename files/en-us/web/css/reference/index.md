@@ -6,7 +6,7 @@ tags:
   - Guide
   - Overview
   - Reference
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{CSSRef}}

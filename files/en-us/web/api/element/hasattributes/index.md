@@ -19,7 +19,7 @@ attributes or not.
 
 ## Syntax
 
-```js
+```js-nolint
 hasAttributes()
 ```
 

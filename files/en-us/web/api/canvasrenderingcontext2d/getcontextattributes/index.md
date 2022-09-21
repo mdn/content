@@ -22,7 +22,7 @@ on context creation.
 
 ## Syntax
 
-```js
+```js-nolint
 getContextAttributes()
 ```
 

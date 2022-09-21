@@ -17,7 +17,7 @@ The **`handler.getOwnPropertyDescriptor()`** method is a trap for {{jsxref("Obje
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   getOwnPropertyDescriptor(target, prop) {
   }

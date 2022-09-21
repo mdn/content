@@ -31,7 +31,12 @@ A string with one of the following values:
 In this example the `aria-busy` attribute on the element with an ID of `clock` is set to "false". Using `ariaBusy` we update the value to "true".
 
 ```html
-<div id="clock" role="timer" aria-live="polite" aria-atomic="true" aria-busy="false"></div>
+<div
+  id="clock"
+  role="timer"
+  aria-live="polite"
+  aria-atomic="true"
+  aria-busy="false"></div>
 ```
 
 ```js

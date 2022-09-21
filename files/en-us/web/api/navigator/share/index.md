@@ -22,7 +22,7 @@ On Windows this happens when the share popup is launched, while on Android the p
 
 ## Syntax
 
-```js
+```js-nolint
 navigator.share(data)
 ```
 
@@ -171,7 +171,7 @@ To share files, first test for and call {{domxref("navigator.canShare()")}}. The
 ```html
 <div>
   <label for="files">Select images to share:</label>
-  <input id="files" type="file" accept="image/*" multiple>
+  <input id="files" type="file" accept="image/*" multiple />
 </div>
 <button id="share" type="button">Share your images!</button>
 <output id="output"></output>

@@ -17,7 +17,7 @@ object, or `undefined` if the target object has been garbage-collected.
 
 ## Syntax
 
-```js
+```js-nolint
 deref()
 ```
 

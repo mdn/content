@@ -23,7 +23,7 @@ const AsyncGeneratorFunction = (async function* () {}).constructor;
 
 ## Syntax
 
-```js
+```js-nolint
 new AsyncGeneratorFunction(functionBody)
 new AsyncGeneratorFunction(arg0, functionBody)
 new AsyncGeneratorFunction(arg0, arg1, functionBody)
@@ -59,6 +59,7 @@ All arguments passed to the function, except the last, are treated as the names 
 > When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `AsyncGeneratorFunction` constructor was called.
 >
 > This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for an async generator function expression.
+
 Invoking the `AsyncGeneratorFunction` constructor as a function (without using the `new` operator) has the same effect as invoking it as a constructor.
 
 ## Examples

@@ -30,7 +30,7 @@ reality session.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRSessionEvent(type, options)
 ```
 

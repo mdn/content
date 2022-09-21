@@ -24,7 +24,7 @@ Unread chunks remain in the stream's internal queue and can be read later by acq
 
 ## Syntax
 
-```js
+```js-nolint
 releaseLock()
 ```
 

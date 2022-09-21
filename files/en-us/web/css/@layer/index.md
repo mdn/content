@@ -1,5 +1,5 @@
 ---
-title: '@layer'
+title: "@layer"
 slug: Web/CSS/@layer
 tags:
   - At-rule
@@ -42,11 +42,11 @@ The first way is to create a named cascade layer with the CSS rules for that lay
 ```css
 @layer utilities {
   .padding-sm {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .padding-lg {
-    padding: .8rem;
+    padding: 0.8rem;
   }
 }
 ```
@@ -84,7 +84,7 @@ This creates an _anonymous cascade layer_. This layer functions in the same way 
 Another way to create a cascade layer is by using {{cssxref("@import")}}. In this case, the rules would be in the imported stylesheet. Remember that the `@import` at-rule must precede all other types of rules, except the `@charset` rules.
 
 ```css
-@import 'theme.css' layer(utilities);
+@import "theme.css" layer(utilities);
 ```
 
 ### Nesting layers
@@ -94,7 +94,6 @@ Layers may be nested. For example:
 ```css
 @layer framework {
   @layer layout {
-
   }
 }
 ```
@@ -162,9 +161,11 @@ In the following example, two layers are created with no rules applied, then CSS
 #### HTML
 
 ```html
-<div class="item">I am displayed in <code>color: rebeccapurple</code>
-because the <code>special</code> layer comes after the <code>base</code> layer.
-My green border, font-size, and padding come from the <code>base</code> layer.</div>
+<div class="item">
+  I am displayed in <code>color: rebeccapurple</code> because the
+  <code>special</code> layer comes after the <code>base</code> layer. My green
+  border, font-size, and padding come from the <code>base</code> layer.
+</div>
 ```
 
 #### CSS
@@ -183,7 +184,7 @@ My green border, font-size, and padding come from the <code>base</code> layer.</
     color: green;
     border: 5px solid green;
     font-size: 1.3em;
-    padding: .5em;
+    padding: 0.5em;
   }
 }
 ```

@@ -22,7 +22,7 @@ interface aborts the current segment and resets the segment parser.
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

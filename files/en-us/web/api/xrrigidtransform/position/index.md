@@ -70,7 +70,7 @@ function refSpaceCreated(refSpace) {
 
 After setting up the graphics context for WebXR use, this begins by looking to see if a
 variable `immersiveSession` is `true`; if so, we first request a
-`bounded-floor` reference space. if that fails (probably because
+`bounded-floor` reference space. If that fails (probably because
 `bounded-floor` isn't supported), we try requesting a
 `local-floor` reference space.
 

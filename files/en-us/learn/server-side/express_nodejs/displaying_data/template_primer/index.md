@@ -24,9 +24,9 @@ Different template languages use different approaches for defining layout and ma
 The _LocalLibrary_ was configured to use [Pug](https://pugjs.org/api/getting-started.html) when we [created the skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website). You should see the pug module included as a dependency in the website's **package.json** file, and the following configuration settings in the **app.js** file. The settings tell us that we're using pug as the view engine, and that _Express_ should search for templates in the **/views** subdirectory.
 
 ```js
-// View engine setup.
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+// View engine setup
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 If you look in the views directory you will see the .pug files for the project's default views.

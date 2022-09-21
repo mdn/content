@@ -22,7 +22,7 @@ in the same way from now on; otherwise, the writer will appear closed.
 
 ## Syntax
 
-```js
+```js-nolint
 releaseLock()
 ```
 

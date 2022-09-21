@@ -22,7 +22,7 @@ properties are available.
 
 ## Syntax
 
-```js
+```js-nolint
 getProperties()
 ```
 

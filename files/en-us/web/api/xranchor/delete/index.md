@@ -20,7 +20,7 @@ The **`delete()`** method of the {{domxref("XRAnchor")}} interface removes an an
 
 ## Syntax
 
-```js
+```js-nolint
 delete()
 ```
 
