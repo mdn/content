@@ -15,7 +15,9 @@ browser-compat: css.types.exp
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`exp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is an exponential function that returns `e` raised to the power of a number.
+The **`exp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is an exponential function that takes an number as an argument and returns the mathematical constant `e` raised to the power of the given number.
+
+The mathematical constant [e](https://en.wikipedia.org/wiki/E_(mathematical_constant)) represents Euler's number and is the base of natural logarithms, and is approximately `2.71828`.
 
 The function contains a calculation which returns the same value as {{CSSxRef("pow", "pow(e, number)")}}.
 
