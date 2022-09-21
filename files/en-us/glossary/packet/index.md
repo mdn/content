@@ -2,7 +2,6 @@
 title: Packet
 slug: Glossary/Packet
 tags:
-  - Glossary
   - Network packet
   - Packet
   - Reference

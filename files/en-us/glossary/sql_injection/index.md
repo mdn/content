@@ -2,7 +2,6 @@
 title: SQL Injection
 slug: Glossary/SQL_Injection
 tags:
-  - Glossary
   - Security
   - Sql
   - Sql Injection

@@ -3,7 +3,6 @@ title: Fork
 slug: Glossary/Fork
 tags:
   - Fork
-  - Glossary
   - Tools
   - git
 ---

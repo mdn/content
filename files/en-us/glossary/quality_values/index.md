@@ -2,7 +2,6 @@
 title: Quality values
 slug: Glossary/Quality_values
 tags:
-  - Glossary
   - WebMechanics
 ---
 

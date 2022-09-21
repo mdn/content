@@ -2,7 +2,6 @@
 title: Blink
 slug: Glossary/Blink
 tags:
-  - Glossary
   - Infrastructure
   - Layout
   - Rendering engine

@@ -3,7 +3,6 @@ title: Static method
 slug: Glossary/Static_method
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
   - Method
   - Static

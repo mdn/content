@@ -3,7 +3,6 @@ title: Loop
 slug: Glossary/loop
 tags:
   - CodingScripting
-  - Glossary
   - control flow
   - programming
 ---

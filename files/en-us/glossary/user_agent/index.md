@@ -3,7 +3,6 @@ title: User agent
 slug: Glossary/User_agent
 tags:
   - Browser
-  - Glossary
   - UA
   - User-agent
   - Web Browser

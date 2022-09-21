@@ -3,7 +3,6 @@ title: BigInt
 slug: Glossary/BigInt
 tags:
   - BigInt
-  - Glossary
   - JavaScript
   - Reference
   - arbitrary precision format

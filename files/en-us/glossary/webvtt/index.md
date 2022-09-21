@@ -4,7 +4,6 @@ slug: Glossary/WebVTT
 tags:
   - Audio
   - CodingScripting
-  - Glossary
   - Video
   - Web
   - WebVTT

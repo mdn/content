@@ -3,7 +3,6 @@ title: Stringifier
 slug: Glossary/Stringifier
 tags:
   - CodingScripting
-  - Glossary
   - Stringifier
 ---
 

@@ -2,7 +2,6 @@
 title: Thread
 slug: Glossary/Thread
 tags:
-  - Glossary
   - Thread
   - asynchronous
 ---

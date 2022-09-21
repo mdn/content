@@ -3,7 +3,6 @@ title: First-class Function
 slug: Glossary/First-class_Function
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

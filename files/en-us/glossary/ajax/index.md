@@ -4,7 +4,6 @@ slug: Glossary/AJAX
 tags:
   - AJAX
   - CodingScripting
-  - Glossary
   - Infrastructure
   - "l10n:priority"
 ---

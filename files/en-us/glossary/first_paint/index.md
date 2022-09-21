@@ -3,7 +3,6 @@ title: First paint
 slug: Glossary/First_paint
 tags:
   - Beginner
-  - Glossary
   - Performance
   - Web Performance
 ---
