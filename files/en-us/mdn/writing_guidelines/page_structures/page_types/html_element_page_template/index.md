@@ -21,7 +21,7 @@ browser-compat: path.to.feature.NameOfTheElement
 >
 > ```md
 > ---
-> title: '<NameOfTheElement>: The NameOfTheElement element'
+> title: "<NameOfTheElement>: The NameOfTheElement element"
 > slug: Web/HTML/Element/NameOfTheElement
 > tags:
 >   - NameOfTheElement
@@ -110,6 +110,8 @@ Include a table of the events fired on this type of element, if any.
 | etc.       |                                  |
 
 ## Examples
+
+Note that we use the plural "Examples" even if the page only contains one example.
 
 ### A descriptive heading
 
