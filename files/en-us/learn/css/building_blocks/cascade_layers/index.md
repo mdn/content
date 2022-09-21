@@ -35,7 +35,7 @@ Cascade layers are most relevant when working with CSS from multiple sources, co
   </tbody>
 </table>
 
-For each property applied to an element, there can only be one value. For example, if you inspect an element in a popular web app in your browser developer tools "styles" panel and scroll down, you may notice there are styles crossed out. The crossed-out styles are the property values that match the selected elemnt but were not applied due to the cascade. There may be several declarations crossed out from many different sources. 
+For each CSS property applied to an element, there can only be one value. For example, if you inspect an element from a popular web app in your browser developer tools' "styles" panel and scroll down, you may notice there are styles crossed out. The crossed-out styles are the property values that match the selected element but were not applied due to the cascade. There may be several declarations crossed out from many different sources. 
 
 The selector matching the element with the highest specificity from the origin with precedence has its values applied. 
 
