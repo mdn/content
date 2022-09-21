@@ -10,7 +10,7 @@ tags:
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 105 that will affect developers. Firefox 105 was released on September 20, 2022.
+This article provides information about the changes in Firefox 105 that affect developers. Firefox 105 was released on September 20, 2022.
 
 ## Changes for web developers
 
