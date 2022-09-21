@@ -36,7 +36,7 @@ The `abs(x)` function accepts only one value as its parameter.
 The absolute value of `x`.
 
 - if `x`'s numeric value is positive or `0⁺`, return `x`.
--  Otherwise, returns `-1 * x`.
+- Otherwise, returns `-1 * x`.
 
 ## Formal syntax
 
