@@ -318,7 +318,7 @@ The order of layers is the order in which the layers each first appeared for nor
 
 {{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
 
-In this example, there are two named layers, unlayered styles and inline styles.
+In this example, there are two named layers, unlayered styles, and inline styles.
 
 The inline-styles, added with the `style` attribute, sets a normal `color` and an important `background-color`. Normal inline styles override all layered and unlayered normal styles. Important inline styles override all layered and unlayered normal and important author styles. There is no way for author styles to override important inline styles.
 
