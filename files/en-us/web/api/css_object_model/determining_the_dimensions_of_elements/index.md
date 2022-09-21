@@ -28,7 +28,7 @@ If you need to know the total amount of space an element occupies, including the
 
 If you need to know how much space the actual displayed content takes up, including padding but not including the border, margins, or scrollbars, you want to use the {{DOMxRef("Element.clientWidth")}} and {{DOMxRef("Element.clientHeight")}} properties:
 
-![properties to determine the size of the content](dimensions-client.png)
+![How the clientWidth and clientHeight properties are determined, considering padding, borders, and margin sizes](dimensions-client.png)
 
 ## How big is the content?
 
