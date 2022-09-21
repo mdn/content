@@ -33,7 +33,7 @@ width: calc(100px * exp(1));  /* 100px * 2.718281828459045 = 217px */
 The `exp(number)` function accepts only one value as its parameter.
 
 - `number`
-  - : A {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the value to be raised by a power of `e`.
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}}. Representing the value to be raised by a power of `e`.
 
 ### Return value
 
