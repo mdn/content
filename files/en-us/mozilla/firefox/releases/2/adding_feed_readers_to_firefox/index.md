@@ -18,9 +18,11 @@ Support for adding feed readers from the web was removed from the HTML5 spec, an
 In older versions, JavaScript code on the web can add a feed reader easily, using the {{domxref("window.navigator.registerContentHandler", "navigator.registerContentHandler()")}} function, like this:
 
 ```js
-navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
-                                 "https://www.example.com/?feed-feed=%s",
-                                 "My Feed Reader");
+navigator.registerContentHandler(
+  "application/vnd.mozilla.maybe.feed",
+  "https://www.example.com/?feed-feed=%s",
+  "My Feed Reader"
+);
 ```
 
 Note that web content is limited to adding handler URLs which have the same origin as the page performing the call.
