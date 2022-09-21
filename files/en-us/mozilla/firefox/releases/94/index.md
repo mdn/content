@@ -2,7 +2,7 @@
 title: Firefox 94 for developers
 slug: Mozilla/Firefox/Releases/94
 tags:
-  - '94'
+  - "94"
   - Firefox
   - Mozilla
   - Release
