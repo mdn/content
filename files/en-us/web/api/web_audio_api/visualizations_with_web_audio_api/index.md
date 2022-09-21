@@ -193,7 +193,7 @@ We also set a `barHeight` variable, and an `x` variable to record how far across
 
 As before, we now start a for loop and cycle through each value in the `dataArray`. For each one, we make the `barHeight` equal to the array value, set a fill color based on the `barHeight` (taller bars are brighter), and draw a bar at `x` pixels across the canvas, which is `barWidth` wide and `barHeight/2` tall (we eventually decided to cut each bar in half so they would all fit on the canvas better.)
 
-The one value that needs explaining is the vertical offset position we are drawing each bar at: `HEIGHT-barHeight/2`. I am doing this because I want each bar to stick up from the bottom of the canvas, not down from the top, as it would if we set the vertical position to 0. Therefore, we instead set the vertical position each time to the height of the canvas minus `barHeight/2`, so therefore each bar will be drawn from partway down the canvas, down to the bottom.
+The one value that needs explaining is the vertical offset position we are drawing each bar at: `HEIGHT - barHeight / 2`. I am doing this because I want each bar to stick up from the bottom of the canvas, not down from the top, as it would if we set the vertical position to 0. Therefore, we instead set the vertical position each time to the height of the canvas minus `barHeight / 2`, so therefore each bar will be drawn from partway down the canvas, down to the bottom.
 
 ```js
   for (let i = 0; i < bufferLength; i++) {
@@ -207,7 +207,7 @@ The one value that needs explaining is the vertical offset position we are drawi
 }
 ```
 
-Again, at the end of the code we invoke the draw() function to set the whole process in motion.
+Again, at the end of the code we invoke the `draw()` function to set the whole process in motion.
 
 ```js
 draw();
