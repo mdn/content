@@ -678,9 +678,9 @@ See {{bug(1715546)}} for more details.
   </tbody>
 </table>
 
-### contains-intrinsic-size property
+### contain-intrinsic-size property
 
-The [`contains-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) property specifies the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+The [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) property specifies the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 This is needed when the [`contain: size`](/en-US/docs/Web/CSS/contain) or [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) properties are applied, so that the user agent can determine the size of the element without needing to render its child elements.
 ({{bug(1597529)}}).
 
