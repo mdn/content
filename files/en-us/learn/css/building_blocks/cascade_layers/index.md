@@ -37,7 +37,7 @@ Cascade layers are most relevant when you're working with CSS from multiple sour
 
 For each CSS property applied to an element, there can only be one value. You can view all the property values applied to an element by inspecting the element in your browser's developer tools. The tool's "Styles" panel shows all the property values applied on the element being inspected, along with the matched selector and the CSS source file. The selector from the origin with precedence has its values applied to the matching element.
 
-In addition to the applied styles, the Styles panel displays  crossed-out values that matched the selected element but were not applied due to the cascade, specificity, or source order. Crossed out styles may come from the same origin with precendence but with lower specificity, or with matching origin and specificity, but was found earlier in the code base. For any applied property value, there may be several declarations crossed out from many different sources. If you see a style crossed out that has a selector with greater specificity it means the value lost because of it's origin or importance.
+In addition to the applied styles, the Styles panel displays  crossed-out values that matched the selected element but were not applied due to the cascade, specificity, or source order. Crossed out styles may come from the same origin with precedence but with lower specificity, or with matching origin and specificity, but was found earlier in the code base. For any applied property value, there may be several declarations crossed out from many different sources. If you see a style crossed out that has a selector with greater specificity it means the value lost because of it's origin or importance.
 
 Often, as the complexity of a site increases, the number of stylesheets increase, which makes the source order of the stylesheets both more important and more complex. Cascade layers simplify maintaining stylesheets across such code bases. Cascade layers are explicit specificity containers providing simpler and greater control over the CSS declarations that ultimately get applied, enabling web developers to prioritize sections of CSS without having to fight specificity.
 
@@ -363,7 +363,7 @@ To summarize:
 - Layer precedence or important styles is reversed, with earlier created layers having precedence.
 - All layered important styles have precedence over unlayered important (and normal) styles.
 - Normal inline styles take precedence over all normal styles, layered and not.
-- Important inline styles take precendence over all other styles, with the exception of styles being transitioned.
+- Important inline styles take precedence over all other styles, with the exception of styles being transitioned.
 - There is no way for author styles to override important inline styles (other than transitioning them, which is temporary).
 
 ### Precedence order of nested cascade layers
