@@ -240,10 +240,17 @@ html body form fieldset#custom div.select[data-multiple] div.header {
 
 html body form fieldset#custom div.select div.header {
   content: "↓";
-  display: inline-flex;
+  display: flex;
+  flex: 1;
   align-items: center;
   padding: 0;
   position: relative;
+  width: auto;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: inherit;
+  border-color: inherit;
+  border-radius: inherit;
 }
 
 html body form fieldset#custom div.select div.header::after {
@@ -292,10 +299,7 @@ html body form fieldset#custom div.select {
   display: inline-block;
 }
 
-html body form fieldset#custom div.select:focus {
-  border-color: blue;
-}
-
+html body form fieldset#custom div.select:focus,
 html body form fieldset#custom div.select:hover {
   border-color: blue;
 }
@@ -332,16 +336,8 @@ html body form fieldset#custom div.select datalist div.option {
   border-width: 0;
 }
 
-html body form fieldset#custom div.select datalist div.option:hover {
-  background-color: blue;
-  color: white;
-}
-
-html body form fieldset#custom div.select datalist div.option:focus {
-  background-color: blue;
-  color: white;
-}
-
+html body form fieldset#custom div.select datalist div.option:hover,
+html body form fieldset#custom div.select datalist div.option:focus,
 html body form fieldset#custom div.select datalist div.option:checked {
   background-color: blue;
   color: white;
@@ -375,17 +371,6 @@ html body form fieldset#custom div.select div.optgroup div.label {
 html body form fieldset#custom div.select div.optgroup div.option div.label {
   font-weight: normal;
   padding: 0.25em;
-}
-
-html body form fieldset#custom div.select div.header {
-  flex: 1;
-  display: flex;
-  width: auto;
-  box-sizing: border-box;
-  border-width: 1px;
-  border-style: inherit;
-  border-color: inherit;
-  border-radius: inherit;
 }
 
 html body form fieldset#custom div.select div.header span {
