@@ -133,9 +133,9 @@ The ability to create nested layers also removes the worry of having conflicting
 
 Layers can be created using any one of the following methods:
 
-- Declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
-- Using an @layer block at-rule, with or without a name, which assigns style rules into that layer.
-- Including the `layer` keyword or `layer()` function in an [`@import`](/en-US/docs/Web/CSS/@import) at-rule. This assigns the contents of the imported file into that layer.
+- The `@layer` statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
+- The `@layer` block at-rule, in which all styles within a block are added to a name or unnamed layer.
+-  The [`@import`](/en-US/docs/Web/CSS/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
 
 All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.
 
@@ -143,7 +143,7 @@ All three methods create a layer if a layer with that name has not already been 
 
 Let’s cover the three ways of creating a layer in a little more detail before discussing nested layers.
 
-### @layer with layer names
+### The @layer statement at-rule for named layers
 
 The order of layers is set by the order in which the layers appear in your CSS. Declaring layers using `@layer` followed by the names of one or more layers without assigning any styles is one way to define the [layer order](#ordering-layers).
 
@@ -157,10 +157,9 @@ Often times, you will want to have your first line of CSS be this `@layer` decla
 
 If the above statement is the first line of a site's CSS, the layer order will be `theme`, `layout`, and `utilities`. If some layers were created prior to the above statement, as long as layers with these names don't already exist, these three layers will be created and added to the end of the list of existing layers. However, if a layer with the same name already exists, then the above statement will create only two new layers. For example, if `layout` already existed, only `theme` and `utilities` will be created, but the order of layers in this case will be `layout`, `theme`, and `utilities`.
 
-### anonymous and named @layer block at-rule assignment
+### The @layer block at-rule for named and anonymous layers
 
 Layers can be created using the block `@layer` at-rule. If an `@layer` at-rule is followed by an identifier and a block of styles, the identifier is used to name the layer and the styles in this at-rule are added to the layer's styles. If a layer with the specified name does not already exist, a new layer will be created. If a layer with the specified name already exists, the styles are added to the previously existing layer. If no name is specified while creating a block of styles using `@layer`, the styles in the at-rule will be added to a new anonymous layer.
-
 
 The following creates five layers, including two anonymous layers. We use `@layer` five times: 
 1) Creates a named `layout` layer
@@ -237,7 +236,7 @@ If you define a layer using [media](​​/en-US/docs/Web/CSS/Media_Queries/Usin
 
 In wide screens, the `site` layer is declared in the first line, meaning `site` has less precedence than `page`. Otherwise, `site` has precedence over `page` because it is declared later on narrow screens. If that doesn't work, try changing the `50em` in the media-query to `10em` or `100em`.
 
-### Importing style sheets into layers with @import
+### Importing style sheets into named and anonymous layers with @import
 
 The [`@import`](/en-US/docs/Web/CSS/@import) rule allows users to import style rules from other style sheets either directly into a CSS file or into a {{htmlelement('style')}} element. 
 
