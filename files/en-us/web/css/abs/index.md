@@ -10,7 +10,7 @@ tags:
   - Web
   - abs
   - Experimental
-spec-url: https://drafts.csswg.org/css-values/#sign-funcs
+spec-urls: https://drafts.csswg.org/css-values/#sign-funcs
 ---
 
 {{CSSRef}}
