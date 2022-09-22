@@ -19,7 +19,7 @@ for blending pixel arithmetic for RGB and alpha components separately.
 
 ## Syntax
 
-```js
+```js-nolint
 blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha)
 ```
 

@@ -20,7 +20,7 @@ instantiated {{domxref("OffscreenCanvas")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new OffscreenCanvas(width, height)
 ```
 

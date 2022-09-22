@@ -18,7 +18,7 @@ The **`DOMRect()`** constructor creates a new {{domxref("DOMRect")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMRect(x, y, width, height)
 ```
 

@@ -24,7 +24,7 @@ its position forward.
 
 ## Syntax
 
-```js
+```js-nolint
 advance(count)
 ```
 

@@ -3,7 +3,6 @@ title: Decryption
 slug: Glossary/Decryption
 tags:
   - Cryptography
-  - Glossary
   - Privacy
   - Security
 ---

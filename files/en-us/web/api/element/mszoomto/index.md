@@ -22,22 +22,26 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
+```js-nolint
 msZoomTo(arguments)
 ```
 
 ### Parameters
 
 - `arguments`
+
   - : An object. It has the following properties:
 
     - `contentX`
+
       - : The x-coordinate of the content that is the target of the scroll/zoom. If no value is specified, defaults to the current centerpoint of visible content, horizontally.
 
     - `contentY`
+
       - : The y-coordinate of the content that is the target of the scroll/zoom. If no value is specified, defaults to the current centerpoint of visible content, vertically.
 
     - `viewportX`
+
       - : The alignment point of the viewport. The scroll/zoom operation attempts to align this point with the contentX point.
 
         - `center`
@@ -50,6 +54,7 @@ msZoomTo(arguments)
           - : Aligns the specified x-coordinate of the viewport to the element's contentX value.
 
     - `viewportY`
+
       - : The alignment point of the viewport. The scroll/zoom operation attempts to align this point with the contentY point.
         - `middle`
           - : Default. Aligns the vertical center of the viewport to the element's contentY value.
@@ -61,6 +66,7 @@ msZoomTo(arguments)
           - : Aligns the specified y-coordinate of the viewport to the element's contentY value.
 
     - `scaleFactor`
+
       - : Floating-point. The scale factor (msContentZoomFactor) to zoom to. If no value is specified, defaults to the current zoom level (no additional zoom occurs). This argument is ignored if the element is not zoomable.
 
     - `animate`

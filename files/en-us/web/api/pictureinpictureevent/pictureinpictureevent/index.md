@@ -16,7 +16,7 @@ When the event has both a source and a destination, the `relatedTarget` value mu
 
 ## Syntax
 
-```js
+```js-nolint
 new PictureInPictureEvent(type, options)
 ```
 

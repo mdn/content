@@ -13,7 +13,7 @@ returns a reference to {{DOMxRef("Presentation")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 const presentation = navigator.presentation
 ```
 

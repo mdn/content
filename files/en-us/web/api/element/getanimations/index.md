@@ -31,7 +31,7 @@ elements too.
 
 ## Syntax
 
-```js
+```js-nolint
 getAnimations()
 getAnimations(options)
 ```

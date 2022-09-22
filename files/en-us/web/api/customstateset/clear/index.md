@@ -18,7 +18,7 @@ The **`clear()`** method of the {{domxref("CustomStateSet")}} interface removes 
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

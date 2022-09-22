@@ -73,59 +73,59 @@ We can start by creating a separate component to handle the editing functionalit
   </form>
 </template>
 <script>
-export default {
-  props: {
-    label: {
-      type: String,
-      required: true
+  export default {
+    props: {
+      label: {
+        type: String,
+        required: true,
+      },
+      id: {
+        type: String,
+        required: true,
+      },
     },
-    id: {
-      type: String,
-      required: true
-    }
-  },
-  data() {
-    return {
-      newLabel: this.label
-    };
-  },
-  methods: {
-    onSubmit() {
-      if (this.newLabel && this.newLabel !== this.label) {
-        this.$emit("item-edited", this.newLabel);
-      }
+    data() {
+      return {
+        newLabel: this.label,
+      };
     },
-    onCancel() {
-      this.$emit("edit-cancelled");
-    }
-  }
-};
+    methods: {
+      onSubmit() {
+        if (this.newLabel && this.newLabel !== this.label) {
+          this.$emit("item-edited", this.newLabel);
+        }
+      },
+      onCancel() {
+        this.$emit("edit-cancelled");
+      },
+    },
+  };
 </script>
 <style scoped>
-.edit-label {
-  font-family: Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #0b0c0c;
-  display: block;
-  margin-bottom: 5px;
-}
-input {
-  display: inline-block;
-  margin-top: 0.4rem;
-  width: 100%;
-  min-height: 4.4rem;
-  padding: 0.4rem 0.8rem;
-  border: 2px solid #565656;
-}
-form {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-form > * {
-  flex: 0 0 100%;
-}
+  .edit-label {
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #0b0c0c;
+    display: block;
+    margin-bottom: 5px;
+  }
+  input {
+    display: inline-block;
+    margin-top: 0.4rem;
+    width: 100%;
+    min-height: 4.4rem;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid #565656;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  form > * {
+    flex: 0 0 100%;
+  }
 </style>
 ```
 
@@ -321,19 +321,19 @@ So, let's implement the fix:
 
 1. Remove the following line from inside our `data()` property:
 
-    ```js
-    isDone: this.done,
-    ```
+   ```js
+   isDone: this.done,
+   ```
 
 2. Add the following block below the data() { } block:
 
-    ```js
-    computed: {
-      isDone() {
-        return this.done;
-      }
-    },
-    ```
+   ```js
+   computed: {
+     isDone() {
+       return this.done;
+     }
+   },
+   ```
 
 Now when you save and reload, you'll find that the problem is solved — the checkbox state is now preserved when you switch between todo item templates.
 

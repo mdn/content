@@ -23,7 +23,7 @@ string objects.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

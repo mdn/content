@@ -27,7 +27,7 @@ that resolves with a {{domxref("FormData")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 formData()
 ```
 

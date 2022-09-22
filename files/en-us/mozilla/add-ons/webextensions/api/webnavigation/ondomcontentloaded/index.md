@@ -20,7 +20,7 @@ Fired when the [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_ev
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onDOMContentLoaded.addListener(
   listener,                   // function
   filter                      // optional object

@@ -17,7 +17,7 @@ This interface should be available inside [web workers](/en-US/docs/Web/API/Web_
 ## Constructor
 
 - {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly()")}}
-  - : Creates a new `DOMMMatrixReadOnly` object.
+  - : Creates a new `DOMMatrixReadOnly` object.
 
 ## Properties
 
@@ -47,9 +47,9 @@ _This interface doesn't inherit any properties._
 _This interface doesn't inherit any methods. None of the following methods alter the original matrix._
 
 - {{domxref("DOMMatrixReadOnly.flipX()")}}
-  - : Returns a new {{domxref("DOMMatrix")}} created by flipping the source matrix around its X-axis. This is equivalent to multiplying the matrix by  `DOMMatrix(-1, 0, 0, 1, 0, 0)`. The original matrix is not modified.
+  - : Returns a new {{domxref("DOMMatrix")}} created by flipping the source matrix around its X-axis. This is equivalent to multiplying the matrix by `DOMMatrix(-1, 0, 0, 1, 0, 0)`. The original matrix is not modified.
 - {{domxref("DOMMatrixReadOnly.flipY()")}}
-  - : Returns a new {{domxref("DOMMatrix")}} created by flipping the source matrix around its Y-axis. This is equivalent to multiplying the matrix by  `DOMMatrix(1, 0, 0, -1, 0, 0)`. The original matrix is not modified.
+  - : Returns a new {{domxref("DOMMatrix")}} created by flipping the source matrix around its Y-axis. This is equivalent to multiplying the matrix by `DOMMatrix(1, 0, 0, -1, 0, 0)`. The original matrix is not modified.
 - {{domxref("DOMMatrixReadOnly.inverse()")}}
   - : Returns a new {{domxref("DOMMatrix")}} created by inverting the source matrix. If the matrix cannot be inverted, the new matrix's components are all set to `NaN` and its `is2D` property is set to `false`. The original matrix is not altered.
 - {{domxref("DOMMatrixReadOnly.multiply()")}}

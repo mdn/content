@@ -15,7 +15,7 @@ The **`Error()`** constructor creates an error object.
 
 ## Syntax
 
-```js
+```js-nolint
 new Error()
 new Error(message)
 new Error(message, options)
@@ -39,19 +39,19 @@ Error(message, fileName, lineNumber)
   - : An object that has the following properties:
     - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
-          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+        When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The value for the `fileName` property on the created `Error` object.
     Defaults to the name of the file containing the code that called the `Error()` constructor.
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}
   - : The value for the `lineNumber` property on the created `Error` object.
-     Defaults to the line number containing the `Error()` constructor invocation.
+    Defaults to the line number containing the `Error()` constructor invocation.
 
 ## Examples
 
 ### Function call or new construction
 
-When `Error` is used like a function, that is without {{JSxRef("Operators/new",  "new")}}, it will return an `Error` object.
+When `Error` is used like a function, that is without {{JSxRef("Operators/new", "new")}}, it will return an `Error` object.
 Therefore, a mere call to `Error` will produce the same output that constructing an `Error` object via the `new` keyword would.
 
 ```js

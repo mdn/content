@@ -21,8 +21,8 @@ The {{HTMLElement("input/email", "email")}} input type expects one or more valid
 
 The {{HTMLElement("input/url", "url")}} input type expects one or more valid URLs, depending on whether the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute is present. A valid URL includes a protocol, optionally with an IP address, or an optional subdomain, domain, and top level domain combination. If the value of the URL input is not an empty string, a single valid URL, or one or more comma separated URLS if the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) attribute is present, there is a `typeMismatch`.
 
-| Input type                                           | Value             | Expected value                                                 |
-| ---------------------------------------------------- | ----------------- | -------------------------------------------------------------- |
+| Input type                              | Value             | Expected value                                                 |
+| --------------------------------------- | ----------------- | -------------------------------------------------------------- |
 | {{HTMLElement("input/email", "email")}} | `x@y` or `x@y.z`  | email address, with or without [TLD](/en-US/docs/Glossary/TLD) |
 | {{HTMLElement("input/url", "url")}}     | `x:` or `x://y.z` | protocol or full URL with protocol                             |
 
@@ -32,15 +32,15 @@ Given the following:
 
 ```html
 <p>
- <label>
+  <label>
     Enter an email address:
-    <input type="email" value="example.com"/>
- </label>
+    <input type="email" value="example.com" />
+  </label>
 </p>
 <p>
- <label>
-     Enter a URL:
-     <input type="url" value="example.com"/>
+  <label>
+    Enter a URL:
+    <input type="url" value="example.com" />
   </label>
 </p>
 ```

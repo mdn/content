@@ -14,7 +14,7 @@ browser-compat: api.MediaStreamTrackProcessor.readable
 
 {{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
 
-The **`readable`**  property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a {{domxref("ReadableStream")}}.
+The **`readable`** property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a {{domxref("ReadableStream")}}.
 
 ## Value
 

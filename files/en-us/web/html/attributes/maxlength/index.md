@@ -30,7 +30,7 @@ While the browser will generally prevent user from entering more text than the m
 ## Examples
 
 ```html
-<input type="password" maxlength="4"/>
+<input type="password" maxlength="4" />
 ```
 
 {{EmbedLiveSample('Examples', '100%', 200)}}

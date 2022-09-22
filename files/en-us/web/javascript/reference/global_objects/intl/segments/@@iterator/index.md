@@ -18,7 +18,7 @@ The **`@@iterator`** method of a `Segments` object implements the [iterable prot
 
 ## Syntax
 
-```js
+```js-nolint
 segments[Symbol.iterator]()
 ```
 

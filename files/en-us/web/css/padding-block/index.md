@@ -26,8 +26,8 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* <length> values */
-padding-block: 10px 20px;  /* An absolute length */
-padding-block: 1em 2em;   /* relative to the text size */
+padding-block: 10px 20px; /* An absolute length */
+padding-block: 1em 2em; /* relative to the text size */
 padding-block: 10px; /* sets both start and end values */
 
 /* <percentage> values */
@@ -100,5 +100,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

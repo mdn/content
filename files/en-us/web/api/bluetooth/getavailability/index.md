@@ -22,7 +22,7 @@ The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface ret
 
 ## Syntax
 
-```js
+```js-nolint
 getAvailability()
 ```
 

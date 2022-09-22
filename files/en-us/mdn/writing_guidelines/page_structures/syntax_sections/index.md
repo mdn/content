@@ -15,14 +15,14 @@ The syntax section of an MDN reference page contains a syntax box defining the e
 
 Syntax sections for API reference pages are written manually, and may differ slightly based on the feature being documented.
 The section starts with a heading (typically level two heading `##`) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
-Below the heading is a code block showing the feature's exact syntax, demarcated using code fence `` ``` [markup-language] `` class.
+Below the heading is a code block showing the feature's exact syntax, demarcated using code fence ` ``` [markup-language] ` class.
 
 The example below shows the Markdown code for a typical Syntax section (for a JavaScript function):
 
 ````
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)

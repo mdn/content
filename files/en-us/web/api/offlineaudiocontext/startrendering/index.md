@@ -28,7 +28,7 @@ eventually be removed, but currently both mechanisms are provided for legacy rea
 
 ## Syntax
 
-```js
+```js-nolint
 startRendering()
 ```
 

@@ -50,7 +50,7 @@ In comparison, a data type that is a {{cssxref("&lt;string&gt;")}}, such as a st
 
 ```css
 .item::after {
-    content: "This is my content.";
+  content: "This is my content.";
 }
 ```
 
@@ -70,7 +70,7 @@ Such values are used without quotes:
 
 ```css
 .box {
-    float: left;
+  float: left;
 }
 ```
 
@@ -98,7 +98,7 @@ A {{cssxref("url","url()")}} type uses functional notation, which accepts a `<st
 }
 ```
 
-The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url","url()")}}  for more information.
+The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url","url()")}} for more information.
 
 ## Numeric data types
 
@@ -161,7 +161,7 @@ Absolute length units are fixed to a physical length: either an inch or a centim
 | `mm` | Millimeters         | 1mm = 1/10th of 1cm |
 | `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm  |
 | `in` | Inches              | 1in = 2.54cm = 96px |
-| `pc` | Picas               | 1pc = 1/6th of 1in |
+| `pc` | Picas               | 1pc = 1/6th of 1in  |
 | `pt` | Points              | 1pt = 1/72th of 1in |
 | `px` | Pixels              | 1px = 1/96th of 1in |
 
@@ -202,9 +202,9 @@ Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. I
 
 Flex units are represented by the type {{cssxref("&lt;flex&gt;")}}. It accepts the following value.
 
-| Unit  | Name      | Description                                          |
-| ----- | --------- | ---------------------------------------------------- |
-| `fr`  | Flex      | Represents a flexible length within a grid container |
+| Unit | Name | Description                                          |
+| ---- | ---- | ---------------------------------------------------- |
+| `fr` | Flex | Represents a flexible length within a grid container |
 
 #### Resolution units
 

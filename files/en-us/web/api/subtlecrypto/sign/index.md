@@ -26,7 +26,7 @@ signature.
 
 ## Syntax
 
-```js
+```js-nolint
 sign(algorithm, key, data)
 ```
 
@@ -49,7 +49,7 @@ sign(algorithm, key, data)
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with an
-  {{jsxref("ArrayBuffer")}} containing the signature.
+{{jsxref("ArrayBuffer")}} containing the signature.
 
 ### Exceptions
 

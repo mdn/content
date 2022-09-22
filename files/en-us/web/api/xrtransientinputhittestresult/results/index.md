@@ -41,7 +41,7 @@ function onXRFrame(time, xrFrame) {
     });
   });
  }
- ```
+```
 
 ## Specifications
 

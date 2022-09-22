@@ -26,7 +26,7 @@ described by the arguments of this method. This lets you scale, rotate, translat
 
 ## Syntax
 
-```js
+```js-nolint
 transform(a, b, c, d, e, f)
 ```
 

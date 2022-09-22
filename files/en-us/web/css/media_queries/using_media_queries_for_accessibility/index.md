@@ -2,7 +2,7 @@
 title: Using media queries for accessibility
 slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
 tags:
-  - '@media'
+  - "@media"
   - Accessibility
   - Animation
   - CSS
@@ -48,7 +48,7 @@ This example has an annoying animation unless you turn on Reduce Motion in your 
 }
 ```
 
-The value of `prefers-reduced-motion` is `reduce`, not "none". Users are not expecting no animation, such as could be set with  `* {animation: none !important;}`. Rather, they expect motion animation triggered by interaction to be disabled, unless the animation is essential to the functionality or the information being conveyed (see [WCAG: Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html)).
+The value of `prefers-reduced-motion` is `reduce`, not "none". Users are not expecting no animation, such as could be set with `* {animation: none !important;}`. Rather, they expect motion animation triggered by interaction to be disabled, unless the animation is essential to the functionality or the information being conveyed (see [WCAG: Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html)).
 
 ## High Contrast Mode
 
@@ -80,10 +80,14 @@ The following declarations will match applications that are being displayed in h
   /* All high contrast styling rules */
 }
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div {
+    background-image: url("image-bw.png");
+  }
 }
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div {
+    background-image: url("image-wb.png");
+  }
 }
 ```
 

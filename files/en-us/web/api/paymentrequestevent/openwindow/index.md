@@ -23,7 +23,7 @@ and only if the given URL is on the same origin as the calling page. It returns 
 
 ## Syntax
 
-```js
+```js-nolint
 openWindow(url)
 ```
 

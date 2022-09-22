@@ -23,7 +23,7 @@ Fires when the selected tab in a window changes.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onSelectionChanged.addListener(listener)
 browser.tabs.onSelectionChanged.removeListener(listener)
 browser.tabs.onSelectionChanged.hasListener(listener)

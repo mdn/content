@@ -20,8 +20,8 @@ You can access the supported constraints dictionary by calling
 
 ## Syntax
 
-```js
-widthConstraintSupported = supportedConstraintsDictionary.width;
+```js-nolint
+widthConstraintSupported = supportedConstraintsDictionary.width
 ```
 
 ### Value
@@ -34,8 +34,7 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ## Example
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden

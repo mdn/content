@@ -20,7 +20,7 @@ This constructor is called by the browser when a change event occurs.
 
 ## Syntax
 
-```js
+```js-nolint
 new ExtendableCookieChangeEvent(type)
 new ExtendableCookieChangeEvent(type, options)
 ```

@@ -23,7 +23,7 @@ formatters.
 
 ## Syntax
 
-```js
+```js-nolint
 formatToParts()
 formatToParts(number)
 ```

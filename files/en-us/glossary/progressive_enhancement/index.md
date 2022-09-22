@@ -4,7 +4,6 @@ slug: Glossary/Progressive_Enhancement
 tags:
   - Accessibility
   - Design
-  - Glossary
 ---
 
 **Progressive enhancement** is a design philosophy that provides a baseline of essential content and functionality to as many users as possible, while delivering the best possible experience only to users of the most modern browsers that can run all the required code.

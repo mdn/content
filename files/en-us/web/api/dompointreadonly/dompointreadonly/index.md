@@ -25,7 +25,7 @@ script code.
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMPointReadOnly()
 new DOMPointReadOnly(x)
 new DOMPointReadOnly(x, y)

@@ -19,7 +19,7 @@ The **`Object.seal()`** method _seals_ an object. Sealing an object [prevents ex
 
 ## Syntax
 
-```js
+```js-nolint
 Object.seal(obj)
 ```
 

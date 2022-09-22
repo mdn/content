@@ -91,57 +91,57 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
 
 1. Import `lodash.uniqueid` into your `App` component in the same way you did with your `ToDoItem` component, using
 
-    ```js
-     import uniqueId from 'lodash.uniqueid';
-    ```
+   ```js
+    import uniqueId from 'lodash.uniqueid';
+   ```
 
 2. Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `uniqueId('todo-')`.
 
-    Your `App.vue` `<script>` element contents should now look like this:
+   Your `App.vue` `<script>` element contents should now look like this:
 
-    ```js
-    import ToDoItem from './components/ToDoItem.vue';
-    import uniqueId from 'lodash.uniqueid'
+   ```js
+   import ToDoItem from './components/ToDoItem.vue';
+   import uniqueId from 'lodash.uniqueid'
 
-    export default {
-      name: 'app',
-      components: {
-        ToDoItem
-      },
-      data() {
-        return {
-          ToDoItems: [
-            { id: uniqueId('todo-'), label: 'Learn Vue', done: false },
-            { id: uniqueId('todo-'), label: 'Create a Vue project with the CLI', done: true },
-            { id: uniqueId('todo-'), label: 'Have fun', done: true },
-            { id: uniqueId('todo-'), label: 'Create a to-do list', done: false }
-          ]
-        };
-      }
-    };
-    ```
+   export default {
+     name: 'app',
+     components: {
+       ToDoItem
+     },
+     data() {
+       return {
+         ToDoItems: [
+           { id: uniqueId('todo-'), label: 'Learn Vue', done: false },
+           { id: uniqueId('todo-'), label: 'Create a Vue project with the CLI', done: true },
+           { id: uniqueId('todo-'), label: 'Have fun', done: true },
+           { id: uniqueId('todo-'), label: 'Create a to-do list', done: false }
+         ]
+       };
+     }
+   };
+   ```
 
 3. Now, add the `v-for` directive and `key` attribute to the `<li>` element in your `App.vue` template, like so:
 
-    ```html
-    <ul>
-      <li v-for="item in ToDoItems" :key="item.id">
-        <to-do-item label="My ToDo Item" :done="true"></to-do-item>
-      </li>
-    </ul>
-    ```
+   ```html
+   <ul>
+     <li v-for="item in ToDoItems" :key="item.id">
+       <to-do-item label="My ToDo Item" :done="true"></to-do-item>
+     </li>
+   </ul>
+   ```
 
-    When you make this change, every JavaScript expression between the `<li>` tags will have access to the `item` value in addition to the other component attributes. This means we can pass the fields of our item objects to our `ToDoItem` component — just remember to use the `v-bind` syntax. This is really useful, as we want our todo items to display their `label` properties as their label, not a static label of "My Todo Item". In addition, we want their checked status to reflect their `done` properties, not always be set to `done="true"`.
+   When you make this change, every JavaScript expression between the `<li>` tags will have access to the `item` value in addition to the other component attributes. This means we can pass the fields of our item objects to our `ToDoItem` component — just remember to use the `v-bind` syntax. This is really useful, as we want our todo items to display their `label` properties as their label, not a static label of "My Todo Item". In addition, we want their checked status to reflect their `done` properties, not always be set to `done="true"`.
 
 4. Update the `label="My ToDo Item"` attribute to `:label="item.label"`, and the `:done="true"` attribute to `:done="item.done"`, as seen in context below:
 
-    ```html
-    <ul>
-      <li v-for="item in ToDoItems" :key="item.id">
-         <to-do-item :label="item.label" :done="item.done"></to-do-item>
-      </li>
-    </ul>
-    ```
+   ```html
+   <ul>
+     <li v-for="item in ToDoItems" :key="item.id">
+       <to-do-item :label="item.label" :done="item.done"></to-do-item>
+     </li>
+   </ul>
+   ```
 
 Now when you look at your running app, it'll show the todo items with their proper names, and if you inspect the source code you'll see that the inputs all have unique `id`s, taken from the object in the `App` component.
 
@@ -181,7 +181,10 @@ Now, over in your `App.vue` component, pass `item.id` as a prop to the `ToDoItem
     <h1>My To-Do List</h1>
     <ul>
       <li v-for="item in ToDoItems" :key="item.id">
-        <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
+        <to-do-item
+          :label="item.label"
+          :done="item.done"
+          :id="item.id"></to-do-item>
       </li>
     </ul>
   </div>

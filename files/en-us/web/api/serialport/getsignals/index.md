@@ -18,7 +18,7 @@ The **`SerialPort.getSignals()`** method of the {{domxref("SerialPort")}} interf
 
 ## Syntax
 
-```js
+```js-nolint
 getSignals()
 ```
 

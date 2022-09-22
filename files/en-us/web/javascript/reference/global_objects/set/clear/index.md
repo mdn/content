@@ -20,7 +20,7 @@ The **`clear()`** method removes all elements from a
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

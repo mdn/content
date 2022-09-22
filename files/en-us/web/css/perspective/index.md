@@ -44,7 +44,7 @@ perspective: unset;
 - `none`
   - : Indicates that no perspective transform is to be applied.
 - `<length>`
-  - : A {{cssxref("&lt;length&gt;")}} giving the distance from the user to the z=0 plane. It is used to apply a perspective transform to the children of the element.  Negative values are syntax errors.  If the value is smaller than `1px`, it is clamped to `1px`.
+  - : A {{cssxref("&lt;length&gt;")}} giving the distance from the user to the z=0 plane. It is used to apply a perspective transform to the children of the element. Negative values are syntax errors. If the value is smaller than `1px`, it is clamped to `1px`.
 
 ## Description
 

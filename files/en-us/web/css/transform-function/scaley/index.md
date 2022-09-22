@@ -26,7 +26,7 @@ property).
 > `scale(1, sy)` or
 > `scale3d(1, sy, 1)`.
 >
-> `transform: rotateX(180deg);`  === `transform: scaleY(-1);`
+> `transform: rotateX(180deg);` === `transform: scaleY(-1);`
 
 ## Syntax
 

@@ -42,7 +42,7 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 ```css
 a {
   background-color: powderblue;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 a:hover {

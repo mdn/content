@@ -10,7 +10,7 @@ tags:
 
 {{MDNSidebar}}
 
-[Issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) are used to track all bugs and work that has a clear actionable outcome. If you have found a bug with either our content or the platform, please search current open issues against the [relevant repository](/en-US/docs/MDN/Community/Contributing/Our_repositories/) to ensure someone has not already reported the issue. If the issue is new, please file an issue using the relevant template available in the repository.
+[Issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) are used to track all bugs and work that has a clear actionable outcome. If you have found a bug with either our content or the platform, please search current open issues against the [relevant repository](/en-US/docs/MDN/Community/Contributing/Our_repositories) to ensure someone has not already reported the issue. If the issue is new, please file an issue using the relevant template available in the repository.
 
 > **Note:** If an issue has a triage label, we haven't reviewed it yet, and you shouldn't begin work on it.
 

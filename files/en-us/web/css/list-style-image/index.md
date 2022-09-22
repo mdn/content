@@ -27,7 +27,7 @@ It is often more convenient to use the shorthand {{ cssxref("list-style") }}.
 list-style-image: none;
 
 /* <url> values */
-list-style-image: url('starsolid.gif');
+list-style-image: url("starsolid.gif");
 
 /* valid image values */
 list-style-image: linear-gradient(to left bottom, red, blue);

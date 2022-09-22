@@ -21,7 +21,7 @@ See {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()
 
 ## Syntax
 
-```js
+```js-nolint
 getModifierState(key)
 ```
 

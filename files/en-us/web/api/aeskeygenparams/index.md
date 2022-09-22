@@ -16,7 +16,7 @@ spec-urls: https://w3c.github.io/webcrypto/#dfn-AesKeyGenParams
 ## Properties
 
 - `name`
-  - : A string. This should be set to `AES-CBC`,  `AES-CTR`, `AES-GCM`, or `AES-KW`, depending on the algorithm you want to use.
+  - : A string. This should be set to `AES-CBC`, `AES-CTR`, `AES-GCM`, or `AES-KW`, depending on the algorithm you want to use.
 - `length`
   - : A `Number` — the length in bits of the key to generate. This must be one of: 128, 192, or 256.
 

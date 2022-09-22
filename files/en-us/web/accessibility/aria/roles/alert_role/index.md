@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: alert role'
+title: "ARIA: alert role"
 slug: Web/Accessibility/ARIA/Roles/alert_role
 tags:
   - ARIA
@@ -40,7 +40,9 @@ The most important thing to know about the `alert` role is that it's for content
 If an element has `role="alert"` and `display: none;` set, when the [`display`](/en-US/docs/Web/CSS/CSS_Display) value is changed with CSS or JavaScript, it automatically triggers the screen reader to read out the content.
 
 ```html
-<p role="alert" style="display: none;">This alert will trigger when the element becomes visible.</p>
+<p role="alert" style="display: none;">
+  This alert will trigger when the element becomes visible.
+</p>
 ```
 
 While triggering an alert via CSS alone is possible, it is better to rely on JavaScript because it has more browser/screen reader support and is often more appropriate as part of a larger user interaction, such as inside an event handler or form validation.
@@ -53,11 +55,11 @@ With JavaScript, developers control the adding and removing of alerts as appropr
 ```
 
 ```js
-const btn = document.querySelector('button');
-btn.addEventListener('click', triggerAlert);
+const btn = document.querySelector("button");
+btn.addEventListener("click", triggerAlert);
 
 function triggerAlert() {
-  const alertEl = document.querySelector('.alert');
+  const alertEl = document.querySelector(".alert");
   alertEl.setAttribute("role", "alert");
 }
 ```
@@ -73,7 +75,9 @@ Following are four ways of creating alerts:
 Here, the alert role is added directly into the HTML source code. When the element finishes loading the screen reader will be notified of the alert.
 
 ```html
-<h2 role="alert">Your form could not be submitted because of 3 validation errors.</h2>
+<h2 role="alert">
+  Your form could not be submitted because of 3 validation errors.
+</h2>
 ```
 
 If the element is in the original source code when the page loads, the screen reader will announce the error immediately after announcing the page title.
@@ -83,9 +87,11 @@ If the element is in the original source code when the page loads, the screen re
 This snippet dynamically creates an element with an alert role and adds it to the document structure.
 
 ```js
-let myAlert = document.createElement("p");
+const myAlert = document.createElement("p");
 myAlert.setAttribute("role", "alert");
-let myAlertText = document.createTextNode("You must agree with our terms of service to create an account.");
+const myAlertText = document.createTextNode(
+  "You must agree with our terms of service to create an account."
+);
 myAlert.appendChild(myAlertText);
 document.body.appendChild(myAlert);
 ```
@@ -114,12 +120,14 @@ If an element already has `role="alert"` and is initially hidden using CSS, maki
 ```
 
 ```html
-<p id="expirationWarning" role="alert" class="hidden">Your log in session will expire in 2 minutes</p>
+<p id="expirationWarning" role="alert" class="hidden">
+  Your log in session will expire in 2 minutes
+</p>
 ```
 
 ```js
 // removing the 'hidden' class makes the element visible, which will make the screen reader announce the alert:
-document.getElementById("expirationWarning").classList.remove('hidden');
+document.getElementById("expirationWarning").classList.remove("hidden");
 ```
 
 ## Specifications
@@ -143,6 +151,6 @@ document.getElementById("expirationWarning").classList.remove('hidden');
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -112,7 +112,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 
 ### Developer tools
 
-- The {{ domxref("console") }} object has two new methods,  {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.
+- The {{ domxref("console") }} object has two new methods, {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.
 - The new [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
 
 ## Changes for Mozilla and add-on developers

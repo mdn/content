@@ -25,7 +25,7 @@ regularly over the network, or possibly via a different service worker.
 
 ## Syntax
 
-```js
+```js-nolint
 claim()
 ```
 

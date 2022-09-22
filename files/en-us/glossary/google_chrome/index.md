@@ -6,7 +6,6 @@ tags:
   - Chrome canary
   - Chrome stable
   - Chromium
-  - Glossary
   - WebMechanics
   - google chrome
 ---

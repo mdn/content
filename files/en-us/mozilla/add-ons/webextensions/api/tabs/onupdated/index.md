@@ -16,7 +16,7 @@ browser-compat: webextensions.api.tabs.onUpdated
 
 Fired when a tab is updated.
 
-When the user navigates to a new URL in a tab, this will typically generate several  `onUpdated` events as various properties of the {{WebExtAPIRef("tabs.Tab")}} object are updated. This includes the `url`, but also potentially the `title` and `favIconUrl` properties. The `status` property will cycle through `"loading"` and `"complete"`.
+When the user navigates to a new URL in a tab, this will typically generate several `onUpdated` events as various properties of the {{WebExtAPIRef("tabs.Tab")}} object are updated. This includes the `url`, but also potentially the `title` and `favIconUrl` properties. The `status` property will cycle through `"loading"` and `"complete"`.
 
 This event will also be fired for changes to a tab's properties that don't involve navigation, like pinning and unpinning (which updates the `pinned` property) and muting or unmuting (which updates the `audible` and `mutedInfo` properties).
 
@@ -24,7 +24,7 @@ You can filter this event, making it only fire for tabs whose URLs match specifi
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onUpdated.addListener(listener[, extraParameters])
 browser.tabs.onUpdated.removeListener(listener)
 browser.tabs.onUpdated.hasListener(listener)

@@ -49,7 +49,7 @@ use this method to let the user use their mouse to pitch and yaw their viewing a
 
 ## Syntax
 
-```js
+```js-nolint
 getOffsetReferenceSpace(originOffset)
 ```
 

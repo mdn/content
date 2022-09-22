@@ -24,7 +24,7 @@ objects to be retrieved from the `SpeechGrammarList` using array syntax.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

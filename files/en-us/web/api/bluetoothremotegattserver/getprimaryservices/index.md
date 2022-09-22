@@ -22,7 +22,7 @@ Bluetooth device for a specified `BluetoothServiceUUID`.
 
 ## Syntax
 
-```js
+```js-nolint
 getPrimaryServices(bluetoothServiceUUID)
 ```
 

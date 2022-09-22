@@ -32,7 +32,7 @@ help avoid clipping (distorting) of the audio output.
 
 ## Syntax
 
-```js
+```js-nolint
 createDynamicsCompressor()
 ```
 
@@ -66,23 +66,23 @@ compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
 source.connect(audioCtx.destination);
 
 button.onclick = () => {
-  const active = button.getAttribute('data-active');
-  if (active === 'false') {
-    button.setAttribute('data-active', 'true');
-    button.textContent = 'Remove compression';
+  const active = button.getAttribute("data-active");
+  if (active === "false") {
+    button.setAttribute("data-active", "true");
+    button.textContent = "Remove compression";
 
     source.disconnect(audioCtx.destination);
     source.connect(compressor);
     compressor.connect(audioCtx.destination);
-  } else if (active === 'true') {
-    button.setAttribute('data-active', 'false');
-    button.textContent = 'Add compression';
+  } else if (active === "true") {
+    button.setAttribute("data-active", "false");
+    button.textContent = "Add compression";
 
     source.disconnect(compressor);
     compressor.disconnect(audioCtx.destination);
     source.connect(audioCtx.destination);
   }
-}
+};
 ```
 
 ## Specifications

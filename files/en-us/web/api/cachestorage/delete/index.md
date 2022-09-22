@@ -22,7 +22,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(cacheName)
 ```
 
@@ -47,8 +47,8 @@ check each key to see if it is in the array. If not, we delete it using
 `delete()`.
 
 ```js
-this.addEventListener('activate', (event) => {
-  const cachesToKeep = ['v2'];
+this.addEventListener("activate", (event) => {
+  const cachesToKeep = ["v2"];
 
   event.waitUntil(
     caches.keys().then((keyList) =>

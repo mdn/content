@@ -21,7 +21,7 @@ If no match is found, the {{jsxref("Promise")}} resolves to {{jsxref("undefined"
 
 ## Syntax
 
-```js
+```js-nolint
 match(request)
 match(request, options)
 ```
@@ -34,7 +34,7 @@ match(request, options)
 - `options` {{optional_inline}}
 
   - : An object that sets options for the `match` operation.
-     The available options are:
+    The available options are:
 
     - `ignoreSearch`
       - : A boolean value that specifies whether to
@@ -81,15 +81,19 @@ response with an response code in the 4xx or 5xx range, the `catch()` will
 NOT be called.
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   // We only want to call event.respondWith() if this is a GET request for an HTML document.
-  if (event.request.method === 'GET' &&
-      event.request.headers.get('accept').includes('text/html')) {
-    console.log('Handling fetch event for', event.request.url);
+  if (
+    event.request.method === "GET" &&
+    event.request.headers.get("accept").includes("text/html")
+  ) {
+    console.log("Handling fetch event for", event.request.url);
     event.respondWith(
       fetch(event.request).catch((e) => {
-        console.error('Fetch failed; returning offline page instead.', e);
-        return caches.open(OFFLINE_CACHE).then((cache) => cache.match(OFFLINE_URL));
+        console.error("Fetch failed; returning offline page instead.", e);
+        return caches
+          .open(OFFLINE_CACHE)
+          .then((cache) => cache.match(OFFLINE_URL));
       })
     );
   }

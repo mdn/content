@@ -19,7 +19,7 @@ The **`Math.sqrt()`** function returns the square root of a number. That is
 
 ## Syntax
 
-```js
+```js-nolint
 Math.sqrt(x)
 ```
 

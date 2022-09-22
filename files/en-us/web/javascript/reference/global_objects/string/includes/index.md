@@ -19,7 +19,7 @@ The **`includes()`** method performs a case-sensitive search to determine whethe
 
 ## Syntax
 
-```js
+```js-nolint
 includes(searchString)
 includes(searchString, position)
 ```

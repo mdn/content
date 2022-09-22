@@ -24,7 +24,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 
 ## Syntax
 
-```js
+```js-nolint
 let detectingLanguages = browser.i18n.detectLanguage(
   text                  // string
 )

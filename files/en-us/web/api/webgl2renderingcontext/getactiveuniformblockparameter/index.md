@@ -20,7 +20,7 @@ information about an active uniform block within a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveUniformBlockParameter(program, uniformBlockIndex, pname)
 ```
 

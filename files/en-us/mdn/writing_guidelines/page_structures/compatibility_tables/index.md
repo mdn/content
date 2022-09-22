@@ -46,27 +46,27 @@ Now, whenever you want to update your fork, you can do so by:
 
 1. Making sure you are in the main branch:
 
-    ```bash
-    git checkout main
-    ```
+   ```bash
+   git checkout main
+   ```
 
 2. fetching the up-to-date repo contents using the following:
 
-    ```bash
-    git fetch upstream
-    ```
+   ```bash
+   git fetch upstream
+   ```
 
 3. rebasing the contents of your main branch with the official repo's contents:
 
-    ```bash
-    git rebase upstream/main
-    ```
+   ```bash
+   git rebase upstream/main
+   ```
 
 4. pushing these updates back to your remote fork using this:
 
-    ```bash
-    git push
-    ```
+   ```bash
+   git push
+   ```
 
 ### Creating a new branch to do your work in
 

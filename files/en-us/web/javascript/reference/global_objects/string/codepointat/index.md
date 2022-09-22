@@ -23,7 +23,7 @@ but the code point starting at the specified string index.
 
 ## Syntax
 
-```js
+```js-nolint
 codePointAt(pos)
 ```
 

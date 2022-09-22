@@ -26,7 +26,7 @@ The **`createTBody()`** method of
 
 ## Syntax
 
-```js
+```js-nolint
 createTBody()
 ```
 

@@ -20,7 +20,7 @@ Fired when a bookmark or folder is removed. When a folder is removed recursively
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onRemoved.addListener(listener)
 browser.bookmarks.onRemoved.removeListener(listener)
 browser.bookmarks.onRemoved.hasListener(listener)

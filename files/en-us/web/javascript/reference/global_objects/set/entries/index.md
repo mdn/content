@@ -25,7 +25,7 @@ returned.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

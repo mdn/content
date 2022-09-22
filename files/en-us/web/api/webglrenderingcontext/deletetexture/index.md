@@ -21,7 +21,7 @@ been deleted.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteTexture(texture)
 ```
 

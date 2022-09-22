@@ -26,20 +26,22 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
   <!-- Auto clipping -->
-  <svg x="0" width="10" height="10"
-       clip="auto">
+  <svg x="0" width="10" height="10" clip="auto">
     <circle cx="5" cy="5" r="4" stroke="green" />
   </svg>
 
   <!-- Rect(top, right, bottom, left) clipping -->
-  <svg x="10" width="10" height="10"
-       clip="rect(1, 9, 8, 2)">
+  <svg x="10" width="10" height="10" clip="rect(1, 9, 8, 2)">
     <circle cx="5" cy="5" r="4" stroke="green" />
   </svg>
 </svg>

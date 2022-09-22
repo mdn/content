@@ -20,7 +20,7 @@ The values correspond to the SVG [`text-rendering`](/en-US/docs/Web/SVG/Attribut
 
 ## Value
 
-A  text-rendering hint to the browser engine.
+A text-rendering hint to the browser engine.
 This one of:
 
 - `auto`

@@ -19,7 +19,7 @@ interface, when passed a key name and value, will add that key to the given
 
 ## Syntax
 
-```js
+```js-nolint
 setItem(keyName, keyValue)
 ```
 

@@ -20,7 +20,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 propertyIsEnumerable(prop)
 ```
 

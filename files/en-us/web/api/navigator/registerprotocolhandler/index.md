@@ -21,7 +21,7 @@ For example, this API lets webmail sites open `mailto:` URLs, or VoIP sites open
 
 ## Syntax
 
-```js
+```js-nolint
 registerProtocolHandler(scheme, url)
 registerProtocolHandler(scheme, url, title)
 ```
@@ -58,6 +58,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
+
   - : The user agent blocked the registration.
     This might happen if:
 

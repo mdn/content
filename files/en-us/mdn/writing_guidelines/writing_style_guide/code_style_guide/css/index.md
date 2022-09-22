@@ -141,18 +141,19 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Media_Queries/Us
 ## Selectors
 
 - Don't use ID selectors because they are:
+
   - less flexible; you can't add more if you discover you need more than one.
   - harder to override because they have higher specificity than classes.
 
   ```css example-good
   .editorial-summary {
-    ...
+    /* ... */
   }
   ```
 
   ```css example-bad
   #editorial-summary {
-    ...
+    /* ... */
   }
   ```
 
@@ -221,4 +222,4 @@ border: 0;
 
 ## See also
 
-[CSS reference index](/en-US/docs/Web/CSS/Reference#index) - browse through our CSS property reference pages to check out some good, concise, meaningful CSS snippets. Our interactive examples in the "Try it" section are generally written to follow the  guidelines described on this page.
+[CSS reference index](/en-US/docs/Web/CSS/Reference#index) - browse through our CSS property reference pages to check out some good, concise, meaningful CSS snippets. Our interactive examples in the "Try it" section are generally written to follow the guidelines described on this page.

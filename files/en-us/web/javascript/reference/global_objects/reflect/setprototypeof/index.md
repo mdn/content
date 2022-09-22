@@ -24,7 +24,7 @@ the operation was successful, or `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.setPrototypeOf(target, prototype)
 ```
 

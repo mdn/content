@@ -63,7 +63,7 @@ In the following example, we have set the color of our heading using a keyword, 
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 
@@ -147,15 +147,15 @@ The numeric type you will come across most frequently is [`<length>`](/en-US/doc
 
 The following are all **absolute** length units — they are not relative to anything else, and are generally considered to always be the same size.
 
-| Unit | Name                | Equivalent to        |
-| ---- | ------------------- | -------------------- |
+| Unit | Name                | Equivalent to            |
+| ---- | ------------------- | ------------------------ |
 | `cm` | Centimeters         | 1cm = 37.8px = 25.2/64in |
-| `mm` | Millimeters         | 1mm = 1/10th of 1cm  |
-| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm   |
-| `in` | Inches              | 1in = 2.54cm = 96px  |
-| `pc` | Picas               | 1pc = 1/6th of 1in   |
-| `pt` | Points              | 1pt = 1/72nd of 1in  |
-| `px` | Pixels              | 1px = 1/96th of 1in  |
+| `mm` | Millimeters         | 1mm = 1/10th of 1cm      |
+| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm       |
+| `in` | Inches              | 1in = 2.54cm = 96px      |
+| `pc` | Picas               | 1pc = 1/6th of 1in       |
+| `pt` | Points              | 1pt = 1/72nd of 1in      |
+| `px` | Pixels              | 1px = 1/96th of 1in      |
 
 Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use `cm` (centimeters) on screen. The only value that you will commonly use is `px` (pixels).
 

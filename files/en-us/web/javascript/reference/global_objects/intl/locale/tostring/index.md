@@ -22,7 +22,7 @@ The **`Intl.Locale.prototype.toString()`** method returns the Locale's full [loc
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

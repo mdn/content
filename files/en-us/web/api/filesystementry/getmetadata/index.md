@@ -24,7 +24,7 @@ its modification date and time and its size.
 
 ## Syntax
 
-```js
+```js-nolint
 getMetadata(successCallback)
 getMetadata(successCallback, errorCallback)
 ```

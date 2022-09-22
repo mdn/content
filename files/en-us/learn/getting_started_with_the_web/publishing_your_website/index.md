@@ -9,7 +9,7 @@ tags:
   - Google App Engine
   - Learn
   - Web
-  - l10n:priority
+  - "l10n:priority"
   - publishing
   - web server
 ---
@@ -71,14 +71,14 @@ Now let's examine how to easily publish your site via GitHub Pages.
 1. First of all, [sign up for GitHub](https://github.com/) and verify your email address.
 2. Next, you need to [create a repository](https://github.com/new) to store files.
 3. On this page, in the _Repository name_ box, enter _username_.github.io, where _username_ is your username. For example, our friend Bob Smith would enter _bobsmith.github.io_.
-    Check the "_Initialize this repository with a README"_ box. Then click _Create repository_.![](github-create-repo.png)
+   Check the "_Initialize this repository with a README"_ box. Then click _Create repository_.![](github-create-repo.png)
 4. Drag and drop the content of your website folder into your repository. Then click _Commit changes_.
 
-    > **Note:** Make sure your folder has an `index.html` file.
+   > **Note:** Make sure your folder has an `index.html` file.
 
 5. Navigate your browser to _username_.github.io to see your website online. For example, for the username _chrisdavidmills_, go to [_chrisdavidmills_.github.io](https://chrisdavidmills.github.io/).
 
-    > **Note:** It may take a few minutes for your website to go live. If your website does not display immediately, wait a few minutes. Try again.
+   > **Note:** It may take a few minutes for your website to go live. If your website does not display immediately, wait a few minutes. Try again.
 
 To learn more, see [GitHub Pages Help](https://docs.github.com/en/pages/getting-started-with-github-pages).
 

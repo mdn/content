@@ -50,7 +50,7 @@ This section describes how to implement a non-persistent background script.
 
 ### Specify the background scripts
 
-In your extension, you include a background script using the  [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For Manifest V2 extensions, the `persistent` property must be set to `false` to create a non-persistent script. It can be omitted for Manifest V3 extensions or must be set to `false`.
+In your extension, you include a background script using the [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key in `manifest.json`. For Manifest V2 extensions, the `persistent` property must be set to `false` to create a non-persistent script. It can be omitted for Manifest V3 extensions or must be set to `false`.
 
 ```json
 "background": {
@@ -78,7 +78,7 @@ Instead of specifying background scripts, you can specify a background page. Thi
   <!DOCTYPE html>
   <html lang="en">
     <head>
-      <meta charset="utf-8">
+      <meta charset="utf-8" />
       <script type="module" src="background-script.js"></script>
     </head>
   </html>

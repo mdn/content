@@ -3,7 +3,6 @@ title: SCM
 slug: Glossary/SCM
 tags:
   - CodingScripting
-  - Glossary
   - SCM
 ---
 

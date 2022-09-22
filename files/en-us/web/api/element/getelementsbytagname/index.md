@@ -36,7 +36,7 @@ elements that are descendants of the specified element.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByTagName(tagName)
 ```
 

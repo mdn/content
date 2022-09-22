@@ -18,7 +18,7 @@ concatenation.
 
 ## Syntax
 
-```js
+```js-nolint
 x + y
 ```
 

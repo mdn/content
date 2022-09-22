@@ -18,7 +18,7 @@ The **`MediaElementAudioSourceNode()`** constructor creates a new {{domxref("Med
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaElementAudioSourceNode(context, options)
 ```
 

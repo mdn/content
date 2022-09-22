@@ -17,7 +17,7 @@ Like websites, extensions can load content from different sources. For example, 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
   <body>
     <!--Some HTML content here-->
@@ -28,8 +28,7 @@ Like websites, extensions can load content from different sources. For example, 
     <script
       src="https://code.jquery.com/jquery-2.2.4.js"
       integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"></script>
 
     <!-- Include my popup's own script-->
     <script src="popup.js"></script>

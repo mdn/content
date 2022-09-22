@@ -70,14 +70,14 @@ containing a parsed XML document. This could prove difficult to manipulate and a
 There are four primary ways of analyzing this XML document:
 
 1. Using [XPath](/en-US/docs/Web/XPath) to address (or point to) parts of
-    it.
+   it.
 2. Manually [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) to strings or objects.
 3. Using {{domxref("XMLSerializer")}} to serialize **DOM trees to strings or to
-    files**.
+   files**.
 4. {{jsxref("RegExp")}} can be used if you always know the content of the XML document
-    beforehand. You might want to remove line breaks, if you use `RegExp` to
-    scan with regard to line breaks. However, this method is a "last resort" since if the
-    XML code changes slightly, the method will likely fail.
+   beforehand. You might want to remove line breaks, if you use `RegExp` to
+   scan with regard to line breaks. However, this method is a "last resort" since if the
+   XML code changes slightly, the method will likely fail.
 
 > **Note:** `XMLHttpRequest` can now interpret HTML for you
 > using the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property. Read the
@@ -91,13 +91,13 @@ containing the raw HTML. This could prove difficult to manipulate and analyze. T
 three primary ways to analyze and parse this raw HTML string:
 
 1. Use the `XMLHttpRequest.responseXML` property as covered in the article
-    [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+   [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
 2. Inject the content into the body of a [document fragment](/en-US/docs/Web/API/DocumentFragment) via
-    `fragment.body.innerHTML` and traverse the DOM of the fragment.
+   `fragment.body.innerHTML` and traverse the DOM of the fragment.
 3. {{jsxref("RegExp")}} can be used if you always know the content of the HTML
-    `responseText` beforehand. You might want to remove line breaks, if you use
-    `RegExp` to scan with regard to line breaks. However, this method is a "last resort"
-    since if the HTML code changes slightly, the method will likely fail.
+   `responseText` beforehand. You might want to remove line breaks, if you use
+   `RegExp` to scan with regard to line breaks. However, this method is a "last resort"
+   since if the HTML code changes slightly, the method will likely fail.
 
 ## Handling binary data
 
@@ -333,24 +333,24 @@ here we place **a complete (yet didactic) framework**, able to use all four
 ways to _submit_, and to **upload files**:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Sending forms with pure AJAX &ndash; MDN</title>
     <script>
       "use strict";
 
       // :: XHR Form Submit Framework ::
-      // 
+      //
       // https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
-      // 
+      //
       // This framework is released under the GNU Public License, version 3 or later.
       // https://www.gnu.org/licenses/gpl-3.0-standalone.html
-      // 
+      //
       // Syntax:
-      // 
+      //
       // XHRSubmit(HTMLFormElement);
       const XHRSubmit = (function () {
         function xhrSuccess() {
@@ -369,9 +369,9 @@ ways to _submit_, and to **upload files**:
               "get",
               data.receiver.replace(
                 /(?:\?.*)?$/,
-                data.segments.length > 0 ? `?${data.segments.join("&")}` : "",
+                data.segments.length > 0 ? `?${data.segments.join("&")}` : ""
               ),
-              true,
+              true
             );
             req.send(null);
           } else {
@@ -379,10 +379,17 @@ ways to _submit_, and to **upload files**:
             req.open("post", data.receiver, true);
             if (data.technique === 3) {
               // enctype is multipart/form-data
-              const boundary = "---------------------------" + Date.now().toString(16);
-              req.setRequestHeader("Content-Type", `multipart\/form-data; boundary=${boundary}`);
-              req.sendAsBinary(`--${boundary}\r\n` +
-                  data.segments.join(`--${boundary}\r\n`) + `--${boundary}--\r\n`);
+              const boundary =
+                "---------------------------" + Date.now().toString(16);
+              req.setRequestHeader(
+                "Content-Type",
+                `multipart\/form-data; boundary=${boundary}`
+              );
+              req.sendAsBinary(
+                `--${boundary}\r\n` +
+                  data.segments.join(`--${boundary}\r\n`) +
+                  `--${boundary}--\r\n`
+              );
             } else {
               // enctype is application/x-www-form-urlencoded or text/plain
               req.setRequestHeader("Content-Type", data.contentType);
@@ -392,7 +399,9 @@ ways to _submit_, and to **upload files**:
         }
 
         function processStatus(data) {
-          if (data.status > 0) { return; }
+          if (data.status > 0) {
+            return;
+          }
           // the form is now totally serialized! do something before sending it to the server…
           // doSomething(data);
           // console.log("XHRSubmit - The form is now serialized. Submitting...");
@@ -400,7 +409,8 @@ ways to _submit_, and to **upload files**:
         }
 
         function pushSegment(segment) {
-          this.owner.segments[this.segmentIdx] += segment.target.result + "\r\n";
+          this.owner.segments[this.segmentIdx] +=
+            segment.target.result + "\r\n";
           this.owner.status--;
           processStatus(this.owner);
         }
@@ -414,18 +424,30 @@ ways to _submit_, and to **upload files**:
 
         function SubmitRequest(target) {
           const isPost = target.method.toLowerCase() === "post";
-          this.contentType = isPost && target.enctype ? target.enctype : "application\/x-www-form-urlencoded";
-          this.technique = isPost ?
-              this.contentType === "multipart\/form-data" ? 3 : this.contentType === "text\/plain" ? 2 : 1 : 0;
+          this.contentType =
+            isPost && target.enctype
+              ? target.enctype
+              : "application\/x-www-form-urlencoded";
+          this.technique = isPost
+            ? this.contentType === "multipart\/form-data"
+              ? 3
+              : this.contentType === "text\/plain"
+              ? 2
+              : 1
+            : 0;
           this.receiver = target.action;
           this.status = 0;
           this.segments = [];
           const filter = this.technique === 2 ? plainEscape : escape;
           for (const field of target.elements) {
-            if (!field.hasAttribute("name")) { continue; }
-            const fieldType = field.nodeName.toUpperCase() === "INPUT" && field.hasAttribute("type")
-              ? field.getAttribute("type").toUpperCase()
-              : "TEXT";
+            if (!field.hasAttribute("name")) {
+              continue;
+            }
+            const fieldType =
+              field.nodeName.toUpperCase() === "INPUT" &&
+              field.hasAttribute("type")
+                ? field.getAttribute("type").toUpperCase()
+                : "TEXT";
             if (fieldType === "FILE" && field.files.length > 0) {
               if (this.technique === 3) {
                 // enctype is multipart/form-data
@@ -437,9 +459,15 @@ ways to _submit_, and to **upload files**:
                   segmReq.owner = this;
 
                   segmReq.onload = pushSegment;
-                  this.segments.push("Content-Disposition: form-data; name=\"" +
-                      field.name + "\"; filename=\"" + file.name +
-                      "\"\r\nContent-Type: " + file.type + "\r\n\r\n");
+                  this.segments.push(
+                    'Content-Disposition: form-data; name="' +
+                      field.name +
+                      '"; filename="' +
+                      file.name +
+                      '"\r\nContent-Type: ' +
+                      file.type +
+                      "\r\n\r\n"
+                  );
                   this.status++;
                   segmReq.readAsBinaryString(file);
                 }
@@ -447,18 +475,27 @@ ways to _submit_, and to **upload files**:
                 // enctype is application/x-www-form-urlencoded or text/plain or
                 // method is GET: files will not be sent!
                 for (const file of field.files) {
-                  this.segments.push(`${filter(field.name)}=${filter(file.name)}`);
+                  this.segments.push(
+                    `${filter(field.name)}=${filter(file.name)}`
+                  );
                 }
               }
-            } else if ((fieldType !== "RADIO" && fieldType !== "CHECKBOX") || field.checked) {
+            } else if (
+              (fieldType !== "RADIO" && fieldType !== "CHECKBOX") ||
+              field.checked
+            ) {
               // NOTE: this will submit _all_ submit buttons. Detecting the correct one is non-trivial.
               // field type is not FILE or is FILE but is empty.
               if (this.technique === 3) {
                 // enctype is multipart/form-data
-                this.segments.push(`Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`);
+                this.segments.push(
+                  `Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`
+                );
               } else {
                 // enctype is application/x-www-form-urlencoded or text/plain or method is GET
-                this.segments.push(`${filter(field.name)}=${filter(field.value)}`);
+                this.segments.push(
+                  `${filter(field.name)}=${filter(field.value)}`
+                );
               }
             }
           }
@@ -466,109 +503,127 @@ ways to _submit_, and to **upload files**:
         }
 
         return (formElement) => {
-          if (!formeElement.action) { return; }
+          if (!formeElement.action) {
+            return;
+          }
           new SubmitRequest(formElement);
         };
       })();
     </script>
   </head>
-<body>
+  <body>
+    <h1>Sending forms with XHR</h1>
 
-<h1>Sending forms with XHR</h1>
+    <h2>Using the GET method</h2>
 
-<h2>Using the GET method</h2>
+    <form
+      action="register.php"
+      method="get"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" />
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
 
-<form action="register.php" method="get" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" />
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+    <h2>Using the POST method</h2>
+    <h3>Enctype: application/x-www-form-urlencoded (default)</h3>
 
-<h2>Using the POST method</h2>
-<h3>Enctype: application/x-www-form-urlencoded (default)</h3>
+    <form
+      action="register.php"
+      method="post"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" />
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
 
-<form action="register.php" method="post" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" />
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+    <h3>Enctype: text/plain</h3>
 
-<h3>Enctype: text/plain</h3>
+    <form
+      action="register.php"
+      method="post"
+      enctype="text/plain"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>Your name: <input type="text" name="user" /></p>
+        <p>
+          Your message:<br />
+          <textarea name="message" cols="40" rows="8"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
 
-<form action="register.php" method="post" enctype="text/plain"
-    onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      Your name: <input type="text" name="user" />
-    </p>
-    <p>
-      Your message:<br />
-      <textarea name="message" cols="40" rows="8"></textarea>
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+    <h3>Enctype: multipart/form-data</h3>
 
-<h3>Enctype: multipart/form-data</h3>
-
-<form action="register.php" method="post" enctype="multipart/form-data"
-    onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Upload example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" /><br />
-      Sex:
-      <input id="sex_male" type="radio" name="sex" value="male" />
-      <label for="sex_male">Male</label>
-      <input id="sex_female" type="radio" name="sex" value="female" />
-      <label for="sex_female">Female</label><br />
-      Password: <input type="password" name="secret" /><br />
-      What do you prefer:
-      <select name="image_type">
-        <option>Books</option>
-        <option>Cinema</option>
-        <option>TV</option>
-      </select>
-    </p>
-    <p>
-      Post your photos:
-      <input type="file" multiple name="photos[]">
-    </p>
-    <p>
-      <input id="vehicle_bike" type="checkbox" name="vehicle[]" value="Bike" />
-      <label for="vehicle_bike">I have a bike</label><br />
-      <input id="vehicle_car" type="checkbox" name="vehicle[]" value="Car" />
-      <label for="vehicle_car">I have a car</label>
-    </p>
-    <p>
-      Describe yourself:<br />
-      <textarea name="description" cols="50" rows="8"></textarea>
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
-
-</body>
+    <form
+      action="register.php"
+      method="post"
+      enctype="multipart/form-data"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Upload example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" /><br />
+          Sex:
+          <input id="sex_male" type="radio" name="sex" value="male" />
+          <label for="sex_male">Male</label>
+          <input id="sex_female" type="radio" name="sex" value="female" />
+          <label for="sex_female">Female</label><br />
+          Password: <input type="password" name="secret" /><br />
+          What do you prefer:
+          <select name="image_type">
+            <option>Books</option>
+            <option>Cinema</option>
+            <option>TV</option>
+          </select>
+        </p>
+        <p>
+          Post your photos:
+          <input type="file" multiple name="photos[]" />
+        </p>
+        <p>
+          <input
+            id="vehicle_bike"
+            type="checkbox"
+            name="vehicle[]"
+            value="Bike" />
+          <label for="vehicle_bike">I have a bike</label><br />
+          <input
+            id="vehicle_car"
+            type="checkbox"
+            name="vehicle[]"
+            value="Car" />
+          <label for="vehicle_car">I have a car</label>
+        </p>
+        <p>
+          Describe yourself:<br />
+          <textarea name="description" cols="50" rows="8"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
+  </body>
 </html>
 ```
 
@@ -620,8 +675,8 @@ XHRSubmit(myForm);
 > {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} method of the
 > `FileReader` API. But, since the aim of this script is to work with a [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 > raw data, we used the {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}}
-> method in conjunction with the {{domxref("FileReader.readAsBinaryString()",
-  "readAsBinaryString()")}} method of the `FileReader` API. As such, the above
+> method in conjunction with the {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}}
+> method of the `FileReader` API. As such, the above
 > script makes sense only when you are dealing with small files. If you do not intend to
 > upload binary content, consider instead using the `FormData` API.
 
@@ -638,11 +693,11 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
 `FormData` API**. Note the brevity of the code:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Sending forms with FormData &ndash; MDN</title>
     <script>
       "use strict";
@@ -679,12 +734,14 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
     </script>
   </head>
   <body>
-
     <h1>Sending forms with FormData</h1>
 
     <h2>Using the GET method</h2>
 
-    <form action="register.php" method="get" onsubmit="AJAXSubmit(this); return false;">
+    <form
+      action="register.php"
+      method="get"
+      onsubmit="AJAXSubmit(this); return false;">
       <fieldset>
         <legend>Registration example</legend>
         <p>
@@ -700,7 +757,10 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
     <h2>Using the POST method</h2>
     <h3>Enctype: application/x-www-form-urlencoded (default)</h3>
 
-    <form action="register.php" method="post" onsubmit="AJAXSubmit(this); return false;">
+    <form
+      action="register.php"
+      method="post"
+      onsubmit="AJAXSubmit(this); return false;">
       <fieldset>
         <legend>Registration example</legend>
         <p>
@@ -719,8 +779,11 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
 
     <h3>Enctype: multipart/form-data</h3>
 
-    <form action="register.php" method="post" enctype="multipart/form-data"
-        onsubmit="AJAXSubmit(this); return false;">
+    <form
+      action="register.php"
+      method="post"
+      enctype="multipart/form-data"
+      onsubmit="AJAXSubmit(this); return false;">
       <fieldset>
         <legend>Upload example</legend>
         <p>
@@ -741,12 +804,20 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
         </p>
         <p>
           Post your photos:
-          <input type="file" multiple name="photos[]">
+          <input type="file" multiple name="photos[]" />
         </p>
         <p>
-          <input id="vehicle_bike" type="checkbox" name="vehicle[]" value="Bike" />
+          <input
+            id="vehicle_bike"
+            type="checkbox"
+            name="vehicle[]"
+            value="Bike" />
           <label for="vehicle_bike">I have a bike</label><br />
-          <input id="vehicle_car" type="checkbox" name="vehicle[]" value="Car" />
+          <input
+            id="vehicle_car"
+            type="checkbox"
+            name="vehicle[]"
+            value="Car" />
           <label for="vehicle_car">I have a car</label>
         </p>
         <p>
@@ -758,7 +829,7 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
         </p>
       </fieldset>
     </form>
-  </body> 
+  </body>
 </html>
 ```
 

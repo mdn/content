@@ -17,7 +17,7 @@ The **`setFormValue()`** method of the {{domxref("ElementInternals")}} interface
 
 ## Syntax
 
-```js
+```js-nolint
 setFormValue(value)
 setFormValue(value, state)
 ```

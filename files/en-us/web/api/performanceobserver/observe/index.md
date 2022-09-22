@@ -29,7 +29,7 @@ function—set when creating the {{domxref("PerformanceObserver")}}—is invoked
 
 ## Syntax
 
-```js
+```js-nolint
 observe(options)
 ```
 

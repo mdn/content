@@ -24,7 +24,7 @@ service worker.
 
 ## Syntax
 
-```js
+```js-nolint
 showNotification(title)
 showNotification(title, options)
 ```
@@ -39,6 +39,7 @@ showNotification(title, options)
     properties:
 
     - `actions` {{experimental_inline}}
+
       - : An array of actions to display in the notification. Each element in the array is an object with the following members:
 
         - `action`
@@ -64,7 +65,7 @@ showNotification(title, options)
       - : Arbitrary data that you want to be associated with the
         notification. This can be of any data type.
     - `dir`
-      - : The direction of the notification; it can be `auto`,  `ltr` or `rtl`.
+      - : The direction of the notification; it can be `auto`, `ltr` or `rtl`.
     - `icon`
       - : a string containing the URL of an image to
         be used as an icon by the notification.

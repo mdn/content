@@ -19,7 +19,7 @@ The **`pause()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Ani
 
 ## Syntax
 
-```js
+```js-nolint
 animation.pause();
 ```
 
@@ -42,15 +42,16 @@ None.
 
 ```js
 // animation of the cupcake slowly getting eaten up
-const nommingCake = document.getElementById('eat-me_sprite').animate(
-[
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
-], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
-});
+const nommingCake = document
+  .getElementById("eat-me_sprite")
+  .animate(
+    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    {
+      fill: "forwards",
+      easing: "steps(4, end)",
+      duration: aliceChange.effect.timing.duration / 2,
+    }
+  );
 
 // doesn't actually need to be eaten until a click event, so pause it initially:
 nommingCake.pause();

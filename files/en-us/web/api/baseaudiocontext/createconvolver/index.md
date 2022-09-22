@@ -25,7 +25,7 @@ reverb effects to your audio. See the [spec definition of Convolution](https://w
 
 ## Syntax
 
-```js
+```js-nolint
 createConvolver()
 ```
 
@@ -58,17 +58,21 @@ const convolver = audioCtx.createConvolver();
 let soundSource, concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
-ajaxRequest.open('GET', 'concert-crowd.ogg', true);
-ajaxRequest.responseType = 'arraybuffer';
+ajaxRequest.open("GET", "concert-crowd.ogg", true);
+ajaxRequest.responseType = "arraybuffer";
 
 ajaxRequest.onload = () => {
   const audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(audioData, (buffer) => {
+  audioCtx.decodeAudioData(
+    audioData,
+    (buffer) => {
       concertHallBuffer = buffer;
       soundSource = audioCtx.createBufferSource();
       soundSource.buffer = concertHallBuffer;
-    }, (e) => console.error(`Error with decoding audio data: ${e.err}`));
-}
+    },
+    (e) => console.error(`Error with decoding audio data: ${e.err}`)
+  );
+};
 
 ajaxRequest.send();
 

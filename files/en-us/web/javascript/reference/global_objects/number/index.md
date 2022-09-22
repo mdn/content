@@ -16,33 +16,47 @@ browser-compat: javascript.builtins.Number
 
 The `Number` constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the `Number()` function.
 
-The JavaScript `Number` type is a [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Floating-point_arithmetic) value, like `double` in Java or C#. This means it can represent fractional values, but there are some limits to what it can store. A `Number` only keeps about 17 decimal places of precision; arithmetic is subject to [rounding](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding). The largest value a `Number` can hold is about 1.8E308. Values higher than that are replaced with the special `Number` constant {{jsxref("Infinity")}}.
-
-A number literal like `37` in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript now has a {{jsxref("BigInt")}} type, but it was not designed to replace Number for everyday uses. `37` is still a `Number`, not a BigInt.)
-
-`Number` may also be expressed in literal forms like `0b101`, `0o13`, `0x0A`. Learn more on numeric [lexical grammar here](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals).
-
 ## Description
+
+Numbers are most commonly expressed in literal forms like `0b101`, `0o13`, `0x0A`. The [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals) contains a more detailed reference.
+
+```js
+123; // one-hundred twenty-three
+123.0; // same
+123 === 123.0; // true
+```
+
+A number literal like `37` in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript also has a {{jsxref("BigInt")}} type, but it's not designed to replace Number for everyday uses. `37` is still a number, not a BigInt.)
 
 When used as a function, `Number(value)` converts a string or other value to the Number type. If the value can't be converted, it returns {{jsxref("NaN")}}.
 
-### Literal syntax
-
 ```js
-123    // one-hundred twenty-three
-123.0  // same
-123 === 123.0  // true
+Number("123"); // returns the number 123
+Number("123") === 123; // true
+
+Number("unicorn"); // NaN
+Number(undefined); // NaN
 ```
 
-### Function syntax
+### Number encoding
 
-```js
-Number('123')  // returns the number 123
-Number('123') === 123  // true
+The JavaScript `Number` type is a [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) value, like `double` in Java or C#. This means it can represent fractional values, but there are some limits to the stored number's magnitude and precision. Very briefly, a IEEE 754 double-precision number uses 64 bits to represent 3 parts:
 
-Number("unicorn")  // NaN
-Number(undefined)  // NaN
-```
+- 1 bit for the _sign_ (positive or negative)
+- 11 bits for the _exponent_ (-1022 to 1023)
+- 52 bits for the _mantissa_ (representing a number between 0 and 1)
+
+The mantissa (also called _significand_) is the part of the number representing the actual value (significant digits). The exponent is the power of 2 that the mantissa should be multiplied by. Thinking about it as scientific notation:
+
+<math display="block"><semantics><mrow><mtext>Number</mtext><mo>=</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><msup><mo stretchy="false">)</mo><mtext>sign</mtext></msup><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mtext>mantissa</mtext><mo stretchy="false">)</mo><mo>⋅</mo><msup><mn>2</mn><mtext>exponent</mtext></msup></mrow><annotation encoding="TeX">\text{Number} = ({-1})^{\text{sign}} \cdot (1 + \text{mantissa}) \cdot 2^{\text{exponent}}</annotation></semantics></math>
+
+The mantissa is stored with 52 bits, interpreted as digits after `1.…` in a binary fractional number. Therefore, the mantissa's precision is 2<sup>-52</sup> (obtainable via {{jsxref("Number.EPSILON")}}), or about 15 to 17 decimal places; arithmetic above that level of precision is subject to [rounding](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding).
+
+The largest value a number can hold is 2<sup>1024</sup> - 1 (with the exponent being 1023 and the mantissa being 0.1111… in base 2), which is obtainable via {{jsxref("Number.MAX_VALUE")}}. Values higher than that are replaced with the special number constant {{jsxref("Infinity")}}.
+
+Integers can only be represented without loss of precision in the range -2<sup>53</sup> + 1 to 2<sup>53</sup> - 1, inclusive (obtainable via {{jsxref("Number.MIN_SAFE_INTEGER")}} and {{jsxref("Number.MAX_SAFE_INTEGER")}}), because the mantissa can only hold 53 bits (including the leading 1).
+
+More details on this are described in the [ECMAScript standard](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type).
 
 ## Constructor
 
@@ -111,20 +125,20 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
 The following example uses the `Number` object's properties to assign values to several numeric variables:
 
 ```js
-const biggestNum     = Number.MAX_VALUE
-const smallestNum    = Number.MIN_VALUE
-const infiniteNum    = Number.POSITIVE_INFINITY
-const negInfiniteNum = Number.NEGATIVE_INFINITY
-const notANum        = Number.NaN
+const biggestNum = Number.MAX_VALUE;
+const smallestNum = Number.MIN_VALUE;
+const infiniteNum = Number.POSITIVE_INFINITY;
+const negInfiniteNum = Number.NEGATIVE_INFINITY;
+const notANum = Number.NaN;
 ```
 
 ### Integer range for Number
 
-The following example shows the minimum and maximum integer values that can be represented as `Number` object. (More details on this are described in the ECMAScript standard, chapter _[6.1.6 The Number Type](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type)._)
+The following example shows the minimum and maximum integer values that can be represented as `Number` object.
 
 ```js
-const biggestInt  = Number.MAX_SAFE_INTEGER  //  (2**53 - 1) =>  9007199254740991
-const smallestInt = Number.MIN_SAFE_INTEGER  // -(2**53 - 1) => -9007199254740991
+const biggestInt = Number.MAX_SAFE_INTEGER; //  (2**53 - 1) =>  9007199254740991
+const smallestInt = Number.MIN_SAFE_INTEGER; // -(2**53 - 1) => -9007199254740991
 ```
 
 When parsing data that has been serialized to JSON, integer values falling outside of this range can be expected to become corrupted when JSON parser coerces them to `Number` type.
@@ -133,12 +147,12 @@ A possible workaround is to use {{jsxref("String")}} instead.
 
 Larger numbers can be represented using the {{jsxref("BigInt")}} type.
 
-### Using Number to convert a Date object
+### Using Number() to convert a Date object
 
 The following example converts the {{jsxref("Date")}} object to a numerical value using `Number` as a function:
 
 ```js
-const d = new Date('December 17, 1995 03:24:00');
+const d = new Date("December 17, 1995 03:24:00");
 console.log(Number(d));
 ```
 
@@ -147,19 +161,19 @@ This logs `819199440000`.
 ### Convert numeric strings and null to numbers
 
 ```js
-Number('123')     // 123
-Number('123') === 123 // true
-Number('12.3')    // 12.3
-Number('12.00')   // 12
-Number('123e-1')  // 12.3
-Number('')        // 0
-Number(null)      // 0
-Number('0x11')    // 17
-Number('0b11')    // 3
-Number('0o11')    // 9
-Number('foo')     // NaN
-Number('100a')    // NaN
-Number('-Infinity') // -Infinity
+Number("123"); // 123
+Number("123") === 123; // true
+Number("12.3"); // 12.3
+Number("12.00"); // 12
+Number("123e-1"); // 12.3
+Number(""); // 0
+Number(null); // 0
+Number("0x11"); // 17
+Number("0b11"); // 3
+Number("0o11"); // 9
+Number("foo"); // NaN
+Number("100a"); // NaN
+Number("-Infinity"); // -Infinity
 ```
 
 ## Specifications

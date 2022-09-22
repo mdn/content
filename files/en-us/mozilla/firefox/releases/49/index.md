@@ -283,7 +283,7 @@ In order to improve compatibility with existing content, Firefox now accepts som
 
 ### Interfaces
 
-- In {{domxref("EventTarget.addEventListener()")}}, the value `mozSystemGroup`,  active only in code running in XBL or in Firefox's chrome, is a {{jsxref("Boolean")}} which indicates if the listener is added to the system group. ({{bug(1274520)}})
+- In {{domxref("EventTarget.addEventListener()")}}, the value `mozSystemGroup`, active only in code running in XBL or in Firefox's chrome, is a {{jsxref("Boolean")}} which indicates if the listener is added to the system group. ({{bug(1274520)}})
 
 ### Other
 

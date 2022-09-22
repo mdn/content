@@ -17,7 +17,7 @@ a JSON representation of the {{domxref("PerformanceNavigationTiming")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 
@@ -28,8 +28,8 @@ None.
 ### Return value
 
 A JSON object that is the serialization of the
-    {{domxref("PerformanceNavigationTiming")}} object as a map with entries from the
-    closest inherited interface and with entries for each of the serializable attributes.
+{{domxref("PerformanceNavigationTiming")}} object as a map with entries from the
+closest inherited interface and with entries for each of the serializable attributes.
 
 ## Examples
 

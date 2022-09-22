@@ -31,7 +31,7 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}.
 
 - `playbackTime` {{ReadOnlyInline}}
   - : A double representing the time when the audio will be played,
-     as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
+    as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
 - `inputBuffer` {{ReadOnlyInline}}
   - : An {{domxref("AudioBuffer")}} that is the buffer containing the input audio data to be processed.
     The number of channels is defined as a parameter `numberOfInputChannels`,

@@ -26,7 +26,7 @@ document fragment valid.
 
 ## Syntax
 
-```js
+```js-nolint
 extractContents()
 ```
 
@@ -72,12 +72,12 @@ body {
 p {
   border: 1px solid;
   font-size: 2em;
-  padding: .3em;
+  padding: 0.3em;
 }
 
 button {
   font-size: 1.2em;
-  padding: .5em;
+  padding: 0.5em;
   pointer-events: auto;
 }
 ```

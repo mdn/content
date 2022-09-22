@@ -27,7 +27,7 @@ requested by calling {{DOMxRef("XRSession.requestAnimationFrame",
 
 ## Syntax
 
-```js
+```js-nolint
 cancelAnimationFrame(handle)
 ```
 

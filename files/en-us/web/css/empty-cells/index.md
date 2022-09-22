@@ -67,7 +67,7 @@ The `empty-cells` property is specified as one of the keyword values listed belo
     <td></td>
   </tr>
 </table>
-<br>
+<br />
 <table class="table_2">
   <tr>
     <td>Moe</td>

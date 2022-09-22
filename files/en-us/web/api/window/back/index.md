@@ -24,7 +24,7 @@ Firefox-specific method and was removed in Firefox 31.
 
 ## Syntax
 
-```js
+```js-nolint
 back()
 ```
 

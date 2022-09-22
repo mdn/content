@@ -19,7 +19,7 @@ The **`delete()`** method of the {{domxref("FormData")}} interface deletes a key
 
 ## Syntax
 
-```js
+```js-nolint
 delete(name)
 ```
 

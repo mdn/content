@@ -26,7 +26,7 @@ This includes the {{domxref("VRPose")}} and view and projection matrices for the
 
 ## Syntax
 
-```js
+```js-nolint
 getFrameData(frameData)
 ```
 

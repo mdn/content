@@ -8,11 +8,10 @@ tags:
   - CanvasRenderingContext2D
   - Method
   - Reference
-  - Experimental
 browser-compat: api.CanvasRenderingContext2D.roundRect
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`CanvasRenderingContext2D.roundRect()`** method of the Canvas 2D API adds a rounded rectangle to the current path.
 
@@ -23,7 +22,7 @@ To draw the rounded rectangle onto a canvas, you can use the {{domxref("CanvasRe
 
 ## Syntax
 
-```js
+```js-nolint
 roundRect(x, y, width, height, radii)
 ```
 
@@ -38,8 +37,10 @@ roundRect(x, y, width, height, radii)
 - `height`
   - : The rectangle's height. Positive values are down, and negative are up.
 - `radii`
+
   - : A number or list specifying the radii of the circular arc to be used for the corners of the rectangle.
     The number and order of the radii function in the same way as the [`border-radius`](/en-US/docs/Web/CSS/border-radius) CSS property when `width` and `height` are _positive_:
+
     - `all-corners`
     - `[all-corners]`
     - `[top-left-and-bottom-right, top-right-and-bottom-left]`
@@ -102,7 +103,7 @@ ctx.stroke();
 Below the previous rectangle we draw another in orange that specifies the values of the radii of opposite corners.
 
 ```js
-// Rounded rectangle with 2 different radii 
+// Rounded rectangle with 2 different radii
 ctx.strokeStyle = 'orange';
 ctx.beginPath();
 ctx.roundRect(10, 150, 150, 100, [10, 40]);

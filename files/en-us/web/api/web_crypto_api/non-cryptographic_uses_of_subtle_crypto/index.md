@@ -43,7 +43,9 @@ First we add some HTML elements for loading some files and displaying the SHA-25
 ```html
 <h3>Demonstration of hashing a file with SHA256</h3>
 
-<label>Choose file(s) to hash <input type="file" id="file" name="file" multiple></label>
+<label
+  >Choose file(s) to hash <input type="file" id="file" name="file" multiple
+/></label>
 <output style="display:block;font-family:monospace;"></output>
 ```
 
@@ -80,7 +82,7 @@ async function fileHash(file) {
 
 async function hashTheseFiles(e) {
   let outHTML = ''
-  // iterate ove reach file in file select input
+  // iterate over each file in file select input
   for (const file of this.files) {
 
     // calculate it's hash and list it in the output element.
@@ -90,7 +92,7 @@ async function hashTheseFiles(e) {
 }
 ```
 
- {{EmbedLiveSample("hashing_a_file")}}
+{{EmbedLiveSample("hashing_a_file")}}
 
 ### Where would you use this?
 
@@ -135,7 +137,9 @@ The code below, like our SHA256 example, can be used to generate these hashes fr
 ```html
 <h3>Demonstration of how git uses SHA1 for files</h3>
 
-<label>Choose file(s) to hash <input type="file" id="file" name="file" multiple></label>
+<label
+  >Choose file(s) to hash <input type="file" id="file" name="file" multiple
+/></label>
 
 <output style="display:block;font-family:monospace;"></output>
 ```
@@ -168,7 +172,7 @@ async function fileHash(file) {
   const arrayBufferToHash = await newBlob.arrayBuffer();
 
   // Finally we perform the hash this time as SHA1 which is what Git uses.
-  // Then we return it as a string. to be displayed.
+  // Then we return it as a string to be displayed.
   return hashToString(await crypto.subtle.digest('SHA-1', arrayBufferToHash));
 }
 

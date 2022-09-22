@@ -33,7 +33,7 @@ escape sequences might be introduced by a function like {{jsxref("escape")}}. Us
 
 ## Syntax
 
-```js
+```js-nolint
 unescape(str)
 ```
 

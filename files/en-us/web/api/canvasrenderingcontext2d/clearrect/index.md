@@ -25,7 +25,7 @@ transparent black.
 
 ## Syntax
 
-```js
+```js-nolint
 clearRect(x, y, width, height)
 ```
 

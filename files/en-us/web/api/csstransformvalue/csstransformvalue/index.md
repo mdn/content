@@ -22,7 +22,7 @@ individual transform objects.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSTransformValue(transforms)
 ```
 

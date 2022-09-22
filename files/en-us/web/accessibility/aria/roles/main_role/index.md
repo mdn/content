@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: main role'
+title: "ARIA: main role"
 slug: Web/Accessibility/ARIA/Roles/main_role
 tags:
   - ARIA
@@ -55,7 +55,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
     <!-- article content -->
   </div>
 
- <!-- sidebar and footer -->
+  <!-- sidebar and footer -->
 </body>
 ```
 
@@ -137,6 +137,6 @@ Which is the equivalent of:
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

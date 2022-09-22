@@ -23,7 +23,7 @@ triggers the user agent's pairing flow.
 
 ## Syntax
 
-```js
+```js-nolint
 requestDevice(filters)
 ```
 

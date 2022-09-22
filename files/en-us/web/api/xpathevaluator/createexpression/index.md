@@ -20,7 +20,7 @@ This method compiles an {{domxref("XPathExpression")}} which can then be used fo
 
 ## Syntax
 
-```js
+```js-nolint
 createExpression(expression)
 createExpression(expression, resolver)
 ```

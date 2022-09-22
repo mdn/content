@@ -20,7 +20,7 @@ In order to use the `export` declaration in a source file, the file must be inte
 
 ## Syntax
 
-```js
+```js-nolint
 // Exporting declarations
 export let name1, name2/*, … */; // also var
 export const name1 = 1, name2 = 2/*, … */; // also var, let

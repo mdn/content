@@ -21,7 +21,7 @@ given namespace prefix within an {{Glossary("XPath")}} expression evaluated by t
 
 ## Syntax
 
-```js
+```js-nolint
 lookupNamespaceURI(prefix)
 ```
 

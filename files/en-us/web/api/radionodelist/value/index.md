@@ -24,9 +24,9 @@ does not contain any radio buttons or none of the radio buttons in the collectio
 
 ## Syntax
 
-```js
-value = radioNodeList.value;
-radioNodeList.value = string;
+```js-nolint
+value = radioNodeList.value
+radioNodeList.value = string
 ```
 
 ## Example
@@ -35,8 +35,8 @@ radioNodeList.value = string;
 
 ```html
 <form>
-  <label><input type="radio" name="color" value="blue">Blue</label>
-  <label><input type="radio" name="color" value="red">Red</label>
+  <label><input type="radio" name="color" value="blue" />Blue</label>
+  <label><input type="radio" name="color" value="red" />Red</label>
 </form>
 ```
 

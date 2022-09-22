@@ -22,7 +22,7 @@ The **`substr()`** method returns a portion of the string, starting at the speci
 
 ## Syntax
 
-```js
+```js-nolint
 substr(start)
 substr(start, length)
 ```

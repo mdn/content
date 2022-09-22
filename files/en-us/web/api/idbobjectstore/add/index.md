@@ -33,7 +33,7 @@ object. For updating existing records, you should use the
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 add(value, key)
 ```
@@ -71,8 +71,8 @@ one of the following types:
   - : Thrown if the data being stored could not be cloned by the internal structured cloning algorithm.
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an insert operation failed because the primary key constraint was
-        violated (due to an already existing record with the same primary key
-        value).
+    violated (due to an already existing record with the same primary key
+    value).
 
 ## Examples
 

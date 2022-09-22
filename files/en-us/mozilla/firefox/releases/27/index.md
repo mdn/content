@@ -29,7 +29,7 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 - The `-moz-grab` and `-moz-grabbing` keywords on the CSS {{cssxref("cursor")}} property have been unprefixed to `grab` and `grabbing` ({{bug("880672")}}).
 - Support for the `-moz-hsla()` and `-moz-rgba()` functional notations has been dropped. Only the unprefixed versions, `hsla()` and `rgba()` are supported from now on ({{bug("893319")}}).
 - The "`true`" value for {{cssxref("text-align")}} has been added ({{bug(929991)}}).
-- Experimental support of `position:sticky` is now active by default on non-release builds ({{bug("902992")}}). For releases builds, the `layout.css.sticky.enabled` preference still needs to be set to `true.`
+- Experimental support of `position:sticky` is now active by default on non-release builds ({{bug("902992")}}). For releases builds, the `layout.css.sticky.enabled` preference still needs to be set to `true`.
 - The {{cssxref("all")}} shorthand property has been added ({{bug(842329)}}).
 - The {{cssxref("unset")}} global value has been added; it allows to reset any CSS property ({{bug(921731)}}).
 - Curly brackets are no longer allowed in HTML `style` attributes: doing `<div style="{ display: none }">` was working in quirks mode, but won't anymore {{bug(915053)}}.
@@ -59,7 +59,7 @@ More details in [this post](https://hacks.mozilla.org/2013/11/firefox-developer-
 - Support for the two `setRange()` methods on the {{domxref("HTMLTextAreaElement")}} interface has been added ({{bug(918940)}}).
 - The methods `getAllKeys()` and `openKeyCursor()` have been added to {{domxref("IDBObjectStore")}} ({{bug(920633)}} and {{bug(920800)}}).
 - The {{domxref("HTMLFormControlsCollection")}} interface has been implemented ({{bug(913920)}}).
-- The {{domxref("CanvasRenderingContext2D")}} interface now supports the two methods {{domxref("CanvasRenderingContext2D.getLineDash()", "getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} and the {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}} property  ({{bug(768067)}}).
+- The {{domxref("CanvasRenderingContext2D")}} interface now supports the two methods {{domxref("CanvasRenderingContext2D.getLineDash()", "getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} and the {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}} property ({{bug(768067)}}).
 - The `typeMustMatch` attribute has been implemented on the {{domxref("HTMLObjectElement")}} interface ({{bug(827160)}}).
 - The `copyFromChannel()` and `copyToChannel()` methods have been added to {{domxref("AudioBuffer")}} ({{bug(915524)}}).
 - `Event.isTrusted()` is now unforgeable ({{bug(637248)}}).

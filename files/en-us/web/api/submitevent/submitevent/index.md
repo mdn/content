@@ -24,7 +24,7 @@ fired at an {{Glossary("HTML")}} [form](/en-US/docs/Learn/Forms).
 
 ## Syntax
 
-```js
+```js-nolint
 new SubmitEvent(type)
 new SubmitEvent(type, options)
 ```

@@ -29,7 +29,12 @@ In this example the `aria-placeholder` attribute on the element with an ID of `t
 
 ```html
 <div id="txtboxLabel">Enter your five-digit zipcode</div>
-<div role="textbox" id="txtBoxInput" contenteditable="true" aria-placeholder="5-digit zipcode" aria-labelledby="txtboxLabel"></div>
+<div
+  role="textbox"
+  id="txtBoxInput"
+  contenteditable="true"
+  aria-placeholder="5-digit zipcode"
+  aria-labelledby="txtboxLabel"></div>
 ```
 
 ```js

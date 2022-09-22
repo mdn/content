@@ -16,9 +16,9 @@ insertion order.
 
 ## Syntax
 
-```js
-forEach(callback);
-forEach(callback, thisArg);
+```js-nolint
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Parameters

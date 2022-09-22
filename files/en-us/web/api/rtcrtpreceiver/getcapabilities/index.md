@@ -35,7 +35,7 @@ the static function {{domxref("RTCRtpSender.getCapabilities()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getCapabilities(kind) //static function
 ```
 

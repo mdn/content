@@ -155,7 +155,8 @@ article {
   justify-items: stretch;
 }
 
-article:hover, article:focus {
+article:hover,
+article:focus {
   justify-items: center;
 }
 
@@ -166,7 +167,8 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }

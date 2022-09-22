@@ -22,7 +22,7 @@ new _array iterator_ containing the values for each index in the
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

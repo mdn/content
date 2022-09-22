@@ -20,7 +20,7 @@ Fired when the sidebar pane becomes visible as a result of the user switching to
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.panels.onShown.addListener(listener)
 browser.devtools.panels.onShown.removeListener(listener)
 browser.devtools.panels.onShown.hasListener(listener)

@@ -35,7 +35,7 @@ offer.
 
 ## Syntax
 
-```js
+```js-nolint
 createOffer()
 createOffer(options)
 
@@ -46,6 +46,7 @@ createOffer(successCallback, failureCallback, options)
 ### Parameters
 
 - `options` {{optional_inline}}
+
   - : An object providing the following options requested for the offer:
 
     - `iceRestart` {{optional_inline}}

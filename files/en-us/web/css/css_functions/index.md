@@ -24,7 +24,7 @@ spec-urls:
 
 ```css
 selector {
-  property: functional-notation( [argument]? [, argument]! );
+  property: functional-notation([argument]? [, argument]!);
 }
 ```
 
@@ -126,15 +126,15 @@ The math functions allow CSS numeric values to be written as mathematical expres
 ### Exponential functions
 
 - {{cssxref("pow", "pow()")}} {{Experimental_Inline}}
-  - : Contains two comma-separated calculations A and B, both of which must resolve as a {{cssxref("&lt;number&gt;")}}, and returns the result of raising A to the power of B, returning the value as a {{cssxref("&lt;number&gt;")}}.
+  - : An exponential function that returns a base raised to the power of a number.
 - {{cssxref("sqrt", "sqrt()")}} {{Experimental_Inline}}
-  - : Contains a single calculation which must resolve to a {{cssxref("&lt;number&gt;")}}, and returns the square root of the value as a {{cssxref("&lt;number&gt;")}}.
+  - : An exponential function that returns the square root of a number.
 - {{cssxref("hypot", "hypot()")}} {{Experimental_Inline}}
-  - : Contains one or more comma-separated calculations, and returns the length of an N-dimensional vector with components equal to each of the calculations.
+  - : An exponential function that returns the square root of the sum of squares of its arguments.
 - {{cssxref("log", "log()")}} {{Experimental_Inline}}
-  - : Contains one or two calculations (representing the value to be logarithmed, and the base of the logarithm, defaulting to e), which must both resolve as a {{cssxref("&lt;number&gt;")}}, and returns the logarithm base B of the value A, as a {{cssxref("&lt;number&gt;")}}.
+  - : An exponential function that returns the logarithm of a number.
 - {{cssxref("exp", "exp()")}} {{Experimental_Inline}}
-  - : Contains one calculation which must resolve to a {{cssxref("&lt;number&gt;")}}, and returns the same value as pow(e, A) as a {{cssxref("&lt;number&gt;")}}.
+  - : An exponential function that returns `e` raised to the power of a number.
 
 ### Sign-related functions
 

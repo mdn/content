@@ -32,8 +32,7 @@ If the property isn't present, this property is missing from the supported const
 ## Examples
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden

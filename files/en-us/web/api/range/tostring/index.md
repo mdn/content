@@ -22,7 +22,7 @@ ineffective.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -39,7 +39,10 @@ A string.
 ### HTML
 
 ```html
-<p>This example logs <em>everything</em> between the emphasized <em>words</em>. Look at the output below.</p>
+<p>
+  This example logs <em>everything</em> between the emphasized <em>words</em>.
+  Look at the output below.
+</p>
 <p id="log"></p>
 ```
 

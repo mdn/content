@@ -14,7 +14,7 @@ browser-compat: api.ImageTrack.repetitionCount
 
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
-The **`repetitionCount`**  property of the {{domxref("ImageTrack")}} interface returns the number of repetitions of this track.
+The **`repetitionCount`** property of the {{domxref("ImageTrack")}} interface returns the number of repetitions of this track.
 
 ## Value
 

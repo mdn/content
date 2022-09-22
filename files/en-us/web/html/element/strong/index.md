@@ -115,7 +115,9 @@ While `<em>` is used to change the meaning of a sentence as spoken emphasis does
 ### Basic example
 
 ```html
-<p>Before proceeding, <strong>make sure you put on your safety goggles</strong>.</p>
+<p>
+  Before proceeding, <strong>make sure you put on your safety goggles</strong>.
+</p>
 ```
 
 The resulting output:
@@ -125,7 +127,10 @@ The resulting output:
 ### Labeling warnings
 
 ```html
-<p><strong>Important:</strong> Before proceeding, make sure you add plenty of butter.</p>
+<p>
+  <strong>Important:</strong> Before proceeding, make sure you add plenty of
+  butter.
+</p>
 ```
 
 This results in:

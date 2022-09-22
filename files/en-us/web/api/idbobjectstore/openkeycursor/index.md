@@ -26,7 +26,7 @@ results's `success` event.
 
 ## Syntax
 
-```js
+```js-nolint
 openKeyCursor()
 openKeyCursor(query)
 openKeyCursor(query, direction)

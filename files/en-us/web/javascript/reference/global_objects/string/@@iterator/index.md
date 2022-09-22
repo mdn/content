@@ -21,7 +21,7 @@ The **`@@iterator`** method of a string implements the [iterable protocol](/en-U
 
 ## Syntax
 
-```js
+```js-nolint
 string[Symbol.iterator]()
 ```
 

@@ -17,7 +17,7 @@ The unary negation operator (`-`) precedes its operand and negates it.
 
 ## Syntax
 
-```js
+```js-nolint
 -x
 ```
 

@@ -22,7 +22,7 @@ JavaScript classes use prototype-based inheritance.
 
 ## Syntax
 
-```js
+```js-nolint
 const MyClass = class [className] [extends otherClassName] {
   // class body
 }

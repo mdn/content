@@ -24,7 +24,7 @@ The **`cancelAnimationFrame()`** method of the {{domxref("VRDisplay")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 cancelAnimationFrame(handle)
 ```
 

@@ -38,7 +38,7 @@ only that profile if you have multiple profiles being recorded.
 
 ## Syntax
 
-```js
+```js-nolint
 profileEnd(profileName)
 ```
 

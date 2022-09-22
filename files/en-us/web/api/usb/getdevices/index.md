@@ -23,7 +23,7 @@ objects for paired attached devices. For information on pairing devices, see
 
 ## Syntax
 
-```js
+```js-nolint
 getDevices()
 ```
 

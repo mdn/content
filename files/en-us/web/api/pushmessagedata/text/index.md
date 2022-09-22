@@ -20,7 +20,7 @@ The **`text()`** method of the {{domxref("PushMessageData")}} interface extracts
 
 ## Syntax
 
-```js
+```js-nolint
 text()
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: table role'
+title: "ARIA: table role"
 slug: Web/Accessibility/ARIA/Roles/table_role
 tags:
   - ARIA
@@ -18,8 +18,14 @@ spec-urls:
 The `table` value of the ARIA `role` attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 
 ```html
-<div role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
-  <div id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</div>
+<div
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <div id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </div>
   <div role="rowgroup">
     <div role="row">
       <span role="columnheader" aria-sort="none">ARIA Role</span>
@@ -91,18 +97,24 @@ None. For sortable columns, see the [columnheader](/en-US/docs/Web/Accessibility
 ## Examples
 
 ```html
-<div role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
-  <div id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</div>
+<div
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <div id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </div>
   <div role="rowgroup">
-     <div role="row">
-       <span role="columnheader" aria-sort="none">ARIA Role</span>
-       <span role="columnheader" aria-sort="none">Semantic Element</span>
-     </div>
-   </div>
-   <div role="rowgroup">
+    <div role="row">
+      <span role="columnheader" aria-sort="none">ARIA Role</span>
+      <span role="columnheader" aria-sort="none">Semantic Element</span>
+    </div>
+  </div>
+  <div role="rowgroup">
     <div role="row" aria-rowindex="11">
-       <span role="cell">header</span>
-       <span role="cell">h1</span>
+      <span role="cell">header</span>
+      <span role="cell">h1</span>
     </div>
     <div role="row" aria-rowindex="16">
       <span role="cell">header</span>
@@ -144,6 +156,6 @@ none
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

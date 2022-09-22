@@ -68,7 +68,7 @@ Take the following form:
 ```html
 <form>
   <label for="name">Enter username (upper and lowercase letters): </label>
-  <input type="text" name="name" id="name" required pattern="[A-Za-z]+">
+  <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Submit</button>
 </form>
 ```

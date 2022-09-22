@@ -3,7 +3,6 @@ title: mime
 slug: Glossary/mime
 tags:
   - Beginner
-  - Glossary
   - Infrastructure
   - MIME
 ---

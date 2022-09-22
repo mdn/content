@@ -18,7 +18,7 @@ The **`terminate()`** method of the {{domxref("Worker")}} interface immediately 
 
 ## Syntax
 
-```js
+```js-nolint
 terminate()
 ```
 

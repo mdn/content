@@ -24,7 +24,7 @@ being too small for the user to interact with.
 
 ## Syntax
 
-```js
+```js-nolint
 sizeToContent()
 ```
 

@@ -34,7 +34,7 @@ See [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_
 
 ## Syntax
 
-```js
+```js-nolint
 getDisplayMedia(constraints)
 ```
 

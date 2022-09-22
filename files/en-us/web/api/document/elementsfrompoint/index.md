@@ -23,7 +23,7 @@ It operates in a similar way to the {{domxref("Document.elementFromPoint",
 
 ## Syntax
 
-```js
+```js-nolint
 elementsFromPoint(x, y)
 ```
 
@@ -57,7 +57,7 @@ let output = document.getElementById("output");
 if (document.elementsFromPoint) {
   let elements = document.elementsFromPoint(30, 20);
   elements.forEach((elt, i) => {
-    output.textContent += element.localName;
+    output.textContent += elt.localName;
     if (i < elements.length - 1) {
       output.textContent += " < ";
     }

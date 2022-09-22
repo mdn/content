@@ -133,7 +133,7 @@ You can sort the table by a particular column by clicking on that column's label
 
 ## Syntax
 
-```js
+```js-nolint
 table(data)
 table(data, columns)
 ```

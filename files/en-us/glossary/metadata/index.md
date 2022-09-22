@@ -3,7 +3,6 @@ title: Metadata
 slug: Glossary/Metadata
 tags:
   - CodingScripting
-  - Glossary
   - HTML
   - metadata
 ---

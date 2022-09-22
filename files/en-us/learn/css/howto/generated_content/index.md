@@ -70,7 +70,7 @@ This rule adds a space and an icon after every link that has the class `glossary
 
 ```css
 a.glossary::after {
-   content: " " url("glossary-icon.gif");
+  content: " " url("glossary-icon.gif");
 }
 ```
 

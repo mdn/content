@@ -20,7 +20,7 @@ without adding the new token to the token list.
 
 ## Syntax
 
-```js
+```js-nolint
 replace(oldToken, newToken)
 ```
 

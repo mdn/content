@@ -18,7 +18,7 @@ The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface 
 
 ## Syntax
 
-```js
+```js-nolint
 subscribe(subscriptions)
 ```
 

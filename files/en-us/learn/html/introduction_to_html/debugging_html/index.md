@@ -50,7 +50,7 @@ When writing code of some kind, everything is usually fine, until that dreaded m
 
 ![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](error-message.png)Here, the error message is relatively easy to understand — "unterminated double quote string". If you look at the listing, you can probably see how `println!(Hello, world!");` might logically be missing a double quote. However, error messages can quickly get more complicated and less easy to interpret as programs get bigger, and even simple cases can look a little intimidating to someone who doesn't know anything about Rust.
 
-Debugging doesn't have to be scary though —  the key to being comfortable with writing and debugging any programming language or code is familiarity with both the language and the tools.
+Debugging doesn't have to be scary though — the key to being comfortable with writing and debugging any programming language or code is familiarity with both the language and the tools.
 
 ## HTML and debugging
 
@@ -75,55 +75,57 @@ It's time to study the permissive nature of HTML code.
 2. Next, open it in a browser. You will see something like this:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
 3. This immediately doesn't look great; let's look at the source code to see if we can work out why (only the body contents are shown):
 
-    ```html
-    <h1>HTML debugging examples</h1>
+   ```html
+   <h1>HTML debugging examples</h1>
 
-    <p>What causes errors in HTML?
+   <p>What causes errors in HTML?
 
-    <ul>
-      <li>Unclosed elements: If an element is <strong>not closed properly,
-          then its effect can spread to areas you didn't intend
+   <ul>
+     <li>Unclosed elements: If an element is <strong>not closed properly,
+         then its effect can spread to areas you didn't intend
 
-      <li>Badly nested elements: Nesting elements properly is also very important
-          for code behaving correctly. <strong>strong <em>strong emphasized?</strong>
-          what is this?</em>
+     <li>Badly nested elements: Nesting elements properly is also very important
+         for code behaving correctly. <strong>strong <em>strong emphasized?</strong>
+         what is this?</em>
 
-      <li>Unclosed attributes: Another common source of HTML problems. Let's
-          look at an example: <a href="https://www.mozilla.org/>link to Mozilla
-          homepage</a>
-    </ul>
-    ```
+     <li>Unclosed attributes: Another common source of HTML problems. Let's
+         look at an example: <a href="https://www.mozilla.org/>link to Mozilla
+         homepage</a>
+   </ul>
+   ```
 
 4. Let's review the problems:
 
-    - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
-    - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been strongly emphasized.
-    - This section is badly nested: `<strong>strong <em>strong emphasized?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
-    - The {{htmlattrxref("href","a")}} attribute value is missing a closing double quote. This seems to have caused the biggest problem — the link has not rendered at all.
+   - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
+   - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been strongly emphasized.
+   - This section is badly nested: `<strong>strong <em>strong emphasized?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
+   - The {{htmlattrxref("href","a")}} attribute value is missing a closing double quote. This seems to have caused the biggest problem — the link has not rendered at all.
 
 5. Now let's look at the markup the browser has rendered, as opposed to the markup in the source code. To do this, we can use the browser developer tools. If you are not familiar with how to use your browser's developer tools, take a few minutes to review [Discover browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
 6. In the DOM inspector, you can see what the rendered markup looks like: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 7. Using the DOM inspector, let's explore our code in detail to see how the browser has tried to fix our HTML errors (we did the review in Firefox; other modern browsers _should_ give the same result):
 
-    - The paragraphs and list items have been given closing tags.
-    - It isn't clear where the first `<strong>` element should be closed, so the browser has wrapped each separate block of text with its own strong tag, right down to the bottom of the document!
-    - The incorrect nesting has been fixed by the browser as shown here:
+   - The paragraphs and list items have been given closing tags.
+   - It isn't clear where the first `<strong>` element should be closed, so the browser has wrapped each separate block of text with its own strong tag, right down to the bottom of the document!
+   - The incorrect nesting has been fixed by the browser as shown here:
 
-      ```html
-      <strong>strong
-        <em>strong emphasized?</em>
-      </strong>
-      <em> what is this?</em>
-      ```
+     ```html
+     <strong>strong
+       <em>strong emphasized?</em>
+     </strong>
+     <em> what is this?</em>
+     ```
 
-    - The link with the missing double quote has been deleted altogether. The last list item looks like this:
+   - The link with the missing double quote has been deleted altogether. The last list item looks like this:
 
-      ```html
-      <li>
-        <strong>Unclosed attributes: Another common source of HTML problems.
-        Let's look at an example: </strong>
-      </li>
-      ```
+     ```html
+     <li>
+       <strong>
+         Unclosed attributes: Another common source of HTML problems. Let's
+         look at an example:
+       </strong>
+     </li>
+     ```
 
 ### HTML validation
 

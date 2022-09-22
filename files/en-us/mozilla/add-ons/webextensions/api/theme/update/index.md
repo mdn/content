@@ -19,7 +19,7 @@ Updates the browser theme according to the content of given {{WebExtAPIRef("them
 
 ## Syntax
 
-```js
+```js-nolint
 browser.theme.update(
   windowId,    // integer
   theme        // object

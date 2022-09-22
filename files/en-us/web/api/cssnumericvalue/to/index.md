@@ -22,7 +22,7 @@ another.
 
 ## Syntax
 
-```js
+```js-nolint
 to(unit)
 ```
 

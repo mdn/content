@@ -20,7 +20,7 @@ interface returns the first value associated to the given search parameter.
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 

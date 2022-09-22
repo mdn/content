@@ -25,7 +25,7 @@ To cancel or redirect the request, first include `"blocking"` in the `extraInfoS
 
 If an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
 
-When multiple blocking handlers modify a request, only one set of modifications take effect. Redirects and cancellations have the same precedence. So if you canceled a request, you might see another request with the same  `requestId` again if another blocking handler redirected the request.
+When multiple blocking handlers modify a request, only one set of modifications take effect. Redirects and cancellations have the same precedence. So if you canceled a request, you might see another request with the same `requestId` again if another blocking handler redirected the request.
 
 From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
 
@@ -33,7 +33,7 @@ If you use `"blocking"`, you must have the ["webRequestBlocking" API permission]
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onBeforeRequest.addListener(
   listener,             // function
   filter,               //  object

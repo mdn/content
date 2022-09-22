@@ -25,7 +25,7 @@ contains the values for each element in the `Set` object in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

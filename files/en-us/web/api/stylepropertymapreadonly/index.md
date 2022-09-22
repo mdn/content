@@ -45,8 +45,8 @@ We have to have an element to observe:
 
 ```html
 <p>
-   This is a paragraph with some text. We can add some CSS, or not. The
-   style map will include all the default and inherited CSS property values.
+  This is a paragraph with some text. We can add some CSS, or not. The style map
+  will include all the default and inherited CSS property values.
 </p>
 <dl id="output"></dl>
 ```
@@ -55,10 +55,10 @@ We add a touch of CSS with a custom property to better demonstrate the output:
 
 ```css
 p {
-   --someVariable: 1.6em;
-   --someOtherVariable: translateX(33vw);
-   --anotherVariable: 42;
-   line-height: var(--someVariable);
+  --someVariable: 1.6em;
+  --someOtherVariable: translateX(33vw);
+  --anotherVariable: 42;
+  line-height: var(--someVariable);
 }
 ```
 

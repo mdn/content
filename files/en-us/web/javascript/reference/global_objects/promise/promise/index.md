@@ -18,7 +18,7 @@ The **`Promise`** constructor is primarily used to wrap functions that do not al
 
 ## Syntax
 
-```js
+```js-nolint
 new Promise(executor)
 ```
 

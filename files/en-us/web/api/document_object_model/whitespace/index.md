@@ -73,7 +73,7 @@ Most whitespace characters are ignored, not all of them are. In the earlier exam
 
 #### Example
 
-Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:
+Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥, and all line breaks with ⏎:
 
 This example:
 
@@ -105,35 +105,35 @@ Inside this context, whitespace character processing can be summarized as follow
 
 1. First, all spaces and tabs immediately before and after a line break are ignored so, if we take our example markup from before and apply this first rule, we get:
 
-    ```html
-    <h1>◦◦◦Hello⏎
-    <span>◦World!</span>⇥◦◦</h1>
-    ```
+   ```html
+   <h1>◦◦◦Hello⏎
+   <span>◦World!</span>⇥◦◦</h1>
+   ```
 
 2. Next, all tab characters are handled as space characters, so the example becomes:
 
-    ```html
-    <h1>◦◦◦Hello⏎
-    <span>◦World!</span>◦◦◦</h1>
-    ```
+   ```html
+   <h1>◦◦◦Hello⏎
+   <span>◦World!</span>◦◦◦</h1>
+   ```
 
 3. Next, line breaks are converted to spaces:
 
-    ```html
-    <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
-    ```
+   ```html
+   <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
+   ```
 
 4. After that, any space immediately following another space (even across two separate inline elements) is ignored, so we end up with:
 
-    ```html
-    <h1>◦Hello◦<span>World!</span>◦</h1>
-    ```
+   ```html
+   <h1>◦Hello◦<span>World!</span>◦</h1>
+   ```
 
 5. And finally, sequences of spaces at the beginning and end of an element are removed, so we finally get this:
 
-    ```html
-    <h1>Hello◦<span>World!</span></h1>
-    ```
+   ```html
+   <h1>Hello◦<span>World!</span></h1>
+   ```
 
 This is why people visiting the web page will see the phrase "Hello World!" nicely written at the top of the page, rather than a weirdly indented "Hello" followed but an even more weirdly indented "World!" on the line below that.
 
@@ -177,23 +177,23 @@ We can summarize how the whitespace here is handled as follows (the may be some 
 
 1. Because we're inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 `<div>`s. Blocks occupy the full width available and are stacked on top of each other, which means that we end up with a layout composed of this list of blocks:
 
-    ```html
-    <block>⏎⇥</block>
-    <block>◦◦Hello◦◦</block>
-    <block>⏎◦◦◦</block>
-    <block>◦◦World!◦◦</block>
-    <block>◦◦⏎</block>
-    ```
+   ```html
+   <block>⏎⇥</block>
+   <block>◦◦Hello◦◦</block>
+   <block>⏎◦◦◦</block>
+   <block>◦◦World!◦◦</block>
+   <block>◦◦⏎</block>
+   ```
 
 2. This is then simplified further by applying the processing rules for whitespace in inline formatting contexts to these blocks:
 
-    ```html
-    <block></block>
-    <block>Hello</block>
-    <block></block>
-    <block>World!</block>
-    <block></block>
-    ```
+   ```html
+   <block></block>
+   <block>Hello</block>
+   <block></block>
+   <block>World!</block>
+   <block></block>
+   ```
 
 3. The 3 empty blocks we now have are not going to occupy any space in the final layout, because they don't contain anything, so we'll end up with only 2 blocks taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you'd expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
 
@@ -368,7 +368,7 @@ function is_ignorable(nod) {
 
 /**
  * Version of |previousSibling| that skips nodes that are entirely
- * whitespace or comments.  (Normally |previousSibling| is a property
+ * whitespace or comments. (Normally |previousSibling| is a property
  * of all DOM nodes that gives the sibling node, the node that is
  * a child of the same parent, that occurs immediately before the
  * reference node.)
@@ -409,7 +409,7 @@ function node_after(sib) {
 
 /**
  * Version of |lastChild| that skips nodes that are entirely
- * whitespace or comments.  (Normally |lastChild| is a property
+ * whitespace or comments. (Normally |lastChild| is a property
  * of all DOM nodes that gives the last of the nodes contained
  * directly in the reference node.)
  *
@@ -453,7 +453,7 @@ function first_child(par) {
 
 /**
  * Version of |data| that doesn't include whitespace at the beginning
- * and end and normalizes all whitespace to a single space.  (Normally
+ * and end and normalizes all whitespace to a single space. (Normally
  * |data| is a property of text nodes that gives the text of the node.)
  *
  * @param txt  The text node whose data should be returned

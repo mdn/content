@@ -20,7 +20,7 @@ by the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API).
 
 ## Syntax
 
-```js
+```js-nolint
 mediaCapabilitiesObj = globalObj.navigator.mediaCapabilities
 ```
 

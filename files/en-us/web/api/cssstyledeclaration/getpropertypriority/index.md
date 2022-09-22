@@ -18,7 +18,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyPriority(property)
 ```
 

@@ -22,7 +22,7 @@ The **`MediaSource()`** constructor of the
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaSource()
 ```
 

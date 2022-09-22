@@ -17,7 +17,7 @@ The **`Math.abs()`** function returns the absolute value of a number.
 
 ## Syntax
 
-```js
+```js-nolint
 Math.abs(x)
 ```
 

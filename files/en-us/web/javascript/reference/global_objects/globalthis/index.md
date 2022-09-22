@@ -42,7 +42,7 @@ Several other popular name choices such as `self` and `global` were removed from
 Usually, the global object does not need to be explicitly specified — its properties are automatically accessible as global variables.
 
 ```js
-console.log(window.NaN === NaN); // true
+console.log(window.Math === Math); // true
 ```
 
 However, one case where one needs to explicitly access the global object is when _writing_ to it, usually for the purpose of [polyfills](/en-US/docs/Glossary/Polyfill).

@@ -23,7 +23,7 @@ the configuration on the provided USBDevice with the given configuration value.
 
 ## Syntax
 
-```js
+```js-nolint
 new USBConfiguration(device, configurationValue)
 ```
 

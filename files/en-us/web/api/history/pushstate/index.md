@@ -25,7 +25,7 @@ session history stack.
 
 ## Syntax
 
-```js
+```js-nolint
 pushState(state, unused)
 pushState(state, unused, url)
 ```
@@ -50,6 +50,7 @@ pushState(state, unused, url)
     "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
 
 - `unused`
+
   - : This parameter exists for historical reasons, and cannot be omitted; passing an empty string is safe against future changes to the method.
 
 - `url` {{optional_inline}}

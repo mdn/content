@@ -8,7 +8,7 @@ tags:
   - HTML
   - Learn
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
@@ -66,7 +66,7 @@ You can put elements inside other elements too — this is called **nesting**. I
 
 You do however need to make sure that your elements are properly nested. In the example above, we opened the {{htmlelement("p")}} element first, then the {{htmlelement("strong")}} element; therefore, we have to close the {{htmlelement("strong")}} element first, then the {{htmlelement("p")}} element. The following is incorrect:
 
-```html example-bad
+```html-nolint example-bad
 <p>My cat is <strong>very grumpy.</p></strong>
 ```
 
@@ -77,7 +77,7 @@ The elements have to open and close correctly so that they are clearly inside or
 Some elements have no content and are called **empty elements**. Take the {{htmlelement("img")}} element that we already have in our HTML page:
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 This contains two attributes, but there is no closing `</img>` tag and no inner content. This is because an image element doesn't wrap content to affect it. Its purpose is to embed an image in the HTML page in the place it appears.
@@ -90,12 +90,12 @@ That wraps up the basics of individual HTML elements, but they aren't handy on t
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>My test page</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="My test image">
+    <img src="images/firefox-icon.png" alt="My test image" />
   </body>
 </html>
 ```
@@ -115,7 +115,7 @@ Here, we have the following:
 Let's turn our attention to the {{htmlelement("img")}} element again:
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 As we said before, it embeds an image into our page in the position it appears. It does this via the `src` (source) attribute, which contains the path to our image file.
@@ -177,7 +177,10 @@ Each item inside the lists is put inside an {{htmlelement("li")}} (list item) el
 For example, if we wanted to turn the part of the following paragraph fragment into a list
 
 ```html
-<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
+<p>
+  At Mozilla, we're a global community of technologists, thinkers, and builders
+  working together…
+</p>
 ```
 
 We could modify the markup to this
@@ -191,7 +194,7 @@ We could modify the markup to this
   <li>builders</li>
 </ul>
 
-<p>working together… </p>
+<p>working together…</p>
 ```
 
 Try adding an ordered or unordered list to your example page.
@@ -203,21 +206,21 @@ Links are very important — they are what makes the web a web! To add a link, w
 1. Choose some text. We chose the text "Mozilla Manifesto".
 2. Wrap the text in an {{htmlelement("a")}} element, as shown below:
 
-    ```html
-    <a>Mozilla Manifesto</a>
-    ```
+   ```html
+   <a>Mozilla Manifesto</a>
+   ```
 
 3. Give the {{htmlelement("a")}} element an `href` attribute, as shown below:
 
-    ```html
-    <a href="">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="">Mozilla Manifesto</a>
+   ```
 
 4. Fill in the value of this attribute with the web address that you want the link to:
 
-    ```html
-    <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
+   ```
 
 You might get unexpected results if you omit the `https://` or `http://` part, called the _protocol_, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
 

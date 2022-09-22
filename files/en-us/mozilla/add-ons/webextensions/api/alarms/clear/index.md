@@ -22,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let clearAlarm = browser.alarms.clear(
   name                       // string
 )
@@ -41,7 +41,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function onCleared(wasCleared) {
-  console.log(wasCleared);  // true/false
+  console.log(wasCleared); // true/false
 }
 
 let clearAlarm = browser.alarms.clear("my-periodic-alarm");

@@ -20,15 +20,16 @@ The method is expected to return `true` for classic and module scripts, which ar
 
 ## Syntax
 
-```js
+```js-nolint
 supports(type)
 ```
 
 ### Parameters
 
 - `type`
+
   - : A string literal that indicates the type of script for which support is to be checked.
-      Supported values are case sensitive, and include:
+    Supported values are case sensitive, and include:
 
     - `"classic"`
       - : Test if _classic scripts_ are supported.

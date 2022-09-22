@@ -109,7 +109,6 @@ You'll notice a number of clickable tabs at the top of the CSS Viewer:
 Find out more about the Inspector in different browsers:
 
 - [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [IE DOM Explorer](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255008(v=vs.85))
 - [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/dom/) (Opera's inspector works the same as this)
 - [Safari DOM inspector and style explorer](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
@@ -185,17 +184,20 @@ This will give you a window like the following:
 To see what happens, try entering the following snippets of code into the console one by one (and then pressing Enter):
 
 ```js
-alert('hello!');
+alert("hello!");
 ```
 
 ```js
-document.querySelector('html').style.backgroundColor = 'purple';
+document.querySelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-const myWordmark = document.createElement('img');
-myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
+const myWordmark = document.createElement("img");
+myWordmark.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+);
+document.querySelector("h1").appendChild(myWordmark);
 ```
 
 Now try entering the following incorrect versions of the code and see what you get.
@@ -205,13 +207,16 @@ alert('hello!);
 ```
 
 ```js example-bad
-document.cheeseSelector('html').style.backgroundColor = 'purple';
+document.cheeseSelector("html").style.backgroundColor = "purple";
 ```
 
 ```js example-bad
-const myWordmark = document.createElement('img');
-myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
+const myWordmark = document.createElement("img");
+myBanana.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png"
+);
+document.querySelector("h1").appendChild(myWordmark);
 ```
 
 You'll start to see the kind of errors that the browser returns. Often these errors are fairly cryptic, but it should be pretty simple to figure these problems out!
@@ -221,7 +226,6 @@ You'll start to see the kind of errors that the browser returns. Often these err
 Find out more about the JavaScript console in different browsers:
 
 - [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [IE JavaScript console](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/samples/dn255006(v=vs.85))
 - [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/) (Opera's inspector works the same as this)
 - [Safari Console](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 

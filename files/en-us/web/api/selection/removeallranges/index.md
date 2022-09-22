@@ -20,7 +20,7 @@ leaving nothing selected.
 
 ## Syntax
 
-```js
+```js-nolint
 removeAllRanges()
 ```
 

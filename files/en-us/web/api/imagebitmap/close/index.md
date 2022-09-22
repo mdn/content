@@ -18,7 +18,7 @@ method disposes of all graphical resources associated with an `ImageBitmap`.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

@@ -39,7 +39,9 @@ The `<resolution>` data type consists of a strictly positive {{cssxref("&lt;numb
 ### Use in a media query
 
 ```css
-@media print and (min-resolution: 300dpi) { /* … */ }
+@media print and (min-resolution: 300dpi) {
+  /* … */
+}
 ```
 
 ### Valid resolutions

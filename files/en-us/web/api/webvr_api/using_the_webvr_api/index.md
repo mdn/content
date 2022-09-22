@@ -287,7 +287,7 @@ We now clear the canvas before we start drawing on it, so that the next frame is
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 ```
 
-We now render the view for both the left and right eyes. First of all we need to create projection and view locations for use in the rendering. these are {{domxref("WebGLUniformLocation")}} objects, created using the {{domxref("WebGLRenderingContext.getUniformLocation()")}} method, passing it the shader program's identifier and an identifying name as parameters.
+We now render the view for both the left and right eyes. First of all we need to create projection and view locations for use in the rendering. These are {{domxref("WebGLUniformLocation")}} objects, created using the {{domxref("WebGLRenderingContext.getUniformLocation()")}} method, passing it the shader program's identifier and an identifying name as parameters.
 
 ```js
   // WebVR: Create the required projection and view matrix locations needed

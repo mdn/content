@@ -97,7 +97,7 @@ Consider the following declarations:
 ```css
 font-style: italic;
 font-weight: bold;
-font-size: .8em;
+font-size: 0.8em;
 line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
@@ -105,7 +105,7 @@ font-family: Arial, sans-serif;
 This 5 statements can be shortened to the following:
 
 ```css
-font: italic bold .8em/1.2 Arial, sans-serif;
+font: italic bold 0.8em/1.2 Arial, sans-serif;
 ```
 
 This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal`, `font-size-adjust: none`, and `font-stretch: normal`.
@@ -175,4 +175,47 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
     - [Actual values](/en-US/docs/Web/CSS/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
-- Shorthand properties: {{cssxref("all")}}, {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-start")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-image")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("gap")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("mask")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}, {{cssxref("text-decoration")}}, {{cssxref("text-emphasis")}}, {{cssxref("transition")}}
+- Shorthand properties:
+  - {{cssxref("all")}}
+  - {{cssxref("animation")}}
+  - {{cssxref("background")}}
+  - {{cssxref("border")}}
+  - {{cssxref("border-block-end")}}
+  - {{cssxref("border-block-start")}}
+  - {{cssxref("border-bottom")}}
+  - {{cssxref("border-color")}}
+  - {{cssxref("border-image")}}
+  - {{cssxref("border-inline-end")}}
+  - {{cssxref("border-inline-start")}}
+  - {{cssxref("border-left")}}
+  - {{cssxref("border-radius")}}
+  - {{cssxref("border-right")}}
+  - {{cssxref("border-style")}}
+  - {{cssxref("border-top")}}
+  - {{cssxref("border-width")}}
+  - {{cssxref("column-rule")}}
+  - {{cssxref("columns")}}
+  - {{cssxref("flex")}}
+  - {{cssxref("flex-flow")}}
+  - {{cssxref("font")}}
+  - {{cssxref("gap")}}
+  - {{cssxref("grid")}}
+  - {{cssxref("grid-area")}}
+  - {{cssxref("grid-column")}}
+  - {{cssxref("grid-row")}}
+  - {{cssxref("grid-template")}}
+  - {{cssxref("list-style")}}
+  - {{cssxref("margin")}}
+  - {{cssxref("mask")}}
+  - {{cssxref("offset")}}
+  - {{cssxref("outline")}}
+  - {{cssxref("overflow")}}
+  - {{cssxref("padding")}}
+  - {{cssxref("place-content")}}
+  - {{cssxref("place-items")}}
+  - {{cssxref("place-self")}}
+  - {{cssxref("scroll-margin")}}
+  - {{cssxref("scroll-padding")}}
+  - {{cssxref("text-decoration")}}
+  - {{cssxref("text-emphasis")}}
+  - {{cssxref("transition")}}

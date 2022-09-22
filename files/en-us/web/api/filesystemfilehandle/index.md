@@ -30,10 +30,10 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 
 - {{domxref('FileSystemFileHandle.getFile', 'getFile()')}}
   - : Returns a {{jsxref('Promise')}} which resolves to a {{domxref('File')}} object
-      representing the state on disk of the entry represented by the handle.
+    representing the state on disk of the entry represented by the handle.
 - {{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}}
   - : Returns a {{jsxref('Promise')}} which resolves to a newly created {{domxref('FileSystemWritableFileStream')}}
-      object that can be used to write to a file.
+    object that can be used to write to a file.
 
 ## Examples
 

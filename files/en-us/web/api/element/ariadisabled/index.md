@@ -17,7 +17,7 @@ browser-compat: api.Element.ariaDisabled
 
 The **`ariaDisabled`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 
-> **Note:** Where possible, use the {{htmlelement("input")}} element with `type="button"` or the {{htmlelement("button")}} element —  because those elements have built in semantics and do not require ARIA attributes.
+> **Note:** Where possible, use the {{htmlelement("input")}} element with `type="button"` or the {{htmlelement("button")}} element — because those elements have built in semantics and do not require ARIA attributes.
 
 ## Value
 

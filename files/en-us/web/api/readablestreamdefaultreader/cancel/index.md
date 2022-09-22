@@ -29,7 +29,7 @@ still and not completely get rid of the stream, you'd use
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 cancel(reason)
 ```

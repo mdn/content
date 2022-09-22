@@ -57,7 +57,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 - {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
 
-  - : Returns a boolean value that is `true` if the  <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
+  - : Returns a boolean value that is `true` if the <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
 
@@ -98,7 +98,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press down a key inside the {{HtmlElement("input")}} element.
 
 ```html
-<input placeholder="Click here, then press down a key." size="40">
+<input placeholder="Click here, then press down a key." size="40" />
 <p id="log"></p>
 ```
 

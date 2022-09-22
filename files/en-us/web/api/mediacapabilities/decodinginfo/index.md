@@ -21,16 +21,18 @@ This contains the three boolean properties `supported`, `smooth`, and `powereffi
 
 ## Syntax
 
-```js
+```js-nolint
 decodingInfo(configuration)
 ```
 
 ### Parameters
 
 - `configuration`
+
   - : An object with a property `type` and _either_ a `video` or `audio` property containing a configuration of the appropriate type: <!-- MediaDecodingConfiguration in the spec -->
 
     - `type`
+
       - : The type of media being tested. This takes one of three values:
 
         - `file`
@@ -41,6 +43,7 @@ decodingInfo(configuration)
           - : Represents a configuration that is meant to be received using {{domxref("RTCPeerConnection")}}.
 
     - `video`
+
       - : Configuration object for a video media source.
         This has the following properties: <!-- VideoConfiguration in the spec -->
 

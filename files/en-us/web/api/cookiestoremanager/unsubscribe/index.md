@@ -18,7 +18,7 @@ The **`unsubscribe()`** method of the {{domxref("CookieStoreManager")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 unsubscribe(subscriptions)
 ```
 

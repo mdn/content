@@ -23,7 +23,7 @@ The **`eval()`** function evaluates JavaScript code represented as a string and 
 
 ## Syntax
 
-```js
+```js-nolint
 eval(string)
 ```
 
@@ -65,79 +65,79 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
 
 - Indirect eval works in the global scope rather than the local scope, and the code being evaluated doesn't have access to local variables within the scope where it's being called.
 
-    ```js
-    function test() {
-      const x = 2, y = 4;
-      // Direct call, uses local scope
-      console.log(eval('x + y')); // Result is 6
-      console.log(eval?.('x + y')); // Uses global scope, throws because x is undefined
-    }
-    ```
+  ```js
+  function test() {
+    const x = 2, y = 4;
+    // Direct call, uses local scope
+    console.log(eval('x + y')); // Result is 6
+    console.log(eval?.('x + y')); // Uses global scope, throws because x is undefined
+  }
+  ```
 
 - Indirect `eval` would not inherit the strictness of the surrounding context, and would only be in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) if the source string itself has a `"use strict"` directive.
 
-    ```js
-    function strictContext() {
-      "use strict";
-      eval?.(`with(Math) console.log(PI);`);
-    }
-    function strictContextStrictEval() {
-      "use strict";
-      eval?.(`"use strict"; with(Math) console.log(PI);`);
-    }
-    strictContext(); // logs 3.141592653589793
-    strictContextStrictEval(); // throws a SyntaxError because the source string is in strict mode
-    ```
+  ```js
+  function strictContext() {
+    "use strict";
+    eval?.(`with(Math) console.log(PI);`);
+  }
+  function strictContextStrictEval() {
+    "use strict";
+    eval?.(`"use strict"; with(Math) console.log(PI);`);
+  }
+  strictContext(); // logs 3.141592653589793
+  strictContextStrictEval(); // throws a SyntaxError because the source string is in strict mode
+  ```
 
-    On the other hand, direct eval inherits the strictness of the invoking context.
+  On the other hand, direct eval inherits the strictness of the invoking context.
 
-    ```js
-    function nonStrictContext() {
-      eval(`with(Math) console.log(PI);`);
-    }
-    function strictContext() {
-      "use strict";
-      eval(`with(Math) console.log(PI);`);
-    }
-    nonStrictContext(); // logs 3.141592653589793
-    strictContext(); // throws a SyntaxError because it's in strict mode
-    ```
+  ```js
+  function nonStrictContext() {
+    eval(`with(Math) console.log(PI);`);
+  }
+  function strictContext() {
+    "use strict";
+    eval(`with(Math) console.log(PI);`);
+  }
+  nonStrictContext(); // logs 3.141592653589793
+  strictContext(); // throws a SyntaxError because it's in strict mode
+  ```
 
 - `var`-declared variables and [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function) would go into the surrounding scope if the source string is not interpreted in strict mode — for indirect eval, they become global variables. If it's a direct eval in a strict mode context, or if the `eval` source string itself is in strict mode, then `var` and function declarations do not "leak" into the surrounding scope.
 
-    ```js
-    // Neither context nor source string is strict,
-    // so var creates a variable in the surrounding scope
-    eval("var a = 1;");
-    console.log(a); // 1
-    // Context is not strict, but eval source is strict,
-    // so b is scoped to the evaluated script
-    eval("'use strict'; var b = 1;");
-    console.log(b); // ReferenceError: b is not defined
+  ```js
+  // Neither context nor source string is strict,
+  // so var creates a variable in the surrounding scope
+  eval("var a = 1;");
+  console.log(a); // 1
+  // Context is not strict, but eval source is strict,
+  // so b is scoped to the evaluated script
+  eval("'use strict'; var b = 1;");
+  console.log(b); // ReferenceError: b is not defined
 
-    function strictContext() {
-      "use strict";
-      // Context is strict, but this is indirect and the source
-      // string is not strict, so c is still global
-      eval?.("var c = 1;");
-      // Direct eval in a strict context, so d is scoped
-      eval("var d = 1;");
-    }
-    strictContext();
-    console.log(c); // 1
-    console.log(d); // ReferenceError: d is not defined
-    ```
+  function strictContext() {
+    "use strict";
+    // Context is strict, but this is indirect and the source
+    // string is not strict, so c is still global
+    eval?.("var c = 1;");
+    // Direct eval in a strict context, so d is scoped
+    eval("var d = 1;");
+  }
+  strictContext();
+  console.log(c); // 1
+  console.log(d); // ReferenceError: d is not defined
+  ```
 
-    [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declarations within the evaluated string are always scoped to that script.
+  [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declarations within the evaluated string are always scoped to that script.
 
 - Direct eval may have access to additional contextual expressions. For example, in a function's body, one can use [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target):
 
-    ```js
-    function Ctor() {
-      eval("console.log(new.target)");
-    }
-    new Ctor(); // [Function: Ctor]
-    ```
+  ```js
+  function Ctor() {
+    eval("console.log(new.target)");
+  }
+  new Ctor(); // [Function: Ctor]
+  ```
 
 In strict mode, declaring a variable named `eval` or re-assigning `eval` is a {{jsxref("SyntaxError")}}.
 

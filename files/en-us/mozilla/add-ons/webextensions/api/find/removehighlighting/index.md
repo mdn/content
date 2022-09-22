@@ -19,7 +19,7 @@ Remove any highlighting of a previous search that was applied by a previous call
 
 ## Syntax
 
-```js
+```js-nolint
 browser.find.removeHighlighting()
 ```
 

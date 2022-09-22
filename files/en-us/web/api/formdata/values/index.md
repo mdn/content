@@ -20,7 +20,7 @@ The **`FormData.values()`** method returns an [iterator](/en-US/docs/Web/JavaScr
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

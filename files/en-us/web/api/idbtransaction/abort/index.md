@@ -27,7 +27,7 @@ their {{domxref("IDBRequest.error")}} attribute set to an `AbortError` {{domxref
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

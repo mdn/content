@@ -95,13 +95,16 @@ The example below shows the effect of different `animation-composition` values s
 #### HTML
 
 ```html
-<div class="container">replace
+<div class="container">
+  replace
   <div id="replace" class="target"></div>
 </div>
-<div class="container">add
+<div class="container">
+  add
   <div id="add" class="target"></div>
 </div>
-<div class="container">accumulate
+<div class="container">
+  accumulate
   <div id="accumulate" class="target"></div>
 </div>
 ```
@@ -112,11 +115,13 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 ```css
 @keyframes slide {
-  20%, 40% {
+  20%,
+  40% {
     transform: translateX(100px);
     background: yellow;
   }
-  80%, 100% {
+  80%,
+  100% {
     transform: translateX(150px);
     background: orange;
   }
@@ -136,8 +141,8 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
   animation: slide 5s linear infinite;
 }
 .target:hover {
-   animation-play-state: paused;
- }
+  animation-play-state: paused;
+}
 #replace {
   animation-composition: replace;
 }

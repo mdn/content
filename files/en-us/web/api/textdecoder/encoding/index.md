@@ -52,7 +52,7 @@ It can be one of the following values:
 - The legacy multi-byte Chinese (simplified) encodings:
   ['gbk'](https://en.wikipedia.org/wiki/GBK),
   ['gb18030'](https://en.wikipedia.org/wiki/GB_18030), and
-  ['hz-gb-2312'](https://en.wikipedia.org/wiki/HZ_(character_encoding)).
+  ['hz-gb-2312'](<https://en.wikipedia.org/wiki/HZ_(character_encoding)>).
 - The legacy multi-byte Chinese (traditional) encoding:
   ['big5'](https://en.wikipedia.org/wiki/Big5).
 - The legacy multi-byte Japanese encodings:

@@ -27,7 +27,7 @@ specified by URI.
 
 ## Syntax
 
-```js
+```js-nolint
 addFromURI(src)
 addFromURI(src, weight)
 ```

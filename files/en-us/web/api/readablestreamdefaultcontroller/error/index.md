@@ -23,7 +23,7 @@ with the associated stream to error.
 
 ## Syntax
 
-```js
+```js-nolint
 error(e)
 ```
 

@@ -24,7 +24,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 removeSourceBuffer(sourceBuffer)
 ```
 
@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `NotFoundError` {{domxref("DOMException")}}
-  - :  Thrown if the supplied sourceBuffer doesn't exist in {{domxref("MediaSource.sourceBuffers")}}.
+  - : Thrown if the supplied sourceBuffer doesn't exist in {{domxref("MediaSource.sourceBuffers")}}.
 
 ## Examples
 

@@ -22,7 +22,7 @@ While a set of bookmarks is being imported, {{WebExtAPIRef("bookmarks.onCreated"
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onImportBegan.addListener(listener)
 browser.bookmarks.onImportBegan.removeListener(listener)
 browser.bookmarks.onImportBegan.hasListener(listener)

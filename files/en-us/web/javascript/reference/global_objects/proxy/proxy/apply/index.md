@@ -17,7 +17,7 @@ The **`handler.apply()`** method is a trap for a function call.
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   apply(target, thisArg, argumentsList) {
   }

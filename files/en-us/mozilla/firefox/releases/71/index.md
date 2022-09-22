@@ -2,7 +2,7 @@
 title: Firefox 71 for Developers
 slug: Mozilla/Firefox/Releases/71
 tags:
-  - '71'
+  - "71"
   - Firefox
   - Mozilla
   - Release
@@ -111,7 +111,7 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
   - 404 returning `SERVER_BAD_CONTENT`
   - 403 returning `SERVER_FORBIDDEN`
   - 402 and Proxy 407 returning `SERVER_UNAUTHORIZED`
-  - Anything else above 400 returning `SERVER_FAILED`  ({{bug(1576333)}})
+  - Anything else above 400 returning `SERVER_FAILED` ({{bug(1576333)}})
 
 - {{WebExtAPIRef("downloads.download")}} now includes the optional `options` parameter property `allowHttpErrors`. When set to `true`, this `boolean` flag enables a download to continue after encountering an HTTP error. When set to `false`, a download is canceled when an HTTP error is encountered. Default value: `false`. ({{bug(1578955)}})
 

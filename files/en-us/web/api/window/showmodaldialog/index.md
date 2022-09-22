@@ -23,7 +23,7 @@ created and displayed a modal dialog box containing a specified HTML document.
 
 ## Syntax
 
-```js
+```js-nolint
 showModalDialog(uri)
 showModalDialog(uri, arguments)
 showModalDialog(uri, arguments, options)
@@ -100,7 +100,7 @@ showModalDialog(uri, arguments, options)
 
 ### Return value
 
- Holds the `returnValue` property as set by the document specified by `uri`.
+Holds the `returnValue` property as set by the document specified by `uri`.
 
 ## Specifications
 

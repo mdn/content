@@ -49,7 +49,7 @@ To get started:
 1. Use the `django-admin` tool to generate a project folder, the basic file templates, and **manage.py**, which serves as your project management script.
 2. Use **manage.py** to create one or more _applications_.
 
-    > **Note:** A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate _applications_, which could then be re-used in different projects if desired.
+   > **Note:** A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate _applications_, which could then be re-used in different projects if desired.
 
 3. Register the new applications to include them in the project.
 4. Hook up the **url/path** mapper for each application.
@@ -74,17 +74,17 @@ To create the project:
 1. Open a command shell (or a terminal window), and make sure you are in your [virtual environment](/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment).
 2. Navigate to where you want to store your Django apps (make it somewhere easy to find like inside your _Documents_ folder), and create a folder for your new website (in this case: _django_projects_). Then change into your newly-created directory:
 
-    ```bash
-    mkdir django_projects
-    cd django_projects
-    ```
+   ```bash
+   mkdir django_projects
+   cd django_projects
+   ```
 
 3. Create the new project using the `django-admin startproject` command as shown, and then change into the project folder:
 
-    ```bash
-    django-admin startproject locallibrary
-    cd locallibrary
-    ```
+   ```bash
+   django-admin startproject locallibrary
+   cd locallibrary
+   ```
 
 The `django-admin` tool creates a folder/file structure as follows:
 

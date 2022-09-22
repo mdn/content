@@ -26,7 +26,7 @@ specified {{Glossary("DOM")}} tree in {{Glossary("XML")}} form.
 
 ## Syntax
 
-```js
+```js-nolint
 serializeToString(rootNode)
 ```
 

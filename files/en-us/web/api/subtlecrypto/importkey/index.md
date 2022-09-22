@@ -22,7 +22,7 @@ The function accepts several import formats: see [Supported formats](#supported_
 
 ## Syntax
 
-```js
+```js-nolint
 importKey(format, keyData, algorithm, extractable, keyUsages)
 ```
 
@@ -69,7 +69,7 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  that fulfills with the imported key as a {{domxref("CryptoKey")}} object.
+that fulfills with the imported key as a {{domxref("CryptoKey")}} object.
 
 ### Exceptions
 

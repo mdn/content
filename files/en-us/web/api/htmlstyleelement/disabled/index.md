@@ -39,9 +39,12 @@ The HTML contains an HTML [`<style>`](/en-US/docs/Web/HTML/Element/style) elemen
 ```html
 <button>Enable</button>
 <style id="InlineStyle">
-  p { color: blue; }
+  p {
+    color: blue;
+  }
 </style>
-<p>Text is black when style is disabled; blue when enabled.<p>
+<p>Text is black when style is disabled; blue when enabled.</p>
+<p></p>
 ```
 
 #### JavaScript
@@ -83,7 +86,8 @@ The HTML is similar to the previous case, but the definition does not include an
 
 ```html
 <button>Enable</button>
-<p>Text is black when style is disabled; blue when enabled.<p>
+<p>Text is black when style is disabled; blue when enabled.</p>
+<p></p>
 ```
 
 #### JavaScript
@@ -105,7 +109,7 @@ Before this point the document did not have an associated style, and so the valu
 
 ```js
 //Disable the style
-style.disabled=true; 
+style.disabled=true;
 ```
 
 Last of all we add an event handler for the button that toggles the disabled state and button text (this is the same as in the previous example).

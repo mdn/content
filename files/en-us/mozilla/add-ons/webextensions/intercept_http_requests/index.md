@@ -70,6 +70,7 @@ To test it:
 - Enable _Show Content Messages_ in the menu:
 
   ![Browser console menu : Show Content Messages](browser_console_show_content_messages.png)
+
 - Open some web pages.
 
 In the Browser Console, you should see the URLs for any resources the browser requests.

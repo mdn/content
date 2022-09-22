@@ -16,7 +16,7 @@ The **`ProgressEvent()`** constructor returns a new {{domxref("ProgressEvent")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new ProgressEvent(type)
 new ProgressEvent(type, options)
 ```

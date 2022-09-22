@@ -153,7 +153,7 @@ By default, the minimum is 0 and the maximum is 100. If that's not what you want
 For example, to ask the user for a value between -10 and 10, you can use:
 
 ```html
-<input type="range" min="-10" max="10">
+<input type="range" min="-10" max="10" />
 ```
 
 {{EmbedLiveSample("Specifying_the_minimum_and_maximum", 600, 40)}}
@@ -165,7 +165,7 @@ By default, the granularity, is 1, meaning that the value is always an integer. 
 #### Setting the step attribute
 
 ```html
-<input type="range" min="5" max="10" step="0.01">
+<input type="range" min="5" max="10" step="0.01" />
 ```
 
 {{EmbedLiveSample("Setting_the_step_attribute", 600, 40)}}
@@ -175,7 +175,7 @@ By default, the granularity, is 1, meaning that the value is always an integer. 
 If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of `any` for the {{htmlattrxref("step", "input")}} attribute:
 
 ```html
-<input type="range" min="0" max="3.14" step="any">
+<input type="range" min="0" max="3.14" step="any" />
 ```
 
 {{EmbedLiveSample("Setting_step_to_any", 600, 40)}}
@@ -344,7 +344,7 @@ In the meantime, we can make the range vertical by rotating it using CSS transfo
 Consider this range control:
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("Horizontal_range_control", 200, 200, "orientation_sample1.png")}}
@@ -363,7 +363,7 @@ According to the specification, making it vertical requires adding CSS to change
 ```
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("Standards-based_vertical_range_control", 200, 200, "orientation_sample2.png")}}
@@ -378,7 +378,7 @@ The HTML needs to be updated to wrap the {{HTMLElement("input")}} in a {{HTMLEle
 
 ```html
 <div class="slider-wrapper">
-  <input type="range" min="0" max="11" value="7" step="1">
+  <input type="range" min="0" max="11" value="7" step="1" />
 </div>
 ```
 
@@ -416,7 +416,7 @@ The {{cssxref('appearance')}} property has a non-standard value of `slider-verti
 We use the same HTML as in the previous examples:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 We target just the inputs with a type of range:
@@ -436,7 +436,7 @@ In Firefox only, there is a non-standard `orient` property.
 Use similar HTML as in the previous examples, we add the attribute with a value of `vertical`:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 {{EmbedLiveSample("Using_the_orient_attribute", 200, 200)}}
@@ -448,7 +448,7 @@ The {{cssxref('writing-mode')}} property should generally not be used to alter t
 We use the same HTML as in the previous examples:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right:
@@ -468,7 +468,7 @@ As each of the above examples works in different browsers, you can put all of th
 We keep the `orient` attribute with a value of `vertical` for Firefox:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right, for Edge and Internet Explorer, and add `-webkit-appearance: slider-vertical` for all -webkit-based browsers:

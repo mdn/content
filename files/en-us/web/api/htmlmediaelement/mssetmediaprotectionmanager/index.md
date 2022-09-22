@@ -19,9 +19,9 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
-msSetMediaProtectionManager();
-msSetMediaProtectionManager(mediaProtectionManager);
+```js-nolint
+msSetMediaProtectionManager()
+msSetMediaProtectionManager(mediaProtectionManager)
 ```
 
 ### Parameters

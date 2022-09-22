@@ -19,7 +19,7 @@ The **`WebGL2RenderingContext.deleteSampler()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteSampler(sampler)
 ```
 

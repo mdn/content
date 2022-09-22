@@ -26,7 +26,7 @@ The **`updateWith()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 updateWith(details)
 ```
 
@@ -37,6 +37,7 @@ updateWith(details)
   - : An object specifying the changes applied to the payment request:
 
     - `displayItems` {{optional_inline}}
+
       - : An array of objects, each describing one line item for the payment request. These represent the line items on a receipt or invoice, each with the following properties:
 
         - `amount`

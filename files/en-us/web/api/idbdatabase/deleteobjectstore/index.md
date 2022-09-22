@@ -27,7 +27,7 @@ transaction.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteObjectStore(name)
 ```
 
@@ -35,7 +35,7 @@ deleteObjectStore(name)
 
 - `name`
   - : The name of the object store you want to delete. Names are
-        case sensitive.
+    case sensitive.
 
 ### Return value
 

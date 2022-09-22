@@ -2,7 +2,7 @@
 title: Firefox 58 for developers
 slug: Mozilla/Firefox/Releases/58
 tags:
-  - '58'
+  - "58"
   - Firefox
   - Release Notes
 ---
@@ -93,7 +93,7 @@ _No changes._
 ### Other
 
 - "Add to home screen" is now supported in Firefox for Android, part of the [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) effort ({{bug(1212648)}}).
-- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ({{bug(1277562)}}), and new streaming APIs — {{jsxref("WebAssembly.compileStreaming()")}} and {{jsxref("WebAssembly.installStreaming()")}} {{bug(1347644)}}.
+- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ({{bug(1277562)}}), and new streaming APIs — [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) and [`WebAssembly.installStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/installStreaming) {{bug(1347644)}}.
 
 ## Removals from the web platform
 

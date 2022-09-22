@@ -22,7 +22,7 @@ process of generating, validating, and submitting a payment request.
 
 ## Syntax
 
-```js
+```js-nolint
 new PaymentRequest(methodData, details)
 new PaymentRequest(methodData, details, options)
 ```

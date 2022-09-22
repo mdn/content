@@ -21,7 +21,7 @@ The **`Math.log2()`** function returns the base 2 logarithm of a number. That is
 
 ## Syntax
 
-```js
+```js-nolint
 Math.log2(x)
 ```
 

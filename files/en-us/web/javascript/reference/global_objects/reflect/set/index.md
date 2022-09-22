@@ -20,7 +20,7 @@ property on an object.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.set(target, propertyKey, value)
 Reflect.set(target, propertyKey, value, receiver)
 ```

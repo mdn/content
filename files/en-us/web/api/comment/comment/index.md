@@ -16,9 +16,9 @@ parameter as its textual content.
 
 ## Syntax
 
-```js
-new Comment();
-new Comment(aString);
+```js-nolint
+new Comment()
+new Comment(aString)
 ```
 
 ### Parameters

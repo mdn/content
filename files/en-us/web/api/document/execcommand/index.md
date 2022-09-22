@@ -31,13 +31,14 @@ The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) can be used instead of `e
 
 ## Syntax
 
-```js
+```js-nolint
 execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ```
 
 ### Parameters
 
 - `aCommandName`
+
   - : A string specifying the name of the command to execute. The following commands are specified:
     - `backColor`
       - : Changes the document background color. In `styleWithCss` mode, it affects the background color of the containing block instead. This requires a {{cssxref("&lt;color&gt;")}} value string to be passed in as a value argument. Note that Internet Explorer uses this to set the text background color.
@@ -76,7 +77,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `forwardDelete`
       - : Deletes the character ahead of the [cursor](https://en.wikipedia.org/wiki/Cursor_%28computers%29)'s position, identical to hitting the Delete key on a Windows keyboard.
     - `heading`
-      - : Adds a heading element around a selection or insertion point line. Requires the tag-name string as a value argument (i.e. `"H1"`, `"H6"`). (Not supported by Internet Explorer and Safari.)
+      - : Adds a heading element around a selection or insertion point line. Requires the tag-name string as a value argument (i.e., `"H1"`, `"H6"`). (Not supported by Internet Explorer and Safari.)
     - `hiliteColor`
       - : Changes the background color for the selection or at the insertion point. Requires a color value string as a value argument. `useCSS` must be `true` for this to function. (Not supported by Internet Explorer.)
     - `increaseFontSize`
@@ -133,7 +134,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
       - : Removes the [anchor element](/en-US/docs/Web/HTML/Element/a) from a selected hyperlink.
     - `useCSS` {{Deprecated_inline}}
       - : Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean true/false as a value argument.
-        > **Note:** This argument is logically backwards (i.e. use `false` to use CSS,
+        > **Note:** This argument is logically backwards (i.e., use `false` to use CSS,
         > `true` to use HTML) and unsupported by Internet Explorer. This has been
         > deprecated in favor of `styleWithCSS`.
     - `styleWithCSS`

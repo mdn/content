@@ -23,7 +23,7 @@ The **`error()`** method of the {{domxref("Response")}} interface returns a new 
 
 ## Syntax
 
-```js
+```js-nolint
 error()
 ```
 

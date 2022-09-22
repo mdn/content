@@ -21,7 +21,7 @@ for that {{domxref("TextEncoder")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 encode(string)
 ```
 
@@ -38,7 +38,7 @@ A {{jsxref("Uint8Array")}} object.
 
 ```html
 <p class="source">This is a sample paragraph.</p>
-<p class="result">Encoded result: </p>
+<p class="result">Encoded result:</p>
 ```
 
 ```js

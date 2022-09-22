@@ -18,7 +18,7 @@ a setter to the specified property.
 
 ## Syntax
 
-```js
+```js-nolint
 __lookupSetter__(sprop)
 ```
 

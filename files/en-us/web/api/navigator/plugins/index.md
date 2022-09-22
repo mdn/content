@@ -43,7 +43,7 @@ If PDF inline viewing is supported this will contain entries for the following p
 - "Chromium PDF Viewer"
 - "Microsoft Edge PDF Viewer"
 - "WebKit built-in PDF"
-If inline viewing of PDFs is not supported then an empty object is returned.
+  If inline viewing of PDFs is not supported then an empty object is returned.
 
 ## Examples
 

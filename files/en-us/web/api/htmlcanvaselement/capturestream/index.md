@@ -23,7 +23,7 @@ which includes a {{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-
 
 ## Syntax
 
-```js
+```js-nolint
 captureStream(frameRate)
 ```
 
@@ -45,6 +45,7 @@ A reference to a {{domxref("MediaStream")}} object, which has a single
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
+
   - : Thrown if the value of `frameRate` is negative.
 
 - `SecurityError` {{domxref("DOMException")}}

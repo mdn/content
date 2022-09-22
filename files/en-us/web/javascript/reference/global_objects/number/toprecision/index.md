@@ -18,7 +18,7 @@ the {{jsxref("Number")}} object to the specified precision.
 
 ## Syntax
 
-```js
+```js-nolint
 toPrecision()
 toPrecision(precision)
 ```

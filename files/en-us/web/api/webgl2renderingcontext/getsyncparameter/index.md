@@ -19,7 +19,7 @@ information of a {{domxref("WebGLSync")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 getSyncParameter(sync, pname)
 ```
 

@@ -23,7 +23,7 @@ The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** method returns an array c
 
 ## Syntax
 
-```js
+```js-nolint
 supportedLocalesOf(locales)
 supportedLocalesOf(locales, options)
 ```

@@ -23,7 +23,7 @@ _TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Refere
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)

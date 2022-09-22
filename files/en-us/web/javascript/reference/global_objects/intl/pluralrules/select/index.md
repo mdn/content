@@ -20,7 +20,7 @@ string indicating which plural rule to use for locale-aware formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 select(number)
 ```
 

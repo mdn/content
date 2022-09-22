@@ -25,7 +25,7 @@ _TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Refere
 
 ## Syntax
 
-```js
+```js-nolint
 copyWithin(target, start)
 copyWithin(target, start, end)
 ```

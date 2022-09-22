@@ -51,7 +51,7 @@ It's good to keep this distinction in mind when you choose how to iterate over t
 
   - : Returns an item in the list by its index, or `null` if the index is out-of-bounds.
 
-    An alternative to accessing `nodeList[i]` (which instead returns  `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.
+    An alternative to accessing `nodeList[i]` (which instead returns `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.
 
 - {{domxref("NodeList.entries()")}}
   - : Returns an {{jsxref("Iteration_protocols","iterator")}}, allowing code to go through all key/value pairs contained in the collection. (In this case, the keys are numbers starting from `0` and the values are nodes.)

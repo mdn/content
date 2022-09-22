@@ -22,7 +22,7 @@ See {{domxref("XRHitTestResult.createAnchor()")}} for creating an anchor from a 
 
 ## Syntax
 
-```js
+```js-nolint
 createAnchor(pose, space)
 ```
 

@@ -2,7 +2,7 @@
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
@@ -27,7 +27,7 @@ Note that, when none of the media query conditions are true, the background will
 ### HTML
 
 ```html
-<div id='inner'>
+<div id="inner">
   Watch this element as you resize your viewport's width and height.
 </div>
 ```
@@ -45,7 +45,7 @@ Note that, when none of the media query conditions are true, the background will
 /* Maximum aspect ratio */
 @media (max-aspect-ratio: 3/2) {
   div {
-    background: #9ff;  /* cyan */
+    background: #9ff; /* cyan */
   }
 }
 
@@ -61,18 +61,19 @@ Note that, when none of the media query conditions are true, the background will
 
 ```html hidden
 <label id="wf" for="w">width:165</label>
-<input id="w" name="w" type="range" min="100" max="250" step="5" value="165">
+<input id="w" name="w" type="range" min="100" max="250" step="5" value="165" />
 <label id="hf" for="w">height:165</label>
-<input id="h" name="h" type="range" min="100" max="250" step="5" value="165">
+<input id="h" name="h" type="range" min="100" max="250" step="5" value="165" />
 
-<iframe id="outer" src="data:text/html,<style> @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
-
+<iframe
+  id="outer"
+  src="data:text/html,<style> @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
 </iframe>
 ```
 
 ```css hidden
-iframe{
-  display:block;
+iframe {
+  display: block;
 }
 ```
 

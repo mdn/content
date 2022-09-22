@@ -23,7 +23,7 @@ For more information about the [drawing state](/en-US/docs/Web/API/CanvasRenderi
 
 ## Syntax
 
-```js
+```js-nolint
 restore()
 ```
 

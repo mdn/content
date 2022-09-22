@@ -25,25 +25,25 @@ The general step-by-step process for creating a page would be:
 
 1. Start a fresh, up-to-date branch to work in.
 
-    ```sh
-    cd ~/repos/mdn/content
-    git checkout main
-    git pull mdn main
-    # Run "yarn" again to ensure you've
-    # installed the latest Yari dependency.
-    yarn
-    git checkout -b my-add
-    ```
+   ```sh
+   cd ~/repos/mdn/content
+   git checkout main
+   git pull mdn main
+   # Run "yarn" again to ensure you've
+   # installed the latest Yari dependency.
+   yarn
+   git checkout -b my-add
+   ```
 
 2. Create one or more new document folders, each with their own `index.md` files.
 
 3. Add and commit your new files as well as push your new branch to your fork.
 
-    ```sh
-    git add files/en-us/folder/you/created
-    git commit -m "appropriate message about your changes"
-    git push -u origin my-add
-    ```
+   ```sh
+   git add files/en-us/folder/you/created
+   git commit -m "appropriate message about your changes"
+   git push -u origin my-add
+   ```
 
 4. Create your pull request.
 
@@ -70,28 +70,28 @@ For example, let's say you want to move the entire
 
 1. You'll start a fresh branch to work in.
 
-    ```sh
-    cd ~/repos/mdn/content
-    git checkout main
-    git pull mdn main
-    # Run "yarn" again just to ensure you've
-    # installed the latest Yari dependency.
-    yarn
-    git checkout -b my-move
-    ```
+   ```sh
+   cd ~/repos/mdn/content
+   git checkout main
+   git pull mdn main
+   # Run "yarn" again just to ensure you've
+   # installed the latest Yari dependency.
+   yarn
+   git checkout -b my-move
+   ```
 
 2. Perform the move (which will delete and modify existing files as well as create new files).
 
-    ```sh
-    yarn content move Learn/Accessibility Learn/A11y
-    ```
+   ```sh
+   yarn content move Learn/Accessibility Learn/A11y
+   ```
 
 3. Add and commit all of the deleted, created, and modified files as well as push your branch to your fork.
 
-    ```sh
-    git commit -a
-    git push -u origin my-move
-    ```
+   ```sh
+   git commit -a
+   git push -u origin my-move
+   ```
 
 4. Create your pull request.
 
@@ -123,34 +123,34 @@ entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
 
 1. You'll start a fresh branch to work in.
 
-    ```sh
-    cd ~/repos/mdn/content
-    git checkout main
-    git pull mdn main
-    # Run "yarn" again just to ensure you've
-    # installed the latest Yari dependency.
-    yarn
-    git checkout -b my-delete
-    ```
+   ```sh
+   cd ~/repos/mdn/content
+   git checkout main
+   git pull mdn main
+   # Run "yarn" again just to ensure you've
+   # installed the latest Yari dependency.
+   yarn
+   git checkout -b my-delete
+   ```
 
 2. Perform the delete.
 
-    ```sh
-    yarn content delete Learn/Accessibility --recursive
-    ```
+   ```sh
+   yarn content delete Learn/Accessibility --recursive
+   ```
 
 3. Add a redirect. The target page can be an external URL or another page on MDN Web Docs.
 
-    ```sh
-    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
-    ```
+   ```sh
+   yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
+   ```
 
 4. Add and commit all of the deleted files as well as push your branch to your fork.
 
-    ```sh
-    git commit -a
-    git push -u origin my-delete
-    ```
+   ```sh
+   git commit -a
+   git push -u origin my-delete
+   ```
 
 5. Create your pull request.
 

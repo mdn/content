@@ -17,7 +17,7 @@ object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new File(bits, name)
 new File(bits, name, options)
 ```

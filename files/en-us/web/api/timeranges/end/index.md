@@ -18,7 +18,7 @@ The **`end()`** method of the {{domxref("TimeRanges")}} interface returns the ti
 
 ## Syntax
 
-```js
+```js-nolint
 end(index)
 ```
 

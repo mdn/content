@@ -18,7 +18,7 @@ The **`insertRule()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 insertRule(rule)
 insertRule(rule, index)
 ```

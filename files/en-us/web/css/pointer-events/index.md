@@ -66,7 +66,7 @@ The `pointer-events` property is specified as a single keyword chosen from the l
 - `stroke`
   - : SVG only. The element can only be the target of a pointer event when the pointer is over the perimeter (i.e., stroke) of the element. The values of the `stroke` and `visibility` properties do not affect event processing.
 - `all`
-  - : SVG only  (experimental for HTML). The element can only be the target of a pointer event when the pointer is over the interior (i.e., fill) or the perimeter (i.e., stroke) of the element. The values of the `fill`, `stroke`, and `visibility` properties do not affect event processing.
+  - : SVG only (experimental for HTML). The element can only be the target of a pointer event when the pointer is over the interior (i.e., fill) or the perimeter (i.e., stroke) of the element. The values of the `fill`, `stroke`, and `visibility` properties do not affect event processing.
 
 ## Description
 
@@ -116,7 +116,8 @@ This example disables pointer events on the link to `http://example.com`.
 #### CSS
 
 ```css
-a[href="http://example.com"] {
+a[href="http://example.com"]
+{
   pointer-events: none;
 }
 ```

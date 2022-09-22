@@ -36,7 +36,7 @@ scroll-padding-inline: auto;
 
 /* <length> values */
 scroll-padding-inline: 10px;
-scroll-padding-inline: 1em .5em;
+scroll-padding-inline: 1em 0.5em;
 scroll-padding-inline: 10%;
 
 /* Global values */

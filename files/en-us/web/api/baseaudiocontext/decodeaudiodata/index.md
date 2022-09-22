@@ -29,7 +29,7 @@ data.
 
 ## Syntax
 
-```js
+```js-nolint
 // Older callback syntax:
 decodeAudioData(arrayBuffer, successCallback)
 decodeAudioData(arrayBuffer, successCallback, errorCallback)
@@ -87,10 +87,10 @@ called on the source, the source is cleared out.
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 let source;
 
-const pre = document.querySelector('pre');
-const myScript = document.querySelector('script');
-const play = document.querySelector('.play');
-const stop = document.querySelector('.stop');
+const pre = document.querySelector("pre");
+const myScript = document.querySelector("script");
+const play = document.querySelector(".play");
+const stop = document.querySelector(".stop");
 
 // use XHR to load an audio track, and
 // decodeAudioData to decode it and stick it in a buffer.
@@ -100,23 +100,25 @@ function getData() {
   source = audioCtx.createBufferSource();
   const request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
   request.onload = () => {
     const audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, (buffer) => {
+    audioCtx.decodeAudioData(
+      audioData,
+      (buffer) => {
         source.buffer = buffer;
 
         source.connect(audioCtx.destination);
         source.loop = true;
       },
 
-      (err) => console.error(`Error with decoding audio data: ${err.err}`));
-
-  }
+      (err) => console.error(`Error with decoding audio data: ${err.err}`)
+    );
+  };
 
   request.send();
 }
@@ -126,13 +128,13 @@ function getData() {
 play.onclick = () => {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-}
+  play.setAttribute("disabled", "disabled");
+};
 
 stop.onclick = () => {
   source.stop(0);
-  play.removeAttribute('disabled');
-}
+  play.removeAttribute("disabled");
+};
 
 // dump script to pre element
 
@@ -143,7 +145,7 @@ pre.innerHTML = myScript.innerHTML;
 
 ```js
 ctx.decodeAudioData(audioData).then((decodedData) => {
- // use the decoded data here
+  // use the decoded data here
 });
 ```
 

@@ -20,7 +20,7 @@ Piping a stream will generally lock it for the duration of the pipe, preventing 
 
 ## Syntax
 
-```js
+```js-nolint
 pipeThrough(transformStream)
 pipeThrough(transformStream, options)
 ```
@@ -28,6 +28,7 @@ pipeThrough(transformStream, options)
 ### Parameters
 
 - `transformStream`
+
   - : A {{domxref("TransformStream")}} (or an object with the structure
     `{writable, readable}`) consisting of a readable stream and a writable
     stream working together to transform some data from one form to another. Data written

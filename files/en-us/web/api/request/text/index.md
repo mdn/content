@@ -20,7 +20,7 @@ The response is _always_ decoded using UTF-8.
 
 ## Syntax
 
-```js
+```js-nolint
 text()
 ```
 

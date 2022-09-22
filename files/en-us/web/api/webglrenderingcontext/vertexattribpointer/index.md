@@ -21,7 +21,7 @@ buffer object and specifies its layout.
 
 ## Syntax
 
-```js
+```js-nolint
 vertexAttribPointer(index, size, type, normalized, stride, offset)
 ```
 
@@ -44,10 +44,11 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
     - `gl.UNSIGNED_SHORT`: unsigned 16-bit integer, with values in \[0,
       65535]
     - `gl.FLOAT`: 32-bit IEEE floating point number
+
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
       the following values are available additionally:
 
-      - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
+    - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
 
 - `normalized`
 
@@ -188,15 +189,15 @@ imaginary data structure where the attributes of each vertex are stored interlea
 a length of 20 bytes per vertex:
 
 1. **position:** We need to store the X, Y and Z coordinates. For highest
-    precision, we use 32-bit floats; in total this uses 12 bytes.
+   precision, we use 32-bit floats; in total this uses 12 bytes.
 2. **normal vector:** We need to store the X, Y and Z components of the
-    normal vector, but since precision is not that important, we use 8-bit signed
-    integers. For better performance, we align the data to 32 bits by also storing a
-    fourth zero-valued component, bringing the total size to 4 bytes. Also, we tell WebGL
-    to normalize the values because our normals are always in range \[-1, 1].
+   normal vector, but since precision is not that important, we use 8-bit signed
+   integers. For better performance, we align the data to 32 bits by also storing a
+   fourth zero-valued component, bringing the total size to 4 bytes. Also, we tell WebGL
+   to normalize the values because our normals are always in range \[-1, 1].
 3. **texture coordinate:** We need to store the U and V coordinates; for
-    this 16-bit unsigned integers offer enough precision, the total size is 4 bytes. We
-    also tell WebGL to normalize the values to \[0, 1].
+   this 16-bit unsigned integers offer enough precision, the total size is 4 bytes. We
+   also tell WebGL to normalize the values to \[0, 1].
 
 For example, the following vertex:
 

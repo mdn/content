@@ -19,7 +19,7 @@ a `Range` relative to another {{domxref("Node")}}. The parent
 
 ## Syntax
 
-```js
+```js-nolint
 setEndBefore(referenceNode)
 ```
 

@@ -51,35 +51,35 @@ Try experimenting using the following two test cases:
 
 1. Press and hold the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key, then press
+   key, then press
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    and release it. Next, release the
+   and release it. Next, release the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key.
+   key.
 
 2. Press and hold the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key, then press and hold
+   key, then press and hold
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    . Release the
+   . Release the
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    key. Finally, release
+   key. Finally, release
 
-    <kbd>2</kbd>
+   <kbd>2</kbd>
 
-    .
+   .
 
 ### HTML
 
@@ -111,7 +111,7 @@ Try experimenting using the following two test cases:
 }
 
 .fx > div:first-child {
-   width: 30%;
+  width: 30%;
 }
 
 .flex {

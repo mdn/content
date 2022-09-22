@@ -19,7 +19,7 @@ The **`DOMRectReadOnly()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMRectReadOnly(x, y, width, height)
 ```
 

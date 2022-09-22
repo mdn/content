@@ -4,7 +4,6 @@ slug: Glossary/WHATWG
 tags:
   - Community
   - DOM
-  - Glossary
   - HTML
   - WHATWG
   - Web

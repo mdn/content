@@ -22,7 +22,7 @@ The **`append()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 append(property, value)
 ```
 

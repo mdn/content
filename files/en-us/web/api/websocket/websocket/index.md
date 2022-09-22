@@ -18,7 +18,7 @@ The **`WebSocket()`** constructor returns a new
 
 ## Syntax
 
-```js
+```js-nolint
 new WebSocket(url)
 new WebSocket(url, protocols)
 ```

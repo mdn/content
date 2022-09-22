@@ -19,7 +19,7 @@ The **`WebGLRenderingContext.getShaderSource()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getShaderSource(shader)
 ```
 

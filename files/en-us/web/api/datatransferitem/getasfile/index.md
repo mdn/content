@@ -21,7 +21,7 @@ file, this method returns `null`.
 
 ## Syntax
 
-```js
+```js-nolint
 getAsFile()
 ```
 

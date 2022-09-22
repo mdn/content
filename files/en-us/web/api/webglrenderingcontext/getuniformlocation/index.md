@@ -46,7 +46,7 @@ The uniform itself is declared in the shader program using GLSL.
 
 ## Syntax
 
-```js
+```js-nolint
 getUniformLocation(program, name)
 ```
 

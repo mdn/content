@@ -18,7 +18,7 @@ blending pixel arithmetic.
 
 ## Syntax
 
-```js
+```js-nolint
 blendFunc(sfactor, dfactor)
 ```
 

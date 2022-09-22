@@ -16,7 +16,7 @@ The **`FinalizationRegistry`** constructor creates a {{jsxref("FinalizationRegis
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow callback function
 new FinalizationRegistry((heldValue) => { /* … */ })
 

@@ -19,13 +19,14 @@ This object is created with a value indicating the [previous priority](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 new TaskPriorityChangeEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
+
   - : A string with the case-sensitive name of the associated event.
     User agents set it to `"prioritychange"`.
 

@@ -19,7 +19,7 @@ specified dimensions. All of the pixels in the new object are transparent black.
 
 ## Syntax
 
-```js
+```js-nolint
 createImageData(width, height)
 createImageData(imagedata)
 ```

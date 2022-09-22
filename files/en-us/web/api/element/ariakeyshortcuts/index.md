@@ -26,7 +26,9 @@ A string.
 In this example the `aria-keyshortcuts` attribute on the element with an ID of `skip-link` is set to "Alt+Shift+A". Using `ariaKeyShortcuts` we update the value to "Alt+Shift+M".
 
 ```html
-<a id="skip-link" href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
+<a id="skip-link" href="#content" aria-keyshortcuts="Alt+Shift+A">
+  Skip to content
+</a>
 ```
 
 ```js

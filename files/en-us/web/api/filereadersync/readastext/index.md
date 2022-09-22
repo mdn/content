@@ -11,11 +11,11 @@ The `readAsText()` method of the {{DOMxRef("FileReaderSync")}} interface allows 
 
 ## Syntax
 
-```js
-readAsText(File);
-readAsText(Blob);
-readAsText(File, encoding);
-readAsText(Blob, encoding);
+```js-nolint
+readAsText(File)
+readAsText(Blob)
+readAsText(File, encoding)
+readAsText(Blob, encoding)
 ```
 
 ### Parameters

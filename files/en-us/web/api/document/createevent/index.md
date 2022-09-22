@@ -21,7 +21,7 @@ returned object should be first initialized and can then be passed to
 
 ## Syntax
 
-```js
+```js-nolint
 createEvent(type)
 ```
 

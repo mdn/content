@@ -18,7 +18,7 @@ The **`fillJointRadii()`** method of the {{domxref("XRFrame")}} interface popula
 
 ## Syntax
 
-```js
+```js-nolint
 fillJointRadii(jointSpaces, radii)
 ```
 

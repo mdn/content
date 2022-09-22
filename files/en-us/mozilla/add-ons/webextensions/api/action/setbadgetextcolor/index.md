@@ -21,7 +21,7 @@ Sets the text color for the browser action's badge. Tabs without a specific badg
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.setBadgeTextColor(
   details // object
 )

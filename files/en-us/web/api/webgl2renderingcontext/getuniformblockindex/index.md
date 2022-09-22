@@ -19,7 +19,7 @@ a uniform block within a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getUniformBlockIndex(program, uniformBlockName)
 ```
 

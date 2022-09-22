@@ -21,7 +21,7 @@ document by the specified number of pages.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollByPages(pages)
 ```
 

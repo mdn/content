@@ -26,9 +26,9 @@ graph, built from audio modules linked together, each represented by an
 
 ## Syntax
 
-```js
-new AudioContext();
-new AudioContext(options);
+```js-nolint
+new AudioContext()
+new AudioContext(options)
 ```
 
 ### Parameters
@@ -95,7 +95,7 @@ This example creates a new {{domxref("AudioContext")}} for interactive audio
 
 ```js
 const audioCtx = new AudioContext({
-  latencyHint: 'interactive',
+  latencyHint: "interactive",
   sampleRate: 44100,
 });
 ```

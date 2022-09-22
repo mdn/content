@@ -4,7 +4,6 @@ slug: Glossary/Flex
 tags:
   - CSS
   - Flex
-  - Glossary
   - flexbox
 ---
 

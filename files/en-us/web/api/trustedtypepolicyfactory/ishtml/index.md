@@ -19,7 +19,7 @@ The **`isHTML()`** method of the {{domxref("TrustedTypePolicyFactory")}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 isHTML(value)
 ```
 

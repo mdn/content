@@ -20,7 +20,7 @@ The **ANGLE_instanced_arrays.vertexAttribDivisorANGLE()** method of the [WebGL A
 
 ## Syntax
 
-```js
+```js-nolint
 vertexAttribDivisorANGLE(index, divisor)
 ```
 
@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 ext.vertexAttribDivisorANGLE(0, 2);
 ```
 

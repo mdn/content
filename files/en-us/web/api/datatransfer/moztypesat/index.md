@@ -22,7 +22,7 @@ in the range from 0 to the number of items minus one, an empty string list is re
 
 ## Syntax
 
-```js
+```js-nolint
 mozTypesAt(index)
 ```
 
@@ -35,8 +35,8 @@ mozTypesAt(index)
 ### Return value
 
 A list of data formats (which are strings). If the index
-    is not in the range from 0 to the number of items minus one, an empty string list is
-    returned.
+is not in the range from 0 to the number of items minus one, an empty string list is
+returned.
 
 ## Examples
 

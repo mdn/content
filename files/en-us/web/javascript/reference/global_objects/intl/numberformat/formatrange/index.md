@@ -20,13 +20,14 @@ The **`Intl.NumberFormat.prototype.formatRange()`** method formats a range of nu
 
 ## Syntax
 
-```js
+```js-nolint
 formatRange(startRange, endRange)
 ```
 
 ### Parameters
 
 - `startRange`
+
   - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
 
 - `endRange`

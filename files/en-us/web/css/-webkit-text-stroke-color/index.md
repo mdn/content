@@ -1,5 +1,5 @@
 ---
-title: '-webkit-text-stroke-color'
+title: "-webkit-text-stroke-color"
 slug: Web/CSS/-webkit-text-stroke-color
 tags:
   - CSS
@@ -49,7 +49,7 @@ The **`-webkit-text-stroke-color`** CSS property specifies the stroke [color](/e
 
 ```html
 <p>Text with stroke</p>
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 #### CSS

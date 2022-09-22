@@ -90,7 +90,7 @@ Either the client or the server can choose to send a message at any time — tha
 
 ### Format
 
-Each data frame (from the client to the server or vice-versa) follows this same format:
+Each data frame (from the client to the server or vice versa) follows this same format:
 
 ```bash
 Frame format:

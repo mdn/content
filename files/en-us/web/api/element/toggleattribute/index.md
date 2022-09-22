@@ -18,7 +18,7 @@ present and adding it if it is not present) on the given element.
 
 ## Syntax
 
-```js
+```js-nolint
 toggleAttribute(name)
 toggleAttribute(name, force)
 ```
@@ -54,8 +54,7 @@ In the following example, `toggleAttribute()` is used to toggle the
 ### HTML
 
 ```html
-<input value="text">
-<button>toggleAttribute("disabled")</button>
+<input value="text" /> <button>toggleAttribute("disabled")</button>
 ```
 
 ### JavaScript

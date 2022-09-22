@@ -25,7 +25,7 @@ For details about how to use `XMLHttpRequest`, see [Using XMLHttpRequest](/en-US
 
 ## Syntax
 
-```js
+```js-nolint
 new XMLHttpRequest()
 ```
 

@@ -20,7 +20,11 @@ Text in a `<title>` element is not rendered as part of the graphic, but browsers
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

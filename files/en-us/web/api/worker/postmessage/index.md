@@ -23,7 +23,7 @@ The `Worker` can send back information to the thread that spawned it using the {
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(message)
 postMessage(message, transfer)
 ```

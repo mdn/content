@@ -25,7 +25,7 @@ rid of the stream and discard any enqueued chunks, you'd use
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

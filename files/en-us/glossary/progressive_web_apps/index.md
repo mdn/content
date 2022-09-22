@@ -3,7 +3,6 @@ title: Progressive web apps
 slug: Glossary/Progressive_web_apps
 tags:
   - Composing
-  - Glossary
   - Progressive web apps
 ---
 

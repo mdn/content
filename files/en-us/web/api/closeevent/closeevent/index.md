@@ -16,7 +16,7 @@ The **`CloseEvent()`** constructor creates a new {{domxref("CloseEvent")}} objec
 
 ## Syntax
 
-```js
+```js-nolint
 new CloseEvent(type)
 new CloseEvent(type, options)
 ```

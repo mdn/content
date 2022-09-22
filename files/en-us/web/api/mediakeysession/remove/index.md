@@ -19,7 +19,7 @@ The `MediaKeySession.remove()` method returns a {{jsxref('Promise')}} after remo
 
 ## Syntax
 
-```js
+```js-nolint
 remove()
 ```
 

@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let restoringSession = browser.sessions.restore(
   sessionId             // string
 )
@@ -108,4 +108,4 @@ browser.browserAction.onClicked.addListener(() => {
 
 ## Known issues
 
-[Bug 1538119](https://bugzilla.mozilla.org/show_bug.cgi?id=1538119) -  Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"
+[Bug 1538119](https://bugzilla.mozilla.org/show_bug.cgi?id=1538119) - Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"

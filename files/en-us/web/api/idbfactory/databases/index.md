@@ -23,7 +23,7 @@ The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a 
 
 ## Syntax
 
-```js
+```js-nolint
 databases()
 ```
 

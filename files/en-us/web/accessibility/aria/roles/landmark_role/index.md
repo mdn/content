@@ -15,7 +15,7 @@ spec-urls: https://w3c.github.io/aria/#landmark
 
 A landmark is an important subsection of a page. The `landmark` role is an abstract superclass for the aria role values for sections of content that are important enough that users will likely want to be able to navigate directly to them.
 
-> **Note:**  The `landmark` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
+> **Note:** The `landmark` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
@@ -31,7 +31,7 @@ For screen reader users, adding landmark roles effectively create 'skip links' f
 
 Do not use `role="landmark"`. Do use HTML and subclass landmark roles.
 
-Landmarks ensure content is in navigable regions. Use {{HTMLElement('main')}} for [`role="main"`](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role), {{HTMLElement('header')}} for [`role="banner"`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), {{HTMLElement('nav')}} for [`role="navigation"`](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role),  and {{HTMLElement('footer')}} for [`role="contentinfo"`](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role). It is also good practice to include the role redundantly with the associated semantic element. It is not as good practice to use non-semantic elements, such as {{HTMLElement('div')}}, adding semantics with landmark roles. But do include one or the other or both. Otherwise, your content is no longer as navigable for screen reader users.
+Landmarks ensure content is in navigable regions. Use {{HTMLElement('main')}} for [`role="main"`](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role), {{HTMLElement('header')}} for [`role="banner"`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), {{HTMLElement('nav')}} for [`role="navigation"`](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role), and {{HTMLElement('footer')}} for [`role="contentinfo"`](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role). It is also good practice to include the role redundantly with the associated semantic element. It is not as good practice to use non-semantic elements, such as {{HTMLElement('div')}}, adding semantics with landmark roles. But do include one or the other or both. Otherwise, your content is no longer as navigable for screen reader users.
 
 ## Specifications
 
@@ -53,6 +53,6 @@ Landmarks ensure content is in navigable regions. Use {{HTMLElement('main')}} fo
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

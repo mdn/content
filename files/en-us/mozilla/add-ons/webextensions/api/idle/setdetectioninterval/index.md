@@ -22,7 +22,7 @@ The detection interval is specific to the extension that calls the method. Chang
 
 ## Syntax
 
-```js
+```js-nolint
 browser.idle.setDetectionInterval(
   intervalInSeconds // integer
 )

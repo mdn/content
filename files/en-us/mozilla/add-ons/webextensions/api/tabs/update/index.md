@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let updating = browser.tabs.update(
   tabId,              // optional integer
   updateProperties    // object
@@ -66,7 +66,7 @@ let updating = browser.tabs.update(
     - `selected` {{deprecated_inline}} {{optional_inline}}
       - : `boolean`. Whether the tab should be selected. This property has been replaced by `active` and `highlighted`.
     - `successorTabId` {{optional_inline}}
-      - : `integer`. The id of the ID of the tab's successor.
+      - : `integer`. The id of the tab's successor.
     - `url` {{optional_inline}}
 
       - : `string`. A URL to navigate the tab to.

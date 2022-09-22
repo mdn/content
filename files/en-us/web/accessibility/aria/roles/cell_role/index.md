@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: cell role'
+title: "ARIA: cell role"
 slug: Web/Accessibility/ARIA/Roles/cell_role
 tags:
   - ARIA
@@ -42,14 +42,14 @@ Each element with `role="cell"` MUST be nested in a container element with [`rol
 
 A cell can contain a number of property attributes clarifying the cell's position within the tabular data structure, including [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex), [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan), [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex), and [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan).
 
-> **Note:** Using the native HTML table element ({{HTMLElement('table')}} element, along with the table row element ({{HTMLElement('tr')}},  and table cell element ({{HTMLElement('td')}}, whenever possible, is strongly encouraged.
+> **Note:** Using the native HTML table element ({{HTMLElement('table')}} element, along with the table row element ({{HTMLElement('tr')}}, and table cell element ({{HTMLElement('td')}}, whenever possible, is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
 #### Context roles
 
 - [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-  - : An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells,  grid cells, column headers, or row headers within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or `treegrid`, and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
+  - : An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells, grid cells, column headers, or row headers within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or `treegrid`, and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
 - [role="rowgroup"](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
   - : `Row` is a required cell parent. `Rowgroup` is an optional contextual row parent. It establishes a relationship between descendant rows. It is a structural equivalent to the [`thead`](/en-US/docs/Web/HTML/Element/thead), [`tfoot`](/en-US/docs/Web/HTML/Element/tfoot), and [`tbody`](/en-US/docs/Web/HTML/Element/tbody) elements in an [HTML `table`](/en-US/docs/Learn/HTML/Tables/Basics) element.
 - [role="table"](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
@@ -62,7 +62,7 @@ A cell can contain a number of property attributes clarifying the cell's positio
 #### Subclass roles
 
 - [role="gridcell"](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-  - : A cell in a row within a `grid` or `treegrid.`
+  - : A cell in a row within a `grid` or `treegrid`.
 - [role="columnheader"](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
   - : A header cell that is the structural equivalent of the HTML [`<th>`](/en-US/docs/Web/HTML/Element/th) element with a column scope. Unlike a plain cell, the `columnheader` role establishes a relationship between it and all cells in the corresponding column.
 - [role="rowheader"](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
@@ -90,34 +90,44 @@ The first rule of ARIA use is if you can use a native feature with the semantics
 ## Examples
 
 ```html
-    <div role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
-      <div id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</div>
-      <div role="rowgroup">
-         <div role="row">
-           <span role="columnheader" aria-sort="none" aria-rowindex="1">ARIA Role</span>
-           <span role="columnheader" aria-sort="none" aria-rowindex="1">Semantic Element</span>
-         </div>
-       </div>
-       <div role="rowgroup">
-        <div role="row">
-           <span role="cell" aria-rowindex="11">header</span>
-           <span role="cell" aria-rowindex="11">h1</span>
-        </div>
-        <div role="row">
-          <span role="cell" aria-rowindex="16">header</span>
-          <span role="cell" aria-rowindex="16">h6</span>
-        </div>
-        <div role="row">
-          <span role="cell" aria-rowindex="18">rowgroup</span>
-          <span role="cell" aria-rowindex="18">thead</span>
-        </div>
-        <div role="row">
-          <span role="cell" aria-rowindex="24">term</span>
-          <span role="cell" aria-rowindex="24">dt</span>
-        </div>
-      </div>
+<div
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <div id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </div>
+  <div role="rowgroup">
+    <div role="row">
+      <span role="columnheader" aria-sort="none" aria-rowindex="1"
+        >ARIA Role</span
+      >
+      <span role="columnheader" aria-sort="none" aria-rowindex="1"
+        >Semantic Element</span
+      >
     </div>
-  ```
+  </div>
+  <div role="rowgroup">
+    <div role="row">
+      <span role="cell" aria-rowindex="11">header</span>
+      <span role="cell" aria-rowindex="11">h1</span>
+    </div>
+    <div role="row">
+      <span role="cell" aria-rowindex="16">header</span>
+      <span role="cell" aria-rowindex="16">h6</span>
+    </div>
+    <div role="row">
+      <span role="cell" aria-rowindex="18">rowgroup</span>
+      <span role="cell" aria-rowindex="18">thead</span>
+    </div>
+    <div role="row">
+      <span role="cell" aria-rowindex="24">term</span>
+      <span role="cell" aria-rowindex="24">dt</span>
+    </div>
+  </div>
+</div>
+```
 
 The above is a non-semantic ARIA table with five of 81 rows present in the DOM: one within a table header and four rows within the table body. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every cell. If no cells spanned more than one row or column, the `aria-rowindex` could have been placed on the row rather than the row's individual cells.
 
@@ -126,33 +136,41 @@ The above is a non-semantic ARIA table with five of 81 rows present in the DOM: 
 Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., for data table structure. You can add ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the native semantics of a table are overridden by [CSS's display property, such as by display: grid](/en-US/docs/Web/CSS/display#accessibility_concerns). In this case, you can use the ARIA table roles to add the semantics back in.
 
 ```html
-    <table role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
-      <caption id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</caption>
-      <thead role="rowgroup">
-         <tr role="row">
-           <th role="columnheader" aria-sort="none" aria-rowindex="1">ARIA Role</th>
-           <th role="columnheader" aria-sort="none" aria-rowindex="1">Semantic Element</th>
-         </tr>
-      </thead>
-      <tbody role="rowgroup">
-         <tr role="row">
-           <td role="cell" aria-rowindex="11">header</td>
-           <td role="cell" aria-rowindex="11">h1</td>
-         </tr>
-         <tr role="row">
-           <td role="cell" aria-rowindex="16">header</td>
-           <td role="cell" aria-rowindex="16">h6</td>
-         </tr>
-         <tr role="row">
-           <td role="cell" aria-rowindex="18">rowgroup</td>
-           <td role="cell" aria-rowindex="18">thead</td>
-         </tr>
-         <tr role="row">
-           <td role="cell" aria-rowindex="24">term</td>
-           <td role="cell" aria-rowindex="24">dt</td>
-         </tr>
-       </tbody>
-     </table>
+<table
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <caption id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </caption>
+  <thead role="rowgroup">
+    <tr role="row">
+      <th role="columnheader" aria-sort="none" aria-rowindex="1">ARIA Role</th>
+      <th role="columnheader" aria-sort="none" aria-rowindex="1">
+        Semantic Element
+      </th>
+    </tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <td role="cell" aria-rowindex="11">header</td>
+      <td role="cell" aria-rowindex="11">h1</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="16">header</td>
+      <td role="cell" aria-rowindex="16">h6</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="18">rowgroup</td>
+      <td role="cell" aria-rowindex="18">thead</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="24">term</td>
+      <td role="cell" aria-rowindex="24">dt</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 Above is the semantic way of writing a table. The ARIA roles are not necessary if the native semantics of the table, and therefore the table rows, have not been altered, such as through [the display property](/en-US/docs/Web/CSS/display#accessibility_concerns).
@@ -178,6 +196,6 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

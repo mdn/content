@@ -16,13 +16,21 @@ You can use this attribute with any SVG element.
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-  <rect width="80"  height="40" x="10" y="10"
-      style="fill: skyblue; stroke: cadetblue; stroke-width: 2;"/>
+  <rect
+    width="80"
+    height="40"
+    x="10"
+    y="10"
+    style="fill: skyblue; stroke: cadetblue; stroke-width: 2;" />
 </svg>
 ```
 

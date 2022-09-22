@@ -28,7 +28,7 @@ value.
 
 ## Syntax
 
-```js
+```js-nolint
 createConstantSource()
 ```
 

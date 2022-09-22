@@ -18,7 +18,7 @@ passed {{domxref("WebGLBuffer")}} is valid and `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 isBuffer(buffer)
 ```
 

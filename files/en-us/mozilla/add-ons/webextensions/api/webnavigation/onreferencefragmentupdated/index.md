@@ -18,7 +18,7 @@ browser-compat: webextensions.api.webNavigation.onReferenceFragmentUpdated
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onReferenceFragmentUpdated.addListener(
   listener,                   // function
   filter                      // optional object

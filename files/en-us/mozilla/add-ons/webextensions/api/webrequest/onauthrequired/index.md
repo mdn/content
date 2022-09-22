@@ -57,7 +57,7 @@ If an extension has the `"webRequest"`, `"webRequestBlocking"`, `"proxy"`, and `
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onAuthRequired.addListener(
   listener,                    // function
   filter,                      //  object
@@ -90,7 +90,7 @@ Events have three functions:
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}} or a {{jsxref("Promise")}}.
 
     - To handle the request synchronously, include `"blocking"` in the `extraInfoSpec` parameter and return a `BlockingResponse` object, with its `cancel` or its `authCredentials` properties set.
-    - To handle the request asynchronously, include `"blocking"` in the `extraInfoSpec` parameter and return a `Promise` that is resolved with a  `BlockingResponse` object, with its `cancel` or its `authCredentials` properties set.
+    - To handle the request asynchronously, include `"blocking"` in the `extraInfoSpec` parameter and return a `Promise` that is resolved with a `BlockingResponse` object, with its `cancel` or its `authCredentials` properties set.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.

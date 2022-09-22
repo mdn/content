@@ -34,10 +34,10 @@ There are several types of redirects, sorted into three categories:
 
 These redirections are meant to last forever. They imply that the original URL should no longer be used, and replaced with the new one. Search engine robots, RSS readers, and other crawlers will update the original URL for the resource.
 
-| Code  | Text                 | Method handling                                                                                                       | Typical use case                                             |
-| ----- | -------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Code  | Text                 | Method handling                                                                                         | Typical use case                                             |
+| ----- | -------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | `301` | `Moved Permanently`  | {{HTTPMethod("GET")}} methods unchanged. Others may or may not be changed to {{HTTPMethod("GET")}}. [1] | Reorganization of a Web site.                                |
-| `308` | `Permanent Redirect` | Method and body not changed.                                                                                          | Reorganization of a Web site, with non-GET links/operations. |
+| `308` | `Permanent Redirect` | Method and body not changed.                                                                            | Reorganization of a Web site, with non-GET links/operations. |
 
 \[1] The specification did not intend to allow method changes, but there are existing user agents that do change their method. {{HTTPStatus("308")}} was created to remove the ambiguity of the behavior when using non-`GET` methods.
 
@@ -47,11 +47,11 @@ Sometimes the requested resource can't be accessed from its canonical location, 
 
 Search engine robots and other crawlers don't memorize the new, temporary URL. Temporary redirections are also used when creating, updating, or deleting resources, to show temporary progress pages.
 
-| Code  | Text                 | Method handling                                                                                                       | Typical use case                                                                                                                                              |
-| ----- | -------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `302` | `Found`              | {{HTTPMethod("GET")}} methods unchanged. Others may or may not be changed to {{HTTPMethod("GET")}}. [2] | The Web page is temporarily unavailable for unforeseen reasons.                                                                                               |
-| `303` | `See Other`          | {{HTTPMethod("GET")}} methods unchanged. Others _changed_ to `GET` (body lost).                                | Used to redirect after a {{HTTPMethod("PUT")}} or a {{HTTPMethod("POST")}}, so that refreshing the result page doesn't re-trigger the operation. |
-| `307` | `Temporary Redirect` | Method and body not changed                                                                                           | The Web page is temporarily unavailable for unforeseen reasons. Better than `302` when non-`GET` operations are available on the site.                        |
+| Code  | Text                 | Method handling                                                                                         | Typical use case                                                                                                                                 |
+| ----- | -------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `302` | `Found`              | {{HTTPMethod("GET")}} methods unchanged. Others may or may not be changed to {{HTTPMethod("GET")}}. [2] | The Web page is temporarily unavailable for unforeseen reasons.                                                                                  |
+| `303` | `See Other`          | {{HTTPMethod("GET")}} methods unchanged. Others _changed_ to `GET` (body lost).                         | Used to redirect after a {{HTTPMethod("PUT")}} or a {{HTTPMethod("POST")}}, so that refreshing the result page doesn't re-trigger the operation. |
+| `307` | `Temporary Redirect` | Method and body not changed                                                                             | The Web page is temporarily unavailable for unforeseen reasons. Better than `302` when non-`GET` operations are available on the site.           |
 
 \[2] The specification did not intend to allow method changes, but there are existing user agents that do change their method. {{HTTPStatus("307")}} was created to remove the ambiguity of the behavior when using non-`GET` methods.
 
@@ -59,10 +59,10 @@ Search engine robots and other crawlers don't memorize the new, temporary URL. T
 
 {{HTTPStatus("304")}} (Not Modified) redirects a page to the locally cached copy (that was stale), and {{HTTPStatus("300")}} (Multiple Choice) is a manual redirection: the body, presented by the browser as a Web page, lists the possible redirections and the user clicks on one to select it.
 
-| Code  | Text              | Typical use case                                                                                                                                                               |
-| ----- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Code  | Text              | Typical use case                                                                                                                                                         |
+| ----- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `300` | `Multiple Choice` | Not many: the choices are listed in an HTML page in the body. Machine-readable choices are encouraged to be sent as {{HTTPHeader("Link")}} headers with `rel=alternate`. |
-| `304` | `Not Modified`    | Sent for revalidated conditional requests. Indicates that the cached response is still fresh and can be used.                                                                  |
+| `304` | `Not Modified`    | Sent for revalidated conditional requests. Indicates that the cached response is still fresh and can be used.                                                            |
 
 ## Alternative way of specifying redirections
 
@@ -77,7 +77,7 @@ HTTP redirects are the best way to create redirections, but sometimes you don't 
 
 ```html
 <head>
-  <meta http-equiv="Refresh" content="0; URL=https://example.com/">
+  <meta http-equiv="Refresh" content="0; URL=https://example.com/" />
 </head>
 ```
 
@@ -148,7 +148,7 @@ Redirects can be set either in the server config file or in the `.htaccess` of e
 
 The [`mod_alias`](https://httpd.apache.org/docs/current/mod/mod_alias.html) module has `Redirect` and `RedirectMatch` directives that set up {{HTTPStatus("302")}} redirects by default:
 
-```html
+```xml
 <VirtualHost *:443>
   ServerName example.com
   Redirect / https://www.example.com

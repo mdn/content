@@ -2,7 +2,6 @@
 title: Robots.txt
 slug: Glossary/Robots.txt
 tags:
-  - Glossary
   - Infrastructure
 ---
 

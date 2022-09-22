@@ -20,7 +20,7 @@ Fired when a connection is made with either an extension process or a content sc
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onConnect.addListener(listener)
 browser.runtime.onConnect.removeListener(listener)
 browser.runtime.onConnect.hasListener(listener)

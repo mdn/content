@@ -17,15 +17,15 @@ browser-compat: api.FileSystemFileHandle.getFile
 
 The **`getFile()`** method of the
 {{domxref("FileSystemFileHandle")}} interface returns a {{jsxref('Promise')}} which resolves to a
-  {{domxref('File')}} object representing the state on disk of the entry represented by the handle.
+{{domxref('File')}} object representing the state on disk of the entry represented by the handle.
 
 If the file on disk changes or is removed after this method is called, the returned
 {{domxref('File')}} object will likely be no longer readable.
 
 ## Syntax
 
-```js
-const filePromise = FileSystemFileHandle.getFile();
+```js-nolint
+getFile()
 ```
 
 ### Parameters

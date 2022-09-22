@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: form role'
+title: "ARIA: form role"
 slug: Web/Accessibility/ARIA/Roles/form_role
 tags:
   - ARIA
@@ -55,24 +55,34 @@ No role specific keyboard interactions
 ```html
 <div role="form" id="send-comment" aria-label="Add a comment">
   <label for="username">Username</label>
-  <input id="username" name="username" autocomplete="nickname" autocorrect="off" type="text">
+  <input
+    id="username"
+    name="username"
+    autocomplete="nickname"
+    autocorrect="off"
+    type="text" />
 
   <label for="email">Email</label>
-  <input id="email" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" type="text">
+  <input
+    id="email"
+    name="email"
+    autocomplete="email"
+    autocapitalize="off"
+    autocorrect="off"
+    spellcheck="false"
+    type="text" />
 
   <label for="comment">Comment</label>
   <textarea id="comment" name="comment"></textarea>
 
-  <input value="Comment" type="submit">
+  <input value="Comment" type="submit" />
 </div>
 ```
 
 It is recommended to use `<form>` instead.
 
 ```html
-<form id="send-comment" aria-label="Add a comment">
-  …
-</form>
+<form id="send-comment" aria-label="Add a comment">…</form>
 ```
 
 ## Accessibility concerns
@@ -93,7 +103,7 @@ If a form is used to search, you should use the more specialized [`role="search"
 
 Each {{HTMLElement('form')}} element and form `role` that needs to be exposed as a landmark must be given an accessible name. This name will allow an assistive technology user to be able to quickly understand the purpose of the form landmark.
 
-Use an `aria-labelledby`, `aria-label` or `title`  on the same element that was given the `role="form"` to provide it an accessible name.
+Use an `aria-labelledby`, `aria-label` or `title` on the same element that was given the `role="form"` to provide it an accessible name.
 
 #### Using `role="form"`
 
@@ -127,6 +137,6 @@ Using the {{HTMLElement('form')}} element will automatically communicate a secti
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

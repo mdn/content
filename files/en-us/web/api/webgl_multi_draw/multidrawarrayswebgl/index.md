@@ -21,8 +21,8 @@ method.
 
 ## Syntax
 
-```js
-void ext.multiDrawArraysWEBGL(mode,
+```js-nolint
+multiDrawArraysWEBGL(mode,
     firstsList, firstsOffset,
     countsList, countsOffset,
     drawCount);

@@ -104,27 +104,26 @@ The "index.html" file and the "style.css" files are already complete:
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Prime numbers</title>
     <script src="main.js" defer></script>
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
-
     <label for="quota">Number of primes:</label>
-    <input type="text" id="quota" name="quota" value="1000000">
+    <input type="text" id="quota" name="quota" value="1000000" />
 
     <button id="generate">Generate primes</button>
     <button id="reload">Reload</button>
 
-    <textarea id="user-input" rows="5" cols="62">Try typing in here immediately after pressing "Generate primes"</textarea>
+    <textarea id="user-input" rows="5" cols="62">
+Try typing in here immediately after pressing "Generate primes"
+</textarea>
 
     <div id="output"></div>
-
   </body>
-
 </html>
 ```
 

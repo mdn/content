@@ -20,7 +20,7 @@ The **`getType()`** method of the {{domxref("ClipboardItem")}} interface returns
 
 ## Syntax
 
-```js
+```js-nolint
 getType(type)
 ```
 

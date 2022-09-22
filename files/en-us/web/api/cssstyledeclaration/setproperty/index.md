@@ -18,7 +18,7 @@ a new value for a property on a CSS style declaration object.
 
 ## Syntax
 
-```js
+```js-nolint
 setProperty(propertyName, value)
 setProperty(propertyName, value, priority)
 ```
@@ -32,6 +32,7 @@ setProperty(propertyName, value, priority)
     as the empty string.
     > **Note:** `value` must not contain `"!important"`, that should be set using the `priority` parameter.
 - `priority` {{optional_inline}}
+
   - : A string allowing the "important" CSS priority to be set. If not
     specified, treated as the empty string. The following values are accepted:
 

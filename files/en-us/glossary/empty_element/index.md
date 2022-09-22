@@ -3,7 +3,6 @@ title: Empty element
 slug: Glossary/Empty_element
 tags:
   - CodingScripting
-  - Glossary
   - Intermediate
 ---
 

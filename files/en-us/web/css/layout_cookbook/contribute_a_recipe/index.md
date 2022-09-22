@@ -27,13 +27,13 @@ A recipe consists of:
 2. A downloadable version of that example, also stored in the CSS Examples repo.
 3. A page in the [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) section of the site that details:
 
-    1. Requirements
-    2. The recipe
-    3. The choices made
-    4. Any useful fallbacks or alternative methods
-    5. Any accessibility concerns
-    6. Browser compatibility
-    7. Additional resources
+   1. Requirements
+   2. The recipe
+   3. The choices made
+   4. Any useful fallbacks or alternative methods
+   5. Any accessibility concerns
+   6. Browser compatibility
+   7. Additional resources
 
 ### 1. Build your pattern
 

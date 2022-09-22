@@ -20,7 +20,7 @@ or multiple files and returns a handle for the file(s).
 
 ## Syntax
 
-```js
+```js-nolint
 showOpenFilePicker()
 ```
 
@@ -39,6 +39,7 @@ showOpenFilePicker()
         any file type filters (instigated with the type option below). Setting this option
         to `true` means that option is _not_ available.
     - `types`
+
       - : An {{jsxref('Array')}} of allowed file types to pick. Each
         item is an object with the following options:
 

@@ -18,7 +18,7 @@ The **`handler.getPrototypeOf()`** method is a trap for the
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(obj, {
   getPrototypeOf(target) {
     // …

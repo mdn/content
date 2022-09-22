@@ -19,7 +19,7 @@ otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 x >= y
 ```
 

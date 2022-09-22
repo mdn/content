@@ -121,10 +121,10 @@ The following trivial example uses the `mouseenter` event to change the border o
 #### HTML
 
 ```html
-<div id='mouseTarget'>
- <ul id="unorderedList">
-  <li>No events yet!</li>
- </ul>
+<div id="mouseTarget">
+  <ul id="unorderedList">
+    <li>No events yet!</li>
+  </ul>
 </div>
 ```
 
@@ -135,8 +135,8 @@ Styling the `div` to make it more visible.
 ```css
 #mouseTarget {
   box-sizing: border-box;
-  width:15rem;
-  border:1px solid #333;
+  width: 15rem;
+  border: 1px solid #333;
 }
 ```
 

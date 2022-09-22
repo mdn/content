@@ -120,7 +120,7 @@ To add complexity, there is a standard and an alternate box model. By default, b
 
 Making up a block box in CSS we have the:
 
-- **Content box**: The area where your content is displayed; size it using properties like  {{cssxref("inline-size")}} and {{cssxref("block-size")}} or {{cssxref("width")}} and {{cssxref("height")}}.
+- **Content box**: The area where your content is displayed; size it using properties like {{cssxref("inline-size")}} and {{cssxref("block-size")}} or {{cssxref("width")}} and {{cssxref("height")}}.
 - **Padding box**: The padding sits around the content as white space; size it using {{cssxref("padding")}} and related properties.
 - **Border box**: The border box wraps the content and any padding; size it using {{cssxref("border")}} and related properties.
 - **Margin box**: The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements; size it using {{cssxref("margin")}} and related properties.
@@ -187,7 +187,9 @@ To use the alternative box model for all of your elements (which is a common cho
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```

@@ -19,7 +19,7 @@ passed {{domxref("WebGLFramebuffer")}} is valid and `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 isFramebuffer(framebuffer)
 ```
 

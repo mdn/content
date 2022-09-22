@@ -16,8 +16,8 @@ This method is intended to support feature detection.
 
 ## Syntax
 
-```js
-supports(token);
+```js-nolint
+supports(token)
 ```
 
 ### Parameters

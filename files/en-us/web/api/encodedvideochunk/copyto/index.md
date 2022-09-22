@@ -18,7 +18,7 @@ The **`copyTo()`** method of the {{domxref("EncodedVideoChunk")}} interface copi
 
 ## Syntax
 
-```js
+```js-nolint
 copyTo(destination)
 ```
 

@@ -49,7 +49,7 @@ function onXRFrame(time, xrFrame) {
     });
   });
  }
- ```
+```
 
 ### Filtering input sources
 
@@ -66,7 +66,7 @@ function onXRFrame(time, xrFrame) {
     }
   });
  }
- ```
+```
 
 ## Specifications
 

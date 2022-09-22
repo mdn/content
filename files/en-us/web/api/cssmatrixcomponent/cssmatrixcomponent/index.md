@@ -22,7 +22,7 @@ individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMatrixComponent(matrix)
 new CSSMatrixComponent(matrix, options)
 ```

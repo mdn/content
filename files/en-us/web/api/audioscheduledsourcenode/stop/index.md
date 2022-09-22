@@ -30,7 +30,7 @@ stopped, this method has no effect.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 stop(when)
 ```

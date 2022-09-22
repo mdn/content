@@ -18,7 +18,7 @@ The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("Media
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamTrackProcessor(options)
 ```
 

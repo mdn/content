@@ -25,7 +25,7 @@ to the `SourceBuffer`.
 
 ## Syntax
 
-```js
+```js-nolint
 appendBuffer(source)
 ```
 

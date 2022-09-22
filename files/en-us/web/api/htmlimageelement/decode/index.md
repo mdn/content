@@ -34,7 +34,7 @@ a delay while the image loads.
 
 ## Syntax
 
-```js
+```js-nolint
 decode()
 ```
 

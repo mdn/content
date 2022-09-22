@@ -22,7 +22,7 @@ called.
 
 ## Syntax
 
-```js
+```js-nolint
 loseContext()
 ```
 

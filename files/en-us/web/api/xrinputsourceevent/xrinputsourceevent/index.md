@@ -33,7 +33,7 @@ represented by an {{domxref("XRInputSource")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRInputSourceEvent(type, options)
 ```
 

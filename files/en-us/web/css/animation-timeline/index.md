@@ -80,7 +80,8 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 
 #square {
   background-color: deeppink;
-  width: 100px; height: 100px;
+  width: 100px;
+  height: 100px;
   margin-top: 100px;
   animation-name: rotateAnimation;
   animation-duration: 3s;
@@ -89,9 +90,9 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 }
 
 @scroll-timeline squareTimeline {
-  source: selector('#container');
+  source: selector("#container");
   orientation: "vertical";
-  scroll-offsets:  0px, 300px;
+  scroll-offsets: 0px, 300px;
 }
 
 @keyframes rotateAnimation {

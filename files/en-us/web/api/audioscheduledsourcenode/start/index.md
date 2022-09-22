@@ -27,7 +27,7 @@ immediately.
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 start(when)
 ```

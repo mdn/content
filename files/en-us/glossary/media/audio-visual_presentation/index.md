@@ -3,7 +3,6 @@ title: Media (Audio-visual presentation)
 slug: Glossary/Media/Audio-visual_presentation
 tags:
   - Audio
-  - Glossary
   - Media
   - Multimedia
   - Video

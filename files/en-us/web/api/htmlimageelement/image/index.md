@@ -26,7 +26,7 @@ equivalent to {{DOMxRef("Document.createElement()",
 
 ## Syntax
 
-```js
+```js-nolint
 new Image()
 new Image(width)
 new Image(width, height)
@@ -63,7 +63,7 @@ This would be the equivalent of defining the following HTML tag inside the
 {{HTMLElement("body")}}:
 
 ```html
-<img width="100" height="200" src="picture.jpg">
+<img width="100" height="200" src="picture.jpg" />
 ```
 
 ## Specifications

@@ -11,7 +11,7 @@ tags:
   - Learn
   - Objects
   - Tutorial
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
@@ -147,18 +147,18 @@ You can start testing your object out already.
 2. Open the browser's JavaScript console, and then refresh the page so that the canvas size changes to the smaller visible viewport that remains when the console opens.
 3. Type in the following to create a new ball instance:
 
-    ```js
-    const testBall = new Ball(50, 100, 4, 4, 'blue', 10);
-    ```
+   ```js
+   const testBall = new Ball(50, 100, 4, 4, 'blue', 10);
+   ```
 
 4. Try calling its members:
 
-    ```js
-    testBall.x
-    testBall.size
-    testBall.color
-    testBall.draw()
-    ```
+   ```js
+   testBall.x
+   testBall.size
+   testBall.color
+   testBall.draw()
+   ```
 
 5. When you enter the last line, you should see the ball draw itself somewhere on the canvas.
 

@@ -23,7 +23,7 @@ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 
 ## Syntax
 
-```js
+```js-nolint
 reverse()
 ```
 

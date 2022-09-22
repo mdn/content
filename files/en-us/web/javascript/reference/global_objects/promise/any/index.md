@@ -18,7 +18,7 @@ browser-compat: javascript.builtins.Promise.any
 
 ## Syntax
 
-```js
+```js-nolint
 Promise.any(iterable)
 ```
 

@@ -20,7 +20,7 @@ existing children of a `Document` with a specified new set of children.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceChildren(param1)
 replaceChildren(param1, param2)
 replaceChildren(param1, param2, /* … ,*/ paramN)

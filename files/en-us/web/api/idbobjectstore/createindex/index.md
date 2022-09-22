@@ -32,7 +32,7 @@ mode callback.
 
 ## Syntax
 
-```js
+```js-nolint
 createIndex(indexName, keyPath)
 createIndex(indexName, keyPath, objectParameters)
 ```
@@ -85,10 +85,10 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if the provided `keyPath` is not a <a href="https://www.w3.org/TR/IndexedDB/#dfn-valid-key-path">valid key path</a>.
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if the transaction this {{domxref("IDBObjectStore")}}
-        belongs to is not active (e.g. has been deleted or removed.) In Firefox
-        previous to version 41, an `InvalidStateError` was raised in
-        this case as well, which was misleading; this has now been fixed (see
-        {{Bug("1176165")}}.)
+    belongs to is not active (e.g. has been deleted or removed.) In Firefox
+    previous to version 41, an `InvalidStateError` was raised in
+    this case as well, which was misleading; this has now been fixed (see
+    {{Bug("1176165")}}.)
 
 ## Examples
 

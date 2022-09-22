@@ -36,7 +36,7 @@ To obtain the `XRPose` for the `XRSpace` used as the local coordinate system of 
 thePose = xrFrame.getPose(localSpace, baseSpace);
 ```
 
-The pose for a viewer (or camera) is represented by the {{domxref("XRViewerPose")}} subclass of `XRPose`. This is obtained using {{domxref("XRFrame.getViewerPose()")}}  instead of `getPose()`, specifying a reference space which has been adjusted to position and orient the node to provide the desired viewing position and angle:
+The pose for a viewer (or camera) is represented by the {{domxref("XRViewerPose")}} subclass of `XRPose`. This is obtained using {{domxref("XRFrame.getViewerPose()")}} instead of `getPose()`, specifying a reference space which has been adjusted to position and orient the node to provide the desired viewing position and angle:
 
 ```js
 viewerPose = xrFrame.getViewerPose(adjReferenceSpace);

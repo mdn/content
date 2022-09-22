@@ -1,5 +1,5 @@
 ---
-title: 'Animation: finish event'
+title: "Animation: finish event"
 slug: Web/API/Animation/finish_event
 page-type: web-api-event
 tags:
@@ -18,16 +18,15 @@ animation to finish up.
 > **Note:** The `"paused"` play state supersedes the `"finished"` play
 > state; if the animation is both paused and finished, the `"paused"` state
 > is the one that will be reported. You can force the animation into the
-> `"finished"` state by setting its {{domxref("Animation.startTime",
-    "startTime")}} to
+> `"finished"` state by setting its {{domxref("Animation.startTime", "startTime")}} to
 > `document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)`.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('finish', (event) => { })
+```js-nolint
+addEventListener("finish", (event) => { })
 onfinish = (event) => { }
 ```
 
@@ -66,7 +65,9 @@ hide(endingUI);
 
 // When the credits are later faded in,
 // we re-add the pointer events when they're done
-bringUI.onfinish = (event) => {endingUI.style.pointerEvents = 'auto';};
+bringUI.onfinish = (event) => {
+  endingUI.style.pointerEvents = "auto";
+};
 ```
 
 ## Specifications

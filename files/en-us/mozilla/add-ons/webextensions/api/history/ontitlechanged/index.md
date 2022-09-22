@@ -16,7 +16,7 @@ browser-compat: webextensions.api.history.onTitleChanged
 
 ## Syntax
 
-```js
+```js-nolint
 browser.history.onTitleChanged.addListener(listener)
 browser.history.onTitleChanged.removeListener(listener)
 browser.history.onTitleChanged.hasListener(listener)

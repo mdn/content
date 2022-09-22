@@ -90,7 +90,7 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 
 ### Interpolation
 
-When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition.  For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as [`<color>`](/en-US/docs/Web/CSS/color_value), and the other values as [`<length>`](/en-US/docs/Web/CSS/length)s.
+When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition. For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as [`<color>`](/en-US/docs/Web/CSS/color_value), and the other values as [`<length>`](/en-US/docs/Web/CSS/length)s.
 
 In interpolating multiple shadows between two comma-separated lists of multiple box shadows, the shadows are paired, in order, with interpolation occurring between paired shadows. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is `transparent`, and X, Y, and blur are `0`, with the inset, or lack of inset, being set to match. If, in any pair of shadows, one has `inset` set and the other is does not, the entire shadow list is uninterpolated; the shadows will change to the new values without an animating effect.
 
@@ -111,11 +111,14 @@ In this example, we include three shadows: an inset shadow, a regular drop shado
 #### HTML
 
 ```html
-<blockquote><q>You may shoot me with your words,<br/>
-You may cut me with your eyes,<br/>
-You may kill me with your hatefulness,<br/>
-But still, like air, I'll rise.</q>
-<p>&mdash; Maya Angelou</p>
+<blockquote>
+  <q>
+    You may shoot me with your words,<br />
+    You may cut me with your eyes,<br />
+    You may kill me with your hatefulness,<br />
+    But still, like air, I'll rise.
+  </q>
+  <p>&mdash; Maya Angelou</p>
 </blockquote>
 ```
 
@@ -124,10 +127,8 @@ But still, like air, I'll rise.</q>
 ```css
 blockquote {
   padding: 20px;
-  box-shadow:
-       inset 0 -3em 3em rgba(0,0,0,0.1),
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 ```
 
@@ -151,10 +152,9 @@ We added a margin the size of the widest box-shadow to ensure the shadow doesn't
 
 ```css
 p {
-  box-shadow: 0 0 0 2em #F4AAB9,
-              0 0 0 4em #66CCFF;
+  box-shadow: 0 0 0 2em #f4aab9, 0 0 0 4em #66ccff;
   margin: 4em;
-  padding:1em;
+  padding: 1em;
 }
 ```
 

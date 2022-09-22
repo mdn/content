@@ -28,7 +28,7 @@ bidirectional stream, with both an {{domxref("RTCRtpSender")}} and an
 
 ## Syntax
 
-```js
+```js-nolint
 addTransceiver(trackOrKind)
 addTransceiver(trackOrKind, init)
 ```
@@ -57,6 +57,7 @@ The {{domxref("RTCRtpTransceiver")}} object which will be used to exchange the m
 ### Exceptions
 
 - {{jsxref("TypeError")}}
+
   - : Thrown if `trackOrKind` was not either `"audio"` or `"video"`.
 
 - {{jsxref("RangeError")}}

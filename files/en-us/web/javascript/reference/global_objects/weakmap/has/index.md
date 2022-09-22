@@ -19,7 +19,7 @@ element with the specified key exists in the `WeakMap` object or not.
 
 ## Syntax
 
-```js
+```js-nolint
 has(key)
 ```
 

@@ -22,7 +22,7 @@ If there are any pending updates for the extension, that it has deferred by list
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.reload()
 ```
 

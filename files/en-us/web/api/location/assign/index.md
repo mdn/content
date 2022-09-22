@@ -29,7 +29,7 @@ If the provided URL is not valid, a {{domxref("DOMException")}} of the
 
 ## Syntax
 
-```js
+```js-nolint
 assign(url)
 ```
 

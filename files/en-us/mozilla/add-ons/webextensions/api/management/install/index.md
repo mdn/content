@@ -21,7 +21,7 @@ This is an asynchronous function that returns a [Promise](/en-US/docs/Web/JavaSc
 
 ## Syntax
 
-```js
+```js-nolint
 browser.management.install(options)
 ```
 

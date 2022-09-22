@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.HID.connect_event
 ---
+
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`connect`** event of the {{domxref("HID")}} interface fires when the user agent connects to a HID device.

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: note role'
+title: "ARIA: note role"
 slug: Web/Accessibility/ARIA/Roles/note_role
 tags:
   - Accessibility
@@ -26,12 +26,18 @@ The `note` role can be added to parenthetic or ancillary content if no other nat
 
 ```html
 <h1>Madam C. J. Walker</h1>
-<p>Madam C.J. Walker was an African American entrepreneur, philanthropist, and political and social activist.</p>
+<p>
+  Madam C.J. Walker was an African American entrepreneur, philanthropist, and
+  political and social activist.
+</p>
 <h2>Early Life</h2>
 …
 <h2>Career</h2>
 …
-<p role="note" class="hilitebox">At the height of the depression, Madam C. J. Walker trained 20,000 women to sell hair pomade door-to-door</p>
+<p role="note" class="hilitebox">
+  At the height of the depression, Madam C. J. Walker trained 20,000 women to
+  sell hair pomade door-to-door
+</p>
 <h2>Activism and Philanthropy</h2>
 …
 ```
@@ -50,6 +56,6 @@ In the above Wikipedia style entry for Madam C.J. Walker, the `hilitebox` with r
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

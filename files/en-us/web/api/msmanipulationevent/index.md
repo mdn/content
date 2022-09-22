@@ -29,8 +29,8 @@ This proprietary method is specific to Internet Explorer.
 
 ### Properties
 
-| Property                                      | Description                                                                          |
-| --------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Property                                 | Description                                                                          |
+| ---------------------------------------- | ------------------------------------------------------------------------------------ |
 | `currentState` {{ReadOnlyInline}}        | Returns the current state of a manipulation event.                                   |
 | `inertiaDestinationX` {{ReadOnlyInline}} | Represents the predicted horizontal scroll offset after the inertia phase completes. |
 | `inertiaDestinationY` {{ReadOnlyInline}} | Represents the predicted vertical scroll offset after the inertia phase completes.   |

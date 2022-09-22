@@ -19,7 +19,7 @@ data in a given range.
 
 ## Syntax
 
-```js
+```js-nolint
 drawRangeElements(mode, start, end, count, type, offset)
 ```
 

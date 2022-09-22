@@ -14,7 +14,7 @@ The **`Event()`** constructor creates a new {{domxref("Event")}} object. An even
 
 ## Syntax
 
-```js
+```js-nolint
 new Event(type)
 new Event(type, options)
 ```

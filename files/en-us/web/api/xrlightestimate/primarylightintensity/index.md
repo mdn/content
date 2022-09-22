@@ -25,7 +25,7 @@ A {{domxref("DOMPointReadOnly")}} object where an RGB value is mapped to the `x`
 
 ## Examples
 
-Within an {{domxref("XRFrame")}} loop, you can use the `primaryLightDirection` and  `primaryLightIntensity` properties
+Within an {{domxref("XRFrame")}} loop, you can use the `primaryLightDirection` and `primaryLightIntensity` properties
 to render shadows based on the most prominent light source, for example.
 
 ```js

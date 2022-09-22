@@ -20,7 +20,7 @@ measured text (such as its width, for example).
 
 ## Syntax
 
-```js
+```js-nolint
 measureText(text)
 ```
 

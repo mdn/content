@@ -22,7 +22,7 @@ the supplied value.
 
 ## Syntax
 
-```js
+```js-nolint
 mul(number)
 ```
 

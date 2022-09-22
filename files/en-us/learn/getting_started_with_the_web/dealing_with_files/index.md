@@ -7,7 +7,7 @@ tags:
   - Files
   - Guide
   - HTML
-  - l10n:priority
+  - "l10n:priority"
   - theory
   - website
 ---
@@ -50,18 +50,18 @@ To make files talk to one another, you have to provide a file path between them 
 1. Copy the image you chose earlier into your `images` folder.
 2. Open up your `index.html` file, and insert the following code into the file exactly as shown. Don't worry about what it all means for now — we'll look at the structures in more detail later in the series.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="en-US">
-      <head>
-        <meta charset="utf-8">
-        <title>My test page</title>
-      </head>
-      <body>
-        <img src="" alt="My test image">
-      </body>
-    </html>
-    ```
+   ```html
+   <!DOCTYPE html>
+   <html lang="en-US">
+     <head>
+       <meta charset="utf-8" />
+       <title>My test page</title>
+     </head>
+     <body>
+       <img src="" alt="My test image" />
+     </body>
+   </html>
+   ```
 
 3. The line `<img src="" alt="My test image">` is the HTML code that inserts an image into the page. We need to tell the HTML where the image is. The image is inside the _images_ directory, which is in the same directory as `index.html`. To walk down the file structure from `index.html` to our image, the file path we'd need is `images/your-image-filename`. For example, our image is called `firefox-icon.png`, so the file path is `images/firefox-icon.png`.
 4. Insert the file path into your HTML code between the double quote marks of the `src=""` code.

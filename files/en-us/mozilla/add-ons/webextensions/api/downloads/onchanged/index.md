@@ -22,7 +22,7 @@ The listener is passed a `downloadDelta` as a parameter — an object containing
 
 ## Syntax
 
-```js
+```js-nolint
 browser.downloads.onChanged.addListener(listener)
 browser.downloads.onChanged.removeListener(listener)
 browser.downloads.onChanged.hasListener(listener)

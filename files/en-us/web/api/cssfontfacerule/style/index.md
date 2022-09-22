@@ -26,12 +26,11 @@ This example uses the CSS found as an example on the {{cssxref("@font-face")}} p
 
 ```css
 @font-face {
-    font-family: MyHelvetica;
-    src: local("Helvetica Neue Bold"),
-    local("HelveticaNeue-Bold"),
+  font-family: MyHelvetica;
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url(MgOpenModernaBold.ttf);
-    font-weight: bold;
-  }
+  font-weight: bold;
+}
 ```
 
 ```js

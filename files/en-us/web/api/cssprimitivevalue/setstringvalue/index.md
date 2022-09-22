@@ -29,7 +29,7 @@ value will be unchanged and a {{domxref("DOMException")}} will be raised.
 
 ## Syntax
 
-```js
+```js-nolint
 setStringValue(stringType, stringValue)
 ```
 
@@ -40,12 +40,12 @@ setStringValue(stringType, stringValue)
   - : An `unsigned short` representing the type of the value. Possible values
     are:
 
-    | Constant     | Description                                              |
-    | ------------ | -------------------------------------------------------- |
-    | `CSS_ATTR`   | The value is an {{cssxref("attr", "attr()")}} function.          |
-    | `CSS_IDENT`  | The value is an identifier.                              |
-    | `CSS_STRING` | The value is a {{cssxref("&lt;string&gt;")}}.            |
-    | `CSS_URI`    | The value is a {{cssxref("url", "url()")}}.                     |
+    | Constant     | Description                                             |
+    | ------------ | ------------------------------------------------------- |
+    | `CSS_ATTR`   | The value is an {{cssxref("attr", "attr()")}} function. |
+    | `CSS_IDENT`  | The value is an identifier.                             |
+    | `CSS_STRING` | The value is a {{cssxref("&lt;string&gt;")}}.           |
+    | `CSS_URI`    | The value is a {{cssxref("url", "url()")}}.             |
 
 - `stringValue`
   - : A string representing the new string value.

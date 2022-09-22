@@ -102,7 +102,7 @@ We also need to build an array of colors for each of the 24 vertices. This code 
 
   const colors = [];
 
-  for (const c of faceColors) 
+  for (const c of faceColors)
     // Repeat each color four times for the four vertices of the face
     colors.push(c, c, c, c);
   }

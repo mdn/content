@@ -67,7 +67,7 @@ Both static and dynamic websites (discussed in the following sections) use exact
 
 You can make a simple `GET` request by clicking on a link or searching on a site (like a search engine homepage). For example, the HTTP request that is sent when you perform a search on MDN for the term "client-server overview" will look a lot like the text shown below (it will not be identical because parts of the message depend on your browser/setup).
 
-> **Note:** The format of HTTP messages is defined in a "web standard" ([RFC7230](https://www.rfc-editor.org/rfc/rfc7230.txt)). You don't need to know this level of detail, but at least now you know where this all came from!
+> **Note:** The format of HTTP messages is defined in a "web standard" ([RFC9110](https://httpwg.org/specs/rfc9110.html#messages)). You don't need to know this level of detail, but at least now you know where this all came from!
 
 #### The request
 
@@ -296,7 +296,7 @@ def junior(request):
     return render(request, 'best/index.html', context)
 ```
 
-After the `junior()` function gets the list of junior teams, it calls the `render()` function, passing the original `HttpRequest`, an HTML template, and a "context" object defining the information to be included in the template. The  `render()` function is a convenience function that generates HTML using a context and an HTML template, and returns it in an `HttpResponse` object.
+After the `junior()` function gets the list of junior teams, it calls the `render()` function, passing the original `HttpRequest`, an HTML template, and a "context" object defining the information to be included in the template. The `render()` function is a convenience function that generates HTML using a context and an HTML template, and returns it in an `HttpResponse` object.
 
 Obviously web frameworks can help you with a lot of other tasks. We discuss a lot more benefits and some popular web framework choices in the next article.
 

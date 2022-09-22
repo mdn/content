@@ -14,9 +14,9 @@ resource.
 
 ## Syntax
 
-```js
-refStr = iframeElt.src;
-iframeElt.src= refStr;
+```js-nolint
+refStr = iframeElt.src
+iframeElt.src= refStr
 ```
 
 ## Example

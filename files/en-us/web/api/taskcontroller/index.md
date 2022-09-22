@@ -50,7 +50,7 @@ _This interface also inherits the properties of its parent, {{domxref("AbortCont
 
 ## Examples
 
-> **Note:** Additional "live" examples can be found in:  [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
+> **Note:** Additional "live" examples can be found in: [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
 
 First we create a task controller, setting the priority of its associated signal to `user-blocking`.
 
@@ -89,7 +89,7 @@ Note that in a later code block we abort the task, so only the `catch()` block w
 // Post task using the controller's signal.
 // The signal priority sets the initial priority of the task
 scheduler.postTask(() => 'Task execute', {signal: controller.signal})
-  .then((taskResult) => { console.log(`${taskResult}`); }) // Aborted (wont run)
+  .then((taskResult) => { console.log(`${taskResult}`); }) // Aborted (won't run)
   .catch((error) => { console.log(`Catch error: ${error}`); });  // Log error
 ```
 

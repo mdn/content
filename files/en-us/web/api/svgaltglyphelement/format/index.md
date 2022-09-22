@@ -18,9 +18,9 @@ of the font.
 
 ## Syntax
 
-```js
-string = myGlyph.format;
- myGlyph.format = string;
+```js-nolint
+string = myGlyph.format
+myGlyph.format = string
 ```
 
 ### Value

@@ -30,7 +30,7 @@ Be aware that you can't call `update()` (or
 
 ## Syntax
 
-```js
+```js-nolint
 update(value)
 ```
 
@@ -56,10 +56,10 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if the cursor was created using {{domxref("IDBindex.openKeyCursor")}}, is currently being iterated, or has iterated past its end.
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the underlying object store uses in-line keys and the property in the value at the object store's key path does not match the key in this
-        cursor's position.
+    cursor's position.
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the data being stored could not be cloned by the internal structured
-        cloning algorithm.
+    cloning algorithm.
 
 ## Examples
 

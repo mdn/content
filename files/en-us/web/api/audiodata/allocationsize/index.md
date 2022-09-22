@@ -18,7 +18,7 @@ The **`allocationSize()`** method of the {{domxref("AudioData")}} interface retu
 
 ## Syntax
 
-```js
+```js-nolint
 allocationSize(options)
 ```
 
@@ -42,7 +42,7 @@ An integer containing the number of bytes needed to hold the samples described b
 The following example gets the size of the plane at index `1`.
 
 ```js
-let size = AudioData.allocationSize({planeIndex: 1})
+let size = AudioData.allocationSize({ planeIndex: 1 });
 ```
 
 ## Specifications

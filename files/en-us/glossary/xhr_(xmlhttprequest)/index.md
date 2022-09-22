@@ -5,7 +5,6 @@ tags:
   - API
   - Beginner
   - CodingScripting
-  - Glossary
   - XMLHttpRequest
 ---
 

@@ -22,7 +22,7 @@ interface gives user input focus to the current client and returns a
 
 ## Syntax
 
-```js
+```js-nolint
 focus()
 ```
 

@@ -19,7 +19,7 @@ you to debug a translated shader.
 
 ## Syntax
 
-```js
+```js-nolint
 getTranslatedShaderSource(shader)
 ```
 

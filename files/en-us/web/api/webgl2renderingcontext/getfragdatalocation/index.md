@@ -19,7 +19,7 @@ color numbers to user-defined varying out variables.
 
 ## Syntax
 
-```js
+```js-nolint
 getFragDataLocation(program, name)
 ```
 

@@ -36,34 +36,30 @@ The following example uses the "toggle" `actiontype`:
 
 ```html
 <math>
+  <maction actiontype="toggle">
+    <mfrac>
+      <mn>6</mn>
+      <mn>8</mn>
+    </mfrac>
 
-<maction actiontype="toggle">
+    <mfrac>
+      <mrow>
+        <mn>3</mn>
+        <mo>×</mo>
+        <mn>2</mn>
+      </mrow>
+      <mrow>
+        <mn>4</mn>
+        <mo>×</mo>
+        <mn>2</mn>
+      </mrow>
+    </mfrac>
 
-  <mfrac>
-    <mn>6</mn>
-    <mn>8</mn>
-  </mfrac>
-
-  <mfrac>
-    <mrow>
+    <mfrac>
       <mn>3</mn>
-      <mo>×</mo>
-      <mn>2</mn>
-    </mrow>
-    <mrow>
       <mn>4</mn>
-      <mo>×</mo>
-      <mn>2</mn>
-    </mrow>
-  </mfrac>
-
-  <mfrac>
-    <mn>3</mn>
-    <mn>4</mn>
-  </mfrac>
-
-</maction>
-
+    </mfrac>
+  </maction>
 </math>
 ```
 

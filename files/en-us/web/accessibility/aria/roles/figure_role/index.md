@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: figure role'
+title: "ARIA: figure role"
 slug: Web/Accessibility/ARIA/Roles/figure_role
 tags:
   - ARIA
@@ -23,8 +23,7 @@ A `figure` is a perceivable section of content that typically contains a graphic
 
 ```html
 <div role="figure" aria-labelledby="caption">
-  <img src="image.png"
-      alt="put image description here">
+  <img src="image.png" alt="put image description here" />
   <p id="caption">Figure 1: The caption</p>
 </div>
 ```
@@ -49,8 +48,7 @@ This can be done semantically, without ARIA, with HTML's {{HTMLElement('figure')
 
 ```html
 <figure>
-  <img src="image.png"
-      alt="put image description here">
+  <img src="image.png" alt="put image description here" />
   <figcaption>Figure 1: The caption</figcaption>
 </figure>
 ```
@@ -79,15 +77,18 @@ No role specific JavaScript requirements. If you don't have control over the HTM
 We could extend the initial example on the page to also identify a paragraph that provides a descriptive label for the figure by referencing its ID in `aria-labelledby`:
 
 ```html
-    <div role="figure" aria-labelledby="figure-1">
-      <img src="diagram.png"
-           alt="diagram showing the four layers of awesome and their relative priority order —
-                music, cats, nature, and ice cream">
-      <pre>`
+<div role="figure" aria-labelledby="figure-1">
+  <img
+    src="diagram.png"
+    alt="diagram showing the four layers of awesome and their relative priority order —
+        music, cats, nature, and ice cream" />
+  <pre>
+`
         let awesome = ['music', 'cats', 'nature', 'ice cream'];
-      `</pre>
-      <p id="figure-1">Figure 1: The four layers of awesome.</p>
-    </div>
+      `</pre
+  >
+  <p id="figure-1">Figure 1: The four layers of awesome.</p>
+</div>
 ```
 
 ## Best practices
@@ -98,12 +99,15 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
 
 ```html
 <figure>
-  <img src="diagram.png"
-       alt="diagram showing the four layers of awesome and their relative priority order —
-       music, cats, nature, and ice cream">
-  <pre>`
+  <img
+    src="diagram.png"
+    alt="diagram showing the four layers of awesome and their relative priority order —
+         music, cats, nature, and ice cream" />
+  <pre>
+`
     let awesome = ['music', 'cats', 'nature', 'ice cream'];
-  `</pre>
+  `</pre
+  >
   <figcaption>Figure 1: The four layers of awesome.</figcaption>
 </figure>
 ```
@@ -123,6 +127,6 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

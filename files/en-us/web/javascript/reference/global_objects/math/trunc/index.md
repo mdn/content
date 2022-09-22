@@ -19,7 +19,7 @@ The **`Math.trunc()`** function returns the integer part of a number by removing
 
 ## Syntax
 
-```js
+```js-nolint
 Math.trunc(x)
 ```
 

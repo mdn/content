@@ -47,22 +47,27 @@ Registering the same protocol handler more than once will pop up a different not
 ### Example
 
 ```html
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en-US">
-<head>
-<meta charset="utf-8"> 
-<meta name="viewport" content="width=device-width">
-  <title>Web Protocol Handler Sample - Register</title>
-  <script>
-    navigator.registerProtocolHandler("web+burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
-  </script>
-</head>
-<body>
-  <h1>Web Protocol Handler Sample</h1>
-  <p>This web page will install a web protocol handler for the <code>web+burger:</code> protocol.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Web Protocol Handler Sample - Register</title>
+    <script>
+      navigator.registerProtocolHandler(
+        "web+burger",
+        "http://www.google.co.uk/?uri=%s",
+        "Burger handler"
+      );
+    </script>
+  </head>
+  <body>
+    <h1>Web Protocol Handler Sample</h1>
+    <p>
+      This web page will install a web protocol handler for the
+      <code>web+burger:</code> protocol.
+    </p>
+  </body>
 </html>
 ```
 
@@ -73,14 +78,14 @@ Now, anytime the user activates a link that uses the registered protocol, the br
 ### Example
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Web Protocol Handler Sample - Test</title>
-</head>
-<body>
-  <p>Hey have you seen <a href="web+burger:cheeseburger">this</a> before?</p>
-</body>
+  <head>
+    <title>Web Protocol Handler Sample - Test</title>
+  </head>
+  <body>
+    <p>Hey have you seen <a href="web+burger:cheeseburger">this</a> before?</p>
+  </body>
 </html>
 ```
 
@@ -106,7 +111,7 @@ if ( isset ( $_GET["value"] ) ) {
 }
 ?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Web Protocol Handler Sample</title>

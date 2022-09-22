@@ -97,51 +97,194 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 
 ## Examples
 
-### Cylon Eye
+> **Note:** Animating [CSS Box Model](/en-US/docs/Web/CSS/CSS_Box_Model) properties is discouraged. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/transform) property instead.
+
+### Sun Rise
+
+Here we animate a yellow sun across a light blue sky. The sun rises
+to the center of the viewport and then falls out of sight.
 
 ```html
-<div class="view_port">
-  <div class="polling_message">
-    Listening for dispatches
-  </div>
-  <div class="cylon_eye"></div>
-</div>
+<div class="sun"></div>
 ```
 
 ```css
-.polling_message {
-  color: white;
-  float: left;
-  margin-right: 2%;
+:root {
+  overflow: hidden; /* hides any part of the sun below the horizon */
+  background-color: lightblue;
+  display: flex;
+  justify-content: center; /* centers the sun in the background */
 }
 
-.view_port {
-  background-color: black;
-  height: 25px;
-  width: 100%;
-  overflow: hidden;
+.sun {
+  background-color: yellow;
+  border-radius: 50%; /* creates a circular background */
+  height: 100vh; /* makes the sun the size of the viewport */
+  aspect-ratio: 1 / 1;
+  animation: 4s linear 0s infinite alternate sun-rise;
 }
 
-.cylon_eye {
-  background-color: red;
-  background-image: linear-gradient(to right,
-      rgba(0, 0, 0, .9) 25%,
-      rgba(0, 0, 0, .1) 50%,
-      rgba(0, 0, 0, .9) 75%);
-  color: white;
-  height: 100%;
-  width: 20%;
-
-  animation: 4s linear 0s infinite alternate move_eye;
-}
-
-@keyframes move_eye { 
-  from { margin-left: -20%; } 
-  to { margin-left: 100%; }
+@keyframes sun-rise {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateY(110vh);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateY(0);
+  }
 }
 ```
 
-{{EmbedLiveSample('Cylon_Eye')}}
+{{EmbedLiveSample('Sun_Rise')}}
+
+### Animating Multiple Properties
+
+Adding onto the sun animation in the previous example, we add a second animation changing the color of the sun as it rises and sets. The sun starts off dark red when it is below the horizon and changes to a bright orange as it reaches the top.
+
+```html
+<div class="sun"></div>
+```
+
+```css
+:root {
+  overflow: hidden;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+}
+
+.sun {
+  background-color: yellow;
+  border-radius: 50%;
+  height: 100vh;
+  aspect-ratio: 1 / 1;
+  animation: 4s linear 0s infinite alternate animating-multiple-properties;
+}
+
+/* it is possible to animate multiple properties in a single animation */
+@keyframes animating-multiple-properties {
+  from {
+    transform: translateY(110vh);
+    background-color: red;
+    filter: brightness(75%);
+  }
+  to {
+    transform: translateY(0);
+    background-color: orange;
+    /* unset properties i.e. 'filter' will revert to default values */
+  }
+}
+```
+
+{{EmbedLiveSample('Animating Multiple Properties')}}
+
+### Applying Multiple Animations
+
+Here is a sun that rises and falls on a lightblue background. The sun
+gradually rotates through a rainbow of colors. The timing of the sun's
+position and color are independent.
+
+```html
+<div class="sun"></div>
+```
+
+```css
+:root {
+  overflow: hidden;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+}
+
+.sun {
+  background-color: yellow;
+  border-radius: 50%;
+  height: 100vh;
+  aspect-ratio: 1 / 1;
+  /* multiple animations are separated by commas */
+  animation:
+    4s linear 0s infinite alternate rise,
+    /* animation parameters are set independently */
+    24s linear 0s infinite psychedelic;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(110vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes psychedelic {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+```
+
+{{EmbedLiveSample('Applying Multiple Animations')}}
+
+### Cascading Multiple Animations
+
+Here is a yellow sun on a lightblue background. The sun bounces between the
+left and right sides of the viewport. The sun remains in the viewport even
+though a rise animation is defined. The rise animation's transform property
+is 'overwritten' by the bounce animation.
+
+```html
+<div class="sun"></div>
+```
+
+```css
+:root {
+  overflow: hidden;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+}
+
+.sun {
+  background-color: yellow;
+  border-radius: 50%;
+  height: 100vh;
+  aspect-ratio: 1 / 1;
+  /*
+    animations declared later in the cascade will override the
+    properties of previously declared animations
+  */
+  animation:
+    4s linear 0s infinite alternate rise,
+    /* bounce 'overwrites' the transform set by rise */
+    4s linear 0s infinite alternate bounce;
+    /* hence the sun only moves horizontally */
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(110vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(50vw);
+  }
+}
+```
+
+{{EmbedLiveSample('Cascading Multiple Animations')}}
 
 See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#examples) for additional examples.
 

@@ -42,7 +42,9 @@ Let's start by looking at a typical HTML table. Well, I say typical — most HTM
 
 ```html
 <table>
-  <caption>A summary of the UK's most famous punk bands</caption>
+  <caption>
+    A summary of the UK's most famous punk bands
+  </caption>
   <thead>
     <tr>
       <th scope="col">Band</th>
@@ -97,9 +99,9 @@ Let's work through styling our table example together.
 2. Next, create a new file called `style.css` and save it in the same directory as your other files.
 3. Link the CSS to the HTML by placing the following line of HTML inside your {{htmlelement("head")}}:
 
-    ```html
-    <link href="style.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="style.css" rel="stylesheet" />
+   ```
 
 ### Spacing and layout
 
@@ -131,7 +133,8 @@ thead th:nth-child(4) {
   width: 35%;
 }
 
-th, td {
+th,
+td {
   padding: 20px;
 }
 ```
@@ -159,7 +162,10 @@ First of all, we've found a font on [Google Fonts](https://fonts.google.com/) th
 First, add the following {{htmlelement("link")}} element into your HTML head, just above your existing `<link>` element:
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 Now add the following CSS into your `style.css` file, below the previous addition:
@@ -168,11 +174,12 @@ Now add the following CSS into your `style.css` file, below the previous additio
 /* typography */
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt', cursive;
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
 }
 
 th {
@@ -212,14 +219,21 @@ Start by adding the following CSS to your `style.css` file, again at the bottom:
 ```css
 /* graphics and colors */
 
-thead, tfoot {
+thead,
+tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
-thead th, tfoot th, tfoot td {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
   border: 3px solid purple;
 }
 ```
@@ -272,7 +286,7 @@ There is one last thing to do with our table — style the caption. To do this, 
 /* caption */
 
 caption {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;

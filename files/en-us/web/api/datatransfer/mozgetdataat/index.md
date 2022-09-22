@@ -24,7 +24,7 @@ range from zero to the number of items minus one.
 
 ## Syntax
 
-```js
+```js-nolint
 mozGetDataAt(index)
 mozGetDataAt(type, index)
 ```

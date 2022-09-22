@@ -20,7 +20,7 @@ Fired when a bookmark item (a bookmark or a folder) is created.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onCreated.addListener()
 browser.bookmarks.onCreated.removeListener(listener)
 browser.bookmarks.onCreated.hasListener(listener)

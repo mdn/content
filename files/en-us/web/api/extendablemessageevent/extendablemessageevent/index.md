@@ -17,7 +17,7 @@ The **`ExtendableMessageEvent()`** constructor creates a new {{domxref("Extendab
 
 ## Syntax
 
-```js
+```js-nolint
 new ExtendableMessageEvent(type)
 new ExtendableMessageEvent(type, options)
 ```
@@ -26,7 +26,7 @@ new ExtendableMessageEvent(type, options)
 
 - `type`
   - : A string with the name of the event.
-    It is case-sensitive and browsers set it to  `messageerror` or `message`.
+    It is case-sensitive and browsers set it to `messageerror` or `message`.
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, can have the following properties:
     - `data` {{optional_inline}}

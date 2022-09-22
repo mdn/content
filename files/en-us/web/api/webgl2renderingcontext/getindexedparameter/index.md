@@ -19,7 +19,7 @@ information about a given `target`.
 
 ## Syntax
 
-```js
+```js-nolint
 getIndexedParameter(target, index)
 ```
 

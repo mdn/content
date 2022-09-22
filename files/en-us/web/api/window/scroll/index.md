@@ -18,7 +18,7 @@ particular place in the document.
 
 ## Syntax
 
-```js
+```js-nolint
 scroll(x-coord, y-coord)
 scroll(options)
 ```

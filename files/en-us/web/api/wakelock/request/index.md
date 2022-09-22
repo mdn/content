@@ -21,7 +21,7 @@ locking.
 
 ## Syntax
 
-```js
+```js-nolint
 request(type)
 ```
 

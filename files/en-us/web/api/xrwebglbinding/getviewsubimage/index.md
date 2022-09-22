@@ -19,7 +19,7 @@ The **`getViewSubImage()`** method of the {{domxref("XRWebGLBinding")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 getViewSubImage(layer, view)
 ```
 

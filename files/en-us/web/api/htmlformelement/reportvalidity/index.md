@@ -20,8 +20,8 @@ each invalid child and validation problems are reported to the user.
 
 ## Syntax
 
-```js
-HTMLFormElement.reportValidity()
+```js-nolint
+reportValidity()
 ```
 
 ### Return value

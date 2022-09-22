@@ -31,7 +31,7 @@ inline sessions can be in progress at once.
 
 ## Syntax
 
-```js
+```js-nolint
 requestSession(mode)
 requestSession(mode, options)
 ```

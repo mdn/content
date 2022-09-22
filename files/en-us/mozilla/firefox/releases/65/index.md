@@ -2,7 +2,7 @@
 title: Firefox 65 for developers
 slug: Mozilla/Firefox/Releases/65
 tags:
-  - '65'
+  - "65"
   - Firefox
   - Mozilla
   - Release
@@ -55,7 +55,8 @@ This article provides information about the changes in Firefox 65 that will affe
   - `user-select: all` set on an element no longer overrides other values of `user-select` set on children of that element. So for example in the following snippet:
 
     ```html
-    <div style="-webkit-user-select: all">All
+    <div style="-webkit-user-select: all">
+      All
       <div style="-webkit-user-select: none">None</div>
     </div>
     ```
@@ -178,7 +179,7 @@ _No changes._
   - The {{WebExtAPIRef("tabs.Tab")}} type now has a `successorId` property, which can be used to store/retrieve the ID of the tab's successor.
   - The {{WebExtAPIRef("tabs.onActivated")}} event listener's callback has a new parameter available, `previousTabId`, which contains the ID of the previous activated tab, if it is still open.
   - The {{WebExtAPIRef("tabs.update()")}} function's `updateProperties` object has a new optional property available on it, `successorTabId`, so can be used to update it.
-  - `successorTabId` is also returned by functions like {{WebExtAPIRef("tabs.get()")}}  and {{WebExtAPIRef("tabs.query()")}}.
+  - `successorTabId` is also returned by functions like {{WebExtAPIRef("tabs.get()")}} and {{WebExtAPIRef("tabs.query()")}}.
   - The new function `tabs.moveInSuccession()` allows manipulation of tab successors in bulk.
 
 ### Manifest changes

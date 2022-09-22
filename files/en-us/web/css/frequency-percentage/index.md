@@ -34,7 +34,7 @@ Where a `<frequency-percentage>` is specified as an allowable type, this means t
 
 ### Valid percentage values
 
-``` plain example-good
+```plain example-good
 90% Positive percentage
 +90% Positive percentage with leading +
 -90% Negative percentage — not valid for all properties that use percentages
@@ -48,7 +48,7 @@ Where a `<frequency-percentage>` is specified as an allowable type, this means t
 
 ### Valid frequency values
 
-``` plain example-good
+```plain example-good
 12Hz     Positive integer
 4.3Hz    Non-integer
 14KhZ    The unit is case-insensitive, though non-SI capitalization is not recommended.

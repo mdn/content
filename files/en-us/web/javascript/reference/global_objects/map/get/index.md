@@ -22,7 +22,7 @@ modify it inside the `Map` object.
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 

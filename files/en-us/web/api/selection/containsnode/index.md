@@ -18,7 +18,7 @@ specified node is part of the selection.
 
 ## Syntax
 
-```js
+```js-nolint
 containsNode(node)
 containsNode(node)
 containsNode(node, partialContainment)
@@ -58,7 +58,10 @@ In this example, a message appears when you select the secret word. It uses
 
 ```html
 <p>Can you find the secret word?</p>
-<p>Hmm, where <span id="secret" style="color:transparent">SECRET</span> could it be?</p>
+<p>
+  Hmm, where <span id="secret" style="color:transparent">SECRET</span> could it
+  be?
+</p>
 <p id="win" hidden>You found it!</p>
 ```
 

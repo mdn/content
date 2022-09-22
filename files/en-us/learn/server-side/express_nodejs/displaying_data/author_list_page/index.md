@@ -18,16 +18,19 @@ Open **/controllers/authorController.js**. Find the exported `author_list()` con
 
 ```js
 // Display list of all Authors.
-exports.author_list = function(req, res, next) {
-
+exports.author_list = function (req, res, next) {
   Author.find()
-    .sort([['family_name', 'ascending']])
+    .sort([["family_name", "ascending"]])
     .exec(function (err, list_authors) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       //Successful, so render
-      res.render('author_list', { title: 'Author List', author_list: list_authors });
+      res.render("author_list", {
+        title: "Author List",
+        author_list: list_authors,
+      });
     });
-
 };
 ```
 
@@ -74,7 +77,7 @@ The genre list controller function needs to get a list of all `Genre` instances,
 1. You will need to edit `genre_list()` in **/controllers/genreController.js**.
 2. The implementation is almost exactly the same as the `author_list()` controller.
 
-    - Sort the results by name, in ascending order.
+   - Sort the results by name, in ascending order.
 
 3. The template to be rendered should be named **genre_list.pug**.
 4. The template to be rendered should be passed the variables `title` ('Genre List') and `genre_list` (the list of genres returned from your `Genre.find()` callback).

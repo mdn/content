@@ -20,7 +20,7 @@ resolves with a {{domxref("Blob")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 blob()
 ```
 

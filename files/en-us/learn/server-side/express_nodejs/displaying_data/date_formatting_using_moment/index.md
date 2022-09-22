@@ -30,16 +30,14 @@ npm install luxon
 1. Open **./models/bookinstance.js**.
 2. At the top of the page, import _luxon_.
 
-    ```js
-    const { DateTime } = require("luxon");
-    ```
+   ```js
+   const { DateTime } = require("luxon");
+   ```
 
 Add the virtual property `due_back_formatted` just after the URL property.
 
 ```js
-BookInstanceSchema
-.virtual('due_back_formatted')
-.get(function () {
+BookInstanceSchema.virtual("due_back_formatted").get(function () {
   return DateTime.fromJSDate(this.due_back).toLocaleString(DateTime.DATE_MED);
 });
 ```

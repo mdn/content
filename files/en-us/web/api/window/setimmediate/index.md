@@ -26,7 +26,7 @@ updates.
 
 ## Syntax
 
-```js
+```js-nolint
 setImmediate(func)
 setImmediate(func, param0)
 setImmediate(func, param0, param1)
@@ -36,7 +36,8 @@ setImmediate(func, param0, param1, /* … ,*/ paramN)
 ### Parameters
 
 - `func`
-  - :  The function you wish to call.
+
+  - : The function you wish to call.
 
 - `param0`, …, `paramN`
   - : All parameters will be passed directly to your function.

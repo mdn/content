@@ -127,10 +127,16 @@ For example:
 
 ```html
 <video id="video" controls preload="metadata" poster="img/poster.jpg">
-  <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
+  <source
+    src="video/tears-of-steel-battle-clip-medium.webm"
+    type="video/webm" />
   <!-- Offer download -->
-  <p>Your browser does not support WebM video; here is a link to
-  <a href="video/tears-of-steel-battle-clip-medium.mp4">view the video directly</a></p>
+  <p>
+    Your browser does not support WebM video; here is a link to
+    <a href="video/tears-of-steel-battle-clip-medium.mp4"
+      >view the video directly</a
+    >
+  </p>
 </video>
 ```
 
@@ -144,11 +150,11 @@ The following example shows date and time inputs:
 <form>
   <div>
     <label for="date">Enter a date:</label>
-    <input id="date" type="date">
+    <input id="date" type="date" />
   </div>
   <div>
     <label for="time">Enter a time:</label>
-    <input id="time" type="time">
+    <input id="time" type="time" />
   </div>
 </form>
 ```
@@ -179,8 +185,8 @@ button {
 
   background-color: #ff0000;
   background-color: rgba(255 0 0 / 1);
-  box-shadow: inset 1px 1px 3px rgba(255 255 255 / 0.4),
-              inset -1px -1px 3px rgba(0 0 0 / 0.4);
+  box-shadow: inset 1px 1px 3px rgba(255 255 255 / 0.4), inset -1px -1px 3px
+      rgba(0 0 0 / 0.4);
 }
 
 button:hover {
@@ -188,8 +194,8 @@ button:hover {
 }
 
 button:active {
-  box-shadow: inset 1px 1px 3px rgba(0 0 0 / 0.4),
-              inset -1px -1px 3px rgba(255 255 255 / 0.4);
+  box-shadow: inset 1px 1px 3px rgba(0 0 0 / 0.4), inset -1px -1px 3px rgba(255
+          255 255 / 0.4);
 }
 ```
 
@@ -253,16 +259,16 @@ Try this simple example:
 3. Look for a feature you can use to select that element. For example, at the time of writing, the main Google logo had an ID of `hplogo`.
 4. Store a reference to this element in a variable, for example:
 
-    ```js
-    const test = document.getElementById('hplogo');
-    ```
+   ```js
+   const test = document.getElementById('hplogo');
+   ```
 
 5. Now try to set a new value for the CSS property you are interested in on that element; you can do this using the [style](/en-US/docs/Web/API/HTMLElement/style) property of the element, for example try typing these into the JavaScript console:
 
-    ```js
-    test.style.transform = 'rotate(90deg)'
-    test.style.webkitTransform = 'rotate(90deg)'
-    ```
+   ```js
+   test.style.transform = 'rotate(90deg)'
+   test.style.webkitTransform = 'rotate(90deg)'
+   ```
 
 As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what versions of the property are implemented in that browser.
 

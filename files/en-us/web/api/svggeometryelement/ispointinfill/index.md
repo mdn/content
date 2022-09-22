@@ -22,7 +22,7 @@ interpreted as a point in the local coordinate system of the element.
 
 ## Syntax
 
-```js
+```js-nolint
 isPointInFill(point)
 ```
 
@@ -41,13 +41,22 @@ A boolean indicating whether the given point is within the fill or not.
 ### SVG
 
 ```html
-<svg viewBox="0 0 100 100" width="150" height="150"
-    xmlns="http://www.w3.org/2000/svg">
-  <circle id="circle" cx="50" cy="50" r="45"
-      fill="white" stroke="black" stroke-width="10"/>
+<svg
+  viewBox="0 0 100 100"
+  width="150"
+  height="150"
+  xmlns="http://www.w3.org/2000/svg">
+  <circle
+    id="circle"
+    cx="50"
+    cy="50"
+    r="45"
+    fill="white"
+    stroke="black"
+    stroke-width="10" />
 
-  <circle cx="10" cy="10" r="5" fill="seagreen"/>
-  <circle cx="40" cy="30" r="5" fill="seagreen"/>
+  <circle cx="10" cy="10" r="5" fill="seagreen" />
+  <circle cx="40" cy="30" r="5" fill="seagreen" />
 </svg>
 ```
 

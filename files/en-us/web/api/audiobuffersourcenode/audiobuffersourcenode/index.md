@@ -20,7 +20,7 @@ constructor creates a new {{domxref("AudioBufferSourceNode")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new AudioBufferSourceNode(context, options)
 ```
 
@@ -29,6 +29,7 @@ new AudioBufferSourceNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
+
   - : Options are as follows:
 
     - `buffer`

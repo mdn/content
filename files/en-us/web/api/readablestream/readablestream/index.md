@@ -18,7 +18,7 @@ Note that while all parameters are technically optional, omitting the `underlyin
 
 ## Syntax
 
-```js
+```js-nolint
 new ReadableStream()
 new ReadableStream(underlyingSource)
 new ReadableStream(underlyingSource, queuingStrategy)
@@ -65,11 +65,13 @@ new ReadableStream(underlyingSource, queuingStrategy)
         (bring your own buffer)/byte stream. If it is not included, the passed controller
         will be a {{domxref("ReadableStreamDefaultController")}}.
     - `autoAllocateChunkSize` {{optional_inline}}
+
       - : For byte streams, the developer can set the `autoAllocateChunkSize` with a positive integer value to turn on the stream's auto-allocation feature.
         With this is set, the stream implementation will automatically allocate a view buffer of the specified size in {{domxref("ReadableByteStreamController.byobRequest")}} when required.
 
         This must be set to enable zero-copy transfers to be used with a default {{domxref("ReadableStreamDefaultReader")}}.
         If not set, a default reader will still stream data, but {{domxref("ReadableByteStreamController.byobRequest")}} will always be `null` and transfers to the consumer must be via the stream's internal queues.
+
 - `queuingStrategy` {{optional_inline}}
 
   - : An object that optionally defines a queuing strategy for the stream. This takes two

@@ -26,7 +26,7 @@ collapsed range with the start and end points both set to the specified start po
 
 ## Syntax
 
-```js
+```js-nolint
 setStart(startNode, startOffset)
 ```
 
@@ -56,13 +56,15 @@ elements.
 #### HTML
 
 ```html
-<p id="address">Wyatt Earp<br>
-101 E. Main St.<br>
-Dodge City, KS<br>
-67801<br>
-USA</p>
+<p id="address">
+  Wyatt Earp<br />
+  101 E. Main St.<br />
+  Dodge City, KS<br />
+  67801<br />
+  USA
+</p>
 
-<hr>
+<hr />
 <p>Nodes in the original address:</p>
 <ol id="log"></ol>
 ```

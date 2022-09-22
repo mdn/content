@@ -21,14 +21,14 @@ with a content decryption module (CDM).
 
 ## Syntax
 
-```js
+```js-nolint
 createSession()
 createSession(mediaKeySessionType)
 ```
 
 ### Parameters
 
-- `mediaKeySessionType`  {{optional_inline}}
+- `mediaKeySessionType` {{optional_inline}}
   - : A string. Either "temporary" or "persistent-license". The default value is "temporary".
 
 ### Return value

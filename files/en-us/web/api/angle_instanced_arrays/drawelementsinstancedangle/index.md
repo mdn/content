@@ -20,7 +20,7 @@ The **`ANGLE_instanced_arrays.drawElementsInstancedANGLE()`** method of the [Web
 
 ## Syntax
 
-```js
+```js-nolint
 drawElementsInstancedANGLE(mode, count, type, offset, primcount)
 ```
 
@@ -66,7 +66,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 ext.drawElementsInstancedANGLE(gl.POINTS, 2, gl.UNSIGNED_SHORT, 0, 4);
 ```
 

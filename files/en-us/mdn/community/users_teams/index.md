@@ -23,6 +23,7 @@ A list of the members of the organization can be [found here](https://github.com
 - **OWD**: Contributors from the Open Web Docs non-profit organization
 - **SRE**: Site reliability engineers who support MDN Web Docs
 - **Yari content**: The umbrella team for all MDN Web Docs content reviewers
+
   - **Yari content MDN**: Responsible for reviewing docs under `/en-US/docs`
   - **Yari content Mozilla add-ons**: Responsible for reviewing docs under `/en-US/docs/Mozilla/Add-ons`
   - **Yari content JavaScript**: Responsible for reviewing docs under `/en-US/docs/Web/JavaScript`
@@ -35,6 +36,7 @@ A list of the members of the organization can be [found here](https://github.com
   - **Yari content Web Assembly**: Responsible for reviewing docs related to WebAssembly
 
   The following teams are specific to respective localization teams:
+
   - **Yari content ES**: Responsible for reviewing MDN docs in Spanish
   - **Yari content FR**: Responsible for reviewing MDN docs in French
   - **Yari content JA**: Responsible for reviewing MDN docs in Japanese

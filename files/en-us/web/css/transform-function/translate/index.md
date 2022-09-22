@@ -132,7 +132,7 @@ transform: translate(30%, 50%);
 ### Formal syntax
 
 ```css
-translate({{cssxref("&lt;length-percentage&gt;")}} , {{cssxref("&lt;length-percentage&gt;")}}?)
+translate({{cssxref("&lt;length-percentage&gt;")}}, {{cssxref("&lt;length-percentage&gt;")}}?)
 ```
 
 ## Examples
@@ -157,7 +157,10 @@ div {
 }
 
 .moved {
-  transform: translate(10px); /* Equal to: translateX(10px) or translate(10px, 0) */
+  /* Equal to: translateX(10px) or translate(10px, 0) */
+  transform: translate(
+    10px
+  );
   background-color: pink;
 }
 ```

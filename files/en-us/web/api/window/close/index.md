@@ -28,7 +28,7 @@ objects returned by
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

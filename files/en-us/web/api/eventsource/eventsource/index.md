@@ -19,7 +19,7 @@ remote resource.
 
 ## Syntax
 
-```js
+```js-nolint
 new EventSource(url)
 new EventSource(url, options)
 ```

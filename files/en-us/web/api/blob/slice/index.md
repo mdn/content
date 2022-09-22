@@ -19,7 +19,7 @@ the blob on which it's called.
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)

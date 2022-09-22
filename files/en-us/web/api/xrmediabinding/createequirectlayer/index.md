@@ -19,7 +19,7 @@ The **`createEquirectLayer()`** method of the {{domxref("XRMediaBinding")}} inte
 
 ## Syntax
 
-```js
+```js-nolint
 createEquirectLayer(video, options)
 ```
 
@@ -45,7 +45,7 @@ createEquirectLayer(video, options)
           - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
         - `stereo-top-bottom`
           - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
-        The default value is `mono`.
+            The default value is `mono`.
     - `lowerVerticalAngle` {{optional_inline}}
       - : A number indicating the lower vertical angle in radians for the sphere. Default value: `-1.570795` (-π/2).
     - `radius` {{optional_inline}}

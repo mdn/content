@@ -20,7 +20,7 @@ For more information, see [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExte
 
 ## Syntax
 
-```js
+```js-nolint
 let port = browser.runtime.connectNative(
   application // string
 )

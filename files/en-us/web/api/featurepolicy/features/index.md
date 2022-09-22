@@ -15,7 +15,7 @@ accessible because of user's permissions.
 
 ## Syntax
 
-```js
+```js-nolint
 const supportedFeatures = FeaturePolicy.features()
 ```
 

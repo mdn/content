@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: complementary role'
+title: "ARIA: complementary role"
 slug: Web/Accessibility/ARIA/Roles/complementary_role
 tags:
   - ARIA
@@ -35,13 +35,17 @@ The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA
 <div role="complementary">
   <h2>Trending articles</h2>
   <ul>
-     <li><a href="#">18 tweets that will make you feel all the feels</a></li>
-     <li><a href="#">Stop searching for the perfect lunch containers because I've found them</a></li>
-     <li><a href="#">The time has come to finally decide what we should be calling these foods</a></li>
-     <li><a href="#">17 really good posts we saw on Tumblr this week</a></li>
-     <li><a href="#">10 parent hacks we know work because we tried them</a></li>
-   </ul>
- </div>
+    <li><a href="#">18 tweets that will make you feel all the feels</a></li>
+    <li>
+      <a href="#">Stop searching! I've found the perfect lunch containers.</a>
+    </li>
+    <li>
+      <a href="#">The time has come to decide how to call these foods</a>
+    </li>
+    <li><a href="#">17 really good posts we saw on Tumblr this week</a></li>
+    <li><a href="#">10 parent hacks we know work because we tried them</a></li>
+  </ul>
+</div>
 ```
 
 ## Accessibility concerns
@@ -100,6 +104,6 @@ Certain technologies such as browser extensions can generate lists of all landma
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

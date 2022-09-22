@@ -19,7 +19,7 @@ The core idea of an object of type `Attr` is the association between a _name_ an
 The name is deemed _local_ when it ignores the eventual namespace prefix and deemed _qualified_ when it includes the prefix of the namespace, if any, separated from the local name by a colon (`:`). We have three cases: an attribute outside of a namespace, an attribute inside a namespace without a prefix defined, an attribute inside a namespace with a prefix:
 
 | Attribute | Namespace name | Namespace prefix | Attribute local name | Attribute qualified name |
-|-----------|----------------|------------------|----------------------|--------------------------|
+| --------- | -------------- | ---------------- | -------------------- | ------------------------ |
 | `myAttr`  | _none_         | _none_           | `myAttr`             | `myAttr`                 |
 | `myAttr`  | `mynamespace`  | _none_           | `myAttr`             | `myAttr`                 |
 | `myAttr`  | `mynamespace`  | `myns`           | `myAttr`             | `myns:myAttr`            |

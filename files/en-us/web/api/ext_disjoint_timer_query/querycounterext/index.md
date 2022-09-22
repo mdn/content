@@ -19,7 +19,7 @@ the corresponding query object.
 
 ## Syntax
 
-```js
+```js-nolint
 queryCounterEXT(query, target)
 ```
 
