@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 tags:
   - Array
   - JavaScript
-  - Method
+  - Property
   - Prototype
   - Polyfill
 browser-compat: javascript.builtins.Array.@@species
@@ -13,6 +13,8 @@ browser-compat: javascript.builtins.Array.@@species
 {{JSRef}}
 
 The **`Array[@@species]`** accessor property returns the constructor used to construct return values from array methods.
+
+> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 
 ## Syntax
 
@@ -44,7 +46,7 @@ class SubArray extends Array {}
 SubArray[Symbol.species] === SubArray; // true
 ```
 
-When calling array methods that do not mutate the existing array but return a new array instance (for example, `filter` and `map`), the array's `constructor[@@species]` will be accessed. The returned constructor will be used to construct the return value of the array method. This makes it technically possible to make array methods return objects unrelated to arrays.
+When calling array methods that do not mutate the existing array but return a new array instance (for example, [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) and [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)), the array's `constructor[@@species]` will be accessed. The returned constructor will be used to construct the return value of the array method. This makes it technically possible to make array methods return objects unrelated to arrays.
 
 ```js
 class NotAnArray {
@@ -64,8 +66,7 @@ arr.concat([1, 2]); // NotAnArray { '0': 0, '1': 1, '2': 2, '3': 1, '4': 2, leng
 
 ### Species in ordinary objects
 
-The `@@species` property returns the default constructor function, which is
-the `Array` constructor for `Array`.
+The `@@species` property returns the default constructor function, which is the `Array` constructor for `Array`.
 
 ```js
 Array[Symbol.species]; // [Function: Array]
@@ -73,15 +74,14 @@ Array[Symbol.species]; // [Function: Array]
 
 ### Species in derived objects
 
-In a derived collection object (e.g. your custom array `MyArray`), the
-`MyArray` species is the `MyArray` constructor. However, you might
-want to overwrite this, in order to return parent `Array` objects in your
-derived class methods:
+In an instance of a custom `Array` subclass, such as `MyArray`, the `MyArray` species is the `MyArray` constructor. However, you might want to overwrite this, in order to return parent `Array` objects in your derived class methods:
 
 ```js
 class MyArray extends Array {
   // Overwrite MyArray species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 ```
 
