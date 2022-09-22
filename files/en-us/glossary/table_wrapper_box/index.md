@@ -2,7 +2,6 @@
 title: Table Wrapper Box
 slug: Glossary/Table_Wrapper_Box
 tags:
-  - Glossary
   - CSS
   - Tables
 ---

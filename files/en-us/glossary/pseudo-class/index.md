@@ -4,7 +4,6 @@ slug: Glossary/Pseudo-class
 tags:
   - CSS
   - CodingScripting
-  - Glossary
   - Selector
 ---
 

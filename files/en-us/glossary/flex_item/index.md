@@ -3,7 +3,6 @@ title: Flex Item
 slug: Glossary/Flex_Item
 tags:
   - CSS
-  - Glossary
   - flex item
   - flexbox
 ---

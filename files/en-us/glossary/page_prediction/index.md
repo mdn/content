@@ -2,7 +2,6 @@
 title: Page prediction
 slug: Glossary/Page_prediction
 tags:
-  - Glossary
   - Security
   - Web Performance
   - page prediction

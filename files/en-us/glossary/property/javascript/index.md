@@ -3,7 +3,6 @@ title: Property (JavaScript)
 slug: Glossary/property/JavaScript
 tags:
   - CodingScripting
-  - Glossary
 ---
 
 A **JavaScript property** is a characteristic of an object, often describing attributes associated with a data structure.

@@ -3,7 +3,6 @@ title: CardDAV
 slug: Glossary/CardDAV
 tags:
   - CardDAV
-  - Glossary
   - Infrastructure
 ---
 

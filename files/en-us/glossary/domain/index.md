@@ -4,7 +4,6 @@ slug: Glossary/Domain
 tags:
   - Browser
   - Domain
-  - Glossary
   - Infrastructure
   - Networking
 ---

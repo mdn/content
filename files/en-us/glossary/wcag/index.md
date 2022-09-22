@@ -3,7 +3,6 @@ title: WCAG
 slug: Glossary/WCAG
 tags:
   - Accessibility
-  - Glossary
   - WCAG
   - Web Guidelines
 ---

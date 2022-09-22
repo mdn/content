@@ -4,7 +4,6 @@ slug: Glossary/Mozilla_Firefox
 tags:
   - Browser
   - Firefox
-  - Glossary
   - Infrastructure
   - Mozilla
   - Mozilla Firefox

@@ -2,7 +2,7 @@
 title: Firefox 82 for developers
 slug: Mozilla/Firefox/Releases/82
 tags:
-  - '82'
+  - "82"
   - Firefox
   - Mozilla
   - Release

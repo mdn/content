@@ -2,7 +2,6 @@
 title: Speed index
 slug: Glossary/Speed_index
 tags:
-  - Glossary
   - Performance
   - Reference
   - Web Performance

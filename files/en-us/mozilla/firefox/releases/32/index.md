@@ -74,11 +74,11 @@ _No change._
 
 - New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ({{bug("907352")}}):
 
-  ```json
+  ```js
   {
     mandatory: {
       width: { min: 640 },
-      height: { min: 480 }
+      height: { min: 480 },
     },
     optional: [
       { width: 650 },

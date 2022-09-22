@@ -87,7 +87,7 @@ negotiation:
   exceeded.
 - The new track is a video track and its raw or pre-encoded state differs from that of
   the original track.
-- The new track is an audio track with a different number of channels fom the
+- The new track is an audio track with a different number of channels from the
   original.
 - Media sources that have built-in encoders — such as hardware encoders — may not be
   able to provide the negotiated codec. Software sources may not implement the

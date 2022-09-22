@@ -4,7 +4,6 @@ slug: Glossary/Fragmentainer
 tags:
   - CSS
   - CSS Fragmentation Specification
-  - Glossary
   - fragmentainer
 ---
 

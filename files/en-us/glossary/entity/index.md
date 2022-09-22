@@ -4,7 +4,6 @@ slug: Glossary/Entity
 tags:
   - CodingScripting
   - Composing
-  - Glossary
   - HTML
 ---
 

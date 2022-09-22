@@ -2,7 +2,6 @@
 title: Proxy server
 slug: Glossary/Proxy_server
 tags:
-  - Glossary
   - Proxy
   - Server
 ---

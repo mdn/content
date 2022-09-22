@@ -4,7 +4,6 @@ slug: Glossary/REST
 tags:
   - Architecture
   - Beginner
-  - Glossary
   - HTTP
   - Rest
   - WebMechanics

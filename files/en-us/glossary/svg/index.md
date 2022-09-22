@@ -4,7 +4,6 @@ slug: Glossary/SVG
 tags:
   - Beginner
   - CodingScripting
-  - Glossary
   - Graphics
   - SVG
   - "l10n:priority"

@@ -3,7 +3,6 @@ title: Search engine
 slug: Glossary/Search_engine
 tags:
   - Definition
-  - Glossary
   - Indexing
   - Search Engine
   - Searching

@@ -88,7 +88,7 @@ When starting the signaling process, an **offer** is created by the user initiat
 - `name`
   - : The sender's username.
 - `target`
-  - : The username of the person to receive the description (if the caller is sending the message, this specifies the callee, and vice-versa).
+  - : The username of the person to receive the description (if the caller is sending the message, this specifies the callee, and vice versa).
 - `sdp`
   - : The SDP (Session Description Protocol) string describing the local end of the connection from the perspective of the sender (or the remote end of the connection from the receiver's point of view).
 

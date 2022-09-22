@@ -2,7 +2,6 @@
 title: Rendering engine
 slug: Glossary/Rendering_engine
 tags:
-  - Glossary
   - Infrastructure
   - Rendering engine
   - Web browser engine

@@ -3,7 +3,6 @@ title: HMAC
 slug: Glossary/HMAC
 tags:
   - Cryptography
-  - Glossary
   - Hash
   - Security
 ---

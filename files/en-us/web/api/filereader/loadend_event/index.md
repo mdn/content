@@ -82,6 +82,7 @@ img.preview {
   border: 1px solid black;
   margin: 0.2rem;
   padding: 0.2rem;
+  resize: none;
 }
 
 .example {
@@ -105,10 +106,6 @@ img.preview {
 
 .event-log > label {
   display: block;
-}
-
-.event-log-contents {
-  resize: none;
 }
 ```
 

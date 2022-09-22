@@ -289,7 +289,7 @@ function handleVisibilityChange() {
 }
 ```
 
-Since the event itself doesn't state whether the document has switched from visible to invisible or vice-versa, the {{domxref("document.hidden")}} property is checked to see if the document is not currently visible. Since it's theoretically possible to get called multiple times, we only proceed if we haven't already paused the timers and saved the visibility states of the existing ads.
+Since the event itself doesn't state whether the document has switched from visible to invisible or vice versa, the {{domxref("document.hidden")}} property is checked to see if the document is not currently visible. Since it's theoretically possible to get called multiple times, we only proceed if we haven't already paused the timers and saved the visibility states of the existing ads.
 
 To pause the timers, all we need to do is remove the ads from the set of visible ads (`visibleAds`) and mark them as inactive. To do so, we begin by saving the set of visible ads into a variable known as `previouslyVisibleAds` to be sure we can restore them when the user tabs back into the document, and we then empty the `visibleAds` set so they won't be treated as visible. Then, for each of the ads that are being suspended, we call our `updateAdTimer()` function, which handles updating the ad's total visible time counter, then we set their `dataset.lastViewStarted` property to 0, which indicates that the tab's timer isn't running.
 
@@ -447,7 +447,6 @@ function createArticle(contents) {
   articleElem.id = nextArticleID;
 
   const titleElem = document.createElement("h2");
-  titleElem.id = nextArticleID;
   titleElem.innerText = `Article ${nextArticleID} title`;
   articleElem.appendChild(titleElem);
 

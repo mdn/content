@@ -3,7 +3,6 @@ title: Python
 slug: Glossary/Python
 tags:
   - CodingScripting
-  - Glossary
   - Language
   - Python
   - programming

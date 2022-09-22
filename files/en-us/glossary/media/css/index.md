@@ -3,7 +3,6 @@ title: Media (CSS)
 slug: Glossary/Media/CSS
 tags:
   - CSS
-  - Glossary
   - Intro
   - Media
 ---

@@ -3,7 +3,6 @@ title: Validator
 slug: Glossary/Validator
 tags:
   - Beginner
-  - Glossary
   - Security
 ---
 

@@ -131,10 +131,6 @@ The `font-variant-ligatures` property is specified as one of the keyword values 
   no-contextual<br />
   if fi ff tf ft jf fj
 </p>
-<p class="contextual">
-  contextual<br />
-  if fi ff tf ft jf fj
-</p>
 ```
 
 #### CSS
@@ -181,10 +177,6 @@ p {
 
 .no-contextual {
   font-variant-ligatures: no-contextual;
-}
-
-.contextual {
-  font-variant-ligatures: contextual;
 }
 ```
 

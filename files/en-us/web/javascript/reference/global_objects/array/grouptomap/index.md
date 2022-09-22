@@ -121,7 +121,7 @@ Each food has a `type` and a `quantity`.
 ```js
 const inventory = [
   { name: 'asparagus', type: 'vegetables', quantity: 9 },
-  { name: 'bananas',  type: 'fruit', quantity: 5 },
+  { name: 'bananas', type: 'fruit', quantity: 5 },
   { name: 'goat', type: 'meat', quantity: 23 },
   { name: 'cherries', type: 'fruit', quantity: 12 },
   { name: 'fish', type: 'meat', quantity: 22 }
@@ -132,7 +132,7 @@ The code below uses `groupToMap()` with an arrow function that returns the objec
 The returned `result` object is a `Map` so we need to call `get()` with the key to obtain the array.
 
 ```js
-const restock  = { restock: true };
+const restock = { restock: true };
 const sufficient = { restock: false };
 const result = inventory.groupToMap(({ quantity }) => quantity < 6 ? restock : sufficient);
 console.log(result.get(restock));
@@ -149,12 +149,12 @@ For this reason it is important that anything that needs to use the map keeps a 
 
 ```js
 // The key can be modified and still used
-restock['fast']  = true ;
+restock['fast'] = true;
 console.log(result.get(restock));
 // expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
 
 // A new key can't be used, even if it has the same structure!
-const restock2  = { restock: true };
+const restock2 = { restock: true };
 console.log(result.get(restock2));
 // expected output: undefined
 ```

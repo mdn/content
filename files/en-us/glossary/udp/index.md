@@ -2,7 +2,6 @@
 title: UDP (User Datagram Protocol)
 slug: Glossary/UDP
 tags:
-  - Glossary
   - Infrastructure
   - Networking
   - Protocols
