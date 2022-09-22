@@ -10,7 +10,7 @@ tags:
   - Web
   - sign
   - Experimental
-spec-url: https://w3c.github.io/csswg-drafts/css-values-4/#sign-funcs
+spec-url: https://drafts.csswg.org/css-values/#sign-funcs
 ---
 
 {{CSSRef}}
