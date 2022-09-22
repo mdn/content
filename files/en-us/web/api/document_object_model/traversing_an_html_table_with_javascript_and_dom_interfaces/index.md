@@ -202,7 +202,7 @@ We've performed following steps:
    const secondParagraph = paragraphs[1];
    ```
 
-   ![How a new node element is added to the second element of the array](sample2a2.jpg)
+   ![A paragraph element is added as a new sibling to an existing paragraph in a DOM tree](sample2a2.jpg)
 
 3. Finally, we set background color to red using the {{domxref("HTMLElement.style", "style")}} property of the {{domxref("HTMLParagraphElement", "paragraph")}} object:
 
