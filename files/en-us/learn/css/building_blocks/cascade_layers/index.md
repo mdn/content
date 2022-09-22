@@ -282,7 +282,7 @@ Nested layers can be created using the same methods as described for regular lay
 
 If you nest a block `@layer` at-rule inside another block `@layer` at-rule, with or without a name, the nested block becomes a nested layer. Similarly, when a style sheet is imported with an `@import` declaration containing the `layer` keyword or `layer()` function, the styles get assigned to that named or anonymous layer. If the `@import` statement contains layers, those layers become nested layers within that anonymous or named layer.
 
-Digging a bit deeper into the example we included above:
+Let's look at the following example:
 
 ```
 @import url("components-lib.css") layer(components);
