@@ -62,7 +62,7 @@ imsc.renderHTML(isd, vdiv);
 
 Lets look at a more expanded example and show you how can render subtitles with imscJS on an embedded HTML video. As an example we use the below video with subtitles.
 
-{{EmbedGHLiveSample("imsc/imscjs-demo/imscjs-demo.html", '100%', 320)}}
+{{EmbedGHLiveSample("imsc-examples/imscjs-demo/imscjs-demo.html", '100%', 320)}}
 
 You can find the [HTML markup](https://github.com/mdn/imsc-examples/blob/main/imscjs-demo/imscjs-demo.html) and the [JavaScript source code](https://github.com/mdn/imsc-examples/blob/main/imscjs-demo/js/index.js) on the [MDN repository for IMSC samples](https://github.com/mdn/imsc-examples).
 
