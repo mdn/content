@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Symbol.species
 
 The well-known symbol **`Symbol.species`** specifies a function-valued property that the constructor function uses to create derived objects.
 
-> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
+> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 
 {{EmbedInteractiveExample("pages/js/symbol-species.html")}}
 
