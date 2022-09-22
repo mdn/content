@@ -39,7 +39,15 @@ width: calc(100px * tan(e));
 The `tan(angle)` function accepts only one value as its parameter.
 
 - `angle`
-  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}. When specifying `infinity`, `-infinity`, or `NaN`, the result is `NaN`. When specifying one of the asymptote values (such as `90deg`, `270deg`, etc), the result must be `infinity` for `90deg` and all values a multiple of `360deg` from that (such as `-270deg` or `450deg`), and `−infinity` for `-90deg` and all values a multiple of `360deg` from that (such as `-450deg` or `270deg`).
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}.
+
+### Return value
+
+The tangent of an `angle` will always return a number between `−∞` and `+∞`.
+
+- If `angle` is `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
+- If `angle` is `0⁻`, the result is `0⁻`.
+- If `angle` is one of the asymptote values (such as `90deg`, `270deg`, etc), the result must be `∞` for `90deg` and all values a multiple of `360deg` from that (such as `-270deg` or `450deg`), and `−∞` for `-90deg` and all values a multiple of `360deg` from that (such as `-450deg` or `270deg`).
 
 ### Formal syntax
 
