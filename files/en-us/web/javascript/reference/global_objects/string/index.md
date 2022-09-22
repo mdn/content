@@ -393,8 +393,7 @@ You must be careful which level of characters you are iterating on. For example,
 
 > **Warning:** Deprecated. Avoid these methods.
 >
-> They are of limited use, as they provide only a subset of the available HTML tags
-> and attributes.
+> They are of limited use, as they are based on a very old HTML standard and provide only a subset of the currently available HTML tags and attributes. Many of them create deprecated or non-standard markup today. In addition, they do simple string concatenation without any validation or sanitation, which makes them a potential security threat when directly inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML). Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 - {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)
@@ -422,6 +421,18 @@ You must be careful which level of characters you are iterating on. For example,
   - : {{HTMLElement("sub")}}
 - {{jsxref("String.prototype.sup()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("sup")}}
+
+Note that these methods do not check if the string itself contains HTML tags, so it's possible to create invalid HTML:
+
+```js
+"</b>".bold(); // <b></b></b>
+```
+
+The only escaping they do is to replace `"` in the attribute value (for {{jsxref("String/anchor", "anchor()")}}, {{jsxref("String/fontcolor", "fontcolor()")}}, {{jsxref("String/fontsize", "fontsize()")}}, and {{jsxref("String/link", "link()")}}) with `&quot;`.
+
+```js
+"foo".anchor('"Hello"'); // <a name="&quot;Hello&quot;">foo</a>
+```
 
 ## Examples
 

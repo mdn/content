@@ -14,8 +14,9 @@ browser-compat: javascript.builtins.String.italics
 
 {{JSRef}} {{deprecated_header}}
 
-The **`italics()`** method creates an {{HTMLElement("i")}} HTML
-element that causes a string to be italic.
+The **`italics()`** method creates a string that embeds a string in an {{HTMLElement("i")}} element (`<i>str</i>`), which causes a string to be displayed as italic.
+
+> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 ## Syntax
 
@@ -25,12 +26,7 @@ italics()
 
 ### Return value
 
-A string containing a {{HTMLElement("i")}} HTML element.
-
-## Description
-
-The `italics()` method embeds a string in an `<i>` element:
-"`<i>str</i>`".
+A string beginning with an `<i>` start tag, then the text `str`, and then an `</i>` end tag.
 
 ## Examples
 
@@ -39,11 +35,11 @@ The `italics()` method embeds a string in an `<i>` element:
 The following example uses deprecated string methods to change the formatting of a string:
 
 ```js
-const worldString = 'Hello, world';
-console.log(worldString.blink());  // <blink>Hello, world</blink>
-console.log(worldString.bold());  // <b>Hello, world</b>
+const worldString = "Hello, world";
+console.log(worldString.blink()); // <blink>Hello, world</blink>
+console.log(worldString.bold()); // <b>Hello, world</b>
 console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike());  // <strike>Hello, world</strike>
+console.log(worldString.strike()); // <strike>Hello, world</strike>
 ```
 
 ## Specifications
