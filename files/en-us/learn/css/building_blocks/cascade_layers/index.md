@@ -12,9 +12,9 @@ tags:
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
-The aim of this lesson is to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
+This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
 
-If you are new to CSS, working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course. However, knowing the basics of what cascade layers are should you e in your projects, understanding cascade layers and knowing how to leverage their power will save you from a lot of pain managing a code base with CSS from different parties, plugins, and development teams.
+If you are new to CSS, working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course. However, knowing the basics of what cascade layers are should you encounter them in your projects is helpful. The more you work with CSS, understanding cascade layers and knowing how to leverage their power will save you from a lot of pain managing a code base with CSS from different parties, plugins, and development teams.
 
 Cascade layers are most relevant when you're working with CSS from multiple sources, when there are conflicting CSS selectors and competing specificities, or when you're considering using [`!important`](/en-US/docs/Web/CSS/important).
 
@@ -37,11 +37,11 @@ Cascade layers are most relevant when you're working with CSS from multiple sour
 
 For each CSS property applied to an element, there can only be one value. You can view all the property values applied to an element by inspecting the element in your browser's developer tools. The tool's "Styles" panel shows all the property values applied on the element being inspected, along with the matched selector and the CSS source file. The selector from the origin with precedence has its values applied to the matching element.
 
-In addition to the applied styles, the Styles panel displays  crossed-out values that matched the selected element but were not applied due to the cascade, specificity, or source order. Crossed out styles may come from the same origin with precedence but with lower specificity, or with matching origin and specificity, but was found earlier in the code base. For any applied property value, there may be several declarations crossed out from many different sources. If you see a style crossed out that has a selector with greater specificity it means the value lost because of it's origin or importance.
+In addition to the applied styles, the Styles panel displays  crossed-out values that matched the selected element but were not applied due to the cascade, specificity, or source order. Crossed-out styles may come from the same origin with precedence but with lower specificity, or with matching origin and specificity, but were found earlier in the code base. For any applied property value, there may be several declarations crossed out from many different sources. If you see a style crossed out that has a selector with greater specificity it means the value is lacking in origin or importance.
 
-Often, as the complexity of a site increases, the number of stylesheets increase, which makes the source order of the stylesheets both more important and more complex. Cascade layers simplify maintaining stylesheets across such code bases. Cascade layers are explicit specificity containers providing simpler and greater control over the CSS declarations that ultimately get applied, enabling web developers to prioritize sections of CSS without having to fight specificity.
+Often, as the complexity of a site increases, the number of stylesheets increases, which makes the source order of the stylesheets both more important and more complex. Cascade layers simplify maintaining stylesheets across such code bases. Cascade layers are explicit specificity containers providing simpler and greater control over the CSS declarations that ultimately get applied, enabling web developers to prioritize sections of CSS without having to fight specificity.
 
-To understand cascade layers, it is important that you understand the CSS cascade well. The sections below provide a quick recap of the important cascade concepts.
+To understand cascade layers, you must understand the CSS cascade well. The sections below provide a quick recap of the important cascade concepts.
 
 ## Review of the cascade concept
 
@@ -107,9 +107,9 @@ Large code bases can have styles coming from multiple teams, component libraries
 
 Having styles from many sources cascade together, especially from teams that aren't working together, can create problems. Different teams may have different methodologies; one may have a best practice of reducing specificity, while another may have a standard of including an `id` in each selector.
 
-Specificity conflicts can escalate quickly. A web developer may create a "quick fix" by adding an `!important` flag. While this may feel like a easy solution, it often just moves the specificity war from normal to important declarations.
+Specificity conflicts can escalate quickly. A web developer may create a "quick fix" by adding an `!important` flag. While this may feel like an easy solution, it often just moves the specificity war from normal to important declarations.
 
-In the same way that cascade origins provides a balance of power between user, user-agents and author styles, cascade layers provide a structured way to organize and balance concerns within a single origin, as if each layer in an origin were a sub-origin. A layer can be created for each team, component, and third party, with style precedence based on layer order.
+In the same way that cascade origins provides a balance of power between user, user-agents, and author styles, cascade layers provide a structured way to organize and balance concerns within a single origin, as if each layer in an origin were a sub-origin. A layer can be created for each team, component, and third party, with style precedence based on layer order.
 
 Rules within a layer cascade together, without competing with style rules outside the layer. Cascade layers enable the prioritizing of entire stylesheets over other stylesheets, without having to worry about specificity between these sub-origins.
 
