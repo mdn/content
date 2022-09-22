@@ -266,9 +266,11 @@ You can import styles and create layers based on specific conditions using [medi
 
 ## Nested layers
 
-Nested layers are layers nested within a named or anonymous layer.  Each cascade layer, even anonymous ones, can contain nested layers. This enables teams to create cascade layers without worrying about other teams importing them into a layer. It also removes the worry of having conflicting layer names between external and internal stylesheets.  If you import a third party stylesheet into a layer, you don't need to worry if that stylesheet itself has layers as the imported layers become nested layers. 
+Nested layers are layers nested within a named or anonymous layer. Each cascade layer, even anonymous ones, can contain nested layers. 
 
-Nested layers are created using the same methods as described for regular layers. They can be created using `@layer` followed by the names of one or more layers, the nested layer being a period-separated list of layer names.
+Layers imported into another layer become nested layers within that layer. The ability to nest layers enables teams to create cascade layers without worrying about whether other teams will import them into a layer. Similarly, it enables you to import third party stylesheet into a layer without worry if that stylesheet itself has layers. Because layers are nestable, you don't have to worry about having conflicting layer names between external and internal stylesheets.
+
+Nested layers can also be created using the same methods as described for regular layers. For example, they can be created using `@layer` followed by the names of one or more layers, the nested layer name being period-separated.
 
 If you nest a `@layer` block at-rule inside another `@layer` block at-rule, with or without a name, the nested block becomes a nested layer. Similarly, when a stylsheet is imported with an `@import` declaration containing the `layer` keyword or `layer()` function, the styles get assigned to that named or anonymous layer. If that import contains layers, those layers become nested layers within that anonymous or named layer.
 
@@ -276,14 +278,14 @@ Digging a bit deeper into the example we included above:
 
 ```
 @import url("components-lib.css") layer(components);
-@import url("dialog.css") layer(components.dialog);
+@import url("narrowtheme.css") layer(components.narrow);
 ```
 
 In the first line, we imported `components-lib.css` into the `components` layer. If that file contains any layers, named or not, those layers become nested layers within the `components` layer. Named layers can be added via `components.layerName`. As mentioned before, unnamed layers cannot be accessed.
 
-The second line imports `dialog.css` into the `dialog` layer, which is a sub-layer of `components`. `dialog` gets created as the last layer within the `components` layer, unless `components-lib.css` already had a `dialog` layer. If `components-lib.css` had layers, all the layers become nested layers. If one of the layers was `dialog`, that layer is now accessible via `components.dialog`, and styles from `dialog.css` are appended to it.
+The second line imports `narrowtheme.css` into the `narrow` layer, which is a sub-layer of `components`. `narrow` gets created as the last layer within the `components` layer, unless `components-lib.css` already had a `narrow` layer. If `components-lib.css` had layers, all the layers become nested layers. If one of the layers was `narrow`, that layer is now accessible via `components.narrow`, and styles from `narrowtheme.css` are appended to it.
 
-Let's look at another example. If we imported `layers1.css` into a named layer with the following:
+Let's look at another example. If we imported [`layers1.css`](#anonymous-and-named-layer-block-at-rule-assignment) into a named layer with the following:
 
 ```css
 @import url(layers1.css) layer(example);
@@ -324,7 +326,7 @@ The layer order precedence is the order in which layers are created. If the auth
 9. inline important styles
 10. transitioning styles
 
-The order of layers is the order in which the layers each first appeared for normal styles, with unlayered styles coming last. For normal styles, later declared layers take precedence over earlier declared layers, with unlayered styles being in a final implicit unnamed layer. This order is inverted for important styles. Then inline styles, declared using the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style) directly on an element, take precedence over layered and unlayered styles.
+The order of layers is the order in which the layers were created which is the order in which they first appeared for normal styles, with unlayered styles coming last. For normal styles, later declared layers take precedence over earlier declared layers, with unlayered styles being in a final implicit unnamed layer. This order is inverted for important styles. Then inline styles, declared using the [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style) directly on an element, take precedence over layered and unlayered styles.
 
 {{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
 
@@ -341,6 +343,8 @@ You can reverse the layer order by changing the first line from `@layer A, B;` t
 The order of layers is set by the order in which the layers appear in your CSS. In our first line, we declared layers without assigning any styles using `@layer` followed by the names of our layers, ending with a semi-colon. Had we omitted this line, the results would have been the same. Why? We assigned styles rules in named @layer blocks in the order A then B. The two layers were created in that first line. Had they not been, these rule blocks would have created them, in that order.
 
 We included that first line for two reasons: first, so you could easily edit the line and switch the order, and second, because often times you'll find declaring the order layer up front to be the best practice for your layer order management.
+
+The cascade precedence order for nested layers is similar to regular layers, but contained within the layer. The precendence order is based on order or nested layer creation, with non-nested styles in the layer having precedence over nested normal styles, with the precedence order reversed for important styles. Similarly, specificity weight between nested layers does not matter, but does within a nested layer.
 
 ## Test your skills!
 
