@@ -54,7 +54,6 @@ Returns a non-negative {{CSSxRef("&lt;number&gt;")}} representing e<sup>number</
 
 ### Rotate elements
 
-
 The `acos()` function can be used to {{CSSxRef("transform-function/rotate", "rotate")}} elements as it return an {{CSSxRef("&lt;angle&gt;")}}.
 
 #### HTML
