@@ -3,7 +3,6 @@ title: Hoisting
 slug: Glossary/Hoisting
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

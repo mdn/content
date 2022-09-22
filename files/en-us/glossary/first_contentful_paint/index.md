@@ -2,7 +2,6 @@
 title: First contentful paint
 slug: Glossary/First_contentful_paint
 tags:
-  - Glossary
   - Performance
   - Reference
   - Web Performance

@@ -2,7 +2,7 @@
 title: Firefox 65 for developers
 slug: Mozilla/Firefox/Releases/65
 tags:
-  - '65'
+  - "65"
   - Firefox
   - Mozilla
   - Release
@@ -55,7 +55,8 @@ This article provides information about the changes in Firefox 65 that will affe
   - `user-select: all` set on an element no longer overrides other values of `user-select` set on children of that element. So for example in the following snippet:
 
     ```html
-    <div style="-webkit-user-select: all">All
+    <div style="-webkit-user-select: all">
+      All
       <div style="-webkit-user-select: none">None</div>
     </div>
     ```

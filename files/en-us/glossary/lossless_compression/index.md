@@ -4,7 +4,6 @@ slug: Glossary/Lossless_compression
 tags:
   - Beginner
   - Composing
-  - Glossary
   - Images
   - Web Performance
   - compression

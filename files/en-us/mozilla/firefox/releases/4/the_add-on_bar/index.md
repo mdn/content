@@ -23,8 +23,9 @@ The add-on bar is an XUL toolbar with the ID "addon-bar". The code below locates
 ```js
 // Find the most recently used window
 
-var mediator = Components.classes['@mozilla.org/appshell/window-mediator;1']
-                  .getService(Components.interfaces.nsIWindowMediator);
+var mediator = Components.classes[
+  "@mozilla.org/appshell/window-mediator;1"
+].getService(Components.interfaces.nsIWindowMediator);
 var doc = mediator.getMostRecentWindow("navigator:browser").document;
 
 // Get the add-on bar for that window
@@ -56,9 +57,14 @@ if (firstrun) {
   /* Code related to firstrun */
 } else {
   try {
-    var installedVersion = Services.prefs.getCharPref("extensions.YOUREXT.installedVersion");
+    var installedVersion = Services.prefs.getCharPref(
+      "extensions.YOUREXT.installedVersion"
+    );
     if (curVersion > installedVersion) {
-      Services.prefs.setCharPref("extensions.YOUREXT.installedVersion", curVersion);
+      Services.prefs.setCharPref(
+        "extensions.YOUREXT.installedVersion",
+        curVersion
+      );
       /* Code related to upgrade */
     }
   } catch (ex) {

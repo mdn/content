@@ -4,7 +4,6 @@ slug: Glossary/Raster_image
 tags:
   - CUR
   - Documents
-  - Glossary
   - ICO
   - JPEG
   - PNG

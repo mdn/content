@@ -2,7 +2,6 @@
 title: Entity header
 slug: Glossary/Entity_header
 tags:
-  - Glossary
   - WebMechanics
 ---
 

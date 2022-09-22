@@ -2,7 +2,6 @@
 title: Time to interactive
 slug: Glossary/Time_to_interactive
 tags:
-  - Glossary
   - Performance
   - Reference
   - Web Performance

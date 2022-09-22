@@ -4,7 +4,6 @@ slug: Glossary/I18N
 tags:
   - Beginner
   - Credibility
-  - Glossary
   - Internationalization
   - OpenPractices
   - i18n

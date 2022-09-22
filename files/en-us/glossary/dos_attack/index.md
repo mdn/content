@@ -2,7 +2,6 @@
 title: DoS attack
 slug: Glossary/DOS_attack
 tags:
-  - Glossary
   - Security
 ---
 

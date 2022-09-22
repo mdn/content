@@ -3,7 +3,6 @@ title: Falsy
 slug: Glossary/Falsy
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

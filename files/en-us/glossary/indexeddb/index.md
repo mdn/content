@@ -5,7 +5,6 @@ tags:
   - API
   - CodingScripting
   - Database
-  - Glossary
   - Sql
 ---
 

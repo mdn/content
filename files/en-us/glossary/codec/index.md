@@ -2,7 +2,6 @@
 title: Codec
 slug: Glossary/Codec
 tags:
-  - Glossary
   - WebMechanics
 ---
 

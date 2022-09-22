@@ -3,7 +3,6 @@ title: WebExtensions
 slug: Glossary/WebExtensions
 tags:
   - CodingScripting
-  - Glossary
   - NeedsContent
   - WebExtensions
 ---

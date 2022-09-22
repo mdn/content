@@ -3,7 +3,6 @@ title: Mutable
 slug: Glossary/Mutable
 tags:
   - CodingScripting
-  - Glossary
   - NeedsContent
 ---
 

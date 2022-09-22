@@ -3,7 +3,6 @@ title: Round Trip Time (RTT)
 slug: Glossary/Round_Trip_Time_(RTT)
 tags:
   - Beginner
-  - Glossary
   - Performance
   - Resource
   - Round Trip Time

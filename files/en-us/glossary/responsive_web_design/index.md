@@ -4,7 +4,6 @@ slug: Glossary/Responsive_web_design
 tags:
   - Accessibility
   - Design
-  - Glossary
   - Responsive web design
 ---
 

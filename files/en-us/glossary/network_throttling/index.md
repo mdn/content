@@ -2,7 +2,6 @@
 title: Network throttling
 slug: Glossary/Network_throttling
 tags:
-  - Glossary
   - RUM
   - Reference
   - Synthetic monitoring

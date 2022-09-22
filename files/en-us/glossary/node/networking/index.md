@@ -2,7 +2,6 @@
 title: Node (networking)
 slug: Glossary/Node/networking
 tags:
-  - Glossary
   - Infrastructure
 ---
 

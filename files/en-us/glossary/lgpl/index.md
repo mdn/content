@@ -2,7 +2,6 @@
 title: LGPL
 slug: Glossary/LGPL
 tags:
-  - Glossary
   - License
   - OpenPractices
   - Remixing

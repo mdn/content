@@ -2,7 +2,6 @@
 title: Percent-encoding
 slug: Glossary/percent-encoding
 tags:
-  - Glossary
   - WebMechanics
 ---
 

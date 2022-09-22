@@ -2,7 +2,6 @@
 title: minification
 slug: Glossary/minification
 tags:
-  - Glossary
   - Performance
   - Reference
   - Web Performance

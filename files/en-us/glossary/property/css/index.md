@@ -3,7 +3,6 @@ title: Property (CSS)
 slug: Glossary/property/CSS
 tags:
   - CodingScripting
-  - Glossary
 ---
 
 A **CSS property** is a characteristic (like color) whose associated value defines one aspect of how the browser should display the element.

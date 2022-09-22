@@ -3,7 +3,6 @@ title: Screen reader
 slug: Glossary/Screen_reader
 tags:
   - Accessibility
-  - Glossary
   - Screen reader
   - Voice Over
   - Voiceover

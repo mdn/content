@@ -2,7 +2,6 @@
 title: Server
 slug: Glossary/Server
 tags:
-  - Glossary
   - Infrastructure
   - Networking
   - Protocol

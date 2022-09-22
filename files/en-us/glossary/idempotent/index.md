@@ -2,7 +2,6 @@
 title: Idempotent
 slug: Glossary/Idempotent
 tags:
-  - Glossary
   - WebMechanics
 ---
 

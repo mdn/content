@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.2.2.tgz#2ec6cc2f2e04905ed9f7223f9fa8ab3e9448550a"
   integrity sha512-UBvrWRXnvvwR/7DyBWOaV2E95BlRFfZ5/NXH7oujE2bT8RnMpkf3hjLETEUediR/AkiLenwGuZpCH1kOpjki7A==
 
-"@mdn/yari@1.18.52":
-  version "1.18.52"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.18.52.tgz#6a092031b71959bce70ce7000388d8729e7b2e9e"
-  integrity sha512-vZ+j2CRZeKl0rkvSkraS4ROpoFW3vqx/Wdxgs7PUY55T9nNVjJsCZCCVKg1Jkqn7lAWGZ+O3tJXZmqilg/UAjw==
+"@mdn/yari@1.18.56":
+  version "1.18.56"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-1.18.56.tgz#2d742c29d3a685042a3b9daf1eaa8204e6e2e21a"
+  integrity sha512-VgtQR7Qu59CYEuq1aT+M9z8b6uHbg1LH3q8La8LwL/70LYrvNhyZ6Jala1Nw1sdGKhg+obn21ByRTb/HMAYw7Q==
   dependencies:
     "@caporal/core" "^2.0.2"
     "@fast-csv/parse" "^4.3.6"
@@ -81,14 +81,12 @@
     inquirer "^8.2.4"
     is-svg "^4.3.2"
     js-yaml "^4.1.0"
-    klaw-sync "^6.0.0"
     loglevel "^1.8.0"
     lru-cache "^7.14.0"
     md5-file "^5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
     mdn-data "^2.0.29"
-    node-gettext "^3.0.0"
     open "^8.4.0"
     open-editor "^3.0.0"
     prismjs "^1.29.0"
@@ -2169,11 +2167,6 @@ graceful-fs@^4.1.10, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0,
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
-graceful-fs@^4.1.11:
-  version "4.2.8"
-  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
-  integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
-
 has-ansi@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/has-ansi/-/has-ansi-2.0.0.tgz#34f5049ce1ecdf2b0649af3ef24e45ed35416d91"
@@ -2940,13 +2933,6 @@ keyv@^4.0.0:
   dependencies:
     json-buffer "3.0.1"
 
-klaw-sync@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/klaw-sync/-/klaw-sync-6.0.0.tgz#1fd2cfd56ebb6250181114f0a581167099c2b28c"
-  integrity sha512-nIeuVSzdCCs6TDPTqI8w1Yre34sSq7AkZ4B3sfOBbI2CgVSB4Du4aLQijFU2+lhAFCwt9+42Hel6lQNIv6AntQ==
-  dependencies:
-    graceful-fs "^4.1.11"
-
 kuler@1.0.x:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/kuler/-/kuler-1.0.1.tgz#ef7c784f36c9fb6e16dd3150d152677b2b0228a6"
@@ -3021,11 +3007,6 @@ lodash.escaperegexp@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.escaperegexp/-/lodash.escaperegexp-4.1.2.tgz#64762c48618082518ac3df4ccf5d5886dae20347"
   integrity sha1-ZHYsSGGAglGKw99Mz11YhtriA0c=
-
-lodash.get@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
-  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
 lodash.groupby@^4.6.0:
   version "4.6.0"
@@ -3618,13 +3599,6 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
-
-node-gettext@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/node-gettext/-/node-gettext-3.0.0.tgz#6b3a253309aa1e53164646c6c644fcddd0d45c58"
-  integrity sha512-/VRYibXmVoN6tnSAY2JWhNRhWYJ8Cd844jrZU/DwLVoI4vBI6ceYbd8i42sYZ9uOgDH3S7vslIKOWV/ZrT2YBA==
-  dependencies:
-    lodash.get "^4.4.2"
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.3.4:
   version "2.5.0"

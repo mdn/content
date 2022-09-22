@@ -3,7 +3,6 @@ title: XQuery
 slug: Glossary/XQuery
 tags:
   - CodingScripting
-  - Glossary
   - XML
   - XQuery
 ---
