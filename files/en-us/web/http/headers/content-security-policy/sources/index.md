@@ -76,10 +76,10 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
 
 - `'<hash-algorithm>-<base64-value>'`
   - : A sha256, sha384 or sha512 hash of scripts or styles.
-    The use of this source consists of two portions separated by a dash: the algorithm used to create the hash and the base64-encoded hash of the script or style.
-    When generating the hash, don't include the \<script> or \<style> tags and note that capitalization and whitespace matter, including leading or trailing whitespace.
-    See [unsafe inline script](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) for an example.
-    In CSP 2.0, this is applied only to inline scripts. CSP 3.0 allows it in the case of `script-src` for external scripts.
+    This value consists of the algorithm used to create the hash followed by a hyphen and the base64-encoded hash of the script or style.
+    When generating the hash, exclude \<script> or \<style> tags and note that capitalization and whitespace matter, including leading or trailing whitespace.
+    In CSP 2.0, hash sources can be applied to inline scripts and styles. Hash source expressions are allowed in [CSP 3.0](https://www.w3.org/TR/CSP3/#external-hash) for external scripts in `script-src` directives.
+    See the [script-src](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) and [style-src](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src#unsafe_inline_styles) pages for more information and examples.
 - `'strict-dynamic'`
   - : The `strict-dynamic` source expression specifies that the trust explicitly given to a script present in the markup, by accompanying it with a nonce or a hash, shall be propagated to all the scripts loaded by that root script.
     At the same time, any allow-list or source expressions such as `'self'` or `'unsafe-inline'` are ignored.
