@@ -73,6 +73,36 @@ export default myStrictFunction;
 
 All parts of ECMAScript [classes](/en-US/docs/Web/JavaScript/Reference/Classes) are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) — and so also including all parts of class bodies.
 
+```js
+const testObjWithStrictMode = {
+    printThis: function () {
+        'use strict'; // strict mode
+        console.log(this);
+    }
+}
+let printThis = testObjWithStrictMode.printThis;
+printThis(); // undefined, because strict mode is enabled
+
+
+const testObjWithoutStrictMode = {
+    printThis: function () {
+        console.log(this);
+    }
+}
+printThis = testObjWithoutStrictMode.printThis;
+printThis(); // Window object, becuase not enable strict mode.
+
+
+class TestClassStrictMode {
+    printThis() {
+        console.log(this);
+    }
+}
+const testClassStrictMode = new TestClassStrictMode();
+printThis = testClassStrictMode.printThis;
+printThis(); // undefined, because printThis() is in a class, strict mode enabled by default.
+```
+
 ## Changes in strict mode
 
 Strict mode changes both syntax and runtime behavior. Changes generally fall into these categories: changes converting mistakes into errors (as syntax errors or at runtime), changes simplifying how the particular variable for a given use of a name is computed, changes simplifying `eval` and `arguments`, changes making it easier to write "secure" JavaScript, and changes anticipating future ECMAScript evolution.
