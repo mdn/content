@@ -230,7 +230,7 @@ myP.appendChild(myTextNode);
 
 After testing this sample, note that the words hello and world are together: helloworld. So visually, when you see the HTML page it seems like the two text nodes hello and world are a single node, but remember that in the document model, there are two nodes. The second node is a new node of type `TEXT_NODE`, and it is the second child of the second `<p>` tag. The following figure shows the recently created Text Node object inside the document tree.
 
-![Appending a new text element to the text node object](sample2b2.jpg)
+![Text nodes in a paragraph element as individual siblings in the DOM tree.](sample2b2.jpg)
 
 > **Note:** `createTextNode()` and `appendChild()` is a simple way to include white space between the words hello and world. Another important note is that the `appendChild` method will append the child after the last child, just like the word world has been added after the word hello. So if you want to append a Text Node between hello and world, you will need to use `insertBefore` instead of `appendChild`.
 
