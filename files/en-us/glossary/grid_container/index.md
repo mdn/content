@@ -3,7 +3,6 @@ title: Grid container
 slug: Glossary/Grid_Container
 tags:
   - CSS
-  - Glossary
   - grid
 ---
 

@@ -2,7 +2,6 @@
 title: ECMAScript
 slug: Glossary/ECMAScript
 tags:
-  - Glossary
   - WebMechanics
 ---
 

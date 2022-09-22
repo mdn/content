@@ -2,7 +2,6 @@
 title: Server Timing
 slug: Glossary/Server_Timing
 tags:
-  - Glossary
   - Reference
   - Server Timing
   - Web Performance

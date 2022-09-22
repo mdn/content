@@ -52,7 +52,7 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLTableElement.summary")}} {{deprecated_inline}}
   - : A string containing a description of the purpose or the structure of the table. It reflects the obsolete {{HTMLAttrxRef("summary", "table")}} attribute.
 - {{DOMxRef("HTMLTableElement.width")}} {{deprecated_inline}}
-  - : A string containing the length in pixels or in percentage of the desired width fo the entire table. It reflects the obsolete {{HTMLAttrxRef("width", "table")}} attribute.
+  - : A string containing the length in pixels or in percentage of the desired width of the entire table. It reflects the obsolete {{HTMLAttrxRef("width", "table")}} attribute.
 
 ## Methods
 

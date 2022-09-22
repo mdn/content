@@ -4,7 +4,6 @@ slug: Glossary/Boolean
 tags:
   - Boolean
   - CodingScripting
-  - Glossary
   - JavaScript
   - Programming Languages
   - data types

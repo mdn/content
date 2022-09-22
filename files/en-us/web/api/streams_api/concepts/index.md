@@ -85,7 +85,7 @@ The start of the pipe chain is called the **original source**, and the end is ca
 
 An important concept in streams is **backpressure** — this is the process by which a single stream or a pipe chain regulates the speed of reading/writing. When a stream later in the chain is still busy and isn't yet ready to accept more chunks, it sends a signal backwards through the chain to tell earlier transform streams (or the original source) to slow down delivery so that you don't end up with a bottleneck anywhere.
 
-To use backpressure in a {{domxref("ReadableStream")}} , we can ask the controller for the chunk size desired by the consumer by querying the {{domxref("ReadableStreamDefaultController.desiredSize")}} property on the controller. If it is too low, our `ReadableStream` can tell its underlying source to stop sending data, and we backpressure along the stream chain.
+To use backpressure in a {{domxref("ReadableStream")}}, we can ask the controller for the chunk size desired by the consumer by querying the {{domxref("ReadableStreamDefaultController.desiredSize")}} property on the controller. If it is too low, our `ReadableStream` can tell its underlying source to stop sending data, and we backpressure along the stream chain.
 
 If later on the consumer again wants to receive data, we can use the pull method in the stream creation to tell our underlying source to feed our stream with data.
 

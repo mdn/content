@@ -2,7 +2,6 @@
 title: Copyleft
 slug: Glossary/Copyleft
 tags:
-  - Glossary
   - OpenPractices
   - Remixing
   - Sharing

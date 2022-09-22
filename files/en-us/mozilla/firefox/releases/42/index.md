@@ -2,7 +2,7 @@
 title: Firefox 42 for developers
 slug: Mozilla/Firefox/Releases/42
 tags:
-  - '42'
+  - "42"
   - Firefox
   - Mozilla
   - Release
@@ -29,7 +29,7 @@ Highlights:
 
 - Vertical {{cssxref('writing-mode')}} is now supported with rtl scripts ({{bug(1131451)}}).
 - The values of {{cssxref("caption-side")}} are now relative to the table, and changing actual meaning according to its {{cssxref("writing-mode")}} value {{bug(1202993)}}.
-- Non-standard properties like `-moz-margin-start` are now aliases of their standard counterpart ({{cssxref('margin-inline-start')}}, …). Previously, it was the opposite. This affects the value returned by {{domxref('CSSStyleDeclaration.cssText')}} and iteration of the properties in a style rule and iteration of the properties in a style rule, that both use the canonical form ({{bug(1118103)}}).
+- Non-standard properties like `-moz-margin-start` are now aliases of their standard counterpart ({{cssxref('margin-inline-start')}}, …). Previously, it was the opposite. This affects the value returned by {{domxref('CSSStyleDeclaration.cssText')}} and iteration of the properties in a style rule, which both use the canonical form ({{bug(1118103)}}).
 - The prefixed version of CSS gradients can be turned off by setting the `layout.css.prefixes.gradients` preference to `false`.
 - Several old bugs with {{cssxref("float")}} and margin collapsing behavior have been fixed ({{bug(478834)}}, {{bug(538194)}}, and {{bug(451791)}}).
 

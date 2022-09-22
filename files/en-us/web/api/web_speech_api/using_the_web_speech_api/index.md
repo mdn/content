@@ -69,7 +69,7 @@ const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechReco
 The next part of our code defines the grammar we want our app to recognize. The following variable is defined to hold our grammar:
 
 ```js
-const colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', /* … */ ];
+const colors = [ 'aqua', 'azure', 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', /* … */ ];
 const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(' | ')};`
 ```
 

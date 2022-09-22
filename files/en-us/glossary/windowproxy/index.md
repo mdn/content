@@ -2,7 +2,6 @@
 title: WindowProxy
 slug: Glossary/WindowProxy
 tags:
-  - Glossary
   - Window
   - WindowProxy
 ---

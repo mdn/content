@@ -3,7 +3,6 @@ title: Certificate authority
 slug: Glossary/Certificate_authority
 tags:
   - Cryptography
-  - Glossary
   - Security
 ---
 

@@ -2,7 +2,6 @@
 title: accent
 slug: Glossary/accent
 tags:
-  - Glossary
   - Input
   - accent
 ---

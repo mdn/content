@@ -4,7 +4,6 @@ slug: Glossary/buffer
 tags:
   - Buffer
   - CodingScripting
-  - Glossary
   - NeedsContent
 ---
 

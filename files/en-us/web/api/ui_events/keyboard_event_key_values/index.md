@@ -3071,7 +3071,7 @@ These key values represent buttons or keys present on television devices, or com
 
 Because modern remote controls for media devices often include buttons beyond the basic controls covered elsewhere in this document, key values are defined for a broad array of these additional buttons.
 
-The values below are derived in part form a number of consumer electronics technical specifications:
+The values below are derived in part from a number of consumer electronics technical specifications:
 
 - [DTV Application Software Environment](https://www.atsc.org/atsc-documents/a100-dtv-application-software-environment-level-1-dase-1/) (part of the [ATSC](https://en.wikipedia.org/wiki/ATSC) specification)
 - [Open Cable Application Platform](https://en.wikipedia.org/wiki/OpenCable_Application_Platform)

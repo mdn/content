@@ -449,8 +449,8 @@ const showBookmark = (() => {
 
 ## See also
 
-- The interface of the returned value, {{domxref("Location")}}.
+- The interface of the returned value, {{domxref("Location")}}
 - A similar information, but attached to the document,
-  {{domxref("Document.location")}}.
+  {{domxref("Document.location")}}
 - [Manipulating the browser history](/en-US/docs/Web/API/History_API)
 - {{domxref("Window/hashchange_event", "hashchange")}}

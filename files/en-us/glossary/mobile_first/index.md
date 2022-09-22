@@ -3,7 +3,6 @@ title: Mobile First
 slug: Glossary/Mobile_First
 tags:
   - Design
-  - Glossary
   - Layout
   - Layout mobile
 ---

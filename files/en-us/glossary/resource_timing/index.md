@@ -2,7 +2,6 @@
 title: Resource Timing
 slug: Glossary/Resource_Timing
 tags:
-  - Glossary
   - Timings
   - Web Performance
 ---

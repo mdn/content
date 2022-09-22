@@ -11,7 +11,6 @@ tags:
   - sin
   - Experimental
 browser-compat: css.types.sin
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

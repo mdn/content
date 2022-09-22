@@ -4,7 +4,6 @@ slug: Glossary/PHP
 tags:
   - Beginner
   - CodingScripting
-  - Glossary
   - Infrastructure
   - Intro
   - PHP

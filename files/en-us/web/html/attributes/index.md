@@ -75,7 +75,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }},
         {{ HTMLElement("img") }}, {{ HTMLElement("table") }},
         {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }},
-        {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }},
+        {{ HTMLElement("tfoot") }}, {{ HTMLElement("th") }},
         {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}
       </td>
       <td>Specifies the horizontal alignment of the element.</td>

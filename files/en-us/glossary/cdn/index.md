@@ -2,7 +2,6 @@
 title: CDN
 slug: Glossary/CDN
 tags:
-  - Glossary
   - Infrastructure
 ---
 

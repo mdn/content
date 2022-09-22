@@ -2,7 +2,6 @@
 title: Stylesheet
 slug: Glossary/Stylesheet
 tags:
-  - Glossary
   - StyleSheet
 ---
 

@@ -3,7 +3,6 @@ title: WebRTC
 slug: Glossary/WebRTC
 tags:
   - CodingScripting
-  - Glossary
   - Infrastructure
   - JavaScript
   - P2P

@@ -4,7 +4,6 @@ slug: Glossary/CRLF
 tags:
   - CR
   - CRLF
-  - Glossary
   - Infrastructure
   - LF
   - carriage return

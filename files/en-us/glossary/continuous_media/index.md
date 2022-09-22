@@ -2,7 +2,6 @@
 title: Continuous Media
 slug: Glossary/Continuous_Media
 tags:
-  - Glossary
   - Media
 ---
 

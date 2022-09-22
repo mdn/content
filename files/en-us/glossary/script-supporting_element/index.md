@@ -2,7 +2,6 @@
 title: Script-supporting element
 slug: Glossary/Script-supporting_element
 tags:
-  - Glossary
   - HTML
   - HTML Content Categories
   - scripts

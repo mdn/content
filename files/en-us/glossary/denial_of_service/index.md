@@ -4,7 +4,6 @@ slug: Glossary/Denial_of_Service
 tags:
   - Attack
   - Denial of Service
-  - Glossary
   - Intro
   - Security
 ---

@@ -3,7 +3,6 @@ title: Locale
 slug: Glossary/Locale
 tags:
   - Composing
-  - Glossary
   - Locale
 ---
 
