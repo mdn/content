@@ -7,10 +7,11 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "null (or undefined) has no properties" occurs when you
-attempt to access properties of {{jsxref("null")}} and {{jsxref("undefined")}}. They
+attempt to access properties of [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. They
 don't have any.
 
 ## Message
@@ -28,7 +29,7 @@ TypeError: undefined is not an object (evaluating 'undefined.x') (Safari)
 
 ## What went wrong?
 
-Both {{jsxref("null")}} and {{jsxref("undefined")}}, have no properties you could
+Both [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}, have no properties you could
 access.
 
 ## Examples
@@ -45,5 +46,5 @@ undefined.bar;
 
 ## See also
 
-- {{jsxref("null")}}
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 - {{jsxref("undefined")}}

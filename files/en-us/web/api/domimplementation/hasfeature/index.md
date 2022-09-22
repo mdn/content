@@ -11,9 +11,8 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.hasFeature
 ---
-{{ApiRef("DOM")}}
 
-{{Deprecated_Header}}
+{{ApiRef("DOM")}}{{Deprecated_Header}}
 
 The
 **`DOMImplementation.hasFeature()`** method returns a
@@ -26,7 +25,7 @@ The latest version of the spec settled to force this method to always return
 
 ## Syntax
 
-```js
+```js-nolint
 hasFeature(feature, version)
 ```
 

@@ -5,10 +5,10 @@ tags:
   - Attack
   - DDoS
   - Denial of Service
-  - Glossary
   - Intro
   - Security
 ---
+
 A Distributed Denial-of-Service (DDoS) is an attack in which many compromised systems are made to attack a single target, in order to swamp server resources and block legitimate users.
 
 Normally many persons, using many bots, attack high-profile Web {{glossary("server","servers")}} like banks or credit-card payment gateways. DDoS concerns computer networks and CPU resource management.
@@ -30,4 +30,4 @@ The United States Computer Emergency Readiness Team (US-CERT) defines symptoms o
 
 ## See also
 
-- {{interwiki("wikipedia", "Denial-of-service_attack", "Denial-of-service attack")}} on Wikipedia
+- [Denial-of-service attack](https://en.wikipedia.org/wiki/Denial-of-service_attack) on Wikipedia

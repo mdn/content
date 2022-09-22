@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't delete non-configurable array element" occurs when it
@@ -94,12 +95,12 @@ Object.seal(arr);
 // Copy the initial array to shorten the copy
 const copy = Array.from(arr);
 copy.length = 1;
-// arr.length == 3
+// arr.length === 3
 ```
 
 ## See also
 
 - [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Data_structures#properties)
-- {{jsxref("Array.length")}}
+- {{jsxref("Array/length", "length")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.seal()")}}

@@ -8,6 +8,7 @@ browser-compat:
   - api.Navigator.deviceMemory
   - http.headers.Device-Memory
 ---
+
 {{DefaultAPISidebar("Device Memory API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The capabilities of a client device largely depend on the amount of available RAM. Traditionally, developers had to use heuristics and either benchmark a device or infer device capabilities based on other factors like the device manufacturer or User Agent strings.
@@ -21,7 +22,7 @@ There are two ways to determine the approximate amount of RAM a device has: use 
 You may query the approximate amount of RAM a device has by retrieving {{DOMxRef("Navigator.deviceMemory")}}
 
 ```js
-var RAM = navigator.deviceMemory;
+const RAM = navigator.deviceMemory;
 ```
 
 ### Client Hints

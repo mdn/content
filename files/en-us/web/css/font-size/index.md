@@ -73,8 +73,8 @@ The `font-size` property is specified in one of the following ways:
 
 > **Note:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
 
-- `math`
-    Special [mathematical scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) must be applied when determining the computed value of the `font-size` property.
+- `math` {{Experimental_Inline}}
+  Special [mathematical scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) must be applied when determining the computed value of the `font-size` property.
 
 ## Description
 
@@ -120,7 +120,7 @@ One important fact to keep in mind: em values compound. Take the following HTML 
 
 ```css
 html {
-  font-size: 100% 
+  font-size: 100%;
 }
 span {
   font-size: 1.6em;
@@ -147,7 +147,7 @@ The CSS below is nearly identical to the previous example. The only exception is
 
 ```css
 html {
-  font-size: 100%; 
+  font-size: 100%;
 }
 span {
   font-size: 1.6rem;

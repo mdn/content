@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "more arguments needed" occurs when there is an error with how
@@ -45,7 +46,7 @@ const obj2 = Object.setPrototypeOf({});
 // TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 1 were passed
 ```
 
-You can fix this by setting {{jsxref("null")}} as the prototype, for example:
+You can fix this by setting [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) as the prototype, for example:
 
 ```js example-good
 const obj = Object.create(null);

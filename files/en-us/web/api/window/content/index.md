@@ -3,6 +3,7 @@ title: Window.content
 slug: Web/API/Window/content
 page-type: web-api-instance-property
 ---
+
 {{APIRef}}{{non-standard_header}}
 
 > **Note:** Since Firefox 57 (initially Nightly-only), both the `content` and `_content` variants are only available to chrome (privileged) code, and not available to the web anymore.
@@ -15,8 +16,8 @@ In unprivileged content (webpages), `content` is normally equivalent to [top](/e
 
 ### Syntax
 
-```js
-var windowObject = window.content;
+```js-nolint
+const windowObject = window.content
 ```
 
 ### Example
@@ -24,7 +25,7 @@ var windowObject = window.content;
 Executing the following code in a chrome XUL window with a `<browser type="content-primary"/>` element in it draws a red border around the first div on the page currently displayed in the browser:
 
 ```js
-content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
+content.document.querySelector("div").style.border = "solid red 1px";
 ```
 
 ### Specifications

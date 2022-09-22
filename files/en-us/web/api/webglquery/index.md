@@ -4,12 +4,12 @@ slug: Web/API/WebGLQuery
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Reference
   - WebGL
   - WebGL2
 browser-compat: api.WebGLQuery
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLQuery`** interface is part of the [WebGL 2](/en-US/docs/Web/API/WebGL_API) API and provides ways to asynchronously query for information. By default, occlusion queries and primitive queries are available.
@@ -35,7 +35,7 @@ When working with `WebGLQuery` objects, the following methods of the {{domxref("
 in this example, `gl` must be a {{domxref("WebGL2RenderingContext")}}. `WebGLQuery` objects are not available in WebGL 1.
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 ```
 
 ## Specifications

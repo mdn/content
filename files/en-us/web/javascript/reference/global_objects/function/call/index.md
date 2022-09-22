@@ -7,6 +7,7 @@ tags:
   - Method
 browser-compat: javascript.builtins.Function.call
 ---
+
 {{JSRef}}
 
 The **`call()`** method calls the function with a given `this` value and arguments provided individually.
@@ -15,10 +16,10 @@ The **`call()`** method calls the function with a given `this` value and argumen
 
 ## Syntax
 
-```js
+```js-nolint
 call()
 call(thisArg)
-call(thisArg, arg1, …, argN)
+call(thisArg, arg1, /* …, */ argN)
 ```
 
 ### Parameters
@@ -95,7 +96,7 @@ const animals = [
 ];
 
 function assignPrintMethod(i) {
-  this.print = function() {
+  this.print = function () {
     console.log(`#${i} ${this.species}: ${this.name}`);
   }
   this.print();
@@ -133,13 +134,13 @@ bound to the global object.
 
 ```js
 // var creates a property on the global object
-var sData = 'Wisen';
+var globProp = 'Wisen';
 
 function display() {
-  console.log(`sData value is ${this.sData}`);
+  console.log(`globProp value is ${this.globProp}`);
 }
 
-display.call(); // logs "sData value is Wisen"
+display.call(); // logs "globProp value is Wisen"
 ```
 
 In strict mode, the value of `this` will be `undefined`.
@@ -147,13 +148,13 @@ In strict mode, the value of `this` will be `undefined`.
 ```js
 'use strict';
 
-var sData = 'Wisen';
+var globProp = 'Wisen';
 
 function display() {
-  console.log(`sData value is ${this.sData}`);
+  console.log(`globProp value is ${this.globProp}`);
 }
 
-display.call(); // throws TypeError: Cannot read the property of 'sData' of undefined
+display.call(); // throws TypeError: Cannot read the property of 'globProp' of undefined
 ```
 
 ## Specifications

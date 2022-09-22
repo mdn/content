@@ -10,6 +10,7 @@ tags:
   - custom elements
   - customized
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 One of the key features of the Web Components standard is the ability to create custom elements that encapsulate your functionality on an HTML page, rather than having to make do with a long, nested batch of elements that together provide a custom page feature. This article introduces the use of the Custom Elements API.
@@ -32,7 +33,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 The element is called `word-count`, its class object is `WordCount`, and it extends the {{htmlelement("p")}} element.
 
-A custom element's class object is written using standard ES 2015 class syntax. For example, `WordCount` is structured like so:
+A custom element's class object is written using the `class` syntax. For example, `WordCount` is structured like so:
 
 ```js
 class WordCount extends HTMLParagraphElement {
@@ -41,8 +42,6 @@ class WordCount extends HTMLParagraphElement {
     super();
 
     // Element functionality written in here
-
-    ...
   }
 }
 ```
@@ -73,15 +72,13 @@ class PopUpInfo extends HTMLElement {
     super();
 
     // write element functionality in here
-
-    ...
   }
 }
 ```
 
 The preceding code snippet contains the [`constructor()`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) definition for the class, which always starts by calling [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) so that the correct prototype chain is established.
 
-Inside the constructor, we define all the functionality the element will have when an instance of it is instantiated. In this case we attach a shadow root to the custom element, use some DOM manipulation to create the element's internal shadow DOM structure — which is then attached to the shadow root — and finally attach some CSS to the shadow root to style it.
+Inside the method connectedCallback, we define all the functionality the element will have when the element is connected to the DOM. In this case we attach a shadow root to the custom element, use some DOM manipulation to create the element's internal shadow DOM structure — which is then attached to the shadow root — and finally attach some CSS to the shadow root to style it. We don't use `constructor()` because an element's attributes are unavailable until connected to the DOM.
 
 ```js
 // Create a shadow root
@@ -120,7 +117,9 @@ customElements.define('popup-info', PopUpInfo);
 It is now available to use on our page. Over in our HTML, we use it like so:
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC)
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
   back of your card."></popup-info>
 ```
@@ -160,8 +159,6 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // write element functionality in here
-
-    ...
   }
 }
 ```
@@ -178,9 +175,7 @@ Using the built-in element in a web document also looks somewhat different:
 
 ```html
 <ul is="expanding-list">
-
-  ...
-
+  …
 </ul>
 ```
 
@@ -262,7 +257,7 @@ attributeChangedCallback(name, oldValue, newValue) {
 }
 ```
 
-Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside custom element class - this should `return`  an array containing the names of the attributes you want to observe:
+Note that to get the `attributeChangedCallback()` callback to fire when an attribute changes, you have to observe the attributes. This is done by specifying a `static get observedAttributes()` method inside custom element class - this should `return` an array containing the names of the attributes you want to observe:
 
 ```js
 static get observedAttributes() { return ['c', 'l']; }
@@ -274,7 +269,7 @@ This is placed right at the top of the constructor, in our example.
 
 ## Transpilers vs. classes
 
-Please note that ES2015 classes cannot reliably be transpiled in Babel 6 or TypeScript targeting legacy browsers. You can either use Babel 7 or the [babel-plugin-transform-builtin-classes](https://www.npmjs.com/package/babel-plugin-transform-builtin-classes) for Babel 6, and target ES2015 in TypeScript instead of legacy.
+Please note that classes cannot reliably be transpiled in Babel 6 or TypeScript targeting legacy browsers. You can either use Babel 7 or the [babel-plugin-transform-builtin-classes](https://www.npmjs.com/package/babel-plugin-transform-builtin-classes) for Babel 6, and target ES2015 in TypeScript instead of legacy.
 
 ## Libraries
 

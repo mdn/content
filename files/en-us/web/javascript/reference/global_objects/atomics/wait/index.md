@@ -8,12 +8,13 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.wait
 ---
+
 {{JSRef}}
 
 The static **`Atomics.wait()`**
 method verifies that a given position in an {{jsxref("Int32Array")}} still contains a
 given value and if so sleeps, awaiting a wakeup or a timeout. It returns a string which
-is either "`ok`", "`not-equal`", or "`timed-out`".
+is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 
 > **Note:** This operation only works with a shared
 > {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} and may not be allowed on the main thread.
@@ -21,7 +22,7 @@ is either "`ok`", "`not-equal`", or "`timed-out`".
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.wait(typedArray, index, value)
 Atomics.wait(typedArray, index, value, timeout)
 ```
@@ -39,8 +40,7 @@ Atomics.wait(typedArray, index, value, timeout)
 
 ### Return value
 
-A string which is either "`ok`", "`not-equal`", or
-"`timed-out`".
+A string which is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 
 ### Exceptions
 

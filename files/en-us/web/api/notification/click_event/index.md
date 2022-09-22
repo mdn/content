@@ -12,6 +12,7 @@ tags:
   - click
 browser-compat: api.Notification.click_event
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`click`** event of the {{domxref("Notification")}}
@@ -26,9 +27,9 @@ If you don't want that behavior, call {{domxref("Event/preventDefault", "prevent
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('click', event => { });
+addEventListener('click', (event) => { });
 
-onclick = event => { };
+onclick = (event) => { };
 ```
 
 ## Event type
@@ -42,7 +43,7 @@ In the following example, we use an onclick handler to open a webpage in a new t
 is clicked:
 
 ```js
-notification.onclick = function(event) {
+notification.onclick = (event) => {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
   window.open('http://www.mozilla.org', '_blank');
 }

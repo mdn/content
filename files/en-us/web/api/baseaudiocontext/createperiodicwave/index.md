@@ -14,6 +14,7 @@ tags:
   - createPeriodicWave
 browser-compat: api.BaseAudioContext.createPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createPeriodicWave()` method of the {{ domxref("BaseAudioContext") }} Interface
@@ -22,7 +23,7 @@ that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 createPeriodicWave(real, imag)
 createPeriodicWave(real, imag, constraints)
 ```
@@ -59,17 +60,17 @@ The following example illustrates simple usage of `createPeriodicWave()`, to
 create a {{domxref("PeriodicWave")}} object containing a simple sine wave.
 
 ```js
-var real = new Float32Array(2);
-var imag = new Float32Array(2);
-var ac = new AudioContext();
-var osc = ac.createOscillator();
+const real = new Float32Array(2);
+const imag = new Float32Array(2);
+const ac = new AudioContext();
+const osc = ac.createOscillator();
 
 real[0] = 0;
 imag[0] = 0;
 real[1] = 1;
 imag[1] = 0;
 
-var wave = ac.createPeriodicWave(real, imag, {disableNormalization: true});
+const wave = ac.createPeriodicWave(real, imag, { disableNormalization: true });
 
 osc.setPeriodicWave(wave);
 
@@ -124,8 +125,8 @@ The coefficients of the Fourier transform should be given in _ascending_ order
 <mrow><mn>3</mn>
 <mi>i</mi>
 </mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} ,
-\left(f+gi\right)e^{3i}   </annotation>
-</semantics></math>etc.) and can be positive or negative.  A simple way of manually obtaining such
+\left(f+gi\right)e^{3i} </annotation>
+</semantics></math>etc.) and can be positive or negative. A simple way of manually obtaining such
 coefficients (though not the best) is to use a graphing calculator.
 
 ## Specifications

@@ -10,7 +10,8 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.defineSetter
 ---
-{{JSRef}}
+
+{{JSRef}}{{Deprecated_Header}}
 
 > **Warning:** This feature is deprecated in favor of defining setters using the
 > [object initializer syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
@@ -24,7 +25,7 @@ a function to be called when an attempt is made to set that property.
 
 ## Syntax
 
-```js
+```js-nolint
 __defineSetter__(prop, fun)
 ```
 
@@ -33,17 +34,10 @@ __defineSetter__(prop, fun)
 - `prop`
   - : A string containing the name of the property to be bound to the given function.
 - `fun`
-
   - : A function to be called when there is an attempt to set the specified property. This
-    function takes the form
-
-    ```js
-        function(val) { . . . }
-        ```
-
+    function receives the following parameter:
     - `val`
-      - : An alias for the variable that holds the value attempted to be assigned to
-        `prop`.
+      - : An alias for the variable that holds the value attempted to be assigned to `prop`.
 
 ### Return value
 
@@ -60,7 +54,9 @@ The `__defineSetter__` method allows a {{jsxref("Functions/set", "setter",
 
 ```js
 const o = {};
-o.__defineSetter__('value', function(val) { this.anotherValue = val; });
+o.__defineSetter__('value', function (val) {
+  this.anotherValue = val;
+});
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
@@ -82,7 +78,7 @@ const o = {};
 Object.defineProperty(o, 'value', {
   set(val) {
     this.anotherValue = val;
-  }
+  },
 });
 o.value = 5;
 console.log(o.value); // undefined
@@ -100,11 +96,11 @@ console.log(o.anotherValue); // 5
 ## See also
 
 - [Polyfill of `Object.prototype.__defineSetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- {{jsxref("Object.prototype.__defineGetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - {{jsxref("Functions/set", "set")}} operator
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
+- [`Object.prototype.__lookupGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+- [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
 - {{bug(647423)}}

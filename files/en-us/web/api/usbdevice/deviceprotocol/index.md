@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.deviceProtocol
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`deviceProtocol`** read only property of the

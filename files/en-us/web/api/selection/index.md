@@ -9,13 +9,14 @@ tags:
   - Selection
 browser-compat: api.Selection
 ---
-{{ ApiRef("Selection API") }}
+
+{{ApiRef("Selection API")}}
 
 A **`Selection`** object represents the range of text selected by the user or the current position of the caret. To obtain a `Selection` object for examination or manipulation, call {{DOMxRef("window.getSelection()")}}.
 
 A user may make a selection from left to right (in document order) or right to left (reverse of document order). The **_anchor_** is where the user began the selection and the **_focus_** is where the user ends the selection. If you make a selection with a desktop mouse, the anchor is placed where you pressed the mouse button, and the focus is placed where you released the mouse button.
 
-> **Note:** _Anchor_ and _focus_ should not be confused with the _start_ and _end_ positions of a selection. The anchor can be placed before the focus or vice-versa, depending on the direction you made your selection.
+> **Note:** _Anchor_ and _focus_ should not be confused with the _start_ and _end_ positions of a selection. The anchor can be placed before the focus or vice versa, depending on the direction you made your selection.
 
 ## Properties
 
@@ -52,7 +53,7 @@ A user may make a selection from left to right (in document order) or right to l
   - : Moves the focus of the selection to a specified point.
 - {{DOMxRef("Selection.getRangeAt()")}}
   - : Returns a {{DOMxRef("Range")}} object representing one of the ranges currently selected.
-- {{DOMxRef("Selection.modify()")}} {{Non-standard_Inline}}
+- {{DOMxRef("Selection.modify()")}}
   - : Changes the current selection.
 - {{DOMxRef("Selection.removeRange()")}}
   - : Removes a range from the selection.
@@ -72,7 +73,7 @@ A user may make a selection from left to right (in document order) or right to l
 Calling the {{DOMxRef("Selection.toString()")}} method returns the text contained within the selection, e.g.:
 
 ```js
-var selObj = window.getSelection();
+const selObj = window.getSelection();
 window.alert(selObj);
 ```
 
@@ -83,8 +84,8 @@ Note that using a selection object as the argument to `window.alert` will call t
 A selection object represents the {{DOMxRef("Range")}}s that the user has selected. Typically, it holds only one range, accessed as follows:
 
 ```js
-var selObj = window.getSelection();
-var range  = selObj.getRangeAt(0);
+const selObj = window.getSelection();
+const range  = selObj.getRangeAt(0);
 ```
 
 - `selObj` is a Selection object
@@ -161,6 +162,6 @@ Other key terms used in this section.
 ## See also
 
 - {{DOMxRef("Window.getSelection")}}, {{DOMxRef("Document.getSelection")}}, {{DOMxRef("Range")}}
-- Selection-related events: {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Document/selectstart_event", "selectstart")}}
+- Selection-related events: {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Node/selectstart_event", "selectstart")}}
 - HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}})
 - {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus")}}, and {{DOMxRef("HTMLElement.blur")}}

@@ -9,6 +9,7 @@ tags:
   - Selector
 browser-compat: css.selectors.placeholder-shown
 ---
+
 {{CSSRef}}
 
 The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying [placeholder text](/en-US/docs/Web/HTML/Element/input#placeholder).
@@ -30,7 +31,7 @@ This example applies special font and border styles when the placeholder is show
 #### HTML
 
 ```html
-<input placeholder="Type something here!">
+<input placeholder="Type something here!" />
 ```
 
 #### CSS
@@ -59,9 +60,8 @@ When form fields are too small, placeholder text can get cropped in an undesirab
 #### HTML
 
 ```html
-<input id="input1" placeholder="Name, Rank, and Serial Number">
-<br><br>
-<input id="input2" placeholder="Name, Rank, and Serial Number">
+<input id="input1" placeholder="Name, Rank, and Serial Number" /> <br /><br />
+<input id="input2" placeholder="Name, Rank, and Serial Number" />
 ```
 
 #### CSS
@@ -86,17 +86,23 @@ The following example highlights the Branch and ID code fields with a custom sty
 <form id="test">
   <p>
     <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name"/>
+    <input id="name" placeholder="Student Name" />
   </p>
   <p>
     <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch"/>
+    <input id="branch" placeholder="Student Branch" />
   </p>
   <p>
     <label for="sid">Enter Student ID:</label>
-    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
+    <input
+      type="number"
+      pattern="[0-9]{8}"
+      title="8 digit ID"
+      id="sid"
+      class="studentid"
+      placeholder="8 digit id" />
   </p>
-  <input type="submit"/>
+  <input type="submit" />
 </form>
 ```
 
@@ -104,7 +110,7 @@ The following example highlights the Branch and ID code fields with a custom sty
 
 ```css
 input {
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
   color: black;
 }
 

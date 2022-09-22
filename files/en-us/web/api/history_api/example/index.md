@@ -3,6 +3,7 @@ title: Ajax navigation example
 slug: Web/API/History_API/Example
 page-type: guide
 ---
+
 This is an example of an AJAX website composed only of three pages (_first_page.php_, _second_page.php_ and _third_page.php_). To see how it works, please create the following files (or git clone [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):
 
 > **Note:** For fully integrating the {{HTMLElement("form")}} elements within this _mechanism_, please take a look at the paragraph [Submitting forms and uploading files](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
@@ -19,8 +20,8 @@ This is an example of an AJAX website composed only of three pages (_first_page.
         ob_start();
     } else {
 ?>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 <?php
         include "include/header.php";
@@ -67,8 +68,8 @@ This is an example of an AJAX website composed only of three pages (_first_page.
         ob_start();
     } else {
 ?>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 <?php
         include "include/header.php";
@@ -114,8 +115,8 @@ This is an example of an AJAX website composed only of three pages (_first_page.
         echo json_encode(array("page" => $page_title, "content" => $page_content));
     } else {
 ?>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
 <?php
         include "include/header.php";
@@ -146,22 +147,22 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 
 ```css
 #ajax-loader {
-    position: fixed;
-    display: table;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #ajax-loader > div {
-    display: table-cell;
-    width: 100%;
-    height: 100%;
-    vertical-align: middle;
-    text-align: center;
-    background-color: #000000;
-    opacity: 0.65;
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #000000;
+  opacity: 0.65;
 }
 ```
 
@@ -184,9 +185,9 @@ This is an example of an AJAX website composed only of three pages (_first_page.
 
 **include/header.php**:
 
-```php
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript" src="js/ajax_nav.js"></script>
+```html
+<meta charset="UTF-8" />
+<script src="js/ajax_nav.js"></script>
 <link rel="stylesheet" href="css/style.css" />
 ```
 
@@ -207,8 +208,8 @@ const ajaxRequest = new (function () {
 
     /* not customizable constants */
     const searchRegex = /\?.*$/;
-    const hostRegex = /^[^\?]*\?*&*/;
-    const viewRegex = new RegExp("&" + viewKey + "\\=[^&]*|&*$", "i");
+    const hostRegex = /^[^?]*\?*&*/;
+    const viewRegex = new RegExp(`&${viewKey}\\=[^&]*|&*$`, "i");
     const endQstMarkRegex = /\?$/;
     const loadingBox = document.createElement("div");
     const cover = document.createElement("div");
@@ -314,7 +315,7 @@ const ajaxRequest = new (function () {
                 }
                 break;
             default:
-                msg = status + ": " + (HTTP_STATUS[status] || "Unknown");
+                msg = `${status}: ${HTTP_STATUS[status] || "Unknown"}`;
                 switch (Math.floor(status / 100)) {
                     /*
                     case 1:
@@ -332,11 +333,11 @@ const ajaxRequest = new (function () {
                     */
                     case 4:
                         /* Client Error 4xx */
-                        alert("Client Error #" + msg);
+                        alert(`Client Error #${msg}`);
                         break;
                     case 5:
                         /* Server Error 5xx */
-                        alert("Server Error #" + msg);
+                        alert(`Server Error #${msg}`);
                         break;
                     default:
                         /* Unknown status */
@@ -350,11 +351,11 @@ const ajaxRequest = new (function () {
         return (
             url.replace(searchRegex, "") +
             (
-                "?" +
+                `?${
                 url
                     .replace(hostRegex, "&")
-                    .replace(viewRegex, viewMode ? "&" + viewKey + "=" + viewMode : "")
-                    .slice(1)
+                    .replace(viewRegex, viewMode ? `&${viewKey}=${viewMode}` : "")
+                    .slice(1)}`
             ).replace(endQstMarkRegex, "")
         );
     }
@@ -407,7 +408,7 @@ const ajaxRequest = new (function () {
     cover.appendChild(loadingImg);
     loadingBox.appendChild(cover);
 
-    onpopstate = function (event) {
+    onpopstate = (event) => {
         updateURL = false;
         pageInfo.title = event.state.title;
         pageInfo.url = event.state.url;

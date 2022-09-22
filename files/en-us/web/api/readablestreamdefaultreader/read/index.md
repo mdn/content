@@ -11,13 +11,14 @@ tags:
   - read
 browser-compat: api.ReadableStreamDefaultReader.read
 ---
+
 {{APIRef("Streams")}}
 
 The **`read()`** method of the {{domxref("ReadableStreamDefaultReader")}} interface returns a {{jsxref("Promise")}} providing access to the next chunk in the stream's internal queue.
 
 ## Syntax
 
-```js
+```js-nolint
 read()
 ```
 
@@ -71,7 +72,7 @@ function fetchStream() {
     charsReceived += value.length;
     const chunk = value;
     let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
     result += chunk;

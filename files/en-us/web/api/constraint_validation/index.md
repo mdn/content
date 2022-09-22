@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.ValidityState
 ---
+
 {{apiref()}}
 
 The Constraint Validation API enables checking values that users have entered into form controls, before submitting the values to the server.
@@ -67,7 +68,7 @@ Take the following form:
 ```html
 <form>
   <label for="name">Enter username (upper and lowercase letters): </label>
-  <input type="text" name="name" id="name" required pattern="[A-Za-z]+">
+  <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Submit</button>
 </form>
 ```
@@ -85,7 +86,7 @@ nameInput.addEventListener('input', () => {
 });
 
 nameInput.addEventListener('invalid', () => {
-  if(nameInput.value === '') {
+  if (nameInput.value === '') {
     nameInput.setCustomValidity('Enter your username!');
   } else {
     nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
@@ -100,7 +101,7 @@ The example renders like so:
 In brief:
 
 - We check the valid state of the input element every time its value is changed by running the `checkValidity()` method via the `input` event handler.
-- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if()` block, and set a custom validity error message.
+- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if ()` block, and set a custom validity error message.
 - As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
 - If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it currently contains a valid value on submission.
 

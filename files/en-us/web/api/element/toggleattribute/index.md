@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Element.toggleAttribute
 ---
+
 {{APIRef("DOM")}}
 
 The **`toggleAttribute()`** method of the
@@ -17,7 +18,7 @@ present and adding it if it is not present) on the given element.
 
 ## Syntax
 
-```js
+```js-nolint
 toggleAttribute(name)
 toggleAttribute(name, force)
 ```
@@ -53,17 +54,16 @@ In the following example, `toggleAttribute()` is used to toggle the
 ### HTML
 
 ```html
-<input value="text">
-<button>toggleAttribute("disabled")</button>
+<input value="text" /> <button>toggleAttribute("disabled")</button>
 ```
 
 ### JavaScript
 
 ```js
-var button = document.querySelector("button");
-var input = document.querySelector("input");
+const button = document.querySelector("button");
+const input = document.querySelector("input");
 
-button.addEventListener("click", function(){
+button.addEventListener("click", () => {
   input.toggleAttribute("disabled");
 });
 ```
@@ -73,27 +73,6 @@ button.addEventListener("click", function(){
 {{ EmbedLiveSample('Examples', '300', '50') }}
 
 {{DOMAttributeMethods}}
-
-## Polyfill
-
-```js
-if (!Element.prototype.toggleAttribute) {
-  Element.prototype.toggleAttribute = function(name, force) {
-    if(force !== void 0) force = !!force
-
-    if (this.hasAttribute(name)) {
-      if (force) return true;
-
-      this.removeAttribute(name);
-      return false;
-    }
-    if (force === false) return false;
-
-    this.setAttribute(name, "");
-    return true;
-  };
-}
-```
 
 ## Specifications
 

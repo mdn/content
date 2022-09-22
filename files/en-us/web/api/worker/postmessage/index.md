@@ -12,6 +12,7 @@ tags:
   - postMessage
 browser-compat: api.Worker.postMessage
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`postMessage()`** method of the {{domxref("Worker")}} interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
@@ -22,7 +23,7 @@ The `Worker` can send back information to the thread that spawned it using the {
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(message)
 postMessage(message, transfer)
 ```
@@ -52,18 +53,18 @@ The following code snippet shows the creation of a {{domxref("Worker")}} object 
 ```js
 const myWorker = new Worker('worker.js');
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+first.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
-second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+second.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 ```
 
-For a full example, see our [simple worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-web-worker) ([run example](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
+For a full example, see our [simple worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run example](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 > **Note:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 

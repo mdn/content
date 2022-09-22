@@ -10,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioDestinationNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `AudioDestinationNode` interface represents the end destination of an audio graph in a given context — usually the speakers of your device. It can also be the node that will "record" the audio data when used with an `OfflineAudioContext`.
@@ -61,8 +62,8 @@ _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_
 There is no complex set up for using an `AudioDestinationNode` — by default, this represents the output of the user's system (e.g. their speakers), so you can get it hooked up inside an audio graph using only a few lines of code:
 
 ```js
-var audioCtx = new AudioContext();
-var source = audioCtx.createMediaElementSource(myMediaElement);
+const audioCtx = new AudioContext();
+const source = audioCtx.createMediaElementSource(myMediaElement);
 source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```

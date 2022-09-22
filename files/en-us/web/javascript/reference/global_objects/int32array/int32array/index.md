@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Int32Array.Int32Array
 ---
+
 {{JSRef}}
 
 The **`Int32Array()`** typed array constructor creates an array
@@ -20,15 +21,18 @@ notation).
 
 ## Syntax
 
-```js
-new Int32Array(); // new in ES2017
-new Int32Array(length);
-new Int32Array(typedArray);
-new Int32Array(object);
-new Int32Array(buffer);
-new Int32Array(buffer, byteOffset);
-new Int32Array(buffer, byteOffset, length);
+```js-nolint
+new Int32Array()
+new Int32Array(length)
+new Int32Array(typedArray)
+new Int32Array(object)
+
+new Int32Array(buffer)
+new Int32Array(buffer, byteOffset)
+new Int32Array(buffer, byteOffset, length)
 ```
+
+> **Note:** `Int32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -96,23 +100,6 @@ console.log(int32FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Int32Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Int32Array` constructor as a function without `new`, will throw a
-{{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Int32Array([1, 2, 3]);
-// TypeError: calling a builtin Int32Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Int32Array([1, 2, 3]);
-```
 
 ## See also
 

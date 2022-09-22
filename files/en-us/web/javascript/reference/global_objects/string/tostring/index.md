@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method of a string object returns a string representing the specified string.
@@ -17,7 +18,7 @@ The **`toString()`** method of a string object returns a string representing the
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

@@ -4,14 +4,14 @@ slug: Web/API/TextEncoder/encodeInto
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - TextEncoder
   - encodeInto
 browser-compat: api.TextEncoder.encodeInto
 ---
-{{APIRef("Encoding API")}}{{SeeCompatTable}}
+
+{{APIRef("Encoding API")}}
 
 The **`TextEncoder.encodeInto()`** method takes a
 string to encode and a destination {{jsxref("Uint8Array")}} to put
@@ -22,7 +22,7 @@ heap.
 
 ## Syntax
 
-```js
+```js-nolint
 encodeInto(string, uint8Array)
 ```
 
@@ -61,7 +61,7 @@ function encodeIntoAtPosition(string, u8array, position) {
 
 const u8array = new Uint8Array(8);
 encodeIntoAtPosition("hello", u8array, 2);
-console.log( "" + u8array.join() ); // 0,0,104,101,108,108,111,0
+console.log(u8array.join()); // 0,0,104,101,108,108,111,0
 ```
 
 ## Buffer sizing
@@ -146,9 +146,9 @@ const textEncoder = new TextEncoder();
 const utf8 = new Uint8Array(string.length);
 
 let encodedResults = textEncoder.encodeInto(string, utf8);
-resultPara.textContent += 'Bytes read: ' + encodedResults.read +
-                          ' | Bytes written: ' + encodedResults.written +
-                          ' | Encoded result: ' + utf8;
+resultPara.textContent += `Bytes read: ${encodedResults.read}` +
+    ` | Bytes written: ${encodedResults.written}` +
+    ` | Encoded result: ${utf8}`;
 ```
 
 {{EmbedLiveSample('Examples')}}

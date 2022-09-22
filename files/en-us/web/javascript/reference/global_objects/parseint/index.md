@@ -8,6 +8,7 @@ tags:
   - parseInt
 browser-compat: javascript.builtins.parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`parseInt()`** function parses a string argument and
@@ -18,7 +19,7 @@ systems).
 
 ## Syntax
 
-```js
+```js-nolint
 parseInt(string)
 parseInt(string, radix)
 ```
@@ -68,35 +69,22 @@ If the first character cannot be converted to a number with the radix in use, `p
 
 For arithmetic purposes, the `NaN` value is not a number in any radix. You can call the [`Number.isNaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN) function to determine if the result of `parseInt` is `NaN`. If `NaN` is passed on to arithmetic operations, the operation result will also be `NaN`.
 
-Because large numbers use the `e` character in their string representation (e.g. `6.022e23` for 6.022 × 10^23), using `parseInt` to truncate numbers will produce unexpected results when used on very large or very small numbers. `parseInt` should _not_ be used as a substitute for {{jsxref("Math.floor()")}}.
+Because large numbers use the `e` character in their string representation (e.g. `6.022e23` for 6.022 × 10<sup>23</sup>), using `parseInt` to truncate numbers will produce unexpected results when used on very large or very small numbers. `parseInt` should _not_ be used as a substitute for {{jsxref("Math.floor()")}}.
 
 To convert a number to its string literal in a particular radix, use [`thatNumber.toString(radix)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 
 > **Warning:** `parseInt` converts a
 > {{jsxref("BigInt")}} to a {{jsxref("Number")}} and loses precision in the process.
-> This is because trailing non-numeric values, including "`n`", are
+> This is because trailing non-numeric characters, including the `n` suffix, are
 > discarded.
 
 ### Octal interpretations with no radix
 
-Please note that following information doesn't apply to recent implementations as of 2021.
-
-Although discouraged by ECMAScript 3, many ECMAScript 3
-implementations had interpreted a numeric string beginning with a leading `0` as
-octal. The following might have had an octal result, or it might have had a decimal result.
+Contrary to number literals (and some legacy implementations), `parseInt()` does _not_ treat strings beginning with a `0` character as octal values.
 
 ```js
 parseInt('0e0')  // 0
-parseInt('08')   // 0, because '8' is not an octal digit.
-```
-
-The ECMAScript 5 specification of the function `parseInt` no longer allows
-implementations to treat Strings beginning with a `0` character as octal
-values. Many implementations have adopted this behavior as of 2021.
-
-```js
-parseInt('0e0')  // 0
-parseInt('08')   // 8
+parseInt('011')  // 11
 ```
 
 ### A stricter parse function
@@ -107,11 +95,7 @@ Regular expressions can help:
 
 ```js
 function filterInt(value) {
-  if (/^[-+]?(\d+|Infinity)$/.test(value)) {
-    return Number(value)
-  } else {
-    return NaN
-  }
+  return /^[-+]?(\d+|Infinity)$/.test(value) ? Number(value) : NaN;
 }
 
 console.log(filterInt('421'))                // 421
@@ -207,21 +191,6 @@ parseInt('123_456')
 // 123
 ```
 
-The radix is coerced to a `Number`:
-
-```js
-const obj = {
-  valueOf() {return 8}
-};
-parseInt('11', obj); // 9
-
-obj.valueOf = function() {return 1};
-parseInt('11', obj); // NaN
-
-obj.valueOf = function() {return Infinity};
-parseInt('11', obj); // 11
-```
-
 ### Using parseInt() on non-strings
 
 `parseInt()` can have interesting results when working on non-strings combined with a high radix, for example, `36` (which makes all alphanumeric characters valid numerics).
@@ -245,5 +214,5 @@ parseInt(undefined, 36) // 86464843759093: The string "undefined" is 86464843759
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-- {{jsxref("Number.toString()")}}
-- {{jsxref("Object.valueOf")}}
+- {{jsxref("Number.prototype.toString()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

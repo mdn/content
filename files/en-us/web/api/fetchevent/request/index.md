@@ -4,7 +4,6 @@ slug: Web/API/FetchEvent/request
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - FetchEvent
   - Offline
   - Property
@@ -14,6 +13,7 @@ tags:
   - request
 browser-compat: api.FetchEvent.request
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`request`** read-only property of the
@@ -21,7 +21,7 @@ The **`request`** read-only property of the
 the event handler.
 
 This property is non-nullable (since version 46, in the case of Firefox.) If a request
-is not provided by some other means, the constructor `init` object must
+is not provided by some other means, the constructor `options` object must
 contain a request (see {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}}.)
 
 ## Value
@@ -42,27 +42,29 @@ response (e.g., 404) will not trigger an exception. It will return a normal resp
 object that has the appropriate error code set.
 
 ```js
-self.addEventListener('fetch', function(event) {
-  console.log('Handling fetch event for', event.request.url);
+self.addEventListener("fetch", (event) => {
+  console.log("Handling fetch event for", event.request.url);
 
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then((response) => {
       if (response) {
-        console.log('Found response in cache:', response);
+        console.log("Found response in cache:", response);
 
         return response;
       }
-      console.log('No response found in cache. About to fetch from network…');
+      console.log("No response found in cache. About to fetch from network…");
 
-      return fetch(event.request).then(function(response) {
-        console.log('Response from network is:', response);
+      return fetch(event.request)
+        .then((response) => {
+          console.log("Response from network is:", response);
 
-        return response;
-      }).catch(function(error) {
-        console.error('Fetching failed:', error);
+          return response;
+        })
+        .catch((error) => {
+          console.error("Fetching failed:", error);
 
-        throw error;
-      });
+          throw error;
+        });
     })
   );
 });
@@ -79,7 +81,7 @@ self.addEventListener('fetch', function(event) {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

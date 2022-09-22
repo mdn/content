@@ -8,60 +8,81 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mstyle
 ---
+
 {{MathMLRef}}
 
-The MathML `<mstyle>` element is used change the style of its children. It accepts all attributes of all MathML presentation elements with some exceptions and additional attributes listed below.
+The MathML `<mstyle>` element is used to change the style of its children.
+
+> **Note:** Historically, this element accepted almost all the MathML attributes and it was used to override the default attribute values of its descendants. It was later restricted to only a few relevant styling attributes that were used in existing web pages. Nowadays, these styling attributes are [common to all MathML elements](/en-US/docs/Web/MathML/Global_attributes) and so `<mstyle>` is really just equivalent to an [`<mrow>`](/en-US/docs/Web/MathML/Element/mrow) element. However, `<mstyle>` may still be relevant for compatibility with MathML implementations outside browsers.
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following deprecated attributes:
 
-- `infixlinebreakstyle`
-  - : Specifies the default `linebreakstyle` to use for infix operators. The values `before`, `after` and `duplicate` are allowed.
-- `scriptminsize`
-  - : Specifies a minimum font size allowed due to changes in `scriptlevel`. The default value is 8pt.
-- `scriptsizemultiplier`
-  - : Specifies the multiplier to be used to adjust font size due to changes in `scriptlevel`. The default value is 0.71.
-
-The `<mstyle>` element accepts [all attributes](/en-US/docs/Web/MathML/Attribute) of all presentation elements with the following exceptions:
-
-- `height`, `depth` or `width` do not apply to {{ MathMLElement("mpadded") }} or {{ MathMLElement("mtable") }}.
-- `rowalign`, `columnalign`, or `groupalign` do not apply to {{ MathMLElement("mtr") }}, {{ MathMLElement("mtd") }} or {{ MathMLElement("maligngroup") }}.
-- `lspace` or `voffset` do not apply to {{ MathMLElement("mpadded") }}.
-- `align` does not apply to {{ MathMLElement("mtable") }} or {{ MathMLElement("mstack") }}.
-- `index` cannot be set on `<mstyle>`.
-- `actiontype` on {{ MathMLElement("maction") }} cannot be set on `<mstyle>`.
+- `background` {{deprecated_inline}}
+  - : Use <a href="/en-US/docs/Web/CSS/background-color"><code>background-color</code></a> instead.
+- `color` {{deprecated_inline}}
+  - : Use <a href="/en-US/docs/Web/CSS/color"><code>color</code></a> instead.
+- `fontsize` {{deprecated_inline}}
+  - : Use <a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a> instead.
+- `fontstyle` {{deprecated_inline}}
+  - : Use <a href="/en-US/docs/Web/CSS/font-style"><code>font-style</code></a> instead.
+- `fontweight` {{deprecated_inline}}
+  - : Use <a href="/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a> instead.
+- `scriptminsize` {{deprecated_inline}}
+  - : Specifies a minimum font size allowed due to changes in `scriptlevel`. The default value is `8pt`.
+- `scriptsizemultiplier` {{deprecated_inline}}
+  - : Specifies the multiplier to be used to adjust font size due to changes in `scriptlevel`. The default value is `0.71`.
 
 ## Examples
 
-Using `displaystyle` and `mathcolor` to effect style changes in the layout of the whole sum.
+The following example uses [global attributes](/en-US/docs/Web/MathML/Global_attributes) `displaystyle` and `mathcolor` to respectively override the [`math-style`](/en-US/docs/Web/CSS/math-style) and [`color`](/en-US/docs/Web/CSS/color) of the `<munder>` and `<munderover>` children:
 
 ```html
 <math>
-
   <mstyle displaystyle="true" mathcolor="teal">
-    <mrow>
-
-      <munderover>
-        <mo stretchy="true" form="prefix">&sum;</mo>
-        <mrow>
-          <mi>i</mi>
-          <mo form="infix">=</mo>
-          <mn>1</mn>
-        </mrow>
-        <mi>n</mi>
-      </munderover>
-
-      <mstyle displaystyle="true">
-        <mfrac>
-          <mn>1</mn>
-          <mi>n</mi>
-        </mfrac>
-      </mstyle>
-
-    </mrow>
+    <munder>
+      <mo>∑</mo>
+      <mi>I</mi>
+    </munder>
+    <munderover>
+      <mo>∏</mo>
+      <mrow>
+        <mi>i</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mrow>
+      <mi>N</mi>
+    </munderover>
   </mstyle>
+</math>
+```
 
+The following example shows a formula with [`font-size`](/en-US/docs/Web/CSS/font-size) set to `128pt`. It contains numbers that are placed in nested superscripts as well as an `<mstyle>` element with legacy attributes `scriptsizemultiplier` and `scriptminsize`. The `font-size` is multiplied by `0.5` when entering each superscript as long as that does not make it smaller than `16pt`.
+
+```html
+<math style="font-size: 128pt">
+  <mstyle scriptsizemultiplier="0.5" scriptminsize="16pt">
+    <msup>
+      <mn>2</mn>
+      <msup>
+        <mn>2</mn>
+        <msup>
+          <mn>2</mn>
+          <msup>
+            <mn>2</mn>
+            <msup>
+              <mn>2</mn>
+              <msup>
+                <mn>2</mn>
+                <mn>2</mn>
+              </msup>
+            </msup>
+          </msup>
+        </msup>
+      </msup>
+    </msup>
+  </mstyle>
 </math>
 ```
 
@@ -72,16 +93,3 @@ Using `displaystyle` and `mathcolor` to effect style changes in the layout of th
 ## Browser compatibility
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- Prior to Gecko 6.0 {{ geckoRelease("6.0") }} the implementation of `<mstyle>` was not complete and [has been corrected](https://bugzilla.mozilla.org/show_bug.cgi?id=569125). In particular, setting these attributes on `mstyle` had no effect to its children:
-
-  - The `bevelled` attribute on {{ MathMLElement("mfrac") }} elements.
-  - The `notation` attribute on {{ MathMLElement("menclose") }} elements.
-  - The `open`, `close` and `separators` attributes on {{ MathMLElement("mfenced") }} elements.
-  - The `accent` and `accentunder` attributes on {{ MathMLElement("mover") }}, {{ MathMLElement("munder") }} and {{ MathMLElement("munderover") }} elements.
-  - The `selection` attribute on {{ MathMLElement("maction") }} elements.
-  - The `mathvariant` attribute on {{ MathMLElement("mi") }} elements.
-
-- Starting with Gecko 29.0 {{geckoRelease("29.0")}}, the attributes accepted on the `<mstyle>` element have been restricted to those actually used in practice: `id, class, style, href, mathcolor, mathbackground, scriptlevel, displaystyle, scriptsizemultiplier, scriptminsize, dir, mathsize, mathvariant, fontfamily, fontweight, fontstyle, fontsize, color, background`.

@@ -8,6 +8,7 @@ tags:
   - XML
   - XSLT
 ---
+
 [« Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
 
 ## Print
@@ -63,47 +64,19 @@ tags:
 
 ### Articles
 
-- **Hands-on XSL**
-
-  - **Author**: Don R. Day
-  - **Location**: <https://www.ibm.com/developerworks/library/x-hands-on-xsl/>
-
-<!---->
-
-- **What is XSLT?**
-
-  - **Author**: G. Ken Holman
-  - **Location**: <https://www.xml.com/pub/a/2000/08/holman/index.html>
+- [Hands-on XSL](https://www.ibm.com/developerworks/library/x-hands-on-xsl/) by Don R. Day
+- [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/index.html) by G. Ken Holman
 
 ### Tutorials/Examples
 
-- **Jeni's XSLT Pages**
-
-  - **Index**: <https://www.jenitennison.com/xslt/>
-
-<!---->
-
-- **XMLPitstop.com**
-
-  - **StyleSheet Center**: <https://www.xmlpitstop.com/default_datatype_SSC.html>
-
-<!---->
-
-- **XSL Tutorial**
-
-  - **Index**: <https://nwalsh.com/docs/tutorials/xsl/>
+- [Jeni's XSLT Pages](https://www.jenitennison.com/xslt/)
+- [XMLPitstop.com](https://web.archive.org/web/20211209064736/https://www.xmlpitstop.com/default_datatype_SSC.html)
+- [XSL Tutorial](https://nwalsh.com/docs/tutorials/xsl/)
 
 ### Other
 
-- **Cover Pages**
-
-  - **Extensible Stylesheet Language (XSL)**: <http://xml.coverpages.org/xsl.html>
-
-<!---->
-
+- [Extensible Stylesheet Language (XSL)](http://xml.coverpages.org/xsl.html)
 - **XSL-List**
 
   - **Subscribe**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>
   - **Archives**: <https://www.biglist.com/lists/xsl-list/archives/>
-
-    - The XSL-List is a very active general mailing list, hosted by [Mulberry Technologies](https://mulberrytech.com/)

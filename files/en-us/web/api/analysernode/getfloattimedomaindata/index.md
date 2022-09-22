@@ -10,13 +10,14 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getFloatTimeDomainData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.
 
 ## Syntax
 
-```js
+```js-nolint
 getFloatTimeDomainData(array)
 ```
 
@@ -51,20 +52,20 @@ function draw() {
   drawVisual = requestAnimationFrame(draw);
   analyser.getFloatTimeDomainData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+  canvasCtx.fillStyle = "rgb(200, 200, 200)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
   canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
   canvasCtx.beginPath();
 
-  const sliceWidth = WIDTH * 1.0 / bufferLength;
+  const sliceWidth = (WIDTH * 1.0) / bufferLength;
   let x = 0;
 
-  for(let i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     const v = dataArray[i] * 200.0;
-    const y = HEIGHT/2 + v;
+    const y = HEIGHT / 2 + v;
 
-    if(i === 0) {
+    if (i === 0) {
       canvasCtx.moveTo(x, y);
     } else {
       canvasCtx.lineTo(x, y);
@@ -72,9 +73,9 @@ function draw() {
     x += sliceWidth;
   }
 
-  canvasCtx.lineTo(canvas.width, canvas.height/2);
+  canvasCtx.lineTo(canvas.width, canvas.height / 2);
   canvasCtx.stroke();
-};
+}
 
 draw();
 ```

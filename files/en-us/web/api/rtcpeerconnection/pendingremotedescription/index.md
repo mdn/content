@@ -39,9 +39,9 @@ This example looks at the `pendingRemoteDescription` to determine whether or
 not there's a description change being processed.
 
 ```js
-var pc = new RTCPeerConnection();
+const pc = new RTCPeerConnection();
 // ...
-var sd = pc.pendingRemoteDescription;
+const sd = pc.pendingRemoteDescription;
 if (sd) {
   // There's a description change underway!
 }

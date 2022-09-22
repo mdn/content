@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.textContent
 ---
+
 {{APIRef("DOM")}}
 
 The **`textContent`** property of the {{domxref ("Node")}}
@@ -17,10 +18,10 @@ interface represents the text content of the node and its descendants.
 
 ## Value
 
-A string, or {{jsxref("null")}}. Its value depends on the situation:
+A string, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). Its value depends on the situation:
 
 - If the node is a {{domxref("document")}} or a {{glossary("doctype")}},
-  `textContent` returns {{jsxref("null")}}.
+  `textContent` returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
   > **Note:** To get _all_ of the text and [CDATA data](/en-US/docs/Web/API/CDATASection) for the whole
   > document, use `document.documentElement.textContent`.

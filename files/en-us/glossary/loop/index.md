@@ -3,10 +3,10 @@ title: Loop
 slug: Glossary/loop
 tags:
   - CodingScripting
-  - Glossary
   - control flow
   - programming
 ---
+
 A loop is a sequence of instructions that is continually repeated until a certain condition is met in {{Glossary("computer programming")}}. An example would be the process of getting an item of data and changing it, and then making sure some {{Glossary("conditional", "condition")}} is checked such as, if a counter has reached a prescribed number.
 
 ## Examples
@@ -16,7 +16,7 @@ A loop is a sequence of instructions that is continually repeated until a certai
 #### Syntax:
 
 ```
-for (statement 1; statement 2; statement 3){
+for (statement 1; statement 2; statement 3) {
   execute code block
 }
 ```
@@ -28,15 +28,15 @@ for (statement 1; statement 2; statement 3){
 #### Example:
 
 ```js
-for(var i = 0; i < 10; i++){
-    console.log(i)
+for (let i = 0; i < 10; i++) {
+  console.log(i);
 }
 //This loop will print numbers 0-9, will stop when condition is met (i = 10)
 ```
 
 For the above example, the syntax is as follows:
 
-- Statement 1 sets the variable for the loop (var i = 0).
+- Statement 1 sets the variable for the loop (let i = 0).
 - Statement 2 sets the loop condition (i < 10).
 - Statement 3 increases the value of i (i++) each time the code block is run.
 
@@ -45,7 +45,7 @@ For the above example, the syntax is as follows:
 #### Syntax:
 
 ```
-while (condition){
+while (condition) {
   execute code block
 }
 ```
@@ -55,10 +55,10 @@ while (condition){
 #### Example:
 
 ```js
-var i = 0;
-while(i < 5){
-    console.log(i)
-    i++
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
 }
 //This loop will print number 0-4, will stop when condition becomes false (i >=5)
 ```
@@ -69,7 +69,7 @@ For the above example, the syntax is as follows:
 
 ## See also
 
-- {{interwiki("wikipedia", "Control_flow#Loops","Control flow")}} on Wikipedia
+- [Control flow](https://en.wikipedia.org/wiki/Control_flow#Loops) on Wikipedia
 - [MDN Web Docs Glossary](/en-US/docs/Glossary)
 
   - {{Glossary("Loop")}}

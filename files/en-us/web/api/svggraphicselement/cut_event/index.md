@@ -11,32 +11,12 @@ tags:
   - SVG OM
 browser-compat: api.Element.cut_event
 ---
+
 {{APIRef}}
 
 The **`cut`** event is fired on an {{domxref("SVGGraphicsElement")}} when the user has initiated a "cut" action through the browser's user interface.
 
 If the user attempts a cut action on uneditable content, the `cut` event still fires but the event object contains no data.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ClipboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("SVGGraphicsElement/oncut", "oncut")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 The event's default action is to copy the current selection (if any) to the system clipboard and remove it from the document.
 
@@ -47,6 +27,22 @@ Note though that cancelling the default action will also prevent the document fr
 The handler cannot _read_ the clipboard data.
 
 It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `cut` event, but this will not affect the system clipboard or the document's contents.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('cut', (event) => { });
+
+oncut = (event) => { };
+```
+
+## Event type
+
+A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ClipboardEvent")}}
 
 ## Specifications
 
@@ -60,5 +56,5 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 
 - Related events: [`copy`](/en-US/docs/Web/API/SVGGraphicsElement/copy_event), [`paste`](/en-US/docs/Web/API/SVGGraphicsElement/paste_event)
 - This event on HTML {{domxref("Element")}} targets: [`cut`](/en-US/docs/Web/API/Element/cut_event)
-- This event on {{domxref("Document")}} targets: [`cut`](Web/API/Document/cut_event)
-- This event on {{domxref("Window")}} targets: [`cut`](Web/API/Window/cut_event)
+- This event on {{domxref("Document")}} targets: [`cut`](/en-US/docs/Web/API/Document/cut_event)
+- This event on {{domxref("Window")}} targets: [`cut`](/en-US/docs/Web/API/Window/cut_event)

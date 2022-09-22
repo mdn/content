@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.NetworkInformation.change_event
 ---
+
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
 The **`change`** event fires when connection information changes, and the {{domxref("HTMLElement/change_event", "change")}}
@@ -22,9 +23,9 @@ is received by the {{domxref("NetworkInformation")}} object.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('change', event => { });
+addEventListener('change', (event) => { });
 
-onchange = event => { };
+onchange = (event) => { };
 ```
 
 ## Event type

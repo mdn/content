@@ -13,6 +13,7 @@ tags:
   - onblur
 browser-compat: api.Window.blur_event
 ---
+
 {{APIRef}}
 
 The **`blur`** event fires when an element has lost focus.
@@ -26,14 +27,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('blur', event => { });
+addEventListener('blur', (event) => { });
 
-onblur = event => { };
+onblur = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 

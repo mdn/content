@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.values
 ---
+
 {{JSRef}}
 
 The **`Object.values()`** method
@@ -21,7 +22,7 @@ chain as well.)
 
 ## Syntax
 
-```js
+```js-nolint
 Object.values(obj)
 ```
 
@@ -58,9 +59,9 @@ const arrayLikeObj2 = { 100: 'a', 2: 'b', 7: 'c' };
 console.log(Object.values(arrayLikeObj2 )); // ['b', 'c', 'a']
 
 // getFoo is property which isn't enumerable
-const my_obj = Object.create({}, { getFoo: { value() { return this.foo; } } });
-my_obj.foo = 'bar';
-console.log(Object.values(my_obj)); // ['bar']
+const myObj = Object.create({}, { getFoo: { value() { return this.foo; } } });
+myObj.foo = 'bar';
+console.log(Object.values(myObj)); // ['bar']
 
 // non-object argument will be coerced to an object
 console.log(Object.values('foo')); // ['f', 'o', 'o']

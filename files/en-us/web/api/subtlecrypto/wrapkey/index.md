@@ -11,6 +11,7 @@ tags:
   - wrapKey
 browser-compat: api.SubtleCrypto.wrapKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`wrapKey()`** method of the {{domxref("SubtleCrypto")}}
@@ -34,7 +35,7 @@ of import + decrypt.
 
 ## Syntax
 
-```js
+```js-nolint
 wrapKey(format, key, wrappingKey, wrapAlgo)
 ```
 
@@ -109,7 +110,7 @@ AES-KW is specified in [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394)
 ### Raw wrap
 
 This example wraps an AES key. It uses "raw" as the export format and AES-KW, with a
-password-derived key, to encrypt it. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/raw.js).
+password-derived key, to encrypt it. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js).
 
 ```js
 let salt;
@@ -119,14 +120,14 @@ Get some key material to use as input to the deriveKey method.
 The key material is a password supplied by the user.
 */
 function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
+  const password = window.prompt('Enter your password');
   const enc = new TextEncoder();
   return window.crypto.subtle.importKey(
-    "raw",
+    'raw',
     enc.encode(password),
-    {name: "PBKDF2"},
+    { name: 'PBKDF2' },
     false,
-    ["deriveBits", "deriveKey"]
+    ['deriveBits', 'deriveKey'],
   );
 }
 
@@ -137,15 +138,15 @@ derive an AES-KW key using PBKDF2.
 function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
-      "name": "PBKDF2",
-      salt: salt,
-      "iterations": 100000,
-      "hash": "SHA-256"
+      name: 'PBKDF2',
+      salt,
+      iterations: 100000,
+      hash: 'SHA-256',
     },
     keyMaterial,
-    { "name": "AES-KW", "length": 256},
+    { name: 'AES-KW', length: 256 },
     true,
-    [ "wrapKey", "unwrapKey" ]
+    ['wrapKey', 'unwrapKey'],
   );
 }
 
@@ -158,40 +159,31 @@ async function wrapCryptoKey(keyToWrap) {
   salt = window.crypto.getRandomValues(new Uint8Array(16));
   const wrappingKey = await getKey(keyMaterial, salt);
 
-  return window.crypto.subtle.wrapKey(
-    "raw",
-    keyToWrap,
-    wrappingKey,
-    "AES-KW"
-  );
-
+  return window.crypto.subtle.wrapKey('raw', keyToWrap, wrappingKey, 'AES-KW');
 }
 
 /*
 Generate an encrypt/decrypt secret key,
 then wrap it.
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "AES-GCM",
-    length: 256,
-  },
-  true,
-  ["encrypt", "decrypt"]
-)
-.then((secretKey) => {
-  return wrapCryptoKey(secretKey);
-})
-.then((wrappedKey) => {
-  console.log(wrappedKey);
-});
+window.crypto.subtle
+  .generateKey(
+    {
+      name: 'AES-GCM',
+      length: 256,
+    },
+    true,
+    ['encrypt', 'decrypt'],
+  )
+  .then((secretKey) => wrapCryptoKey(secretKey))
+  .then((wrappedKey) => console.log(wrappedKey));
 ```
 
 ### PKCS #8 wrap
 
 This example wraps an RSA private signing key. It uses "pkcs8" as the export format and
 AES-GCM, with a password-derived key, to encrypt it.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/pkcs8.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/pkcs8.js)
 
 ```js
 let salt;
@@ -202,14 +194,14 @@ Get some key material to use as input to the deriveKey method.
 The key material is a password supplied by the user.
 */
 function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
+  const password = window.prompt('Enter your password');
   const enc = new TextEncoder();
   return window.crypto.subtle.importKey(
-    "raw",
+    'raw',
     enc.encode(password),
-    {name: "PBKDF2"},
+    { name: 'PBKDF2' },
     false,
-    ["deriveBits", "deriveKey"]
+    ['deriveBits', 'deriveKey'],
   );
 }
 
@@ -220,15 +212,15 @@ derive an AES-GCM key using PBKDF2.
 function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
-      "name": "PBKDF2",
-      salt: salt,
-      "iterations": 100000,
-      "hash": "SHA-256"
+      name: 'PBKDF2',
+      salt,
+      iterations: 100000,
+      hash: 'SHA-256',
     },
     keyMaterial,
-    { "name": "AES-GCM", "length": 256},
+    { name: 'AES-GCM', length: 256 },
     true,
-    [ "wrapKey", "unwrapKey" ]
+    ['wrapKey', 'unwrapKey'],
   );
 }
 
@@ -243,45 +235,39 @@ async function wrapCryptoKey(keyToWrap) {
   iv = window.crypto.getRandomValues(new Uint8Array(12));
 
   return window.crypto.subtle.wrapKey(
-    "pkcs8",
+    'pkcs8',
     keyToWrap,
     wrappingKey,
-    {
-      name: "AES-GCM",
-      iv: iv
-    }
-  );
-
+    { name: 'AES-GCM', iv });
 }
 
 /*
 Generate a sign/verify key pair,
 then wrap the private key.
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "RSA-PSS",
-    // Consider using a 4096-bit key for systems that require long-term security
-    modulusLength: 2048,
-    publicExponent: new Uint8Array([1, 0, 1]),
-    hash: "SHA-256",
-  },
-  true,
-  ["sign", "verify"]
-)
-.then((keyPair) => {
-  return wrapCryptoKey(keyPair.privateKey);
-})
-.then((wrappedKey) => {
-  console.log(wrappedKey);
-});
+window.crypto.subtle
+  .generateKey(
+    {
+      name: 'RSA-PSS',
+      // Consider using a 4096-bit key for systems that require long-term security
+      modulusLength: 2048,
+      publicExponent: new Uint8Array([1, 0, 1]),
+      hash: 'SHA-256',
+    },
+    true,
+    ['sign', 'verify'],
+  )
+  .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
+  .then((wrappedKey) => {
+    console.log(wrappedKey);
+  });
 ```
 
 ### SubjectPublicKeyInfo wrap
 
 This example wraps an RSA public encryption key. It uses "spki" as the export format
 and AES-CBC, with a password-derived key, to encrypt it.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/spki.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/spki.js)
 
 ```js
 let salt;
@@ -292,14 +278,14 @@ Get some key material to use as input to the deriveKey method.
 The key material is a password supplied by the user.
 */
 function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
+  const password = window.prompt('Enter your password');
   const enc = new TextEncoder();
   return window.crypto.subtle.importKey(
-    "raw",
+    'raw',
     enc.encode(password),
-    {name: "PBKDF2"},
+    { name: 'PBKDF2' },
     false,
-    ["deriveBits", "deriveKey"]
+    ['deriveBits', 'deriveKey'],
   );
 }
 
@@ -310,15 +296,15 @@ derive an AES-CBC key using PBKDF2.
 function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
-      "name": "PBKDF2",
-      salt: salt,
-      "iterations": 100000,
-      "hash": "SHA-256"
+      name: 'PBKDF2',
+      salt,
+      iterations: 100000,
+      hash: 'SHA-256',
     },
     keyMaterial,
-    { "name": "AES-CBC", "length": 256},
+    { name: 'AES-CBC', length: 256 },
     true,
-    [ "wrapKey", "unwrapKey" ]
+    ['wrapKey', 'unwrapKey'],
   );
 }
 
@@ -333,45 +319,37 @@ async function wrapCryptoKey(keyToWrap) {
   iv = window.crypto.getRandomValues(new Uint8Array(16));
 
   return window.crypto.subtle.wrapKey(
-    "spki",
+    'spki',
     keyToWrap,
     wrappingKey,
-    {
-      name: "AES-CBC",
-      iv: iv
-    }
-  );
-
+    { name: 'AES-CBC', iv });
 }
 
 /*
 Generate an encrypt/decrypt key pair,
 then wrap it.
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "RSA-OAEP",
-    // Consider using a 4096-bit key for systems that require long-term security
-    modulusLength: 2048,
-    publicExponent: new Uint8Array([1, 0, 1]),
-    hash: "SHA-256",
-  },
-  true,
-  ["encrypt", "decrypt"]
-)
-.then((keyPair) => {
-  return wrapCryptoKey(keyPair.publicKey);
-})
-.then((wrappedKey) => {
-  console.log(wrappedKey);
-});
+window.crypto.subtle
+  .generateKey(
+    {
+      name: 'RSA-OAEP',
+      // Consider using a 4096-bit key for systems that require long-term security
+      modulusLength: 2048,
+      publicExponent: new Uint8Array([1, 0, 1]),
+      hash: 'SHA-256',
+    },
+    true,
+    ['encrypt', 'decrypt'],
+  )
+  .then((keyPair) => wrapCryptoKey(keyPair.publicKey))
+  .then((wrappedKey) => console.log(wrappedKey));
 ```
 
 ### JSON Web Key import
 
 This code wraps an ECDSA private signing key. It uses "jwk" as the export format and
 AES-GCM, with a password-derived key, to encrypt it.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/jwk.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/jwk.js)
 
 ```js
 let salt;
@@ -382,14 +360,14 @@ Get some key material to use as input to the deriveKey method.
 The key material is a password supplied by the user.
 */
 function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
+  const password = window.prompt('Enter your password');
   const enc = new TextEncoder();
   return window.crypto.subtle.importKey(
-    "raw",
+    'raw',
     enc.encode(password),
-    {name: "PBKDF2"},
+    { name: 'PBKDF2' },
     false,
-    ["deriveBits", "deriveKey"]
+    ['deriveBits', 'deriveKey'],
   );
 }
 
@@ -400,15 +378,15 @@ derive an AES-GCM key using PBKDF2.
 function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
-      "name": "PBKDF2",
-      salt: salt,
-      "iterations": 100000,
-      "hash": "SHA-256"
+      name: 'PBKDF2',
+      salt,
+      iterations: 100000,
+      hash: 'SHA-256',
     },
     keyMaterial,
-    { "name": "AES-GCM", "length": 256},
+    { name: 'AES-GCM', length: 256 },
     true,
-    [ "wrapKey", "unwrapKey" ]
+    ['wrapKey', 'unwrapKey'],
   );
 }
 
@@ -423,34 +401,27 @@ async function wrapCryptoKey(keyToWrap) {
   iv = window.crypto.getRandomValues(new Uint8Array(12));
 
   return window.crypto.subtle.wrapKey(
-    "jwk",
+    'jwk',
     keyToWrap,
     wrappingKey,
-    {
-      name: "AES-GCM",
-      iv: iv
-    }
-  );
+    { name: 'AES-GCM', iv });
 }
 
 /*
 Generate a sign/verify key pair,
 then wrap the private key
 */
-window.crypto.subtle.generateKey(
-  {
-    name: "ECDSA",
-    namedCurve: "P-384"
-  },
-  true,
-  ["sign", "verify"]
-)
-.then((keyPair) => {
-  return wrapCryptoKey(keyPair.privateKey);
-})
-.then((wrappedKey) => {
-  console.log(wrappedKey);
-});
+window.crypto.subtle
+  .generateKey(
+    {
+      name: 'ECDSA',
+      namedCurve: 'P-384',
+    },
+    true,
+    ['sign', 'verify'],
+  )
+  .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
+  .then((wrappedKey) => console.log(wrappedKey));
 ```
 
 ## Specifications

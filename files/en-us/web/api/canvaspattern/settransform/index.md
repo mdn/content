@@ -6,11 +6,11 @@ tags:
   - API
   - Canvas
   - CanvasPattern
-  - Experimental
   - Method
   - Reference
 browser-compat: api.CanvasPattern.setTransform
 ---
+
 {{APIRef("Canvas API")}}
 
 The
@@ -20,7 +20,7 @@ pattern's transformation matrix and invokes it on the pattern.
 
 ## Syntax
 
-```js
+```js-nolint
 setTransform(matrix)
 ```
 
@@ -48,8 +48,7 @@ method, for example.
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
-<svg id="svg1"></svg>
+<canvas id="canvas"></canvas> <svg id="svg1"></svg>
 ```
 
 #### JavaScript
@@ -64,7 +63,7 @@ const matrix = svg1.createSVGMatrix();
 const img = new Image();
 img.src = 'canvas_createpattern.png';
 
-img.onload = function() {
+img.onload = () => {
   const pattern = ctx.createPattern(img, 'repeat');
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
   ctx.fillStyle = pattern;
@@ -94,12 +93,13 @@ Here's an editable demo of the code snippet above. Try changing the argument to 
 <textarea id="code" class="playable-code" style="height:120px">
 const img = new Image();
 img.src = 'canvas_createpattern.png';
-img.onload = function() {
+img.onload = () => {
   const pattern = ctx.createPattern(img, 'repeat');
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 400, 400);
-};</textarea>
+};
+</textarea>
 ```
 
 ```js hidden
@@ -118,12 +118,12 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener('click', () => {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener('click', () => {
   textarea.focus();
 })
 

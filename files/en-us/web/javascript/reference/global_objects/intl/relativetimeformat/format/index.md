@@ -12,6 +12,7 @@ tags:
   - RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.format
 ---
+
 {{JSRef}}
 
 The **`Intl.RelativeTimeFormat.prototype.format()`** method formats a `value` and `unit` according to the locale and formatting options of this {{jsxref("Intl.RelativeTimeFormat")}} object.
@@ -22,7 +23,7 @@ The **`Intl.RelativeTimeFormat.prototype.format()`** method formats a `value` an
 
 ## Syntax
 
-```js
+```js-nolint
 format(value, unit)
 ```
 
@@ -31,7 +32,7 @@ format(value, unit)
 - `value`
   - : Numeric value to use in the internationalized relative time message.
 - `unit`
-  - : Unit to use in the relative time internationalized message. Possible values are: "`year`", "`quarter`", "`month`", "`week`", "`day`", "`hour`", "`minute`", "`second`". Plural forms are also permitted.
+  - : Unit to use in the relative time internationalized message. Possible values are: `"year"`, `"quarter"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"`. Plural forms are also permitted.
 
 ## Description
 
@@ -47,9 +48,9 @@ The following example shows how to create a relative time formatter using the En
 // Create a relative time formatter in your locale
 // with default values explicitly passed in.
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // other values: "lookup"
-    numeric: "always", // other values: "auto"
-    style: "long", // other values: "short" or "narrow"
+  localeMatcher: "best fit", // other values: "lookup"
+  numeric: "always", // other values: "auto"
+  style: "long", // other values: "short" or "narrow"
 });
 
 // Format relative time using negative value (-1).

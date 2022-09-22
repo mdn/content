@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: api.InputEvent.data
 ---
+
 {{APIRef("UI Events")}}
 
 The **`data`** read-only property of the
@@ -35,7 +36,7 @@ property.
 ```html
 <p>Some text to copy and paste.</p>
 
-<input type="text">
+<input type="text" />
 
 <p class="result"></p>
 ```
@@ -45,7 +46,7 @@ const editable = document.querySelector('input');
 const result = document.querySelector('.result');
 
 editable.addEventListener('input', (e) => {
-  result.textContent = "Inputted text: " + e.data;
+  result.textContent = `Inputted text: ${e.data}`;
 });
 ```
 

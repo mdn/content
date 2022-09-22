@@ -11,6 +11,7 @@ tags:
   - Style
 browser-compat: api.HTMLElement.style
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`style`** read-only property returns the _inline_ style of an element in the form of a {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style).
@@ -43,8 +44,8 @@ The `style` property is not useful for completely learning about the styles appl
 The following code snippet demonstrates the difference between the values obtained using the element's `style` property and that obtained using the `getComputedStyle()` method:
 
 ```html
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
   <body style="font-weight:bold;">
     <div style="color:red" id="myElement">..</div>
   </body>
@@ -52,17 +53,17 @@ The following code snippet demonstrates the difference between the values obtain
 ```
 
 ```js
-var element = document.getElementById("myElement");
-var out = "";
-var elementStyle = element.style;
-var computedStyle = window.getComputedStyle(element, null);
+const element = document.getElementById("myElement");
+let out = "";
+const elementStyle = element.style;
+const computedStyle = window.getComputedStyle(element, null);
 
-for (prop in elementStyle) {
+for (const prop in elementStyle) {
   if (Object.hasOwn(elementStyle, prop)) {
-    out += "  " + prop + " = '" + elementStyle[prop] + "' > '" + computedStyle[prop] + "'\n";
+    out += `  ${prop} = '${elementStyle[prop]}' > '${computedStyle[prop]}'\n`;
   }
 }
-console.log(out)
+console.log(out);
 ```
 
 The output would be something like:

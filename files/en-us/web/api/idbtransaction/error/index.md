@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBTransaction.error
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`IDBTransaction.error`** property of the {{domxref("IDBTransaction")}} interface
@@ -35,7 +36,7 @@ was successfully committed.
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event
 handlers to report on the outcome of the transaction opening in the event of success or
-failure. Note the `transaction.onerror = function(event) { };` block, making
+failure. Note the `transaction.onerror = (event) => { };` block, making
 use of `transaction.error` to help in reporting what went wrong when the
 transaction was unsuccessful. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([View example live](https://mdn.github.io/to-do-notifications/)).
 
@@ -48,7 +49,7 @@ let db;
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -67,12 +68,12 @@ function addData() {
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
-  transaction.oncomplete = event => {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
-  transaction.onerror = event => {
-    note.innerHTML += '<li>Transaction not opened due to error: ' + transaction.error + '</li>';
+  transaction.onerror = (event) => {
+    note.innerHTML += `<li>Transaction not opened due to error: ${transaction.error}</li>`;
   };
 
   // create an object store on the transaction
@@ -81,7 +82,7 @@ function addData() {
   // add our newItem object to the object store
   const objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = event => {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
     note.innerHTML += '<li>Request successful.</li>';

@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/3/Updating_extensions
 tags:
   - Firefox 3
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 3.
@@ -150,7 +151,7 @@ Extensions that attempt to overlay onto the "appcontent" box try to float chrome
 _Add simple changes you had to make while updating your extension to work with Firefox 3 here._
 
 - `chrome://browser/base/utilityOverlay.js` is no longer supported for security reasons. If you were previously using this, you should switch to `chrome://browser/content/utilityOverlay.js`.
-- `nsIAboutModule` implementations are now required to support the `getURIFlags` method. See {{ Source("netwerk/protocol/about/public/nsIAboutModule.idl", "nsIAboutModule.idl") }} for documentation. This affects extensions that provide new `about:` URIs. ({{ Bug(337746) }})
+- `nsIAboutModule` implementations are now required to support the `getURIFlags` method. See [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) for documentation. This affects extensions that provide new `about:` URIs. ({{ Bug(337746) }})
 - The [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element is no longer part of "toolkit" ({{ Bug(339964) }}). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).
 - Changes to `nsISupports_proxies` and possibly to threading-related interfaces need to be documented.
 - If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in {{ Bug(319654) }}:

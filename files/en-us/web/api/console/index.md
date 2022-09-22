@@ -10,6 +10,7 @@ tags:
   - web console
 browser-compat: api.console
 ---
+
 {{APIRef("Console API")}}
 
 The **`console`** object provides access to the browser's
@@ -74,7 +75,7 @@ gives a few [Usage](#usage) examples.
 - {{domxref("console.timeLog()")}}
   - : Logs the value of the specified [timer](#timers) to the console.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Adds a marker to the browser's [Timeline](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) or [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html) tool.
+  - : Adds a marker to the browser performance tool's timeline ([Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) or [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)).
 - {{domxref("console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
 - {{domxref("console.warn()")}}
@@ -100,7 +101,7 @@ console.log(someObject);
 The output looks something like this:
 
 ```bash
-[09:27:13.475] ({str:"Some text", id:5})
+{str:"Some text", id:5}
 ```
 
 #### Outputting multiple objects
@@ -116,7 +117,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 The output will look like this:
 
 ```bash
-[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+My first car was a Dodge Charger. The object is: ({str:"Some text", id:5})
 ```
 
 #### Using string substitutions
@@ -144,12 +145,12 @@ for (let i=0; i<5; i++) {
 
 The output looks like this:
 
-```bash
-[13:14:13.481] Hello, Bob. You've called me 1 times.
-[13:14:13.483] Hello, Bob. You've called me 2 times.
-[13:14:13.485] Hello, Bob. You've called me 3 times.
-[13:14:13.487] Hello, Bob. You've called me 4 times.
-[13:14:13.488] Hello, Bob. You've called me 5 times.
+```
+Hello, Bob. You've called me 1 times.
+Hello, Bob. You've called me 2 times.
+Hello, Bob. You've called me 3 times.
+Hello, Bob. You've called me 4 times.
+Hello, Bob. You've called me 5 times.
 ```
 
 #### Styling console output
@@ -274,10 +275,10 @@ The output in the console looks something like this:
 
 - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
 - [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web console in Firefox handles console API calls
-- [Remote Debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html) — how to see console output when the debugging target is a mobile device
+- [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) — how to see console output when the debugging target is a mobile device
 
 ### Other implementations
 
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
-- [Microsoft Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
+- [Microsoft Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
 - [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

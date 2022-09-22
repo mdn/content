@@ -11,7 +11,8 @@ tags:
   - renotify
 browser-compat: api.Notification.renotify
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`renotify`** read-only property of the
 {{domxref("Notification")}} interface specifies whether the user should be notified

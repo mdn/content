@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFilterElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFilterElement`** interface provides access to the properties of {{SVGElement("filter")}} elements, as well as methods to manipulate them.

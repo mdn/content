@@ -7,17 +7,17 @@ tags:
   - Constructor
   - EncryptedMediaExtensions
   - MediaKeyMessageEvent
-  - Experimental
   - Reference
 browser-compat: api.MediaKeyMessageEvent.MediaKeyMessageEvent
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeyMessageEvent`** constructor creates a new {{domxref("MediaKeyMessageEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaKeyMessageEvent(type)
 new MediaKeyMessageEvent(type, options)
 ```

@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.visited
 ---
+
 {{CSSRef}}
 
 The **`:visited`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents links that the user has already visited. For privacy reasons, the styles that can be modified using this selector are very limited.
@@ -43,7 +44,7 @@ Properties that would otherwise have no color or be transparent cannot be modifi
 ### HTML
 
 ```html
-<a href="#test-visited-link">Have you visited this link yet?</a><br>
+<a href="#test-visited-link">Have you visited this link yet?</a><br />
 <a href="">You've already visited this link.</a>
 ```
 

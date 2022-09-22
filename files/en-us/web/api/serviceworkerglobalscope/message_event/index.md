@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: message event'
+title: "ServiceWorkerGlobalScope: message event"
 slug: Web/API/ServiceWorkerGlobalScope/message_event
 page-type: web-api-event
 tags:
@@ -10,6 +10,7 @@ tags:
   - message
 browser-compat: api.ServiceWorkerGlobalScope.message_event
 ---
+
 {{APIRef}}
 
 The **`message`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface occurs when incoming messages are received. Controlled pages can use the {{domxref("ServiceWorker.postMessage()")}} method to send messages to service workers.
@@ -22,9 +23,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener("message", (event) => {});
 
-onmessage = event => { };
+onmessage = (event) => {};
 ```
 
 ## Event type
@@ -37,15 +38,15 @@ An {{domxref("ExtendableMessageEvent")}}. Inherits from {{domxref("ExtendableEve
 
 _Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 
-- {{domxref("ExtendableMessageEvent.data")}} {{readonlyinline}}
+- {{domxref("ExtendableMessageEvent.data")}} {{ReadOnlyInline}}
   - : Returns the event's data. It can be any data type.
-- {{domxref("ExtendableMessageEvent.origin")}} {{readonlyinline}}
+- {{domxref("ExtendableMessageEvent.origin")}} {{ReadOnlyInline}}
   - : Returns the origin of the {{domxref("Client")}} that sent the message.
-- {{domxref("ExtendableMessageEvent.lastEventId")}} {{readonlyinline}}
+- {{domxref("ExtendableMessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : Represents, in [server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the last event ID of the event source. This is an empty string.
-- {{domxref("ExtendableMessageEvent.source")}} {{readonlyinline}}
+- {{domxref("ExtendableMessageEvent.source")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("Client")}} object that sent the message.
-- {{domxref("ExtendableMessageEvent.ports")}} {{readonlyinline}}
+- {{domxref("ExtendableMessageEvent.ports")}} {{ReadOnlyInline}}
   - : Returns the array containing the {{domxref("MessagePort")}} objects representing the ports of the associated message channel.
 
 ## Examples
@@ -55,18 +56,16 @@ In the below example a page gets a handle to the {{domxref("ServiceWorker")}} ob
 ```js
 // main.js
 if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("service-worker.js");
 
-  navigator.serviceWorker.register('service-worker.js');
-
-  navigator.serviceWorker.addEventListener('message', event => {
+  navigator.serviceWorker.addEventListener("message", (event) => {
     // event is a MessageEvent object
     console.log(`The service worker sent me a message: ${event.data}`);
   });
 
-  navigator.serviceWorker.ready.then( registration => {
+  navigator.serviceWorker.ready.then((registration) => {
     registration.active.postMessage("Hi service worker");
   });
-
 }
 ```
 
@@ -74,7 +73,7 @@ The service worker can receive the message by listening to the `message` event:
 
 ```js
 // service-worker.js
-addEventListener('message', event => {
+addEventListener("message", (event) => {
   // event is an ExtendableMessageEvent object
   console.log(`The client sent me a message: ${event.data}`);
 
@@ -86,7 +85,7 @@ Alternatively, the script can listen for the message using `onmessage`:
 
 ```js
 // service-worker.js
-self.onmessage = event => {
+self.onmessage = (event) => {
   // event is an ExtendableMessageEvent object
   console.log(`The client sent me a message: ${event.data}`);
 
@@ -105,6 +104,6 @@ self.onmessage = event => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

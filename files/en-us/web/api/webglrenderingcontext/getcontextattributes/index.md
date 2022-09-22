@@ -10,15 +10,16 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getContextAttributes
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getContextAttributes()`** method
 returns a `WebGLContextAttributes` object that contains the actual context
-parameters. Might return {{jsxref("null")}}, if the context is lost.
+parameters. Might return [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), if the context is lost.
 
 ## Syntax
 
-```js
+```js-nolint
 getContextAttributes()
 ```
 
@@ -29,7 +30,7 @@ None.
 ### Return value
 
 A `WebGLContextAttributes` object that contains the actual context
-parameters, or {{jsxref("null")}} if the context is lost.
+parameters, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context is lost.
 
 ## Examples
 
@@ -42,8 +43,8 @@ Given this {{HTMLElement("canvas")}} element
 and given this WebGL context
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
 gl.getContextAttributes();
 ```
 

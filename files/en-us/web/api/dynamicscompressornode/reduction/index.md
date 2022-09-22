@@ -11,6 +11,7 @@ tags:
   - reduction
 browser-compat: api.DynamicsCompressorNode.reduction
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`reduction`** read-only property of the {{ domxref("DynamicsCompressorNode") }} interface is a float representing the amount of gain reduction currently applied by the compressor to the signal.
@@ -24,9 +25,9 @@ A float.
 ## Examples
 
 ```js
-var audioCtx = new AudioContext();
-var compressor = audioCtx.createDynamicsCompressor();
-var myReduction = compressor.reduction;
+const audioCtx = new AudioContext();
+const compressor = audioCtx.createDynamicsCompressor();
+const myReduction = compressor.reduction;
 ```
 
 See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.

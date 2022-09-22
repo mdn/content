@@ -7,10 +7,11 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{JSSidebar("Errors")}}
 
 The JavaScript exception "is not a non-null object" occurs when an object is expected
-somewhere and wasn't provided. {{jsxref("null")}} is not an object and won't work.
+somewhere and wasn't provided. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is not an object and won't work.
 
 ## Message
 
@@ -30,7 +31,7 @@ TypeError: Attempted to add a non-object value to a WeakSet (Safari)
 
 ## What went wrong?
 
-An object is expected somewhere and wasn't provided. {{jsxref("null")}} is not an
+An object is expected somewhere and wasn't provided. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is not an
 object and won't work. You must provide a proper object in the given situation.
 
 ## Examples

@@ -10,6 +10,7 @@ tags:
   - connectionstatechange
 browser-compat: api.RTCPeerConnection.connectionstatechange_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`connectionstatechange`** event is sent to the `onconnectionstatechange` event handler on an {{domxref("RTCPeerConnection")}} object after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.
@@ -25,9 +26,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connectionstatechange', event => { });
+addEventListener('connectionstatechange', (event) => { });
 
-onconnectionstatechange = event => { };
+onconnectionstatechange = (event) => { };
 ```
 
 ## Event type
@@ -39,7 +40,7 @@ A generic {{domxref("Event")}}.
 For an {{domxref("RTCPeerConnection")}}, `pc`, this example sets up a handler for `connectionstatechange` messages to handle changes to the connectivity of the WebRTC session. It calls an app-defined function called `setOnlineStatus()` to update a status display.
 
 ```js
-pc.onconnectionstatechange = ev => {
+pc.onconnectionstatechange = (ev) => {
   switch(pc.connectionState) {
     case "new":
     case "checking":
@@ -67,7 +68,7 @@ pc.onconnectionstatechange = ev => {
 You can also create a handler for `connectionstatechange` by using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-pc.addEventListener("connectionstatechange", ev => {
+pc.addEventListener("connectionstatechange", (ev) => {
   switch(pc.connectionState) {
     // …
   }

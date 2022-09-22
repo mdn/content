@@ -10,6 +10,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.canplaythrough_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `canplaythrough` event is fired when the user agent can play the media, and estimates that enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
@@ -21,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('canplaythrough', event => { });
+addEventListener('canplaythrough', (event) => { });
 
-oncanplaythrough = event => { };
+oncanplaythrough = (event) => { };
 ```
 
 ## Event type

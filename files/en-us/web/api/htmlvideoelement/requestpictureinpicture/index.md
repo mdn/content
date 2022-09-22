@@ -4,7 +4,6 @@ slug: Web/API/HTMLVideoElement/requestPictureInPicture
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - HTML DOM
   - HTMLVideoElement
   - Media
@@ -16,6 +15,7 @@ tags:
   - pip
 browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **{{domxref("HTMLVideoElement")}}** method
@@ -29,7 +29,7 @@ video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event",
 
 ## Syntax
 
-```js
+```js-nolint
 requestPictureInPicture()
 ```
 
@@ -40,7 +40,7 @@ None.
 ### Return value
 
 A {{jsxref("Promise")}} that will resolve to a {{domxref("PictureInPictureWindow")}}
-object. that can be used to listen when a user will resize that floating window.
+object that can be used to listen when a user will resize that floating window.
 
 ## Examples
 
@@ -50,7 +50,7 @@ listener to handle the floating window resizing.
 ```js
 function enterPictureInPicture() {
   videoElement.requestPictureInPicture()
-    .then(pictureInPictureWindow => {
+    .then((pictureInPictureWindow) => {
       pictureInPictureWindow.addEventListener("resize", () => onPipWindowResize(), false);
     })
 }

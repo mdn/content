@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBMutableFile.error_event
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -26,8 +27,8 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
-onerror = event => { };
+addEventListener('error', (event) => { });
+onerror = (event) => { };
 ```
 
 ## Event type

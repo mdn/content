@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBOpenDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the results of requests to open or delete databases (performed using {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}), using specific event handler attributes.
@@ -23,7 +24,7 @@ The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the
 
 ## Properties
 
-_Also inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}_.
+_Also inherits properties from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}_.
 
 ## Methods
 
@@ -53,11 +54,11 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these event handlers act on the database being opened.
-DBOpenRequest.onerror = function(event) {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += '<li>Error loading database.</li>';
 };
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db
@@ -74,10 +75,10 @@ DBOpenRequest.onsuccess = function(event) {
 // been created before, or a new version number has been
 // submitted via the window.indexedDB.open line above
 // it is only implemented in recent browsers
-DBOpenRequest.onupgradeneeded = function(event) {
-  const db = this.result;
+DBOpenRequest.onupgradeneeded = (event) => {
+  const db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = (event) => {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 

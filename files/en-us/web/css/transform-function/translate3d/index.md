@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.translate3d
 ---
+
 {{CSSRef}}
 
 The **`translate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element in 3D space. Its result is a

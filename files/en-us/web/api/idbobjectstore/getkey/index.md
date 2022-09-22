@@ -3,7 +3,7 @@ title: IDBObjectStore.getKey()
 slug: Web/API/IDBObjectStore/getKey
 page-type: web-api-instance-method
 tags:
-  - IBDObjectStore
+  - IDBObjectStore
   - IndexedDB
   - Method
   - Reference
@@ -11,6 +11,7 @@ tags:
   - Web API
 browser-compat: api.IDBObjectStore.getKey
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getKey()`** method of the
@@ -25,7 +26,7 @@ result of the request object.
 
 ## Syntax
 
-```js
+```js-nolint
 getKey(key)
 ```
 
@@ -64,7 +65,7 @@ openRequest.onsuccess = (event) => {
   let request = store.getKey(IDBKeyRange(yesterday, today));
   request.onsuccess = (event) => {
     let when = event.target.result;
-    alert("The 1st activity in last 24 hours was occurred at " + when);
+    alert(`The 1st activity in last 24 hours was occurred at ${when}`);
   };
 };
 ```

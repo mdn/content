@@ -8,15 +8,17 @@ tags:
   - Reference
   - configure
   - AudioEncoder
+  - Experimental
 browser-compat: api.AudioEncoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("AudioEncoder")}} interface enqueues a control message to configure the audio encoder for encoding chunks.
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 
@@ -55,11 +57,11 @@ const init = {
   output: handleOutput,
   error: (e) => {
     console.log(e.message);
-  }
+  },
 };
 
 let config = {
-  codec: 'vp8',
+  codec: "vp8",
   bitrate: 2_000_000, // 2 Mbps
 };
 

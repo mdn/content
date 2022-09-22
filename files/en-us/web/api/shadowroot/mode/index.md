@@ -11,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.mode
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`mode`** read-only property of the {{domxref("ShadowRoot")}}
@@ -39,7 +40,7 @@ enum — either `open` or `closed`.
   // We create an open shadow root, that is accessible
   let element2 = document.createElement("div");
   element2.attachShadow({ mode: "open" });
-  console.log("The shadow is" + element2.shadowRoot.mode) // logs "The shadow is open"
+  console.log(`The shadow is ${element2.shadowRoot.mode}`) // logs "The shadow is open"
   element2.shadowRoot.textContent("Opened shadow") // The shadow is open, we can access it from outside
 ```
 

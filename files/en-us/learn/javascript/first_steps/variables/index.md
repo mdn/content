@@ -11,10 +11,11 @@ tags:
   - Variables
   - declaring
   - initializing
-  - l10n:priority
+  - "l10n:priority"
   - loose typing
   - strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
 After reading the last couple of articles you should now know what JavaScript is, what it can do for you, how you use it alongside other web technologies, and what its main features look like from a high level. In this article, we will get down to the real basics, looking at how to work with the most basic building blocks of JavaScript — Variables.
@@ -96,7 +97,7 @@ One special thing about variables is that they can contain just about anything �
 
 > **Note:** We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.
 
-![](boxes.png)
+![A screenshot of three 3-dimensional cardboard boxes demonstrating examples of javascript variables. Each box contains hypothetical values that represent various javascript data types. The sample values are "Bob", true and 35 respectively.](boxes.png)
 
 ## Declaring a variable
 
@@ -192,7 +193,7 @@ var myName = 'Bob';
 
 But the following would throw an error on the second line:
 
-```js
+```js example-bad
 let myName = 'Chris';
 let myName = 'Bob';
 ```
@@ -349,7 +350,7 @@ We won't be looking at objects any more for now — you can learn more about tho
 
 ## Dynamic typing
 
-JavaScript is a "dynamically typed language", which means that, unlike some other languages, you don't need to specify what data type a variable will contain (numbers, strings, arrays, etc).
+JavaScript is a "dynamically typed language", which means that, unlike some other languages, you don't need to specify what data type a variable will contain (numbers, strings, arrays, etc.).
 
 For example, if you declare a variable and give it a value enclosed in quotes, the browser treats the variable as a string:
 
@@ -387,7 +388,7 @@ If you try to do this using `const` you will see an error:
 const count;
 ```
 
-Similarly, with `let` you can initialize a variable, and then assign it a new value (this is also called *reassigning* the variable):
+Similarly, with `let` you can initialize a variable, and then assign it a new value (this is also called _reassigning_ the variable):
 
 ```js
 let count = 1;
@@ -421,7 +422,7 @@ If you can't do as much with `const` as you can with `let`, why would you prefer
 
 In this course, we adopt the following principle about when to use `let` and when to use `const`:
 
-*Use `const` when you can, and use `let` when you have to.*
+_Use `const` when you can, and use `let` when you have to._
 
 This means that if you can initialize a variable when you declare it, and don't need to reassign it later, make it a constant.
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.arrow_functions
 ---
+
 {{jsSidebar("Functions")}}
 
 An **arrow function expression** is a compact alternative to a traditional
@@ -42,14 +43,14 @@ Let's decompose a "traditional anonymous function" down to the simplest "arrow f
 // Traditional Anonymous Function
 (function (a) {
   return a + 100;
-})
+});
 
 // Arrow Function Break Down
 
 // 1. Remove the word "function" and place arrow between the argument and opening body bracket
 (a) => {
   return a + 100;
-}
+};
 
 // 2. Remove the body braces and word "return" — the return is implied.
 (a) => a + 100;
@@ -67,21 +68,20 @@ arguments**, you'll need to re-introduce parentheses around the arguments:
 // Traditional Anonymous Function
 (function (a, b) {
   return a + b + 100;
-})
+});
 
 // Arrow Function
 (a, b) => a + b + 100;
 
-// Traditional Anonymous Function (no arguments)
 const a = 4;
 const b = 2;
-(function () {
+
+// Traditional Anonymous Function (no arguments)
+(function() {
   return a + b + 100;
-})
+});
 
 // Arrow Function (no arguments)
-const a = 4;
-const b = 2;
 () => a + b + 100;
 ```
 
@@ -94,13 +94,13 @@ magically guess what or when you want to "return"):
 (function (a, b) {
   const chuck = 42;
   return a + b + chuck;
-})
+});
 
 // Arrow Function
 (a, b) => {
   const chuck = 42;
   return a + b + chuck;
-}
+};
 ```
 
 And finally, for **named functions** we treat arrow expressions like
@@ -113,7 +113,7 @@ function bob(a) {
 }
 
 // Arrow Function
-const bob = a => a + 100;
+const bob2 = (a) => a + 100;
 ```
 
 ## Syntax
@@ -124,6 +124,7 @@ One param. With simple expression return is not needed:
 
 ```js
 param => expression
+(param) => expression
 ```
 
 Multiple params require parentheses. With simple
@@ -136,7 +137,8 @@ expression return is not needed:
 Multiline statements require body braces and return:
 
 ```js
-param => {
+// The parentheses are optional with one single parameter
+(param) => {
   const a = 1;
   return a + param;
 }
@@ -158,7 +160,7 @@ To return an object literal expression requires
 parentheses around expression:
 
 ```js
-params => ({ foo: "a" }) // returning the object { foo: "a" }
+(params) => ({ foo: "a" }) // returning the object { foo: "a" }
 ```
 
 [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) are supported, and always require parentheses:
@@ -199,8 +201,8 @@ const obj = { // does not create a new scope
   },
 }
 
-obj.b(); // prints undefined, Window {...} (or the global object)
-obj.c(); // prints 10, Object {...}
+obj.b(); // prints undefined, Window { /* … */ } (or the global object)
+obj.c(); // prints 10, Object { /* … */ }
 ```
 
 Arrow functions do not have their own `this`. Another example involving
@@ -215,7 +217,7 @@ const obj = {
 
 Object.defineProperty(obj, 'b', {
   get: () => {
-    console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (or the global object)
+    console.log(this.a, typeof this.a, this); // undefined 'undefined' Window { /* … */ } (or the global object)
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
   },
 });
@@ -290,17 +292,17 @@ const add = function (a, b, c) {
 };
 
 // call
-const result = add.call(obj, 1, 2, 3); // establishing the scope as "obj"
-console.log(result); // result 106
+const resultCall = add.call(obj, 1, 2, 3); // establishing the scope as "obj"
+console.log(resultCall); // result 106
 
 // apply
 const arr = [1, 2, 3];
-const result = add.apply(obj, arr); // establishing the scope as "obj"
-console.log(result); // result 106
+const resultApply = add.apply(obj, arr); // establishing the scope as "obj"
+console.log(resultApply); // result 106
 
 // bind
-const result = add.bind(obj); // establishing the scope as "obj"
-console.log(result(1, 2, 3)); // result 106
+const resultBind = add.bind(obj); // establishing the scope as "obj"
+console.log(resultBind(1, 2, 3)); // result 106
 ```
 
 With arrow functions, since our `add` function is essentially created on the
@@ -334,7 +336,7 @@ const bound = add.bind(obj);
 console.log(bound(1, 2, 3)); // result 2026
 ```
 
-Perhaps the greatest benefit of using Arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.addEventListener()")}} that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
+Perhaps the greatest benefit of using Arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.prototype.addEventListener()")}} that usually require some kind of closure, call, apply or bind to ensure that the function is executed in the proper scope.
 
 #### Traditional function example
 
@@ -392,6 +394,8 @@ function foo(n) {
 foo(3); // 3 + 3 = 6
 ```
 
+> **Note:** You cannot declare a variable called `arguments` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), so the code above would be a syntax error. This makes the scoping effect of `arguments` much easier to reason about.
+
 In most cases, using [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 is a good alternative to using an `arguments` object.
 
@@ -438,7 +442,7 @@ In a concise body, only an expression is specified, which becomes the implicit r
 value. In a block body, you must use an explicit `return` statement.
 
 ```js
-const func = x => x * x;
+const func = (x) => x * x;
 // concise body syntax, implied "return"
 
 const func2 = (x, y) => { return x + y; };
@@ -448,13 +452,13 @@ const func2 = (x, y) => { return x + y; };
 ### Returning object literals
 
 Keep in mind that returning object literals using the concise body syntax
-`params => {object:literal}` will not work as expected.
+`(params) => {object:literal}` will not work as expected.
 
-```js
+```js example-bad
 const func = () => { foo: 1 };
 // Calling func() returns undefined!
 
-const func2 = () => { foo: function() {} };
+const func2 = () => { foo: function () {} };
 // SyntaxError: function statement requires a name
 
 const func3 = () => { foo() {} };
@@ -474,7 +478,7 @@ const func = () => ({ foo: 1 });
 
 An arrow function cannot contain a line break between its parameters and its arrow.
 
-```js
+```js example-bad
 const func = (a, b, c)
   => 1;
 // SyntaxError: Unexpected token '=>'
@@ -512,14 +516,16 @@ special parsing rules that interact differently with
 [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 compared to regular functions.
 
-```js
+```js example-bad
 let callback;
-
-callback = callback || function() {}; // ok
 
 callback = callback || () => {};
 // SyntaxError: invalid arrow-function arguments
+```
 
+Because `=>` has a lower precedence than most operators, parentheses are necessary to avoid `callback || ()` being parsed as the arguments list of the arrow function.
+
+```js example-good
 callback = callback || (() => {});    // ok
 ```
 
@@ -535,32 +541,32 @@ const empty = () => {};
 // Returns "foobar"
 // (this is an Immediately Invoked Function Expression)
 
-const simple = a => a > 15 ? 15 : a;
+const simple = (a) => a > 15 ? 15 : a;
 simple(16); // 15
 simple(10); // 10
 
 const max = (a, b) => a > b ? a : b;
 
-// Easy array filtering, mapping, ...
+// Easy array filtering, mapping, etc.
 
 const arr = [5, 6, 13, 0, 1, 18, 23];
 
 const sum = arr.reduce((a, b) => a + b);
 // 66
 
-const even = arr.filter(v => v % 2 == 0);
+const even = arr.filter((v) => v % 2 === 0);
 // [6, 0, 18]
 
-const double = arr.map(v => v * 2);
+const double = arr.map((v) => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // More concise promise chains
 promise
-  .then(a => {
-  // ...
+  .then((a) => {
+  // …
   })
-  .then(b => {
-    // ...
+  .then((b) => {
+    // …
   });
 
 // Parameterless arrow functions that are visually easier to parse

@@ -6,6 +6,7 @@ tags:
   - Reference
   - XSLT
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:element>` element creates an element in the output document.

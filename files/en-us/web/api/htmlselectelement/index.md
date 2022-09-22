@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSelectElement`** interface represents a {{HTMLElement("select")}} HTML Element. These elements also share all of the properties and methods of other HTML elements via the {{domxref("HTMLElement")}} interface.
@@ -100,7 +101,7 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
 </select>
 */
 
-var select = document.getElementById('s');
+const select = document.getElementById('s');
 
 // return the index of the selected option
 console.log(select.selectedIndex); // 1

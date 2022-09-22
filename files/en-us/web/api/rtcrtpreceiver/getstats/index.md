@@ -15,6 +15,7 @@ tags:
   - getStats
 browser-compat: api.RTCRtpReceiver.getStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpReceiver")}} method **`getStats()`**
@@ -25,7 +26,7 @@ results are available.
 
 ## Syntax
 
-```js
+```js-nolint
 getStats()
 ```
 
@@ -49,9 +50,8 @@ updates an element's {{domxref("HTMLElement/innerText", "innerText")}} to displa
 packets lost.
 
 ```js
-receiver.getStats().then(function(stats) {
-  document.getElementById("lostpackets").innerText =
-          stats.packetsLost;
+receiver.getStats().then((stats) => {
+  document.getElementById("lostpackets").innerText = stats.packetsLost;
 });
 ```
 

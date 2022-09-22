@@ -10,6 +10,7 @@ tags:
   - waitUntil
 browser-compat: api.ExtendableEvent.waitUntil
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ExtendableEvent.waitUntil()`**
@@ -41,7 +42,7 @@ settle.
 
 ## Syntax
 
-```js
+```js-nolint
 waitUntil(promise)
 ```
 
@@ -58,7 +59,7 @@ None ({{jsxref("undefined")}}).
 Using `waitUntil()` within a service worker's `install` event:
 
 ```js
-addEventListener('install', event => {
+addEventListener('install', (event) => {
   const preCache = async () => {
     const cache = await caches.open('static-v1');
     return cache.addAll([

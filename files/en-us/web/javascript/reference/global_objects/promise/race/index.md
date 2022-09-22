@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Promise.race
 ---
+
 {{JSRef}}
 
 The **`Promise.race()`** method returns a promise that fulfills
@@ -19,8 +20,8 @@ value or reason from that promise.
 
 ## Syntax
 
-```js
-Promise.race(iterable);
+```js-nolint
+Promise.race(iterable)
 ```
 
 ### Parameters
@@ -61,9 +62,9 @@ const p = Promise.race(resolvedPromisesArray);
 console.log(p);
 
 // using setTimeout we can execute code after the stack is empty
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(p);
+setTimeout(() => {
+  console.log("the stack is now empty");
+  console.log(p);
 });
 
 // logs, in order:
@@ -77,9 +78,9 @@ An empty iterable causes the returned promise to be forever pending:
 ```js
 const foreverPendingPromise = Promise.race([]);
 console.log(foreverPendingPromise);
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(foreverPendingPromise);
+setTimeout(() => {
+  console.log("the stack is now empty");
+  console.log(foreverPendingPromise);
 });
 
 // logs, in order:
@@ -103,10 +104,10 @@ const p2 = Promise.race(arr2);
 
 console.log(p);
 console.log(p2);
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(p);
-    console.log(p2);
+setTimeout(() => {
+  console.log("the stack is now empty");
+  console.log(p);
+  console.log(p2);
 });
 
 // logs, in order:
@@ -120,48 +121,51 @@ setTimeout(function(){
 ### Using Promise.race – examples with setTimeout
 
 ```js
-const p1 = new Promise(function(resolve, reject) {
-    setTimeout(() => resolve('one'), 500);
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("one"), 500);
 });
-const p2 = new Promise(function(resolve, reject) {
-    setTimeout(() => resolve('two'), 100);
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("two"), 100);
 });
 
-Promise.race([p1, p2])
-.then(function(value) {
+Promise.race([p1, p2]).then((value) => {
   console.log(value); // "two"
   // Both fulfill, but p2 is faster
 });
 
-const p3 = new Promise(function(resolve, reject) {
-    setTimeout(() => resolve('three'), 100);
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("three"), 100);
 });
-const p4 = new Promise(function(resolve, reject) {
-    setTimeout(() => reject(new Error('four')), 500);
-});
-
-Promise.race([p3, p4])
-.then(function(value) {
-  console.log(value); // "three"
-  // p3 is faster, so it fulfills
-}, function(error) {
-  // Not called
+const p4 = new Promise((resolve, reject) => {
+  setTimeout(() => reject(new Error("four")), 500);
 });
 
-const p5 = new Promise(function(resolve, reject) {
-    setTimeout(() => resolve('five'), 500);
+Promise.race([p3, p4]).then(
+  (value) => {
+    console.log(value); // "three"
+    // p3 is faster, so it fulfills
+  },
+  (error) => {
+    // Not called
+  },
+);
+
+const p5 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("five"), 500);
 });
-const p6 = new Promise(function(resolve, reject) {
-    setTimeout(() => reject(new Error('six')), 100);
+const p6 = new Promise((resolve, reject) => {
+  setTimeout(() => reject(new Error("six")), 100);
 });
 
-Promise.race([p5, p6])
-.then(function(value) {
-  // Not called
-}, function(error) {
-  console.log(error.message); // "six"
-  // p6 is faster, so it rejects
-});
+Promise.race([p5, p6]).then(
+  (value) => {
+    // Not called
+  },
+  (error) => {
+    console.error(error.message); // "six"
+    // p6 is faster, so it rejects
+  },
+);
 ```
 
 ### Comparison with Promise.any
@@ -170,19 +174,21 @@ Promise.race([p5, p6])
 
 ```js
 const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, 'one');
+  setTimeout(resolve, 500, "one");
 });
 
 const promise2 = new Promise((resolve, reject) => {
-  setTimeout(reject, 100, 'two');
+  setTimeout(reject, 100, "two");
 });
 
-Promise.race([promise1, promise2]).then((value) => {
-  console.log('succeeded with value:', value);
-}).catch((reason) => {
-  // Only promise1 is fulfilled, but promise2 is faster
-  console.log('failed with reason:', reason);
-});
+Promise.race([promise1, promise2])
+  .then((value) => {
+    console.log("succeeded with value:", value);
+  })
+  .catch((reason) => {
+    // Only promise1 is fulfilled, but promise2 is faster
+    console.error("failed with reason:", reason);
+  });
 // expected output: "failed with reason: two"
 ```
 
@@ -190,19 +196,21 @@ Promise.race([promise1, promise2]).then((value) => {
 
 ```js
 const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, 'one');
+  setTimeout(resolve, 500, "one");
 });
 
 const promise2 = new Promise((resolve, reject) => {
-  setTimeout(reject, 100, 'two');
+  setTimeout(reject, 100, "two");
 });
 
-Promise.any([promise1, promise2]).then((value) => {
-  // Only promise1 is fulfilled, even though promise2 settled sooner
-  console.log('succeeded with value:', value);
-}).catch((reason) => {
-  console.log('failed with reason:', reason);
-});
+Promise.any([promise1, promise2])
+  .then((value) => {
+    // Only promise1 is fulfilled, even though promise2 settled sooner
+    console.log("succeeded with value:", value);
+  })
+  .catch((reason) => {
+    console.error("failed with reason:", reason);
+  });
 // expected output: "succeeded with value: one"
 ```
 

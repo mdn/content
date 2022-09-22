@@ -9,6 +9,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-transitions/
 ---
+
 {{CSSRef}}
 
 **CSS Transitions** is a module of CSS that lets you create gradual transitions between the values of specific CSS properties. The behavior of these transitions can be controlled by specifying their timing function, duration, and other attributes.

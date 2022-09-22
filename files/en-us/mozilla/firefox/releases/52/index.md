@@ -6,6 +6,7 @@ tags:
   - Mozilla
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 52 was released on March 7, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -54,7 +55,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
   - Alpha values can now be specified as percentages as well as numbers, e.g. `rgb(255 0 0 / 50%)`.
   - The hue component in `hsl()` colors can now be specified as an angle, as well as a number, e.g. `hsl(120deg, 60%, 70%)`.
 
-- Firefox's implementation of child-indexed pseudo-classes (such as {{cssxref(":nth-child")}}, {{cssxref(":first-child")}}, and so forth) has been updated to match the CSS4 specification: these pseudo-classes now match the appropriate sibling elements rather than the children of their parent element. This allows these pseudo-classes to be used when there is no parent, or the parent is not an {{domxref("Element")}} ({{bug(1300374)}}.
+- Firefox's implementation of child-indexed pseudo-classes (such as {{cssxref(":nth-child")}}, {{cssxref(":first-child")}}, and so forth) has been updated to match the CSS selectors level 4 specification: these pseudo-classes now match the appropriate sibling elements rather than the children of their parent element. This allows these pseudo-classes to be used when there is no parent, or the parent is not an {{domxref("Element")}} ({{bug(1300374)}}.
 
 #### CSS Grids
 
@@ -102,11 +103,11 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 - The property {{domxref("Event.composed")}} is now supported; this Boolean value indicates whether or not the event can bubble through the shadow root into the standard DOM ({{bug(1292063)}}).
 - Only HTML elements, plus the {{SVGElement("svg")}} and {{MathMLElement("math")}} elements, can be put into full-screen mode by calling {{domxref("Element.requestFullscreen()")}} ({{bug(1305928)}}).
 - [Touch events](/en-US/docs/Web/API/Touch_events) have been reenabled on Windows desktop platforms — see {{bug(1244402)}}. (They were disabled in Firefox 24 because they broke a number of major sites; see {{bug(888304)}}.)
-- The {{event("focusin")}} and {{event("focusout")}} events are now implemented ({{bug("687787")}}).
+- The {{domxref("Element/focusin_event", "focusin")}} and {{domxref("Element/focusout_event", "focusout")}} events are now implemented ({{bug("687787")}}).
 - The {{domxref("isSecureContext")}} property has been implemented (see {{bug(1269052)}}).
 - The [Web App Manifest](/en-US/docs/Web/Manifest) install event has been renamed appinstalled (see {{domxref("Window.appinstalled_event")}}, {{domxref("Window.appinstalled", "appinstalled")}}) to avoid confusion with the service worker install event (see {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}}). See {{bug(1309099)}} for more details about this update.
 - The {{domxref("DataTransfer.types")}} property of the [Drag and drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) now returns a frozen array of strings rather than a {{domxref("DOMStringList")}} (see {{bug(1298243)}}).
-- The {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}} and {{domxref("HTMLMediaElement/loadend_event", "loadend")}} events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}, and also see {{domxref("GlobalEventHandlers.onloadstart")}} and {{domxref("GlobalEventHandlers.onloadend")}}).
+- The `loadstart` and `loadend` events are now fired on {{htmlelement("img")}} elements (see {{bug(1264769)}}).
 - The {{domxref("Notification.requireInteraction")}} of the [Notifications API](/en-US/docs/Web/API/Notifications_API) has been implemented (see {{bug(862395)}}.)
 - The {{domxref("Window.open()")}} method now has a `noopener` [window feature](/en-US/docs/Web/API/Window/open#window_functionality_features) available (see {{bug(1267339)}}), which mirrors the functionality of the `rel="noopener"` [Link type](/en-US/docs/Web/HTML/Link_types).
 - The {{domxref("CustomElementRegistry.get()")}} method of the [Web Components API](/en-US/docs/Web/Web_Components) has been implemented (see {{bug(1275838)}}).
@@ -167,7 +168,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### Security
 
-- When login pages (i.e those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ({{bug(1319119)}}). Autofill is also disabled on insecure login forms ({{bug(1217152)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
+- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ({{bug(1319119)}}). Autofill is also disabled on insecure login forms ({{bug(1217152)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
 - Support for SHA-1 SSL certificates has been removed; navigating to a secure page that uses a SHA-1 certificate will now result in an `Untrusted Connection` error ({{bug(1330043)}}).
 
 ## Plugins

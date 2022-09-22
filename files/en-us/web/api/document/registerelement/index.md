@@ -9,9 +9,11 @@ tags:
   - Method
   - Reference
   - Web Components
+  - Non-standard
 browser-compat: api.Document.registerElement
 ---
-{{APIRef("DOM")}}{{Deprecated_header}}
+
+{{APIRef("DOM")}}{{Deprecated_header}}{{Non-standard_header}}
 
 > **Warning:** `document.registerElement()` is deprecated in
 > favor of {{DOMxRef("CustomElementRegistry.define()","customElements.define()")}}.
@@ -24,7 +26,7 @@ browser and returns a constructor for the new element.
 
 ## Syntax
 
-```js
+```js-nolint
 registerElement(tagName)
 registerElement(tagName, options)
 ```
@@ -47,15 +49,15 @@ None ({{jsxref("undefined")}}).
 Here is a very simple example:
 
 ```js
-var Mytag = document.registerElement('my-tag');
+const MyTag = document.registerElement("my-tag");
 ```
 
-Now the new tag is registered in the browser. The `Mytag` variable holds a
+Now the new tag is registered in the browser. The `MyTag` variable holds a
 constructor that you can use to create a `my-tag` element in the document as
 follows:
 
 ```js
-document.body.appendChild(new Mytag());
+document.body.appendChild(new MyTag());
 ```
 
 This inserts an empty `my-tag` element that will be visible if you use the
@@ -64,8 +66,8 @@ capability. And it won't be visible in the browser unless you add some content t
 tag. Here is one way to add content to the new tag:
 
 ```js
-var mytag = document.getElementsByTagName("my-tag")[0];
-mytag.textContent = "I am a my-tag element.";
+const myTagElement = document.querySelector("my-tag");
+myTagElement.textContent = "I am a my-tag element.";
 ```
 
 ## Browser compatibility

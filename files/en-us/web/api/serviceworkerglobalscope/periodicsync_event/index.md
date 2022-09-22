@@ -8,9 +8,11 @@ tags:
   - Periodic Background Synchronization
   - ServiceWorkerGlobalScope
   - events
+  - Experimental
 browser-compat: api.ServiceWorkerGlobalScope.periodicsync_event
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`periodicsync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired at timed intervals, specified when registering a {{domxref('PeriodicSyncManager')}}.
 
@@ -21,14 +23,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('periodicsync', event => { });
+addEventListener('periodicsync', (event) => { });
 
-onperiodicsync = event => { };
+onperiodicsync = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("PeriodicSyncEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PeriodicSyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PeriodicSyncEvent")}}
 
@@ -36,7 +38,7 @@ An {{domxref("PeriodicSyncEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref('PeriodicSyncEvent.tag')}} {{readonlyInline}}
+- {{domxref('PeriodicSyncEvent.tag')}} {{ReadOnlyInline}}
   - : Returns the developer-defined identifier for this `PeriodicSyncEvent`. Multiple tags can be used by the web app to run different periodic tasks at different frequencies.
 
 ## Examples
@@ -44,8 +46,8 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 The following example shows how to respond to a periodic sync event in the service worker.
 
 ```js
-self.addEventListener('periodicsync', event => {
-  if (event.tag == 'get-latest-news') {
+self.addEventListener('periodicsync', (event) => {
+  if (event.tag === 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });

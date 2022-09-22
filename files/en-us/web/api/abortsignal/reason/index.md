@@ -5,13 +5,13 @@ page-type: web-api-instance-property
 tags:
   - API
   - AbortSignal
-  - Experimental
   - Property
   - Reference
   - reason
 browser-compat: api.AbortSignal.reason
 ---
-{{APIRef("DOM")}} {{SeeCompatTable}}
+
+{{APIRef("DOM")}}
 
 The **`reason`** read-only property returns a JavaScript value that indicates the abort reason.
 
@@ -29,12 +29,20 @@ In the following snippet, we create a new `AbortController` object, and get its 
 Later on, using the `aborted` property, we check whether or not the signal has been aborted, and log the abort status and reason to the console.
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+const controller = new AbortController();
+const signal = controller.signal;
 
 // …
 
-signal.aborted ? console.log(`Request aborted with reason: ${signal.reason}`) : console.log('Request not aborted');
+if (signal.aborted) {
+  if (signal.reason) {
+    console.log(`Request aborted with reason: ${signal.reason}`);
+  } else {
+    console.log("Request aborted but no reason was given.");
+  }
+} else {
+  console.log("Request not aborted");
+}
 ```
 
 ## Specifications

@@ -10,6 +10,7 @@ tags:
   - referrerPolicy
 browser-compat: api.HTMLScriptElement.referrerPolicy
 ---
+
 {{APIRef}}
 
 The **`referrerPolicy`** property of the
@@ -62,7 +63,7 @@ A string; one of the following:
 ## Examples
 
 ```js
-var scriptElem = document.createElement("script");
+const scriptElem = document.createElement("script");
 scriptElem.src = "/";
 scriptElem.referrerPolicy = "unsafe-url";
 document.body.appendChild(scriptElem);

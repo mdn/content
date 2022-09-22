@@ -121,7 +121,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** Do not use this attribute as it is obsolete in the latest standard: use the {{htmlattrxref("scope", "th")}} attribute instead.
 
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+- {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
 
   - : This attribute defines the background color of each cell in a column. It consists of a 6-digit hexadecimal code as defined in [sRGB](https://www.w3.org/Graphics/Color/sRGB) and is prefixed by '#'. This attribute may be used with one of sixteen predefined color strings:
 

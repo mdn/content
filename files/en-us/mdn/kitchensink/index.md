@@ -4,7 +4,9 @@ slug: MDN/Kitchensink
 tags:
   - Kitchensink
   - MDN Meta
+browser-compat: html.elements.video
 ---
+
 {{MDNSidebar}}
 
 > **Warning:** Don't delete this page. It's used by [mdn/yari](https://github.com/mdn/yari) for its automation.
@@ -115,14 +117,14 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
 
 ### Markdown table
 
-| Constant name                | Value  | Description |
-| ---------------------------- | ------ | ----------- |
+| Constant name                | Value  | Description                                                            |
+| ---------------------------- | ------ | ---------------------------------------------------------------------- |
 | `QUERY_COUNTER_BITS_EXT`     | 0x8864 | The number of bits used to hold the query result for the given target. |
-| `CURRENT_QUERY_EXT`          | 0x8865 | The currently active query. |
-| `QUERY_RESULT_EXT`           | 0x8866 | The query result. |
-| `QUERY_RESULT_AVAILABLE_EXT` | 0x8867 | A Boolean indicating whether a query result is available. |
-| `TIME_ELAPSED_EXT`           | 0x88BF | Elapsed time (in nanoseconds). |
-| `TIMESTAMP_EXT`              | 0x8E28 | The current time. |
+| `CURRENT_QUERY_EXT`          | 0x8865 | The currently active query.                                            |
+| `QUERY_RESULT_EXT`           | 0x8866 | The query result.                                                      |
+| `QUERY_RESULT_AVAILABLE_EXT` | 0x8867 | A Boolean indicating whether a query result is available.              |
+| `TIME_ELAPSED_EXT`           | 0x88BF | Elapsed time (in nanoseconds).                                         |
+| `TIMESTAMP_EXT`              | 0x8E28 | The current time.                                                      |
 | `GPU_DISJOINT_EXT`           | 0x8FBB | A Boolean indicating whether the GPU performed any disjoint operation. |
 
 ### HTML table
@@ -237,7 +239,7 @@ Listening for mouse movement is even easier than listening for key presses: all 
 
 ## Browser compatibility
 
-{{Compat("html.elements.video")}}
+{{Compat}}
 
 ## Axis-Aligned Bounding Box
 
@@ -306,7 +308,7 @@ this.color("blue");
 {{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}
 
 - [Accessibility resources at MDN](/en-US/docs/Web/Accessibility)
-- {{Interwiki("wikipedia", "Web accessibility")}} on Wikipedia
+- [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
 
 The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 
@@ -337,7 +339,7 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 
   - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
 
-- {{interwiki("wikipedia", "AJAX")}} on Wikipedia
+- [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
 - [Ajax](/en-US/docs/Web/Guide/AJAX)
 - [Ajax - Getting started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
 - {{DOMxRef("XMLHttpRequest")}}
@@ -362,5 +364,3 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
 {{Non-standard_Header}}
 {{Deprecated_Header}}
 [![Iceberg pic](iceberg.jpg)](iceberg.jpg)
-
-`geckoRelease:` {{ geckoRelease("1.9.3") }}

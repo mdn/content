@@ -7,10 +7,11 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "_x_ is (not) _y_" occurs when there was an
-unexpected type. Oftentimes, unexpected {{jsxref("undefined")}} or {{jsxref("null")}}
+unexpected type. Oftentimes, unexpected {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 values.
 
 ## Message
@@ -32,7 +33,7 @@ TypeError: Symbol.keyFor requires that the first argument be a symbol (Safari)
 ## What went wrong?
 
 There was an unexpected type. This occurs oftentimes with {{jsxref("undefined")}} or
-{{jsxref("null")}} values.
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) values.
 
 Also, certain methods, such as {{jsxref("Object.create()")}} or
 {{jsxref("Symbol.keyFor()")}}, require a specific type, that must be provided.
@@ -78,4 +79,4 @@ if (foo) {
 ## See also
 
 - {{jsxref("undefined")}}
-- {{jsxref("null")}}
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)

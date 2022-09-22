@@ -5,10 +5,11 @@ page-type: guide
 tags:
   - Advanced
   - DOM
-  - HTML5
+  - HTML
   - JavaScript
   - Reference
 ---
+
 {{DefaultAPISidebar("Web Workers API") }}
 
 The **structured clone algorithm** copies complex JavaScript objects.
@@ -116,7 +117,7 @@ It clones by recursing through the input object while maintaining a map of previ
       <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Native <code>Error</code> types</a></td>
       <td>
         <p>The error name must be one of: {{jsxref("Error")}}, {{JSxRef("EvalError")}}, {{JSxRef("RangeError")}}, {{JSxRef("ReferenceError")}}, {{JSxRef("SyntaxError")}}, {{JSxRef("TypeError")}}, {{JSxRef("URIError")}} (or will be set to "Error").</p>
-        <p>Browsers must serialize the properties <code>name</code> and <code>message</code>, and are expected to serialize "interesting" other properties of the errors such as <code>stack</code>, <code>cause</code>, etc.</p>
+        <p>Browsers must serialize the properties <code>name</code> and <code>message</code>, and are expected to serialize other "interesting" properties of the errors such as <code>stack</code>, <code>cause</code>, etc.</p>
         <p>{{JSxRef("AggregateError")}} support is expected to be added to the specification in <a href="https://github.com/whatwg/html/pull/5749">whatwg/html#5749</a> (and is already supported in some browsers).</p>
       </td>
     </tr>

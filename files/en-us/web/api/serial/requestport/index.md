@@ -8,15 +8,17 @@ tags:
   - Reference
   - requestPort
   - Serial
+  - Experimental
 browser-compat: api.Serial.requestPort
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
+
+{{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`Serial.requestPort()`** method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.
 
 ## Syntax
 
-```js
+```js-nolint
 requestPort()
 requestPort(options)
 ```
@@ -29,7 +31,7 @@ requestPort(options)
 
     - `filters`
 
-      - : A list of objects containing vendor and product IDs used to search for attached devices. The [USB Implementors Forum](https://www.usb.org/) assigns IDs to specific companies. Each company assigns IDS to it's products. Filters contain the following values:
+      - : A list of objects containing vendor and product IDs used to search for attached devices. The [USB Implementors Forum](https://www.usb.org/) assigns IDs to specific companies. Each company assigns IDS to its products. Filters contain the following values:
 
         - `usbVendorId`
           - : An unsigned short integer that identifies a USB device vendor.

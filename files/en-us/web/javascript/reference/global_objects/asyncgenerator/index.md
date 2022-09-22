@@ -11,11 +11,14 @@ tags:
   - Reference
 browser-compat: javascript.builtins.AsyncGenerator
 ---
+
 {{JSRef}}
 
 The **`AsyncGenerator`** object is returned by an {{jsxref("Statements/async_function*", "async generator function", "", 1)}} and it conforms to both the [async iterable protocol and the async iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
 Async generator methods always yield {{jsxref("Promise")}} objects.
+
+{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
 
 ## Constructor
 
@@ -29,11 +32,11 @@ async function* createAsyncGenerator() {
 }
 const asyncGen = createAsyncGenerator();
 asyncGen.next()
-  .then(res => console.log(res.value)); // 1
+  .then((res) => console.log(res.value)); // 1
 asyncGen.next()
-  .then(res => console.log(res.value)); // 2
+  .then((res) => console.log(res.value)); // 2
 asyncGen.next()
-  .then(res => console.log(res.value)); // 3
+  .then((res) => console.log(res.value)); // 3
 ```
 
 ## Instance methods
@@ -92,7 +95,7 @@ main()
 
 - {{jsxref("Statements/function*", "function*", "", 1)}}
 - {{jsxref("Statements/async_function*", "async function*", "", 1)}}
-- {{jsxref("Operators/function*", '<code>function*</code> expression', "", 1)}}
+- [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("GeneratorFunction", "Generator Function", "", 1)}}
 - {{jsxref("AsyncGeneratorFunction", "Async Generator Function", "", 1)}}
 - [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)

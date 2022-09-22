@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: mathml.global_attributes.displaystyle
 ---
+
 {{MathMLRef("Global_attributes")}}
 
 The **`displaystyle`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is a boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) of a MathML element.
@@ -31,20 +32,16 @@ In this example, an [munder](/en-US/docs/Web/MathML/Element/munder) element is u
 ## Syntax
 
 ```html
-<math displaystyle="true">
-<math displaystyle="false">
+<math displaystyle="true"></math>
+<math displaystyle="false"></math>
 ```
 
 ### Values
 
 - `true`
-   -: Sets the display style to `normal`.
+  - : Sets the display style to `normal`.
 - `false`
-   -: Sets the display style to `compact`.
-
-## Notes on MathML versions
-
-- MathML Core relies on `math-style` to implement the `displaystyle` attribute, but implementations of older MathML versions may follow a different approach to implement similar behavior.
+  - : Sets the display style to `compact`.
 
 ## Specifications
 

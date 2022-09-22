@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.elements
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLFormElement")}} property
@@ -57,16 +58,16 @@ In this example, we see how to obtain the list of form controls as well as how t
 
 ```html
 <form id="my-form">
-  <input type="text" name="username">
-  <input type="text" name="full-name">
-  <input type="password" name="password">
+  <input type="text" name="username" />
+  <input type="text" name="full-name" />
+  <input type="password" name="password" />
 </form>
 ```
 
 ```js
-var inputs = document.getElementById("my-form").elements;
-var inputByIndex = inputs[0];
-var inputByName = inputs["username"];
+const inputs = document.getElementById("my-form").elements;
+const inputByIndex = inputs[0];
+const inputByName = inputs["username"];
 ```
 
 ### Accessing form controls
@@ -77,10 +78,10 @@ This example gets the form's element list, then iterates over the list, looking 
 form of processing can be performed on them.
 
 ```js
-var inputs = document.getElementById("my-form").elements;
+const inputs = document.getElementById("my-form").elements;
 
 // Iterate over the form controls
-for (i = 0; i < inputs.length; i++) {
+for (let i = 0; i < inputs.length; i++) {
   if (inputs[i].nodeName === "INPUT" && inputs[i].type === "text") {
     // Update text input
     inputs[i].value.toLocaleUpperCase();
@@ -91,10 +92,10 @@ for (i = 0; i < inputs.length; i++) {
 ### Disabling form controls
 
 ```js
-var inputs = document.getElementById("my-form").elements;
+const inputs = document.getElementById("my-form").elements;
 
 // Iterate over the form controls
-for (i = 0; i < inputs.length; i++) {
+for (let i = 0; i < inputs.length; i++) {
   // Disable all form controls
   inputs[i].setAttribute("disabled", "");
 }

@@ -10,6 +10,7 @@ tags:
   - TransformStream
 browser-compat: api.TransformStream.writable
 ---
+
 {{APIRef("Streams")}}
 
 The **`writable`** read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("WritableStream")}} instance controlled by this `TransformStream`.

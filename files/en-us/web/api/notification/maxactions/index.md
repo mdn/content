@@ -10,9 +10,11 @@ tags:
   - Property
   - Reference
   - actions
+  - Experimental
 browser-compat: api.Notification.maxActions
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`maxActions`** attribute of the
 {{domxref("Notification")}} interface returns the maximum number of actions supported by
@@ -30,7 +32,7 @@ The following snippet logs the maximum number of supported actions.
 
 ```js
 const maxActions = Notification.maxActions;
-console.log('This device can display at most ' + maxActions + ' actions on each notification.');
+console.log(`This device can display at most ${maxActions} actions on each notification.`);
 ```
 
 ## Specifications

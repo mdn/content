@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.IDBIndex.getAllKeys
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getAllKeys()`** method of the {{domxref("IDBIndex")}}
@@ -18,7 +19,7 @@ setting them as the `result` of the request object.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllKeys()
 getAllKeys(query)
 getAllKeys(query, count)
@@ -55,9 +56,9 @@ not between `0` and `2^32 - 1` included.
 ## Examples
 
 ```js
-var myIndex = objectStore.index('index');
-var getAllKeysRequest = myIndex.getAllKeys();
-getAllKeysRequest.onsuccess = function() {
+const myIndex = objectStore.index('index');
+const getAllKeysRequest = myIndex.getAllKeys();
+getAllKeysRequest.onsuccess = () => {
   console.log(getAllKeysRequest.result);
 }
 ```

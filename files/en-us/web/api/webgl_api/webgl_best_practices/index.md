@@ -14,6 +14,7 @@ tags:
   - OpenGL
   - WebGL
 ---
+
 {{WebGLSidebar}}
 
 WebGL is a complicated API, and it's often not obvious what the recommended ways to use it are. This page tackles recommendations across the spectrum of expertise, and not only highlights dos and don'ts, but also details _why_. You can rely on this document to guide your choice of approach, and ensure you're on the right track no matter what browser or hardware your users run.
@@ -40,7 +41,7 @@ These WebGL 1 extensions are universally supported, and can be relied upon to be
 
 _(see also: [WebGL feature levels and % support](https://kdashg.github.io/misc/webgl/webgl-feature-levels.html))_
 
-Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/jdashg/misc/blob/master/webgl/webgl-v1.1.js>
+Consider polyfilling these into WebGLRenderingContext, like: <https://github.com/kdashg/misc/blob/tip/webgl/webgl-v1.1.js>
 
 ## Understand system limits
 
@@ -181,9 +182,9 @@ for (const [vs, fs, prog] of programs) {
   compileOnce(gl, fs);
   gl.linkProgram(prog);
   if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-    console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-    console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-    console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+    console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+    console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+    console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
   }
 }
 ```
@@ -205,9 +206,9 @@ for (const [vs, fs, prog] of programs) {
 }
 for (const [vs, fs, prog] of programs) {
   if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
-    console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-    console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-    console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+    console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+    console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+    console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
   }
 }
 ```
@@ -261,17 +262,17 @@ Instead of:
 ```js
 gl.compileShader(vs);
 if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
-  console.error('vs compile failed: ' + gl.getShaderInfoLog(vs));
+  console.error(`vs compile failed: ${gl.getShaderInfoLog(vs)}`);
 }
 
 gl.compileShader(fs);
 if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
-  console.error('fs compile failed: ' + gl.getShaderInfoLog(fs));
+  console.error(`fs compile failed: ${gl.getShaderInfoLog(fs)}`);
 }
 
 gl.linkProgram(prog);
 if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
-  console.error('Link failed: ' + gl.getProgramInfoLog(prog));
+  console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
 }
 ```
 
@@ -282,9 +283,9 @@ gl.compileShader(vs);
 gl.compileShader(fs);
 gl.linkProgram(prog);
 if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
-  console.error('Link failed: ' + gl.getProgramInfoLog(prog));
-  console.error('vs info-log: ' + gl.getShaderInfoLog(vs));
-  console.error('fs info-log: ' + gl.getShaderInfoLog(fs));
+  console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
+  console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
+  console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
 }
 ```
 
@@ -347,7 +348,7 @@ precision mediump float;
 | `mediump` | int11 | (-2^10, 2^10) |
 | `lowp`    | int9  | (-2^8, 2^8)   |
 
-_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa_
+_\*float24: sign bit, 7-bit for exponent, 16-bit for mantissa._
 
 ### ESSL300 minimum requirements (WebGL 2)
 
@@ -537,11 +538,11 @@ function clientWaitAsync(gl, sync, flags, interval_ms) {
   return new Promise((resolve, reject) => {
     function test() {
       const res = gl.clientWaitSync(sync, flags, 0);
-      if (res == gl.WAIT_FAILED) {
+      if (res === gl.WAIT_FAILED) {
         reject();
         return;
       }
-      if (res == gl.TIMEOUT_EXPIRED) {
+      if (res === gl.TIMEOUT_EXPIRED) {
         setTimeout(test, interval_ms);
         return;
       }
@@ -583,7 +584,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 
 ### `devicePixelRatio` and high-dpi rendering
 
-Handling `devicePixelRatio != 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
+Handling `devicePixelRatio !== 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
 
 Instead, we can use non-integer values for CSS's `top`/`bottom`/`left`/`right` to fairly reliably 'pre-snap' our canvas to whole integer device coordinates.
 
@@ -594,9 +595,9 @@ Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-pr
 On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
 
 ```js
-window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
-   await new Promise(fn_resolve => {
-      const observer = new ResizeObserver(entries => {
+window.getDevicePixelSize = window.getDevicePixelSize || (async (elem) => {
+   await new Promise((fn_resolve) => {
+      const observer = new ResizeObserver((entries) => {
          for (const cur of entries) {
             const dev_size = cur.devicePixelContentBoxSize;
             const ret = {
@@ -607,11 +608,11 @@ window.getDevicePixelSize = window.getDevicePixelSize || async function(elem) {
             observer.disconnect();
             return;
          }
-         throw 'device-pixel-content-box not observed for elem ' + elem;
+         throw `device-pixel-content-box not observed for elem ${elem}`;
       });
       observer.observe(elem, {box: 'device-pixel-content-box'});
    });
-};
+});
 ```
 
 Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resize-observer-interface) for more details.

@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - Media
   - Media Capture and Streams API
   - Media Streams API
@@ -17,6 +16,7 @@ tags:
   - track
 browser-compat: api.MediaStream.getAudioTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`getAudioTracks()`** method of the
@@ -27,7 +27,7 @@ is `audio`.
 
 ## Syntax
 
-```js
+```js-nolint
 getAudioTracks()
 ```
 
@@ -59,7 +59,7 @@ first audio track found on the stream.
 
 ```js
 navigator.mediaDevices.getUserMedia({audio: true, video: true})
-.then(mediaStream => {
+.then((mediaStream) => {
   document.querySelector('video').srcObject = mediaStream;
   // Stop the audio stream after 5 seconds
   setTimeout(() => {

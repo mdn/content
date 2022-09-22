@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.strokeStyle
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.strokeStyle`** property of the
@@ -20,7 +21,7 @@ Canvas 2D API specifies the color, gradient, or pattern to use for the strokes
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `color`
   - : A string parsed as [CSS](/en-US/docs/Web/CSS)
@@ -45,8 +46,8 @@ This example applies a blue stroke color to a rectangle.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 ctx.strokeStyle = 'blue';
 ctx.strokeRect(10, 10, 100, 100);
@@ -69,7 +70,7 @@ only modify the green and blue values. (The red channel has a fixed value.)
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+const ctx = document.getElementById('canvas').getContext('2d');
 
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {
@@ -104,7 +105,7 @@ In WebKit- and Blink-based browsers, the non-standard and deprecated method
 
 ```js
 setStrokeColor(color);
-setStrokeColor(color,  alpha);
+setStrokeColor(color, alpha);
 setStrokeColor(grayLevel);
 setStrokeColor(grayLevel, alpha);
 setStrokeColor(r, g, b, a);

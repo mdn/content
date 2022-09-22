@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.right
 ---
+
 {{CSSRef}}
 
 The **`right`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the horizontal position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.
@@ -95,7 +96,7 @@ When both {{cssxref("left")}} and `right` are defined, if not prevented from doi
 #relative {
   width: 100px;
   height: 100px;
-  background-color: #FFC7E4;
+  background-color: #ffc7e4;
   position: relative;
   top: 20px;
   left: 20px;
@@ -104,7 +105,7 @@ When both {{cssxref("left")}} and `right` are defined, if not prevented from doi
 #absolute {
   width: 100px;
   height: 100px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
   position: absolute;
   bottom: 10px;
   right: 20px;
@@ -122,9 +123,10 @@ When both `left` and `right` are declared, the element will stretch to meet both
 #### HTML
 
 ```html
-<div id="parent">Parent
-    <div id="noWidth">No width</div>
-    <div id="width">width: 100px</div>
+<div id="parent">
+  Parent
+  <div id="noWidth">No width</div>
+  <div id="width">width: 100px</div>
 </div>
 ```
 
@@ -132,18 +134,18 @@ When both `left` and `right` are declared, the element will stretch to meet both
 
 ```css
 div {
-  outline: 1px solid #CCCCCC;
+  outline: 1px solid #cccccc;
 }
 #parent {
   width: 200px;
   height: 200px;
-  background-color: #FFC7E4;
+  background-color: #ffc7e4;
   position: relative;
 }
 /* declare both a left and a right */
 #width,
 #noWidth {
-  background-color: #C2FFD7;
+  background-color: #c2ffd7;
   position: absolute;
   left: 0;
   right: 0;

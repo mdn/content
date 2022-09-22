@@ -14,6 +14,7 @@ tags:
   - paste
 browser-compat: api.ClipboardItem
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The **`ClipboardItem`** interface of the {{domxref('Clipboard API')}} represents a single item format, used when reading or writing data via the {{domxref('Clipboard API')}}. That is {{domxref("clipboard.read()")}} and {{domxref("clipboard.write()")}} respectively.
@@ -66,7 +67,7 @@ async function writeClipImg() {
       })
     ]);
     console.log('Fetched image copied.');
-  } catch(err) {
+  } catch (err) {
     console.error(err.name, err.message);
   }
 }

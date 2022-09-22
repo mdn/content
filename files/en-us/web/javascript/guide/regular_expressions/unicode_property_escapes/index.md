@@ -9,6 +9,7 @@ tags:
   - regex
   - unicode property escapes
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 **Unicode property escapes** [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) allows for matching characters based on their Unicode properties. A character is described by several properties which are either binary ("boolean-like") or non-binary. For instance, unicode property escapes can be used to match emojis, punctuations, letters (even letters from specific languages or scripts), etc.
@@ -21,7 +22,7 @@ tags:
 
 ## Syntax
 
-```js
+```js-nolint
 // Non-binary values
 \p{UnicodePropertyValue}
 \p{UnicodePropertyName=UnicodePropertyValue}
@@ -40,18 +41,14 @@ tags:
 
 See also [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
 
-- UnicodeBinaryPropertyName
+- `UnicodeBinaryPropertyName`
   - : The name of a [binary property](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. See [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt) for more info.
-- UnicodePropertyName
+- `UnicodePropertyName`
   - : The name of a [non-binary](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties) property:
-- UnicodePropertyValue
-  - : One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value `Decimal_Number` for the `General_Category` property may be written `Nd`, `digit`, or `Decimal_Number`). For most values, the *`UnicodePropertyName`* part and equals sign may be omitted. If a *`UnicodePropertyName`* is specified, the value must correspond to the property type given.
+- `UnicodePropertyValue`
+  - : One of the tokens listed in the Values section, below. Many values have aliases or shorthand (e.g. the value `Decimal_Number` for the `General_Category` property may be written `Nd`, `digit`, or `Decimal_Number`). For most values, the `UnicodePropertyName` part and equals sign may be omitted. If a `UnicodePropertyName` is specified, the value must correspond to the property type given.
 
-> **Note:** As there are many properties and values available, we will not describe them exhaustively here but rather provide various examples
-
-## Rationale
-
-Before ES2018 there was no performance-efficient way to match characters from different sets based on `scripts` (like Macedonian, Greek, Georgian etc.) or `propertyName` (like Emoji etc) in JavaScript. Check out [tc39 Proposal on Unicode Property Escapes](https://github.com/tc39/proposal-regexp-unicode-property-escapes) for more info.
+> **Note:** As there are many properties and values available, we will not describe them exhaustively here but rather provide various examples.
 
 ## Examples
 
@@ -63,7 +60,7 @@ They can be used to match letters, numbers, symbols, punctuations, spaces, etc. 
 
 ```js
 // finding all the letters of a text
-let story = "It's the Cheshire Cat: now I shall have somebody to talk to.";
+const story = "It's the Cheshire Cat: now I shall have somebody to talk to.";
 
 // Most explicit form
 story.match(/\p{General_Category=Letter}/gu);
@@ -85,7 +82,7 @@ Some languages use different scripts for their writing system. For instance, Eng
 For example, `A` belongs to the `Latin` script and `ε` to the `Greek` script.
 
 ```js
-let mixedCharacters = "aεЛ";
+const mixedCharacters = "aεЛ";
 
 // Using the canonical "long" name of the script
 mixedCharacters.match(/\p{Script=Latin}/u); // a
@@ -147,4 +144,5 @@ console.table(nonEnglishText.match(regexpUPE));
 - [Unicode character property — Wikipedia](https://en.wikipedia.org/wiki/Unicode_character_property)
 - [A blog post from Axel Rauschmayer about Unicode property escapes](https://2ality.com/2017/07/regexp-unicode-property-escapes.html)
 - [The Unicode document for Unicode properties](https://unicode.org/reports/tr18/#Categories)
+- [tc39 Proposal on Unicode Property Escapes](https://github.com/tc39/proposal-regexp-unicode-property-escapes)
 - [UnicodeMatchProperty in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-runtime-semantics-unicodematchproperty-p)

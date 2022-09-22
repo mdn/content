@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once
@@ -20,21 +21,21 @@ for each array element.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-forEach((element) => { /* ... */ })
-forEach((element, index) => { /* ... */ })
-forEach((element, index, array) => { /* ... */ })
+forEach((element) => { /* … */ })
+forEach((element, index) => { /* … */ })
+forEach((element, index, array) => { /* … */ })
 
 // Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function(element) { /* ... */ })
-forEach(function(element, index) { /* ... */ })
-forEach(function(element, index, array){ /* ... */ })
-forEach(function(element, index, array) { /* ... */ }, thisArg)
+forEach(function(element) { /* … */ })
+forEach(function(element, index) { /* … */ })
+forEach(function(element, index, array){ /* … */ })
+forEach(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -115,8 +116,9 @@ effects at the end of a chain.
 > - {{jsxref("Array.prototype.findIndex()")}}
 >
 > Array methods: {{jsxref("Array.prototype.every()", "every()")}},
-> {{jsxref("Array.prototype.some()", "some()")}}, {{jsxref("Array.prototype.find()",
-    "find()")}}, and {{jsxref("Array.prototype.findIndex()", "findIndex()")}} test the
+> {{jsxref("Array.prototype.some()", "some()")}},
+> {{jsxref("Array.prototype.find()", "find()")}}, and
+> {{jsxref("Array.prototype.findIndex()", "findIndex()")}} test the
 > array elements with a predicate returning a truthy value to determine if further
 > iteration is required.
 
@@ -145,7 +147,7 @@ effects at the end of a chain.
 ### No operation for uninitialized values (sparse arrays)
 
 ```js
-const arraySparse = [1, 3,, 7];
+const arraySparse = [1, 3, /* empty */, 7];
 let numCallbackRuns = 0;
 
 arraySparse.forEach((element) => {
@@ -155,12 +157,13 @@ arraySparse.forEach((element) => {
 
 console.log({ numCallbackRuns });
 
-// 1
-// 3
-// 7
-// numCallbackRuns: 3
-// comment: as you can see the missing value between 3 and 7 didn't invoke callback function.
+// { element: 1 }
+// { element: 3 }
+// { element: 7 }
+// { numCallbackRuns: 3 }
 ```
+
+As you can seem the missing value between 3 and 7 didn't invoke callback function.
 
 ### Converting a for loop to forEach
 
@@ -191,13 +194,13 @@ items.forEach((item) => {
 The following code logs a line for each element in an array:
 
 ```js
-const logArrayElements = (element, index, array) => {
-  console.log('a[' + index + '] = ' + element);
+const logArrayElements = (element, index /*, array */) => {
+  console.log(`a[${index}] = ${element}`);
 };
 
 // Notice that index 2 is skipped, since there is no item at
-// that position in the array...
-[2, 5,, 9].forEach(logArrayElements);
+// that position in the array.
+[2, 5, , 9].forEach(logArrayElements);
 // logs:
 // a[0] = 2
 // a[1] = 5
@@ -210,17 +213,19 @@ The following (contrived) example updates an object's properties from each entry
 array:
 
 ```js
-function Counter() {
-  this.sum = 0
-  this.count = 0
+class Counter {
+  constructor() {
+    this.sum = 0;
+    this.count = 0;
+  }
+  add(array) {
+    // Only function expressions will have its own this binding
+    array.forEach(function countEntry(entry) {
+      this.sum += entry;
+      ++this.count;
+    }, this);
+  }
 }
-
-Counter.prototype.add = function(array) {
-  array.forEach(function countEntry(entry) {
-    this.sum += entry;
-    ++this.count;
-  }, this);
-};
 
 const obj = new Counter();
 obj.add([2, 5, 9]);
@@ -244,7 +249,7 @@ The following code creates a copy of a given object.
 
 There are different ways to create a copy of an object. The following is just one way
 and is presented to explain how `Array.prototype.forEach()` works by using
-ECMAScript 5 `Object.*` meta property functions.
+`Object.*` utility functions.
 
 ```js
 const copy = (obj) => {
@@ -292,11 +297,11 @@ array using built-in methods you can use {{jsxref("Array.prototype.flat()")}}.
 ```js
 const flatten = (arr) => {
   const result = [];
-  arr.forEach((i) => {
-    if (Array.isArray(i)) {
-      result.push(...flatten(i));
+  arr.forEach((item) => {
+    if (Array.isArray(item)) {
+      result.push(...flatten(item));
     } else {
-      result.push(i);
+      result.push(item);
     }
   });
   return result;

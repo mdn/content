@@ -10,6 +10,7 @@ tags:
   - Server-sent events
 browser-compat: api.EventSource.EventSource
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`EventSource()`**
@@ -18,7 +19,7 @@ remote resource.
 
 ## Syntax
 
-```js
+```js-nolint
 new EventSource(url)
 new EventSource(url, options)
 ```
@@ -42,15 +43,15 @@ new EventSource(url, options)
 const evtSource = new EventSource('sse.php');
 const eventList = document.querySelector('ul');
 
-evtSource.onmessage = function(e) {
+evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 }
 ```
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Specifications
 

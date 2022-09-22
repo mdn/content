@@ -4,7 +4,6 @@ slug: Web/API/WritableStreamDefaultWriter
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - Streams
@@ -12,7 +11,8 @@ tags:
   - WritableStream
 browser-compat: api.WritableStreamDefaultWriter
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`WritableStreamDefaultWriter`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) is the object returned by {{domxref("WritableStream.getWriter()")}} and once created locks the writer to the `WritableStream` ensuring that no other streams can write to the underlying sink.
 
@@ -23,11 +23,11 @@ The **`WritableStreamDefaultWriter`** interface of the [Streams API](/en-US/docs
 
 ## Properties
 
-- {{domxref("WritableStreamDefaultWriter.closed")}} {{readonlyinline}}
+- {{domxref("WritableStreamDefaultWriter.closed")}} {{ReadOnlyInline}}
   - : Allows you to write code that responds to an end to the streaming process. Returns a promise that fulfills if the stream becomes closed, or rejects if the stream errors or the writer's lock is released.
-- {{domxref("WritableStreamDefaultWriter.desiredSize")}} {{readonlyinline}}
+- {{domxref("WritableStreamDefaultWriter.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size required to fill the stream's internal queue.
-- {{domxref("WritableStreamDefaultWriter.ready")}} {{readonlyinline}}
+- {{domxref("WritableStreamDefaultWriter.ready")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the desired size of the stream's internal queue transitions from non-positive to positive, signaling that it is no longer applying backpressure.
 
 ## Methods
@@ -55,9 +55,7 @@ The following example shows the creation of a `WritableStream` with a custom sin
    const encoded = encoder.encode(message, { stream: true });
    encoded.forEach((chunk) => {
      defaultWriter.ready
-       .then(() => {
-         return defaultWriter.write(chunk);
-       })
+       .then(() => defaultWriter.write(chunk))
        .then(() => {
          console.log("Chunk written to sink.");
        })
@@ -91,7 +89,7 @@ The following example shows the creation of a `WritableStream` with a custom sin
        view[0] = chunk;
        const decoded = decoder.decode(view, { stream: true });
        const listItem = document.createElement('li');
-       listItem.textContent = "Chunk decoded: " + decoded;
+       listItem.textContent = `Chunk decoded: ${decoded}`;
        list.appendChild(listItem);
        result += decoded;
        resolve();
@@ -99,7 +97,7 @@ The following example shows the creation of a `WritableStream` with a custom sin
    },
    close() {
      const listItem = document.createElement('li');
-     listItem.textContent = "[MESSAGE RECEIVED] " + result;
+     listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
      list.appendChild(listItem);
    },
    abort(err) {

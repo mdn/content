@@ -14,6 +14,7 @@ tags:
   - size
 browser-compat: api.KeyboardLayoutMap.size
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`size`** read-only property of

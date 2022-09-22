@@ -7,6 +7,7 @@ tags:
   - Event
   - Non-standard
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}
@@ -17,7 +18,7 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
+```js-nolint
 object.addEventListener("msthumbnailclick", handler, useCapture)
 ```
 
@@ -47,7 +48,7 @@ Pointer to an IHTMLEventObj interface for the current event.
 ```js
 function thumbnailClickHandler(evt)
 {
-    alert ("Clicked button: " + evt.buttonID);
+    alert(`Clicked button: ${evt.buttonID}`);
 }
 document.addEventListener('msthumbnailclick', thumbnailClickHandler);
 ```
@@ -66,7 +67,7 @@ window.external.msSiteModeClearIconOverlay();
 handlerdocument.addEventListener('msthumbnailclick', onButtonClicked, false);
 
 // add the buttons
-var btnPlay = window.external.msSiteModeAddThumbBarButton(iconUri, toolTip);
+const btnPlay = window.external.msSiteModeAddThumbBarButton(iconUri, toolTip);
 
 // refresh the taskbar
 window.external.msSiteModeShowThumbBar();

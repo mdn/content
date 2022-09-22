@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.validateProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.validateProgram()`** method of the
@@ -19,7 +20,7 @@ used in the current WebGL state.
 
 ## Syntax
 
-```js
+```js-nolint
 validateProgram(program)
 ```
 
@@ -44,9 +45,9 @@ gl.attachShader(program, fragmentShader);
 gl.linkProgram(program);
 gl.validateProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
   const info = gl.getProgramInfoLog(program);
-  throw 'Could not compile WebGL program. \n\n' + info;
+  throw `Could not compile WebGL program. \n\n${info}`;
 }
 
 gl.useProgram(program);

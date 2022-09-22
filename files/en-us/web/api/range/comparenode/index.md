@@ -14,6 +14,7 @@ tags:
   - compareNode
 browser-compat: api.Range.compareNode
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_Header}}
 
 The **`Range.compareNode()`** returns a constant indicating the
@@ -47,8 +48,8 @@ function rangeCompareNode(range, node) {
   catch (e) {
     nodeRange.selectNodeContents(node);
   }
-  const nodeIsBefore = range.compareBoundaryPoints(Range.START_TO_START, nodeRange) == 1;
-  const nodeIsAfter = range.compareBoundaryPoints(Range.END_TO_END, nodeRange) == -1;
+  const nodeIsBefore = range.compareBoundaryPoints(Range.START_TO_START, nodeRange) === 1;
+  const nodeIsAfter = range.compareBoundaryPoints(Range.END_TO_END, nodeRange) === -1;
 
   if (nodeIsBefore && !nodeIsAfter)
     return 0;
@@ -63,7 +64,7 @@ function rangeCompareNode(range, node) {
 
 ## Syntax
 
-```js
+```js-nolint
 compareNode(referenceNode)
 ```
 

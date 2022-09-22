@@ -10,6 +10,7 @@ tags:
   - Web
 spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
 ---
+
 {{ CSSRef }}
 
 A **block formatting context** (BFC) is a part of a visual CSS rendering of a web page. It's the region in which the layout of block boxes occurs and in which floats interact with other elements.
@@ -67,22 +68,22 @@ The value name of `flow-root` makes sense when you understand you are creating s
 
 ```html
 <section>
-    <div class="box">
-        <div class="float">I am a floated box!</div>
-        <p>I am content inside the container.</p>
-    </div>
+  <div class="box">
+    <div class="float">I am a floated box!</div>
+    <p>I am content inside the container.</p>
+  </div>
 </section>
 <section>
-    <div class="box" style="overflow:auto">
-        <div class="float">I am a floated box!</div>
-        <p>I am content inside the <code>overflow:auto</code> container.</p>
-    </div>
+  <div class="box" style="overflow:auto">
+    <div class="float">I am a floated box!</div>
+    <p>I am content inside the <code>overflow:auto</code> container.</p>
+  </div>
 </section>
 <section>
-    <div class="box" style="display:flow-root">
-        <div class="float">I am a floated box!</div>
-        <p>I am content inside the <code>display:flow-root</code> container.</p>
-    </div>
+  <div class="box" style="display:flow-root">
+    <div class="float">I am a floated box!</div>
+    <p>I am content inside the <code>display:flow-root</code> container.</p>
+  </div>
 </section>
 ```
 
@@ -90,23 +91,23 @@ The value name of `flow-root` makes sense when you understand you are creating s
 
 ```css
 section {
-    height:150px;
+  height: 150px;
 }
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
 }
 .box[style] {
-    background-color: aliceblue;
-    border: 5px solid steelblue;
+  background-color: aliceblue;
+  border: 5px solid steelblue;
 }
 .float {
-    float: left;
-    width: 200px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, .5);
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -125,7 +126,9 @@ In the following example, we are using `display:flow-root` and floats to impleme
 </section>
 <section>
   <div class="float">Try to resize this outer float</div>
-  <div class="box" style="display:flow-root"><p><code>display:flow-root</code><p></div>
+  <div class="box" style="display:flow-root">
+    <p><code>display:flow-root</code></p>
+  </div>
 </section>
 ```
 
@@ -133,26 +136,26 @@ In the following example, we are using `display:flow-root` and floats to impleme
 
 ```css
 section {
-    height:150px;
+  height: 150px;
 }
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
 }
 .box[style] {
-    background-color: aliceblue;
-    border: 5px solid steelblue;
+  background-color: aliceblue;
+  border: 5px solid steelblue;
 }
 .float {
-    float: left;
-    overflow: hidden; /* required by resize:both */
-    resize: both;
-    margin-right:25px;
-    width: 200px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, .75);
-    border: 1px solid black;
-    padding: 10px;
+  float: left;
+  overflow: hidden; /* required by resize:both */
+  resize: both;
+  margin-right: 25px;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -178,7 +181,8 @@ Creating a new BFC to avoid the [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_
 #### CSS
 
 ```css
-.blue, .red-inner {
+.blue,
+.red-inner {
   height: 50px;
   margin: 10px 0;
 }
@@ -202,4 +206,21 @@ Creating a new BFC to avoid the [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_
 ## See also
 
 - {{ cssxref("float") }}, {{ cssxref("clear") }}
-- {{css_key_concepts}}
+- CSS key concepts:
+  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - [At-rules](/en-US/docs/Web/CSS/At-rule)
+  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Values
+    - [Initial values](/en-US/docs/Web/CSS/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

@@ -13,6 +13,7 @@ tags:
   - clear
 browser-compat: api.IDBObjectStore.clear
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`clear()`** method of the {{domxref("IDBObjectStore")}}
@@ -29,7 +30,7 @@ or {{domxref("IDBKeyRange")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 
@@ -60,14 +61,14 @@ full working example, see our [To-do Notifications](https://github.com/mdn/to-do
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
   db = DBOpenRequest.result;
 
-  // Clear all the data form the object store
+  // Clear all the data from the object store
   clearData();
 };
 
@@ -76,12 +77,12 @@ function clearData() {
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
-  transaction.oncomplete = function(event) {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed.</li>';
   };
 
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>Transaction not opened due to error: ' + transaction.error + '</li>';
+  transaction.onerror = (event) => {
+    note.innerHTML += `<li>Transaction not opened due to error: ${transaction.error}</li>`;
   };
 
   // create an object store on the transaction
@@ -90,7 +91,7 @@ function clearData() {
   // Make a request to clear all the data out of the object store
   const objectStoreRequest = objectStore.clear();
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
     note.innerHTML += '<li>Request successful.</li>';
   };

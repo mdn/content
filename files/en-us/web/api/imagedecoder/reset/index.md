@@ -8,15 +8,17 @@ tags:
   - Reference
   - reset
   - ImageDecoder
+  - Experimental
 browser-compat: api.ImageDecoder.reset
 ---
-{{securecontext_header}}{{APIRef("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`reset()`** method of the {{domxref("ImageDecoder")}} interface aborts all pending `decode()` operations; rejecting all pending promises. All other state will be unchanged. Class methods can continue to be invoked after `reset()`. E.g., calling `decode()` after `reset()` is permitted.
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 

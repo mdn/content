@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.Permissions.query
 ---
+
 {{APIRef("Permissions API")}}
 
 The **`Permissions.query()`** method of the {{domxref("Permissions")}} interface returns the state of a user permission on the global scope.
 
 ## Syntax
 
-```js
+```js-nolint
 query(permissionDescriptor)
 ```
 
@@ -34,7 +35,7 @@ query(permissionDescriptor)
 
 > **Note:** As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is granted (e.g. by the user, in the relevant permissions dialog), `navigator.permissions.query()` will return `true` for both `notifications` and `push`.
 
-> **Note:** The `persistent-storage` permission allows an origin to use a persistent box (i.e [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its storage, as per the [Storage API](https://storage.spec.whatwg.org/).
+> **Note:** The `persistent-storage` permission allows an origin to use a persistent box (i.e., [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 
 ### Return value
 
@@ -65,10 +66,10 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} objec
 ## Examples
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(result) {
- if (result.state == 'granted') {
+navigator.permissions.query({ name: 'geolocation' }).then((result) => {
+ if (result.state === 'granted') {
    showLocalNewsWithGeolocation();
- } else if (result.state == 'prompt') {
+ } else if (result.state === 'prompt') {
    showButtonToEnableLocalNews();
  }
  // Don't do anything if the permission was denied.

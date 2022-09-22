@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: region role'
+title: "ARIA: region role"
 slug: Web/Accessibility/ARIA/Roles/region_role
 tags:
   - ARIA
@@ -13,6 +13,7 @@ spec-urls:
   - https://w3c.github.io/aria/#region
   - https://w3c.github.io/aria-practices/#aria_lh_region
 ---
+
 The **`region`** role is used to identify document areas the author deems significant. It is a generic landmark available to aid in navigation when none of the other landmark roles are appropriate.
 
 ```html
@@ -41,7 +42,9 @@ Using the {{HTMLElement('section')}} element will automatically communicate a se
 
 ```html
 <div role="region" aria-labelledby="region-heading">
-  <h2 id="region-heading">This heading's `id` attribute helps this region have an accessible name</h2>
+  <h2 id="region-heading">
+    This heading's `id` attribute helps this region have an accessible name
+  </h2>
   <!-- region content -->
 </div>
 ```
@@ -56,7 +59,7 @@ Only use the `region` role if no other relevant [content sectioning](/en-US/docs
 
 ### Prefer HTML
 
-Using the {{HTMLElement('section')}} element will automatically communicate that a section has a role of `region` if it is given an accessible name. If at all possible, prefer using {{HTMLElement('section')}}  instead.
+Using the {{HTMLElement('section')}} element will automatically communicate that a section has a role of `region` if it is given an accessible name. If at all possible, prefer using {{HTMLElement('section')}} instead.
 
 ### Labeling landmarks
 
@@ -84,7 +87,7 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 
 ### SVG
 
-`role="region"` can be declared on areas of {{HTMLElement('svg')}}  along with an `aria-label` to allow individual sections of the SVG to be described.
+`role="region"` can be declared on areas of {{HTMLElement('svg')}} along with an `aria-label` to allow individual sections of the SVG to be described.
 
 ## Specifications
 
@@ -107,6 +110,6 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

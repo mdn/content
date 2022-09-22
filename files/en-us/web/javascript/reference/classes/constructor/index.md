@@ -8,6 +8,7 @@ tags:
   - Language feature
 browser-compat: javascript.classes.constructor
 ---
+
 {{jsSidebar("Classes")}}
 
 The `constructor` method is a special method of a {{jsxref("Statements/class", "class")}} for creating and initializing an object instance of that class.
@@ -16,11 +17,11 @@ The `constructor` method is a special method of a {{jsxref("Statements/class", "
 
 ## Syntax
 
-```js
-constructor() { /* ... */ }
-constructor(argument0) { /* ... */ }
-constructor(argument0, argument1) { /* ... */ }
-constructor(argument0, argument1, ... , argumentN) { /* ... */ }
+```js-nolint
+constructor() { /* … */ }
+constructor(argument0) { /* … */ }
+constructor(argument0, argument1) { /* … */ }
+constructor(argument0, argument1, /* … ,*/ argumentN) { /* … */ }
 ```
 
 ## Description
@@ -64,17 +65,15 @@ That enables code like this to work:
 
 ```js
 class ValidationError extends Error {
-
   printCustomerMessage() {
     return `Validation failed :-( (details: ${this.message})`;
   }
-
 }
 
 try {
   throw new ValidationError("Not a valid phone number");
 } catch (error) {
-   if (error instanceof ValidationError) {
+  if (error instanceof ValidationError) {
     console.log(error.name); // This is Error instead of ValidationError!
     console.log(error.printCustomerMessage());
   } else {
@@ -92,7 +91,6 @@ For example:
 
 ```js
 class ValidationError extends Error {
-
   constructor(message) {
     super(message);  // call parent class constructor
     this.name = 'ValidationError';
@@ -100,15 +98,14 @@ class ValidationError extends Error {
   }
 
   printCustomerMessage() {
-     return `Validation failed :-( (details: ${this.message}, code: ${this.code})`;
+    return `Validation failed :-( (details: ${this.message}, code: ${this.code})`;
   }
-
 }
 
 try {
   throw new ValidationError("Not a valid phone number");
 } catch (error) {
-   if (error instanceof ValidationError) {
+  if (error instanceof ValidationError) {
     console.log(error.name); // Now this is ValidationError!
     console.log(error.printCustomerMessage());
   } else {
@@ -176,8 +173,8 @@ class Square extends Polygon {
   }
 
   set area(value) {
-    this.height = value**0.5;
-    this.width = value**0.5;
+    this.height = value ** 0.5;
+    this.width = value ** 0.5;
   }
 }
 ```
@@ -188,15 +185,15 @@ Here the prototype of `Square` class is changed—but the constructor of its bas
 
 ```js
 class Polygon {
-    constructor() {
-        this.name = "Polygon";
-    }
+  constructor() {
+    this.name = "Polygon";
+  }
 }
 
 class Square extends Polygon {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 }
 
 class Rectangle {}
@@ -206,7 +203,7 @@ Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
 console.log(Object.getPrototypeOf(Square.prototype) === Polygon.prototype); //false
 console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //true
 
-let newInstance = new Square();
+const newInstance = new Square();
 console.log(newInstance.name); //Polygon
 ```
 

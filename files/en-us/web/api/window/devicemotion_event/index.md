@@ -9,6 +9,7 @@ tags:
   - events
 browser-compat: api.Window.devicemotion_event
 ---
+
 {{APIRef}}
 
 The `devicemotion` event is fired at a regular interval and indicates the amount of physical force of acceleration the device is receiving at that time. It also provides information about the rate of rotation, if available.
@@ -20,14 +21,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('devicemotion', event => { });
+addEventListener('devicemotion', (event) => { });
 
-ondevicemotion = event => { };
+ondevicemotion = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("DeviceMotionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("DeviceMotionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DeviceMotionEvent")}}
 

@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/36
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 36 was released on February 24th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -15,7 +16,7 @@ Firefox 36 was released on February 24th, 2015. This article lists key changes t
 Highlights:
 
 - [eval sources now appear in the Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html#debug-eval-sources)
-- [Simpler process for connecting to Firefox for Android](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/debugging_firefox_for_android_with_webide/index.html)
+- [Simpler process for connecting to Firefox for Android](https://web.archive.org/web/20220410035837/https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/debugging_firefox_for_android_with_webide/index.html)
 - Box Model Highlighter works on remote targets
 - ["Invert the call tree" option in the Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html#inverting-the-call-tree)
 - [Inspect DOM promises in the console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#type-specific-rich-output)
@@ -125,7 +126,10 @@ _No change._
 - Implemented global `require` function to access sdk modules anywhere ({{bug(1070927)}}), using:
 
   ```js
-  var { require } = Cu.import("resource://gre/modules/commonjs/toolkit/require.js", {});
+  var { require } = Cu.import(
+    "resource://gre/modules/commonjs/toolkit/require.js",
+    {}
+  );
   ```
 
 #### Details

@@ -24,7 +24,7 @@ The **`<abbr>`** [HTML](/en-US/docs/Web/HTML) element represents an abbreviation
 
 When including an abbreviation or acronym, provide a full expansion of the term in plain text on first use, along with the `<abbr>` to mark up the abbreviation. This informs the user what the abbreviation or acronym means.
 
-The optional {{htmlattrxref("title")}} attribute can provide an expansion for the abbreviation or accronym when a full expansion is not present. This provides a hint to user agents on how to announce/display the content while informing all users what the abbreviation means. If present, `title` must contain this full description and nothing else.
+The optional {{htmlattrxref("title")}} attribute can provide an expansion for the abbreviation or acronym when a full expansion is not present. This provides a hint to user agents on how to announce/display the content while informing all users what the abbreviation means. If present, `title` must contain this full description and nothing else.
 
 {{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
 
@@ -104,7 +104,7 @@ It's certainly not required that all abbreviations be marked up using `<abbr>`. 
 
 ### Grammar considerations
 
-In languages with {{interwiki("wikipedia", "grammatical number")}} (that is, languages where the number of items affects the grammar of a sentence), use the same grammatical number in your `title` attribute as inside your `<abbr>` element. This is especially important in languages with more than two numbers, such as Arabic, but is also relevant in English.
+In languages with [grammatical number](https://en.wikipedia.org/wiki/Grammatical_number) (that is, languages where the number of items affects the grammar of a sentence), use the same grammatical number in your `title` attribute as inside your `<abbr>` element. This is especially important in languages with more than two numbers, such as Arabic, but is also relevant in English.
 
 ## Default styling
 
@@ -157,8 +157,7 @@ Adding a {{htmlattrxref("title")}} attribute lets you provide an expansion or de
 #### HTML
 
 ```html
-<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big
-time.</p>
+<p>Ashok's joke made me <abbr title="Laugh Out Loud">LOL</abbr> big time.</p>
 ```
 
 #### Result
@@ -172,14 +171,16 @@ You can use `<abbr>` in tandem with {{HTMLElement("dfn")}} to more formally defi
 #### HTML
 
 ```html
-<p><dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr>
-</dfn> is a markup language used to create the semantics and structure
-of a web page.</p>
+<p>
+  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn> is a
+  markup language used to create the semantics and structure of a web page.
+</p>
 
-<p>A <dfn id="spec">Specification</dfn>
-(<abbr>spec</abbr>) is a document that outlines
-in detail how a technology or API is intended to function and how it is
-accessed.</p>
+<p>
+  A <dfn id="spec">Specification</dfn> (<abbr>spec</abbr>) is a document that
+  outlines in detail how a technology or API is intended to function and how it
+  is accessed.
+</p>
 ```
 
 #### Result
@@ -190,12 +191,15 @@ accessed.</p>
 
 Spelling out the acronym or abbreviation in full the first time it is used on a page is beneficial for helping people understand it, especially if the content is technical or industry jargon.
 
-Only include a `title` if expanding the abbreviation or acronym in the text is not possible.  Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
+Only include a `title` if expanding the abbreviation or acronym in the text is not possible. Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
 
-#### Example
+### Example
 
 ```html
-<p>JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight data-interchange format.</p>
+<p>
+  JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight
+  data-interchange format.
+</p>
 ```
 
 This is especially helpful for people who are unfamiliar with the terminology or concepts discussed in the content, people who are new to the language, and people with cognitive concerns.

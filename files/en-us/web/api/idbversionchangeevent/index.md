@@ -14,6 +14,7 @@ tags:
   - Storage
 browser-compat: api.IDBVersionChangeEvent
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBVersionChangeEvent`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) indicates that the version of the database has changed, as the result of an {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} event handler function.
@@ -31,14 +32,14 @@ The **`IDBVersionChangeEvent`** interface of the [IndexedDB API](/en-US/docs/Web
 
 _Also inherits properties from its parent, {{domxref("Event")}} interface._
 
-- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{readonlyInline}}
+- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{ReadOnlyInline}}
   - : Returns the old version of the database.
-- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{readonlyInline}}
+- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{ReadOnlyInline}}
   - : Returns the new version of the database.
 
 ### Methods
 
-_No specific method, but inherits properties from its parent, {{domxref("Event")}} interface._
+_No specific method, but inherits methods from its parent, {{domxref("Event")}} interface._
 
 ## Example
 
@@ -47,27 +48,19 @@ In the following code snippet, we make a request to open a database, and include
 ```js
 const note = document.querySelector("ul");
 
-// In the following line, you should include the prefixes of implementations you want to test.
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-// DON'T use "var indexedDB = …" if you're not in a function.
-// Moreover, you may need references to some window.IDB* objects:
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-// (Mozilla has never prefixed these objects, so we don't need window.mozIDB*)
-
 // Let us open version 4 of our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
-DBOpenRequest.onerror = function(event) {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += '<li>Error loading database.</li>';
 };
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot later on, for opening transactions and suchlike.
-  db = DBOpenRequest.result;
+  const db = DBOpenRequest.result;
 };
 ```
 

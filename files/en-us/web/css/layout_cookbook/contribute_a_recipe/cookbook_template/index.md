@@ -10,6 +10,7 @@ tags:
   - cookbook
   - recipes
 ---
+
 {{CSSRef}}
 
 > **Note:** This is a template page for a CSS Cookbook page. Please use this as a raw template when you create a new cookbook page.

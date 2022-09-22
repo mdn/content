@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTextAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTextAreaElement`** interface provides special properties and methods for manipulating the layout and presentation of {{HTMLElement("textarea")}} elements.
@@ -73,7 +74,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       </td>
     </tr>
     <tr>
-      <td><code>form</code> {{readonlyInline}}</td>
+      <td><code>form</code> {{ReadOnlyInline}}</td>
       <td>
         <code><em>object</em>:</code> Returns a reference to the parent form
         element. If this element is not contained in a form element, it can be
@@ -185,20 +186,20 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       </td>
     </tr>
     <tr>
-      <td><code>textLength</code> {{readonlyInline}}</td>
+      <td><code>textLength</code> {{ReadOnlyInline}}</td>
       <td>
         <code><em>long</em>:</code> Returns the codepoint length of the
         control's <code>value</code>. Same as reading <code>value.length</code>
       </td>
     </tr>
     <tr>
-      <td><code>type</code> {{readonlyInline}}</td>
+      <td><code>type</code> {{ReadOnlyInline}}</td>
       <td>
         <code><em>string</em>:</code> Returns the string <code>textarea</code>.
       </td>
     </tr>
     <tr>
-      <td><code>validationMessage</code> {{readonlyInline}}</td>
+      <td><code>validationMessage</code> {{ReadOnlyInline}}</td>
       <td>
         <code><em>string</em>:</code> Returns a localized message that describes
         the validation constraints that the control does not satisfy (if any).
@@ -208,7 +209,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       </td>
     </tr>
     <tr>
-      <td><code>validity</code> {{readonlyInline}}</td>
+      <td><code>validity</code> {{ReadOnlyInline}}</td>
       <td>
         <code><em>{{domxref("ValidityState")}} object</em>:</code>
         Returns the validity states that this element is in.
@@ -222,7 +223,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
       </td>
     </tr>
     <tr>
-      <td><code>willValidate</code> {{readonlyInline}}</td>
+      <td><code>willValidate</code> {{ReadOnlyInline}}</td>
       <td>
         <p>
           <code><em>boolean</em>:</code> Returns whether the element is a
@@ -253,7 +254,7 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
   </tbody>
 </table>
 
-The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on `HTMLTextAreaElement` in DOM Level 2 HTML and earlier specifications.
+The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}}.
 
 ## Methods
 
@@ -323,7 +324,7 @@ The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTML
   </tbody>
 </table>
 
-The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on `HTMLTextAreaElement` in DOM Level 2 HTML and earlier specifications.
+The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}}.
 
 ## Events
 
@@ -345,7 +346,7 @@ Make a textarea autogrow while typing:
 ```js
 function autoGrow (oField) {
   if (oField.scrollHeight > oField.clientHeight) {
-    oField.style.height = oField.scrollHeight + "px";
+    oField.style.height = `${oField.scrollHeight}px`;
   }
 }
 ```
@@ -414,10 +415,10 @@ const em = document.querySelector("#format-em");
 const link = document.querySelector("#format-link");
 const code = document.querySelector("#format-code");
 
-strong.addEventListener("click", e => insert("<strong>","</strong>"));
-em.addEventListener("click", e => insert("<em>","</em>"));
-link.addEventListener("click", e => insertURL());
-code.addEventListener("click", e => insert("\n<code>\n","\n</code>\n"));
+strong.addEventListener("click", (e) => insert("<strong>","</strong>"));
+em.addEventListener("click", (e) => insert("<em>","</em>"));
+link.addEventListener("click", (e) => insertURL());
+code.addEventListener("click", (e) => insert("\n<code>\n","\n</code>\n"));
 ```
 
 #### CSS
@@ -436,14 +437,19 @@ HTML:
 
 ```html
 <form name="myForm">
-<p>[&nbsp;
-  <span class="intLink" id="format-strong"><strong>Bold</strong></span> |
-  <span class="intLink" id="format-em"><em>Italic</em></span> |
-  <span class="intLink" id="format-link">URL</span> |
-  <span class="intLink" id="format-code">code</span> &nbsp;]
-</p>
+  <p>
+    [&nbsp;
+    <span class="intLink" id="format-strong"><strong>Bold</strong></span> |
+    <span class="intLink" id="format-em"><em>Italic</em></span> |
+    <span class="intLink" id="format-link">URL</span> |
+    <span class="intLink" id="format-code">code</span> &nbsp;]
+  </p>
 
-<p><textarea name="myTxtArea" rows="10" cols="50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem. </textarea></p>
+  <p>
+    <textarea name="myTxtArea" rows="10" cols="50">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem. 
+    </textarea>
+  </p>
 </form>
 ```
 
@@ -468,7 +474,7 @@ function checkRows(oField, oKeyEvent) {
     sVal = oField.value, nLen = sVal.length,
 
     nBackward = nSelS >= nCols ? nSelS - nCols : 0,
-    nDeltaForw = sVal.substring(nBackward, nSelS).search(new RegExp("\\n(?!.{0," + String(nCols - 2) + "}\\n)")) + 1,
+    nDeltaForw = sVal.substring(nBackward, nSelS).search(new RegExp(`\\n(?!.{0,${String(nCols - 2)}}\\n)`)) + 1,
     nRowStart = nBackward + nDeltaForw,
     aReturns = (sVal.substring(0, nSelS) + sVal.substring(nSelE, sVal.length)).match(/\n/g),
     nRowEnd = nSelE + nRowStart + nCols - nSelS,
@@ -483,9 +489,13 @@ In the HTML we just need to hook our function to the \`onkeypress\` event and sp
 
 ```html
 <form>
-  <p>Textarea with fixed number of characters per line:<br />
-    <textarea cols="50" rows="10" onkeypress="return checkRows(this, event);"
-              onpaste="return false;"></textarea>
+  <p>
+    Textarea with fixed number of characters per line:<br />
+    <textarea
+      cols="50"
+      rows="10"
+      onkeypress="return checkRows(this, event);"
+      onpaste="return false;"></textarea>
   </p>
 </form>
 ```

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.toBlob
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement.toBlob()`** method creates a {{domxref("Blob")}} object representing the image contained in the canvas.
@@ -23,7 +24,7 @@ The created image will have a resolution of 96dpi for file formats that support 
 
 ## Syntax
 
-```js
+```js-nolint
 toBlob(callback)
 toBlob(callback, type)
 toBlob(callback, type, quality)
@@ -60,11 +61,11 @@ The code snippet below, for example, takes the image in the {{HTMLElement("canva
 ```js
 const canvas = document.getElementById('canvas');
 
-canvas.toBlob(function(blob) {
+canvas.toBlob((blob) => {
   const newImg = document.createElement('img');
   const url = URL.createObjectURL(blob);
 
-  newImg.onload = function() {
+  newImg.onload = () => {
     // no longer need to read the blob so it's revoked
     URL.revokeObjectURL(url);
   };
@@ -78,7 +79,7 @@ Note that here we're creating a PNG image; if you add a second parameter to the 
 For example, to get the image in JPEG format:
 
 ```js
-canvas.toBlob(function(blob){ /* … */ }, 'image/jpeg', 0.95); // JPEG at 95% quality
+canvas.toBlob((blob) => { /* … */ }, 'image/jpeg', 0.95); // JPEG at 95% quality
 ```
 
 ### Convert a canvas to an ico (Mozilla only)
@@ -100,12 +101,12 @@ ctx.fillStyle = 'yellow';
 ctx.fill();
 
 function blobCallback(iconName) {
-  return function(b) {
+  return (b) => {
     const a = document.createElement('a');
     a.textContent = 'Download';
     document.body.appendChild(a);
     a.style.display = 'block';
-    a.download = iconName + '.ico';
+    a.download = `${iconName}.ico`;
     a.href = window.URL.createObjectURL(b);
   }
 }
@@ -130,20 +131,20 @@ ctx.fillStyle = 'yellow';
 ctx.fill();
 
 function blobCallback(iconName) {
-  return function(b) {
+  return (b) => {
     const r = new FileReader();
-    r.onloadend = function () {
+    r.onloadend = () => {
     // r.result contains the ArrayBuffer.
     Cu.import('resource://gre/modules/osfile.jsm');
     const writePath = OS.Path.join(OS.Constants.Path.desktopDir,
-                                 iconName + '.ico');
+                                 `${iconName}.ico`);
     const promise = OS.File.writeAtomic(writePath, new Uint8Array(r.result),
-                                      {tmpPath:writePath + '.tmp'});
+                                      {tmpPath:`${writePath}.tmp`});
     promise.then(
-      function() {
+      () => {
         console.log('successfully wrote file');
       },
-      function() {
+      () => {
         console.log('failure writing file')
       }
     );

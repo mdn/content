@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getProgramInfoLog
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLRenderingContext.getProgramInfoLog** returns the information
@@ -18,7 +19,7 @@ occurred during failed linking or validation of `WebGLProgram` objects.
 
 ## Syntax
 
-```js
+```js-nolint
 getProgramInfoLog(program)
 ```
 
@@ -39,7 +40,7 @@ string of length 0.
 ### Checking program errors
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);

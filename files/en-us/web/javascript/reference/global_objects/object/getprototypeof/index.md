@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`Object.getPrototypeOf()`** method returns the prototype
@@ -19,7 +20,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getPrototypeOf(obj)
 ```
 
@@ -30,8 +31,7 @@ Object.getPrototypeOf(obj)
 
 ### Return value
 
-The prototype of the given object. If there are no inherited properties,
-{{jsxref("null")}} is returned.
+The prototype of the given object, which may be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 ## Examples
 
@@ -45,7 +45,7 @@ Object.getPrototypeOf(obj) === proto; // true
 
 ### Non-object coercion
 
-In ES5, it will throw a {{jsxref("TypeError")}} exception if the _obj_
+In ES5, it will throw a {{jsxref("TypeError")}} exception if the `obj`
 parameter isn't an object. In ES2015, the parameter will be coerced to an
 {{jsxref("Object")}}.
 
@@ -64,17 +64,11 @@ Object.getPrototypeOf('foo');
 
 {{Compat}}
 
-### Opera-specific notes
-
-Even though older Opera versions don't support `Object.getPrototypeOf()`
-yet, Opera supports the non-standard {{jsxref("Object.proto", "__proto__")}} property
-since Opera 10.50.
-
 ## See also
 
 - [Polyfill of `Object.getPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object/proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - John Resig's post on [getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/)
 - {{jsxref("Reflect.getPrototypeOf()")}}

@@ -8,6 +8,7 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.mover
 ---
+
 {{MathMLRef}}
 
 The MathML `<mover>` element is used to attach an accent or a limit over an expression. Use the following syntax: `<mover> base overscript </mover>`
@@ -16,33 +17,28 @@ The MathML `<mover>` element is used to attach an accent or a limit over an expr
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- accent
+- `accent`
   - : If `true` the over-script is an _accent_, which is drawn closer to the base expression.
     If `false` (default value) the over-script is a _limit_ over the base expression.
-- align {{deprecated_inline}}
-  - : The alignment of the over-script. Possible values are: `left`, `center`, and `right`.
-    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
 
 ## Examples
 
 Sample rendering: ![x+y+z](mover.png)
 
-Rendering in your browser: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mrow><mo>⏞</mo></mover></math>
+Rendering in your browser: <math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>⏞</mo></mover></math>
 
 ```html
 <math>
-
-<mover accent="true">
-  <mrow>
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-    <mo> + </mo>
-    <mi> z </mi>
-  </mrow>
-  <mo> &#x23DE; <!--TOP CURLY BRACKET--> </mo>
-</mover>
-
+  <mover accent="true">
+    <mrow>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>y</mi>
+      <mo>+</mo>
+      <mi>z</mi>
+    </mrow>
+    <mo>&#x23DE;<!--TOP CURLY BRACKET--></mo>
+  </mover>
 </math>
 ```
 

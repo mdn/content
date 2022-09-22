@@ -13,6 +13,7 @@ tags:
   - delete
 browser-compat: api.IDBCursor.delete
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`delete()`** method of the {{domxref("IDBCursor")}}
@@ -29,7 +30,7 @@ Be aware that you can't call `delete()` (or
 
 ## Syntax
 
-```js
+```js-nolint
 delete()
 ```
 
@@ -58,12 +59,12 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. If the
 `albumTitle` of the current cursor is "Grace under pressure", we delete that
-entire record using `var request = cursor.delete();`.
+entire record using `const request = cursor.delete();`.
 
 The cursor does not require us to select the data based on a key; we can just grab all
 of it. Also note that in each iteration of the loop, you can grab data from the current
 record under the cursor object using `cursor.value.foo`. For a complete
-working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/indexeddb-examples/idbcursor/)).
+working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/indexeddb-examples/idbcursor/)).
 
 ```js
 function deleteResult() {
@@ -71,17 +72,17 @@ function deleteResult() {
   const transaction = db.transaction(['rushAlbumList'], 'readwrite');
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
-      if(cursor.value.albumTitle === 'Grace under pressure') {
+    if (cursor) {
+      if (cursor.value.albumTitle === 'Grace under pressure') {
         const request = cursor.delete();
-        request.onsuccess = function() {
+        request.onsuccess = () => {
           console.log('Deleted that mediocre album from 1984. Even Power windows is better.');
         };
       } else {
         const listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+        listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
         list.appendChild(listItem);
       }
       cursor.continue();

@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_compressed_texture_s3tc_srgb
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_compressed_texture_s3tc_srgb`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes four [S3TC compressed texture formats](https://en.wikipedia.org/wiki/S3_Texture_Compression) for the sRGB colorspace.
@@ -35,9 +36,9 @@ The compressed texture formats are exposed by four constants and can be used in 
 ## Examples
 
 ```js
-var ext = gl.getExtension('WEBGL_compressed_texture_s3tc_srgb');
+const ext = gl.getExtension('WEBGL_compressed_texture_s3tc_srgb');
 
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_SRGB_S3TC_DXT1_EXT, 512, 512, 0, textureData);

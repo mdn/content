@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.IDBObjectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
@@ -18,15 +19,15 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 
 ## Properties
 
-- {{domxref("IDBObjectStore.indexNames")}} {{readonlyInline}}
+- {{domxref("IDBObjectStore.indexNames")}} {{ReadOnlyInline}}
   - : A list of the names of [indexes](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) on objects in this object store.
-- {{domxref("IDBObjectStore.keyPath")}} {{readonlyInline}}
+- {{domxref("IDBObjectStore.keyPath")}} {{ReadOnlyInline}}
   - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of this object store. If this attribute is `null`, the application must provide a key for each modification operation.
 - {{domxref("IDBObjectStore.name")}}
   - : The name of this object store.
-- {{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}
+- {{domxref("IDBObjectStore.transaction")}} {{ReadOnlyInline}}
   - : The {{domxref("IDBTransaction")}} object to which this object store belongs.
-- {{domxref("IDBObjectStore.autoIncrement")}} {{readonlyInline}}
+- {{domxref("IDBObjectStore.autoIncrement")}} {{ReadOnlyInline}}
   - : The value of the auto increment flag for this object store.
 
 ## Methods
@@ -68,7 +69,7 @@ This example shows a variety of different uses of object stores, from updating t
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in db.
@@ -79,10 +80,10 @@ DBOpenRequest.onsuccess = function(event) {
 // the database needs to be created Either one has not
 // been created before, or a new version number has been
 // submitted via the window.indexedDB.open line above
-DBOpenRequest.onupgradeneeded = function(event) {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = (event) => {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 
@@ -112,11 +113,11 @@ const newItem = [
 const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of the transaction completing, when everything is done
-transaction.oncomplete = function(event) {
+transaction.oncomplete = (event) => {
   note.innerHTML += '<li>Transaction completed.</li>';
 };
 
-transaction.onerror = function(event) {
+transaction.onerror = (event) => {
   note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
 };
 
@@ -125,7 +126,7 @@ const objectStore = transaction.objectStore("toDoList");
 // make a request to add our newItem object to the object store
 const objectStoreRequest = objectStore.add(newItem[0]);
 
-objectStoreRequest.onsuccess = function(event) {
+objectStoreRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Request successful .</li>';
 }
 ```

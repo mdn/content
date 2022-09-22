@@ -14,6 +14,7 @@ tags:
   - Window
 browser-compat: api.Window.convertPointFromNodeToPage
 ---
+
 {{APIRef}}
 
 {{Non-standard_header}}
@@ -29,7 +30,7 @@ non-standard and _should not be used_.
 
 ## Syntax
 
-```js
+```js-nolint
 convertPointFromNodeToPage(node, nodePoint)
 ```
 

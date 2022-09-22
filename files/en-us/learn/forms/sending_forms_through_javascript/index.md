@@ -15,6 +15,7 @@ tags:
   - Web
   - Web Forms
 ---
+
 {{LearnSidebar}}
 
 HTML forms can send an [HTTP](/en-US/docs/Web/HTTP) request declaratively. But forms can also prepare an HTTP request to send via JavaScript, for example via `XMLHttpRequest`. This article explores such approaches.
@@ -68,47 +69,45 @@ And now the JavaScript:
 ```js
 const btn = document.querySelector('button');
 
-function sendData( data ) {
-  console.log( 'Sending data' );
+function sendData(data) {
+  console.log('Sending data');
 
   const XHR = new XMLHttpRequest();
 
-  let urlEncodedData = "",
-      urlEncodedDataPairs = [],
-      name;
+  const urlEncodedDataPairs = [];
 
   // Turn the data object into an array of URL-encoded key/value pairs.
-  for( name in data ) {
-    urlEncodedDataPairs.push( encodeURIComponent( name ) + '=' + encodeURIComponent( data[name] ) );
+  for (const [name, value] of Object.entries(data)) {
+    urlEncodedDataPairs.push(`${encodeURIComponent(name)}=${encodeURIComponent(value)}`);
   }
 
   // Combine the pairs into a single string and replace all %-encoded spaces to
   // the '+' character; matches the behavior of browser form submissions.
-  urlEncodedData = urlEncodedDataPairs.join( '&' ).replace( /%20/g, '+' );
+  const urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
 
   // Define what happens on successful data submission
-  XHR.addEventListener( 'load', function(event) {
-    alert( 'Yeah! Data sent and response loaded.' );
-  } );
+  XHR.addEventListener('load', (event) => {
+    alert('Yeah! Data sent and response loaded.');
+  });
 
   // Define what happens in case of error
-  XHR.addEventListener( 'error', function(event) {
-    alert( 'Oops! Something went wrong.' );
-  } );
+  XHR.addEventListener('error', (event) => {
+    alert('Oops! Something went wrong.');
+  });
 
   // Set up our request
-  XHR.open( 'POST', 'https://example.com/cors.php' );
+  XHR.open('POST', 'https://example.com/cors.php');
 
   // Add the required HTTP header for form data POST requests
-  XHR.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+  XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
   // Finally, send our data.
-  XHR.send( urlEncodedData );
+  XHR.send(urlEncodedData);
 }
 
-btn.addEventListener( 'click', function() {
-  sendData( {test:'ok'} );
-} )
+btn.addEventListener('click', () => {
+  sendData({ test: 'ok' });
+})
 ```
 
 Here's the live result:
@@ -136,35 +135,35 @@ You should be familiar with that HTML sample. Now for the JavaScript:
 ```js
 const btn = document.querySelector('button');
 
-function sendData( data ) {
-  const XHR = new XMLHttpRequest(),
-        FD  = new FormData();
+function sendData(data) {
+  const XHR = new XMLHttpRequest();
+  const FD = new FormData();
 
   // Push our data into our FormData object
-  for( name in data ) {
-    FD.append( name, data[ name ] );
+  for (const [name, value] of Object.entries(data)) {
+    FD.append(name, value);
   }
 
   // Define what happens on successful data submission
-  XHR.addEventListener( 'load', function( event ) {
-    alert( 'Yeah! Data sent and response loaded.' );
-  } );
+  XHR.addEventListener('load', (event) => {
+    alert('Yeah! Data sent and response loaded.');
+  });
 
   // Define what happens in case of error
-  XHR.addEventListener(' error', function( event ) {
-    alert( 'Oops! Something went wrong.' );
-  } );
+  XHR.addEventListener('error', (event) => {
+    alert('Oops! Something went wrong.');
+  });
 
   // Set up our request
-  XHR.open( 'POST', 'https://example.com/cors.php' );
+  XHR.open('POST', 'https://example.com/cors.php');
 
   // Send our FormData object; HTTP headers are set automatically
-  XHR.send( FD );
+  XHR.send(FD);
 }
 
-btn.addEventListener( 'click', function()
-  { sendData( {test:'ok'} );
-} )
+btn.addEventListener('click', () => {
+  sendData({ test: 'ok' });
+});
 ```
 
 Here's the live result:
@@ -180,48 +179,48 @@ The HTML is typical:
 ```html
 <form id="myForm">
   <label for="myName">Send me your name:</label>
-  <input id="myName" name="name" value="John">
-  <input type="submit" value="Send Me!">
+  <input id="myName" name="name" value="John" />
+  <input type="submit" value="Send Me!" />
 </form>
 ```
 
 But JavaScript takes over the form:
 
 ```js
-window.addEventListener( "load", function () {
+window.addEventListener("load", () => {
   function sendData() {
     const XHR = new XMLHttpRequest();
 
     // Bind the FormData object and the form element
-    const FD = new FormData( form );
+    const FD = new FormData(form);
 
     // Define what happens on successful data submission
-    XHR.addEventListener( "load", function(event) {
-      alert( event.target.responseText );
-    } );
+    XHR.addEventListener("load", (event) => {
+      alert(event.target.responseText);
+    });
 
     // Define what happens in case of error
-    XHR.addEventListener( "error", function( event ) {
-      alert( 'Oops! Something went wrong.' );
-    } );
+    XHR.addEventListener("error", (event) => {
+      alert('Oops! Something went wrong.');
+    });
 
     // Set up our request
-    XHR.open( "POST", "https://example.com/cors.php" );
+    XHR.open("POST", "https://example.com/cors.php");
 
     // The data sent is what the user provided in the form
-    XHR.send( FD );
+    XHR.send(FD);
   }
 
   // Get the form element
-  const form = document.getElementById( "myForm" );
+  const form = document.getElementById("myForm");
 
   // Add 'submit' event handler
-  form.addEventListener( "submit", function ( event ) {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     sendData();
-  } );
-} );
+  });
+});
 ```
 
 Here's the live result:
@@ -244,11 +243,11 @@ In the following example, we use the {{domxref("FileReader")}} API to access bin
 <form id="theForm">
   <p>
     <label for="theText">text data:</label>
-    <input id="theText" name="myText" value="Some text data" type="text">
+    <input id="theText" name="myText" value="Some text data" type="text" />
   </p>
   <p>
     <label for="theFile">file data:</label>
-    <input id="theFile" name="myFile" type="file">
+    <input id="theFile" name="myFile" type="file" />
   </p>
   <button>Send Me!</button>
 </form>
@@ -259,44 +258,44 @@ As you see, the HTML is a standard `<form>`. There's nothing magical going on. T
 ```js
 // Because we want to access DOM nodes,
 // we initialize our script at page load.
-window.addEventListener( 'load', function () {
+window.addEventListener('load', () => {
 
   // These variables are used to store the form data
-  const text = document.getElementById( "theText" );
+  const text = document.getElementById("theText");
   const file = {
-        dom    : document.getElementById( "theFile" ),
-        binary : null
-      };
+    dom: document.getElementById("theFile"),
+    binary: null,
+  };
 
   // Use the FileReader API to access file content
   const reader = new FileReader();
 
   // Because FileReader is asynchronous, store its
   // result when it finishes to read the file
-  reader.addEventListener( "load", function () {
+  reader.addEventListener("load", () => {
     file.binary = reader.result;
-  } );
+  });
 
   // At page load, if a file is already selected, read it.
-  if( file.dom.files[0] ) {
-    reader.readAsBinaryString( file.dom.files[0] );
+  if (file.dom.files[0]) {
+    reader.readAsBinaryString(file.dom.files[0]);
   }
 
   // If not, read the file once the user selects it.
-  file.dom.addEventListener( "change", function () {
-    if( reader.readyState === FileReader.LOADING ) {
+  file.dom.addEventListener("change", () => {
+    if (reader.readyState === FileReader.LOADING) {
       reader.abort();
     }
 
-    reader.readAsBinaryString( file.dom.files[0] );
-  } );
+    reader.readAsBinaryString(file.dom.files[0]);
+  });
 
   // sendData is our main function
   function sendData() {
     // If there is a selected file, wait it is read
     // If there is not, delay the execution of the function
-    if( !file.binary && file.dom.files.length > 0 ) {
-      setTimeout( sendData, 10 );
+    if (!file.binary && file.dom.files.length > 0) {
+      setTimeout(sendData, 10);
       return;
     }
 
@@ -311,18 +310,18 @@ window.addEventListener( 'load', function () {
     let data = "";
 
     // So, if the user has selected a file
-    if ( file.dom.files[0] ) {
+    if (file.dom.files[0]) {
       // Start a new part in our body's request
-      data += "--" + boundary + "\r\n";
+      data += `--${boundary}\r\n`;
 
       // Describe it as form data
       data += 'content-disposition: form-data; '
       // Define the name of the form data
-            + 'name="'         + file.dom.name          + '"; '
+            + `name="${file.dom.name}"; `
       // Provide the real name of the file
-            + 'filename="'     + file.dom.files[0].name + '"\r\n';
+            + `filename="${file.dom.files[0].name}"\r\n`;
       // And the MIME type of the file
-      data += 'Content-Type: ' + file.dom.files[0].type + '\r\n';
+      data += `Content-Type: ${file.dom.files[0].type}\r\n`;
 
       // There's a blank line between the metadata and the data
       data += '\r\n';
@@ -333,10 +332,10 @@ window.addEventListener( 'load', function () {
 
     // Text data is simpler
     // Start a new part in our body's request
-    data += "--" + boundary + "\r\n";
+    data += `--${boundary}\r\n`;
 
     // Say it's form data, and name it
-    data += 'content-disposition: form-data; name="' + text.name + '"\r\n';
+    data += `content-disposition: form-data; name="${text.name}"\r\n`;
     // There's a blank line between the metadata and the data
     data += '\r\n';
 
@@ -344,37 +343,37 @@ window.addEventListener( 'load', function () {
     data += text.value + "\r\n";
 
     // Once we are done, "close" the body's request
-    data += "--" + boundary + "--";
+    data += `--${boundary}--`;
 
     // Define what happens on successful data submission
-    XHR.addEventListener( 'load', function( event ) {
-      alert( 'Yeah! Data sent and response loaded.' );
-    } );
+    XHR.addEventListener('load', (event) => {
+      alert('Yeah! Data sent and response loaded.');
+    });
 
     // Define what happens in case of error
-    XHR.addEventListener( 'error', function( event ) {
-      alert( 'Oops! Something went wrong.' );
-    } );
+    XHR.addEventListener('error', (event) => {
+      alert('Oops! Something went wrong.');
+    });
 
     // Set up our request
-    XHR.open( 'POST', 'https://example.com/cors.php' );
+    XHR.open('POST', 'https://example.com/cors.php');
 
     // Add the required HTTP header to handle a multipart form data POST request
-    XHR.setRequestHeader( 'Content-Type','multipart/form-data; boundary=' + boundary );
+    XHR.setRequestHeader('Content-Type', `multipart/form-data; boundary=${boundary}`);
 
     // Send the data
-    XHR.send( data );
+    XHR.send(data);
   }
 
   // Get the form element
-  const form = document.getElementById( "theForm" );
+  const form = document.getElementById('theForm');
 
   // Add 'submit' event handler
-  form.addEventListener( 'submit', function ( event ) {
+  form.addEventListener('submit', (event) => {
     event.preventDefault();
     sendData();
-  } );
-} );
+  });
+});
 ```
 
 Here's the live result:

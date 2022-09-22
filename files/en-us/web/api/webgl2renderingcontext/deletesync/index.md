@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.deleteSync
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.deleteSync()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) deletes a given
@@ -17,7 +18,7 @@ The **`WebGL2RenderingContext.deleteSync()`** method of the [WebGL 2 API](/en-US
 
 ## Syntax
 
-```js
+```js-nolint
 deleteSync(sync)
 ```
 
@@ -36,7 +37,7 @@ None ({{jsxref("undefined")}}).
 objects are not available in WebGL 1.
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 
 // …
 

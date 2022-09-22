@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLFontElement.size
 ---
+
 {{deprecated_header}}{{ APIRef("HTML DOM") }}
 
 The obsolete
@@ -56,13 +57,13 @@ A string.
 ```js
 // Assumes there is <font id="f"> element in the HTML
 
-var f = document.getElementById("f");
+const f = document.getElementById("f");
 f.size = "6";
 ```
 
 ## Specifications
 
-The \<font> tag is not supported in HTML5 and as a result neither is
+The `<font>` element has been deprecated and is no longer supported and, as a result, neither is
 `<font>.size`.
 
 ## Browser compatibility

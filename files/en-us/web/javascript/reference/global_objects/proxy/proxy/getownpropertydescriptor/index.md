@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 The **`handler.getOwnPropertyDescriptor()`** method is a trap for {{jsxref("Object.getOwnPropertyDescriptor()")}}.
@@ -16,7 +17,7 @@ The **`handler.getOwnPropertyDescriptor()`** method is a trap for {{jsxref("Obje
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   getOwnPropertyDescriptor(target, prop) {
   }
@@ -67,9 +68,9 @@ The following code traps {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 ```js
 const p = new Proxy({ a: 20}, {
   getOwnPropertyDescriptor(target, prop) {
-    console.log('called: ' + prop);
+    console.log(`called: ${prop}`);
     return { configurable: true, enumerable: true, value: 10 };
-  }
+  },
 });
 
 console.log(Object.getOwnPropertyDescriptor(p, 'a').value); // "called: a"
@@ -84,7 +85,7 @@ Object.preventExtensions(obj);
 const p = new Proxy(obj, {
   getOwnPropertyDescriptor(target, prop) {
     return undefined;
-  }
+  },
 });
 
 Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
@@ -101,6 +102,6 @@ Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Reflect.getOwnPropertyDescriptor()")}}

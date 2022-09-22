@@ -16,6 +16,7 @@ tags:
   - Web
   - formats
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 Since nearly its beginning, the web has included support for some form of visual media presentation. Originally, these capabilities were limited, and were expanded organically, with different browsers finding their own solutions to the problems around including still and video imagery on the web. The modern web has powerful features to support the presentation and manipulation of media, with several media-related APIs supporting various types of content. Generally, the media formats supported by a browser are entirely up to the browser's creators, which can complicate the work of a web developer.

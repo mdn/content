@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.skewX
 ---
+
 {{CSSRef}}
 
 The **`skewX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that skews an element in the
@@ -16,7 +17,7 @@ horizontal direction on the 2D plane. Its result is a {{cssxref("&lt;transform-f
 
 {{EmbedInteractiveExample("pages/css/function-skewX.html")}}
 
-This transformation is a shear mapping ({{interwiki('wikipedia', 'Shear_mapping', 'transvection')}}) that distorts
+This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
 each point within an element by a certain angle in the horizontal direction. The abscissa coordinate of each point is
 modified by a value proportionate to the specified angle and the distance to the origin; thus, the farther from the
 origin a point is, the greater will be the value added it.

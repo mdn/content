@@ -4,7 +4,6 @@ slug: Web/API/WritableStreamDefaultWriter/write
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Streams
@@ -12,7 +11,8 @@ tags:
   - write
 browser-compat: api.WritableStreamDefaultWriter.write
 ---
-{{APIRef("Streams")}}{{SeeCompatTable}}
+
+{{APIRef("Streams")}}
 
 The **`write()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface writes a passed chunk of data to a
@@ -26,7 +26,7 @@ destination.
 
 ## Syntax
 
-```js
+```js-nolint
 write(chunk)
 ```
 
@@ -67,9 +67,7 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
         console.log("Chunk written to sink.");
       })
@@ -103,7 +101,7 @@ const writableStream = new WritableStream({
       view[0] = chunk;
       const decoded = decoder.decode(view, { stream: true });
       const listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
@@ -111,7 +109,7 @@ const writableStream = new WritableStream({
   },
   close() {
     const listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {

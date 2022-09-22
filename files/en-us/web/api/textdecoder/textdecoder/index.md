@@ -6,23 +6,21 @@ tags:
   - API
   - Constructor
   - Encoding
-  - Experimental
   - Reference
   - TextDecoder
 browser-compat: api.TextDecoder.TextDecoder
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextDecoder()`** constructor returns a newly created
 {{DOMxRef("TextDecoder")}} object for the encoding specified in parameter.
 
-If the value for _utfLabel_ is unknown, or is one of the two values leading to a
-`'replacement'` decoding algorithm ( "`iso-2022-cn`" or
-"`iso-2022-cn-ext`"), a {{jsxref("RangeError")}} is thrown.
+If the value for _utfLabel_ is unknown, or is one of the two values leading to a `'replacement'` decoding algorithm (`"iso-2022-cn"` or `"iso-2022-cn-ext"`), a {{jsxref("RangeError")}} is thrown.
 
 ## Syntax
 
-```js
+```js-nolint
 new TextDecoder()
 new TextDecoder(utfLabel)
 new TextDecoder(utfLabel, options)
@@ -45,10 +43,10 @@ new TextDecoder(utfLabel, options)
 ## Examples
 
 ```js
-var textDecoder1 = new TextDecoder("iso-8859-2");
-var textDecoder2 = new TextDecoder();
-var textDecoder3 = new TextDecoder("csiso2022kr", {fatal: true}); // Allows TypeError exception to be thrown.
-var textDecoder4 = new TextDecoder("iso-2022-cn"); // Throw a RangeError exception.
+const textDecoder1 = new TextDecoder("iso-8859-2");
+const textDecoder2 = new TextDecoder();
+const textDecoder3 = new TextDecoder("csiso2022kr", { fatal: true }); // Allows TypeError exception to be thrown.
+const textDecoder4 = new TextDecoder("iso-2022-cn"); // Throw a RangeError exception.
 ```
 
 ## Specifications

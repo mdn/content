@@ -4,7 +4,6 @@ slug: Web/API/PaymentResponse/details
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentResponse
@@ -14,7 +13,8 @@ tags:
   - details
 browser-compat: api.PaymentResponse.details
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}
+
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`details`** read-only property of the
 {{domxref("PaymentResponse")}} interface returns a JSON-serializable object that
@@ -32,7 +32,7 @@ object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a
 real-world implementation this data would then be sent to a payment server.
 
 ```js
-payment.show().then(paymentResponse => {
+payment.show().then((paymentResponse) => {
   const paymentData = {
     // payment method string
     method: paymentResponse.methodName,

@@ -10,6 +10,7 @@ tags:
   - WritableStream
 browser-compat: api.WritableStream.WritableStream
 ---
+
 {{APIRef("Streams")}}
 
 The **`WritableStream()`** constructor creates
@@ -17,7 +18,7 @@ a new {{domxref("WritableStream")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new WritableStream(underlyingSink)
 new WritableStream(underlyingSink, queuingStrategy)
 ```
@@ -87,7 +88,7 @@ An instance of the {{domxref("WritableStream")}} object.
 
 ## Examples
 
-The following example illustrates several features of this interface.  It shows the
+The following example illustrates several features of this interface. It shows the
 creation of the `WritableStream` with a custom sink and an API-supplied
 queuing strategy. It then calls a function called `sendMessage()`, passing
 the newly created stream and a string. Inside this function it calls the stream's
@@ -107,9 +108,7 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
         console.log("Chunk written to sink.");
       })
@@ -143,7 +142,7 @@ const writableStream = new WritableStream({
       view[0] = chunk;
       const decoded = decoder.decode(view, { stream: true });
       const listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
@@ -151,7 +150,7 @@ const writableStream = new WritableStream({
   },
   close() {
     const listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {

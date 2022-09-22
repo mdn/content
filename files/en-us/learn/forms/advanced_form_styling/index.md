@@ -10,6 +10,7 @@ tags:
   - HTML
   - Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
 In this article, we will see what can be done with CSS to style the types of form control that are more difficult to style — the "bad" and "ugly" categories. As we saw [in the previous article](/en-US/docs/Learn/Forms/Styling_web_forms), text fields and buttons are perfectly easy to style; now we will dig into styling the bits that are more problematic.
@@ -56,9 +57,7 @@ Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/appearance) proper
 
 In the previous article we said that historically, styling of web form controls was largely taken from the underlying operating system, which is part of the problem with customizing the look of these controls.
 
-The {{cssxref("appearance")}} property was created as a way to control what OS- or system-level styling was applied to web form controls. Unfortunately, the behavior of this property's original implementations was very different across browsers, making it not very usable. Newer implementations are more consistent in behavior; interestingly enough, both Chromium-based browsers (Chrome, Opera, Edge), Safari, and Firefox all support the `-webkit-`  prefixed version (`-webkit-appearance`). Firefox settled on this because web developers mostly seemed to be using the `-webkit-` prefixed version, so it was better for compatibility.
-
-If you look at the reference page you'll see a lot of different possible values listed for `-webkit-appearance`, however by far the most helpful value, and probably the only one you'll use, is `none`. This stops any control you apply it to from using system-level styling, as much as possible, and lets you build up the styles yourself using CSS.
+The {{cssxref("appearance")}} property was created as a way to control what OS- or system-level styling was applied to web form controls. By far the most helpful value, and probably the only one you'll use, is `none`. This stops any control you apply it to from using system-level styling, as much as possible, and lets you build up the styles yourself using CSS.
 
 For example, let's take the following controls:
 
@@ -66,26 +65,26 @@ For example, let's take the following controls:
 <form>
   <p>
     <label for="search">search: </label>
-    <input id="search" name="search" type="search">
+    <input id="search" name="search" type="search" />
   </p>
   <p>
     <label for="text">text: </label>
-    <input id="text" name="text" type="text">
+    <input id="text" name="text" type="text" />
   </p>
   <p>
     <label for="date">date: </label>
-    <input id="date" name="date" type="datetime-local">
+    <input id="date" name="date" type="datetime-local" />
   </p>
   <p>
     <label for="radio">radio: </label>
-    <input id="radio" name="radio" type="radio">
+    <input id="radio" name="radio" type="radio" />
   </p>
   <p>
     <label for="checkbox">checkbox: </label>
-    <input id="checkbox" name="checkbox" type="checkbox">
+    <input id="checkbox" name="checkbox" type="checkbox" />
   </p>
-  <p><input type="submit" value="submit"></p>
-  <p><input type="button" value="button"></p>
+  <p><input type="submit" value="submit" /></p>
+  <p><input type="button" value="button" /></p>
 </form>
 ```
 
@@ -93,12 +92,9 @@ Applying the following CSS to them removes system-level styling.
 
 ```css
 input {
-  -webkit-appearance: none;
   appearance: none;
 }
 ```
-
-> **Note:** It is a good idea to always include both declarations — prefixed and unprefixed — when using a prefixed property. Prefixed usually means "work in progress", so in the future browser vendors may come to a consensus to drop the prefix. The above code is good for future-proofing against such an eventuality.
 
 The following live example shows you what they look like in your system — default on the left, and with the above CSS applied on the right ([find it here also](https://mdn.github.io/learning-area/html/forms/styling-examples/appearence-tester.html) if you want to test it on other systems).
 
@@ -108,26 +104,25 @@ In most cases, the effect is to remove the stylized border, which makes CSS styl
 
 ### Taming search boxes
 
-[`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search) is basically just a text input, so why is `appearance: none;` useful here? The answer is that in Chromium-based browsers on macOS, search boxes have some styling restrictions — you can't adjust their `height` or `font-size` freely, for example. This is because non-macOS [Chrome browsers no longer use the WebKit rendering engine](https://www.wired.com/2013/04/blink/), which enabled Aqua appearance by default for certain form controls. With Aqua enabled, some form controls are not [scalable](https://webkit.org/blog/28/buttons/).
+[`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search) is basically just a text input, so why is `appearance: none;` useful here? The answer is that in Safari search boxes have some styling restrictions — you can't adjust their `height` or `font-size` freely, for example.
 
-This can be fixed using our friend `appearance: none;`, which disables the default Aqua appearance:
+This can be fixed using our friend `appearance: none;`, which disables the default appearance:
 
 ```css
 input[type="search"] {
-    -webkit-appearance: none;
-    appearance: none;
+  appearance: none;
 }
 ```
 
-In the example below, you can see two identical styled search boxes. The right one has `appearance: none;` applied, and the left one doesn't. If you look at it in macOS Chrome you'll see that the left one isn't sized properly.
+In the example below, you can see two identical styled search boxes. The right one has `appearance: none;` applied, and the left one doesn't. If you look at it in Safari on macOS you'll see that the left one isn't sized properly.
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearence.html", '100%', 200)}}
 
-Interestingly, setting border/background on the search field also fixes this problem, as it [disables](https://webkit.org/blog/28/buttons/) or "breaks" the Aqua appearance too. The following styled search doesn't have `appearance: none;` applied, but it doesn't suffer from the same problem in macOS Chrome as the previous example.
+Interestingly, setting border/background on the search field also fixes this problem. The following styled search doesn't have `appearance: none;` applied, but it doesn't suffer from the same problem in Safari as the previous example.
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
 
-> **Note:** You may have noticed that in the search field, the "x" delete icon disappears when the input loses focus in Edge and Chrome, but stays put in Safari. To remove via CSS, you can use `input[type="search"]::-webkit-search-cancel-button { display: none; }`. However, this seems to get rid of the icon _with_ focus too, with no apparent way to get it back.
+> **Note:** You may have noticed that in the search field, the "x" delete icon, which appears when the value of the search is not null, disappears when the input loses focus in Edge and Chrome, but stays put in Safari. To remove via CSS, you can use `input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { display: none; }`.
 
 ### Styling checkboxes and radio buttons
 
@@ -136,22 +131,23 @@ Styling a checkbox or a radio button is tricky by default. The sizes of check bo
 For example, consider this simple test case:
 
 ```html
-<span><input type="checkbox"></span>
+<label><span><input type="checkbox" name="q5" value="true"></span> True</label>
+<label><span><input type="checkbox" name="q5" value="false"></span> False</label>
 ```
 
 ```css
 span {
-    display: inline-block;
-    background: red;
+  display: inline-block;
+  background: red;
 }
 
 input[type="checkbox"] {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 ```
 
-Different browsers handle this in many different, often ugly ways:
+Different browsers handle the checkbox and span differently, often ugly ways:
 
 | Browser                             | Rendering                         |
 | ----------------------------------- | --------------------------------- |
@@ -173,19 +169,19 @@ As we showed before, you can remove the default appearance of a checkbox or radi
 
     <p>
       <label>
-        <input type="checkbox" name="fruit-1" value="cherry">
+        <input type="checkbox" name="fruit" value="cherry" />
         I like cherry
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit-2" value="banana" disabled>
+        <input type="checkbox" name="fruit" value="banana" disabled />
         I can't like banana
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit-3" value="strawberry">
+        <input type="checkbox" name="fruit" value="strawberry" />
         I like strawberry
       </label>
     </p>
@@ -197,7 +193,6 @@ Now, let's style these with a custom checkbox design. Let's start by unstyling t
 
 ```css
 input[type="checkbox"] {
-  -webkit-appearance: none;
   appearance: none;
 }
 ```
@@ -271,7 +266,7 @@ This example has the following CSS applied to it:
 
 ```css
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
   max-width: 400px;
 }
@@ -281,7 +276,6 @@ form > div {
 }
 
 select {
-  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -297,7 +291,12 @@ select {
   position: absolute;
 }
 
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -308,7 +307,10 @@ button, label, input, select, progress, meter {
   height: 30px;
 }
 
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -332,7 +334,12 @@ As you can see, we've done fairly well at getting these to look uniform across m
 We've applied some global normalizing CSS to all the controls and their labels, to get them to size in the same way, adopt their parent font, etc., as mentioned in the previous article:
 
 ```css
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -347,7 +354,10 @@ button, label, input, select, progress, meter {
 We also added some uniform shadow and rounded corners to the controls on which it made sense:
 
 ```css
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -367,7 +377,6 @@ Two things are slightly more problematic. First of all, the select's "arrow" ico
 
 ```css
 select {
-  -webkit-appearance: none;
   appearance: none;
 }
 ```
@@ -375,11 +384,14 @@ select {
 We then created our own icon using generated content. We put an extra wrapper around the control, because [`::before`](/en-US/docs/Web/CSS/::before)/[`::after`](/en-US/docs/Web/CSS/::after) don't work on `<select>` elements (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements — their display is generated by the browser and put in place — and therefore don't have one):
 
 ```html
-<div class="select-wrapper"><select id="select" name="select">
-  <option>Banana</option>
-  <option>Cherry</option>
-  <option>Lemon</option>
-</select></div>
+<label for="select">Select a fruit</label>
+<div class="select-wrapper">
+  <select id="select" name="select">
+    <option>Banana</option>
+    <option>Cherry</option>
+    <option>Lemon</option>
+  </select>
+</div>
 ```
 
 We then use generated content to generate a little down arrow, and put it in the right place using positioning:
@@ -403,6 +415,7 @@ The second, slightly more major issue is that you don't have control over the bo
 If you really need full control over the option styling, you'll have to either use some kind of library to generate a custom control, or build your own custom control, or in the case of select use the `multiple` attribute, which makes all the options appear on the page, sidestepping this particular problem:
 
 ```html
+<label for="select">Select fruits</label>
 <select id="select" name="select" multiple>
   …
 </select>
@@ -416,7 +429,7 @@ The date/time input types ([`datetime-local`](/en-US/docs/Web/HTML/Element/input
 
 However, the internal parts of the control (e.g. the popup calendar that you use to pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use some kind of library to generate a custom control, or build your own.
 
-> **Note:** It is worth mentioning [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the `number` type the data being collected is simpler, and it is easy to just use a `text` input type instead if desired (or `tel` if you want mobile browsers to show the numeric keypad).
+> **Note:** It is worth mentioning [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the `number` type the data being collected is simpler, and it is easy to just use a `tel` input type instead which has the appearance of `text`, but displays the numeric keypad in devices with touch keyboards.
 
 ### Range input types
 
@@ -425,7 +438,6 @@ However, the internal parts of the control (e.g. the popup calendar that you use
 ```css
 input[type="range"] {
   appearance: none;
-  -webkit-appearance: none;
   background: red;
   height: 2px;
   padding: 0;
@@ -433,7 +445,7 @@ input[type="range"] {
 }
 ```
 
-However, it is very difficult to customize the style of the range control's drag handle — to get full control over range styling you'll need to use a whole bunch of complex CSS code, including multiple non-standard, browser-specific pseudo-elements. Check out [Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) on CSS tricks for a detailed write up of what's needed.
+However, it is very difficult to customize the style of the range control's drag handle — to get full control over range styling you'll need to use a whole bunch of complex CSS code, including multiple non-standard, browser-specific pseudo-elements. Check out [Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) on CSS tricks for a detailed write-up of what's needed.
 
 ### Color input types
 
@@ -497,20 +509,7 @@ You can see the result of the above CSS styling in the below live example (see a
 
 It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
 
-## The road to nicer forms: useful libraries and polyfills
-
-As we've mentioned above a few times, if you want to gain full control over the "ugly" control types, you have no choice but to rely on JavaScript. In the article [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) you will see how to do it on your own, but there are some very useful libraries out there that can help you:
-
-- [Uni-form](https://github.com/draganbabic/uni-form) is a framework that standardizes form markup, styling it with CSS. It also offers a few additional features when used with jQuery, but that's optional.
-- [Formalize](https://formalize.me/) is an extension to common JavaScript frameworks (such as jQuery, Dojo, YUI, etc.) that helps to normalize and customize your forms.
-
-The following libraries aren't just about forms, but they have very interesting features for dealing with HTML forms:
-
-- [jQuery UI](https://jqueryui.com/) offers customizable widgets such as date pickers (with special attention given to accessibility).
-- [Bootstrap](https://getbootstrap.com/docs/5.1/forms/overview/) can help normalize your forms.
-- [WebShim](https://afarkas.github.io/webshim/demos/) is a huge tool that can help you deal with browser HTML5 support. The web forms part can be really helpful.
-
-Remember that CSS and JavaScript can have side effects. So if you choose to use one of those libraries, you should always have robust fallback HTML in case the script fails. There are many reasons why scripts may fail, especially in the mobile world, and you need to design your Web site or app to handle these cases as well as possible.
+The article [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) provides an example of how to build a custom designed select with HTML, CSS and JavaScript.
 
 ## Test your skills!
 

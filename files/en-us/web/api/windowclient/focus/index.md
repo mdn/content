@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Client
-  - Experimental
   - Focus
   - Method
   - Reference
@@ -13,6 +12,7 @@ tags:
   - WindowClient
 browser-compat: api.WindowClient.focus
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`focus()`** method of the {{domxref("WindowClient")}}
@@ -22,7 +22,7 @@ interface gives user input focus to the current client and returns a
 
 ## Syntax
 
-```js
+```js-nolint
 focus()
 ```
 
@@ -37,7 +37,7 @@ A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}
 ## Examples
 
 ```js
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -45,9 +45,9 @@ self.addEventListener('notificationclick', function(event) {
   // focuses if it is
   event.waitUntil(clients.matchAll({
     type: "window"
-  }).then(function(clientList) {
+  }).then((clientList) => {
     for (const client of clientList) {
-      if (client.url == '/' && 'focus' in client)
+      if (client.url === '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)

@@ -20,6 +20,7 @@ tags:
   - icecandidateerror
 browser-compat: api.RTCPeerConnection.icecandidateerror_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) event **`icecandidateerror`** is sent to an {{domxref("RTCPeerConnection")}} if an error occurs while performing ICE negotiations through a {{Glossary("STUN")}} or {{Glossary("TURN")}} server. The event object is of type {{domxref("RTCPeerConnectionIceErrorEvent")}}, and contains information describing the error in some amount of detail.
@@ -31,9 +32,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('icecandidateerror', event => { });
+addEventListener('icecandidateerror', (event) => { });
 
-onicecandidateerror = event => { };
+onicecandidateerror = (event) => { };
 ```
 
 ## Event type

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.format
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat.prototype.format()`** method formats a number according to the [locale and formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) of this {{jsxref("Intl.NumberFormat")}} object.
@@ -22,7 +23,7 @@ The **`Intl.NumberFormat.prototype.format()`** method formats a number according
 
 ## Syntax
 
-```js
+```js-nolint
 format(number)
 ```
 
@@ -88,7 +89,7 @@ This is considered a historical artefact, as part of a convention which is no lo
 ```js
 const a = [123456.789, 987654.321, 456789.123];
 const numberFormat = new Intl.NumberFormat('es-ES');
-const formatted = a.map(n => numberFormat.format(n));
+const formatted = a.map((n) => numberFormat.format(n));
 console.log(formatted.join('; '));
 // → "123.456,789; 987.654,321; 456.789,123"
 ```
@@ -110,7 +111,7 @@ console.log(numberFormat.format("987654321987654321"));
 ```
 
 We can also use the general "E" exponent syntax for decimal strings: `#.#E#`.
-The code below creates a {{jsxref("BigInt")}},  coerces it to a string with the suffix `E-6`, and then formats it.
+The code below creates a {{jsxref("BigInt")}}, coerces it to a string with the suffix `E-6`, and then formats it.
 
 ```js
 const numberFormat = new Intl.NumberFormat("en-US");
@@ -119,7 +120,7 @@ console.log(numberFormat.format(bigNum));
 // → "1,000,000,000,000,000,110,000"
 
 // Format as a string using the `E` syntax:
-console.log(numberFormat.format(bigNum + "E-6"));
+console.log(numberFormat.format(`${bigNum}E-6`));
 // → "1,000,000,000,000,000.11"
 ```
 

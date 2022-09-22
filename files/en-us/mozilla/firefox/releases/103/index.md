@@ -2,24 +2,37 @@
 title: Firefox 103 for developers
 slug: Mozilla/Firefox/Releases/103
 tags:
-  - '103'
+  - "103"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 103 that will affect developers. Firefox 103 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and will ship on [July 26, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 103 that will affect developers. Firefox 103 was released on July 26, 2022.
 
 ## Changes for web developers
-
-### Developer Tools
 
 ### HTML
 
 #### Removals
 
+- Support for the `<menuitem>` element has been removed along with the `dom.menuitem.enabled` preference.
+  For more details, see [Bug 1372276](https://bugzilla.mozilla.org/show_bug.cgi?id=1372276).
+
+### MathML
+
+#### Removals
+
+- The deprecated `scriptminsize` and `scriptsizemultiplier` attributes have been removed ({{bug(1772697)}}).
+
 ### CSS
+
+- The {{CSSxRef("backdrop-filter")}} property (which can be used to apply graphical effects such as blurring or color shifting to the area behind an element) is now available by default. It was earlier behind a preference setting ({{bug(1578503)}}).
+- The {{CSSxRef("scroll-snap-stop")}} property is now available ({{bug(1312165)}}). You can use this property's `always` and `normal` values to specify whether or not to pass the snap points, even when scrolling fast.
+- Support has been added for the {{CSSxRef(":modal")}} pseudo class. It selects all elements that are in a state in which they exclude all interaction with other elements until the interaction has been dismissed ({{bug(1768535)}}).
+- The [`style`](/en-US/docs/Web/CSS/contain#style) value for the `contain` property is now supported. You can use this value for properties that can have effects on more than just an element and its descendants for effects don't escape the containing element. For more information, see ({{bug(1463600)}}).
 
 #### Removals
 
@@ -63,11 +76,23 @@ This article provides information about the changes in Firefox 103 that will aff
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### Removals
+#### WebDriver BiDi
+
+- Added a preference to disable experimental BiDi commands and events `remote.experimental.enabled` ({{bug(1777951)}}).
+- Added a `script` module with an experimental implementation of the `evaluate` command. Only available if `remote.experimental.enabled` is set to `true` ({{bug(1742979)}}).
+- Added serialization support for collections with simple values and complex objects, used for instance for the event data of `log.entryAdded` or the return value of `script.evaluate` ({{bug(1770752)}}).
+- Fixed an edge case for `browsingContext.navigate` when navigating to a cached image ({{bug(1763133)}}).
+
+#### Marionette
+
+- Updated the `platformVersion` capability to be returned as `moz:platformVersion` ({{bug(1771760)}}).
+- Removed support for `ChromeElement`; all elements are now serialized as `WebElement` ({{bug(1775036)}} and {{bug(1775064)}}).
 
 ## Changes for add-on developers
 
-#### Removals
+### Removals
+
+- Removed the ServiceWorker API in WebExtensions (`'serviceWorker' in navigator` now returns false when run inside an extension). ({{bug(1593931)}})
 
 ### Other
 

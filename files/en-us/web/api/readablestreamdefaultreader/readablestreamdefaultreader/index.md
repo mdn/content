@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
 ---
+
 {{APIRef("Streams")}}
 
 The **`ReadableStreamDefaultReader()`**
@@ -21,7 +22,7 @@ instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new ReadableStreamDefaultReader(stream)
 ```
 
@@ -69,7 +70,7 @@ function fetchStream() {
     charsReceived += value.length;
     const chunk = value;
     let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
     result += chunk;

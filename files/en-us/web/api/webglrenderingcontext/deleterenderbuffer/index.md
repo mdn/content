@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.deleteRenderbuffer()`** method of
@@ -19,7 +20,7 @@ has already been deleted.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteRenderbuffer(renderbuffer)
 ```
 
@@ -37,9 +38,9 @@ None ({{jsxref("undefined")}}).
 ### Deleting a renderbuffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var renderbuffer = gl.createRenderbuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const renderbuffer = gl.createRenderbuffer();
 
 // …
 

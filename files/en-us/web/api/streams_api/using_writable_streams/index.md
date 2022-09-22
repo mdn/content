@@ -11,6 +11,7 @@ tags:
   - writable streams
   - writer
 ---
+
 {{apiref("Streams")}}
 
 As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the [Streams API](/en-US/docs/Web/API/Streams_API)'s writable stream functionality.
@@ -22,7 +23,7 @@ As a JavaScript developer, programmatically writing data to a stream is very use
 
 ## Introducing an example
 
-In our [dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) repo you'll find a [Simple writer example](https://github.com/mdn/dom-examples/blob/master/streams/simple-writer/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-writer/)). This takes a given message and writes it into a writable stream, displaying each chunk on the UI as it is written to the stream and also displaying the whole message on the UI when writing has finished.
+In our [dom-examples/streams](https://github.com/mdn/dom-examples/tree/main/streams) repo you'll find a [Simple writer example](https://github.com/mdn/dom-examples/blob/main/streams/simple-writer/index.html) ([see it live also](https://mdn.github.io/dom-examples/streams/simple-writer/)). This takes a given message and writes it into a writable stream, displaying each chunk on the UI as it is written to the stream and also displaying the whole message on the UI when writing has finished.
 
 ## How writable streams work
 
@@ -39,7 +40,7 @@ const stream = new WritableStream({
   start(controller) {
 
   },
-  write(chunk,controller) {
+  write(chunk, controller) {
 
   },
   close(controller) {
@@ -78,7 +79,7 @@ const writableStream = new WritableStream({
       view[0] = chunk;
       const decoded = decoder.decode(view, { stream: true });
       const listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
@@ -86,12 +87,12 @@ const writableStream = new WritableStream({
   },
   close() {
     const listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {
-    console.log("Sink error:", err);
-  }
+    console.error("Sink error:", err);
+  },
 }, queuingStrategy);
 ```
 
@@ -117,28 +118,16 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
-      .then(() => {
-        console.log("Chunk written to sink.");
-      })
-      .catch((err) => {
-        console.log("Chunk error:", err);
-      });
+      .then(() => defaultWriter.write(chunk))
+      .then(() => console.log("Chunk written to sink."))
+      .catch((err) => console.error("Chunk error:", err));
   });
   // Call ready again to ensure that all chunks are written
   //   before closing the writer.
   defaultWriter.ready
-    .then(() => {
-      defaultWriter.close();
-    })
-    .then(() => {
-      console.log("All chunks written");
-    })
-    .catch((err) => {
-      console.log("Stream error:", err);
-    });
+    .then(() => defaultWriter.close())
+    .then(() => console.log("All chunks written"))
+    .catch((err) => console.error("Stream error:", err));
 }
 ```
 
@@ -146,7 +135,7 @@ So here we create a writer to write the chunks to the stream using {{domxref("Wr
 
 We also create a new {{domxref("TextEncoder")}} instance using the relevant constructor to encode the message into chunks to be put into the stream.
 
-With the chunks encoded, we then call {{jsxref("Array/forEach")}} on the resulting array. Inside this block we use {{domxref("WritableStreamDefaultWriter.ready")}} to check whether the writer is ready to have another chunk written to it. `ready` returns a promise that fulfills when this is the case, inside of which we call {{domxref("WritableStreamDefaultWriter.write()")}} to actually write the chunk to the stream. This also triggers the `write()` method specified inside the `WritableStream()` constructor, as discussed above.
+With the chunks encoded, we then call [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) on the resulting array. Inside this block we use {{domxref("WritableStreamDefaultWriter.ready")}} to check whether the writer is ready to have another chunk written to it. `ready` returns a promise that fulfills when this is the case, inside of which we call {{domxref("WritableStreamDefaultWriter.write()")}} to actually write the chunk to the stream. This also triggers the `write()` method specified inside the `WritableStream()` constructor, as discussed above.
 
 After the chunks have all been written, we then perform the `ready` check once more, to check that the last chunk has finished being written and all the work is done. When this `ready` check fulfills, we invoke {{domxref("WritableStreamDefaultWriter.close()")}} to close the stream. This also triggers the `close()` method specified inside the `WritableStream()` constructor, as discussed above.
 

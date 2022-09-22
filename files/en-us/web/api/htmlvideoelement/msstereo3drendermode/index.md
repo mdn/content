@@ -5,6 +5,7 @@ page-type: web-api-instance-property
 tags:
   - msStereo3DRenderMode
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}
@@ -16,8 +17,8 @@ This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
 ## Syntax
 
-```js
-HTMLVideoElement.msStereo3DRenderMode(mono, stereo);
+```js-nolint
+msStereo3DRenderMode(mono, stereo)
 ```
 
 ## Value

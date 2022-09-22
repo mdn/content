@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBDatabase.deleteObjectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`deleteObjectStore()`** method of the
@@ -26,7 +27,7 @@ transaction.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteObjectStore(name)
 ```
 
@@ -34,7 +35,7 @@ deleteObjectStore(name)
 
 - `name`
   - : The name of the object store you want to delete. Names are
-        case sensitive.
+    case sensitive.
 
 ### Return value
 
@@ -56,7 +57,7 @@ const dbName = "sampleDB";
 const dbVersion = 2;
 const request = indexedDB.open(dbName, dbVersion);
 
-request.onupgradeneeded = event => {
+request.onupgradeneeded = (event) => {
   const db = request.result;
   if (event.oldVersion < 1) {
     db.createObjectStore("store1");

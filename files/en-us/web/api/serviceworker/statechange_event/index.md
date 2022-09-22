@@ -11,6 +11,7 @@ tags:
   - statechange
 browser-compat: api.ServiceWorker.statechange_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `statechange` event fires anytime the {{domxref("ServiceWorker.state")}} changes.
@@ -20,9 +21,9 @@ The `statechange` event fires anytime the {{domxref("ServiceWorker.state")}} cha
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('statechange', event => { });
+addEventListener('statechange', (event) => { });
 
-onstatechange = event => { };
+onstatechange = (event) => { };
 ```
 
 ## Event type
@@ -35,7 +36,7 @@ This code snippet is from the [service worker registration-events sample](https:
 and returns its value.
 
 ```js
-var serviceWorker;
+let serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
   document.querySelector('#kind').textContent = 'installing';
@@ -49,7 +50,7 @@ if (registration.installing) {
 
 if (serviceWorker) {
   logState(serviceWorker.state);
-  serviceWorker.addEventListener('statechange', function(e) {
+  serviceWorker.addEventListener('statechange', (e) => {
     logState(e.target.state);
   });
 }
@@ -59,10 +60,10 @@ Note that when `statechange` fires, the service worker's references may have
 changed. For example:
 
 ```js
-navigator.serviceWorker.register("/sw.js").then(function(swr) {
-  swr.installing.state == "installing"
-  swr.installing.onstatechange = function() {
-    swr.installing == null;
+navigator.serviceWorker.register("/sw.js").then((swr) => {
+  swr.installing.state = "installing";
+  swr.installing.onstatechange = () => {
+    swr.installing = null;
     // At this point, swr.waiting OR swr.active might be true. This is because the statechange
     // event gets queued, meanwhile the underlying worker may have gone into the waiting
     // state and will be immediately activated if possible.

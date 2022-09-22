@@ -7,11 +7,12 @@ tags:
   - drag and drop
   - drop zone
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform's _file manager_ and dropped on a web page.
 
-The main steps to drag and drop are to define a _drop zone_ (i.e. a target element for the file drop) and to define event handlers for the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events. These steps are described below, including example code snippets. The full source code is available in [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (pull requests and/or issues are welcome).
+The main steps to drag and drop are to define a _drop zone_ (i.e. a target element for the file drop) and to define event handlers for the {{domxref("HTMLElement/drop_event", "drop")}} and {{domxref("HTMLElement/dragover_event", "dragover")}} events. These steps are described below, including example code snippets. The full source code is available in [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/main/drag-and-drop) (pull requests and/or issues are welcome).
 
 Note that {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).
 
@@ -28,7 +29,10 @@ The _target element_ of the {{domxref("HTMLElement/drop_event", "drop")}} event 
 Typically, an application will include a {{domxref("HTMLElement/dragover_event", "dragover")}} event handler on the drop target element and that handler will turn off the browser's default drag behavior. To add this handler, you need to include a {{domxref("HTMLElement.dragover_event","ondragover")}} event handler:
 
 ```html
-<div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+<div
+  id="drop_zone"
+  ondrop="dropHandler(event);"
+  ondragover="dragOverHandler(event);">
   <p>Drag one or more files to this <i>drop zone</i>.</p>
 </div>
 ```
@@ -38,7 +42,7 @@ Lastly, an application may want to style the drop target element to visually ind
 ```css
 #drop_zone {
   border: 5px solid blue;
-  width:  200px;
+  width: 200px;
   height: 100px;
 }
 ```
@@ -62,18 +66,18 @@ function dropHandler(ev) {
 
   if (ev.dataTransfer.items) {
     // Use DataTransferItemList interface to access the file(s)
-    for (let i = 0; i < ev.dataTransfer.items.length; i++) {
+    [...ev.dataTransfer.items].forEach((item, i) => {
       // If dropped items aren't files, reject them
-      if (ev.dataTransfer.items[i].kind === 'file') {
-        const file = ev.dataTransfer.items[i].getAsFile();
-        console.log('… file[' + i + '].name = ' + file.name);
+      if (item.kind === 'file') {
+        const file = item.getAsFile();
+        console.log(`… file[${i}].name = ${file.name}`);
       }
-    }
+    });
   } else {
     // Use DataTransfer interface to access the file(s)
-    for (let i = 0; i < ev.dataTransfer.files.length; i++) {
-      console.log('… file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
-    }
+    [...ev.dataTransfer.files].forEach((file, i) => {
+      console.log(`… file[${i}].name = ${file.name}`);
+    });
   }
 }
 ```
@@ -95,4 +99,4 @@ function dragOverHandler(ev) {
 
 - [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

@@ -13,6 +13,7 @@ tags:
   - lastChance
 browser-compat: api.SyncEvent.lastChance
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
 The **`SyncEvent.lastChance`** read-only property of the

@@ -9,9 +9,11 @@ tags:
   - Event
   - Deprecated
   - vrdisplaypointerunrestricted
+  - Non-standard
 browser-compat: api.Window.vrdisplaypointerunrestricted_event
 ---
-{{APIRef("Window")}}{{Deprecated_Header}}
+
+{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`vrdisplaypointerunrestricted`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when the VR display's pointer input is no longer restricted to consumption via a [pointerlocked element](/en-US/docs/Web/API/Pointer_Lock_API).
 
@@ -24,14 +26,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplaypointerunrestricted', event => { });
+addEventListener('vrdisplaypointerunrestricted', (event) => { });
 
-onvrdisplaypointerunrestricted = event => { };
+onvrdisplaypointerunrestricted = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("VRDisplayEvent")}}
 
@@ -39,9 +41,9 @@ An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
 
-- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.display")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.reason")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : A human-readable reason why the event was fired.
 
 ## Examples
@@ -49,7 +51,7 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplaypointerunrestricted` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplaypointerunrestricted', function() {
+window.addEventListener('vrdisplaypointerunrestricted', () => {
   // Run code to handle freeing app from pointer lock
 });
 ```
@@ -57,7 +59,7 @@ window.addEventListener('vrdisplaypointerunrestricted', function() {
 Or use the `onvrdisplaypointerunrestricted` event handler property:
 
 ```js
-window.onvrdisplaypointerunrestricted = function() {
+window.onvrdisplaypointerunrestricted = () => {
   // Run code to handle freeing app from pointer lock
 };
 ```

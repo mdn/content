@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.fill
 ---
+
 {{JSRef}}
 
 The **`fill()`** method changes all elements in an array to a static value, from a start index (default `0`) to an end index (default `array.length`).
@@ -19,7 +20,7 @@ It returns the modified array.
 
 ## Syntax
 
-```js
+```js-nolint
 fill(value)
 fill(value, start)
 fill(value, start, end)
@@ -55,20 +56,20 @@ The modified array, filled with `value`.
 ### Using fill
 
 ```js
-[1, 2, 3].fill(4)                // [4, 4, 4]
-[1, 2, 3].fill(4, 1)             // [1, 4, 4]
-[1, 2, 3].fill(4, 1, 2)          // [1, 4, 3]
-[1, 2, 3].fill(4, 1, 1)          // [1, 2, 3]
-[1, 2, 3].fill(4, 3, 3)          // [1, 2, 3]
-[1, 2, 3].fill(4, -3, -2)        // [4, 2, 3]
-[1, 2, 3].fill(4, NaN, NaN)      // [1, 2, 3]
-[1, 2, 3].fill(4, 3, 5)          // [1, 2, 3]
-Array(3).fill(4)                 // [4, 4, 4]
-[].fill.call({ length: 3 }, 4)   // {0: 4, 1: 4, 2: 4, length: 3}
+console.log([1, 2, 3].fill(4));                // [4, 4, 4]
+console.log([1, 2, 3].fill(4, 1));             // [1, 4, 4]
+console.log([1, 2, 3].fill(4, 1, 2));          // [1, 4, 3]
+console.log([1, 2, 3].fill(4, 1, 1));          // [1, 2, 3]
+console.log([1, 2, 3].fill(4, 3, 3));          // [1, 2, 3]
+console.log([1, 2, 3].fill(4, -3, -2));        // [4, 2, 3]
+console.log([1, 2, 3].fill(4, NaN, NaN));      // [1, 2, 3]
+console.log([1, 2, 3].fill(4, 3, 5));          // [1, 2, 3]
+console.log(Array(3).fill(4));                 // [4, 4, 4]
+console.log([].fill.call({ length: 3 }, 4));   // {0: 4, 1: 4, 2: 4, length: 3}
 
 // A single object, referenced by each slot of the array:
-let arr = Array(3).fill({}) // [{}, {}, {}]
-arr[0].hi = "hi"            // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
+const arr = Array(3).fill({}); // [{}, {}, {}]
+arr[0].hi = "hi";              // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 ```
 
 ### Using fill() to create a matrix of all 1
@@ -77,7 +78,7 @@ This example shows how to create a matrix of all 1, like the `ones()` function o
 
 ```js
 const arr = new Array(3);
-for (let i=0; i<arr.length; i++) {
+for (let i = 0; i < arr.length; i++) {
   arr[i] = new Array(4).fill(1); // Creating an array of size 4 and filled of 1
 }
 arr[0][0] = 10;
@@ -92,7 +93,7 @@ This example shows how to populate an array, setting all elements to a specific 
 The `end` parameter does not have to be specified.
 
 ```js
-let tempGirls = Array(5).fill("girl",0);
+const tempGirls = Array(5).fill("girl", 0);
 ```
 
 ## Specifications

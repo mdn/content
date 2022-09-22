@@ -28,7 +28,7 @@ which will be transmitted to the other peer.>
 
 ## Syntax
 
-```js
+```js-nolint
 addTrack(track)
 addTrack(track, stream0)
 addTrack(track, stream0, stream1)
@@ -235,18 +235,16 @@ This example is drawn from the code presented in the article [Signaling and vide
 is received from the remote peer.
 
 ```js
-var mediaConstraints = {
+const mediaConstraints = {
   audio: true, // We want an audio track
   video: true, // And we want a video track
 };
 
-var desc = new RTCSessionDescription(sdp);
+const desc = new RTCSessionDescription(sdp);
 
 pc.setRemoteDescription(desc)
-  .then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function (stream) {
+  .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
+  .then((stream) => {
     previewElement.srcObject = stream;
 
     stream.getTracks().forEach((track) => pc.addTrack(track, stream));

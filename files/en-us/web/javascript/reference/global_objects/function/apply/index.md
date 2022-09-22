@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Function.apply
 ---
+
 {{JSRef}}
 
 The **`apply()`** method calls the specified function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
@@ -16,7 +17,7 @@ The **`apply()`** method calls the specified function with a given `this` value,
 
 ## Syntax
 
-```js
+```js-nolint
 apply(thisArg)
 apply(thisArg, argsArray)
 ```
@@ -92,8 +93,8 @@ const numbers = [5, 6, 2, 3, 7];
 
 // using Math.min/Math.max apply
 let max = Math.max.apply(null, numbers);
-// This about equal to Math.max(numbers[0], ...)
-// or Math.max(5, 6, ...)
+// This about equal to Math.max(numbers[0], …)
+// or Math.max(5, 6, …)
 
 let min = Math.min.apply(null, numbers);
 
@@ -119,7 +120,7 @@ If your value array might grow into the tens of thousands, use a hybrid strategy
 ```js
 function minOfArray(arr) {
   let min = Infinity;
-  let QUANTUM = 32768;
+  const QUANTUM = 32768;
 
   for (let i = 0; i < arr.length; i += QUANTUM) {
     const submin = Math.min.apply(

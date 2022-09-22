@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray
 ---
+
 {{JSRef}}
 
 A **_TypedArray_** object describes an array-like view of an
@@ -23,7 +24,7 @@ methods that can be used with any typed array containing elements of any type.
 
 ## Description
 
-ECMAScript 2015 defines a `TypedArray` constructor that serves as
+The `TypedArray` constructor is a hidden global that serves as
 the `[[Prototype]]` of all `TypedArray` constructors.
 This constructor is not directly exposed: there is no global `%TypedArray%`
 or `TypedArray` property. It is only directly accessible through
@@ -42,19 +43,19 @@ etc., operate on that array buffer address.
 
 ### TypedArray objects
 
-| Type                                     | Value Range                                                     | Size in bytes | Description                                                                        | Web IDL type          | Equivalent C type               |
-| ---------------------------------------- | --------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| {{jsxref("Int8Array")}}         | `-128` to `127`                                                 | 1             | 8-bit two's complement signed integer                                              | `byte`                | `int8_t`                        |
-| {{jsxref("Uint8Array")}}         | `0` to `255`                                                    | 1             | 8-bit unsigned integer                                                             | `octet`               | `uint8_t`                       |
-| {{jsxref("Uint8ClampedArray")}} | `0` to `255`                                                    | 1             | 8-bit unsigned integer (clamped)                                                   | `octet`               | `uint8_t`                       |
-| {{jsxref("Int16Array")}}         | `-32768` to `32767`                                             | 2             | 16-bit two's complement signed integer                                             | `short`               | `int16_t`                       |
-| {{jsxref("Uint16Array")}}         | `0` to `65535`                                                  | 2             | 16-bit unsigned integer                                                            | `unsigned short`      | `uint16_t`                      |
-| {{jsxref("Int32Array")}}         | `-2147483648` to `2147483647`                                   | 4             | 32-bit two's complement signed integer                                             | `long`                | `int32_t`                       |
-| {{jsxref("Uint32Array")}}         | `0` to `4294967295`                                             | 4             | 32-bit unsigned integer                                                            | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}     | `-3.4E38` to `3.4E38` and `1.2E-38` is the min positive number  | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.234567`)          | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}     | `-1.8E308` to `1.8E308` and `5E-324` is the min positive number | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.23456789012345`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | `-2^63` to `2^63 - 1`                                           | 8             | 64-bit two's complement signed integer                                             | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}     | `0` to `2^64 - 1`                                               | 8             | 64-bit unsigned integer                                                            | `bigint`              | `uint64_t (unsigned long long)` |
+| Type                            | Value Range                                                     | Size in bytes | Description                                                                        | Web IDL type          | Equivalent C type               |
+| ------------------------------- | --------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------------- | --------------------- | ------------------------------- |
+| {{jsxref("Int8Array")}}         | -128 to 127                                                     | 1             | 8-bit two's complement signed integer                                              | `byte`                | `int8_t`                        |
+| {{jsxref("Uint8Array")}}        | 0 to 255                                                        | 1             | 8-bit unsigned integer                                                             | `octet`               | `uint8_t`                       |
+| {{jsxref("Uint8ClampedArray")}} | 0 to 255                                                        | 1             | 8-bit unsigned integer (clamped)                                                   | `octet`               | `uint8_t`                       |
+| {{jsxref("Int16Array")}}        | -32768 to 32767                                                 | 2             | 16-bit two's complement signed integer                                             | `short`               | `int16_t`                       |
+| {{jsxref("Uint16Array")}}       | 0 to 65535                                                      | 2             | 16-bit unsigned integer                                                            | `unsigned short`      | `uint16_t`                      |
+| {{jsxref("Int32Array")}}        | -2147483648 to 2147483647                                       | 4             | 32-bit two's complement signed integer                                             | `long`                | `int32_t`                       |
+| {{jsxref("Uint32Array")}}       | 0 to 4294967295                                                 | 4             | 32-bit unsigned integer                                                            | `unsigned long`       | `uint32_t`                      |
+| {{jsxref("Float32Array")}}      | `-3.4E38` to `3.4E38` and `1.2E-38` is the min positive number  | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.234567`)          | `unrestricted float`  | `float`                         |
+| {{jsxref("Float64Array")}}      | `-1.8E308` to `1.8E308` and `5E-324` is the min positive number | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.23456789012345`) | `unrestricted double` | `double`                        |
+| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1                           | 8             | 64-bit two's complement signed integer                                             | `bigint`              | `int64_t (signed long long)`    |
+| {{jsxref("BigUint64Array")}}    | 0 to 2<sup>64</sup> - 1                                         | 8             | 64-bit unsigned integer                                                            | `bigint`              | `uint64_t (unsigned long long)` |
 
 ## Constructor
 
@@ -76,6 +77,8 @@ new TypedArray(buffer, byteOffset, length)
 
 Where _TypedArray_ is a constructor for one of the concrete types.
 
+> **Note:** All `TypedArray` constructors can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call one without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `length`
@@ -87,11 +90,11 @@ Where _TypedArray_ is a constructor for one of the concrete types.
     into a new typed array. For a **non-{{glossary("bigint")}}** `TypedArray`,
     the `typedArray` parameter can be an object of only the
     **non**-{{glossary("bigint")}} typed array types (such as
-    {{JSxRef("Int32Array")}}).  Similarly, for a **{{glossary("bigint")}}**
+    {{JSxRef("Int32Array")}}). Similarly, for a **{{glossary("bigint")}}**
     `TypedArray`, the `typedArray` parameter can be an object of only the
     {{glossary("bigint")}} typed array types (such as {{JSxRef("BigInt64Array")}}).
     Each value in `typedArray` is converted to the corresponding type of the
-    constructor before being copied into the new array.  The length of the new
+    constructor before being copied into the new array. The length of the new
     typed array will be same as the length of the `typedArray` argument.
 - `object`
   - : When called with an `object` argument, a new typed array is
@@ -113,7 +116,7 @@ Where _TypedArray_ is a constructor for one of the concrete types.
   - : Returns a number value of the element size for the different
     `TypedArray` objects.
 - {{jsxref("TypedArray.name")}}
-  - : Returns the string value of the constructor name (e.g, "`Int8Array`").
+  - : Returns the string value of the constructor name (e.g., `"Int8Array"`).
 - {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
   - : The constructor function used to create derived objects.
 - {{jsxref("TypedArray")}}
@@ -235,28 +238,11 @@ Where _TypedArray_ is a constructor for one of the concrete types.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also
     {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.prototype.@@iterator()",
-    "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
   - : Returns a new _array iterator_ object that contains the values for each index in the
     array.
 
 ## Examples
-
-### New is required
-
-Starting with ECMAScript 2015, `TypedArray` constructors must be constructed
-with the {{jsxref("Operators/new", "new")}} operator. Calling a `TypedArray`
-constructor as a function without `new` will throw a {{jsxref("TypeError")}}.
-
-```js example-bad
-const dv = Int8Array([1, 2, 3]);
-// TypeError: calling a builtin Int8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Int8Array([1, 2, 3]);
-```
 
 ### Property access
 

@@ -8,6 +8,7 @@ tags:
   - WebGL extensions
 browser-compat: api.OVR_multiview2
 ---
+
 {{APIRef("WebGL")}}
 
 The `OVR_multiview2` extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds support for rendering into multiple views simultaneously. This especially useful for virtual reality (VR) and WebXR.
@@ -51,7 +52,7 @@ This extension exposes 4 constants that can be used in [`getParameter()`](/en-US
 This example is taken from the [specification](https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/).
 
 ```js
-const gl = document.createElement('canvas').getContext( 'webgl2', { antialias: false } );
+const gl = document.createElement('canvas').getContext('webgl2', { antialias: false });
 const ext = gl.getExtension('OVR_multiview2');
 const fb = gl.createFramebuffer();
 gl.bindFramebuffer(gl.DRAW_FRAMEBUFFER, fb);

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_or
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise OR operator (`|`) returns a `1` in each bit position
@@ -18,7 +19,7 @@ for which the corresponding bits of either or both operands are `1`s.
 
 ## Syntax
 
-```js
+```js-nolint
 a | b
 ```
 
@@ -29,7 +30,7 @@ and ones). Numbers with more than 32 bits get their most significant bits discar
 example, the following integer with more than 32 bits will be converted to a 32-bit
 integer:
 
-```js
+```
 Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001
 ```
@@ -49,8 +50,8 @@ The truth table for the OR operation is:
 | 1   | 0   | 1      |
 | 1   | 1   | 1      |
 
-```js
-.    9 (base 10) = 00000000000000000000000000001001 (base 2)
+```
+     9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
 14 | 9 (base 10) = 00000000000000000000000000001111 (base 2) = 15 (base 10)

@@ -10,6 +10,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.type
 ---
+
 {{CSSRef}}
 
 The CSS **type selector** matches elements by node name. In other words, it selects all elements of the given type within a document.
@@ -21,7 +22,7 @@ a {
 }
 ```
 
-Type selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML5 with inline SVG or MathML, or XML that mixes multiple vocabularies.
+Type selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
 
 - `ns|h1` - matches `<h1>` elements in namespace _ns_
 - `*|h1` - matches all `<h1>` elements
@@ -61,7 +62,9 @@ In this example the selector will only match `<h1>` elements in the example name
 
 ```css
 @namespace example url(http://www.example.com);
-example|h1 { color: blue }
+example|h1 {
+  color: blue;
+}
 ```
 
 ## Specifications

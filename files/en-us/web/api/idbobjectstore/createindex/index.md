@@ -13,6 +13,7 @@ tags:
   - createIndex
 browser-compat: api.IDBObjectStore.createIndex
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`createIndex()`** method of the
@@ -31,7 +32,7 @@ mode callback.
 
 ## Syntax
 
-```js
+```js-nolint
 createIndex(indexName, keyPath)
 createIndex(indexName, keyPath, objectParameters)
 ```
@@ -84,10 +85,10 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if the provided `keyPath` is not a <a href="https://www.w3.org/TR/IndexedDB/#dfn-valid-key-path">valid key path</a>.
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if the transaction this {{domxref("IDBObjectStore")}}
-        belongs to is not active (e.g. has been deleted or removed.) In Firefox
-        previous to version 41, an `InvalidStateError` was raised in
-        this case as well, which was misleading; this has now been fixed (see
-        {{Bug("1176165")}}.)
+    belongs to is not active (e.g. has been deleted or removed.) In Firefox
+    previous to version 41, an `InvalidStateError` was raised in
+    this case as well, which was misleading; this has now been fixed (see
+    {{Bug("1176165")}}.)
 
 ## Examples
 
@@ -104,11 +105,11 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Two event handlers for opening the database.
-DBOpenRequest.onerror = function(event) {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += '<li>Error loading database.</li>';
 };
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -124,10 +125,10 @@ DBOpenRequest.onsuccess = function(event) {
 // either that one has not been created before, or a new version
 // was submitted with window.indexedDB.open(). (See above.)
 // It is only implemented in recent browsers.
-DBOpenRequest.onupgradeneeded = function(event) {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = function(event) {
+  db.onerror = (event) => {
     note.innerHTML += '<li>Error loading database.</li>';
   };
 

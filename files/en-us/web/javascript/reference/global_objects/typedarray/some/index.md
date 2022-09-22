@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.some
 ---
+
 {{JSRef}}
 
 The **`some()`** method tests whether some element in the typed
@@ -22,7 +23,7 @@ of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/T
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 some((element) => { /* ... */ } )
 some((element, index) => { /* ... */ } )
@@ -75,7 +76,7 @@ index of the element, and the array object being traversed.
 If a `thisArg` parameter is provided to `some`, it will be passed
 to `callbackFn` when invoked, for use as its `this` value.
 Otherwise, the value `undefined` will be passed for use as its
-`this` value.  The `this` value ultimately observable by
+`this` value. The `this` value ultimately observable by
 `callbackFn` is determined according to
 [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
@@ -100,8 +101,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
-new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+new Uint8Array([2, 5, 8, 1, 4]).some((elem) => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some((elem) => elem > 10); // true
 ```
 
 ## Specifications

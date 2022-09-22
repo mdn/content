@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry.register
 ---
+
 {{JSRef}}
 
 The `register()` method registers an object with a
@@ -17,9 +18,9 @@ the registry's callback may get called.
 
 ## Syntax
 
-```js
-register(target, heldValue);
-register(target, heldValue, unregisterToken);
+```js-nolint
+register(target, heldValue)
+register(target, heldValue, unregisterToken)
 ```
 
 ### Parameters

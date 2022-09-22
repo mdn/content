@@ -10,6 +10,7 @@ tags:
   - Reference
 spec-urls: https://w3c.github.io/aria/#aria-invalid
 ---
+
 The `aria-invalid` state indicates the entered value does not conform to the format expected by the application.
 
 ## Description
@@ -22,7 +23,7 @@ The attribute should be set with JavaScript as a result of a validation process.
 
 > **Note:** When `aria-invalid` is used in conjunction with the `aria-required` attribute, `aria-invalid` should not be set to true before the form is submitted - only in response to validation.
 
-There are currently four values: in addition to `true` and `false` we have `grammar` which can be used when a grammatical error is detected and `spelling` for spelling errors.  If the attribute is not present, or its value is false, or its value is an empty string, the default value of false applies. Any other value is treated as if `true` were set.
+There are currently four values: in addition to `true` and `false` we have `grammar` which can be used when a grammatical error is detected and `spelling` for spelling errors. If the attribute is not present, or its value is false, or its value is an empty string, the default value of false applies. Any other value is treated as if `true` were set.
 
 ### Native HTML validation
 
@@ -31,7 +32,7 @@ HTML has native form validation. When a user submits a form with a control conta
 If there is a {{htmlattrxref("required")}} attribute on a form control that isn't filled out, the form will not submit, and an error message appears reading "Please fill out this field" or something similar. The messaging for native validation varies depending on the browser, and cannot be styled.
 
 ```html
-<input type="number" step="2" min="0" max="100" required>
+<input type="number" step="2" min="0" max="100" required />
 ```
 
 If the user had entered a value in the preceding input example above the maximum, below the minimum, or that doesn't match the step value, an error message would appear. If the user had entered "3", the native error message would be similar to "Please enter a valid value."
@@ -59,15 +60,23 @@ The following snippet shows a simplified version of two form fields with a valid
 <ul>
   <li>
     <label for="name">Full Name</label>
-   <input type="text" name="name" id="name"
-      aria-required="true" aria-invalid="false"
-      onblur="checkValidity('name', ' ', 'Invalid name entered (requires both first and last name)');"/>
- </li>
- <li>
-   <label for="email">Email Address</label>
-   <input type="email" name="email" id="email"
-      aria-required="true" aria-invalid="false"
-      onblur="checkValidity('email', '@', 'Invalid e-mail address');"/>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      aria-required="true"
+      aria-invalid="false"
+      onblur="checkValidity('name', ' ', 'Invalid name entered (requires both first and last name)');" />
+  </li>
+  <li>
+    <label for="email">Email Address</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      aria-required="true"
+      aria-invalid="false"
+      onblur="checkValidity('email', '@', 'Invalid e-mail address');" />
   </li>
 </ul>
 ```
@@ -77,15 +86,14 @@ Note that it is not necessary to validate the fields immediately on blur; the ap
 The snippet below shows a very simple validation function, which only checks for the presence of a particular character (in the real world, validation will likely be more sophisticated):
 
 ```js
-function checkValidity(aID, aSearchTerm, aMsg){
-  let elem = document.getElementById(aID);
-  let invalid = (elem.value.indexOf(aSearchTerm) < 0);
-  if (invalid) {
-    elem.setAttribute("aria-invalid", "true");
-    updateAlert(aMsg);
-  } else {
+function checkValidity(id, searchTerm, msg) {
+  const elem = document.getElementById(id);
+  if (elem.value.includes(searchTerm)) {
     elem.setAttribute("aria-invalid", "false");
     updateAlert();
+  } else {
+    elem.setAttribute("aria-invalid", "true");
+    updateAlert(msg);
   }
 }
 ```
@@ -94,19 +102,19 @@ The snippet below shows the alert functions, which add (or remove) the error mes
 
 ```js
 function updateAlert(msg) {
-    let oldAlert = document.getElementById("alert");
-    if (oldAlert) {
-      document.body.removeChild(oldAlert);
-    }
+  const oldAlert = document.getElementById("alert");
+  if (oldAlert) {
+    oldAlert.remove();
+  }
 
-    if (msg) {
-      let newAlert = document.createElement("div");
-      newAlert.setAttribute("role", "alert");
-      newAlert.setAttribute("id", "alert");
-      let content = document.createTextNode(msg);
-      newAlert.appendChild(content);
-      document.body.appendChild(newAlert);
-    }
+  if (msg) {
+    const newAlert = document.createElement("div");
+    newAlert.setAttribute("role", "alert");
+    newAlert.setAttribute("id", "alert");
+    const content = document.createTextNode(msg);
+    newAlert.appendChild(content);
+    document.body.appendChild(newAlert);
+  }
 }
 ```
 

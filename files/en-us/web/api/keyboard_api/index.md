@@ -14,6 +14,7 @@ browser-compat:
   - api.Keyboard
   - api.KeyboardLayoutMap
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The Keyboard API provides methods for working with a physical keyboard that is attached to a device running a browser.
@@ -34,9 +35,9 @@ The following example demonstrates how to get the location-specific or layout-sp
 if (navigator.keyboard) {
   const keyboard = navigator.keyboard;
   keyboard.getLayoutMap()
-  .then(keyboardLayoutMap => {
+  .then((keyboardLayoutMap) => {
     const upKey = keyboardLayoutMap.get('KeyW');
-    window.alert('Press ' + upKey + ' to move up.');
+    window.alert(`Press ${upKey} to move up.`);
   });
 } else {
   // Do something else.
@@ -69,7 +70,7 @@ The codes passed {{domxref('Keyboard.lock')}} and the various methods of the {{d
   - : Provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 - {{domxref('KeyboardLayoutMap')}} {{experimental_inline}}
   - : A map-like object with functions for retrieving the string associated with specific physical keys.
-- {{domxref('navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}
+- {{domxref('navigator.keyboard')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 
 ## Specifications

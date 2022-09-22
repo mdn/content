@@ -7,6 +7,7 @@ tags:
   - WebGL
 browser-compat: api.WebGLRenderingContext.attachShader
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLRenderingContext.attachShader()** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) attaches either a fragment or
@@ -14,8 +15,8 @@ vertex {{domxref("WebGLShader")}} to a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
-void gl.attachShader(program, shader);
+```js-nolint
+attachShader(program, shader)
 ```
 
 ### Parameters
@@ -38,9 +39,9 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
   const info = gl.getProgramInfoLog(program);
-  throw 'Could not compile WebGL program. \n\n' + info;
+  throw `Could not compile WebGL program. \n\n${info}`;
 }
 ```
 

@@ -16,6 +16,7 @@ tags:
   - innerHeight
 browser-compat: api.Window.innerHeight
 ---
+
 {{APIRef}}
 
 The read-only **`innerHeight`** property of the
@@ -49,16 +50,16 @@ or any object that behaves like a window, such as a tab or frame.
 ### Assuming a frameset
 
 ```js
-var intFrameHeight = window.innerHeight; // or
+console.log(window.innerHeight); // or
 
-var intFrameHeight = self.innerHeight;
-// will return the height of the frame viewport within the frameset
+console.log(self.innerHeight);
+// will log the height of the frame viewport within the frameset
 
-var intFramesetHeight = parent.innerHeight;
-// will return the height of the viewport of the closest frameset
+console.log(parent.innerHeight);
+// will log the height of the viewport of the closest frameset
 
-var intOuterFramesetHeight = top.innerHeight;
-// will return the height of the viewport of the outermost frameset
+console.log(top.innerHeight);
+// will log the height of the viewport of the outermost frameset
 ```
 
 To change the size of a window, see {{domxref("window.resizeBy()")}} and

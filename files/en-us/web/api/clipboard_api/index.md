@@ -20,6 +20,7 @@ browser-compat:
   - api.ClipboardEvent
   - api.ClipboardItem
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The **Clipboard API** provides the ability to respond to clipboard commands (cut, copy, and paste) as well as to asynchronously read from and write to the system clipboard.
@@ -39,7 +40,7 @@ Instead of creating a `Clipboard` object through instantiation, you access the s
 
 ```js
 navigator.clipboard.readText().then(
-  clipText => document.querySelector(".editor").innerText += clipText);
+  (clipText) => document.querySelector(".editor").innerText += clipText);
 ```
 
 This snippet fetches the text from the clipboard and appends it to the first element found with the class `editor`. Since {{domxref("Clipboard.readText", "readText()")}} (and {{domxref("Clipboard.read", "read()")}}, for that matter) returns an empty string if the clipboard isn't text, this code is safe.
@@ -47,7 +48,7 @@ This snippet fetches the text from the clipboard and appends it to the first ele
 ## Interfaces
 
 - {{domxref("Clipboard")}} {{securecontext_inline}}
-  - : Provides an interface for reading and writing text and data to or from the system clipboard. The specification refers to this as the 'Async Clipboard API.'
+  - : Provides an interface for reading and writing text and data to or from the system clipboard. The specification refers to this as the 'Async Clipboard API'.
 - {{domxref("ClipboardEvent")}} {{securecontext_inline}}
   - : Represents events providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events. The specification refers to this as the 'Clipboard Event API'.
 - {{domxref("ClipboardItem")}} {{securecontext_inline}}

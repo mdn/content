@@ -8,9 +8,11 @@ tags:
   - Reference
   - selectedTrack
   - ImageTrackList
+  - Experimental
 browser-compat: api.ImageTrackList.selectedTrack
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`selectedTrack`** property of the {{domxref("ImageTrackList")}} interface returns an {{domxref("ImageTrack")}} object representing the currently selected track.
 

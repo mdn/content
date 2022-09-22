@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.types.filter-function.grayscale
 ---
+
 {{CSSRef}}
 
 The **`grayscale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) converts the input image to grayscale. Its result is a {{cssxref("&lt;filter-function&gt;")}}.

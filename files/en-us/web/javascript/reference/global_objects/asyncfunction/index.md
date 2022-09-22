@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.AsyncFunction
 ---
+
 {{JSRef}}
 
 The **`AsyncFunction` constructor** creates a new
@@ -17,17 +18,24 @@ Note that `AsyncFunction` is _not_ a global object. It can be
 obtained with the following code:
 
 ```js
-Object.getPrototypeOf(async function(){}).constructor
+const AsyncFunction = (async function () {}).constructor;
 ```
 
 ## Syntax
 
-```js
+```js-nolint
 new AsyncFunction(functionBody)
 new AsyncFunction(arg0, functionBody)
 new AsyncFunction(arg0, arg1, functionBody)
 new AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
+
+AsyncFunction(functionBody)
+AsyncFunction(arg0, functionBody)
+AsyncFunction(arg0, arg1, functionBody)
+AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
+
+> **Note:** `AsyncFunction()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `AsyncFunction` instance.
 
 ### Parameters
 
@@ -42,17 +50,16 @@ new AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 
 ## Description
 
-{{jsxref("Statements/async_function", "async function")}} objects created with the
+[Async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) objects created with the
 `AsyncFunction` constructor are parsed when the function is created. This is
 less efficient than declaring an async function with an
-{{jsxref("Statements/async_function", "async function expression")}} and calling it
+[`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function) and calling it
 within your code, because such functions are parsed with the rest of the code.
 
 All arguments passed to the function, except the last, are treated as the names of the identifiers of the
 parameters in the function to be created, in the order in which they are passed.
 
-> **Note:** {{jsxref("Statements/async_function", "async functions", "",
-    1)}} created with the `AsyncFunction` constructor do not create closures to
+> **Note:** {{jsxref("Statements/async_function", "async functions", "", 1)}} created with the `AsyncFunction` constructor do not create closures to
 > their creation contexts; they are always created in the global scope.
 >
 > When running them, they will only be able to access their own local variables and
@@ -71,20 +78,22 @@ Invoking the `AsyncFunction` constructor as a function (without using the
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
 
-let AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+const AsyncFunction = (async function () {}).constructor;
 
-let a = new AsyncFunction('a',
-                          'b',
-                          'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
+const fn = new AsyncFunction(
+  'a',
+  'b',
+  'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);',
+);
 
-a(10, 20).then(v => {
+fn(10, 20).then((v) => {
   console.log(v); // prints 30 after 4 seconds
 });
 ```
@@ -99,7 +108,7 @@ a(10, 20).then(v => {
 
 ## See also
 
-- {{jsxref("Statements/async_function", "async function function", "", 1)}}
+- {{jsxref("Statements/async_function", "async function", "", 1)}}
 - {{jsxref("Operators/async_function", "async function expression", "", 1)}}
 - {{jsxref("Global_Objects/Function", "Function")}}
 - {{jsxref("Statements/function", "function statement", "", 1)}}

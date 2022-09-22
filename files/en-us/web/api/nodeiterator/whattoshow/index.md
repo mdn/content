@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.NodeIterator.whatToShow
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.whatToShow`** read-only property represents
@@ -121,9 +122,9 @@ The values that can be combined to form the bitmask are:
 
 ```js
 const nodeIterator = document.createNodeIterator(
-    document.body,
-    ( NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT | NodeFilter.SHOW_TEXT ),
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
+  document.body,
+  NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT | NodeFilter.SHOW_TEXT,
+  { acceptNode: (node) => NodeFilter.FILTER_ACCEPT }
 );
 if ((nodeIterator.whatToShow & NodeFilter.SHOW_ALL) ||
     (nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT)) {

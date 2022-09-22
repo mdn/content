@@ -8,6 +8,7 @@ tags:
   - NeedsContent
   - WebRTC
 ---
+
 {{WebRTCSidebar}}
 
 WebRTC lets you build peer-to-peer communication of arbitrary data, audio, or video—or any combination thereof—into a browser application. In this article, we'll look at the lifetime of a WebRTC session, from establishing the connection all the way through closing the connection when it's no longer needed.
@@ -18,9 +19,9 @@ This article doesn't get into details of the actual APIs involved in establishin
 
 ## Establishing the connection
 
-The internet is big. Really big. It's so big that years ago, smart people saw how big it was, how fast it was growing, and the {{interwiki("wikipedia", "IPv4 address exhaustion", "limitations")}} of the 32-bit IP addressing system, and realized that something had to be done before we ran out of addresses to use, so they started working on designing a new 64-bit addressing system. But they realized that it would take longer to complete the transition than 32-bit addresses would last, so other smart people came up with a way to let multiple computers share the same 32-bit IP address. Network Address Translation ({{Glossary("NAT")}}) is a standard which supports this address sharing by handling routing of data inbound and outbound to and from devices on a LAN, all of which are sharing a single WAN (global) IP address.
+The internet is big. Really big. It's so big that years ago, smart people saw how big it was, how fast it was growing, and the [limitations](https://en.wikipedia.org/wiki/IPv4_address_exhaustion) of the 32-bit IP addressing system, and realized that something had to be done before we ran out of addresses to use, so they started working on designing a new 64-bit addressing system. But they realized that it would take longer to complete the transition than 32-bit addresses would last, so other smart people came up with a way to let multiple computers share the same 32-bit IP address. Network Address Translation ({{Glossary("NAT")}}) is a standard which supports this address sharing by handling routing of data inbound and outbound to and from devices on a LAN, all of which are sharing a single WAN (global) IP address.
 
-The problem for users is that each individual computer on the internet no longer necessarily has a unique IP address, and, in fact, each device's IP address may change not only if they move from one network to another, but if their network's address is changed by {{Glossary("NAT")}} and/or {{interwiki("wikipedia", "DHCP")}}. For developers trying to do peer-to-peer networking, this introduces a conundrum: without a unique identifier for every user device, it's not possible to instantly and automatically know how to connect to a specific device on the internet. Even though you know who you want to talk to, you don't necessarily know how to reach them or even what their address is.
+The problem for users is that each individual computer on the internet no longer necessarily has a unique IP address, and, in fact, each device's IP address may change not only if they move from one network to another, but if their network's address is changed by {{Glossary("NAT")}} and/or [DHCP](https://en.wikipedia.org/wiki/DHCP). For developers trying to do peer-to-peer networking, this introduces a conundrum: without a unique identifier for every user device, it's not possible to instantly and automatically know how to connect to a specific device on the internet. Even though you know who you want to talk to, you don't necessarily know how to reach them or even what their address is.
 
 This is like trying to mail a package to your friend Michelle by labeling it "Michelle" and dropping it in a mailbox when you don't know her address. You need to look up her address and include it on the package, or she'll wind up wondering why you forgot her birthday again.
 

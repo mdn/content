@@ -12,6 +12,7 @@ tags:
   - Components
   - Structure
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 At this point, we are ready to start creating our to-do list application using Angular. The finished application will display a list of to-do items and includes editing, deleting, and adding features. In this article you will get to know your application structure, and work up to displaying a basic list of to-do items.
@@ -84,7 +85,7 @@ To use `@Output()`, you raise an event in one component so that the other compon
 
 In the `app` directory, create a new file named `item.ts` with the following contents:
 
-```js
+```ts
 export interface Item {
   description: string;
   done: boolean;
@@ -123,7 +124,7 @@ export class AppComponent {
     if (this.filter === 'all') {
       return this.allItems;
     }
-    return this.allItems.filter(item => this.filter === 'done' ? item.done : !item.done);
+    return this.allItems.filter((item) => this.filter === 'done' ? item.done : !item.done);
   }
 
 }
@@ -188,7 +189,7 @@ A to-do list needs a way to add items.
 
 In `app.component.ts`, add the following method to the class:
 
-```js
+```ts
 addItem(description: string) {
   this.allItems.unshift({
     description,
@@ -205,7 +206,7 @@ To use the `addItem()` method, edit the HTML in the `AppComponent` template.
 
 In `app.component.html`, replace the `<h2>` with the following:
 
-```js
+```html
 <label for="addItemInput">What would you like to do today?</label>
 
 <input
@@ -213,8 +214,7 @@ In `app.component.html`, replace the `<h2>` with the following:
   placeholder="add an item"
   (keyup.enter)="addItem(newItem.value); newItem.value = ''"
   class="lg-text-input"
-  id="addItemInput"
-/>
+  id="addItemInput" />
 
 <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
 ```

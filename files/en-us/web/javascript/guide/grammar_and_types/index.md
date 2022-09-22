@@ -4,8 +4,9 @@ slug: Web/JavaScript/Guide/Grammar_and_types
 tags:
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 This chapter discusses JavaScript's basic grammar, variable declarations, data types and literals.
@@ -17,7 +18,7 @@ JavaScript borrows most of its syntax from Java, C, and C++, but it has also bee
 JavaScript is **case-sensitive** and uses the **Unicode** character set. For example, the word Früh (which means "early" in German) could be used as a variable name.
 
 ```js
-let Früh = "foobar"
+const Früh = "foobar";
 ```
 
 But, the variable `früh` is not the same as `Früh` because JavaScript is case sensitive.
@@ -42,8 +43,18 @@ The syntax of **comments** is the same as in C++ and in many other languages:
 /* this is a longer,
  * multi-line comment
  */
+```
 
+You can't nest block comments. This often happens when you accidentally include a `*/` sequence in your comment, which will terminate the comment.
+
+```js example-bad
 /* You can't, however, /* nest comments */ SyntaxError */
+```
+
+In this case, you need to break up the `*/` pattern. For example, by inserting a backslash:
+
+```js
+/* You can /* nest comments *\/ by escaping slashes */
 ```
 
 Comments behave like whitespace, and are discarded during script execution.
@@ -67,11 +78,9 @@ JavaScript has three kinds of variable declarations.
 
 You use variables as symbolic names for values in your application. The names of variables, called {{Glossary("Identifier", "identifiers")}}, conform to certain rules.
 
-A JavaScript identifier must start with a letter, underscore (`_`), or dollar sign (`$`). Subsequent characters can also be digits (`0`–`9`).
+A JavaScript identifier usually starts with a letter, underscore (`_`), or dollar sign (`$`). Subsequent characters can also be digits (`0`–`9`). Because JavaScript is case sensitive, letters include the characters `A` through `Z` (uppercase) as well as `a` through `z` (lowercase).
 
-Because JavaScript is case sensitive, letters include the characters "`A`" through "`Z`" (uppercase) as well as "`a`" through "`z`" (lowercase).
-
-You can use most of ISO 8859-1 or Unicode letters such as `å` and `ü` in identifiers. (For more details, see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6).) You can also use the [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) as characters in identifiers.
+You can use most of ISO 8859-1 or Unicode letters such as `å` and `ü` in identifiers. (For more details, see [this blog post](https://mathiasbynens.be/notes/javascript-identifiers-es6) or the [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) reference.) You can also use the [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) as characters in identifiers.
 
 Some examples of legal names are `Number_hits`, `temp99`, `$credit`, and `_name`.
 
@@ -94,18 +103,18 @@ An attempt to access an undeclared variable results in a {{jsxref("ReferenceErro
 
 ```js
 var a;
-console.log('The value of a is ' + a); // The value of a is undefined
+console.log(`The value of a is ${a}`); // The value of a is undefined
 
-console.log('The value of b is ' + b); // The value of b is undefined
+console.log(`The value of b is ${b}`); // The value of b is undefined
 var b;
 // This one may puzzle you until you read 'Variable hoisting' below
 
-console.log('The value of c is ' + c); // Uncaught ReferenceError: c is not defined
+console.log(`The value of c is ${c}`); // Uncaught ReferenceError: c is not defined
 
 let x;
-console.log('The value of x is ' + x); // The value of x is undefined
+console.log(`The value of x is ${x}`); // The value of x is undefined
 
-console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defined
+console.log(`The value of y is ${y}`); // Uncaught ReferenceError: y is not defined
 let y;
 ```
 
@@ -134,7 +143,7 @@ let a;
 a + 2;  // Evaluates to NaN
 ```
 
-When you evaluate a {{jsxref("null")}} variable, the null value behaves as `0` in numeric contexts and as `false` in boolean contexts. For example:
+When you evaluate a [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) variable, the null value behaves as `0` in numeric contexts and as `false` in boolean contexts. For example:
 
 ```js
 const n = null;
@@ -145,7 +154,16 @@ console.log(n * 32); // Will log 0 to the console
 
 When you declare a variable outside of any function, it is called a _global_ variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a _local_ variable, because it is available only within that function.
 
-JavaScript before ECMAScript 2015 does not have [block statement](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement) scope. Rather, a variable declared within a block is local to the _function (or global scope)_ that the block resides within.
+`let` and `const` declarations are scoped to the [block statement](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement) that they are declared in.
+
+```js
+if (Math.random() > 0.5) {
+  const y = 5;
+}
+console.log(y);  // ReferenceError: y is not defined
+```
+
+However, variables created with `var` are not block-scoped, but only local to the _function (or global scope)_ that the block resides within.
 
 For example, the following code will log `5`, because the scope of `x` is the global context (or the function context if the code is part of a function). The scope of `x` is not limited to the immediate `if` statement block.
 
@@ -156,20 +174,11 @@ if (true) {
 console.log(x);  // x is 5
 ```
 
-This behavior changes when using the `let` declaration (introduced in ECMAScript 2015).
-
-```js
-if (true) {
-  let y = 5;
-}
-console.log(y);  // ReferenceError: y is not defined
-```
-
 ### Variable hoisting
 
 Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception.
 
-This concept is known as **hoisting.** Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
+This concept is known as _hoisting_. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of `undefined`. So even if you declare and initialize after you use or refer to this variable, it still returns `undefined`.
 
 ```js
 /**
@@ -214,11 +223,11 @@ var myvar = 'my value';
 
 Because of hoisting, all `var` statements in a function should be placed as near to the top of the function as possible. This best practice increases the clarity of the code.
 
-In ECMAScript 2015, `let` and `const` **are hoisted but not initialized**. Referencing the variable in the block before the variable declaration results in a {{jsxref("ReferenceError")}}, because the variable is in a "temporal dead zone" from the start of the block until the declaration is processed.
+`let` and `const` **are hoisted but not initialized**. Referencing the variable in the block before the variable declaration results in a {{jsxref("ReferenceError")}}, because the variable is in a "temporal dead zone" from the start of the block until the declaration is processed.
 
 ```js
 console.log(x); // ReferenceError
-let x = 3;
+const x = 3;
 ```
 
 ### Function hoisting
@@ -277,7 +286,7 @@ The scope rules for constants are the same as those for `let` block-scope variab
 
 You cannot declare a constant with the same name as a function or variable in the same scope. For example:
 
-```js
+```js example-bad
 // THIS WILL CAUSE AN ERROR
 function f() {};
 const f = 5;
@@ -319,12 +328,12 @@ The latest ECMAScript standard defines eight data types:
   3. {{Glossary("undefined")}}. A top-level property whose value is not defined.
   4. {{Glossary("Number")}}. An integer or floating point number. For example: `42` or `3.14159`.
   5. {{Glossary("BigInt")}}. An integer with arbitrary precision. For example: `9007199254740992n`.
-  6. {{Glossary("String")}}. A sequence of characters that represent a text value. For example: "Howdy"
-  7. {{Glossary("Symbol")}} (new in ECMAScript 2015). A data type whose instances are unique and immutable.
+  6. {{Glossary("String")}}. A sequence of characters that represent a text value. For example: `"Howdy"`.
+  7. [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol). A data type whose instances are unique and immutable.
 
 - and {{Glossary("Object")}}
 
-Although these data types are relatively few, they enable you to perform useful functions with your applications. {{jsxref("Object", "Objects", "", 1)}} and {{jsxref("Function", "functions", "", 1)}} are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your script can perform.
+Although these data types are relatively few, they enable you to perform useful operations with your applications. [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) are the other fundamental elements of the language. While functions are technically a kind of object, you can think of objects as named containers for values, and functions as procedures that your script can perform.
 
 ### Data type conversion
 
@@ -339,7 +348,7 @@ let answer = 42;
 And later, you could assign the same variable a string value, for example:
 
 ```js
-answer = 'Thanks for all the fish...';
+answer = 'Thanks for all the fish!';
 ```
 
 Because JavaScript is dynamically typed, this assignment does not cause an error message.
@@ -402,21 +411,19 @@ An array literal is a list of zero or more expressions, each of which represents
 The following example creates the `coffees` array with three elements and a `length` of three:
 
 ```js
-let coffees = ['French Roast', 'Colombian', 'Kona'];
+const coffees = ['French Roast', 'Colombian', 'Kona'];
 ```
-
-> **Note:** An array literal is a type of _object initializer_. See [Using Object Initializers](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_object_initializers).
 
 If an array is created using a literal in a top-level script, JavaScript interprets the array each time it evaluates the expression containing the array literal. In addition, a literal used in a function is created each time the function is called.
 
-> **Note:** Array literals are also `Array` objects. See {{jsxref("Array")}} and [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) for details on `Array` objects.
+> **Note:** Array literals create `Array` objects. See {{jsxref("Array")}} and [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) for details on `Array` objects.
 
 #### Extra commas in array literals
 
 If you put two commas in a row in an array literal, the array leaves an empty slot for the unspecified element. The following example creates the `fish` array:
 
 ```js
-let fish = ['Lion', , 'Angel'];
+const fish = ['Lion', , 'Angel'];
 ```
 
 When you log this array, you will see:
@@ -433,22 +440,22 @@ If you include a trailing comma at the end of the list of elements, the comma is
 In the following example, the `length` of the array is three. There is no `myList[3]`. All other commas in the list indicate a new element.
 
 ```js
-let myList = ['home', , 'school', ];
+const myList = ['home', , 'school', ];
 ```
 
 In the following example, the `length` of the array is four, and `myList[0]` and `myList[2]` are missing.
 
 ```js
-let myList = [, 'home', , 'school'];
+const myList = [, 'home', , 'school'];
 ```
 
 In the following example, the `length` of the array is four, and `myList[1]` and `myList[3]` are missing. **Only the last comma is ignored.**
 
 ```js
-let myList = ['home', , 'school', , ];
+const myList = ['home', , 'school', , ];
 ```
 
-> **Note:** Trailing commas help keep git diffs clean when you have a multi-line array, because appending an item to the end only adds one line, but does not modify the previous line.
+> **Note:** [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) help keep git diffs clean when you have a multi-line array, because appending an item to the end only adds one line, but does not modify the previous line.
 >
 > ```diff
 > const myList = [
@@ -463,7 +470,7 @@ Understanding the behavior of extra commas is important to understanding JavaScr
 However, when writing your own code, you should explicitly declare the missing elements as `undefined`, or at least insert a comment to highlight its absence. Doing this increases your code's clarity and maintainability.
 
 ```js
-let myList = ['home', /* empty */, 'school', /* empty */, ];
+const myList = ['home', /* empty */, 'school', /* empty */, ];
 ```
 
 ### Boolean literals
@@ -506,11 +513,11 @@ For more information, see [Numeric literals in the Lexical grammar reference](/e
 A floating-point literal can have the following parts:
 
 - An unsigned decimal integer,
-- A decimal point ("`.`"),
+- A decimal point (`.`),
 - A fraction (another decimal number),
 - An exponent.
 
-The exponent part is an "`e`" or "`E`" followed by an integer, which can be signed (preceded by "`+`" or "`-`"). A floating-point literal must have at least one digit, and either a decimal point or "`e`" (or "`E`").
+The exponent part is an `e` or `E` followed by an integer, which can be signed (preceded by `+` or `-`). A floating-point literal must have at least one digit, and either a decimal point or `e` (or `E`).
 
 More succinctly, the syntax is:
 
@@ -520,7 +527,7 @@ More succinctly, the syntax is:
 
 For example:
 
-```
+```js
 3.1415926
 .123456789
 3.1E+12
@@ -539,11 +546,7 @@ The following is an example of an object literal. The first element of the `car`
 const sales = 'Toyota';
 
 function carTypes(name) {
-  if (name === 'Honda') {
-    return name;
-  } else {
-    return "Sorry, we don't sell " + name + ".";
-  }
+  return name === 'Honda' ? name : `Sorry, we don't sell ${name}.`;
 }
 
 const car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
@@ -564,22 +567,27 @@ console.log(car[7]); // Mazda
 
 Object property names can be any string, including the empty string. If the property name would not be a valid JavaScript {{Glossary("Identifier","identifier")}} or number, it must be enclosed in quotes.
 
-Property names that are not valid identifiers cannot be accessed as a dot (`.`) property, but _can_ be accessed and set with the array-like notation("`[]`").
+Property names that are not valid identifiers cannot be accessed as a dot (`.`) property.
 
-```js
+```js example-bad
 const unusualPropertyNames = {
   '': 'An empty string',
   '!': 'Bang!'
 }
 console.log(unusualPropertyNames.'');   // SyntaxError: Unexpected string
-console.log(unusualPropertyNames['']);  // An empty string
 console.log(unusualPropertyNames.!);    // SyntaxError: Unexpected token !
+```
+
+Instead, they must be accessed with the bracket notation (`[]`).
+
+```js example-good
+console.log(unusualPropertyNames['']);  // An empty string
 console.log(unusualPropertyNames['!']); // Bang!
 ```
 
 #### Enhanced Object literals
 
-In ES2015, object literals are extended to support setting the prototype at construction, shorthand for `foo: foo` assignments, defining methods, making `super` calls, and computing property names with expressions.
+Object literals support a range of shorthand syntaxes that include setting the prototype at construction, shorthand for `foo: foo` assignments, defining methods, making `super` calls, and computing property names with expressions.
 
 Together, these also bring object literals and class declarations closer together, and allow object-based design to benefit from some of the same conveniences.
 
@@ -591,11 +599,11 @@ const obj = {
   handler,
   // Methods
   toString() {
-   // Super calls
+    // Super calls
     return 'd ' + super.toString();
   },
   // Computed (dynamic) property names
-  [ 'prop_' + (() => 42)() ]: 42,
+  ['prop_' + (() => 42)()]: 42,
 }
 ```
 
@@ -623,7 +631,7 @@ The following are examples of string literals:
 
 You should use string literals unless you specifically need to use a `String` object. See {{jsxref("String")}} for details on `String` objects.
 
-You can call any of the {{jsxref("String")}} object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. You can also use the `String.length` property with a string literal:
+You can call any of the {{jsxref("String")}} object's methods on a string literal value. JavaScript automatically converts the string literal to a temporary String object, calls the method, then discards the temporary String object. You can also use the `length` property with a string literal:
 
 ```js
 // Will print the number of symbols in the string including whitespace.
@@ -720,104 +728,22 @@ In addition to ordinary characters, you can also include special characters in s
 
 The following table lists the special characters that you can use in JavaScript strings.
 
-<table class="standard-table">
-  <caption>
-    Table: JavaScript special characters
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">Character</th>
-      <th scope="col">Meaning</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>\0</code></td>
-      <td>Null Byte</td>
-    </tr>
-    <tr>
-      <td><code>\b</code></td>
-      <td>Backspace</td>
-    </tr>
-    <tr>
-      <td><code>\f</code></td>
-      <td>Form feed</td>
-    </tr>
-    <tr>
-      <td><code>\n</code></td>
-      <td>New line</td>
-    </tr>
-    <tr>
-      <td><code>\r</code></td>
-      <td>Carriage return</td>
-    </tr>
-    <tr>
-      <td><code>\t</code></td>
-      <td>Tab</td>
-    </tr>
-    <tr>
-      <td><code>\v</code></td>
-      <td>Vertical tab</td>
-    </tr>
-    <tr>
-      <td><code>\'</code></td>
-      <td>Apostrophe or single quote</td>
-    </tr>
-    <tr>
-      <td><code>\"</code></td>
-      <td>Double quote</td>
-    </tr>
-    <tr>
-      <td><code>\\</code></td>
-      <td>Backslash character</td>
-    </tr>
-    <tr>
-      <td>
-        <code>\<em>XXX</em></code>
-      </td>
-      <td>
-        The character with the Latin-1 encoding specified by up to three octal
-        digits <em>XXX</em> between <code>0</code> and
-        <code>377</code>.<br />For example, <code>\251</code> is the octal
-        sequence for the copyright symbol.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>\x<em>XX</em></code>
-      </td>
-      <td>
-        The character with the Latin-1 encoding specified by the two
-        hexadecimal digits <em>XX</em> between <code>00</code> and
-        <code>FF</code>.<br />For example, <code>\xA9</code> is the
-        hexadecimal sequence for the copyright symbol.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>\u<em>XXXX</em></code>
-      </td>
-      <td>
-        The Unicode character specified by the four hexadecimal digits
-        <em>XXXX</em>.<br />For example, <code>\u00A9</code> is the Unicode
-        sequence for the copyright symbol. See
-        <a
-          href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals"
-          >Unicode escape sequences</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>\u<em>{XXXXX}</em></code>
-      </td>
-      <td>
-        Unicode code point escapes.<br />For example, <code>\u{2F804}</code> is
-        the same as the simple Unicode escapes <code>\uD87E\uDC04</code>.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Character   | Meaning                                                                                                                                                                                                                                              |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `\0`        | Null Byte                                                                                                                                                                                                                                            |
+| `\b`        | Backspace                                                                                                                                                                                                                                            |
+| `\f`        | Form Feed                                                                                                                                                                                                                                            |
+| `\n`        | New Line                                                                                                                                                                                                                                             |
+| `\r`        | Carriage Return                                                                                                                                                                                                                                      |
+| `\t`        | Tab                                                                                                                                                                                                                                                  |
+| `\v`        | Vertical tab                                                                                                                                                                                                                                         |
+| `\'`        | Apostrophe or single quote                                                                                                                                                                                                                           |
+| `\"`        | Double quote                                                                                                                                                                                                                                         |
+| `\\`        | Backslash character                                                                                                                                                                                                                                  |
+| `\XXX`      | The character with the Latin-1 encoding specified by up to three octal digits `XXX` between `0` and `377`. For example, `\251` is the octal sequence for the copyright symbol.                                                                       |
+| `\xXX`      | The character with the Latin-1 encoding specified by the two hexadecimal digits `XX` between `00` and `FF`. For example, `\xA9` is the hexadecimal sequence for the copyright symbol.                                                                |
+| `\uXXXX`    | The Unicode character specified by the four hexadecimal digits `XXXX`. For example, `\u00A9` is the Unicode sequence for the copyright symbol. See [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals). |
+| `\u{XXXXX}` | Unicode code point escapes. For example, `\u{2F804}` is the same as the simple Unicode escapes `\uD87E\uDC04`.                                                                                                                                       |
 
 #### Escaping characters
 
@@ -850,16 +776,6 @@ is broken \
 across multiple \
 lines.'
 console.log(str);   // this string is broken across multiple lines.
-```
-
-ECMAScript 2015 introduces a new type of literal, namely [**template literals**](/en-US/docs/Web/JavaScript/Reference/Template_literals). This allows for many new features, including multiline strings!
-
-```js
-const poem =
-`Roses are red,
-Violets are blue.
-Sugar is sweet,
-and so is foo.`
 ```
 
 ## More information

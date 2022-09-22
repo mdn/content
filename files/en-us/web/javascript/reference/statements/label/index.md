@@ -7,6 +7,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.label
 ---
+
 {{jsSidebar("Statements")}}
 
 The **labeled statement** can be used with {{jsxref("Statements/break", "break")}}
@@ -17,8 +18,8 @@ a statement with an identifier which you can refer to.
 
 ## Syntax
 
-```js
-label :
+```js-nolint
+label:
   statement
 ```
 
@@ -38,7 +39,7 @@ Note that JavaScript has _no_ `goto` statement, you can only use
 labels with `break` or `continue`.
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, you
-can't use "`let`" as a label name. It will throw a {{jsxref("SyntaxError")}}
+can't use `let` as a label name. It will throw a {{jsxref("SyntaxError")}}
 (let is a reserved identifier).
 
 ## Examples
@@ -50,13 +51,13 @@ let i, j;
 
 loop1:
 for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 && j === 1) {
-         continue loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+  loop2:
+  for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+    if (i === 1 && j === 1) {
+      continue loop1;
+    }
+    console.log(`i = ${i}, j = ${j}`);
+  }
 }
 
 // Output is:
@@ -98,13 +99,13 @@ let i, j;
 
 loop1:
 for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 && j === 1) {
-         break loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+  loop2:
+  for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+    if (i === 1 && j === 1) {
+      break loop1;
+    }
+    console.log(`i = ${i}, j = ${j}`);
+  }
 }
 
 // Output is:
@@ -156,8 +157,7 @@ console.log('swap');
 
 ### Labeled function declarations
 
-Starting with ECMAScript 2015, labeled function declarations are now standardized for non-strict code in the
-[Annex B: Additional ECMAScript Features for Web Browsers](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) section.
+Labels can only be applied to [statements, not declarations](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). Still, the [Annex B: Additional ECMAScript Features for Web Browsers](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) section defines a legacy grammar to standardize labeled function declarations in non-strict code.
 
 ```js
 L: function F() {}
@@ -166,7 +166,7 @@ L: function F() {}
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code,
 however, this will throw a {{jsxref("SyntaxError")}}:
 
-```js
+```js example-bad
 'use strict';
 L: function F() {}
 // SyntaxError: functions cannot be labelled
@@ -175,7 +175,7 @@ L: function F() {}
 [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 can neither be labeled in strict code, nor in non-strict code:
 
-```js
+```js example-bad
 L: function* F() {}
 // SyntaxError: generator functions cannot be labelled
 ```

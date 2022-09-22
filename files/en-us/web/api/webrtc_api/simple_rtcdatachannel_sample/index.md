@@ -9,6 +9,7 @@ tags:
   - Tutorial
   - WebRTC
 ---
+
 {{WebRTCSidebar}}
 
 The {{domxref("RTCDataChannel")}} interface is a feature of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the [WebSocket API](/en-US/docs/Web/API/WebSockets_API), so that the same programming model can be used for each.
@@ -23,7 +24,11 @@ First, let's take a quick look at the [HTML that's needed](https://github.com/md
 <button id="connectButton" name="connectButton" class="buttonleft">
   Connect
 </button>
-<button id="disconnectButton" name="disconnectButton" class="buttonright" disabled>
+<button
+  id="disconnectButton"
+  name="disconnectButton"
+  class="buttonright"
+  disabled>
   Disconnect
 </button>
 ```
@@ -32,9 +37,17 @@ Then there's a box which contains the text input box into which the user can typ
 
 ```html
 <div class="messagebox">
-  <label for="message">Enter a message:
-    <input type="text" name="message" id="message" placeholder="Message text"
-            inputmode="latin" size=60 maxlength=120 disabled>
+  <label for="message"
+    >Enter a message:
+    <input
+      type="text"
+      name="message"
+      id="message"
+      placeholder="Message text"
+      inputmode="latin"
+      size="60"
+      maxlength="120"
+      disabled />
   </label>
   <button id="sendButton" name="sendButton" class="buttonright" disabled>
     Send
@@ -53,8 +66,6 @@ Finally, there's the little box into which we'll insert the messages. This {{HTM
 ## The JavaScript code
 
 While you can just [look at the code itself on GitHub](https://github.com/mdn/samples-server/blob/master/s/webrtc-simple-datachannel/main.js), below we'll review the parts of the code that do the heavy lifting.
-
-The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy to chain the steps of the connection process together; if you haven't already read up on this functionality of [ECMAScript 2015](/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla), you should read up on them. Similarly, this example uses [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to simplify syntax.
 
 ### Starting up
 
@@ -126,11 +137,11 @@ The next step is to set up each connection with ICE candidate listeners; these w
 > **Note:** In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.
 
 ```js
-    localConnection.onicecandidate = e => !e.candidate
+    localConnection.onicecandidate = (e) => !e.candidate
         || remoteConnection.addIceCandidate(e.candidate)
         .catch(handleAddCandidateError);
 
-    remoteConnection.onicecandidate = e => !e.candidate
+    remoteConnection.onicecandidate = (e) => !e.candidate
         || localConnection.addIceCandidate(e.candidate)
         .catch(handleAddCandidateError);
 ```
@@ -143,10 +154,10 @@ The last thing we need to do in order to begin connecting our peers is to create
 
 ```js
     localConnection.createOffer()
-    .then(offer => localConnection.setLocalDescription(offer))
+    .then((offer) => localConnection.setLocalDescription(offer))
     .then(() => remoteConnection.setRemoteDescription(localConnection.localDescription))
     .then(() => remoteConnection.createAnswer())
-    .then(answer => remoteConnection.setLocalDescription(answer))
+    .then((answer) => remoteConnection.setLocalDescription(answer))
     .then(() => localConnection.setRemoteDescription(remoteConnection.localDescription))
     .catch(handleCreateDescriptionError);
 ```
@@ -169,7 +180,7 @@ As each side of the peer-to-peer connection is successfully linked up, the corre
 
 ```js
   function handleCreateDescriptionError(error) {
-    console.log("Unable to create an offer: " + error.toString());
+    console.log(`Unable to create an offer: ${error.toString()}`);
   }
 
   function handleLocalAddCandidateSuccess() {
@@ -238,8 +249,7 @@ Our example's remote peer, on the other hand, ignores the status change events, 
 ```js
   function handleReceiveChannelStatusChange(event) {
     if (receiveChannel) {
-      console.log("Receive channel's status has changed to " +
-                  receiveChannel.readyState);
+      console.log(`Receive channel's status has changed to ${receiveChannel.readyState}`);
     }
   }
 ```
@@ -315,7 +325,7 @@ This starts by closing each peer's {{domxref("RTCDataChannel")}}, then, similarl
 
 ## Next steps
 
-You should [try out this example](https://mdn-samples.mozilla.org/s/webrtc-simple-datachannel) and take a look at the [webrtc-simple-datachannel](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel) source code, available on GitHub.
+Take a look at the [webrtc-simple-datachannel](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel) source code, available on GitHub.
 
 ## See also
 

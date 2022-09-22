@@ -10,6 +10,7 @@ tags:
   - connectionState
 browser-compat: api.RTCPeerConnection.connectionState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`connectionState`** property
@@ -29,8 +30,8 @@ is sent to the {{domxref("RTCPeerConnection")}} instance.
 
 ## Syntax
 
-```js
-var connectionState = RTCPeerConnection.connectionState;
+```js-nolint
+const connectionState = RTCPeerConnection.connectionState
 ```
 
 ## Value
@@ -69,11 +70,11 @@ A string representing the current state of the connection, that is one of the fo
 ## Example
 
 ```js
-var pc = new RTCPeerConnection(configuration);
+const pc = new RTCPeerConnection(configuration);
 
 // …
 
-var connectionState = pc.connectionState;
+const connectionState = pc.connectionState;
 ```
 
 ## Specifications

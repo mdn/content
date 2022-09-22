@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.findLast
 ---
+
 {{JSRef}}
 
 The **`findLast()`** method returns the value of the last element in an array that satisfies the provided testing function.
@@ -20,31 +21,31 @@ If no elements satisfy the testing function, {{jsxref("undefined")}} is returned
 
 If you need to find:
 
-- the _first_ element that matches, use {{jsxref("Array.findIndex", "find()")}}.
-- the _index_ of the last matching element in the array, use {{jsxref("Array.findLastIndex", "findLastIndex()")}}.
-- the _index of a value_, use {{jsxref("Array.prototype.indexOf()")}}.
-  (It's similar to {{jsxref("Array.findIndex", "findIndex()")}}, but checks each element for equality with the value instead of using a testing function.)
-- whether a value _exists_ in an array, use {{jsxref("Array.prototype.includes()")}}.
+- the _first_ element that matches, use {{jsxref("Array/find", "find()")}}.
+- the _index_ of the last matching element in the array, use {{jsxref("Array/findLastIndex", "findLastIndex()")}}.
+- the _index of a value_, use {{jsxref("Array/indexOf", "indexOf()")}}.
+  (It's similar to {{jsxref("Array/findIndex", "findIndex()")}}, but checks each element for equality with the value instead of using a testing function.)
+- whether a value _exists_ in an array, use {{jsxref("Array/includes", "includes()")}}.
   Again, it checks each element for equality with the value instead of using a testing function.
-- if any element satisfies the provided testing function, use {{jsxref("Array.prototype.some()")}}.
+- if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-findLast((element) => { /* ... */ } )
-findLast((element, index) => { /* ... */ } )
-findLast((element, index, array) => { /* ... */ } )
+findLast((element) => { /* … */ } )
+findLast((element, index) => { /* … */ } )
+findLast((element, index, array) => { /* … */ } )
 
 // Callback function
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
 
 // Inline callback function
-findLast(function(element) { /* ... */ })
-findLast(function(element, index) { /* ... */ })
-findLast(function(element, index, array){ /* ... */ })
-findLast(function(element, index, array) { /* ... */ }, thisArg)
+findLast(function(element) { /* … */ })
+findLast(function(element, index) { /* … */ })
+findLast(function(element, index, array){ /* … */ })
+findLast(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -104,10 +105,10 @@ This example shows how you might create a test based on the properties of array 
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'fish', quantity: 1},
-  {name: 'cherries', quantity: 5}
+  { name: 'apples', quantity: 2 },
+  { name: 'bananas', quantity: 0 },
+  { name: 'fish', quantity: 1 },
+  { name: 'cherries', quantity: 5 }
 ];
 
 // return true inventory stock is low
@@ -125,15 +126,15 @@ The previous example might be written using an arrow function and [object destru
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'fish', quantity: 1},
-  {name: 'cherries', quantity: 5}
+  { name: 'apples', quantity: 2 },
+  { name: 'bananas', quantity: 0 },
+  { name: 'fish', quantity: 1 },
+  { name: 'cherries', quantity: 5 },
 ];
 
-const result = inventory.findLast( ({ quantity }) => quantity < 2 );
+const result = inventory.findLast(({ quantity }) => quantity < 2);
 
-console.log(result) 
+console.log(result);
 // { name: "fish", quantity: 1 }
 ```
 
@@ -164,15 +165,15 @@ The following examples show that nonexistent and deleted elements _are_ visited,
 
 ```js
 // Declare array with no elements at indexes 2, 3, and 4
-const array = [0,1,,,,5,6];
+const array = [0, 1, , , , 5, 6];
 
 // Shows all indexes, not just those with assigned values
-array.findLast(function(value, index) {
+array.findLast((value, index) => {
   console.log(`Visited index ${index} with value ${value}`);
 });
 
 // Shows all indexes, including deleted
-array.findLast(function(value, index) {
+array.findLast((value, index) => {
   // Delete element 5 on first iteration
   if (index === 6) {
     console.log(`Deleting array[5] with value ${array[5]}`);

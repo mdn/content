@@ -6,13 +6,13 @@ tags:
   - API
   - Animation
   - DOM
-  - Experimental
   - Method
   - Reference
   - Window
   - Polyfill
 browser-compat: api.Window.cancelAnimationFrame
 ---
+
 {{APIRef}}
 
 The **`window.cancelAnimationFrame()`** method cancels an
@@ -21,7 +21,7 @@ animation frame request previously scheduled through a call to
 
 ## Syntax
 
-```js
+```js-nolint
 cancelAnimationFrame(requestID)
 ```
 
@@ -49,7 +49,7 @@ let myReq;
 
 function step(timestamp) {
   const progress = timestamp - start;
-  d.style.left = Math.min(progress / 10, 200) + 'px';
+  d.style.left = `${Math.min(progress / 10, 200)}px`;
   if (progress < 2000) {
     // it's important to update the requestId each time you're calling requestAnimationFrame
     myReq = requestAnimationFrame(step);

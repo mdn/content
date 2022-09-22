@@ -11,9 +11,12 @@ tags:
   - hsla
 browser-compat: css.types.color.hsla
 ---
+
 {{CSSRef}}
 
 The **`hsla()`** functional notation expresses a given color according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.
+
+{{EmbedInteractiveExample("pages/css/function-hsla.html")}}
 
 > **Note:** The Level 4 specification allows for space-separated in addition to comma-separated values.
 

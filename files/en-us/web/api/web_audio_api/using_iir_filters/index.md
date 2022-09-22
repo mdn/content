@@ -10,6 +10,7 @@ tags:
   - Using
   - Web Audio API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 The **`IIRFilterNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is an {{domxref("AudioNode")}} processor that implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response) (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers, and the filter response parameters can be specified, so that it can be tuned as needed. This article looks at how to implement one, and use it in a simple example.
@@ -40,7 +41,7 @@ With the IIRFIlter node it's up to you to set what `feedforward` and `feedback` 
 
 If you are looking to learn more there's some [information about the maths behind IIR filters here](http://ece.uccs.edu/~mwickert/ece2610/lecture_notes/ece2610_chap8.pdf). This enters the realms of signal processing theory — don't worry if you look at it and feel like it's not for you.
 
-If you want to play with the IIR filter node and need some values to help along the way, there's [a table of already calculated values here](https://www.dspguide.com/CH20.PDF); on pages 4 & 5 of the linked PDF the a*n* values refer to the `feedForward` values and the b*n* values refer to the `feedback`. [musicdsp.org](https://www.musicdsp.org/en/latest/) is also a great resource if you want to read more about different filters and how they are implemented digitally.
+If you want to play with the IIR filter node and need some values to help along the way, there's [a table of already calculated values here](https://www.dspguide.com/CH20.PDF); on pages 4 & 5 of the linked PDF the `an` values refer to the `feedForward` values and the `bn` values refer to the `feedback`. [musicdsp.org](https://www.musicdsp.org/en/latest/) is also a great resource if you want to read more about different filters and how they are implemented digitally.
 
 With that all in mind, let's take a look at the code to create an IIR filter with the Web Audio API.
 
@@ -51,13 +52,13 @@ When creating an IIR filter, we pass in the `feedforward` and `feedback` coeffic
 When setting our coefficients, the `feedforward` values can't all be set to zero, otherwise nothing would be sent to the filter. Something like this is acceptable:
 
 ```js
-let feedForward = [0.00020298, 0.0004059599, 0.00020298];
+const feedForward = [0.00020298, 0.0004059599, 0.00020298];
 ```
 
 Our `feedback` values cannot start with zero, otherwise on the first pass nothing would be sent back:
 
 ```js
-let feedBackward = [1.0126964558, -1.9991880801, 0.9873035442];
+const feedBackward = [1.0126964558, -1.9991880801, 0.9873035442];
 ```
 
 > **Note:** These values are calculated based on the lowpass filter specified in the [filter characteristics of the Web Audio API specification](https://webaudio.github.io/web-audio-api/#filters-characteristics). As this filter node gains more popularity we should be able to collate more coefficient values.
@@ -67,7 +68,6 @@ let feedBackward = [1.0126964558, -1.9991880801, 0.9873035442];
 Let's create our context and our filter node:
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 const iirFilter = audioCtx.createIIRFilter(feedForward, feedBack);
@@ -88,33 +88,47 @@ function playSourceNode(audioContext, audioBuffer) {
 This function is called when the play button is pressed. The play button HTML looks like this:
 
 ```html
-<button class="button-play" role="switch" data-playing="false" aria-pressed="false">Play</button>
+<button
+  class="button-play"
+  role="switch"
+  data-playing="false"
+  aria-pressed="false">
+  Play
+</button>
 ```
 
 And the `click` event listener starts like so:
 
 ```js
-playButton.addEventListener('click', function() {
-    if (this.dataset.playing === 'false') {
-        srcNode = playSourceNode(audioCtx, sample);
-        // …
+playButton.addEventListener('click', () => {
+  if (playButton.dataset.playing === 'false') {
+    srcNode = playSourceNode(audioCtx, sample);
+     // …
+  }
 }, false);
 ```
 
 The toggle that turns the IIR filter on and off is set up in the similar way. First, the HTML:
 
 ```html
-<button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
+<button
+  class="button-filter"
+  role="switch"
+  data-filteron="false"
+  aria-pressed="false"
+  aria-describedby="label"
+  disabled></button>
 ```
 
 The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the destination:
 
 ```js
-filterButton.addEventListener('click', function() {
-    if (this.dataset.filteron === 'false') {
-        srcNode.disconnect(audioCtx.destination);
-        srcNode.connect(iirfilter).connect(audioCtx.destination);
-        // …
+filterButton.addEventListener('click', () => {
+  if (filterButton.dataset.filteron === 'false') {
+    srcNode.disconnect(audioCtx.destination);
+    srcNode.connect(iirfilter).connect(audioCtx.destination);
+    // …
+  }
 }, false);
 ```
 
@@ -130,16 +144,14 @@ We need to create three arrays. One of frequency values for which we want to rec
 // arrays for our frequency response
 const totalArrayItems = 30;
 let myFrequencyArray = new Float32Array(totalArrayItems);
-let magResponseOutput = new Float32Array(totalArrayItems);
-let phaseResponseOutput = new Float32Array(totalArrayItems);
+const magResponseOutput = new Float32Array(totalArrayItems);
+const phaseResponseOutput = new Float32Array(totalArrayItems);
 ```
 
 Let's fill our first array with frequency values we want data to be returned on:
 
 ```js
-myFrequencyArray = myFrequencyArray.map(function(item, index) {
-    return Math.pow(1.4, index);
-});
+myFrequencyArray = myFrequencyArray.map((item, index) => 1.4 ** index);
 ```
 
 We could go for a linear approach, but it's far better when working with frequencies to take a log approach, so let's fill our array with frequency values that get larger further on in the array items.
@@ -153,27 +165,27 @@ iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseRespons
 We can use this data to draw a filter frequency plot. We'll do so on a 2d canvas context.
 
 ```js
-// create a canvas element and append it to our DOM
+// Create a canvas element and append it to our DOM
 const canvasContainer = document.querySelector('.filter-graph');
 const canvasEl = document.createElement('canvas');
 canvasContainer.appendChild(canvasEl);
 
-// set 2d context and set dimensions
+// Set 2d context and set dimensions
 const canvasCtx = canvasEl.getContext('2d');
 const width = canvasContainer.offsetWidth;
 const height = canvasContainer.offsetHeight;
 canvasEl.width = width;
 canvasEl.height = height;
 
-// set background fill
+// Set background fill
 canvasCtx.fillStyle = 'white';
 canvasCtx.fillRect(0, 0, width, height);
 
-// set up some spacing based on size
-const spacing = width/16;
-const fontSize = Math.floor(spacing/1.5);
+// Set up some spacing based on size
+const spacing = width / 16;
+const fontSize = Math.floor(spacing / 1.5);
 
-// draw our axis
+// Draw our axis
 canvasCtx.lineWidth = 2;
 canvasCtx.strokeStyle = 'grey';
 
@@ -183,28 +195,31 @@ canvasCtx.lineTo(spacing, height-spacing);
 canvasCtx.lineTo(width-spacing, height-spacing);
 canvasCtx.stroke();
 
-// axis is gain by frequency -> make labels
-canvasCtx.font = fontSize+'px sans-serif';
+// Axis is gain by frequency -> make labels
+canvasCtx.font = `${fontSize}px sans-serif`;
 canvasCtx.fillStyle = 'grey';
-canvasCtx.fillText('1', spacing-fontSize, spacing+fontSize);
-canvasCtx.fillText('g', spacing-fontSize, (height-spacing+fontSize)/2);
-canvasCtx.fillText('0', spacing-fontSize, height-spacing+fontSize);
-canvasCtx.fillText('Hz', width/2, height-spacing+fontSize);
-canvasCtx.fillText('20k', width-spacing, height-spacing+fontSize);
+canvasCtx.fillText('1', spacing - fontSize, spacing + fontSize);
+canvasCtx.fillText('g', spacing - fontSize, (height - spacing + fontSize) / 2);
+canvasCtx.fillText('0', spacing - fontSize, height - spacing + fontSize);
+canvasCtx.fillText('Hz', width / 2, height - spacing + fontSize);
+canvasCtx.fillText('20k', width - spacing, height - spacing + fontSize);
 
-// loop over our magnitude response data and plot our filter
-
+// Loop over our magnitude response data and plot our filter
 canvasCtx.beginPath();
 
-for(let i = 0; i < magResponseOutput.length; i++) {
-
-    if (i === 0) {
-        canvasCtx.moveTo(spacing, height-(magResponseOutput[i]*100)-spacing );
-    } else {
-        canvasCtx.lineTo((width/totalArrayItems)*i, height-(magResponseOutput[i]*100)-spacing );
-    }
-
-}
+magResponseOutput.forEach((magResponseData, i) => {
+  if (i === 0) {
+    canvasCtx.moveTo(
+      spacing,
+      height - magResponseData * 100 - spacing,
+    );
+  } else {
+    canvasCtx.lineTo(
+      width / totalArrayItems * i,
+      height - magResponseData * 100 - spacing,
+    );
+  }
+});
 
 canvasCtx.stroke();
 ```

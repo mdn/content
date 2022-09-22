@@ -14,13 +14,11 @@ tags:
   - autoGainControl
 browser-compat: api.MediaTrackConstraints.autoGainControl
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackConstraints")}} dictionary's
-**`autoGainControl`** property is a
-[`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed
-upon the value of the {{domxref("MediaTrackSettings.autoGainControl",
-  "autoGainControl")}} constrainable property.
+The {{domxref("MediaTrackConstraints")}} dictionary's **`autoGainControl`** property is a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed
+upon the value of the {{domxref("MediaTrackSettings.autoGainControl", "autoGainControl")}} constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
 the value of {{domxref("MediaTrackSupportedConstraints.autoGainControl")}} as returned

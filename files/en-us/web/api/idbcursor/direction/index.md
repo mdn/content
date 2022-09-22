@@ -13,6 +13,7 @@ tags:
   - direction
 browser-compat: api.IDBCursor.direction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`direction`** read-only property of the
@@ -56,7 +57,7 @@ prev
 The cursor does not require us to select the data based on a key; we can just grab all
 of it. Also note that in each iteration of the loop, you can grab data from the current
 record under the cursor object using `cursor.value.foo`. For a complete
-working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
+working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function backwards() {
@@ -64,11 +65,11 @@ function backwards() {
   const transaction = db.transaction(['rushAlbumList'], 'readonly');
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor(null,'prev').onsuccess = function(event) {
+  objectStore.openCursor(null,'prev').onsuccess = (event) => {
     const cursor = event.target.result;
-      if(cursor) {
+      if (cursor) {
         const listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+        listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
         list.appendChild(listItem);
 
         console.log(cursor.direction);

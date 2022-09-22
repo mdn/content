@@ -9,6 +9,7 @@ tags:
   - How-to
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 With the Cookies API your extensions have access to capabilities similar to those used by websites to store and read cookies. The API's features give extensions the ability to store information on a site-by-site basis. So, as we shall see in the example, you could store details of a user's choice of background color for a site. Then, when the user revisits the site, your extension can use the API's ability to get details about cookies and read them to recover the user's choice and apply it to the website.
@@ -135,12 +136,12 @@ let bgBtns = document.querySelectorAll('.bg-container button');
 It then loops through all the buttons assigning them their image and creating an onclick listener for each button:
 
 ```js
-for(let i = 0; i < bgBtns.length; i++) {
+for (let i = 0; i < bgBtns.length; i++) {
   let imgName = bgBtns[i].getAttribute('class');
   let bgImg = 'url(\'images/' + imgName + '.png\')';
   bgBtns[i].style.backgroundImage = bgImg;
 
-  bgBtns[i].onclick = function(e) {
+  bgBtns[i].onclick = (e) => {
 ```
 
 When a button is clicked, its corresponding listener function gets the button class name and then the icon path which it passes to the page's content script ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js)) using a message. The content script then applies the icon to the web page's background. Meanwhile, [bgpicker.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/popup/bgpicker.js) stores the details of the icon applied to the background in a cookie:
@@ -193,7 +194,7 @@ browser.cookies.onChanged.addListener((changeInfo) => {
 
 ### Scripts—background.js
 
-A background script ([background.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/background_scripts/background.js)) provides for the possibility that the user has chosen a background icon and color for the website in an earlier session. The script listens for changes in the active tab, either the user switching between tabs or changing the URL of the page displayed in the tab. When either of these events happen, `cookieUpdate()` is called.  `cookieUpdate()` in turn uses `getActiveTab()` to get the active tab ID. The function can then check whether a cookie for the extension exists, using the tab's URL:
+A background script ([background.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/background_scripts/background.js)) provides for the possibility that the user has chosen a background icon and color for the website in an earlier session. The script listens for changes in the active tab, either the user switching between tabs or changing the URL of the page displayed in the tab. When either of these events happen, `cookieUpdate()` is called. `cookieUpdate()` in turn uses `getActiveTab()` to get the active tab ID. The function can then check whether a cookie for the extension exists, using the tab's URL:
 
 ```js
     let gettingCookies = browser.cookies.get({

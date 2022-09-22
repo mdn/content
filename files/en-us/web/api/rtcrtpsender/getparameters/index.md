@@ -14,6 +14,7 @@ tags:
   - getParameters()
 browser-compat: api.RTCRtpSender.getParameters
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The **`getParameters()`** method of
@@ -24,7 +25,7 @@ the encoding and transmission of media on the sender's {{domxref("RTCRtpSender.t
 
 ## Syntax
 
-```js
+```js-nolint
 getParameters()
 ```
 

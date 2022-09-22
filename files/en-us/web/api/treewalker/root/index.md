@@ -9,6 +9,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.root
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.root`** read-only property returns the node
@@ -21,7 +22,7 @@ A {{domxref("Node")}} object.
 ## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },

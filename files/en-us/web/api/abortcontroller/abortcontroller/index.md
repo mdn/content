@@ -6,18 +6,18 @@ tags:
   - API
   - AbortController
   - Constructor
-  - Experimental
   - Fetch
   - Reference
 browser-compat: api.AbortController.AbortController
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbortController()`** constructor creates a new {{domxref("AbortController")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new AbortController()
 ```
 
@@ -37,29 +37,31 @@ When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the
 const controller = new AbortController();
 const signal = controller.signal;
 
-const downloadBtn = document.querySelector('.download');
-const abortBtn = document.querySelector('.abort');
+const url = "video.mp4";
+const downloadBtn = document.querySelector(".download");
+const abortBtn = document.querySelector(".abort");
 
-downloadBtn.addEventListener('click', fetchVideo);
+downloadBtn.addEventListener("click", fetchVideo);
 
-abortBtn.addEventListener('click', function() {
+abortBtn.addEventListener("click", () => {
   controller.abort();
-  console.log('Download aborted');
+  console.log("Download aborted");
 });
 
 function fetchVideo() {
-  // …
-  fetch(url, {signal}).then(function(response) {
-    // …
-  }).catch(function(e) {
-   reports.textContent = 'Download error: ' + e.message;
-  })
+  fetch(url, { signal })
+    .then((response) => {
+      console.log("Download complete", response);
+    })
+    .catch((err) => {
+      console.error(`Download error: ${err.message}`);
+    });
 }
 ```
 
 > **Note:** When `abort()` is called, the `fetch()` promise rejects with an `AbortError`.
 
-You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/master/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
+You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/main/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
 
 ## Specifications
 

@@ -6,13 +6,14 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `str:tokenize()` splits a string using a set of characters as delimiters that determine where the splits should occur, returning a node-set containing the resulting strings.
 
 ## Syntax
 
-```js
+```plain
 str:tokenize(string, delimiters)
 ```
 
@@ -29,7 +30,7 @@ A node-set of `token` elements, each containing one token from the `string`.
 
 ## Example:
 
-```js
+```plain
 str:tokenize('2007-09-14-03T11:40:23', '-T:')
 ```
 

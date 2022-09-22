@@ -12,6 +12,7 @@ tags:
   - onchange
 browser-compat: api.MediaQueryList.change_event
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`change`** event of the {{DOMxRef("MediaQueryList")}} interface fires when the status of media query support changes.
@@ -21,14 +22,14 @@ The **`change`** event of the {{DOMxRef("MediaQueryList")}} interface fires when
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('change', event => { });
+addEventListener('change', (event) => { });
 
-onchange = event => { };
+onchange = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("MediaQueryListEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaQueryListEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaQueryListEvent")}}
 
@@ -44,7 +45,7 @@ _The `MediaQueryListEvent` interface inherits properties from its parent interfa
 ## Example
 
 ```js
-var mql = window.matchMedia('(max-width: 600px)');
+const mql = window.matchMedia('(max-width: 600px)');
 
 mql.onchange = (e) => {
     if (e.matches) {

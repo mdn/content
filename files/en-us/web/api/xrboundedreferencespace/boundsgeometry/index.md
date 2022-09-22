@@ -22,9 +22,11 @@ tags:
   - augmented
   - boundsGeometry
   - space
+  - Experimental
 browser-compat: api.XRBoundedReferenceSpace.boundsGeometry
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only {{domxref("XRBoundedReferenceSpace")}}
 property **`boundsGeometry`** is an array of
@@ -46,7 +48,7 @@ objects, each of which defines one vertex in a polygon inside which the viewer i
 required to remain. Each point must be at floor level, with
 its `y` coordinate's value set to 0. Additionally, the value
 of `w` is always 1 in every point in the array. Additionally, the
-points *must* be listed in clockwise order.
+points _must_ be listed in clockwise order.
 
 Each entry in `boundsGeometry` is equal to an entry in the list of native
 bounds geometry points for the room, premultiplied by the inverse of the origin offset.

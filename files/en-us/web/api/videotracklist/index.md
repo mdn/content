@@ -15,6 +15,7 @@ tags:
   - list
 browser-compat: api.VideoTrackList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`VideoTrackList`** interface is used to represent a list of the video tracks contained within a {{HTMLElement("video")}} element, with each track represented by a separate {{domxref("VideoTrack")}} object in the list.
@@ -62,7 +63,7 @@ In addition to being able to obtain direct access to the video tracks present on
 To get a media element's {{domxref("VideoTrackList")}}, use its {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} property.
 
 ```js
-var videoTracks = document.querySelector("video").videoTracks;
+const videoTracks = document.querySelector("video").videoTracks;
 ```
 
 ### Monitoring track count changes

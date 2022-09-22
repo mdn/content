@@ -9,6 +9,7 @@ tags:
   - blocked
 browser-compat: api.IDBOpenDBRequest.blocked_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `blocked` handler is executed when an open connection to a database is blocking a `versionchange` transaction on the same database.
@@ -20,9 +21,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('blocked', event => { });
+addEventListener('blocked', (event) => { });
 
-onblocked = event => { };
+onblocked = (event) => { };
 ```
 
 ## Event type
@@ -35,9 +36,9 @@ An {{domxref("IDBVersionChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent, {{domxref("Event")}} interface._
 
-- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{readonlyInline}}
+- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{ReadOnlyInline}}
   - : Returns the old version of the database.
-- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{readonlyInline}}
+- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{ReadOnlyInline}}
   - : Returns the new version of the database.
 
 ## Examples

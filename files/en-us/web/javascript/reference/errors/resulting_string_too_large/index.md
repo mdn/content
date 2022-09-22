@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - RangeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "repeat count must be less than infinity" occurs when the
@@ -36,7 +37,7 @@ number. The range of allowed values can be described like this: \[0, +∞).
 
 The resulting string can also not be larger than the maximum string size, which can
 differ in JavaScript engines. In Firefox (SpiderMonkey) the maximum string size is
-2^28 - 1 (`0xFFFFFFF`).
+2<sup>30</sup> - 2 (\~1GB).
 
 ## Examples
 
@@ -44,7 +45,7 @@ differ in JavaScript engines. In Firefox (SpiderMonkey) the maximum string size 
 
 ```js example-bad
 'abc'.repeat(Infinity); // RangeError
-'a'.repeat(2**28);      // RangeError
+'a'.repeat(2**30);      // RangeError
 ```
 
 ### Valid cases

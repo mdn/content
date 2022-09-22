@@ -15,6 +15,7 @@ tags:
   - tagName
 browser-compat: api.Element.tagName
 ---
+
 {{ApiRef("DOM")}}
 
 The **`tagName`** read-only property
@@ -53,7 +54,7 @@ inherits from {{domxref("Node")}}.
 ### JavaScript
 
 ```js
-var span = document.getElementById("born");
+const span = document.getElementById("born");
 console.log(span.tagName);
 ```
 

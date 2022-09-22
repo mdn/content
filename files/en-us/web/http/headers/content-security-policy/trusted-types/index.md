@@ -6,9 +6,11 @@ tags:
   - Directive
   - HTTP
   - Security
+  - Experimental
 browser-compat: http.headers.Content-Security-Policy.trusted-types
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** {{experimental_inline}} directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.
 
@@ -16,7 +18,7 @@ Together with **[`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Conte
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: trusted-types;
 Content-Security-Policy: trusted-types 'none';
 Content-Security-Policy: trusted-types <policyName>;

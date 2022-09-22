@@ -1,5 +1,5 @@
 ---
-title: '-webkit-overflow-scrolling'
+title: "-webkit-overflow-scrolling"
 slug: Web/CSS/-webkit-overflow-scrolling
 tags:
   - CSS
@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-overflow-scrolling
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls whether or not touch devices use momentum-based scrolling for a given element.
@@ -28,7 +29,10 @@ The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls wh
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-overflow-scrolling =
+  auto | touch
+```
 
 ## Examples
 
@@ -36,14 +40,10 @@ The `-webkit-overflow-scrolling` [CSS](/en-US/docs/Web/CSS) property controls wh
 
 ```html
 <div class="scroll-touch">
-  <p>
-    This paragraph has momentum scrolling
-  </p>
+  <p>This paragraph has momentum scrolling</p>
 </div>
 <div class="scroll-auto">
-  <p>
-    This paragraph does not.
-  </p>
+  <p>This paragraph does not.</p>
 </div>
 ```
 

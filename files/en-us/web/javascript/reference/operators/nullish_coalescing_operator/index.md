@@ -9,11 +9,12 @@ tags:
   - nullish coalescing
 browser-compat: javascript.operators.nullish_coalescing
 ---
+
 {{JSSidebar("Operators")}}
 
 The **nullish coalescing operator (`??`)** is a logical
 operator that returns its right-hand side operand when its left-hand side operand is
-{{jsxref("null")}} or {{jsxref("undefined")}}, and otherwise returns its left-hand side
+[`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, and otherwise returns its left-hand side
 operand.
 
 This can be seen as a special case of the [logical OR (`||`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR),
@@ -32,7 +33,7 @@ directly lower than `||` and directly higher than the
 
 ## Syntax
 
-```js
+```js-nolint
 leftExpr ?? rightExpr
 ```
 
@@ -67,7 +68,7 @@ to use the logical OR operator
 let foo;
 
 //  foo is never assigned any value so it is still undefined
-let someDummyText = foo || 'Hello!';
+const someDummyText = foo || 'Hello!';
 ```
 
 However, due to `||` being a boolean logical operator, the left-hand-side
@@ -78,11 +79,11 @@ consequences if you consider `0`, `''`, or `NaN` as
 valid values.
 
 ```js
-let count = 0;
-let text = "";
+const count = 0;
+const text = "";
 
-let qty = count || 42;
-let message = text || "hi!";
+const qty = count || 42;
+const message = text || "hi!";
 console.log(qty);     // 42 and not 0
 console.log(message); // "hi!" and not ""
 ```
@@ -92,12 +93,12 @@ operand when the first one evaluates to either `null` or
 `undefined` (but no other falsy values):
 
 ```js
-let myText = ''; // An empty string (which is also a falsy value)
+const myText = ''; // An empty string (which is also a falsy value)
 
-let notFalsyText = myText || 'Hello world';
+const notFalsyText = myText || 'Hello world';
 console.log(notFalsyText); // Hello world
 
-let preservingFalsy = myText ?? 'Hi neighborhood';
+const preservingFalsy = myText ?? 'Hi neighborhood';
 console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
 ```
 
@@ -111,11 +112,11 @@ function A() { console.log('A was called'); return undefined;}
 function B() { console.log('B was called'); return false;}
 function C() { console.log('C was called'); return "foo";}
 
-console.log( A() ?? C() );
+console.log(A() ?? C());
 // logs "A was called" then "C was called" and then "foo"
 // as A() returned undefined so both expressions are evaluated
 
-console.log( B() ?? C() );
+console.log(B() ?? C());
 // logs "B was called" then "false"
 // as B() returned false (and not null or undefined), the right
 // hand side expression was not evaluated
@@ -146,7 +147,7 @@ The nullish coalescing operator treats `undefined` and `null` as specific values
 which is useful to access a property of an object which may be `null` or `undefined`.
 
 ```js
-let foo = { someFooProp: "hi" };
+const foo = { someFooProp: "hi" };
 
 console.log(foo.someFooProp?.toUpperCase() ?? "not available"); // "HI"
 console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not available"

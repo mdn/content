@@ -16,6 +16,7 @@ tags:
   - Polyfill
 browser-compat: api.setInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`setInterval()`** method,
@@ -29,7 +30,7 @@ can remove it later by calling {{domxref("clearInterval",
 
 ## Syntax
 
-```js
+```js-nolint
 setInterval(code)
 setInterval(code, delay)
 
@@ -81,7 +82,7 @@ avoid confusion when maintaining your code.
 The following example demonstrates `setInterval()`'s basic syntax.
 
 ```js
-var intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+const intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
 
 function myCallback(a, b)
 {
@@ -125,7 +126,7 @@ the Stop button is pressed.
 let nIntervId;
 
 function changeColor() {
-  // check if already an interval has been set up
+  // check if an interval has already been set up
   if (!nIntervId) {
     nIntervId = setInterval(flashText, 1000);
   }
@@ -133,11 +134,7 @@ function changeColor() {
 
 function flashText() {
   const oElem = document.getElementById("my_box");
-  if (oElem.className === "go") {
-    oElem.className = "stop";
-  } else {
-    oElem.className = "go";
-  }
+  oElem.className = oElem.className === "go" ? "stop" : "go";
 }
 
 function stopTextColor() {
@@ -176,17 +173,18 @@ is the same for both timers):
 myArray = ['zero', 'one', 'two'];
 
 myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
+  alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
 myArray.myMethod(); // prints "zero,one,two"
 myArray.myMethod(1); // prints "one"
 setTimeout(myArray.myMethod, 1000); // prints "[object Window]" after 1 second
 setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1,5 seconds
-// passing the 'this' object with .call won't work
+
+// Passing the 'this' object with .call won't work
 // because this will change the value of this inside setTimeout itself
-// while we want to change the value of this inside myArray.myMethod
-// in fact, it will be an error because setTimeout code expects this to be the window object:
+// while we want to change the value of this inside myArray.myMethod.
+// In fact, it will be an error because setTimeout code expects this to be the window object:
 setTimeout.call(myArray, myArray.myMethod, 2000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 ```
@@ -196,7 +194,7 @@ function in the legacy JavaScript.
 
 ### A possible solution
 
-All modern JavaScript runtimes (in browsers and elsewhere) support [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical `this` — allowing us to write `setInterval( () => this.myMethod)` if we're inside the `myArray` method.
+All modern JavaScript runtimes (in browsers and elsewhere) support [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical `this` — allowing us to write `setInterval(() => this.myMethod)` if we're inside the `myArray` method.
 
 If you need to support IE, use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. That lets you easily bypass problems where it's unclear what `this` will be, depending on the context from which your function was called.
 
@@ -239,8 +237,8 @@ requests that won't necessarily return in order.
 In these cases, a recursive `setTimeout()` pattern is preferred:
 
 ```js
-(function loop(){
-   setTimeout(function() {
+(function loop() {
+   setTimeout(() => {
       // Your logic here
 
       loop();

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.every
 ---
+
 {{JSRef}}
 
 The **`every()`** method tests whether all elements in the
@@ -22,7 +23,7 @@ of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/T
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 every((element) => { /* ... */ } )
 every((element, index) => { /* ... */ } )
@@ -102,8 +103,8 @@ new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
 [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
-new Uint8Array([12, 5, 8, 130, 44]).every(elem => elem >= 10); // false
-new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
+new Uint8Array([12, 5, 8, 130, 44]).every((elem) => elem >= 10); // false
+new Uint8Array([12, 54, 18, 130, 44]).every((elem) => elem >= 10); // true
 ```
 
 ## Specifications

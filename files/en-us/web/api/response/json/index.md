@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.json
 ---
+
 {{APIRef("Fetch API")}}
 
 The **`json()`** method of the {{DOMxRef("Response")}} interface takes
@@ -21,7 +22,7 @@ Note that despite the method being named `json()`, the result is not JSON but is
 
 ## Syntax
 
-```js
+```js-nolint
 json()
 ```
 
@@ -36,7 +37,7 @@ anything that can be represented by JSON — an object, an array, a string, a nu
 
 ## Examples
 
-In our [fetch JSON example](https://github.com/mdn/fetch-examples/tree/master/fetch-json) (run [fetch JSON live](https://mdn.github.io/fetch-examples/fetch-json/)), we create a new request using the {{DOMxRef("Request.Request",
+In our [fetch JSON example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-json) (run [fetch JSON live](https://mdn.github.io/dom-examples/fetch/fetch-json/)), we create a new request using the {{DOMxRef("Request.Request",
   "Request()")}} constructor, then use it to fetch a `.json` file. When the
 fetch is successful, we read and parse the data using `json()`, then read
 values out of the resulting objects as you'd expect and insert them into list items to
@@ -47,10 +48,10 @@ const myList = document.querySelector('ul');
 const myRequest = new Request('products.json');
 
 fetch(myRequest)
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     for (const product of data.products) {
-      let listItem = document.createElement('li');
+      const listItem = document.createElement('li');
       listItem.appendChild(
         document.createElement('strong')
       ).textContent = product.Name;

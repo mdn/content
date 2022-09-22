@@ -13,6 +13,7 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.search
 ---
+
 {{AddonSidebar()}}
 
 The **`search()`** function of the {{WebExtAPIRef("downloads")}} API queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let searching = browser.downloads.search(query);
 ```
 
@@ -46,7 +47,7 @@ In general, you restrict the items retrieved using the `query` parameter.
 
 ```js
 function logDownloads(downloads) {
-  for (let download of downloads) {
+  for (const download of downloads) {
     console.log(download.id);
     console.log(download.url);
   }
@@ -56,11 +57,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let searching = browser.downloads.search({
-  query:["imgur"]
-});
-
-searching.then(logDownloads, onError);
+browser.downloads
+  .search({
+    query: ["imgur"],
+  })
+  .then(logDownloads, onError);
 ```
 
 ### Get a specific item
@@ -69,7 +70,7 @@ To get a specific {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, th
 
 ```js
 function logDownloads(downloads) {
-  for (let download of downloads) {
+  for (const download of downloads) {
     console.log(download.id);
     console.log(download.url);
   }
@@ -79,10 +80,9 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let id = 13;
+const id = 13;
 
-let searching = browser.downloads.search({id});
-searching.then(logDownloads, onError);
+browser.downloads.search({ id }).then(logDownloads, onError);
 ```
 
 ### Get all downloads
@@ -91,7 +91,7 @@ If you want to return all {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem
 
 ```js
 function logDownloads(downloads) {
-  for (let download of downloads) {
+  for (const download of downloads) {
     console.log(download.id);
     console.log(download.url);
   }
@@ -101,8 +101,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let searching = browser.downloads.search({});
-searching.then(logDownloads, onError);
+browser.downloads.search({}).then(logDownloads, onError);
 ```
 
 ### Get the most recent download
@@ -111,7 +110,7 @@ You can get the most recent download by specifying the following search paramete
 
 ```js
 function logDownloads(downloads) {
-  for (let download of downloads) {
+  for (const download of downloads) {
     console.log(download.id);
     console.log(download.url);
   }
@@ -121,11 +120,12 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let searching = browser.downloads.search({
-   limit: 1,
-   orderBy: ["-startTime"]
-});
-searching.then(logDownloads, onError);
+browser.downloads
+  .search({
+    limit: 1,
+    orderBy: ["-startTime"],
+  })
+  .then(logDownloads, onError);
 ```
 
 You can see this code in action in our [latest-download](https://github.com/mdn/webextensions-examples/blob/master/latest-download/popup/latest_download.js) example.
@@ -136,7 +136,8 @@ You can see this code in action in our [latest-download](https://github.com/mdn/
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -163,4 +164,4 @@ You can see this code in action in our [latest-download](https://github.com/mdn/
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

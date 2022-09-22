@@ -10,6 +10,7 @@ tags:
   - TransformStream
 browser-compat: api.TransformStream.readable
 ---
+
 {{APIRef("Streams")}}
 
 The **`readable`** read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("ReadableStream")}} instance controlled by this `TransformStream`.

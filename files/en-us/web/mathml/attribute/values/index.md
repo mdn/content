@@ -7,6 +7,7 @@ tags:
   - MathML Reference
 browser-compat: mathml.attribute_values
 ---
+
 {{MathMLRef}}
 
 ## MathML-specific types
@@ -68,9 +69,3 @@ veryverythickmathspace => 0.3888888888888889em
 ## Browser compatibility
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- [Namedspace binding is deprecated](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) in MathML3 and has been removed in Gecko 15.0 {{ geckoRelease("15.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=673759)).
-- Non-zero unitless length values are no longer supported in Gecko 70.0 {{ geckoRelease("70.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=1574749)).
-- Numbers ending with a dot are no longer supported in Gecko 70.0 {{ geckoRelease("70.0") }} ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=1575596)).

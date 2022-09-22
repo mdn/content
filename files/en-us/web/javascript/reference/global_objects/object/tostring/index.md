@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -18,7 +19,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -63,7 +64,7 @@ Object.prototype.toString.call(arr) // "[object Array]"
 
 The [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object returns `"[object Arguments]"`. Everything else, including user-defined classes, unless with a custom `Symbol.toStringTag`, will return `"[object Object]"`.
 
-`Object.prototype.toString()` invoked on {{jsxref("null")}} and {{jsxref("undefined")}} returns `[object Null]` and `[object Undefined]`, respectively.
+`Object.prototype.toString()` invoked on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}} returns `[object Null]` and `[object Undefined]`, respectively.
 
 ## Examples
 
@@ -101,7 +102,7 @@ theDog.toString(); // returns [object Object]
 The following code creates and assigns `dogToString()` to override the
 default `toString()` method. This function generates a string containing the
 `name`, `breed`, `color`, and `sex` of the
-object, in the form "`property = value;`".
+object.
 
 ```js
 Dog.prototype.toString = function dogToString() {

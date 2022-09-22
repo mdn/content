@@ -11,6 +11,7 @@ tags:
   - read
 browser-compat: api.ReadableStreamBYOBReader.read
 ---
+
 {{APIRef("Streams")}}
 
 The **`read()`** method of the {{domxref("ReadableStreamBYOBReader")}} interface is used to read data into a view on a user-supplied buffer from an associated [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
@@ -32,7 +33,7 @@ The value is set `true` if the stream is closed or cancelled, and `false` otherw
 
 ## Syntax
 
-```js
+```js-nolint
 read(view)
 ```
 
@@ -49,23 +50,23 @@ The following are possible:
 
 - If a chunk is available and the stream is still active, the promise fulfills with an object of the form:
 
-  ```js
+  ```
   { value: theChunk, done: false }
   ```
-  
+
   `theChunk` is a view containing the new data.
   This is a view of the same type and over the same backing memory as the `view` passed to the `read()` method.
   The original `view` will be detached and no longer usable.
-  
+
 - If the stream is closed, the promise fulfills with an object of the form (where `theChunk` has the same properties as above):
 
-  ```js
+  ```
   { value: theChunk, done: true }
   ```
 
 - If the stream is cancelled, the promise fulfills with an object of the form:
 
-  ```js
+  ```
   { value: undefined, done: true }
   ```
 
@@ -86,7 +87,7 @@ First we create the reader using {{domxref("ReadableStream.getReader()")}} on th
 We also need create an `ArrayBuffer`, which is the "backing memory" of the views that we will write into.
 
 ```js
-const reader = stream.getReader({mode: "byob"});
+const reader = stream.getReader({ mode: "byob" });
 let buffer = new ArrayBuffer(4000);
 ```
 
@@ -100,28 +101,29 @@ readStream(reader);
 
 function readStream(reader) {
   let bytesReceived = 0;
-  let offset =  0;
+  let offset = 0;
 
-  while (offset < buffer.byteLength) {    
+  while (offset < buffer.byteLength) {
     // read() returns a promise that fulfills when a value has been received
-    reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(function processBytes({ done, value }) {
-      // Result objects contain two properties:
+    reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset))
+      .then(function processBytes({ done, value }) {
+        // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
         // value - some data. Always undefined when done is true.
-      
-      if (done) {
-        // There is no more data in the stream
-        return;
-      }
 
-      buffer = value.buffer;
-      offset += value.byteLength;
-      bytesReceived += value.byteLength;
+        if (done) {
+          // There is no more data in the stream
+          return;
+        }
 
-      // Read some more, and call this function again
-      // Note that here we create a new view over the original buffer.
-      return reader.read( new Uint8Array(buffer, offset, buffer.byteLength - offset) ).then(processBytes);
-    });
+        buffer = value.buffer;
+        offset += value.byteLength;
+        bytesReceived += value.byteLength;
+
+        // Read some more, and call this function again
+        // Note that here we create a new view over the original buffer.
+        return reader.read(new Uint8Array(buffer, offset, buffer.byteLength - offset)).then(processBytes);
+      });
   }
 }
 ```

@@ -19,6 +19,7 @@ tags:
   - querySelector
 browser-compat: api.Element.querySelector
 ---
+
 {{APIRef("DOM")}}
 
 The **`querySelector()`** method of the {{domxref("Element")}}
@@ -27,7 +28,7 @@ invoked that matches the specified group of selectors.
 
 ## Syntax
 
-```js
+```js-nolint
 querySelector(selectors)
 ```
 
@@ -67,7 +68,7 @@ In this first example, the first {{HTMLElement("style")}} element which either h
 type or has type "text/css" in the HTML document body is returned:
 
 ```js
-var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+const el = document.body.querySelector("style[type='text/css'], style:not([type])");
 ```
 
 ### Get direct descendants using the :scope pseudo-class
@@ -94,14 +95,14 @@ This example uses the {{cssxref(":scope")}} pseudo-class to retrieve direct chil
 #### CSS
 
 ```css
-  span {
-    display:block;
-    margin-bottom: 5px;
-  }
-  .red span {
-    background-color: red;
-    padding:5px;
-  }
+span {
+  display: block;
+  margin-bottom: 5px;
+}
+.red span {
+  background-color: red;
+  padding: 5px;
+}
 ```
 
 #### JavaScript
@@ -109,7 +110,7 @@ This example uses the {{cssxref(":scope")}} pseudo-class to retrieve direct chil
 ```js
   const parentElement = document.querySelector('#parent');
   let allChildren = parentElement.querySelectorAll(":scope > span");
-  allChildren.forEach(item => item.classList.add("red"));
+  allChildren.forEach((item) => item.classList.add("red"));
 ```
 
 #### Result
@@ -142,7 +143,7 @@ applying `selectors`, so that levels outside the specified
 #### JavaScript
 
 ```js
-var baseElement = document.querySelector("p");
+const baseElement = document.querySelector("p");
 document.getElementById("output").innerHTML =
   (baseElement.querySelector("div span").innerHTML);
 ```

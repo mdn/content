@@ -4,7 +4,6 @@ slug: Web/API/fetch
 page-type: web-api-global-function
 tags:
   - API
-  - Experimental
   - Fetch
   - Fetch API
   - GlobalFetch
@@ -13,6 +12,7 @@ tags:
   - request
 browser-compat: api.fetch
 ---
+
 {{APIRef("Fetch API")}}
 
 The global **`fetch()`** method starts the process of fetching a
@@ -42,7 +42,7 @@ rather than the directive of the resources it's retrieving.
 
 ## Syntax
 
-```js
+```js-nolint
 fetch(resource)
 fetch(resource, options)
 ```
@@ -86,7 +86,7 @@ fetch(resource, options)
         - `omit`
           - : Tells browsers to exclude credentials from the request, and ignore any credentials sent back in the response (e.g., any {{HTTPHeader("Set-Cookie")}} header).
         - `same-origin`
-          - : Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs.
+          - : Tells browsers to include credentials with requests to same-origin URLs, and use any credentials sent back in responses from same-origin URLs. **This is the default value.**
         - `include`
 
           - : Tells browsers to include credentials in both same- and cross-origin requests, and always use any credentials sent back in responses.
@@ -264,7 +264,7 @@ fetch('https://example.com/', {
 
 ## Examples
 
-In our [Fetch Request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) we
+In our [Fetch Request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) (see [Fetch Request live](https://mdn.github.io/dom-examples/fetch/fetch-request/)) we
 create a new {{domxref("Request")}} object using the relevant constructor, then fetch it
 using a `fetch()` call. Since we are fetching an image, we run
 {{domxref("Response.blob()")}} on the response to give it the proper MIME type so it will be
@@ -279,7 +279,7 @@ const myRequest = new Request('flowers.jpg');
 fetch(myRequest)
   .then((response) => {
     if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${ response.status }`);
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     return response.blob();
@@ -289,7 +289,7 @@ fetch(myRequest)
   });
 ```
 
-In the [Fetch with init then Request example](https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html) (see [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)), we do the same thing except that we pass in an
+In the [Fetch with init then Request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-with-init-then-request/index.html) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-with-init-then-request/)), we do the same thing except that we pass in an
 `init` object when we invoke `fetch()`:
 
 ```js

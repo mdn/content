@@ -11,6 +11,7 @@ tags:
   - XRPose
 browser-compat: api.XRPose.linearVelocity
 ---
+
 {{APIRef}}
 
 The `linearVelocity` read-only property of the
@@ -21,7 +22,7 @@ the linear velocity in meters per second relative to the base
 ## Value
 
 A {{DOMxRef("DOMPointReadOnly")}} describing the linear velocity in meters
-per second relative to the base {{DOMxRef("XRSpace")}}. Returns {{jsxref("null")}}
+per second relative to the base {{DOMxRef("XRSpace")}}. Returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
 if the user agent can't populate this value.
 
 ## Specifications

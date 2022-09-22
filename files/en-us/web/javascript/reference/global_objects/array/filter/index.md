@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.filter
 ---
+
 {{JSRef}}
 
 The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
@@ -19,21 +20,21 @@ The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-filter((element) => { /* ... */ } )
-filter((element, index) => { /* ... */ } )
-filter((element, index, array) => { /* ... */ } )
+filter((element) => { /* … */ } )
+filter((element, index) => { /* … */ } )
+filter((element, index, array) => { /* … */ } )
 
 // Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function(element) { /* ... */ })
-filter(function(element, index) { /* ... */ })
-filter(function(element, index, array){ /* ... */ })
-filter(function(element, index, array) { /* ... */ }, thisArg)
+filter(function(element) { /* … */ })
+filter(function(element, index) { /* … */ })
+filter(function(element, index, array){ /* … */ })
+filter(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -84,10 +85,10 @@ The following example uses `filter()` to create a filtered array that has all el
 
 ```js
 function isBigEnough(value) {
-  return value >= 10
+  return value >= 10;
 }
 
-let filtered = [12, 5, 8, 130, 44].filter(isBigEnough)
+const filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // filtered is [12, 130, 44]
 ```
 
@@ -100,7 +101,7 @@ const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 function isPrime(num) {
   for (let i = 2; num > i; i++) {
-    if (num % i == 0) {
+    if (num % i === 0) {
       return false;
     }
   }
@@ -115,35 +116,35 @@ console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 The following example uses `filter()` to create a filtered JSON of all elements with non-zero, numeric `id`.
 
 ```js
-let arr = [
+const arr = [
   { id: 15 },
   { id: -1 },
   { id: 0 },
   { id: 3 },
   { id: 12.2 },
-  { },
+  {},
   { id: null },
   { id: NaN },
-  { id: 'undefined' }
-]
+  { id: 'undefined' },
+];
 
-let invalidEntries = 0
+let invalidEntries = 0;
 
 function filterByID(item) {
   if (Number.isFinite(item.id) && item.id !== 0) {
-    return true
+    return true;
   }
-  invalidEntries++
+  invalidEntries++;
   return false;
 }
 
-let arrByID = arr.filter(filterByID)
+const arrByID = arr.filter(filterByID);
 
-console.log('Filtered Array\n', arrByID)
+console.log('Filtered Array\n', arrByID);
 // Filtered Array
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log('Number of Invalid Entries = ', invalidEntries)
+console.log('Number of Invalid Entries = ', invalidEntries);
 // Number of Invalid Entries = 5
 ```
 
@@ -152,35 +153,17 @@ console.log('Number of Invalid Entries = ', invalidEntries)
 Following example uses `filter()` to filter array content based on search criteria.
 
 ```js
-let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
+const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
  * Filter array items based on search criteria (query)
  */
 function filterItems(arr, query) {
-  return arr.filter(function(el) {
-    return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
-  })
+  return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
 }
 
-console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
-console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
-```
-
-#### ES2015 Implementation
-
-```js
-const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
-
-/**
- * Filter array items based on search criteria (query)
- */
-const filterItems = (arr, query) => {
-  return arr.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) !== -1)
-}
-
-console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
-console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
+console.log(filterItems(fruits, 'ap')); // ['apple', 'grapes']
+console.log(filterItems(fruits, 'an')); // ['banana', 'mango', 'orange']
 ```
 
 ### Affecting Initial Array (modifying, appending and deleting)
@@ -189,37 +172,37 @@ The following example tests the behavior of the `filter` method when the array i
 
 ```js
 // Modifying each word
-let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
+let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present'];
 
-const modifiedWords = words.filter( (word, index, arr) => {
-  arr[index+1] +=' extra'
-  return word.length < 6
-})
+const modifiedWords = words.filter((word, index, arr) => {
+  arr[index + 1] += ' extra';
+  return word.length < 6;
+});
 
-console.log(modifiedWords)
+console.log(modifiedWords);
 // Notice there are three words below length 6, but since they've been modified one is returned
 // ["spray"]
 
 // Appending new words
-words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
-const appendedWords = words.filter( (word, index, arr) => {
-  arr.push('new')
-  return word.length < 6
+words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present'];
+const appendedWords = words.filter((word, index, arr) => {
+  arr.push('new');
+  return word.length < 6;
 })
 
-console.log(appendedWords)
+console.log(appendedWords);
 // Only three fits the condition even though the `words` itself now has a lot more words with character length less than 6
 // ["spray" ,"limit" ,"elite"]
 
 // Deleting words
-words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
-const deleteWords = words.filter( (word, index, arr) => {
-  arr.pop()
-  return word.length < 6
+words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present'];
+const deleteWords = words.filter((word, index, arr) => {
+  arr.pop();
+  return word.length < 6;
 })
 
-console.log(deleteWords)
-// Notice 'elite' is not even obtained as it’s been popped off 'words' before filter can even get there
+console.log(deleteWords);
+// Notice 'elite' is not even obtained as it's been popped off 'words' before filter can even get there
 // ["spray" ,"limit"]
 ```
 

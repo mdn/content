@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 In [the last article](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming) we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
@@ -133,7 +134,7 @@ We use the {{jsxref("Classes/extends", "extends")}} keyword to say that this cla
 
 The `Professor` class adds a new property `teaches`, so we declare that.
 
-Since we want to set `teaches` when a new `Professor` is created, we define a constructor,  which takes the `name` and `teaches` as arguments. The first thing this constructor does is call the superclass constructor using {{jsxref("Operators/super", "super()")}}, passing up the `name` parameter. The superclass constructor takes care of setting `name`. After that the `Professor` constructor sets the `teaches` property.
+Since we want to set `teaches` when a new `Professor` is created, we define a constructor, which takes the `name` and `teaches` as arguments. The first thing this constructor does is call the superclass constructor using {{jsxref("Operators/super", "super()")}}, passing up the `name` parameter. The superclass constructor takes care of setting `name`. After that the `Professor` constructor sets the `teaches` property.
 
 > **Note:** If a subclass has any of its own initialization to do, it **must** first call the superclass constructor using `super()`, passing up any parameters that the superclass constructor is expecting.
 
@@ -195,7 +196,6 @@ You can have private methods as well as private data properties. Just like priva
 
 ```js
 class Example {
-
   somePublicMethod() {
     this.#somePrivateMethod();
   }
@@ -203,7 +203,6 @@ class Example {
   #somePrivateMethod() {
     console.log('You called me?');
   }
-
 }
 
 const myExample = new Example();

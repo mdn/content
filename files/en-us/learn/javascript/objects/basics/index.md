@@ -2,6 +2,7 @@
 title: JavaScript object basics
 slug: Learn/JavaScript/Objects/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 In this article, we'll look at fundamental JavaScript object syntax, and revisit some JavaScript features that we've already seen earlier in the course, reiterating the fact that many of the features you've already dealt with are objects.
@@ -42,7 +43,7 @@ const person = {};
 
 Now open your browser's [JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#the_javascript_console), enter `person` into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should get a result similar to one of the below lines:
 
-```js
+```
 [object Object]
 Object { }
 { }
@@ -54,10 +55,10 @@ Congratulations, you've just created your first object. Job done! But this is an
 const person = {
   name: ['Bob', 'Smith'],
   age: 32,
-  bio() {
+  bio: function () {
     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
   },
-  introduceSelf() {
+  introduceSelf: function () {
     console.log(`Hi! I'm ${this.name[0]}.`);
   }
 };
@@ -87,7 +88,7 @@ const objectName = {
 
 The value of an object member can be pretty much anything — in our person object we've got a number, an array, and two functions. The first two items are data items, and are referred to as the object's **properties**. The last two items are functions that allow the object to do something with that data, and are referred to as the object's **methods**.
 
-When the object's members are functions there's a simpler syntax. Instead of `bio: function()` we can write `bio()`. Like this:
+When the object's members are functions there's a simpler syntax. Instead of `bio: function ()` we can write `bio()`. Like this:
 
 ```js
 const person = {
@@ -122,16 +123,21 @@ person.bio()
 An object property can itself be an object. For example, try changing the `name` member from
 
 ```js
-name: ['Bob', 'Smith'],
+const person = {
+  name: ['Bob', 'Smith'],
+};
 ```
 
 to
 
 ```js
-name : {
-  first: 'Bob',
-  last: 'Smith'
-},
+const person = {
+  name: {
+    first: 'Bob',
+    last: 'Smith',
+  },
+  // …
+};
 ```
 
 To access these items you just need to chain the extra step onto the end with another dot. Try these in the JS console:

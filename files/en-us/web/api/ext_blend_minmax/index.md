@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_blend_minmax
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_blend_minmax`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and extends blending capabilities by adding two new blend equations: the minimum or maximum color components of the source and destination colors.
@@ -29,7 +30,7 @@ This extension adds two new constants, which can be used in {{domxref("WebGLRend
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_blend_minmax');
+const ext = gl.getExtension('EXT_blend_minmax');
 
 gl.blendEquation(ext.MIN_EXT);
 gl.blendEquation(ext.MAX_EXT);

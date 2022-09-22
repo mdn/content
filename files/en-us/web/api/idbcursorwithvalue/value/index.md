@@ -13,6 +13,7 @@ tags:
   - value
 browser-compat: api.IDBCursorWithValue.value
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`value`** read-only property of the
@@ -34,7 +35,7 @@ value of the cursor with `cursor.value`.
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,
 you can grab data from the current record under the cursor object using `cursor.value.foo`.
-For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbcursor)
+For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor)
 ([view example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/).)
 
 ```js
@@ -42,11 +43,11 @@ function displayData() {
   const transaction = db.transaction(['rushAlbumList'], "readonly");
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const listItem = document.createElement('li');
-      listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       console.log(cursor.value);

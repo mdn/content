@@ -10,6 +10,7 @@ tags:
   - indexOf
 browser-compat: javascript.builtins.String.indexOf
 ---
+
 {{JSRef}}
 
 The **`indexOf()`** method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the first occurrence of the specified substring. Given a second argument: a number, the method returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
@@ -18,7 +19,7 @@ The **`indexOf()`** method, given one argument: a substring to search for, searc
 
 ## Syntax
 
-```js
+```js-nolint
 indexOf(searchString)
 indexOf(searchString, position)
 ```
@@ -27,13 +28,15 @@ indexOf(searchString, position)
 
 - `searchString`
 
-  - : Substring to search for. If the method is called with no arguments, `searchString` [is coerced](https://tc39.es/ecma262/#sec-tostring) to "`undefined`". Therefore,`'undefined'.indexOf()` returns `0` — because the substring `undefined` is found at position `0` in the string `undefined`. But `'undefine'.indexOf()`, returns `-1` — because the substring `undefined` is not found in the string `undefine`.
+  - : Substring to search for, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
+
+    If the method is called with no arguments, `searchString` is coerced to `"undefined"`. Therefore,`"undefined".indexOf()` returns `0` — because the substring `"undefined"` is found at position `0` in the string `"undefined"`. But `"undefine".indexOf()`, returns `-1` — because the substring `"undefined"` is not found in the string `"undefine"`.
 
 - `position` {{optional_inline}}
 
   - : The method returns the index of the first occurrence of the specified substring at a position greater than or equal to `position`, which defaults to `0`. If `position` is greater than the length of the calling string, the method doesn't search the calling string at all. If `position` is less than zero, the method behaves as it would if `position` were `0`.
 
-    - `'hello world hello'.indexOf('o', -5)` returns `4` — because it causes the method to behave as if the second argument were `0`, and the first occurrence of `hello` at a position greater or equal to `0` is at position `4`.
+    - `'hello world hello'.indexOf('o', -5)` returns `4` — because it causes the method to behave as if the second argument were `0`, and the first occurrence of `o` at a position greater or equal to `0` is at position `4`.
 
     - `'hello world hello'.indexOf('world', 12)` returns `-1` — because, while it's true the substring `world` occurs at index `6`, that position is not greater than or equal to `12`.
 
@@ -98,54 +101,54 @@ When checking if a specific substring occurs within a string, the correct way to
 
 ## Examples
 
-### Using `indexOf()`
+### Using indexOf()
 
 The following example uses `indexOf()` to locate substrings in the string
 `"Brave new world"`.
 
 ```js
-const str = 'Brave new world'
+const str = 'Brave new world';
 
-console.log('Index of first w from start is ' + str.indexOf('w'))   // logs 8
-console.log('Index of "new" from start is ' + str.indexOf('new'))   // logs 6
+console.log(`Index of first w from start is ${str.indexOf('w')}`); // logs 8
+console.log(`Index of "new" from start is ${str.indexOf('new')}`); // logs 6
 ```
 
-### `indexOf()` and case-sensitivity
+### indexOf() and case-sensitivity
 
 The following example defines two string variables.
 
 The variables contain the same string, except that the second string contains uppercase
 letters. The first {{domxref("console.log()")}} method displays `19`. But
 because the `indexOf()` method is case sensitive, the string
-"`cheddar`" is not found in `myCapString`, so the second
+`"cheddar"` is not found in `myCapString`, so the second
 `console.log()` method displays `-1`.
 
 ```js
-const myString    = 'brie, pepper jack, cheddar'
-const myCapString = 'Brie, Pepper Jack, Cheddar'
+const myString = 'brie, pepper jack, cheddar';
+const myCapString = 'Brie, Pepper Jack, Cheddar';
 
-console.log('myString.indexOf("cheddar") is ' + myString.indexOf('cheddar'))
+console.log(`myString.indexOf("cheddar") is ${myString.indexOf('cheddar')}`);
 // logs 19
-console.log('myCapString.indexOf("cheddar") is ' + myCapString.indexOf('cheddar'))
+console.log(`myCapString.indexOf("cheddar") is ${myCapString.indexOf('cheddar')}`);
 // logs -1
 ```
 
-### Using `indexOf()` to count occurrences of a letter in a string
+### Using indexOf() to count occurrences of a letter in a string
 
 The following example sets `count` to the number of occurrences of the
 letter `e` in the string `str`:
 
 ```js
-const str = 'To be, or not to be, that is the question.'
-let count = 0
-let position = str.indexOf('e')
+const str = 'To be, or not to be, that is the question.';
+let count = 0;
+let position = str.indexOf('e');
 
 while (position !== -1) {
-  count++
-  position = str.indexOf('e', position + 1)
+  count++;
+  position = str.indexOf('e', position + 1);
 }
 
-console.log(count)  // displays 4
+console.log(count); // displays 4
 ```
 
 ## Specifications

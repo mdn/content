@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.executeScript
 ---
+
 {{AddonSidebar()}}
 
 Injects a script into a target context. The script is run at `document_idle` by default.
@@ -28,7 +29,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let results = await browser.scripting.executeScript(
   details             // object
 )
@@ -83,7 +84,7 @@ The result values must be [structured clonable](/en-US/docs/Web/API/Web_Workers_
 This example executes a one-line code snippet in the active tab:
 
 ```js
-browser.action.onClicked.addListener(async tab => {
+browser.action.onClicked.addListener(async (tab) => {
   try {
     await browser.scripting.executeScript({
       target: {
@@ -102,7 +103,7 @@ browser.action.onClicked.addListener(async tab => {
 This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the active tab. The script is executed in subframes and the main document:
 
 ```js
-browser.action.onClicked.addListener(async tab => {
+browser.action.onClicked.addListener(async (tab) => {
   try {
     await browser.scripting.executeScript({
       target: {

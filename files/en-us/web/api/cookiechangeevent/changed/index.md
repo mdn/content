@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.CookieChangeEvent.changed
 ---
+
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`changed`** read-only property of the {{domxref("CookieChangeEvent")}} interface returns an array of the cookies that have been changed.

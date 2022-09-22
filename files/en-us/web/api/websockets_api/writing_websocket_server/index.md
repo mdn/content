@@ -3,14 +3,13 @@ title: Writing a WebSocket server in C#
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 page-type: guide
 tags:
-  - HTML5
+  - HTML
   - NeedsMarkupWork
   - Tutorial
   - WebSockets
 ---
-{{DefaultAPISidebar("Websockets API")}}
 
-## Introduction
+{{DefaultAPISidebar("Websockets API")}}
 
 If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.
 
@@ -18,7 +17,7 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the *System.Net.Sockets* namespace.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the `System.Net.Sockets` namespace.
 
 > **Note:** It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
 
@@ -147,7 +146,7 @@ You must:
 4. Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response
 
 ```cs
- if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
+if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 {
     const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
 
@@ -293,16 +292,16 @@ class Server {
                     msglen = BitConverter.ToUInt16(new byte[] { bytes[3], bytes[2] }, 0);
                     offset = 4;
                 } else if (msglen == 127) {
-                    // To test the below code, we need to manually buffer larger messages — since the NIC's autobuffering 
+                    // To test the below code, we need to manually buffer larger messages — since the NIC's autobuffering
                     // may be too latency-friendly for this code to run (that is, we may have only some of the bytes in this
-                    // websocket frame available through client.Available).  
+                    // websocket frame available through client.Available).
                     msglen = BitConverter.ToUInt64(new byte[] { bytes[9], bytes[8], bytes[7], bytes[6], bytes[5], bytes[4], bytes[3], bytes[2] },0);
                     offset = 10;
                 }
 
-                if (msglen == 0)
+                if (msglen == 0) {
                     Console.WriteLine("msglen == 0");
-                else if (mask) {
+                } else if (mask) {
                     byte[] decoded = new byte[msglen];
                     byte[] masks = new byte[4] { bytes[offset], bytes[offset + 1], bytes[offset + 2], bytes[offset + 3] };
                     offset += 4;
@@ -325,64 +324,76 @@ class Server {
 ### client.html
 
 ```html
-<!doctype html>
-<style>
-    textarea { vertical-align: bottom; }
-    #output { overflow: auto; }
-    #output > p { overflow-wrap: break-word; }
-    #output span { color: blue; }
-    #output span.error { color: red; }
-</style>
-<h2>WebSocket Test</h2>
-<textarea cols=60 rows=6></textarea>
-<button>send</button>
-<div id=output></div>
-<script>
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    textarea {
+      vertical-align: bottom;
+    }
+    #output {
+      overflow: auto;
+    }
+    #output > p {
+      overflow-wrap: break-word;
+    }
+    #output span {
+      color: blue;
+    }
+    #output span.error {
+      color: red;
+    }
+  </style>
+  <body>
+    <h2>WebSocket Test</h2>
+    <textarea cols="60" rows="6"></textarea>
+    <button>send</button>
+    <div id="output"></div>
+  </body>
+  <script>
     // http://www.websocket.org/echo.html
-
     const button = document.querySelector("button");
     const output = document.querySelector("#output");
     const textarea = document.querySelector("textarea");
-        // wsUri = "ws://echo.websocket.org/",
-        wsUri = "ws://127.0.0.1/",
-        websocket = new WebSocket(wsUri);
+    const wsUri = "ws://127.0.0.1/";
+    const websocket = new WebSocket(wsUri);
 
     button.addEventListener("click", onClickButton);
 
-    websocket.onopen = function (e) {
-        writeToScreen("CONNECTED");
-        doSend("WebSocket rocks");
+    websocket.onopen = (e) => {
+      writeToScreen("CONNECTED");
+      doSend("WebSocket rocks");
     };
 
-    websocket.onclose = function (e) {
-        writeToScreen("DISCONNECTED");
+    websocket.onclose = (e) => {
+      writeToScreen("DISCONNECTED");
     };
 
-    websocket.onmessage = function (e) {
-        writeToScreen("<span>RESPONSE: " + e.data + "</span>");
+    websocket.onmessage = (e) => {
+      writeToScreen(`<span>RESPONSE: ${e.data}</span>`);
     };
 
-    websocket.onerror = function (e) {
-        writeToScreen("<span class=error>ERROR:</span> " + e.data);
+    websocket.onerror = (e) => {
+      writeToScreen(`<span class="error">ERROR:</span> ${e.data}`);
     };
 
     function doSend(message) {
-        writeToScreen("SENT: " + message);
-        websocket.send(message);
+      writeToScreen(`SENT: ${message}`);
+      websocket.send(message);
     }
 
     function writeToScreen(message) {
-        output.insertAdjacentHTML("afterbegin", "<p>" + message + "</p>");
+      output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
     }
 
     function onClickButton() {
-        const text = textarea.value;
+      const text = textarea.value;
 
-        text && doSend(text);
-        textarea.value = "";
-        textarea.focus();
+      text && doSend(text);
+      textarea.value = "";
+      textarea.focus();
     }
-</script>
+  </script>
+</html>
 ```
 
 ## Related

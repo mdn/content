@@ -8,6 +8,7 @@ tags:
   - viewport
 spec-urls: https://drafts.csswg.org/css-device-adapt/#viewport-meta
 ---
+
 {{HTMLSidebar}}
 
 This article describes how to use the "viewport" `<meta>` tag to control the viewport's size and shape.
@@ -27,7 +28,7 @@ However, this mechanism is not so good for pages that are optimized for narrow s
 A typical mobile-optimized site contains something like the following:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
 Not all devices are the same width; you should make sure that your pages work well in a large variation of screen sizes and orientations.
@@ -47,7 +48,7 @@ The basic properties of the "viewport" `<meta>` tag include:
 - `user-scalable`
   - : Controls whether zoom in and zoom out actions are allowed on the page. Valid values: `0`, `1`, `yes`, or `no`. Default: `1`, which is the same as `yes`. Setting the value to `0`, which is the same as `no`, is against Web Content Accessibility Guidelines (WCAG).
 
-> **Warning:** Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. [WCAG](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) requires a minimum of 2x scaling; however, the best practice is to enable a 5x zoom.
+> **Warning:** Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) requires a minimum of 2x scaling; however, the best practice is to enable a 5x zoom.
 
 ## Screen density
 
@@ -64,7 +65,7 @@ Sites can set their viewport to a specific size. For example, the definition `"w
 For pages that set an initial or maximum scale, this means the `width` property actually translates into a _minimum_ viewport width. For example, if your layout needs at least 500 pixels of width then you can use the following markup. When the screen is more than 500 pixels wide, the browser will expand the viewport (rather than zoom in) to fit the screen:
 
 ```html
-<meta name="viewport" content="width=500, initial-scale=1">
+<meta name="viewport" content="width=500, initial-scale=1" />
 ```
 
 Other [attributes](/en-US/docs/Web/HTML/Element/meta#attributes) that are available are `minimum-scale`, `maximum-scale`, and `user-scalable`. These properties affect the initial scale and width, as well as limiting changes in zoom level.

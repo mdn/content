@@ -9,9 +9,11 @@ tags:
   - Property
   - Web
   - Deprecated
+  - Non-standard
 browser-compat: api.HTMLMediaElement.controller
 ---
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLMediaElement.controller`** property represents the media controller assigned to the element.
 

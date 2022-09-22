@@ -12,13 +12,14 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.payment
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header field's `payment` directive controls whether the current document is allowed to use the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API). When this policy is disabled, the {{DOMxRef("PaymentRequest()")}} constructor will throw a `SyntaxError` {{domxref("DOMException")}}.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: payment <allowlist>;
 ```
 

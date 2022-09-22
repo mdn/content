@@ -11,6 +11,7 @@ tags:
   - fullscreenchange
 browser-compat: api.Element.fullscreenchange_event
 ---
+
 {{APIRef}}
 
 The `fullscreenchange` event is fired immediately after an {{domxref("Element")}} switches into or out of fullscreen mode.
@@ -26,9 +27,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('fullscreenchange', event => { });
+addEventListener('fullscreenchange', (event) => { });
 
-onfullscreenchange = event => { };
+onfullscreenchange = (event) => { };
 ```
 
 ## Event type
@@ -48,10 +49,10 @@ What that means to the example code is that, if an element is currently in fulls
 ### HTML
 
 ```html
- <h1>fullscreenchange event example</h1>
- <div id="fullscreen-div">
-   <button id="toggle-fullscreen">Toggle Fullscreen Mode</button>
- </div>
+<h1>fullscreenchange event example</h1>
+<div id="fullscreen-div">
+  <button id="toggle-fullscreen">Toggle Fullscreen Mode</button>
+</div>
 ```
 
 ### JavaScript
@@ -68,7 +69,7 @@ function fullscreenchanged(event) {
   }
 };
 
-var el = document.getElementById('fullscreen-div');
+const el = document.getElementById('fullscreen-div');
 
 el.addEventListener('fullscreenchange', fullscreenchanged);
 // or

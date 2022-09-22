@@ -14,7 +14,8 @@ tags:
   - paintWorklet
 browser-compat: api.PaintWorkletGlobalScope
 ---
-{{APIRef("CSS Painting API")}} {{SeeCompatTable}}
+
+{{APIRef("CSS Painting API")}}
 
 The **`PaintWorklet`** interface of the {{domxref('CSS Painting API','','',' ')}} programmatically generates an image where a CSS property expects a file. Access this interface through {{DOMxRef("CSS.paintWorklet")}}.
 
@@ -57,8 +58,8 @@ class CheckerboardPainter {
     // Use `ctx` as if it was a normal canvas
     const colors = ['red', 'green', 'blue'];
     const size = 32;
-    for(let y = 0; y < geom.height/size; y++) {
-      for(let x = 0; x < geom.width/size; x++) {
+    for (let y = 0; y < (geom.height / size); y++) {
+      for (let x = 0; x < (geom.width / size); x++) {
         const color = colors[(x + y) % colors.length];
         ctx.beginPath();
         ctx.fillStyle = color;

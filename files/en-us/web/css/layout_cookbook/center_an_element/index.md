@@ -14,6 +14,7 @@ browser-compat:
   - css.properties.align-items
   - css.properties.justify-content
 ---
+
 {{CSSRef}}
 
 In this recipe you will see how to center one box inside another. Centering both horizontally and vertically was difficult before flexbox, with the Box Alignment properties it is now straightforward.

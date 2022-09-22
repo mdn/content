@@ -6,8 +6,10 @@ tags:
   - Reference
   - SVG
   - SVG Text Content
+  - Deprecated
 browser-compat: svg.elements.tref
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The textual content for a {{SVGElement("text")}} [SVG](/en-US/docs/Web/SVG) element can be either character data directly embedded within the {{SVGElement("text")}} element or the character data content of a referenced element, where the referencing is specified with a **`<tref>`** element.

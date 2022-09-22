@@ -11,6 +11,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URLSearchParams.values
 ---
+
 {{APIRef("URL API")}}
 
 The **`values()`** method of the {{domxref("URLsearchParams")}}
@@ -22,7 +23,7 @@ objects.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
@@ -39,9 +40,9 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 The following example passes a URL search string to the `URLSearchParams` constructor, then uses the iterator returned by `values()` to print the values to the console.
 
 ```js
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
-for(var value of searchParams.values()) {
+for (const value of searchParams.values()) {
   console.log(value);
 }
 ```
@@ -56,7 +57,7 @@ value2
 This example does much the same as above, but first casts the iterator into an array.
 
 ```js
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 console.log(Array.from(searchParams.values()));
 ```

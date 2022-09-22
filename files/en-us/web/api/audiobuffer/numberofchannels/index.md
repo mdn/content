@@ -11,6 +11,7 @@ tags:
   - numberOfChannels
 browser-compat: api.AudioBuffer.numberOfChannels
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `numberOfChannels` property of the {{ domxref("AudioBuffer") }}
@@ -32,7 +33,7 @@ const channels = 2;
 const frameCount = audioCtx.sampleRate * 2.0;
 const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = () => {
   // Fill the buffer with white noise;
   // just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {
@@ -46,7 +47,7 @@ button.onclick = function() {
   }
 
   console.log(myArrayBuffer.numberOfChannels);
-}
+};
 ```
 
 ## Specifications

@@ -10,6 +10,7 @@ tags:
   - eval
 browser-compat: javascript.builtins.eval
 ---
+
 {{jsSidebar("Objects")}}
 
 > **Warning:** Executing JavaScript from a string is an enormous security
@@ -22,7 +23,7 @@ The **`eval()`** function evaluates JavaScript code represented as a string and 
 
 ## Syntax
 
-```js
+```js-nolint
 eval(string)
 ```
 
@@ -42,7 +43,7 @@ The completion value of evaluating the given code. If the completion value is em
 
 The argument of the `eval()` function is a string. It will evaluate the source string as a script body, which means both statements and expressions are allowed. It returns the completion value of the code. For expressions, it's the value the expression evaluates to. Many statements and declarations have completion values as well, but the result may be surprising (for example, the completion value of an assignment is the assigned value, but the completion value of [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) is undefined), so it's recommended to not rely on statements' completion values.
 
-There are two modes of `eval()` calls: _direct_ eval and _indirect_ eval. Direct eval only has one form: `eval(...)` (the invoked function's name is `eval` and its value is the global `eval` function). Everything else, including invoking it via an aliased variable, via a member access or other expression, or through the optional chaining [`?.`](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator, is indirect.
+There are two modes of `eval()` calls: _direct_ eval and _indirect_ eval. Direct eval only has one form: `eval( )` (the invoked function's name is `eval` and its value is the global `eval` function). Everything else, including invoking it via an aliased variable, via a member access or other expression, or through the optional chaining [`?.`](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator, is indirect.
 
 ```js
 // Indirect call using the comma operator to return eval
@@ -64,83 +65,83 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
 
 - Indirect eval works in the global scope rather than the local scope, and the code being evaluated doesn't have access to local variables within the scope where it's being called.
 
-    ```js
-    function test() {
-      const x = 2, y = 4;
-      // Direct call, uses local scope
-      console.log(eval('x + y')); // Result is 6
-      console.log(eval?.('x + y')); // Uses global scope, throws because x is undefined
-    }
-    ```
+  ```js
+  function test() {
+    const x = 2, y = 4;
+    // Direct call, uses local scope
+    console.log(eval('x + y')); // Result is 6
+    console.log(eval?.('x + y')); // Uses global scope, throws because x is undefined
+  }
+  ```
 
 - Indirect `eval` would not inherit the strictness of the surrounding context, and would only be in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) if the source string itself has a `"use strict"` directive.
 
-    ```js
-    function strictContext() {
-      "use strict";
-      eval?.(`with(Math) console.log(PI);`);
-    }
-    function strictContextStrictEval() {
-      "use strict";
-      eval?.(`"use strict"; with(Math) console.log(PI);`);
-    }
-    strictContext(); // logs 3.141592653589793
-    strictContextStrictEval(); // throws a SyntaxError because the source string is in strict mode
-    ```
+  ```js
+  function strictContext() {
+    "use strict";
+    eval?.(`with(Math) console.log(PI);`);
+  }
+  function strictContextStrictEval() {
+    "use strict";
+    eval?.(`"use strict"; with(Math) console.log(PI);`);
+  }
+  strictContext(); // logs 3.141592653589793
+  strictContextStrictEval(); // throws a SyntaxError because the source string is in strict mode
+  ```
 
-    On the other hand, direct eval inherits the strictness of the invoking context.
+  On the other hand, direct eval inherits the strictness of the invoking context.
 
-    ```js
-    function nonStrictContext() {
-      eval(`with(Math) console.log(PI);`);
-    }
-    function strictContext() {
-      "use strict";
-      eval(`with(Math) console.log(PI);`);
-    }
-    nonStrictContext(); // logs 3.141592653589793
-    strictContext(); // throws a SyntaxError because it's in strict mode
-    ```
+  ```js
+  function nonStrictContext() {
+    eval(`with(Math) console.log(PI);`);
+  }
+  function strictContext() {
+    "use strict";
+    eval(`with(Math) console.log(PI);`);
+  }
+  nonStrictContext(); // logs 3.141592653589793
+  strictContext(); // throws a SyntaxError because it's in strict mode
+  ```
 
 - `var`-declared variables and [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function) would go into the surrounding scope if the source string is not interpreted in strict mode — for indirect eval, they become global variables. If it's a direct eval in a strict mode context, or if the `eval` source string itself is in strict mode, then `var` and function declarations do not "leak" into the surrounding scope.
 
-    ```js
-    // Neither context nor source string is strict,
-    // so var creates a variable in the surrounding scope
-    eval("var a = 1;");
-    console.log(a); // 1
-    // Context is not strict, but eval source is strict,
-    // so b is scoped to the evaluated script
-    eval("'use strict'; var b = 1;");
-    console.log(b); // ReferenceError: b is not defined
+  ```js
+  // Neither context nor source string is strict,
+  // so var creates a variable in the surrounding scope
+  eval("var a = 1;");
+  console.log(a); // 1
+  // Context is not strict, but eval source is strict,
+  // so b is scoped to the evaluated script
+  eval("'use strict'; var b = 1;");
+  console.log(b); // ReferenceError: b is not defined
 
-    function strictContext() {
-      "use strict";
-      // Context is strict, but this is indirect and the source
-      // string is not strict, so c is still global
-      eval?.("var c = 1;");
-      // Direct eval in a strict context, so d is scoped
-      eval("var d = 1;");
-    }
-    strictContext();
-    console.log(c); // 1
-    console.log(d); // ReferenceError: d is not defined
-    ```
+  function strictContext() {
+    "use strict";
+    // Context is strict, but this is indirect and the source
+    // string is not strict, so c is still global
+    eval?.("var c = 1;");
+    // Direct eval in a strict context, so d is scoped
+    eval("var d = 1;");
+  }
+  strictContext();
+  console.log(c); // 1
+  console.log(d); // ReferenceError: d is not defined
+  ```
 
-    [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declarations within the evaluated string are always scoped to that script.
+  [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declarations within the evaluated string are always scoped to that script.
 
 - Direct eval may have access to additional contextual expressions. For example, in a function's body, one can use [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target):
 
-    ```js
-    function Ctor() {
-      eval("console.log(new.target)");
-    }
-    new Ctor(); // [Function: Ctor]
-    ```
+  ```js
+  function Ctor() {
+    eval("console.log(new.target)");
+  }
+  new Ctor(); // [Function: Ctor]
+  ```
 
 In strict mode, declaring a variable named `eval` or re-assigning `eval` is a {{jsxref("SyntaxError")}}.
 
-```js
+```js example-bad
 "use strict";
 
 const eval = 1; // SyntaxError: Unexpected eval or arguments in strict mode
@@ -190,7 +191,7 @@ the [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) c
 
 ```js
 function looseJsonParse(obj) {
-  return eval("(" + obj + ")");
+  return eval(`(${obj})`);
 }
 console.log(looseJsonParse(
   "{a:(4-1), b:function(){}, c:new Date()}"
@@ -201,7 +202,7 @@ Better code without `eval()`:
 
 ```js
 function looseJsonParse(obj) {
-  return Function('"use strict";return (' + obj + ')')();
+  return Function(`"use strict";return (${obj})`)();
 }
 console.log(looseJsonParse(
   "{a:(4-1), b:function(){}, c:new Date()}"
@@ -222,7 +223,7 @@ function Date(n) {
   return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
 }
 function looseJsonParse(obj) {
-  return eval("(" + obj + ")");
+  return eval(`(${obj})`);
 }
 console.log(looseJsonParse(
   "{a:(4-1), b:function(){}, c:new Date()}"
@@ -243,7 +244,7 @@ function Date(n) {
   return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
 }
 function runCodeWithDateFunction(obj) {
-  return Function('"use strict";return (' + obj + ')')()(
+  return Function(`"use strict";return (${obj})`)()(
     Date
   );
 }
@@ -276,11 +277,11 @@ return"Monday Tuesday Wednesday Thursday Friday Saturday Sunday".split(" ")[a%7|
 There are also additional safer (and faster!) alternatives to `eval()` or
 `Function()` for common use-cases.
 
-The difference between `eval()` and `Function()` is that the source string passed to `Function()` is parsed as function body, not as a script. There are a few nuances — for example, you can use `return` statements in a function body but not in a script. In case you intend to parse the content as a script, using indirect eval and forcing strict mode can be another secure alternative.
+The difference between `eval()` and `Function()` is that the source string passed to `Function()` is parsed as function body, not as a script. There are a few nuances — for example, you can use `return` statements in a function body but not in a script. In case you intend to parse the content as a script, using indirect eval and forcing strict mode can be another secure alternative.
 
 ```js
 function looseJsonParse(obj) {
-  return eval?.("'use strict';(" + obj + ")");
+  return eval?.(`'use strict';(${obj})`);
 }
 console.log(looseJsonParse(
   "{a:(4-1), b:function(){}, c:new Date()}"
@@ -364,11 +365,11 @@ and objects' properties, and so on. Many DOM APIs are designed with this in mind
 can (and should) write:
 
 ```js
-// instead of setTimeout(" ... ", 1000) use:
-setTimeout(function() { /* ... */ }, 1000);
+// instead of setTimeout(" … ", 1000) use:
+setTimeout(function() { /* … */ }, 1000);
 
-// instead of elt.setAttribute("onclick", "...") use:
-elt.addEventListener('click', function() { /* ... */ } , false);
+// instead of elt.setAttribute("onclick", "…") use:
+elt.addEventListener('click', function() { /* … */ } , false);
 ```
 
 [Closures](/en-US/docs/Web/JavaScript/Closures) are also helpful as a way to
@@ -413,16 +414,16 @@ eval(z);           // returns 42
 `eval()` returns the completion value of statements. For `if`, it would be the last expression or statement evaluated.
 
 ```js
-const str = 'if ( a ) { 1 + 1; } else { 1 + 2; }';
-const a = true;
-const b = eval(str);  // returns 2
+const str = 'if (a) { 1 + 1 } else { 1 + 2 }';
+let a = true;
+let b = eval(str);  // returns 2
 
-console.log('b is : ' + b);
+console.log(`b is: ${b}`);
 
 a = false;
 b = eval(str);  // returns 3
 
-console.log('b is : ' + b);
+console.log(`b is: ${b}`);
 ```
 
 The following example uses `eval()` to evaluate the string `str`.

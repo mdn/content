@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once per each key/value
@@ -19,23 +20,23 @@ pair in the `Map` object, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-forEach(() => { /* ... */ } )
-forEach((value) => { /* ... */ } )
-forEach((value, key) => { /* ... */ } )
-forEach((value, key, map) => { /* ... */ } )
+forEach(() => { /* … */ } )
+forEach((value) => { /* … */ } )
+forEach((value, key) => { /* … */ } )
+forEach((value, key, map) => { /* … */ } )
 
 // Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function() { /* ... */ })
-forEach(function(value) { /* ... */ })
-forEach(function(value, key) { /* ... */ })
-forEach(function(value, key, map) { /* ... */ })
-forEach(function(value, key, map) { /* ... */ }, thisArg)
+forEach(function() { /* … */ })
+forEach(function(value) { /* … */ })
+forEach(function(value, key) { /* … */ })
+forEach(function(value, key, map) { /* … */ })
+forEach(function(value, key, map) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -88,9 +89,9 @@ The following code logs a line for each element in an `Map` object:
 
 ```js
 function logMapElements(value, key, map) {
-    console.log(`map.get('${key}') = ${value}`)
+  console.log(`map.get('${key}') = ${value}`);
 }
-new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)
+new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements);
 // logs:
 // "map.get('foo') = 3"
 // "map.get('bar') = [object Object]"

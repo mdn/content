@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.allSettled
 ---
+
 {{JSRef}}
 
 The **`Promise.allSettled()`** method returns a promise that
@@ -29,8 +30,8 @@ reject upon any of them rejecting.
 
 ## Syntax
 
-```js
-Promise.allSettled(iterable);
+```js-nolint
+Promise.allSettled(iterable)
 ```
 
 ### Parameters
@@ -58,18 +59,16 @@ reflects what value each promise was fulfilled (or rejected) with.
 
 ## Examples
 
-### Using Promise.allSettled
-
-#### {{JSxRef("Promise.then", "Promise.prototype.then()")}}
+### Using Promise.allSettled() with Promise.prototype.then()
 
 ```js
 Promise.allSettled([
   Promise.resolve(33),
-  new Promise(resolve => setTimeout(() => resolve(66), 0)),
+  new Promise((resolve) => setTimeout(() => resolve(66), 0)),
   99,
   Promise.reject(new Error('an error'))
 ])
-.then(values => console.log(values));
+.then((values) => console.log(values));
 
 // [
 //   {status: "fulfilled", value: 33},
@@ -79,12 +78,12 @@ Promise.allSettled([
 // ]
 ```
 
-#### {{jsxref("Operators/await", "await")}}
+### Using Promise.allSettled() with await
 
 ```js
 const values = await Promise.allSettled([
   Promise.resolve(33),
-  new Promise(resolve => setTimeout(() => resolve(66), 0)),
+  new Promise((resolve) => setTimeout(() => resolve(66), 0)),
   99,
   Promise.reject(new Error('an error'))
 ])

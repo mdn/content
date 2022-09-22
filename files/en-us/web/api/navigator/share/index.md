@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.Navigator.share
 ---
+
 {{APIRef("Web Share API")}}{{securecontext_header}}
 
 The **`navigator.share()`** method of the [Web Share API](/en-US/docs/Web/API/Web_Share_API) invokes the native sharing mechanism of the device to share data such as text, URLs, or files. The available _share targets_ depend on the device, but might include the clipboard, contacts and email applications, websites, Bluetooth, etc.
@@ -21,7 +22,7 @@ On Windows this happens when the share popup is launched, while on Android the p
 
 ## Syntax
 
-```js
+```js-nolint
 navigator.share(data)
 ```
 
@@ -121,7 +122,7 @@ The following is a list of usually shareable file types. However, you should alw
 ### Sharing a URL
 
 The example below shows a button click invoking the Web Share API to share MDN's URL.
-This is taken from our [Web share test](https://mdn.github.io/dom-examples/web-share/) ([see the source code](https://github.com/mdn/dom-examples/blob/master/web-share/index.html)).
+This is taken from our [Web share test](https://mdn.github.io/dom-examples/web-share/) ([see the source code](https://github.com/mdn/dom-examples/blob/main/web-share/index.html)).
 
 #### HTML
 
@@ -147,10 +148,10 @@ const resultPara = document.querySelector('.result');
 // Share must be triggered by "user activation"
 btn.addEventListener('click', async () => {
   try {
-    await navigator.share(shareData)
-    resultPara.textContent = 'MDN shared successfully'
-  } catch(err) {
-    resultPara.textContent = 'Error: ' + err
+    await navigator.share(shareData);
+    resultPara.textContent = 'MDN shared successfully';
+  } catch (err) {
+    resultPara.textContent = `Error: ${err}`;
   }
 });
 ```
@@ -170,7 +171,7 @@ To share files, first test for and call {{domxref("navigator.canShare()")}}. The
 ```html
 <div>
   <label for="files">Select images to share:</label>
-  <input id="files" type="file" accept="image/*" multiple>
+  <input id="files" type="file" accept="image/*" multiple />
 </div>
 <button id="share" type="button">Share your images!</button>
 <output id="output"></output>

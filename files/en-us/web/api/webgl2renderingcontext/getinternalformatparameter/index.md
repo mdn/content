@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.getInternalformatParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getInternalformatParameter()`**
@@ -18,7 +19,7 @@ information about implementation-dependent support for internal formats.
 
 ## Syntax
 
-```js
+```js-nolint
 getInternalformatParameter(target, internalformat, pname)
 ```
 
@@ -53,8 +54,11 @@ Depends on the requested information (as specified with `pname`). It is an
 ## Examples
 
 ```js
-var samples = gl.getInternalformatParameter(gl.RENDERBUFFER,
-                                            gl.RGBA8, gl.SAMPLES);
+const samples = gl.getInternalformatParameter(
+  gl.RENDERBUFFER,
+  gl.RGBA8,
+  gl.SAMPLES
+);
 ```
 
 ## Specifications

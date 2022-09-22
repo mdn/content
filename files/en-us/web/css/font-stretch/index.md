@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-stretch
 ---
+
 {{CSSRef}}
 
 The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
@@ -102,27 +103,27 @@ The table below demonstrates the effect of supplying various different percentag
   <tbody>
     <tr>
       <th scope="row">Helvetica Neue</th>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 50%" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 62.5%" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 75%" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 87.5%" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 100%" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 112.5%" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 125%" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 150%" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in Helvetica Neue set at 200%" src="screenshot_2018-06-06_example_page1.png" /></td>
     </tr>
     <tr>
       <th scope="row">League Mono Variable</th>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page2.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page3.png" /></td>
-      <td><img alt="" src="l-100.png" /></td>
-      <td><img alt="" src="l-112.5.png" /></td>
-      <td><img alt="" src="l-125.png" /></td>
-      <td><img alt="" src="l-150.png" /></td>
-      <td><img alt="" src="l-200.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 50%" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 62.5%" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 75%" src="screenshot_2018-06-06_example_page2.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 87.5%" src="screenshot_2018-06-06_example_page3.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 100%" src="l-100.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 112.5%" src="l-112.5.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 125%" src="l-125.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 150%" src="l-150.png" /></td>
+      <td><img alt="Example use of font-stretch property on the letter e in League Mono Variable set at 200%" src="l-200.png" /></td>
     </tr>
   </tbody>
 </table>

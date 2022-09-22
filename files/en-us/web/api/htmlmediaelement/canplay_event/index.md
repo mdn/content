@@ -10,6 +10,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.canplay_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `canplay` event is fired when the user agent can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
@@ -21,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('canplay', event => { });
+addEventListener('canplay', (event) => { });
 
-oncanplay = event => { };
+oncanplay = (event) => { };
 ```
 
 ## Event type

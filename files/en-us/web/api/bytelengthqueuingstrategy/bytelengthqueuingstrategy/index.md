@@ -6,12 +6,12 @@ tags:
   - API
   - ByteLengthQueuingStrategy
   - Constructor
-  - Experimental
   - Reference
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy()`**
 constructor creates and returns a `ByteLengthQueuingStrategy` object
@@ -19,7 +19,7 @@ instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new ByteLengthQueuingStrategy(highWaterMark)
 ```
 
@@ -43,19 +43,22 @@ None.
 ```js
 const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
-const readableStream = new ReadableStream({
-  start(controller) {
-    // …
+const readableStream = new ReadableStream(
+  {
+    start(controller) {
+      // …
+    },
+    pull(controller) {
+      // …
+    },
+    cancel(err) {
+      console.log("stream error:", err);
+    },
   },
-  pull(controller) {
-    // …
-  },
-  cancel(err) {
-    console.log("stream error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
-var size = queuingStrategy.size(chunk);
+const size = queuingStrategy.size(chunk);
 ```
 
 ## Specifications

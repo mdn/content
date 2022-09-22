@@ -13,6 +13,7 @@ tags:
   - onblur
 browser-compat: api.Element.blur_event
 ---
+
 {{APIRef}}
 
 The **`blur`** event fires when an element has lost focus. The main difference between this event and {{domxref("Element/focusout_event", "focusout")}} is that `focusout` [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) while `blur` does not.
@@ -26,14 +27,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('blur', event => { });
+addEventListener('blur', (event) => { });
 
-onblur = event => { };
+onblur = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 
@@ -52,8 +53,8 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <input type="text" placeholder="text input" />
+  <input type="password" placeholder="password" />
 </form>
 ```
 
@@ -77,14 +78,14 @@ password.addEventListener('blur', (event) => {
 
 ### Event delegation
 
-There are two ways of implementing event delegation for this event: by using the {{Event("focusout")}} event, or by setting the `useCapture` parameter of {{domxref("EventTarget.addEventListener()", "addEventListener()")}} to `true`.
+There are two ways of implementing event delegation for this event: by using the {{domxref("Element/focusout_event", "focusout")}} event, or by setting the `useCapture` parameter of {{domxref("EventTarget.addEventListener()", "addEventListener()")}} to `true`.
 
 #### HTML
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <input type="text" placeholder="text input" />
+  <input type="password" placeholder="password" />
 </form>
 ```
 

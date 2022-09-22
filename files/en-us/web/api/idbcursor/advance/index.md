@@ -13,6 +13,7 @@ tags:
   - advance
 browser-compat: api.IDBCursor.advance
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`advance()`** method of the {{domxref("IDBCursor")}}
@@ -23,7 +24,7 @@ its position forward.
 
 ## Syntax
 
-```js
+```js-nolint
 advance(count)
 ```
 
@@ -57,7 +58,7 @@ every other result will be displayed. `advance()` works in a similar way to
 a time, not just always go onto the next record.
 
 Note that in each iteration of the loop, you can grab
-data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
+data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function advanceResult() {
@@ -65,11 +66,11 @@ function advanceResult() {
   const transaction = db.transaction(['rushAlbumList'], "readonly");
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
       cursor.advance(2);
     } else {

@@ -13,6 +13,7 @@ tags:
   - theme manifest
 browser-compat: webextensions.manifest.theme_experiment
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

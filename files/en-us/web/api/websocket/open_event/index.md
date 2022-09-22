@@ -10,6 +10,7 @@ tags:
   - open
 browser-compat: api.WebSocket.open_event
 ---
+
 {{APIRef}}
 
 The `open` event is fired when a connection with a `WebSocket` is opened.
@@ -19,9 +20,9 @@ The `open` event is fired when a connection with a `WebSocket` is opened.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('open', event => { })
+addEventListener('open', (event) => { })
 
-onopen = event => { }
+onopen = (event) => { }
 ```
 
 ## Event type

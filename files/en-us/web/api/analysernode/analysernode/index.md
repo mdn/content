@@ -12,13 +12,14 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.AnalyserNode
 ---
+
 {{APIRef("'Web Audio API'")}}
 
 The **`AnalyserNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("AnalyserNode")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new AnalyserNode(context)
 new AnalyserNode(context, options)
 ```
@@ -28,6 +29,7 @@ new AnalyserNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}} or {{domxref("OfflineAudioContext")}}.
 - `options` {{optional_inline}}
+
   - : An object with the following properties, all optional:
 
     - `fftSize`

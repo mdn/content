@@ -3,8 +3,8 @@ title: Algorithm
 slug: Glossary/Algorithm
 tags:
   - CodingScripting
-  - Glossary
 ---
+
 An algorithm is a self-contained series of instructions to perform a function.
 
 In other words, an algorithm is a means of describing a way to solve a problem so that it can be solved repeatedly, by humans or machines. Computer scientists compare the efficiency of algorithms through the concept of "Algorithmic Complexity" or "Big O" notation.
@@ -20,6 +20,6 @@ There are also Machine Learning algorithms such as Linear Regression, Logistic R
 
 ## See also
 
-- {{Interwiki("wikipedia", "Algorithm", "Algorithm")}} on Wikipedia
+- [Algorithm](https://en.wikipedia.org/wiki/Algorithm) on Wikipedia
 - [Explanations of sorting algorithms](https://www.toptal.com/developers/sorting-algorithms)
 - [Explanations of algorithmic complexity](https://www.bigocheatsheet.com/)

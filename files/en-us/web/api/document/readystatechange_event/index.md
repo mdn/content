@@ -1,5 +1,5 @@
 ---
-title: 'Document: readystatechange event'
+title: "Document: readystatechange event"
 slug: Web/API/Document/readystatechange_event
 page-type: web-api-event
 tags:
@@ -9,6 +9,7 @@ tags:
   - interactive
 browser-compat: api.Document.readystatechange_event
 ---
+
 {{APIRef}}
 
 The **`readystatechange`** event is fired when the {{domxref("Document.readyState", "readyState")}} attribute of a document has changed.
@@ -20,9 +21,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('readystatechange', event => { });
+addEventListener('readystatechange', (event) => { });
 
-onreadystatechange = event => { };
+onreadystatechange = (event) => { };
 ```
 
 ## Event type
@@ -41,8 +42,13 @@ A generic {{domxref("Event")}}.
 </div>
 
 <div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+  <label for="eventLog">Event log:</label>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
 </div>
 ```
 
@@ -69,7 +75,8 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -78,7 +85,7 @@ label, button {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const log = document.querySelector('.event-log-contents');
@@ -86,21 +93,21 @@ const reload = document.querySelector('#reload');
 
 reload.addEventListener('click', () => {
   log.textContent ='';
-  window.setTimeout(() => {
+  setTimeout(() => {
       window.location.reload(true);
   }, 200);
 });
 
 window.addEventListener('load', (event) => {
-    log.textContent = log.textContent + 'load\n';
+    log.textContent = `${log.textContent}load\n`;
 });
 
 document.addEventListener('readystatechange', (event) => {
-    log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+    log.textContent = `${log.textContent}readystate: ${document.readyState}\n`;
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent = log.textContent + `DOMContentLoaded\n`;
+    log.textContent = `${log.textContent}DOMContentLoaded\n`;
 });
 ```
 

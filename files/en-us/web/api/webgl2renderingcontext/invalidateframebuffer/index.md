@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.invalidateFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.invalidateFramebuffer()`** method
@@ -18,7 +19,7 @@ of attachments in a framebuffer.
 
 ## Syntax
 
-```js
+```js-nolint
 invalidateFramebuffer(target, attachments)
 ```
 

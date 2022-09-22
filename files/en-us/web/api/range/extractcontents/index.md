@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.extractContents
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.extractContents()`** method moves contents of the
@@ -25,7 +26,7 @@ document fragment valid.
 
 ## Syntax
 
-```js
+```js-nolint
 extractContents()
 ```
 
@@ -71,12 +72,12 @@ body {
 p {
   border: 1px solid;
   font-size: 2em;
-  padding: .3em;
+  padding: 0.3em;
 }
 
 button {
   font-size: 1.2em;
-  padding: .5em;
+  padding: 0.5em;
   pointer-events: auto;
 }
 ```
@@ -88,7 +89,7 @@ const list1 = document.getElementById('list1');
 const list2 = document.getElementById('list2');
 const button = document.getElementById('swap');
 
-button.addEventListener('click', e => {
+button.addEventListener('click', (e) => {
   selection = window.getSelection();
 
   for (let i = 0; i < selection.rangeCount; i++) {

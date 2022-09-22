@@ -8,9 +8,11 @@ tags:
   - Reference
   - tracks
   - ImageDecoder
+  - Experimental
 browser-compat: api.ImageDecoder.tracks
 ---
-{{securecontext_header}}{{APIRef("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`tracks`** read-only property of the {{domxref("ImageDecoder")}} interface returns a list of the tracks in the encoded image data.
 

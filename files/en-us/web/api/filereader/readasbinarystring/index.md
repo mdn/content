@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FileReader.readAsBinaryString
 ---
+
 {{APIRef("File API")}}
 
 The `readAsBinaryString` method is used to start reading the contents of the
@@ -25,7 +26,7 @@ Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
 
 ## Syntax
 
-```js
+```js-nolint
 readAsBinaryString(blob)
 ```
 
@@ -55,10 +56,10 @@ ctx.beginPath();
 ctx.arc(width/2, height/2, width/2 - width/10, 0, Math.PI*2);
 ctx.stroke();
 
-canvas.toBlob(function (blob) {
+canvas.toBlob((blob) => {
   const reader = new FileReader();
 
-  reader.onload = function () {
+  reader.onload = () => {
     console.log(reader.result);
   }
 

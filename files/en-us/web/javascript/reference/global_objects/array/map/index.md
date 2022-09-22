@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.map
 ---
+
 {{JSRef}}
 
 The **`map()`** method **creates
@@ -21,21 +22,21 @@ every element in the calling array.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-map((element) => { /* ... */ })
-map((element, index) => { /* ... */ })
-map((element, index, array) => { /* ... */ })
+map((element) => { /* … */ })
+map((element, index) => { /* … */ })
+map((element, index, array) => { /* … */ })
 
 // Callback function
 map(callbackFn)
 map(callbackFn, thisArg)
 
 // Inline callback function
-map(function(element) { /* ... */ })
-map(function(element, index) { /* ... */ })
-map(function(element, index, array){ /* ... */ })
-map(function(element, index, array) { /* ... */ }, thisArg)
+map(function(element) { /* … */ })
+map(function(element, index) { /* … */ })
+map(function(element, index, array){ /* … */ })
+map(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -133,9 +134,11 @@ The following code takes an array of objects and creates a new array containing 
 newly reformatted objects.
 
 ```js
-const kvArray = [{ key: 1, value: 10 },
-                 { key: 2, value: 20 },
-                 { key: 3, value: 30 }];
+const kvArray = [
+  { key: 1, value: 10 },
+  { key: 2, value: 20 },
+  { key: 3, value: 30 },
+];
 
 const reformattedArray = kvArray.map(({ key, value}) => ({ [key]: value }));
 
@@ -163,8 +166,7 @@ const doubles = numbers.map((num) => num * 2);
 
 ### Using map generically
 
-This example shows how to use map on a {{jsxref("String")}} to get an array of bytes in
-the ASCII encoding representing the character values:
+This example shows how to use map on a {{jsxref("String")}} to get an array of numbers representing the string's characters in UTF-16 code units:
 
 ```js
 const map = Array.prototype.map;
@@ -220,9 +222,9 @@ Here is a concise example of the iteration steps:
 
 ```js
 // parseInt(string, radix) -> map(parseInt(value, index))
-/*  first iteration  (index is 0): */ parseInt("1", 0);  // 1
-/*  second iteration (index is 1): */ parseInt("2", 1);  // NaN
-/*  third iteration  (index is 2): */ parseInt("3", 2);  // NaN
+/* first iteration  (index is 0): */ parseInt("1", 0);  // 1
+/* second iteration (index is 1): */ parseInt("2", 1);  // NaN
+/* third iteration  (index is 2): */ parseInt("3", 2);  // NaN
 ```
 
 Then let's talk about solutions.

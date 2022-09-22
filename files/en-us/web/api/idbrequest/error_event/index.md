@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.IDBRequest.error_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `error` handler is executed when an error caused a request to fail.
@@ -20,9 +21,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('error', event => { });
+addEventListener('error', (event) => { });
 
-onerror = event => { };
+onerror = (event) => { };
 ```
 
 ## Event type
@@ -37,7 +38,7 @@ This example opens a database and tries to add a record, listening for the `erro
 // Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.addEventListener('upgradeneeded', event => {
+DBOpenRequest.addEventListener('upgradeneeded', (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
@@ -55,7 +56,7 @@ DBOpenRequest.addEventListener('upgradeneeded', event => {
   objectStore.createIndex('year', 'year', { unique: false });
 });
 
-DBOpenRequest.addEventListener('success', event => {
+DBOpenRequest.addEventListener('success', (event) => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
@@ -76,7 +77,7 @@ The same example, using the `onerror` property instead of `addEventListener()`:
 // Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
@@ -94,7 +95,7 @@ DBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data

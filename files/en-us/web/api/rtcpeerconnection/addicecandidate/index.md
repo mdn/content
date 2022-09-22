@@ -16,6 +16,7 @@ tags:
   - addIceCandidate
 browser-compat: api.RTCPeerConnection.addIceCandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 When a web site or app using {{domxref("RTCPeerConnection")}} receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling **`RTCPeerConnection.addIceCandidate()`**.
@@ -32,7 +33,7 @@ This is covered in more detail in the articles [WebRTC connectivity](/en-US/docs
 
 ## Syntax
 
-```js
+```js-nolint
 addIceCandidate(candidate)
 addIceCandidate(candidate, successCallback)
 addIceCandidate(candidate, successCallback, failureCallback) // deprecated
@@ -166,7 +167,7 @@ channel.
 ```js
 // This example assumes that the other peer is using a signaling channel as follows:
 //
-// pc.onicecandidate = event => {
+// pc.onicecandidate = (event) => {
 //   if (event.candidate) {
 //     signalingChannel.send(JSON.stringify({ice: event.candidate})); // "ice" is arbitrary
 //   } else {
@@ -174,7 +175,7 @@ channel.
 //   }
 // }
 
-signalingChannel.onmessage = receivedString => {
+signalingChannel.onmessage = (receivedString) => {
   const message = JSON.parse(receivedString);
   if (message.ice) {
     // A typical value of ice here might look something like this:
@@ -183,8 +184,8 @@ signalingChannel.onmessage = receivedString => {
     //
     // Pass the whole thing to addIceCandidate:
 
-    pc.addIceCandidate(message.ice).catch(e => {
-      console.log("Failure during addIceCandidate(): " + e.name);
+    pc.addIceCandidate(message.ice).catch((e) => {
+      console.log(`Failure during addIceCandidate(): ${e.name}`);
     });
   } else {
     // handle other things you might be signaling, like sdp

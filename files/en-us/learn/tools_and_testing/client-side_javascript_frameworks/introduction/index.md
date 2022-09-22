@@ -8,6 +8,7 @@ tags:
   - Learn
   - client-side
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
@@ -141,7 +142,7 @@ This button doesn't do anything yet, but it will later once we decide to impleme
 ```js
 function renderTodoList() {
   const frag = document.createDocumentFragment();
-  state.tasks.forEach(task => {
+  state.tasks.forEach((task) => {
     const item = buildTodoItemEl(task.id, task.name);
     frag.appendChild(item);
   });
@@ -306,7 +307,7 @@ Popular examples include [Wordpress](https://wordpress.com/), [Joomla](https://w
 
 ### Server-side rendering
 
-**Server-side rendering** (**SSR**) is an application architecture in which it is the *server*'s job to render a single-page application. This is the opposite of _client-side rendering_, which is the most common and most straightforward way to build a JavaScript application. Server-side rendering is easier on the client's device, because you're only sending a rendered HTML file to them, but it can be difficult to set up compared to a client-side-rendered application.
+**Server-side rendering** (**SSR**) is an application architecture in which it is the _server_'s job to render a single-page application. This is the opposite of _client-side rendering_, which is the most common and most straightforward way to build a JavaScript application. Server-side rendering is easier on the client's device, because you're only sending a rendered HTML file to them, but it can be difficult to set up compared to a client-side-rendered application.
 
 All of the frameworks covered in this module support server-side rendering as well as client-side rendering. Check out [Next.js](https://nextjs.org/) for React, [Nuxt.js](https://nuxtjs.org/) for Vue (yes, it is confusing, and no, these projects are not related!), [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) for Ember, and [Angular Universal](https://angular.io/guide/universal) for Angular.
 

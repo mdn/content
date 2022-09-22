@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: mathml.global_attributes.scriptlevel
 ---
+
 {{MathMLRef("Global_attributes")}}
 
 The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets the [math-depth](/en-US/docs/Web/CSS/math-depth) of a MathML element. It allows overriding rules from the [user agent stylesheet](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets) that define automatic calculation of [font-size](/en-US/docs/Web/CSS/font-size) within MathML formulas.
@@ -43,18 +44,11 @@ The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Global_attribute
 If `<U>` is an unsigned [integer](/en-US/docs/Web/CSS/integer) (i.e. with prefix sign symbol removed) then the accepted values are:
 
 - `<U>`
-     -: Sets the `math-depth` to value `<U>`. This will set `font-size` of the
-        element to the same value as the one of elements at the specified depth.
+  - : Sets the `math-depth` to value `<U>`. This will set `font-size` of the element to the same value as the one of elements at the specified depth.
 - `+<U>`
-     -: Sets the `math-depth` to value `add(<U>)`. This will scale down
-        `font-size` on the element `<U>` times.
+  - : Sets the `math-depth` to value `add(<U>)`. This will scale down `font-size` on the element `<U>` times.
 - `-<U>`
-      -: Sets the `math-depth` to value `add(-<U>)`. This will scale up
-        `font-size` on the element `<U>` times.
-
-## Notes on MathML versions
-
-- MathML Core relies on `math-depth` to implement the `scriptlevel` attribute, but implementations of older MathML versions may follow a different approach to implement similar side-effect on the `font-size` within mathematical formulas.
+  - : Sets the `math-depth` to value `add(-<U>)`. This will scale up `font-size` on the element `<U>` times.
 
 ## Specifications
 

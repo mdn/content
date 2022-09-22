@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.volume
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`volume`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the volume that the utterance will be spoken at.
@@ -38,13 +39,13 @@ const voices = synth.getVoices();
 
 // ...
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(let i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  for (let i = 0; i < voices.length ; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }

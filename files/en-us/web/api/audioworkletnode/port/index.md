@@ -11,7 +11,8 @@ tags:
   - port
 browser-compat: api.AudioWorkletNode.port
 ---
-{{APIRef("Web Audio API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Audio API")}}
 
 The read-only **`port`** property of the
 {{domxref("AudioWorkletNode")}} interface returns the associated

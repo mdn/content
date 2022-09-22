@@ -16,6 +16,7 @@ tags:
   - width
 browser-compat: css.properties.max-block-size
 ---
+
 {{CSSRef}}
 
 The **`max-block-size`** [CSS](/en-US/docs/Web/CSS) property specifies the maximum size of an element in the direction opposite that of the writing direction as specified by {{cssxref("writing-mode")}}. That is, if the writing direction is horizontal, then `max-block-size` is equivalent to {{cssxref("max-height")}}; if the writing direction is vertical, `max-block-size` is the same as {{cssxref("max-width")}}.
@@ -94,7 +95,7 @@ The values of `writing-mode` affect the mapping of `max-block-size` to `max-widt
 
 ### Setting max-block-size with horizontal and vertical text
 
-In this example, the same text (the opening sentences from {{interwiki("wikipedia", "Herman Melville", "Herman Melville's")}} novel _{{interwiki("wikipedia", "Moby-Dick")}}_) is presented in both the `horizontal-tb` and `vertical-rl` writing modes.
+In this example, the same text (the opening sentences from [Herman Melville's](https://en.wikipedia.org/wiki/Herman_Melville) novel _[Moby-Dick](https://en.wikipedia.org/wiki/Moby-Dick)_) is presented in both the `horizontal-tb` and `vertical-rl` writing modes.
 
 Everything else about the two boxes is identical, including the values used for {{cssxref("max-block-size")}}.
 

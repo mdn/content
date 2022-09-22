@@ -11,6 +11,7 @@ tags:
   - Response
 browser-compat: api.Response.body
 ---
+
 {{APIRef("Fetch")}}
 
 The **`body`** read-only property of the {{domxref("Response")}} interface is a {{domxref("ReadableStream")}} of the body contents.
@@ -33,8 +34,8 @@ const image = document.getElementById('target');
 // Fetch the original image
 fetch('./tortoise.png')
 // Retrieve its body as ReadableStream
-.then(response => response.body)
-.then(body => {
+.then((response) => response.body)
+.then((body) => {
   const reader = body.getReader();
 
   return new ReadableStream({
@@ -57,11 +58,11 @@ fetch('./tortoise.png')
     }
   })
 })
-.then(stream => new Response(stream))
-.then(response => response.blob())
-.then(blob => URL.createObjectURL(blob))
-.then(url => console.log(image.src = url))
-.catch(err => console.error(err));
+.then((stream) => new Response(stream))
+.then((response) => response.blob())
+.then((blob) => URL.createObjectURL(blob))
+.then((url) => console.log(image.src = url))
+.catch((err) => console.error(err));
 ```
 
 ## Specifications

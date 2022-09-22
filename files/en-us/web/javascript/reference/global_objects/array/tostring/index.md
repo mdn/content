@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -17,7 +18,7 @@ specified array and its elements.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -38,13 +39,6 @@ console.log(Array.prototype.toString.call({ join: () => 1 }));  // Logs 1
 ```
 
 JavaScript calls the `toString` method automatically when an array is to be represented as a text value or when an array is referred to in a string concatenation.
-
-### ECMAScript 5 semantics
-
-Starting in JavaScript 1.8.5 (Firefox 4), and consistent with ECMAScript 5th edition
-semantics, the `toString()` method is generic and can be used with any
-object. {{jsxref("Object.prototype.toString()")}} will be called, and the resulting
-value will be returned.
 
 ## Examples
 

@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.isExtensible
 ---
+
 {{JSRef}}
 
 The **`handler.isExtensible()`** method is a trap for
@@ -17,7 +18,7 @@ The **`handler.isExtensible()`** method is a trap for
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   isExtensible(target) {
   }
@@ -97,7 +98,7 @@ Object.isExtensible(p); // TypeError is thrown
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.isExtensible()")}}
 - {{jsxref("Reflect.isExtensible()")}}
 - {{jsxref("Reflect.preventExtensions()")}}

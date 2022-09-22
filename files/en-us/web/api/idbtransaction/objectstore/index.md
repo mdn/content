@@ -13,6 +13,7 @@ tags:
   - objectStore
 browser-compat: api.IDBTransaction.objectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`objectStore()`** method of the
@@ -27,7 +28,7 @@ transaction object, a different {{domxref("IDBObjectStore")}} instance is return
 
 ## Syntax
 
-```js
+```js-nolint
 objectStore(name)
 ```
 
@@ -63,7 +64,7 @@ let db;
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -82,11 +83,11 @@ function addData() {
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
-  transaction.oncomplete = event => {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
-  transaction.onerror = event => {
+  transaction.onerror = (event) => {
     note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
@@ -96,7 +97,7 @@ function addData() {
   // add our newItem object to the object store
   const objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = event => {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
     note.innerHTML += '<li>Request successful.</li>';

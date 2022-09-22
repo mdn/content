@@ -6,8 +6,9 @@ tags:
   - Functions
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 
 Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.
@@ -22,7 +23,7 @@ A **function definition** (also called a **function declaration**, or **function
 
 - The name of the function.
 - A list of parameters to the function, enclosed in parentheses and separated by commas.
-- The JavaScript statements that define the function, enclosed in curly brackets, `{...}`.
+- The JavaScript statements that define the function, enclosed in curly brackets, `{ /* … */ }`.
 
 For example, the following code defines a simple function named `square`:
 
@@ -116,8 +117,8 @@ In the following code, the function receives a function defined by a function ex
 ```js
 function map(f, a) {
   const result = [];
-  for (const v of a) {
-    result[i] = f(v);
+  for (let i = 0; i < a.length; i++) {
+    result[i] = f(a[i]);
   }
   return result;
 }
@@ -164,7 +165,7 @@ Functions must be _in scope_ when they are called, but the function declaration 
 
 ```js
 console.log(square(5));
-/* ... */
+// …
 function square(n) {
   return n * n;
 }
@@ -209,7 +210,7 @@ const e = factorial(5); // e gets the value 120
 
 There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime.
 
-It turns out that _functions are themselves objects_—and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) One of these, the {{jsxref("Function.apply", "apply()")}} method, can be used to achieve this goal.
+It turns out that _functions are themselves objects_ — and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) The [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) and [`apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) methods can be used to achieve this goal.
 
 ## Function scope
 
@@ -236,7 +237,7 @@ function getScore() {
   const num2 = 3;
 
   function add() {
-    return name + ' scored ' + (num1 + num2);
+    return `${name} scored ${num1 + num2}`;
   }
 
   return add();
@@ -299,7 +300,7 @@ However, some algorithms cannot be simple iterative loops. For example, getting 
 
 ```js
 function walkTree(node) {
-  if (node == null) {
+  if (node === null) {
     return;
   }
   // do something with node
@@ -320,9 +321,9 @@ function foo(i) {
   if (i < 0) {
     return;
   }
-  console.log('begin: ' + i);
+  console.log(`begin: ${i}`);
   foo(i - 1);
-  console.log('end: ' + i);
+  console.log(`end: ${i}`);
 }
 foo(3);
 
@@ -450,7 +451,7 @@ Also, since the inner function has access to the scope of the outer function, th
 const pet = function (name) {   // The outer function defines a variable called "name"
   const getName = function () {
     // The inner function has access to the "name" variable of the outer function
-    return name;             
+    return name;
   }
   return getName; // Return the inner function, thereby exposing it to outer scopes
 }
@@ -504,7 +505,7 @@ In the code above, the `name` variable of the outer function is accessible to th
 
 ```js
 const getCode = (function () {
-  const apiCode = '0]Eal(eh&2';    // A code we do not want outsiders to be able to modify...
+  const apiCode = '0]Eal(eh&2';    // A code we do not want outsiders to be able to modify…
 
   return function () {
     return apiCode;
@@ -572,13 +573,11 @@ See the {{jsxref("Function")}} object in the JavaScript reference for more infor
 
 ## Function parameters
 
-Starting with ECMAScript 2015, there are two new kinds of parameters: _default parameters_ and _rest parameters_.
+There are two special kinds of parameter syntax: _default parameters_ and _rest parameters_.
 
 ### Default parameters
 
 In JavaScript, parameters of functions default to `undefined`. However, in some situations it might be useful to set a different default value. This is exactly what default parameters do.
-
-#### Without default parameters (pre-ECMAScript 2015)
 
 In the past, the general strategy for setting defaults was to test parameter values in the body of the function and assign a value if they are `undefined`.
 
@@ -592,8 +591,6 @@ function multiply(a, b) {
 
 multiply(5); // 5
 ```
-
-#### With default parameters (post-ECMAScript 2015)
 
 With _default parameters_, a manual check in the function body is no longer necessary. You can put `1` as the default value for `b` in the function head:
 
@@ -624,7 +621,7 @@ console.log(arr); // [2, 4, 6]
 
 ## Arrow functions
 
-An [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (previously, and now incorrectly known as **fat arrow function**) has a shorter syntax compared to function expressions and does not have its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), [super](/en-US/docs/Web/JavaScript/Reference/Operators/super), or [new.target](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Arrow functions are always anonymous. See also this hacks.mozilla.org blog post: "[ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
+An [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (also called a _fat arrow_ to distinguish from a hypothetical `->` syntax in future JavaScript) has a shorter syntax compared to function expressions and does not have its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), or [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Arrow functions are always anonymous.
 
 Two factors influenced the introduction of arrow functions: _shorter functions_ and _non-binding_ of `this`.
 
@@ -649,7 +646,7 @@ const a3 = a.map((s) => s.length);
 console.log(a3); // logs [8, 6, 7, 9]
 ```
 
-### No separate `this`
+### No separate this
 
 Until arrow functions, every new function defined its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value (a new object in the case of a constructor, undefined in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) function calls, the base object if the function is called as an "object method", etc.). This proved to be less than ideal with an object-oriented style of programming.
 
@@ -710,7 +707,7 @@ JavaScript has several top-level, built-in functions:
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
   - : The global **`isFinite()`** function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : The **`isNaN()`** function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the `isNaN` function has [interesting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) rules; you may alternatively want to use {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015, or you can use [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) to determine if the value is Not-A-Number.
+  - : The **`isNaN()`** function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the `isNaN` function has [interesting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) rules; you may alternatively want to use {{jsxref("Number.isNaN()")}} to determine if the value is Not-A-Number.
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - : The **`parseFloat()`** function parses a string argument and returns a floating point number.
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}

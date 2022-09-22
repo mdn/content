@@ -12,6 +12,7 @@ tags:
   - Web
 browser-compat: css.types.shape
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 The **`<shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) defines the specific form (shape) of a region. The region represents the part of an element to which the {{cssxref("clip")}} property applies.
@@ -28,9 +29,9 @@ The `<shape>` data type is specified using the `rect()` function, which produces
 rect(top, right, bottom, left)
 ```
 
-#### Values
+### Values
 
-![](rect.png)
+![A graph showing top, right, bottom, and left, as described below. These define the rectangle's shape. The upper left corner is defined by the top and left values. The bottom right corner is defined by the bottom and right values.](rect.png)
 
 - _top_
   - : Is a {{cssxref("length")}} representing the offset for the top of the rectangle relative to the top border of the element's box.

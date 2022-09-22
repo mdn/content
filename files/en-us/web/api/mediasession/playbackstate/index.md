@@ -13,6 +13,7 @@ tags:
   - playbackState
 browser-compat: api.MediaSession.playbackState
 ---
+
 {{APIRef("Media Session API")}}
 
 The **`playbackState`** property of the
@@ -43,7 +44,7 @@ const actionHandlers = [
   // play
   [
     'play',
-    async function() {
+    async () => {
       // play our audio
       await audioEl.play();
       // set playback state

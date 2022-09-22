@@ -15,6 +15,7 @@ tags:
   - WebGLProgram
 browser-compat: api.WebGLProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLProgram`** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and is a combination of two compiled {{domxref("WebGLShader")}}s consisting of a vertex shader and a fragment shader (both written in GLSL).
@@ -32,9 +33,9 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
-  var info = gl.getProgramInfoLog(program);
-  throw 'Could not compile WebGL program. \n\n' + info;
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  const info = gl.getProgramInfoLog(program);
+  throw `Could not compile WebGL program. \n\n${info}`;
 }
 ```
 

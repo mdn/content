@@ -11,6 +11,7 @@ tags:
   - shadow DOM
 browser-compat: api.Element.shadowRoot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The `Element.shadowRoot` read-only property
@@ -60,7 +61,7 @@ function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   const childNodes = Array.from(shadow.childNodes);
 
-  childNodes.forEach(childNode => {
+  childNodes.forEach((childNode) => {
     if (childNode.nodeName === 'STYLE') {
       childNode.textContent = `
         div {

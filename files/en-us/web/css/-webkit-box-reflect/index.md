@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-box-reflect
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you reflect the content of an element in one specific direction.
@@ -53,7 +54,10 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+-webkit-box-reflect =
+  [ above | below | right | left ]? <length>? <image>?
+```
 
 ## Specifications
 

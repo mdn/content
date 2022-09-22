@@ -11,6 +11,7 @@ tags:
   - viewport
 browser-compat: api.VisualViewport
 ---
+
 {{APIRef("Visual Viewport")}}
 
 The **`VisualViewport`** interface of the [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique `VisualViewport` representing the properties associated with that window.
@@ -25,19 +26,19 @@ You can get a window's visual viewport using {{domxref("Window.visualViewport")}
 
 _`VisualViewport` also inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("VisualViewport.offsetLeft")}} {{readonlyinline}}
+- {{domxref("VisualViewport.offsetLeft")}} {{ReadOnlyInline}}
   - : Returns the offset of the left edge of the visual viewport from the left edge of the layout viewport in CSS pixels.
-- {{domxref("VisualViewport.offsetTop")}} {{readonlyinline}}
+- {{domxref("VisualViewport.offsetTop")}} {{ReadOnlyInline}}
   - : Returns the offset of the top edge of the visual viewport from the top edge of the layout viewport in CSS pixels.
-- {{domxref("VisualViewport.pageLeft")}} {{readonlyinline}}
+- {{domxref("VisualViewport.pageLeft")}} {{ReadOnlyInline}}
   - : Returns the x coordinate of the visual viewport relative to the initial containing block origin of the top edge in CSS pixels.
-- {{domxref("VisualViewport.pageTop")}} {{readonlyinline}}
+- {{domxref("VisualViewport.pageTop")}} {{ReadOnlyInline}}
   - : Returns the y coordinate of the visual viewport relative to the initial containing block origin of the top edge in CSS pixels.
-- {{domxref("VisualViewport.width")}} {{readonlyinline}}
+- {{domxref("VisualViewport.width")}} {{ReadOnlyInline}}
   - : Returns the width of the visual viewport in CSS pixels.
-- {{domxref("VisualViewport.height")}} {{readonlyinline}}
+- {{domxref("VisualViewport.height")}} {{ReadOnlyInline}}
   - : Returns the height of the visual viewport in CSS pixels.
-- {{domxref("VisualViewport.scale")}} {{readonlyinline}}
+- {{domxref("VisualViewport.scale")}} {{ReadOnlyInline}}
   - : Returns the pinch-zoom scaling factor applied to the visual viewport.
 
 ## Events
@@ -62,10 +63,7 @@ const bottomBar = document.getElementById('bottombar');
 const viewport = window.visualViewport;
 
 function resizeHandler() {
-   if (viewport.scale > 1.3)
-     bottomBar.style.display = "none";
-   else
-     bottomBar.style.display = "block";
+  bottomBar.style.display = viewport.scale > 1.3 ? "none" : "block";
 }
 
 window.visualViewport.addEventListener('resize', resizeHandler);
@@ -90,10 +88,7 @@ function viewportHandler() {
 
   // You could also do this by setting style.left and style.top if you
   // use width: 100% instead.
-  bottomBar.style.transform = 'translate(' +
-                              offsetLeft + 'px,' +
-                              offsetTop + 'px) ' +
-                              'scale(' + 1/viewport.scale + ')'
+  bottomBar.style.transform = `translate(${offsetLeft}px, ${offsetTop}px) scale(${1 / viewport.scale})`;
 }
 window.visualViewport.addEventListener('scroll', viewportHandler);
 window.visualViewport.addEventListener('resize', viewportHandler);

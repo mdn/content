@@ -11,6 +11,7 @@ tags:
   - Reference
   - Non Standard
 ---
+
 {{APIRef("UI Events")}}
 
 > **Warning:** Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!
@@ -29,7 +30,7 @@ this way must have been created with the
 
 ## Syntax
 
-```js
+```js-nolint
 initKeyEvent (type, bubbles, cancelable, view,
                     ctrlKey, altKey, shiftKey, metaKey,
                     keyCode, charCode)
@@ -73,12 +74,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var event = document.createEvent('KeyboardEvent'); // create a key event
+const event = document.createEvent('KeyboardEvent'); // create a key event
 // define the event
 event.initKeyEvent("keypress",       // typeArg,
                    true,             // canBubbleArg,
                    true,             // cancelableArg,
-                   null,             // viewArg,  Specifies UIEvent.view. This value may be null.
+                   null,             // viewArg, Specifies UIEvent.view. This value may be null.
                    false,            // ctrlKeyArg,
                    false,            // altKeyArg,
                    false,            // shiftKeyArg,

@@ -18,6 +18,7 @@ browser-compat:
   - api.Document.fullscreen
   - api.Document.fullscreenEnabled
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 This article demonstrates how to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) to place a given element into fullscreen mode, as well as how to detect when the browser enters or exits fullscreen mode.
@@ -38,7 +39,7 @@ Let's consider this {{HTMLElement("video")}} element:
 We can put that video into fullscreen mode as follows:
 
 ```js
-var elem = document.getElementById("myvideo");
+const elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }
@@ -99,8 +100,8 @@ In this example, a video is presented in a web page. Pressing the <kbd>Return</k
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
+document.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13) {
     toggleFullScreen();
   }
 }, false);
@@ -114,10 +115,8 @@ This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
   }
 }
 ```

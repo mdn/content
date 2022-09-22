@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid assignment to const" occurs when it was attempted to
@@ -42,7 +43,7 @@ Assigning a value to the same constant name in the same block-scope will throw.
 ```js example-bad
 const COLUMNS = 80;
 
-// ...
+// …
 
 COLUMNS = 120; // TypeError: invalid assignment to const `COLUMNS'
 ```
@@ -73,7 +74,7 @@ global variable with
 ```js example-good
 let columns = 80;
 
-// ...
+// …
 
 columns = 120;
 ```

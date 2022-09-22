@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.reduce
 ---
+
 {{JSRef}}
 
 The **`reduce()`** method applies a function against an
@@ -23,7 +24,7 @@ single value. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduce((accumulator, currentValue) => { /* ... */ } )
 reduce((accumulator, currentValue, index) => { /* ... */ } )
@@ -96,10 +97,8 @@ value would be returned without calling `callbackFn`.
 ### Sum up all values within an array
 
 ```js
-const total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
-  return a + b;
-});
-// total == 6
+const total = new Uint8Array([0, 1, 2, 3]).reduce((a, b) => a + b);
+// total === 6
 ```
 
 ## Specifications

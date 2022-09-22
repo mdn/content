@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaDevices.enumerateDevices
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("MediaDevices")}} method **`enumerateDevices()`** requests a list of the available media input and output devices, such as microphones, cameras, headsets, and so forth.
@@ -20,7 +21,7 @@ The list of returned devices will omit any devices for which the corresponding p
 
 ## Syntax
 
-```js
+```js-nolint
 enumerateDevices()
 ```
 
@@ -41,26 +42,25 @@ If enumeration fails, the promise is rejected.
 Here's an example of using `enumerateDevices()`. It outputs a list of the [device IDs](/en-US/docs/Web/API/MediaDeviceInfo/deviceId), with their labels if available.
 
 ```js
-if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+if (!navigator.mediaDevices?.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
 } else {
   // List cameras and microphones.
   navigator.mediaDevices.enumerateDevices()
-  .then(function(devices) {
-    devices.forEach(function(device) {
-      console.log(device.kind + ": " + device.label +
-                  " id = " + device.deviceId);
+    .then((devices) => {
+      devices.forEach((device) => {
+        console.log(`${device.kind}: ${device.label} id = ${device.deviceId}`);
+      });
+    })
+    .catch((err) => {
+      console.error(`${err.name}: ${err.message}`);
     });
-  })
-  .catch(function(err) {
-    console.log(err.name + ": " + err.message);
-  });
 }
 ```
 
 This might produce:
 
-```bash
+```
 videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
@@ -69,7 +69,7 @@ audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 or if one or more {{domxref("MediaStream")}}s are active or persistent permissions are
 granted:
 
-```bash
+```
 videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
@@ -88,5 +88,5 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 - {{domxref("MediaDevices.getUserMedia")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
 - [MediaStream API](/en-US/docs/Web/API/Media_Streams_API) - the API for the media stream objects
-- [Taking webcam photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos) - a
+- [Taking webcam photos](/en-US/docs/Web/API/Media_Streams_API/Taking_still_photos) - a
   tutorial on using `getUserMedia()` for taking photos rather than video.

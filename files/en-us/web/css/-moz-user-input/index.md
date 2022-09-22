@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-moz-user-input
 ---
+
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 In Mozilla applications, **`-moz-user-input`** determines if an element will accept user input.
@@ -29,17 +30,17 @@ In Mozilla applications, **`-moz-user-input`** determines if an element will acc
 
 For elements that normally take user input, such as a {{HTMLElement("textarea")}}, the initial value of `-moz-user-input` is `enabled`.
 
-> **Note:** `-moz-user-input` was one of the proposals leading to the proposed CSS 3 {{cssxref("user-input")}} property, which has not yet reached Candidate Recommendation (call for implementations). A similar property, `user-focus`, was proposed in [early drafts of a predecessor of the CSS3 UI specification](https://www.w3.org/TR/2000/WD-css3-userint-20000216), but was rejected by the working group.
+> **Note:** `-moz-user-input` was one of the proposals leading to the proposed CSS 3 {{cssxref("user-input")}} property, which has not yet reached Candidate Recommendation (call for implementations). A similar property, `user-focus`, was proposed in [early drafts of a predecessor of the User Interface for CSS3 specification](https://www.w3.org/TR/2000/WD-css3-userint-20000216), but was rejected by the working group.
 
 ## Syntax
 
 ### Values
 
-- `none`
+- `none` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The element does not respond to user input, and it does not become {{CSSxRef(":active")}}.
-- `enabled`
+- `enabled` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The element accepts user input. For textboxes, this is the default behavior. **Please note that this value is no longer supported in Firefox 60 onwards ({{bug(1405087)}}).**
-- `disabled`
+- `disabled` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The element does not accept user input. However, this is not the same as setting `disabled` to true, in that the element is drawn normally. **Please note that this value is no longer supported in Firefox 60 onwards ({{bug(1405087)}}).**
 
 ## Formal definition
@@ -48,7 +49,10 @@ For elements that normally take user input, such as a {{HTMLElement("textarea")}
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+-moz-user-input =
+  auto | none | enabled | disabled
+```
 
 ## Examples
 

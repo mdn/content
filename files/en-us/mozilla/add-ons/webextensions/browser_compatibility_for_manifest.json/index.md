@@ -7,6 +7,7 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest
 ---
+
 {{AddonSidebar}}
 
 {{Compat}}
