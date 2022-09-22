@@ -10,10 +10,10 @@ tags:
   - Web
   - abs
   - Experimental
-browser-compat: css.types.abs
+spec-url: https://w3c.github.io/csswg-drafts/css-values-4/#sign-funcs
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns the absolute value of the argument, as the same type as the input.
 
@@ -38,7 +38,7 @@ The absolute value of `x`.
 - if `x`'s numeric value is positive or `0⁺`, return `x`.
 - Otherwise, returns `-1 * x`.
 
-## Formal syntax
+### Formal syntax
 
 {{CSSSyntax}}
 
@@ -69,10 +69,6 @@ div {
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
-- {{CSSxRef("sign_function", "sign()")}}
+- {{CSSxRef("sign")}}
