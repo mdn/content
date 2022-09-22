@@ -85,13 +85,13 @@ The original image looks like this:
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 const img = new Image();
-img.src = 'canvas_createpattern.png';
+img.src = "canvas_createpattern.png";
 img.onload = () => {
-  const pattern = ctx.createPattern(img, 'repeat');
+  const pattern = ctx.createPattern(img, "repeat");
   ctx.fillStyle = pattern;
   ctx.fillRect(0, 0, 300, 300);
 };
@@ -108,23 +108,23 @@ apply it to the fill style of our primary canvas, and fill that canvas with the 
 
 ```js
 // Create a pattern, offscreen
-const patternCanvas = document.createElement('canvas');
-const patternContext = patternCanvas.getContext('2d');
+const patternCanvas = document.createElement("canvas");
+const patternContext = patternCanvas.getContext("2d");
 
 // Give the pattern a width and height of 50
 patternCanvas.width = 50;
 patternCanvas.height = 50;
 
 // Give the pattern a background color and draw an arc
-patternContext.fillStyle = '#fec';
+patternContext.fillStyle = "#fec";
 patternContext.fillRect(0, 0, patternCanvas.width, patternCanvas.height);
-patternContext.arc(0, 0, 50, 0, .5 * Math.PI);
+patternContext.arc(0, 0, 50, 0, 0.5 * Math.PI);
 patternContext.stroke();
 
 // Create our primary canvas and fill it with the pattern
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
-const pattern = ctx.createPattern(patternCanvas, 'repeat');
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const pattern = ctx.createPattern(patternCanvas, "repeat");
 ctx.fillStyle = pattern;
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
