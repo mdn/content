@@ -41,7 +41,7 @@ The `sin(angle)` function accepts only one value as its parameter.
 - `angle`
   - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}. When specifying `infinity`, `-infinity`, or `NaN`, the result is `NaN`. When specifying `0⁻`, the result is `0⁻`.
 
-## Formal syntax
+### Formal syntax
 
 {{CSSSyntax}}
 
