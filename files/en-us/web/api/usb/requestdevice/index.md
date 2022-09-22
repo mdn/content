@@ -45,6 +45,10 @@ requestDevice(filters)
 
 A {{JSxRef("Promise")}} that resolves with an instance of {{DOMxRef("USBDevice")}}.
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 The following example looks for one of two USB devices. Notice that two product IDs are

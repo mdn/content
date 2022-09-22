@@ -26,10 +26,6 @@ The **{{domxref("Clipboard")}}** interface's
 **`readText()`** method returns a {{jsxref("Promise")}} which
 resolves with a copy of the textual contents of the system clipboard.
 
-The
-`"clipboard-read"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API) must be granted before
-you can read data from the clipboard.
-
 ## Syntax
 
 ```js-nolint
@@ -50,6 +46,12 @@ does not contain text, or does not include a textual representation among the
 To read non-text contents from the clipboard, use the {{domxref("Clipboard.read",
   "read()")}} method instead. You can write text to the clipboard using
 {{domxref("Clipboard.writeText", "writeText()")}}.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
+The `"clipboard-read"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API) must be granted before you can read data from the clipboard.
 
 ## Examples
 
