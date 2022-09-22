@@ -33,7 +33,6 @@ No notable changes.
 
 - The [TextDecoderStream](/en-US/docs/Web/API/TextDecoderStream) and [TextEncoderStream](/en-US/docs/Web/API/TextEncoderStream) interfaces, part of the [Encoding API](/en-US/docs/Web/API/Encoding_API), are now supported ({{bug(1486949)}}).
 
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
@@ -49,7 +48,6 @@ No notable changes.
 ## Changes for add-on developers
 
 - Support for defining persistent scripts using {{WebExtAPIRef("scripting")}} has been added. A script is identified as persistent using the `persistAcrossSessions` property in {{WebExtAPIRef("scripting.RegisteredContentScript")}} ({{bug("1751436")}}).
-
 
 ## Older versions
 

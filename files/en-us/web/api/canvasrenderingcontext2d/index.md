@@ -191,7 +191,7 @@ The following methods can be used to manipulate paths of objects.
   - : Adds an elliptical arc to the current path.
 - {{domxref("CanvasRenderingContext2D.rect()")}}
   - : Creates a path for a rectangle at position (x, y) with a size that is determined by _width_ and _height_.
-- {{domxref("CanvasRenderingContext2D.roundRect()")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.roundRect()")}}
   - : Creates a path for a rounded rectangle with a specified position, width, height, and corner radii.
 
 ### Drawing paths
