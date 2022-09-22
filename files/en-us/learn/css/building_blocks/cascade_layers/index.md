@@ -354,6 +354,18 @@ The order of layers is set by the order in which the layers appear in your CSS. 
 
 We included that first line for two reasons: first, so you could easily edit the line and switch the order, and second, because often times you'll find declaring the order layer up front to be the best practice for your layer order management.
 
+To summarize:
+
+- The order of layers is the order in which the layers are created.
+- Once created, there is no way to change the layer order.
+- Layer precedence or normal styles is the order in which the layers were created.
+- Unlayered normal styles have precedence over normal layered styles.
+- Layer precedence or important styles is reversed, with earlier created layers having precedence.
+- All layered important styles have precedence over unlayered important (and normal) styles.
+- Normal inline styles take precedence over all normal styles, layered and not.
+- Important inline styles take precendence over all other styles, with the exception of styles being transitioned.
+- There is no way for author styles to override important inline styles (other than transitioning them, which is temporary).
+
 ### Precedence order of nested cascade layers
 
 The cascade precedence order for nested layers is similar to that of regular layers, but contained within the layer. The precedence order is based on the order of nested layer creation. Non-nested styles in a layer have precedence over nested normal styles, with the precedence order reversed for important styles. Specificity weight between nested layers does not matter, though it does matter for conflicting styles within a nested layer.
