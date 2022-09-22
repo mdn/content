@@ -16,8 +16,6 @@ The **`SharedArrayBuffer`** object is used to represent a generic, fixed-length 
 
 ## Description
 
-### Allocating and sharing memory
-
 To share memory using {{jsxref("SharedArrayBuffer")}} objects from one agent in the cluster to another (an agent is either the web page's main program or one of its web workers), [`postMessage`](/en-US/docs/Web/API/Worker/postMessage) and [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) is used.
 
 The structured clone algorithm accepts `SharedArrayBuffer` objects and typed arrays mapped onto `SharedArrayBuffer` objects. In both cases, the `SharedArrayBuffer` object is transmitted to the receiver resulting in a new, private `SharedArrayBuffer` object in the receiving agent (just as for {{jsxref("ArrayBuffer")}}). However, the shared data block referenced by the two `SharedArrayBuffer` objects is the same data block, and a side effect to the block in one agent will eventually become visible in the other agent.
@@ -27,11 +25,9 @@ const sab = new SharedArrayBuffer(1024);
 worker.postMessage(sab);
 ```
 
-### Updating and synchronizing shared memory with atomic operations
-
 Shared memory can be created and updated simultaneously in workers or the main thread. Depending on the system (the CPU, the OS, the Browser) it can take a while until the change is propagated to all contexts. To synchronize, {{jsxref("Atomics", "atomic", "", 1)}} operations are needed.
 
-### APIs which use SharedArrayBuffer objects
+`SharedArrayBuffer` objects are used by some web APIs, such as:
 
 - [`WebGLRenderingContext.bufferData()`](/en-US/docs/Web/API/WebGLRenderingContext/bufferData)
 - [`WebGLRenderingContext.bufferSubData()`](/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData)
@@ -39,11 +35,11 @@ Shared memory can be created and updated simultaneously in workers or the main t
 
 ### Security requirements
 
-Shared memory and high-resolution timers were effectively [disabled at the start of 2018](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) in light of [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>). In 2020, a new, secure approach has been standardized to re-enable shared memory. With a few security measures, [`postMessage()`](/en-US/docs/Web/API/Window/postMessage) will no longer throw for `SharedArrayBuffer` objects and shared memory across threads will be available:
+Shared memory and high-resolution timers were effectively [disabled at the start of 2018](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) in light of [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>). In 2020, a new, secure approach has been standardized to re-enable shared memory.
 
 As a baseline requirement, your document needs to be in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
-For top-level documents, two headers will need to be set to cross-origin isolate your site:
+For top-level documents, two headers need to be set to cross-origin isolate your site:
 
 - [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) with `same-origin` as value (protects your origin from attackers)
 - [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) with `require-corp` as value (protects victims from your origin)
@@ -63,21 +59,25 @@ if (crossOriginIsolated) {
 }
 ```
 
-See also [Planned changes to shared memory](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes) which is starting to roll out to browsers (Firefox 79, for example.)
+With these two headers set, `postMessage()` no longer throws for `SharedArrayBuffer` objects and shared memory across threads is therefore available.
 
-### Always use the new operator to create a SharedArrayBuffer
+Nested documents and dedicated workers need to set the [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) header as well, with the same value. No further changes are needed for same-origin nested documents and subresources. Same-site (but cross-origin) nested documents and subresources need to set the [`Cross-Origin-Resource-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) header with `same-site` as value. And their cross-origin (and cross-site) counterparts need to set the same header with `cross-origin` as value. Note that setting the [`Cross-Origin-Resource-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) header to any other value than `same-origin` opens up the resource to potential attacks, such as [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>).
 
-`SharedArrayBuffer` objects must be constructed with the {{jsxref("Operators/new", "new")}} operator. Calling `SharedArrayBuffer()` as a function without using `new` will throw a {{jsxref("TypeError")}}.
+Note that the [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) header limits your ability to retain a reference to popups. Direct access between two top-level window contexts essentially only work if they are same-origin and carry the same two headers with the same two values.
 
-```js example-bad
-const sab = SharedArrayBuffer(1024);
-// TypeError: calling a builtin SharedArrayBuffer constructor
-// without new is forbidden
-```
+### API availability
 
-```js example-good
-const sab = new SharedArrayBuffer(1024);
-```
+Depending on whether the above security measures are taken, the various memory-sharing APIs have different availabilities:
+
+- The `Atomics` object is always available.
+- `SharedArrayBuffer` objects are in principle always available, but unfortunately the constructor on the global object is hidden, unless the two headers mentioned above are set, for compatibility with web content. There is hope that this restriction can be removed in the future. [`WebAssembly.Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) can still be used to get an instance.
+- Unless the two headers mentioned above are set, the various `postMessage()` APIs will throw for `SharedArrayBuffer` objects. If they are set, `postMessage()` on `Window` objects and dedicated workers will function and allow for memory sharing.
+
+### WebAssembly shared memory
+
+[`WebAssembly.Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) objects can be created with the [`shared`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory#shared) constructor flag. When this flag is set to `true`, the constructed `Memory` object can be shared between workers via `postMessage()`, just like `SharedArrayBuffer`, and the backing [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) of the `Memory` object is a `SharedArrayBuffer`. Therefore, the requirements listed above for sharing a `SharedArrayBuffer` between workers also apply to sharing a `WebAssembly.Memory`.
+
+The WebAssembly Threads proposal also defines a new set of [atomic](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses) instructions. Just as `SharedArrayBuffer` and its methods are unconditionally enabled (and only sharing between threads is gated on the new headers), the WebAssembly atomic instructions are also unconditionally allowed.
 
 ## Constructor
 
@@ -138,3 +138,9 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)
 - [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [COOP and COEP explained](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit).
+- `Cross-Origin-Opener-Policy`: [whatwg/html issue #3740](https://github.com/whatwg/html/issues/3740), [draft specification](https://gist.github.com/annevk/6f2dd8c79c77123f39797f6bdac43f3e).
+- `Cross-Origin-Embedder-Policy`: [whatwg/html issue #4175](https://github.com/whatwg/html/issues/4175), [draft specification](https://mikewest.github.io/corpp/).
+- `Cross-Origin-Resource-Policy`: [standardized in Fetch](https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header), new `cross-origin` value is part of the `Cross-Origin-Embedder-Policy` effort.
+- `postMessage()` changes and [`self.crossOriginIsolated`](/en-US/docs/Web/API/crossOriginIsolated): [whatwg/html issue #4732](https://github.com/whatwg/html/issues/4732), [whatwg/html issue #4872](https://github.com/whatwg/html/issues/4872), [draft specification](https://github.com/whatwg/html/pull/4734).
+- [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92](https://developer.chrome.com/blog/enabling-shared-array-buffer/)
