@@ -266,7 +266,7 @@ You can import styles and create layers based on specific conditions using [medi
 
 ## Nested layers
 
-Nested layers are layers nested within a named or anonymous layer.  Each cascade layer, even anonymous ones, can contain nested layers. This removes the worry of having conflicting layer names between external and internal stylesheets and enabling teams to create cascade layers without worrying about them being imported into a named layer. If you import a third party stylesheet into a layer, you don't need to worry if that stylesheet itself has layers as the imported layers become nested layers. 
+Nested layers are layers nested within a named or anonymous layer.  Each cascade layer, even anonymous ones, can contain nested layers. This enables teams to create cascade layers without worrying about other teams importing them into a layer. It also removes the worry of having conflicting layer names between external and internal stylesheets.  If you import a third party stylesheet into a layer, you don't need to worry if that stylesheet itself has layers as the imported layers become nested layers. 
 
 Nested layers are created using the same methods as described for regular layers. They can be created using `@layer` followed by the names of one or more layers, the nested layer being a period-separated list of layer names.
 
