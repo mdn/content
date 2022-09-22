@@ -309,7 +309,9 @@ To add styles to a named nested layer, use the dot notation:
 ## Determining the precedence based on the order of layers
 
 The order of layers determines their order of precedence. Therefore, the order of layers is very important. In the same way as the cascade sorts by origin and importance, the cascade sorts each CSS declaration by origin layer and importance.
+
 ### Precedence order of regular cascade layers
+
 ```css
 @import url(A.css) layer(firstLayer);
 @import url(B.css) layer(secondLayer);
