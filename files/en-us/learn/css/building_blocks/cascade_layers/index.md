@@ -37,7 +37,7 @@ Cascade layers are most relevant when you're working with CSS from multiple sour
 
 For each CSS property applied to an element, there can only be one value. You can view all the property values applied to an element by inspecting the element in your browser's developer tools. The tool's "Styles" panel shows all the property values applied on the element being inspected, along with the matched selector and the CSS source file. The selector from the origin with precedence has its values applied to the matching element.
 
-In addition to the applied styles, the Styles panel displays  crossed-out values that matched the selected element but were not applied due to the cascade, specificity, or source order. Crossed out styles may come from the same origin with precendence but with lower specificity, or with matching origin and specificity, but was found earlier in the code base. For any applied property value, there may be several declarations crossed out from many different sources. If you see a style crossed out that has a selector with greater specificity it means the value lost because of it's origin or importance. 
+In addition to the applied styles, the Styles panel displays  crossed-out values that matched the selected element but were not applied due to the cascade, specificity, or source order. Crossed out styles may come from the same origin with precendence but with lower specificity, or with matching origin and specificity, but was found earlier in the code base. For any applied property value, there may be several declarations crossed out from many different sources. If you see a style crossed out that has a selector with greater specificity it means the value lost because of it's origin or importance.
 
 Often, as the complexity of a site increases, the number of stylesheets increase, which makes the source order of the stylesheets both more important and more complex. Cascade layers simplify maintaining stylesheets across such code bases. Cascade layers are explicit specificity containers providing simpler and greater control over the CSS declarations that ultimately get applied, enabling web developers to prioritize sections of CSS without having to fight specificity.
 
@@ -95,7 +95,7 @@ Similar to how we have six levels of priority based on origin and importance, ca
 
 Within each of the six origin buckets, there can be multiple cascade layers. The [order of layer creation](/en-US/docs/Web/CSS/@layer) matters a lot. It is the order of creation that sets the precedence order among layers within an origin.
 
-In normal origin buckets, layers are sorted in the order of each layer's creation. The order of precedence is from the first layer created to the last, followed by unlayered normal styles. 
+In normal origin buckets, layers are sorted in the order of each layer's creation. The order of precedence is from the first layer created to the last, followed by unlayered normal styles.
 
 This order is inverted for important styles. All unlayered important styles cascade together into an implicit layer having precedence over all non-transitioning normal styles. The unlayered important styles have lower precedence than any important layered styles. The important styles in earlier declared layers have precedence over important styles in subsequent declared layers within the same origin.
 
@@ -125,8 +125,8 @@ The ability to nest layers is very useful for anybody who works on developing co
 
 The ability to create nested layers also removes the worry of having conflicting layer names. We'll cover this in the [nested layer](#nested-layers) section.
 
-> "Authors can create layers to represent element defaults, third-party libraries, themes, components, overrides, and other styling concerns—and are able to re-order the cascade of layers in an explicit way, without altering selectors or specificity within each layer, or relying on order of appearance to resolve conflicts across layers." 
-> 
+> "Authors can create layers to represent element defaults, third-party libraries, themes, components, overrides, and other styling concerns—and are able to re-order the cascade of layers in an explicit way, without altering selectors or specificity within each layer, or relying on order of appearance to resolve conflicts across layers."
+>
 > —[Cascading and Inheritance specification](https://www.w3.org/TR/css-cascade-5/#layering).
 
 ##  Creating cascade layers
@@ -184,11 +184,11 @@ body {
 }
 
 /* creates the second layer: an unnamed, anonymous layer */
-@layer { 
+@layer {
   body {
     margin: 0;
   }
-} 
+}
 
 /* creates the third and fourth layers: `theme` and `utitlities` */
 @layer theme, layout, utilities;
@@ -201,18 +201,18 @@ body {
 }
 
 /* creates the fifth layer: an unnamed, anonymous layer */
-@layer { 
+@layer {
   body {
     margin: 1vw;
   }
-} 
+}
 ```
 
-In the above CSS, we created five layers: `layout`, `<anonymous(01)>`, `theme`, `utilities`, and `<anonymous(02)>` – in that order - with a sixth, implicit layer of unlayered styles contained in the `body` style block. The layer order is the order in which the layers are created, with the implicit layer of unlayered styles always being last. There is no way to change the layer order once created. 
+In the above CSS, we created five layers: `layout`, `<anonymous(01)>`, `theme`, `utilities`, and `<anonymous(02)>` – in that order - with a sixth, implicit layer of unlayered styles contained in the `body` style block. The layer order is the order in which the layers are created, with the implicit layer of unlayered styles always being last. There is no way to change the layer order once created.
 
 We assigned some styles to the layer named `layout`. If a named layer doesn’t already exist, then specifying the name in an `@layer` at-rule, with or without assigning styles to the layer, creates the layer; this adds the layer to the end of the series of existing layer names. If the named layer already exists, all styles within the named block get appended to styles in the previously existing layer – specifying styles in a block by reusing an existing layer name does not create a new layer.
 
-Anonymous layers are created by assigning styles to a layer without naming the layer. Styles can be added to an unnamed layer only at the time of it's creation. 
+Anonymous layers are created by assigning styles to a layer without naming the layer. Styles can be added to an unnamed layer only at the time of it's creation.
 
 > **Note:** Subsequent use of `@layer` with no layer name creates additional unnamed layers; it does not append styles to a previously existing unnamed layer.
 
@@ -238,7 +238,7 @@ In wide screens, the `site` layer is declared in the first line, meaning `site` 
 
 ### Importing style sheets into named and anonymous layers with @import
 
-The [`@import`](/en-US/docs/Web/CSS/@import) rule allows users to import style rules from other style sheets either directly into a CSS file or into a {{htmlelement('style')}} element. 
+The [`@import`](/en-US/docs/Web/CSS/@import) rule allows users to import style rules from other style sheets either directly into a CSS file or into a {{htmlelement('style')}} element.
 
 When importing stylesheets, the `@import` statement must be defined before any CSS styles within the stylesheet or `<style>` block. The `@import` statement must come first, before any styles, but can be preceded by an `@layer` at-rule that creates one or more layers without assigning any styles to the layers. (`@import` can also be preceded by an [`@charset`](/en-US/docs/Web/CSS/@charset) rule.)
 
@@ -268,12 +268,18 @@ You can import styles and create layers based on specific conditions using [medi
 
 ## Overview of nested cascade layers
 
-Nested layers are layers within a named or an anonymous layer. Each cascade layer, even an anonymous one, can contain nested layers. Layers imported into another layer become nested layers within that layer. 
+Nested layers are layers within a named or an anonymous layer. Each cascade layer, even an anonymous one, can contain nested layers. Layers imported into another layer become nested layers within that layer.
+
 ### Advantages of nesting layers
+
 The ability to nest layers enables teams to create cascade layers without worrying about whether other teams will import them into a layer. Similarly, nesting enables you to import third party style sheets into a layer without worrying if that style sheet itself has layers. Because layers can be nested, you don't have to worry about having conflicting layer names between external and internal style sheets.
+
 ### Creating nested cascade layers
+
 Nested layers can be created using the same methods as described for regular layers. For example, they can be created using `@layer` at-rule followed by the names of one or more layers, using a dot notation. Multiple dots and layer names signify multiple nesting.
+
 ### Creating nested cascade layers
+
 If you nest a block `@layer` at-rule inside another block `@layer` at-rule, with or without a name, the nested block becomes a nested layer. Similarly, when a style sheet is imported with an `@import` declaration containing the `layer` keyword or `layer()` function, the styles get assigned to that named or anonymous layer. If the `@import` statement contains layers, those layers become nested layers within that anonymous or named layer.
 
 Digging a bit deeper into the example we included above:
@@ -283,7 +289,7 @@ Digging a bit deeper into the example we included above:
 @import url("narrowtheme.css") layer(components.narrow);
 ```
 
-In the first line, we import `components-lib.css` into the `components` layer. If that file contains any layers, named or not, those layers become nested layers within the `components` layer. 
+In the first line, we import `components-lib.css` into the `components` layer. If that file contains any layers, named or not, those layers become nested layers within the `components` layer.
 
 The second line imports `narrowtheme.css` into the `narrow` layer, which is a sub-layer of `components`. The nested `components.narrow` gets created as the last layer within the `components` layer, unless `components-lib.css` already contains a `narrow` layer, in which case, the contents of `narrowtheme.css` would be appended to the `components.narrow` nested layer. Additional nested named layers can be added to the `components` layer using the pattern `components.<layerName>`. As mentioned before, unnamed layers can be created but they cannot be accessed subsequently.
 
@@ -322,7 +328,7 @@ The layer order precedence is the order in which layers are created. If the auth
 1. firstLayer normal styles (`A.css`)
 2. secondLayer normal styles (`B.css`)
 3. unlayered normal styles (`C.css`)
-4. inline normal styles 
+4. inline normal styles
 5. animating styles
 6. unlayered important styles (`C.css`)
 7. secondLayer important styles (`B.css`)
@@ -378,7 +384,7 @@ The following creates and adds styles to the `components` layer and `components.
 }
 ```
 
-Because unlayered normal styles have precedence over layered normal styles, and within a layer, non-nested styles have precedence over normal nested styles, `red` wins over the other `theme` colors. 
+Because unlayered normal styles have precedence over layered normal styles, and within a layer, non-nested styles have precedence over normal nested styles, `red` wins over the other `theme` colors.
 
 With important styles, layered styles take precedence over unlayered styles, with important styles in earlier declared layers having precedence over later declared layers. In this example, the order of nested layer creation is `components.narrow`, then `components.wide`, so important styles in `components.narrow` have precedence over important styles in `components.wide`, meaning `sans-serif` wins.
 
