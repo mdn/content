@@ -233,6 +233,7 @@ Then we also have the {{htmlelement("button")}} element itself. This can take a 
 </p>
 </div>
 ```
+
 ```css hidden
 button, input {
   display: none;
@@ -241,6 +242,7 @@ button, input {
   all: revert;
 }
 ```
+
 {{ EmbedLiveSample('Actual_buttons', '500', '250') }}
 
 > **Note:** The `image` input type also renders as a button. We'll cover that later too.
