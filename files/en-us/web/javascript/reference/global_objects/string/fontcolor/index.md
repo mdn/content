@@ -17,9 +17,7 @@ browser-compat: javascript.builtins.String.fontcolor
 
 The **`fontcolor()`** method creates a string that embeds a string in a {{HTMLElement("font")}} element (`<font color="...">str</font>`), which causes a string to be displayed in the specified font color.
 
-> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
-
-> **Warning:** The `<font>` element itself has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore. Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
+> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `fontcolor()`, the `<font>` element itself has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore. Web developers should use [CSS](/en-US/docs/Web/CSS) properties instead.
 
 ## Syntax
 

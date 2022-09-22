@@ -17,9 +17,7 @@ browser-compat: javascript.builtins.String.big
 
 The **`big()`** method creates a string that embeds a string in a {{HTMLElement("big")}} element (`<big>str</big>`), which causes a string to be displayed in a big font.
 
-> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
-
-> **Warning:** The `<big>` element itself has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore. Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
+> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `big()`, the `<big>` element itself has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore. Web developers should use [CSS](/en-US/docs/Web/CSS) properties Instead.
 
 ## Syntax
 

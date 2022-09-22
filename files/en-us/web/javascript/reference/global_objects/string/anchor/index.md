@@ -18,8 +18,8 @@ browser-compat: javascript.builtins.String.anchor
 The **`anchor()`** method creates a string that embeds a string in an {{HTMLElement("a")}} element with a name (`<a name="...">str</a>`).
 
 > **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
-
-> **Warning:** The HTML specification no longer allows the {{HTMLElement("a")}} element to have a `name` attribute, so this method doesn't even create valid markup.
+>
+> The HTML specification no longer allows the {{HTMLElement("a")}} element to have a `name` attribute, so this method doesn't even create valid markup.
 
 ## Syntax
 
