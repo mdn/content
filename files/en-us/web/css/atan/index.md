@@ -15,7 +15,7 @@ browser-compat: css.types.atan
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`atan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse tangent of a number between `-∞` and `∞`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+The **`atan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse tangent of a number between `-∞` and `+∞`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
 
 ## Syntax
 
@@ -34,7 +34,23 @@ transform: rotate(atan(e * 3));
 The `atan(number)` function accepts only one value as its parameter.
 
 - `number`
-  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} between `-∞` and `∞`. When specifying `+∞` the result is `90deg`. When specifying `-∞` the result is `-90deg`. That is, `atan(0)` representing `0deg`, `atan(1)` representing `45deg`, and `atan(infinity)` representing `90deg`.
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} between `-∞` and `+∞`.
+
+### Return value
+
+The inverse tangent of an `number` will always return an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+
+- If `number` is `0⁻`, the result is `0⁻`.
+- If `number` is `+∞` the result is `90deg`.
+- If `number` is `-∞` the result is `-90deg`.
+
+That is:
+
+- `atan(-infinity)` representing `-90deg`.
+- `atan(-1)` representing `-45deg`
+- `atan(0)` representing `0deg`
+- `atan(1)` representing `45deg`
+- `atan(infinity)` representing `90deg`.
 
 ### Formal syntax
 
