@@ -48,7 +48,7 @@ The `atan2(y, x)` function accepts two comma-separated values as its parameters.
 
 Given two points `x` and `y`, the function `atan2(y, x)` calculates and returns the {{cssxref("&lt;angle&gt;")}} between the positive `x` axis and the ray from the origin to the point `(x, y)`.
 
-## Formal syntax
+### Formal syntax
 
 {{CSSSyntax}}
 
