@@ -161,7 +161,7 @@ If the above statement is the first line of a site's CSS, the layer order will b
 
 Layers can be created using the block `@layer` at-rule. If an `@layer` at-rule is followed by an identifier and a block of styles, the identifier is used to name the layer and the styles in this at-rule are added to the layer's styles. If a layer with the specified name does not already exist, a new layer will be created. If a layer with the specified name already exists, the styles are added to the previously existing layer. If no name is specified while creating a block of styles using `@layer`, the styles in the at-rule will be added to a new anonymous layer.
 
-The following creates five layers, including two anonymous layers. We use `@layer` five times: 
+In the example below, we've used four block and one inline `@layer` at-rules. This CSS does the following in the order listed:
 1) Creates a named `layout` layer
 2) Creates an unnamed, anonymous layer
 3) Declares a list of three layers and creates only two new layers, `theme` and `utilities`, because `layout` already exists
