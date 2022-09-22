@@ -19,7 +19,7 @@ The **`exp()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 
 The mathematical constant [e](https://en.wikipedia.org/wiki/E_(mathematical_constant)) represents Euler's number and is the base of natural logarithms, and is approximately `2.718281828459045`.
 
-> **Note:** The `exp()` function contains a calculation which returns the same value as {{CSSxRef("pow", "pow(e, number)")}}.
+> **Note:** The `exp(number)` function contains a calculation which returns the same value as {{CSSxRef("pow", "pow(e, number)")}}.
 
 ## Syntax
 
