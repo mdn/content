@@ -22,7 +22,7 @@ browsing contexts loading using elements such as {{HTMLElement("frame")}} and
 {{HTMLElement("iframe")}}.
 
 > **Note:** **`frame-src`** allows you to specify where iframes in a page may be loaded from.
-> This differs from **`frame-ancestors`** which allows you to specify what parent source may embed a page.
+> This differs from **`frame-ancestors`**, which allows you to specify what parent source may embed a page.
 
 <table class="properties">
   <tbody>
