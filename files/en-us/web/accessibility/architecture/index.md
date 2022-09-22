@@ -79,7 +79,7 @@ Here are some notes on the classes we use:
 2. If not successful, then it is not embedded in text, so it's position in parent should be determined just by `IA2::indexInParent`, which will return its child offset within the parent. Examples of objects not embedded in text are the child options in list boxes and combo boxes.
 3. otherwise, use `IAHyperLink::getStartIndex()` to find the index in parent. In Firefox, the results of getEndIndex will always be the startIndex + 1, because links are always just represented by a single embedded object character
 
-### (C) To get the next char fom a given offset in an accessible text:
+### (C) To get the next char from a given offset in an accessible text:
 
 1. If current `char` is `0` (end of string), then we are on a hard line break: get next node (typical depth first search), and set the current offset = 0
 2. `IAText::ch = getCharacterAtOffset(++offset);`
