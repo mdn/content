@@ -53,7 +53,7 @@ The `tan()` function can be used draw a parallelogram.
 
 #### HTML
 
-```html hidden
+```html
 <div class="parallelogram"></div>
 ```
 
