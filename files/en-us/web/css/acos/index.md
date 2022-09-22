@@ -34,7 +34,14 @@ transform: rotate(acos(e / 3));
 The `acos(number)` function accepts only one value as its parameter.
 
 - `number`
-  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} between `-1` and `1`. When specifying exactly `1`, the result is `0`.
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} between `-1` and `1`.
+
+### Return value
+
+The inverse cosine of an `number` will always return an {{cssxref("&lt;angle&gt;")}} between `0deg` and `180deg`.
+
+- If `number` is less than `-1` or greater than `1`, the result is `NaN`.
+- If `number` is exactly `1`, the result is `0`.
 
 ### Formal syntax
 
