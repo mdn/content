@@ -120034,18 +120034,6 @@
       "lth"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes": {
-    "modified": "2020-07-15T09:52:43.293Z",
-    "contributors": [
-      "fscholz",
-      "ExE-Boss",
-      "Annevk",
-      "chicoxyzzy",
-      "webenot",
-      "LeonFrempong",
-      "lukewagner"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer": {
     "modified": "2020-11-14T11:48:01.093Z",
     "contributors": ["mfuji09", "fscholz", "wbamberg"]
