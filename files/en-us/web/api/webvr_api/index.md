@@ -122,7 +122,7 @@ The WebVR API extends the following APIs, adding the listed features.
 
 You can find a number of examples at these locations:
 
-- [mdn/webvr-tests](https://github.com/mdn/webvr-tests/tree/main/webvr) — very simple examples to accompany the MDN WebVR documentation.
+- [mdn/webvr-tests](https://github.com/mdn/webvr-tests/) — very simple examples to accompany the MDN WebVR documentation.
 - [Carmel starter kit](https://github.com/facebookarchive/Carmel-Starter-Kit) — nice simple, well-commented examples that go along with Carmel, Facebook's WebVR browser.
 - [WebVR.info samples](https://webvr.info/samples/) — slightly more in-depth examples plus source code
 - [WebVR.rocks Firefox demos](https://webvr.rocks/firefox#demos) — showcase examples
