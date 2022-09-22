@@ -10,10 +10,10 @@ tags:
   - Web
   - pow
   - Experimental
-browser-compat: css.types.pow
+spec-urls: https://w3c.github.io/csswg-drafts/css-values-4/#exponent-funcs
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`pow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is an exponential function that returns the value of a base raised to the power of a number.
 
@@ -93,10 +93,6 @@ h6 {
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
