@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.RegExp.@@species
 
 The **`RegExp[@@species]`** accessor property returns the constructor used to construct copied regular expressions in certain `RegExp` methods.
 
-> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
+> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 
 {{EmbedInteractiveExample("pages/js/regexp-getregexp-@@species.html")}}
 
