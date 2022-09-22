@@ -36,7 +36,7 @@ The `atan(number)` function accepts only one value as its parameter.
 - `number`
   - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} between `-∞` and `∞`. When specifying `+∞` the result is `90deg`. When specifying `-∞` the result is `-90deg`. That is, `atan(0)` representing `0deg`, `atan(1)` representing `45deg`, and `atan(infinity)` representing `90deg`.
 
-## Formal syntax
+### Formal syntax
 
 {{CSSSyntax}}
 
