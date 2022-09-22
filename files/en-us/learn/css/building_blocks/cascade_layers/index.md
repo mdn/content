@@ -281,9 +281,9 @@ Digging a bit deeper into the example we included above:
 @import url("narrowtheme.css") layer(components.narrow);
 ```
 
-In the first line, we imported `components-lib.css` into the `components` layer. If that file contains any layers, named or not, those layers become nested layers within the `components` layer. Named layers can be added via `components.layerName`. As mentioned before, unnamed layers cannot be accessed.
+In the first line, we imported `components-lib.css` into the `components` layer. If that file contains any layers, named or not, those layers become nested layers within the `components` layer. 
 
-The second line imports `narrowtheme.css` into the `narrow` layer, which is a sub-layer of `components`. `narrow` gets created as the last layer within the `components` layer, unless `components-lib.css` already had a `narrow` layer. If `components-lib.css` had layers, all the layers become nested layers. If one of the layers was `narrow`, that layer is now accessible via `components.narrow`, and styles from `narrowtheme.css` are appended to it.
+The second line imports `narrowtheme.css` into the `narrow` layer, which is a sub-layer of `components`. The nested `components.narrow` gets created as the last layer within the `components` layer, unless `components-lib.css` already had a `narrow` layer; it which case the contents of `narrowtheme.css` would be appended to the `components.narrow` nested layer. Additional nested named layers can be added via `components.layerName`. As mentioned before, unnamed layers cab be createdm but cannot be subsequently be accessed.
 
 Let's look at another example. If we imported [`layers1.css`](#anonymous-and-named-layer-block-at-rule-assignment) into a named layer with the following:
 
@@ -334,7 +334,7 @@ In this example, there are two named layers, unlayered styles, and inline styles
 
 The inline-styles, added with the `style` attribute, sets a normal `color` and an important `background-color`. Normal inline styles override all layered and unlayered normal styles. Important inline styles override all layered and unlayered normal and important author styles. There is no way for author styles to override important inline styles.
 
-The normal `text-decoration` and important `box-shadow` are not part of the `style` inline styles and can therefore be overridden. For normal non-inline styles, unlayered styles have precedence. For important styles, layer order matters! While normal unlayered styles override all normal styles set in a layer, with important styles, the precedence order is reversed; unlayered important styles have lower precedence than layered styles.
+The normal `text-decoration` and important `box-shadow` are not part of the `style` inline styles and can therefore be overridden. For normal non-inline styles, unlayered styles have precedence. For important styles, layer order matters too. While normal unlayered styles override all normal styles set in a layer, with important styles, the precedence order is reversed; unlayered important styles have lower precedence than layered styles.
 
 The two styles declared only within layers are `font-style`, with normal importance, and `font-weight` with an `!important` flag. For normal styles, the B layer, declared last, overrides styles in the earlier declared layer A. For normal styles, later layers have precedence over earlier layers. The order of precedence is reversed for important styles. For the important `font-weight` declarations, layer A, being declared first, has precedence over the last declared layer B.
 
@@ -344,7 +344,39 @@ The order of layers is set by the order in which the layers appear in your CSS. 
 
 We included that first line for two reasons: first, so you could easily edit the line and switch the order, and second, because often times you'll find declaring the order layer up front to be the best practice for your layer order management.
 
-The cascade precedence order for nested layers is similar to regular layers, but contained within the layer. The precendence order is based on order or nested layer creation, with non-nested styles in the layer having precedence over nested normal styles, with the precedence order reversed for important styles. Similarly, specificity weight between nested layers does not matter, but does within a nested layer.
+### Precedence order of nested layers
+
+The cascade precedence order for nested layers is similar to regular layers, but contained within the layer. The precendence order is based on order of nested layer creation. Non-nested styles in the layer have precedence over nested normal styles, with the precedence order reversed for important styles. Specificity weight between nested layers does not matter, though it does matter for conflicting styles within a nested layer.
+
+The following creates and adds styles to the `components` layer and `components.narrow` nested layer, and creates and appends styles to a new `components.wide` layer:
+
+```css
+@import url("components-lib.css") layer(components);
+@import url("narrowtheme.css") layer(components.narrow);
+
+@layer components {
+  :root {
+    --theme: red;
+    font-family: serif !important;
+  }
+}
+@layer components.narrow {
+  :root {
+    --theme: blue;
+    font-family: sans-serif !important;
+  }
+}
+@layer components.wide {
+  :root {
+    --theme: purple;
+    font-family: cursive !important;
+  }
+}
+```
+
+Because unlayered normal styles have precedence over layered normal styles, and, within a layer, non-nested styles have precedence over normal nested styles, `red` wins. 
+
+With important styles, layered styles take precendence over unlayered styles, with important styles in earlier declared layers having precedence over later declared layers. The order of nested layer creation is `components.narrow` then `components.wide`, so important styles in `components.narrow` have precendence over important styles in `components.wide`, meaning `sans-serif` wins.
 
 ## Test your skills!
 
