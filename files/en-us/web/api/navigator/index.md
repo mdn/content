@@ -88,7 +88,7 @@ _Doesn't inherit any properties._
   - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. `20181001000000` in Firefox 64 onwards.
 - {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref('ContactsManager')}} interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
-- {{domxref("Navigator.globalPrivacyControl")}} {{Non-standard_Inline}}
+- {{domxref("Navigator.globalPrivacyControl")}} {{Non-standard_Inline}} {{Experimental_Inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
 - {{domxref("Navigator.securitypolicy")}} {{Non-standard_Inline}}
   - : Returns an empty string. In Netscape 4.7x, returns "US & CA domestic policy" or "Export policy".

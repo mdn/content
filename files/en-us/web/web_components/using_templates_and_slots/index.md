@@ -270,12 +270,10 @@ dl {
   margin-left: 6px;
 }
 dt {
-  font-weight: bold;
   color: #217ac0;
-  font-size: 110%;
-}
-dt {
   font-family: Consolas, "Liberation Mono", Courier;
+  font-size: 110%;
+  font-weight: bold;
 }
 dd {
   margin-left: 16px;

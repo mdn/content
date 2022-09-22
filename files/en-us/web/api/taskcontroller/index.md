@@ -89,7 +89,7 @@ Note that in a later code block we abort the task, so only the `catch()` block w
 // Post task using the controller's signal.
 // The signal priority sets the initial priority of the task
 scheduler.postTask(() => 'Task execute', {signal: controller.signal})
-  .then((taskResult) => { console.log(`${taskResult}`); }) // Aborted (wont run)
+  .then((taskResult) => { console.log(`${taskResult}`); }) // Aborted (won't run)
   .catch((error) => { console.log(`Catch error: ${error}`); });  // Log error
 ```
 
