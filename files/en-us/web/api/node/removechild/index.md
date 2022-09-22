@@ -113,15 +113,15 @@ let garbage = top.removeChild(nested);
 garbage = top.removeChild(nested);
 ```
 
-To remove all children from an parent:
+### Removing all Children from a parent
 
 ```js
 const parentNode = document.getElementById("parent");
 if (parentNode){
   let child = parentNode.lastElementChild;
   while(child){
-  parentNode.removeChild(child);
-  child = parentNode.lastElementChild;
+    parentNode.removeChild(child);
+    child = parentNode.lastElementChild;
   }  
 }
 ```
