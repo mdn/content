@@ -41,7 +41,7 @@ The `exp(number)` function accepts only one value as its parameter.
 
 Returns a {{cssxref("&lt;number&gt;")}} which is the result of calculating `e` raised to the power of `number`.
 
-## Formal syntax
+### Formal syntax
 
 {{CSSSyntax}}
 
