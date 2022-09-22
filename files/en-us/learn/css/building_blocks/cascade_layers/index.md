@@ -274,7 +274,7 @@ Nested layers are layers within a named or an anonymous layer. Each cascade laye
 The ability to nest layers enables teams to create cascade layers without worrying about whether other teams will import them into a layer. Similarly, nesting enables you to import third party style sheets into a layer without worrying if that style sheet itself has layers. Because layers can be nested, you don't have to worry about having conflicting layer names between external and internal style sheets.
 ### Creating nested cascade layers
 Nested layers can be created using the same methods as described for regular layers. For example, they can be created using `@layer` at-rule followed by the names of one or more layers, using a dot notation. Multiple dots and layer names signify multiple nesting.
-
+### Creating nested cascade layers
 If you nest a block `@layer` at-rule inside another block `@layer` at-rule, with or without a name, the nested block becomes a nested layer. Similarly, when a style sheet is imported with an `@import` declaration containing the `layer` keyword or `layer()` function, the styles get assigned to that named or anonymous layer. If the `@import` statement contains layers, those layers become nested layers within that anonymous or named layer.
 
 Digging a bit deeper into the example we included above:
