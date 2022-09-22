@@ -226,7 +226,7 @@ In the following interactive example, we assign styles to two layers, creating t
 
 Try moving the last line, `@layer site, page;`, to make it the first line. What happens?
 
-#### @layer creation and media queries
+#### Layer creation and media queries
 
 If you define a layer using [media](​​/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) or [feature](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries) queries, and the media is not a match or the feature is not supported, the layer is not created. In the following example, we create the site `layer` only in wider browsers. We then assign styles to the `page` and `site` layers, in that order.
 
@@ -238,7 +238,7 @@ If you are on a wide screen, the `site` layer was declared in the first line, me
 
 The [`@import`](/en-US/docs/Web/CSS/@import) rule allows users to import style rules from other style sheets either directly into a CSS file or into a {{htmlelement('style')}} element. 
 
-Generally, when importing stylesheets, the `@import` statement must be defined before any CSS styles within the stylesheet or `<style>` block. An exception to the "@import must come first" rule is that `@import` may be preceded by an `@layer` at-rule that creates one or more layers without assigning any styles. (The other exception is that @charset can precede an @import.)
+When importing stylesheets, the `@import` statement must be defined before any CSS styles within the stylesheet or `<style>` block. The `@import` must come first, before any styles, but can be preceded by an `@layer` statement that creates one or more layers without assigning any styles (and can also be preceded by an [`@charset`](/en-US/docs/Web/CSS/@charset) rule).
 
 You can import a stylesheet into a named layer, a nested named layer, or an anonymous layer. The following layer imports the style sheets into a `components` layer, a nested `dialog` layer within the `components` layer, and an un-named layer, respectively:
 
@@ -262,11 +262,11 @@ You can import styles and create layers based on specific conditions using [medi
 @import url("ruby-wide.css") layer(international) supports(display: ruby) and (width >= 32rem);
 ```
 
-There is no equivalent of the {{HTMLElement('link')}} method of linking stylesheets. Use `@import` to import a stylesheet into a layer when you can't use `@layer` within the stylesheet.
+> **Note:** There is no equivalent of the {{HTMLElement('link')}} method of linking stylesheets. Use `@import` to import a stylesheet into a layer when you can't use `@layer` within the stylesheet.
 
 ## Nested layers
 
-Nested layers are layers within a named or anonymous layer. If you're importing a third party stylesheet that has layers into a new layer, you don't need to worry. The imported layers become nested layers. 
+Nested layers are layers nested within a named or anonymous layer.  Each cascade layer, even anonymous ones, can contain nested layers. This removes the worry of having conflicting layer names between external and internal stylesheets and enabling teams to create cascade layers without worrying about them being imported into a named layer. If you import a third party stylesheet into a layer, you don't need to worry if that stylesheet itself has layers as the imported layers become nested layers. 
 
 Nested layers are created using the same methods as described for regular layers. They can be created using `@layer` followed by the names of one or more layers, the nested layer being a period-separated list of layer names.
 
