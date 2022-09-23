@@ -25,7 +25,9 @@ No notable changes.
 
 ### JavaScript
 
-No notable changes.
+- Range restrictions are relaxed on `formatRange` and `selectRange` functions for `Intl.DateTimeFormat`, `Intl.NumberFormat`, and `Intl.PluralRules`.
+  For example, `formatRange(x, y)` can be called where and `x` > `y` such as `formatRange(-500, -1000)`.
+  The intention of this change is to relax ordering rules so that negative ranges (e.g., "losses ranging from -$500 to -$1000") can be formatted correctly ({{bug(1780545)}}).
 
 ### APIs
 
