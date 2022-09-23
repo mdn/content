@@ -73,6 +73,23 @@ export default myStrictFunction;
 
 All parts of ECMAScript [classes](/en-US/docs/Web/JavaScript/Reference/Classes) are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) — and so also including all parts of class bodies.
 
+```js
+class C1 {
+  // All code here is evaluated in strict mode
+  test() {
+    delete Object.prototype;
+  }
+}
+new C1().test(); // TypeError, because test() is in strict mode
+
+const C2 = class {
+  // All code here is evaluated in strict mode
+};
+
+// Code here may not be in strict mode
+delete Object.prototype; // Will not throw error
+```
+
 ## Changes in strict mode
 
 Strict mode changes both syntax and runtime behavior. Changes generally fall into these categories: changes converting mistakes into errors (as syntax errors or at runtime), changes simplifying how the particular variable for a given use of a name is computed, changes simplifying `eval` and `arguments`, changes making it easier to write "secure" JavaScript, and changes anticipating future ECMAScript evolution.

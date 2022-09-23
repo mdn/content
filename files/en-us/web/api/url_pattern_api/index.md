@@ -381,7 +381,7 @@ console.log(pattern.test('https://example.com/foo/bar')); // true
 
 console.log(pattern.test({ hostname: 'cdn.example.com' })); // true
 
-console.log(pattern.test('custom-protocol://example.com/other/path?q=1')); // true
+console.log(pattern.test('custom-protocol://example.com/other/path?q=1')); // false
 
 // Prints `false` because the hostname component does not match
 console.log(pattern.test('https://cdn-example.com/foo/bar'));

@@ -56,8 +56,8 @@ This example initializes a conic gradient using the `createConicGradient()` meth
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create a conic gradient
 // The start angle is 0
