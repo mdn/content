@@ -670,7 +670,7 @@ Among methods that iterate through multiple elements, the following do an [`in`]
 - {{jsxref("Array/sort", "sort()")}}
 - {{jsxref("Array/splice", "splice()")}}
 
-For how they treat empty slots exactly, see the page for each method.
+For exactly how they treat empty slots, see the page for each method.
 
 These methods treat empty slots as if they are `undefined`:
 
