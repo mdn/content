@@ -85,6 +85,7 @@ f(1, 'a', true);
 
 ```js
 console.log([1, , 3].join()); // '1,,3'
+console.log([1, undefined, 3].join()); // '1,,3' 
 ```
 
 ## Specifications

@@ -174,6 +174,7 @@ console.log(filterItems(fruits, 'an')); // ['banana', 'mango', 'orange']
 
 ```js
 console.log([1, , undefined].filter((x) => x === undefined)); // [undefined]
+console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
 ```
 
 ### Affecting Initial Array (modifying, appending and deleting)

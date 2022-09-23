@@ -84,10 +84,10 @@ Each key has an associated array containing all the elements for which the callb
 Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
 
 `callbackFn` is called with the value of the current element, the current index, and the array itself.
-While groups often depend only on the current element, it is possible to implement grouping strategies based on the values of other elements in the array.
+While groups often depend only on the current element, you can implement grouping strategies based on the values of other elements in the array.
 
 If a `thisArg` parameter is provided to `groupToMap()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
-If it is not provided, then {{jsxref("undefined")}} is used.
+If `thisArg` is not provided, then {{jsxref("undefined")}} is used.
 
 The `group()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns a map of arrays that contains the same elements as the ones from the original array. The elements in the returned {{jsxref("Map")}} and the original array are the same (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of the elements will be reflected in both the original array and the returned {{jsxref("Map")}}.
 

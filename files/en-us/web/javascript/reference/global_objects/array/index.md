@@ -672,7 +672,7 @@ Among methods that iterate through multiple elements, the following special case
 
 For how they treat empty slots exactly, see the page for each method.
 
-These methods treat empty slots the same as if they are `undefined`:
+These methods treat empty slots as if they are `undefined`:
 
 - {{jsxref("Array/entries", "entries()")}}
 - {{jsxref("Array/fill", "fill()")}}

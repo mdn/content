@@ -175,6 +175,8 @@ getBoolean('true');  // true
 
 ```js
 console.log([1, , 3].some((x) => x === undefined)); // false
+console.log([1, , 1].some((x) => x !== 1)); // false
+console.log([1, undefined, 1].some((x) => x !== 1)); // true
 ```
 
 ## Specifications

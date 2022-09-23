@@ -32,7 +32,7 @@ A new {{jsxref("Array")}} iterator object.
 
 ## Description
 
-The `entries()` method does not special case [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). Empty slots are visited as if they have value `undefined`.
+The `entries()` method does not special case [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). Empty slots are visited as if they have the value `undefined`.
 
 ## Examples
 
