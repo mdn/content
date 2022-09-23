@@ -35,7 +35,7 @@ The operands are compared with multiple rounds of coercion, which can be summari
 - If either value is [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), the operator returns `false`.
 - Otherwise the values are compared as numeric values. BigInt and number values can be compared together.
 
-Other operators, including [`>`](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than), [`>=`](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal), and [`<=`](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal) use the same algorithm as `<`. There are two cases where all four operators return `false`:
+Other operators, including [`>`](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than), [`>=`](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal), and [`<=`](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal), use the same algorithm as `<`. There are two cases where all four operators return `false`:
 
 - If one of the operands gets converted to a BigInt, while the other gets converted to a string that cannot be converted to a BigInt value (it throws a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax) when passed to [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)).
 - If one of the operands gets converted to `NaN`. (For example, strings that cannot be converted to numbers, or `undefined`.)
