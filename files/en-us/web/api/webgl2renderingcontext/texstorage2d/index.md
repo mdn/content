@@ -19,7 +19,7 @@ two-dimensional texture storage.
 
 ## Syntax
 
-```js
+```js-nolint
 texStorage2D(target, levels, internalformat, width, height)
 ```
 

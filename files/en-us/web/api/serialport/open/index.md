@@ -18,7 +18,7 @@ The **`open()`** method of the {{domxref("SerialPort")}} interface returns a {{j
 
 ## Syntax
 
-```js
+```js-nolint
 open(options)
 ```
 

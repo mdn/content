@@ -19,7 +19,7 @@ The **`PushManager.hasPermission()`** method of the {{domxref("PushManager")}} i
 
 ## Syntax
 
-```js
+```js-nolint
 hasPermission()
 ```
 

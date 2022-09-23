@@ -20,7 +20,7 @@ interface returns all the values associated with a given search parameter as an 
 
 ## Syntax
 
-```js
+```js-nolint
 getAll(name)
 ```
 

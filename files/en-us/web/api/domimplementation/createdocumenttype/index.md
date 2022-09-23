@@ -21,7 +21,7 @@ into the document via methods like {{domxref("Node.insertBefore()")}} or
 
 ## Syntax
 
-```js
+```js-nolint
 createDocumentType(qualifiedNameStr, publicId, systemId)
 ```
 

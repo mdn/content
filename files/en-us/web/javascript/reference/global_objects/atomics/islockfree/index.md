@@ -23,7 +23,7 @@ property of integer TypedArray types.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.isLockFree(size)
 ```
 

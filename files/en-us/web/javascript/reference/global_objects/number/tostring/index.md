@@ -18,7 +18,7 @@ specified {{jsxref("Number")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 toString(radix)
 ```

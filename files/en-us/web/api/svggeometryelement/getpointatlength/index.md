@@ -21,7 +21,7 @@ point at a given distance along the path.
 
 ## Syntax
 
-```js
+```js-nolint
 getPointAtLength(distance)
 ```
 

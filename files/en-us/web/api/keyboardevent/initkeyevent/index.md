@@ -30,7 +30,7 @@ this way must have been created with the
 
 ## Syntax
 
-```js
+```js-nolint
 initKeyEvent (type, bubbles, cancelable, view,
                     ctrlKey, altKey, shiftKey, metaKey,
                     keyCode, charCode)
@@ -79,7 +79,7 @@ const event = document.createEvent('KeyboardEvent'); // create a key event
 event.initKeyEvent("keypress",       // typeArg,
                    true,             // canBubbleArg,
                    true,             // cancelableArg,
-                   null,             // viewArg,  Specifies UIEvent.view. This value may be null.
+                   null,             // viewArg, Specifies UIEvent.view. This value may be null.
                    false,            // ctrlKeyArg,
                    false,            // altKeyArg,
                    false,            // shiftKeyArg,

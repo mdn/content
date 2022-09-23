@@ -22,7 +22,7 @@ heap.
 
 ## Syntax
 
-```js
+```js-nolint
 encodeInto(string, uint8Array)
 ```
 

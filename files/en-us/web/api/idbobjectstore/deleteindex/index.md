@@ -28,7 +28,7 @@ mode callback. Note that this method synchronously modifies the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteIndex(indexName)
 ```
 

@@ -2,7 +2,6 @@
 title: Table Grid Box
 slug: Glossary/Table_Grid_Box
 tags:
-  - Glossary
   - CSS
   - Tables
 ---

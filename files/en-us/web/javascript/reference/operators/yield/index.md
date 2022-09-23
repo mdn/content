@@ -19,7 +19,7 @@ The `yield` keyword is used to pause and resume a [generator function](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 [rv] = yield [expression]
 ```
 

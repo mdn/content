@@ -16,7 +16,7 @@ The `await` operator is used to wait for a {{jsxref("Promise")}} and get its ful
 
 ## Syntax
 
-```js
+```js-nolint
 await expression
 ```
 

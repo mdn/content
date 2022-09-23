@@ -21,7 +21,7 @@ The **`SyncManager.register`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 register()
 register(options)
 ```

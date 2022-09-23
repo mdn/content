@@ -19,7 +19,7 @@ an entry point into the page's content.
 
 ## Syntax
 
-```js
+```js-nolint
 new Document()
 ```
 

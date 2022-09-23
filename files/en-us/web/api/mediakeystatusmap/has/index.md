@@ -20,7 +20,7 @@ whether a value has been associated with the given key.
 
 ## Syntax
 
-```js
+```js-nolint
 has(key)
 ```
 

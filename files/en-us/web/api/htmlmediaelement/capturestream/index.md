@@ -27,7 +27,7 @@ This can be used, for example, as a source for a [WebRTC](/en-US/docs/Web/API/We
 
 ## Syntax
 
-```js
+```js-nolint
 captureStream()
 ```
 

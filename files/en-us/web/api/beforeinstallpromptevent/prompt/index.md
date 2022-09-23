@@ -20,7 +20,7 @@ install prompt at a time of their own choosing.
 
 ## Syntax
 
-```js
+```js-nolint
 prompt()
 ```
 

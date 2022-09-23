@@ -17,8 +17,8 @@ The individual values are strings.
 
 ## Syntax
 
-```js
-tokenList.values();
+```js-nolint
+tokenList.values()
 ```
 
 ### Parameters

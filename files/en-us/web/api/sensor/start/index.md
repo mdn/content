@@ -21,7 +21,7 @@ of the sensors based on `Sensor`.
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 ```
 

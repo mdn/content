@@ -51,7 +51,7 @@ Note however that some of the values don't make sense for `base-uri`, such as th
 ### Meta tag configuration
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
 ```
 
 ### Apache configuration
@@ -73,12 +73,14 @@ add_header Content-Security-Policy "base-uri 'self';"
 Since your domain isn't `example.com`, a {{HTMLElement("base")}} element with its `href` set to `https://example.com` will result in a CSP violation.
 
 ```html example-bad
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
-<base href="https://example.com/">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
+<base href="https://example.com/" />
 
+<!--
 // Error: Refused to set the document's base URI to 'https://example.com/'
 // because it violates the following Content Security Policy
 // directive: "base-uri 'self'"
+-->
 ```
 
 ## Specifications

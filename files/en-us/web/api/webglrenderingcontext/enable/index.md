@@ -18,7 +18,7 @@ for this context.
 
 ## Syntax
 
-```js
+```js-nolint
 enable(cap)
 ```
 

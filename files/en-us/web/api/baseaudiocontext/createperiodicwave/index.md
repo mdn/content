@@ -23,7 +23,7 @@ that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 createPeriodicWave(real, imag)
 createPeriodicWave(real, imag, constraints)
 ```
@@ -70,7 +70,7 @@ imag[0] = 0;
 real[1] = 1;
 imag[1] = 0;
 
-const wave = ac.createPeriodicWave(real, imag, {disableNormalization: true});
+const wave = ac.createPeriodicWave(real, imag, { disableNormalization: true });
 
 osc.setPeriodicWave(wave);
 

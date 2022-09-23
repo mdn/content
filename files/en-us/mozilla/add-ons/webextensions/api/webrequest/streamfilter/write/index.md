@@ -20,7 +20,7 @@ You can only call this function after the {{WebExtAPIRef("webRequest.StreamFilte
 
 ## Syntax
 
-```js
+```js-nolint
 filter.write(
   data    // ArrayBuffer or Uint8Array
 )

@@ -23,7 +23,7 @@ started.
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 ```
 

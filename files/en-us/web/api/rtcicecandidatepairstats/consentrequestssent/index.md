@@ -29,8 +29,8 @@ described by the pair of candidates.
 
 ## Syntax
 
-```js
-consentRequestsSent = rtcIceCandidatePairStats.consentRequestsSent;
+```js-nolint
+consentRequestsSent = rtcIceCandidatePairStats.consentRequestsSent
 ```
 
 ### Value

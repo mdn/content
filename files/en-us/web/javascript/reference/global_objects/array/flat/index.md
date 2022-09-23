@@ -21,7 +21,7 @@ elements concatenated into it recursively up to the specified depth.
 
 ## Syntax
 
-```js
+```js-nolint
 flat()
 flat(depth)
 ```

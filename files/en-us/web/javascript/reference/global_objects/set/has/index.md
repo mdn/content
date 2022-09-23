@@ -19,7 +19,7 @@ element with the specified value exists in a `Set` object or not.
 
 ## Syntax
 
-```js
+```js-nolint
 has(value)
 ```
 

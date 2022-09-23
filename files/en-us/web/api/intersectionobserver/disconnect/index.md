@@ -21,7 +21,7 @@ for visibility changes.
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

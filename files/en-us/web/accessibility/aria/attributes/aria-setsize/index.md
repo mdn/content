@@ -38,7 +38,7 @@ In a menu, `aria-setsize` is set on all [`menuitem`](/en-US/docs/Web/Accessibili
 The following example shows items 5 through 8 in a set of 16.
 
 ```html
-<h2 id="label_fruit"> Available Fruit </h2>
+<h2 id="label_fruit">Available Fruit</h2>
 <ul role="listbox" aria-labelledby="label_fruit">
   <li role="option" aria-setsize="16" aria-posinset="5">apples</li>
   <li role="option" aria-setsize="16" aria-posinset="6">bananas</li>

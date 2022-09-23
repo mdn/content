@@ -33,7 +33,7 @@ drawn.
 
 ## Syntax
 
-```js
+```js-nolint
 clip()
 clip(path)
 clip(fillRule)

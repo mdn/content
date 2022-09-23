@@ -30,7 +30,7 @@ the encoding and transmission of media on the receiver's
 
 ## Syntax
 
-```js
+```js-nolint
 getParameters()
 ```
 

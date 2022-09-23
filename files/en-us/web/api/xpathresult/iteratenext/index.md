@@ -20,7 +20,7 @@ next node from it or `null` if there are no more nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 iterateNext()
 ```
 

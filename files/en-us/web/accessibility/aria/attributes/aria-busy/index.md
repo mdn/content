@@ -50,13 +50,18 @@ If changes to a rendered widget would create a state where the widget is missing
   - : The [`ariaBusy`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-busy` attribute, which indicates whether an element is being modified.
 
 ```html
-<div id="clock" role="timer" aria-live="polite" aria-atomic="true" aria-busy="false"></div>
+<div
+  id="clock"
+  role="timer"
+  aria-live="polite"
+  aria-atomic="true"
+  aria-busy="false"></div>
 ```
 
 ```js
-let el = document.getElementById('clock');
+const el = document.getElementById("clock");
 console.log(el.ariaBusy); // false
-el.ariaBusy = "true"
+el.ariaBusy = "true";
 console.log(el.ariaBusy); // true
 ```
 

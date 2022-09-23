@@ -147,13 +147,13 @@ In a stylesheet that contains [media query](/en-US/docs/Web/CSS/Media_Queries/Us
 
   ```css example-good
   .editorial-summary {
-    ...
+    /* ... */
   }
   ```
 
   ```css example-bad
   #editorial-summary {
-    ...
+    /* ... */
   }
   ```
 

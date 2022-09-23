@@ -23,7 +23,7 @@ The **`console.countReset()`** method resets counter used with
 
 ## Syntax
 
-```js
+```js-nolint
 countReset()
 countReset(label)
 ```

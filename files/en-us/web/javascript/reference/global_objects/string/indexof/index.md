@@ -19,7 +19,7 @@ The **`indexOf()`** method, given one argument: a substring to search for, searc
 
 ## Syntax
 
-```js
+```js-nolint
 indexOf(searchString)
 indexOf(searchString, position)
 ```

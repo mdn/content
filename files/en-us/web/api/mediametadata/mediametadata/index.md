@@ -22,7 +22,7 @@ The **`MediaMetadata()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaMetadata()
 new MediaMetadata(metadata)
 ```

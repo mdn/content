@@ -19,7 +19,7 @@ The **`isScript()`** method of the {{domxref("TrustedTypePolicyFactory")}} inter
 
 ## Syntax
 
-```js
+```js-nolint
 isScript(value)
 ```
 

@@ -18,7 +18,7 @@ previously called commands are finished.
 
 ## Syntax
 
-```js
+```js-nolint
 finish()
 ```
 

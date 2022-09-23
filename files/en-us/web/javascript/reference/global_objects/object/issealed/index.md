@@ -19,7 +19,7 @@ sealed.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.isSealed(obj)
 ```
 

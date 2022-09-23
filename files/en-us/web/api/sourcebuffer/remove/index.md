@@ -26,7 +26,7 @@ interface removes media segments within a specific time range from the
 
 ## Syntax
 
-```js
+```js-nolint
 remove(start, end)
 ```
 

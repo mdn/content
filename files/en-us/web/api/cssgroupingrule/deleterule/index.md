@@ -19,7 +19,7 @@ rules.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteRule(index)
 ```
 

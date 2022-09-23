@@ -24,7 +24,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 removeSourceBuffer(sourceBuffer)
 ```
 

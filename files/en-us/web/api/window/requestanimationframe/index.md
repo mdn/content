@@ -56,7 +56,7 @@ timestamp is a decimal number, in milliseconds, but with a minimal precision of 
 
 ## Syntax
 
-```js
+```js-nolint
 requestAnimationFrame(callback)
 ```
 

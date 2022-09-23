@@ -17,7 +17,7 @@ browser-compat: javascript.operators.property_accessors
 
 ## Syntax
 
-```js
+```js-nolint
 object.propertyName
 object[expression]
 ```

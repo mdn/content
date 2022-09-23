@@ -24,7 +24,7 @@ For more details, see [connection-based messaging](/en-US/docs/Mozilla/Add-ons/W
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.connect(
   tabId,      // integer
   connectInfo // optional object

@@ -20,7 +20,7 @@ Unlike the [declaration-style counterpart](/en-US/docs/Web/JavaScript/Reference/
 
 ## Syntax
 
-```js
+```js-nolint
 import(moduleName)
 ```
 

@@ -11,7 +11,7 @@ tags:
   - Variables
   - declaring
   - initializing
-  - l10n:priority
+  - "l10n:priority"
   - loose typing
   - strings
 ---

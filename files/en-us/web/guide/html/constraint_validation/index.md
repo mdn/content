@@ -26,10 +26,10 @@ In HTML, basic constraints are declared in two ways:
 
 The intrinsic constraints for the {{ htmlattrxref("type", "input") }} attribute are:
 
-| Input type                                                         | Constraint description                                                                                                                                        | Associated violation                                                                    |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/). | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
-| [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) | The value must be a syntactically valid email address, which generally has the format `username@hostname.tld` but can also be local such as `username@hostname`.                                                | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
+| Input type                                                         | Constraint description                                                                                                                                           | Associated violation                                                                    |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/).    | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
+| [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) | The value must be a syntactically valid email address, which generally has the format `username@hostname.tld` but can also be local such as `username@hostname`. | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
 
 For both of these input types, if the {{ htmlattrxref("multiple", "input") }} attribute is set, several values can be set, as a comma-separated list. If any of these do not satisfy the condition described here, the **Type mismatch** constraint violation is triggered.
 
@@ -296,16 +296,16 @@ As an example, we will add a script checking the constraint validation for this 
 
 ```html
 <form>
-    <label for="ZIP">ZIP : </label>
-    <input type="text" id="ZIP">
-    <label for="Country">Country : </label>
-    <select id="Country">
-      <option value="ch">Switzerland</option>
-      <option value="fr">France</option>
-      <option value="de">Germany</option>
-      <option value="nl">The Netherlands</option>
-    </select>
-    <input type="submit" value="Validate">
+  <label for="ZIP">ZIP : </label>
+  <input type="text" id="ZIP" />
+  <label for="Country">Country : </label>
+  <select id="Country">
+    <option value="ch">Switzerland</option>
+    <option value="fr">France</option>
+    <option value="de">Germany</option>
+    <option value="nl">The Netherlands</option>
+  </select>
+  <input type="submit" value="Validate" />
 </form>
 ```
 
@@ -365,7 +365,7 @@ Here is the HTML part:
 
 ```html
 <label for="FS">Select a file smaller than 75 kB : </label>
-<input type="file" id="FS">
+<input type="file" id="FS" />
 ```
 
 This displays:

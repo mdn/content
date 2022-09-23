@@ -22,7 +22,7 @@ current document if it is mutated.
 
 ## Syntax
 
-```js
+```js-nolint
 snapshotItem(i)
 ```
 

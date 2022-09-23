@@ -18,7 +18,7 @@ The **`close()`** method of the {{domxref("VideoFrame")}} interface clears all s
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

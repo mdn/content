@@ -1,5 +1,5 @@
 ---
-title: 'HTMLFormElement: reset event'
+title: "HTMLFormElement: reset event"
 slug: Web/API/HTMLFormElement/reset_event
 page-type: web-api-event
 tags:
@@ -38,8 +38,8 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text"></label>
-  <br><br>
+  <label>Test field: <input type="text" /></label>
+  <br /><br />
   <button type="reset">Reset form</button>
 </form>
 <p id="log"></p>

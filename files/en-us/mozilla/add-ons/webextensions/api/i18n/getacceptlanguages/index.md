@@ -24,7 +24,7 @@ See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interna
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
 ```
 

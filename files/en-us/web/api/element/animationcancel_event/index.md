@@ -1,5 +1,5 @@
 ---
-title: 'Element: animationcancel event'
+title: "Element: animationcancel event"
 slug: Web/API/Element/animationcancel_event
 tags:
   - API
@@ -78,11 +78,11 @@ animated.style.display = 'none';
 
 ```html
 <div class="animation-example">
-    <div class="container">
-        <p class="animation">You chose a cold night to visit our planet.</p>
-    </div>
-    <button class="activate" type="button">Activate animation</button>
-    <div class="event-log"></div>
+  <div class="container">
+    <p class="animation">You chose a cold night to visit our planet.</p>
+  </div>
+  <button class="activate" type="button">Activate animation</button>
+  <div class="event-log"></div>
 </div>
 ```
 

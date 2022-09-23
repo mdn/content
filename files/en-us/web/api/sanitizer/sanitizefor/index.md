@@ -28,7 +28,7 @@ The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitiz
 
 ## Syntax
 
-```js
+```js-nolint
 sanitizeFor(element, input)
 ```
 

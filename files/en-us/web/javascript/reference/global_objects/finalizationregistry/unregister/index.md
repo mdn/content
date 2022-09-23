@@ -17,8 +17,8 @@ The `unregister()` method unregisters a target object from a
 
 ## Syntax
 
-```js
-unregister(unregisterToken);
+```js-nolint
+unregister(unregisterToken)
 ```
 
 ### Parameters

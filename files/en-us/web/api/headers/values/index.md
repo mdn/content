@@ -21,7 +21,7 @@ in this object. The values are {{jsxref("String")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

@@ -63,7 +63,7 @@ Take the following document, for example:
 
 The DOM tree for this looks like so:
 
-![dom tree equivalent of the above HTML example](dom-string.png)
+![The DOM tree representing a simple HTML document](dom-string.png)
 
 Conserving whitespace characters in the DOM is useful in many ways, but there are certain places where this makes certain layouts more difficult to implement, and causes problems for developers who want to iterate through nodes in the DOM. We'll look at these, and some solutions, later on.
 
@@ -73,7 +73,7 @@ Most whitespace characters are ignored, not all of them are. In the earlier exam
 
 #### Example
 
-Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:
+Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥, and all line breaks with ⏎:
 
 This example:
 

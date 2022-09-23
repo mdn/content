@@ -27,7 +27,7 @@ lines.
 
 ## Syntax
 
-```js
+```js-nolint
 lineWidth(width)
 ```
 

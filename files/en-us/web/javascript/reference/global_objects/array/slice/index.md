@@ -21,7 +21,7 @@ the index of items in that array. The original array will not be modified.
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)

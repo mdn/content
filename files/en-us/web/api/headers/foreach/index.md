@@ -17,7 +17,7 @@ The **`Headers.forEach()`** method executes a callback function once per each ke
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((value, key) => { /* … */ })
 forEach((value, key, object) => { /* … */ })

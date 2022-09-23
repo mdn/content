@@ -18,7 +18,7 @@ The **`WebGLRenderingContext.bindFramebuffer()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 bindFramebuffer(target, framebuffer)
 ```
 

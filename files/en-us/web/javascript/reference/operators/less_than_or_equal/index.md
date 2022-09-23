@@ -17,7 +17,7 @@ The less than or equal operator (`<=`) returns `true` if the left operand is les
 
 ## Syntax
 
-```js
+```js-nolint
 x <= y
 ```
 

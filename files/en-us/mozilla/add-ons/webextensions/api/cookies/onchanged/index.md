@@ -27,7 +27,7 @@ Note that updating a cookie's properties is implemented as a two step process:
 
 ## Syntax
 
-```js
+```js-nolint
 browser.cookies.onChanged.addListener(listener)
 browser.cookies.onChanged.removeListener(listener)
 browser.cookies.onChanged.hasListener(listener)

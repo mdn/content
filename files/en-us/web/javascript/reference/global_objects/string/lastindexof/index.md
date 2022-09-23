@@ -19,7 +19,7 @@ The **`lastIndexOf()`** method, given one argument: a substring to search for, s
 
 ## Syntax
 
-```js
+```js-nolint
 lastIndexOf(searchString)
 lastIndexOf(searchString, position)
 ```

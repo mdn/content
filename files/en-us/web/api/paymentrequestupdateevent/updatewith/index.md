@@ -26,7 +26,7 @@ The **`updateWith()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 updateWith(details)
 ```
 

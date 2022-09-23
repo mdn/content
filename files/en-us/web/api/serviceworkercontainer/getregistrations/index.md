@@ -23,7 +23,7 @@ The **`getRegistrations()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getRegistrations()
 ```
 

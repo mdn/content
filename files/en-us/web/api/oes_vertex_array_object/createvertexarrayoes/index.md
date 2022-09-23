@@ -22,7 +22,7 @@ data.
 
 ## Syntax
 
-```js
+```js-nolint
 createVertexArrayOES()
 ```
 

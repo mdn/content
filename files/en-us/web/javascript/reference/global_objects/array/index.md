@@ -128,7 +128,7 @@ In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but ar
 - {{jsxref("Array.prototype.values()")}}
   - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the values for each index in the array.
 - [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
-  - : Returns the [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values) function by default.
+  - : An alias for the [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values) method by default.
 
 ## Examples
 
@@ -461,7 +461,7 @@ Here we have a simple inventory array that contains "food" objects that have a `
 ```js
 const inventory = [
   { name: 'asparagus', type: 'vegetables' },
-  { name: 'bananas',  type: 'fruit' },
+  { name: 'bananas', type: 'fruit' },
   { name: 'goat', type: 'meat' },
   { name: 'cherries', type: 'fruit' },
   { name: 'fish', type: 'meat' },

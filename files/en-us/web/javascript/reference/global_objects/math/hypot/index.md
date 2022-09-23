@@ -20,7 +20,7 @@ The **`Math.hypot()`** function returns the square root of the sum of squares of
 
 ## Syntax
 
-```js
+```js-nolint
 Math.hypot()
 Math.hypot(value0)
 Math.hypot(value0, value1)

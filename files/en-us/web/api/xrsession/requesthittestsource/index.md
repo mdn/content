@@ -25,7 +25,7 @@ The **`requestHitTestSource()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 requestHitTestSource(options)
 ```
 

@@ -66,7 +66,9 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
 
 ```html
 <p class="red">This paragraph has red text.</p>
-<p class="red yellow-bg">This paragraph has red text and a yellow background.</p>
+<p class="red yellow-bg">
+  This paragraph has red text and a yellow background.
+</p>
 <p class="red fancy">This paragraph has red text and "fancy" styling.</p>
 <p>This is just a regular paragraph.</p>
 ```

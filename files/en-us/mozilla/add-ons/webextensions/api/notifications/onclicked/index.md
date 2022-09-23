@@ -20,7 +20,7 @@ Fired when the user clicks a notification, but not on any of the notification's 
 
 ## Syntax
 
-```js
+```js-nolint
 browser.notifications.onClicked.addListener(callback)
 browser.notifications.onClicked.removeListener(listener)
 browser.notifications.onClicked.hasListener(listener)

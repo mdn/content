@@ -21,7 +21,7 @@ for each array element.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((element) => { /* … */ })
 forEach((element, index) => { /* … */ })
@@ -117,8 +117,9 @@ effects at the end of a chain.
 > - {{jsxref("Array.prototype.findIndex()")}}
 >
 > Array methods: {{jsxref("Array.prototype.every()", "every()")}},
-> {{jsxref("Array.prototype.some()", "some()")}}, {{jsxref("Array.prototype.find()",
-    "find()")}}, and {{jsxref("Array.prototype.findIndex()", "findIndex()")}} test the
+> {{jsxref("Array.prototype.some()", "some()")}},
+> {{jsxref("Array.prototype.find()", "find()")}}, and
+> {{jsxref("Array.prototype.findIndex()", "findIndex()")}} test the
 > array elements with a predicate returning a truthy value to determine if further
 > iteration is required.
 

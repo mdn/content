@@ -23,7 +23,7 @@ On success it will fire the [`contextrestored` event](/en-US/docs/Web/API/HTMLCa
 
 ## Syntax
 
-```js
+```js-nolint
 isContextLost()
 ```
 
@@ -38,10 +38,10 @@ None.
 ### Examples
 
 ```js
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 
 if (ctx.isContextLost()) {
-  console.log("Context is lost")
+  console.log("Context is lost");
 }
 ```
 

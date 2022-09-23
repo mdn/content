@@ -22,7 +22,7 @@ which implements a general infinite impulse response filter.
 
 ## Syntax
 
-```js
+```js-nolint
 new IIRFilterNode(context, options)
 ```
 

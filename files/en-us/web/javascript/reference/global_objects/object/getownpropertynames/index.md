@@ -20,7 +20,7 @@ The **`Object.getOwnPropertyNames()`** method returns an array of all properties
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getOwnPropertyNames(obj)
 ```
 

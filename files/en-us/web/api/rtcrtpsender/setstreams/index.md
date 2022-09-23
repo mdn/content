@@ -28,7 +28,7 @@ associates the sender's {{domxref("RTCRtpSender.track", "track")}} with the spec
 
 ## Syntax
 
-```js
+```js-nolint
 setStreams()
 setStreams(mediaStream)
 setStreams(mediaStreams)

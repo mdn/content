@@ -22,7 +22,7 @@ The listener is passed the {{WebExtAPIRef('downloads.DownloadItem')}} object in 
 
 ## Syntax
 
-```js
+```js-nolint
 browser.downloads.onCreated.addListener(listener)
 browser.downloads.onCreated.removeListener(listener)
 browser.downloads.onCreated.hasListener(listener)

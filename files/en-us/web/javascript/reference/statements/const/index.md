@@ -21,15 +21,14 @@ keyword. The value of a constant can't be changed through reassignment (i.e. by 
 
 ## Syntax
 
-```js
-const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
+```js-nolint
+const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]]
 ```
 
 - `nameN`
   - : The constant's name, which can be any legal {{Glossary("identifier")}}.
 - `valueN`
-  - : The constant's value. This can be any legal [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions),
-    including a function expression.
+  - : The constant's value. This can be any legal expression, including a function expression.
 
 The [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 syntax can also be used to declare variables.

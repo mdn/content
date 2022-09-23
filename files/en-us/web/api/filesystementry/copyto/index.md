@@ -31,7 +31,7 @@ typical restrictions on what you can do:
 
 ## Syntax
 
-```js
+```js-nolint
 copyTo(newParent)
 copyTo(newParent, newName)
 copyTo(newParent, newName, successCallback)

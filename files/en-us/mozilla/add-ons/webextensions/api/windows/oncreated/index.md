@@ -20,7 +20,7 @@ Fired when a window is created.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.windows.onCreated.addListener(listener)
 browser.windows.onCreated.removeListener(listener)
 browser.windows.onCreated.hasListener(listener)

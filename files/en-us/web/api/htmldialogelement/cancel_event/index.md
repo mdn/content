@@ -40,7 +40,7 @@ A generic {{domxref("Event")}}.
 
 ```html
 <dialog class="example-dialog">
-    <button class="close" type="reset">Close</button>
+  <button class="close" type="reset">Close</button>
 </dialog>
 
 <button class="open-dialog">Open dialog</button>
@@ -49,8 +49,9 @@ A generic {{domxref("Event")}}.
 ```
 
 ```css hidden
-button, div {
-    margin: .5rem;
+button,
+div {
+  margin: 0.5rem;
 }
 ```
 

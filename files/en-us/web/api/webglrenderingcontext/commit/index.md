@@ -21,7 +21,7 @@ context is not directly fixed to a specific canvas.
 
 ## Syntax
 
-```js
+```js-nolint
 commit()
 ```
 

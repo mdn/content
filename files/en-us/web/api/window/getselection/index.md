@@ -21,7 +21,7 @@ the current position of the caret.
 
 ## Syntax
 
-```js
+```js-nolint
 getSelection()
 ```
 

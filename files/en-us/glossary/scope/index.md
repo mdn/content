@@ -3,7 +3,6 @@ title: Scope
 slug: Glossary/Scope
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

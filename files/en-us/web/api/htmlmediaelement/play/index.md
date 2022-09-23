@@ -27,7 +27,7 @@ permission issues, result in the promise being rejected.
 
 ## Syntax
 
-```js
+```js-nolint
 play()
 ```
 

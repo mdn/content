@@ -18,7 +18,7 @@ The **`setSignals()`** method of the {{domxref("SerialPort")}} interface sets co
 
 ## Syntax
 
-```js
+```js-nolint
 setSignals()
 setSignals(options)
 ```

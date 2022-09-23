@@ -20,7 +20,7 @@ about a framebuffer's attachment.
 
 ## Syntax
 
-```js
+```js-nolint
 getFramebufferAttachmentParameter(target, attachment, pname)
 ```
 

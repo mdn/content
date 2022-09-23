@@ -20,7 +20,7 @@ The **`requestViewportScale()`** method of the {{domxref("XRView")}} interface r
 
 ## Syntax
 
-```js
+```js-nolint
 requestViewportScale(scale)
 ```
 

@@ -17,7 +17,7 @@ The **`toJSON()`** method of the {{domxref("TrustedScriptURL")}} interface retur
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

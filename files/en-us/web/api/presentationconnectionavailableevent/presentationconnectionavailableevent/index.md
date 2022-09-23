@@ -17,7 +17,7 @@ The **`PresentationConnectionAvailableEvent()`** constructor creates a new {{dom
 
 ## Syntax
 
-```js
+```js-nolint
 new PresentationConnectionAvailableInit(type, options)
 ```
 

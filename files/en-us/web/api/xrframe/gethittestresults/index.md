@@ -19,7 +19,7 @@ The **`getHitTestResults()`** method of the {{domxref("XRFrame")}} interface ret
 
 ## Syntax
 
-```js
+```js-nolint
 getHitTestResults(hitTestSource)
 ```
 

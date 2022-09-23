@@ -24,7 +24,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 releasePointerCapture(pointerId)
 ```
 

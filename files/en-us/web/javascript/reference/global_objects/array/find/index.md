@@ -28,7 +28,7 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 find((element) => { /* … */ } )
 find((element, index) => { /* … */ } )

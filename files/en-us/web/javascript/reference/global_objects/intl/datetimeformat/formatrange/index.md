@@ -27,7 +27,7 @@ date range in the most concise way based on the **`locale`** and
 
 ## Syntax
 
-```js
+```js-nolint
 formatRange(startDate, endDate)
 ```
 

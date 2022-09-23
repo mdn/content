@@ -19,7 +19,7 @@ The **`pulse()`** method of the {{domxref("GamepadHapticActuator")}} interface m
 
 ## Syntax
 
-```js
+```js-nolint
 pulse(value, duration)
 ```
 

@@ -18,7 +18,7 @@ The **`getInfo()`** method of the {{domxref("SerialPort")}} interface returns an
 
 ## Syntax
 
-```js
+```js-nolint
 getInfo()
 ```
 

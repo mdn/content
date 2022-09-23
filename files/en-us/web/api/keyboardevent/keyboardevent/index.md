@@ -18,7 +18,7 @@ The **`KeyboardEvent()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new KeyboardEvent(type)
 new KeyboardEvent(type, options)
 ```

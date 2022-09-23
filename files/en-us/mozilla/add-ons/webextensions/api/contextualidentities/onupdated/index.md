@@ -19,7 +19,7 @@ Fired when the properties of a contextual identity, such as its name, icon, or c
 
 ## Syntax
 
-```js
+```js-nolint
 browser.contextualIdentities.onUpdated.addListener(listener)
 browser.contextualIdentities.onUpdated.removeListener(listener)
 browser.contextualIdentities.onUpdated.hasListener(listener)

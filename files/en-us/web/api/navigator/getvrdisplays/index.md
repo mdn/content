@@ -27,7 +27,7 @@ computer.
 
 ## Syntax
 
-```js
+```js-nolint
 getVRDisplays()
 ```
 

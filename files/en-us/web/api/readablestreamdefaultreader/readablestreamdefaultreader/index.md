@@ -22,7 +22,7 @@ instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new ReadableStreamDefaultReader(stream)
 ```
 

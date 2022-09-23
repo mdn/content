@@ -22,7 +22,7 @@ element.
 
 ## Syntax
 
-```js
+```js-nolint
 unobserve(target)
 ```
 

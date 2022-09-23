@@ -25,7 +25,7 @@ range produced by {{jsxref("Intl.DateTimeFormat")}} formatters.
 
 ## Syntax
 
-```js
+```js-nolint
 formatRangeToParts(startDate, endDate)
 ```
 

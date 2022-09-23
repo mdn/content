@@ -22,8 +22,8 @@ error, and will reject with this first rejection message / error.
 
 ## Syntax
 
-```js
-Promise.all(iterable);
+```js-nolint
+Promise.all(iterable)
 ```
 
 ### Parameters

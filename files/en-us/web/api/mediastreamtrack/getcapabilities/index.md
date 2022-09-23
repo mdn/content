@@ -27,7 +27,7 @@ track to be configured to match ideal or acceptable settings. See [Capabilities,
 
 ## Syntax
 
-```js
+```js-nolint
 getCapabilities()
 ```
 

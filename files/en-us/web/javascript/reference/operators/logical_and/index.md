@@ -20,7 +20,7 @@ More generally, the operator returns the value of the first {{Glossary("falsy")}
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 && expr2
 ```
 

@@ -22,7 +22,7 @@ interface moves the current window by a specified amount.
 
 ## Syntax
 
-```js
+```js-nolint
 moveBy(deltaX, deltaY)
 ```
 

@@ -22,7 +22,7 @@ parameter doesn't exist, this method creates it.
 
 ## Syntax
 
-```js
+```js-nolint
 set(name, value)
 ```
 

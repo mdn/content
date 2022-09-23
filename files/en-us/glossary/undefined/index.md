@@ -3,7 +3,6 @@ title: undefined
 slug: Glossary/undefined
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
   - NeedsContent
 ---

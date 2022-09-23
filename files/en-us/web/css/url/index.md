@@ -101,7 +101,7 @@ url( <string> <url-modifier>* )
 
 ```css
 .topbanner {
-  background: url("topbanner.png") #00D no-repeat fixed;
+  background: url("topbanner.png") #00d no-repeat fixed;
 }
 ```
 
@@ -129,7 +129,7 @@ ul {
 
 ```css
 li::after {
-  content: ' - ' url(star.gif);
+  content: " - " url(star.gif);
 }
 ```
 

@@ -49,9 +49,12 @@ The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to e
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -88,8 +91,8 @@ Open the HTML index file. You'll see a number of features; the HTML is dominated
 ```html
 <div class="player">
   <video controls>
-    <source src="video/sintel-short.mp4" type="video/mp4">
-    <source src="video/sintel-short.webm" type="video/webm">
+    <source src="video/sintel-short.mp4" type="video/mp4" />
+    <source src="video/sintel-short.webm" type="video/webm" />
     <!-- fallback content here -->
   </video>
   <div class="controls">
@@ -147,13 +150,13 @@ Next, let's look at our button icons:
 
 ```css
 @font-face {
-   font-family: 'HeydingsControlsRegular';
-   src: url('fonts/heydings_controls-webfont.eot');
-   src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
-        url('fonts/heydings_controls-webfont.woff') format('woff'),
-        url('fonts/heydings_controls-webfont.ttf') format('truetype');
-   font-weight: normal;
-   font-style: normal;
+  font-family: "HeydingsControlsRegular";
+  src: url("fonts/heydings_controls-webfont.eot");
+  src: url("fonts/heydings_controls-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/heydings_controls-webfont.woff") format("woff"),
+    url("fonts/heydings_controls-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 button:before {
@@ -191,7 +194,7 @@ Last but not least, let's look at the CSS for the timer:
 
 .timer div {
   position: absolute;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   left: 0;
   top: 0;
   width: 0;

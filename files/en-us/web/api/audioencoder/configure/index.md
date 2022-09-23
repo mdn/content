@@ -18,7 +18,7 @@ The **`configure()`** method of the {{domxref("AudioEncoder")}} interface enqueu
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 
@@ -57,11 +57,11 @@ const init = {
   output: handleOutput,
   error: (e) => {
     console.log(e.message);
-  }
+  },
 };
 
 let config = {
-  codec: 'vp8',
+  codec: "vp8",
   bitrate: 2_000_000, // 2 Mbps
 };
 

@@ -34,7 +34,7 @@ the following configuration options:
 
 ## Syntax
 
-```js
+```js-nolint
 getConfiguration()
 ```
 

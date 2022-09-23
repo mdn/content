@@ -20,7 +20,7 @@ The **`requestPermission()`** method of the {{domxref("Notification")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 // The latest spec has updated this method to a promise-based syntax that works like this:
 requestPermission()
 

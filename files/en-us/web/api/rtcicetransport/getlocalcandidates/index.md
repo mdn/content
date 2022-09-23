@@ -33,7 +33,7 @@ forward the candidates to the remote peer.
 
 ## Syntax
 
-```js
+```js-nolint
 getLocalCandidates()
 ```
 

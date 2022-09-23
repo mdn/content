@@ -19,7 +19,7 @@ The **`async function*`** keywords can be used to define an asynchronous generat
 
 ## Syntax
 
-```js
+```js-nolint
 async function* (param0) {
   statements
 }
@@ -56,7 +56,7 @@ An `async function*` expression is very similar to and has almost the same synta
 
 ## Examples
 
-### Using async function*
+### Using async function\*
 
 The following example defines an unnamed asynchronous generator function and assigns it to `x`. The function yields the square of its argument:
 

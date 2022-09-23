@@ -20,7 +20,7 @@ Fired when a tab is detached from a window, for example because it is being move
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onDetached.addListener(listener)
 browser.tabs.onDetached.removeListener(listener)
 browser.tabs.onDetached.hasListener(listener)

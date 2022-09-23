@@ -22,7 +22,7 @@ method) at explicit points in time.
 
 ## Syntax
 
-```js
+```js-nolint
 getEntriesByType(type)
 ```
 

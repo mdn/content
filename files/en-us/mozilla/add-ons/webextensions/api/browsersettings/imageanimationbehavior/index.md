@@ -31,7 +31,7 @@ The underlying value is a string that can take one of three values:
 Disable animated images:
 
 ```js
-  browser.browserSettings.imageAnimationBehavior.set({value: "none"});
+browser.browserSettings.imageAnimationBehavior.set({ value: "none" });
 ```
 
 {{WebExtExamples}}

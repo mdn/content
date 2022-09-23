@@ -20,7 +20,7 @@ or key pair (for public-key algorithms).
 
 ## Syntax
 
-```js
+```js-nolint
 generateKey(algorithm, extractable, keyUsages)
 ```
 

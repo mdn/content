@@ -18,7 +18,7 @@ The **`importScripts()`** method of the {{domxref("WorkerGlobalScope")}} interfa
 
 ## Syntax
 
-```js
+```js-nolint
 importScripts(path0)
 importScripts(path0, path1)
 importScripts(path0, path1, /* … ,*/ pathN)

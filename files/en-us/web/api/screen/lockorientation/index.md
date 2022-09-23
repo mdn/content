@@ -25,7 +25,7 @@ interface locks the screen into a specified orientation.
 
 ## Syntax
 
-```js
+```js-nolint
 lockOrientation(orientation)
 ```
 

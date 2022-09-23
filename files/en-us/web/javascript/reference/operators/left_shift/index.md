@@ -18,7 +18,7 @@ The **left shift operator (`<<`)** shifts the first operand the specified number
 
 ## Syntax
 
-```js
+```js-nolint
 a << b
 ```
 

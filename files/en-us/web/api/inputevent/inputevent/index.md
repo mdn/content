@@ -20,7 +20,7 @@ The **`InputEvent()`** constructor creates a new {{domxref("InputEvent")}} objec
 
 ## Syntax
 
-```js
+```js-nolint
 new InputEvent(type)
 new InputEvent(type, options)
 ```

@@ -24,7 +24,7 @@ appropriate. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 includes(searchElement)
 includes(searchElement, fromIndex)
 ```

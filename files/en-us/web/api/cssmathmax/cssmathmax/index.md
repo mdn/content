@@ -21,7 +21,7 @@ new {{domxref("CSSMathMax")}} object which represents the CSS {{CSSXref('max()',
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMathMax(args)
 ```
 

@@ -202,7 +202,7 @@ div.onmousedown = () => {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
-}
+};
 
 document.onmouseup = stopMove;
 ```
@@ -215,7 +215,7 @@ div.ontouchstart = (e) => {
   initialBoxY = div.offsetTop;
   positionHandler(e);
   movePanel();
-}
+};
 
 panel.ontouchend = stopMove;
 ```
@@ -245,7 +245,7 @@ There are other important issues to consider when making sites more accessible o
 Using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag), it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:
 
 ```html
-<meta name="viewport" content="width=device-width; user-scalable=yes">
+<meta name="viewport" content="width=device-width; user-scalable=yes" />
 ```
 
 You should never set `user-scalable=no` if at all possible — many people rely on zoom to be able to see the content of your website, so taking this functionality away is a really bad idea. There are certain situations where zooming might break the UI; in such cases, if you feel that you absolutely need to disable zoom, you should provide some other kind of equivalent, such as a control for increasing the text size in a way that doesn't break your UI.

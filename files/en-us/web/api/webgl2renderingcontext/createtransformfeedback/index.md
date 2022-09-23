@@ -19,7 +19,7 @@ initializes {{domxref("WebGLTransformFeedback")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 createTransformFeedback()
 ```
 

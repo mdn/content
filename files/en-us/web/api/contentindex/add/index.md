@@ -22,7 +22,7 @@ The **`add()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 add(contentDescription)
 ```
 

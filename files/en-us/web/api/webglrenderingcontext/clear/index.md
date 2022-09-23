@@ -24,7 +24,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 clear(mask)
 ```
 

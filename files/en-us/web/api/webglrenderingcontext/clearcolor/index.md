@@ -22,7 +22,7 @@ between 0 and 1.
 
 ## Syntax
 
-```js
+```js-nolint
 clearColor(red, green, blue, alpha)
 ```
 

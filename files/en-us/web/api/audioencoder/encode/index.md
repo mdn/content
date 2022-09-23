@@ -18,7 +18,7 @@ The **`encode()`** method of the {{domxref("AudioEncoder")}} interface enqueues 
 
 ## Syntax
 
-```js
+```js-nolint
 encode(data)
 ```
 

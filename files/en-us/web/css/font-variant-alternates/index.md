@@ -91,7 +91,9 @@ This property may take one of two forms:
 
 ```css
 @font-feature-values "Leitura Display Swashes" {
-    @swash { fancy: 1 }
+  @swash {
+    fancy: 1;
+  }
 }
 
 p {

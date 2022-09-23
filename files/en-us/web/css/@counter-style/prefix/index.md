@@ -66,7 +66,7 @@ prefix: url(bullet.png);
 @counter-style chapters {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
-  prefix: 'Chapter ';
+  prefix: "Chapter ";
 }
 
 .index {

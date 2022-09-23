@@ -22,7 +22,7 @@ creates a new {{domxref("ImageCapture")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new ImageCapture(videoTrack)
 ```
 

@@ -45,13 +45,11 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ```html
 <math>
-
   <menclose notation="circle box">
     <mi>x</mi>
     <mo>+</mo>
     <mi>y</mi>
   </menclose>
-
 </math>
 ```
 

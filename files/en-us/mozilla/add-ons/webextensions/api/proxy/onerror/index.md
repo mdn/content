@@ -20,7 +20,7 @@ The error can be triggered by throwing or returning an invalid value in the prox
 
 ## Syntax
 
-```js
+```js-nolint
 browser.proxy.onError.addListener(listener)
 browser.proxy.onError.removeListener(listener)
 browser.proxy.onError.hasListener(listener)

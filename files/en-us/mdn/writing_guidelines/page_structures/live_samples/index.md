@@ -85,7 +85,7 @@ One common use case is to take existing code snippets already shown on MDN and t
 
 #### Prepare the code samples
 
-The first step is to either add code snippets or ensure that existing ones are ready to be used as live samples, in terms of the content and in terms of their mark-up. The code snippets, taken together, must comprise a complete, runnable example. For example, if the existing snippet shows only CSS, you might need to add a snippet of HTML for the CSS to operate on.
+The first step is to either add code snippets or ensure that existing ones are ready to be used as live samples, in terms of the content and in terms of their markup. The code snippets, taken together, must comprise a complete, runnable example. For example, if the existing snippet shows only CSS, you might need to add a snippet of HTML for the CSS to operate on.
 
 Each piece of code must be in a {{HTMLElement("pre")}} block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. This is done with a class on the `<pre>` element of `brush:language-type`, where _language-type_ is the type of language the block contains, e.g. `html`, `css`, or `js`.
 

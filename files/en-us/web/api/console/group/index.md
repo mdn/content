@@ -21,7 +21,7 @@ until {{domxref("console.groupEnd()")}} is called.
 
 ## Syntax
 
-```js
+```js-nolint
 group()
 group(label)
 ```

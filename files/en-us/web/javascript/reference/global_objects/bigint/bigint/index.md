@@ -15,7 +15,7 @@ The **`BigInt()`** function returns a value of type **bigint**.
 
 ## Syntax
 
-```js
+```js-nolint
 BigInt(value)
 ```
 

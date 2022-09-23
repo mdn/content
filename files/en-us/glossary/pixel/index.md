@@ -3,7 +3,6 @@ title: Pixel
 slug: Glossary/Pixel
 tags:
   - Design
-  - Glossary
   - Graphics
 ---
 

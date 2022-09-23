@@ -5,7 +5,6 @@ tags:
   - Beginner
   - Definitions
   - Dictionary
-  - Glossary
   - Index
   - Landing
   - Terminology

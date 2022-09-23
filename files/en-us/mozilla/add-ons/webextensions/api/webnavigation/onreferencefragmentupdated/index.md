@@ -14,11 +14,13 @@ tags:
 browser-compat: webextensions.api.webNavigation.onReferenceFragmentUpdated
 ---
 
-{{AddonSidebar()}}Fired if the [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) for a page is changed. For example, if a page implements a table of contents using fragments, and the user clicks an entry in the table of contents, this event will fire. All future events for this frame will use the updated URL.
+{{AddonSidebar()}}
+
+Fired if the [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) for a page is changed. For example, if a page implements a table of contents using fragments, and the user clicks an entry in the table of contents, this event will fire. All future events for this frame will use the updated URL.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onReferenceFragmentUpdated.addListener(
   listener,                   // function
   filter                      // optional object

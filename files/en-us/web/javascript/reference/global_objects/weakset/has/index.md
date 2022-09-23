@@ -19,7 +19,7 @@ object exists in a `WeakSet` or not.
 
 ## Syntax
 
-```js
+```js-nolint
 has(value)
 ```
 

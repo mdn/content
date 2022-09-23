@@ -25,7 +25,7 @@ URL.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

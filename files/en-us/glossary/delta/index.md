@@ -3,7 +3,6 @@ title: Delta
 slug: Glossary/Delta
 tags:
   - Delta
-  - Glossary
   - difference
   - value
 ---

@@ -20,7 +20,7 @@ current texture.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL1
 texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels) // pixels is a TypedArray or a DataView
 texSubImage2D(target, level, xoffset, yoffset, format, type, pixels)

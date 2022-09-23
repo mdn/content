@@ -19,7 +19,7 @@ the {{jsxref("Number")}} object in exponential notation.
 
 ## Syntax
 
-```js
+```js-nolint
 toExponential()
 toExponential(fractionDigits)
 ```

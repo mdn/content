@@ -21,7 +21,7 @@ This method is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Acce
 
 ## Syntax
 
-```js
+```js-nolint
 hasStorageAccess()
 ```
 

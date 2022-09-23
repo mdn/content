@@ -18,7 +18,7 @@ newly created {{domxref("TreeWalker")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 createTreeWalker(root)
 createTreeWalker(root, whatToShow)
 createTreeWalker(root, whatToShow, filter)

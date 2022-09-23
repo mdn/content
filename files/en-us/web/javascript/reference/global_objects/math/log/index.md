@@ -19,7 +19,7 @@ The **`Math.log()`** function returns the natural logarithm (base [e](/en-US/doc
 
 ## Syntax
 
-```js
+```js-nolint
 Math.log(x)
 ```
 

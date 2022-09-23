@@ -20,7 +20,7 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 
 ## Syntax
 
-```js
+```js-nolint
 new AmbientLightSensor()
 new AmbientLightSensor(options)
 ```

@@ -18,7 +18,7 @@ capabilities for this context.
 
 ## Syntax
 
-```js
+```js-nolint
 disable(capability)
 ```
 

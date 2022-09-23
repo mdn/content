@@ -27,7 +27,7 @@ using these methods.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL 1:
 compressedTexImage2D(target, level, internalformat, width, height, border)
 compressedTexImage2D(target, level, internalformat, width, height, border, pixels)

@@ -22,7 +22,7 @@ audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.
 
 ## Syntax
 
-```js
+```js-nolint
 new OfflineAudioContext(options)
 
 new OfflineAudioContext(numberOfChannels, length, sampleRate)

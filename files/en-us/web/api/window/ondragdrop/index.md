@@ -32,27 +32,25 @@ The `window.ondragdrop` property and the `ondragdrop` attribute are not implemen
 In this example, an event listener is added to the window (the event target). If, from an external source, a tab, a link, marked text or a file is dragged and dropped onto this window, the alert is fired. Note how `event.stopPropagation();` prevents the browser from loading the dropped tab, link or file.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>dragdroptest</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>dragdroptest</title>
 
-<script>
+    <script>
+      window.addEventListener("dragdrop", testfunc, false);
 
-window.addEventListener("dragdrop", testfunc, false);
-
-function testfunc(event) {
-    alert("dragdrop!");
-    event.stopPropagation();
-}
-</script>
-
-</head>
-<body>
-I am bodytext
-</body>
+      function testfunc(event) {
+        alert("dragdrop!");
+        event.stopPropagation();
+      }
+    </script>
+  </head>
+  <body>
+    I am bodytext
+  </body>
 </html>
 ```
 

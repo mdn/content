@@ -24,7 +24,7 @@ Other browsers always use a white text color, so setting a dark background may b
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.setBadgeBackgroundColor(
   details // object
 )

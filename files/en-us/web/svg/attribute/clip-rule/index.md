@@ -17,10 +17,10 @@ The following fragment of code will cause an evenodd clipping rule to be applied
 
 ```html
 <g>
-    <clipPath id="MyClip">
-        <path d="..." clip-rule="evenodd" />
-    </clipPath>
-    <rect clip-path="url(#MyClip)" ... />
+  <clipPath id="MyClip">
+    <path d="..." clip-rule="evenodd" />
+  </clipPath>
+  <rect clip-path="url(#MyClip)" ... />
 </g>
 ```
 
@@ -28,10 +28,10 @@ whereas the following fragment of code will not cause an evenodd clipping rule t
 
 ```html
 <g>
-    <clipPath id="MyClip">
-        <path d="..." />
-    </clipPath>
-    <rect clip-path="url(#MyClip)" clip-rule="evenodd" ... />
+  <clipPath id="MyClip">
+    <path d="..." />
+  </clipPath>
+  <rect clip-path="url(#MyClip)" clip-rule="evenodd" ... />
 </g>
 ```
 
@@ -64,7 +64,11 @@ As a presentation attribute, it also can be used as a property directly inside a
 ## Example
 
 ```html
-<svg width="100" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg
+  width="100"
+  viewBox="0 0 100 90"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1">
   <!-- Define star path -->
   <defs>
     <path d="M50,0 21,90 98,35 2,35 79,90z" id="star" />

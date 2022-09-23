@@ -45,7 +45,6 @@ analyser.getByteTimeDomainData(dataArray);
 // draw an oscilloscope of the current audio source
 
 function draw() {
-
   drawVisual = requestAnimationFrame(draw);
 
   analyser.getByteTimeDomainData(dataArray);

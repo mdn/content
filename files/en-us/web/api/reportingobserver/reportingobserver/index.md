@@ -20,7 +20,7 @@ access reports.
 
 ## Syntax
 
-```js
+```js-nolint
 new ReportingObserver(callback)
 new ReportingObserver(callback, options)
 ```

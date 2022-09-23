@@ -24,7 +24,7 @@ currently registered for periodic syncing.
 
 ## Syntax
 
-```js
+```js-nolint
 getTags()
 ```
 

@@ -23,7 +23,7 @@ Note that the stored results are global across all extensions, so for example, i
 
 ## Syntax
 
-```js
+```js-nolint
 browser.find.highlightResults(
   options // optional object
 )

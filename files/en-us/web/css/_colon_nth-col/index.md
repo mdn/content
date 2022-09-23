@@ -40,7 +40,7 @@ See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
     <td>four</td>
   </tr>
   <tr>
-  <td>one</td>
+    <td>one</td>
     <td>two</td>
     <td>three</td>
     <td>four</td>
@@ -53,11 +53,11 @@ See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 ```css
 td {
   border: 1px solid #ccc;
-  padding: .2em;
+  padding: 0.2em;
 }
 
 /* Odd columns */
-:nth-col(2n+1) {
+:nth-col(2n + 1) {
   background-color: pink;
 }
 ```

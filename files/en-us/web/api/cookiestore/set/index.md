@@ -18,7 +18,7 @@ The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie
 
 ## Syntax
 
-```js
+```js-nolint
 set(name, value)
 set(options)
 ```
@@ -79,7 +79,7 @@ cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + day,
-  domain: "example.com"
+  domain: "example.com",
 });
 ```
 

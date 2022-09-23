@@ -23,7 +23,7 @@ triggers the user agent's pairing flow.
 
 ## Syntax
 
-```js
+```js-nolint
 requestDevice(filters)
 ```
 
@@ -44,6 +44,10 @@ requestDevice(filters)
 ### Return value
 
 A {{JSxRef("Promise")}} that resolves with an instance of {{DOMxRef("USBDevice")}}.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

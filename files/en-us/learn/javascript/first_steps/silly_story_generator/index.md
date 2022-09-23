@@ -11,7 +11,7 @@ tags:
   - Numbers
   - Operators
   - Variables
-  - l10n:priority
+  - "l10n:priority"
   - strings
 ---
 

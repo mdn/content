@@ -18,7 +18,7 @@ passed {{domxref("WebGLProgram")}} is valid, `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 isProgram(program)
 ```
 

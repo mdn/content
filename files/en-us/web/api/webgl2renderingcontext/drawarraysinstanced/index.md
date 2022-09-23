@@ -24,7 +24,7 @@ method. In addition, it can execute multiple instances of the range of elements.
 
 ## Syntax
 
-```js
+```js-nolint
 drawArraysInstanced(mode, first, count, instanceCount)
 ```
 

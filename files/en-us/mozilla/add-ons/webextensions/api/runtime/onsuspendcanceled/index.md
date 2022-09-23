@@ -20,7 +20,7 @@ Sent after {{WebExtAPIRef("runtime.onSuspend")}} to indicate that the app won't 
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onSuspendCanceled.addListener(listener)
 browser.runtime.onSuspendCanceled.removeListener(listener)
 browser.runtime.onSuspendCanceled.hasListener(listener)

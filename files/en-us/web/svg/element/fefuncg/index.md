@@ -27,7 +27,7 @@ The **`<feFuncG>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the tran
 
 ### Specific attributes
 
-_None._
+None.
 
 ## DOM Interface
 

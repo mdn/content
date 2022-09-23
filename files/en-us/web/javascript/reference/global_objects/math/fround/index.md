@@ -20,7 +20,7 @@ The **`Math.fround()`** function returns the nearest [32-bit single precision](h
 
 ## Syntax
 
-```js
+```js-nolint
 Math.fround(doubleFloat)
 ```
 

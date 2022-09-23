@@ -23,7 +23,7 @@ previously scheduled with {{domxref("window.requestIdleCallback()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 cancelIdleCallback(handle)
 ```
 

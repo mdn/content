@@ -20,7 +20,7 @@ The **`toGMTString()`** method converts a date to a string, using Internet Green
 
 ## Syntax
 
-```js
+```js-nolint
 toGMTString()
 ```
 

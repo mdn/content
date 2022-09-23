@@ -37,9 +37,7 @@ npm install luxon
 Add the virtual property `due_back_formatted` just after the URL property.
 
 ```js
-BookInstanceSchema
-.virtual('due_back_formatted')
-.get(function () {
+BookInstanceSchema.virtual("due_back_formatted").get(function () {
   return DateTime.fromJSDate(this.due_back).toLocaleString(DateTime.DATE_MED);
 });
 ```

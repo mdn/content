@@ -23,7 +23,7 @@ it).
 
 ## Syntax
 
-```js
+```js-nolint
 hasOwnProperty(prop)
 ```
 

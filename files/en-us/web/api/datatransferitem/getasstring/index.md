@@ -23,7 +23,7 @@ given callback with the drag data item's string data as the argument if the item
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 getAsString((data) => { /* … */ } )
 

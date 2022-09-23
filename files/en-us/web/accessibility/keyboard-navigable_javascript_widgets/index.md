@@ -32,13 +32,13 @@ The following table describes `tabindex` behavior in modern browsers:
   <tbody>
     <tr>
       <td>not present</td>
-      <td>Follows the platform convention of the element (yes for form controls,links, etc.).</td>
+      <td>Follows the platform convention of the element (yes for form controls, links, etc.).</td>
       <td>Follows the platform convention of the element.</td>
     </tr>
     <tr>
       <td>Negative (i.e. <code>tabindex="-1"</code>)</td>
       <td>Yes</td>
-      <td>No; author must focus the element with <a href="/en-US/docs/Web/API/Element/focus_event"><code>focus()</code></a> in response to arrow or other key presses.</td>
+      <td>No; author must focus the element with <a href="/en-US/docs/Web/API/HTMLElement/focus"><code>focus()</code></a> in response to arrow or other key presses.</td>
     </tr>
     <tr>
       <td>Zero (i.e. <code>tabindex="0"</code>)</td>
@@ -67,7 +67,8 @@ The example below shows this technique used with a nested menu control. Once key
 
 ```html
 <ul id="mb1" tabindex="0">
-  <li id="mb1_menu1" tabindex="-1"> Font
+  <li id="mb1_menu1" tabindex="-1">
+    Font
     <ul id="fontMenu" title="Font" tabindex="-1">
       <li id="sans-serif" tabindex="-1">Sans-serif</li>
       <li id="serif" tabindex="-1">Serif</li>
@@ -75,14 +76,16 @@ The example below shows this technique used with a nested menu control. Once key
       <li id="fantasy" tabindex="-1">Fantasy</li>
     </ul>
   </li>
-  <li id="mb1_menu2" tabindex="-1"> Style
+  <li id="mb1_menu2" tabindex="-1">
+    Style
     <ul id="styleMenu" title="Style" tabindex="-1">
       <li id="italic" tabindex="-1">Italics</li>
       <li id="bold" tabindex="-1">Bold</li>
       <li id="underline" tabindex="-1">Underlined</li>
     </ul>
   </li>
-  <li id="mb1_menu3" tabindex="-1"> Justification
+  <li id="mb1_menu3" tabindex="-1">
+    Justification
     <ul id="justificationMenu" title="Justification" tabindex="-1">
       <li id="left" tabindex="-1">Left</li>
       <li id="center" tabindex="-1">Centered</li>
@@ -159,7 +162,7 @@ If your widget handles a key event, prevent the browser from also handling it (f
 For example:
 
 ```html
-<span tabindex="-1" onkeydown="return handleKeyDown();">
+<span tabindex="-1" onkeydown="return handleKeyDown();">…</span>
 ```
 
 If `handleKeyDown()` returns `false`, the event will be consumed, preventing the browser from performing any action based on the keystroke.

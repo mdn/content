@@ -19,7 +19,7 @@ The **`disconnect()`** method of the {{ domxref("AudioNode") }} interface lets y
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 

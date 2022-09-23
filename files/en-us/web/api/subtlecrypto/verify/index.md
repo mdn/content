@@ -24,7 +24,7 @@ indicating whether the signature is valid.
 
 ## Syntax
 
-```js
+```js-nolint
 verify(algorithm, key, signature, data)
 ```
 

@@ -24,7 +24,7 @@ the element that it is attached to is called the {{glossary("shadow root")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 createShadowRoot()
 ```
 

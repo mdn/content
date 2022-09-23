@@ -65,7 +65,11 @@ objects, then their elements or properties are enumerated in the row, one per co
 ```js
 // an array of arrays
 
-const people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+const people = [
+  ["John", "Smith"],
+  ["Jane", "Doe"],
+  ["Emily", "Jones"],
+];
 console.table(people);
 ```
 
@@ -133,7 +137,7 @@ You can sort the table by a particular column by clicking on that column's label
 
 ## Syntax
 
-```js
+```js-nolint
 table(data)
 table(data, columns)
 ```

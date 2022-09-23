@@ -27,7 +27,7 @@ The main scope that spawned the worker can send back information to the thread t
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(aMessage, transferList)
 ```
 

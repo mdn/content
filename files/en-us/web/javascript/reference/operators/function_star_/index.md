@@ -21,7 +21,7 @@ function inside an expression.
 
 ## Syntax
 
-```js
+```js-nolint
 function* (param0) {
   statements
 }

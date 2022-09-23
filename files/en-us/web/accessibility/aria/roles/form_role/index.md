@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: form role'
+title: "ARIA: form role"
 slug: Web/Accessibility/ARIA/Roles/form_role
 tags:
   - ARIA
@@ -55,24 +55,34 @@ No role specific keyboard interactions
 ```html
 <div role="form" id="send-comment" aria-label="Add a comment">
   <label for="username">Username</label>
-  <input id="username" name="username" autocomplete="nickname" autocorrect="off" type="text">
+  <input
+    id="username"
+    name="username"
+    autocomplete="nickname"
+    autocorrect="off"
+    type="text" />
 
   <label for="email">Email</label>
-  <input id="email" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" type="text">
+  <input
+    id="email"
+    name="email"
+    autocomplete="email"
+    autocapitalize="off"
+    autocorrect="off"
+    spellcheck="false"
+    type="text" />
 
   <label for="comment">Comment</label>
   <textarea id="comment" name="comment"></textarea>
 
-  <input value="Comment" type="submit">
+  <input value="Comment" type="submit" />
 </div>
 ```
 
 It is recommended to use `<form>` instead.
 
 ```html
-<form id="send-comment" aria-label="Add a comment">
-  …
-</form>
+<form id="send-comment" aria-label="Add a comment">…</form>
 ```
 
 ## Accessibility concerns

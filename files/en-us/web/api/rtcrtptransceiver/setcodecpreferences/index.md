@@ -40,7 +40,7 @@ characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/
 
 ## Syntax
 
-```js
+```js-nolint
 setCodecPreferences(codecs)
 ```
 

@@ -41,7 +41,7 @@ minimized.
 
 ## Syntax
 
-```js
+```js-nolint
 document.visibilityState
 ```
 

@@ -9,7 +9,7 @@ browser-compat: api.Performance.memory
 
 ## Syntax
 
-```js
+```js-nolint
 memoryInfo = performance.memory
 ```
 

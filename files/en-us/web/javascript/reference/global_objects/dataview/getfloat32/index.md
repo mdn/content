@@ -19,7 +19,7 @@ The **`getFloat32()`** method gets a signed 32-bit float
 
 ## Syntax
 
-```js
+```js-nolint
 getFloat32(byteOffset)
 getFloat32(byteOffset, littleEndian)
 ```

@@ -19,7 +19,7 @@ date, according to local time.
 
 ## Syntax
 
-```js
+```js-nolint
 getHours()
 ```
 

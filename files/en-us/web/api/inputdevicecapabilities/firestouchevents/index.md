@@ -21,7 +21,7 @@ touch events on mobile browsers.
 
 ## Syntax
 
-```js
+```js-nolint
 const boolean = InputDeviceCapabilities.firesTouchEvents
 ```
 

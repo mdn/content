@@ -17,7 +17,7 @@ The **`Function()`** constructor creates a new [`Function`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 new Function(functionBody)
 new Function(arg0, functionBody)
 new Function(arg0, arg1, functionBody)

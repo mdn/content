@@ -20,7 +20,7 @@ Fired when an error occurs and the navigation is aborted. This can happen if eit
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onErrorOccurred.addListener(
   listener,                   // function
   filter                      // optional object

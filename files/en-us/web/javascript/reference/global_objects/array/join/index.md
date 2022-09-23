@@ -22,7 +22,7 @@ only one item, then that item will be returned without using the separator.
 
 ## Syntax
 
-```js
+```js-nolint
 join()
 join(separator)
 ```

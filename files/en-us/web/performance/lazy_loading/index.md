@@ -48,9 +48,9 @@ Any script tag with `type="module"` is treated as a [JavaScript module](/en-US/d
 By default, CSS is treated as a [render blocking](/en-US/docs/Web/Performance/Critical_rendering_path) resource, so the browser won't render any processed content until the [CSSOM](/en-US/docs/Web/API/CSS_Object_Model) is constructed. CSS must be thin, delivered as quickly as possible, and the usage media types and queries are advised to unblock rendering.
 
 ```html
-<link href="style.css"    rel="stylesheet" media="all">
-<link href="portrait.css" rel="stylesheet" media="(orientation:portrait)">
-<link href="print.css"    rel="stylesheet" media="print">
+<link href="style.css" rel="stylesheet" media="all" />
+<link href="portrait.css" rel="stylesheet" media="(orientation:portrait)" />
+<link href="print.css" rel="stylesheet" media="print" />
 ```
 
 It is possible to perform some [CSS optimizations](/en-US/docs/Learn/Performance/CSS) to achieve that.
@@ -71,7 +71,7 @@ Very often, webpages contain many images that contribute to data-usage and how f
 The {{htmlattrxref("loading", "img")}} attribute on an {{HTMLElement("img")}} element (or the {{htmlattrxref("loading", "iframe")}} attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
 
 ```html
-<img src="image.jpg" alt="..." loading="lazy">
+<img src="image.jpg" alt="..." loading="lazy" />
 <iframe src="video-player.html" title="..." loading="lazy"></iframe>
 ```
 

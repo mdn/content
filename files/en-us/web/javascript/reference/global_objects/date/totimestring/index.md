@@ -18,7 +18,7 @@ The **`toTimeString()`** method returns the time portion of a {{jsxref("Date")}}
 
 ## Syntax
 
-```js
+```js-nolint
 toTimeString()
 ```
 

@@ -17,7 +17,7 @@ The **`removeCue()`** method of the {{domxref("TextTrack")}} interface removes a
 
 ## Syntax
 
-```js
+```js-nolint
 removeCue(cue)
 ```
 

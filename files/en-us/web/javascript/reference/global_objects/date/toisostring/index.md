@@ -19,7 +19,7 @@ The **`toISOString()`** method returns a string in _simplified_ extended ISO for
 
 ## Syntax
 
-```js
+```js-nolint
 toISOString()
 ```
 

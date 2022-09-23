@@ -19,7 +19,7 @@ is no such node, return `null` and the current node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 nextSibling()
 ```
 

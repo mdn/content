@@ -21,7 +21,7 @@ document from its default orientation.
 
 ## Syntax
 
-```js
+```js-nolint
 unlock()
 ```
 

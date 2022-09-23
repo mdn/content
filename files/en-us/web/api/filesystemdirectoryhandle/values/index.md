@@ -21,8 +21,8 @@ object.
 
 ## Syntax
 
-```js
-FileSystemDirectoryHandle.values();
+```js-nolint
+values()
 ```
 
 ### Parameters

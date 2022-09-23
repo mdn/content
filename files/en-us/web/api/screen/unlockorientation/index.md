@@ -25,7 +25,7 @@ method should be used instead.
 
 ## Syntax
 
-```js
+```js-nolint
 unlockOrientation()
 ```
 

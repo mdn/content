@@ -113,7 +113,7 @@ npm install -g jshint
 
 You can then point these tools at JavaScript files you want to lint, for example:
 
-![jshint filename.js was entered at the command line. The response is a list of of line numbers and a description of the error found.](js-hint-commandline.png)
+![jshint filename.js was entered at the command line. The response is a list of line numbers and a description of the error found.](js-hint-commandline.png)
 
 You can also use these tools with a task runner/build tool such as [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.github.io/) to automatically lint your JavaScript during development. (see [Using a task runner to automate testing tools](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools) in a later article.) See [ESLint integrations](https://eslint.org/docs/user-guide/integrations) for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. [JSHint loader for Webpack](https://github.com/webpack-contrib/jshint-loader).
 

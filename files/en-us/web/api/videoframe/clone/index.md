@@ -18,7 +18,7 @@ The **`clone()`** method of the {{domxref("VideoFrame")}} interface creates a ne
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

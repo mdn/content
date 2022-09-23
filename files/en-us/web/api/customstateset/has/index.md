@@ -18,7 +18,7 @@ The **`has()`** method of the {{domxref("CustomStateSet")}} interface returns a 
 
 ## Syntax
 
-```js
+```js-nolint
 has(value)
 ```
 

@@ -85,6 +85,6 @@ The nature of space can change depending upon what MIME type is being used, and 
 - [Gamma oscillations and photosensitive epilepsy](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub)
 - [Characterizing the Patterned Images That Precipitate Seizures and Optimizing Guidelines To Prevent Them](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1528-1167.2005.01405.x) Arnold Wilkins, John Emmett, and Graham Harding
 
-#### Contributors:
+#### Contributors
 
 Heartfelt thanks to Jim Allan of the [Diagram Center](http://diagramcenter.org/) for his discussions on the topic of alternative means of education.

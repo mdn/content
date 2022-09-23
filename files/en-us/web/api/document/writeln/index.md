@@ -23,7 +23,7 @@ Writes a string of text followed by a newline character to a document.
 
 ## Syntax
 
-```js
+```js-nolint
 writeln(line)
 ```
 

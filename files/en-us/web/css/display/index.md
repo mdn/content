@@ -146,7 +146,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
     - `ruby-text` {{Experimental_Inline}}
       - : These elements behave like {{HTMLElement("rt")}} HTML elements.
     - `ruby-base-container` {{Experimental_Inline}}
-      - : These elements behave like {{HTMLElement("rbc")}} HTML elements generated as anonymous boxes.
+      - : These elements are generated as anonymous boxes.
     - `ruby-text-container` {{Experimental_Inline}}
       - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
@@ -360,12 +360,14 @@ article span {
   margin: 1px;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }
 
-article, div {
+article,
+div {
   margin: 20px;
 }
 ```

@@ -11,7 +11,9 @@ tags:
 browser-compat: webextensions.api.permissions
 ---
 
-{{AddonSidebar}}Enables extensions to request extra permissions at runtime, after they have been installed.
+{{AddonSidebar}}
+
+Enables extensions to request extra permissions at runtime, after they have been installed.
 
 Extensions need permissions to access more powerful WebExtension APIs. They can ask for permissions at install time, by including the permissions they need in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest.json key. The main advantages of asking for permissions at install time are:
 

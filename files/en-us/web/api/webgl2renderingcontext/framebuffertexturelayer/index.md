@@ -22,7 +22,7 @@ but only a given single layer of the texture level is attached to the attachment
 
 ## Syntax
 
-```js
+```js-nolint
 framebufferTextureLayer(target, attachment, texture, level, layer)
 ```
 

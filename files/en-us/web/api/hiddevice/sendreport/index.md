@@ -20,7 +20,7 @@ The `reportId` for each of the report formats that this device supports can be r
 
 ## Syntax
 
-```js
+```js-nolint
 sendReport(reportId, data)
 ```
 

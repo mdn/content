@@ -17,7 +17,7 @@ The **`item()`** method of the {{domxref("StyleSheetList")}} interface returns a
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

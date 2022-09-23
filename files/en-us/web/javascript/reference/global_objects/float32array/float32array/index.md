@@ -22,7 +22,7 @@ notation).
 
 ## Syntax
 
-```js
+```js-nolint
 new Float32Array()
 new Float32Array(length)
 new Float32Array(typedArray)

@@ -27,7 +27,7 @@ transaction.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteObjectStore(name)
 ```
 

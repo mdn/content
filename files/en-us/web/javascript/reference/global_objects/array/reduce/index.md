@@ -31,7 +31,7 @@ The reducer walks through the array element-by-element, at each step adding the 
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduce((previousValue, currentValue) => { /* … */ } )
 reduce((previousValue, currentValue, currentIndex) => { /* … */ } )
@@ -241,8 +241,9 @@ const people = [
 function groupBy(objectArray, property) {
   return objectArray.reduce((acc, obj) => {
     const key = obj[property];
+    const curGroup = acc[key] ?? [];
 
-    return { ...acc, [key]: [...acc[key], obj] };
+    return { ...acc, [key]: [...curGroup, obj] };
   }, {});
 }
 
@@ -366,7 +367,7 @@ function p2(a) {
   });
 }
 
-// function 3  - will be wrapped in a resolved promise by .then()
+// function 3 - will be wrapped in a resolved promise by .then()
 function f3(a) {
   return a * 3;
 }

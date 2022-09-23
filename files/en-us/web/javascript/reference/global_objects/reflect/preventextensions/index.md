@@ -19,7 +19,7 @@ The static **`Reflect.preventExtensions()`** method prevents new properties from
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.preventExtensions(target)
 ```
 

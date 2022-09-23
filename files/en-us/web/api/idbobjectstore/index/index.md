@@ -25,7 +25,7 @@ to, for example, return a series of records sorted by that index using a cursor.
 
 ## Syntax
 
-```js
+```js-nolint
 index(name)
 ```
 

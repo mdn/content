@@ -17,7 +17,7 @@ The **`try...catch`** statement is comprised of a `try` block and either a `catc
 
 ## Syntax
 
-```js
+```js-nolint
 try {
   tryStatements
 } catch (exceptionVar) {

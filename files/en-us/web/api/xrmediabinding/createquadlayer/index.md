@@ -19,7 +19,7 @@ The **`createQuadLayer()`** method of the {{domxref("XRMediaBinding")}} interfac
 
 ## Syntax
 
-```js
+```js-nolint
 createQuadLayer(video, options)
 ```
 

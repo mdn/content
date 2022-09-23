@@ -27,7 +27,7 @@ operation is pending.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

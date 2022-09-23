@@ -23,7 +23,7 @@ Converts a relative path within an extension's install directory to a fully-qual
 
 ## Syntax
 
-```js
+```js-nolint
 browser.extension.getURL(
   path // string
 )

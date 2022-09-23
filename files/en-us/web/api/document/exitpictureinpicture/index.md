@@ -25,7 +25,7 @@ effects of a previous call to {{domxref("HTMLVideoElement.requestPictureInPictur
 
 ## Syntax
 
-```js
+```js-nolint
 exitPictureInPicture()
 ```
 

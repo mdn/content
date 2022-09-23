@@ -22,7 +22,7 @@ represents a non-linear distorter.
 
 ## Syntax
 
-```js
+```js-nolint
 new WaveShaperNode(context, options)
 ```
 

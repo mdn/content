@@ -21,7 +21,7 @@ Note that despite the method being named `json()`, the result is not JSON but is
 
 ## Syntax
 
-```js
+```js-nolint
 json()
 ```
 

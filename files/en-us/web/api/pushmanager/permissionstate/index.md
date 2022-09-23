@@ -24,7 +24,7 @@ values are `'prompt'`, `'denied'`, or `'granted'`.
 
 ## Syntax
 
-```js
+```js-nolint
 permissionState()
 permissionState(options)
 ```

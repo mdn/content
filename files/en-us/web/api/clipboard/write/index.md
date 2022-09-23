@@ -34,7 +34,7 @@ automatically to pages when they are in the active tab.
 
 ## Syntax
 
-```js
+```js-nolint
 write(data)
 ```
 

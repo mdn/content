@@ -32,7 +32,7 @@ Otherwise the task is immediately scheduled for prioritization.
 
 ## Syntax
 
-```js
+```js-nolint
 postTask(callback)
 postTask(callback, options)
 ```

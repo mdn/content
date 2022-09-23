@@ -19,7 +19,7 @@ The **`TransitionEvent()`** constructor returns a new {{domxref("TransitionEvent
 
 ## Syntax
 
-```js
+```js-nolint
 new TransitionEvent(type)
 new TransitionEvent(type, options)
 ```

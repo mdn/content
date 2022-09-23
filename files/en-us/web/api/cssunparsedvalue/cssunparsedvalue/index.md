@@ -22,7 +22,7 @@ that reference custom properties.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSUnparsedValue(members)
 ```
 

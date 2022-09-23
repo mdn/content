@@ -36,7 +36,7 @@ negotiation is complete. Only then does the agreed-upon configuration take effec
 
 ## Syntax
 
-```js
+```js-nolint
 setLocalDescription()
 setLocalDescription(sessionDescription)
 setLocalDescription(sessionDescription, successCallback, errorCallback) // deprecated

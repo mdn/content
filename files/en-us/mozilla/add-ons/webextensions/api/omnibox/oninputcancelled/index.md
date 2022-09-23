@@ -19,7 +19,7 @@ Fired when the user has cancelled their interaction with your extension (for exa
 
 ## Syntax
 
-```js
+```js-nolint
 browser.omnibox.onInputCancelled.addListener(listener)
 browser.omnibox.onInputCancelled.removeListener(listener)
 browser.omnibox.onInputCancelled.hasListener(listener)

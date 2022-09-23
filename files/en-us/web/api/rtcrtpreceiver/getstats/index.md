@@ -26,7 +26,7 @@ results are available.
 
 ## Syntax
 
-```js
+```js-nolint
 getStats()
 ```
 

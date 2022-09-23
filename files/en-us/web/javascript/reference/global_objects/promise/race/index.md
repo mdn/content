@@ -20,7 +20,7 @@ value or reason from that promise.
 
 ## Syntax
 
-```js
+```js-nolint
 Promise.race(iterable)
 ```
 

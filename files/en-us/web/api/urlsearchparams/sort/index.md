@@ -23,7 +23,7 @@ preserved).
 
 ## Syntax
 
-```js
+```js-nolint
 sort()
 ```
 

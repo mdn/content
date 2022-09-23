@@ -19,7 +19,7 @@ The **`close()`** method of the {{domxref("SharedWorkerGlobalScope")}} interface
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

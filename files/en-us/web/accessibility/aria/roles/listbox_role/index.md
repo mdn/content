@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: listbox role'
+title: "ARIA: listbox role"
 slug: Web/Accessibility/ARIA/Roles/listbox_role
 tags:
   - ARIA
@@ -159,8 +159,8 @@ When the user selects an option, the following must occur:
 When the user clicks on an option, hits <kbd>Space</kbd> when focused on an option, or otherwise toggles the state of an option, the following must occur:
 
 1. Toggle the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) state of the currently focused option, changing the state of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to true if it was false or false if it was true.
-1. Change the appearance of the option to reflect its selected state
-1. Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the ID of the option the user just interacted with, even if they toggled the option to be unselected.
+2. Change the appearance of the option to reflect its selected state
+3. Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the ID of the option the user just interacted with, even if they toggled the option to be unselected.
 
 > **Note:** The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.
 
@@ -172,17 +172,23 @@ The snippet below shows how the listbox role is added directly into the HTML sou
 
 ```html
 <p id="listbox1label" role="label">Select a color:</p>
-<div role="listbox" tabindex="0" id="listbox1" aria-labelledby="listbox1label"
+<div
+  role="listbox"
+  tabindex="0"
+  id="listbox1"
+  aria-labelledby="listbox1label"
   onclick="return listItemClick(event);"
   onkeydown="return listItemKeyEvent(event);"
   onkeypress="return listItemKeyEvent(event);"
   aria-activedescendant="listbox1-1">
-    <div role="option" id="listbox1-1" class="selected" aria-selected="true">Green</div>
-    <div role="option" id="listbox1-2">Orange</div>
-    <div role="option" id="listbox1-3">Red</div>
-    <div role="option" id="listbox1-4">Blue</div>
-    <div role="option" id="listbox1-5">Violet</div>
-    <div role="option" id="listbox1-6">Periwinkle</div>
+  <div role="option" id="listbox1-1" class="selected" aria-selected="true">
+    Green
+  </div>
+  <div role="option" id="listbox1-2">Orange</div>
+  <div role="option" id="listbox1-3">Red</div>
+  <div role="option" id="listbox1-4">Blue</div>
+  <div role="option" id="listbox1-5">Violet</div>
+  <div role="option" id="listbox1-6">Periwinkle</div>
 </div>
 ```
 
@@ -191,12 +197,12 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 ```html
 <label for="listbox1">Select a color:</label>
 <select id="listbox1">
-   <option selected>Green</option>
-   <option>Orange</option>
-   <option>Red</option>
-   <option>Blue</option>
-   <option>Violet</option>
-   <option>Periwinkle</option>
+  <option selected>Green</option>
+  <option>Orange</option>
+  <option>Red</option>
+  <option>Blue</option>
+  <option>Violet</option>
+  <option>Periwinkle</option>
 </select>
 ```
 

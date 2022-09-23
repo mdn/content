@@ -24,7 +24,7 @@ If the object is invariant, you might instead represent it using a string, and g
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 groupToMap((element) => { /* … */ } )
 groupToMap((element, index) => { /* … */ } )
@@ -59,10 +59,11 @@ groupToMap(function(element, index, array) { /* … */ }, thisArg)
     The value ({{Glossary("object")}} or {{Glossary("primitive")}}) returned from the callback indicates the group of the current element.
 
 - `thisArg` {{optional_inline}}
+
   - : Object to use as {{jsxref("Operators/this", "this")}} inside `callbackFn`.
 
-     The argument is ignored in arrow functions, as they have their own lexical scope that will be used instead.
-     Otherwise, if `thisArg` not specified, then either the `this` of the executing scope is used, or `undefined` if the function is called in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+    The argument is ignored in arrow functions, as they have their own lexical scope that will be used instead.
+    Otherwise, if `thisArg` not specified, then either the `this` of the executing scope is used, or `undefined` if the function is called in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
 ### Return value
 
@@ -121,7 +122,7 @@ Each food has a `type` and a `quantity`.
 ```js
 const inventory = [
   { name: 'asparagus', type: 'vegetables', quantity: 9 },
-  { name: 'bananas',  type: 'fruit', quantity: 5 },
+  { name: 'bananas', type: 'fruit', quantity: 5 },
   { name: 'goat', type: 'meat', quantity: 23 },
   { name: 'cherries', type: 'fruit', quantity: 12 },
   { name: 'fish', type: 'meat', quantity: 22 }
@@ -132,7 +133,7 @@ The code below uses `groupToMap()` with an arrow function that returns the objec
 The returned `result` object is a `Map` so we need to call `get()` with the key to obtain the array.
 
 ```js
-const restock  = { restock: true };
+const restock = { restock: true };
 const sufficient = { restock: false };
 const result = inventory.groupToMap(({ quantity }) => quantity < 6 ? restock : sufficient);
 console.log(result.get(restock));
@@ -149,12 +150,12 @@ For this reason it is important that anything that needs to use the map keeps a 
 
 ```js
 // The key can be modified and still used
-restock['fast']  = true ;
+restock['fast'] = true;
 console.log(result.get(restock));
 // expected output: Array [Object { name: "bananas", type: "fruit", quantity: 5 }]
 
 // A new key can't be used, even if it has the same structure!
-const restock2  = { restock: true };
+const restock2 = { restock: true };
 console.log(result.get(restock2));
 // expected output: undefined
 ```

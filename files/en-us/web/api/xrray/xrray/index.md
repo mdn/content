@@ -18,7 +18,7 @@ The **`XRRay()`** constructor creates a new {{domxref("XRRay")}} object which is
 
 ## Syntax
 
-```js
+```js-nolint
 new XRRay()
 new XRRay(origin)
 new XRRay(origin, direction)

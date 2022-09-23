@@ -21,7 +21,7 @@ It can also be called from elsewhere to trigger a stream error, for example if a
 
 ## Syntax
 
-```js
+```js-nolint
 error(errorObject)
 ```
 

@@ -20,7 +20,7 @@ keys for each element in the status map, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

@@ -18,7 +18,7 @@ creates and returns a `CountQueuingStrategy` object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new CountQueuingStrategy(highWaterMark)
 ```
 
@@ -42,18 +42,21 @@ None.
 ```js
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    // …
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    // …
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
 const size = queuingStrategy.size();
 ```

@@ -13,14 +13,17 @@ browser-compat: css.at-rules.font-face.font-family
 
 {{CSSRef}}
 
-The **`font-family`** CSS descriptor allows authors to specify the font family for the font specified in an {{cssxref("@font-face")}} rule.
+The **`font-family`** CSS descriptor sets the font family for a font specified in an {{cssxref("@font-face")}} rule.
+
+The value is used for name matching against a particular `@font-face` when styling elements using the [`font-family`](/en-US/docs/Web/CSS/font-family) property.
+Any name may be used, and this overrides any name specified in the underlying font data.
 
 ## Syntax
 
 ```css
 /* <string> values */
 font-family: "font family";
-font-family: 'another font family';
+font-family: "another font family";
 
 /* <custom-ident> value */
 font-family: examplefont;
@@ -51,8 +54,8 @@ font-family: examplefont;
 
 ```css
 @font-face {
-  font-family: examplefont;
-  src: url('examplefont.ttf');
+  font-family: "Some font family";
+  src: url("some_font_name.ttf");
 }
 ```
 

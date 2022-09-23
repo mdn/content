@@ -63,7 +63,8 @@ There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref
   background-image: url("large-balloons.jpg");
   background-image: image-set(
     "large-balloons.avif" type("image/avif"),
-    "large-balloons.jpg" type("image/jpeg"));
+    "large-balloons.jpg" type("image/jpeg")
+  );
 }
 ```
 

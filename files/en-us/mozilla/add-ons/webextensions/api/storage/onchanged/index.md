@@ -22,7 +22,7 @@ When this event is triggered by {{WebExtAPIRef('storage.StorageArea.set','storag
 
 ## Syntax
 
-```js
+```js-nolint
 browser.storage.onChanged.addListener(callback)
 browser.storage.onChanged.removeListener(listener)
 browser.storage.onChanged.hasListener(listener)

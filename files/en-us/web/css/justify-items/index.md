@@ -151,11 +151,13 @@ article {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 40px;
   grid-gap: 10px;
+  margin: 20px;
   width: 300px;
   justify-items: stretch;
 }
 
-article:hover, article:focus {
+article:hover,
+article:focus {
   justify-items: center;
 }
 
@@ -166,13 +168,10 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
-}
-
-article {
-  margin: 20px;
 }
 ```
 

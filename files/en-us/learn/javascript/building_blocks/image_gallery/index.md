@@ -11,7 +11,7 @@ tags:
   - Learn
   - Loops
   - events
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
@@ -53,14 +53,15 @@ You have been provided with some HTML, CSS and image assets and a few lines of J
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg" alt="Closeup of a blue human eye">
+  <img
+    class="displayed-img"
+    src="images/pic1.jpg"
+    alt="Closeup of a blue human eye" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 The example looks like this:
@@ -116,7 +117,7 @@ That just leaves our darken/lighten `<button>` — we've already provided a line
 The following lines provide a basis for achieving the changes stipulated in points 2 and 3 above.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```

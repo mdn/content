@@ -2,7 +2,6 @@
 title: IETF
 slug: Glossary/IETF
 tags:
-  - Glossary
   - IETF
   - Infrastructure
   - Internet

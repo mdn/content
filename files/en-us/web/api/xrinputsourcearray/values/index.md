@@ -36,7 +36,7 @@ array, from first to last.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

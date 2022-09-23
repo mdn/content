@@ -42,7 +42,8 @@ We add some CSS, including a background image requesting a binary file:
 ```css
 button {
   display: inline-block;
-  min-height: 100px; min-width: 100px;
+  min-height: 100px;
+  min-width: 100px;
   background: no-repeat 5% center url(magicwand.png) aqua;
 }
 ```

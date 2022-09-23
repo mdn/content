@@ -27,7 +27,7 @@ that same origin.
 
 ## Syntax
 
-```js
+```js-nolint
 getNotifications()
 getNotifications(options)
 ```

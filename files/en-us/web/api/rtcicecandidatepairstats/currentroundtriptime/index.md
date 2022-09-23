@@ -31,8 +31,8 @@ candidates.
 
 ## Syntax
 
-```js
-rtt = rtcIceCandidatePairStats.currentRoundTripTime;
+```js-nolint
+rtt = rtcIceCandidatePairStats.currentRoundTripTime
 ```
 
 ### Value

@@ -23,7 +23,7 @@ There is also a function-like dynamic [`import()`](/en-US/docs/Web/JavaScript/Re
 
 ## Syntax
 
-```js
+```js-nolint
 import defaultExport from "module-name";
 import * as name from "module-name";
 import { export1 } from "module-name";

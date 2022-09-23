@@ -43,26 +43,29 @@ The following snippets are taken from our [host-selectors example](https://githu
 In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
 
 ```html
-<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+<h1>
+  Host selectors <a href="#"><context-span>example</context-span></a>
+</h1>
 ```
 
 Inside the element's constructor, we create `style` and `span` elements, fill the `span` with the content of the custom element, and fill the `style` element with some CSS rules:
 
 ```js
-let style = document.createElement('style');
-let span = document.createElement('span');
+const style = document.createElement("style");
+const span = document.createElement("span");
 span.textContent = this.textContent;
 
-const shadowRoot = this.attachShadow({mode: 'open'});
+const shadowRoot = this.attachShadow({ mode: "open" });
 shadowRoot.appendChild(style);
 shadowRoot.appendChild(span);
 
-style.textContent = 'span:hover { text-decoration: underline; }' +
-                    ':host-context(h1) { font-style: italic; }' +
-                    ':host-context(h1):after { content: " - no links in headers!" }' +
-                    ':host-context(article, aside) { color: gray; }' +
-                    ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+style.textContent =
+  "span:hover { text-decoration: underline; }" +
+  ":host-context(h1) { font-style: italic; }" +
+  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ":host-context(article, aside) { color: gray; }" +
+  ":host(.footer) { color : red; }" +
+  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
 The `:host(.footer) { color : red; }` rule styles all instances of the `<context-span>` element (the shadow host in this instance) in the document that have the `footer` class set on them — we've used it to give instances of the element inside the {{htmlelement("footer")}} a special color.

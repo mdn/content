@@ -23,7 +23,7 @@ If you need to group elements using a key that is some arbitrary value, use {{js
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 group((element) => { /* … */ } )
 group((element, index) => { /* … */ } )
@@ -59,10 +59,11 @@ group(function(element, index, array) { /* … */ }, thisArg)
     It must be possible to coerce this returned callback value into a string (which will then be used as a property name in the final returned object).
 
 - `thisArg` {{optional_inline}}
+
   - : Object to use as {{jsxref("Operators/this", "this")}} inside `callbackFn`.
 
-     The argument is ignored in arrow functions, as they have their own lexical scope that will be used instead.
-     Otherwise, if `thisArg` not specified, then either the `this` of the executing scope is used, or `undefined` if the function is called in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+    The argument is ignored in arrow functions, as they have their own lexical scope that will be used instead.
+    Otherwise, if `thisArg` not specified, then either the `this` of the executing scope is used, or `undefined` if the function is called in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
 ### Return value
 
@@ -113,7 +114,7 @@ Each food has a `type` and a `quantity`.
 ```js
 const inventory = [
   { name: 'asparagus', type: 'vegetables', quantity: 5 },
-  { name: 'bananas',  type: 'fruit', quantity: 0 },
+  { name: 'bananas', type: 'fruit', quantity: 0 },
   { name: 'goat', type: 'meat', quantity: 23 },
   { name: 'cherries', type: 'fruit', quantity: 5 },
   { name: 'fish', type: 'meat', quantity: 22 }

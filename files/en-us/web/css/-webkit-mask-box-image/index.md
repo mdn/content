@@ -71,7 +71,7 @@ Where:
 
 ```css
 .exampleone {
-  -webkit-mask-box-image: url('mask.png');
+  -webkit-mask-box-image: url("mask.png");
 }
 ```
 
@@ -79,7 +79,7 @@ Where:
 
 ```css
 .exampletwo {
-  -webkit-mask-box-image: url('logo.png') 100 100 0 0 round round;
+  -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
 }
 ```
 

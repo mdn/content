@@ -23,7 +23,7 @@ implementation.
 
 ## Syntax
 
-```js
+```js-nolint
 // Functionless
 sort()
 
@@ -74,11 +74,11 @@ elements are sorted according to the return value of the compare function (all
 `undefined` elements are sorted to the end of the array, with no call to
 `compareFn`).
 
-| `compareFn(a, b)` return value       | sort order                         |
-|--------------------------------------|------------------------------------|
-| > 0                                  | sort `a` after `b`                 |
-| < 0                                  | sort `a` before `b`                |
-| === 0                                | keep original order of `a` and `b` |
+| `compareFn(a, b)` return value | sort order                         |
+| ------------------------------ | ---------------------------------- |
+| > 0                            | sort `a` after `b`                 |
+| < 0                            | sort `a` before `b`                |
+| === 0                          | keep original order of `a` and `b` |
 
 So, the compare function has the following form:
 

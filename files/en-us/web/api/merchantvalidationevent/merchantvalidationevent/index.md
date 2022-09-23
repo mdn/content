@@ -23,7 +23,7 @@ The **`MerchantValidationEvent()`** constructor creates a new {{domxref("Merchan
 
 ## Syntax
 
-```js
+```js-nolint
 new MerchantValidationEvent(type)
 new MerchantValidationEvent(type, options)
 ```

@@ -16,9 +16,9 @@ The **`MIDIMessageEvent()`** constructor creates a new {{domxref("MIDIMessageEve
 
 ## Syntax
 
-```js
-new MIDIMessageEvent(type);
-new MIDIMessageEvent(type, options);
+```js-nolint
+new MIDIMessageEvent(type)
+new MIDIMessageEvent(type, options)
 ```
 
 ### Parameters

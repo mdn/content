@@ -137,7 +137,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ```html
 <header>
   <h1>Main Page Title</h1>
-  <img src="mdn-logo-sm.png" alt="MDN logo">
+  <img src="mdn-logo-sm.png" alt="MDN logo" />
 </header>
 ```
 
@@ -147,9 +147,14 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 <article>
   <header>
     <h2>The Planet Earth</h2>
-    <p>Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by Jane Smith</p>
+    <p>
+      Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by
+      Jane Smith
+    </p>
   </header>
-  <p>We live on a planet that's blue and green, with so many things still unseen.</p>
+  <p>
+    We live on a planet that's blue and green, with so many things still unseen.
+  </p>
   <p><a href="https://example.com/the-planet-earth/">Continue reading…</a></p>
 </article>
 ```

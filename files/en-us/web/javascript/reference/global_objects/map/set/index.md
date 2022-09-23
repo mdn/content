@@ -19,7 +19,7 @@ The **`set()`** method adds or updates an entry in a `Map` object with a specifi
 
 ## Syntax
 
-```js
+```js-nolint
 set(key, value)
 ```
 

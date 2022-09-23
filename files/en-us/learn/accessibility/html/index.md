@@ -1,5 +1,5 @@
 ---
-title: 'HTML: A good basis for accessibility'
+title: "HTML: A good basis for accessibility"
 slug: Learn/Accessibility/HTML
 tags:
   - AT
@@ -104,11 +104,17 @@ One of the best accessibility aids a screen reader user can have is an excellent
 
 <h2>My subheading</h2>
 
-<p>This is the first subsection of my document. I'd love people to be able to find this content!</p>
+<p>
+  This is the first subsection of my document.
+  I'd love people to be able to find this content!
+</p>
 
 <h2>My 2nd subheading</h2>
 
-<p>This is the second subsection of my content, which I think is more interesting than the last one.</p>
+<p>
+  This is the second subsection of my content,
+  which I think is more interesting than the last one.
+</p>
 ```
 
 We've prepared a version with longer text for you to try out with a screen reader (see [good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). If you try navigating through this, you'll see that this is pretty easy to navigate:
@@ -122,24 +128,26 @@ People sometimes write headings, paragraphs, etc. using line breaks and adding H
 
 ```html example-bad
 <span style="font-size: 3em">My heading</span>
-<br><br>
+<br /><br />
 This is the first section of my document.
-<br><br>
+<br /><br />
 I'll add another paragraph here too.
-<br><br>
+<br /><br />
 1. Here is
-<br><br>
+<br /><br />
 2. a list for
-<br><br>
+<br /><br />
 3. you to read
-<br><br>
+<br /><br />
 <span style="font-size: 2.5em">My subheading</span>
-<br><br>
-This is the first subsection of my document. I'd love people to be able to find this content!
-<br><br>
+<br /><br />
+This is the first subsection of my document.
+I'd love people to be able to find this content!
+<br /><br />
 <span style="font-size: 2.5em">My 2nd subheading</span>
-<br><br>
-This is the second subsection of my content. I think is more interesting than the last one.
+<br /><br />
+This is the second subsection of my content.
+I think is more interesting than the last one.
 ```
 
 If you try our longer version out with a screen reader (see [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), you'll not have a very good experience — the screen reader hasn't got anything to use as signposts, so you can't retrieve a useful table of contents, and the whole page is seen as a single giant block, so it is just read out in one go, all at once.
@@ -162,71 +170,68 @@ Try our example [table-layout.html](https://mdn.github.io/learning-area/accessib
 
 ```html
 <table width="1200">
-      <!-- main heading row -->
-      <tr id="heading">
-        <td colspan="6">
+  <!-- main heading row -->
+  <tr id="heading">
+    <td colspan="6">
+      <h1 align="center">Header</h1>
+    </td>
+  </tr>
+  <!-- nav menu row -->
+  <tr id="nav" bgcolor="#ffffff">
+    <td width="200">
+      <a href="#" align="center">Home</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Our team</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Projects</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Contact</a>
+    </td>
+    <td width="300">
+      <form width="300">
+        <label
+          >Search
+          <input
+            type="search"
+            name="q"
+            placeholder="Search query"
+            width="300" />
+        </label>
+      </form>
+    </td>
+    <td width="100">
+      <button width="100">Go!</button>
+    </td>
+  </tr>
+  <!-- spacer row -->
+  <tr id="spacer" height="10">
+    <td></td>
+  </tr>
+  <!-- main content and aside row -->
+  <tr id="main">
+    <td id="content" colspan="4">
+      <!-- main content goes here -->
+    </td>
+    <td id="aside" colspan="2" valign="top">
+      <h2>Related</h2>
 
-          <h1 align="center">Header</h1>
-
-        </td>
-      </tr>
-      <!-- nav menu row  -->
-      <tr id="nav" bgcolor="#ffffff">
-        <td width="200">
-          <a href="#" align="center">Home</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Our team</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Projects</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Contact</a>
-        </td>
-        <td width="300">
-          <form width="300">
-            <label>Search
-            <input type="search" name="q" placeholder="Search query" width="300">
-            </label>
-          </form>
-        </td>
-        <td width="100">
-          <button width="100">Go!</button>
-        </td>
-      </tr>
-      <!-- spacer row -->
-      <tr id="spacer" height="10">
-        <td>
-
-        </td>
-      </tr>
-      <!-- main content and aside row -->
-      <tr id="main">
-        <td id="content" colspan="4">
-
-          <!-- main content goes here -->
-        </td>
-        <td id="aside" colspan="2" valign="top">
-          <h2>Related</h2>
-
-          <!-- aside content goes here -->
-
-        </td>
-      </tr>
-      <!-- spacer row -->
-      <tr id="spacer" height="10">
-        <td>
-
-        </td>
-      </tr>
-      <!-- footer row -->
-      <tr id="footer">
-        <td colspan="6">
-          <p>©Copyright 1996 by nobody. All rights reversed.</p>
-        </td>
-      </tr>
-    </table>
+      <!-- aside content goes here -->
+    </td>
+  </tr>
+  <!-- spacer row -->
+  <tr id="spacer" height="10">
+    <td></td>
+  </tr>
+  <!-- footer row -->
+  <tr id="footer">
+    <td colspan="6">
+      <p>©Copyright 1996 by nobody. All rights reversed.</p>
+    </td>
+  </tr>
+</table>
 ```
 
 If you try to navigate this using a screen reader, it will probably tell you that there's a table to be looked at (although some screen readers can guess the difference between table layouts and data tables). You'll then likely (depending on which screen reader you're using) have to go down into the table as an object and look at its features separately, then get out of the table again to carry on navigating the content.
@@ -244,7 +249,6 @@ Table layouts are a relic of the past — they made sense back when CSS support 
 
 <!-- Here is our page's main content -->
 <main>
-
   <!-- It contains an article -->
   <article>
     <h2>Article heading</h2>
@@ -257,7 +261,6 @@ Table layouts are a relic of the past — they made sense back when CSS support 
 
     <!-- aside content in here -->
   </aside>
-
 </main>
 
 <!-- And here is our main footer that is used across all the pages of our website -->
@@ -294,7 +297,10 @@ You essentially get this behavior for free, just by using the appropriate elemen
 
 <p>This is a link to <a href="https://www.mozilla.org">Mozilla</a>.</p>
 
-<p>Another link, to the <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.</p>
+<p>
+  Another link, to the
+  <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.
+</p>
 
 <h2>Buttons</h2>
 
@@ -309,11 +315,11 @@ You essentially get this behavior for free, just by using the appropriate elemen
 <form>
   <div>
     <label for="name">Fill in your name:</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" />
   </div>
   <div>
     <label for="age">Enter your age:</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" />
   </div>
   <div>
     <label for="mood">Choose your mood:</label>
@@ -344,9 +350,15 @@ But using such code is not advised — you immediately lose the native keyboard 
 Adding such advantages back in takes a bit of work (you can see an example in our [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example — also see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Here we've given our fake `<div>` buttons the ability to be focused (including via tab) by giving each one the attribute `tabindex="0"`. We also include `role="button"` so screen reader users know they can focus on and interact with the element:
 
 ```html
-<div data-message="This is from the first button" tabindex="0" role="button">Click me!</div>
-<div data-message="This is from the second button" tabindex="0" role="button">Click me too!</div>
-<div data-message="This is from the third button" tabindex="0" role="button">And me!</div>
+<div data-message="This is from the first button" tabindex="0" role="button">
+  Click me!
+</div>
+<div data-message="This is from the second button" tabindex="0" role="button">
+  Click me too!
+</div>
+<div data-message="This is from the third button" tabindex="0" role="button">
+  And me!
+</div>
 ```
 
 Basically, the {{htmlattrxref("tabindex")}} attribute is primarily intended to allow tabbable elements to have a custom tab order (specified in positive numerical order), instead of just being tabbed through in their default source order. This is nearly always a bad idea, as it can cause major confusion. Use it only if you really need to, for example, if the layout shows things in a very different visual order to the source code, and you want to make things work more logically. There are two other options for `tabindex`:
@@ -358,7 +370,8 @@ While the above addition allows us to tab to the buttons, it does not allow us t
 
 ```js
 document.onkeydown = (e) => {
-  if (e.key === "Enter") { // The Enter/Return key
+  // The Enter/Return key
+  if (e.key === "Enter") {
     document.activeElement.click();
   }
 };
@@ -379,13 +392,19 @@ You should make sure that your button and link text labels are understandable an
 Make sure your labels make sense out of context, read on their own, as well as in the context of the paragraph they are in. For example, the following shows an example of good link text:
 
 ```html example-good
-<p>Whales are really awesome creatures. <a href="whales.html">Find out more about whales</a>.</p>
+<p>
+  Whales are really awesome creatures.
+  <a href="whales.html">Find out more about whales</a>.
+</p>
 ```
 
 but this is bad link text:
 
 ```html example-bad
-<p>Whales are really awesome creatures. To find out more about whales, <a href="whales.html">click here</a>.</p>
+<p>
+  Whales are really awesome creatures. To find out more about whales,
+  <a href="whales.html">click here</a>.
+</p>
 ```
 
 > **Note:** You can find a lot more about link implementation and best practices in our [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) article. You can also see some good and bad examples at [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) and [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
@@ -393,7 +412,7 @@ but this is bad link text:
 Form labels are also important for giving you a clue about what you need to enter into each form input. The following seems like a reasonable enough example:
 
 ```html example-bad
-Fill in your name: <input type="text" id="name" name="name">
+Fill in your name: <input type="text" id="name" name="name" />
 ```
 
 However, this is not so useful for disabled users. There is nothing in the above example to associate the label unambiguously with the form input and make it clear how to fill it in if you cannot see it. If you access this with some screen readers, you may only be given a description along the lines of "edit text."
@@ -403,7 +422,7 @@ The following is a much better example:
 ```html example-good
 <div>
   <label for="name">Fill in your name:</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -464,18 +483,23 @@ Whereas textual content is inherently accessible, the same cannot necessarily be
 We have a simple example written up, [accessible-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html), which features four copies of the same image:
 
 ```html
-<img src="dinosaur.png">
+<img src="dinosaur.png" />
 
-<img src="dinosaur.png"
-     alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
 
-<img src="dinosaur.png"
-     alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
-     title="The Mozilla red dinosaur">
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
+  title="The Mozilla red dinosaur" />
 
-<img src="dinosaur.png" aria-labelledby="dino-label">
+<img src="dinosaur.png" aria-labelledby="dino-label" />
 
-<p id="dino-label">The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.</p>
+<p id="dino-label">
+  The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like
+  a human, with small arms, and a large head with lots of sharp teeth.
+</p>
 ```
 
 The first image, when viewed by a screen reader, doesn't really offer the user much help — VoiceOver for example reads out "/dinosaur.png, image". It reads out the filename to try to provide some help. In this example the user will at least know it is a dinosaur of some kind, but often files may be uploaded with machine-generated file names (e.g. from a digital camera) and these file names would likely provide no context to the image's content.
@@ -503,9 +527,9 @@ If you do want to provide extra contextual information, you should put it in the
 Let's have another quick look at the fourth method:
 
 ```html
-<img src="dinosaur.png" aria-labelledby="dino-label">
+<img src="dinosaur.png" aria-labelledby="dino-label" />
 
-<p id="dino-label">The Mozilla red Tyrannosaurus… </p>
+<p id="dino-label">The Mozilla red Tyrannosaurus…</p>
 ```
 
 In this case, we are not using the `alt` attribute at all — instead, we have presented our description of the image as a regular text paragraph, given it an `id`, and then used the `aria-labelledby` attribute to refer to that `id`, which causes screen readers to use that paragraph as the alt text/label for that image. This is especially useful if you want to use the same text as a label for multiple images — something that isn't possible with `alt`.
@@ -518,8 +542,14 @@ HTML includes two elements — {{htmlelement("figure")}} and {{htmlelement("figc
 
 ```html
 <figure>
-  <img src="dinosaur.png" alt="The Mozilla Tyrannosaurus" aria-describedby="dinodescr">
-  <figcaption id="dinodescr">A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.</figcaption>
+  <img
+    src="dinosaur.png"
+    alt="The Mozilla Tyrannosaurus"
+    aria-describedby="dinodescr" />
+  <figcaption id="dinodescr">
+    A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a
+    human, with small arms, and a large head with lots of sharp teeth.
+  </figcaption>
 </figure>
 ```
 
@@ -529,7 +559,7 @@ While there is mixed screen reader support of associating figure captions with t
 
 ```html
 <h3>
-  <img src="article-icon.png" alt="">
+  <img src="article-icon.png" alt="" />
   Tyrannosaurus Rex: the king of the dinosaurs
 </h3>
 ```
@@ -565,13 +595,17 @@ People experiencing low vision conditions, who are navigating with the aid of sc
 #### Link that opens a new tab or window
 
 ```html
-<a target="_blank" href="https://www.wikipedia.org/">Wikipedia (opens in a new window)</a>
+<a target="_blank" href="https://www.wikipedia.org/"
+  >Wikipedia (opens in a new window)</a
+>
 ```
 
 #### Link to a non-HTML resource
 
 ```html
-<a target="_blank" href="2017-annual-report.ppt">2017 Annual Report (PowerPoint)</a>
+<a target="_blank" href="2017-annual-report.ppt"
+  >2017 Annual Report (PowerPoint)</a
+>
 ```
 
 If an icon is used in place of text to signify this kind of links behavior, make sure it includes an {{HTMLAttrxRef("alt", "img", "alternate description", "true")}}.

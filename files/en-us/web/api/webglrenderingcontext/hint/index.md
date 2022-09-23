@@ -18,7 +18,7 @@ behaviors. The interpretation of these hints depend on the implementation.
 
 ## Syntax
 
-```js
+```js-nolint
 hint(target, mode)
 ```
 

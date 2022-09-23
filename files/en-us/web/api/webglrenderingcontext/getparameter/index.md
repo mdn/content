@@ -18,7 +18,7 @@ parameter name.
 
 ## Syntax
 
-```js
+```js-nolint
 getParameter(pname)
 ```
 

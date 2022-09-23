@@ -19,7 +19,7 @@ The **`WebGL2RenderingContext.clientWaitSync()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 clientWaitSync(sync, flags, timeout)
 ```
 

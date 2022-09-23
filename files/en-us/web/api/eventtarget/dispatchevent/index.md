@@ -27,7 +27,7 @@ handlers are called and return before `dispatchEvent()` returns.
 
 ## Syntax
 
-```js
+```js-nolint
 dispatchEvent(event)
 ```
 

@@ -36,7 +36,7 @@ or number type (which will be converted into a string) or an `nsISupports`.
 
 ## Syntax
 
-```js
+```js-nolint
 mozSetDataAt(data, index)
 mozSetDataAt(type, data, index)
 ```

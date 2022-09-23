@@ -18,7 +18,7 @@ The **`close()`** method of the {{domxref("HIDDevice")}} interface closes the co
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

@@ -73,7 +73,7 @@ resulting {{domxref("Window.location")}}. This means sites can still provide an
 
 ## Syntax
 
-```js
+```js-nolint
 respondWith(response)
 ```
 

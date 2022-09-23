@@ -21,7 +21,7 @@ notation).
 
 ## Syntax
 
-```js
+```js-nolint
 new Int32Array()
 new Int32Array(length)
 new Int32Array(typedArray)

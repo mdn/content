@@ -19,7 +19,7 @@ variable to the power of the right operand.
 
 ## Syntax
 
-```js
+```js-nolint
 x **= y // x = x ** y
 ```
 
@@ -45,5 +45,5 @@ bar **= 'foo' // NaN
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
 - [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)

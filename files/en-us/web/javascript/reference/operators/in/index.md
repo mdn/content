@@ -17,7 +17,7 @@ The **`in` operator** returns `true` if the specified property is in the specifi
 
 ## Syntax
 
-```js
+```js-nolint
 prop in object
 #prop in object
 ```

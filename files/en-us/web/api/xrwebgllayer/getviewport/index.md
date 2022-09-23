@@ -36,7 +36,7 @@ represented by the view.
 
 ## Syntax
 
-```js
+```js-nolint
 getViewport(view)
 ```
 

@@ -31,7 +31,7 @@ If you need to find:
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findLast((element) => { /* … */ } )
 findLast((element, index) => { /* … */ } )

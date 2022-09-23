@@ -18,7 +18,7 @@ The **`add`** method of the {{domxref("CustomStateSet")}} interface adds an item
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 ```
 

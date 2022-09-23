@@ -24,7 +24,7 @@ syntax.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

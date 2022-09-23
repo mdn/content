@@ -20,7 +20,7 @@ indicating whether the given point is in the {{domxref("Range")}}. It returns
 
 ## Syntax
 
-```js
+```js-nolint
 isPointInRange(referenceNode, offset)
 ```
 

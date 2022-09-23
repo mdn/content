@@ -31,15 +31,19 @@ Web performance is all about user experience and perceived performance. As we le
 To load CSS asynchronously one can set the media type to print and then change to all once loaded. The following snippet includes an onload attribute, requiring JavaScript, so it is important to include a noscript tag with a traditional fallback.
 
 ```html
-<link rel="stylesheet" href="/path/to/my.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="/path/to/my.css"></noscript>
+<link
+  rel="stylesheet"
+  href="/path/to/my.css"
+  media="print"
+  onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="/path/to/my.css" /></noscript>
 ```
 
 The downside with this approach is the flash of unstyled text (FOUT.) The simplest way to address this is by inlining CSS that is required for any content that is rendered above the fold, or what you see in the browser viewport before scrolling. These styles will improve perceived performance as the CSS does not require a file request.
 
 ```html
 <style>
-// Insert your CSS here
+  /* Insert your CSS here */
 </style>
 ```
 

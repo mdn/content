@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: columnheader role'
+title: "ARIA: columnheader role"
 slug: Web/Accessibility/ARIA/Roles/columnheader_role
 tags:
   - Accessibility
@@ -41,24 +41,16 @@ JavaScript is only required if the `aria-sort` attribute is used.
   <thead>
     <tr role="row">
       <th role="columnheader" scope="col">
-        <button>
-          First Name
-        </button>
+        <button>First Name</button>
       </th>
       <th role="columnheader" scope="col">
-        <button>
-          Last Name
-        </button>
+        <button>Last Name</button>
       </th>
       <th role="columnheader" scope="col" aria-sort="ascending">
-        <button>
-          Company Name
-        </button>
+        <button>Company Name</button>
       </th>
       <th role="columnheader" scope="col">
-        <button>
-          Job Title
-        </button>
+        <button>Job Title</button>
       </th>
     </tr>
   </thead>

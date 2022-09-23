@@ -47,16 +47,16 @@ To recommend adding a browser to MDN, follow these steps:
 
 1. Review BCD's [_Addition of browsers_](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md#addition-of-browsers) guideline.
 
-1. Start [a discussion on the mdn/content repository](https://github.com/mdn/content/discussions) proposing to add the browser and mention `@mdn/yari-content`.
+2. Start [a discussion on the mdn/content repository](https://github.com/mdn/content/discussions) proposing to add the browser and mention `@mdn/yari-content`.
 
-1. Complete the [browser selection questionnaire](#compatibility-table-browser-selection-questionnaire).
+3. Complete the [browser selection questionnaire](#compatibility-table-browser-selection-questionnaire).
 
    If you're comfortable sharing your responses publicly, do so;
    otherwise, ask in the GitHub discussion for a Mozilla email contact.
 
    If needed, the MDN team may ask follow-up questions.
 
-1. Wait for the team to consider your recommendation.
+4. Wait for the team to consider your recommendation.
 
 Whether your recommendation is selected, deferred, or rejected, we'll follow up in the GitHub discussion with next steps.
 
@@ -65,9 +65,9 @@ Whether your recommendation is selected, deferred, or rejected, we'll follow up 
 Answer these questions to recommend a browser (or engine) to MDN compatibility tables:
 
 1. Why do you want this browser added to MDN (and BCD)?
-1. How many users and developers do you estimate the browser has?
+2. How many users and developers do you estimate the browser has?
    How did you make this estimation?
-1. What's the governance model of the browser?
+3. What's the governance model of the browser?
    For example, who owns it, what is or is not open source, who participates in its development, and how is it funded?
-1. What is on the browser's roadmap for the next year?
+4. What is on the browser's roadmap for the next year?
    How do you see the browser's compatibility or support for existing tools changing in the future?

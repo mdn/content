@@ -22,7 +22,7 @@ method **`createShader()`** of the [WebGL API](/en-US/docs/Web/API/WebGL_API) cr
 
 ## Syntax
 
-```js
+```js-nolint
 createShader(type)
 ```
 

@@ -71,8 +71,8 @@ For example, you can decide to have the main heading on your page to be shown as
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 ```
 
@@ -87,12 +87,12 @@ A CSS stylesheet will contain many such rules, written one after the other.
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 
 p {
-    color: black;
+  color: black;
 }
 ```
 

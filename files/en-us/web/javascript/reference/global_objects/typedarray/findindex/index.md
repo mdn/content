@@ -26,7 +26,7 @@ See also the {{jsxref("TypedArray.find", "find()")}} method, which returns the
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findIndex((element) => { /* ... */ } )
 findIndex((element, index) => { /* ... */ } )

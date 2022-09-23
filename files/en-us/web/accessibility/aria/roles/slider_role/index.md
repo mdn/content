@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: slider role'
+title: "ARIA: slider role"
 slug: Web/Accessibility/ARIA/Roles/slider_role
 tags:
   - Accessibility
@@ -115,19 +115,20 @@ In the example below, we create a vertical thermometer with which the user can s
 
 ```html
 <div>
-  <div id="temperatureLabel">
-    Temperature
-  </div>
+  <div id="temperatureLabel">Temperature</div>
   <div id="temperatureValue">20°C</div>
   <div id="temperatureSlider">
-    <div id="temperatureSliderThumb"
-       role="slider" aria-labelledby="temperatureLabel"
-       aria-orientation="vertical"
-       tabindex="0"
-       aria-valuemin="15.0" aria-valuemax="25.0"
-       aria-valuenow="20.0" aria-valuetext="20 degrees Celsius"
-       style="top: calc((25 - 20)*2rem - 0.5rem)">
-    </div>
+    <div
+      id="temperatureSliderThumb"
+      role="slider"
+      aria-labelledby="temperatureLabel"
+      aria-orientation="vertical"
+      tabindex="0"
+      aria-valuemin="15.0"
+      aria-valuemax="25.0"
+      aria-valuenow="20.0"
+      aria-valuetext="20 degrees Celsius"
+      style="top: calc((25 - 20)*2rem - 0.5rem)"></div>
   </div>
 </div>
 ```
@@ -157,13 +158,16 @@ For this example to work, we have to write a script to handle all keyboard and p
 Using semantic HTML, this could have been written as:
 
 ```html
-<label for="temperature">
-    Temperature
-</label>
+<label for="temperature"> Temperature </label>
 <output id="temperatureValue">20°C</output>
-<input type="range" id="temperatureSlider"
-  min="15" max="25" step="0.1"
-  value="20" aria-valuetext="20 degrees celsius"
+<input
+  type="range"
+  id="temperatureSlider"
+  min="15"
+  max="25"
+  step="0.1"
+  value="20"
+  aria-valuetext="20 degrees celsius"
   style="transform: rotate(-90deg);" />
 ```
 

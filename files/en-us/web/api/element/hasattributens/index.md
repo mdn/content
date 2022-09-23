@@ -17,7 +17,7 @@ browser-compat: api.Element.hasAttributeNS
 
 ## Syntax
 
-```js
+```js-nolint
 hasAttributeNS(namespace,localName)
 ```
 

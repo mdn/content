@@ -24,7 +24,7 @@ transmitted received from the USB device.
 
 ## Syntax
 
-```js
+```js-nolint
 isochronousTransferIn(endpointNumber, packetLengths)
 ```
 

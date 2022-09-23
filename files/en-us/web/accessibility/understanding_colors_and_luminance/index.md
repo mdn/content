@@ -1,5 +1,5 @@
 ---
-title: 'Web Accessibility: Understanding Colors and Luminance'
+title: "Web Accessibility: Understanding Colors and Luminance"
 slug: Web/Accessibility/Understanding_Colors_and_Luminance
 tags:
   - accessibility
@@ -117,7 +117,7 @@ Today, the proliferation of easily available web fonts of all sizes and weights 
 
 The W3.org defines the sRGB colorspace as the [default for web content](https://www.w3.org/TR/css-color-3/#SRGB). The MDN page on [\<color>](/en-US/docs/Web/CSS/color_value) says "_The [CSS](/en-US/docs/Web/CSS) [color data type](/en-US/docs/Web/CSS/CSS_Types) represents a color in the [sRGB colorspace](https://en.wikipedia.org/wiki/SRGB)._"
 
-### CSS Color Level 3 notations:
+### CSS Color Level 3 notations
 
 These are examples of the CSS notations used to define a color. Here the example color for each is magenta:
 
@@ -316,7 +316,7 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - **Some colors can affect our perception of time:** [Color and time perception: Evidence for temporal overestimation of blue stimuli](https://pubmed.ncbi.nlm.nih.gov/29374198/)
 - **Blue also has a significant effect on brightness and glare:** [Blue and glare & brightness](https://pubmed.ncbi.nlm.nih.gov/31288107/)
 - **Red tinted glasses can provide increased happiness or joy:** [Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing](https://pubmed.ncbi.nlm.nih.gov/31244627/)
-- **Red is well known to have significant effects on our behavior:** [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/), Scientific American, S. Martinez-Conde, S,Macknik
+- **Red is well known to have significant effects on our behavior:** [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/), Scientific American, S. Martinez-Conde, Stephen L. Macknik
 - **Red Environment:** [Studies have shown that a red environment stimulates cognition](https://pubmed.ncbi.nlm.nih.gov/20649469/), but for those who suffer Traumatic Brain Injury cognitive function may be reduced in a red environment, while a green environment had no measurable effect according.
 
 ### Flashing and Seizures
@@ -372,7 +372,7 @@ function sRGBtoLin(colorChannel) {
   if (colorChannel <= 0.04045) {
     return colorChannel / 12.92;
   } else {
-    return Math.pow(((colorChannel + 0.055) / 1.055), 2.4);
+    return Math.pow((colorChannel + 0.055) / 1.055, 2.4);
   }
 }
 ```

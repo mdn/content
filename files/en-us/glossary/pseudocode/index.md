@@ -3,7 +3,6 @@ title: Pseudocode
 slug: Glossary/Pseudocode
 tags:
   - CodingScripting
-  - Glossary
   - Pseudocode
 ---
 

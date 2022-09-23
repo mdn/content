@@ -23,7 +23,7 @@ value of the individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSSkewX(ax)
 ```
 

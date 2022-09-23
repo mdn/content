@@ -21,7 +21,7 @@ Form of the string.
 
 ## Syntax
 
-```js
+```js-nolint
 normalize()
 normalize(form)
 ```

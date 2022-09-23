@@ -19,7 +19,7 @@ The `replace()` and {{domxref("CSSStyleSheet.replaceSync()")}} methods can only 
 
 ## Syntax
 
-```js
+```js-nolint
 replace(text)
 ```
 

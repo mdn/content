@@ -31,7 +31,7 @@ This example uses `input::-webkit-outer-spin-button` to find {{HTMLElement("inpu
 #### HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 #### CSS

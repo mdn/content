@@ -25,7 +25,7 @@ A list of valid keys is found in the [UI Events KeyboardEvent code Values](https
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 

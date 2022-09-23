@@ -20,7 +20,7 @@ for each value in the `Set` object, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach(() => { /* ... */ } )
 forEach((value) => { /* ... */ } )

@@ -20,7 +20,7 @@ of the Canvas 2D API adds one {{domxref("Path2D")}} object to another
 
 ## Syntax
 
-```js
+```js-nolint
 addPath(path)
 addPath(path, transform)
 ```

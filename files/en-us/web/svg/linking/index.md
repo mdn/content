@@ -16,7 +16,7 @@ page1.html:
 <html lang="en">
   <body>
     <p>This is a SVG button:</p>
-    <object width="100" height="50" type="image/svg+xml" data="button.svg"/>
+    <object width="100" height="50" type="image/svg+xml" data="button.svg" />
   </body>
 </html>
 ```

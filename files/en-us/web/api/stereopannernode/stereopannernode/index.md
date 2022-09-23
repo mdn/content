@@ -19,7 +19,7 @@ The **`StereoPannerNode()`** constructor of the [Web Audio API](/en-US/docs/Web/
 
 ## Syntax
 
-```js
+```js-nolint
 new StereoPannerNode(context, options)
 ```
 

@@ -19,7 +19,7 @@ The **`getHitTestResultsForTransientInput()`** method of the {{domxref("XRFrame"
 
 ## Syntax
 
-```js
+```js-nolint
 getHitTestResultsForTransientInput(hitTestSource)
 ```
 

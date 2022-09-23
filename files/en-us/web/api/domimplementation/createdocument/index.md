@@ -18,7 +18,7 @@ returns an {{domxref("XMLDocument")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 createDocument(namespaceURI, qualifiedNameStr)
 createDocument(namespaceURI, qualifiedNameStr, documentType)
 ```

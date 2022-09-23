@@ -1,5 +1,5 @@
 ---
-title: 'aria-modal'
+title: "aria-modal"
 slug: Web/Accessibility/ARIA/Attributes/aria-modal
 tags:
   - Accessibility
@@ -41,17 +41,14 @@ If a dialog is not modal — there is no inert background and focus isn't confin
 
 ```html
 <div id="backdrop" class="no-scroll">
-  <div role="alertdialog"
-       aria-modal="true"
-       aria-labelledby="dialog_label"
-       aria-describedby="dialog_desc">
-    <h2 id="dialog_label">
-      Confirmation
-    </h2>
+  <div
+    role="alertdialog"
+    aria-modal="true"
+    aria-labelledby="dialog_label"
+    aria-describedby="dialog_desc">
+    <h2 id="dialog_label">Confirmation</h2>
     <div id="dialog_desc">
-      <p>
-        Are you sure you want to delete this file?
-      </p>
+      <p>Are you sure you want to delete this file?</p>
     </div>
     <button type="button" onclick="closeDialog(this)">
       No. Close this popup.

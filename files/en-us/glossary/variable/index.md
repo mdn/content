@@ -3,7 +3,6 @@ title: Variable
 slug: Glossary/Variable
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

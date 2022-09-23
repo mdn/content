@@ -24,7 +24,7 @@ inserted instead.
 
 ## Syntax
 
-```js
+```js-nolint
 insertNode(newNode)
 ```
 

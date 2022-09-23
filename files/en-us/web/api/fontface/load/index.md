@@ -22,7 +22,7 @@ If the `source` for the font face was specified as binary data, or the font {{do
 
 ## Syntax
 
-```js
+```js-nolint
 load()
 ```
 
@@ -32,8 +32,7 @@ None.
 
 ### Return value
 
-A {{jsxref('Promise')}} that resolves with a reference to the current `FontFace` object when the font loads or rejects with a `NetworkError` {{domxref("DOMException")}} if the
-loading process fails.
+A {{jsxref('Promise')}} that resolves with a reference to the current `FontFace` object when the font loads or rejects with a `NetworkError` {{domxref("DOMException")}} if the loading process fails.
 
 ### Exceptions
 
@@ -49,26 +48,32 @@ This simple example loads a font and uses it to display some text in a canvas el
 ```
 
 ```js
-const mycanvas = document.getElementById("js-canvas");
+const canvas = document.getElementById("js-canvas");
 
 // load the "Bitter" font from Google Fonts
-let font_file = new FontFace('FontFamily Style Bitter', 'url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)');
+const fontFile = new FontFace(
+  "FontFamily Style Bitter",
+  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)"
+);
+document.fonts.add(fontFile);
 
-font_file.load().then(() => {
-  // font loaded successfully!
-  mycanvas.width = 650;
-  mycanvas.height = 100;
-  const ctx = mycanvas.getContext('2d')
+fontFile.load().then(
+  () => {
+    // font loaded successfully!
+    canvas.width = 650;
+    canvas.height = 100;
+    const ctx = canvas.getContext("2d");
 
-  ctx.font = '36px "FontFamily Style Bitter"'
-  ctx.fillText('Bitter font loaded', 20, 50)
+    ctx.font = '36px "FontFamily Style Bitter"';
+    ctx.fillText("Bitter font loaded", 20, 50);
   },
-(err) => {
-  console.error(err)
-});
+  (err) => {
+    console.error(err);
+  }
+);
 ```
 
-{{EmbedLiveSample('Examples')}}:
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

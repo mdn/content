@@ -25,7 +25,7 @@ existing values.
 
 ## Syntax
 
-```js
+```js-nolint
 maximize()
 ```
 

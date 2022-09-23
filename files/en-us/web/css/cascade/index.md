@@ -15,7 +15,6 @@ tags:
   - Style sheet
   - Stylesheets
 spec-urls: https://drafts.csswg.org/css-cascade/
-
 ---
 
 {{CSSRef}}
@@ -97,29 +96,37 @@ Here we have a user agent style sheet, two author style sheets, a user styleshee
 **User-agent CSS:**
 
 ```css
-li { margin-left: 10px }
+li {
+  margin-left: 10px;
+}
 ```
 
 **Author CSS 1:**
 
 ```css
-li { margin-left: 0 } /* This is a reset */
+li {
+  margin-left: 0;
+} /* This is a reset */
 ```
 
 **Author CSS 2:**
 
 ```css
 @media screen {
-  li { margin-left: 3px }
+  li {
+    margin-left: 3px;
+  }
 }
 
 @media print {
-  li { margin-left: 1px }
+  li {
+    margin-left: 1px;
+  }
 }
 
 @layer namedLayer {
   li {
-    margin-left: 5px ;
+    margin-left: 5px;
   }
 }
 ```
@@ -127,15 +134,17 @@ li { margin-left: 0 } /* This is a reset */
 **User CSS:**
 
 ```css
-.specific { margin-left: 1em }
+.specific {
+  margin-left: 1em;
+}
 ```
 
 **HTML:**
 
 ```html
 <ul>
-<li class="specific">1<sup>st</sup></li>
-<li>2<sup>nd</sup></li>
+  <li class="specific">1<sup>st</sup></li>
+  <li>2<sup>nd</sup></li>
 </ul>
 ```
 
@@ -157,19 +166,23 @@ Note that even though the user style on `.specific` of `1em` has a higher specif
 There are three declarations in author stylesheets:
 
 ```css
-li { margin-left: 0 } /* from author css 1 */
+li {
+  margin-left: 0;
+} /* from author css 1 */
 ```
 
 ```css
 @media screen {
-  li { margin-left: 3px }
+  li {
+    margin-left: 3px;
+  }
 }
 ```
 
 ```css
 @layer namedLayer {
   li {
-    margin-left: 5px ;
+    margin-left: 5px;
   }
 }
 ```
@@ -181,7 +194,7 @@ This leaves the `0` and the `3px`, which both have the same selector, hence the 
 We then look at _order of appearance_. The second one, the last of the two unlayered author styles, wins.
 
 ```css
-margin-left: 3px
+margin-left: 3px;
 ```
 
 > **Note:** The declaration defined in the user CSS, while it may have greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though it may come later in the code, will not have precedence either as normal styles in cascade layers have less precedence than normal unlayered styles. _Order of appearance_ only matters when both origin, importance, and specificity are equal.
@@ -311,7 +324,7 @@ Now that we have a better understanding of origin type and cascade layer precede
   <tr><td rowspan="3">6</td><td>user - unlayered styles</td><td rowspan="3"><code>!important</td></tr>
   <tr><td>user - last declared layer</td></tr>
   <tr><td>user - first declared layer</td></tr>
-  <tr><td rowspan="3">7</td><td>user-agent  - unlayered styles</td><td rowspan="3"><code>!important</code></td></tr>
+  <tr><td rowspan="3">7</td><td>user-agent - unlayered styles</td><td rowspan="3"><code>!important</code></td></tr>
   <tr><td>user-agent - last declared layer</td></tr>
   <tr><td>user-agent - first declared layer</td></tr>
   <tr><td>8</td><td>transitions</td><td></td></tr>
@@ -343,20 +356,32 @@ p {
   animation: infinite 5s alternate repeatedName;
 }
 @keyframes repeatedName {
-  from {font-size: 1rem;}
-  to {font-size: 3rem;}
+  from {
+    font-size: 1rem;
+  }
+  to {
+    font-size: 3rem;
+  }
 }
 
 @layer A {
   @keyframes repeatedName {
-    from {background-color: yellow;}
-    to {background-color: orange;}
+    from {
+      background-color: yellow;
+    }
+    to {
+      background-color: orange;
+    }
   }
 }
 @layer B {
   @keyframes repeatedName {
-    from {color: white;}
-    to {color: black;}
+    from {
+      color: white;
+    }
+    to {
+      color: black;
+    }
   }
 }
 ```

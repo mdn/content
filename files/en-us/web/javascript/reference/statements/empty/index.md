@@ -17,7 +17,7 @@ JavaScript syntax would expect one.
 
 ## Syntax
 
-```js
+```js-nolint
 ;
 ```
 

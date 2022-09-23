@@ -21,7 +21,7 @@ data.
 
 ## Syntax
 
-```js
+```js-nolint
 createVertexArray()
 ```
 

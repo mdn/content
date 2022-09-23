@@ -2,7 +2,6 @@
 title: IANA
 slug: Glossary/IANA
 tags:
-  - Glossary
   - Infrastructure
 ---
 

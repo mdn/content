@@ -15,6 +15,10 @@ browser-compat: css.types.counter
 The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a string representing the current value of the named counter, if there is one.
 It is generally used in the {{CSSxRef("content")}} property of [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), but can theoretically be used anywhere a [`<string>`](/en-US/docs/Web/CSS/string) value is supported.
 
+{{EmbedInteractiveExample("pages/tabbed/function-counter.html", "tabbed-shorter")}}
+
+## Syntax
+
 ```css
 /* Simple usage */
 counter(countername);
@@ -25,8 +29,6 @@ counter(countername, upper-roman)
 
 A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no visible effect by itself.
 The `counter()` function (and {{cssxref("counters", "counters()")}} function) is what makes it useful by returning developer defined strings (or images).
-
-## Syntax
 
 ### Values
 
@@ -63,8 +65,8 @@ li {
   counter-increment: listCounter;
 }
 li::after {
-  content: "[" counter(listCounter) "] == ["
-               counter(listCounter, upper-roman) "]";
+  content: "[" counter(listCounter) "] == [" counter(listCounter, upper-roman)
+    "]";
 }
 ```
 
@@ -94,8 +96,11 @@ li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, decimal-leading-zero) "] == ["
-               counter(count, lower-alpha) "]";
+  content: "[" counter(count, decimal-leading-zero) "] == [" counter(
+      count,
+      lower-alpha
+    )
+    "]";
 }
 ```
 

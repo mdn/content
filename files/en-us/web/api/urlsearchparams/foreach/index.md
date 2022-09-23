@@ -21,7 +21,7 @@ in this object via a callback function.
 
 ## Syntax
 
-```js
+```js-nolint
 forEach(callback)
 forEach(callback, thisArg)
 ```

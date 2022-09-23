@@ -28,7 +28,7 @@ The default is `password`.
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   // ...
   credentialType: newCredentialType,

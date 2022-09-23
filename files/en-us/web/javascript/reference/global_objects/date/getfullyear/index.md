@@ -22,7 +22,7 @@ method.
 
 ## Syntax
 
-```js
+```js-nolint
 getFullYear()
 ```
 

@@ -22,7 +22,7 @@ Note that before version 63, Firefox didn't have the concept of highlighting mul
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onHighlighted.addListener(listener)
 browser.tabs.onHighlighted.removeListener(listener)
 browser.tabs.onHighlighted.hasListener(listener)

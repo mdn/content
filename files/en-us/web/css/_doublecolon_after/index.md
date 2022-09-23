@@ -73,12 +73,12 @@ We can style text or images in the {{CSSxRef("content")}} property almost any wa
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::after {
   content: "This is a fancy orange box.";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -97,9 +97,15 @@ We can also support keyboard users with this technique, by adding a `tabindex` o
 #### HTML
 
 ```html
-<p>Here we have some
-  <span tabindex="0" data-descr="collection of words and punctuation">text</span> with a few
-  <span tabindex="0" data-descr="small popups that appear when hovering">tooltips</span>.
+<p>
+  Here we have some
+  <span tabindex="0" data-descr="collection of words and punctuation">
+    text
+  </span>
+  with a few
+  <span tabindex="0" data-descr="small popups that appear when hovering">
+    tooltips
+  </span>.
 </p>
 ```
 
@@ -109,7 +115,7 @@ We can also support keyboard users with this technique, by adding a `tabindex` o
 span[data-descr] {
   position: relative;
   text-decoration: underline;
-  color: #00F;
+  color: #00f;
   cursor: help;
 }
 

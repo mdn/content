@@ -19,7 +19,7 @@ is extensible (whether it can have new properties added to it).
 
 ## Syntax
 
-```js
+```js-nolint
 Object.isExtensible(obj)
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Part 7: Deploying to production'
+title: "Express Tutorial Part 7: Deploying to production"
 slug: Learn/Server-side/Express_Nodejs/deployment
 tags:
   - Beginner
@@ -116,18 +116,18 @@ For example, the code fragment below shows how you might set up "author" logging
 The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.
 
 ```js
-const debug = require('debug')('author');
+const debug = require("debug")("author");
 
 // Display Author update form on GET
 exports.author_update_get = (req, res, next) => {
-  req.sanitize('id').escape().trim();
+  req.sanitize("id").escape().trim();
   Author.findById(req.params.id, (err, author) => {
     if (err) {
       debug(`update error: ${err}`);
       return next(err);
     }
     // On success
-    res.render('author_form', { title: 'Update Author', author });
+    res.render("author_form", { title: "Update Author", author });
   });
 };
 ```
@@ -159,21 +159,21 @@ npm install compression
 Open **./app.js** and require the compression library as shown. Add the compression library to the middleware chain with the `use()` method (this should appear before any routes you want compressed — in this case, all of them!)
 
 ```js
-const catalogRouter = require('./routes/catalog'); //Import routes for "catalog" area of site
-const compression = require('compression');
+const catalogRouter = require("./routes/catalog"); // Import routes for "catalog" area of site
+const compression = require("compression");
 
 // Create the Express application object
 const app = express();
 
 // …
 
-app.use(compression()); //Compress all routes
+app.use(compression()); // Compress all routes
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 
 // …
 ```
@@ -194,8 +194,8 @@ Open **./app.js** and require the _helmet_ library as shown.
 Then add the module to the middleware chain with the `use()` method.
 
 ```js
-const compression = require('compression');
-const helmet = require('helmet');
+const compression = require("compression");
+const helmet = require("helmet");
 
 // Create the Express application object
 const app = express();
@@ -363,14 +363,16 @@ So far in this tutorial, we've used a single database that is hard-coded into **
 Open **app.js** and find the line that sets the MongoDB connection variable. It will look something like this:
 
 ```js
-const mongoDB = 'mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true';
+const mongoDB =
+  "mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true";
 ```
 
 Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below.)
 
 ```js
 // Set up mongoose connection
-const dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
+const dev_db_url =
+  "mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true";
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 ```
 

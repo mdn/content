@@ -19,7 +19,7 @@ The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl/RelativeT
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.RelativeTimeFormat()
 new Intl.RelativeTimeFormat(locales)
 new Intl.RelativeTimeFormat(locales, options)

@@ -19,7 +19,7 @@ given shader.
 
 ## Syntax
 
-```js
+```js-nolint
 getShaderParameter(shader, pname)
 ```
 

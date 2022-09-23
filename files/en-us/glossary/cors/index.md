@@ -2,7 +2,6 @@
 title: CORS
 slug: Glossary/CORS
 tags:
-  - Glossary
   - Infrastructure
   - Security
 ---

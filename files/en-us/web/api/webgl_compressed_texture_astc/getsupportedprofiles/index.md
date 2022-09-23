@@ -20,7 +20,7 @@ by the implementation.
 
 ## Syntax
 
-```js
+```js-nolint
 getSupportedProfiles()
 ```
 

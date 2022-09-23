@@ -21,7 +21,7 @@ date according to local time. Because `getYear()` does not return full years
 
 ## Syntax
 
-```js
+```js-nolint
 getYear()
 ```
 

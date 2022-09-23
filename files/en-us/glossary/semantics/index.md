@@ -3,7 +3,6 @@ title: Semantics
 slug: Glossary/Semantics
 tags:
   - CodingScripting
-  - Glossary
   - HTML
   - semantics
 ---

@@ -20,7 +20,7 @@ The **`[@@search]()`** method of a regular expression specifies how [`String.pro
 
 ## Syntax
 
-```js
+```js-nolint
 regexp[Symbol.search](str)
 ```
 

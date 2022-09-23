@@ -18,7 +18,7 @@ passed object is a valid {{domxref("WebGLSync")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 isSync(sync)
 ```
 

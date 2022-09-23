@@ -20,7 +20,7 @@ It returns the modified array.
 
 ## Syntax
 
-```js
+```js-nolint
 fill(value)
 fill(value, start)
 fill(value, start, end)

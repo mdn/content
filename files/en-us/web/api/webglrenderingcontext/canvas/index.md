@@ -20,8 +20,8 @@ object.
 
 ## Syntax
 
-```js
-gl.canvas;
+```js-nolint
+gl.canvas
 ```
 
 ### Return value

@@ -24,8 +24,8 @@ Unlike {{domxref("Node.cloneNode()")}} the return value preserves the {{domxref(
 
 ## Syntax
 
-```js
-removeChild(child);
+```js-nolint
+removeChild(child)
 ```
 
 ### Parameters
@@ -82,7 +82,7 @@ while (element.firstChild) {
 
 ```html
 <!--Sample HTML code-->
-<div id="top"> </div>
+<div id="top"></div>
 ```
 
 ```js

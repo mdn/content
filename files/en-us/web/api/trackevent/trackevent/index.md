@@ -24,7 +24,7 @@ occurred on a list of tracks ({{domxref("AudioTrackList")}},
 
 ## Syntax
 
-```js
+```js-nolint
 new TrackEvent(type)
 new TrackEvent(type, options)
 ```

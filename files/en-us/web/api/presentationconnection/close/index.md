@@ -21,7 +21,7 @@ When the `close()` method is called on a {{domxref("PresentationConnection")}}, 
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

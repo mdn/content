@@ -19,7 +19,7 @@ Fired when a new contextual identity is created. Contextual identities may be cr
 
 ## Syntax
 
-```js
+```js-nolint
 browser.contextualIdentities.onCreated.addListener(listener)
 browser.contextualIdentities.onCreated.removeListener(listener)
 browser.contextualIdentities.onCreated.hasListener(listener)

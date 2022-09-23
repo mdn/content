@@ -23,7 +23,7 @@ This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}
 To link an external stylesheet, you'd include a `<link>` element inside your {{HTMLElement("head")}} like this:
 
 ```html
-<link href="main.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet" />
 ```
 
 This simple example provides the path to the stylesheet inside an `href` attribute, and a `rel` attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is probably one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
@@ -32,14 +32,17 @@ As you'll see from our [Link types](/en-US/docs/Web/HTML/Link_types) reference, 
 There are a number of other common types you'll come across. For example, a link to the site's favicon:
 
 ```html
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="favicon.ico" />
 ```
 
 There are a number of other icon `rel` values, mainly used to indicate special icon types for use on various mobile platforms, e.g.:
 
 ```html
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-      href="apple-icon-114.png" type="image/png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="apple-icon-114.png"
+  type="image/png" />
 ```
 
 The `sizes` attribute indicates the icon size, while the `type` contains the MIME type of the resource being linked.
@@ -48,15 +51,22 @@ These provide useful hints to allow the browser to choose the most appropriate i
 You can also provide a media type or query inside a `media` attribute; this resource will then only be loaded if the media condition is true. For example:
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link
+  href="mobile.css"
+  rel="stylesheet"
+  media="screen and (max-width: 600px)" />
 ```
 
 Some interesting new performance and security features have been added to the `<link>` element too. Take this example:
 
 ```html
-<link rel="preload" href="myFont.woff2" as="font"
-      type="font/woff2" crossorigin="anonymous">
+<link
+  rel="preload"
+  href="myFont.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous" />
 ```
 
 A `rel` value of `preload` indicates that the browser should preload this resource (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
@@ -296,7 +306,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 To include a stylesheet in a page, use the following syntax:
 
 ```html
-<link href="style.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
 ```
 
 ### Providing alternative stylesheets
@@ -307,9 +317,9 @@ The user can choose which style sheet to use by choosing it from the **View > Pa
 This provides a way for users to see multiple versions of a page.
 
 ```html
-<link href="default.css" rel="stylesheet" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" title="Basic">
+<link href="default.css" rel="stylesheet" title="Default Style" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+<link href="basic.css" rel="alternate stylesheet" title="Basic" />
 ```
 
 ### Providing icons for different usage contexts
@@ -318,15 +328,21 @@ You can include links to several different icons on the same page, and the brows
 
 ```html
 <!-- third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="favicon57.png">
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- basic favicon -->
-<link rel="icon" href="favicon32.png">
+<link rel="icon" href="favicon32.png" />
 ```
 
 ### Conditionally loading resources with media queries
@@ -335,10 +351,16 @@ You can provide a media type or query inside a `media` attribute;
 this resource will then only be loaded if the media condition is true. For example:
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="all">
-<link href="desktop.css" rel="stylesheet" media="screen and (min-width: 600px)">
-<link href="highres.css" rel="stylesheet" media="screen and (min-resolution: 300dpi)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link href="mobile.css" rel="stylesheet" media="all" />
+<link
+  href="desktop.css"
+  rel="stylesheet"
+  media="screen and (min-width: 600px)" />
+<link
+  href="highres.css"
+  rel="stylesheet"
+  media="screen and (min-resolution: 300dpi)" />
 ```
 
 ### Stylesheet load events
@@ -347,18 +369,18 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 
 ```html
 <script>
-  const stylesheet = document.querySelector('#my-stylesheet');
+  const stylesheet = document.querySelector("#my-stylesheet");
 
   stylesheet.onload = () => {
     // Do something interesting; the sheet has been loaded
-  }
+  };
 
   stylesheet.onerror = () => {
     console.log("An error occurred loading the stylesheet!");
-  }
+  };
 </script>
 
-<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet">
+<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
 ```
 
 > **Note:** The `load` event fires once the stylesheet and all of its imported content has been loaded and parsed, and immediately before the styles start being applied to the content.

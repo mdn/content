@@ -24,7 +24,7 @@ Calls to this method will throw a `SecurityError` {{domxref('DOMException')}} if
 
 ## Syntax
 
-```js
+```js-nolint
 getGamepads()
 ```
 

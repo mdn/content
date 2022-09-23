@@ -24,7 +24,7 @@ pattern.
 
 ## Syntax
 
-```js
+```js-nolint
 exec(input)
 exec(input, baseURL)
 ```

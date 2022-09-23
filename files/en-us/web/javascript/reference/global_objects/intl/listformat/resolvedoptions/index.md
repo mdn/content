@@ -25,7 +25,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 listFormat.resolvedOptions()
 ```
 

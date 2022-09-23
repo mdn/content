@@ -29,7 +29,7 @@ and all ongoing operations are canceled.
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

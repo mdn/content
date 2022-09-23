@@ -26,7 +26,7 @@ fragment valid.
 
 ## Syntax
 
-```js
+```js-nolint
 cloneContents()
 ```
 

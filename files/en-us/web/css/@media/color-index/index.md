@@ -2,7 +2,7 @@
 title: color-index
 slug: Web/CSS/@media/color-index
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
@@ -58,7 +58,10 @@ This HTML will apply a special stylesheet for devices that have at least 256 col
 
 ```html
 <link rel="stylesheet" href="http://foo.bar.com/base.css" />
-<link rel="stylesheet" media="all and (min-color-index: 256)" href="http://foo.bar.com/color-stylesheet.css" />
+<link
+  rel="stylesheet"
+  media="all and (min-color-index: 256)"
+  href="http://foo.bar.com/color-stylesheet.css" />
 ```
 
 ## Specifications

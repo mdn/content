@@ -3,7 +3,6 @@ title: Public-key cryptography
 slug: Glossary/Public-key_cryptography
 tags:
   - Cryptography
-  - Glossary
   - Public-key cryptography
   - Security
 ---

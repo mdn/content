@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: region role'
+title: "ARIA: region role"
 slug: Web/Accessibility/ARIA/Roles/region_role
 tags:
   - ARIA
@@ -42,7 +42,9 @@ Using the {{HTMLElement('section')}} element will automatically communicate a se
 
 ```html
 <div role="region" aria-labelledby="region-heading">
-  <h2 id="region-heading">This heading's `id` attribute helps this region have an accessible name</h2>
+  <h2 id="region-heading">
+    This heading's `id` attribute helps this region have an accessible name
+  </h2>
   <!-- region content -->
 </div>
 ```

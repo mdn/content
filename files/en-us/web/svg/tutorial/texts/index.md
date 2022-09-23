@@ -35,16 +35,19 @@ This element is used to mark up sub-portions of a larger text. It must be a chil
 
 ```html
 <svg width="350" height="60" xmlns="http://www.w3.org/2000/svg">
-<text>
-  This is <tspan font-weight="bold" fill="red">bold and red</tspan>
-</text>
+  <text>
+    This is
+    <tspan font-weight="bold" fill="red">bold and red</tspan>
+  </text>
 
-<style><![CDATA[
-  text{
-    dominant-baseline: hanging;
-    font: 28px Verdana, Helvetica, Arial, sans-serif;
-  }
-]]></style>
+  <style>
+    <![CDATA[
+      text{
+        dominant-baseline: hanging;
+        font: 28px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
 </svg>
 ```
 
@@ -55,9 +58,11 @@ The `tspan` element has the following custom attributes:
 - `x`
   - : Set a new absolute `x` coordinate for the containing text. This overwrites the default current text position. The attribute may also contain a list of numbers, that are one by one applied to the single characters of the `tspan` element.
 - `dx`
+
   - : Start drawing the text with a horizontal offset `dx` from the default current position. Here, too, you may provide a list of values that are applied to consecutive characters, hence piling up the offset over time.
 
     Likewise, there are **`y`** and **`dy`** for vertical displacement.
+
 - `rotate`
   - : Rotate all characters by this degree. A list of numbers makes each character rotate to its respective value, with remaining characters rotating according to the last value.
 - `textLength`
@@ -69,19 +74,21 @@ This element fetches via its `xlink:href` attribute an arbitrary path and aligns
 
 ```html
 <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-<path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
-<text>
-  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
-    A curve.
-  </textPath>
-</text>
+  <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
+  <text>
+    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
+      A curve.
+    </textPath>
+  </text>
 
-<style><![CDATA[
-  text{
-    dominant-baseline: hanging;
-    font: 28px Verdana, Helvetica, Arial, sans-serif;
-  }
-]]></style>
+  <style>
+    <![CDATA[
+      text{
+        dominant-baseline: hanging;
+        font: 28px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
 </svg>
 ```
 
