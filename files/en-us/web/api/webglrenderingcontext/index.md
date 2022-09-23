@@ -300,6 +300,13 @@ The following properties and methods provide general information and functionali
 - {{domxref("WebGLRenderingContext.flush()")}}
   - : Empties different buffer commands, causing all commands to be executed as quickly as possible.
 
+## Color spaces
+
+- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}}
+  - : Specifies the color space of the WebGL drawing buffer.
+- {{domxref("WebGLRenderingContext.unpackColorSpace")}}
+  - : Specifies the color space to convert to when importing textures.
+
 ## Working with extensions
 
 These methods manage WebGL extensions:
