@@ -8,6 +8,7 @@ tags:
   - Reference
   - metadata
 browser-compat: html.elements.meta.name
+spec-urls: https://www.w3.org/TR/css-device-adapt-1/#viewport-meta
 ---
 
 {{HTMLRef}}

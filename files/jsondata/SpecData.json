@@ -254,6 +254,11 @@
     "url": "https://drafts.csswg.org/css-device-adapt/",
     "status": "WD"
   },
+  "CSS Device Adaptation Module Level 1": {
+    "name": "CSS Device Adaptation Module Level&nbsp;1",
+    "url": "https://www.w3.org/TR/css-device-adapt-1/",
+    "status": "ED"
+  },
   "CSS3 Display": {
     "name": "CSS Display Module Level&nbsp;3",
     "url": "https://drafts.csswg.org/css-display/",
