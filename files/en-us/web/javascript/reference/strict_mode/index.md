@@ -78,7 +78,7 @@ class C {
     // All code here is evaluated in strict mode
     test() {delete Object.prototype;}
 }
-new C().test();// Throw error, because strict mode
+new C().test();// TypeError, because strict mode
 
 const C = class {
     // All code here is evaluated in strict mode
