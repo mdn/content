@@ -786,9 +786,9 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
   Do not declare multiple variables in one line, separating them with commas or using chain declaration. Avoid declaring variables like this:
 
-  ```js example-bad
+  ```js-nolint example-bad
   let var1, var2;
-  let var3 = (var4 = "Apapou"); // var4 is implicitly created as a global variable; fails in strict mode
+  let var3 = var4 = "Apapou"; // var4 is implicitly created as a global variable; fails in strict mode
   ```
 
 ### Type coercion
