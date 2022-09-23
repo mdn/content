@@ -74,22 +74,14 @@ export default myStrictFunction;
 All parts of ECMAScript [classes](/en-US/docs/Web/JavaScript/Reference/Classes) are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) — and so also including all parts of class bodies.
 
 ```js
-const testObjWithStrictMode = {
-    printThis: function () {
-        'use strict'; // strict mode
-        console.log(this);
-    }
-}
-let printThis = testObjWithStrictMode.printThis;
-printThis(); // undefined, because strict mode is enabled
-
-
 const testObjWithoutStrictMode = {
     printThis: function () {
+        // enable strict mode will output undefined
+        // "use strict";
         console.log(this);
     }
 }
-printThis = testObjWithoutStrictMode.printThis;
+let printThis = testObjWithoutStrictMode.printThis;
 printThis(); // Window object, becuase not enable strict mode.
 
 
