@@ -71,7 +71,7 @@ The interface also supports the following properties which are listed in the ord
   - : A `number` that is the size (in octets) received from the fetch (HTTP or cache) of the _message body_, after removing any applied content-codings.
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
-- {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{readonlyInline}}
+- {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
   - : A string representing the render-blocking status. Must be: "`blocking`" or "`non-blocking`".
 
 ## Methods

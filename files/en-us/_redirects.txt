@@ -9186,6 +9186,7 @@
 /en-US/docs/Web/API/PerformanceEntry/nextHopProtocol	/en-US/docs/Web/API/PerformanceResourceTiming/nextHopProtocol
 /en-US/docs/Web/API/PerformanceEntry/redirectEnd	/en-US/docs/Web/API/PerformanceResourceTiming/redirectEnd
 /en-US/docs/Web/API/PerformanceEntry/redirectStart	/en-US/docs/Web/API/PerformanceResourceTiming/redirectStart
+/en-US/docs/Web/API/PerformanceEntry/renderBlockingStatus	/en-US/docs/Web/API/PerformanceResourceTiming/renderBlockingStatus
 /en-US/docs/Web/API/PerformanceEntry/requestStart	/en-US/docs/Web/API/PerformanceResourceTiming/requestStart
 /en-US/docs/Web/API/PerformanceEntry/responseEnd	/en-US/docs/Web/API/PerformanceResourceTiming/responseEnd
 /en-US/docs/Web/API/PerformanceEntry/responseStart	/en-US/docs/Web/API/PerformanceResourceTiming/responseStart

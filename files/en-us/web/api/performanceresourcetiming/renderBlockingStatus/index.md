@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.renderBlockingStatus
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`renderBlockingStatus`** read-only property returns the render-blocking
@@ -27,6 +28,7 @@ A string containing one of the following values:
 
 In the following example, we print out the {{domxref("PerformanceEntry.name","name")}} of
 resources which are potentially render-blocking.
+
 ```js
 function print_renderBlocking_resources() {
   const p = performance.getEntriesByType("resource");
