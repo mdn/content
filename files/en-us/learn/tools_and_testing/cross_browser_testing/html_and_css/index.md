@@ -260,14 +260,14 @@ Try this simple example:
 4. Store a reference to this element in a variable, for example:
 
    ```js
-   const test = document.getElementById('hplogo');
+   const test = document.getElementById("hplogo");
    ```
 
 5. Now try to set a new value for the CSS property you are interested in on that element; you can do this using the [style](/en-US/docs/Web/API/HTMLElement/style) property of the element, for example try typing these into the JavaScript console:
 
    ```js
-   test.style.transform = 'rotate(90deg)'
-   test.style.webkitTransform = 'rotate(90deg)'
+   test.style.transform = "rotate(90deg)";
+   test.style.webkitTransform = "rotate(90deg)";
    ```
 
 As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what versions of the property are implemented in that browser.
