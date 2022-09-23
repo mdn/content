@@ -35,6 +35,22 @@ The operands are compared with multiple rounds of coercion, which can be summari
 - If either value is [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), the operator returns `false`.
 - Otherwise the values are compared as numeric values. BigInt and number values can be compared together.
 
+Other operators, including [`>`](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than), [`>=`](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal), and [`<=`](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal), use the same algorithm as `<`. There are two cases where all four operators return `false`:
+
+- If one of the operands gets converted to a BigInt, while the other gets converted to a string that cannot be converted to a BigInt value (it throws a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax) when passed to [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)).
+- If one of the operands gets converted to `NaN`. (For example, strings that cannot be converted to numbers, or `undefined`.)
+
+For all other cases, the four operators have the following relationships:
+
+```js
+x < y === !(x >= y);
+x <= y === !(x > y);
+x > y === y < x;
+x >= y === y <= x;
+```
+
+> **Note:** One observable difference between `<` and `>` is the order of coercion, especially if the coercion to primitive has side effects. All comparison operators coerce the left operand before the right operand.
+
 ## Examples
 
 ### String to string comparison
@@ -92,6 +108,29 @@ console.log(3 < undefined);    // false
 console.log(3 < NaN);          // false
 console.log(NaN < 3);          // false
 ```
+
+### Comparison with side effects
+
+Comparisons always coerce their operands to primitives. This means the same object may end up having different values within one comparison expression. For example, you may have two values that are both greater than and less than the other.
+
+```js
+class Mystery {
+  static #coercionCount = -1;
+  valueOf() {
+    Mystery.#coercionCount++;
+    // The left operand is coerced first, so this will return 0
+    // Then it returns 1 for the right operand
+    return Mystery.#coercionCount % 2;
+  }
+}
+
+const l = new Mystery();
+const r = new Mystery();
+console.log(l < r && r < l);
+// true
+```
+
+> **Warning:** This can be a source of confusion. If your objects provide custom primitive conversion logic, make sure it is _idempotent_: multiple coercions should return the same value.
 
 ## Specifications
 
