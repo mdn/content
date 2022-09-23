@@ -83,6 +83,7 @@ new C().test();// TypeError, because strict mode
 const C = class {
     // All code here is evaluated in strict mode
 };
+
 // Code here may not be in strict mode
 delete Object.prototype; // Will not throw error
 ```
