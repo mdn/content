@@ -75,13 +75,15 @@ All parts of ECMAScript [classes](/en-US/docs/Web/JavaScript/Reference/Classes) 
 
 ```js
 class C {
-    // All code here is evaluated in strict mode
-    test() {delete Object.prototype;}
+  // All code here is evaluated in strict mode
+  test() {
+    delete Object.prototype;
+  }
 }
-new C().test();// TypeError, because strict mode
+new C().test(); // TypeError, because test() is in strict mode
 
 const C = class {
-    // All code here is evaluated in strict mode
+  // All code here is evaluated in strict mode
 };
 
 // Code here may not be in strict mode
