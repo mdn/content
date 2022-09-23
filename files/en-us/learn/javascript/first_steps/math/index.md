@@ -203,10 +203,10 @@ We probably don't need to teach you how to do basic math, but we would like to t
 
 1. First try entering some simple examples of your own, such as
 
-   ```js-nolint
-   10 + 7
-   9 * 8
-   60 % 3
+   ```js
+   10 + 7;
+   9 * 8;
+   60 % 3;
    ```
 
 2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
