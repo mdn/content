@@ -35,6 +35,9 @@ No notable changes.
 
 - The [TextDecoderStream](/en-US/docs/Web/API/TextDecoderStream) and [TextEncoderStream](/en-US/docs/Web/API/TextEncoderStream) interfaces, part of the [Encoding API](/en-US/docs/Web/API/Encoding_API), are now supported ({{bug(1486949)}}).
 
+- The [OffscreenCanvas API](/en-US/docs/Web/API/OffscreenCanvas) provides a canvas that can be rendered off-screen in both Window and [Web Worker contexts](/en-US/docs/Web/API/OffscreenCanvas#asynchronous_display_of_frames_produced_by_an_offscreencanvas), decoupling the DOM and the Canvas API so that `<canvas>` elements are no longer dependent on the DOM.
+  The [OffscreenCanvasRenderingContext2D](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D) interface is supported and enabled by default ({{bug(1746110)}}).
+
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
