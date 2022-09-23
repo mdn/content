@@ -14,7 +14,8 @@ tags:
   - Video
 browser-compat: api.MediaMetadata.title
 ---
-{{SeeCompatTable}}{{APIRef("Media Session API")}}
+
+{{APIRef("Media Session API")}}
 
 The **`title`** property of the
 {{domxref("MediaMetaData")}} interface returns or sets the title of the media to be

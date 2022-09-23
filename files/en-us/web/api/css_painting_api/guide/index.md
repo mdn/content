@@ -9,6 +9,7 @@ tags:
   - Houdini
   - Learn
 ---
+
 {{DefaultAPISidebar("CSS Painting API")}}
 The [CSS Paint API](/en-US/docs/Web/API/CSS_Painting_API) is designed to enable developers to programmatically define images which can then be used anywhere a CSS image can be invoked, such as CSS [`background-image`](/en-US/docs/Web/CSS/background-image), [`border-image`](/en-US/docs/Web/CSS/border-image-source), [`mask-image`](/en-US/docs/Web/CSS/mask-image), etc.
 
@@ -40,7 +41,7 @@ registerPaint('headerHighlight', class {
 
     /*
         ctx is the 2D drawing context
-        a subset of the HTML5 Canvas API.
+        a subset of the HTML Canvas API.
     */
   paint(ctx) {
         ctx.fillStyle = 'hsla(55, 90%, 60%, 1.0)';
@@ -53,7 +54,7 @@ In this class example we have defined a single context option with the `contextO
 
 We have then used the `paint()` function to paint to our canvas.
 
-A `paint()` function can take three arguments. Here we have provided one argument: the rendering context (we'll look at more in due course), often referred to by the variable name `ctx`. The 2D Rendering Context is a subset of the [HTML5 Canvas API](/en-US/docs/Web/API/Canvas_API); the version available to Houdini (called the `PaintRenderingContext2D`) is a further subset containing most of the features available in the full Canvas API with the [exception](<https://drafts.css-houdini.org/css-paint-api-1/#2d-rendering-context)>) of the `CanvasImageData`, `CanvasUserInterface`, `CanvasText`, and `CanvasTextDrawingStyles` APIs.
+A `paint()` function can take three arguments. Here we have provided one argument: the rendering context (we'll look at more in due course), often referred to by the variable name `ctx`. The 2D Rendering Context is a subset of the [HTML Canvas API](/en-US/docs/Web/API/Canvas_API); the version available to Houdini (called the `PaintRenderingContext2D`) is a further subset containing most of the features available in the full Canvas API with the [exception](<https://drafts.css-houdini.org/css-paint-api-1/#2d-rendering-context)>) of the `CanvasImageData`, `CanvasUserInterface`, `CanvasText`, and `CanvasTextDrawingStyles` APIs.
 
 We define the [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) as being `hsla(55, 90%, 60%, 1.0)`, which is a shade of yellow, and then call `fillRect()` to create a rectangle of that color. The [`fillRect()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect) parameters are, in order, x-axis origin, y-axis origin, width, and height. `fillRect(0, 15, 200, 20)` results in the creation of a rectangle that is 200 units wide by 20 units tall, positioned 0 units from the left and 15 units from the top of the content box.
 
@@ -238,24 +239,24 @@ We used the `inputProperties()` method in the `registerPaint()` class to get the
 
 ```html
 <ul>
-    <li>item 1</li>
-    <li>item 2</li>
-    <li>item 3</li>
-    <li>item 4</li>
-    <li>item 5</li>
-    <li>item 6</li>
-    <li>item 7</li>
-    <li>item 8</li>
-    <li>item 9</li>
-    <li>item 10</li>
-    <li>item 11</li>
-    <li>item 12</li>
-    <li>item 13</li>
-    <li>item 14</li>
-    <li>item 15</li>
-    <li>item 16</li>
-    <li>item 17</li>
-    <li>item</li>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+  <li>item 4</li>
+  <li>item 5</li>
+  <li>item 6</li>
+  <li>item 7</li>
+  <li>item 8</li>
+  <li>item 9</li>
+  <li>item 10</li>
+  <li>item 11</li>
+  <li>item 12</li>
+  <li>item 13</li>
+  <li>item 14</li>
+  <li>item 15</li>
+  <li>item 16</li>
+  <li>item 17</li>
+  <li>item</li>
 </ul>
 ```
 
@@ -426,7 +427,7 @@ We can also specify that we want a particular type of argument. When we `get` ou
 static get inputArguments() { return ['*', '<length>']; }
 ```
 
-In this case, we specifically requested the `<length>` attribute. The first element in the returned array will be a [`CSSUnparsedValue`](/en-US/docs/Web/API/CSSUnparsedValue). The second will be a [`CSSStyleValue.`](/en-US/docs/Web/API/CSSStyleValue)
+In this case, we specifically requested the `<length>` attribute. The first element in the returned array will be a [`CSSUnparsedValue`](/en-US/docs/Web/API/CSSUnparsedValue). The second will be a [`CSSStyleValue`](/en-US/docs/Web/API/CSSStyleValue).
 
 If the custom argument is a CSS value, for instance a unit, we can invoke Typed OM CSSStyleValue class (and sub classes) by using the value type keyword when we retrieve it in the `registerPaint()` function.
 
@@ -498,11 +499,7 @@ registerPaint('hollowHighlights', class {
     const strokeWidth = parseInt(args[1]);
 
     // set the stroke width
-    if (strokeWidth) {
-      ctx.lineWidth = strokeWidth;
-    } else {
-      ctx.lineWidth = 1.0;
-    }
+    ctx.lineWidth = strokeWidth ?? 1.0;
     // set the fill type
     if (strokeType === 'stroke') {
       ctx.fillStyle = 'transparent';
@@ -555,7 +552,7 @@ li {
 
 li:nth-of-type(3n) {
    --boxColor: hsla(255, 90%, 60%, 0.5);
-   background-image: paint(hollowHighlights, filled,  3px);
+   background-image: paint(hollowHighlights, filled, 3px);
 }
 
 li:nth-of-type(3n+1) {
@@ -566,24 +563,24 @@ li:nth-of-type(3n+1) {
 
 ```html hidden
 <ul>
-    <li>item 1</li>
-    <li>item 2</li>
-    <li>item 3</li>
-    <li>item 4</li>
-    <li>item 5</li>
-    <li>item 6</li>
-    <li>item 7</li>
-    <li>item 8</li>
-    <li>item 9</li>
-    <li>item 10</li>
-    <li>item 11</li>
-    <li>item 12</li>
-    <li>item 13</li>
-    <li>item 14</li>
-    <li>item 15</li>
-    <li>item 16</li>
-    <li>item 17</li>
-    <li>item</li>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+  <li>item 4</li>
+  <li>item 5</li>
+  <li>item 6</li>
+  <li>item 7</li>
+  <li>item 8</li>
+  <li>item 9</li>
+  <li>item 10</li>
+  <li>item 11</li>
+  <li>item 12</li>
+  <li>item 13</li>
+  <li>item 14</li>
+  <li>item 15</li>
+  <li>item 16</li>
+  <li>item 17</li>
+  <li>item</li>
 </ul>
 ```
 

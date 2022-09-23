@@ -5,6 +5,7 @@ tags:
   - MathML
   - MathML Reference
 ---
+
 {{MathMLRef}}
 
 This is an alphabetical list of MathML attributes. More details for each attribute are available on relevant [MathML element pages](/en-US/docs/Web/MathML/Element) and on the [global attributes page](/en-US/docs/Web/MathML/Global_attributes). See the [Values](/en-US/docs/Web/MathML/Attribute/Values) page for notes on values and units in MathML.
@@ -50,9 +51,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
     <tr>
       <td><code>align</code> {{deprecated_inline}}</td>
       <td>
-        {{ MathMLElement("mtable") }}<br />{{ MathMLElement("munder") }},
-        {{ MathMLElement("mover") }},
-        {{ MathMLElement("munderover") }}
+        {{ MathMLElement("mtable") }}
       </td>
       <td>
         Specifies different alignments of several elements (see element pages
@@ -64,14 +63,6 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
         Use CSS <a href="/en-US/docs/Web/CSS/background-color"><code>background-color</code></a> instead.
-      </td>
-    </tr>
-    <tr>
-      <td><code>bevelled</code> {{deprecated_inline}}</td>
-      <td>{{ MathMLElement("mfrac") }}</td>
-      <td>
-        Specifies the style how the fraction should be displayed. Deprecated.
-        Use U+2044 (fraction slash) instead.
       </td>
     </tr>
     <tr>
@@ -438,30 +429,6 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td>
         Specifies whether the operator stretches to the size of the adjacent
         element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>subscriptshift</code> {{deprecated_inline}}</td>
-      <td>
-        {{ MathMLElement("mmultiscripts") }},
-        {{ MathMLElement("msub") }},
-        {{ MathMLElement("msubsup") }}
-      </td>
-      <td>
-        The minimum space by which to shift the subscript below the baseline of
-        the expression.
-      </td>
-    </tr>
-    <tr>
-      <td><code>supscriptshift</code> {{deprecated_inline}}</td>
-      <td>
-        {{ MathMLElement("mmultiscripts") }},
-        {{ MathMLElement("msup") }},
-        {{ MathMLElement("msubsup") }}
-      </td>
-      <td>
-        The minimum space by which to shift the superscript above the baseline
-        of the expression.
       </td>
     </tr>
     <tr>

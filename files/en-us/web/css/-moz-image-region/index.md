@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-moz-image-region
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 For certain XUL elements and pseudo-elements that use an image from the {{CSSxRef("list-style-image")}} property, this property specifies a region of the image that is used in place of the whole image. This allows elements to use different pieces of the same image to improve performance.
@@ -46,7 +47,10 @@ The syntax is similar to the {{CSSxRef("clip")}} property. All four values are r
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+ -moz-image-region =
+   <shape> | auto
+```
 
 ## Examples
 

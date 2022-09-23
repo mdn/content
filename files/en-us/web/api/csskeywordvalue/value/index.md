@@ -13,6 +13,7 @@ tags:
   - value
 browser-compat: api.CSSKeywordValue.value
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`value`** property of the

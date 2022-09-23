@@ -18,6 +18,7 @@ browser-compat:
   - html.elements.template
   - api.ShadowRoot
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Web Components is a suite of different technologies allowing you to create reusable custom elements — with their functionality encapsulated away from the rest of your code — and utilize them in your web apps.
@@ -34,7 +35,7 @@ Web Components aims to solve such problems — it consists of three main technol
 
 The basic approach for implementing a web component generally looks something like this:
 
-1. Create a class in which you specify your web component functionality, using the ECMAScript 2015 class syntax (see [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) for more information).
+1. Create a class in which you specify your web component functionality, using the [class](/en-US/docs/Web/JavaScript/Reference/Classes) syntax.
 2. Register your new custom element using the {{domxref("CustomElementRegistry.define()")}} method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from.
 3. If required, attach a shadow DOM to the custom element using {{domxref("Element.attachShadow()")}} method. Add child elements, event listeners, etc., to the shadow DOM using regular DOM methods.
 4. If required, define an HTML template using {{htmlelement("template")}} and {{htmlelement("slot")}}. Again use regular DOM methods to clone the template and attach it to your shadow DOM.

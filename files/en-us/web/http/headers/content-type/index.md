@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: http.headers.Content-Type
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Type`** representation header is used to indicate the original {{Glossary("MIME type","media type")}} of the resource (prior to any content encoding applied for sending).
@@ -51,7 +52,7 @@ In requests, (such as {{HTTPMethod("POST")}} or {{HTTPMethod("PUT")}}), the clie
 
 ## Syntax
 
-```
+```http
 Content-Type: text/html; charset=UTF-8
 Content-Type: multipart/form-data; boundary=something
 ```
@@ -73,15 +74,15 @@ In a {{HTTPMethod("POST")}} request, resulting from an HTML form submission, the
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```
 
 The request looks something like this (less interesting headers are omitted here):
 
-```
+```http
 POST /foo HTTP/1.1
 Content-Length: 68137
 Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575

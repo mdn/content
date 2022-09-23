@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.byteOffset
 ---
+
 {{JSRef}}
 
 The **`byteOffset`** accessor property represents the offset (in bytes) of a typed array from the start of its {{jsxref("ArrayBuffer")}}.

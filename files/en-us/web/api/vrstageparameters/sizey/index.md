@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - sizeY
+  - Non-standard
 browser-compat: api.VRStageParameters.sizeY
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`sizeY`** read-only property of the {{domxref("VRStageParameters")}} interface _returns the depth_ of the play-area bounds in meters.
 

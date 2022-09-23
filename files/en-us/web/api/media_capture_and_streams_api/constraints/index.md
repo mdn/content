@@ -15,6 +15,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 This article discusses the twin concepts of **constraints** and **capabilities**, as well as media settings, and includes an example we call the [Constraint Exerciser](#example_constraint_exerciser). The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
@@ -79,7 +80,12 @@ Sometimes, any value within a range is acceptable for a property's value. You ca
 ```js
 const supports = navigator.mediaDevices.getSupportedConstraints();
 
-if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supports["facingMode"]) {
+if (
+  !supports["width"] ||
+  !supports["height"] ||
+  !supports["frameRate"] ||
+  !supports["facingMode"]
+) {
   // We're missing needed properties, so handle that error.
 } else {
   const constraints = {
@@ -90,11 +96,14 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
     facingMode: { exact: "user" }
   };
 
-  myTrack.applyConstraints(constraints).then(() => {
-    /* do stuff if constraints applied successfully */
-  }).catch((reason) => {
-    /* failed to apply constraints; reason is why */
-  });
+  myTrack
+    .applyConstraints(constraints)
+    .then(() => {
+      /* do stuff if constraints applied successfully */
+    })
+    .catch((reason) => {
+      /* failed to apply constraints; reason is why */
+    });
 }
 ```
 
@@ -117,19 +126,22 @@ You can call {{domxref("MediaStreamTrack.getCapabilities()")}} to get a list of 
 The first and most common way to use constraints is to specify them when you call {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}:
 
 ```js
-navigator.mediaDevices.getUserMedia({
-  video: {
-    width: { min: 640, ideal: 1920 },
-    height: { min: 400, ideal: 1080 },
-    aspectRatio: { ideal: 1.7777777778 }
-  },
-  audio: {
-    sampleSize: 16,
-    channelCount: 2
-  }
-}).then((stream) => {
-  videoElement.srcObject = stream;
-}).catch(handleError);
+navigator.mediaDevices
+  .getUserMedia({
+    video: {
+      width: { min: 640, ideal: 1920 },
+      height: { min: 400, ideal: 1080 },
+      aspectRatio: { ideal: 1.7777777778 },
+    },
+    audio: {
+      sampleSize: 16,
+      channelCount: 2,
+    },
+  })
+  .then((stream) => {
+    videoElement.srcObject = stream;
+  })
+  .catch(handleError);
 ```
 
 In this example, constraints are applied at `getUserMedia()` time, asking for an ideal set of options with fallbacks for the video.
@@ -184,53 +196,47 @@ In this example, we create an exerciser which lets you experiment with media con
 The HTML and CSS for this example are pretty simple, and aren't shown here. You can look at the complete example by {{LiveSampleLink("Example_Constraint_exerciser", "clicking here")}}.
 
 ```html hidden
-<p>Experiment with media constraints! Edit the constraint sets for the
-   video and audio tracks in the edit boxes on the left, then click the
-   "Apply Constraints" button to try them out. The actual settings the
-   browser selected and is using are shown in the boxes on the right.
-   Below all of that, you'll see the video itself.</p>
+<p>
+  Experiment with media constraints! Edit the constraint sets for the video and
+  audio tracks in the edit boxes on the left, then click the "Apply Constraints"
+  button to try them out. The actual settings the browser selected and is using
+  are shown in the boxes on the right. Below all of that, you'll see the video
+  itself.
+</p>
 <p>Click the "Start" button to begin.</p>
 
 <h3>Constrainable properties available:</h3>
-<ul id="supportedConstraints">
-</ul>
-<div id="startButton" class="button">
-  Start
-</div>
+<ul id="supportedConstraints"></ul>
+<div id="startButton" class="button">Start</div>
 <div class="wrapper">
   <div class="trackrow">
     <div class="leftside">
       <h3>Requested video constraints:</h3>
-      <textarea id="videoConstraintEditor" cols=32 rows=8></textarea>
+      <textarea id="videoConstraintEditor" cols="32" rows="8"></textarea>
     </div>
     <div class="rightside">
       <h3>Actual video settings:</h3>
-      <textarea id="videoSettingsText" cols=32 rows=8 disabled></textarea>
+      <textarea id="videoSettingsText" cols="32" rows="8" disabled></textarea>
     </div>
   </div>
   <div class="trackrow">
     <div class="leftside">
       <h3>Requested audio constraints:</h3>
-      <textarea id="audioConstraintEditor" cols=32 rows=8></textarea>
+      <textarea id="audioConstraintEditor" cols="32" rows="8"></textarea>
     </div>
     <div class="rightside">
       <h3>Actual audio settings:</h3>
-      <textarea id="audioSettingsText" cols=32 rows=8 disabled></textarea>
+      <textarea id="audioSettingsText" cols="32" rows="8" disabled></textarea>
     </div>
   </div>
 
-  <div class="button" id="applyButton">
-    Apply Constraints
-  </div>
+  <div class="button" id="applyButton">Apply Constraints</div>
 </div>
 <video id="video" autoplay></video>
 
-<div class="button" id="stopButton">
-  Stop Video
-</div>
+<div class="button" id="stopButton">Stop Video</div>
 
-<div id="log">
-</div>
+<div id="log"></div>
 ```
 
 ```css hidden
@@ -266,12 +272,12 @@ video {
 
 .leftside {
   float: left;
-  width: calc(calc(100%/2) - 10px);
+  width: calc(calc(100% / 2) - 10px);
 }
 
 .rightside {
   float: right;
-  width: calc(calc(100%/2) - 10px);
+  width: calc(calc(100% / 2) - 10px);
 }
 
 textarea {
@@ -284,7 +290,6 @@ h3 {
 
 #supportedConstraints {
   column-count: 2;
-  -moz-column-count: 2;
 }
 
 #log {
@@ -292,7 +297,7 @@ h3 {
 }
 ```
 
-#### Defaults and variables
+### Defaults and variables
 
 First we have the default constraint sets, as strings. These strings are presented in editable {{HTMLElement("textarea")}}s, but this is the initial configuration of the stream.
 
@@ -349,7 +354,7 @@ videoConstraintEditor.value = videoDefaultConstraintString;
 audioConstraintEditor.value = audioDefaultConstraintString;
 ```
 
-#### Updating the settings display
+### Updating the settings display
 
 To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function `getCurrentSettings()`, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their {{htmlattrxref("value", "textarea")}}.
 
@@ -358,6 +363,7 @@ function getCurrentSettings() {
   if (videoTrack) {
     videoSettingsText.value = JSON.stringify(videoTrack.getSettings(), null, 2);
   }
+
   if (audioTrack) {
     audioSettingsText.value = JSON.stringify(audioTrack.getSettings(), null, 2);
   }
@@ -366,7 +372,7 @@ function getCurrentSettings() {
 
 This gets called after the stream first starts up, as well as any time we've applied updated constraints, as you'll see below.
 
-#### Building the track constraint set objects
+### Building the track constraint set objects
 
 The `buildConstraints()` function builds the {{domxref("MediaTrackConstraints")}} objects for the audio and video tracks using the code in the two tracks' constraint set edit boxes.
 
@@ -383,34 +389,42 @@ function buildConstraints() {
 
 This uses {{jsxref("JSON.parse()")}} to parse the code in each editor into an object. If either call to JSON.parse() throws an exception, `handleError()` is called to output the error message to the log.
 
-#### Configuring and starting the stream
+### Configuring and starting the stream
 
 The `startVideo()` method handles setting up and starting the video stream.
 
 ```js
 function startVideo() {
   buildConstraints();
-  navigator.mediaDevices.getUserMedia({
-    video: videoConstraints,
-    audio: audioConstraints
-  }).then((stream) => {
-    const audioTracks = stream.getAudioTracks();
-    const videoTracks = stream.getVideoTracks();
 
-    videoElement.srcObject = stream;
-    if (audioTracks.length > 0) {
+  navigator.mediaDevices
+    .getUserMedia({
+      video: videoConstraints,
+      audio: audioConstraints,
+    })
+    .then((stream) => {
+      const audioTracks = stream.getAudioTracks();
+      const videoTracks = stream.getVideoTracks();
+
+      videoElement.srcObject = stream;
+
+      if (audioTracks.length > 0) {
         audioTrack = audioTracks[0];
-    }
-    if (videoTracks.length > 0) {
+      }
+
+      if (videoTracks.length > 0) {
         videoTrack = videoTracks[0];
-    }
-  }).then(() => {
-    return new Promise((resolve) => {
-      videoElement.onloadedmetadata = resolve;
-    });
-  }).then(() => {
-    getCurrentSettings();
-  }).catch(handleError);
+      }
+    })
+    .then(() => {
+      return new Promise((resolve) => {
+        videoElement.onloadedmetadata = resolve;
+      });
+    })
+    .then(() => {
+      getCurrentSettings();
+    })
+    .catch(handleError);
 }
 ```
 
@@ -426,12 +440,14 @@ There are several steps here:
 We also need to set up an event listener to watch for the "Start Video" button to be clicked:
 
 ```js
-document.getElementById("startButton").addEventListener("click", () => {
-  startVideo();
-}, false);
+document.getElementById("startButton").addEventListener(
+  "click",
+  () => { startVideo(); },
+  false
+);
 ```
 
-#### Applying constraint set updates
+### Applying constraint set updates
 
 Next, we set up an event listener for the "Apply Constraints" button. If it's clicked and there's not already media in use, we call `startVideo()`, and let that function handle starting the stream with the specified settings in place. Otherwise, we follow these steps to apply the updated constraints to the already-active stream:
 
@@ -441,27 +457,40 @@ Next, we set up an event listener for the "Apply Constraints" button. If it's cl
 4. If an error occurs applying either set of constraints, `handleError()` is used to output a message into the log.
 
 ```js
-document.getElementById("applyButton").addEventListener("click", () => {
-  if (!videoTrack && !audioTrack) {
-    startVideo();
-  } else {
-    buildConstraints();
-    if (videoTrack) {
-      videoTrack.applyConstraints(videoConstraints).then(() => {
-        videoSettingsText.value = JSON.stringify(videoTrack.getSettings(), null, 2);
-      }).catch(handleError);
-    }
+document.getElementById("applyButton").addEventListener(
+  "click",
+  () => {
+    if (!videoTrack && !audioTrack) {
+      startVideo();
+    } else {
+      buildConstraints();
 
-    if (audioTrack) {
-      audioTrack.applyConstraints(audioConstraints).then(() => {
-        audioSettingsText.value = JSON.stringify(audioTrack.getSettings(), null, 2);
-      }).catch(handleError);
+      const prettyJson = (obj) => JSON.stringify(obj, null, 2);
+
+      if (videoTrack) {
+        videoTrack
+          .applyConstraints(videoConstraints)
+          .then(() => {
+            videoSettingsText.value = prettyJson(videoTrack.getSettings());
+          })
+          .catch(handleError);
+      }
+
+      if (audioTrack) {
+        audioTrack
+          .applyConstraints(audioConstraints)
+          .then(() => {
+            audioSettingsText.value = prettyJson(audioTrack.getSettings());
+          })
+          .catch(handleError);
+      }
     }
-  }
-}, false);
+  },
+  false
+);
 ```
 
-#### Handling the stop button
+### Handling the stop button
 
 Then we set up the handler for the stop button.
 
@@ -470,6 +499,7 @@ document.getElementById("stopButton").addEventListener("click", () => {
   if (videoTrack) {
     videoTrack.stop();
   }
+
   if (audioTrack) {
     audioTrack.stop();
   }
@@ -481,7 +511,7 @@ document.getElementById("stopButton").addEventListener("click", () => {
 
 This stops the active tracks, sets the `videoTrack` and `audioTrack` variables to `null` so we know they're gone, and removes the stream from the {{HTMLElement("video")}} element by setting {{domxref("HTMLMediaElement.srcObject")}} to `null`.
 
-#### Simple tab support in the editor
+### Simple tab support in the editor
 
 This code adds simple support for tabs to the {{HTMLElement("textarea")}} elements by making the tab key insert two space characters when either constraint edit box is focused.
 
@@ -492,7 +522,9 @@ function keyDownHandler(event) {
     const str = elem.value;
 
     const position = elem.selectionStart;
-    const newStr = `${str.substring(0, position)}  ${str.substring(position, str.length)}`;
+    const beforeTab = str.substring(0, position);
+    const afterTab = str.substring(position, str.length);
+    const newStr = `${beforeTab}  ${afterTab}`;
     elem.value = newStr;
     elem.selectionStart = elem.selectionEnd = position + 2;
     event.preventDefault();
@@ -503,7 +535,7 @@ videoConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 ```
 
-#### Show constrainable properties the browser supports
+### Show constrainable properties the browser supports
 
 The last significant piece of the puzzle: code that displays, for the user's reference, a list of the constrainable properties which their browser supports. Each property is a link to its documentation on MDN for the user's convenience. See the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getSupportedConstraints", "Example")}} for details on how this code works.
 
@@ -521,7 +553,7 @@ for (const constraint in supportedConstraints) {
 }
 ```
 
-#### Error handling
+### Error handling
 
 We also have some simple error handling code; `handleError()` is called to handle promises which fail, and the `log()` function appends the error message to a special logging {{HTMLElement("div")}} box under the video.
 

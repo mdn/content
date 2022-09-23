@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - MediaSource
@@ -15,7 +14,8 @@ tags:
   - readyState
 browser-compat: api.MediaSource.readyState
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`readyState`** read-only property of the
 {{domxref("MediaSource")}} interface returns an enum representing the state of the

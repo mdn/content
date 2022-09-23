@@ -12,6 +12,7 @@ tags:
   - conditional rendering
   - passing data
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -117,41 +118,41 @@ We'll begin by creating our `FilterButton.svelte`.
 1. First of all, create a new file, `components/FilterButton.svelte`.
 2. Inside this file we will declare a `filter` prop, and then copy the relevant markup over to it from `Todos.svelte`. Add the following content into the file:
 
-    ```html
-    <script>
-      export let filter = 'all'
-    </script>
+   ```html
+   <script>
+     export let filter = 'all'
+   </script>
 
-    <div class="filters btn-group stack-exception">
-      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={() => filter = 'all'} >
-        <span class="visually-hidden">Show</span>
-        <span>All</span>
-        <span class="visually-hidden">tasks</span>
-      </button>
-      <button class="btn toggle-btn" class:btn__primary={filter === 'active'} aria-pressed={filter === 'active'} on:click={() => filter = 'active'} >
-        <span class="visually-hidden">Show</span>
-        <span>Active</span>
-        <span class="visually-hidden">tasks</span>
-      </button>
-      <button class="btn toggle-btn" class:btn__primary={filter === 'completed'} aria-pressed={filter === 'completed'} on:click={() => filter = 'completed'} >
-        <span class="visually-hidden">Show</span>
-        <span>Completed</span>
-        <span class="visually-hidden">tasks</span>
-      </button>
-    </div>
-    ```
+   <div class="filters btn-group stack-exception">
+     <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={() => filter = 'all'} >
+       <span class="visually-hidden">Show</span>
+       <span>All</span>
+       <span class="visually-hidden">tasks</span>
+     </button>
+     <button class="btn toggle-btn" class:btn__primary={filter === 'active'} aria-pressed={filter === 'active'} on:click={() => filter = 'active'} >
+       <span class="visually-hidden">Show</span>
+       <span>Active</span>
+       <span class="visually-hidden">tasks</span>
+     </button>
+     <button class="btn toggle-btn" class:btn__primary={filter === 'completed'} aria-pressed={filter === 'completed'} on:click={() => filter = 'completed'} >
+       <span class="visually-hidden">Show</span>
+       <span>Completed</span>
+       <span class="visually-hidden">tasks</span>
+     </button>
+   </div>
+   ```
 
 3. Back in our `Todos.svelte` component, we want to make use of our `FilterButton` component. First of all, we need to import it. Add the following line at the top of the `Todos.svelte <script>` section:
 
-    ```js
-    import FilterButton from './FilterButton.svelte'
-    ```
+   ```js
+   import FilterButton from './FilterButton.svelte'
+   ```
 
 4. Now replace the `filters` `<div>` with a call to the `FilterButton` component, which takes the current filter as a prop. The below line is all you need:
 
-    ```html
-    <FilterButton {filter} />
-    ```
+   ```html
+   <FilterButton {filter} />
+   ```
 
 > **Note:** Remember that when the HTML attribute name and variable match, they can be replaced with `{variable}`. That's why we could replace `<FilterButton filter={filter} />` with `<FilterButton {filter} />`.
 
@@ -173,17 +174,17 @@ And we'll declare the reactive statement `$: onclick(filter)` to call the `oncli
 
 1. The `<script>` section of our `FilterButton` component should end up looking like this. Update it now:
 
-    ```js
-    export let filter = 'all'
-    export let onclick = (clicked) => {}
-    $: onclick(filter)
-    ```
+   ```js
+   export let filter = 'all'
+   export let onclick = (clicked) => {}
+   $: onclick(filter)
+   ```
 
 2. Now when we call `FilterButton` inside `Todos.svelte`, we'll need to specify the handler. Update it like this:
 
-    ```html
-    <FilterButton {filter} onclick={ (clicked) => filter = clicked }/>
-    ```
+   ```html
+   <FilterButton {filter} onclick={ (clicked) => filter = clicked }/>
+   ```
 
 When any filter button is clicked, we just update the filter variable with the new filter. Now our `FilterButton` component will work again.
 
@@ -197,19 +198,19 @@ Using `bind`, we will tell Svelte that any changes made to the `filter` prop in 
 
 1. In `Todos.svelte`, update the call to the `FilterButton` component as follows:
 
-    ```html
-    <FilterButton bind:filter={filter} />
-    ```
+   ```html
+   <FilterButton bind:filter={filter} />
+   ```
 
-    As usual, Svelte provides us with a nice shorthand: `bind:value={value}` is equivalent to `bind:value`. So in the above example you could just write `<FilterButton bind:filter />`.
+   As usual, Svelte provides us with a nice shorthand: `bind:value={value}` is equivalent to `bind:value`. So in the above example you could just write `<FilterButton bind:filter />`.
 
 2. The child component can now modify the value of the parent's filter variable, so we no longer need the `onclick` prop. Modify your `FilterButton` `<script>` like this:
 
-    ```html
-    <script>
-      export let filter = 'all'
-    </script>
-    ```
+   ```html
+   <script>
+     export let filter = "all";
+   </script>
+   ```
 
 3. Try your app again, and you should still see your filters working correctly.
 
@@ -222,51 +223,51 @@ Our `Todo` component will receive a single `todo` object as a prop. Let's declar
 1. Create a new component file, `components/Todo.svelte`.
 2. Put the following contents inside this file:
 
-    ```html
-    <script>
-      export let todo
-    </script>
+   ```html
+   <script>
+     export let todo
+   </script>
 
-    <div class="stack-small">
-      <div class="c-cb">
-        <input type="checkbox" id="todo-{todo.id}"
-          on:click={() => todo.completed = !todo.completed}
-          checked={todo.completed}
-        />
-        <label for="todo-{todo.id}" class="todo-label">{todo.name}</label>
-      </div>
-      <div class="btn-group">
-        <button type="button" class="btn">
-          Edit <span class="visually-hidden">{todo.name}</span>
-        </button>
-        <button type="button" class="btn btn__danger" on:click={() => alert('not implemented')}>
-          Delete <span class="visually-hidden">{todo.name}</span>
-        </button>
-      </div>
-    </div>
-    ```
+   <div class="stack-small">
+     <div class="c-cb">
+       <input type="checkbox" id="todo-{todo.id}"
+         on:click={() => todo.completed = !todo.completed}
+         checked={todo.completed}
+       />
+       <label for="todo-{todo.id}" class="todo-label">{todo.name}</label>
+     </div>
+     <div class="btn-group">
+       <button type="button" class="btn">
+         Edit <span class="visually-hidden">{todo.name}</span>
+       </button>
+       <button type="button" class="btn btn__danger" on:click={() => alert('not implemented')}>
+         Delete <span class="visually-hidden">{todo.name}</span>
+       </button>
+     </div>
+   </div>
+   ```
 
 3. Now we need to import our `Todo` component into `Todos.svelte`. Go to this file now, and add the following `import` statement below your previous one:
 
-    ```js
-    import Todo from './Todo.svelte'
-    ```
+   ```js
+   import Todo from './Todo.svelte'
+   ```
 
 4. Next we need to update our `{#each}` block to include a `<Todo>` component for each to-do, rather than the code that has been moved out to `Todo.svelte`. We are also passing the current `todo` object into the component as a prop.
 
-    Update the `{#each}` block inside `Todos.svelte` like so:
+   Update the `{#each}` block inside `Todos.svelte` like so:
 
-    ```html
-    <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
-      {#each filterTodos(filter, todos) as todo (todo.id)}
-        <li class="todo">
-          <Todo {todo} />
-        </li>
-      {:else}
-        <li>Nothing to do here!</li>
-      {/each}
-    </ul>
-    ```
+   ```html
+   <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
+     {#each filterTodos(filter, todos) as todo (todo.id)}
+     <li class="todo">
+       <Todo {todo} />
+     </li>
+     {:else}
+     <li>Nothing to do here!</li>
+     {/each}
+   </ul>
+   ```
 
 The list of to-dos is displayed on the page, and the checkboxes should work (try checking/unchecking a couple, and then observing that the filters still work as expected), but our "x out of y items completed" status heading will no longer update accordingly. That's because our `Todo` component is receiving the to-do via the prop, but it's not sending any information back to its parent. We'll fix this later on.
 
@@ -286,28 +287,28 @@ We'll edit our `Todo` component to emit a `remove` event, passing the to-do bein
 
 1. First of all, add the following lines to the top of the `Todo` component's `<script>` section:
 
-    ```js
-    import { createEventDispatcher } from 'svelte'
-    const dispatch = createEventDispatcher()
-    ```
+   ```js
+   import { createEventDispatcher } from 'svelte'
+   const dispatch = createEventDispatcher()
+   ```
 
 2. Now update the _Delete_ button in the markup section of the same file to look like so:
 
-    ```html
-    <button type="button" class="btn btn__danger" on:click={() => dispatch('remove', todo)}>
-      Delete <span class="visually-hidden">{todo.name}</span>
-    </button>
-    ```
+   ```html
+   <button type="button" class="btn btn__danger" on:click={() => dispatch('remove', todo)}>
+     Delete <span class="visually-hidden">{todo.name}</span>
+   </button>
+   ```
 
-    With `dispatch('remove', todo)` we are emitting a `remove` event, and passing as additional data the `todo` being deleted. The handler will be called with an event object available, with the additional data available in the `event.detail` property.
+   With `dispatch('remove', todo)` we are emitting a `remove` event, and passing as additional data the `todo` being deleted. The handler will be called with an event object available, with the additional data available in the `event.detail` property.
 
 3. Now we have to listen to that event from inside `Todos.svelte` and act accordingly. Go back to this file and update your `<Todo>` component call like so:
 
-    ```html
-    <Todo {todo} on:remove={(e) => removeTodo(e.detail)} />
-    ```
+   ```html
+   <Todo {todo} on:remove={(e) => removeTodo(e.detail)} />
+   ```
 
-    Our handler receives the `e` parameter (the event object), which as described before holds the to-do being deleted in the `detail` property.
+   Our handler receives the `e` parameter (the event object), which as described before holds the to-do being deleted in the `detail` property.
 
 4. At this point, if you try out your app again, you should see that the _Delete_ functionality now works again. So our custom event has worked as we hoped. In addition, the `remove` event listener is sending the data change back up to the parent, so our "x out of y items completed" status heading will now update appropriately when to-dos are deleted.
 
@@ -321,56 +322,56 @@ We still have to implement functionality to allow us to edit existing to-dos. We
 
 1. We'll need one variable to track whether we are in editing mode and another to store the name of the task being updated. Add the following variable definitions at the bottom of the `<script>` section of the `Todo` component:
 
-    ```js
-    let editing = false                     // track editing mode
-    let name = todo.name                    // hold the name of the to-do being edited
-    ```
+   ```js
+   let editing = false                     // track editing mode
+   let name = todo.name                    // hold the name of the to-do being edited
+   ```
 
 2. We have to decide what events our `Todo` component will emit:
 
-    - We could emit different events for the status toggle and editing of the name (for example, `updateTodoStatus` and `updateTodoName`).
-    - Or we could take a more generic approach and emit a single `update` event for both operations.
+   - We could emit different events for the status toggle and editing of the name (for example, `updateTodoStatus` and `updateTodoName`).
+   - Or we could take a more generic approach and emit a single `update` event for both operations.
 
-    We will take the second approach so that we can demonstrate a different technique. The advantage of this approach is that later we can add more fields to the to-dos and still handle all updates with the same event.
+   We will take the second approach so that we can demonstrate a different technique. The advantage of this approach is that later we can add more fields to the to-dos and still handle all updates with the same event.
 
-    Let's create an `update()` function that will receive the changes and will emit an update event with the modified to-do. Add the following, again to the bottom of the `<script>` section:
+   Let's create an `update()` function that will receive the changes and will emit an update event with the modified to-do. Add the following, again to the bottom of the `<script>` section:
 
-    ```js
-    function update(updatedTodo) {
-      todo = { ...todo, ...updatedTodo }    // applies modifications to todo
-      dispatch('update', todo)              // emit update event
-    }
-    ```
+   ```js
+   function update(updatedTodo) {
+     todo = { ...todo, ...updatedTodo }    // applies modifications to todo
+     dispatch('update', todo)              // emit update event
+   }
+   ```
 
-    Here we are using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to return the original to-do with the modifications applied to it.
+   Here we are using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to return the original to-do with the modifications applied to it.
 
 3. Next we'll create different functions to handle each user action. When the to-do is in editing mode, the user can save or cancel the changes. When it's not in editing mode, the user can delete the to-do, edit it, or toggle its status between completed and active.
 
-    Add the following set of functions below your previous function to handle these actions:
+   Add the following set of functions below your previous function to handle these actions:
 
-    ```js
-    function onCancel() {
-      name = todo.name                      // restores name to its initial value and
-      editing = false                       // and exit editing mode
-    }
+   ```js
+   function onCancel() {
+     name = todo.name                      // restores name to its initial value and
+     editing = false                       // and exit editing mode
+   }
 
-    function onSave() {
-      update({ name })                      // updates todo name
-      editing = false                       // and exit editing mode
-    }
+   function onSave() {
+     update({ name })                      // updates todo name
+     editing = false                       // and exit editing mode
+   }
 
-    function onRemove() {
-      dispatch('remove', todo)              // emit remove event
-    }
+   function onRemove() {
+     dispatch('remove', todo)              // emit remove event
+   }
 
-    function onEdit() {
-      editing = true                        // enter editing mode
-    }
+   function onEdit() {
+     editing = true                        // enter editing mode
+   }
 
-    function onToggle() {
-      update({ completed: !todo.completed}) // updates todo status
-    }
-    ```
+   function onToggle() {
+     update({ completed: !todo.completed}) // updates todo status
+   }
+   ```
 
 ### Updating the markup
 
@@ -386,11 +387,11 @@ The following gives you an idea of what the basic `if` block structure looks lik
 
 ```html
 <div class="stack-small">
-{#if editing}
+  {#if editing}
   <!-- markup for editing to-do: label, input text, Cancel and Save Button -->
-{:else}
+  {:else}
   <!-- markup for displaying to-do: checkbox, label, Edit and Delete Button -->
-{/if}
+  {/if}
 </div>
 ```
 
@@ -463,68 +464,66 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
 1. The complete updated markup of our `Todo` component looks like the following. Update yours now:
 
-    ```html
-    <div class="stack-small">
-    {#if editing}
-      <!-- markup for editing todo: label, input text, Cancel and Save Button -->
-      <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={(e) => e.key === 'Escape' && onCancel()}>
-        <div class="form-group">
-          <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
-          <input bind:value={name} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" />
-        </div>
-        <div class="btn-group">
-          <button class="btn todo-cancel" on:click={onCancel} type="button">
-            Cancel<span class="visually-hidden">renaming {todo.name}</span>
-            </button>
-          <button class="btn btn__primary todo-edit" type="submit" disabled={!name}>
-            Save<span class="visually-hidden">new name for {todo.name}</span>
-          </button>
-        </div>
-      </form>
-    {:else}
-      <!-- markup for displaying todo: checkbox, label, Edit and Delete Button -->
-      <div class="c-cb">
-        <input type="checkbox" id="todo-{todo.id}"
-          on:click={onToggle} checked={todo.completed}
-        >
-        <label for="todo-{todo.id}" class="todo-label">{todo.name}</label>
-      </div>
-      <div class="btn-group">
-        <button type="button" class="btn" on:click={onEdit}>
-          Edit<span class="visually-hidden"> {todo.name}</span>
-        </button>
-        <button type="button" class="btn btn__danger" on:click={onRemove}>
-          Delete<span class="visually-hidden"> {todo.name}</span>
-        </button>
-      </div>
-    {/if}
-    </div>
-    ```
+   ```html
+   <div class="stack-small">
+   {#if editing}
+     <!-- markup for editing todo: label, input text, Cancel and Save Button -->
+     <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={(e) => e.key === 'Escape' && onCancel()}>
+       <div class="form-group">
+         <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
+         <input bind:value={name} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" />
+       </div>
+       <div class="btn-group">
+         <button class="btn todo-cancel" on:click={onCancel} type="button">
+           Cancel<span class="visually-hidden">renaming {todo.name}</span>
+           </button>
+         <button class="btn btn__primary todo-edit" type="submit" disabled={!name}>
+           Save<span class="visually-hidden">new name for {todo.name}</span>
+         </button>
+       </div>
+     </form>
+   {:else}
+     <!-- markup for displaying todo: checkbox, label, Edit and Delete Button -->
+     <div class="c-cb">
+       <input type="checkbox" id="todo-{todo.id}"
+         on:click={onToggle} checked={todo.completed}
+       >
+       <label for="todo-{todo.id}" class="todo-label">{todo.name}</label>
+     </div>
+     <div class="btn-group">
+       <button type="button" class="btn" on:click={onEdit}>
+         Edit<span class="visually-hidden"> {todo.name}</span>
+       </button>
+       <button type="button" class="btn btn__danger" on:click={onRemove}>
+         Delete<span class="visually-hidden"> {todo.name}</span>
+       </button>
+     </div>
+   {/if}
+   </div>
+   ```
 
-    > **Note:** We could further split this into two different components, one for editing the to-do and the other for displaying it. In the end, it boils down to how comfortable you feel dealing with this level of complexity in a single component. You should also consider whether splitting it further would enable reusing this component in a different context.
+   > **Note:** We could further split this into two different components, one for editing the to-do and the other for displaying it. In the end, it boils down to how comfortable you feel dealing with this level of complexity in a single component. You should also consider whether splitting it further would enable reusing this component in a different context.
 
 2. To get the update functionality working, we have to handle the `update` event from the `Todos` component. In its `<script>` section, add this handler:
 
-    ```js
-    function updateTodo(todo) {
-      const i = todos.findIndex((t) => t.id === todo.id)
-      todos[i] = { ...todos[i], ...todo }
-    }
-    ```
+   ```js
+   function updateTodo(todo) {
+     const i = todos.findIndex((t) => t.id === todo.id)
+     todos[i] = { ...todos[i], ...todo }
+   }
+   ```
 
-    We find the `todo` by `id` in our `todos` array, and update its content using spread syntax. In this case we could have also just used `todos[i] = todo`, but this implementation is more bullet-proof, allowing the `Todo` component to return only the updated parts of the to-do.
+   We find the `todo` by `id` in our `todos` array, and update its content using spread syntax. In this case we could have also just used `todos[i] = todo`, but this implementation is more bullet-proof, allowing the `Todo` component to return only the updated parts of the to-do.
 
 3. Next we have to listen for the `update` event on our `<Todo>` component call, and run our `updateTodo()` function when this occurs to change the `name` and `completed` status. Update your \<Todo> call like this:
 
-    ```html
-    {#each filterTodos(filter, todos) as todo (todo.id)}
-      <li class="todo">
-        <Todo {todo}
-          on:update={(e) => updateTodo(e.detail)}
-          on:remove={(e) => removeTodo(e.detail)}
-        />
-      </li>
-    ```
+   ```html
+   {#each filterTodos(filter, todos) as todo (todo.id)}
+   <li class="todo">
+     <Todo {todo} on:update={(e) => updateTodo(e.detail)} on:remove={(e) =>
+     removeTodo(e.detail)} />
+   </li>
+   ```
 
 4. Try your app again, and you should see that you can delete, add, edit, cancel editing of, and toggle completion status of to-dos. And our "x out of y items completed" status heading will now update appropriately when to-dos are completed.
 

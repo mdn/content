@@ -11,6 +11,7 @@ tags:
   - detune
 browser-compat: api.OscillatorNode.detune
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `detune` property of the {{ domxref("OscillatorNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-numeric
 ---
+
 {{CSSRef}}
 
 The **`font-variant-numeric`** CSS property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
@@ -21,12 +22,12 @@ The **`font-variant-numeric`** CSS property controls the usage of alternate glyp
 font-variant-numeric: normal;
 font-variant-numeric: ordinal;
 font-variant-numeric: slashed-zero;
-font-variant-numeric: lining-nums;         /* <numeric-figure-values> */
-font-variant-numeric: oldstyle-nums;       /* <numeric-figure-values> */
-font-variant-numeric: proportional-nums;   /* <numeric-spacing-values> */
-font-variant-numeric: tabular-nums;        /* <numeric-spacing-values> */
-font-variant-numeric: diagonal-fractions;  /* <numeric-fraction-values> */
-font-variant-numeric: stacked-fractions;   /* <numeric-fraction-values> */
+font-variant-numeric: lining-nums; /* <numeric-figure-values> */
+font-variant-numeric: oldstyle-nums; /* <numeric-figure-values> */
+font-variant-numeric: proportional-nums; /* <numeric-spacing-values> */
+font-variant-numeric: tabular-nums; /* <numeric-spacing-values> */
+font-variant-numeric: diagonal-fractions; /* <numeric-fraction-values> */
+font-variant-numeric: stacked-fractions; /* <numeric-fraction-values> */
 font-variant-numeric: oldstyle-nums stacked-fractions;
 
 /* Global values */

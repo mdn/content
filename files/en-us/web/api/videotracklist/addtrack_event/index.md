@@ -9,6 +9,7 @@ tags:
   - Event
 browser-compat: api.VideoTrackList.addtrack_event
 ---
+
 {{APIRef}}
 
 The `addtrack` event is fired when a video track is added to a [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList).
@@ -25,7 +26,7 @@ onaddtrack = (event) => { }
 
 ## Event type
 
-An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TrackEvent")}}
 

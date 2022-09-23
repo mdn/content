@@ -4,7 +4,6 @@ slug: Web/API/WritableStreamDefaultWriter/close
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Streams
@@ -12,7 +11,8 @@ tags:
   - close
 browser-compat: api.WritableStreamDefaultWriter.close
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`close()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface closes the associated writable
@@ -24,7 +24,7 @@ invoking the close behavior. During this time any further attempts to write will
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

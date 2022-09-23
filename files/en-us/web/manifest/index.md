@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.manifest
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 **Web app manifests** are part of a collection of web technologies called [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs), which are websites that can be installed to a device's homescreen without an app store. Unlike regular web apps with simple homescreen links or bookmarks, PWAs can be downloaded in advance and can work offline, as well as use regular [Web APIs](/en-US/docs/Web/API).
@@ -70,7 +71,7 @@ Web application manifests can contain the following keys. Click on each one to l
 Web app manifests are deployed in your HTML pages using a {{HTMLElement("link")}} element in the {{HTMLElement("head")}} of a document:
 
 ```html
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest.json" />
 ```
 
 The `.webmanifest` extension is specified in the [Media type registration](https://w3c.github.io/manifest/#media-type-registration) section of the specification (the response of the manifest file should return `Content-Type: application/manifest+json`). Browsers generally support manifests with other appropriate extensions like `.json` (`Content-Type: application/json`).
@@ -78,7 +79,7 @@ The `.webmanifest` extension is specified in the [Media type registration](https
 If the manifest requires credentials to fetch, the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute must be set to `use-credentials`, even if the manifest file is in the same origin as the current page.
 
 ```html
-<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
 ```
 
 ## Splash screens

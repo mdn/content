@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionResult/length
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionResult
@@ -14,7 +13,8 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResult.length
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+
+{{APIRef("Web Speech API")}}
 
 The **`length`** read-only property of the
 {{domxref("SpeechRecognitionResult")}} interface returns the length of the "array"
@@ -31,7 +31,7 @@ A number.
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

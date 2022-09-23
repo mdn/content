@@ -13,6 +13,7 @@ tags:
   - openCursor
 browser-compat: api.IDBIndex.openCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openCursor()`** method of the {{domxref("IDBIndex")}}
@@ -29,7 +30,7 @@ If the key range is not specified or is null, then the range includes all the re
 
 ## Syntax
 
-```js
+```js-nolint
 openCursor()
 openCursor(range)
 openCursor(range, direction)
@@ -72,7 +73,7 @@ directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}}
 except that the returned records are sorted based on the index, not the primary key.
 
 Finally, we iterate through each record, and insert the data into an HTML table. For a
-complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
+complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {

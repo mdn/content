@@ -11,6 +11,7 @@ tags:
   - numberOfChannels
 browser-compat: api.AudioBuffer.numberOfChannels
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `numberOfChannels` property of the {{ domxref("AudioBuffer") }}
@@ -46,7 +47,7 @@ button.onclick = () => {
   }
 
   console.log(myArrayBuffer.numberOfChannels);
-}
+};
 ```
 
 ## Specifications

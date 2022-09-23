@@ -10,6 +10,7 @@ tags:
 browser-compat: api.Element.pointerdown_event
 page-type: web-api-event
 ---
+
 {{APIRef}}
 
 The `pointerdown` event is fired when a pointer becomes active. For mouse, it is fired when the device transitions from no buttons pressed to at least one button pressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.
@@ -36,25 +37,25 @@ A {{domxref("PointerEvent")}}. Inherits from {{domxref("Event")}}.
 
 _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
 
-- {{ domxref('PointerEvent.pointerId')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.
-- {{ domxref('PointerEvent.width')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.width')}} {{ReadOnlyInline}}
   - : The width (magnitude on the X axis), in CSS pixels, of the contact geometry of the pointer.
-- {{ domxref('PointerEvent.height')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.height')}} {{ReadOnlyInline}}
   - : The height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.
-- {{ domxref('PointerEvent.pressure')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
   - : The normalized pressure of the pointer input in the range `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
-- {{ domxref('PointerEvent.tangentialPressure')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
   - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
-- {{ domxref('PointerEvent.tiltX')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
   - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
-- {{ domxref('PointerEvent.tiltY')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
   - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
-- {{ domxref('PointerEvent.twist')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
-- {{ domxref('PointerEvent.pointerType')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
   - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
-- {{ domxref('PointerEvent.isPrimary')}} {{readonlyInline}}
+- {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
 ## Examples

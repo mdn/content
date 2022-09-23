@@ -15,6 +15,7 @@ tags:
   - canRecordMimeType
 browser-compat: api.MediaRecorder.isTypeSupported
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The
@@ -24,7 +25,7 @@ should be able to successfully record.
 
 ## Syntax
 
-```js
+```js-nolint
 isTypeSupported(mimeType)
 ```
 

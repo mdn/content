@@ -6,19 +6,19 @@ tags:
   - API
   - Constructor
   - CountQueuingStrategy
-  - Experimental
   - Reference
   - Streams
 browser-compat: api.CountQueuingStrategy.CountQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`CountQueuingStrategy()`** constructor
 creates and returns a `CountQueuingStrategy` object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new CountQueuingStrategy(highWaterMark)
 ```
 
@@ -42,18 +42,21 @@ None.
 ```js
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    // …
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    // …
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy
+);
 
 const size = queuingStrategy.size();
 ```

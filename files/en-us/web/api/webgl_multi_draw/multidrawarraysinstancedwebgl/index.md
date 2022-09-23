@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawArraysInstancedWEBGL
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_multi_draw.multiDrawArraysInstancedWEBGL()`**
@@ -21,8 +22,8 @@ method.
 
 ## Syntax
 
-```js
-void ext.multiDrawArraysInstancedWEBGL(mode,
+```js-nolint
+multiDrawArraysInstancedWEBGL(mode,
     firstsList, firstsOffset,
     countsList, countsOffset,
     instanceCountsList, instanceCountsOffset,
@@ -66,7 +67,7 @@ void ext.multiDrawArraysInstancedWEBGL(mode,
   - : An [`Int32Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
     or [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
     (of [`GLsizei`](/en-US/docs/Web/API/WebGL_API/Types))
-    specifying a list of number sof instances of the range of elements to execute.
+    specifying a list of numbers of instances of the range of elements to execute.
 - `instanceCountsOffset`
   - : A [`GLuint`](/en-US/docs/Web/API/WebGL_API/Types)
     defining the starting point into the `instanceCountsList` array.

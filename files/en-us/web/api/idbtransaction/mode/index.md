@@ -13,6 +13,7 @@ tags:
   - mode
 browser-compat: api.IDBTransaction.mode
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`mode`** read-only property of the

@@ -11,6 +11,7 @@ tags:
   - value
 browser-compat: css.types.dimension
 ---
+
 {{CSSRef}}
 
 The **`<dimension>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a {{CSSxRef("&lt;number&gt;")}} with a unit attached to it, for example `10px`.
@@ -25,7 +26,7 @@ The syntax of `<dimension>` is a {{CSSxRef("&lt;number&gt;")}} immediately follo
 
 ### Valid dimensions
 
-```css example-good
+```plain example-good
 12px      12 pixels
 1rem      1 rem
 1.2pt     1.2 points
@@ -37,7 +38,7 @@ The syntax of `<dimension>` is a {{CSSxRef("&lt;number&gt;")}} immediately follo
 
 ### Invalid dimensions
 
-```css example-bad
+```plain example-bad
 12 px       The unit must come immediately after the number.
 12"px"      Units are identifiers and therefore unquoted.
 3sec        The seconds unit is abbreviated "s" not "sec".

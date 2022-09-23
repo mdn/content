@@ -13,6 +13,7 @@ tags:
   - readyState
 browser-compat: api.IDBRequest.readyState
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`readyState`** read-only property of the

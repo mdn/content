@@ -9,9 +9,11 @@ tags:
   - Non-standard
   - Reference
   - recipe:css-property
+  - Deprecated
 browser-compat: css.properties.scroll-snap-type-x
 ---
-{{CSSRef}}{{deprecated_header}}
+
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`scroll-snap-type-x`** [CSS](/en-US/docs/Web/CSS) property defines how strictly snap points are enforced on the horizontal axis of the scroll container in case there is one.
 

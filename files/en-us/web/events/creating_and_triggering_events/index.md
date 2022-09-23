@@ -9,6 +9,7 @@ tags:
   - NeedsContent
   - events
 ---
+
 This article demonstrates how to create and dispatch DOM events. Such events are commonly called **synthetic events**, as opposed to the events fired by the browser itself.
 
 ## Creating custom events
@@ -42,7 +43,7 @@ This will then allow you to access the additional data in the event listener:
 
 ```js
 function eventHandler(e) {
-  console.log('The time is: ' + e.detail);
+  console.log(`The time is: ${e.detail}`);
 }
 ```
 

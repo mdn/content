@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.setStartBefore
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setStartBefore()`** method sets the start position
@@ -18,7 +19,7 @@ for the `referenceNode`.
 
 ## Syntax
 
-```js
+```js-nolint
 setStartBefore(referenceNode)
 ```
 

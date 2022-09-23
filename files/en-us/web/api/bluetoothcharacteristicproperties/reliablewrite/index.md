@@ -15,6 +15,7 @@ tags:
   - reliableWrite
 browser-compat: api.BluetoothCharacteristicProperties.reliableWrite
 ---
+
 {{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`reliableWrite`** read-only property of
@@ -24,7 +25,7 @@ is permitted.
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Specifications
 

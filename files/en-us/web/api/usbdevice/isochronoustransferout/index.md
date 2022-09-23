@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.isochronousTransferOut
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`isochronousTransferOut()`** method of the
@@ -23,7 +24,7 @@ transmitted to the USB device.
 
 ## Syntax
 
-```js
+```js-nolint
 isochronousTransferOut(endpointNumber, data, packetLengths)
 ```
 

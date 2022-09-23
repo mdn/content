@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.setTitle
 ---
+
 {{AddonSidebar()}}
 
 Sets the sidebar's title. The title is displayed anywhere the browser lists available sidebars. For example, Firefox will show it in the "View > Sidebar" menu. It's also shown at the top o the sidebar when the sidebar is open.
@@ -28,7 +29,7 @@ If you set a new title using `setTitle()`, and omit both the `tabId` and `window
 
 ## Syntax
 
-```js
+```js-nolint
 browser.sidebarAction.setTitle(
   details // object
 )
@@ -84,7 +85,8 @@ browser.browserAction.onClicked.addListener(setTitleForTab);
 
 > **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,4 +113,4 @@ browser.browserAction.onClicked.addListener(setTitleForTab);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

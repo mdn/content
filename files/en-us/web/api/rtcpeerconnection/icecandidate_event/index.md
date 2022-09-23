@@ -16,6 +16,7 @@ tags:
   - icecandidate
 browser-compat: api.RTCPeerConnection.icecandidate_event
 ---
+
 {{APIRef("WebRTC")}}
 
 An **`icecandidate`** event is sent to an {{domxref("RTCPeerConnection")}} when an {{domxref("RTCIceCandidate")}} has been identified and added to the local peer by a call to {{domxref("RTCPeerConnection.setLocalDescription()")}}. The event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.
@@ -42,7 +43,7 @@ An {{domxref("RTCPeerConnectionIceEvent")}}. Inherits from {{domxref("Event")}}.
 
 _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
 
-- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{readOnlyInline}}
+- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or `null` if this event indicates that there are no further candidates to come.
 
 ## Description

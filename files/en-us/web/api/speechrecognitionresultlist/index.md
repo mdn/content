@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionResultList
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - SpeechRecognitionResultList
@@ -13,13 +12,14 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResultList
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionResultList`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a list of {{domxref("SpeechRecognitionResult")}} objects, or a single one if results are being captured in {{domxref("SpeechRecognition.continuous","continuous")}} mode.
 
 ## Properties
 
-- {{domxref("SpeechRecognitionResultList.length")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionResultList.length")}} {{ReadOnlyInline}}
   - : Returns the length of the "array" — the number of {{domxref("SpeechRecognitionResult")}} objects in the list.
 
 ## Methods
@@ -29,7 +29,7 @@ The **`SpeechRecognitionResultList`** interface of the [Web Speech API](/en-US/d
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

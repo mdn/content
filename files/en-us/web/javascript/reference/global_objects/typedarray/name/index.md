@@ -8,6 +8,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.name
 ---
+
 {{JSRef}}
 
 The **`TypedArray.name`** property represents a string value of the typed array constructor name.

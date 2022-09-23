@@ -17,7 +17,9 @@ browser-compat:
   - api.FileSystemFileHandle
   - api.FileSystemDirectoryHandle
   - api.FileSystemWritableFileStream
+  - api.Window.showOpenFilePicker
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The File System Access API allows read, write and file management capabilities.
@@ -32,7 +34,7 @@ These handles represent the file or directory on the user's system. You must fir
 
 The handle provides its own functionality and there are a few differences depending on whether a file or directory was selected (see the [interfaces](#interfaces) section for specific details). You then can access file data, or information (including children) of the directory selected.
 
-There is also "save" functionality, using the {{domxref('FilesystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{jsxref("String")}} object, string literal or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
+There is also "save" functionality, using the {{domxref('FileSystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{jsxref("String")}} object, string literal or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
 
 This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it.
 

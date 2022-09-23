@@ -10,6 +10,7 @@ tags:
   - events
 browser-compat: api.VisualViewport.scroll_event
 ---
+
 {{APIRef("Window")}}
 
 The **`scroll`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewport) interface is fired when the visual viewport is scrolled.

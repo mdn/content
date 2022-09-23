@@ -10,9 +10,10 @@ tags:
   - Reference
 browser-compat: api.HTMLLinkElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLLinkElement`** interface represents reference information for external resources and the relationship of those resources to a document and vice-versa (corresponds to [`<link>`](/en-US/docs/Web/HTML/Element/link) element; not to be confused with [`<a>`](/en-US/docs/Web/HTML/Element/a), which is represented by [`HTMLAnchorElement`](/en-US/docs/Web/API/HTMLAnchorElement)). This object inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
+The **`HTMLLinkElement`** interface represents reference information for external resources and the relationship of those resources to a document and vice versa (corresponds to [`<link>`](/en-US/docs/Web/HTML/Element/link) element; not to be confused with [`<a>`](/en-US/docs/Web/HTML/Element/a), which is represented by [`HTMLAnchorElement`](/en-US/docs/Web/API/HTMLAnchorElement)). This object inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
 
 {{InheritanceDiagram}}
 
@@ -38,11 +39,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string that reflects the {{htmlattrxref("referrerpolicy", "link")}} HTML attribute indicating which referrer to use.
 - {{domxref("HTMLLinkElement.rel")}}
   - : A string representing the forward relationship of the linked resource from the document to the resource.
-- {{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}
+- {{domxref("HTMLLinkElement.relList")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "link")}} HTML attribute, as a list of tokens.
-- {{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}
+- {{domxref("HTMLLinkElement.sizes")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("sizes", "link")}} HTML attribute, as a list of tokens.
-- {{domxref("HTMLLinkElement.sheet")}} {{readonlyInline}}
+- {{domxref("HTMLLinkElement.sheet")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none.
 - {{domxref("HTMLLinkElement.type")}}
   - : A string representing the MIME type of the linked resource.

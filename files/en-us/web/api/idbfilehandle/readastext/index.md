@@ -12,6 +12,7 @@ tags:
   - Deprecated
 browser-compat: api.IDBFileHandle.readAsText
 ---
+
 {{APIRef("IndexedDB")}}{{deprecated_header}}
 
 > **Note:** The three non-standard interfaces {{domxref("IDBMutableFile")}}, {{domxref("IDBFileHandle")}}, and {{domxref("IDBFileRequest")}} are [disabled by default](#browser_compatibility).
@@ -27,7 +28,7 @@ The reading operation starts at the position given by the
 
 ## Syntax
 
-```js
+```js-nolint
 readAsText(size)
 readAsText(size, encoding)
 ```

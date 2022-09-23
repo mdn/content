@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.findIndex
 ---
+
 {{JSRef}}
 
 The **`findIndex()`** method returns the index of the first element in an array that satisfies the provided testing function.
@@ -17,11 +18,11 @@ If no elements satisfy the testing function, -1 is returned.
 
 {{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
 
-See also the {{jsxref("Array.find", "find()")}} method, which returns the first element that satisfies the testing function (rather than its index).
+See also the {{jsxref("Array/find", "find()")}} method, which returns the first element that satisfies the testing function (rather than its index).
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findIndex((element) => { /* … */ } )
 findIndex((element, index) => { /* … */ } )
@@ -70,7 +71,7 @@ The `findIndex()` method executes the `callbackFn` function once for every index
 If such an element is found, `findIndex()` immediately returns the element's index.
 If `callbackFn` never returns a truthy value (or the array's `length` is `0`), `findIndex()` returns `-1`.
 
-> **Note:** Unlike other array methods such as {{jsxref("Array.some()")}}, `callbackFn` is run even for indexes with unassigned values.
+> **Note:** Unlike other array methods such as {{jsxref("Array/some", "some()")}}, `callbackFn` is run even for indexes with unassigned values.
 
 `callbackFn` is invoked with three arguments:
 

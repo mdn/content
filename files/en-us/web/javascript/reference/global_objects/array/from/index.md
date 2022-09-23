@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.from
 ---
+
 {{JSRef}}
 
 The **`Array.from()`** static method creates a new, shallow-copied `Array` instance from an iterable or array-like object.
@@ -18,7 +19,7 @@ The **`Array.from()`** static method creates a new, shallow-copied `Array` insta
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 Array.from(arrayLike, (element) => { /* … */ } )
 Array.from(arrayLike, (element, index) => { /* … */ } )
@@ -62,7 +63,7 @@ More clearly, `Array.from(obj, mapFn, thisArg)` has the same result as `Array.fr
 
 The `length` property of the `from()` method is `1`.
 
-In ES2015, the class syntax allows sub-classing of both built-in and user-defined classes. As a result, static methods such as `Array.from()` are "inherited" by subclasses of `Array`, and create new instances _of the subclass_, not `Array`. The `Array.from()` method is also defined generically and can be defined on any constructor that accepts a single number argument.
+The [class](/en-US/docs/Web/JavaScript/Reference/Classes) syntax allows sub-classing of both built-in and user-defined classes. As a result, static methods such as `Array.from()` are "inherited" by subclasses of `Array`, and create new instances _of the subclass_, not `Array`. The `Array.from()` method is also defined generically and can be defined on any constructor that accepts a single number argument.
 
 ## Examples
 
@@ -100,7 +101,7 @@ Array.from(mapper.keys());
 
 ```js
 // Create an array based on a property of DOM Elements
-const images = document.getElementsByTagName('img');
+const images = document.querySelectorAll('img');
 const sources = Array.from(images, (image) => image.src);
 const insecureSources = sources.filter((link) => link.startsWith('http://'));
 ```
@@ -135,7 +136,7 @@ Array.from({length: 5}, (v, i) => i);
 ### Sequence generator (range)
 
 ```js
-// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
+// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP, etc.)
 const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
 
 // Generate numbers range 0..4

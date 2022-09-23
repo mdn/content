@@ -7,6 +7,7 @@ tags:
   - Overview
   - Reference
 ---
+
 {{CSSRef}}
 
 These pages contain CSS properties that are supported by browsers but either aren't included in a CSS specification, don't fit into any other CSS categories, or are experimental.
@@ -17,10 +18,6 @@ These pages contain CSS properties that are supported by browsers but either are
 
 - {{cssxref("all")}}
 - {{cssxref("text-rendering")}}
-
-## Guides
-
-_None._
 
 ## Specifications
 

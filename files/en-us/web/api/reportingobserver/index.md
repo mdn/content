@@ -11,13 +11,14 @@ tags:
   - ReportingObserver
 browser-compat: api.ReportingObserver
 ---
-{{SeeCompatTable}}{{APIRef("Reporting API")}}
+
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The `ReportingObserver` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) allows you to collect and access reports.
 
 ## Constructor
 
-- {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}}
+- {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}} {{Experimental_Inline}}
   - : Creates a new `ReportingObserver` object instance, which can be used to collect and access reports.
 
 ## Properties
@@ -26,11 +27,11 @@ _This interface has no properties defined on it._
 
 ## Methods
 
-- {{domxref("ReportingObserver.disconnect()")}} {{experimental_inline}}
+- {{domxref("ReportingObserver.disconnect()")}} {{Experimental_Inline}}
   - : Stops a reporting observer that had previously started observing from collecting reports.
-- {{domxref("ReportingObserver.observe()")}} {{experimental_inline}}
+- {{domxref("ReportingObserver.observe()")}} {{Experimental_Inline}}
   - : Instructs a reporting observer to start collecting reports in its report queue.
-- {{domxref("ReportingObserver.takeRecords()")}} {{experimental_inline}}
+- {{domxref("ReportingObserver.takeRecords()")}} {{Experimental_Inline}}
   - : Returns the current list of reports contained in the observer's report queue, and empties the queue.
 
 ## Events
@@ -78,7 +79,7 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ![image of a jolly bearded man with various stats displayed below it about a deprecated feature](reporting_api_example.png)
 
-> **Note:** If you look at the [complete source code](https://github.com/mdn/dom-examples/blob/master/reporting-api/deprecation_report.html), you'll notice that we actually call the deprecated `getUserMedia()` method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.
+> **Note:** If you look at the [complete source code](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html), you'll notice that we actually call the deprecated `getUserMedia()` method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.
 
 ## Specifications
 

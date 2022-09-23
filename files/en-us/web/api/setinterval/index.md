@@ -16,6 +16,7 @@ tags:
   - Polyfill
 browser-compat: api.setInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`setInterval()`** method,
@@ -29,7 +30,7 @@ can remove it later by calling {{domxref("clearInterval",
 
 ## Syntax
 
-```js
+```js-nolint
 setInterval(code)
 setInterval(code, delay)
 
@@ -133,11 +134,7 @@ function changeColor() {
 
 function flashText() {
   const oElem = document.getElementById("my_box");
-  if (oElem.className === "go") {
-    oElem.className = "stop";
-  } else {
-    oElem.className = "go";
-  }
+  oElem.className = oElem.className === "go" ? "stop" : "go";
 }
 
 function stopTextColor() {

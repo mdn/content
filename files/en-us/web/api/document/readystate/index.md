@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.readyState
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.readyState`** property describes the loading
@@ -84,8 +85,7 @@ document.onreadystatechange = () => {
 document.addEventListener('readystatechange', (event) => {
   if (event.target.readyState === 'interactive') {
     initLoader();
-  }
-  else if (event.target.readyState === 'complete') {
+  } else if (event.target.readyState === 'complete') {
     initApp();
   }
 });

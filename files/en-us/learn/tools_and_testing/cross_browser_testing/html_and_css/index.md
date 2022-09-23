@@ -13,6 +13,7 @@ tags:
   - cross browser
   - linting
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 With the scene set, we'll now look specifically at the common cross-browser problems you will come across in HTML and CSS code, and what tools can be used to prevent problems from happening, or fix problems that occur. This includes linting code, handling CSS prefixes, using browser dev tools to track down problems, using polyfills to add support into browsers, tackling responsive design problems, and more.
@@ -126,16 +127,22 @@ For example:
 
 ```html
 <video id="video" controls preload="metadata" poster="img/poster.jpg">
-  <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
+  <source
+    src="video/tears-of-steel-battle-clip-medium.webm"
+    type="video/webm" />
   <!-- Offer download -->
-  <p>Your browser does not support WebM video; here is a link to
-  <a href="video/tears-of-steel-battle-clip-medium.mp4">view the video directly</a></p>
+  <p>
+    Your browser does not support WebM video; here is a link to
+    <a href="video/tears-of-steel-battle-clip-medium.mp4"
+      >view the video directly</a
+    >
+  </p>
 </video>
 ```
 
 This example includes a simple link allowing you to download the video if even the HTML video player doesn't work, so at least the user can still access the video.
 
-Newer form elements also exhibit fallback qualities — HTML5 introduced some special [`<input>`](/en-US/docs/Web/HTML/Element/input) types for inputting specific information into forms, such as times, dates, colors, numbers, etc. These are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Supporting platforms provide special UI widgets when these input types are used, such as a calendar widget for entering dates.
+Another example is form elements. When new [`<input>`](/en-US/docs/Web/HTML/Element/input) types were introduced for inputting specific information into forms, such as times, dates, colors, numbers, etc., if a browser didn't support the new feature, the browser used the default of `type="text"`. Input types were added, which are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Platforms provide different UI widgets depending on the input type, such as a calendar widget for entering dates. Should a browser not support an input type, the user can still enter the required data.
 
 The following example shows date and time inputs:
 
@@ -143,11 +150,11 @@ The following example shows date and time inputs:
 <form>
   <div>
     <label for="date">Enter a date:</label>
-    <input id="date" type="date">
+    <input id="date" type="date" />
   </div>
   <div>
     <label for="time">Enter a time:</label>
-    <input id="time" type="time">
+    <input id="time" type="time" />
   </div>
 </form>
 ```
@@ -158,13 +165,13 @@ The output of this code is as follows:
 
 > **Note:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
 
-If you view the example on a supporting browser like desktop/Android Chrome or iOS Safari, you'll see the special widgets/features in action as you try to input data. On a non-supporting platform such Internet Explorer, the inputs will just fallback to normal text inputs, so at least the user can still enter some information.
+If you view the example on a supporting browser, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser like Internet Explorer, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
 
 #### CSS fallback behavior
 
 CSS is arguably better at fallbacks than HTML. If a browser encounters a declaration or rule it doesn't understand, it just skips it completely without applying it or throwing an error. This might be frustrating for you and your users if such a mistake slips through to production code, but at least it means the whole site doesn't come crashing down because of one error, and if used cleverly you can use it to your advantage.
 
-Let's look at an example — a simple box styled with CSS, which has some styling provided by various CSS3 features:
+Let's look at an example — a simple box styled with CSS, which has some styling provided by various CSS features:
 
 ![A red pill button with rounded corners, inset shadow, and drop shadow](blingy-button.png)
 
@@ -178,8 +185,8 @@ button {
 
   background-color: #ff0000;
   background-color: rgba(255 0 0 / 1);
-  box-shadow: inset 1px 1px 3px rgba(255 255 255 / 0.4),
-              inset -1px -1px 3px rgba(0 0 0 / 0.4);
+  box-shadow: inset 1px 1px 3px rgba(255 255 255 / 0.4), inset -1px -1px 3px
+      rgba(0 0 0 / 0.4);
 }
 
 button:hover {
@@ -187,8 +194,8 @@ button:hover {
 }
 
 button:active {
-  box-shadow: inset 1px 1px 3px rgba(0 0 0 / 0.4),
-              inset -1px -1px 3px rgba(255 255 255 / 0.4);
+  box-shadow: inset 1px 1px 3px rgba(0 0 0 / 0.4), inset -1px -1px 3px rgba(255
+          255 255 / 0.4);
 }
 ```
 
@@ -224,27 +231,24 @@ form > #date
 
 Another set of problems comes with CSS prefixes — these are a mechanism originally used to allow browser vendors to implement their own version of a CSS (or JavaScript) feature while the technology is in an experimental state, so they can play with it and get it right without conflicting with other browser's implementations, or the final unprefixed implementations. So for example:
 
-- Mozilla uses `-moz-`
-- Chrome/Opera/Safari use `-webkit-`
-- Microsoft uses `-ms-`
+- Firefox uses `-moz-`
+- Chrome/Edge/Opera/Safari use `-webkit-`
+
+More prefixes were used in the past: Internet Explorer and early versions of Edge used `-ms-`, and old versions of Opera used `-o`.
 
 Here's some examples:
 
 ```css
 -webkit-transform: rotate(90deg);
-
-background-image: -moz-linear-gradient(left ,green, yellow);
-background-image: -webkit-gradient(linear, left center, right center, from(green), to(yellow));
-background-image: linear-gradient(to right, green, yellow);
+-moz-transform: rotate(90deg);
+transform: rotate(90deg);
 ```
 
-While none of these properties requires a prefix, you may encounter this old CSS in a codebase. The first line shows a {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in older versions of Safari and Chrome until the prefix-free feature was supported.
+While the `transform` property does not require a prefix, you may encounter this old CSS in a codebase. The first line shows the {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in older versions of Safari and Chrome until the prefix-free feature was supported.
 
-The last three lines show three different versions of the [`linear-gradient()`](/en-US/docs/Web/CSS/gradient/linear-gradient) function, which is originally how linear gradient were written:
+The second line has a `-moz-` prefix, which is also no longer needed. The third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
 
-The first one has a `-moz-` prefix, the second a `-webkit-` prefix, and the third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
-
-Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. This is particularly a problem when developers decide to only use say, the `-webkit-` version of a property — meaning that the site won't work in other browsers. This actually happened so much that other browsers implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so developers can test them during development.
+Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning and cause cross-browser issues. This is particularly a problem, for example, when developers decide to use only the `-webkit-` version of a property, which implied that the site won't work in other browsers. This actually happened so much that other browser vendors implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so that web developers can test them during development.
 
 If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes on MDN reference pages, and sites like [caniuse.com](https://caniuse.com/). If you are unsure, you can also find out by doing some testing directly in browsers.
 
@@ -255,16 +259,16 @@ Try this simple example:
 3. Look for a feature you can use to select that element. For example, at the time of writing, the main Google logo had an ID of `hplogo`.
 4. Store a reference to this element in a variable, for example:
 
-    ```js
-    const test = document.getElementById('hplogo');
-    ```
+   ```js
+   const test = document.getElementById('hplogo');
+   ```
 
 5. Now try to set a new value for the CSS property you are interested in on that element; you can do this using the [style](/en-US/docs/Web/API/HTMLElement/style) property of the element, for example try typing these into the JavaScript console:
 
-    ```js
-    test.style.transform = 'rotate(90deg)'
-    test.style.webkitTransform = 'rotate(90deg)'
-    ```
+   ```js
+   test.style.transform = 'rotate(90deg)'
+   test.style.webkitTransform = 'rotate(90deg)'
+   ```
 
 As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what versions of the property are implemented in that browser.
 
@@ -283,9 +287,7 @@ Generally, you will rarely need to include a prefix; and you may want to delete 
 
 Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/en-US/docs/Web/CSS/Media_Queries), and make sure it is applied correctly using [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag). You can find a detailed account of such practices in [The building blocks of responsive design](/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks).
 
-Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from simple [mobile first media queries](/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first), to more complex [responsive image techniques](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes).
-
-Another difficulty that can present problems is browser support for the features that make the above techniques possible. media queries are not supported in IE 8 or less, so if you want to use a mobile first layout and have the desktop layout then apply to old IE versions, you'll have to apply a media query {{glossary("polyfill")}} to your page, like [css3-mediaqueries-js](https://code.google.com/archive/p/css3-mediaqueries-js/), or [Respond.js](https://github.com/scottjehl/Respond).
+Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from simple [mobile first media queries](/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first), to more complex [responsive image techniques](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes), including {{HTMLElement('picture')}} and the {{HTMLElement('image')}} element's {{htmlattrxref("srcset", "img")}} and {{htmlattrxref("sizes", "img")}} attributes.
 
 ## Finding help
 
@@ -293,7 +295,7 @@ There are many other issues you'll encounter with HTML and CSS, making knowledge
 
 Among the best sources of support information are the Mozilla Developer Network (that's where you are now!), [stackoverflow.com](https://stackoverflow.com/), and [caniuse.com](https://caniuse.com/).
 
-To use the Mozilla Developer Network (MDN), most people do a search engine search of the technology they are trying to find information on, plus the term "mdn", for example, "mdn HTML5 video". MDN contains several useful types of content:
+To use the Mozilla Developer Network (MDN), most people do a search engine search of the technology they are trying to find information on, plus the term "mdn", for example, "mdn HTML video". MDN contains several useful types of content:
 
 - Reference material with browser support information for client-side web technologies, e.g. the [\<video> reference page](/en-US/docs/Web/HTML/Element/video).
 - Other supporting reference material, e.g. the [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats),
@@ -301,7 +303,7 @@ To use the Mozilla Developer Network (MDN), most people do a search engine searc
 
 [caniuse.com](https://caniuse.com/) provides support information, along with a few useful external resource links. For example, see <https://caniuse.com/#search=video> (you just have to enter the feature you are searching for into the text box).
 
-[stackoverflow.com](https://stackoverflow.com/) (SO) is a forum site where you can ask questions and have fellow developers share their solutions, look up previous posts, and help other developers. You are advised to look and see if there is an answer to your question already, before posting a new question. For example, we searched for "cross browser html5 video" on SO, and very quickly came up with [HTML5 Video with full cross browser compatibility](https://stackoverflow.com/questions/16212510/html5-video-with-full-cross-browser-compatibility).
+[stackoverflow.com](https://stackoverflow.com/) (SO) is a forum site where you can ask questions and have fellow developers share their solutions, look up previous posts, and help other developers. You are advised to look and see if there is an answer to your question already, before posting a new question. For example, we searched for "disabling autofocus on HTML dialog" on SO, and very quickly came up with [Disable showModal auto-focusing using HTML attributes](https://stackoverflow.com/questions/63267581/disable-showmodal-auto-focusing-using-html-attributes).
 
 Aside from that, try searching your favorite search engine for an answer to your problem. It is often useful to search for specific error messages if you have them — other developers will be likely to have had the same problems as you.
 

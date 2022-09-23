@@ -10,6 +10,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.labels
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`labels`** read-only property of the {{domxref("ElementInternals")}} interface returns the labels associated with the element.

@@ -8,6 +8,7 @@ spec-urls:
   - https://svgwg.org/svg2-draft/geometry.html#R
   - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementRAttribute
 ---
+
 {{SVGRef}}
 
 The **`r`** attribute defines the radius of a circle.
@@ -20,29 +21,33 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
   <radialGradient r="0" id="myGradient000">
-    <stop offset="0"    stop-color="white" />
+    <stop offset="0" stop-color="white" />
     <stop offset="100%" stop-color="black" />
   </radialGradient>
   <radialGradient r="50%" id="myGradient050">
-    <stop offset="0"    stop-color="white" />
+    <stop offset="0" stop-color="white" />
     <stop offset="100%" stop-color="black" />
   </radialGradient>
   <radialGradient r="100%" id="myGradient100">
-    <stop offset="0"    stop-color="white" />
+    <stop offset="0" stop-color="white" />
     <stop offset="100%" stop-color="black" />
   </radialGradient>
 
-  <circle cx="50"  cy="50" r="0"/>
-  <circle cx="150" cy="50" r="25"/>
-  <circle cx="250" cy="50" r="50"/>
+  <circle cx="50" cy="50" r="0" />
+  <circle cx="150" cy="50" r="25" />
+  <circle cx="250" cy="50" r="50" />
 
-  <rect x="20"  y="120" width="60" height="60" fill="url(#myGradient000)" />
+  <rect x="20" y="120" width="60" height="60" fill="url(#myGradient000)" />
   <rect x="120" y="120" width="60" height="60" fill="url(#myGradient050)" />
   <rect x="220" y="120" width="60" height="60" fill="url(#myGradient100)" />
 </svg>
@@ -83,7 +88,7 @@ For {{SVGElement('circle')}}, `r` defines the radius of the circle and therefor 
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `r` is a *Geometry Property* meaning this attribute can also be used as a CSS property for circles.
+> **Note:** Starting with SVG2, `r` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for circles.
 
 ## radialGradient
 

@@ -3,12 +3,12 @@ title: WebKit
 slug: Glossary/WebKit
 tags:
   - Browser
-  - Glossary
   - Intro
   - Web
   - WebKit
   - WebMechanics
 ---
+
 _WebKit_ is a framework that displays properly-formatted webpages based on their markup. {{Glossary("Apple Safari")}} depends on WebKit, and so do many mobile browsers (since WebKit is highly portable and customizable).
 
 WebKit began life as a fork of KDE's KHTML and KJS libraries, but many individuals and companies have since contributed (including KDE, Apple, Google, and Nokia).

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array
 ---
+
 {{JSRef}}
 
 The **`Array`** object, as with arrays in other programming languages, enables [storing a collection of multiple items under a single variable name](/en-US/docs/Learn/JavaScript/First_steps/Arrays), and has members for [performing common array operations](#examples).
@@ -22,7 +23,7 @@ In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but ar
 
 - **JavaScript arrays are not associative arrays** and so, [array elements cannot be accessed using arbitrary strings as indexes](#notes), but must be accessed using nonnegative integers (or their respective string form) as indexes.
 
-- **JavaScript arrays are [zero-indexed](https://en.wikipedia.org/wiki/Zero-based_numbering)**: the first element of an array is at index `0`, the second is at index `1`, and so on — and the last element is at the value of the array's {{jsxref("Array.length", "length")}} property minus `1`.
+- **JavaScript arrays are [zero-indexed](https://en.wikipedia.org/wiki/Zero-based_numbering)**: the first element of an array is at index `0`, the second is at index `1`, and so on — and the last element is at the value of the array's {{jsxref("Array/length", "length")}} property minus `1`.
 
 - **JavaScript [array-copy operations](#copy_an_array) create [shallow copies](/en-US/docs/Glossary/Shallow_copy)**. (All standard built-in copy operations with _any_ JavaScript objects create shallow copies, rather than [deep copies](/en-US/docs/Glossary/Deep_copy)).
 
@@ -127,7 +128,7 @@ In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but ar
 - {{jsxref("Array.prototype.values()")}}
   - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that contains the values for each index in the array.
 - [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
-  - : Returns the [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values) function by default.
+  - : An alias for the [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values) method by default.
 
 ## Examples
 
@@ -145,14 +146,14 @@ const fruits = ['Apple', 'Banana'];
 console.log(fruits.length);
 // 2
 
-// 'fruits' array created using the Array() constructor.
+// 'fruits2' array created using the Array() constructor.
 const fruits2 = new Array('Apple', 'Banana');
-console.log(fruits.length);
+console.log(fruits2.length);
 // 2
 
-// 'fruits' array created using String.prototype.split().
+// 'fruits3' array created using String.prototype.split().
 const fruits3 = 'Apple, Banana'.split(', ');
-console.log(fruits.length);
+console.log(fruits3.length);
 // 2
 ```
 
@@ -460,7 +461,7 @@ Here we have a simple inventory array that contains "food" objects that have a `
 ```js
 const inventory = [
   { name: 'asparagus', type: 'vegetables' },
-  { name: 'bananas',  type: 'fruit' },
+  { name: 'bananas', type: 'fruit' },
   { name: 'goat', type: 'meat' },
   { name: 'cherries', type: 'fruit' },
   { name: 'fish', type: 'meat' },
@@ -583,11 +584,11 @@ Only `years['2']` is an actual array index. `years['02']` is an arbitrary string
 
 ### Relationship between length and numerical properties
 
-A JavaScript array's {{jsxref("Array.length", "length")}} property and numerical properties are connected.
+A JavaScript array's {{jsxref("Array/length", "length")}} property and numerical properties are connected.
 
-Several of the built-in array methods (e.g., {{jsxref("Array.join", "join()")}}, {{jsxref("Array.slice", "slice()")}}, {{jsxref("Array.indexOf", "indexOf()")}}, etc.) take into account the value of an array's {{jsxref("Array.length", "length")}} property when they're called.
+Several of the built-in array methods (e.g., {{jsxref("Array/join", "join()")}}, {{jsxref("Array/slice", "slice()")}}, {{jsxref("Array/indexOf", "indexOf()")}}, etc.) take into account the value of an array's {{jsxref("Array/length", "length")}} property when they're called.
 
-Other methods (e.g., {{jsxref("Array.push", "push()")}}, {{jsxref("Array.splice", "splice()")}}, etc.) also result in updates to an array's {{jsxref("Array.length", "length")}} property.
+Other methods (e.g., {{jsxref("Array/push", "push()")}}, {{jsxref("Array/splice", "splice()")}}, etc.) also result in updates to an array's {{jsxref("Array/length", "length")}} property.
 
 ```js
 const fruits = [];
@@ -595,7 +596,7 @@ fruits.push('banana', 'apple', 'peach');
 console.log(fruits.length); // 3
 ```
 
-When setting a property on a JavaScript array when the property is a valid array index and that index is outside the current bounds of the array, the engine will update the array's {{jsxref("Array.length", "length")}} property accordingly:
+When setting a property on a JavaScript array when the property is a valid array index and that index is outside the current bounds of the array, the engine will update the array's {{jsxref("Array/length", "length")}} property accordingly:
 
 ```js
 fruits[5] = 'mango';
@@ -604,7 +605,7 @@ console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
 console.log(fruits.length);        // 6
 ```
 
-Increasing the {{jsxref("Array.length", "length")}}.
+Increasing the {{jsxref("Array/length", "length")}}.
 
 ```js
 fruits.length = 10;
@@ -614,7 +615,7 @@ console.log(fruits.length);       // 10
 console.log(fruits[8]);           // undefined
 ```
 
-Decreasing the {{jsxref("Array.length", "length")}} property does, however, delete elements.
+Decreasing the {{jsxref("Array/length", "length")}} property does, however, delete elements.
 
 ```js
 fruits.length = 2;
@@ -622,13 +623,13 @@ console.log(Object.keys(fruits)); // ['0', '1']
 console.log(fruits.length);       // 2
 ```
 
-This is explained further on the {{jsxref("Array.length")}} page.
+This is explained further on the {{jsxref("Array/length")}} page.
 
 ### Creating an array using the result of a match
 
-The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array that has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.exec()")}} and {{jsxref("String.match()")}}.
+The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array that has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}}.
 
-To help explain these properties and elements, see the following example and then refer to the table below:
+For example:
 
 ```js
 // Match one d followed by one or more b's followed by one d
@@ -636,50 +637,14 @@ To help explain these properties and elements, see the following example and the
 // Ignore case
 
 const myRe = /d(b+)(d)/i;
-const myArray = myRe.exec('cdbBdbsbz');
+const execResult = myRe.exec('cdbBdbsbz');
+
+console.log(execResult.input); // 'cdbBdbsbz'
+console.log(execResult.index); // 1
+console.log(execResult); // Array(3) [ "dbBd", "bB", "d" ]
 ```
 
-The properties and elements returned from this match are as follows:
-
-<table class="fullwidth-table standard-table">
-  <thead>
-    <tr>
-      <th class="header" scope="col">Property/Element</th>
-      <th class="header" scope="col">Description</th>
-      <th class="header" scope="col">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>input</code><br />{{ReadOnlyInline}}</td>
-      <td>
-        The original string against which the regular expression was matched.
-      </td>
-      <td><code>"cdbBdbsbz"</code></td>
-    </tr>
-    <tr>
-      <td><code>index</code><br />{{ReadOnlyInline}}</td>
-      <td>The zero-based index of the match in the string.</td>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <td><code>[0]</code><br />{{ReadOnlyInline}}</td>
-      <td>The last matched characters.</td>
-      <td><code>"dbBd"</code></td>
-    </tr>
-    <tr>
-      <td><code>[1], …[n]</code><br />{{ReadOnlyInline}}</td>
-      <td>
-        Elements that specify the parenthesized substring matches (if included)
-        in the regular expression. The number of possible parenthesized
-        substrings is unlimited.
-      </td>
-      <td>
-        <code>[1]: "bB"<br />[2]: "d"</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+For more information about the result of a match, see the {{jsxref("RegExp.prototype.exec()")}} and {{jsxref("String.prototype.match()")}} pages.
 
 ## Specifications
 

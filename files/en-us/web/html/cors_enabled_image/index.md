@@ -88,8 +88,8 @@ The code that handles the newly-downloaded image is found in the `imageReceived(
 
 ```js
 function imageReceived() {
-  let canvas = document.createElement("canvas");
-  let context = canvas.getContext("2d");
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
 
   canvas.width = downloadedImg.width;
   canvas.height = downloadedImg.height;
@@ -99,9 +99,8 @@ function imageReceived() {
 
   try {
     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
-  }
-  catch (err) {
-    console.log("Error: " + err);
+  } catch (err) {
+    console.error(`Error: ${err}`);
   }
 }
 ```

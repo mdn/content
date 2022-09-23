@@ -21,6 +21,7 @@ tags:
   - color
   - rgb
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 In this article, we explore important concepts that are useful to understand in order to fully grasp how to work with video on the web.
@@ -106,25 +107,25 @@ The table below shows examples of three chroma subsampling models.
     <tr>
       <th scope="col" style="width: 144px">Chroma (U and V)</th>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-chroma-420.svg" />
+        <img alt="A matrix of U and V values for a 4:2:0 decoding operation. The first row contains 2 chroma samples for U: a blue and a green. The first row's samples are duplicated in the second row for V." src="yuv-chroma-420.svg" />
       </td>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-chroma-422.svg" />
+        <img alt="A matrix of U and V values for a 4:2:2 decoding operation. The first row contains 2 chroma samples for U: a blue and a green. The second row contains 2 chroma samples for V: a pink and a yellow." src="yuv-chroma-422.svg" />
       </td>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-chroma-444.svg" />
+        <img alt="A matrix of U and V values for a 4:4:4 decoding operation. The first row contains 4 chroma samples for U: a light blue, a yellow, a green and a deep blue. The second row contains 4 chroma samples for V: a pink, a white, a red and a gray." src="yuv-chroma-444.svg" />
       </td>
     </tr>
     <tr>
       <th scope="col" style="width: 144px">Decoded pixels</th>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-decoded-420.png" />
+        <img alt="A 4:2 block of decoded pixels after a 4:2:0 decoding operation that applies the 2 samples of the chroma matrix to each row in the block of luminance data. The colors of the samples become darker when applied to gray shades, black when applied to solid black, and remain unchanged when applied to white." src="yuv-decoded-420.png" />
       </td>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-decoded-422.png" />
+        <img alt="A 4:2 block of decoded pixels after a 4:2:2 decoding operation that applies the 2 samples contained in each row of the chroma matrix to the corresponding rows in the block of luminance data. The colors of the samples become darker when applied to gray shades, black when applied to solid black and remain unchanged when applied to white." src="yuv-decoded-422.png" />
       </td>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-decoded-444.png" />
+        <img alt="A 4:2 block of decoded pixels after a 4:4:4 decoding operation that applies the 4 samples contained in each row of the chroma matrix to the corresponding rows in the block of luminance data. The colors of the samples become darker when applied to gray shades, black when applied to solid black and remain unchanged when applied to white." src="yuv-decoded-444.png" />
       </td>
     </tr>
   </tbody>

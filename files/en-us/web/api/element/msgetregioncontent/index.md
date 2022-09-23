@@ -7,17 +7,18 @@ tags:
   - Non-standard
   - Method
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}
 
-The **`msGetRegionContent`**  method returns an array of Range instances corresponding to the content from the region flow that is positioned in the region.
+The **`msGetRegionContent`** method returns an array of Range instances corresponding to the content from the region flow that is positioned in the region.
 
 This proprietary method is specific to Internet Explorer browser.
 
 ### Syntax
 
-```js
+```js-nolint
 msGetRegionContent()
 ```
 

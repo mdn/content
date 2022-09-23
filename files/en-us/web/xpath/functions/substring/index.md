@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `substring` function returns a part of a given string.
@@ -21,7 +22,7 @@ substring(string, start, length)
 - `string`
   - : The string to evaluate.
 - `start`
-  - : The position within*`string`* the substring begins
+  - : The position within `string` the substring begins
 - `length` {{optional_inline}}
   - : The length of the substring.
     If omitted, the returned string will contain every character from the `start` position to the end of `string`.

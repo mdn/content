@@ -5,12 +5,12 @@ page-type: web-api-instance-method
 tags:
   - API
   - Encoding
-  - Experimental
   - Method
   - TextDecoder
 browser-compat: api.TextDecoder.decode
 ---
-{{APIRef("Encoding API")}}{{SeeCompatTable}}
+
+{{APIRef("Encoding API")}}
 
 The **`TextDecode.decode()`** method returns a
 string containing the text, given in parameters, decoded with the
@@ -18,7 +18,7 @@ specific method for that {{domxref("TextDecoder")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 decode()
 decode(buffer)
 decode(buffer, options)

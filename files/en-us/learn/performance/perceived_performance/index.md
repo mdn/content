@@ -5,6 +5,7 @@ tags:
   - Perceived Performance
   - Web Performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
 
 **[Perceived performance](/en-US/docs/Glossary/Perceived_performance)** is a subjective measure of website performance, responsiveness, and reliability. In other words, how fast a website seems to the user. It is harder to quantify and measure than the actual speed of operation, but perhaps even more important.

@@ -8,13 +8,14 @@ tags:
   - XPath
   - XSLT
 ---
+
 This article provides some XPath code snippets — simple examples of how to a few simple **utility functions** based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
 
 ### Node-specific _evaluator_ function
 
 The following custom utility function can be used to evaluate XPath expressions on given XML nodes. The first argument is a DOM node or Document object, while the second is a string defining an XPath expression.
 
-##### Example: Defining a custom node-specific `evaluateXPath()` utility function
+#### Example: Defining a custom node-specific `evaluateXPath()` utility function
 
 ```js
 // Evaluate an XPath expression aExpression against a given DOM node
@@ -80,7 +81,7 @@ You can now "query" the document with XPath expressions. Although walking the DO
 // display the last names of all people in the doc
 let results = evaluateXPath(people, "//person/@last-name");
 for (const i in results)
-  console.log("Person #" + i + " has the last name " + results[i].value);
+  console.log(`Person #${i} has the last name ${results[i].value}`);
 
 // get the 2nd person node
 results = evaluateXPath(people, "/people/person[2]");
@@ -89,7 +90,7 @@ results = evaluateXPath(people, "/people/person[2]");
 results = evaluateXPath(people, "//person[address/@city='denver']");
 
 // get all the addresses that have "south" in the street name
-results = evaluateXPath(people,  "//address[contains(@street, 'south')]");
+results = evaluateXPath(people, "//address[contains(@street, 'south')]");
 console.log(results.length);
 ```
 
@@ -97,7 +98,7 @@ console.log(results.length);
 
 The following is a simple utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of [`document.evaluate()`](/en-US/docs/Web/API/Document/evaluate) for cases when it is not required as well as the need to use the special iterators on [`XPathResult`](/en-US/docs/Web/API/XPathResult) (by returning an array instead).
 
-##### Example: Defining a simple `docEvaluateArray()` utility function
+#### Example: Defining a simple `docEvaluateArray()` utility function
 
 ```js
 // Example usage:
@@ -123,7 +124,7 @@ function docEvaluateArray (expr, doc, context, resolver) {
 
 The following function allows one to pass an element and an XML document to find a unique string XPath expression leading back to that element.
 
-##### Example: Defining a `getXPathForElement()` utility function
+#### Example: Defining a `getXPathForElement()` utility function
 
 ```js
 function getXPathForElement(el, xml) {

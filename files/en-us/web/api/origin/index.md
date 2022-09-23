@@ -13,7 +13,8 @@ tags:
   - origin
 browser-compat: api.origin
 ---
-{{APIRef()}}{{SeeCompatTable}}
+
+{{APIRef()}}
 
 The global **`origin`** read-only property returns the origin of the global
 scope, serialized as a string.

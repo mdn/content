@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.port
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.port`** property is a

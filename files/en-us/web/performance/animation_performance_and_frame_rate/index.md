@@ -49,7 +49,7 @@ In the context of the rendering waterfall, some properties are more expensive th
         <em>position</em> trigger a style recalculation, a layout and a repaint.
       </td>
       <td>
-        <img alt="Recalcute: Yes" src="recalculate-style.png" />
+        <img alt="Recalculate: Yes" src="recalculate-style.png" />
         <img alt="Does calculate layout" src="layout.png" />
         <img alt="Does repaint" src="paint.png" />
       </td>

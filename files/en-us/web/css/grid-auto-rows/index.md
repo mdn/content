@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: css.properties.grid-auto-rows
 ---
+
 {{CSSRef}}
 
 The **`grid-auto-rows`** CSS property specifies the size of an implicitly-created grid row {{glossary("grid tracks", "track")}} or pattern of tracks.

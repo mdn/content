@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.background
 ---
+
 {{CSSRef("CSS Background")}}
 
 The **`background`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin and size, or repeat method.
@@ -107,11 +108,12 @@ Browsers do not provide any special information on background images to assistiv
 
 ```html
 <p class="topbanner">
-  Starry sky<br/>
-  Twinkle twinkle<br/>
+  Starry sky<br />
+  Twinkle twinkle<br />
   Starry sky
 </p>
-<p class="warning">Here is a paragraph<p>
+<p class="warning">Here is a paragraph</p>
+<p></p>
 ```
 
 #### CSS

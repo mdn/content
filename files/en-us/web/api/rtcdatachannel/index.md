@@ -6,7 +6,6 @@ tags:
   - API
   - Communication
   - Data Transfer
-  - Experimental
   - Interface
   - Media
   - Networking
@@ -16,6 +15,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCDataChannel
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannel`** interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an {{DOMxRef("RTCPeerConnection")}}, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser).
@@ -82,7 +82,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
 ### Obsolete properties
 
-- {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{deprecated_inline}}
+- {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Indicates whether or not the data channel is _reliable_.
 
 ## Methods
@@ -104,7 +104,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
     falls below the value specified by {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}.
 - {{domxref("RTCDataChannel.close_event", "close")}}
   - : Sent when the underlying data transport closes.
-- {{domxref("RTCDataChannel.closing_event", "closing")}} {{Experimental_inline}}
+- {{domxref("RTCDataChannel.closing_event", "closing")}}
   - : Sent when the underlying data transport is about to start closing.
 - {{domxref("RTCDataChannel.error_event", "error")}}
   - : Sent when an error occurs on the data channel.

@@ -18,6 +18,7 @@ tags:
   - rendering
 browser-compat: api.WebGLRenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext`** interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
@@ -43,7 +44,7 @@ The following properties and methods provide general information and functionali
 
 - {{domxref("WebGLRenderingContext.canvas")}}
   - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
-- {{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}
+- {{domxref("WebGLRenderingContext.commit()")}} {{Experimental_Inline}}
   - : Pushes frames back to the original {{domxref("HTMLCanvasElement")}}, if the context is not directly fixed to a specific canvas.
 - {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
   - : The read-only width of the current drawing buffer. Should match the width of the canvas element associated with this context.

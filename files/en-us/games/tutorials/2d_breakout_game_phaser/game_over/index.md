@@ -11,6 +11,7 @@ tags:
   - Tutorial
   - game over
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls", "Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field")}}
@@ -32,7 +33,7 @@ This will make the three walls (top, left and right) bounce the ball back, but t
 ```js
 ball.checkWorldBounds = true;
 ball.events.onOutOfBounds.add(() => {
-  alert('Game over!');
+  alert("Game over!");
   location.reload();
 }, this);
 ```

@@ -9,6 +9,7 @@ tags:
   - Intermediate
   - Tutorial
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary("HTML")}} element itself. At the end of this page, you will know how to set up a canvas 2D context and have drawn a first example in your browser.
@@ -41,7 +42,7 @@ For example, we could provide a text description of the canvas content or provid
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="" />
 </canvas>
 ```
 
@@ -89,20 +90,22 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Canvas tutorial</title>
     <script>
       function draw() {
-        const canvas = document.getElementById('tutorial');
+        const canvas = document.getElementById("tutorial");
         if (canvas.getContext) {
-          const ctx = canvas.getContext('2d');
+          const ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style>
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -123,27 +126,28 @@ To begin, let's take a look at a simple example that draws two intersecting rect
 
 ```html
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <script type="application/javascript">
-    function draw() {
-      const canvas = document.getElementById('canvas');
-      if (canvas.getContext) {
-        const ctx = canvas.getContext('2d');
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Canvas experiment</title>
+    <script type="application/javascript">
+      function draw() {
+        const canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = 'rgb(200, 0, 0)';
-        ctx.fillRect(10, 10, 50, 50);
+          ctx.fillStyle = "rgb(200, 0, 0)";
+          ctx.fillRect(10, 10, 50, 50);
 
-        ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
-        ctx.fillRect(30, 30, 50, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 50, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 

@@ -12,6 +12,7 @@ tags:
   - Media
 browser-compat: api.TextTrackCueList.length
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`length`** read-only property of the {{domxref("TextTrackCueList")}} interface returns the number of cues in the list.

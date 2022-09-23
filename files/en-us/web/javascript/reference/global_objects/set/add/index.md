@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.add
 ---
+
 {{JSRef}}
 
 The **`add()`** method inserts a new element with a specified value in to a `Set` object, if there isn't an element with the same value already in the `Set`.
@@ -18,7 +19,7 @@ The **`add()`** method inserts a new element with a specified value in to a `Set
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 ```
 

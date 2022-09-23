@@ -6,6 +6,7 @@ tags:
   - Non-standard
   - Event
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}

@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - RangeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "repeat count must be less than infinity" occurs when the

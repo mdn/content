@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: css.properties.list-style-type.symbols
 ---
+
 {{CSSRef}}
 
 The **`symbols()`** CSS function lets you define counter styles inline, directly as the value of a property such as {{cssxref("list-style")}}. Unlike {{cssxref("@counter-style")}}, `symbols()` is _anonymous_ (i.e., it can only be used once). Although less powerful, it is shorter and easier to write than {{cssxref("@counter-style")}}.

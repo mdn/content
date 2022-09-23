@@ -16,6 +16,7 @@ browser-compat:
   - api.Clipboard
   - webextensions.api.clipboard
 ---
+
 {{AddonSidebar}}
 
 Working with the clipboard in extensions is transitioning from the Web API {{domxref("Document.execCommand()","document.execCommand")}} method (which is deprecated) to the {{domxref("Clipboard", "navigator.clipboard")}} method.
@@ -73,8 +74,7 @@ The `"cut"` and `"copy"` commands of the {{domxref("Document.execCommand", "docu
 For example, suppose you've got a popup that includes the following HTML:
 
 ```html
-<input id="input" type="text"/>
-<button id="copy">Copy</button>
+<input id="input" type="text" /> <button id="copy">Copy</button>
 ```
 
 To make the `"copy"` button copy the contents of the {{HTMLElement("input")}} element, you can use code like this:
@@ -151,8 +151,7 @@ To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)
 Consider HTML that includes something like this:
 
 ```html
-<textarea id="output"></textarea>
-<button id="paste">Paste</button>
+<textarea id="output"></textarea> <button id="paste">Paste</button>
 ```
 
 To set the content of the {{HTMLElement("textarea")}} element with the ID `"output"` from the clipboard when the user clicks the `"paste"` {{HTMLElement("button")}}, you can use code like this:

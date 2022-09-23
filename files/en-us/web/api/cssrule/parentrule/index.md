@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSRule.parentRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`parentRule`** property of the {{domxref("CSSRule")}}

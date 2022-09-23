@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.pitch
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`pitch`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the pitch at which the utterance will be spoken at.
@@ -44,7 +45,7 @@ inputForm.onsubmit = (event) => {
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
   for (let i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }

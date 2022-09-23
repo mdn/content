@@ -10,6 +10,7 @@ tags:
   - IndexedDB
   - deadline
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 In this article we look at a complex example involving checking the current time and date against a deadline stored via IndexedDB. The main complication here is checking the stored deadline info (month, hour, day, etc.) against the current time and date taken from a [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object.
@@ -144,7 +145,7 @@ The `Date` object has a number of methods to extract various parts of the date a
 Next we create another IndexedDB `objectStore`, and use the `openCursor()` method to open a cursor, which is basically a way in IndexedDB to iterate through all the items in the store. We then loop through all the items in the cursor for as long as there is a valid item left in the cursor.
 
 ```js
-      switch(cursor.value.month) {
+      switch (cursor.value.month) {
         case "January":
           monthNumber = 0;
           break;
@@ -166,11 +167,11 @@ The first thing we do is convert the month names we have stored in the database 
 
 ```js
       if (
-        +(cursor.value.hours) == hourCheck &&
-        +(cursor.value.minutes) == minuteCheck &&
-        +(cursor.value.day) == dayCheck &&
-        monthNumber == monthCheck &&
-        cursor.value.year == yearCheck &&
+        Number(cursor.value.hours) === hourCheck &&
+        Number(cursor.value.minutes) === minuteCheck &&
+        Number(cursor.value.day) === dayCheck &&
+        monthNumber === monthCheck &&
+        cursor.value.year === yearCheck &&
         notified === "no"
       ) {
 

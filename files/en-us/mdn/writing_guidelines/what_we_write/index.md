@@ -6,7 +6,8 @@ tags:
   - meta
   - writing-guide
 ---
-{{MDNSidebar}}  
+
+{{MDNSidebar}}
 
 MDN Web Docs contains _browser-neutral_ documentation that enables web developers to write _browser-agnostic_ code. In this article, you'll find information about whether or not a given topic and/or type of content should be included on MDN Web Docs.
 
@@ -70,9 +71,7 @@ For more details about the criteria for whether or not a technology can be docum
 On MDN Web Docs, we are constantly looking to document new web standards technologies as appropriate.
 We try to strike a balance between publishing the documentation early enough so that developers can learn about new features as soon as they need to and publishing it late enough so that the technology is mature and stable so that the documentation won't need constant updates or rapid removal.
 
-In general, our definition of the earliest we'll consider documenting a new technology is:
-
-_"When the feature is on a standards track and is implemented somewhere."_
+In general, our definition of the earliest we'll consider documenting a new technology is: _When the feature is on a standards track and is implemented somewhere._
 
 We consider documenting a new technology if it is:
 
@@ -110,7 +109,7 @@ The following examples describe situations when pages/content might be deleted:
 - Articles contain content that is inappropriate for MDN Web Docs.
 - Sections of MDN Web Docs are not focused on open web technologies and are a maintenance burden.
 
-For more information on _how_ to delete documents, please see the [Creating, moving and deleting pages](/en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting) guide.
+For more information on _how_ to delete documents, please see the [Creating, moving and deleting pages](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) guide.
 
 ## Types of documents allowed on MDN Web Docs
 

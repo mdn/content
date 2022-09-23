@@ -12,6 +12,7 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTServer
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer`** interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a GATT

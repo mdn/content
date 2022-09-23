@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGLength
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG length interface
@@ -24,7 +25,7 @@ An `SVGLength` object can be designated as read only, which means that attempts 
   <tbody>
     <tr>
       <th scope="row">Also implement</th>
-      <td><var>None</var></td>
+      <td>None</td>
     </tr>
     <tr>
       <th scope="row">Methods</th>

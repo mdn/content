@@ -5,7 +5,6 @@ page-type: guide
 tags:
   - API
   - BODY
-  - Experimental
   - Fetch
   - Guide
   - HTTP
@@ -15,9 +14,10 @@ tags:
   - request
 browser-compat: api.fetch
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
-The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global {{domxref("fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.
+The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for accessing and manipulating parts of the [protocol](/en-US/docs/Glossary/Protocol), such as requests and responses. It also provides a global {{domxref("fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.
 
 This kind of functionality was previously achieved using {{domxref("XMLHttpRequest")}}. Fetch provides a better alternative that can be easily used by other technologies such as {{domxref("Service_Worker_API", "Service Workers")}}. Fetch also provides a single logical place to define other HTTP-related concepts such as [CORS](/en-US/docs/Web/HTTP/CORS) and extensions to HTTP.
 
@@ -130,13 +130,13 @@ fetch('https://example.com/profile', {
   },
   body: JSON.stringify(data),
 })
-.then((response) => response.json())
-.then((data) => {
-  console.log('Success:', data);
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
+  .then((response) => response.json())
+  .then((data) => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 ```
 
 ## Uploading a file
@@ -154,13 +154,13 @@ fetch('https://example.com/profile/avatar', {
   method: 'PUT',
   body: formData
 })
-.then((response) => response.json())
-.then((result) => {
-  console.log('Success:', result);
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
+  .then((response) => response.json())
+  .then((result) => {
+    console.log('Success:', result);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 ```
 
 ## Uploading multiple files
@@ -172,21 +172,23 @@ const formData = new FormData();
 const photos = document.querySelector('input[type="file"][multiple]');
 
 formData.append('title', 'My Vegas Vacation');
-for (let i = 0; i < photos.files.length; i++) {
-  formData.append(`photos_${i}`, photos.files[i]);
+let i = 0;
+for (const photo of photos.files) {
+  formData.append(`photos_${i}`, photo);
+  i++;
 }
 
 fetch('https://example.com/posts', {
   method: 'POST',
   body: formData,
 })
-.then((response) => response.json())
-.then((result) => {
-  console.log('Success:', result);
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
+  .then((response) => response.json())
+  .then((result) => {
+    console.log('Success:', result);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 ```
 
 ## Processing a text file line by line
@@ -205,12 +207,10 @@ async function* makeTextFileLineIterator(fileURL) {
   let startIndex = 0;
   let result;
 
-  for (;;) {
+  while (true) {
     let result = re.exec(chunk);
     if (!result) {
-      if (readerDone) {
-        break;
-      }
+      if (readerDone) break;
       let remainder = chunk.substr(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
       chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : '');
@@ -220,14 +220,15 @@ async function* makeTextFileLineIterator(fileURL) {
     yield chunk.substring(startIndex, result.index);
     startIndex = re.lastIndex;
   }
+
   if (startIndex < chunk.length) {
-    // last line didn't end in a newline char
+    // Last line didn't end in a newline char
     yield chunk.substr(startIndex);
   }
 }
 
 async function run() {
-  for await (let line of makeTextFileLineIterator(urlOfFile)) {
+  for await (const line of makeTextFileLineIterator(urlOfFile)) {
     processLine(line);
   }
 }
@@ -459,4 +460,4 @@ if (window.fetch) {
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch examples on GitHub](https://github.com/mdn/fetch-examples/)
+- [Fetch examples on GitHub](https://github.com/mdn/dom-examples/tree/main/fetch)

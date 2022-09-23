@@ -8,49 +8,53 @@ tags:
   - part 5
   - server-side
 ---
+
 The author detail page needs to display the information about the specified `Author`, identified using their (automatically generated) `_id` field value, along with a list of all the `Book` objects associated with that `Author`.
 
 ## Controller
 
 Open **/controllers/authorController.js**.
 
-Add the following lines to the top of the file to import the _async_ and *Book* modules (these are needed for our author detail page).
+Add the following lines to the top of the file to import the `async` and `Book` modules (these are needed for our author detail page).
 
 ```js
-var async = require('async');
-var Book = require('../models/book');
+const async = require("async");
+const Book = require("../models/book");
 ```
 
 Find the exported `author_detail()` controller method and replace it with the following code.
 
 ```js
 // Display detail page for a specific Author.
-exports.author_detail = function(req, res, next) {
-
-    async.parallel({
-        author(callback) {
-            Author.findById(req.params.id)
-              .exec(callback)
-        },
-        authors_books(callback) {
-          Book.find({ 'author': req.params.id },'title summary')
-          .exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); } // Error in API usage.
-        if (results.author==null) { // No results.
-            var err = new Error('Author not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render.
-        res.render('author_detail', {
-          title: 'Author Detail',
-          author: results.author,
-          author_books: results.authors_books,
-        });
-    });
-
+exports.author_detail = (req, res, next) => {
+  async.parallel(
+    {
+      author(callback) {
+        Author.findById(req.params.id).exec(callback);
+      },
+      authors_books(callback) {
+        Book.find({ author: req.params.id }, "title summary").exec(callback);
+      },
+    },
+    (err, results) => {
+      if (err) {
+        // Error in API usage.
+        return next(err);
+      }
+      if (results.author == null) {
+        // No results.
+        const err = new Error("Author not found");
+        err.status = 404;
+        return next(err);
+      }
+      // Successful, so render.
+      res.render("author_detail", {
+        title: "Author Detail",
+        author: results.author,
+        author_books: results.authors_books,
+      });
+    }
+  );
 };
 ```
 

@@ -8,9 +8,11 @@ tags:
   - WebVR
   - Deprecated
   - vrdisplayconnect
+  - Non-standard
 browser-compat: api.Window.vrdisplayconnect_event
 ---
-{{APIRef("Window")}}{{Deprecated_Header}}
+
+{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`vrdisplayconnect`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when a compatible VR display is connected to the computer.
 
@@ -30,7 +32,7 @@ onvrdisplayconnect = (event) => { };
 
 ## Event type
 
-An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("VRDisplayEvent")}}
 
@@ -38,9 +40,9 @@ An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
 
-- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.display")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.reason")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : A human-readable reason why the event was fired.
 
 ## Examples

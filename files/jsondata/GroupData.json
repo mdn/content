@@ -91,19 +91,14 @@
         "Path2D",
         "TextMetrics"
       ],
-      "methods": [
-        "createImageBitmap"
-      ],
+      "methods": ["createImageBitmap"],
       "properties": [],
       "events": []
     },
     "Channel Messaging API": {
       "overview": ["Channel Messaging API"],
       "guides": ["/docs/Web/API/Channel_Messaging_API/Using_channel_messaging"],
-      "interfaces": [
-        "MessageChannel",
-        "MessagePort"
-      ],
+      "interfaces": ["MessageChannel", "MessagePort"],
       "methods": [],
       "properties": [],
       "events": []
@@ -123,10 +118,7 @@
     },
     "Compression Streams API": {
       "overview": ["Compression Streams API"],
-      "interfaces": [
-        "CompressionStream",
-        "DecompressionStream"
-      ],
+      "interfaces": ["CompressionStream", "DecompressionStream"],
       "methods": [],
       "properties": [],
       "events": []
@@ -145,9 +137,7 @@
       "overview": ["Content Index API"],
       "interfaces": ["ContentIndex", "ContentIndexEvent"],
       "methods": [],
-      "properties": [
-        "ServiceWorkerRegistration.index"
-      ],
+      "properties": ["ServiceWorkerRegistration.index"],
       "events": ["ServiceWorkerGlobalScope: contentdelete"]
     },
     "Console API": {
@@ -191,15 +181,14 @@
     },
     "CSS Font Loading API": {
       "overview": ["CSS Font Loading API"],
-      "interfaces": [
-        "FontFace",
-        "FontFaceSet",
-        "FontFaceSource",
-        "FontFaceSetLoadEvent"
-      ],
+      "interfaces": ["FontFace", "FontFaceSet", "FontFaceSetLoadEvent"],
       "methods": [],
-      "properties": [],
-      "events": []
+      "properties": ["Document.fonts", "WorkerGlobalScope.fonts"],
+      "events": [
+        "FontFaceSet: loading event",
+        "FontFaceSet: loadingdone event",
+        "FontFaceSet: loadingerror event"
+      ]
     },
     "CSS Painting API": {
       "overview": ["CSS Painting API"],
@@ -275,11 +264,12 @@
       ]
     },
     "Device Orientation Events": {
+      "overview": ["Device orientation events"],
       "guides": [
-          "/docs/Web/Events/Detecting_device_orientation",
-          "/docs/Web/Events/Orientation_and_motion_data_explained",
-          "/docs/Web/Events/Using_device_orientation_with_3D_transforms"
-        ],
+        "/docs/Web/API/Device_orientation_events/Detecting_device_orientation",
+        "/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained",
+        "/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms"
+      ],
       "interfaces": [
         "DeviceMotionEvent",
         "DeviceMotionEventAcceleration",
@@ -290,7 +280,7 @@
       "properties": [],
       "events": [
         "Window: deviceorientation",
-        "Window: compassneedscalibration",
+        "Window: deviceorientationabsolute",
         "Window: devicemotion"
       ]
     },
@@ -358,7 +348,12 @@
     },
     "Encoding API": {
       "overview": ["Encoding API"],
-      "interfaces": ["TextDecoder", "TextEncoder", "TextDecoderStream", "TextEncoderStream"],
+      "interfaces": [
+        "TextDecoder",
+        "TextEncoder",
+        "TextDecoderStream",
+        "TextEncoderStream"
+      ],
       "methods": [],
       "properties": [],
       "events": []
@@ -376,18 +371,12 @@
         "Navigator.requestMediaKeySystemAccess()",
         "HTMLMediaElement.setMediaKeys()"
       ],
-      "properties": [
-        "HTMLMediaElement.mediaKeys"
-      ],
-      "events": [
-        "HTMLMediaElement: encrypted"
-      ]
+      "properties": ["HTMLMediaElement.mediaKeys"],
+      "events": ["HTMLMediaElement: encrypted"]
     },
     "EyeDropper API": {
       "overview": ["EyeDropper API"],
-      "interfaces": [
-        "EyeDropper"
-      ],
+      "interfaces": ["EyeDropper"],
       "methods": [],
       "properties": [],
       "events": []
@@ -406,9 +395,7 @@
     },
     "File API": {
       "overview": ["File API"],
-      "guides": [
-        "/docs/Web/API/File_API/Using_files_from_web_applications"
-      ],
+      "guides": ["/docs/Web/API/File_API/Using_files_from_web_applications"],
       "interfaces": [
         "Blob",
         "File",
@@ -460,10 +447,7 @@
       "guides": ["/docs/Web/API/Fullscreen_API/Guide"],
       "interfaces": [],
       "methods": ["Document.exitFullscreen()", "Element.requestFullscreen()"],
-      "properties": [
-        "Document.fullscreen",
-        "Document.fullscreenElement"
-      ],
+      "properties": ["Document.fullscreen", "Document.fullscreenElement"],
       "events": [
         "Document: fullscreenchange",
         "Document: fullscreenerror",
@@ -496,9 +480,12 @@
       "events": []
     },
     "Geometry Interfaces": {
+      "overview": ["Geometry interfaces"],
       "interfaces": [
         "DOMMatrix",
         "DOMMatrixReadOnly",
+        "DOMPoint",
+        "DOMQuad",
         "DOMRect",
         "DOMRectReadOnly"
       ],
@@ -749,17 +736,19 @@
       "overview": ["Intersection Observer API"],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": [
-        "indexedDB"
-      ],
+      "properties": ["indexedDB"],
+      "events": []
+    },
+    "Largest Contentful Paint API": {
+      "overview": ["Largest Contentful Paint API"],
+      "interfaces": ["LargestContentfulPaint"],
+      "methods": [],
+      "properties": [],
       "events": []
     },
     "Layout Instability API": {
       "overview": ["Layout Instability API"],
-      "interfaces: ": [
-        "LayoutShift",
-        "LayoutShiftAttribution"
-      ],
+      "interfaces: ": ["LayoutShift", "LayoutShiftAttribution"],
       "methods": [],
       "properties": [],
       "events": []
@@ -776,15 +765,12 @@
       "guides": [
         "/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API"
       ],
-      "interfaces": [
-        "MediaCapabilities",
-        "Screen"
-      ],
+      "interfaces": ["MediaCapabilities", "Screen"],
       "methods": [
         "mediaCapabilities.decodingInfo()",
         "mediaCapabilities.encodingInfo()"
       ],
-      "properties": [],
+      "properties": ["navigator.mediaCapabilities"],
       "events": [],
       "dictionaries": []
     },
@@ -819,10 +805,7 @@
       "methods": [],
       "properties": ["window.MediaRecorder"],
       "events": [],
-      "dictionaries": [
-        "MediaRecorderOptions",
-        "BlobEventInit"
-      ],
+      "dictionaries": ["MediaRecorderOptions", "BlobEventInit"],
       "types": ["BitrateMode", "RecordingState"],
       "callbacks": []
     },
@@ -892,6 +875,13 @@
       "methods": [],
       "properties": ["Document.hidden", "Document.visibilityState"],
       "events": ["Document: visibilitychange"]
+    },
+    "Paint Timing API": {
+      "overview": ["Paint Timing API"],
+      "interfaces": ["PerformancePaintTiming"],
+      "methods": [],
+      "properties": [],
+      "events": []
     },
     "Payment Request API": {
       "overview": ["Payment Request API"],
@@ -1017,9 +1007,7 @@
         "Element.setPointerCapture()",
         "Element.releasePointerCapture()"
       ],
-      "properties": [
-        "Navigator.maxTouchPoints"
-      ],
+      "properties": ["Navigator.maxTouchPoints"],
       "events": [
         "HTMLElement: pointerover",
         "HTMLElement: pointerenter",
@@ -1036,17 +1024,9 @@
     "Pointer Lock API": {
       "overview": ["Pointer Lock API"],
       "interfaces": [],
-      "methods": [
-        "Element.requestPointerLock()",
-        "Document.exitPointerLock()"
-      ],
-      "properties": [
-        "Document.pointerLockElement"
-      ],
-      "events": [
-        "Document: pointerlockchange",
-        "Document: pointerlockerror"
-      ]
+      "methods": ["Element.requestPointerLock()", "Document.exitPointerLock()"],
+      "properties": ["Document.pointerLockElement"],
+      "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
     },
     "Presentation API": {
       "overview": ["Presentation API"],
@@ -1068,7 +1048,13 @@
     "Prioritized Task Scheduling API": {
       "overview": ["Prioritized Task Scheduling API"],
       "guides": [],
-      "interfaces": ["Scheduler", "TaskController", "TaskSignal", "AbortSignal", "TaskPriorityChangeEvent"],
+      "interfaces": [
+        "Scheduler",
+        "TaskController",
+        "TaskSignal",
+        "AbortSignal",
+        "TaskPriorityChangeEvent"
+      ],
       "methods": [],
       "properties": ["Window.scheduler"],
       "events": []
@@ -1090,9 +1076,7 @@
         "PushMessageData"
       ],
       "methods": [],
-      "properties": [
-        "ServiceWorkerRegistration.pushManager"
-      ],
+      "properties": ["ServiceWorkerRegistration.pushManager"],
       "events": [
         "ServiceWorkerGlobalScope: push",
         "ServiceWorkerGlobalScope: pushsubscriptionchange"
@@ -1975,10 +1959,7 @@
       "overview": ["Web Share API"],
       "guides": [],
       "interfaces": [],
-      "methods": [
-        "Navigator.canShare()",
-        "Navigator.share()"
-      ],
+      "methods": ["Navigator.canShare()", "Navigator.share()"],
       "properties": [],
       "events": []
     },
@@ -2155,9 +2136,7 @@
     },
     "Window Controls Overlay API": {
       "overview": ["Window Controls Overlay API"],
-      "interfaces": [
-        "WindowControlsOverlay"
-      ],
+      "interfaces": ["WindowControlsOverlay"],
       "methods": [],
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []

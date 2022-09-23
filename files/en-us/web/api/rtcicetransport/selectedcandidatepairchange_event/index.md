@@ -17,6 +17,7 @@ tags:
   - selectedcandidatepairchange
 browser-compat: api.RTCIceTransport.selectedcandidatepairchange_event
 ---
+
 {{APIRef("WebRTC")}}
 
 A **`selectedcandidatepairchange`** event is sent to an {{domxref("RTCIceTransport")}} when the {{Glossary("ICE")}} agent selects a new pair of candidates that describe the endpoints of a viable connection.

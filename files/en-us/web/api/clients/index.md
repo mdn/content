@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Clients
-  - Experimental
   - Interface
   - Reference
   - Service Workers
@@ -14,6 +13,7 @@ tags:
   - Workers
 browser-compat: api.Clients
 ---
+
 {{APIRef("Service Workers API")}}
 
 The `Clients` interface provides access to {{domxref("Client")}} objects. Access it via `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` within a [service worker](/en-US/docs/Web/API/Service_Worker_API).

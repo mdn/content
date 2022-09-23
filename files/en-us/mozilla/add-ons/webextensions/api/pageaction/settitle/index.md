@@ -13,13 +13,14 @@ tags:
   - setTitle
 browser-compat: webextensions.api.pageAction.setTitle
 ---
+
 {{AddonSidebar()}}
 
 Sets the title of the page action. The title is displayed in a tooltip when the user hovers over the page action.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.pageAction.setTitle(
   details // object
 )
@@ -63,7 +64,8 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,4 +92,4 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

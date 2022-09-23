@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-left-style
 ---
+
 {{CSSRef}}
 
 The **`border-left-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's left {{cssxref("border")}}.
@@ -83,9 +84,10 @@ The `border-left-style` property is specified as a single keyword chosen from th
 /* Define look of the table */
 table {
   border-width: 2px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 

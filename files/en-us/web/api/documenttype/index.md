@@ -9,6 +9,7 @@ tags:
   - Interface
 browser-compat: api.DocumentType
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType`** interface represents a {{domxref("Node")}} containing a doctype.
@@ -19,16 +20,16 @@ The **`DocumentType`** interface represents a {{domxref("Node")}} containing a d
 
 _Inherits properties from its parent, {{domxref("Node")}}._
 
-- {{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxref("DocumentType.internalSubset")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A string of the internal subset, or `null` if there is none. Eg `"<!ELEMENT foo (bar)>"`.
-- {{domxref("DocumentType.name")}} {{readonlyInline}}
+- {{domxref("DocumentType.name")}} {{ReadOnlyInline}}
   - : A string, eg `"html"` for `<!DOCTYPE HTML>`.
-- {{domxref("DocumentType.notations")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxref("DocumentType.notations")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : A {{domxref("NamedNodeMap")}} with notations declared in the DTD.
-- {{domxref("DocumentType.publicId")}} {{readonlyInline}}
-  - : A string, eg `"-//W3C//DTD HTML 4.01//EN"`, empty string for HTML5.
-- {{domxref("DocumentType.systemId")}} {{readonlyInline}}
-  - : A string, eg `"http://www.w3.org/TR/html4/strict.dtd"`, empty string for HTML5.
+- {{domxref("DocumentType.publicId")}} {{ReadOnlyInline}}
+  - : A string, eg `"-//W3C//DTD HTML 4.01//EN"`, now and empty string for HTML.
+- {{domxref("DocumentType.systemId")}} {{ReadOnlyInline}}
+  - : A string, eg `"http://www.w3.org/TR/html4/strict.dtd"`, now an empty string for HTML.
 
 ## Methods
 

@@ -15,6 +15,7 @@ tags:
   - speech
 browser-compat: api.SpeechGrammarList.item
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 The **`item`** getter of the {{domxref("SpeechGrammarList")}}
@@ -23,7 +24,7 @@ objects to be retrieved from the `SpeechGrammarList` using array syntax.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 
@@ -45,7 +46,7 @@ const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 
-const myFirstGrammar = speechRecognitionList[0]; // var should contain the SpeechGrammar object created in line 4.
+const myFirstGrammar = speechRecognitionList[0]; // variable contain the object created above
 ```
 
 ## Specifications

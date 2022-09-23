@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.Bluetooth.referringDevice
 ---
+
 {{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`Bluetooth.referringDevice`**

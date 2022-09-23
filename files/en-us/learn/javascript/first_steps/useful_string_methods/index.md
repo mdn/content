@@ -9,13 +9,14 @@ tags:
   - Learn
   - case
   - indexOf
-  - l10n:priority
+  - "l10n:priority"
   - length
   - lower
   - replace
   - split
   - upper
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 Now that we've looked at the very basics of strings, let's move up a gear and start thinking about what useful operations we can do on strings with built-in methods, such as finding the length of a text string, joining and splitting strings, substituting one character in a string for another, and more.
@@ -66,7 +67,7 @@ This should return the number 7, because "mozilla" is 7 characters long. This is
 
 ## Retrieving a specific string character
 
-On a related note, you can return any character inside a string by using **square bracket notation** — this means you include square brackets (`[]`) on the end of your variable name. Inside the square brackets you include the number of the character you want to return, so for example to retrieve the first letter you'd do this:
+On a related note, you can return any character inside a string by using **square bracket notation** — this means you include square brackets (`[]`) on the end of your variable name. Inside the square brackets, you include the number of the character you want to return, so for example to retrieve the first letter you'd do this:
 
 ```js
 browserType[0];
@@ -225,7 +226,7 @@ console.log(quote);  // "To code or not to code"
 
 ## Active learning examples
 
-In this section we'll get you to try your hand at writing some string manipulation code. In each exercise below, we have an array of strings, and a loop that processes each value in the array and displays it in a bulleted list. You don't need to understand arrays or loops right now — these will be explained in future articles. All you need to do in each case is write the code that will output the strings in the format that we want them in.
+In this section, we'll get you to try your hand at writing some string manipulation code. In each exercise below, we have an array of strings, and a loop that processes each value in the array and displays it in a bulleted list. You don't need to understand arrays or loops right now — these will be explained in future articles. All you need to do in each case is write the code that will output the strings in the format that we want them in.
 
 Each example comes with a "Reset" button, which you can use to reset the code if you make a mistake and can't get it working again, and a "Show solution" button you can press to see a potential answer if you get really stuck.
 
@@ -239,15 +240,13 @@ Think about how you could test whether the message in each case is a Christmas m
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 const list = document.querySelector('.output ul');
@@ -258,7 +257,7 @@ const greetings = ['Happy Birthday!',
                  'You\'re all I want for Christmas',
                  'Get well soon'];
 
-for (let greeting of greetings) {
+for (const greeting of greetings) {
   // Your conditional test needs to go inside the parentheses
   // in the line below, replacing what's currently there
   if (greeting) {
@@ -270,8 +269,8 @@ for (let greeting of greetings) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -337,7 +336,7 @@ const greetings = [
   'Get well soon',
 ];
 
-for (let greeting of greetings) {
+for (const greeting of greetings) {
   // Your conditional test needs to go inside the parentheses
   // in the line below, replacing what's currently there
   if (greeting.includes('Christmas')) {
@@ -399,11 +398,11 @@ textarea.onkeyup = () => {
 
 ### Fixing capitalization
 
-In this exercise we have the names of cities in the United Kingdom, but the capitalization is all messed up. We want you to change them so that they are all lower case, except for a capital first letter. A good way to do this is to:
+In this exercise, we have the names of cities in the United Kingdom, but the capitalization is all messed up. We want you to change them so that they are all lowercase, except for a capital first letter. A good way to do this is to:
 
-1. Convert the whole of the string contained in the `city` variable to lower case and store it in a new variable.
+1. Convert the whole of the string contained in the `city` variable to lowercase and store it in a new variable.
 2. Grab the first letter of the string in this new variable and store it in another variable.
-3. Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.
+3. Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replacement procedure in another new variable.
 4. Change the value of the `result` variable to equal to the final result, not the `city`.
 
 > **Note:** A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.
@@ -412,22 +411,20 @@ In this exercise we have the names of cities in the United Kingdom, but the capi
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 const list = document.querySelector('.output ul');
 list.innerHTML = '';
 const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
-for (let city of cities) {
+for (const city of cities) {
   // write your code just below here
 
   const result = city;
@@ -438,8 +435,8 @@ for (let city of cities) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -485,7 +482,7 @@ reset.addEventListener('click', function() {
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -499,7 +496,7 @@ const jsSolution = `const list = document.querySelector('.output ul');
 list.innerHTML = '';
 const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
-for (let city of cities) {
+for (const city of cities) {
   // write your code just below here
   const lower = city.toLowerCase();
   const firstLetter = lower.slice(0,1);
@@ -548,7 +545,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = function(){
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -580,21 +577,19 @@ We'd recommend doing it like this:
 2. Find the character index number of the semicolon.
 3. Extract the human-readable station name using the semicolon character index number as a reference point, and store it in a new variable.
 4. Concatenate the two new variables and a string literal to make the final string.
-5. Change the value of the `result` variable to equal to the final string, not the `station`.
+5. Change the value of the `result` variable to the final string, not the `station`.
 
 ```html hidden
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 const list = document.querySelector('.output ul');
@@ -605,7 +600,7 @@ const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                   'SYB4f65hf75f736463;Stalybridge',
                   'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
-for (let station of stations) {
+for (const station of stations) {
   // write your code just below here
 
   const result = station;
@@ -616,8 +611,8 @@ for (let station of stations) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -663,7 +658,7 @@ reset.addEventListener('click', function() {
 });
 
 solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     textarea.value = solutionEntry;
     solution.value = 'Hide solution';
   } else {
@@ -681,7 +676,7 @@ const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                   'SYB4f65hf75f736463;Stalybridge',
                   'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
-for (let station of stations) {
+for (const station of stations) {
   // write your code just below here
   const code = station.slice(0,3);
   const semiColon = station.indexOf(';');
@@ -730,7 +725,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = function(){
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === 'Show solution') {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

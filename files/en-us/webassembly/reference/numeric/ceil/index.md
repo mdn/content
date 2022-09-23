@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Something
 ---
+
 {{WebAssemblySidebar}}
 
 The **`ceil`** instructions, are used for getting the value of a number rounded up to the next integer.

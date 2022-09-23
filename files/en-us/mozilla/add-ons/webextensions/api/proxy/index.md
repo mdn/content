@@ -8,6 +8,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.proxy
 ---
+
 {{AddonSidebar}}
 
 Use the proxy API to proxy web requests. You can use the {{WebExtAPIRef("proxy.onRequest")}} event listener to intercept web requests, and return an object that describes whether and how to proxy them.

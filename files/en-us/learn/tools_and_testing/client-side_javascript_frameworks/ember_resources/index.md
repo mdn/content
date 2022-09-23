@@ -10,6 +10,7 @@ tags:
   - client-side
   - resources
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -33,7 +34,7 @@ Our final Ember article provides you with a list of resources that you can use t
         </p>
         <p>
           A deeper understanding of modern JavaScript features (such as classes,
-          modules, etc), will be extremely beneficial, as Ember makes heavy use
+          modules, etc.), will be extremely beneficial, as Ember makes heavy use
           of them.
         </p>
       </td>
@@ -68,7 +69,7 @@ For _framework-specific_ things, there is the [ember-inspector add-on](https://g
 - Components
 - Services
 - Promises
-- Data (i.e: from a remote API — from ember-data, by default)
+- Data (i.e., from a remote API — from ember-data, by default)
 - Deprecation Information
 - Render Performance
 

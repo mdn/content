@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.lastModified
 ---
+
 {{APIRef("DOM")}}
 
 The **`lastModified`** property of the {{domxref("Document")}}

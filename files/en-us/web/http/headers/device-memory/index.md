@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Device-Memory
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
 The **`Device-Memory`** [device client hint](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) request header field indicates the approximate amount of available RAM on the client device. The header is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
@@ -39,7 +40,7 @@ The **`Device-Memory`** [device client hint](/en-US/docs/Web/HTTP/Client_hints#d
 
 ## Syntax
 
-```
+```http
 Device-Memory: <number>
 ```
 
@@ -54,13 +55,13 @@ The amount of device RAM can be used as a fingerprinting variable, so values for
 
 The server first needs to opt in to receive `Device-Memory` header by sending the response headers {{HTTPHeader("Accept-CH")}} containing `Device-Memory`.
 
-```
+```http
 Accept-CH: Device-Memory
 ```
 
 Then on subsequent requests the client might send `Device-Memory` header back:
 
-```
+```http
 Device-Memory: 1
 ```
 

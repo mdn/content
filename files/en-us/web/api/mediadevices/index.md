@@ -20,6 +20,7 @@ tags:
   - WebRTC
 browser-compat: api.MediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`MediaDevices`** interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.
@@ -42,7 +43,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
   - : Prompts the user to select a display or portion of a display (such as a window) to capture as a {{domxref("MediaStream")}} for sharing or recording purposes. Returns a promise that resolves to a `MediaStream`.
 - {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}
   - : With the user's permission through a prompt, turns on a camera and/or a microphone on the system and provides a {{domxref("MediaStream")}} containing a video track and/or an audio track with the input.
-- {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }}
+- {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()") }} {{Experimental_Inline}}
   - : Prompts the user to select a specific audio output device.
 
 ## Events
@@ -101,5 +102,5 @@ navigator.mediaDevices.getUserMedia(constraints)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): The API defining the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method.
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("Navigator.mediaDevices")}}: Returns a reference to a `MediaDevices` object that can be used to access devices.
-- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML5 video capture and playback using `MediaDevices` and the MediaStream Recording API ([source on GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using `MediaDevices` and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
+- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML video capture and playback using `MediaDevices` and the MediaStream Recording API ([source on GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML video language lab web application using `MediaDevices` and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))

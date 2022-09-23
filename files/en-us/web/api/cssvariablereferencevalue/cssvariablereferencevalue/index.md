@@ -13,13 +13,14 @@ tags:
   - Experimental
 browser-compat: api.CSSVariableReferenceValue.CSSVariableReferenceValue
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 Creates a new {{domxref('CSSVariableReferenceValue')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSVariableReferenceValue(variable)
 new CSSVariableReferenceValue(variable, fallback)
 ```

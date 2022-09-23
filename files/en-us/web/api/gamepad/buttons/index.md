@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.buttons
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.buttons`** property of the {{domxref("Gamepad")
@@ -81,10 +82,6 @@ function gameLoop() {
   const start = rAF(gameLoop);
 };
 ```
-
-## Value
-
-An array of {{domxref("gamepadButton")}} objects.
 
 ## Specifications
 

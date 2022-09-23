@@ -8,8 +8,9 @@ tags:
   - Reference
   - Experimental
   - ReportBody
-spec-urls: https://w3c.github.io/reporting/#reportbody
+browser-compat: api.ReportBody
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`ReportBody`** interface of the {{domxref('Reporting API','','',' ')}} represents the body of a report. Individual report types inherit from this interface, adding specific attributes relevant to the particular report.
@@ -48,4 +49,4 @@ const observer = new ReportingObserver(([firstReport], observer) => {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}

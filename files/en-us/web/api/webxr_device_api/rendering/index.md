@@ -24,6 +24,7 @@ tags:
   - rendering
   - requestAnimationFrame
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 Once your WebXR environment has been set up and an {{domxref("XRSession")}} created to represent an ongoing XR environment session, you need to provide frames of the scene to the XR device for rendering. This article covers the process of driving the frames of the XR scene to the device in the rendering loop, using the {{domxref("XRSession")}} to obtain an {{domxref("XRFrame")}} object representing each frame, which is then used to prepare the framebuffer for delivery to the XR device.
@@ -44,7 +45,8 @@ async function runXR(xrSession) {
 
   if (worldRefSpace) {
     viewerRefSpace = worldRefSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(viewerStartPosition, viewerStartOrientation));
+      new XRRigidTransform(viewerStartPosition, viewerStartOrientation)
+    );
     animationFrameRequestID = xrSession.requestAnimationFrame(myDrawFrame);
   }
 }
@@ -125,7 +127,7 @@ This is illustrated in the diagram below, in which we see how each eye perceives
 
 The left eye sees the die from a little bit to the left of center, and the right eye sees it from a bit to the right of center. As a result, the left eye sees just a little bit more of the left side of the object and a little bit less of the right, and vice versa. These two images are focused onto the retinas and the resulting signal transmitted over the optic nerves to the brain's visual cortex, located at the back of the occipital lobe.
 
-Tha brain takes those signals from the left and right eyes and constructs a single, unified, 3D image of the world in the viewer's brain, and that image is what is seen. And because of those differences between what is seen by the left eye versus the right eye, the brain is able to infer a great deal of information about how deep the object is, its size, and more. By combining that inferred depth information with other cues such as perspective, shadows, memories of what these relationships mean, and so forth, we can figure out a great deal about the world around us.
+The brain takes those signals from the left and right eyes and constructs a single, unified, 3D image of the world in the viewer's brain, and that image is what is seen. And because of those differences between what is seen by the left eye versus the right eye, the brain is able to infer a great deal of information about how deep the object is, its size, and more. By combining that inferred depth information with other cues such as perspective, shadows, memories of what these relationships mean, and so forth, we can figure out a great deal about the world around us.
 
 ### Frames, poses, views, and framebuffers
 
@@ -173,7 +175,7 @@ Let's take a look at some real code that follows this basic pattern. Since in th
 let lastFrameTime = 0;
 
 function myDrawFrame(currentFrameTime, frame) {
-  let session = frame.session;
+  const session = frame.session;
   let viewerPose;
 
   // Schedule the next frame to be painted when the time comes.
@@ -186,7 +188,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
   viewerPose = frame.getViewerPose(viewerRefSpace);
   if (viewerPose) {
-    let glLayer = session.renderState.baseLayer;
+    const glLayer = session.renderState.baseLayer;
     gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
     // Start by erasing the color and depth framebuffers.
@@ -205,8 +207,8 @@ function myDrawFrame(currentFrameTime, frame) {
     // Now call the scene rendering code once for each of
     // the session's views.
 
-    for (let view of viewerPose.views) {
-      let viewport = glLayer.getViewport(view);
+    for (const view of viewerPose.views) {
+      const viewport = glLayer.getViewport(view);
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
       myDrawSceneIntoView(view, deltaTime);
     }
@@ -298,7 +300,7 @@ function drawFrame(time, frame) {
   const deltaTime = (time - lastFrameTime) * 0.001;
   lastFrameTime = time;
 
-  for (let view of pose.views) {
+  for (const view of pose.views) {
     /* render each view */
   }
 }

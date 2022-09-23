@@ -9,6 +9,7 @@ tags:
   - NeedsContent
   - Site-wide
 ---
+
 {{MDNSidebar}}
 
 On the [Yari](/en-US/docs/MDN/Yari) platform that powers MDN, we still have a legacy template/macro system available called [KumaScript](https://github.com/mdn/yari/tree/main/kumascript) for automating certain aspects of content. We are hoping to stop using it some day, but until then MDN will still rely on it. This article provides basic information about using KumaScript.
@@ -48,7 +49,7 @@ Invoking a template is done with a _macro_, which can be used anywhere in any pa
 
 The output of the macro would look like this:
 
-```html
+```
 Hello #0
 Hello #1
 Hello #2
@@ -105,7 +106,7 @@ KumaScript templates are processed by an [embedded JavaScript template engine](h
 - Nothing inside a `<% %>` block can ever contribute to the output stream. But, you can transition from JS mode to output mode using `<% %>`—for example:
 
   ```js
-  <% for (var i = 0; i < $0; i++) { %>
+  <% for (let i = 0; i < $0; i++) { %>
     Hello #<%= i %>
   <% } %>
   ```
@@ -262,14 +263,14 @@ Assuming this template were saved in the macros directory as `MathLib.ejs`, you 
 
 ```js
 <%
-var math_lib = require("MathLib");
+const math_lib = require("MathLib");
 %>
 The result of 2 + 2 = <%= math_lib.add(2, 2) %>
 ```
 
 And, the output of this template would be:
 
-```html
+```
 The result of 2 + 2 = 4
 ```
 
@@ -377,7 +378,7 @@ Templates can be localized using the `mdn.localString()` method, which takes an 
 
 ```js
 <%
-var text = mdn.localString({
+const text = mdn.localString({
   "en-US": "Hello world!",
   "es": "¡Hola mundo!",
   // ...
@@ -389,7 +390,7 @@ Each locale may also take an object containing a mapping of keys to strings, for
 
 ```js
 <%
-var text = mdn.localStringMap({
+const text = mdn.localStringMap({
   'en-US': {
     'Complete_beginners_start_here': 'Complete beginners start here!',
     'Getting_started_with_the_web': 'Getting started with the web',
@@ -407,17 +408,17 @@ var text = mdn.localStringMap({
 %>
 ```
 
-The `mdn.localString()` function will automatically load strings for the appropriate locale. If a string is missing for a locale, it will fall back to `en-US` for that string.  For example:
+The `mdn.localString()` function will automatically load strings for the appropriate locale. If a string is missing for a locale, it will fall back to `en-US` for that string. For example:
 
 ```js
 <%
-var s_title = mdn.localString({
+const s_title = mdn.localString({
   "en-US": "Firefox for Developers",
   "de": "Firefox für Entwickler",
   "es": "Firefox para desarrolladores"
 });
 
-var body = mdn.localString({
+const body = mdn.localString({
   "en-US": {
     "hello": "Hello!",
     "goodbye": "Goodbye!",

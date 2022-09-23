@@ -8,9 +8,11 @@ tags:
   - Deprecated
   - Reference
   - recipe:css-property
+  - Non-standard
 browser-compat: css.properties.scroll-snap-points-y
 ---
-{{CSSRef}}{{deprecated_header}}
+
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`scroll-snap-points-y`** [CSS](/en-US/docs/Web/CSS) property defines the vertical positioning of snap points within the content of the scroll container they are applied to.
 
@@ -42,7 +44,10 @@ scroll-snap-points-y: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+scroll-snap-points-y =
+  none | repeat( <length-percentage> )
+```
 
 ## Examples
 
@@ -81,11 +86,11 @@ scroll-snap-points-y: unset;
 }
 
 #container > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 #container > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 

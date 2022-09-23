@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.grid-column
 ---
+
 {{CSSRef}}
 
 The **`grid-column`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid column")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
@@ -30,7 +31,7 @@ grid-column: auto;
 /* with line numbers */
 grid-column: 1;
 grid-column: 1 / 3;
-grid-column: 1 /  span 2;
+grid-column: 1 / span 2;
 
 /* with line names */
 grid-column: main-start;

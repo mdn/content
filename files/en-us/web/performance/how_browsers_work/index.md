@@ -14,6 +14,7 @@ tags:
   - Web Performance
   - render
 ---
+
 Users want web experiences with content that is fast to load and smooth to interact with. Therefore, a developer should strive to achieve these two goals.
 
 To understand how to improve performance and perceived performance, it helps to understand how the browser works.
@@ -67,22 +68,22 @@ After the 8 round trips, the browser is finally able to make the request.
 Once we have an established connection to a web server, the browser sends an initial [HTTP `GET` request](/en-US/docs/Web/HTTP/Methods) on behalf of the user, which for websites is most often an HTML file. Once the server receives the request, it will reply with relevant response headers and the contents of the HTML.
 
 ```html
-<!doctype HTML>
-<html>
- <head>
-  <meta charset="UTF-8"/>
-  <title>My simple page</title>
-  <link rel="stylesheet" src="styles.css"/>
-  <script src="myscript.js"></script>
-</head>
-<body>
-  <h1 class="heading">My Page</h1>
-  <p>A paragraph with a <a href="https://example.com/about">link</a></p>
-  <div>
-    <img src="myimage.jpg" alt="image description"/>
-  </div>
-  <script src="anotherscript.js"></script>
-</body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My simple page</title>
+    <link rel="stylesheet" src="styles.css" />
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <h1 class="heading">My Page</h1>
+    <p>A paragraph with a <a href="https://example.com/about">link</a></p>
+    <div>
+      <img src="myimage.jpg" alt="image description" />
+    </div>
+    <script src="anotherscript.js"></script>
+  </body>
 </html>
 ```
 
@@ -129,9 +130,9 @@ When the parser finds non-blocking resources, such as an image, the browser will
 While the browser builds the DOM tree, this process occupies the main thread. As this happens, the _preload scanner_ will parse through the content available and request high priority resources like CSS, JavaScript, and web fonts. Thanks to the preload scanner, we don't have to wait until the parser finds a reference to an external resource to request it. It will retrieve resources in the background so that by the time the main HTML parser reaches requested assets, they may possibly already be in flight, or have been downloaded. The optimizations the preload scanner provides reduce blockages.
 
 ```html
-<link rel="stylesheet" src="styles.css"/>
+<link rel="stylesheet" src="styles.css" />
 <script src="myscript.js" async></script>
-<img src="myimage.jpg" alt="image description"/>
+<img src="myimage.jpg" alt="image description" />
 <script src="anotherscript.js" async></script>
 ```
 

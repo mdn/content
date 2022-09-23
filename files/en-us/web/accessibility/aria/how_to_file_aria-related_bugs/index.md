@@ -5,6 +5,7 @@ tags:
   - ARIA
   - Bugzilla
 ---
+
 The state of ARIA technology has always depended on the community. If you notice an implementation issue, please take a little time and let the developers know. Here's where to file bugs:
 
 ### Screen Readers

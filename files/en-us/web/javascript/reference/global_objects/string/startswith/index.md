@@ -11,17 +11,16 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.startsWith
 ---
+
 {{JSRef}}
 
-The **`startsWith()`** method
-determines whether a string begins with the characters of a specified string,
-returning `true` or `false` as appropriate.
+The **`startsWith()`** method determines whether a string begins with the characters of a specified string, returning `true` or `false` as appropriate.
 
 {{EmbedInteractiveExample("pages/js/string-startswith.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 startsWith(searchString)
 startsWith(searchString, position)
 ```
@@ -29,20 +28,22 @@ startsWith(searchString, position)
 ### Parameters
 
 - `searchString`
-  - : The characters to be searched for at the start of this string.
+  - : The characters to be searched for at the start of this string. Cannot be a regex.
 - `position` {{optional_inline}}
-  - : The position in this string at which to begin searching for
-    `searchString`. Defaults to `0`.
+  - : The start position at which `searchString` is expected to be found (the index of `searchString`'s first character). Defaults to `0`.
 
 ### Return value
 
-**`true`** if the given characters are found at the beginning
-of the string; otherwise, **`false`**.
+**`true`** if the given characters are found at the beginning of the string; otherwise, **`false`**.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : If `searchString` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 
 ## Description
 
-This method lets you determine whether or not a string begins with another string. This
-method is case-sensitive.
+This method lets you determine whether or not a string begins with another string. This method is case-sensitive.
 
 ## Examples
 

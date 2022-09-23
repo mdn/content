@@ -5,7 +5,7 @@ page-type: guide
 tags:
   - API
   - Channel messaging
-  - HTML5
+  - HTML
   - MessageChannel
   - MessagePort
   - Tutorial
@@ -13,6 +13,7 @@ browser-compat:
   - api.MessageChannel
   - api.MessagePort
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 The [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) allows two separate scripts running in different browsing contexts attached to the same document (e.g., two {{HTMLElement("iframe")}} elements, the main document and a single {{HTMLElement("iframe")}}, or two documents via a {{domxref("SharedWorker")}}) to communicate directly, passing messages between each other through two-way channels (or pipes) with a port at each end.
@@ -31,9 +32,9 @@ Message channels on the other hand can provide a secure channel that allows you 
 
 ## Simple examples
 
-To get you started, we have published a couple of demos on GitHub. First, check our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
+To get you started, we have published a couple of demos on GitHub. First, check our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
 
-Second, have a look at our [multimessaging demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between the main page and an IFrame.
+Second, have a look at our [multimessaging demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between the main page and an IFrame.
 
 We'll be focusing on the latter example in this article, which looks like:
 

@@ -10,9 +10,11 @@ tags:
   - VR
   - XR
   - WebXR
+  - Experimental
 browser-compat: api.XRView.recommendedViewportScale
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`recommendedViewportScale`** property of the {{domxref("XRView")}} interface is the recommended viewport scale value that you can use for {{domxref("XRView.requestViewportScale()")}} if the user agent has such a recommendation; [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
 
@@ -27,11 +29,11 @@ A number greater than 0.0 and less than or equal to 1.0; or [`null`](/en-US/docs
 Dynamic viewport scaling allows applications to only use a subset of the available {{domxref("XRWebGLLayer.framebuffer", "framebuffer")}}. The feature may not be available on all systems since it depends on driver support, so you might want to ensure that {{domxref("XRView.requestViewportScale")}} exists before calling it.
 
 ```js
-for (let view of pose.views) {
+for (const view of pose.views) {
   if (view.requestViewportScale) {
     view.requestViewportScale(view.recommendedViewportScale);
   }
-  let viewport = glLayer.getViewport(view);
+  const viewport = glLayer.getViewport(view);
 }
 ```
 

@@ -69,15 +69,15 @@ Historically, this has been presented as a horizontal rule or line. While it may
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- {{htmlattrdef("align")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the alignment of the rule on the page. If no value is specified, the default value is `left`.
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- {{htmlattrdef("color")}} {{Non-standard_inline}} {{Deprecated_Inline}}
   - : Sets the color of the rule through color name or hexadecimal value.
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- {{htmlattrdef("noshade")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the rule to have no shading.
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- {{htmlattrdef("size")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the height, in pixels, of the rule.
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- {{htmlattrdef("width")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Sets the length of the rule on the page through a pixel or percentage value.
 
 ## Example
@@ -86,19 +86,15 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ```html
 <p>
-  This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.
-  This is the first paragraph of text.
+  This is the first paragraph of text. This is the first paragraph of text. This
+  is the first paragraph of text. This is the first paragraph of text.
 </p>
 
-<hr>
+<hr />
 
 <p>
-  This is the second paragraph of text.
-  This is the second paragraph of text.
-  This is the second paragraph of text.
-  This is the second paragraph of text.
+  This is the second paragraph of text. This is the second paragraph of text.
+  This is the second paragraph of text. This is the second paragraph of text.
 </p>
 ```
 

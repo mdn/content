@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.stop-color
 ---
+
 {{SVGRef}}
 
 The **`stop-color`** attribute indicates what color to use at a gradient stop.

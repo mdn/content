@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.spread
 ---
+
 {{jsSidebar("Operators")}}
 
 **Spread syntax** (`...`) allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.
@@ -19,7 +20,7 @@ Spread syntax looks exactly like rest syntax. In a way, spread syntax is the opp
 
 ## Syntax
 
-```js
+```js-nolint
 myFunction(a, ...iterableObj, b)
 [1, ...iterableObj, '4', 'five', 6]
 { ...obj, key: 'value' }
@@ -130,7 +131,7 @@ arr2.push(4);
 > b.shift().shift();
 > //  1
 >
-> //  Oh no!  Now array 'a' is affected as well:
+> //  Oh no! Now array 'a' is affected as well:
 > a
 > //  [[], [2], [3]]
 > ```
@@ -216,7 +217,7 @@ const spread = { set foo(val) { console.log(val); }, ...{ foo: 1 } };
 // Nothing is logged; spread.foo is 1
 ```
 
-You cannot naively re-implement the {{jsxref("Object.assign()")}} function through a single spread operator:
+You cannot naively re-implement the {{jsxref("Object.assign()")}} function through a single spreading:
 
 ```js
 const obj1 = { foo: 'bar', x: 42 };
@@ -230,7 +231,7 @@ const mergedObj2 = merge({}, obj1, obj2);
 // Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
 ```
 
-In the above example, the spread syntax does not work as one might expect: it spreads an _array_ of arguments into the object literal, due to the rest parameter. Here is an implementation of `merge` using the spread operator, whose behavior is similar to {{jsxref("Object.assign()")}}, except that it doesn't trigger setters, nor mutates any object:
+In the above example, the spread syntax does not work as one might expect: it spreads an _array_ of arguments into the object literal, due to the rest parameter. Here is an implementation of `merge` using the spread syntax, whose behavior is similar to {{jsxref("Object.assign()")}}, except that it doesn't trigger setters, nor mutates any object:
 
 ```js
 const obj1 = { foo: 'bar', x: 42 };

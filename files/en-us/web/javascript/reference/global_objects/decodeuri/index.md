@@ -13,6 +13,7 @@ tags:
   - decoding
 browser-compat: javascript.builtins.decodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`decodeURI()`** function decodes
@@ -23,7 +24,7 @@ a Uniform Resource Identifier (URI) previously created by {{jsxref("encodeURI",
 
 ## Syntax
 
-```js
+```js-nolint
 decodeURI(encodedURI)
 ```
 

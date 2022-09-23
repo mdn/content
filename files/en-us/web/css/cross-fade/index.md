@@ -5,12 +5,12 @@ tags:
   - CSS
   - CSS Function
   - CSS-4 Images
-  - Experimental
   - Function
   - Reference
   - Web
 browser-compat: css.types.image.cross-fade
 ---
+
 {{CSSRef}}
 
 The **`cross-fade()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to blend two or more images at a defined transparency.
@@ -122,16 +122,10 @@ When using background images, make sure the contrast in color is great enough th
 
 ```css
 .crossfade {
-    width: 300px;
-    height: 300px;
-    background-image: -webkit-cross-fade(
-        url('br.png'),
-        url('tr.png'),
-        75%);
-    background-image: cross-fade(
-        url('br.png'),
-        url('tr.png'),
-        75%);
+  width: 300px;
+  height: 300px;
+  background-image: -webkit-cross-fade(url("br.png"), url("tr.png"), 75%);
+  background-image: cross-fade(url("br.png"), url("tr.png"), 75%);
 }
 ```
 

@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Audio
-  - Experimental
   - Extensions
   - Interface
   - MSE
@@ -16,7 +15,8 @@ tags:
   - Video
 browser-compat: api.MediaSource
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API) represents a source of media data for an {{domxref("HTMLMediaElement")}} object. A `MediaSource` object can be attached to a {{domxref("HTMLMediaElement")}} to be played in the user agent.
 
@@ -29,11 +29,11 @@ The **`MediaSource`** interface of the [Media Source Extensions API](/en-US/docs
 
 ## Properties
 
-- {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
+- {{domxref("MediaSource.sourceBuffers")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SourceBufferList")}} object containing the list of {{domxref("SourceBuffer")}} objects associated with this `MediaSource`.
-- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
-  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track,  enabled audio tracks, and shown/hidden text tracks.
-- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
+- {{domxref("MediaSource.activeSourceBuffers")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
+- {{domxref("MediaSource.readyState")}} {{ReadOnlyInline}}
   - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
 - {{domxref("MediaSource.duration")}}
   - : Gets and sets the duration of the current media being presented.

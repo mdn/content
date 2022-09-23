@@ -5,10 +5,10 @@ tags:
   - Audio
   - Guide
   - HTML
-  - HTML5
   - Media
   - Video
 ---
+
 We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web based media and compatibility with popular browsers.
 
 ## The Audio and Video Elements
@@ -26,10 +26,10 @@ To deliver video and audio, the general workflow is usually something like this:
 
 ```html
 <audio controls preload="auto">
-  <source src="audiofile.mp3" type="audio/mpeg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
 
   <!-- fallback for browsers that don't support mp3 -->
-  <source src="audiofile.ogg" type="audio/ogg">
+  <source src="audiofile.ogg" type="audio/ogg" />
 
   <!-- fallback for browsers that don't support audio tag -->
   <a href="audiofile.mp3">download audio</a>
@@ -40,20 +40,30 @@ The code above will create an audio player that attempts to preload as much audi
 
 > **Note:** The `preload` attribute may be ignored by some mobile browsers.
 
-For further info see [Cross Browser Audio Basics (HTML5 Audio In Detail)](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
+For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
 
 ### HTML Video
 
 ```html
-<video controls width="640" height="480" poster="initialimage.png" autoplay muted>
-  <source src="videofile.mp4" type="video/mp4">
+<video
+  controls
+  width="640"
+  height="480"
+  poster="initialimage.png"
+  autoplay
+  muted>
+  <source src="videofile.mp4" type="video/mp4" />
 
   <!-- fallback for browsers that don't support mp4 -->
-  <source src="videofile.webm" type="video/webm">
+  <source src="videofile.webm" type="video/webm" />
 
   <!-- specifying subtitle files -->
-  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-  <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" />
+  <track
+    src="subtitles_no.vtt"
+    kind="subtitles"
+    srclang="no"
+    label="Norwegian" />
 
   <!-- fallback for browsers that don't support video tag -->
   <a href="videofile.mp4">download video</a>
@@ -128,7 +138,7 @@ try {
       source = context.createBufferSource();
       source.buffer = buffer;
       source.connect(context.destination);
-      // auto play
+      // autoplay
       source.start(0); // start was previously noteOn
     });
   };
@@ -241,7 +251,9 @@ You may detect click, touch and/or keyboard events to trigger actions such as pl
 A quick example — first set up your audio and custom controls in HTML:
 
 ```html
-<audio id="my-audio" src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
+<audio
+  id="my-audio"
+  src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
 <button id="my-control">play</button>
 ```
 
@@ -333,11 +345,9 @@ A few examples:
 - `http://example.com/video.ogv#t=60`
   - : Specifies that the video should start playing at 60 seconds and play through the end of the video.
 
-> **Note:** The playback range portion of the media element URI specification was added to Gecko 9.0 {{ geckoRelease("9.0") }}. At this time, this is the only part of the [Media Fragments URI specification](https://www.w3.org/TR/media-frags/) implemented by Gecko, and it can only be used when specifying the source for media elements, and not in the address bar.
-
 ## Error handling
 
-Starting in Gecko 2.0 {{ geckoRelease("2.0") }}, error handling has been revised to match the latest version of the HTML5 specification. Instead of the `error` event being dispatched to the media element itself, it now gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
+Errors gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
 
 This lets you detect which sources failed to load, which may be useful. Consider this HTML:
 
@@ -404,7 +414,7 @@ Your files may have been encoded incorrectly — try encoding using one of the f
 - [Firefogg](http://www.firefogg.org/) — Video and Audio encoding for Firefox
 - [FFmpeg2](https://www.ffmpeg.org/) — Comprehensive command line encoder
 - [Libav](https://libav.org/) — Comprehensive command line encoder
-- [Vid.ly](https://m.vid.ly/) — Video player,transcoding and delivery
+- [Vid.ly](https://m.vid.ly/) — Video player, transcoding and delivery
 - [Internet Archive](https://archive.org/) — Free transcoding and storage
 
 ### Detecting when no sources have loaded
@@ -471,10 +481,10 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Video player styling basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)
   - : With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, responsive styling for the player.
 - [Cross-browser audio basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)
-  - : This article provides a basic guide to creating an HTML5 audio player that works cross browser, with all the associated attributes, properties and events explained, and a quick guide to custom controls created using the Media API.
+  - : This article provides a basic guide to creating an HTML audio player that works cross browser, with all the associated attributes, properties and events explained, and a quick guide to custom controls created using the Media API.
 - [Media buffering, seeking, and time ranges](/en-US/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)
   - : Sometimes it's useful to know how much {{ htmlelement("audio") }} or {{ htmlelement("video") }} has downloaded or is playable without delay — a good example of this is the buffered progress bar of an audio or video player. This article discusses how to build a buffer/seek bar using [TimeRanges](/en-US/docs/Web/API/TimeRanges), and other features of the media API.
-- [HTML5 playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+- [HTML playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
   - : The `playbackRate` property allows us to change the speed or rate at which a piece of web audio or video is playing. This article explains it in detail.
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
   - : Explains the basics of using the Web Audio API to grab, manipulate and play back an audio source.
@@ -490,8 +500,8 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ## Advanced tutorials
 
-- [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
+- [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+  - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
 - [Writing Web Audio API code that works in every browser](/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser)
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)

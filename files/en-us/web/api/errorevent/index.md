@@ -8,6 +8,7 @@ tags:
   - Worker API
 browser-compat: api.ErrorEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`ErrorEvent`** interface represents events providing information related to errors in scripts or in files.
@@ -18,15 +19,15 @@ The **`ErrorEvent`** interface represents events providing information related t
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("ErrorEvent.message")}} {{readonlyInline}}
+- {{domxref("ErrorEvent.message")}} {{ReadOnlyInline}}
   - : A string containing a human-readable error message describing the problem.
-- {{domxref("ErrorEvent.filename")}} {{readonlyInline}}
+- {{domxref("ErrorEvent.filename")}} {{ReadOnlyInline}}
   - : A string containing the name of the script file in which the error occurred.
-- {{domxref("ErrorEvent.lineno")}} {{readonlyInline}}
+- {{domxref("ErrorEvent.lineno")}} {{ReadOnlyInline}}
   - : An `integer` containing the line number of the script file on which the error occurred.
-- {{domxref("ErrorEvent.colno")}} {{readonlyInline}}
+- {{domxref("ErrorEvent.colno")}} {{ReadOnlyInline}}
   - : An `integer` containing the column number of the script file on which the error occurred.
-- {{domxref("ErrorEvent.error")}} {{readonlyInline}} {{experimental_inline}}
+- {{domxref("ErrorEvent.error")}} {{ReadOnlyInline}}
   - : A JavaScript `Object` that is concerned by the event.
 
 ## Constructor

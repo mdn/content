@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.ruby-position
 ---
+
 {{CSSRef}}
 
 The **`ruby-position`** CSS property defines the position of a ruby element relatives to its base element. It can be positioned over the element (`over`), under it (`under`), or between the characters on their right side (`inter-character`).
@@ -38,9 +39,9 @@ ruby-position: unset;
   - : ![Over example](screen_shot_2015-03-04_at_13.02.20.png)Is a keyword indicating that the ruby has to be placed over the main text for horizontal scripts and right to it for vertical scripts.
 - `under`
   - : ![Under example](screen_shot_2015-03-04_at_13.02.07.png)Is a keyword indicating that the ruby has to be placed under the main text for horizontal scripts and left to it for vertical scripts.
-- `inter-character`
+- `inter-character` {{Experimental_Inline}}
   - : Is a keyword indicating that the ruby has to be placed between the different characters.
-- `alternate`
+- `alternate` {{Experimental_Inline}}
   - : Is a keyword indicating that the ruby alternates between over and under, when there are multiple levels of annotation.
 
 ## Formal definition
@@ -68,7 +69,7 @@ ruby-position: unset;
 
 ```css
 ruby {
-    ruby-position:over;
+  ruby-position: over;
 }
 ```
 
@@ -91,7 +92,7 @@ ruby {
 
 ```css
 ruby {
-    ruby-position:under;
+  ruby-position: under;
 }
 ```
 
@@ -105,7 +106,7 @@ ruby {
 
 ```html
 <ruby>
-  <rb>A<rb>B<rb>C</rb>
+  <rb>A</rb><rb>B</rb><rb>C</rb>
   <rtc>Above</rtc>
   <rtc>Below</rtc>
 </ruby>
@@ -115,7 +116,7 @@ ruby {
 
 ```css
 ruby {
-    ruby-position: alternate; /* this is also the initial value */
+  ruby-position: alternate; /* this is also the initial value */
 }
 ```
 

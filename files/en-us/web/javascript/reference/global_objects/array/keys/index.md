@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.keys
 ---
+
 {{JSRef}}
 
 The **`keys()`** method returns a new **Array
@@ -21,7 +22,7 @@ Iterator** object that contains the keys for each index in the array.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

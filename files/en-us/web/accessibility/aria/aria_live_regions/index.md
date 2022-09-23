@@ -6,6 +6,7 @@ tags:
   - Accessibility
   - ariaLive
 ---
+
 Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.
 
 > **Note:** Assistive technologies will announce _dynamic_ changes in the content of a live region.
@@ -46,50 +47,60 @@ A website specializing in providing information about planets provides a dropdow
   <p id="planetDescription">Select a planet to view its description</p>
 </div>
 
-<p><small>Information courtesy <a href="https://en.wikipedia.org/wiki/Solar_System#Inner_Solar_System">Wikipedia</a></small></p>
+<p>
+  <small>Information from
+    <a href="https://en.wikipedia.org/wiki/Solar_System">Wikipedia</a></small>
+</p>
 ```
 
 ```js
 const PLANETS_INFO = {
   mercury: {
-    title: 'Mercury',
-    description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.'
+    title: "Mercury",
+    description:
+      "Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.",
   },
 
   venus: {
     title: "Venus",
-    description: 'Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.'
+    description:
+      "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.",
   },
 
   earth: {
     title: "Earth",
-    description: 'Earth is the third planet from the Sun and the only object in the Universe known to harbor life.'
+    description:
+      "Earth is the third planet from the Sun and the only object in the Universe known to harbor life.",
   },
 
   mars: {
     title: "Mars",
-    description: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".'
-  }
+    description:
+      'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".',
+  },
 };
 
 function renderPlanetInfo(planet) {
-  const planetTitle = document.querySelector('#planetTitle');
-  const planetDescription = document.querySelector('#planetDescription');
+  const planetTitle = document.querySelector("#planetTitle");
+  const planetDescription = document.querySelector("#planetDescription");
 
   if (planet in PLANETS_INFO) {
     planetTitle.textContent = PLANETS_INFO[planet].title;
     planetDescription.textContent = PLANETS_INFO[planet].description;
   } else {
-    planetTitle.textContent = 'No planet selected';
-    planetDescription.textContent = 'Select a planet to view its description';
+    planetTitle.textContent = "No planet selected";
+    planetDescription.textContent = "Select a planet to view its description";
   }
 }
 
-const renderPlanetInfoButton = document.querySelector('#renderPlanetInfoButton');
+const renderPlanetInfoButton = document.querySelector(
+  "#renderPlanetInfoButton"
+);
 
-renderPlanetInfoButton.addEventListener('click', (event) => {
-  const planetsSelect = document.querySelector('#planetsSelect');
-  const selectedPlanet = planetsSelect.options[planetsSelect.selectedIndex].value;
+renderPlanetInfoButton.addEventListener("click", (event) => {
+  const planetsSelect = document.querySelector("#planetsSelect");
+  const selectedPlanet =
+    planetsSelect.options[planetsSelect.selectedIndex].value;
 
   renderPlanetInfo(selectedPlanet);
 });
@@ -160,7 +171,7 @@ The Paciello Group has some [information about the state of the support of Live 
 1. **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
 2. [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 
-    : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
+   : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
 
 ### Basic examples: `aria-atomic`
 
@@ -176,9 +187,10 @@ As an illustration of `aria-atomic`, consider a site with a simple clock, showin
 ```js
 /* basic JavaScript to update the clock */
 function updateClock() {
-  var now = new Date();
-  document.getElementById('clock-hours').innerHTML = now.getHours();
-  document.getElementById('clock-mins').innerHTML = ("0"+now.getMinutes()).substr(-2);
+  const now = new Date();
+  document.getElementById("clock-hours").textContent = now.getHours();
+  document.getElementById("clock-mins").textContent =
+    `0${now.getMinutes()}`.substr(-2);
 }
 
 /* first run */
@@ -195,18 +207,15 @@ One way around this would be to first clear all the contents of the live region 
 `aria-atomic="true"` ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "17:34").
 
 ```html
-<div id="clock" role="timer" aria-live="polite" aria-atomic="true">
-  …
-</div>
+<div id="clock" role="timer" aria-live="polite" aria-atomic="true">…</div>
 ```
 
 Another example of `aria-atomic` - an update/notification made as a result of a user action.
 
 ```html
 <div id="date-input">
-  <label>Year:
-    <input type="text" id="year" value="1990" onblur="change(event)"/>
-  </label>
+  <label for="year">Year:</label>
+  <input type="text" id="year" value="1990" onblur="change(event)" />
 </div>
 
 <div id="date-output" aria-atomic="true" aria-live="polite">
@@ -217,7 +226,7 @@ Another example of `aria-atomic` - an update/notification made as a result of a 
 
 ```js
 function change(event) {
-  var yearOut = document.getElementById("year-output");
+  const yearOut = document.getElementById("year-output");
 
   switch (event.target.id) {
     case "year":
@@ -226,10 +235,10 @@ function change(event) {
     default:
       return;
   }
-};
+}
 ```
 
-Without `aria-atomic="true"` the screenreader announces only the changed value of year. With `aria-atomic="true"`, the screenreader announces "The set year is: _changed value_"
+Without `aria-atomic="true"` the screen reader announces only the changed value of year. With `aria-atomic="true"`, the screen reader announces "The set year is: _changed value_"
 
 ### Basic example: `aria-relevant`
 

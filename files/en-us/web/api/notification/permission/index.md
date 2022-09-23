@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Notification.permission
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The `permission` read-only property of the {{domxref("Notification")}}
@@ -39,21 +40,17 @@ notifications, then request permission if required, before then sending a notifi
 
 ```js
 function notifyMe() {
-  // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
-    console.log("This browser does not support desktop notification");
-  }
-
-  // Let's check whether notification permissions have already been granted
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
+    // Check if the browser supports notifications
+    alert("This browser does not support desktop notification");
+  } else if (Notification.permission === "granted") {
+    // Check whether notification permissions have already been granted;
+    // if so, create a notification
     const notification = new Notification("Hi there!");
     // …
-  }
-
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied' || Notification.permission === "default") {
-    Notification.requestPermission((permission) => {
+  } else if (Notification.permission !== "denied") {
+    // We need to ask the user for permission
+    Notification.requestPermission().then((permission) => {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
         const notification = new Notification("Hi there!");
@@ -63,7 +60,7 @@ function notifyMe() {
   }
 
   // At last, if the user has denied notifications, and you
-  // want to be respectful there is no need to bother them any more.
+  // want to be respectful there is no need to bother them anymore.
 }
 ```
 

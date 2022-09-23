@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.widths
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`widths`** attribute indicates a list of range values, each followed by one or more {{Glossary("glyph")}} widths.

@@ -7,6 +7,7 @@ tags:
   - Preferences
   - features
 ---
+
 {{FirefoxSidebar}}
 
 This page lists Firefox's experimental and partially implemented features, including those for proposed or cutting-edge web platform standards, along with information on the builds in which they are present, whether or not they are activated "by default", and which _preference_ can be used to activate or deactivate them.
@@ -14,7 +15,7 @@ This allows you to test the features before they are released.
 
 New features appear first in the [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) build, where they are often enabled by default.
 They later propagate though to [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) and eventually to the release build.
-Once a feature is enabled by default in a release build it is no longer experimental, and should be removed from the topic.
+After a feature is enabled by default in a release build, it is no longer considered experimental and should be removed from the topic.
 
 Experimental features can be enabled or disabled using the [Firefox Configuration Editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) (enter `about:config` in the Firefox address bar) by modifying the associated _preference_ listed below.
 
@@ -24,7 +25,7 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ### inert attribute
 
-The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. For more details on the status of this feature see {{bug(1655722)}}.
+The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}. When present, it may make the browser "ignore" the element from assistive technologies, page search, and text selection. For more details on the status of this feature, see {{bug(1655722)}}.
 
 <table>
   <thead>
@@ -144,7 +145,7 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
 
 ## CSS
 
-### Display stray control characters in CSS as hex boxes
+### Hex boxes to display stray control characters
 
 This feature renders control characters (Unicode category Cc) other than _tab_ (`U+0009`), _line feed_ (`U+000A`), _form feed_ (`U+000C`), and _carriage return_ (`U+000D`) as a hexbox when they are not expected. (See {{bug(1099557)}} for more details.)
 
@@ -187,7 +188,7 @@ This feature renders control characters (Unicode category Cc) other than _tab_ (
   </tbody>
 </table>
 
-### Property: initial-letter
+### initial-letter property
 
 The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout](https://drafts.csswg.org/css-inline/) specification and allows you to specify how dropped, raised, and sunken initial letters are displayed. (See {{bug(1223880)}} for more details.)
 
@@ -267,7 +268,7 @@ Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when 
   </tbody>
 </table>
 
-### Property: backdrop-filter
+### backdrop-filter property
 
 The {{cssxref("backdrop-filter")}} property applies filter effects to the area behind an element. (See {{bug(1178765)}} for more details.)
 
@@ -307,47 +308,7 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
   </tbody>
 </table>
 
-### The fit-content() function for width and other sizing properties
-
-The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>91</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.fit-content-function.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Grid: Masonry layout
+### Masonry grid layout
 
 Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See {{bug(1607954)}} for more details.
 
@@ -389,7 +350,7 @@ Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Ma
   </tbody>
 </table>
 
-### Property: math-style
+### math-style property
 
 The {{cssxref("math-style")}} property indicates whether MathML equations should render with normal or compact height. (See {{bug(1665975)}} for more details.)
 
@@ -429,11 +390,51 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
   </tbody>
 </table>
 
+### fit-content() function
+
+The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>91</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>91</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>91</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>91</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.fit-content-function.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Scroll-linked animations
 
 The {{cssxref('@scroll-timeline')}} at-rule and {{cssxref('animation-timeline')}} property allow you to define animations that are linked to container scroll progress (rather than time).
 Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
-For more information see {{bug(1676791)}} and {{bug(1676782)}}.
+For more information, see {{bug(1676791)}} and {{bug(1676782)}}.
 
 <table>
   <thead>
@@ -467,6 +468,254 @@ For more information see {{bug(1676791)}} and {{bug(1676782)}}.
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.scroll-linked-animations.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### :has() pseudo-class
+
+The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that contain the selectors passed as parameters.
+(See {{bug(1771896)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.has-selector.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### linear() easing function
+
+The `linear()` [easing function](/en-US/docs/Web/CSS/easing-function) defines a piecewise linear function, allowing you to approximate more complex animations.
+(See {{bug(1764126)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>104</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.linear-easing-function.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### animation-composition property
+
+The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) property specifies the composite operation to perform when multiple animations affect the same property simultaneously.
+(See {{bug(1293490)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>104</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.animation-composition.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Trigonometric functions
+
+CSS [trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) allow for making calculations relating to geometry.
+The functions available are `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, and `atan2()`.
+See {{bug(1774589)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>105</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.trig.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### @font-face src feature checking
+
+The `@font-face` [`src` descriptor](/en-US/docs/Web/CSS/@font-face/src) now supports the `tech()` function, allowing fallback of whether a font resource is downloaded based on whether the user-agent supports a particular font feature or technology.
+See {{bug(1715546)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>105</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.font-tech.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### contain-intrinsic-size property
+
+The [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) property specifies the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+This is needed when the [`contain: size`](/en-US/docs/Web/CSS/contain) or [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) properties are applied, so that the user agent can determine the size of the element without needing to render its child elements.
+({{bug(1597529)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.contain-intrinsic-size.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -687,6 +936,47 @@ This new API provides low-level support for performing computation and graphics 
   </tbody>
 </table>
 
+### CSS Font Loading API
+
+The [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) can now be used in worker threads.
+See {{bug(1072107)}}.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>104</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.font-loading-api.workers.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Audio Output API
 
 #### MediaDevices.selectAudioOutput()
@@ -731,7 +1021,7 @@ This new API provides low-level support for performing computation and graphics 
 
 ### WebRTC and media
 
-The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API).
+The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
 
 #### Asynchronous SourceBuffer add and remove
 
@@ -896,6 +1186,48 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>image.jxl.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### OpenFont COLRv1 fonts
+
+This feature provides support for the [OpenFont COLRv1 font specification](https://docs.microsoft.com/en-us/typography/opentype/spec/).
+This enables compression-friendly color vector fonts with gradients, compositing and blending to be loaded using the CSS [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule, or the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
+See {{bug(1740530)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>gfx.font_rendering.colr_v1.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1190,7 +1522,7 @@ The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings
 
 #### Document property: autoplayPolicy
 
-The {{domxref("document")}} property {{domxref("Document.autoplayPolicy", "autoplayPolicy")}} returns a string indicating how the browser handles requests to automatically play media (either using the {{domxref("HTMLMediaElement.autoplay", "autoplay")}} property on a media element or by attempting to trigger playback from JavaScript code. The spec for this API is still being written. The value changes over time depending on what the user is doing, their preferences, and the state of the browser in general. Potential values include `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time). See {{bug(1506289)}} for more details.
+The {{domxref("document")}} property autoplayPolicy returns a string indicating how the browser handles requests to automatically play media (either using the {{domxref("HTMLMediaElement.autoplay", "autoplay")}} property on a media element or by attempting to trigger playback from JavaScript code. The spec for this API is still being written. The value changes over time depending on what the user is doing, their preferences, and the state of the browser in general. Potential values include `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time). See {{bug(1506289)}} for more details.
 
 <table>
   <thead>
@@ -1711,6 +2043,89 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
       <th>Preference name</th>
       <td colspan="2">
         <code>privacy.clearsitedata.cache.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### CSP "script-src-elem" and "script-src-attr" directives
+
+The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ({{bug(1529337)}}).
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>105</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>security.csp.script-src-attr-elem.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### CSP "style-src-elem" and "style-src-attr" directives
+
+The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`style-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem) and [`style-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-attr) specify valid sources for stylesheet `<style>` elements and `<link>` elements with `rel="stylesheet"`, and for styles applied to individual elements, respectively ({{bug(1529338)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>105</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>security.csp.style-src-attr-elem.enabled</code>
       </td>
     </tr>
   </tbody>

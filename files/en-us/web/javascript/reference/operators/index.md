@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators
 ---
+
 {{JSSidebar("Operators")}}
 
 This chapter documents all the JavaScript language operators, expressions and keywords.
@@ -226,8 +227,7 @@ An assignment operator assigns a value to its left operand based on the value of
   - : Logical OR assignment.
 - {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
   - : Logical nullish assignment.
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-  {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
   - : Destructuring assignment allows you to assign the properties of an array or object to variables using syntax that looks similar to array or object literals.
 
 ### Comma operator

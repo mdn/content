@@ -4,7 +4,6 @@ slug: Web/API/PushSubscription/endpoint
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Push
   - Push API
@@ -14,7 +13,8 @@ tags:
   - endPoint
 browser-compat: api.PushSubscription.endpoint
 ---
-{{SeeCompatTable}}{{APIRef("Push API")}}
+
+{{APIRef("Push API")}}
 
 The **`endpoint`** read-only property of the
 {{domxref("PushSubscription")}} interface returns a string containing

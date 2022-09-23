@@ -10,6 +10,7 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.encoding
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`encoding`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a string containing the name of the encoding algorithm used by the specific encoder.

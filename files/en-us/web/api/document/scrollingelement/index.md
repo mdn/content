@@ -10,6 +10,7 @@ tags:
   - scrollingElement
 browser-compat: api.Document.scrollingElement
 ---
+
 {{APIRef("DOM")}}
 
 The **`scrollingElement`** read-only property of the

@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBObjectStore.get
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`get()`** method of the {{domxref("IDBObjectStore")}}
@@ -30,7 +31,7 @@ request object.
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 

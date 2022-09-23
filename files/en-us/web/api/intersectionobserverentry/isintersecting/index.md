@@ -12,6 +12,7 @@ tags:
   - isIntersecting
 browser-compat: api.IntersectionObserverEntry.isIntersecting
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's

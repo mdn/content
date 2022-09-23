@@ -10,6 +10,7 @@ tags:
   - constants
 browser-compat: javascript.statements.const
 ---
+
 {{jsSidebar("Statements")}}
 
 Constants are block-scoped, much like variables declared using the
@@ -20,15 +21,14 @@ keyword. The value of a constant can't be changed through reassignment (i.e. by 
 
 ## Syntax
 
-```js
-const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
+```js-nolint
+const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]]
 ```
 
 - `nameN`
   - : The constant's name, which can be any legal {{Glossary("identifier")}}.
 - `valueN`
-  - : The constant's value. This can be any legal [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions),
-    including a function expression.
+  - : The constant's value. This can be any legal expression, including a function expression.
 
 The [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 syntax can also be used to declare variables.
@@ -124,7 +124,7 @@ const FOO;
 
 ### const in objects and arrays
 
-`const` also works on objects and arrays. Atempting to overwrite the object throws an error "Assignment to constant variable".
+`const` also works on objects and arrays. Attempting to overwrite the object throws an error "Assignment to constant variable".
 
 ```js example-bad
 const MY_OBJECT = { key: 'value' };

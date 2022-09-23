@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.CookieStore
 ---
+
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`CookieStore`** interface of the ['Cookie Store API'](/en-US/docs/Web/API/Cookie_Store_API) provides methods for getting and setting cookies asynchronously from either a page or a service worker.
@@ -40,20 +41,21 @@ In this example we set a cookie and write to the console feedback as to whether 
 
 ```js
 const day = 24 * 60 * 60 * 1000;
-cookieStore.set({
-  name: "cookie1",
-  value: "cookie1-value",
-  expires: Date.now() + day,
-  domain: "example.com"
-})
-.then(
-  () => {
-    console.log("It worked!");
-  },
-  (reason) => {
-    console.error("It failed: ", reason);
-  }
-);
+cookieStore
+  .set({
+    name: "cookie1",
+    value: "cookie1-value",
+    expires: Date.now() + day,
+    domain: "example.com",
+  })
+  .then(
+    () => {
+      console.log("It worked!");
+    },
+    (reason) => {
+      console.error("It failed: ", reason);
+    }
+  );
 ```
 
 ## Specifications

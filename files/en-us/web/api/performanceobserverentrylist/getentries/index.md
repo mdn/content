@@ -10,6 +10,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserverEntryList.getEntries
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`getEntries()`** method of the
@@ -25,7 +26,7 @@ interfaces.
 
 ## Syntax
 
-```js
+```js-nolint
 getEntries()
 getEntries(performanceEntryFilterOptions)
 ```
@@ -86,7 +87,7 @@ observe_all.observe({
 
 const observe_frame = new PerformanceObserver((list, obs) => {
   const perfEntries = list.getEntries();
-  
+
   // Should only have 'frame' entries
   perfEntries.forEach((entry) => print_perf_entry(entry));
 });

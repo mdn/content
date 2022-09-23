@@ -11,6 +11,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedInteger
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated integer interface

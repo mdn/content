@@ -10,6 +10,7 @@ tags:
   - contentScripts
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript
 ---
+
 {{AddonSidebar()}}
 
 A `RegisteredContentScript` is returned by a call to {{WebExtAPIRef("contentScripts.register()")}} and represents the content scripts registered in that call.

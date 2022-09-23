@@ -8,6 +8,7 @@ tags:
   - Syntax
 spec-urls: https://drafts.csswg.org/css-values/#value-defs
 ---
+
 {{CSSRef}}
 
 **CSS value definition syntax**, a formal grammar, is used for defining the set of valid values for a CSS property or function. In addition to this syntax, the set of valid values can be further restricted by semantic constraints (for example, for a number to be strictly positive).
@@ -72,7 +73,7 @@ But not:
 Placing several keywords, literals or data types, next to one another, only separated by one or several spaces, is called _juxtaposition_. All juxtaposed components are **mandatory and should appear in the exact order**.
 
 ```css
-bold <length> , thin
+bold <length>, thin
 ```
 
 This example matches the following values:
@@ -259,6 +260,34 @@ But not:
 - `bold smaller smaller smaller`, as the different occurrence of `smaller` must be separated by commas.
 - `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword.
 
+The hash mark may optionally be followed by curly braces to indicate precisely how many times the repetition occurs.
+
+```css
+bold smaller#{1,3}
+```
+
+This example matches the following values:
+
+- `bold smaller`
+- `bold smaller, smaller`
+- `bold smaller, smaller, smaller`
+
+But not:
+
+- `bold smaller, smaller, smaller, smaller`, as `smaller` must appear at most three times.
+
+```css
+bold smaller#{2}
+```
+
+This example matches the following value:
+
+- `bold smaller, smaller`
+
+But not:
+
+- `bold smaller`, as `smaller` must appear exactly two times.
+
 ### Exclamation point (`!`)
 
 The _exclamation point multiplier_ after a group indicates that the group is required, and must produce at least one value; even if the grammar of the items within the group would otherwise allow the entire contents to be omitted, at least one component value must not be omitted.
@@ -386,4 +415,20 @@ But not:
 
 ## See also
 
-- {{CSS_key_concepts}}
+- CSS key concepts:
+  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Values
+    - [Initial values](/en-US/docs/Web/CSS/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

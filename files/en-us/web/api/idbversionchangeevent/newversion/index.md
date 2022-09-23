@@ -13,6 +13,7 @@ tags:
   - newVersion
 browser-compat: api.IDBVersionChangeEvent.newVersion
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`newVersion`** read-only property of the
@@ -23,7 +24,7 @@ database.
 
 ## Value
 
-A number that is a 64-bit integer.
+A number that is a 64-bit integer or null if the database is being deleted.
 
 ## Examples
 
@@ -33,16 +34,6 @@ handlers for the success and error cases. These events are fired via the custom
 
 ```js
 const note = document.querySelector("ul");
-
-// In the following line, you should include the prefixes of
-// implementations you want to test.
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-// DON'T use "var indexedDB = …" if you're not in a function.
-// Moreover, you may need references to some window.IDB* objects:
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
-// (Mozilla has never prefixed these objects,
-//  so we don't need window.mozIDB*)
 
 // Let us open version 4 of our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -57,7 +48,7 @@ DBOpenRequest.onsuccess = (event) => {
 
   // store the result of opening the database in the db variable.
   // This is used a lot later on, for opening transactions and suchlike.
-  db = DBOpenRequest.result;
+  const db = DBOpenRequest.result;
 };
 ```
 

@@ -10,6 +10,7 @@ tags:
   - display-box
 browser-compat: css.properties.display.contents
 ---
+
 {{CSSRef}}
 
 These keywords define whether an element generates display boxes at all.
@@ -34,6 +35,10 @@ Current implementations in most browsers will remove from the [accessibility tre
 
 - [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 

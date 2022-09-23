@@ -8,10 +8,10 @@ tags:
   - Reference
   - changed
   - ExtendableCookieChangeEvent
-  - Experimental
 browser-compat: api.ExtendableCookieChangeEvent.changed
 ---
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 The **`changed`** read-only property of the {{domxref("ExtendableCookieChangeEvent")}} interface returns any cookies that have been changed by the given `ExtendableCookieChangeEvent` instance.
 

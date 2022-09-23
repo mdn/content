@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.document
 ---
+
 {{APIRef}}
 
 **`window.document`** returns a reference to the [document](/en-US/docs/Web/API/Document) contained in the window.

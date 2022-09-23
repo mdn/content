@@ -10,6 +10,7 @@ tags:
   - WritableStream
 browser-compat: api.WritableStream
 ---
+
 {{APIRef("Streams")}}
 
 The **`WritableStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a standard abstraction for writing streaming data to a destination, known as a sink.
@@ -24,7 +25,7 @@ This object comes with built-in backpressure and queuing.
 
 ## Properties
 
-- {{domxref("WritableStream.locked")}} {{readonlyinline}}
+- {{domxref("WritableStream.locked")}} {{ReadOnlyInline}}
   - : A boolean indicating whether the `WritableStream` is locked to a writer.
 
 ## Methods

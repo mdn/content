@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEConvolveMatrixElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEConvolveMatrixElement`** interface corresponds to the {{SVGElement("feConvolveMatrix")}} element.

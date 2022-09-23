@@ -2,12 +2,13 @@
 title: Firefox 42 for developers
 slug: Mozilla/Firefox/Releases/42
 tags:
-  - '42'
+  - "42"
   - Firefox
   - Mozilla
   - Release
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 42 was released on November 3, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -28,7 +29,7 @@ Highlights:
 
 - Vertical {{cssxref('writing-mode')}} is now supported with rtl scripts ({{bug(1131451)}}).
 - The values of {{cssxref("caption-side")}} are now relative to the table, and changing actual meaning according to its {{cssxref("writing-mode")}} value {{bug(1202993)}}.
-- Non-standard properties like `-moz-margin-start` are now aliases of their standard counterpart ({{cssxref('margin-inline-start')}}, …). Previously, it was the opposite. This affects the value returned by {{domxref('CSSStyleDeclaration.cssText')}} and iteration of the properties in a style rule and iteration of the properties in a style rule, that both use the canonical form ({{bug(1118103)}}).
+- Non-standard properties like `-moz-margin-start` are now aliases of their standard counterpart ({{cssxref('margin-inline-start')}}, …). Previously, it was the opposite. This affects the value returned by {{domxref('CSSStyleDeclaration.cssText')}} and iteration of the properties in a style rule, which both use the canonical form ({{bug(1118103)}}).
 - The prefixed version of CSS gradients can be turned off by setting the `layout.css.prefixes.gradients` preference to `false`.
 - Several old bugs with {{cssxref("float")}} and margin collapsing behavior have been fixed ({{bug(478834)}}, {{bug(538194)}}, and {{bug(451791)}}).
 
@@ -72,7 +73,7 @@ Our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_
 - The {{domxref('Animation/playbackRate', 'AnimationPlayer.playbackRate')}} property ({{bug(1127380)}}).
 - The {{domxref('CSSAnimation')}} and {{domxref('CSSTransition')}} interfaces ({{bug(1178186)}}).
 - The {{domxref('Animation.reverse()')}} method ({{bug(1150808)}}).
-- The {{domxref('AnimationPlaybackEvent')}} interface has been added and {{domxref("Animation/cancel_event", "cancel")}} and {{domxref("Animation/finish_event" , "finish")}} are now fired on {{domxref('Animation')}} ({{bug(1178664)}}).
+- The {{domxref('AnimationPlaybackEvent')}} interface has been added and {{domxref("Animation/cancel_event", "cancel")}} and {{domxref("Animation/finish_event", "finish")}} are now fired on {{domxref('Animation')}} ({{bug(1178664)}}).
 
 #### Web Components
 

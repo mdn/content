@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.snapshotItem
 ---
+
 {{APIRef("DOM XPath")}}
 
 The **`snapshotItem()`** method of the
@@ -21,7 +22,7 @@ current document if it is mutated.
 
 ## Syntax
 
-```js
+```js-nolint
 snapshotItem(i)
 ```
 

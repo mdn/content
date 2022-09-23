@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.update
 ---
+
 {{AddonSidebar()}}
 
 Navigate the tab to a new URL, or modify other properties of the tab.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let updating = browser.tabs.update(
   tabId,              // optional integer
   updateProperties    // object
@@ -65,7 +66,7 @@ let updating = browser.tabs.update(
     - `selected` {{deprecated_inline}} {{optional_inline}}
       - : `boolean`. Whether the tab should be selected. This property has been replaced by `active` and `highlighted`.
     - `successorTabId` {{optional_inline}}
-      - : `integer`. The id of the ID of the tab's successor.
+      - : `integer`. The id of the tab's successor.
     - `url` {{optional_inline}}
 
       - : `string`. A URL to navigate the tab to.
@@ -86,7 +87,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-Navigate the active tab in the current window to https\://developer.mozilla.org:
+Navigate the active tab in the current window to `https://developer.mozilla.org`:
 
 ```js
 function onUpdated(tab) {
@@ -101,7 +102,7 @@ let updating = browser.tabs.update({url: "https://developer.mozilla.org"});
 updating.then(onUpdated, onError);
 ```
 
-Activate the first tab in the current window, and navigate it to https\://developer.mozilla.org:
+Activate the first tab in the current window, and navigate it to `https://developer.mozilla.org`:
 
 ```js
 function onUpdated(tab) {
@@ -134,7 +135,8 @@ querying.then(updateFirstTab, onError);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -161,4 +163,4 @@ querying.then(updateFirstTab, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

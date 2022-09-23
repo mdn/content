@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media
   - Media Source Extensions
@@ -15,9 +14,11 @@ tags:
   - SourceBuffer
   - Video
   - appendBufferAsync
+  - Experimental
 browser-compat: api.SourceBuffer.appendBufferAsync
 ---
-{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`appendBufferAsync()`** method
 of the {{domxref("SourceBuffer")}} interface begins the process of asynchronously
@@ -27,7 +28,7 @@ It returns a {{jsxref("Promise")}} which is fulfilled once the buffer has been a
 
 ## Syntax
 
-```js
+```js-nolint
 appendBufferAsync(source)
 ```
 

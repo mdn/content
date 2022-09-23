@@ -12,6 +12,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest
 ---
+
 {{AddonSidebar}}
 
 Add event listeners for the various stages of making an HTTP request, which includes websocket requests on `ws://` and `wss://`. The event listener receives detailed information about the request and can modify or cancel the request.
@@ -20,9 +21,9 @@ Each event is fired at a particular stage of the request. The typical sequence o
 
 ![](webrequest-flow.png)
 
-{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can be fired at any time during the request. Also, note that sometimes the sequence of events may differ from this: for example, in Firefox, on an [HSTS](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) upgrade, the `onBeforeRedirect` event will be triggered immediately after `onBeforeRequest`.
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can fire at any time during the request. Also, note that sometimes the sequence of events may differ from this. For example, in Firefox, on an [HSTS](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) upgrade, the `onBeforeRedirect` event is triggered immediately after `onBeforeRequest`. `onErrorOccurred` is also fired if [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) blocks a request.
 
-All events—_except_ `onErrorOccurred`—can take three arguments to `addListener()`:
+All events – _except_ `onErrorOccurred` – can take three arguments to `addListener()`:
 
 - the listener itself
 - a {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} object, so you can only be notified for requests made to particular URLs or for particular types of resource
@@ -151,7 +152,8 @@ To do this, you must have the `"webRequestBlocking"` API permission as well as t
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -178,4 +180,4 @@ To do this, you must have the `"webRequestBlocking"` API permission as well as t
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

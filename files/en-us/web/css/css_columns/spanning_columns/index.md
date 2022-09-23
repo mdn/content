@@ -1,5 +1,5 @@
 ---
-title: Spanning and Balancing Columns
+title: Spanning and balancing columns
 slug: Web/CSS/CSS_Columns/Spanning_Columns
 tags:
   - CSS
@@ -7,13 +7,14 @@ tags:
   - Guide
   - Layout
 ---
+
 {{CSSRef}}
 
-In this guide we look at how to make elements span across columns inside the multicol container and how to control how the columns are filled.
+In this guide, we look at how to make elements span across columns inside the multi-column (_multicol_) container and how to control how the columns are filled.
 
 > **Note:** The spanning and balancing functionality covered in this guide is not as well supported across browsers as the functionality covered in the previous two sections in this guide.
 
-## Spanning the Columns
+## Spanning the columns
 
 To cause an item to span across columns use the property {{cssxref("column-span")}} with a value of `all`. This will cause the element to span all of the columns.
 
@@ -31,7 +32,7 @@ When a spanner is introduced, it breaks the flow of columns and columns restart 
 
 ### Limitations of column-span
 
-In the current level 1 specification there are only two allowable values for `column-span`. The value `none` is the initial value and means the item does not span, remaining within a column. The value `all` means the item spans all of the columns. You cannot cause an item to span two out of three columns for example.
+In the current level 1 specification, there are only two allowable values for `column-span`. The value `none` is the initial value and means that the item does not span and remains within a column. The value `all` means that the item spans all of the columns. This means that, for example, you cannot cause an item to span two out of three columns.
 
 ### Things to watch out for
 
@@ -41,7 +42,7 @@ If the spanning element is inside another element which has margins, padding and
 
 Additionally, if a spanning element appears later in the content it can cause unexpected or unwanted behavior when there is not enough content to create columns after the spanner. Use spanning carefully and test at various breakpoints to make sure you get the intended effect.
 
-## Column Filling and Balancing
+## Filling and balancing columns
 
 A balanced set of columns is where all columns have approximately the same amount of content. Filling and balancing comes into play when the amount of content does not match the amount of space provided, such as when a height is declared on the container.
 
@@ -59,4 +60,6 @@ The other value for `column-fill` is `auto`. In this case, rather than filling a
 
 Note that column balancing is not supported by all browsers. Check that you are getting the sort of effect that you expect in the browsers you support.
 
-In the next guide you will learn [how multicol handles overflow](/en-US/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol), both within columns and where there are more columns than will fit the container.
+## Next steps
+
+In the next guide, you will learn [how multicol handles overflow](/en-US/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol), both within columns and where there are more columns than will fit the container.

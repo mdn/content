@@ -11,9 +11,12 @@ tags:
   - MediaStream Recording API
   - Property
   - Reference
+  - Deprecated
+  - Non-standard
 browser-compat: api.MediaRecorderErrorEvent.error
 ---
-{{APIRef("MediaStream Recording")}}
+
+{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only `error` property in the
 **{{domxref("MediaRecorderErrorEvent")}}** interface is a

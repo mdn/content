@@ -13,6 +13,7 @@ tags:
   - max()
 browser-compat: api.CSSNumericValue.max
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`max()`** method of the
@@ -21,7 +22,7 @@ passed. The passed values must be of the same type.
 
 ## Syntax
 
-```js
+```js-nolint
 max(number1, /* …, */ numberN)
 ```
 

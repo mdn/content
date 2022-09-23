@@ -11,6 +11,7 @@ tags:
   - screen
 browser-compat: api.ScreenOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}
 
 The **`ScreenOrientation`** interface of the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API) provides information about the current orientation of the document.

@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "Date.prototype.toLocaleFormat is deprecated; consider using

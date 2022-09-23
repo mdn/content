@@ -14,6 +14,7 @@ tags:
   - noiseSuppression
 browser-compat: api.MediaTrackConstraints.noiseSuppression
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's **`noiseSuppression`** property is a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.noiseSuppression","noiseSuppression")}} constrainable property.
