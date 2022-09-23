@@ -95,8 +95,6 @@ Since `map` builds a new array, calling it without using the returned
 array is an anti-pattern; use {{jsxref("Array/forEach", "forEach")}} or
 {{jsxref("Statements/for...of", "for...of")}} instead.
 
-### Parameters in Detail
-
 ## Examples
 
 ### Mapping an array of numbers to an array of square roots
@@ -176,10 +174,16 @@ An easier way would be the {{jsxref("Array.from()")}} method.
 
 ### Using map() on sparse arrays
 
-A sparse array remains sparse after `map()`.
+A sparse array remains sparse after `map()`. The indices of empty slots are still empty in the returned array, and the callback function won't be called on them.
 
 ```js
-console.log([1, , 3].map((x) => x * 2)); // [2, empty, 6]
+console.log([1, , 3].map((x, index) => {
+  console.log(`Visit ${index}`);
+  return x * 2;
+}));
+// Visit 0
+// Visit 2
+// [2, empty, 6] 
 ```
 
 ### Using parseInt() with map()

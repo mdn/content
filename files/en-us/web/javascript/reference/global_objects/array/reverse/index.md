@@ -91,10 +91,11 @@ console.log(numbers[0]); // 3
 
 ### Using reverse() on sparse arrays
 
-Sparse arrays remain sparse after calling `reverse()`.
+Sparse arrays remain sparse after calling `reverse()`. Empty slots are copied over to their respective new indices as empty slots.
 
 ```js
 console.log([1, , 3].reverse()); // [3, empty, 1]
+console.log([1, , 3, 4].reverse()); // [4, 3, empty, 1]
 ```
 
 ## Specifications

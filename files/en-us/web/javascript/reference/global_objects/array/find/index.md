@@ -155,6 +155,13 @@ const array = [0, 1, , , , 5, 6];
 array.find((value, index) => {
   console.log("Visited index ", index, " with value ", value);
 });
+// Visited index 0 with value 0
+// Visited index 1 with value 1
+// Visited index 2 with value undefined
+// Visited index 3 with value undefined
+// Visited index 4 with value undefined
+// Visited index 5 with value 5
+// Visited index 6 with value 6
 
 // Shows all indexes, including deleted
 array.find((value, index) => {
@@ -166,14 +173,6 @@ array.find((value, index) => {
   // Element 5 is still visited even though deleted
   console.log("Visited index ", index, " with value ", value);
 });
-// expected output:
-// Visited index 0 with value 0
-// Visited index 1 with value 1
-// Visited index 2 with value undefined
-// Visited index 3 with value undefined
-// Visited index 4 with value undefined
-// Visited index 5 with value 5
-// Visited index 6 with value 6
 // Deleting array[5] with value 5
 // Visited index 0 with value 0
 // Visited index 1 with value 1

@@ -164,7 +164,7 @@ console.log({ numCallbackRuns });
 // { numCallbackRuns: 3 }
 ```
 
-As you can seem the missing value between 3 and 7 didn't invoke callback function.
+The callback function is not invoked for the missing value at index 2.
 
 ### Converting a for loop to forEach
 

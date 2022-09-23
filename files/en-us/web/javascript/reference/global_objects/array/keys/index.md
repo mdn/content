@@ -36,7 +36,9 @@ The `keys()` method does not special case [sparse arrays](/en-US/docs/Web/JavaSc
 
 ## Examples
 
-### Key iterator doesn't ignore holes
+### Using keys() on sparse arrays
+
+Unlike {{jsxref("Object.keys()")}}, which only includes keys that actually exist in the array, the `keys()` iterator doesn't ignore holes representing missing properties.
 
 ```js
 const arr = ['a', , 'c'];
