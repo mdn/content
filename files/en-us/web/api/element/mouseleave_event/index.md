@@ -92,13 +92,13 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
   - : Alias for {{domxref("MouseEvent.clientY")}}.
 
-### Behavior of `mouseleave` events:
+### Behavior of `mouseleave` events
 
 ![](mouseleave.png)
 
 One `mouseleave` event is sent to each element of the hierarchy when leaving them. Here four events are sent to the four elements of the hierarchy when the pointer moves from the text to an area outside of the most outer div represented here.
 
-### Behavior of `mouseout` events:
+### Behavior of `mouseout` events
 
 ![](mouseout.png)
 
