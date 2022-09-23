@@ -175,7 +175,7 @@ const result2 = inventory.group(myCallback);
 
 ### Using group() on sparse arrays
 
-`group()` does not special case empty slots.
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `group()` method iterates empty slots as if they have the value `undefined`.
 
 ```js
 console.log([1, , 3].group((x) => x)); // { 1: [1], undefined: [undefined], 3: [3] }

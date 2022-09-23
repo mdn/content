@@ -60,7 +60,7 @@ Values of zero are all considered to be equal, regardless of sign. (That is, `-0
 
 > **Note:** Technically speaking, `includes()` uses the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm to determine whether the given element is found.
 
-The `includes()` method does not special case [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). Empty slots are visited as if they have value `undefined`.
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `includes()` method iterates empty slots as if they have the value `undefined`.
 
 ## Examples
 

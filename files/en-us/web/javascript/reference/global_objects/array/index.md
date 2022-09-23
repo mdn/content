@@ -650,7 +650,7 @@ This is explained further on the {{jsxref("Array/length")}} page.
 
 Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave inconsistently between array methods. Generally, the older methods will skip empty slots, while newer ones treat them as `undefined`.
 
-Among methods that iterate through multiple elements, the following special case empty slots (i.e. they do an [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check before accessing the index):
+Among methods that iterate through multiple elements, the following do an [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) check before accessing the index and do not conflate empty slots with `undefined`:
 
 - {{jsxref("Array/concat", "concat()")}}
 - {{jsxref("Array/copyWithin", "copyWithin()")}}

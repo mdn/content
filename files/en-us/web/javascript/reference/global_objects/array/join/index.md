@@ -46,7 +46,7 @@ The string conversions of all array elements are joined into one string. If an e
 
 The `join` method is accessed internally by [`Array.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) with no arguments. Overriding `join` of an array instance will override its `toString` behavior as well.
 
-The `join()` method does not special case [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). Empty slots are visited as if they have value `undefined`.
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `join()` method iterates empty slots as if they have the value `undefined`.
 
 ## Examples
 

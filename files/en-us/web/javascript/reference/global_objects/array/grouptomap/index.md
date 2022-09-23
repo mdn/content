@@ -162,7 +162,7 @@ console.log(result.get(restock2));
 
 ### Using groupToMap() on sparse arrays
 
-`groupToMap()` does not special case empty slots.
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `groupToMap()` method iterates empty slots as if they have the value `undefined`.
 
 ```js
 console.log([1, , 3].groupToMap((x) => x));

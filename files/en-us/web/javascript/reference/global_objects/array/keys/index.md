@@ -32,7 +32,7 @@ A new {{jsxref("Array")}} iterator object.
 
 ## Description
 
-The `keys()` method does not special case [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). Empty slots are visited as if they have value `undefined`.
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `keys()` method iterates empty slots as if they have the value `undefined`.
 
 ## Examples
 
