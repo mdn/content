@@ -43,8 +43,8 @@ contain-intrinsic-size: unset;
 ### Values
 
 Either one or two of the following values may be specified for an element.
-If two values are specified the first value applies to the width, and the second to the height.
-If a single value is specified it applies to both width and height.
+If two values are specified, the first value applies to the width, and the second to the height.
+If a single value is specified, it applies to both width and height.
 
 - `none`
   - : The element has no intrinsic size in the given dimension(s).
