@@ -25,9 +25,7 @@ No notable changes.
 
 ### JavaScript
 
-- Range restrictions are relaxed on `formatRange` and `selectRange` functions for [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), [`Intl.NumberFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat), and [`Intl.PluralRules`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules).
-  For example, `formatRange(x, y)` can be called where and `x` > `y` such as `formatRange(-500, -1000)`.
-  The intention of this change is to relax ordering rules so that negative ranges (e.g., "losses ranging from -$500 to -$1000") can be formatted correctly ({{bug(1780545)}}).
+- Range restrictions have been relaxed on `formatRange` and `selectRange` functions for [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), [`Intl.NumberFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat), and [`Intl.PluralRules`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules) objects. This change now allows negative ranges ({{bug(1780545)}}).
 
 ### APIs
 
