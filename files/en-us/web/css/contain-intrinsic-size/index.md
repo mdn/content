@@ -61,7 +61,7 @@ The `contain-intrinsic-size` allows authors to specify an appropriate value to b
 
 Determining the correct size to specify for an element can be difficult, and odd layout effects may result if an incorrect value is used.
 The `auto <length>` value can help.
-If the element is ever rendered with all its child elements (if the element is ever outside of size containment) then setting `auto` saves the size and can use it instead of the `<length>`.
+If the element is ever rendered with all its child elements (if the element is ever outside of size containment), then setting `auto` saves the size, which can be used instead of the `<length>`.
 In particular this is recommended with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) as elements are only in size containment when offscreen, and will hence may have a remembered value.
 
 ## Formal definition
