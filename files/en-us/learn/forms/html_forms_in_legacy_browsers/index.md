@@ -170,10 +170,10 @@ Modernizr.load({
   test: Modernizr.formvalidation,
 
   // If the browser does not support it, the following polyfill is loaded
-  nope: form - validation - API - polyfill.js,
+  nope: "form-validation-API-polyfill.js",
 
   // In any case, your core App file that depends on that API is loaded
-  both: app.js,
+  both: "app.js",
 
   // Once both files are loaded, this function is called in order to initialize the App.
   complete() {
