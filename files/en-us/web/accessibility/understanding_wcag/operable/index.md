@@ -476,7 +476,7 @@ The conformance criteria under this guideline relate to ways in which users can 
 
 > **Note:** Also see the WCAG description for [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.](https://www.w3.org/TR/WCAG21/#navigable)
 
-## Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard.
+## Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard
 
 The conformance criteria under this guideline ensures that users are able to interact with digital technology using different input methods beyond a keyboard or mouse (including touchscreen, voice, device motion, or alternative input devices).
 

@@ -24,7 +24,7 @@ XML - declaration is not a tag. It is used for the transmission of the meta-data
 <?xml version="1.0" encoding="UTF-8"?>
 ```
 
-#### Attributes:
+#### Attributes
 
 - version:
   - : Used version XML in this document.
