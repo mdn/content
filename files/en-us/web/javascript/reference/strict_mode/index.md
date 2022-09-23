@@ -74,15 +74,15 @@ export default myStrictFunction;
 All parts of ECMAScript [classes](/en-US/docs/Web/JavaScript/Reference/Classes) are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) — and so also including all parts of class bodies.
 
 ```js
-class C {
+class C1 {
   // All code here is evaluated in strict mode
   test() {
     delete Object.prototype;
   }
 }
-new C().test(); // TypeError, because test() is in strict mode
+new C1().test(); // TypeError, because test() is in strict mode
 
-const C = class {
+const C2 = class {
   // All code here is evaluated in strict mode
 };
 
