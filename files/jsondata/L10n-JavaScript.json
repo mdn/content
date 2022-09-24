@@ -2,6 +2,7 @@
   "stdlib": {
     "en-US": "Standard built-in objects",
     "fr": "Objets standards",
+    "ja": "標準組み込みオブジェクト",
     "ru": "Стандартные встроенные объекты",
     "zh-CN": "JavaScript 标准库"
   }
