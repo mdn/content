@@ -221,9 +221,9 @@ We probably don't need to teach you how to do basic math, but we would like to t
 
 3. Last for this section, try entering some more complex expressions, such as:
 
-   ```js-nolint
+   ```js
    5 + 10 * 3;
-   num2 % 9 * num1;
+   (num2 % 9) * num1;
    num2 + num1 / 8 + 2;
    ```
 
