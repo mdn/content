@@ -203,8 +203,8 @@ customElements.define('popup-info', PopUpInfo);
 <popup-info
   img="img/alt.png"
   data-text="Your card validation code (CVC) is an extra
-                                    security feature — it is the last 3 or 4
-                                    numbers on the back of your card."></popup-info>
+             security feature — it is the last 3 or 4
+             numbers on the back of your card."></popup-info>
 ```
 
 ### Internal versus external styles
