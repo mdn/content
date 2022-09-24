@@ -74,7 +74,7 @@ This script gets a reference to the `<canvas>` element, then calls the [`getCont
 
 Next, we set constants called `width` and `height`, and the width and height of the canvas element (represented by the `canvas.width` and `canvas.height` properties) to equal the width and height of the browser viewport (the area which the webpage appears on — this can be gotten from the {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}} properties).
 
-Note that we are making multiple assignments together, to get the variables all set quicker — this is perfectly OK.
+Note that we are chaining multiple assignments together, to get the variables all set quicker — this is perfectly OK.
 
 Then we have two helper functions:
 
