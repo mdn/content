@@ -98,7 +98,7 @@ This allows you to construct a data hierarchy, like so:
 }
 ```
 
-If we loaded this string into a JavaScript program, and parsed it into a variable called `superHeroes`. For example, we could then access the data inside it using the same dot/bracket notation we looked at in the [JavaScript object basics](/en-US/docs/Learn/JavaScript/Objects/Basics) article.
+If we loaded this string into a JavaScript program, and parsed it into a variable called `superHeroes` for example. We could then access the data inside it using the same dot/bracket notation we looked at in the [JavaScript object basics](/en-US/docs/Learn/JavaScript/Objects/Basics) article.
 For example:
 
 ```js
