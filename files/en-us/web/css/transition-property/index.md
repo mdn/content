@@ -71,7 +71,7 @@ This example performs a four-second font size transition when the user hovers ov
 #### HTML
 
 ```html
-<a class="target">Hover over me</a>
+<a class="target">Hover over here</a>
 ```
 
 #### CSS
