@@ -64,7 +64,7 @@ If you need to set different `Content-type` for formData, you can use `Blob` lik
 
 ```js
 const blob = new Blob(["true"], {
-  type: 'application/json'
+  type: "application/json",
 });
 formData.append("isDisabled", blob);
 ```
