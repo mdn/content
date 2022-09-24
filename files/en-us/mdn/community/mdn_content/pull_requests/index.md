@@ -43,7 +43,7 @@ These guidelines apply to anyone opening a PR to make a change on MDN Web Docs.
 
 ### Guidelines for after submitting a pull request
 
-We have general guidelines for what to do and expect after a PR has been opened. Please [refer to these guidelines](/en-US/docs/MDN/Community/Pull_requests/pull-requests).
+We have general guidelines for what to do and expect after a PR has been opened. Please [refer to these guidelines](/en-US/docs/MDN/Community/Pull_requests).
 
 ### Guidelines for pull request review assignments
 
