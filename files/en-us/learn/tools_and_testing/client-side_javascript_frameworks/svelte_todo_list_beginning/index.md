@@ -372,7 +372,9 @@ plugins: [
     // warnings with a particular code
     onwarn: (warning, handler) => {
       // e.g. I don't care about screen readers -> please DON'T DO THIS!!!
-      if (warning.code === "a11y-missing-attribute") return;
+      if (warning.code === "a11y-missing-attribute") {
+        return;
+      }
 
       // let Rollup handle all other warnings normally
       handler(warning);
