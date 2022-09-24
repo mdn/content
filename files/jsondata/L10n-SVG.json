@@ -256,13 +256,14 @@
     "ru": "Структурные элементы"
   },
   "textContentChildElements": {
-    "en-US": "Text content child elements"
+    "en-US": "Text content child elements",
+    "ja": "テキストコンテンツの子要素"
   },
   "textContentElements": {
     "en-US": "Text content elements",
     "fr": "Éléments avec du contenu texte",
     "es": "Elementos de contenido de texto",
-    "ja": "テキストコンテンツの子要素",
+    "ja": "テキストコンテンツの要素",
     "pt-BR": "Elementos de conteúdo textual",
     "zh-CN": "文字内容子元素",
     "ru": "Текстосодержащие элементы"
