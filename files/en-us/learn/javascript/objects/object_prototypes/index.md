@@ -67,7 +67,7 @@ isPrototypeOf
 propertyIsEnumerable
 toLocaleString
 toString
-toValueOf
+valueOf
 ```
 
 Try accessing one of them:
