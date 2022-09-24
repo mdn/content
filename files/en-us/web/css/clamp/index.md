@@ -24,7 +24,7 @@ Note that using `clamp()` for font sizes, as in these examples, allows you to se
 
 ## Syntax
 
-```
+```css
 /* Static values */
 width: clamp(200px, 300px, 400px);
 width: clamp(20rem, 50rem, 70rem);
