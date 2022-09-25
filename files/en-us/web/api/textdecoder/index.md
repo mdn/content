@@ -68,8 +68,8 @@ console.log(utf8decoder.decode(i32arr));
 In this example, we decode the Russian text "Привет, мир!", which means "Hello, world." In our {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} constructor, we specify the Windows-1251 character encoding, which is appropriate for Cyrillic script.
 
 ```js
-let win1251decoder = new TextDecoder("windows-1251");
-let bytes = new Uint8Array([
+const win1251decoder = new TextDecoder("windows-1251");
+const bytes = new Uint8Array([
   207, 240, 232, 226, 229, 242, 44, 32, 236, 232, 240, 33,
 ]);
 console.log(win1251decoder.decode(bytes)); // Привет, мир!

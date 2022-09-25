@@ -123,7 +123,7 @@ const string = sourcePara.textContent;
 const textEncoder = new TextEncoder();
 const utf8 = new Uint8Array(string.length);
 
-let encodedResults = textEncoder.encodeInto(string, utf8);
+const encodedResults = textEncoder.encodeInto(string, utf8);
 resultPara.textContent +=
   `Bytes read: ${encodedResults.read}` +
   ` | Bytes written: ${encodedResults.written}` +
