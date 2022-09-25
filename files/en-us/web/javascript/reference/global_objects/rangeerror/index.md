@@ -8,6 +8,7 @@ tags:
   - RangeError
 browser-compat: javascript.builtins.RangeError
 ---
+
 {{JSRef}}
 
 The **`RangeError`** object indicates an error when a value is not in the set or range of allowed values.
@@ -22,7 +23,7 @@ This can be encountered when:
 - when attempting to create an array of an illegal length with the {{jsxref("Array")}} constructor, or
 - when passing bad values to the numeric methods {{jsxref("Number.prototype.toExponential()")}}, {{jsxref("Number.prototype.toFixed()")}} or {{jsxref("Number.prototype.toPrecision()")}}.
 
-`RangeError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+`RangeError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ## Constructor
 
@@ -96,7 +97,7 @@ try {
 
 - {{jsxref("Error")}}
 - {{jsxref("Array")}}
-- {{jsxref("Number.toExponential()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("String.prototype.normalize()")}}

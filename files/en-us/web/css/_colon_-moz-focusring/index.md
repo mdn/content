@@ -10,6 +10,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-focusring
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 The **`:-moz-focusring`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that is similar to the {{cssxref(":focus")}} pseudo-class, but it only matches an element if it's currently focused _and_ a focus ring or other indicator should be drawn around it.

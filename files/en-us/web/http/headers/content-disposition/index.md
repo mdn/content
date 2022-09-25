@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: http.headers.Content-Disposition
 ---
+
 {{HTTPSidebar}}
 
 In a regular HTTP response, the **`Content-Disposition`** response header is a header indicating if the content is expected to be displayed _inline_ in the browser, that is, as a Web page or as part of a Web page, or as an _attachment_, that is downloaded and saved locally.

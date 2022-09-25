@@ -11,13 +11,14 @@ tags:
   - Reference
 browser-compat: api.OffscreenCanvas.getContext
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The **`OffscreenCanvas.getContext()`** method returns a drawing context for an offscreen canvas, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context identifier is not supported.
 
 ## Syntax
 
-```js
+```js-nolint
 getContext(contextType, contextAttributes)
 ```
 
@@ -47,9 +48,7 @@ getContext(contextType, contextAttributes)
   - : You can use several context attributes when creating your rendering context, for example:
 
     ```js
-    offscreen.getContext("webgl",
-                     { antialias: false,
-                       depth: false });
+    offscreen.getContext("webgl", { antialias: false, depth: false });
     ```
 
     2d context attributes:
@@ -113,4 +112,4 @@ gl.canvas; // OffscreenCanvas
 
 - The interface defining this method: {{domxref("OffscreenCanvas")}}
 - {{domxref("HTMLCanvasElement.getContext()")}}
-- Available rendering contexts: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}}, and {{domxref("ImageBitmapRenderingContext")}}
+- Available rendering contexts: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}}, {{domxref("ImageBitmapRenderingContext")}}, and {{domxref("OffscreenCanvasRenderingContext2D")}}

@@ -6,6 +6,7 @@ tags:
   - Firefox 41
   - Releases
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -40,7 +41,7 @@ Highlights:
   - Direction-independent equivalents of {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} and {{cssxref("border-left")}} and their longhands for width, style and color: {{cssxref("border-block-start")}}, {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}}, {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} and {{cssxref("border-inline-end-color")}}.
   - Direction-independent equivalents of {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} and {{cssxref("left")}}: `offset-block-start`, `offset-block-end`, `offset-inline-start` and `offset-inline-end`.
 
-- Support the {{cssxref("transform-origin")}} property in SVG and implement the {{cssxref("transform-box")}} property  ({{bug(923193)}}).
+- Support the {{cssxref("transform-origin")}} property in SVG and implement the {{cssxref("transform-box")}} property ({{bug(923193)}}).
 
 ### HTML
 
@@ -123,7 +124,7 @@ Highlights:
 
 #### New default and fallback font handling
 
-Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces, an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g. `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`.  All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see {{bug(947654)}} and {{bug(1160456)}}.
+Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces, an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g. `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`. All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see {{bug(947654)}} and {{bug(1160456)}}.
 
 ### SVG
 

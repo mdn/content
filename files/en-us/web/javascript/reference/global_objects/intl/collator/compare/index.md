@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Collator.compare
 ---
+
 {{JSRef}}
 
 The **`Intl.Collator.prototype.compare()`** method compares two
@@ -23,7 +24,7 @@ strings according to the sort order of this {{jsxref("Intl.Collator")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 compare(string1, string2)
 ```
 

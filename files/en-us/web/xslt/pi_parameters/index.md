@@ -4,6 +4,7 @@ slug: Web/XSLT/PI_Parameters
 tags:
   - XSLT
 ---
+
 ### Overview
 
 XSLT supports the concept of passing parameters to a stylesheet when executing it. This has been possible for a while when using the [XSLTProcessor](/en-US/XSLTProcessor) in JavaScript. However when using an `<?xml-stylesheet?>` processing instruction (PI) there used to be no way to provide parameters.

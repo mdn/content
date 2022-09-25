@@ -13,6 +13,7 @@ tags:
   - removeFile
 browser-compat: webextensions.api.downloads.removeFile
 ---
+
 {{AddonSidebar()}}
 
 The **`removeFile()`** function of the {{WebExtAPIRef("downloads")}} API removes a downloaded file from disk.
@@ -27,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.downloads.removeFile(
   downloadId      // integer
 )

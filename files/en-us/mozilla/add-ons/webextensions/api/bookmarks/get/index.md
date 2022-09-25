@@ -13,6 +13,7 @@ tags:
   - get
 browser-compat: webextensions.api.bookmarks.get
 ---
+
 {{AddonSidebar()}}
 
 Given the ID of a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} or an array of such IDs, the **`bookmarks.get()`** method retrieves the matching nodes.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getBookmarks = browser.bookmarks.get(
   idOrIdList                // string or string array
 )

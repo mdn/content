@@ -12,6 +12,7 @@ tags:
   - origin
 browser-compat: api.MessageEvent.origin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`origin`** read-only property of the

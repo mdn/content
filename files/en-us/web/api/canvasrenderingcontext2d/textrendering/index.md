@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.CanvasRenderingContext2D.textRendering
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.textRendering`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) provides information to the rendering engine about what to optimize for when rendering text.
@@ -19,7 +20,7 @@ The values correspond to the SVG [`text-rendering`](/en-US/docs/Web/SVG/Attribut
 
 ## Value
 
-A  text-rendering hint to the browser engine.
+A text-rendering hint to the browser engine.
 This one of:
 
 - `auto`
@@ -43,13 +44,13 @@ The property can be used to get or set the value.
 In this example we display the text "Hello World" using each of the supported values of the `textRendering` property.
 The value is also displayed for each case by reading the property.
 
-#### HTML
+### HTML
 
 ```html
 <canvas id="canvas" width="700" height="220"></canvas>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 const canvas = document.getElementById('canvas');
@@ -72,7 +73,7 @@ ctx.textRendering = 'geometricPrecision';
 ctx.fillText(`Hello world (${ctx.textRendering})`, 5, 110);
 ```
 
-#### Result
+### Result
 
 {{ EmbedLiveSample('Examples', 700, 230) }}
 

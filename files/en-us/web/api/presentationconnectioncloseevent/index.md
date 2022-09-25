@@ -12,6 +12,7 @@ tags:
   - events
 browser-compat: api.PresentationConnectionCloseEvent
 ---
+
 {{SeeCompatTable}}{{securecontext_header}}{{APIRef("Presentation API")}}
 
 The **`PresentationConnectionCloseEvent`** interface of the [Presentation API](/en-US/docs/Web/API/Presentation_API) is fired on a {{domxref("PresentationConnection")}} when it is closed.

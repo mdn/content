@@ -14,8 +14,8 @@ The **`remove()`** method of the {{domxref("CharacterData")}} removes the text c
 
 ## Syntax
 
-```js
-remove();
+```js-nolint
+remove()
 ```
 
 ### Parameters

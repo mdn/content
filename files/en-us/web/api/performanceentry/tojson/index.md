@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry.toJSON
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`toJSON()`** method is a _serializer_; it returns
@@ -18,7 +19,7 @@ a JSON representation of the {{domxref("PerformanceEntry","performance entry")}}
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 
@@ -35,7 +36,7 @@ A JSON object that is the serialization of the {{domxref("PerformanceEntry")}} o
 The following example shows the use of the `toJSON()` method.
 
 ```js
-function run_PerformanceEntry() {
+function runPerformanceEntry() {
   console.log("PerformanceEntry support…");
 
   if (performance.mark === undefined) {
@@ -45,39 +46,32 @@ function run_PerformanceEntry() {
 
   // Create some performance entries via the mark() method
   performance.mark("Begin");
-  do_work(50000);
+  doWork(50000);
   performance.mark("End");
 
   // Use getEntries() to iterate through the each entry
-  const p = performance.getEntries();
-  for (let i=0; i < p.length; i++) {
-    log(`Entry[${i}]`);
-    check_PerformanceEntry(p[i]);
-  }
+  performance.getEntries()
+    .forEach((entry, i) => {
+      console.log(`Entry[${i}]`);
+      checkPerformanceEntry(entry);
+    });
 }
-function check_PerformanceEntry(obj) {
+
+function checkPerformanceEntry(obj) {
   const properties = ["name", "entryType", "startTime", "duration"];
   const methods = ["toJSON"];
 
-  for (let i=0; i < properties.length; i++) {
-    // check each property
-    const supported = properties[i] in obj;
-    if (supported) {
-      console.log(`…${properties[i]} = ${obj[properties[i]]}`);
-    } else {
-      console.log(`…${properties[i]} = Not supported`);
-    }
-  }
-  for (let i=0; i < methods.length; i++) {
-    // check each method
-    const supported = typeof obj[methods[i]] === "function";
-    if (supported) {
-      const js = obj[methods[i]]();
-      console.log(`…${methods[i]}() = ${JSON.stringify(js)}`);
-    } else {
-      console.log(`…${methods[i]} = Not supported`);
-    }
-  }
+  // Check each property
+  properties.forEach((property) => {
+    const supported = property in obj;
+    console.log(`…${property} = ${supported ? obj[property] : "Not supported"}`);
+  });
+
+  // Check each method
+  methods.forEach((method) => {
+    const supported = typeof obj[method] === "function";
+    console.log(`…${method} = ${supported ? JSON.stringify(obj[method]()) : "Not supported"}`);
+  });
 }
 ```
 

@@ -21,6 +21,7 @@ tags:
   - track
 browser-compat: api.MediaStreamAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`MediaStreamAudioSourceNode`** interface is a type of {{domxref("AudioNode")}} which operates as an audio source whose media is received from a {{domxref("MediaStream")}} obtained using the WebRTC or Media Capture and Streams APIs.

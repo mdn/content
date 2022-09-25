@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.XRLightProbe
 ---
+
 {{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRLightProbe`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) contains lighting information at a given point in the user's environment. You can get an `XRLighting` object using the {{domxref("XRSession.requestLightProbe()")}} method.

@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.CanvasRenderingContext2D.fontVariantCaps
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.fontVariantCaps`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) specifies an alternative capitalization of the rendered text.
@@ -49,13 +50,13 @@ Note that there are accessibility concerns with some of these, which are outline
 In this example we display the text "Hello World" using each of the supported values of the `fontVariantCaps` property.
 The value is also displayed for each case by reading the property.
 
-#### HTML
+### HTML
 
 ```html
 <canvas id="canvas" width="700" height="220"></canvas>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 const canvas = document.getElementById('canvas');
@@ -90,7 +91,7 @@ ctx.fontVariantCaps = 'titling-caps';
 ctx.fillText(`Hello world (${ctx.fontVariantCaps})`, 5, 200);
 ```
 
-#### Result
+### Result
 
 {{ EmbedLiveSample('Examples', 700, 230) }}
 

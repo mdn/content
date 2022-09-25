@@ -51,7 +51,7 @@ Here's how the scene looks initially in the editor. Even though it's a blank new
 
 ![PlayCanvas Editor - Scene](playcanvas-editor-scene.png)
 
-Now onto the creative part. To add an entity to the scene you have to click on the big plus button located in the top left area of the editor, next to the Hierarchy text. When hovering over that button with your mouse the label will say 'Add Entity' — that's exactly what we want to do. An Entity is any object used in the scene — it cna be an object like a box, cylinder or cone, but it can also be a camera, light or sound source. After clicking the button you'll see a dropdown list containing a lot of various entities to choose from. Go ahead and click _Box_ — it will be added to the scene.
+Now onto the creative part. To add an entity to the scene you have to click on the big plus button located in the top left area of the editor, next to the Hierarchy text. When hovering over that button with your mouse the label will say 'Add Entity' — that's exactly what we want to do. An Entity is any object used in the scene — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source. After clicking the button you'll see a dropdown list containing a lot of various entities to choose from. Go ahead and click _Box_ — it will be added to the scene.
 
 ![PlayCanvas Editor - New box](playcanvas-editor-newbox.png)
 

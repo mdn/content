@@ -11,6 +11,7 @@ tags:
   - web messaging
 browser-compat: api.MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`MessageChannel`** interface of the [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) allows us to create a new message channel and send data through it via its two {{domxref("MessagePort")}} properties.

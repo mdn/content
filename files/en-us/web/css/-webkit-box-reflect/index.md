@@ -1,8 +1,8 @@
 ---
-title: '-webkit-box-reflect'
+title: "-webkit-box-reflect"
 slug: Web/CSS/-webkit-box-reflect
 tags:
-  - '-webkit-box-reflect'
+  - "-webkit-box-reflect"
   - CSS
   - CSS Property
   - CSS:WebKit Extensions
@@ -11,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-box-reflect
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you reflect the content of an element in one specific direction.

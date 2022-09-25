@@ -6,8 +6,9 @@ tags:
   - HTTP
   - Overview
   - WebMechanics
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** is a {{Glossary("protocol")}} for fetching resources such as HTML documents.

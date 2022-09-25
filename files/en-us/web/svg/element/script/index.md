@@ -29,9 +29,9 @@ The SVG `script` element allows to add scripts to an SVG document.
     }
 
     document.querySelector('circle').addEventListener('click', (e) => {
-      e.target.style.fill = getColor()
-    })
-  })
+      e.target.style.fill = getColor() 
+    }); 
+  });
   // ]]>
   </script>
 

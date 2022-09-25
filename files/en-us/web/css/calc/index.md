@@ -13,6 +13,7 @@ tags:
   - calc
 browser-compat: css.types.calc
 ---
+
 {{CSSRef}}
 
 The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) lets you perform calculations when specifying CSS property values. It can be used anywhere a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, or {{cssxref("&lt;integer&gt;")}} is allowed.
@@ -133,8 +134,8 @@ Here, the form itself is established to use 1/6 of the available window width. T
 ```html
 <form>
   <div id="formbox">
-  <label for="misc">Type something:</label>
-  <input type="text" id="misc" name="misc">
+    <label for="misc">Type something:</label>
+    <input type="text" id="misc" name="misc" />
   </div>
 </form>
 ```

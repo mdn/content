@@ -13,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLTableElement.summary
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The **`HTMLTableElement.summary`** property represents the

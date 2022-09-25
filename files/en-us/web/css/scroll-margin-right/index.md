@@ -11,6 +11,7 @@ tags:
   - scroll-margin-right
 browser-compat: css.properties.scroll-margin-right
 ---
+
 {{CSSRef}}
 
 The `scroll-margin-right` property defines the right margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.

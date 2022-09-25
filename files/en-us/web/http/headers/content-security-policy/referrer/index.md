@@ -13,6 +13,7 @@ tags:
   - Non-standard
 browser-compat: http.headers.Content-Security-Policy.referrer
 ---
+
 {{HTTPSidebar}} {{deprecated_header}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)

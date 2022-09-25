@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.getCurrent
 ---
+
 {{AddonSidebar()}}
 
 Get a {{WebExtAPIRef("tabs.Tab")}} containing information about the tab that this script is running in.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a {{jsxref("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 const gettingCurrent = browser.tabs.getCurrent()
 ```
 

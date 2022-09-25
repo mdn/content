@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.create
 ---
+
 {{AddonSidebar()}}
 
 Creates a new tab.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let creating = browser.tabs.create(
   createProperties   // object
 )

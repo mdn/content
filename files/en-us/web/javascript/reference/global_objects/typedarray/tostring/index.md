@@ -9,6 +9,7 @@ tags:
   - TypedArray
 browser-compat: javascript.builtins.TypedArray.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -20,7 +21,7 @@ specified array and its elements. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

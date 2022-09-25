@@ -16,6 +16,7 @@ tags:
   - send
 browser-compat: api.RTCDataChannel.send
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`send()`** method of the
@@ -30,12 +31,11 @@ the connection is closing or closed.
 > send. Specifications exist to define how to automatically fragment large messages, but
 > not all browsers implement them, and those that do have various additional
 > restrictions. This will get less complicated over time, but for now, if you have
-> questions, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels",
-    "Understanding message size limits")}}.
+> questions, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 send(data)
 ```
 

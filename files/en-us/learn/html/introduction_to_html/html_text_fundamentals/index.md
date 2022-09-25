@@ -13,6 +13,7 @@ tags:
   - paragraphs
   - semantics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 One of HTML's main jobs is to give text structure so that a browser can display an HTML document the way its developer intends. This article explains the way {{glossary("HTML")}} can be used to structure a page of text by adding headings and paragraphs, emphasizing words, creating lists, and more.
@@ -71,7 +72,9 @@ For example, in this story, the `<h1>` element represents the title of the story
 
 <h2>Chapter 1: The dark night</h2>
 
-<p>It was a dark night. Somewhere, an owl hooted. The rain lashed down on the…</p>
+<p>
+  It was a dark night. Somewhere, an owl hooted. The rain lashed down on the…
+</p>
 
 <h2>Chapter 2: The eternal silence</h2>
 
@@ -79,7 +82,10 @@ For example, in this story, the `<h1>` element represents the title of the story
 
 <h3>The specter speaks</h3>
 
-<p>Several more hours had passed, when all of a sudden the specter sat bolt upright and exclaimed, "Please have mercy on my soul!"</p>
+<p>
+  Several more hours had passed, when all of a sudden the specter sat bolt
+  upright and exclaimed, "Please have mercy on my soul!"
+</p>
 ```
 
 It's really up to you what the elements involved represent, as long as the hierarchy makes sense. You just need to bear in mind a few best practices as you create such structures:
@@ -114,19 +120,22 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">My short story I am a statistician and my name is Trish.
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+My short story I am a statistician and my name is Trish.
 
-My legs are made of cardboard and I am married to a fish.</textarea>
+My legs are made of cardboard and I am married to a fish.
+</textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -303,20 +312,23 @@ Try editing the live sample below to create your very own HTML unordered list.
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">milk
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+milk
 eggs
 bread
-hummus</textarea>
+hummus
+</textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -454,21 +466,24 @@ Try editing the live sample below to create your very own HTML ordered list.
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">Drive to the end of the road
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
 Turn left at the third roundabout
-The school is on your right, 300 meters up the road</textarea>
+The school is on your right, 300 meters up the road
+</textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -582,13 +597,15 @@ So at this point in the article, you have all the information you need to mark u
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">Quick hummus recipe
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+Quick hummus recipe
 
   This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.
 
@@ -622,8 +639,8 @@ So at this point in the article, you have all the information you need to mark u
   Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -754,9 +771,12 @@ Since the last two bullets are very closely related to the one before them (they
   <li>Remove the skin from the garlic, and chop coarsely.</li>
   <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
   <li>Add all the ingredients into a food processor.</li>
-  <li>Process all the ingredients into a paste.
+  <li>
+    Process all the ingredients into a paste.
     <ul>
-      <li>If you want a coarse "chunky" hummus, process it for a short time.</li>
+      <li>
+        If you want a coarse "chunky" hummus, process it for a short time.
+      </li>
       <li>If you want a smooth hummus, process it for a longer time.</li>
     </ul>
   </li>
@@ -815,13 +835,15 @@ In this active learning section, we've provided an editable example. Inside it, 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%"><h1>Important notice</h1>
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+<h1>Important notice</h1>
 <p>On Sunday January 9th 2010, a gang of goths were
   spotted stealing several garden gnomes from a
   shopping center in downtown Milwaukee. They were
@@ -831,8 +853,8 @@ In this active learning section, we've provided an editable example. Inside it, 
     contact the police now.</p></textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -957,8 +979,8 @@ Always keep an accessibility mindset. The concept of italics isn't very helpful 
 ```html
 <!-- scientific names -->
 <p>
-  The Ruby-throated Hummingbird (<i>Archilochus colubris</i>)
-  is the most common hummingbird in Eastern North America.
+  The Ruby-throated Hummingbird (<i>Archilochus colubris</i>) is the most common
+  hummingbird in Eastern North America.
 </p>
 
 <!-- foreign words -->
@@ -968,14 +990,15 @@ Always keep an accessibility mindset. The concept of italics isn't very helpful 
 </p>
 
 <!-- a known misspelling -->
-<p>
-  Someday I'll learn how to <u class="spelling-error">spel</u> better.
-</p>
+<p>Someday I'll learn how to <u class="spelling-error">spel</u> better.</p>
 
 <!-- term being defined when used in a definition -->
 <dl>
   <dt>Semantic HTML</dt>
-  <dd>Use the elements based on their <b>semantic</b> meaning, not their appearance.</dd>
+  <dd>
+    Use the elements based on their <b>semantic</b> meaning, not their
+    appearance.
+  </dd>
 </dl>
 ```
 

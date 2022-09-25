@@ -11,6 +11,7 @@ tags:
   - imageSmoothingQuality
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingQuality
 ---
+
 {{APIRef}}
 
 The **`imageSmoothingQuality`** property of the
@@ -47,13 +48,13 @@ This example uses the `imageSmoothingQuality` property with a scaled image.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 let img = new Image();
-img.src = 'canvas_createpattern.png';
+img.src = "canvas_createpattern.png";
 img.onload = () => {
-  ctx.imageSmoothingQuality = 'low';
+  ctx.imageSmoothingQuality = "low";
   ctx.drawImage(img, 0, 0, 300, 150);
 };
 ```

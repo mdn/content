@@ -32,7 +32,7 @@ Regardless of the type of camera, we would always need information regarding its
 
 There are two main differences between rendering scrolling maps vs. static maps:
 
-- **Partial tiles might be shown**. In static maps, usually the rendering starts at the top left corner of a tile situated at the top left corner of a viewport. While rendering scrolling tilemaps, the first tile will often be clipped.
+- **Partial tiles might be shown**. In static maps, usually the rendering starts in the top left corner of a tile situated in the top left corner of a viewport. While rendering scrolling tilemaps, the first tile will often be clipped.
 
 TODO: show a diagram here explaining this.
 

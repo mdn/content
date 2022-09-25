@@ -17,6 +17,7 @@ tags:
   - z
 browser-compat: api.DOMPointReadOnly.z
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly`** interface's

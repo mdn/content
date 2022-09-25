@@ -12,13 +12,14 @@ tags:
   - setTitle
 browser-compat: webextensions.api.browserAction.setTitle
 ---
+
 {{AddonSidebar}}
 
 Sets the browser action's title. The title is displayed in a tooltip over the browser action's icon. You can pass a `tabId` in or a `windowId` as an optional parameter — if you do this then the title is changed only for the given tab or the given window. Tabs or windows without a specific title will inherit the global title text, which defaults to the [`default_title`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) specified in the manifest.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.setTitle(
   details // object
 )

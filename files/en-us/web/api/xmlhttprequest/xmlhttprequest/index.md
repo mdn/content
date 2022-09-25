@@ -15,6 +15,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.XMLHttpRequest
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The **`XMLHttpRequest()`** constructor
@@ -24,7 +25,7 @@ For details about how to use `XMLHttpRequest`, see [Using XMLHttpRequest](/en-US
 
 ## Syntax
 
-```js
+```js-nolint
 new XMLHttpRequest()
 ```
 

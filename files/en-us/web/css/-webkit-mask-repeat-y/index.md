@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-repeat-y'
+title: "-webkit-mask-repeat-y"
 slug: Web/CSS/-webkit-mask-repeat-y
 tags:
   - CSS
@@ -10,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.-webkit-mask-repeat-y
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeated (tiled) vertically.
@@ -62,12 +63,12 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 
 ```css
 .exampleone {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: repeat;
 }
 
 .exampletwo {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: no-repeat;
 }
 ```
@@ -78,7 +79,7 @@ You can specify a different `<repeat-style>` for each mask image, separated by c
 
 ```css
 .examplethree {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-y: repeat, space;
 }
 ```

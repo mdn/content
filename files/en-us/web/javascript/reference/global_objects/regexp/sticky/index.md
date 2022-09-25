@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.RegExp.sticky
 ---
+
 {{JSRef}}
 
 The **`sticky`** accessor property indicates whether or not the `y` flag is used with the regular expression.
@@ -20,7 +21,7 @@ The **`sticky`** accessor property indicates whether or not the `y` flag is used
 
 ## Description
 
-`RegExp.prototype.sticky` has the value `true` if the `y` flag was used; otherwise, `false`. The `y` flag indicates that the regex attempts to match the target string only from the index indicated by the {{jsxref("RegExp.lastIndex", "lastIndex")}} property (and unlike a global regex, does not attempt to match from any later indexes).
+`RegExp.prototype.sticky` has the value `true` if the `y` flag was used; otherwise, `false`. The `y` flag indicates that the regex attempts to match the target string only from the index indicated by the {{jsxref("RegExp/lastIndex", "lastIndex")}} property (and unlike a global regex, does not attempt to match from any later indexes).
 
 The set accessor of `sticky` is `undefined`. You cannot change this property directly.
 
@@ -100,7 +101,7 @@ regex2.test('.\nfoo'); // true - index 2 is the beginning of a line
 ## See also
 
 - [Polyfill of `sticky` `RegExp` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.global")}}
 - {{JSxRef("RegExp.prototype.hasIndices")}}

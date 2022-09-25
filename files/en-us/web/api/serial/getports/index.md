@@ -11,13 +11,14 @@ tags:
   - Experimental
 browser-compat: api.Serial.getPorts
 ---
+
 {{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`getPorts()`** method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to the host which the origin has permission to access.
 
 ## Syntax
 
-```js
+```js-nolint
 getPorts()
 ```
 

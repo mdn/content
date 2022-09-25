@@ -14,6 +14,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceNavigation.redirectCount
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 The legacy

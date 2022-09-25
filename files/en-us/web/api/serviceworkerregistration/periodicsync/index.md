@@ -13,6 +13,7 @@ tags:
   - periodicSync
 browser-compat: api.ServiceWorkerRegistration.periodicSync
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`periodicSync`** read-only property of

@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGClipPathElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGClipPathElement`** interface provides access to the properties of {{SVGElement("clipPath")}} elements, as well as methods to manipulate them.

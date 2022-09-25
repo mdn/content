@@ -10,6 +10,7 @@ tags:
   - framework
   - resources
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Our final article provides you with a list of React resources that you can use to go further in your learning.
@@ -44,7 +45,7 @@ Although this tutorial doesn't use this approach, many React applications define
 
 `create-react-app` makes it possible to import CSS files into JavaScript modules, so that CSS is only sent to your user when the corresponding component is rendered. For this app, we could have for example written a dedicated `Form.css` file to house the styles of those respective components, then imported the styles into their respective modules like this:
 
-```js
+```jsx
 import Form from './Form';
 import './Form.css'
 ```
@@ -57,7 +58,7 @@ You can [read more about component stylesheets in the create-react-app docs](htt
 
 We used `console.log()` to check on the state and props of our application in this tutorial, and you'll also have seen some of the useful warnings and error message that React gives you both in the CLI and your browser's JavaScript console. But there's more we can do here.
 
-The React DevTools utility allows you to inspect the internals of your React application directly in the browser.  It adds a new panel to your browser's developer tools, and with it you can inspect the state and props of various components, and even edit state and props to make immediate changes to your application.
+The React DevTools utility allows you to inspect the internals of your React application directly in the browser. It adds a new panel to your browser's developer tools, and with it you can inspect the state and props of various components, and even edit state and props to make immediate changes to your application.
 
 This screenshot shows our finished application as it appears in React DevTools:
 

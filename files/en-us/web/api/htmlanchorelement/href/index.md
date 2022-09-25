@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.href
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.href`** property is a

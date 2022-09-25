@@ -14,6 +14,7 @@ tags:
   - writableAuxiliaries
 browser-compat: api.BluetoothCharacteristicProperties.writableAuxiliaries
 ---
+
 {{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`writableAuxiliaries`** read-only

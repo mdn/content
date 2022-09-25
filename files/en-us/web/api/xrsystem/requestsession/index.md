@@ -18,6 +18,7 @@ tags:
   - requestSession
 browser-compat: api.XRSystem.requestSession
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **{{domxref("XRSystem")}}** interface's
@@ -30,7 +31,7 @@ inline sessions can be in progress at once.
 
 ## Syntax
 
-```js
+```js-nolint
 requestSession(mode)
 requestSession(mode, options)
 ```
@@ -118,7 +119,7 @@ The following session features and reference spaces can be requested, either as 
 - `viewer`
   - : Enable a tracking space whose native origin tracks the viewer's position and orientation.
 
-### Security requirements
+## Security
 
 Several session features and the various reference spaces have minimum security and privacy requirements, like asking for user consent and/or requiring the {{HTTPHeader("Feature-Policy")}}: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking) directive to be set. See also [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security) for more details.
 
@@ -132,6 +133,8 @@ Several session features and the various reference spaces have minimum security 
 | `local-floor`   | Always required                     | `xr-spatial-tracking`      |
 | `unbounded`     | Always required                     | `xr-spatial-tracking`      |
 | `viewer`        | Always required                     | —                          |
+
+See also [transient user activation](/en-US/docs/Web/Security/User_activation).
 
 ## Examples
 

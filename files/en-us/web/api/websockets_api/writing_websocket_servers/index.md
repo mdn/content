@@ -13,6 +13,7 @@ tags:
   - WebSocket API
   - WebSockets
 ---
+
 {{APIRef("Websockets API")}}
 
 A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. The task of creating a custom server tends to scare people; however, it can be straightforward to implement a simple WebSocket server on your platform of choice.
@@ -89,7 +90,7 @@ Either the client or the server can choose to send a message at any time — tha
 
 ### Format
 
-Each data frame (from the client to the server or vice-versa) follows this same format:
+Each data frame (from the client to the server or vice versa) follows this same format:
 
 ```bash
 Frame format:
@@ -130,7 +131,7 @@ To read the payload data, you must know when to stop reading. That's why the pay
 
 ### Reading and unmasking the data
 
-If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data `ENCODED`, and the key `MASK`. To get `DECODED`, loop through the octets (bytes a.k.a. characters for text data) of `ENCODED` and XOR the octet with the (i modulo 4)th octet of `MASK`. In pseudo-code (that happens to be valid JavaScript):
+If the MASK bit was set (and it should be, for client-to-server messages), read the next 4 octets (32 bits); this is the masking key. Once the payload length and masking key is decoded, you can read that number of bytes from the socket. Let's call the data `ENCODED`, and the key `MASK`. To get `DECODED`, loop through the octets (bytes a.k.a. characters for text data) of `ENCODED` and XOR the octet with the (i modulo 4)th octet of `MASK`. In pseudocode (that happens to be valid JavaScript):
 
 ```js
 const MASK = [1, 2, 3, 4]; // 4-byte mask

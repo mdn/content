@@ -11,6 +11,7 @@ tags:
   - Video
 browser-compat: api.HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLVideoElement`** interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of {{domxref("HTMLMediaElement")}} and {{domxref("HTMLElement")}}.

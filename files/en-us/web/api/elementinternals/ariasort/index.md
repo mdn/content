@@ -12,6 +12,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaSort
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaSort`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.

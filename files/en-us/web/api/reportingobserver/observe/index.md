@@ -12,6 +12,7 @@ tags:
   - observe
 browser-compat: api.ReportingObserver.observe
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`observe()`** method of the
@@ -20,7 +21,7 @@ collecting reports in its report queue.
 
 ## Syntax
 
-```js
+```js-nolint
 observe()
 ```
 

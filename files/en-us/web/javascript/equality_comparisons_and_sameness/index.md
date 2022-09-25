@@ -215,23 +215,20 @@ Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken int
 
 ### Caveat: Object.is() and NaN
 
-The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct instances, which don't behave identically in all contexts. For example:
+The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
 const b2f = (x) => new Float64Array(x.buffer)[0];
 // Get a byte representation of NaN
 const n = f2b(NaN);
+// Change the first bit, which is the sign bit and doesn't matter for NaN
 n[0] = 1;
 const nan2 = b2f(n);
-nan2;
-// > NaN
-Object.is(nan2, NaN);
-// > true
-f2b(NaN);
-// > Uint8Array(8) [0, 0, 0, 0, 0, 0, 248,127)
-f2b(nan2);
-// > Uint8Array(8) [1, 0, 0, 0, 0, 0, 248,127)
+console.log(nan2); // NaN
+console.log(Object.is(nan2, NaN)); // true
+console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 ```
 
 ## See also

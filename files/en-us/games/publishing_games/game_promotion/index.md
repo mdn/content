@@ -41,7 +41,7 @@ Grow your fanbase by talking to them, sharing tips, offering discounts, giving a
 
 Using game portals is mostly concerned with [monetization](/en-US/docs/Games/Publishing_games/Game_monetization), but if you're not planning to [sell licenses](/en-US/docs/Games/Publishing_games/Game_monetization#licensing) to allow people to purchase your game and are intending to [implement adverts](/en-US/docs/Games/Publishing_games/Game_monetization#advertisements) or in-app purchases instead, promoting your game across free portals can be effective.
 
-There are a number of different game portals to which you can send your games for publication. Some portals have their own APIs that allow you to authorize users, save their progress and process in-app purchases. You can also sell a full version of the game from inside your browser demo version, which will be a great move considering high competition, some developers even manage to make full browser versions. Most portals offer revenue share deals or will buy non exclusive license.
+There are a number of different game portals to which you can send your games for publication. Some portals have their own APIs that allow you to authorize users, save their progress and process in-app purchases. You can also sell a full version of the game from inside your browser demo version, which will be a great move considering high competition, some developers even manage to make full browser versions. Most portals offer revenue share deals or will buy nonexclusive license.
 
 Free portals offer traffic, but only the best ones are popular enough to generate revenues from advertisements on in-app purchases. On the other hand they are a perfect tool to make games visible to a broader audience if you have no budget and limited time.
 
@@ -87,6 +87,6 @@ You can help community grow and promote yourself and your games at the same time
 
 ## Summary
 
-Any way of promoting your game is good. You have a whole lot of options to chose from with most of them being free, so it's only about your enthusiasm and available time. Sometimes you have to spend more time promoting a game than actually developing it. Remember that it's no use to have the best game in the world if no one knows it exists.
+Any way of promoting your game is good. You have a lot of options to chose from with most of them being free, so it's only about your enthusiasm and available time. Sometimes you have to spend more time promoting a game than actually developing it. Remember that it's no use to have the best game in the world if no one knows it exists.
 
 Now lets get on with that [monetization](/en-US/docs/Games/Publishing_games/Game_monetization) part, and earn something for a living.

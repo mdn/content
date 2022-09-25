@@ -10,6 +10,7 @@ tags:
   - resize
 browser-compat: api.VisualViewport.resize_event
 ---
+
 {{APIRef("Window")}}
 
 The **`resize`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewport) interface is fired when the visual viewport is resized.

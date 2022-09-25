@@ -12,6 +12,7 @@ tags:
   - browsingData
 browser-compat: webextensions.api.browsingData.RemovalOptions
 ---
+
 {{AddonSidebar()}}
 
 The **`browsingData.RemovalOptions`** type contains options to control certain aspects of browsing data removal.

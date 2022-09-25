@@ -9,6 +9,7 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.altGlyph
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<altGlyph>`** SVG element allows sophisticated selection of the glyphs used to render its child character data.

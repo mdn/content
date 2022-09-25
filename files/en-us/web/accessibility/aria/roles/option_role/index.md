@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: option role'
+title: "ARIA: option role"
 slug: Web/Accessibility/ARIA/Roles/option_role
 tags:
   - Accessibility
@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#option
   - https://w3c.github.io/aria-practices/#Listbox
 ---
+
 The `option` role is used for selectable items in a `listbox`.
 
 ## Description
@@ -58,30 +59,39 @@ From the assistive technology user's perspective, the heading does not exist sin
 #### States and Properties
 
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+
   - : Used to describe the selection state of the option. Required.
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
+
   - : Used to describe the checked state when options are used in a multiple selection fashion. Supports `true`, `false` and `mixed`. Optional.
 
 - [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
+
   - : Used to describe the position in the set of options when it does not match the DOM, such as virtual scrolling where only some options are present at a time. Optional.
 
 - [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+
   - : Used in conjunction with `aria-posinset` to declare the total number of options. Optional.
 
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
+
   - : Used to indicate that the option is present but not editable. Optional.
 
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+
   - : Used to hide the option from accessibility tools. It should only be used to hide non-visible content or visible content if it improves the experience of assistive technology, such as redundant content. Optional.
 
 - [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
+
   - : Used to indicate that the value of the option is considered invalid by the application. Optional.
 
 - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
+
   - : Used to indicate that an element is being modified, such as while it is loadingOptional.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+
   - : Used to indicate which element labels the option. The content of the option should be used instead where appropriate. Optional.
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)

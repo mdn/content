@@ -2,13 +2,14 @@
 title: speak-as
 slug: Web/CSS/@counter-style/speak-as
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Descriptor
   - Reference
 browser-compat: css.at-rules.counter-style.speak-as
 ---
+
 {{CSSRef}}
 
 The **`speak-as`** descriptor specifies how a counter symbol constructed with a given {{cssxref('@counter-style')}} will be represented in the spoken form. For example, an author can specify a counter symbol to be either spoken as its numerical value or just represented with an audio cue.

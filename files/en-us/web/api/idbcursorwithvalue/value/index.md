@@ -13,6 +13,7 @@ tags:
   - value
 browser-compat: api.IDBCursorWithValue.value
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`value`** read-only property of the

@@ -1,5 +1,5 @@
 ---
-title: ':hover'
+title: ":hover"
 slug: Web/CSS/:hover
 tags:
   - CSS
@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: css.selectors.hover
 ---
+
 {{ CSSRef }}
 
 The **`:hover`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).
@@ -41,7 +42,7 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 ```css
 a {
   background-color: powderblue;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 a:hover {

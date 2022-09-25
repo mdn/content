@@ -6,6 +6,7 @@ tags:
   - Extensions
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 A **version string** consists of one or more _version parts_, separated with dots.

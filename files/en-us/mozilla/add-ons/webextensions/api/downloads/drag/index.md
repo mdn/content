@@ -13,13 +13,14 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.drag
 ---
+
 {{AddonSidebar()}}
 
 The **`drag()`** function of the {{WebExtAPIRef("downloads")}} API initiates dragging the downloaded file to another application.
 
 ## Syntax
 
-```js
+```js-nolint
 chrome.downloads.drag(
   downloadId // integer
 )

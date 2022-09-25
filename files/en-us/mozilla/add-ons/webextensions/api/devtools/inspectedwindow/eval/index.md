@@ -12,6 +12,7 @@ tags:
   - eval
 browser-compat: webextensions.api.devtools.inspectedWindow.eval
 ---
+
 {{AddonSidebar()}}
 
 Executes JavaScript in the window that the devtools are attached to.
@@ -43,7 +44,7 @@ The script gets access to a number of objects that help the injected script inte
 
 ## Syntax
 
-```js
+```js-nolint
 let evaluating = browser.devtools.inspectedWindow.eval(
   expression,       // string
   options           // object

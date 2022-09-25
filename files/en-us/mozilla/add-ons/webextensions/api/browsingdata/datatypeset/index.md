@@ -12,6 +12,7 @@ tags:
   - browsingData
 browser-compat: webextensions.api.browsingData.DataTypeSet
 ---
+
 {{AddonSidebar()}}
 
 The **`browsingData.DataTypeSet`** type describes a set of data types.

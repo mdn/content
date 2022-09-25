@@ -9,6 +9,7 @@ tags:
   - NeedsContent
   - Site-wide
 ---
+
 {{MDNSidebar}}
 
 On the [Yari](/en-US/docs/MDN/Yari) platform that powers MDN, we still have a legacy template/macro system available called [KumaScript](https://github.com/mdn/yari/tree/main/kumascript) for automating certain aspects of content. We are hoping to stop using it some day, but until then MDN will still rely on it. This article provides basic information about using KumaScript.
@@ -407,7 +408,7 @@ const text = mdn.localStringMap({
 %>
 ```
 
-The `mdn.localString()` function will automatically load strings for the appropriate locale. If a string is missing for a locale, it will fall back to `en-US` for that string.  For example:
+The `mdn.localString()` function will automatically load strings for the appropriate locale. If a string is missing for a locale, it will fall back to `en-US` for that string. For example:
 
 ```js
 <%

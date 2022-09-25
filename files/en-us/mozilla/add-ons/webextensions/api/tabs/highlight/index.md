@@ -13,13 +13,16 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.highlight
 ---
-{{AddonSidebar()}}Highlights (selects) one or more tabs. Tabs are specified using a window ID and a range of tab indices.
+
+{{AddonSidebar()}}
+
+Highlights (selects) one or more tabs. Tabs are specified using a window ID and a range of tab indices.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
-```js
+```js-nolint
 let highlighting = browser.tabs.highlight(
   highlightInfo         // object
 )

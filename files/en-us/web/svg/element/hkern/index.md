@@ -10,6 +10,7 @@ tags:
   - SVG Font
 browser-compat: svg.elements.hkern
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<hkern>`** [SVG](/en-US/docs/Web/SVG) element allows to fine-tweak the horizontal distance between two glyphs. This process is known as [kerning](https://en.wikipedia.org/wiki/Kerning).

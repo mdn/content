@@ -10,6 +10,7 @@ tags:
   - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-AesCtrParams
 ---
+
 {{ APIRef("Web Crypto API") }}
 
 The **`AesCtrParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}}, when using the [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr) algorithm.

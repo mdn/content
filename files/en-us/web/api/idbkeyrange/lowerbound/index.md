@@ -13,6 +13,7 @@ tags:
   - lowerBound
 browser-compat: api.IDBKeyRange.lowerBound
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`lowerBound()`** method of the
@@ -23,7 +24,7 @@ By default, it includes the lower endpoint value and is closed.
 
 ## Syntax
 
-```js
+```js-nolint
 lowerBound(lower)
 lowerBound(lower, open)
 ```

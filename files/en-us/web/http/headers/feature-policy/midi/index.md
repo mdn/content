@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.midi
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `midi` directive controls whether the current document is allowed to use the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API). When this policy is enabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMIDIAccess()")}} will reject with a `DOMException`.

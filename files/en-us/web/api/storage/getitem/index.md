@@ -10,6 +10,7 @@ tags:
   - Web Storage
 browser-compat: api.Storage.getItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`getItem()`** method of the {{domxref("Storage")}}
@@ -18,7 +19,7 @@ the key does not exist, in the given `Storage` object.
 
 ## Syntax
 
-```js
+```js-nolint
 getItem(keyName)
 ```
 

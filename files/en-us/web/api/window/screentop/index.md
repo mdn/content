@@ -12,6 +12,7 @@ tags:
   - screenTop
 browser-compat: api.Window.screenTop
 ---
+
 {{APIRef}}
 
 The **`Window.screenTop`** read-only property returns the

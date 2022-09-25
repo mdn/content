@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.className
 ---
+
 {{APIRef("DOM")}}
 
 The **`className`** property of the

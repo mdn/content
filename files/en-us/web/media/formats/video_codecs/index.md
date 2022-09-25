@@ -22,6 +22,7 @@ tags:
   - mp4
   - streaming
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 This guide introduces the video codecs you're most likely to encounter or consider using on the web, summaries of their capabilities and any compatibility and utility concerns, and advice to help you choose the right codec for your project's video.
@@ -266,7 +267,7 @@ In addition, each encoder utility may have variations in how they process the so
     <tr>
       <th scope="row">Lossy compression</th>
       <td>
-        To some degree, artifacts and other forms of quality degradation wil
+        To some degree, artifacts and other forms of quality degradation will
         occur, depending on the specific codec and how much compression is being
         applied
       </td>
@@ -1985,14 +1986,12 @@ First, let's look at the best options for videos presented on a typical web site
 
 2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
 
-    ```html
-    <video controls>
-      <source type="video/webm"
-              src="filename.webm">
-      <source type="video/mp4"
-              src="filename.mp4">
-    </video>
-    ```
+   ```html
+   <video controls>
+     <source type="video/webm" src="filename.webm" />
+     <source type="video/mp4" src="filename.mp4" />
+   </video>
+   ```
 
 > **Note:** The {{HTMLElement("video")}} element requires a closing `</video>` tag, whether or not you have any {{HTMLElement("source")}} elements inside it.
 
@@ -2008,14 +2007,12 @@ If your mission is to present video at the highest possible quality, you will pr
 
 2. An MP4 container using the [HEVC](#hevc_h.265) codec using one of the advanced Main profiles, such as Main 4:2:2 with 10 or 12 bits of color depth, or even the Main 4:4:4 profile at up to 16 bits per component. At a high bit rate, this provides excellent graphics quality with remarkable color reproduction. In addition, you can optionally include HDR metadata to provide high dynamic range video. For audio, use the AAC codec at a high sample rate (at least 48 kHz but ideally 96kHz) and encoded with complex encoding rather than fast encoding.
 
-    ```html
-    <video controls>
-      <source type="video/webm"
-              src="filename.webm">
-      <source type="video/mp4"
-              src="filename.mp4">
-    </video>
-    ```
+   ```html
+   <video controls>
+     <source type="video/webm" src="filename.webm" />
+     <source type="video/mp4" src="filename.mp4" />
+   </video>
+   ```
 
 ### Recommendations for archival, editing, or remixing
 

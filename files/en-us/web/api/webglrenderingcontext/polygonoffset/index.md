@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.polygonOffset
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.polygonOffset()`** method of the
@@ -21,7 +22,7 @@ into the depth buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 polygonOffset(factor, units)
 ```
 

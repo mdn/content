@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.indexOf
 ---
+
 {{JSRef}}
 
 The **`indexOf()`** method returns the first index at which a
@@ -20,7 +21,7 @@ given element can be found in the array, or -1 if it is not present.
 
 ## Syntax
 
-```js
+```js-nolint
 indexOf(searchElement)
 indexOf(searchElement, fromIndex)
 ```
@@ -49,6 +50,8 @@ the Array using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators
 
 > **Note:** For the String method, see
 > {{jsxref("String.prototype.indexOf()")}}.
+
+The `indexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 ## Examples
 
@@ -98,6 +101,14 @@ updateVegetablesCollection(veggies, 'spinach');
 // New veggies collection is: potato,tomato,chillies,green-pepper,spinach
 updateVegetablesCollection(veggies, 'spinach');
 // spinach already exists in the veggies collection.
+```
+
+### Using indexOf() on sparse arrays
+
+You cannot use `indexOf()` to search for empty slots in sparse arrays.
+
+```js
+console.log([1, , 3].indexOf(undefined)); // -1
 ```
 
 ## Specifications

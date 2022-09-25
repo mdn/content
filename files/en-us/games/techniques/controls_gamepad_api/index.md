@@ -40,7 +40,7 @@ The game encapsulates two totally different types of "change" — good food vs. 
 
 The full version of the Hungry Fridge game was built first, and then to showcase the Gamepad API in action and show the JavaScript source code, a [simple demo](https://end3r.github.io/Gamepad-API-Content-Kit/demo/demo.html) was created. It's part of the [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/) available on GitHub where you can dive deep into the code and study exactly how it works.
 
-The code explained below is from the full version of the Hungry Fridge game, but it's almost identical to the one from the demo — the only difference is that the full version uses the `turbo` variable to decide whether or not the game will be launched using Super Turbo mode. It works independently, so it could be turned on even if the gamepad is not connected.
+The code explained below is from the full version of the Hungry Fridge game, but it's almost identical to the one from the demo — the only difference is that the full version uses the `turbo` variable to decide whether the game will be launched using Super Turbo mode. It works independently, so it could be turned on even if the gamepad is not connected.
 
 > **Note:** Easter Egg time: There's a hidden option to launch Super Turbo Hungry Fridge on the desktop without having a gamepad connected — click the gamepad icon in the top right corner of the screen. It will launch the game in the Super Turbo mode and you'll be able to control the Fridge with the keyboard: A and D for turning the turret left and right, W for shooting and arrow keys for movement.
 
@@ -212,7 +212,7 @@ If `gamepadAPI.turbo` is `true` and the given buttons are pressed (or held), we 
 
 ### Axis threshold
 
-The buttons have only two states: `0` or `1`, but the analog sticks can have many different values — they have a float range between `-1` and `1` along both the `X` and `Y` axes.
+The buttons have only two states: `0` or `1`, but the analog sticks can have many values — they have a float range between `-1` and `1` along both the `X` and `Y` axes.
 
 Gamepads can get dusty from lying around inactive, meaning that checking for exact -1 or 1 values can be a problem. For this reason, it can be good to set a threshold for the value of the axis to take effect. For example, the Fridge tank will turn right only when the `X` value is bigger than `0.5`:
 
@@ -227,7 +227,7 @@ Even if we move it a little by mistake or the stick doesn't make it back to its 
 
 ## Specification update
 
-After more than a year of stability, in April 2015 the W3C Gamepad API spec was updated ([see the latest](https://w3c.github.io/gamepad/).) It hasn't changed much, but it's good to know whats going on — the updates are as follows.
+After more than a year of stability, in April 2015 the W3C Gamepad API spec was updated ([see the latest](https://w3c.github.io/gamepad/).) It hasn't changed much, but it's good to know what is going on — the updates are as follows.
 
 ### Getting the gamepads
 
@@ -248,7 +248,7 @@ This enum defines the set of known mappings for a Gamepad. For now, there's only
 
 ### Events
 
-There were more events available in the spec than just `gamepadconnected` and `gamepaddisconnected` available, but they were removed from the specification as they were thought to not be very useful. The discussion is still ongoing as to whether they should be put back, and in what form.
+There were more events available in the spec than just `gamepadconnected` and `gamepaddisconnected` available, but they were removed from the specification as they were thought to not be very useful. The discussion is still ongoing whether they should be put back, and in what form.
 
 ## Summary
 

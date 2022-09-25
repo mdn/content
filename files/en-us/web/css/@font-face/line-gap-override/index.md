@@ -2,7 +2,7 @@
 title: line-gap-override
 slug: Web/CSS/@font-face/line-gap-override
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference
@@ -10,6 +10,7 @@ tags:
   - line-gap-override
 browser-compat: css.at-rules.font-face.line-gap-override
 ---
+
 {{CSSRef}}
 
 The **`line-gap-override`** CSS descriptor defines the line-gap metric for the font. The line-gap metric is the font recommended line-gap or external leading.

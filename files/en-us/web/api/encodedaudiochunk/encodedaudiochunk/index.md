@@ -10,13 +10,14 @@ tags:
   - Experimental
 browser-compat: api.EncodedAudioChunk.EncodedAudioChunk
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`EncodedAudioChunk()`** constructor creates a new {{domxref("EncodedAudioChunk")}} object representing a chunk of encoded audio.
 
 ## Syntax
 
-```js
+```js-nolint
 new EncodedAudioChunk(options)
 ```
 

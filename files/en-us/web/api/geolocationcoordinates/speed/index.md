@@ -11,6 +11,7 @@ tags:
   - speed
 browser-compat: api.GeolocationCoordinates.speed
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.speed`** read-only property is a

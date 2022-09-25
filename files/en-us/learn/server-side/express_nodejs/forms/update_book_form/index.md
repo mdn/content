@@ -8,6 +8,7 @@ tags:
   - part 6
   - server-side
 ---
+
 This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
 
 ## Controller—get route
@@ -81,7 +82,8 @@ exports.book_update_post = [
   // Convert the genre to an array
   (req, res, next) => {
     if (!Array.isArray(req.body.genre)) {
-      req.body.genre = typeof req.body.genre === "undefined" ? [] : [req.body.genre];
+      req.body.genre =
+        typeof req.body.genre === "undefined" ? [] : [req.body.genre];
     }
     next();
   },

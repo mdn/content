@@ -13,6 +13,7 @@ tags:
   - devtools.panels.ExtensionSidebarPane
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane
 ---
+
 {{AddonSidebar}}
 
 The `ExtensionSidebarPane` object represents a pane that an extension has added to the sidebar in the browser's HTML/CSS inspector.

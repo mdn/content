@@ -13,6 +13,7 @@ browser-compat:
   - css.properties.justify-content
   - css.properties.align-items
 ---
+
 {{CSSRef}}
 
 In this recipe we will create a list group pattern with badges that indicate a count.

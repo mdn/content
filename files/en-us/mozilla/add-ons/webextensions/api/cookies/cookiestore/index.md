@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.cookies.CookieStore
 ---
+
 {{AddonSidebar()}}
 
 The `CookieStore` type of the {{WebExtAPIRef("cookies")}} API represents a cookie store in the browser.

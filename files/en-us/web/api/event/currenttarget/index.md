@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.currentTarget
 ---
+
 {{APIRef("DOM")}}
 
 The **`currentTarget`** read-only property of the
@@ -26,7 +27,7 @@ An {{domxref("EventTarget")}} representing the object to which the current event
 handler to several elements.
 
 ```js
-function hide(e){
+function hide(e) {
   e.currentTarget.style.visibility = 'hidden';
   console.log(e.currentTarget);
   // When this function is used as an event handler: this === e.currentTarget
@@ -34,17 +35,17 @@ function hide(e){
 
 const ps = document.getElementsByTagName('p');
 
-for (let i = 0; i < ps.length; i++){
-  // console: print the clicked <p> element
-  ps[i].addEventListener('click', hide, false);
+for (const p of ps) {
+  // Hide the clicked <p> element
+  p.addEventListener('click', hide, false);
 }
-// console: print <body>
+
 document.body.addEventListener('click', hide, false);
 
 // Click around and make paragraphs disappear
 ```
 
-> **Note:** The value of `event.currentTarget` is **only** available while the event is being handled.
+> **Note:** The value of `event.currentTarget` is _only_ available while the event is being handled.
 > If you {{DOMxRef("console.log()")}} the `event` object, storing it in a variable,
 > and _then_ look for the `currentTarget` key in the console, its value will be `null`.<br/>
 > Instead, you should either use `console.log(event.currentTarget)` to be

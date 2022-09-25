@@ -16,6 +16,7 @@ tags:
   - Web Article
   - Web Development
 ---
+
 The links on this page lead to a variety of tutorials and training materials. Whether you are just starting out, learning the basics, or are an old hand at web development, you can find helpful resources here for best practices.
 
 These resources are created by forward-thinking companies and web developers who have embraced open standards and best practices for web development and that provide or allow translations, through an open content license such as Creative Commons.
@@ -152,4 +153,4 @@ These resources are created by forward-thinking companies and web developers who
 ### Extension Development
 
 - [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent, the system is compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox).
+  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent, the system is compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox).

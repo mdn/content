@@ -14,6 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.getMetadata
 ---
+
 {{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
@@ -23,7 +24,7 @@ its modification date and time and its size.
 
 ## Syntax
 
-```js
+```js-nolint
 getMetadata(successCallback)
 getMetadata(successCallback, errorCallback)
 ```

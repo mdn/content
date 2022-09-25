@@ -9,6 +9,7 @@ tags:
   - nullish coalescing
 browser-compat: javascript.operators.nullish_coalescing
 ---
+
 {{JSSidebar("Operators")}}
 
 The **nullish coalescing operator (`??`)** is a logical
@@ -32,7 +33,7 @@ directly lower than `||` and directly higher than the
 
 ## Syntax
 
-```js
+```js-nolint
 leftExpr ?? rightExpr
 ```
 

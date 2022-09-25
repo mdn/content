@@ -2,7 +2,7 @@
 title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference
@@ -10,6 +10,7 @@ tags:
   - ascent-override
 browser-compat: css.at-rules.font-face.ascent-override
 ---
+
 {{CSSRef}}
 
 The **`ascent-override`** CSS descriptor defines the ascent metric for the font. The ascent metric is the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.

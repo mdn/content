@@ -13,13 +13,14 @@ tags:
   - onChanged
 browser-compat: webextensions.api.storage.StorageArea.onChanged
 ---
+
 {{AddonSidebar()}}
 
 Fires when one or more items in a storage area change. Compared to {{WebExtAPIRef("storage.onChanged")}}, this event enables you to listen for changes in one of the storage areas: `local`, `managed`, `session`, and `sync`.
 
 ## Syntax
 
-```js
+```js-nolint
 // local can also be sync, managed, or session
 browser.storage.local.onChanged.addListener(callback)
 browser.storage.local.onChanged.removeListener(listener)

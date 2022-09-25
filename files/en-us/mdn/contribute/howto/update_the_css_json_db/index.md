@@ -6,26 +6,27 @@ tags:
   - Howto
   - MDN Meta
 ---
+
 {{MDNSidebar}}
 
-Several characteristics of a CSS property, like its syntax or if it can be animated, are mentioned in multiple pages on MDN and are therefore stored in an ad-hoc "database". This database actually consists of several JSON files containing CSS related information, which are [stored on GitHub](https://github.com/mdn/data/tree/main/css). This article describes how to update this structure.
+Several characteristics of a CSS property, like its syntax or if it can be animated, are mentioned in multiple pages on MDN and are therefore stored in an ad hoc "database". This database actually consists of several JSON files containing CSS related information, which are [stored on GitHub](https://github.com/mdn/data/tree/main/css). This article describes how to update this structure.
 
 ## Prerequisite resources
 
 To update or check the content of the CSS JSON DB, you will need to gather information from different sources.
 
 1. **Latest spec**
-    Whether it is a W3C Recommendation or an early editor's draft, you should refer to the latest available draft of the spec that covers (or specifies that cover) that feature. To find it, you can usually do a web search. The latest version will often be linked to from all versions of the spec, listed under "latest draft" or similar.
+   Whether it is a W3C Recommendation or an early editor's draft, you should refer to the latest available draft of the spec that covers (or specifies that cover) that feature. To find it, you can usually do a web search. The latest version will often be linked to from all versions of the spec, listed under "latest draft" or similar.
 2. **Latest web browsers**
-    These should be experimental/alpha builds such as [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental feature.
+   These should be experimental/alpha builds such as [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental feature.
 3. **Additional info**
-    Find as much info as you can to better understand how the specific feature works. E.g. blog posts or demos are good resources.
+   Find as much info as you can to better understand how the specific feature works. E.g. blog posts or demos are good resources.
 4. **Engineering contacts**
-    It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser. If you have the implementation bug on Bugzilla, the engineer who implemented the feature is a good contact: asking him in the bug, with a needinfo flag is a good way of having an answer about a specific question. Other good places to find knowledgeable people are:
+   It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser. If you have the implementation bug on Bugzilla, the engineer who implemented the feature is a good contact: asking him in the bug, with a needinfo flag is a good way of having an answer about a specific question. Other good places to find knowledgeable people are:
 
-    - Your internal company address book, if you work for a relevant company.
-    - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) list, or the W3C list [www-style](https://lists.w3.org/Archives/Public/www-style/).
-    - The spec itself. For example, the [CSS Animations spec](https://drafts.csswg.org/css-animations/) lists the authors and their contact details at the top.
+   - Your internal company address book, if you work for a relevant company.
+   - A public mailing list that is involved in the discussion of that API, such as Mozilla's [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) list, or the W3C list [www-style](https://lists.w3.org/Archives/Public/www-style/).
+   - The spec itself. For example, the [CSS Animations spec](https://drafts.csswg.org/css-animations/) lists the authors and their contact details at the top.
 
 ## Update the CSS information database
 

@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.padEnd
 ---
+
 {{JSRef}}
 
 The **`padEnd()`** method pads the current string with a given
@@ -20,7 +21,7 @@ padding is applied from the end of the current string.
 
 ## Syntax
 
-```js
+```js-nolint
 padEnd(targetLength)
 padEnd(targetLength, padString)
 ```

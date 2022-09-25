@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.PeriodicSyncManager
 ---
+
 {{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`PeriodicSyncManager`** interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to register tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests. Access `PeriodicSyncManager` through the {{domxref('ServiceWorkerRegistration.periodicSync')}}.

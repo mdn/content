@@ -1,5 +1,5 @@
 ---
-title: '::-moz-list-bullet'
+title: "::-moz-list-bullet"
 slug: Web/CSS/:-moz-list-bullet
 tags:
   - CSS
@@ -10,6 +10,7 @@ tags:
   - Reference
   - Selector
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-list-bullet`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the marker (typically a bullet) of a list item ({{htmlelement("li")}}) in an unordered list ({{htmlelement("ul")}}).

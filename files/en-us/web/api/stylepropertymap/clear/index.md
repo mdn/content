@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.StylePropertyMap.clear
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`clear()`** method of the {{domxref("StylePropertyMap")}}
@@ -20,7 +21,7 @@ interface removes all declarations in the `StylePropertyMap`.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

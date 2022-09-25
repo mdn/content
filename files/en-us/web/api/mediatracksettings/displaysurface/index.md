@@ -22,6 +22,7 @@ tags:
   - screen
 browser-compat: api.MediaTrackSettings.displaySurface
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's

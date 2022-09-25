@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.greater_than_or_equal
 ---
+
 {{jsSidebar("Operators")}}
 
 The greater than or equal operator (`>=`) returns `true` if
@@ -18,13 +19,13 @@ otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 x >= y
 ```
 
 ## Description
 
-The operands are compared using the same algorithm as the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator, except the two operands are swapped, and equal values return `true`.
+The operands are compared using the same algorithm as the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator, except the two operands are swapped, and equal values (after attempting coercion) return `true`.
 
 ## Examples
 

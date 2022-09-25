@@ -12,6 +12,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}
 
 A simple WebGL game that demonstrates clearing with solid colors, scissoring, animation, and user interaction.
@@ -36,22 +37,22 @@ In addition, the example demonstrates how to integrate the WebGL function calls 
 
 ```css hidden
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 

@@ -11,6 +11,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransfer.DataTransfer
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer`** constructor creates a new
@@ -18,7 +19,7 @@ The **`DataTransfer`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new DataTransfer()
 ```
 

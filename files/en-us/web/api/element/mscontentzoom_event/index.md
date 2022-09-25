@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Element.msContentZoom_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 The **`msContentZoom`** event fires when a user zooms the element (changes the scale of the content).

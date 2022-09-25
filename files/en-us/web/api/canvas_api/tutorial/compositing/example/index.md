@@ -9,6 +9,7 @@ tags:
   - HTML
   - Tutorial
 ---
+
 {{CanvasSidebar}}
 
 This sample program demonstrates a number of [compositing operations](/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). The output looks like this:

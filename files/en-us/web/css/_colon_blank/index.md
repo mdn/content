@@ -1,8 +1,8 @@
 ---
-title: ':blank'
+title: ":blank"
 slug: Web/CSS/:blank
 tags:
-  - ':blank'
+  - ":blank"
   - CSS
   - CSS Selectors
   - Draft
@@ -13,6 +13,7 @@ tags:
   - Selector
 browser-compat: css.selectors.blank
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 > **Note:** The `:blank` selector is considered at risk, as the CSSWG keeps changing it.

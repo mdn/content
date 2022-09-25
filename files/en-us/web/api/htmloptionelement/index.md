@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLOptionElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLOptionElement`** interface represents {{HTMLElement("option")}} elements and inherits all properties and methods of the {{domxref("HTMLElement")}} interface.

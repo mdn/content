@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.location
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.location`** read-only property returns an

@@ -9,6 +9,7 @@ tags:
   - Permanent Redirect
   - Redirect
 ---
+
 Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.
 
 While this is useful it's important to note that using `.htaccess` files slows down Apache, so, if you have access to the main server configuration file (which is usually called \`httpd.conf\`), you should add this logic there under a `Directory` block.
@@ -43,7 +44,7 @@ There are times when we need to tell users that a resource has moved, either tem
 </IfModule>
 ```
 
-The possible values for the first parameter are listed below. If the first parameter is not included is defaults to `temp`.
+The possible values for the first parameter are listed below. If the first parameter is not included, it defaults to `temp`.
 
 - permanent
   - : Returns a permanent redirect status (301) indicating that the resource has moved permanently.
@@ -226,8 +227,7 @@ Servers should use text/javascript for JavaScript resources as indicated in the 
 
 Every piece of content on the web has a character set. Most, if not all, the content is UTF-8 Unicode.
 
-Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset
-) to serve all resources labeled as `text/html` or `text/plain` with the `UTF-8` charset.
+Use [AddDefaultCharset](https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset) to serve all resources labeled as `text/html` or `text/plain` with the `UTF-8` charset.
 
 ```apache
 <IfModule mod_mime.c>
@@ -278,9 +278,9 @@ The required steps are:
 2. Enable the `FollowSymLinks` option if it isn't already. See [Core Options](https://httpd.apache.org/docs/current/mod/core.html#options) documentation
 3. If your web host doesn't allow the `FollowSymlinks` option, you need to comment it out or remove it, and then uncomment the `Options +SymLinksIfOwnerMatch` line, but be aware of the [performance impact](https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks)
 
-    - Some cloud hosting services will require you set `RewriteBase`
-    - See [Rackspace FAQ](https://web.archive.org/web/20151223141222/http://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site) and the [HTTPD documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase)
-    - Depending on how your server is set up, you may also need to use the [`RewriteOptions`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions) directive to enable some options for the rewrite engine
+   - Some cloud hosting services will require you set `RewriteBase`
+   - See [Rackspace FAQ](https://web.archive.org/web/20151223141222/http://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site) and the [HTTPD documentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase)
+   - Depending on how your server is set up, you may also need to use the [`RewriteOptions`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions) directive to enable some options for the rewrite engine
 
 ```apache
 <IfModule mod_rewrite.c>
@@ -463,22 +463,22 @@ Be aware that Strict Transport Security is not revokable and you must ensure bei
 
 1. Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
 
-    - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
-    - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from, otherwise it will be restricted to the same origin as the page making the request
+   - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
+   - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from, otherwise it will be restricted to the same origin as the page making the request
 
 2. Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs
 
-    - If you want to use the `<base>` element, then use `base-uri 'self'` instead
+   - If you want to use the `<base>` element, then use `base-uri 'self'` instead
 
 3. Only allows form submissions are from the current origin with: `form-action 'self'`
 4. Prevents all websites (including your own) from embedding your webpages within e.g. the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
 
-    - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks and is similar to the `X-Frame-Options` header
-    - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
+   - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks and is similar to the `X-Frame-Options` header
+   - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
 
 5. Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
 
-    - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
+   - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
 
 6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
 

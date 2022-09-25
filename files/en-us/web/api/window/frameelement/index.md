@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.frameElement
 ---
+
 {{ApiRef}}
 
 The **`Window.frameElement`** property

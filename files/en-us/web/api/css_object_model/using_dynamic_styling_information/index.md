@@ -9,6 +9,7 @@ tags:
   - Guide
   - NeedsBeginnerUpdate
 ---
+
 {{DefaultAPISidebar("CSSOM")}}
 
 The CSS Object Model (CSSOM), part of the DOM, exposes specific interfaces allowing manipulation of a wide amount of information regarding CSS. Initially defined in the _DOM Level 2 Style_ recommendation, these interfaces forms now a specification, _CSS Object Model (CSSOM)_ which aims at superseding it.
@@ -38,7 +39,8 @@ In this example the background of the page is set to red using CSS. The JavaScri
     </script>
   </head>
   <body>
-    The stylesheet declaration for the body's background color is modified via JavaScript.
+    The stylesheet declaration for the body's background color is modified via
+    JavaScript.
   </body>
 </html>
 ```
@@ -63,18 +65,18 @@ To change a particular element's style, you can adapt the following example for 
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>simple style example</title>
 
     <script>
       function alterStyle(elem) {
-        elem.style.background = 'green';
+        elem.style.background = "green";
       }
 
       function resetStyle(elemId) {
-        elem = document.getElementById(elemId);
-        elem.style.background = 'white';
+        const elem = document.getElementById(elemId);
+        elem.style.background = "white";
       }
     </script>
     <style>
@@ -112,16 +114,16 @@ More important than the two properties noted here is the use of the `style` obje
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Style Property Example</title>
-    <link rel="StyleSheet" href="example.css">
+    <link rel="StyleSheet" href="example.css" />
     <script>
       function setStyle() {
-        document.getElementById('d').style.color = 'orange';
+        document.getElementById("d").style.color = "orange";
       }
       function resetStyle() {
-        document.getElementById('d').style.color = 'black';
+        document.getElementById("d").style.color = "black";
       }
     </script>
   </head>

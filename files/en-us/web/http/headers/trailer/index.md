@@ -9,6 +9,7 @@ tags:
   - Payload header
 browser-compat: http.headers.Trailer
 ---
+
 {{HTTPSidebar}}
 
 The **Trailer** response header allows the sender to include additional

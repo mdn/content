@@ -14,6 +14,7 @@ tags:
   - text direction
 browser-compat: javascript.builtins.Intl.Locale.textInfo
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.textInfo`** property is an accessor property which returns the ordering of characters indicated by either `ltr` (left-to-right) or by `rtl` (right-to-left) for the associated `Locale`.

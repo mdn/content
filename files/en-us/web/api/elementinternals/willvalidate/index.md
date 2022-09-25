@@ -10,6 +10,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.willValidate
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`willValidate`** read-only property of the {{domxref("ElementInternals")}} interface returns `true` if the element is a submittable element that is a candidate for [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).

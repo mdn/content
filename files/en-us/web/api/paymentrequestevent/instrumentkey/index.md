@@ -4,6 +4,7 @@ slug: Web/API/PaymentRequestEvent/instrumentKey
 page-type: web-api-instance-property
 browser-compat: api.PaymentRequestEvent.instrumentKey
 ---
+
 {{APIRef("Payment Request API")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`instrumentKey`** read-only property of the

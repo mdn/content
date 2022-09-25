@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.WindowControlsOverlay
 ---
+
 {{DefaultAPISidebar("Window Controls Overlay API")}}{{SeeCompatTable}}
 
 The Window Controls Overlay API gives Progressive Web Apps installed on desktop operating systems the ability to hide the default window title bar and display their own content
@@ -66,4 +67,4 @@ See [Using env() to ensure content is not obscured by window control buttons in 
 
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)
-- [Display content in the title bar](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
+- [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)

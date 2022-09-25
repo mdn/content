@@ -9,6 +9,7 @@ tags:
   - WebSockets
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.101
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`101 Switching Protocols`** response code indicates

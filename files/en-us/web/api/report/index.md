@@ -11,6 +11,7 @@ tags:
   - Reporting API
 browser-compat: api.Report
 ---
+
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
 The `Report` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a single report.
@@ -79,9 +80,9 @@ function displayReports(reports) {
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
-    for (const key in reports[i].body) {
+    for (const key in report.body) {
       const innerListItem = document.createElement('li');
-      const keyValue = reports[i].body[key];
+      const keyValue = report.body[key];
       innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);
     }

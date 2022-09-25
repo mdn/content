@@ -11,6 +11,7 @@ spec-urls:
   - https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14
   - https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7
 ---
+
 {{WebGLSidebar}}
 
 The [WebGL API](/en-US/docs/Web/API/WebGL_API) provides several constants that are passed into or returned by functions. All constants are of type {{domxref("WebGL_API/Types", "GLenum")}}.
@@ -1201,7 +1202,7 @@ Constants passed to {{domxref("WebGLRenderingContext.depthFunc()")}} or {{domxre
       <td>0x0200</td>
       <td>
         Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will never pass. i.e. Nothing will be
+        specify depth or stencil tests will never pass, i.e., nothing will be
         drawn.
       </td>
     </tr>
@@ -1264,7 +1265,7 @@ Constants passed to {{domxref("WebGLRenderingContext.depthFunc()")}} or {{domxre
       <td>0x0207</td>
       <td>
         Passed to <code>depthFunction</code> or <code>stencilFunction</code> to
-        specify depth or stencil tests will always pass. i.e. Pixels will be
+        specify depth or stencil tests will always pass, i.e., pixels will be
         drawn in the order they are drawn.
       </td>
     </tr>

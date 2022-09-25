@@ -9,6 +9,7 @@ tags:
   - events
 browser-compat: api.Window.devicemotion_event
 ---
+
 {{APIRef}}
 
 The `devicemotion` event is fired at a regular interval and indicates the amount of physical force of acceleration the device is receiving at that time. It also provides information about the rate of rotation, if available.

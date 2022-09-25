@@ -19,6 +19,7 @@ tags:
   - parameters
 browser-compat: api.RTCRtpEncodingParameters.maxFramerate
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`maxFramerate`** property of the {{domxref("RTCRtpEncodingParameters")}} dictionary specifies the maximum framerate that can be used to send the encoding, in frames per second.

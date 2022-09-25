@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.MediaQueryListEvent.media
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`media`** read-only property of the

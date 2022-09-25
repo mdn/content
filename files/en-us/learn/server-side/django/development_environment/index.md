@@ -10,6 +10,7 @@ tags:
   - Python
   - django
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
 Now that you know what Django is for, we'll show you how to set up and test a Django development environment on Windows, Linux (Ubuntu), and macOS — whatever common operating system you are using, this article should give you what you need to be able to start developing Django apps.
@@ -142,9 +143,9 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
 
 1. Download the required installer:
 
-    1. Go to <https://www.python.org/downloads/macos/>
-    2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
-       (at time of writing this is Python 3.10.2).
+   1. Go to <https://www.python.org/downloads/macos/>
+   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
+      (at time of writing this is Python 3.10.2).
 
 2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
 
@@ -167,9 +168,10 @@ Windows doesn't include Python by default, but you can easily install it (along 
 
 1. Download the required installer:
 
-    1. Go to <https://www.python.org/downloads/windows/>
-    2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
-       (at time of writing this is Python 3.10.2).
+   1. Go to <https://www.python.org/downloads/windows/>
+   2. Download the most recent [supported version](https://docs.djangoproject.com/en/4.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.0.2.
+      (at time of writing this is Python 3.10.2).
+
 2. Install Python by double-clicking on the downloaded file and following the installation prompts
 3. Be sure to check the box labeled "Add Python to PATH"
 
@@ -359,7 +361,7 @@ py -3 -m django --version
 >
 > In Windows _Python 3_ scripts are launched by prefixing the command with `py -3`, although this can vary depending on your specific installation. Try omitting the `-3` modifier if you encounter any problems with commands. In Linux/macOS, the command is `python3.`
 
-> **Warning:** The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`) . If you're working on _Windows_ replace this prefix with: `py -3`
+> **Warning:** The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`). If you're working on _Windows_ replace this prefix with: `py -3`
 
 ## Other Python tools
 
@@ -402,7 +404,7 @@ Quit the server with CONTROL-C.
 ```
 
 > **Note:** The above command shows the Linux/macOS command.
-> You can ignore the warnings about  "18 unapplied migration(s)" at this point!
+> You can ignore the warnings about "18 unapplied migration(s)" at this point!
 
 Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`. You should see a site that looks like this:
 

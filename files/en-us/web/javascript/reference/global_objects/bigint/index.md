@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt`** is a [primitive wrapper object](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript) used to represent and manipulate {{Glossary("Primitive", "primitive")}} `bigint` values — which are [too large](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) to be represented by the `number` {{Glossary("Primitive", "primitive")}}.
@@ -229,7 +230,7 @@ Because coercing between Number values and BigInt values can lead to loss of pre
 
 ### Cryptography
 
-The operations supported on BigInt values are not constant-time, and are thus open to [timing attacks](https://en.wikipedia.org/wiki/Timing_attack). JavaScript BigInts are therefore not well-suited for use in cryptography.
+The operations supported on BigInt values are not constant-time and are thus open to [timing attacks](https://en.wikipedia.org/wiki/Timing_attack). JavaScript BigInts therefore could be dangerous for use in cryptography without mitigating factors. As a very generic example, an attacker could measure the time difference between `101n ** 65537n` and `17n ** 9999n`, and deduce the magnitude of secrets, such as private keys, based on the time elapsed. If you still have to use BigInts, take a look at the [Timing attack FAQ](https://timing.attacks.cr.yp.to/programming.html) for general advice regarding the issue.
 
 ### Use within JSON
 

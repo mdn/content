@@ -10,6 +10,7 @@ tags:
   - Read-only
 browser-compat: api.Navigator.vendorSub
 ---
+
 {{ApiRef}} {{Deprecated_Header}}
 
 The value of the **`Navigator.vendorSub`** property is always

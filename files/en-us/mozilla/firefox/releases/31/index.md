@@ -6,6 +6,7 @@ tags:
   - Firefox 31
   - Firefox for Developers
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers

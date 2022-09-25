@@ -13,6 +13,7 @@ tags:
   - setIcon
 browser-compat: webextensions.api.browserAction.setIcon
 ---
+
 {{AddonSidebar()}}
 
 Sets the icon for the browser action.
@@ -27,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let settingIcon = browser.browserAction.setIcon(
   details         // object
 )

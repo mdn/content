@@ -10,6 +10,7 @@ tags:
   - SVG Font
 browser-compat: svg.elements.font
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<font>`** [SVG](/en-US/docs/Web/SVG) element defines a font to be used for text layout.

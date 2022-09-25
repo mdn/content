@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - Web Performance
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
 
 Web performance is all about making websites fast, including making slow processes _seem_ fast. This article provides an introduction into why web performance is important to site visitors and for your business goals.
@@ -53,7 +54,7 @@ As an example, consider the loading experience of CNN.com, which at the time of 
 
 A 22.6 MB site could take up to 83 seconds to load on a 3G network, with [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) (meaning the site's base HTML structure) at 31.86 seconds.
 
-And it isn't just the time taken to download that is a major problem. A lot of countries still have internet connections that bill per megabyte. Our example 22.6 MB CNN.com experience would cost about 11% of the average Indian's daily wage to download. From a mobile device in Northwest Africa, it might cost two days of an average salary.  And if this site were loaded on a US carrier's international roaming plan? The costs would make anyone cry. (See [how much your site costs to download](https://whatdoesmysitecost.com/).)
+And it isn't just the time taken to download that is a major problem. A lot of countries still have internet connections that bill per megabyte. Our example 22.6 MB CNN.com experience would cost about 11% of the average Indian's daily wage to download. From a mobile device in Northwest Africa, it might cost two days of an average salary. And if this site were loaded on a US carrier's international roaming plan? The costs would make anyone cry. (See [how much your site costs to download](https://whatdoesmysitecost.com/).)
 
 ### Improve conversion rates
 

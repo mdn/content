@@ -8,6 +8,7 @@ tags:
   - MIME
   - XMLHttpRequest
 ---
+
 The `responseType` property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, and `"text"`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This is `null` if the request is not complete or was not successful.
 
 This example reads an image as a binary file and creates an 8-bit unsigned integer array from the raw bytes. Note that this will not decode the image and read the pixels. You will need a [png decoding library](https://github.com/foliojs/png.js) for that.
@@ -21,9 +22,9 @@ req.onload = (event) => {
   const arrayBuffer = req.response; // Note: not req.responseText
   if (arrayBuffer) {
     const byteArray = new Uint8Array(arrayBuffer);
-    byteArray.forEach((element, index)) => {
+    byteArray.forEach((element, index) => {
       // do something with each byte in the array
-    }
+    });
   }
 };
 
@@ -47,25 +48,24 @@ oReq.send();
 
 ## Receiving binary data in older browsers
 
-The `load_binary_resource()` function shown below loads binary data from the specified URL, returning it to the caller.
+The `loadBinaryResource()` function shown below loads binary data from the specified URL, returning it to the caller.
 
 ```js
-function load_binary_resource(url) {
+function loadBinaryResource(url) {
   const req = new XMLHttpRequest();
-  req.open('GET', url, false);
+  req.open("GET", url, false);
 
-  //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
-  req.overrideMimeType('text/plain; charset=x-user-defined');
+  // XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
+  req.overrideMimeType("text/plain; charset=x-user-defined");
   req.send(null);
-  if (req.status !== 200) return '';
-  return req.responseText;
+  return req.status === 200 ? req.responseText : "";
 }
 ```
 
 The magic happens in line 5, which overrides the MIME type, forcing the browser to treat it as plain text, using a user-defined character set. This tells the browser not to parse it, and to let the bytes pass through unprocessed.
 
 ```js
-const filestream = load_binary_resource(url);
+const filestream = loadBinaryResource(url);
 const abyte = filestream.charCodeAt(x) & 0xff; // throw away high-order byte (f7)
 ```
 
@@ -86,7 +86,7 @@ req.onload = (event) => {
   // Uploaded
 };
 
-const blob = new Blob(['abc123'], { type: 'text/plain' });
+const blob = new Blob(["abc123"], { type: "text/plain" });
 
 req.send(blob);
 ```
@@ -96,10 +96,10 @@ req.send(blob);
 You can send JavaScript typed arrays as binary data as well.
 
 ```js
-// Create a new array with fake data (Consecutive numbers (0 - 255), looping back to 0) 
+// Create a new array with fake data (Consecutive numbers (0 - 255), looping back to 0)
 const array = new Uint8Array(512).map((v, i) => i);
 
-const xhr = new XMLHttpRequest;
+const xhr = new XMLHttpRequest();
 xhr.open("POST", url, false);
 xhr.send(array);
 ```

@@ -7,6 +7,7 @@ tags:
   - Non-standard
   - Property
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 {{Non-standard_header()}}

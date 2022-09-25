@@ -11,6 +11,7 @@ tags:
   - readyState
 browser-compat: api.EventSource.readyState
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`readyState`** read-only property of the

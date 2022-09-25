@@ -5,6 +5,7 @@ tags:
   - ARIA
   - Accessibility
 ---
+
 The following pages provide various techniques for improving the accessibility of web forms:
 
 - [Basic form hints](/en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints): Adding hints and descriptions for invalid or required fields

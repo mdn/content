@@ -8,16 +8,16 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Math.floor
 ---
+
 {{JSRef}}
 
-The **`Math.floor()`** function returns the largest integer
-less than or equal to a given number.
+The **`Math.floor()`** function always rounds down and returns the largest integer less than or equal to a given number.
 
 {{EmbedInteractiveExample("pages/js/math-floor.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Math.floor(x)
 ```
 
@@ -28,27 +28,26 @@ Math.floor(x)
 
 ### Return value
 
-A number representing the largest integer less than or equal to the specified number.
+The largest integer smaller than or equal to `x`. It's the same value as [`-Math.ceil(-x)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil).
 
 ## Description
 
-Because `floor()` is a static method of `Math`, you always use it
-as `Math.floor()`, rather than as a method of a `Math` object you
-created (`Math` is not a constructor).
-
-> **Note:** `Math.floor(null)` returns 0, not a
-> {{jsxref("NaN")}}.
+Because `floor()` is a static method of `Math`, you always use it as `Math.floor()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
 
 ## Examples
 
 ### Using Math.floor()
 
 ```js
-Math.floor(45.95);  //  45
-Math.floor(45.05);  //  45
-Math.floor(4);      //   4
-Math.floor(-45.05); // -46
+Math.floor(-Infinity); // -Infinity
 Math.floor(-45.95); // -46
+Math.floor(-45.05); // -46
+Math.floor(-0); // -0
+Math.floor(0); // 0
+Math.floor(4); //   4
+Math.floor(45.05); //  45
+Math.floor(45.95); //  45
+Math.floor(Infinity); // Infinity
 ```
 
 ### Decimal adjustment
@@ -69,7 +68,9 @@ It does so by multiplying the number by a power of 10, then rounding the result 
 function decimalAdjust(type, value, exp) {
   type = String(type);
   if (!["round", "floor", "ceil"].includes(type)) {
-    throw new TypeError("The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'.");
+    throw new TypeError(
+      "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'."
+    );
   }
   exp = Number(exp);
   value = Number(value);
@@ -78,39 +79,39 @@ function decimalAdjust(type, value, exp) {
   } else if (exp === 0) {
     return Math[type](value);
   }
-  const [magnitude, exponent = 0] = value.toString().split('e');
+  const [magnitude, exponent = 0] = value.toString().split("e");
   const adjustedValue = Math[type](`${magnitude}e${exponent - exp}`);
   // Shift back
-  const [newMagnitude, newExponent = 0] = adjustedValue.toString().split('e');
+  const [newMagnitude, newExponent = 0] = adjustedValue.toString().split("e");
   return Number(`${newMagnitude}e${+newExponent + exp}`);
 }
 
 // Decimal round
-const round10 = (value, exp) => decimalAdjust('round', value, exp);
+const round10 = (value, exp) => decimalAdjust("round", value, exp);
 // Decimal floor
-const floor10 = (value, exp) => decimalAdjust('floor', value, exp);
+const floor10 = (value, exp) => decimalAdjust("floor", value, exp);
 // Decimal ceil
-const ceil10 = (value, exp) => decimalAdjust('ceil', value, exp);
+const ceil10 = (value, exp) => decimalAdjust("ceil", value, exp);
 
 // Round
-round10(55.55, -1);   // 55.6
-round10(55.549, -1);  // 55.5
-round10(55, 1);       // 60
-round10(54.9, 1);     // 50
-round10(-55.55, -1);  // -55.5
+round10(55.55, -1); // 55.6
+round10(55.549, -1); // 55.5
+round10(55, 1); // 60
+round10(54.9, 1); // 50
+round10(-55.55, -1); // -55.5
 round10(-55.551, -1); // -55.6
-round10(-55, 1);      // -50
-round10(-55.1, 1);    // -60
+round10(-55, 1); // -50
+round10(-55.1, 1); // -60
 // Floor
-floor10(55.59, -1);   // 55.5
-floor10(59, 1);       // 50
-floor10(-55.51, -1);  // -55.6
-floor10(-51, 1);      // -60
+floor10(55.59, -1); // 55.5
+floor10(59, 1); // 50
+floor10(-55.51, -1); // -55.6
+floor10(-51, 1); // -60
 // Ceil
-ceil10(55.51, -1);    // 55.6
-ceil10(51, 1);        // 60
-ceil10(-55.59, -1);   // -55.5
-ceil10(-59, 1);       // -50
+ceil10(55.51, -1); // 55.6
+ceil10(51, 1); // 60
+ceil10(-55.59, -1); // -55.5
+ceil10(-59, 1); // -50
 ```
 
 ## Specifications

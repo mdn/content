@@ -11,6 +11,7 @@ tags:
   - Learn
   - client-side
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -74,8 +75,7 @@ However, we don't want this. Instead, we want it to contain the TodoMVC app stru
     class="new-todo"
     aria-label="What needs to be done?"
     placeholder="What needs to be done?"
-    autofocus
-  >
+    autofocus />
 </section>
 ```
 
@@ -94,11 +94,10 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
     class="new-todo"
     aria-label="What needs to be done?"
     placeholder="What needs to be done?"
-    autofocus
-  >
+    autofocus />
 
   <section class="main">
-    <input id="mark-all-complete" class="toggle-all" type="checkbox">
+    <input id="mark-all-complete" class="toggle-all" type="checkbox" />
     <label for="mark-all-complete">Mark all as complete</label>
 
     <ul class="todo-list">
@@ -107,17 +106,15 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
           <input
             aria-label="Toggle the completion of this todo"
             class="toggle"
-            type="checkbox"
-          >
+            type="checkbox" />
           <label>Buy Movie Tickets</label>
           <button
             type="button"
             class="destroy"
-            title="Remove this todo"
-          ></button>
+            title="Remove this todo"></button>
         </div>
 
-        <input autofocus class="edit" value="Todo Text">
+        <input autofocus class="edit" value="Todo Text" />
       </li>
 
       <li>
@@ -125,25 +122,21 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
           <input
             aria-label="Toggle the completion of this todo"
             class="toggle"
-            type="checkbox"
-          >
+            type="checkbox" />
           <label>Go to Movie</label>
           <button
             type="button"
             class="destroy"
-            title="Remove this todo"
-           ></button>
+            title="Remove this todo"></button>
         </div>
 
-        <input autofocus class="edit" value="Todo Text">
+        <input autofocus class="edit" value="Todo Text" />
       </li>
     </ul>
   </section>
 
   <footer class="footer">
-    <span class="todo-count">
-      <strong>0</strong> todos left
-    </span>
+    <span class="todo-count"> <strong>0</strong> todos left </span>
 
     <ul class="filters">
       <li>
@@ -153,9 +146,7 @@ It doesn't take too much effort to get our HTML looking like a fully-featured to
       </li>
     </ul>
 
-    <button type="button" class="clear-completed">
-      Clear Completed
-    </button>
+    <button type="button" class="clear-completed">Clear Completed</button>
   </footer>
 </section>
 ```
@@ -198,20 +189,20 @@ To create a component, we use the `ember generate component` command, followed b
 1. Stop the server running by going to the terminal and pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 2. Enter the following command into your terminal:
 
-    ```bash
-    ember generate component header
-    ```
+   ```bash
+   ember generate component header
+   ```
 
-    These will generate some new files, as shown in the resulting terminal output:
+   These will generate some new files, as shown in the resulting terminal output:
 
-    ```
-    installing component
-      create app/components/header.hbs
-      skip app/components/header.js
-      tip to add a class, run `ember generate component-class header`
-    installing component-test
-      create tests/integration/components/header-test.js
-    ```
+   ```
+   installing component
+     create app/components/header.hbs
+     skip app/components/header.js
+     tip to add a class, run `ember generate component-class header`
+   installing component-test
+     create tests/integration/components/header-test.js
+   ```
 
 `header.hbs` is the template file where we'll include the HTML structure for just that component. Later on we'll add the required dynamic functionality such as data bindings, responding to user interaction, etc.
 
@@ -235,87 +226,77 @@ Now that we have all of our component structure files, we can cut and paste the 
 
 1. The `header.hbs` file should be updated to contain the following:
 
-    ```html
-    <input
-      class="new-todo"
-      aria-label="What needs to be done?"
-      placeholder="What needs to be done?"
-      autofocus
-    >
-    ```
+   ```html
+   <input
+     class="new-todo"
+     aria-label="What needs to be done?"
+     placeholder="What needs to be done?"
+     autofocus />
+   ```
 
 2. `todo-list.hbs` should be updated to contain this chunk of code:
 
-    ```html
-    <section class="main">
-      <input id="mark-all-complete" class="toggle-all" type="checkbox">
-      <label for="mark-all-complete">Mark all as complete</label>
+   ```html
+   <section class="main">
+     <input id="mark-all-complete" class="toggle-all" type="checkbox" />
+     <label for="mark-all-complete">Mark all as complete</label>
 
-      <ul class="todo-list">
-        <Todo />
-        <Todo />
-      </ul>
-    </section>
-    ```
+     <ul class="todo-list">
+       <Todo />
+       <Todo />
+     </ul>
+   </section>
+   ```
 
-    > **Note:** The only non-HTML in this new `todo-list.hbs` is the `<Todo />` component invocation. In Ember, a component invocation is similar to declaring an HTML element, but the first letter starts with a capital letter, and the names are written in upper camel case, as you'll see with `<TodoList />` later on. The contents of the `todo.hbs` file below will replace `<Todo />` in the rendered page as our application loads.
+   > **Note:** The only non-HTML in this new `todo-list.hbs` is the `<Todo />` component invocation. In Ember, a component invocation is similar to declaring an HTML element, but the first letter starts with a capital letter, and the names are written in upper camel case, as you'll see with `<TodoList />` later on. The contents of the `todo.hbs` file below will replace `<Todo />` in the rendered page as our application loads.
 
 3. Add the following into the `todo.hbs` file:
 
-    ```html
-    <li>
-      <div class="view">
-        <input
-          aria-label="Toggle the completion of this todo"
-          class="toggle"
-          type="checkbox"
-        >
-        <label>Buy Movie Tickets</label>
-        <button
-          type="button"
-          class="destroy"
-          title="Remove this todo"
-        ></button>
-      </div>
+   ```html
+   <li>
+     <div class="view">
+       <input
+         aria-label="Toggle the completion of this todo"
+         class="toggle"
+         type="checkbox" />
+       <label>Buy Movie Tickets</label>
+       <button type="button" class="destroy" title="Remove this todo"></button>
+     </div>
 
-      <input autofocus class="edit" value="Todo Text">
-    </li>
-    ```
+     <input autofocus class="edit" value="Todo Text" />
+   </li>
+   ```
 
 4. `footer.hbs` should be updated to contain the following:
 
-    ```html
-    <footer class="footer">
-      <span class="todo-count">
-        <strong>0</strong> todos left
-      </span>
+   ```html
+   <footer class="footer">
+     <span class="todo-count"> <strong>0</strong> todos left </span>
 
-      <ul class="filters">
-        <li>
-          <a href="#">All</a>
-          <a href="#">Active</a>
-          <a href="#">Completed</a>
-        </li>
-      </ul>
+     <ul class="filters">
+       <li>
+         <a href="#">All</a>
+         <a href="#">Active</a>
+         <a href="#">Completed</a>
+       </li>
+     </ul>
 
-      <button type="button" class="clear-completed">
-        Clear Completed
-      </button>
-    </footer>
-    ```
+     <button type="button" class="clear-completed">Clear Completed</button>
+   </footer>
+   ```
 
 5. Finally, the contents of `application.hbs` should be updated so that they call the appropriate components, like so:
 
-    ```html
-    <section class="todoapp">
-      <h1>todos</h1>
+   ```html
+   <section class="todoapp">
+     <h1>todos</h1>
 
-      <Header />
-      <TodoList />
-      <Footer />
+     <Header />
+     <TodoList />
+     <Footer />
 
-    </section>
-    ```
+   </section>
+   ```
 
 6. With these changes made, run `npm start` in your terminal again, then head over to `http://localhost:4200` to ensure that the todo app still looks as it did before the refactor.
 

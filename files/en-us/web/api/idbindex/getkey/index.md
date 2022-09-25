@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBIndex.getKey
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getKey()`** method of the {{domxref("IDBIndex")}}
@@ -27,7 +28,7 @@ Note that this doesn't return the whole record as {{domxref("IDBIndex.get")}} do
 
 ## Syntax
 
-```js
+```js-nolint
 getKey()
 getKey(key)
 ```

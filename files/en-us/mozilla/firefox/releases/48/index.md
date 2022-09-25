@@ -2,11 +2,12 @@
 title: Firefox 48 for developers
 slug: Mozilla/Firefox/Releases/48
 tags:
-  - '48'
+  - "48"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 48 was released on August 2, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -55,7 +56,7 @@ tags:
 
   - {{cssxref("-webkit-text-fill-color")}} ({{bug(1247777)}}).
   - {{cssxref("-webkit-text-stroke")}}, {{cssxref("-webkit-text-stroke-color")}}, {{cssxref("-webkit-text-stroke-width")}} ({{bug(1248708)}}).
-  - `-webkit-background-clip`  (as background-clip) text value ({{bug(759568)}}).
+  - `-webkit-background-clip` (as background-clip) text value ({{bug(759568)}}).
   - `-webkit-box-direction`, `-webkit-box-orient` ({{bug(1262049)}}.
   - The value `-webkit-inline-box` is now an alias of `inline-flex` on the {{cssxref("display")}} property. ({{bug(1257661)}}).
   - `-webkit-flex-direction`, `-webkit-flex-wrap`, `-webkit-flex-flow`, `-webkit-order`, `-webkit-flex`, `-webkit-flex-grow`, `-webkit-flex-shrink`, `-webkit-flex-basis`, `-webkit-justify-content`, `-webkit-align-items`, `-webkit-align-self` and `-webkit-align-content` were added as aliases for the unprefixed properties and the values `-webkit-flex` and `-webkit-inline-flex` for the {{cssxref("display")}} property as aliases for the unprefixed values ({{bug(1274096)}}).

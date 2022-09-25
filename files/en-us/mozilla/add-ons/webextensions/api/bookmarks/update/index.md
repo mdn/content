@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.update
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.update()`** updates the title and/or URL of a bookmark, or the name of a bookmark folder.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let updating = browser.bookmarks.update(
   id,                    // string
   changes                // object

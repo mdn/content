@@ -14,6 +14,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement`** interface adds to {{domxref("HTMLElement")}} the properties and methods needed to support basic media-related capabilities that are common to audio and video.

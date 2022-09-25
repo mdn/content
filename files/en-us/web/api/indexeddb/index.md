@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.indexedDB
 ---
+
 {{ APIRef() }}
 
 The global **`indexedDB`** read-only property provides a mechanism for applications to

@@ -12,6 +12,7 @@ tags:
   - credential management
 browser-compat: api.CredentialsContainer.store
 ---
+
 {{APIRef("Credential Management API")}}
 
 The **`store()`** method of the
@@ -23,7 +24,7 @@ The **`store()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 store(credentials)
 ```
 

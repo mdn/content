@@ -12,6 +12,7 @@ tags:
   - Type
 browser-compat: api.GamepadHapticActuator.type
 ---
+
 {{APIRef("Gamepad")}}
 
 The **`type`** read-only property of the {{domxref("GamepadHapticActuator")}} interface returns an enum representing the type of the haptic hardware.

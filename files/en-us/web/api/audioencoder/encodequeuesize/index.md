@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.AudioEncoder.encodeQueueSize
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`encodeQueueSize`** read-only property of the {{domxref("AudioEncoder")}} interface returns the number of pending encode requests in the queue.

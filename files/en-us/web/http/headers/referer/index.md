@@ -9,6 +9,7 @@ tags:
   - referrer
 browser-compat: http.headers.Referer
 ---
+
 {{HTTPSidebar}}
 
 The **`Referer`** HTTP request header contains an absolute or partial address of the page that makes the request.

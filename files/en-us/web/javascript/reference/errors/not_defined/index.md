@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - ReferenceError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "_variable_ is not defined" occurs when there is a

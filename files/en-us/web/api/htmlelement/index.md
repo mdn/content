@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLElement`** interface represents any [HTML](/en-US/docs/Web/HTML) element. Some elements directly implement this interface, while others implement it via an interface that inherits it.

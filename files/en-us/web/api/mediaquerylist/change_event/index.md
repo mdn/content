@@ -12,6 +12,7 @@ tags:
   - onchange
 browser-compat: api.MediaQueryList.change_event
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`change`** event of the {{DOMxRef("MediaQueryList")}} interface fires when the status of media query support changes.

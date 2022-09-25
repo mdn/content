@@ -12,13 +12,14 @@ tags:
   - Service Workers
 browser-compat: api.PushMessageData.blob
 ---
+
 {{APIRef("Push API")}}
 
 The **`blob()`** method of the {{domxref("PushMessageData")}} interface extracts push message data as a {{domxref("Blob")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 blob()
 ```
 

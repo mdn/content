@@ -13,6 +13,7 @@ tags:
   - legacy
 browser-compat: api.Performance.timing
 ---
+
 {{APIRef("Navigation Timing")}}{{deprecated_header}}
 
 The legacy

@@ -12,6 +12,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
 
 This WebGL example demonstrates a very basic GLSL shader program that draws a solid color square.
@@ -29,46 +30,45 @@ A very simple first shader program.
 ```
 
 ```html hidden
-<canvas>Your browser does not seem to support
-    HTML canvas.</canvas>
+<canvas>Your browser does not seem to support HTML canvas.</canvas>
 ```
 
 ```css hidden
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
 ```html
 <script type="x-shader/x-vertex" id="vertex-shader">
-#version 100
-void main() {
-  gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
-  gl_PointSize = 64.0;
-}
+  #version 100
+  void main() {
+    gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
+    gl_PointSize = 64.0;
+  }
 </script>
 ```
 
 ```html
 <script type="x-shader/x-fragment" id="fragment-shader">
-#version 100
-void main() {
-  gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
-}
+  #version 100
+  void main() {
+    gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
+  }
 </script>
 ```
 

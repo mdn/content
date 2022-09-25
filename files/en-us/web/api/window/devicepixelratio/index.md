@@ -14,6 +14,7 @@ tags:
   - resolution
 browser-compat: api.Window.devicePixelRatio
 ---
+
 {{APIRef}}
 
 The **`devicePixelRatio`** of
@@ -142,12 +143,14 @@ box that will display the current pixel ratio information.
 ```html
 <div class="container">
   <div class="inner-container">
-    <p>This example demonstrates the effect of zooming the page in
-       and out (or moving it to a screen with a different scaling
-       factor) on the value of the property <code>Window.devicePixelRatio</code>.
-       Try it and watch what happens!</p>
+    <p>
+      This example demonstrates the effect of zooming the page in and out (or
+      moving it to a screen with a different scaling factor) on the value of the
+      property <code>Window.devicePixelRatio</code>. Try it and watch what
+      happens!
+    </p>
   </div>
-    <div class="pixel-ratio"></div>
+  <div class="pixel-ratio"></div>
 </div>
 ```
 

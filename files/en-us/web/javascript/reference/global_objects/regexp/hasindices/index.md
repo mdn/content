@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.hasIndices
 ---
+
 {{JSRef}}
 
 The **`hasIndices`** accessor property indicates whether or not the `d` flag is used with the regular expression.
@@ -55,7 +56,7 @@ console.log(regex2.exec(str2).indices); // Output: undefined
 
 ## See also
 
-- {{JSxRef("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.exec()")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.global")}}

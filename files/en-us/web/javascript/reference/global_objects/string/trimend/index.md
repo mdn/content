@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.trimEnd
 ---
+
 {{JSRef}}
 
 The **`trimEnd()`** method removes whitespace from the end of a
@@ -19,7 +20,7 @@ string. `trimRight()` is an alias of this method.
 
 ## Syntax
 
-```js
+```js-nolint
 trimEnd()
 
 trimRight()

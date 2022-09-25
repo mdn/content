@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.multiline
 ---
+
 {{JSRef}}
 
 The **`multiline`** accessor property indicates whether or not the `m` flag is used with the regular expression.
@@ -42,7 +43,7 @@ console.log(regex.multiline); // true
 
 ## See also
 
-- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.global")}}
 - {{JSxRef("RegExp.prototype.hasIndices")}}

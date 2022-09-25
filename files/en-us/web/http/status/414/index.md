@@ -8,6 +8,7 @@ tags:
   - Status code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.414
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`414 URI Too Long`** response status code indicates

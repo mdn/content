@@ -13,6 +13,7 @@ tags:
   - erase
 browser-compat: webextensions.api.downloads.erase
 ---
+
 {{AddonSidebar()}}
 
 The **`erase()`** function of the {{WebExtAPIRef("downloads")}} API erases matching {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} from the browser's download history, without deleting the downloaded files from disk.
@@ -25,7 +26,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let erasing = browser.downloads.erase(
   query                    // DownloadQuery
 )

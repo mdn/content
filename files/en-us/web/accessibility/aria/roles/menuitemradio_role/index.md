@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: menuitemradio role'
+title: "ARIA: menuitemradio role"
 slug: Web/Accessibility/ARIA/Roles/menuitemradio_role
 tags:
   - Accessibility
@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#menuitemradio
   - https://w3c.github.io/aria-practices/#menu
 ---
+
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, only one of which can be checked at a time.
 
 ## Description
@@ -34,7 +35,7 @@ If your want more than one item in a group to be checked, or if you want to enab
 
 If a `menu` or `menubar` contains more than one group of `menuitemradio` elements, or if the `menu` contains a group of `menuitemradio` elements as well as other, unrelated `menuitem` elements and/or `menuitemcheckbox` elements, contain each set of related `menuitemradio` elements in a `group` element or delimit the group the `menuitemradio` elements from the other menu items with a `separator` element (or an HTML element with an equivalent role such as a {{HTMLElement('fieldset')}} grouping or a thematic break {{HTMLElement('hr')}} separator.
 
-An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using  `<input type="radio">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
+An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using `<input type="radio">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
 
 If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemradio`, set the value with respect to the total number of items in the menu, excluding any separators.
 
@@ -86,9 +87,9 @@ If the `menuitemradio` is in a submenu in a `menubar` or a menu opened with a me
 - <kbd>Escape</kbd>
   - : Closes menu. In menubar, moves focus to parent menubar item.
 - <kbd>Right Arrow</kbd>
-  - : Closes submenu.  In menubar, moves focus to next item in the menubar, opening any submenu if there is one.
+  - : Closes submenu. In menubar, moves focus to next item in the menubar, opening any submenu if there is one.
 - <kbd>Left Arrow</kbd>
-  - : Closes menu.  In menubar, moves focus to previous item in the menubar, opening any submenu if there is one.
+  - : Closes menu. In menubar, moves focus to previous item in the menubar, opening any submenu if there is one.
 - <kbd>Down Arrow</kbd>
   - : Moves focus to the next item in the menu. If focus is on the last item, moves focus to the first item.
 - <kbd>Up Arrow</kbd>
@@ -120,19 +121,19 @@ The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the
 The visual appearance of the selected state is a checked radio button which we can create using [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and changing the [`background-color`](/en-US/docs/Web/CSS/background-color).
 
 ```css
-[role='menuitemradio']::before {
+[role="menuitemradio"]::before {
   display: inline-block;
-  content: '';
+  content: "";
   width: 1em;
   height: 1em;
   padding: 0.1em;
-  border : 2px solid #333;
+  border: 2px solid #333;
   border-radius: 50%;
   box-sizing: border-box;
   background-clip: content-box;
   margin-inline-end: 2px;
 }
-[role='menuitemradio'][aria-checked='true']::before {
+[role="menuitemradio"][aria-checked="true"]::before {
   background-color: purple;
 }
 ```
@@ -157,6 +158,6 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

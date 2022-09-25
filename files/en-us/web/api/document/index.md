@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document`** interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the [DOM tree](/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core).
@@ -113,6 +114,8 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets directionality (rtl/ltr) of the document.
 - {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
   - : Gets/sets the domain of the current document.
+- {{DOMxRef("Document.fullscreenEnabled")}} {{ReadOnlyInline}}
+  - : Indicates whether fullscreen mode is available.
 - {{DOMxRef("Document.lastModified")}} {{ReadOnlyInline}}
   - : Returns the date on which the document was last modified.
 - {{DOMxRef("Document.location")}} {{ReadOnlyInline}}
@@ -223,6 +226,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns an array of all elements at the specified coordinates.
 - {{DOMxRef("Document.enableStyleSheetsForSet()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Enables the style sheets for the specified style sheet set.
+- {{DOMxRef("Document.exitFullscreen()")}}
+  - : Stops document's fullscreen element from being displayed fullscreen.
 - {{DOMxRef("Document.exitPictureInPicture()")}}
   - : Remove the video from the floating picture-in-picture window back to its original container.
 - {{DOMxRef("Document.exitPointerLock()")}}
@@ -312,6 +317,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
 - {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
+- {{DOMxRef("Document.securitypolicyviolation_event", "securitypolicyviolation")}}
+  - : Fired when a content security policy is violated.
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}

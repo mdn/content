@@ -1,10 +1,11 @@
 ---
-title: 'ARIA: gridcell role'
+title: "ARIA: gridcell role"
 slug: Web/Accessibility/ARIA/Roles/gridcell_role
 tags:
   - ARIA
   - HTML
 ---
+
 The [gridcell role](https://www.w3.org/TR/wai-aria-1.1/#gridcell) is used to make a cell in a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role). It is intended to mimic the functionality of the HTML {{HTMLElement('td')}} element for table-style grouping of information.
 
 ```html
@@ -170,6 +171,6 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

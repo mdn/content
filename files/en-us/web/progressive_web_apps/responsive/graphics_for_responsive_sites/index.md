@@ -8,6 +8,7 @@ tags:
   - SVG
   - WebGL
 ---
+
 In 1996, many people involved in building the Web would have laughed at you if you had told them that less than 20 years in the future we would be developing web sites that worked well on mobile phones, tablets, TVs, even cars and home lighting. But today it is very much a reality. This article provides a high level discussion aimed at helping you to choose the best option for your graphical needs.
 
 Textual content is not a problem, as text boxes are innately responsive, but the picture starts to get ugly when you start including graphics and complex layouts on your pages — especially when those graphics and layouts need to adapt to different displays! This is why we have included an entire docs section covering each of these topics (the one you are currently in, and [app layout](/en-US/docs/Web/Apps/app_layout).)

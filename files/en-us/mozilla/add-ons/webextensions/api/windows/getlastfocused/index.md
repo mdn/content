@@ -13,6 +13,7 @@ tags:
   - getLastFocused
 browser-compat: webextensions.api.windows.getLastFocused
 ---
+
 {{AddonSidebar()}}
 
 Gets the window that was most recently focused — typically the window 'on top'.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingWindow = browser.windows.getLastFocused(
   getInfo               // optional object
 )

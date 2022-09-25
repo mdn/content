@@ -11,6 +11,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime
 ---
+
 {{AddonSidebar}}
 
 This module provides information about your extension and the environment it's running in.

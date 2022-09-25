@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.error_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`error`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechSynthesisUtterance")}} object is fired when an error occurs that prevents the utterance from being successfully spoken.

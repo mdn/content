@@ -13,6 +13,7 @@ tags:
   - toSum()
 browser-compat: api.CSSNumericValue.toSum
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`toSum()`** method of the
@@ -21,7 +22,7 @@ The **`toSum()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 toSum(units)
 ```
 

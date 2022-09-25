@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.Sec-CH-UA-Arch
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Sec-CH-UA-Arch`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's underlying CPU architecture, such as ARM or x86.

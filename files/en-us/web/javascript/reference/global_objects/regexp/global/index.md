@@ -10,6 +10,7 @@ tags:
   - Regular Expressions
 browser-compat: javascript.builtins.RegExp.global
 ---
+
 {{JSRef}}
 
 The **`global`** accessor property indicates whether or not the `g` flag is used with the regular expression.
@@ -56,7 +57,7 @@ console.log(str2);  // Output: examplefoo
 
 ## See also
 
-- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
 - {{JSxRef("RegExp.prototype.dotAll")}}
 - {{JSxRef("RegExp.prototype.hasIndices")}}
 - {{JSxRef("RegExp.prototype.ignoreCase")}}

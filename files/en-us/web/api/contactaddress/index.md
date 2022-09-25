@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.ContactAddress
 ---
+
 {{securecontext_header}}{{APIRef("")}}{{SeeCompatTable}}
 
 The **`ContactAddress`** interface of the {{domxref('contact_picker_api','Contact Picker API','','true')}} represents a physical address. Instances of this interface are retrieved from the `address` property of the objects returned by {{domxref("ContactManager.getProperties()")}}.
@@ -29,16 +30,16 @@ _Inherits methods from its parent, {{domxref("PaymentAddress")}}_.
 The following example prompts the user to select contacts, then prints the first returned address to the console.
 
 ```js
-const props = ['address'];
-const opts = {multiple: true};
+const props = ["address"];
+const opts = { multiple: true };
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(props, ops);
-      const contactAddress = contacts[0].address[0];
-      console.log(contactAddress)
+    const contacts = await navigator.contacts.select(props, ops);
+    const contactAddress = contacts[0].address[0];
+    console.log(contactAddress);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```

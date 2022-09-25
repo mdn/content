@@ -9,6 +9,7 @@ tags:
   - Experimental
 browser-compat: api.NDEFRecord.data
 ---
+
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`data`**
@@ -17,7 +18,7 @@ property of the {{DOMxRef("NDEFRecord")}} interface returns a
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.data
 ```
 

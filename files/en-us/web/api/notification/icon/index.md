@@ -12,6 +12,7 @@ tags:
   - icon
 browser-compat: api.Notification.icon
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`icon`** read-only property of the

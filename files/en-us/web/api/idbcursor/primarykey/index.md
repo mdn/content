@@ -13,6 +13,7 @@ tags:
   - primaryKey
 browser-compat: api.IDBCursor.primaryKey
 ---
+
 {{APIRef("IDBCursor")}}
 
 The **`primaryKey`** read-only property of the

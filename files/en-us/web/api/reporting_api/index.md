@@ -11,6 +11,7 @@ tags:
   - Secure context
 spec-urls: https://w3c.github.io/reporting/#intro
 ---
+
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
 The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy), or feature deprecation reports) in a consistent manner.

@@ -15,6 +15,7 @@ tags:
   - rtc
 browser-compat: api.RTCStats.type
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCStats")}} dictionary's property

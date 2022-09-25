@@ -9,6 +9,7 @@ tags:
   - CompressionStream
 browser-compat: api.CompressionStream
 ---
+
 {{APIRef("Compression Streams API")}}
 
 The **`CompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} is an API for compressing a stream of data.
@@ -30,7 +31,9 @@ The **`CompressionStream`** interface of the {{domxref('Compression Streams API'
 In this example a stream is compressed using gzip compression.
 
 ```js
-const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));
+const compressedReadableStream = inputReadableStream.pipeThrough(
+  new CompressionStream("gzip")
+);
 ```
 
 ## Specifications

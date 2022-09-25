@@ -9,6 +9,7 @@ tags:
   - Request header
 browser-compat: http.headers.If-None-Match
 ---
+
 {{HTTPSidebar}}
 
 The **`If-None-Match`** HTTP request header makes the request conditional. For {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods, the server will return the requested resource, with a {{HTTPStatus("200")}} status, only if it doesn't have an {{HTTPHeader("ETag")}} matching the given ones. For other methods, the request will be processed only if the eventually existing resource's {{HTTPHeader("ETag")}} doesn't match any of the values listed.

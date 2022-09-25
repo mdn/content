@@ -13,6 +13,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.remove
 ---
+
 {{AddonSidebar()}}
 
 Closes one or more tabs.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.tabs.remove(
   tabIds          // integer or integer array
 )

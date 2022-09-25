@@ -17,6 +17,7 @@ tags:
   - track
 browser-compat: api.VideoTrack.sourceBuffer
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("VideoTrack")}}**

@@ -14,6 +14,7 @@ tags:
   - sourceBuffers
 browser-compat: api.MediaSource.sourceBuffers
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`sourceBuffers`** read-only property of the

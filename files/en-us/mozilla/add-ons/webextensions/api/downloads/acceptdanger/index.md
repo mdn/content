@@ -13,6 +13,7 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.acceptDanger
 ---
+
 {{AddonSidebar()}}
 
 The **`acceptDanger()`** function of the {{WebExtAPIRef("downloads")}} API prompts the user to either accept or cancel a potentially dangerous download.
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let prompting = browser.downloads.acceptDanger(
   downloadId      // integer
 )

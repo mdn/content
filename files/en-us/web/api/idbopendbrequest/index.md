@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBOpenDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the results of requests to open or delete databases (performed using {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}), using specific event handler attributes.
@@ -23,7 +24,7 @@ The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the
 
 ## Properties
 
-_Also inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}_.
+_Also inherits properties from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}_.
 
 ## Methods
 

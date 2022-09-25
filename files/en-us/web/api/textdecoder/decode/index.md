@@ -9,6 +9,7 @@ tags:
   - TextDecoder
 browser-compat: api.TextDecoder.decode
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextDecode.decode()`** method returns a
@@ -17,7 +18,7 @@ specific method for that {{domxref("TextDecoder")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 decode()
 decode(buffer)
 decode(buffer, options)

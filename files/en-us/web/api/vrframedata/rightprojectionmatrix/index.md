@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VRFrameData.rightProjectionMatrix
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`rightProjectionMatrix`** read-only property of the {{domxref("VRFrameData")}} interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the projection to be used for the right eye's rendering.

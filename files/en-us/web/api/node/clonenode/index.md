@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`cloneNode()`** method of the {{domxref("Node")}} interface
@@ -33,9 +34,9 @@ To clone a node to insert into a _different_ document, use
 
 ## Syntax
 
-```js
-cloneNode();
-cloneNode(deep);
+```js-nolint
+cloneNode()
+cloneNode(deep)
 ```
 
 ### Parameters

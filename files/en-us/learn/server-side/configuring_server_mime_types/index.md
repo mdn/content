@@ -8,6 +8,7 @@ tags:
   - nginx
   - server-side
 ---
+
 MIME types describe the media type of content, either in email, or served by web servers or web applications. They are intended to help provide a hint as to how the content should be processed and displayed.
 
 Examples of MIME types:

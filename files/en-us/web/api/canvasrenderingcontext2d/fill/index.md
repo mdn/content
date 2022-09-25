@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.fill
 ---
+
 {{APIRef}}
 
 The
@@ -19,7 +20,7 @@ method of the Canvas 2D API fills the current or given path with the current
 
 ## Syntax
 
-```js
+```js-nolint
 fill()
 fill(path)
 fill(fillRule)
@@ -36,7 +37,7 @@ fill(path, fillRule)
 
     - `nonzero`
       - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule).
-      Default rule.
+        Default rule.
     - `evenodd`
       - : The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
@@ -62,8 +63,8 @@ This example fills a rectangle with the `fill()` method.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 150, 100);
 ctx.fill();
 ```
@@ -88,8 +89,8 @@ object's center by using the `"evenodd"` rule; by default (with the
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create path
 let region = new Path2D();
@@ -102,8 +103,8 @@ region.lineTo(270, 90);
 region.closePath();
 
 // Fill path
-ctx.fillStyle = 'green';
-ctx.fill(region, 'evenodd');
+ctx.fillStyle = "green";
+ctx.fill(region, "evenodd");
 ```
 
 #### Result

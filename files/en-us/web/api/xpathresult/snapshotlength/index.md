@@ -11,6 +11,7 @@ tags:
   - XPathResult
 browser-compat: api.XPathResult.snapshotLength
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`snapshotLength`** property of the

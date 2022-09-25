@@ -8,10 +8,11 @@ tags:
   - CanvasRenderingContext2D
   - Method
   - Reference
+  - Experimental
 browser-compat: api.CanvasRenderingContext2D.reset
 ---
 
-{{APIRef}}
+{{APIRef}}{{SeeCompatTable}}
 
 The **`CanvasRenderingContext2D.reset()`** method of the Canvas 2D API resets the rendering context to its default state, allowing it to be reused for drawing something else without having to explicitly reset all the properties.
 
@@ -20,7 +21,7 @@ This includes the current [transformation](/en-US/docs/Web/API/CanvasRenderingCo
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 

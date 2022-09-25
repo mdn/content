@@ -14,6 +14,7 @@ tags:
   - 'y'
 browser-compat: api.Gyroscope.y
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`y`** read-only property of the

@@ -11,6 +11,7 @@ tags:
   - Type
 browser-compat: api.Client.type
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`type`** read-only property of the {{domxref("Client")}}

@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.DataTransfer.mozSourceNode
 ---
+
 {{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`DataTransfer.mozSourceNode`** property is used to

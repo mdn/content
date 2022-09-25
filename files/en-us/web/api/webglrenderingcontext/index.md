@@ -18,6 +18,7 @@ tags:
   - rendering
 browser-compat: api.WebGLRenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext`** interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
@@ -298,6 +299,13 @@ The following properties and methods provide general information and functionali
   - : Blocks execution until all previously called commands are finished.
 - {{domxref("WebGLRenderingContext.flush()")}}
   - : Empties different buffer commands, causing all commands to be executed as quickly as possible.
+
+## Color spaces
+
+- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}}
+  - : Specifies the color space of the WebGL drawing buffer.
+- {{domxref("WebGLRenderingContext.unpackColorSpace")}}
+  - : Specifies the color space to convert to when importing textures.
 
 ## Working with extensions
 

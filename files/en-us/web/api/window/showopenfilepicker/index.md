@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.Window.showOpenFilePicker
 ---
+
 {{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`showOpenFilePicker()`** method of the
@@ -19,7 +20,7 @@ or multiple files and returns a handle for the file(s).
 
 ## Syntax
 
-```js
+```js-nolint
 showOpenFilePicker()
 ```
 
@@ -38,6 +39,7 @@ showOpenFilePicker()
         any file type filters (instigated with the type option below). Setting this option
         to `true` means that option is _not_ available.
     - `types`
+
       - : An {{jsxref('Array')}} of allowed file types to pick. Each
         item is an object with the following options:
 
@@ -56,6 +58,10 @@ A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}
 - `AbortError`
   - : An AbortError is thrown if a user dismisses the prompt without making a selection or
     if a file selected is deemed too sensitive or dangerous to be exposed to the website.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 
