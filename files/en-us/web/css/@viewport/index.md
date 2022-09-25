@@ -1,8 +1,8 @@
 ---
-title: '@viewport'
+title: "@viewport"
 slug: Web/CSS/@viewport
 tags:
-  - '@viewport'
+  - "@viewport"
   - At-rule
   - CSS
   - Deprecated

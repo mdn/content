@@ -126,6 +126,7 @@ article {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 80px;
   grid-gap: 10px;
+  margin: 20px;
   width: 300px;
 }
 
@@ -148,13 +149,10 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
-}
-
-article {
-  margin: 20px;
 }
 ```
 

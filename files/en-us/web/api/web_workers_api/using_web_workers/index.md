@@ -199,7 +199,7 @@ First, we use an `onconnect` handler to fire code when a connection to the port 
 
 We use the `ports` attribute of this event object to grab the port and store it in a variable.
 
-Next, we add a `message` handler on the port to do the calculation and return the result to the main thread. Setting up this `message` handler in the worker thread also implicitly opens the port connection back to the parent thread, so the call to `port.start()` is not actually needed, as noted above.
+Next, we add an `onmessage` handler on the port to do the calculation and return the result to the main thread. Setting up this `onmessage` handler in the worker thread also implicitly opens the port connection back to the parent thread, so the call to `port.start()` is not actually needed, as noted above.
 
 Finally, back in the main script, we deal with the message (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/square.js)):
 
@@ -428,11 +428,11 @@ Here are the full implementation:
 **example.html** (the main page):
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>MDN Example - Queryable worker</title>
     <script type="text/javascript">
       // QueryableWorker instances methods:
@@ -450,69 +450,90 @@ Here are the full implementation:
 
         this.defaultListener = defaultListener ?? (() => {});
 
-        if (onError) { worker.onerror = onError; }
+        if (onError) {
+          worker.onerror = onError;
+        }
 
         this.postMessage = (message) => {
           worker.postMessage(message);
-        }
+        };
 
         this.terminate = () => {
           worker.terminate();
-        }
+        };
 
         this.addListener = (name, listener) => {
           listeners[name] = listener;
-        }
+        };
 
         this.removeListener = (name) => {
           delete listeners[name];
-        }
+        };
 
         // This functions takes at least one argument, the method name we want to query.
         // Then we can pass in the arguments that the method needs.
         this.sendQuery = (queryMethod, ...queryMethodArguments) => {
           if (!queryMethod) {
-            throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
+            throw new TypeError(
+              "QueryableWorker.sendQuery takes at least one argument"
+            );
           }
           worker.postMessage({
             queryMethod,
             queryMethodArguments,
           });
-        }
+        };
 
         worker.onmessage = (event) => {
           if (
             event.data instanceof Object &&
-            Object.hasOwn(event.data, 'queryMethodListener') &&
-            Object.hasOwn(event.data, 'queryMethodArguments')
+            Object.hasOwn(event.data, "queryMethodListener") &&
+            Object.hasOwn(event.data, "queryMethodArguments")
           ) {
-            listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
+            listeners[event.data.queryMethodListener].apply(
+              instance,
+              event.data.queryMethodArguments
+            );
           } else {
             this.defaultListener.call(instance, event.data);
           }
-        }
+        };
       }
 
       // your custom "queryable" worker
-      const myTask = new QueryableWorker('my_task.js');
+      const myTask = new QueryableWorker("my_task.js");
 
       // your custom "listeners"
-      myTask.addListener('printStuff', (result) => {
-        document.getElementById('firstLink')
-          .parentNode
-          .appendChild(document.createTextNode(`The difference is ${result}!`));
+      myTask.addListener("printStuff", (result) => {
+        document
+          .getElementById("firstLink")
+          .parentNode.appendChild(
+            document.createTextNode(`The difference is ${result}!`)
+          );
       });
 
-      myTask.addListener('doAlert', (time, unit) => {
+      myTask.addListener("doAlert", (time, unit) => {
         alert(`Worker waited for ${time} ${unit} :-)`);
       });
     </script>
   </head>
   <body>
     <ul>
-      <li><a id="firstLink" href="javascript:myTask.sendQuery('getDifference', 5, 3);">What is the difference between 5 and 3?</a></li>
-      <li><a href="javascript:myTask.sendQuery('waitSomeTime');">Wait 3 seconds</a></li>
-      <li><a href="javascript:myTask.terminate();">terminate() the Worker</a></li>
+      <li>
+        <a
+          id="firstLink"
+          href="javascript:myTask.sendQuery('getDifference', 5, 3);"
+          >What is the difference between 5 and 3?</a
+        >
+      </li>
+      <li>
+        <a href="javascript:myTask.sendQuery('waitSomeTime');"
+          >Wait 3 seconds</a
+        >
+      </li>
+      <li>
+        <a href="javascript:myTask.terminate();">terminate() the Worker</a>
+      </li>
     </ul>
   </body>
 </html>
@@ -585,8 +606,8 @@ There is not an "official" way to embed the code of a worker within a web page, 
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>MDN Example - Embedded worker</title>
     <script type="text/js-worker">
       // This script WON'T be parsed by JS engines because its MIME type is text/js-worker.
@@ -599,8 +620,8 @@ There is not an "official" way to embed the code of a worker within a web page, 
         // Use a fragment: browser will only render/reflow once.
         const frag = document.createDocumentFragment();
         frag.appendChild(document.createTextNode(sMsg));
-        frag.appendChild(document.createElement('br'));
-        document.querySelector('#logDisplay').appendChild(frag);
+        frag.appendChild(document.createElement("br"));
+        document.querySelector("#logDisplay").appendChild(frag);
       }
     </script>
     <script type="text/js-worker">
@@ -686,14 +707,15 @@ The worker sets the property `onmessage` to a function which will receive messag
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8"  />
+    <meta charset="UTF-8" />
     <title>Fibonacci number generator</title>
     <style>
       body {
         width: 500px;
       }
 
-      div, p {
+      div,
+      p {
         margin-bottom: 20px;
       }
     </style>
@@ -701,21 +723,25 @@ The worker sets the property `onmessage` to a function which will receive messag
   <body>
     <form>
       <div>
-        <label for="number">Enter a number that is an index position in the fibonacci sequence to see what number is in that position (e.g. enter 5 and you'll get a result of 8 — fibonacci index position 5 is 8).</label>
-        <input type="number" id="number">
+        <label for="number"
+          >Enter a number that is an index position in the fibonacci sequence to
+          see what number is in that position (e.g. enter 5 and you'll get a
+          result of 8 — fibonacci index position 5 is 8).</label
+        >
+        <input type="number" id="number" />
       </div>
       <div>
-        <input type="submit">
+        <input type="submit" />
       </div>
     </form>
 
     <p id="result"></p>
 
     <script>
-      const form = document.querySelector('form');
+      const form = document.querySelector("form");
       const input = document.querySelector('input[type="number"]');
-      const result = document.querySelector('p#result');
-      const worker = new Worker('fibonacci.js');
+      const result = document.querySelector("p#result");
+      const worker = new Worker("fibonacci.js");
 
       worker.onmessage = (event) => {
         result.textContent = event.data;
@@ -730,14 +756,14 @@ The worker sets the property `onmessage` to a function which will receive messag
       form.onsubmit = (e) => {
         e.preventDefault();
         worker.postMessage(input.value);
-        input.value = '';
-      }
+        input.value = "";
+      };
     </script>
   </body>
 </html>
 ```
 
-The web page creates a `<div>` element with the ID `result` , which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<div>` element, and the `onerror` handler is set to log the error message to the devtools console.
+The web page creates a `<div>` element with the ID `result`, which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<div>` element, and the `onerror` handler is set to log the error message to the devtools console.
 
 Finally, a message is sent to the worker to start it.
 

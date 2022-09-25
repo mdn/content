@@ -128,10 +128,10 @@ Or it can be moved to a special style section that you include. Instead of shovi
 Moving styles to an area like this can make it easier to adjust properties on large groups of elements. You can also use things like the **`:hover` pseudo class** to create rollover effects:
 
 ```css
- #MyRect:hover {
-   stroke: black;
-   fill: blue;
- }
+#MyRect:hover {
+  stroke: black;
+  fill: blue;
+}
 ```
 
 You can also specify an external stylesheet for your CSS rules through [normal XML-stylesheet syntax](https://www.w3.org/TR/xml-stylesheet/):

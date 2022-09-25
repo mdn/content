@@ -1,5 +1,5 @@
 ---
-title: 'aria-braillelabel'
+title: "aria-braillelabel"
 slug: Web/Accessibility/ARIA/Attributes/aria-braillelabel
 tags:
   - Accessibility
@@ -33,7 +33,7 @@ Using only the accessible name, e.g., from content or via `aria-label` is almost
 
 ```html
 <button aria-braillelabel="***">
-  <img alt="3 out of 5 stars" src="three_stars.png">
+  <img alt="3 out of 5 stars" src="three_stars.png" />
 </button>
 ```
 

@@ -86,7 +86,7 @@ The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} 
 - {{ domxref('PointerEvent.twist','twist')}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType','pointerType')}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary','isPrimary')}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
@@ -133,16 +133,16 @@ This example registers a handler for every event type for the given element.
 ```html
 <html lang="en">
   <script>
-    function over_handler(event) { }
-    function enter_handler(event) { }
-    function down_handler(event) { }
-    function move_handler(event) { }
-    function up_handler(event) { }
-    function cancel_handler(event) { }
-    function out_handler(event) { }
-    function leave_handler(event) { }
-    function gotcapture_handler(event) { }
-    function lostcapture_handler(event) { }
+    function over_handler(event) {}
+    function enter_handler(event) {}
+    function down_handler(event) {}
+    function move_handler(event) {}
+    function up_handler(event) {}
+    function cancel_handler(event) {}
+    function out_handler(event) {}
+    function leave_handler(event) {}
+    function gotcapture_handler(event) {}
+    function lostcapture_handler(event) {}
 
     function init() {
       const el = document.getElementById("target");

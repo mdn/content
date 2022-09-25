@@ -42,7 +42,7 @@ JavaScript:
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="results"></dl>
 ```

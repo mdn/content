@@ -28,7 +28,7 @@ A boolean value.
 ```html
 <label>
   Allow drinks?
-  <input id="allow-drinks" type="checkbox"/>
+  <input id="allow-drinks" type="checkbox" />
 </label>
 
 <label for="drink-select">Drink selection:</label>

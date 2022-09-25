@@ -2,7 +2,6 @@
 title: Visual Viewport
 slug: Glossary/Visual_Viewport
 tags:
-  - Glossary
   - VisualViewport
   - viewport
   - visual viewport

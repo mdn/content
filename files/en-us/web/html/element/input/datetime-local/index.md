@@ -85,7 +85,11 @@ You can set a default value for the input by including a date and time inside th
 
 ```html
 <label for="party">Enter a date and time for your party booking:</label>
-<input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30">
+<input
+  id="party"
+  type="datetime-local"
+  name="partydate"
+  value="2017-06-01T08:30" />
 ```
 
 {{ EmbedLiveSample('Value', 600, 60) }}
@@ -143,8 +147,8 @@ The simplest use of `<input type="datetime-local">` involves a basic `<input>` a
 
 ```html
 <form>
-    <label for="party">Enter a date and time for your party booking:</label>
-    <input id="party" type="datetime-local" name="partydate">
+  <label for="party">Enter a date and time for your party booking:</label>
+  <input id="party" type="datetime-local" name="partydate" />
 </form>
 ```
 
@@ -155,10 +159,15 @@ The simplest use of `<input type="datetime-local">` involves a basic `<input>` a
 You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the dates/times that can be chosen by the user. In the following example we are setting a minimum datetime of `2017-06-01T08:30` and a maximum datetime of `2017-06-30T16:30`:
 
 ```html
-  <form>
-    <label for="party">Enter a date and time for your party booking:</label>
-    <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30">
-  </form>
+<form>
+  <label for="party">Enter a date and time for your party booking:</label>
+  <input
+    id="party"
+    type="datetime-local"
+    name="partydate"
+    min="2017-06-01T08:30"
+    max="2017-06-30T16:30" />
+</form>
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
@@ -181,18 +190,18 @@ One thing the `datetime-local` input type doesn't provide is a way to set the ti
 For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden) input type. For example:
 
 ```html
-<input type="hidden" id="timezone" name="timezone" value="-08:00">
+<input type="hidden" id="timezone" name="timezone" value="-08:00" />
 ```
 
 On the other hand, if you were required to allow the user to enter a time zone along with a date/time input, you could have a {{htmlelement("select")}} element to enable the user to set the right time zone by choosing a particular location from among a set of locations:
 
 ```html
 <select name="timezone" id="timezone">
-    <option value="Pacific/Kwajalein">Eniwetok, Kwajalein</option>
-    <option value="Pacific/Midway">Midway Island, Samoa</option>
-    <option value="Pacific/Honolulu">Hawaii</option>
-    <option value="Pacific/Marquesas">Taiohae</option>
-    <!-- and so on -->
+  <option value="Pacific/Kwajalein">Eniwetok, Kwajalein</option>
+  <option value="Pacific/Midway">Midway Island, Samoa</option>
+  <option value="Pacific/Honolulu">Hawaii</option>
+  <option value="Pacific/Marquesas">Taiohae</option>
+  <!-- and so on -->
 </select>
 ```
 
@@ -208,14 +217,23 @@ Let's look at an example; here we've set minimum and maximum date/time values, a
 
 ```html
 <form>
-    <div>
-        <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
-        <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
-        <span class="validity"></span>
-    </div>
-    <div>
-        <input type="submit" value="Book party!">
-    </div>
+  <div>
+    <label for="party">
+      Choose your preferred party date and time (required, June 1st 8.30am to
+      June 30th 4.30pm):
+    </label>
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      required />
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit" value="Book party!" />
+  </div>
 </form>
 ```
 
@@ -227,9 +245,9 @@ Here's the CSS used in the above example. Here we make use of the {{cssxref(":va
 
 ```css
 div {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 label {
@@ -270,16 +288,24 @@ One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute o
 ```html
 <form>
   <div>
-    <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
-    <input id="party" type="datetime-local" name="partydate"
-           min="2017-06-01T08:30" max="2017-06-30T16:30"
-           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required>
+    <label for="party">
+      Choose your preferred party date and time (required, June 1st 8.30am to
+      June 30th 4.30pm):
+    </label>
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit" value="Book party!">
+    <input type="submit" value="Book party!" />
   </div>
-  <input type="hidden" id="timezone" name="timezone" value="-08:00">
+  <input type="hidden" id="timezone" name="timezone" value="-08:00" />
 </form>
 ```
 
@@ -301,7 +327,7 @@ input:invalid + span {
 }
 
 input:invalid + span::after {
-  content: '✖';
+  content: "✖";
   position: absolute;
   right: -18px;
 }
@@ -311,7 +337,7 @@ input:valid + span {
 }
 
 input:valid + span::after {
-  content: '✓';
+  content: "✓";
   position: absolute;
   right: -18px;
 }
@@ -333,7 +359,7 @@ The problem is with the client side of things: parsing of dates with more than 4
 
 ```html
 <!--midnight of January 1st, 10000: the exact time of Y10K-->
-<input type="datetime-local" value="+010000-01-01T05:00"/>
+<input type="datetime-local" value="+010000-01-01T05:00" />
 ```
 
 It's that simple. Just prepare your code for any number of digits. Do not only prepare for 5 digits. Here is JavaScript code for programmatically setting the value:
@@ -359,7 +385,7 @@ The HTML looks like so:
 <form>
   <div class="nativeDateTimePicker">
     <label for="party">Choose a date and time for your party:</label>
-    <input type="datetime-local" id="party" name="bday">
+    <input type="datetime-local" id="party" name="bday" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">Choose a date and time for your party:</p>
@@ -367,8 +393,7 @@ The HTML looks like so:
     <div>
       <span>
         <label for="day">Day:</label>
-        <select id="day" name="day">
-        </select>
+        <select id="day" name="day"></select>
       </span>
       <span>
         <label for="month">Month:</label>
@@ -389,20 +414,17 @@ The HTML looks like so:
       </span>
       <span>
         <label for="year">Year:</label>
-        <select id="year" name="year">
-        </select>
+        <select id="year" name="year"></select>
       </span>
     </div>
     <div>
       <span>
         <label for="hour">Hour:</label>
-        <select id="hour" name="hour">
-        </select>
+        <select id="hour" name="hour"></select>
       </span>
       <span>
         <label for="minute">Minute:</label>
-        <select id="minute" name="minute">
-        </select>
+        <select id="minute" name="minute"></select>
       </span>
     </div>
   </div>
@@ -427,13 +449,13 @@ input + span {
 
 input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
 input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```

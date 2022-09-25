@@ -1,5 +1,5 @@
 ---
-title: '@color-profile'
+title: "@color-profile"
 slug: Web/CSS/@color-profile
 tags:
   - At-rule
@@ -20,7 +20,7 @@ The **`@color-profile`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CS
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 ```
 
@@ -51,10 +51,10 @@ The `src` descriptor specifies the URL to retrieve the color-profile information
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 .header {
-  background-color:   color(--swop5c 0% 70% 20% 0%);
+  background-color: color(--swop5c 0% 70% 20% 0%);
 }
 ```
 

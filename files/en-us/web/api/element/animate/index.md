@@ -55,7 +55,7 @@ In this example we use the `animate()` method to rotate and scale an element.
 #### HTML
 
 ```html
-<div class="newspaper">Spinning newspaper<br>causes dizziness</div>
+<div class="newspaper">Spinning newspaper<br />causes dizziness</div>
 ```
 
 #### CSS

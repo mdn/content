@@ -1,5 +1,5 @@
 ---
-title: ':playing'
+title: ":playing"
 slug: Web/CSS/:playing
 tags:
   - CSS
@@ -17,7 +17,6 @@ A resource is playing even if in buffering state or paused for any reason other 
 
 ```css
 :playing {
-
 }
 ```
 

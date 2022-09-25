@@ -187,19 +187,19 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="">
-</head>
-<body>
-  <div id="main"></div>
-  <script>
-    // A var statement creates a global variable.
-    var text = "Hello";
-  </script>
-  <script type="module" src="./render.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div id="main"></div>
+    <script>
+      // A var statement creates a global variable.
+      var text = "Hello";
+    </script>
+    <script type="module" src="./render.js"></script>
+  </body>
 </html>
 ```
 
@@ -519,13 +519,12 @@ Another advantage of dynamic imports is that they are always available, even in 
 
 ```html
 <script>
-  import('./modules/square.js')
-    .then((module) => {
-      // Do something with the module.
-    });
+  import("./modules/square.js").then((module) => {
+    // Do something with the module.
+  });
   // Other code that operates on the global scope and is not
   // ready to be refactored into modules yet.
-  var btn = document.querySelector('.square');
+  var btn = document.querySelector(".square");
 </script>
 ```
 

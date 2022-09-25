@@ -138,7 +138,7 @@ From there the GitHub UI will take your hand and
 [walk you through the rest](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files),
 like automatically creating a
 [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
-and branch to commit your changes to, as well as helping you reach the
+and the branch to commit your changes to, as well as helping you reach the
 ultimate goal, a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 Your pull request represents the work you want to be reviewed,
 hopefully approved, and then merged into the `main` branch of this repository.
@@ -170,10 +170,10 @@ Instead, you're going to have to use `git` or one of the other
 1. You'll want to create a
    [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
    of this repository, so you can freely experiment with branches and
-   changes in your own copy before submitting your changes as a
+   changes in your copy before submitting your changes as a
    [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
    Let's assume your GitHub username is `octocat`. Your fork would be a copy
-   of this repository but in your own account, so
+   of this repository but in your account, so
    `https://github.com/octocat/content`.
 
 2. Once you've created your fork on GitHub, you'll want to clone it locally.
@@ -205,10 +205,10 @@ Instead, you're going to have to use `git` or one of the other
    that `git` has assigned to your fork (`https://github.com/octocat/content`).
 
 5. Once you've created your local clone, there's no need to do that
-   again next time you want to make a contribution. However, each time before
+   again the next time you want to contribute. However, each time
    you start a new chunk of work make sure you update your local clone.
-   The following checks-out your local clone's `main` branch, fetches the
-   latest content from the `main` branch of the `mdn` repository and merges
+   The following checks out your local clone's `main` branch, fetches the
+   the latest content from the `main` branch of the `mdn` repository and merges
    it into your local `main` branch, and finally checks out a new branch
    called `my-work` (you can call it anything you'd like) for you to work within.
    When you're ready, you'll push your `my-work` branch to your fork
@@ -270,7 +270,7 @@ Instead, you're going to have to use `git` or one of the other
    `http://localhost:5042/en-us/docs/web/javascript` in your browser.
 
 10. You might have noticed that at the top of each page that you preview,
-    for example the `http://localhost:5042/en-us/docs/web/javascript` page,
+    for example, the `http://localhost:5042/en-us/docs/web/javascript` page,
     there is a `Show flaws` button. Click on that button to see if your
     changes have introduced flaws on the page. You can also fix flaws on a
     particular page by running the command:
@@ -301,7 +301,7 @@ Instead, you're going to have to use `git` or one of the other
     it's merged into the `main` branch, and then later (within 48 hours)
     published on [MDN Web Docs](https://developer.mozilla.org). Along the way,
     you may be asked, not only
-    to answer questions about your work, but to make changes as well. Don't
+    to answer questions about your work but to make changes as well. Don't
     worry, that's a common and natural part of the process.
     **See the [pull request etiquette section](#pull-request-etiquette) for more details**
     **on creating and handling pull requests successfully.**
@@ -311,7 +311,7 @@ Instead, you're going to have to use `git` or one of the other
 Here are some important rules of etiquette to remember when working
 with pull requests.
 
-1. When you submit a pull request, a number of tests are automatically run
+1. When you submit a pull request, several tests are automatically run
    as GitHub Actions (see [.github/workflows](.github/workflows)). If
    one or more of these tests fail, it is your responsibility to try and
    resolve the underlying issue(s). If you don't know how to resolve the
@@ -329,12 +329,12 @@ with pull requests.
    from GitHub lead to nowhere. Your changes are replayed on top of the current
    main branch at that point in time.
 
-4. Each pull request should contain a single logical change, or related set
+4. Each pull request should contain a single logical change or related set
    of changes that make sense to submit together. If a pull request becomes
    too large or contains too many unrelated changes, it becomes too difficult
-   to review, and may begin to look suspicious (it is easier to hide malicious
+   to review and may begin to look suspicious (it is easier to hide malicious
    changes in a large pull request). In such cases, the reviewer has the right
-   to close your pull request, and ask that you submit a separate pull request
+   to close your pull request and ask that you submit a separate pull request
    for each logical set of changes that belong together.
 
 5. If your pull request contains any kind of significant complexity
@@ -343,8 +343,8 @@ with pull requests.
    making the change and anything else we need to know about it.
 
    - If the pull request is simple (it is really clear what has been
-     changed and why, and the change is obviously a good thing), you can do
-     this in your pull request's description.
+     changed and why, and the change is a good thing), you can do
+     this is in your pull request's description.
    - If the pull request is complex (the changes and the reasoning behind
      them need a bit more explanation), then the requestor should file an
      issue describing the intended change first, and seek discussion/approval
@@ -368,7 +368,7 @@ There are only a few things to keep in mind:
 
 - Documents must be authored in Markdown.
 - Remember that a document is represented by an `index.html` or `index.md` file
-  within its own folder.
+  within its folder.
 - Determine where in the document hierarchy your document belongs. For
   example, if you're
   creating a new CSS document for a new property `foo`, you'll want to create
@@ -380,7 +380,7 @@ There are only a few things to keep in mind:
   (if any) for the document. You might find it helpful to refer
   to the front-matter within a similar document's `index.html` or `index.md`.
 
-As we outlined above, the step-by-step process in general would be:
+As we outlined above, the step-by-step process, in general, would be:
 
 1. Start a fresh, up-to-date branch to work within:
 
@@ -420,7 +420,7 @@ You just have to specify the slug of the existing document that you'd like
 to move (e.g., `Learn/Accessibility`), as well as the slug of its new
 location (e.g., `Learn/A11y`), optionally followed by the locale of the
 existing document (defaults to `en-US`).
-If the existing document that you'd like to move has child documents (i.e.
+If the existing document that you'd like to move contains child documents (i.e.
 it represents a document tree), the `yarn content move` command will move
 the entire tree. For example, let's say you want to move the entire
 `/en-US/Learn/Accessibility` tree to `/en-US/Learn/A11y`:
@@ -513,7 +513,7 @@ entire `/en-US/Learn/Accessibility` tree:
 
 5. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
-> **Note:** If the slug of the page you wish to delete contain special
+> **Note:** If the slug of the page you wish to delete contains special
 > characters, include it in quotes:
 
 ```sh

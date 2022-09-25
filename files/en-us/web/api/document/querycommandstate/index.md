@@ -37,7 +37,7 @@ queryCommandState(command)
 <div contenteditable="true">Select a part of this text!</div>
 <button onclick="makeBold();">Test the state of the 'bold' command</button>
 
-<hr>
+<hr />
 
 <div id="output"></div>
 ```

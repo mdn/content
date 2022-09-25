@@ -1,5 +1,5 @@
 ---
-title: ':past'
+title: ":past"
 slug: Web/CSS/:past
 browser-compat: css.selectors.past
 ---
@@ -36,7 +36,12 @@ The **`:past`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 <video controls preload="metadata">
   <source src="video.mp4" type="video/mp4" />
   <source src="video.webm" type="video/webm" />
-  <track label="English" kind="subtitles" srclang="en" src="subtitles.vtt" default>
+  <track
+    label="English"
+    kind="subtitles"
+    srclang="en"
+    src="subtitles.vtt"
+    default />
 </video>
 ```
 

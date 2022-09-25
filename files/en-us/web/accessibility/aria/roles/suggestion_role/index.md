@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: suggestion role'
+title: "ARIA: suggestion role"
 slug: Web/Accessibility/ARIA/Roles/suggestion_role
 tags:
   - ARIA
@@ -16,10 +16,11 @@ The `suggestion` role semantically denotes a single proposed change to an editab
 When you've got a content change that involves an insertion _and_ a deletion, there is no way for a screen reader user to work out if the two are related or not. This is the job of `role="suggestion"`, which should be set on an element wrapping both of them like so:
 
 ```html
-<p>Freida's pet is a
+<p>
+  Freida's pet is a
   <span role="suggestion">
     <span role="deletion">black Cat called Luna</span>
-    <span role="insertion">purple Tyrannosaurus Rex called Tiny</span>
+    <span role="insertion">purple T. Rex called Tiny</span>
   </span>.
 </p>
 ```
@@ -27,14 +28,18 @@ When you've got a content change that involves an insertion _and_ a deletion, th
 We could even provide an information box saying who made the suggestion and when, and associate it with the suggestion via [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details):
 
 ```html
-<p>Freida's pet is a
+<p>
+  Freida's pet is a
   <span role="suggestion" aria-details="comment-source">
     <span role="deletion">black Cat called Luna</span>
-    <span role="insertion">purple Tyrannosaurus Rex called Tiny</span>
+    <span role="insertion">purple T. Rex called Tiny</span> 
   </span>.
 </p>
 
-<div id="comment-source">Suggested by Chris, <time datetime="2019-03-30T19:29">March 30 2019, 19:29</time></div>
+<div id="comment-source">
+  Suggested by Chris,
+  <time datetime="2019-03-30T19:29">March 30 2019, 19:29</time>
+</div>
 ```
 
 Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions, but you'll probably want to use

@@ -40,7 +40,11 @@ None.
 ### Return value
 
 A {{jsxref("Promise")}} that will resolve to a {{domxref("PictureInPictureWindow")}}
-object. that can be used to listen when a user will resize that floating window.
+object that can be used to listen when a user will resize that floating window.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

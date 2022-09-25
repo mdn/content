@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Part 3: Using a Database (with Mongoose)'
+title: "Express Tutorial Part 3: Using a Database (with Mongoose)"
 slug: Learn/Server-side/Express_Nodejs/mongoose
 tags:
   - Beginner
@@ -133,17 +133,17 @@ _Mongoose_ requires a connection to a MongoDB database. You can `require()` and 
 
 ```js
 // Import the mongoose module
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // Set up default mongoose connection
-const mongoDB = 'mongodb://127.0.0.1/my_database';
-mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+const mongoDB = "mongodb://127.0.0.1/my_database";
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Get the default connection
 const db = mongoose.connection;
 
 // Bind connection to error event (to get notification of connection errors)
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 ```
 
 You can get the default `Connection` object with `mongoose.connection`. Once connected, the open event is fired on the `Connection` instance.
@@ -164,14 +164,14 @@ The code fragment below shows how you might define a simple schema. First you `r
 
 ```js
 // Require Mongoose
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // Define a schema
 const Schema = mongoose.Schema;
 
 const SomeModelSchema = new Schema({
   a_string: String,
-  a_date: Date
+  a_date: Date,
 });
 ```
 
@@ -187,11 +187,11 @@ const Schema = mongoose.Schema;
 
 const SomeModelSchema = new Schema({
   a_string: String,
-  a_date: Date
+  a_date: Date,
 });
 
 // Compile model from schema
-const SomeModel = mongoose.model('SomeModel', SomeModelSchema);
+const SomeModel = mongoose.model("SomeModel", SomeModelSchema);
 ```
 
 The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the above model _SomeModel_ above), and the second argument is the schema you want to use in creating the model.
@@ -204,8 +204,7 @@ A schema can have an arbitrary number of fields — each one represents a field 
 An example schema showing many of the common field types and how they are declared is shown below.
 
 ```js
-const schema = new Schema(
-{
+const schema = new Schema({
   name: String,
   binary: Buffer,
   living: Boolean,
@@ -215,8 +214,8 @@ const schema = new Schema(
   _someId: Schema.Types.ObjectId,
   array: [],
   ofString: [String], // You can also have an array of each of the other types too.
-  nested: { stuff: { type: String, lowercase: true, trim: true } }
-})
+  nested: { stuff: { type: String, lowercase: true, trim: true } },
+});
 ```
 
 Most of the [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) (the descriptors after "type:" or after field names) are self-explanatory. The exceptions are:
@@ -257,14 +256,14 @@ The example below (slightly modified from the Mongoose documents) shows how you 
 const breakfastSchema = new Schema({
   eggs: {
     type: Number,
-    min: [6, 'Too few eggs'],
+    min: [6, "Too few eggs"],
     max: 12,
-    required: [true, 'Why no eggs?']
+    required: [true, "Why no eggs?"],
   },
   drink: {
     type: String,
-    enum: ['Coffee', 'Tea', 'Water',]
-  }
+    enum: ["Coffee", "Tea", "Water"],
+  },
 });
 ```
 
@@ -294,7 +293,7 @@ To create a record you can define an instance of the model and then call `save()
 
 ```js
 // Create an instance of model SomeModel
-const awesome_instance = new SomeModel({ name: 'awesome' });
+const awesome_instance = new SomeModel({ name: "awesome" });
 
 // Save the new model instance, passing a callback
 awesome_instance.save((err) => {
@@ -308,7 +307,7 @@ Creation of records (along with updates, deletes, and queries) are asynchronous 
 You can also use `create()` to define the model instance at the same time as you save it. The callback will return an error for the first argument and the newly-created model instance for the second argument.
 
 ```js
-SomeModel.create({ name: 'also_awesome' }, function (err, awesome_instance) {
+SomeModel.create({ name: "also_awesome" }, function (err, awesome_instance) {
   if (err) return handleError(err);
   // saved!
 });
@@ -323,7 +322,7 @@ You can access the fields in this new record using the dot syntax, and change th
 console.log(awesome_instance.name); //should log 'also_awesome'
 
 // Change record by modifying the fields, then calling save().
-awesome_instance.name="New cool name";
+awesome_instance.name = "New cool name";
 awesome_instance.save((err) => {
   if (err) return handleError(err); // saved!
 });
@@ -334,13 +333,13 @@ awesome_instance.save((err) => {
 You can search for records using query methods, specifying the query conditions as a JSON document. The code fragment below shows how you might find all athletes in a database that play tennis, returning just the fields for athlete _name_ and _age_. Here we just specify one matching field (sport) but you can add more criteria, specify regular expression criteria, or remove the conditions altogether to return all athletes.
 
 ```js
-const Athlete = mongoose.model('Athlete', yourSchema);
+const Athlete = mongoose.model("Athlete", yourSchema);
 
 // find all athletes who play tennis, selecting the 'name' and 'age' fields
-Athlete.find({ 'sport': 'Tennis' }, 'name age', (err, athletes) => {
+Athlete.find({ sport: "Tennis" }, "name age", (err, athletes) => {
   if (err) return handleError(err);
   // 'athletes' contains the list of athletes that match the criteria.
-})
+});
 ```
 
 If you specify a callback, as shown above, the query will execute immediately. The callback will be invoked when the search completes.
@@ -353,10 +352,10 @@ If you don't specify a callback then the API will return a variable of type [Que
 
 ```js
 // find all athletes that play tennis
-const query = Athlete.find({ 'sport': 'Tennis' });
+const query = Athlete.find({ sport: "Tennis" });
 
 // selecting the 'name' and 'age' fields
-query.select('name age');
+query.select("name age");
 
 // limit our results to 5 items
 query.limit(5);
@@ -368,19 +367,21 @@ query.sort({ age: -1 });
 query.exec((err, athletes) => {
   if (err) return handleError(err);
   // athletes contains an ordered list of 5 athletes who play Tennis
-})
+});
 ```
 
 Above we've defined the query conditions in the `find()` method. We can also do this using a `where()` function, and we can chain all the parts of our query together using the dot operator (.) rather than adding them separately. The code fragment below is the same as our query above, with an additional condition for the age.
 
 ```js
-Athlete
-  .find()
-  .where('sport').equals('Tennis')
-  .where('age').gt(17).lt(50) // Additional where query
+Athlete.find()
+  .where("sport")
+  .equals("Tennis")
+  .where("age")
+  .gt(17)
+  .lt(50) // Additional where query
   .limit(5)
   .sort({ age: -1 })
-  .select('name age')
+  .select("name age")
   .exec(callback); // where callback is the name of our callback function.
 ```
 
@@ -404,29 +405,29 @@ Each story can have a single author.
 The `ref` property tells the schema which model can be assigned to this field.
 
 ```js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
 const authorSchema = Schema({
-  name    : String,
-  stories : [{ type: Schema.Types.ObjectId, ref: 'Story' }]
+  name: String,
+  stories: [{ type: Schema.Types.ObjectId, ref: "Story" }],
 });
 
 const storySchema = Schema({
-  author : { type: Schema.Types.ObjectId, ref: 'Author' },
-  title    : String
+  author: { type: Schema.Types.ObjectId, ref: "Author" },
+  title: String,
 });
 
-const Story  = mongoose.model('Story', storySchema);
-const Author = mongoose.model('Author', authorSchema);
+const Story = mongoose.model("Story", storySchema);
+const Author = mongoose.model("Author", authorSchema);
 ```
 
 We can save our references to the related document by assigning the `_id` value.
 Below we create an author, then a story, and assign the author id to our story's author field.
 
 ```js
-const bob = new Author({ name: 'Bob Smith' });
+const bob = new Author({ name: "Bob Smith" });
 
 bob.save((err) => {
   if (err) return handleError(err);
@@ -434,7 +435,7 @@ bob.save((err) => {
   // Bob now exists, so lets create a story
   const story = new Story({
     title: "Bob goes sledding",
-    author: bob._id    // assign the _id from our author Bob. This ID is created by default!
+    author: bob._id, // assign the _id from our author Bob. This ID is created by default!
   });
 
   story.save((err) => {
@@ -447,12 +448,11 @@ bob.save((err) => {
 Our story document now has an author referenced by the author document's ID. In order to get the author information in the story results we use `populate()`, as shown below.
 
 ```js
-Story
-  .findOne({ title: 'Bob goes sledding' })
-  .populate('author') // This populates the author id with actual author information!
+Story.findOne({ title: "Bob goes sledding" })
+  .populate("author") // This populates the author id with actual author information!
   .exec((err, story) => {
     if (err) return handleError(err);
-    console.log('The author is %s', story.author.name);
+    console.log("The author is %s", story.author.name);
     // prints "The author is Bob Smith"
   });
 ```
@@ -462,12 +462,10 @@ Story
 > A better way is to get the `_id` of our _author_, then use `find()` to search for this in the author field across all stories.
 >
 > ```js
-> Story
->   .find({ author : bob._id })
->   .exec((err, stories) => {
->    if (err) return handleError(err);
->     // returns all stories that have Bob's id as their author.
->   });
+> Story.find({ author: bob._id }).exec((err, stories) => {
+>   if (err) return handleError(err);
+>   // returns all stories that have Bob's id as their author.
+> });
 > ```
 
 This is almost everything you need to know about working with related items _for this tutorial_. For more detailed information see [Population](https://mongoosejs.com/docs/populate.html) (Mongoose docs).
@@ -481,7 +479,7 @@ This is shown below:
 // File: ./models/somemodel.js
 
 // Require Mongoose
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // Define a schema
 const Schema = mongoose.Schema;
@@ -492,14 +490,14 @@ const SomeModelSchema = new Schema({
 });
 
 // Export function to create "SomeModel" model class
-module.exports = mongoose.model('SomeModel', SomeModelSchema);
+module.exports = mongoose.model("SomeModel", SomeModelSchema);
 ```
 
 You can then require and use the model immediately in other files. Below we show how you might use it to get all instances of the model.
 
 ```js
 // Create a SomeModel model just by requiring the module
-const SomeModel = require('../models/somemodel')
+const SomeModel = require("../models/somemodel");
 
 // Use the SomeModel object (model) to find all SomeModel records
 SomeModel.find(callback_function);
@@ -596,11 +594,11 @@ Open **/app.js** (in the root of your project) and copy the following text below
 
 ```js
 // Set up mongoose connection
-const mongoose = require('mongoose');
-const mongoDB = 'insert_your_database_url_here';
+const mongoose = require("mongoose");
+const mongoDB = "insert_your_database_url_here";
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 ```
 
 As discussed [in the Mongoose primer above](#connecting_to_mongodb), this code creates the default connection to the database and binds to the error event (so that errors will be printed to the console).
@@ -625,44 +623,39 @@ Copy the `Author` schema code shown below and paste it into your **./models/auth
 The schema defines an author as having `String` SchemaTypes for the first and family names (required, with a maximum of 100 characters), and `Date` fields for the dates of birth and death.
 
 ```js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const AuthorSchema = new Schema(
-  {
-    first_name: {type: String, required: true, maxLength: 100},
-    family_name: {type: String, required: true, maxLength: 100},
-    date_of_birth: {type: Date},
-    date_of_death: {type: Date},
-  }
-);
+const AuthorSchema = new Schema({
+  first_name: { type: String, required: true, maxLength: 100 },
+  family_name: { type: String, required: true, maxLength: 100 },
+  date_of_birth: { type: Date },
+  date_of_death: { type: Date },
+});
 
 // Virtual for author's full name
-AuthorSchema
-  .virtual('name')
-  .get(function () {
+AuthorSchema.virtual("name").get(function () {
   // To avoid errors in cases where an author does not have either a family name or first name
   // We want to make sure we handle the exception by returning an empty string for that case
-    let fullname = '';
-    if (this.first_name && this.family_name) {
-      fullname = `${this.family_name}, ${this.first_name}`;
-    }
-    if (!this.first_name || !this.family_name) {
-      fullname = '';
-    }
-    return fullname;
-  });
+  let fullname = "";
+  if (this.first_name && this.family_name) {
+    fullname = `${this.family_name}, ${this.first_name}`;
+  }
+  if (!this.first_name || !this.family_name) {
+    fullname = "";
+  }
+  return fullname;
+});
 
 // Virtual for author's URL
-AuthorSchema
-  .virtual('url')
-  .get(function() { // We don't use an arrow function as we'll need the this object
-    return `/catalog/author/${this._id}`;
-  });
+AuthorSchema.virtual("url").get(function () {
+  // We don't use an arrow function as we'll need the this object
+  return `/catalog/author/${this._id}`;
+});
 
 // Export model
-module.exports = mongoose.model('Author', AuthorSchema);
+module.exports = mongoose.model("Author", AuthorSchema);
 ```
 
 We've also declared a [virtual](#virtual_properties) for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.
@@ -679,29 +672,26 @@ Copy the `Book` schema code shown below and paste it into your **./models/book.j
 Most of this is similar to the author model — we've declared a schema with a number of string fields and a virtual for getting the URL of specific book records, and we've exported the model.
 
 ```js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const BookSchema = new Schema(
-  {
-    title: { type: String, required: true },
-    author: { type: Schema.Types.ObjectId, ref: 'Author', required: true },
-    summary: { type: String, required: true },
-    isbn: { type: String, required: true },
-    genre: [{ type: Schema.Types.ObjectId, ref: 'Genre' }]
-  }
-);
+const BookSchema = new Schema({
+  title: { type: String, required: true },
+  author: { type: Schema.Types.ObjectId, ref: "Author", required: true },
+  summary: { type: String, required: true },
+  isbn: { type: String, required: true },
+  genre: [{ type: Schema.Types.ObjectId, ref: "Genre" }],
+});
 
 // Virtual for book's URL
-BookSchema
-  .virtual('url')
-  .get(function() { // We don't use an arrow function as we'll need the this object
-    return '/catalog/book/' + this._id;
-  });
+BookSchema.virtual("url").get(function () {
+  // We don't use an arrow function as we'll need the this object
+  return `/catalog/book/${this._id}`;
+});
 
 // Export model
-module.exports = mongoose.model('Book', BookSchema);
+module.exports = mongoose.model("Book", BookSchema);
 ```
 
 The main difference here is that we've created two references to other models:
@@ -715,28 +705,30 @@ Finally, copy the `BookInstance` schema code shown below and paste it into your 
 The `BookInstance` represents a specific copy of a book that someone might borrow and includes information about whether the copy is available, on what date it is expected back, and "imprint" (or version) details.
 
 ```js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const BookInstanceSchema = new Schema(
-  {
-    book: { type: Schema.Types.ObjectId, ref: 'Book', required: true }, // reference to the associated book
-    imprint: { type: String, required: true },
-    status: { type: String, required: true, enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'], default: 'Maintenance' },
-    due_back: { type: Date, default: Date.now }
-  }
-);
+const BookInstanceSchema = new Schema({
+  book: { type: Schema.Types.ObjectId, ref: "Book", required: true }, // reference to the associated book
+  imprint: { type: String, required: true },
+  status: {
+    type: String,
+    required: true,
+    enum: ["Available", "Maintenance", "Loaned", "Reserved"],
+    default: "Maintenance",
+  },
+  due_back: { type: Date, default: Date.now },
+});
 
 // Virtual for bookinstance's URL
-BookInstanceSchema
-  .virtual('url')
-  .get(function() { // We don't use an arrow function as we'll need the this object
-    return `/catalog/bookinstance/${this._id}`;
-  });
+BookInstanceSchema.virtual("url").get(function () {
+  // We don't use an arrow function as we'll need the this object
+  return `/catalog/bookinstance/${this._id}`;
+});
 
 // Export model
-module.exports = mongoose.model('BookInstance', BookInstanceSchema);
+module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 ```
 
 The new things we show here are the field options:

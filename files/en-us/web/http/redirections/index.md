@@ -77,7 +77,7 @@ HTTP redirects are the best way to create redirections, but sometimes you don't 
 
 ```html
 <head>
-  <meta http-equiv="Refresh" content="0; URL=https://example.com/">
+  <meta http-equiv="Refresh" content="0; URL=https://example.com/" />
 </head>
 ```
 
@@ -148,7 +148,7 @@ Redirects can be set either in the server config file or in the `.htaccess` of e
 
 The [`mod_alias`](https://httpd.apache.org/docs/current/mod/mod_alias.html) module has `Redirect` and `RedirectMatch` directives that set up {{HTTPStatus("302")}} redirects by default:
 
-```html
+```xml
 <VirtualHost *:443>
   ServerName example.com
   Redirect / https://www.example.com

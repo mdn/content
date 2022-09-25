@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: menubar role'
+title: "ARIA: menubar role"
 slug: Web/Accessibility/ARIA/Roles/menubar_role
 tags:
   - Accessibility

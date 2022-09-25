@@ -15,7 +15,7 @@ tags:
   - comments
   - external
   - inline
-  - l10n:priority
+  - "l10n:priority"
   - what
 ---
 
@@ -232,9 +232,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
    ```html
    <script>
-
      // JavaScript goes here
-
    </script>
    ```
 

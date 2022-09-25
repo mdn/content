@@ -48,7 +48,7 @@ content is ready to display.
   <nav-menu>
     <menu-item>Item 1</menu-item>
     <menu-item>Item 2</menu-item>
-     …
+    …
     <menu-item>Item N</menu-item>
   </nav-menu>
 </nav>

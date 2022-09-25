@@ -1,5 +1,5 @@
 ---
-title: ':disabled'
+title: ":disabled"
 slug: Web/CSS/:disabled
 tags:
   - CSS
@@ -15,12 +15,7 @@ browser-compat: css.selectors.disabled
 
 The **`:disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any disabled element. An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.
 
-```css
-/* Selects any disabled <input> */
-input:disabled {
-  background: #ccc;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-disabled.html", "tabbed-standard")}}
 
 ## Syntax
 
@@ -38,19 +33,19 @@ This example shows a basic shipping form. It uses the [JavaScript](/en-US/docs/W
 <form action="#">
   <fieldset id="shipping">
     <legend>Shipping address</legend>
-    <input type="text" placeholder="Name">
-    <input type="text" placeholder="Address">
-    <input type="text" placeholder="Zip Code">
+    <input type="text" placeholder="Name" />
+    <input type="text" placeholder="Address" />
+    <input type="text" placeholder="Zip Code" />
   </fieldset>
-  <br>
+  <br />
   <fieldset id="billing">
     <legend>Billing address</legend>
     <label for="billing-checkbox">Same as shipping address:</label>
-    <input type="checkbox" id="billing-checkbox" checked>
-    <br>
-    <input type="text" placeholder="Name" disabled>
-    <input type="text" placeholder="Address" disabled>
-    <input type="text" placeholder="Zip Code" disabled>
+    <input type="checkbox" id="billing-checkbox" checked />
+    <br />
+    <input type="text" placeholder="Name" disabled />
+    <input type="text" placeholder="Address" disabled />
+    <input type="text" placeholder="Zip Code" disabled />
   </fieldset>
 </form>
 ```
@@ -67,10 +62,14 @@ input[type="text"]:disabled {
 
 ```js
 // Wait for the page to finish loading
-document.addEventListener('DOMContentLoaded', () => {
-  // Attach `change` event listener to checkbox
-  document.getElementById('billing-checkbox').onchange = toggleBilling;
-}, false);
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    // Attach `change` event listener to checkbox
+    document.getElementById("billing-checkbox").onchange = toggleBilling;
+  },
+  false
+);
 
 function toggleBilling() {
   // Select the billing text fields

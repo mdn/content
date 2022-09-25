@@ -83,8 +83,10 @@ The [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute value is a stri
 For instance, there are a number of ways Microsoft Word files can be identified, so a site that accepts Word files might use an `<input>` like this:
 
 ```html
-<input type="file" id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+<input
+  type="file"
+  id="docpicker"
+  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
 ### capture
@@ -120,7 +122,7 @@ A **unique file type specifier** is a string that describes a type of file that 
 The `accept` attribute takes a string containing one or more of these unique file type specifiers as its value, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
 
 ```html
-<input type="file" accept="image/*,.pdf">
+<input type="file" accept="image/*,.pdf" />
 ```
 
 ## Using file inputs
@@ -129,13 +131,13 @@ The `accept` attribute takes a string containing one or more of these unique fil
 
 ```html
 <form method="post" enctype="multipart/form-data">
- <div>
-   <label for="file">Choose file to upload</label>
-   <input type="file" id="file" name="file" multiple>
- </div>
- <div>
-   <button>Submit</button>
- </div>
+  <div>
+    <label for="file">Choose file to upload</label>
+    <input type="file" id="file" name="file" multiple />
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
 </form>
 ```
 
@@ -193,8 +195,11 @@ Let's look at a more complete example:
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="profile_pic">Choose file to upload</label>
-    <input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png">
+    <input
+      type="file"
+      id="profile_pic"
+      name="profile_pic"
+      accept=".jpg, .jpeg, .png" />
   </div>
   <div>
     <button>Submit</button>
@@ -243,7 +248,12 @@ First of all, let's look at the HTML:
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
-    <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+    <input
+      type="file"
+      id="image_uploads"
+      name="image_uploads"
+      accept=".jpg, .jpeg, .png"
+      multiple />
   </div>
   <div class="preview">
     <p>No files currently selected for upload</p>
@@ -271,7 +281,8 @@ form ol {
   padding-left: 0;
 }
 
-form li, div > p {
+form li,
+div > p {
   background: #eee;
   display: flex;
   justify-content: space-between;
@@ -290,8 +301,9 @@ form p {
   padding-left: 10px;
 }
 
-form label, form button {
-  background-color: #7F9CCB;
+form label,
+form button {
+  background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px ridge black;
@@ -299,13 +311,15 @@ form label, form button {
   height: auto;
 }
 
-form label:hover, form button:hover {
-  background-color: #2D5BA3;
+form label:hover,
+form button:hover {
+  background-color: #2d5ba3;
   color: white;
 }
 
-form label:active, form button:active {
-  background-color: #0D3F8F;
+form label:active,
+form button:active {
+  background-color: #0d3f8f;
   color: white;
 }
 ```

@@ -40,17 +40,19 @@ The code fragment below shows a descriptor of this type being returned by a stat
 ```js
 // white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  static get parameterDescriptors () {
-    return [{
-      name: 'customGain',
-      defaultValue: 1,
-      minValue: 0,
-      maxValue: 1,
-      automationRate: 'a-rate'
-    }]
+  static get parameterDescriptors() {
+    return [
+      {
+        name: "customGain",
+        defaultValue: 1,
+        minValue: 0,
+        maxValue: 1,
+        automationRate: "a-rate",
+      },
+    ];
   }
 
-// …
+  // …
 }
 ```
 

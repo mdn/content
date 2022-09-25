@@ -279,16 +279,16 @@ We only do the validation when the form is submitted — this is so that we don'
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = '';
-  for(let i = 0; i < formItems.length; i++) {
+  errorList.innerHTML = "";
+  for (let i = 0; i < formItems.length; i++) {
     const testItem = formItems[i];
-    if (testItem.input.value === '') {
-      errorField.style.left = '360px';
+    if (testItem.input.value === "") {
+      errorField.style.left = "360px";
       createLink(testItem);
     }
   }
 
-  if (errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== "") {
     e.preventDefault();
   }
 }
@@ -304,8 +304,8 @@ For each input that doesn't have a value filled in when the form is submitted, w
 
 ```js
 function createLink(testItem) {
-  const listItem = document.createElement('li');
-  const anchor = document.createElement('a');
+  const listItem = document.createElement("li");
+  const anchor = document.createElement("a");
 
   const name = testItem.input.name;
   anchor.textContent = `${name} field is empty: fill in your ${name}.`;

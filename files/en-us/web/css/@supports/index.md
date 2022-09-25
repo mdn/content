@@ -1,5 +1,5 @@
 ---
-title: '@supports'
+title: "@supports"
 slug: Web/CSS/@supports
 tags:
   - At-rule
@@ -15,21 +15,7 @@ browser-compat: css.at-rules.supports
 
 The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you specify declarations that depend on a browser's support for one or more specific CSS features. This is called a _feature query_. The rule may be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
 
-```css
-@supports (display: grid) {
-  div {
-    display: grid;
-  }
-}
-```
-
-```css
-@supports not (display: grid) {
-  div {
-    float: right;
-  }
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
 
 In JavaScript, `@supports` can be accessed via the CSS object model interface {{DOMxRef("CSSSupportsRule")}}.
 
@@ -42,7 +28,8 @@ The `@supports` at-rule associates a block of statements with a _supports condit
 The most basic supports condition is a simple declaration (a property name followed by a value, separated by a colon). The declaration must be surrounded by parentheses. The following example returns true if the browser's {{CSSxRef("transform-origin")}} property considers `5% 5%` valid:
 
 ```css
-@supports (transform-origin: 5% 5%) {}
+@supports (transform-origin: 5% 5%) {
+}
 ```
 
 ### Function syntax
@@ -54,7 +41,8 @@ The second basic supports condition is a supports function, the syntax for these
 Tests if the browser supports the tested selector syntax. The following example returns true if the browser supports the [child combinator](/en-US/docs/Web/CSS/Child_combinator):
 
 ```css
-@supports selector(A > B) {}
+@supports selector(A > B) {
+}
 ```
 
 ### The not operator
@@ -62,14 +50,17 @@ Tests if the browser supports the tested selector syntax. The following example 
 The `not` operator can precede any expression to create a new expression, resulting in the negation of the original one. The following example returns true if the browser's {{CSSxRef("transform-origin")}} property **doesn't** consider `10em 10em 10em` valid:
 
 ```css
-@supports not (transform-origin: 10em 10em 10em) {}
+@supports not (transform-origin: 10em 10em 10em) {
+}
 ```
 
 As with any operator, the `not` operator can be applied to a declaration of any complexity. The following examples are both valid:
 
 ```css
-@supports not (not (transform-origin: 2px)) {}
-@supports (display: grid) and (not (display: inline-grid)) {}
+@supports not (not (transform-origin: 2px)) {
+}
+@supports (display: grid) and (not (display: inline-grid)) {
+}
 ```
 
 > **Note:** There is no need to enclose the `not` operator between two parentheses at the top level. To combine it with other operators, like `and` and `or`, the parentheses are required.
@@ -79,14 +70,18 @@ As with any operator, the `not` operator can be applied to a declaration of any 
 The `and` operator creates a new expression from the conjunction of two shorter expressions. It returns true only if **both** of the shorter expressions are also true. The following example returns true if and only if the two shorter expressions are simultaneously true:
 
 ```css
-@supports (display: table-cell) and (display: list-item) {}
+@supports (display: table-cell) and (display: list-item) {
+}
 ```
 
 Multiple conjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:
 
 ```css
-@supports (display: table-cell) and (display: list-item) and (display:contents) {}
-@supports (display: table-cell) and ((display: list-item) and (display:contents)) {}
+@supports (display: table-cell) and (display: list-item) and (display: contents) {
+}
+@supports (display: table-cell) and
+  ((display: list-item) and (display: contents)) {
+}
 ```
 
 ### The or operator
@@ -94,7 +89,8 @@ Multiple conjunctions can be juxtaposed without the need of more parentheses. Th
 The `or` operator creates a new expression from the disjunction of two shorter expressions. It returns true if **one or both** of the shorter expressions is also true. The following example returns true if at least one of the two shorter expressions is true:
 
 ```css
-@supports (transform-style: preserve) or (-moz-transform-style: preserve) {}
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) {
+}
 ```
 
 Multiple disjunctions can be juxtaposed without the need of more parentheses. The following are both equivalent:

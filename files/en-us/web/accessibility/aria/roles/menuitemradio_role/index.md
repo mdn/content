@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: menuitemradio role'
+title: "ARIA: menuitemradio role"
 slug: Web/Accessibility/ARIA/Roles/menuitemradio_role
 tags:
   - Accessibility
@@ -121,19 +121,19 @@ The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the
 The visual appearance of the selected state is a checked radio button which we can create using [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and changing the [`background-color`](/en-US/docs/Web/CSS/background-color).
 
 ```css
-[role='menuitemradio']::before {
+[role="menuitemradio"]::before {
   display: inline-block;
-  content: '';
+  content: "";
   width: 1em;
   height: 1em;
   padding: 0.1em;
-  border : 2px solid #333;
+  border: 2px solid #333;
   border-radius: 50%;
   box-sizing: border-box;
   background-clip: content-box;
   margin-inline-end: 2px;
 }
-[role='menuitemradio'][aria-checked='true']::before {
+[role="menuitemradio"][aria-checked="true"]::before {
   background-color: purple;
 }
 ```

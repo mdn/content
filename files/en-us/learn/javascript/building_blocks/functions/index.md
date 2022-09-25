@@ -15,7 +15,7 @@ tags:
   - Method
   - anonymous
   - invoke
-  - l10n:priority
+  - "l10n:priority"
   - parameters
 ---
 

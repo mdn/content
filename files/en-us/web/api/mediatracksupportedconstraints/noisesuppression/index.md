@@ -48,8 +48,7 @@ This example displays whether or not your browser supports the
 `noiseSuppression` constraint.
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden

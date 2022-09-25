@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Indexed_collections
 tags:
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
@@ -537,6 +537,8 @@ for (const key in arr) console.log(key); // Logs "0 1 4"
 // Spreading into an object uses property enumeration, not the array's iterator
 const objectSpread = { ...arr }; // { '0': 1, '1': 2, '4': 5 }
 ```
+
+For a complete list of how array methods behave with sparse arrays, see [the `Array` reference page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#array_methods_and_empty_slots).
 
 ## Multi-dimensional arrays
 

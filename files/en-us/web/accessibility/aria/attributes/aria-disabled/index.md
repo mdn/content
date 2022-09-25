@@ -32,9 +32,7 @@ In each of these cases, one may want users to find these elements through standa
 Another reason to need use the `aria-disabled` attribute over the HTML `disabled` attribute is if you have created custom controls which need to be marked as disabled, but are not using an element that allows for the `disabled` attribute. For instance, in the following snippet a `<div>` was used to create a custom button which needs to be marked as disabled. However, the `<div>` element does not expect, nor respect the `disabled` attribute - even if it were to be given a `role="button"` to change its exposed ARIA role. The `aria-disabled` attribute is required to disable such custom controls.
 
 ```html
-<div role="button" aria-disabled="true" tabindex="-1">
-  Edit
-</div>
+<div role="button" aria-disabled="true" tabindex="-1">Edit</div>
 ```
 
 Similarly to needing to use JavaScript to ensure an element with `aria-disabled="true"` is not functional, the element will also need styling adjustments. In contrast to the HTML `disabled` attribute, where specifying it provides `:disabled` user-agent styles to be applied, adding `aria-disabled="true"` doesn't. The element can be styled with the [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]`.
@@ -70,14 +68,14 @@ function onClick(event) {
 function toggleDisabled(element, status, update) {
   if (status) {
     //element.input.disabled = false;
-    element.setAttribute('aria-disabled', 'false');
-    update.textContent = 'The element is now enabled.';
-    element.addEventListener('click', onClick);
+    element.setAttribute("aria-disabled", "false");
+    update.textContent = "The element is now enabled.";
+    element.addEventListener("click", onClick);
   } else {
     //element.input.disabled = true;
-    element.setAttribute('aria-disabled', 'true');
-    update.textContent = 'The element is now disabled.';
-    element.removeEventListener('click', onClick);
+    element.setAttribute("aria-disabled", "true");
+    update.textContent = "The element is now disabled.";
+    element.removeEventListener("click", onClick);
   }
 }
 ```

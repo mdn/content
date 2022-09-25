@@ -43,7 +43,10 @@ Here's the HTML for this example:
 
 ```html
 <body>
-  <p>Click <a href="javascript:makeDocument()">here</a> to create a new document and insert it below.</p>
+  <p>
+    Click <a href="javascript:makeDocument()">here</a> to create a new document
+    and insert it below.
+  </p>
   <iframe id="theFrame" src="about:blank" />
 </body>
 ```
@@ -92,12 +95,13 @@ The returned document is pre-constructed with the following HTML:
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-<meta charset="UTF-8">
-<title>title</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+  </head>
+  <body>
+    …
+  </body>
 </html>
 ```
 

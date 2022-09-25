@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: widget role'
+title: "ARIA: widget role"
 slug: Web/Accessibility/ARIA/Roles/widget_role
 tags:
   - widget

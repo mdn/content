@@ -30,7 +30,11 @@ For animation, these elements are using this attribute: {{SVGElement('animate')}
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -41,7 +45,7 @@ html,body,svg { height:100% }
   <!-- Fill circle with a gradient -->
   <defs>
     <radialGradient id="myGradient">
-      <stop offset="0%"   stop-color="pink" />
+      <stop offset="0%" stop-color="pink" />
       <stop offset="100%" stop-color="black" />
     </radialGradient>
   </defs>
@@ -53,10 +57,13 @@ html,body,svg { height:100% }
   which is a circle with a radius of 40.
   -->
   <circle cx="250" cy="50" r="20">
-    <animate attributeType="XML"
-             attributeName="r"
-             from="0" to="40" dur="5s"
-             fill="freeze" />
+    <animate
+      attributeType="XML"
+      attributeName="r"
+      from="0"
+      to="40"
+      dur="5s"
+      fill="freeze" />
   </circle>
 </svg>
 ```

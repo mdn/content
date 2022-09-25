@@ -52,15 +52,12 @@ The HTML establishes the drop zone itself, which is a {{HTMLElement("div")}} ele
 <p>Drag files and/or directories to the box below!</p>
 
 <div id="dropzone">
-  <div id="boxtitle">
-    Drop Files Here
-  </div>
+  <div id="boxtitle">Drop Files Here</div>
 </div>
 
 <h2>Directory tree:</h2>
 
-<ul id="listing">
-</ul>
+<ul id="listing"></ul>
 ```
 
 ### CSS content

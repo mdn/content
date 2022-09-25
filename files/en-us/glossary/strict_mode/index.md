@@ -2,7 +2,6 @@
 title: Strict mode
 slug: Glossary/strict_mode
 tags:
-  - Glossary
   - JavaScript
   - Reference
 ---

@@ -4,7 +4,6 @@ slug: Glossary/Gecko
 tags:
   - Firefox OS
   - Gecko
-  - Glossary
   - Infrastructure
   - Intro
   - Mozilla

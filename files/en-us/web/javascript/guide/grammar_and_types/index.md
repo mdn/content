@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Grammar_and_types
 tags:
   - Guide
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
@@ -333,7 +333,7 @@ The latest ECMAScript standard defines eight data types:
 
 - and {{Glossary("Object")}}
 
-Although these data types are relatively few, they enable you to perform useful functions with your applications. {{jsxref("Object", "Objects", "", 1)}} and {{jsxref("Function", "functions", "", 1)}} are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your script can perform.
+Although these data types are relatively few, they enable you to perform useful operations with your applications. [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) are the other fundamental elements of the language. While functions are technically a kind of object, you can think of objects as named containers for values, and functions as procedures that your script can perform.
 
 ### Data type conversion
 
@@ -776,16 +776,6 @@ is broken \
 across multiple \
 lines.'
 console.log(str);   // this string is broken across multiple lines.
-```
-
-There is also a [**template literal**](/en-US/docs/Web/JavaScript/Reference/Template_literals) syntax. This allows for many advanced text formatting use cases, including multiline strings!
-
-```js
-const poem =
-`Roses are red,
-Violets are blue.
-Sugar is sweet,
-and so is foo.`
 ```
 
 ## More information

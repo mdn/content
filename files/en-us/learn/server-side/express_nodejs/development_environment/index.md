@@ -23,8 +23,7 @@ Now that you know what [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/In
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Know how to open a terminal / command line. Know how to install software
-        packages on your development computer's operating system.
+        Know how to open a terminal / command line. Know how to install software packages on your development computer's operating system.
       </td>
     </tr>
     <tr>
@@ -119,16 +118,15 @@ As a slightly more exciting test let's create a very basic "pure node" server th
    ```js
    //Load HTTP module
    const http = require("http");
-   const hostname = '127.0.0.1';
+   const hostname = "127.0.0.1";
    const port = 3000;
 
    //Create HTTP server and listen on port 3000 for requests
    const server = http.createServer((req, res) => {
-
      //Set the response HTTP header with HTTP status and Content type
      res.statusCode = 200;
-     res.setHeader('Content-Type', 'text/plain');
-     res.end('Hello World\n');
+     res.setHeader("Content-Type", "text/plain");
+     res.end("Hello World\n");
    });
 
    //listen for request on port 3000, and as a callback function have the port listened on logged
@@ -222,16 +220,16 @@ The following steps show how you can use npm to download a package, save it into
    Create this file now, in the root of the "myapp" application directory, and give it the following contents:
 
    ```js
-   const express = require('express')
+   const express = require("express");
    const app = express();
    const port = 3000;
 
-   app.get('/', (req, res) => {
-     res.send('Hello World!')
+   app.get("/", (req, res) => {
+     res.send("Hello World!");
    });
 
    app.listen(port, () => {
-     console.log(`Example app listening on port ${port}!`)
+     console.log(`Example app listening on port ${port}!`);
    });
    ```
 

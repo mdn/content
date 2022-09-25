@@ -2,7 +2,6 @@
 title: Usenet
 slug: Glossary/Usenet
 tags:
-  - Glossary
   - WebMechanics
 ---
 

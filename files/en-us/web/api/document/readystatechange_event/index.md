@@ -1,5 +1,5 @@
 ---
-title: 'Document: readystatechange event'
+title: "Document: readystatechange event"
 slug: Web/API/Document/readystatechange_event
 page-type: web-api-event
 tags:
@@ -43,7 +43,12 @@ A generic {{domxref("Event")}}.
 
 <div class="event-log">
   <label for="eventLog">Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30" id="eventLog"></textarea>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
 </div>
 ```
 

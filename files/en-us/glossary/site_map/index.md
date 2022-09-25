@@ -3,7 +3,6 @@ title: Site map
 slug: Glossary/Site_map
 tags:
   - Accessibility
-  - Glossary
   - Search
   - Site map
 ---

@@ -2,7 +2,6 @@
 title: Repo
 slug: Glossary/Repo
 tags:
-  - Glossary
   - Infrastructure
   - Intro
   - Repo

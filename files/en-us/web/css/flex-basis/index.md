@@ -108,10 +108,10 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 }
 
 .flex {
-  background: #6AB6D8;
+  background: #6ab6d8;
   padding: 10px;
   margin-bottom: 50px;
-  border: 3px solid #2E86BB;
+  border: 3px solid #2e86bb;
   color: white;
   font-size: 14px;
   text-align: center;
@@ -134,7 +134,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 }
 
 .flex1::after {
-  content: 'auto';
+  content: "auto";
 }
 
 .flex2 {
@@ -142,7 +142,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 }
 
 .flex2::after {
-  content: 'max-content';
+  content: "max-content";
 }
 
 .flex3 {
@@ -150,7 +150,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 }
 
 .flex3::after {
-  content: 'min-content';
+  content: "min-content";
 }
 
 .flex4 {
@@ -158,15 +158,15 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 }
 
 .flex4::after {
-  content: 'fit-content';
+  content: "fit-content";
 }
 
 .flex5 {
-   flex-basis: content;
+  flex-basis: content;
 }
 
 .flex5::after {
-  content: 'content';
+  content: "content";
 }
 ```
 

@@ -58,7 +58,8 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 
 ```html
 <span class="tweaked" id="source" draggable="true">
-  Select this element, drag it to the Drop Zone and then release the selection to move the element.
+  Select this element, drag it to the Drop Zone and then release the selection
+  to move the element.
 </span>
 <span class="tweaked" id="target">Drop Zone</span>
 <div>Status: <span id="status">Drag to start</span></div>

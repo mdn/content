@@ -2,7 +2,6 @@
 title: DSL (Digital Subscriber Line)
 slug: Glossary/DSL/Digital_subscriber_line
 tags:
-  - Glossary
   - Reference
 ---
 

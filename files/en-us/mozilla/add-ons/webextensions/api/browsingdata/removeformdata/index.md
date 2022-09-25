@@ -58,11 +58,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeFormData(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeFormData({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Remove all saved form data:
@@ -76,8 +76,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeFormData({}).
-then(onRemoved, onError);
+browser.browsingData.removeFormData({}).then(onRemoved, onError);
 ```
 
 ## Browser compatibility

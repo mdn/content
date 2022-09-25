@@ -34,8 +34,7 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ## Example
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden

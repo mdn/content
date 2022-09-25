@@ -122,16 +122,10 @@ When using background images, make sure the contrast in color is great enough th
 
 ```css
 .crossfade {
-    width: 300px;
-    height: 300px;
-    background-image: -webkit-cross-fade(
-        url('br.png'),
-        url('tr.png'),
-        75%);
-    background-image: cross-fade(
-        url('br.png'),
-        url('tr.png'),
-        75%);
+  width: 300px;
+  height: 300px;
+  background-image: -webkit-cross-fade(url("br.png"), url("tr.png"), 75%);
+  background-image: cross-fade(url("br.png"), url("tr.png"), 75%);
 }
 ```
 

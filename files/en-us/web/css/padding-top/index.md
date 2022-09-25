@@ -63,8 +63,12 @@ The `padding-top` property is specified as a single value chosen from the list b
 ### Setting top padding using pixels and percentages
 
 ```css
-.content { padding-top: 5%; }
-.sidebox { padding-top: 10px; }
+.content {
+  padding-top: 5%;
+}
+.sidebox {
+  padding-top: 10px;
+}
 ```
 
 ## Specifications

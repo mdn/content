@@ -7,7 +7,7 @@ tags:
   - Guide
   - JavaScript
   - Operators
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
@@ -61,7 +61,7 @@ operator operand
 operand operator
 ```
 
-For example, `x++` or `++x`. The `operator operand` form is called a _postfix_ unary operator, and the `operand operator` form is called a _prefix_ unary operator. `++` and `--` are the only postfix operators in JavaScript — all other operators, like `!`, `typeof`, etc. are prefix.
+For example, `x++` or `++x`. The `operator operand` form is called a _prefix_ unary operator, and the `operand operator` form is called a _postfix_ unary operator. `++` and `--` are the only postfix operators in JavaScript — all other operators, like `!`, `typeof`, etc. are prefix.
 
 ## Assignment operators
 
@@ -1088,7 +1088,7 @@ You could call `validate` in each form element's `onChange` event handler, using
 
 ```html
 <p>Enter a number between 18 and 99:</p>
-<input type="text" name="age" size=3 onChange="validate(this, 18, 99);">
+<input type="text" name="age" size="3" onChange="validate(this, 18, 99);" />
 ```
 
 ### Grouping operator

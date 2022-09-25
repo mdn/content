@@ -3,7 +3,6 @@ title: Database
 slug: Glossary/Database
 tags:
   - Database
-  - Glossary
   - Sql
 ---
 

@@ -7,7 +7,7 @@ tags:
   - Files
   - Guide
   - HTML
-  - l10n:priority
+  - "l10n:priority"
   - theory
   - website
 ---

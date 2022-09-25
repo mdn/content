@@ -1,5 +1,5 @@
 ---
-title: '-webkit-text-stroke-width'
+title: "-webkit-text-stroke-width"
 slug: Web/CSS/-webkit-text-stroke-width
 tags:
   - CSS

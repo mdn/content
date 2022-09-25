@@ -1,8 +1,8 @@
 ---
-title: '-webkit-animation'
+title: "-webkit-animation"
 slug: Web/CSS/@media/-webkit-animation
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Reference
   - WebKit

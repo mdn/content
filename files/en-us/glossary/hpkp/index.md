@@ -2,7 +2,6 @@
 title: HPKP
 slug: Glossary/HPKP
 tags:
-  - Glossary
   - Security
 ---
 

@@ -23,7 +23,7 @@ A boolean.
 ## Examples
 
 ```html
-<input type="number" id="age">
+<input type="number" id="age" />
 ```
 
 ```js

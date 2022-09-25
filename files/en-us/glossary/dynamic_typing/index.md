@@ -3,7 +3,6 @@ title: Dynamic typing
 slug: Glossary/Dynamic_typing
 tags:
   - CodingScripting
-  - Glossary
   - ProgrammingLanguage
 ---
 

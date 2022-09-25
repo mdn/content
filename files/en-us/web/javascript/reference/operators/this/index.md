@@ -443,13 +443,13 @@ keyword), its `this` is bound to the new object being constructed.
  * function MyConstructor() {
  *   // Actual function body code goes here.
  *   // Create properties on `this` as
- *   // desired by assigning to them.  E.g.,
+ *   // desired by assigning to them, for example,
  *   this.fum = "nom";
  *   // et cetera...
  *
  *   // If the function has a return statement that
  *   // returns an object, that object will be the
- *   // result of the `new` expression.  Otherwise,
+ *   // result of the `new` expression. Otherwise,
  *   // the result of the expression is the object
  *   // currently bound to `this`
  *   // (i.e., the common case most usually seen).

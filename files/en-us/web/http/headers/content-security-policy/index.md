@@ -90,7 +90,7 @@ where `<policy-directive>` consists of:
 - {{CSP("prefetch-src")}} {{experimental_inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
-  - : Specifies valid sources for JavaScript.
+  - : Specifies valid sources for JavaScript and WebAssembly resources.
 - {{CSP("script-src-elem")}}
   - : Specifies valid sources for JavaScript {{HTMLElement("script")}} elements.
 - {{CSP("script-src-attr")}}
@@ -283,7 +283,7 @@ Content-Security-Policy: default-src https:
 ### Using the HTML meta element
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="default-src https:">
+<meta http-equiv="Content-Security-Policy" content="default-src https:" />
 ```
 
 Example: Pre-existing site that uses too much inline code to fix but wants to ensure

@@ -1,5 +1,5 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
 tags:
   - CSS
@@ -36,7 +36,8 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 #### HTML
 
 ```html
-<p>This paragraph contains a link:
+<p>
+  This paragraph contains a link:
   <a href="#">This link will turn red while you click on it.</a>
   The paragraph will get a gray background while you click on it or the link.
 </p>
@@ -45,12 +46,27 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 #### CSS
 
 ```css
-a:link { color: blue; }          /* Unvisited links */
-a:visited { color: purple; }     /* Visited links */
-a:hover { background: yellow; }  /* Hovered links */
-a:active { color: red; }         /* Active links */
+/* Unvisited links */
+a:link {
+  color: blue;
+}
+/* Visited links */
+a:visited {
+  color: purple;
+}
+/* Hovered links */
+a:hover {
+  background: yellow;
+}
+/* Active links */
+a:active {
+  color: red;
+}
 
-p:active { background: #eee; }   /* Active paragraphs */
+/* Active paragraphs */
+p:active {
+  background: #eee;
+}
 ```
 
 #### Result

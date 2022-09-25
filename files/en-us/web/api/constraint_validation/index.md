@@ -68,7 +68,7 @@ Take the following form:
 ```html
 <form>
   <label for="name">Enter username (upper and lowercase letters): </label>
-  <input type="text" name="name" id="name" required pattern="[A-Za-z]+">
+  <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Submit</button>
 </form>
 ```
@@ -78,18 +78,20 @@ The basic HTML form validation features will cause this to produce a default err
 If you wanted to instead display custom error messages, you could use JavaScript like the following:
 
 ```js
-const nameInput = document.querySelector('input');
+const nameInput = document.querySelector("input");
 
-nameInput.addEventListener('input', () => {
-  nameInput.setCustomValidity('');
+nameInput.addEventListener("input", () => {
+  nameInput.setCustomValidity("");
   nameInput.checkValidity();
 });
 
-nameInput.addEventListener('invalid', () => {
-  if (nameInput.value === '') {
-    nameInput.setCustomValidity('Enter your username!');
+nameInput.addEventListener("invalid", () => {
+  if (nameInput.value === "") {
+    nameInput.setCustomValidity("Enter your username!");
   } else {
-    nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+    nameInput.setCustomValidity(
+      "Usernames can only contain upper and lowercase letters. Try again!"
+    );
   }
 });
 ```

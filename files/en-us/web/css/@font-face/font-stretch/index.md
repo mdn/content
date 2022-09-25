@@ -2,7 +2,7 @@
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference
@@ -151,8 +151,8 @@ The following find a local Open Sans font or import it, and allow using the font
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src: local("Open Sans") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+      format("woff");
   font-stretch: 87.5% 112.5%;
 }
 ```

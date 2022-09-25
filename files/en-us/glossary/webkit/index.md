@@ -3,7 +3,6 @@ title: WebKit
 slug: Glossary/WebKit
 tags:
   - Browser
-  - Glossary
   - Intro
   - Web
   - WebKit

@@ -20,12 +20,12 @@ If no priority is set, the signal priority defaults to [`user-visible`](/en-US/d
 
 ```js-nolint
 new TaskController()
-new TaskController(init)
+new TaskController(options)
 ```
 
 ### Parameters
 
-- `init` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : An object with the following properties:
 

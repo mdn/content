@@ -1,8 +1,8 @@
 ---
-title: '-webkit-device-pixel-ratio'
+title: "-webkit-device-pixel-ratio"
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - WebKit
   - media feature
@@ -28,14 +28,22 @@ The `-webkit-device-pixel-ratio` feature is specified as a {{cssxref("&lt;number
 
 ```css
 /* A unit of "dppx" is implied: */
-@media (-webkit-min-device-pixel-ratio: 2) { /* … */ }
+@media (-webkit-min-device-pixel-ratio: 2) {
+  /* … */
+}
 /* It is equivalent to: */
-@media (min-resolution: 2dppx) { /* … */ }
+@media (min-resolution: 2dppx) {
+  /* … */
+}
 
 /* Similarly: */
-@media (-webkit-max-device-pixel-ratio: 2) { /* … */ }
+@media (-webkit-max-device-pixel-ratio: 2) {
+  /* … */
+}
 /* It is equivalent to: */
-@media (max-resolution: 2dppx) { /* … */ }
+@media (max-resolution: 2dppx) {
+  /* … */
+}
 ```
 
 ## Examples

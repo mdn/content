@@ -26,8 +26,8 @@ A string containing an integer.
 In this example the `aria-posinset` attribute on the element with an ID of `article2` is set to "2". Using `ariaPosInSet` we update the value to "3".
 
 ```html
-<article id="article1" aria-posinset="1"> … </article>
-<article id="article2" aria-posinset="2"> … </article>
+<article id="article1" aria-posinset="1">…</article>
+<article id="article2" aria-posinset="2">…</article>
 ```
 
 ```js

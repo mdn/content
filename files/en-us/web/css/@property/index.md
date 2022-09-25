@@ -1,5 +1,5 @@
 ---
-title: '@property'
+title: "@property"
 slug: Web/CSS/@property
 tags:
   - At-rule
@@ -22,7 +22,7 @@ The `@property` rule represents a custom property registration directly in a sty
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -51,7 +51,7 @@ Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -61,10 +61,10 @@ Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

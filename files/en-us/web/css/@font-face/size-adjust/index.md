@@ -2,7 +2,7 @@
 title: size-adjust
 slug: Web/CSS/@font-face/size-adjust
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference

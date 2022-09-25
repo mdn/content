@@ -21,7 +21,8 @@ a[title] {
 }
 
 /* <a> elements with an href matching "https://example.org" */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 
@@ -210,7 +211,9 @@ ol[type="c" i] {
 
 ```html
 <ol type="A">
-  <li>Red background for case-insensitive matching (default for the type selector)</li>
+  <li>
+    Red background for case-insensitive matching (default for the type selector)
+  </li>
 </ol>
 <ol type="b">
   <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
@@ -219,7 +222,9 @@ ol[type="c" i] {
   <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
 </ol>
 <ol type="C">
-  <li>Green background if `i` modifier is supported (case-insensitive match)</li>
+  <li>
+    Green background if `i` modifier is supported (case-insensitive match)
+  </li>
 </ol>
 ```
 

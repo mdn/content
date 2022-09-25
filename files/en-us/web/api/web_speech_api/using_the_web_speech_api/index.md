@@ -69,7 +69,7 @@ const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechReco
 The next part of our code defines the grammar we want our app to recognize. The following variable is defined to hold our grammar:
 
 ```js
-const colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', /* … */ ];
+const colors = [ 'aqua', 'azure', 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', /* … */ ];
 const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(' | ')};`
 ```
 
@@ -202,23 +202,26 @@ The HTML and CSS are again pretty trivial, containing a title, some instructions
 ```html
 <h1>Speech synthesizer</h1>
 
-<p>Enter some text in the input below and press return to hear it. change voices using the dropdown menu.</p>
+<p>
+  Enter some text in the input below and press return to hear it. change voices
+  using the dropdown menu.
+</p>
 
 <form>
-  <input type="text" class="txt">
+  <input type="text" class="txt" />
   <div>
-    <label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+    <label for="rate">Rate</label
+    ><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
     <div class="rate-value">1</div>
     <div class="clearfix"></div>
   </div>
   <div>
-    <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+    <label for="pitch">Pitch</label
+    ><input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
     <div class="pitch-value">1</div>
     <div class="clearfix"></div>
   </div>
-  <select>
-
-  </select>
+  <select></select>
 </form>
 ```
 

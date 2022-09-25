@@ -33,14 +33,15 @@ A string with one of the following values:
 In this example the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) attribute on the element with an ID of `handle_zoomSlider` is set to "`vertical`". Using `ariaOrientation` we update the value to "`horizontal`".
 
 ```html
-<div id="handle_zoomSlider"
+<div
+  id="handle_zoomSlider"
   role="slider"
   aria-orientation="vertical"
   aria-valuemin="0"
   aria-valuemax="17"
   aria-valuenow="14"
   tabindex="0">
-<span>11</span>
+  <span>11</span>
 </div>
 ```
 

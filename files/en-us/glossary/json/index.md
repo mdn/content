@@ -3,10 +3,9 @@ title: JSON
 slug: Glossary/JSON
 tags:
   - CodingScripting
-  - Glossary
   - Intro
   - JSON
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 _JavaScript Object Notation_ (**JSON**) is a data-interchange format. Although not a strict subset, JSON closely resembles a subset of {{Glossary("JavaScript")}} syntax. Though many programming languages support JSON, it is especially useful for JavaScript-based apps, including websites and browser extensions.

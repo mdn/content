@@ -4,7 +4,6 @@ slug: Glossary/Alignment_Subject
 tags:
   - Alignment subject
   - CSS
-  - Glossary
   - alignment
 ---
 

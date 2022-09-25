@@ -2,7 +2,6 @@
 title: STUN
 slug: Glossary/STUN
 tags:
-  - Glossary
   - Infrastructure
   - STUN
   - WebMechanics

@@ -372,9 +372,9 @@ Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/St
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email"></p>
-<p>Name: <input type="text" id="name" name="name"></p>
-<p>Age: <input type="text" id="age" name="age"></p>
+<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Name: <input type="text" id="name" name="name" /></p>
+<p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js

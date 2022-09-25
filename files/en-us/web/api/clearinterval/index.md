@@ -21,7 +21,7 @@ this method does nothing.
 
 ## Syntax
 
- ```js-nolint
+```js-nolint
 clearInterval(intervalID)
 ```
 

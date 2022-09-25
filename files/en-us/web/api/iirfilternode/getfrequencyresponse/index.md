@@ -77,9 +77,8 @@ Next we create a {{ htmlelement("ul") }} element in our HTML to contain our resu
 and grab a reference to it in our JavaScript:
 
 ```html
-<p>IIR filter frequency response for: </p>
-<ul class="freq-response-output">
-</ul>
+<p>IIR filter frequency response for:</p>
+<ul class="freq-response-output"></ul>
 ```
 
 ```js
@@ -101,7 +100,7 @@ const iirFilter = audioCtx.createIIRFilter(feedforwardCoefficients, feedbackCoef
 function calcFrequencyResponse() {
   iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
 
-  for (i = 0; i <= myFrequencyArray.length-1;i++){
+  for (let i = 0; i < myFrequencyArray.length; i++) {
     const listItem = document.createElement('li');
     listItem.textContent = `${myFrequencyArray[i]}Hz: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
     freqResponseOutput.appendChild(listItem);

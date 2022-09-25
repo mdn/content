@@ -136,7 +136,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -210,7 +211,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -272,7 +274,8 @@ table {
   border: 1px solid black;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
 }
 ```
@@ -349,9 +352,10 @@ thead > tr {
   background-color: rgb(228, 240, 245);
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
 }
 ```
 
@@ -429,9 +433,10 @@ table {
 Here we've added the {{CSSxRef("border-spacing")}} and {{CSSxRef("border-collapse")}} properties to eliminate spacing between cells and collapse borders that touch one another to be a single border instead of winding up with double borders.
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
 }
 
 th {
@@ -502,7 +507,7 @@ Finally, since it's standard practice to right-justify currency values in tables
 
 ```css
 tbody > tr > td:last-of-type {
-  text-align:right;
+  text-align: right;
 }
 ```
 

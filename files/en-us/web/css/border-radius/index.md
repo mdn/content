@@ -165,20 +165,20 @@ For example:
 border-radius: 1em/5em;
 
 /* It is equivalent to: */
-border-top-left-radius:     1em 5em;
-border-top-right-radius:    1em 5em;
+border-top-left-radius: 1em 5em;
+border-top-right-radius: 1em 5em;
 border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius:  1em 5em;
+border-bottom-left-radius: 1em 5em;
 ```
 
 ```css
 border-radius: 4px 3px 6px / 2px 4px;
 
 /* It is equivalent to: */
-border-top-left-radius:     4px 2px;
-border-top-right-radius:    3px 4px;
+border-top-left-radius: 4px 2px;
+border-top-right-radius: 3px 4px;
 border-bottom-right-radius: 6px 2px;
-border-bottom-left-radius:  3px 4px;
+border-bottom-left-radius: 3px 4px;
 ```
 
 ## Formal definition
@@ -192,39 +192,45 @@ border-bottom-left-radius:  3px 4px;
 ## Examples
 
 ```html hidden
-  <pre id="example-1">
-border: solid 10px;
-border-radius: 10px 40px 40px 10px;
-  </pre>
-  <pre id="example-2">
-border: groove 1em red;
-border-radius: 2em;
-  </pre>
-  <pre id="example-3">
-background: gold;
-border: ridge gold;
-border-radius: 13em/3em;
-  </pre>
-  <pre id="example-4">
-border: none;
-border-radius: 40px 10px;
-background: gold;
-  </pre>
-  <pre id="example-5">
-border: none;
-border-radius: 50%;
-background: burlywood;
-  </pre>
-  <pre id="example-6">
-border: dotted;
-border-width: 10px 4px;
-border-radius: 10px 40px;
-  </pre>
-  <pre id="example-7">
-border: dashed;
-border-width: 2px 4px;
-border-radius: 40px;
-  </pre>
+<pre id="example-1">
+  border: solid 10px;
+  border-radius: 10px 40px 40px 10px;
+</pre>
+
+<pre id="example-2">
+  border: groove 1em red;
+  border-radius: 2em;
+</pre>
+
+<pre id="example-3">
+  background: gold;
+  border: ridge gold;
+  border-radius: 13em/3em;
+</pre>
+
+<pre id="example-4">
+  border: none;
+  border-radius: 40px 10px;
+  background: gold;
+</pre>
+
+<pre id="example-5">
+  border: none;
+  border-radius: 50%;
+  background: burlywood;
+</pre>
+
+<pre id="example-6">
+  border: dotted;
+  border-width: 10px 4px;
+  border-radius: 10px 40px;
+</pre>
+
+<pre id="example-7">
+  border: dashed;
+  border-width: 2px 4px;
+  border-radius: 40px;
+</pre>
 ```
 
 ```css hidden

@@ -2,7 +2,7 @@
 title: font-family
 slug: Web/CSS/@font-face/font-family
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - CSS Descriptor
@@ -23,7 +23,7 @@ Any name may be used, and this overrides any name specified in the underlying fo
 ```css
 /* <string> values */
 font-family: "font family";
-font-family: 'another font family';
+font-family: "another font family";
 
 /* <custom-ident> value */
 font-family: examplefont;
@@ -55,7 +55,7 @@ font-family: examplefont;
 ```css
 @font-face {
   font-family: "Some font family";
-  src: url('some_font_name.ttf');
+  src: url("some_font_name.ttf");
 }
 ```
 

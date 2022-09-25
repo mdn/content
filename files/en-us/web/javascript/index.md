@@ -6,7 +6,7 @@ tags:
   - Landing
   - Landing page
   - Learn
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{JsSidebar}}

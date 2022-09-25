@@ -23,10 +23,6 @@ The **{{domxref('PaymentRequest')}}** interface's
 process of showing and handling the user interface for the payment request to the
 user.
 
-For security reasons, the `PaymentRequest.show()` method can't just be
-initiated at any time. It may only be called while handling events that represent user
-interactions, such as {{domxref("Element/click_event", "click")}}, {{domxref("Element/keyup_event", "keyup")}}, or the like.
-
 Only one payment request can be in the process of being handled at once, across all
 documents. Once one `PaymentRequest`'s `show()` method has been
 called, any other call to `show()` will by rejected with an
@@ -129,6 +125,10 @@ Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
     are at the discretion of the user agent, and may include situations such as too many
     calls to `show()` being made in a short time or `show()` being
     called while payment requests are blocked by parental controls.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Usage notes
 

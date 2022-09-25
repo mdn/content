@@ -11,7 +11,7 @@ tags:
   - Learn
   - Pop
   - Push
-  - l10n:priority
+  - "l10n:priority"
   - shift
   - split
   - unshift
@@ -291,18 +291,16 @@ Let's return to the example we described earlier — printing out product names 
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 150px;">
+  <ul></ul>
 
-<ul>
-
-</ul>
-
-<p></p>
-
+  <p></p>
 </div>
 
 <h2>Editable code</h2>
 
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 410px;width: 95%">
 const list = document.querySelector('.output ul');
@@ -336,8 +334,8 @@ totalBox.textContent = 'Total: $' + total.toFixed(2);
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -487,18 +485,16 @@ To complete the app, we need you to:
 ```html hidden
 <h2>Live output</h2>
 <div class="output" style="min-height: 150px;">
+  <input type="text" /><button>Search</button>
 
-<input type="text"><button>Search</button>
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
 
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 370px; width: 95%">
 const list = document.querySelector('.output ul');
@@ -539,8 +535,8 @@ searchBtn.onclick = () => {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 

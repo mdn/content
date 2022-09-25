@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: menuitemcheckbox role'
+title: "ARIA: menuitemcheckbox role"
 slug: Web/Accessibility/ARIA/Roles/menuitemcheckbox_role
 tags:
   - Accessibility
@@ -113,9 +113,9 @@ The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the
 The visual appearance of the selected state is a checked checkbox which we can create using [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and [inheriting](/en-US/docs/Web/CSS/inherit) the color.
 
 ```css
-[role='menuitemcheckbox']::before {
+[role="menuitemcheckbox"]::before {
   display: inline-block;
-  content: '';
+  content: "";
   color: transparent;
   width: 1em;
   text-align: center;
@@ -123,9 +123,9 @@ The visual appearance of the selected state is a checked checkbox which we can c
   margin-inline-end: 2px;
   font-family: sans-serif;
 }
-[role='menuitemcheckbox'][aria-checked='true']::before {
+[role="menuitemcheckbox"][aria-checked="true"]::before {
   color: inherit;
-  content: 'X';
+  content: "X";
 }
 ```
 

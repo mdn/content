@@ -2,7 +2,7 @@
 title: video-dynamic-range
 slug: Web/CSS/@media/video-dynamic-range
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

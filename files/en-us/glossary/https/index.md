@@ -2,7 +2,6 @@
 title: HTTPS
 slug: Glossary/https
 tags:
-  - Glossary
   - HTTPS
   - Infrastructure
   - Security

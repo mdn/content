@@ -2,7 +2,7 @@
 title: Firefox 63 for developers
 slug: Mozilla/Firefox/Releases/63
 tags:
-  - '63'
+  - "63"
   - Firefox
   - Mozilla
   - Release
@@ -40,7 +40,7 @@ This article provides information about the changes in Firefox 63 that will affe
 - Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio) ({{bug(1444139)}}).
 - Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ({{bug(1472843)}}).
 - Implemented the `path()` function for {{CSSxRef("offset-path")}} ({{bug(1429298)}}).
-- Implemented [syntax improvements from the Media Queries Level 4 specification](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax_improvements_in_level_4) ({{bug(1472843)}}).
+- Implemented [syntax improvements from the Media Queries Level 4 specification](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax_improvements_in_level_4) ({{bug(1422225)}}).
 - Renamed `offset-*` properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ({{bug(1464782)}}).
 - Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature ({{bug(1365045)}}, {{bug(1475462)}}).
 - Added flow relative values (`block`, `inline`) for the {{CSSxRef("resize")}} property ({{bug(1464786)}}).

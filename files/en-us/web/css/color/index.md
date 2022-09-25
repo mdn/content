@@ -49,7 +49,7 @@ color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
 color: rgb(34 12 64 / 0.6);
 color: rgba(34 12 64 / 0.3);
-color: rgb(34.0 12 64 / 60%);
+color: rgb(34 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
 
 /* <hsl()> values */
@@ -57,7 +57,7 @@ color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
 color: hsla(30 100% 50% / 0.6);
-color: hsl(30.0 100% 50% / 60%);
+color: hsl(30 100% 50% / 60%);
 color: hsla(30.2 100% 50% / 60%);
 
 /* <hwb()> values */
@@ -65,7 +65,7 @@ color: hwb(90 10% 10%);
 color: hwb(90 10% 10% / 0.5);
 color: hwb(90deg 10% 10%);
 color: hwb(1.5708rad 60% 0%);
-color: hwb(.25turn 0% 40% / 50%);
+color: hwb(0.25turn 0% 40% / 50%);
 
 /* Global values */
 color: inherit;

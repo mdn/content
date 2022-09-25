@@ -2,7 +2,7 @@
 title: color-gamut
 slug: Web/CSS/@media/color-gamut
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

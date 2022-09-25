@@ -84,9 +84,10 @@ The `border-bottom-style` property is specified as a single keyword chosen from 
 /* Define look of the table */
 table {
   border-width: 3px;
-  background-color: #52E385;
+  background-color: #52e385;
 }
-tr, td {
+tr,
+td {
   padding: 3px;
 }
 

@@ -21,7 +21,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -74,14 +78,18 @@ For {{SVGElement('line')}}, `y1` defines the y coordinate of the starting point 
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="1" x2="9" y1="1" y2="5" stroke="red"   />
+  <line x1="1" x2="9" y1="1" y2="5" stroke="red" />
   <line x1="1" x2="9" y1="5" y2="5" stroke="green" />
-  <line x1="1" x2="9" y1="9" y2="5" stroke="blue"  />
+  <line x1="1" x2="9" y1="9" y2="5" stroke="blue" />
 </svg>
 ```
 
@@ -127,7 +135,11 @@ For {{SVGElement('linearGradient')}}, `y1` defines the y coordinate of the start
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -137,20 +149,20 @@ html,body,svg { height:100% }
   corner of the bounding box of the shape it is applied to.
   -->
   <linearGradient y1="0%" id="g0">
-    <stop offset="5%"  stop-color="black" />
-    <stop offset="50%" stop-color="red"   />
+    <stop offset="5%" stop-color="black" />
+    <stop offset="50%" stop-color="red" />
     <stop offset="95%" stop-color="black" />
   </linearGradient>
 
-  <rect x="1"  y="1" width="8" height="8" fill="url(#g0)" />
+  <rect x="1" y="1" width="8" height="8" fill="url(#g0)" />
 
   <!--
   Here the gradient vector start at the bottom left
   corner of the bounding box of the shape it is applied to.
   -->
   <linearGradient y1="100%" id="g1">
-    <stop offset="5%"  stop-color="black" />
-    <stop offset="50%" stop-color="red"   />
+    <stop offset="5%" stop-color="black" />
+    <stop offset="50%" stop-color="red" />
     <stop offset="95%" stop-color="black" />
   </linearGradient>
 

@@ -70,20 +70,24 @@ The value `horizontal-tb` is the default for text on the web. It is the directio
 
 ```css hidden
 .wrapper > p {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    margin: 1em;
-    color: #d9480f;
-    max-width: 300px;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  margin: 1em;
+  color: #d9480f;
+  max-width: 300px;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <p style="writing-mode: horizontal-tb">I have writing mode set to the default <code>horizontal-tb</code></p>
-  <p style="writing-mode: vertical-rl">I have writing mode set to <code>vertical-rl</code></p>
+  <p style="writing-mode: horizontal-tb">
+    I have writing mode set to the default <code>horizontal-tb</code>
+  </p>
+  <p style="writing-mode: vertical-rl">
+    I have writing mode set to <code>vertical-rl</code>
+  </p>
 </div>
 ```
 
@@ -98,20 +102,22 @@ If we now take a look at a grid layout example, we can see how changing the writ
 The grid in this example has three columns and two row tracks. This means there are three tracks running down the block axis. In default writing mode, grid auto-places items starting at the top left, moving along to the right, filling up the three cells on the inline axis. It then moves onto the next line, creating a new Row track, and fills in more items:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -120,7 +126,7 @@ The grid in this example has three columns and two row tracks. This means there 
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(2, 100px);
-gap: 10px;
+  gap: 10px;
 }
 ```
 
@@ -141,20 +147,22 @@ gap: 10px;
 If we add `writing-mode: vertical-lr` to the grid container, we can see that the block and inline Axis are now running in a different direction. The block or _column_ axis now runs across the page from left to right, Inline runs down the page, creating rows from top to bottom.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -189,20 +197,22 @@ With the block and inline axis able to change direction, the logical values for 
 In this next example, I am using alignment to align items inside a grid that is set to `writing-mode: vertical-lr`. The `start` and `end` properties work in exactly the same way that they do in the default writing mode, and remain logical in a way that using left and right, top and bottom to align items would not do. This occurs once we've flipped the grid onto the side, like this:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -216,21 +226,21 @@ In this next example, I am using alignment to align items inside a grid that is 
 }
 
 .item1 {
-    grid-column: 1 / 4;
-    align-self: start;
+  grid-column: 1 / 4;
+  align-self: start;
 }
 
 .item2 {
-    grid-column: 1 / 3;
-    grid-row: 2 / 4;
-    align-self: start;
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+  align-self: start;
 }
 
 .item3 {
-    grid-column: 3;
-    grid-row: 2 / 4;
-    align-self: end;
-    justify-self: end;
+  grid-column: 3;
+  grid-row: 2 / 4;
+  align-self: end;
+  justify-self: end;
 }
 ```
 
@@ -263,20 +273,22 @@ In this next example, I have a grid which is in the default `ltr` direction. I h
 - Item 3 starts at column line 1, spanning to column line 3.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -288,23 +300,23 @@ In this next example, I have a grid which is in the default `ltr` direction. I h
   gap: 10px;
 }
 .item1 {
-    grid-column: 1 ;
+  grid-column: 1;
 }
 .item2 {
-    grid-column: -1 / -3;
+  grid-column: -1 / -3;
 }
 .item3 {
-    grid-column: 1 / 3;
-    grid-row: 2;
+  grid-column: 1 / 3;
+  grid-row: 2;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="item1">Item 1</div>
-        <div class="item2">Item 2</div>
-        <div class="item3">Item 3</div>
-    </div>
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+</div>
 ```
 
 {{ EmbedLiveSample('Line-based_placement_with_left_to_right_text', '500', '330') }}
@@ -314,20 +326,22 @@ In this next example, I have a grid which is in the default `ltr` direction. I h
 If I now add the {{cssxref("direction")}} property with a value of `rtl` to the grid container, line 1 becomes the right-hand side of the grid, and line -1 on the left.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -340,23 +354,23 @@ If I now add the {{cssxref("direction")}} property with a value of `rtl` to the 
   gap: 10px;
 }
 .item1 {
-    grid-column: 1 ;
+  grid-column: 1;
 }
 .item2 {
-    grid-column: -1 / -3;
+  grid-column: -1 / -3;
 }
 .item3 {
-    grid-column: 1 / 3;
-    grid-row: 2;
+  grid-column: 1 / 3;
+  grid-row: 2;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="item1">Item 1</div>
-        <div class="item2">Item 2</div>
-        <div class="item3">Item 3</div>
-    </div>
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+</div>
 ```
 
 {{ EmbedLiveSample('Line-based_placement_with_right_to_left_text', '500', '330') }}
@@ -389,40 +403,55 @@ In addition to displaying documents, using the correct writing mode for the lang
 
 ```css
 .wrapper {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr auto;
-    font: 1em Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr auto;
+  font: 1em Helvetica, Arial, sans-serif;
 }
 .wrapper nav {
-    writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
 }
 .wrapper ul {
-    list-style: none;
-    margin: 0;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
 }
 .wrapper a {
-    text-decoration: none;
+  text-decoration: none;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="content">
-            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
-            <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">Link 1</a></li>
-                <li><a href="">Link 2</a></li>
-                <li><a href="">Link 3</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="content">
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo
+      shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.
+      Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi
+      beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki
+      bean chickweed potato bell pepper artichoke.
+    </p>
+    <p>
+      Nori grape silver beet broccoli kombu beet greens fava bean potato
+      quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
+      turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter
+      purslane fennel azuki bean earthnut pea sierra leone bologi leek soko
+      chicory celtuce parsley jícama salsify.
+    </p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="">Link 1</a></li>
+      <li><a href="">Link 2</a></li>
+      <li><a href="">Link 3</a></li>
+    </ul>
+  </nav>
+</div>
 ```
 
 {{ EmbedLiveSample('Mixed_writing_modes_and_grid_layout', '500', '330') }}

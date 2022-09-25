@@ -18,12 +18,12 @@ The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} o
 ## Syntax
 
 ```js-nolint
-new VideoEncoder(init)
+new VideoEncoder(options)
 ```
 
 ### Parameters
 
-- `init`
+- `options`
   - : An object containing two required callbacks.
     - `output`
       - : A callback which takes an {{domxref("EncodedVideoChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has three members:

@@ -2,7 +2,6 @@
 title: ASCII
 slug: Glossary/ASCII
 tags:
-  - Glossary
   - Infrastructure
 ---
 

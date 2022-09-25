@@ -38,25 +38,19 @@ Actually, as you can see in the example below, the background and border of the 
 ### HTML
 
 ```html
-<div id="abs1">
-  <strong>DIV #1</strong><br />position: absolute;</div>
+<div id="abs1"><strong>DIV #1</strong><br />position: absolute;</div>
 
-<div id="flo1">
-  <strong>DIV #2</strong><br />float: left;</div>
+<div id="flo1"><strong>DIV #2</strong><br />float: left;</div>
 
-<div id="flo2">
-  <strong>DIV #3</strong><br />float: right;</div>
+<div id="flo2"><strong>DIV #3</strong><br />float: right;</div>
 
 <br />
 
-<div id="sta1">
-  <strong>DIV #4</strong><br />no positioning</div>
+<div id="sta1"><strong>DIV #4</strong><br />no positioning</div>
 
-<div id="abs2">
-  <strong>DIV #5</strong><br />position: absolute;</div>
+<div id="abs2"><strong>DIV #5</strong><br />position: absolute;</div>
 
-<div id="rel1">
-  <strong>DIV #6</strong><br />position: relative;</div>
+<div id="rel1"><strong>DIV #6</strong><br />position: relative;</div>
 ```
 
 ### CSS

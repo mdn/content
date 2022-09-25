@@ -33,13 +33,13 @@ In this example, the CSS {{cssxref("cursor")}} is changed to `pointer` whenever 
 #### HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 #### CSS
 
 ```css
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button {
   cursor: pointer;
 }
 ```

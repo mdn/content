@@ -17,8 +17,6 @@ This event enables a web page to trigger a confirmation dialog asking the user i
 
 According to the specification, to show the confirmation dialog an event handler should call {{domxref("Event.preventDefault()", "preventDefault()")}} on the event.
 
-To combat unwanted pop-ups, browsers may not display prompts created in `beforeunload` event handlers unless the page has been interacted with, or may even not display them at all.
-
 The HTML specification states that calls to {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} methods may be ignored during this event. See the [HTML specification](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts) for more details.
 
 ## Syntax
@@ -41,6 +39,10 @@ In addition to the `Window` interface, the event handler property `onbeforeunloa
 - {{domxref("HTMLBodyElement")}}
 - {{domxref("HTMLFrameSetElement")}}
 - {{domxref("SVGSVGElement")}}
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Usage notes
 

@@ -29,7 +29,7 @@ A [DOM](https://www.w3.org/TR/REC-DOM-Level-1/introduction.html) tree is a kind 
 
 has a DOM tree that looks like this:
 
-![](using_the_w3c_dom_level_1_core-doctree.jpg)
+![The DOM as a tree-like representation of a document that has a root and node elements containing content](using_the_w3c_dom_level_1_core-doctree.jpg)
 
 (Note that, although the above tree is similar to the above document's DOM tree, it's not identical, as [the actual DOM tree preserves whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace).)
 
@@ -47,7 +47,7 @@ Suppose the author wants to change the header of the above document and write tw
 
 ```html
 <body>
-  <input type="button" value="Change this document." onclick="change()">
+  <input type="button" value="Change this document." onclick="change()" />
   <h2>Header</h2>
   <p>Paragraph</p>
 </body>

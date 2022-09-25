@@ -133,7 +133,8 @@ If JavaScript support is disabled or non-existent, then the user agent will crea
 
 ```html
 <a href="https://www.wikipedia.org/" target="OpenWikipediaWindow">
-  Wikipedia, a free encyclopedia (opens in another, possibly already existing, tab)
+  Wikipedia, a free encyclopedia (opens in another, possibly already existing,
+  tab)
 </a>
 ```
 
@@ -171,11 +172,14 @@ Here is an example where a secondary window can be opened and reused for other l
 ```html
 <p>
   <a href="https://www.wikipedia.org/" target="SingleSecondaryWindowName">
-    Wikipedia, a free encyclopedia (opens in another, possibly already existing, tab)
+    Wikipedia, a free encyclopedia (opens in another, possibly already existing,
+    tab)
   </a>
 </p>
 <p>
-  <a href="https://support.mozilla.org/products/firefox" target="SingleSecondaryWindowName">
+  <a
+    href="https://support.mozilla.org/products/firefox"
+    target="SingleSecondaryWindowName">
     Firefox FAQ (opens in another, possibly already existing, tab)
   </a>
 </p>

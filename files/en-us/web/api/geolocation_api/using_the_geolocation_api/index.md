@@ -133,9 +133,9 @@ button {
 ### HTML
 
 ```html
-<button id = "find-me">Show my location</button><br/>
-<p id = "status"></p>
-<a id = "map-link" target="_blank"></a>
+<button id="find-me">Show my location</button><br />
+<p id="status"></p>
+<a id="map-link" target="_blank"></a>
 ```
 
 ### JavaScript

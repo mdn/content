@@ -30,8 +30,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<body>
-</body>
+  <body></body>
 </html>
 ```
 

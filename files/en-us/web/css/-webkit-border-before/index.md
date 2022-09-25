@@ -1,8 +1,8 @@
 ---
-title: '-webkit-border-before'
+title: "-webkit-border-before"
 slug: Web/CSS/-webkit-border-before
 tags:
-  - '-webkit-border-before'
+  - "-webkit-border-before"
   - CSS
   - CSS Property
   - CSS:WebKit Extensions

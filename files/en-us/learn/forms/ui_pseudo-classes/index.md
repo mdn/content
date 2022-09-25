@@ -81,15 +81,17 @@ One of the most basic concepts with regards to client-side form validation is wh
     <legend>Feedback form</legend>
     <div>
       <label for="fname">First name: </label>
-      <input id="fname" name="fname" type="text" required>
+      <input id="fname" name="fname" type="text" required />
     </div>
     <div>
       <label for="lname">Last name: </label>
-      <input id="lname" name="lname" type="text" required>
+      <input id="lname" name="lname" type="text" required />
     </div>
     <div>
-      <label for="email">Email address (include if you want a response): </label>
-      <input id="email" name="email" type="email">
+      <label for="email">
+        Email address (include if you want a response):
+      </label>
+      <input id="email" name="email" type="email" />
     </div>
     <div><button>Submit</button></div>
   </fieldset>
@@ -171,7 +173,7 @@ Since form inputs don't directly support having generated content put on them (t
 ```html
 <div>
   <label for="fname">First name: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -234,7 +236,7 @@ As in the previous example, we've got extra `<span>`s to generate content on, wh
 ```html
 <div>
   <label for="fname">First name *: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -292,7 +294,7 @@ The numeric input looks like this:
 ```html
 <div>
   <label for="age">Age (must be 12+): </label>
-  <input id="age" name="age" type="number" min="12" max="120" required>
+  <input id="age" name="age" type="number" min="12" max="120" required />
   <span></span>
 </div>
 ```
@@ -351,34 +353,38 @@ Let's have a look at an example that does just this. First of all, the HTML is a
     <legend>Shipping address</legend>
     <div>
       <label for="name1">Name: </label>
-      <input id="name1" name="name1" type="text" required>
+      <input id="name1" name="name1" type="text" required />
     </div>
     <div>
       <label for="address1">Address: </label>
-      <input id="address1" name="address1" type="text" required>
+      <input id="address1" name="address1" type="text" required />
     </div>
     <div>
       <label for="pcode1">Zip/postal code: </label>
-      <input id="pcode1" name="pcode1" type="text" required>
+      <input id="pcode1" name="pcode1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
     <legend>Billing address</legend>
     <div>
       <label for="billing-checkbox">Same as shipping address:</label>
-      <input type="checkbox" id="billing-checkbox" checked>
+      <input type="checkbox" id="billing-checkbox" checked />
     </div>
     <div>
       <label for="name" class="billing-label disabled-label">Name: </label>
-      <input id="name" name="name" type="text" disabled required>
+      <input id="name" name="name" type="text" disabled required />
     </div>
     <div>
-      <label for="address2" class="billing-label disabled-label">Address: </label>
-      <input id="address2" name="address2" type="text" disabled required>
+      <label for="address2" class="billing-label disabled-label">
+        Address:
+      </label>
+      <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
-      <label for="pcode2" class="billing-label disabled-label">Zip/postal code: </label>
-      <input id="pcode2" name="pcode2" type="text" disabled required>
+      <label for="pcode2" class="billing-label disabled-label">
+        Zip/postal code:
+      </label>
+      <input id="pcode2" name="pcode2" type="text" disabled required />
     </div>
   </fieldset>
 
@@ -448,8 +454,7 @@ A fragment of the HTML is as follows — note the readonly attribute:
 ```html
 <div>
   <label for="name">Name: </label>
-  <input id="name" name="name" type="text"
-         value="Mr Soft" readonly>
+  <input id="name" name="name" type="text" value="Mr Soft" readonly />
 </div>
 ```
 
@@ -531,7 +536,7 @@ Let's look at a couple of modified versions of the previous example that remind 
 
 ```html
 <p>
-  <input type="radio" name="fruit" value="cherry" id="cherry">
+  <input type="radio" name="fruit" value="cherry" id="cherry" />
   <label for="cherry">Cherry</label>
   <span></span>
 </p>

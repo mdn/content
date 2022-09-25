@@ -2,7 +2,7 @@
 title: speak-as
 slug: Web/CSS/@counter-style/speak-as
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Descriptor

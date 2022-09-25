@@ -65,10 +65,18 @@ For example, let's say you have a game with a UI on top, the gameplay action in 
     border: 2px solid black;
   }
 
-  canvas { position: absolute; }
-  #ui-layer { z-index: 3; }
-  #game-layer { z-index: 2; }
-  #background-layer { z-index: 1; }
+  canvas {
+    position: absolute;
+  }
+  #ui-layer {
+    z-index: 3;
+  }
+  #game-layer {
+    z-index: 2;
+  }
+  #background-layer {
+    z-index: 1;
+  }
 </style>
 ```
 

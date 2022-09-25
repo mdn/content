@@ -43,14 +43,16 @@ globalThis.genRandomNumbers = () => {
 
   const randText = document.getElementById("myRandText");
   randText.textContent = `The random numbers are: ${array.join(" ")}`;
-}
+};
 ```
 
 ### HTML
 
 ```html
-<p id="myRandText">The random numbers are: </p>
-<button type="button" onClick='genRandomNumbers()'>Generate 10 random numbers</button>
+<p id="myRandText">The random numbers are:</p>
+<button type="button" onClick="genRandomNumbers()">
+  Generate 10 random numbers
+</button>
 ```
 
 ### Result

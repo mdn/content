@@ -49,7 +49,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
 - {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.)
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
 - {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 

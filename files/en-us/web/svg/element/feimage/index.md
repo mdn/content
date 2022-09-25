@@ -41,16 +41,17 @@ This element implements the {{domxref("SVGFEImageElement")}} interface.
 ### SVG
 
 ```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 200 200"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="image">
-      <feImage xlink:href="mdn_logo_only_color.png"/>
+      <feImage xlink:href="mdn_logo_only_color.png" />
     </filter>
   </defs>
 
-  <rect x="10%" y="10%" width="80%" height="80%"
-      style="filter:url(#image);"/>
+  <rect x="10%" y="10%" width="80%" height="80%" style="filter:url(#image);" />
 </svg>
 ```
 

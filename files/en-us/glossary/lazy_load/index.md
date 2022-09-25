@@ -2,7 +2,6 @@
 title: Lazy load
 slug: Glossary/Lazy_load
 tags:
-  - Glossary
   - Lazy loading
   - Reference
   - Web Performance

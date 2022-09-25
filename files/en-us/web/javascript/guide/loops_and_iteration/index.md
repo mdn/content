@@ -6,7 +6,7 @@ tags:
   - JavaScript
   - Loop
   - Syntax
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}}

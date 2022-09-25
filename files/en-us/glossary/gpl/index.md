@@ -3,7 +3,6 @@ title: GPL
 slug: Glossary/GPL
 tags:
   - GPL
-  - Glossary
   - License
   - OpenPractices
   - Remixing

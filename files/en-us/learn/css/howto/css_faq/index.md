@@ -32,23 +32,19 @@ The standard `DOCTYPE` declaration that will trigger standards mode is:
 When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 ```
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 ## Why doesn't my CSS, which is valid, render at all?
@@ -109,13 +105,16 @@ HTML elements can be assigned multiple classes by listing the classes in the `cl
 
 ```html
 <style>
-.news { background: black; color: white; }
-.today { font-weight: bold; }
+  .news {
+    background: black;
+    color: white;
+  }
+  .today {
+    font-weight: bold;
+  }
 </style>
 
-<div class="news today">
-  Content of today's news goes here.
-</div>
+<div class="news today">Content of today's news goes here.</div>
 ```
 
 If the same property is declared in both rules, the conflict is resolved first through specificity, then according to the order of the CSS declarations. The order of classes in the `class` attribute is not relevant.
@@ -141,7 +140,8 @@ The way CSS styles are applied to HTML elements depends also on the elements hie
 ```html
 <!-- news item text is black, but corporate name is red and in bold -->
 <div class="news">
-    (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday…
+  (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on
+  Thursday…
 </div>
 ```
 
@@ -168,9 +168,7 @@ In CSS stylesheets, order **is** important. If you define a rule and then you re
 
 ```html
 <!-- most text is in bold, except "GE", which is red and not bold -->
-<div id="stockTicker">
-    NYS: <span class="stockSymbol">GE</span> +1.0…
-</div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0…</div>
 ```
 
 To avoid this kind of error, try to define rules only once for a certain selector, and group all rules belonging to that selector.
@@ -192,9 +190,7 @@ Using shorthand properties for defining style rules is good because it uses a ve
 ```
 
 ```html
-<div id="stockTicker">
-    NYS: <span class="stockSymbol">GE</span> +1.0…
-</div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0…</div>
 ```
 
 In the previous example the problem occurred on rules belonging to different elements, but it could happen also for the same element, because rule order **is** important.
@@ -227,7 +223,7 @@ body * {
 
 ```html
 <div id="section">
-    NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0…
+  NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0…
 </div>
 ```
 
