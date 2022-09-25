@@ -115,7 +115,7 @@ Rules within a layer cascade together, without competing with style rules outsid
 
 Layer precedence always beats selector specificity. Styles in layers with precedence "win" over layers with less precedence. The specificity of a selector in a losing layer is irrelevant. Specificity still matters for competing property values within a layer, but there are no specificity concerns between layers because only the highest-priority layer for each property is considered.
 
-#### Issues nested cascade layers can solve
+### Issues nested cascade layers can solve
 
 Cascade layers allow the creation of nested layers. Each cascade layer can contain nested layers.
 
@@ -278,7 +278,6 @@ The ability to nest layers enables teams to create cascade layers without worryi
 
 Nested layers can be created using the same methods as described for regular layers. For example, they can be created using `@layer` at-rule followed by the names of one or more layers, using a dot notation. Multiple dots and layer names signify multiple nesting.
 
-### Creating nested cascade layers
 
 If you nest a block `@layer` at-rule inside another block `@layer` at-rule, with or without a name, the nested block becomes a nested layer. Similarly, when a style sheet is imported with an `@import` declaration containing the `layer` keyword or `layer()` function, the styles get assigned to that named or anonymous layer. If the `@import` statement contains layers, those layers become nested layers within that anonymous or named layer.
 
@@ -315,7 +314,6 @@ To add styles to a named nested layer, use the dot notation:
 
 The order of layers determines their order of precedence. Therefore, the order of layers is very important. In the same way as the cascade sorts by origin and importance, the cascade sorts each CSS declaration by origin layer and importance.
 
-### Precedence order of regular cascade layers
 ### Precedence order of regular cascade layers
 ```css
 @import url(A.css) layer(firstLayer);
@@ -358,11 +356,11 @@ To summarize:
 
 - The order of layers is the order in which the layers are created.
 - Once created, there is no way to change the layer order.
-- Layer precedence or normal styles is the order in which the layers were created.
+- Layer precedence or normal styles is the order in which the layers are created.
 - Unlayered normal styles have precedence over normal layered styles.
 - Layer precedence or important styles is reversed, with earlier created layers having precedence.
 - All layered important styles have precedence over unlayered important (and normal) styles.
-- Normal inline styles take precedence over all normal styles, layered and not.
+- Normal inline styles take precedence over all normal styles, layered or not.
 - Important inline styles take precedence over all other styles, with the exception of styles being transitioned.
 - There is no way for author styles to override important inline styles (other than transitioning them, which is temporary).
 
