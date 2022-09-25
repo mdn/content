@@ -81,11 +81,16 @@ number1 == number2;   // false
 ### Comparison of objects
 
 ```js
-const object1 = {"key": "value"}
-const object2 = {"key": "value"};
+const object1 = {
+  key: "value"
+}
 
-object1 == object2 // false
-object2 == object2 // true
+const object2 = {
+  key: "value"
+}
+
+console.log(object1 == object2); // false
+console.log(object1 == object1); // true
 ```
 
 ### Comparing strings and String objects

@@ -78,15 +78,15 @@ console.log(null !== undefined);  // true
 
 ```js
 const object1 = {
-  name: "hello"
+  key: "value"
 }
 
 const object2 = {
-  name: "hello"
+  key: "value"
 }
 
-console.log(object1 !== object2);  // true
-console.log(object1 !== object1);  // false
+console.log(object1 !== object2); // true
+console.log(object1 !== object1); // false
 ```
 
 ## Specifications
