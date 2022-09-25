@@ -13,6 +13,13 @@
       "properties": [],
       "events": []
     },
+    "Background Sync": {
+      "overview": ["Background Synchronization API"],
+      "interfaces": ["SyncManager", "SyncEvent"],
+      "methods": ["ServiceWorkerRegistration.sync()"],
+      "properties": [],
+      "events": ["ServiceWorkerGlobalScope: sync"]
+    },
     "Background Tasks": {
       "overview": ["Background Tasks API"],
       "interfaces": ["IdleDeadline"],
