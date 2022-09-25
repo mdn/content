@@ -56,38 +56,38 @@ There's a "willful violation" of the above algorithm: if one of the operands is 
 ### Comparison with no type conversion
 
 ```js
-1 == 1;              // true
-"hello" == "hello";  // true
+1 == 1; // true
+"hello" == "hello"; // true
 ```
 
 ### Comparison with type conversion
 
 ```js
-"1" == 1;             // true
-1 == "1";             // true
-0 == false;           // true
-0 == null;            // false
-0 == undefined;       // false
-0 == !!null;          // true, look at Logical NOT operator
-0 == !!undefined;     // true, look at Logical NOT operator
-null == undefined;    // true
+"1" == 1; // true
+1 == "1"; // true
+0 == false; // true
+0 == null; // false
+0 == undefined; // false
+0 == !!null; // true, look at Logical NOT operator
+0 == !!undefined; // true, look at Logical NOT operator
+null == undefined; // true
 
 const number1 = new Number(3);
 const number2 = new Number(3);
-number1 == 3;         // true
-number1 == number2;   // false
+number1 == 3; // true
+number1 == number2; // false
 ```
 
 ### Comparison of objects
 
 ```js
 const object1 = {
-  key: "value"
-}
+  key: "value",
+};
 
 const object2 = {
-  key: "value"
-}
+  key: "value",
+};
 
 console.log(object1 == object2); // false
 console.log(object1 == object1); // true
@@ -117,9 +117,9 @@ console.log(string4 == string4); // true
 ### Comparing Dates and strings
 
 ```js
-const d = new Date('December 17, 1995 03:24:00');
+const d = new Date("December 17, 1995 03:24:00");
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
-console.log(d == s);    //true
+console.log(d == s); //true
 ```
 
 ### Comparing arrays and strings
