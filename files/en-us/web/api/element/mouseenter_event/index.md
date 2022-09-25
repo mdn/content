@@ -96,12 +96,12 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 Though similar to {{domxref("Element/mouseover_event", "mouseover")}}, `mouseenter` differs in that it doesn't [bubble](/en-US/docs/Web/API/Event/bubbles) and it isn't sent to any descendants when the pointer is moved from one of its descendants' physical space to its own physical space.
 
-### Behavior of `mouseenter` events:
+### Behavior of `mouseenter` events
 
 ![](mouseenter.png)
 One `mouseenter` event is sent to each element of the hierarchy when entering them. Here 4 events are sent to the four elements of the hierarchy when the pointer reaches the text.
 
-### Behavior of `mouseover` events:
+### Behavior of `mouseover` events
 
 ![](mouseover.png)
 A single `mouseover` event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.

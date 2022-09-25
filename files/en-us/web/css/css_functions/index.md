@@ -100,11 +100,11 @@ The math functions allow CSS numeric values to be written as mathematical expres
 ### Stepped value functions
 
 - {{cssxref("round", "round()")}} {{Experimental_Inline}}
-  - : Contains an optional rounding strategy, and two calculations A and B, and returns the value of A, rounded according to the rounding strategy, to the nearest integer multiple of B either above or below A.
+  - : A stepped value function that returns a rounded number based on a rounding strategy.
 - {{cssxref("mod", "mod()")}} {{Experimental_Inline}}
-  - : A modulus function that contains two calculations A and B, and returns the difference between A and the nearest integer multiple of B either above or below A.
+  - : A function that divides one number by another and returns the modulus (with the same sign as the divisor).
 - {{cssxref("rem", "rem()")}} {{Experimental_Inline}}
-  - : A modulus function that contains two calculations A and B, and returns the difference between A and the nearest integer multiple of B either above or below A.
+  - : A function that divides one number by another and returns the remainder (with the same sign as the dividend).
 
 ### Trigonometric functions
 
@@ -141,7 +141,7 @@ The math functions allow CSS numeric values to be written as mathematical expres
 - {{cssxref("abs", "abs()")}} {{Experimental_Inline}}
   - : Takes a calculation and returns the absolute value.
 - {{cssxref("sign_function", "sign()")}} {{Experimental_Inline}}
-  - : Takes a calculation and returns -1 if the numeric value is negative, \+1 if the numeric value is positive, 0⁺ if the numeric value is 0⁺, and 0⁻ if the numeric value is 0⁻.
+  - : Takes a calculation and returns the sign (positive or negative) of the number.
 
 ## Filter functions
 

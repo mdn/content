@@ -197,7 +197,7 @@ If your extension is using `xpcnativewrappers=no` (which it shouldn't be doing i
 
 Firefox 3.5 introduces support for adding and removing progress listeners that listen on all tabs. See [Listening to events on all tabs](/en-US/Listening_to_events_on_all_tabs) for details.
 
-## For Theme developers:
+## For Theme developers
 
 - Check [Theme changes in Firefox 3.1](/en-US/Theme_changes_in_Firefox_3.1).
 - Go to the Mozillazine forum [Theme changes for FF3.1](https://forums.mozillazine.org/viewtopic.php?f=18&t=665138) to get an overview / listing of all changes between 3.0 and 3.1 that impact theme developers. This concerns new CSS features (like nth-child, -moz-box-shadow, etc.), changes to existing widgets, overall UI improvements, and new FF3.1 features (audio/video support, private browsing, extended session restore, box/window/text shadows).

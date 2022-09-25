@@ -165,24 +165,22 @@ Rather than inline-blocks with width:\<percentage>, in this case we don't have t
 
 Note that flexbox is a more efficient way to implement multi-column layout in modern CSS.
 
-### Margin collapsing
+### Prevent margin collapsing
 
-Creating a new BFC to avoid the [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) between two neighbor div:
+You can create a new BFC to avoid [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) between two neighbor elements.
 
-#### HTML
+#### Margin collapsing example
+
+In this example we have two adjacent {{HTMLElement("div")}} elements, which each have a vertical margin of `10px`. Because of margin collapsing, the vertical gap between them is 10 pixels, not the 20 we might expect.
 
 ```html
 <div class="blue"></div>
-<div class="red-outer">
-  <div class="red-inner">red inner</div>
-</div>
+<div class="red"></div>
 ```
-
-#### CSS
 
 ```css
 .blue,
-.red-inner {
+.red {
   height: 50px;
   margin: 10px 0;
 }
@@ -191,13 +189,46 @@ Creating a new BFC to avoid the [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_
   background: blue;
 }
 
-.red-outer {
-  overflow: hidden;
+.red {
   background: red;
 }
 ```
 
-{{EmbedLiveSample("Margin_collapsing", 120, 170)}}
+{{EmbedLiveSample("Margin collapsing example", 120, 170)}}
+
+#### Preventing margin collapsing
+
+In this example we wrap the second `<div>` in an outer one, to create a new BFC and prevent margin collapsing.
+
+```html
+<div class="blue"></div>
+<div class="outer">
+  <div class="red"></div>
+</div>
+```
+
+```css
+.blue,
+.red {
+  height: 50px;
+  margin: 10px 0;
+}
+
+.blue {
+  background: blue;
+}
+
+.red {
+  background: red;
+}
+
+.outer {
+  overflow: hidden;
+  background: transparent;
+}
+```
+
+{{EmbedLiveSample("Preventing margin collapsing", 120, 170)}}
 
 ## Specifications
 

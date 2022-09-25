@@ -254,6 +254,25 @@ console.log(emptyObj); // { x: 0, y: 13 }
 
 If you wish to restrict a bound function to only be callable with {{jsxref("Operators/new", "new")}}, or only be callable without `new`, the target function must enforce that restriction, such as by checking `new.target !== undefined` or using a [class](/en-US/docs/Web/JavaScript/Reference/Classes) instead.
 
+### Binding classes
+
+Using `bind()` on classes preserves most of the class's semantics, except that all static own properties of the current class are lost. However, because the prototype chain is preserved, you can still access static properties inherited from the parent class.
+
+```js
+class Base {
+  static baseProp = "base";
+}
+
+class Derived extends Base {
+  static derivedProp = "derived";
+}
+
+const BoundDerived = Derived.bind(null);
+console.log(BoundDerived.baseProp); // "base"
+console.log(BoundDerived.derivedProp); // undefined
+console.log(new BoundDerived() instanceof Derived); // true
+```
+
 ### Transforming methods to utility functions
 
 `bind()` is also helpful in cases where you want to transform a method which requires a specific `this` value to a plain utility function that accepts the previous `this` parameter as a normal parameter.
@@ -280,25 +299,6 @@ const slice = Function.prototype.call.bind(unboundSlice);
 // ...
 
 slice(arguments);
-```
-
-### Binding classes
-
-Using `bind()` on classes preserves most of the class's semantics, except that all static own properties of the current class are lost. However, because the prototype chain is preserved, you can still access static properties inherited from the parent class.
-
-```js
-class Base {
-  static baseProp = "base";
-}
-
-class Derived extends Base {
-  static derivedProp = "derived";
-}
-
-const BoundDerived = Derived.bind(null);
-console.log(BoundDerived.baseProp); // "base"
-console.log(BoundDerived.derivedProp); // undefined
-console.log(new BoundDerived() instanceof Derived); // true
 ```
 
 ## Specifications

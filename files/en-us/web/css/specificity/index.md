@@ -307,7 +307,7 @@ To remove the perceived need for `!important`, you can do one of the following:
 
 All these methods are covered in preceding sections.
 
-If you're unable to remove `!important` flags from an authors style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](../@layer/) of important declaration overrides is an excellent solution. Two ways of doing this include:
+If you're unable to remove `!important` flags from an authors style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](/en-US/docs/Web/CSS/@layer) of important declaration overrides is an excellent solution. Two ways of doing this include:
 
 #### Method #1
 
