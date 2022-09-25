@@ -4,7 +4,6 @@ slug: Glossary/firewall
 tags:
   - DDoS
   - Firewall
-  - Glossary
   - Security
   - computer network
 ---

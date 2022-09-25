@@ -57,7 +57,7 @@ order, correct as per spec.
 ```js
 clients.matchAll(options).then((clientList) => {
   for (const client of clientList) {
-    if (client.url === 'index.html') {
+    if (client.url === "index.html") {
       clients.openWindow(client);
       // or do something else involving the matching client
     }

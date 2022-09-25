@@ -37,11 +37,8 @@ async function getClipboardContents() {
     const clipboardItems = await navigator.clipboard.read();
 
     for (const clipboardItem of clipboardItems) {
-
       console.log(clipboardItem.presentationStyle);
-
     }
-
   } catch (err) {
     console.error(err.name, err.message);
   }

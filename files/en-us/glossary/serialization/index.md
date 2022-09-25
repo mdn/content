@@ -3,7 +3,6 @@ title: Serialization
 slug: Glossary/Serialization
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
   - Serialization
 ---

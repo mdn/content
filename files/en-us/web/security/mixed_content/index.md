@@ -88,7 +88,7 @@ Starting in Firefox 23, mixed active content is blocked by default (and mixed di
 
 To fix this type of error, all requests to HTTP content should be removed and replaced with content served over HTTPS. Some common examples of mixed content include JavaScript files, stylesheets, images, videos, and other media.
 
-> **Note:** The console will display a message indicating if mixed-display content is being successfully [upgraded from HTTP to HTTPS](#upgrading_mixed-display_resources)  (instead of a warning about "Loading mixed (insecure) display content").
+> **Note:** The console will display a message indicating if mixed-display content is being successfully [upgraded from HTTP to HTTPS](#upgrading_mixed-display_resources) (instead of a warning about "Loading mixed (insecure) display content").
 
 ## See also
 

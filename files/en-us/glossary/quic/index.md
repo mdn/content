@@ -2,7 +2,6 @@
 title: QUIC
 slug: Glossary/QUIC
 tags:
-  - Glossary
   - HTTP
   - QUIC
   - Reference

@@ -3,7 +3,6 @@ title: OpenGL
 slug: Glossary/OpenGL
 tags:
   - CodingScripting
-  - Glossary
   - OpenGL
 ---
 

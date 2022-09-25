@@ -309,17 +309,17 @@ console.log(new Intl.DateTimeFormat().format(date));
 ### Using timeStyle and dateStyle
 
 ```js
-const shortTime = new Intl.DateTimeFormat("en" , {
+const shortTime = new Intl.DateTimeFormat("en", {
   timeStyle: "short"
 });
 console.log(shortTime.format(Date.now())); // "13:31 AM"
 
-const shortDate = new Intl.DateTimeFormat("en" , {
+const shortDate = new Intl.DateTimeFormat("en", {
   dateStyle: "short"
 });
 console.log(shortDate.format(Date.now())); // "07/07/20"
 
-const mediumTime = new Intl.DateTimeFormat("en" , {
+const mediumTime = new Intl.DateTimeFormat("en", {
   timeStyle: "medium",
   dateStyle: "short"
 });

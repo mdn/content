@@ -3,7 +3,6 @@ title: Flexbox
 slug: Glossary/Flexbox
 tags:
   - CSS
-  - Glossary
   - Intro
   - flexbox
 ---

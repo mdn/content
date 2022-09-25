@@ -4,7 +4,6 @@ slug: Glossary/Identifier
 tags:
   - Beginner
   - CodingScripting
-  - Glossary
   - Sharing
 ---
 

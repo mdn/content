@@ -2,7 +2,6 @@
 title: HTTP/2
 slug: Glossary/HTTP_2
 tags:
-  - Glossary
   - HTTP
   - Infrastructure
   - Reference

@@ -3,7 +3,6 @@ title: Signature (security)
 slug: Glossary/Signature/Security
 tags:
   - Cryptography
-  - Glossary
   - Privacy
   - Security
 ---

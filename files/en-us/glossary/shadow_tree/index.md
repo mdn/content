@@ -3,7 +3,6 @@ title: Shadow tree
 slug: Glossary/Shadow_tree
 tags:
   - DOM
-  - Glossary
   - Shadow Tree
   - shadow DOM
 ---

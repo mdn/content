@@ -2,7 +2,6 @@
 title: Real User Monitoring (RUM)
 slug: Glossary/Real_User_Monitoring
 tags:
-  - Glossary
   - RUM
   - Reference
   - Web Performance

@@ -2,7 +2,6 @@
 title: ISP
 slug: Glossary/ISP
 tags:
-  - Glossary
   - ISP
   - Internet Service Provider
   - Web

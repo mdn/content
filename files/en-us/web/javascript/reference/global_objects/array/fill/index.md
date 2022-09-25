@@ -47,8 +47,12 @@ The modified array, filled with `value`.
 - `fill` is a mutator method: it will change the array itself and return it, not a copy of it.
 - If the first parameter is an object, each slot in the array will reference that object.
 
-> **Note:** Using `Array.prototype.fill()` on an empty array would not modify it as the array has nothing to be modified.
-> To use `Array.prototype.fill()` when declaring an array, make sure to assign slots to the array.
+The `fill()` method is a [mutating method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter the length of `this`, but it will change the content of `this`.
+
+The `fill()` method fills empty slots in [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) arrays with `value` as well.
+
+> **Note:** Using `Array.prototype.fill()` on an empty array (`length = 0`) would not modify it as the array has nothing to be modified.
+> To use `Array.prototype.fill()` when declaring an array, make sure the array has non-zero `length`.
 > [See example](#using_fill_to_populate_an_empty_array).
 
 ## Examples
@@ -95,6 +99,8 @@ The `end` parameter does not have to be specified.
 ```js
 const tempGirls = Array(5).fill("girl", 0);
 ```
+
+Note that the array was initially a [sparse array](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) with no assigned indices. `fill()` is still able to fill this array.
 
 ## Specifications
 

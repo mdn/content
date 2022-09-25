@@ -50,7 +50,7 @@ An array of objects containing the deleted cookie(s). Each object contains the f
 In this example when the cookie is deleted the event listener logs the first item in the `CookieChangeEvent.deleted` property to the console. It contains an object representing the cookie that has just been deleted.
 
 ```js
-cookieStore.addEventListener('change', (event) => {
+cookieStore.addEventListener("change", (event) => {
   console.log(event.deleted[0]);
 });
 ```

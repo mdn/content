@@ -3,7 +3,6 @@ title: Inheritance
 slug: Glossary/Inheritance
 tags:
   - CodingScripting
-  - Glossary
   - Inheritance
   - Programming Language
 ---

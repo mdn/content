@@ -117,7 +117,7 @@ Today, the proliferation of easily available web fonts of all sizes and weights 
 
 The W3.org defines the sRGB colorspace as the [default for web content](https://www.w3.org/TR/css-color-3/#SRGB). The MDN page on [\<color>](/en-US/docs/Web/CSS/color_value) says "_The [CSS](/en-US/docs/Web/CSS) [color data type](/en-US/docs/Web/CSS/CSS_Types) represents a color in the [sRGB colorspace](https://en.wikipedia.org/wiki/SRGB)._"
 
-### CSS Color Level 3 notations:
+### CSS Color Level 3 notations
 
 These are examples of the CSS notations used to define a color. Here the example color for each is magenta:
 

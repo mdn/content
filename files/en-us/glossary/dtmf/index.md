@@ -3,7 +3,6 @@ title: DTMF (Dual-Tone Multi-Frequency signaling)
 slug: Glossary/DTMF
 tags:
   - DTMF
-  - Glossary
   - WebRTC
 ---
 

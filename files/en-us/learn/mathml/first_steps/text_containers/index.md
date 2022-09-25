@@ -65,7 +65,7 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
 
 {{ EmbedLiveSample('Unicode_characters_for_mathematics', 700, 100, "", "") }}
 
-## A bit of semantics...
+## A bit of semantics
 
 We noticed in the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Getting_started) article that the text in MathML formulas are wrapped in specific container elements such as the `<mn>` or `<mo>`. More generally, every text in MathML formulas must be included inside such container elements, called _token_ elements. In addition, MathML provides multiple token elements in order to distinguish different meanings of the text content:
 

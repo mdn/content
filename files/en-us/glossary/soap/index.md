@@ -2,7 +2,6 @@
 title: SOAP
 slug: Glossary/SOAP
 tags:
-  - Glossary
   - Infrastructure
   - SOAP
   - WebMechanics

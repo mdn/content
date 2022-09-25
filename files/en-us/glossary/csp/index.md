@@ -2,7 +2,6 @@
 title: CSP
 slug: Glossary/CSP
 tags:
-  - Glossary
   - HTTP
   - Infrastructure
 ---

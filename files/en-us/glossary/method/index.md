@@ -3,7 +3,6 @@ title: Method
 slug: Glossary/Method
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

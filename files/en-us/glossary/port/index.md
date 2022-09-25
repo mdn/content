@@ -2,7 +2,6 @@
 title: Port
 slug: Glossary/Port
 tags:
-  - Glossary
   - Intro
   - Security
   - computer network

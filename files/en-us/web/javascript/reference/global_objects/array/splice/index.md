@@ -67,7 +67,9 @@ If no elements are removed, an empty array is returned.
 
 ## Description
 
-If the specified number of elements to insert differs from the number of elements being removed, the array's `length` will be changed.
+The `splice()` method is a [mutating method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It may change the content of `this`. If the specified number of elements to insert differs from the number of elements being removed, the array's `length` will be changed as well. At the same time, it uses [`@@species`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) to create a new array instance to be returned.
+
+If the deleted portion is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the array returned by `splice()` is sparse as well, with those corresponding indices being empty slots.
 
 ## Examples
 
@@ -149,6 +151,16 @@ const removed = myFish.splice(2);
 
 // myFish is ["angel", "clown"]
 // removed is ["mandarin", "sturgeon"]
+```
+
+### Using splice() on sparse arrays
+
+The `splice()` method preserves the array's sparseness.
+
+```js
+const arr = [1, 3, 4, , 6];
+console.log(arr.splice(1, 2)); // [empty, 3]
+console.log(arr); // [1, 4, empty, 6]
 ```
 
 ## Specifications

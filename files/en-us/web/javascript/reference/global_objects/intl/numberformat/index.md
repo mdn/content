@@ -105,7 +105,7 @@ console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).form
 // → 1,23,000
 
 // Formatting with units
-console.log(new Intl.NumberFormat('pt-PT',  {
+console.log(new Intl.NumberFormat('pt-PT', {
   style: 'unit',
   unit: 'kilometer-per-hour'
 }).format(50));

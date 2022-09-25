@@ -2,7 +2,6 @@
 title: Safe
 slug: Glossary/Safe
 tags:
-  - Glossary
   - Disambiguation
 ---
 

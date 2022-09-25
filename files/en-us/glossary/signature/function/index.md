@@ -3,7 +3,6 @@ title: Signature (functions)
 slug: Glossary/Signature/Function
 tags:
   - CodingScripting
-  - Glossary
   - Java
   - JavaScript
 ---

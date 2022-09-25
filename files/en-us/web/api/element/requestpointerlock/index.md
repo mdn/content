@@ -19,7 +19,7 @@ The **`Element.requestPointerLock()`** method lets you
 asynchronously ask for the pointer to be locked on the given element.
 
 To track the success or failure of the request, it is necessary to listen for the
-{{domxref("Element/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Element/pointerlockerror_event", "pointerlockerror")}} events at the
+{{domxref("Document/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} events at the
 {{domxref("Document")}} level.
 
 ## Syntax
@@ -35,6 +35,10 @@ None.
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Specifications
 
