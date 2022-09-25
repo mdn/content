@@ -266,8 +266,7 @@ function updateStatus() {
     scangamepads();
   }
 
-  for (const i in controllers) {
-    const controller = controllers[i];
+  Object.entries(controllers).forEach(([i, controller]) => {
     const d = document.getElementById(`controller${i}`);
     const buttons = d.getElementsByClassName("button");
 
