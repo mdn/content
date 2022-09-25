@@ -2,7 +2,7 @@
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 tags:
-  - '@media'
+  - "@media"
   - Accessibility
   - CSS
   - Media Queries

@@ -2,7 +2,7 @@
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference

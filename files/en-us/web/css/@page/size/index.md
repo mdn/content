@@ -2,7 +2,7 @@
 title: size
 slug: Web/CSS/@page/size
 tags:
-  - '@page'
+  - "@page"
   - At-rule descriptor
   - CSS
   - CSS Descriptor

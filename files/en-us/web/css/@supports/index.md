@@ -1,5 +1,5 @@
 ---
-title: '@supports'
+title: "@supports"
 slug: Web/CSS/@supports
 tags:
   - At-rule

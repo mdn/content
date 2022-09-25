@@ -2,7 +2,7 @@
 title: pad
 slug: Web/CSS/@counter-style/pad
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Counter Styles

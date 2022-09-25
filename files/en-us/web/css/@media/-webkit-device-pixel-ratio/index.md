@@ -1,8 +1,8 @@
 ---
-title: '-webkit-device-pixel-ratio'
+title: "-webkit-device-pixel-ratio"
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - WebKit
   - media feature

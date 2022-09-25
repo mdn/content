@@ -1,8 +1,8 @@
 ---
-title: '-webkit-transform-2d'
+title: "-webkit-transform-2d"
 slug: Web/CSS/@media/-webkit-transform-2d
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Non-standard
   - Reference

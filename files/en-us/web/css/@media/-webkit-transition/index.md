@@ -1,8 +1,8 @@
 ---
-title: '-webkit-transition'
+title: "-webkit-transition"
 slug: Web/CSS/@media/-webkit-transition
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Deprecated
   - Non-standard

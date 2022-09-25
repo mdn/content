@@ -2,7 +2,7 @@
 title: font-variation-settings
 slug: Web/CSS/@font-face/font-variation-settings
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - CSS Descriptor

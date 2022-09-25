@@ -1,5 +1,5 @@
 ---
-title: '@keyframes'
+title: "@keyframes"
 slug: Web/CSS/@keyframes
 tags:
   - Animations
