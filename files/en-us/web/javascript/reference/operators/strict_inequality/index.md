@@ -52,26 +52,24 @@ operands of different types to be different:
 ### Comparing operands of the same type
 
 ```js
-console.log("hello" !== "hello"); // false
-console.log("hello" !== "hola"); // true
+"hello" !== "hello"; // false
+"hello" !== "hola"; // true
 
-console.log(3 !== 3); // false
-console.log(3 !== 4); // true
+3 !== 3; // false
+3 !== 4; // true
 
-console.log(true !== true); // false
-console.log(true !== false); // true
+true !== true; // false
+true !== false; // true
 
-console.log(null !== null); // false
+null !== null; // false
 ```
 
 ### Comparing operands of different types
 
 ```js
-console.log("3" !== 3); // true
-
-console.log(true !== 1); // true
-
-console.log(null !== undefined); // true
+"3" !== 3; // true
+true !== 1; // true
+null !== undefined; // true
 ```
 
 ### Comparing objects
