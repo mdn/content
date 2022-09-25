@@ -9,8 +9,7 @@ tags:
   - Web
   - color
   - rgba
-browser-compat:
-  - css.types.color.rgba
+browser-compat: css.types.color.rgba
 ---
 
 {{CSSRef}}
