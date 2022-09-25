@@ -1,5 +1,5 @@
 ---
-title: ':lang()'
+title: ":lang()"
 slug: Web/CSS/:lang
 tags:
   - CSS

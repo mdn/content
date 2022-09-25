@@ -52,6 +52,10 @@ A {{domxref('FileSystemDirectoryHandle')}}.
   - : Thrown if the user dismisses the prompt without making a selection, or if the user
     agent deems the selected content to be too sensitive or dangerous
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 This asynchronous function shows a directory picker and returns a

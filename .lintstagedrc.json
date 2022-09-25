@@ -1,4 +1,5 @@
 {
   "*": "prettier --ignore-unknown --write",
-  "*.md": "markdownlint-cli2-fix"
+  "*.md": "markdownlint-cli2-fix",
+  "*.{svg,png,jpeg,jpg,gif}": "yarn filecheck"
 }

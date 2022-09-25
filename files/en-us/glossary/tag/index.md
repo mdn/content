@@ -3,7 +3,6 @@ title: Tag
 slug: Glossary/Tag
 tags:
   - CodingScripting
-  - Glossary
   - HTML
   - Intro
 ---

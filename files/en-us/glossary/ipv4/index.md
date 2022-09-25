@@ -2,7 +2,6 @@
 title: IPv4
 slug: Glossary/IPv4
 tags:
-  - Glossary
   - IPv4
   - Infrastructure
   - Internet Protocol

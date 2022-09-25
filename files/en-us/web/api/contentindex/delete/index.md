@@ -53,13 +53,11 @@ Below is an asynchronous function, that removes an item from the {{domxref('Cont
 
 ```js
 async function unregisterContent(article) {
-
   // reference registration
   const registration = await navigator.serviceWorker.ready;
 
   // feature detect Content Index
-  if (!registration.index)
-    return;
+  if (!registration.index) return;
 
   // unregister content from index
   await registration.index.delete(article.id);
@@ -70,7 +68,7 @@ The `delete` method can also be used within the
 [service worker](/en-US/docs/Web/API/ServiceWorker) scope.
 
 ```js
-self.registration.index.delete('my-id');
+self.registration.index.delete("my-id");
 ```
 
 ## Specifications

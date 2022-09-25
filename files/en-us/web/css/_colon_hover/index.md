@@ -1,5 +1,5 @@
 ---
-title: ':hover'
+title: ":hover"
 slug: Web/CSS/:hover
 tags:
   - CSS

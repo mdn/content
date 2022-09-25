@@ -42,6 +42,10 @@ A string representing the elements of the array.
 
 The `Array.prototype.toLocaleString` method traverses its content, calling the `toLocaleString` method of every element with the `locales` and `options` parameters provided, and concatenates them with a implementation-defined separator (such as a comma ","). Note that the method itself does not consume the two parameters — it only passes them to the `toLocaleString()` of each element. The choice of the separator string depends on the host's current locale, not the `locales` parameter.
 
+If an element is `undefined`, `null`, it is converted to an empty string instead of the string `"null"` or `"undefined"`.
+
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `toLocaleString()` method iterates empty slots as if they have the value `undefined`.
+
 ## Examples
 
 ### Using locales and options
@@ -64,6 +68,14 @@ prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 ```
 
 For more examples, see also the [`Intl.NumberFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) and [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) pages.
+
+### Using toLocaleString() on sparse arrays
+
+`toLocaleString()` treats empty slots the same as `undefined` and produces an extra separator:
+
+```js
+console.log([1, , 3].toLocaleString()); // '1,,3'
+```
 
 ## Specifications
 

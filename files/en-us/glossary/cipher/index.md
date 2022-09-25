@@ -3,7 +3,6 @@ title: Cipher
 slug: Glossary/Cipher
 tags:
   - Cryptography
-  - Glossary
   - Privacy
   - Security
 ---

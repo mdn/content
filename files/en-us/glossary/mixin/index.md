@@ -3,7 +3,6 @@ title: Mixin
 slug: Glossary/Mixin
 tags:
   - CodingScripting
-  - Glossary
   - Method
   - Mixin
   - Property

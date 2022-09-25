@@ -3,7 +3,6 @@ title: beacon
 slug: Glossary/beacon
 tags:
   - Beacon
-  - Glossary
   - Reference
   - Web Performance
 ---

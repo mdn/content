@@ -73,7 +73,7 @@ In trying to improve the accessibility of your sites and applications, there are
 
 #### Don't override browser, assistive technology, or operating system shortcuts
 
-When implementing keyboard shortcuts, make sure you don't create shortcuts that are already being used by the browser, assistive technology, or operating system, unless they are used for the same thing. For example, `"Control+P"` is used by most user-agents to initiate print functionality. Generally a web application should not create a "Control+P" shortcut as it will usurp browser functionality. There are exceptions. Web applications where printing is common, like email applications or Google Docs, usurping the browser's `"Control+P"` printing functionality for an application specific print flow would be expected.
+When implementing keyboard shortcuts, make sure you don't create shortcuts that are already being used by the browser, assistive technology, or operating system, unless they are used for the same thing. For example, `"Control+P"` is used by most user-agents to initiate print functionality. Generally a web application should not create a "Control+P" shortcut as it will usurp browser functionality. There are exceptions. Web applications where printing is common, like email applications or document editors, usurping the browser's `"Control+P"` printing functionality for an application specific print flow would be expected.
 
 Unless you're creating an HTML version of a productivity application, you should likely avoid implementing keyboard shortcut. While overriding an operating system or browser keyboard shortcut can be annoying for non-assistive technology users, if you override a screen reader's keyboard functionality you can completely shut down access for the assistive technology user. If you must create keyboard shortcuts, avoid single letter keyboard shortcuts and common screen reader keyboard shortcuts.
 
@@ -87,7 +87,8 @@ The `aria-keyshortcuts` attribute is very similar to the [problematic](https://w
 
 ```html
 <p>
-  Press the <strong><u>S</u></strong>tress reliever to relax!
+  Press the 
+  <strong><u>S</u></strong>tress reliever to relax!
 </p>
 <button accesskey="s">Stress reliever</button>
 ```

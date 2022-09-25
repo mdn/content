@@ -7,8 +7,8 @@ tags:
   - BookmarkTreeNodeType
   - Bookmarks
   - Extensions
-  - Property
   - Reference
+  - Type
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.BookmarkTreeNodeType
 ---

@@ -66,7 +66,7 @@ the IP address):
 type }\quad +\quad { 2 }^{ 8 }\times { p }_{ local }\quad +\quad (256\quad
 -\quad componentID)</annotation></semantics></math>
 
-This is equivalent to mapping the priorities of teh candidate type, the local IP, and
+This is equivalent to mapping the priorities of the candidate type, the local IP, and
 the component ID into various bit ranges within the 32-bit `priority`
 value.
 

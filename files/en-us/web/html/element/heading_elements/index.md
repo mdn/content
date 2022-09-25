@@ -48,8 +48,7 @@ The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six
         Any element that accepts
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
           >flow content</a
-        >; don't use a heading element as a child of the
-        {{HTMLElement("hgroup")}} element — it is now deprecated.
+        >.
       </td>
     </tr>
     <tr>
@@ -87,17 +86,11 @@ These elements only include the [global attributes](/en-US/docs/Web/HTML/Global_
 - Avoid skipping heading levels: always start from `<h1>`, followed by `<h2>` and so on.
 - Use only one `<h1>` per page or view. It should concisely describe the overall purpose of the content.
 
-### Multiple `<h1>` elements on one page
+### Do not use multiple `<h1>` elements on one page
 
-Using more than one `<h1>` is allowed by the HTML specification, but is not considered a best practice. Using only one `<h1>` is beneficial for screen reader users.
+Using more than one `<h1>` on one page was allowed in older versions of the HTML specification that included the concept of an _outline algorithm_. However, this was never considered a best practice. Read more in [There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
 
-The HTML specification includes the concept of an _outline_ formed by the use of {{htmlelement("section")}} elements.
-If this were implemented it would enable the use of multiple `<h1>` elements, giving user agents—including screen readers—a way to understand that an `<h1>` nested inside a defined section is a subheading. This functionality has never been implemented; therefore it is important to use your headings to describe the outline of your document.
-
-The following articles give more information about the status of outlines:
-
-- [Computer says no to the HTML5 outline](https://html5doctor.com/computer-says-no-to-html5-document-outline/)
-- [A decade + a year of heading backwards](https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/)
+Use only one `<h1>` per page and [nest headings](#nesting) without skipping levels.
 
 ## Examples
 

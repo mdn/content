@@ -2,7 +2,7 @@
 title: Firefox 54 for developers
 slug: Mozilla/Firefox/Releases/54
 tags:
-  - '54'
+  - "54"
   - Firefox
   - Release Notes
 ---
@@ -61,7 +61,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 #### General
 
-- 5.1 surround sound playback is now enabled by default on Windows, macOS, and Linux ({{bug(1334508)}}, {{bug(1321502)}} , and {{bug(1323659)}}).
+- 5.1 surround sound playback is now enabled by default on Windows, macOS, and Linux ({{bug(1334508)}}, {{bug(1321502)}}, and {{bug(1323659)}}).
 
 #### Media Capture and Streams API
 

@@ -2,7 +2,7 @@
 title: height
 slug: Web/CSS/@media/height
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

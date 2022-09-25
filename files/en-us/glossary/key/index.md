@@ -3,7 +3,6 @@ title: Key
 slug: Glossary/Key
 tags:
   - Cryptography
-  - Glossary
   - Security
 ---
 

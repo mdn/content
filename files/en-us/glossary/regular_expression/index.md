@@ -3,7 +3,6 @@ title: Regular expression
 slug: Glossary/Regular_expression
 tags:
   - CodingScripting
-  - Glossary
   - Regular Expression
 ---
 

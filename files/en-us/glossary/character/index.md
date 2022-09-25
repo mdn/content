@@ -3,7 +3,6 @@ title: Character
 slug: Glossary/Character
 tags:
   - CodingScripting
-  - Glossary
   - strings
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: marquee role'
+title: "ARIA: marquee role"
 slug: Web/Accessibility/ARIA/Roles/marquee_role
 tags:
   - Accessibility

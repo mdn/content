@@ -60,7 +60,7 @@ Reflect.has({x: 0}, 'toString')
 
 // Proxy with .has() handler method
 obj = new Proxy({}, {
-  has(t, k) { return k.startsWith('door')  }
+  has(t, k) { return k.startsWith('door') }
 });
 Reflect.has(obj, 'doorbell')  // true
 Reflect.has(obj, 'dormitory')  // false

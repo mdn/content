@@ -40,7 +40,9 @@ new CompressionStream(format)
 In this example a stream is compressed using gzip compression.
 
 ```js
-const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));
+const compressedReadableStream = inputReadableStream.pipeThrough(
+  new CompressionStream("gzip")
+);
 ```
 
 ## Specifications

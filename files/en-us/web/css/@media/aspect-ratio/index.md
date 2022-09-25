@@ -87,7 +87,7 @@ w.onchange = w.oninput = () => {
 h.onchange = h.oninput = () => {
   outer.style.height = `${h.value}px`;
   hf.textContent = `height: ${h.value}`;
-}
+};
 ```
 
 {{ EmbedLiveSample('Result', '300px', '350px') }}

@@ -3,7 +3,6 @@ title: Baseline
 slug: Glossary/baseline
 tags:
   - CSS
-  - Glossary
   - SVG
   - alignment
   - typography

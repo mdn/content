@@ -1,5 +1,5 @@
 ---
-title: ':local-link'
+title: ":local-link"
 slug: Web/CSS/:local-link
 spec-urls: https://drafts.csswg.org/selectors/#local-link-pseudo
 ---

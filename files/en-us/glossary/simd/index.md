@@ -3,7 +3,6 @@ title: SIMD
 slug: Glossary/SIMD
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

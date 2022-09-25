@@ -4,7 +4,6 @@ slug: Glossary/State_machine
 tags:
   - CodingScripting
   - Finite
-  - Glossary
   - Input
   - Mealy
   - Moore

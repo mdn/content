@@ -3,7 +3,6 @@ title: Static typing
 slug: Glossary/Static_typing
 tags:
   - CodingScripting
-  - Glossary
   - Type
 ---
 

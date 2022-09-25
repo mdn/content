@@ -2,7 +2,7 @@
 title: display-mode
 slug: Web/CSS/@media/display-mode
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

@@ -2,7 +2,7 @@
 title: range
 slug: Web/CSS/@counter-style/range
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Counter Styles

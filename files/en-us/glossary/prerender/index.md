@@ -2,7 +2,6 @@
 title: Prerender
 slug: Glossary/prerender
 tags:
-  - Glossary
   - Prefetch
   - Security
   - Web Performance

@@ -1,5 +1,5 @@
 ---
-title: '@namespace'
+title: "@namespace"
 slug: Web/CSS/@namespace
 tags:
   - At-rule
@@ -14,6 +14,8 @@ browser-compat: css.at-rules.namespace
 {{CSSRef}}
 
 **`@namespace`** is an [at-rule](/en-US/docs/Web/CSS/At-rule) that defines [XML namespaces](/en-US/docs/Namespaces) to be used in a [CSS](/en-US/docs/Glossary/CSS) [style sheet](/en-US/docs/Web/API/StyleSheet).
+
+{{EmbedInteractiveExample("pages/tabbed/at-rule-namespace.html", "tabbed-shorter")}}
 
 ## Syntax
 

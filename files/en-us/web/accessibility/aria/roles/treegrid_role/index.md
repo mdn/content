@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: treegrid role'
+title: "ARIA: treegrid role"
 slug: Web/Accessibility/ARIA/Roles/treegrid_role
 tags:
   - Accessibility
@@ -110,7 +110,7 @@ The following keyboard interactions need to be supported when an element in the 
 - <kbd>Up Arrow</kbd>
   - : If focus is on a row, moves focus one row up. If focus is on the first row, focus does not move. If focus is on a cell, moves focus one cell up. If focus is on the top cell in the column, focus does not move.
 - <kbd>Page Down</kbd>
-  - : If focus is on a row or cell, moves focus down a predetermined number of rows or cells. Usually, it moves down the equivalent of the height of the treegrid, scrolling so the bottom row in the currently visible set of rows becomes one of the first visible rows. If focus is in the last row , focus does not move.
+  - : If focus is on a row or cell, moves focus down a predetermined number of rows or cells. Usually, it moves down the equivalent of the height of the treegrid, scrolling so the bottom row in the currently visible set of rows becomes one of the first visible rows. If focus is in the last row, focus does not move.
 - <kbd>Page Up</kbd>
   - : If focus is on a row or cell, moves focus up an predetermined number of rows. Usually, it moves up the equivalent of the height of the treegrid, scrolling so the top row in the currently visible set of rows becomes one of the last visible rows. If focus is in the first row, focus does not move.
 - <kbd>Home</kbd> <kbd>Control + Home</kbd>

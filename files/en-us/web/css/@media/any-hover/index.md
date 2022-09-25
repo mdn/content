@@ -2,7 +2,7 @@
 title: any-hover
 slug: Web/CSS/@media/any-hover
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

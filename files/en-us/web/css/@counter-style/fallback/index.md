@@ -2,7 +2,7 @@
 title: fallback
 slug: Web/CSS/@counter-style/fallback
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Counter Styles

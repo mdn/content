@@ -67,7 +67,7 @@ The options are:
 - `priority` This allows you to specify a particular immutable priority.
   Once set, the priority cannot be changed.
 - `signal` This allows you to specify a signal, which may be either a {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}}
-  The signal is associated with a controller, which can be used to used to abort the task.
+  The signal is associated with a controller, which can be used to abort the task.
   A {{domxref("TaskSignal")}} can also be used to set and change the task priority if the [task is mutable](#mutable_and_immutable_task_priority).
 - `delay` This allows you to specify the delay before the task is added for scheduling, in milliseconds.
 

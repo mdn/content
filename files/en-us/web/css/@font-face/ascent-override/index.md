@@ -2,7 +2,7 @@
 title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference

@@ -3,7 +3,6 @@ title: Syntax
 slug: Glossary/Syntax
 tags:
   - CodingScripting
-  - Glossary
   - Syntax
 ---
 

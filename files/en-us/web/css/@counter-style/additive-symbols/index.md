@@ -2,7 +2,7 @@
 title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Counter Styles

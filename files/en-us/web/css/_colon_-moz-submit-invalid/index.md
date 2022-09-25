@@ -1,8 +1,8 @@
 ---
-title: ':-moz-submit-invalid'
+title: ":-moz-submit-invalid"
 slug: Web/CSS/:-moz-submit-invalid
 tags:
-  - ':-moz-submit-invalid'
+  - ":-moz-submit-invalid"
   - CSS
   - CSS:Mozilla Extensions
   - Non-standard

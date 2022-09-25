@@ -1,5 +1,5 @@
 ---
-title: '@color-profile'
+title: "@color-profile"
 slug: Web/CSS/@color-profile
 tags:
   - At-rule

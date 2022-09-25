@@ -2,7 +2,6 @@
 title: ARPANET
 slug: Glossary/Arpanet
 tags:
-  - Glossary
   - Infrastructure
 ---
 

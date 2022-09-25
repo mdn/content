@@ -3,7 +3,6 @@ title: Internet
 slug: Glossary/Internet
 tags:
   - Beginner
-  - Glossary
   - Guide
   - Intro
   - NeedsContent

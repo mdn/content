@@ -165,7 +165,7 @@ Due to the on-off nature of checkboxes, the checkbox is considered a toggle butt
 A radio button is created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value `radio`:
 
 ```html
-<input type="radio" id="soup" name="meal" checked />
+<input type="radio" id="soup" name="meal" value="soup" checked />
 ```
 
 Several radio buttons can be tied together. If they share the same value for their {{htmlattrxref("name","input")}} attribute, they will be considered to be in the same group of buttons. Only one button in a given group may be checked at a time; this means that when one of them is checked all the others automatically get unchecked. When the form is sent, only the value of the checked radio button is sent. If none of them are checked, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form. Once one of the radio buttons in a same-named group of buttons is checked, it is not possible for the user to uncheck all of the buttons without resetting the form.
@@ -206,6 +206,44 @@ The radio button isn't actually a button, despite its name; let's move on and lo
   - : Buttons that have no automatic effect but can be customized using JavaScript code.
 
 Then we also have the {{htmlelement("button")}} element itself. This can take a `type` attribute of value `submit`, `reset`, or `button` to mimic the behavior of the three `<input>` types mentioned above. The main difference between the two is that actual `<button>` elements are much easier to style.
+
+```html
+  <input type="submit" value="Submit this form">
+  <input type="reset" value="Reset this form">
+  <input type="button" value="Do Nothing without JavaScript">
+
+  <button type="submit">Submit this form</button>
+  <button type="reset">Reset this form</button>
+  <button type="button">Do Nothing without JavaScript</button>
+```
+
+```html hidden
+<div class="buttondemo">
+<p>Using &lt;input>
+<p>
+  <input type="submit" value="Submit this form">
+  <input type="reset" value="Reset this form">
+  <input type="button" value="Do Nothing without JavaScript">
+</p>
+<p>Using &lt;button>
+<p>
+  <button type="submit">Submit this form</button>
+  <button type="reset">Reset this form</button>
+  <button type="button">Do Nothing without JavaScript</button>
+</p>
+</div>
+```
+
+```css hidden
+button, input {
+  display: none;
+}
+.buttondemo button, .buttondemo input {
+  all: revert;
+}
+```
+
+{{ EmbedLiveSample('Actual_buttons', '500', '250') }}
 
 > **Note:** The `image` input type also renders as a button. We'll cover that later too.
 

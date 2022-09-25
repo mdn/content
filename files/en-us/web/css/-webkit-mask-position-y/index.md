@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-position-y'
+title: "-webkit-mask-position-y"
 slug: Web/CSS/-webkit-mask-position-y
 tags:
   - CSS

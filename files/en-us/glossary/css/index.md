@@ -4,7 +4,6 @@ slug: Glossary/CSS
 tags:
   - CSS
   - CodingScripting
-  - Glossary
   - Web
   - "l10n:priority"
 ---

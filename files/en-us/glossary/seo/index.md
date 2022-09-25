@@ -2,7 +2,6 @@
 title: SEO
 slug: Glossary/SEO
 tags:
-  - Glossary
   - Intro
   - SEO
   - Search

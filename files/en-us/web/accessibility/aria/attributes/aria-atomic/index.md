@@ -1,5 +1,5 @@
 ---
-title: 'aria-atomic'
+title: "aria-atomic"
 slug: Web/Accessibility/ARIA/Attributes/aria-atomic
 tags:
   - Accessibility

@@ -3,7 +3,6 @@ title: Compile time
 slug: Glossary/Compile_time
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

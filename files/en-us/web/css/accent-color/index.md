@@ -34,7 +34,7 @@ Browsers that support `accent-color` currently apply it to the following HTML el
 accent-color: auto;
 
 /* <color> values */
-accent-color: red;
+accent-color: darkred;
 accent-color: #5729e9;
 accent-color: rgb(0, 200, 0);
 accent-color: hsl(228, 4%, 24%);

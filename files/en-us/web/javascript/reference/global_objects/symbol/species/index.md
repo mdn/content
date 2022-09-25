@@ -13,13 +13,17 @@ browser-compat: javascript.builtins.Symbol.species
 
 The well-known symbol **`Symbol.species`** specifies a function-valued property that the constructor function uses to create derived objects.
 
+> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
+
 {{EmbedInteractiveExample("pages/js/symbol-species.html")}}
+
+{{js_property_attributes(0,0,0)}}
 
 ## Description
 
-The `species` accessor property allows subclasses to override the default constructor for objects.
+The `@@species` accessor property allows subclasses to override the default constructor for objects. This specifies a protocol about how instances should be copied. For example, when you use copying methods of arrays, such as {{jsxref("Array/map", "map()")}}. the `map()` method uses `instance.constructor[Symbol.species]` to get the constructor for constructing the new array.
 
-{{js_property_attributes(0,0,0)}}
+All built-in implementations of `@@species` return the `this` value, which is the current instance's constructor. This allows copying methods to create instances of derived classes rather than the base class — for example, `map()` will return an array of the same type as the original array.
 
 ## Examples
 
@@ -30,13 +34,15 @@ You might want to return {{jsxref("Array")}} objects in your derived array class
 ```js
 class MyArray extends Array {
   // Overwrite species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 const a = new MyArray(1, 2, 3);
 const mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Specifications

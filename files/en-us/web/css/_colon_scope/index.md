@@ -1,8 +1,8 @@
 ---
-title: ':scope'
+title: ":scope"
 slug: Web/CSS/:scope
 tags:
-  - ':scope'
+  - ":scope"
   - CSS
   - Layout
   - Pseudo-class

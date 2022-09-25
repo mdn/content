@@ -38,10 +38,10 @@ None.
 ### Examples
 
 ```js
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 
 if (ctx.isContextLost()) {
-  console.log("Context is lost")
+  console.log("Context is lost");
 }
 ```
 

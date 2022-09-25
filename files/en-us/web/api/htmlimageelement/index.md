@@ -87,7 +87,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Methods
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLImageElement.decode()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the image is decoded and it's safe to append the image to the DOM. This prevents rendering of the next frame from having to pause to decode the image, as would happen if an undecoded image were added to the DOM.

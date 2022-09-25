@@ -1,5 +1,5 @@
 ---
-title: '-moz-outline-radius-topright'
+title: "-moz-outline-radius-topright"
 slug: Web/CSS/-moz-outline-radius-topright
 tags:
   - CSS

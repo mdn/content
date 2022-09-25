@@ -56,13 +56,19 @@ To fix this, move your instantiation of these services into your `load` event ha
 
 ```js
 var MyObject = {
-  comp : null,
+  comp: null,
   init() {
     this.comp = Components.classes["…"].getService(/* … */);
   },
   // …
-}
-window.addEventListener("load", function() { MyObject.init(); }, false);
+};
+window.addEventListener(
+  "load",
+  function () {
+    MyObject.init();
+  },
+  false
+);
 ```
 
 An even better solution, of course, is to follow [performance best practices](/en-US/docs/Extensions/Performance_best_practices_in_extensions) and to not instantiate services until you need to use them.

@@ -3,7 +3,6 @@ title: Slug
 slug: Glossary/Slug
 tags:
   - Community
-  - Glossary
   - Intermediate
   - MDN
   - URL

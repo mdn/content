@@ -4,7 +4,6 @@ slug: Glossary/Polyfill
 tags:
   - Browser Support
   - CodingScripting
-  - Glossary
   - JavaScript
   - polyfill
 ---

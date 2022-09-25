@@ -5,7 +5,6 @@ tags:
   - CodingScripting
   - DesignPattern
   - Functions
-  - Glossary
   - JavaScript
 ---
 
