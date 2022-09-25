@@ -321,7 +321,6 @@ window.addEventListener("gamepadconnected", connecthandler);
 window.addEventListener("gamepaddisconnected", disconnecthandler);
 
 if (!haveEvents) {
-  document.querySelector("#noDevices").style.display = "block";
   setInterval(scangamepads, 500);
 }
 ```
