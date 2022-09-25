@@ -1,5 +1,5 @@
 ---
-title: 'aria-valuetext'
+title: "aria-valuetext"
 slug: Web/Accessibility/ARIA/Attributes/aria-valuetext
 tags:
   - Accessibility
