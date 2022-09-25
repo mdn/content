@@ -306,8 +306,8 @@ function scangamepads() {
     ? "none"
     : "block";
   for (const gamepad of gamepads) {
+    // gamepad is null if disconnected during the session
     if (gamepad) {
-      // Can be null if disconnected during the session
       if (gamepad.index in controllers) {
         controllers[gamepad.index] = gamepad;
       } else {
