@@ -1,8 +1,8 @@
 ---
-title: ':host-context()'
+title: ":host-context()"
 slug: Web/CSS/:host-context
 tags:
-  - ':host-context()'
+  - ":host-context()"
   - CSS
   - Layout
   - Pseudo-class

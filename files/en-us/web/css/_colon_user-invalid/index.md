@@ -1,5 +1,5 @@
 ---
-title: ':user-invalid (:-moz-ui-invalid)'
+title: ":user-invalid (:-moz-ui-invalid)"
 slug: Web/CSS/:user-invalid
 tags:
   - CSS

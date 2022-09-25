@@ -1,5 +1,5 @@
 ---
-title: ':target'
+title: ":target"
 slug: Web/CSS/:target
 tags:
   - CSS
@@ -54,9 +54,9 @@ The `:target` pseudo-class can be used to highlight the portion of a page that h
   <li><a href="#p1">Jump to the first paragraph!</a></li>
   <li><a href="#p2">Jump to the second paragraph!</a></li>
   <li>
-    <a href="#nowhere"
-      >This link goes nowhere, because the target doesn't exist.</a
-    >
+    <a href="#nowhere">
+      This link goes nowhere, because the target doesn't exist.
+    </a>
   </li>
 </ol>
 

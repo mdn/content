@@ -1,5 +1,5 @@
 ---
-title: ':valid'
+title: ":valid"
 slug: Web/CSS/:valid
 tags:
   - CSS

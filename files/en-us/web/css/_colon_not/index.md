@@ -1,8 +1,8 @@
 ---
-title: ':not()'
+title: ":not()"
 slug: Web/CSS/:not
 tags:
-  - ':not()'
+  - ":not()"
   - CSS
   - Layout
   - Negation

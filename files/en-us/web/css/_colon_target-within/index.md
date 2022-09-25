@@ -1,5 +1,5 @@
 ---
-title: ':target-within'
+title: ":target-within"
 slug: Web/CSS/:target-within
 browser-compat: css.selectors.target-within
 ---

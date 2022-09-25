@@ -1,5 +1,5 @@
 ---
-title: ':future'
+title: ":future"
 slug: Web/CSS/:future
 browser-compat: css.selectors.future
 ---

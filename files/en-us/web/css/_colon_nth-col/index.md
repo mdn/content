@@ -1,5 +1,5 @@
 ---
-title: ':nth-col'
+title: ":nth-col"
 slug: Web/CSS/:nth-col
 browser-compat: css.selectors.nth-col
 ---

@@ -1,5 +1,5 @@
 ---
-title: ':playing'
+title: ":playing"
 slug: Web/CSS/:playing
 tags:
   - CSS

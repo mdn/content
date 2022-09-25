@@ -1,9 +1,9 @@
 ---
-title: ':focus-within'
+title: ":focus-within"
 slug: Web/CSS/:focus-within
 tags:
-  - ':focus'
-  - ':focus-within'
+  - ":focus"
+  - ":focus-within"
   - CSS
   - Layout
   - Pseudo-class
