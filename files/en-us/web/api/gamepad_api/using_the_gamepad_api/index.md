@@ -221,7 +221,7 @@ function addgamepad(gamepad) {
   gamepad.buttons.forEach((button, i) => {
     const e = document.createElement("li");
     e.className = "button";
-    e.textContent = "Button " + i;
+    e.textContent = `Button ${i}`;
     b.appendChild(e);
   });
 
