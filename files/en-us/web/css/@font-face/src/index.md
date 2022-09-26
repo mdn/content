@@ -1,6 +1,7 @@
 ---
 title: src
 slug: Web/CSS/@font-face/src
+page-type: css-at-rule-descriptor
 tags:
   - "@font-face"
   - At-rule descriptor

@@ -1,6 +1,7 @@
 ---
 title: initial-value
 slug: Web/CSS/@property/initial-value
+page-type: css-at-rule-descriptor
 tags:
   - CSS
   - Reference

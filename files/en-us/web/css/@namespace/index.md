@@ -1,6 +1,7 @@
 ---
 title: "@namespace"
 slug: Web/CSS/@namespace
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS

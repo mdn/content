@@ -1,6 +1,7 @@
 ---
 title: inherits
 slug: Web/CSS/@property/inherits
+page-type: css-at-rule-descriptor
 tags:
   - CSS
   - Reference

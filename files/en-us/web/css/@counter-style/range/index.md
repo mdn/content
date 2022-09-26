@@ -1,6 +1,7 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
+page-type: css-at-rule-descriptor
 tags:
   - "@counter-style"
   - At-rule descriptor

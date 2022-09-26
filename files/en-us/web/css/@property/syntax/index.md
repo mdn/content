@@ -1,6 +1,7 @@
 ---
 title: syntax
 slug: Web/CSS/@property/syntax
+page-type: css-at-rule-descriptor
 tags:
   - CSS
   - Reference

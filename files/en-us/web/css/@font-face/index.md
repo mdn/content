@@ -1,6 +1,7 @@
 ---
 title: "@font-face"
 slug: Web/CSS/@font-face
+page-type: css-at-rule
 tags:
   - "@font-face"
   - At-rule
