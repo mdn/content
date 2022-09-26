@@ -37,7 +37,7 @@ width: clamp(100px, calc(30% / 2rem + 10px), 900px);
 
 ### Parameters
 
-The `clamp(min, val, max)` function accepts three comma separated expressions as its parameters.
+The `clamp(min, val, max)` function accepts three comma-separated expressions as its parameters.
 
 - `min`
   - : The minimum value is the smallest (most negative) value. This is the lower bound in the range of allowed values. If the preferred value is less than this value, the minimum value will be used.
@@ -56,12 +56,12 @@ You can use different units for each value in your expressions and different uni
 
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
 - It is permitted to nest `max()` and `min()` functions as expression values, in which case the inner ones are treated as simple parentheses. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.
-- The expression can be values combining the addition ( `+` ), subtraction ( `-` ), multiplication ( `*` ) and division ( `/` ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any {{CSSxRef("&lt;length&gt;")}} syntax value. You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.
+- The expression can be values combining the addition ( `+` ), subtraction ( `-` ), multiplication ( `*` ) and division ( `/` ) operators, using standard operator precedence rules. Make sure to put a space on each side of the `+` and `-` operands. The operands in the expression may be any {{CSSxRef("&lt;length&gt;")}} syntax value. You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.
 - Oftentimes you will want to use {{CSSxRef("min", "min()")}} and {{CSSxRef("max", "max()")}} within a `clamp()` function.
 
 ### Return value
 
-`clamp(MIN, VAL, MAX)` is resolved as `{{CSSxRef("max", "max")}}(MIN, {{CSSxRef("min", "min")}}(VAL, MAX))`
+`clamp(MIN, VAL, MAX)` is resolved as `{{CSSxRef("max", "max")}}(MIN, {{CSSxRef("min", "min")}}(VAL, MAX))`.
 
 Based on the provided parameters, the function returns {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}}.
 
