@@ -33,10 +33,10 @@ width: calc(10px * pow(2, 10)); /* 10px * 1024 = 10240px */
 The `pow(base, number)` function accepts two comma-separated values as its parameters.
 
 - `base`
-  - : A calculation which resolves to a {{CSSxRef("&lt;number&gt;")}}, representing the base.
+  - : A calculation that resolves to a {{CSSxRef("&lt;number&gt;")}}, representing the base.
 
 - `number`
-  - : A calculation which resolves to a {{CSSxRef("&lt;number&gt;")}}, representing the exponent.
+  - : A calculation that resolves to a {{CSSxRef("&lt;number&gt;")}}, representing the exponent.
 
 ### Return value
 
