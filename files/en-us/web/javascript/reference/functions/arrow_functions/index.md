@@ -136,9 +136,9 @@ expression return is not needed:
 
 Multiline statements require body braces and return:
 
-```js
+```js-nolint
 // The parentheses are optional with one single parameter
-(param) => {
+param => {
   const a = 1;
   return a + param;
 }
