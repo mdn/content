@@ -194,142 +194,66 @@ Since browsers have this flexibility, and to date none support all of the featur
 
 This is what you get if you don't specify a {{htmlattrxref("list", "input")}} attribute, or if the browser doesn't support it.
 
-<table class="fullwidth standard-table">
-  <tbody>
-    <tr>
-      <th>HTML</th>
-      <th>Examples</th>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        <pre class="brush: html">&#x3C;input type="range"></pre>
-      </td>
-      <th>Screenshot</th>
-    </tr>
-    <tr>
-      <td>
-        <img
-          alt="Screenshot of a plain slider control on macOS"
-          src="macslider-plain.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <th>Live</th>
-    </tr>
-    <tr>
-      <td>
-        {{EmbedLiveSample("An_unadorned_range_control",200,55,"","", "nobutton")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+```html
+<input type="range">
+```
+
+![Screenshot of a plain slider control on macOS](macslider-plain.png)
+
+{{EmbedLiveSample("An_unadorned_range_control",200,55,"","", "nobutton")}}
 
 ##### A range control with hash marks
 
 This range control is using a `list` attribute specifying the ID of a {{HTMLElement("datalist")}} which defines a series of hash marks on the control. There are eleven of them, so that there's one at 0% as well as at each 10% mark. Each point is represented using an {{HTMLElement("option")}} element with its {{htmlattrxref("value", "option")}} set to the range's value at which a mark should be drawn.
 
-<table class="fullwidth standard-table">
-  <tbody>
-    <tr>
-      <th>HTML</th>
-      <th>Examples</th>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        <pre class="brush: html">
-&#x3C;input type="range" list="tickmarks">
+```html
+<input type="range" list="tickmarks">
 
-&#x3C;datalist id="tickmarks">
-&#x3C;option value="0">&#x3C;/option>
-&#x3C;option value="10">&#x3C;/option>
-&#x3C;option value="20">&#x3C;/option>
-&#x3C;option value="30">&#x3C;/option>
-&#x3C;option value="40">&#x3C;/option>
-&#x3C;option value="50">&#x3C;/option>
-&#x3C;option value="60">&#x3C;/option>
-&#x3C;option value="70">&#x3C;/option>
-&#x3C;option value="80">&#x3C;/option>
-&#x3C;option value="90">&#x3C;/option>
-&#x3C;option value="100">&#x3C;/option>
-&#x3C;/datalist>
+<datalist id="tickmarks">
+<option value="0"></option>
+<option value="10"></option>
+<option value="20"></option>
+<option value="30"></option>
+<option value="40"></option>
+<option value="50"></option>
+<option value="60"></option>
+<option value="70"></option>
+<option value="80"></option>
+<option value="90"></option>
+<option value="100"></option>
+</datalist>
 
-</pre
-        >
-      </td>
-      <th>Screenshot</th>
-    </tr>
-    <tr>
-      <td>
-        <img
-          alt="Screenshot of a plain slider control on macOS"
-          src="macslider-ticks.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <th>Live</th>
-    </tr>
-    <tr>
-      <td>
-        {{EmbedLiveSample("A_range_control_with_hash_marks_and_labels",200,55,"","", "nobutton")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+```
+
+![Screenshot of a plain slider control on macOS](macslider-ticks.png)
+
+{{EmbedLiveSample("A_range_control_with_hash_marks_and_labels",200,55,"","", "nobutton")}}
 
 ##### A range control with hash marks and labels
 
 You can add labels to your range control by adding the {{htmlattrxref("label", "option")}} attribute to the {{HTMLElement("option")}} elements corresponding to the tick marks you wish to have labels for.
 
-<table class="fullwidth standard-table">
-  <tbody>
-    <tr>
-      <th>HTML</th>
-      <th>Examples</th>
-    </tr>
-    <tr>
-      <td rowspan="4">
-        <pre class="brush: html">
-&#x3C;input type="range" list="tickmarks">
+```html
+<input type="range" list="tickmarks">
 
-&#x3C;datalist id="tickmarks">
-&#x3C;option value="0" label="0%">&#x3C;/option>
-&#x3C;option value="10">&#x3C;/option>
-&#x3C;option value="20">&#x3C;/option>
-&#x3C;option value="30">&#x3C;/option>
-&#x3C;option value="40">&#x3C;/option>
-&#x3C;option value="50" label="50%">&#x3C;/option>
-&#x3C;option value="60">&#x3C;/option>
-&#x3C;option value="70">&#x3C;/option>
-&#x3C;option value="80">&#x3C;/option>
-&#x3C;option value="90">&#x3C;/option>
-&#x3C;option value="100" label="100%">&#x3C;/option>
-&#x3C;/datalist>
+<datalist id="tickmarks">
+<option value="0" label="0%"></option>
+<option value="10"></option>
+<option value="20"></option>
+<option value="30"></option>
+<option value="40"></option>
+<option value="50" label="50%"></option>
+<option value="60"></option>
+<option value="70"></option>
+<option value="80"></option>
+<option value="90"></option>
+<option value="100" label="100%"></option>
+</datalist>
+```
 
-</pre
-        >
-      </td>
-      <th>Screenshot</th>
-    </tr>
-    <tr>
-      <td>
-        <img
-          alt="Screenshot of a plain slider control on macOS"
-          src="macslider-labels.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <th>Live</th>
-    </tr>
-    <tr>
-      <td>
-        {{EmbedLiveSample("A_range_control_with_hash_marks_and_labels",200,55,"","", "nobutton")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+![Screenshot of a plain slider control on macOS"](macslider-labels.png)
+
+{{EmbedLiveSample("A_range_control_with_hash_marks_and_labels",200,55,"","", "nobutton")}}
 
 > **Note:** Currently, no browser fully supports these features. Firefox doesn't support hash marks and labels at all, for example, while Chrome supports hash marks but doesn't support labels. Version 66 (66.0.3359.181) of Chrome supports labels but the {{htmlelement("datalist")}} tag has to be styled with CSS as its {{cssxref("display")}} property is set to `none` by default, hiding the labels.
 
