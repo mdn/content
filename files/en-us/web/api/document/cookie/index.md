@@ -47,7 +47,7 @@ In the code above, `newCookie` is a string of form
 single cookie at a time using this method. Consider also that:
 
 - Any of the following cookie attribute values can optionally follow the key-value
-  pair, specifying the cookie to set/update, and preceded by a semi-colon separator:
+  pair, specifying the cookie to set/update, and preceded by a semicolon separator:
 
   - `;path=path` (e.g., '`/`',
     '`/mydir`') If not specified, defaults to the current path
