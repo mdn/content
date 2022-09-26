@@ -37,7 +37,7 @@
     "fr": "Tout \u00e9l\u00e9ment ou caract\u00e8re de donn\u00e9e",
     "ja": "あらゆる要素や文字データ",
     "pt-BR": "Quaisquer elementos ou dados de caracteres",
-    "zh-CN": "任何元素或字符数据",
+    "zh-CN": "任意元素或字符数据",
     "ru": "Любые элементы и символы"
   },
   "characterDataElementsInAnyOrder": {
@@ -61,7 +61,7 @@
   "anyNumberOfElementsWithMeshgradientElement": {
     "en-US": "Any number of animation elements, descriptive elements, {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, and {{SVGElement(\"style\")}} elements, along with zero or one {{SVGElement(\"meshgradient\")}} element.",
     "ja": "任意の数のアニメーション要素、説明的要素、 {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, {{SVGElement(\"style\")}} の各要素と 0 個または 1 個の {{SVGElement(\"meshgradient\")}} 要素。",
-    "zh-CN": "任意数量的动画元素、描述性元素、{{SVGElement(\"mask\")}}、{{SVGElement(\"clipPath\")}}、{{SVGElement(\"marker\")}}、{{SVGElement(\"script\")}}、{{SVGElement(\"style\")}} 元素，以及 0 个或 1 个 {{SVGElement(\"meshgradient\")}} 元素。"
+    "zh-CN": "任意数量的动画元素、描述性元素、{{SVGElement(\"mask\")}}、{{SVGElement(\"clipPath\")}}、{{SVGElement(\"marker\")}}、{{SVGElement(\"script\")}}、{{SVGElement(\"style\")}} 元素，以及 0 到 1 个 {{SVGElement(\"meshgradient\")}} 元素。"
   },
   "anyNumberOfElementsDescriptiveElementsScriptAndTwoToFourStopElements": {
     "en-US": "Any number of descriptive elements, {{SVGElement(\"script\")}} and from two to four {{SVGElement(\"stop\")}} elements.",
@@ -387,7 +387,7 @@
     "fr": "Attribut XLink",
     "ja": "XLink 属性",
     "pt-BR": "Atributos Xlink",
-    "zh-CN": "Xlink 属性",
+    "zh-CN": "XLink 属性",
     "ru": "XLink атрибуты"
   }
 }
