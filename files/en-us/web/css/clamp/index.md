@@ -1,6 +1,7 @@
 ---
 title: clamp()
 slug: Web/CSS/clamp
+page-type: css-function
 tags:
   - CSS
   - CSS Function

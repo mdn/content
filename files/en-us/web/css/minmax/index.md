@@ -1,6 +1,7 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
+page-type: css-function
 tags:
   - CSS
   - CSS Function

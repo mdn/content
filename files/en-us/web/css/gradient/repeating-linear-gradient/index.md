@@ -1,6 +1,7 @@
 ---
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
+page-type: css-function
 tags:
   - CSS
   - CSS Function
