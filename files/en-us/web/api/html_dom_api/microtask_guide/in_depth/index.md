@@ -127,7 +127,7 @@ The specifics may vary from browser to browser, depending on how they're impleme
 
 #### Tasks vs microtasks
 
-A **task** is any JavaScript scheduled to be run by the standard mechanisms such as initially starting to execute a program, an event triggering a callback, and so forth. Other than by using events, you can enqueue a task by using {{domxref("setTimeout()")}} or {{domxref("setInterval()")}}**.**
+A **task** is any JavaScript scheduled to be run by the standard mechanisms such as initially starting to execute a program, an event triggering a callback, and so forth. Other than by using events, you can enqueue a task by using {{domxref("setTimeout()")}} or {{domxref("setInterval()")}}.
 
 The difference between the task queue and the microtask queue is simple but very important:
 
