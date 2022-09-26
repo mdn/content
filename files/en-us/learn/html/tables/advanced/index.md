@@ -353,7 +353,7 @@ This section of the article provides further techniques for making tables as acc
 
 ### Using column and row headers
 
-screen readers will identify all headers and use them to make programmatic associations between those headers and the cells they relate to. The combination of column and row headers will identify and interpret the data in each cell so that screen reader users can interpret the table similarly to how a sighted user does.
+Screen readers will identify all headers and use them to make programmatic associations between those headers and the cells they relate to. The combination of column and row headers will identify and interpret the data in each cell so that screen reader users can interpret the table similarly to how a sighted user does.
 
 We already covered headers in our previous article — see [Adding headers with \<th> elements](/en-US/docs/Learn/HTML/Tables/Basics#adding_headers_with_th_elements).
 
