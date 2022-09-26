@@ -50,7 +50,7 @@ In this article we will write a classic "bouncing balls" demo, to show you how u
 
 ![Screenshot of a webpage titled "Bouncing balls". 23 balls of various pastel colors and sizes are visible across a black screen with long trails behind them indicating motion.](bouncing-balls.png)
 
-This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) for drawing the balls to the screen, and the [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame) API for animating the whole display — you don't need to have any previous knowledge of these APIs, and we hope that by the time you've finished this article you'll be interested in exploring them more. Along the way, we'll make use of some nifty objects, and show you a couple of nice techniques like bouncing balls off walls, and checking whether they have hit each other (otherwise known as **collision detection**).
+This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) for drawing the balls to the screen, and the [`requestAnimationFrame`](/en-US/docs/Web/API/window/requestAnimationFrame) API for animating the whole display — you don't need to have any previous knowledge of these APIs, and we hope that by the time you've finished this article you'll be interested in exploring them more. Along the way, we'll make use of some nifty objects, and show you a couple of nice techniques like bouncing balls off walls, and checking whether they have hit each other (otherwise known as _collision detection_).
 
 ## Getting started
 
