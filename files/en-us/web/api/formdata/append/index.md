@@ -60,7 +60,7 @@ formData.append('userpic', myFileInput.files[0], 'chris1.jpg');
 formData.append('userpic', myFileInput.files[1], 'chris2.jpg');
 ```
 
-If you need to set different `Content-type` for formData, you can use `Blob` like this:
+If you need to set a different `Content-type` for `formData`, you can use `Blob` like this:
 
 ```js
 const blob = new Blob(["true"], {
