@@ -63,7 +63,7 @@ These page types are not specific to a particular MDN technology area:
 
 ### Web API page types
 
-This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/API). Every page in that part of the tree must have a `page-type`, and its value must be ine of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/API). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
 
 - `web-api-overview`
   - : A page giving an overview of a Web API, like the [Fetch API](/en-US/docs/Web/API/Fetch_API). See [API landing page](#api_landing_page).
@@ -88,7 +88,7 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 - `webgl-extension`
   - : A page documenting a WebGL extension, like [`WEBGL_draw_buffers`](/en-US/docs/Web/API/WEBGL_draw_buffers).
 - `webgl-extension-method`
-  - : A page documenting a method on WebGL extension, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES). See [API reference subpage](#api_reference_subpage).
+  - : A page documenting a method on WebGL extension, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES).
 
 ## API landing page
 
