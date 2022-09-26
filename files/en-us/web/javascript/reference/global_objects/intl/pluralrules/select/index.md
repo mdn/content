@@ -18,6 +18,8 @@ browser-compat: javascript.builtins.Intl.PluralRules.select
 The **`Intl.PluralRules.prototype.select()`** method returns a
 string indicating which plural rule to use for locale-aware formatting.
 
+{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-select.html")}}
+
 ## Syntax
 
 ```js-nolint
