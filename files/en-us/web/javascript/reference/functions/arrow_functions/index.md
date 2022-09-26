@@ -138,7 +138,7 @@ Multiline statements require body braces and return:
 
 ```js
 // The parentheses are optional with one single parameter
-(param) => {
+param => {
   const a = 1;
   return a + param;
 }
