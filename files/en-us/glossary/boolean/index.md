@@ -24,7 +24,7 @@ if (boolean conditional) {
 if (boolean conditional) {
   console.log("boolean conditional resolved to true");
 } else {
-  console.log("boolean conditional resolved to false");
+  console.log("boolean conditional resolved to true");
 }
 
 /* JavaScript for loop */
