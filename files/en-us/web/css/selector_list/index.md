@@ -39,16 +39,24 @@ A downside to using a selector list is that a single unsupported selector in the
 Consider the following two CSS rule sets:
 
 ```css
-h1 { font-family: sans-serif; }
-h2:maybe-unsupported { font-family: sans-serif; }
-h3 { font-family: sans-serif; }
+h1 {
+  font-family: sans-serif;
+}
+h2:maybe-unsupported {
+  font-family: sans-serif;
+}
+h3 {
+  font-family: sans-serif;
+}
 ```
 
 ```css
-h1, h2:maybe-unsupported, h3 { font-family: sans-serif; }
+h1, h2:maybe-unsupported, h3 {
+  font-family: sans-serif;
+}
 ```
 
-They are not equivalent. In the first rule set, styles will be applied on the `h1` and `h3` elements, but the `h2` rule will not be parsed. However, in the second rule set, because one selector in the list is invalid, the entire rule will not be parsed and  no style will be applied to the `h1` and `h3` elements as well.
+They are not equivalent. In the first rule set, styles will be applied on the `h1` and `h3` elements, but the `h2` rule will not be parsed. However, in the second rule set, because one selector in the list is invalid, the entire rule will not be parsed and no style will be applied to the `h1` and `h3` elements as well.
 
 ### Forgiving selector list
 
@@ -57,13 +65,21 @@ A way to remedy the [invalid selector list](#invalid_selector_list) problem is t
 Carrying on from the previous example, the following two CSS rule sets are now equivalent:
 
 ```css
-h1 { font-family: sans-serif; }
-h2:maybe-unsupported { font-family: sans-serif; }
-h3 { font-family: sans-serif; }
+h1 {
+  font-family: sans-serif;
+}
+h2:maybe-unsupported {
+  font-family: sans-serif;
+}
+h3 {
+  font-family: sans-serif;
+}
 ```
 
 ```css
-:is(h1, h2:maybe-unsupported, h3) { font-family: sans-serif; }
+:is(h1, h2:maybe-unsupported, h3) {
+  font-family: sans-serif;
+}
 ```
 
 ### Forgiving relative selector list
@@ -77,7 +93,9 @@ A forgiving relative selector list is similar to the [forgiving selector list](#
 This example shows grouping selectors in a single line using a comma-separated list.
 
 ```css
-h1, h2, h3, h4, h5, h6 { font-family: helvetica; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: helvetica;
+}
 ```
 
 ### Multi Line Grouping
