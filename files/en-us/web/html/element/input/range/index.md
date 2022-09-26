@@ -200,7 +200,7 @@ This is what you get if you don't specify a {{htmlattrxref("list", "input")}} at
 
 ![Screenshot of a plain slider control on macOS](macslider-plain.png)
 
-{{EmbedLiveSample("An_unadorned_range_control",200,55,"","", "nobutton")}}
+{{EmbedLiveSample("An_unadorned_range_control", 200, 55)}}
 
 ##### A range control with hash marks
 
@@ -227,7 +227,7 @@ This range control is using a `list` attribute specifying the ID of a {{HTMLElem
 
 ![Screenshot of a plain slider control on macOS](macslider-ticks.png)
 
-{{EmbedLiveSample("A_range_control_with_hash_marks_and_labels",200,55,"","", "nobutton")}}
+{{EmbedLiveSample("A_range_control_with_hash_marks_and_labels", 200, 55)}}
 
 ##### A range control with hash marks and labels
 
@@ -253,7 +253,7 @@ You can add labels to your range control by adding the {{htmlattrxref("label", "
 
 ![Screenshot of a plain slider control on macOS"](macslider-labels.png)
 
-{{EmbedLiveSample("A_range_control_with_hash_marks_and_labels",200,55,"","", "nobutton")}}
+{{EmbedLiveSample("A_range_control_with_hash_marks_and_labels", 200, 55)}}
 
 > **Note:** Currently, no browser fully supports these features. Firefox doesn't support hash marks and labels at all, for example, while Chrome supports hash marks but doesn't support labels. Version 66 (66.0.3359.181) of Chrome supports labels but the {{htmlelement("datalist")}} tag has to be styled with CSS as its {{cssxref("display")}} property is set to `none` by default, hiding the labels.
 
@@ -271,7 +271,9 @@ Consider this range control:
 <input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
-{{EmbedLiveSample("Horizontal_range_control", 200, 200, "orientation_sample1.png")}}
+![Screenshot of a plain horizontal slider control on macOS"](orientation_sample1.png)
+
+{{EmbedLiveSample("Horizontal_range_control", 200, 200)}}
 
 This control is horizontal (at least on most if not all major browsers; others might vary).
 
@@ -290,7 +292,9 @@ According to the specification, making it vertical requires adding CSS to change
 <input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
-{{EmbedLiveSample("Standards-based_vertical_range_control", 200, 200, "orientation_sample2.png")}}
+![Screenshot of a plain vertical slider control on macOS"](orientation_sample2.png)
+
+{{EmbedLiveSample("Standards-based_vertical_range_control", 200, 200)}}
 
 Unfortunately, no major browsers currently support vertical range controls directly.
 
@@ -331,7 +335,9 @@ Then comes the style information for the `<input>` element within the reserved s
 
 The size of the control is set to be 150 pixels long by 20 pixels tall. The margins are set to 0 and the {{cssxref("transform-origin")}} is shifted to the middle of the space the slider rotates through; since the slider is configured to be 150 pixels wide, it rotates through a box which is 150 pixels on each side. Offsetting the origin by 75px on each axis means we will rotate around the center of that space. Finally, we rotate counter-clockwise by 90°. The result: a range input which is rotated so the maximum value is at the top and the minimum value is at the bottom.
 
-{{EmbedLiveSample("Using_transform", 200, 200, "orientation_sample3.png")}}
+![Screenshot of a plain vertical slider control on macOS"](orientation_sample3.png)
+
+{{EmbedLiveSample("Using_transform", 200, 200)}}
 
 #### Using the appearance property
 
