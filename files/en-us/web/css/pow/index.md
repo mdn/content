@@ -40,7 +40,7 @@ The `pow(base, number)` function accepts two comma-separated values as its param
 
 ### Return value
 
-Returns a {{CSSxRef("&lt;number&gt;")}} representing base<sup>number</sup>, a `base` taken to the power of `number`.
+Returns a {{CSSxRef("&lt;number&gt;")}} representing base<sup>number</sup>, that is, `base` raised to the power of `number`.
 
 ## Formal syntax
 
