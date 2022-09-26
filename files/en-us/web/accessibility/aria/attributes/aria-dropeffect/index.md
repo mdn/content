@@ -1,5 +1,5 @@
 ---
-title: 'aria-dropeffect'
+title: "aria-dropeffect"
 slug: Web/Accessibility/ARIA/Attributes/aria-dropeffect
 tags:
   - Accessibility
@@ -59,7 +59,7 @@ Used in **ALL** roles.
 
 ## See Also
 
-- [`aria-grabbed`](../aria-grabbed)
+- [`aria-grabbed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
 - [HTML global `draggable` attribute](/en-US/docs/Web/HTML/Global_attributes/draggable)
 - HTML [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - {{domxref('dataTransfer')}}

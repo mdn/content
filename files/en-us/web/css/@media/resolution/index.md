@@ -2,7 +2,7 @@
 title: resolution
 slug: Web/CSS/@media/resolution
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

@@ -2,7 +2,7 @@
 title: width
 slug: Web/CSS/@media/width
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

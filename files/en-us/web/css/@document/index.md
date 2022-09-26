@@ -1,6 +1,7 @@
 ---
-title: '@document'
+title: "@document"
 slug: Web/CSS/@document
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS

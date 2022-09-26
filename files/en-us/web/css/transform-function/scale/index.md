@@ -1,6 +1,7 @@
 ---
 title: scale()
 slug: Web/CSS/transform-function/scale
+page-type: css-function
 tags:
   - CSS
   - CSS Function

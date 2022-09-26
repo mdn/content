@@ -87,6 +87,8 @@ The value that results from running the "reducer" callback function to completio
 The `reduce()` method takes two arguments: a callback function and an optional initial value.
 If an initial value is provided, `reduce()` calls the "reducer" callback function on each element in the array, in order. If no initial value is provided, `reduce()` calls the callback function on each element in the array after the first element.
 
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+
 `reduce()` returns the value that is returned from the callback function on the final iteration of the array.
 
 `reduce()` is a central concept in [functional programming](https://en.wikipedia.org/wiki/Functional_programming), where it's not possible to mutate any value, so in order to accumulate all values in an array, one must return a new accumulator value on every iteration. This convention propagates to JavaScript's `reduce()`: you should use [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or other copying methods where possible to create new arrays and objects as the accumulator, rather than mutating the existing one. If you decided to mutate the accumulator instead of copying it, remember to still return the modified object in the callback, or the next iteration will receive undefined.
@@ -406,6 +408,15 @@ multiply6(6); // 36
 multiply9(9); // 81
 multiply16(16); // 256
 multiply24(10); // 240
+```
+
+### Using reduce() with sparse arrays
+
+`reduce()` skips missing elements in sparse arrays, but it does not skip `undefined` values.
+
+```js
+console.log([1, 2, , 4].reduce((a, b) => a + b)); // 7
+console.log([1, 2, undefined, 4].reduce((a, b) => a + b)); // NaN
 ```
 
 ## Specifications

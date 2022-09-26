@@ -1,5 +1,5 @@
 ---
-title: '-moz-float-edge'
+title: "-moz-float-edge"
 slug: Web/CSS/-moz-float-edge
 tags:
   - CSS

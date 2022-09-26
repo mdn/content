@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-position-x'
+title: "-webkit-mask-position-x"
 slug: Web/CSS/-webkit-mask-position-x
 tags:
   - CSS

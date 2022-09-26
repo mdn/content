@@ -1,8 +1,8 @@
 ---
-title: ':focus'
+title: ":focus"
 slug: Web/CSS/:focus
 tags:
-  - ':focus'
+  - ":focus"
   - CSS
   - Layout
   - Pseudo-class

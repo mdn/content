@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-attachment'
+title: "-webkit-mask-attachment"
 slug: Web/CSS/-webkit-mask-attachment
 tags:
   - CSS

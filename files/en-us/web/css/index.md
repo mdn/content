@@ -1,5 +1,5 @@
 ---
-title: 'CSS: Cascading Style Sheets'
+title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
 tags:
   - CSS

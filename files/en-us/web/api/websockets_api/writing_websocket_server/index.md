@@ -31,7 +31,7 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 `localaddr` specifies the IP of the listener, and `port` specifies the port.
 
-> **Note:** To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`_._
+> **Note:** To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`.
 
 Methods:
 

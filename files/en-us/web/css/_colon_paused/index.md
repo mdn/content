@@ -1,5 +1,5 @@
 ---
-title: ':paused'
+title: ":paused"
 slug: Web/CSS/:paused
 tags:
   - CSS

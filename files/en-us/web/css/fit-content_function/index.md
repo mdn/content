@@ -1,6 +1,7 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content_function
+page-type: css-function
 tags:
   - CSS
   - CSS Function

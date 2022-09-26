@@ -1,5 +1,5 @@
 ---
-title: ':root'
+title: ":root"
 slug: Web/CSS/:root
 tags:
   - CSS

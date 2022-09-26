@@ -71,8 +71,7 @@ The `findLastIndex()` method executes the `callbackFn` function once for each el
 `findLastIndex()` then returns the index of that element and stops iterating through the array.
 If `callbackFn` never returns a truthy value, `findLastIndex()` returns `-1`.
 
-`callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
-This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
+`callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
 
 If a `thisArg` parameter is provided to `findLastIndex()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
 If it is not provided, then {{jsxref("undefined")}} is used.
@@ -112,18 +111,12 @@ console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
 
-### Find index using arrow function
+### Using findLastIndex() on sparse arrays
 
-The following example finds the index of a fruit using an arrow function.
-Note that the result would be the same as if using {{jsxref("Array/findIndex", "findIndex()")}}.
+You can search for `undefined` in a sparse array and get the index of an empty slot.
 
 ```js
-const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
-
-const index = fruits.findLastIndex((fruit) => fruit === "blueberries");
-
-console.log(index); // 3
-console.log(fruits[index]); // blueberries
+console.log([1, , 3].findLastIndex((x) => x === undefined)); // 1
 ```
 
 ## Specifications

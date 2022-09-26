@@ -1,5 +1,5 @@
 ---
-title: 'aria-owns'
+title: "aria-owns"
 slug: Web/Accessibility/ARIA/Attributes/aria-owns
 tags:
   - Accessibility

@@ -2,7 +2,7 @@
 title: update
 slug: Web/CSS/@media/update-frequency
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

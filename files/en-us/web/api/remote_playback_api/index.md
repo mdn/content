@@ -39,7 +39,7 @@ The following example demonstrates a player with custom controls that supports r
 </video>
 ```
 
-The {{domxref("RemotePlayback.watchAvailability()")}} method is watches for available remote playback devices. If a device is available, use the callback to show the button.
+The {{domxref("RemotePlayback.watchAvailability()")}} method watches for available remote playback devices. If a device is available, use the callback to show the button.
 
 ```js
 const deviceBtn = document.getElementById("deviceBtn");
