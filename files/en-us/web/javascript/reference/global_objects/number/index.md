@@ -60,7 +60,7 @@ More details on this are described in the [ECMAScript standard](https://tc39.es/
 
 ### Number coercion
 
-Many built-in operations that expect numbers would first coerce their arguments to numbers (which is largely why `Number` objects behave similarly to number primitives). [The operation](https://tc39.es/ecma262/#sec-tonumber) can be summarized as follows:
+Many built-in operations that expect numbers first coerce their arguments to numbers (which is largely why `Number` objects behave similarly to number primitives). [The operation](https://tc39.es/ecma262/#sec-tonumber) can be summarized as follows:
 
 - Numbers are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
