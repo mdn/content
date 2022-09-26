@@ -13,7 +13,13 @@ browser-compat:
 ---
 
 {{CSSRef}}
-The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved. The specification defines a single CSS property {{cssxref("contain")}}. This document describes the basic aims of the specification.
+The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved.
+
+In addition, it lets developers indicate whether or not an element should render its contents at all, and whether it should render its contents when it is offscreen.
+This allows the user agent to apply containment on elements when appropriate, and potentially defer layout and rendering until it is actually needed.
+
+The specification defines the CSS properties {{cssxref("contain")}} and {{cssxref("content-visibility")}}.
+This document describes the basic aims of the specification.
 
 ## Basic example
 
