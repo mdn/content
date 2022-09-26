@@ -232,7 +232,7 @@ for (initializer; condition; final-expression) {
 Here we have:
 
 1. The keyword `for`, followed by some parentheses.
-2. Inside the parentheses we have three items, separated by semi-colons:
+2. Inside the parentheses we have three items, separated by semicolons:
 
    1. An **initializer** — this is usually a variable set to a number, which is incremented to count the number of times the loop has run.
       It is also sometimes referred to as a **counter variable**.
