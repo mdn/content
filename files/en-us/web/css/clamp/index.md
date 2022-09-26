@@ -52,7 +52,7 @@ The expressions can be math functions (see {{CSSxRef("calc", "calc()")}} for mor
 
 You can use different units for each value in your expressions and different units in any math function making up any of the arguments.
 
-#### Notes
+Keep the following aspects in mind while working with the function:
 
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
 - It is permitted to nest `max()` and `min()` functions as expression values, in which case the inner ones are treated as simple parentheses. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.
