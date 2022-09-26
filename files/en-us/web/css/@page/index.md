@@ -1,6 +1,7 @@
 ---
 title: "@page"
 slug: Web/CSS/@page
+page-type: css-at-rule
 tags:
   - "@page"
   - At-rule

@@ -1,6 +1,7 @@
 ---
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
+page-type: css-at-rule-descriptor
 tags:
   - At-rule descriptor
   - CSS

@@ -1,6 +1,7 @@
 ---
 title: "@import"
 slug: Web/CSS/@import
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS
