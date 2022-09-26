@@ -1,6 +1,7 @@
 ---
 title: min()
 slug: Web/CSS/min
+page-type: css-function
 tags:
   - CSS
   - CSS Function

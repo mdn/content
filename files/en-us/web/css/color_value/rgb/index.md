@@ -1,6 +1,7 @@
 ---
 title: rgb()
 slug: Web/CSS/color_value/rgb
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type

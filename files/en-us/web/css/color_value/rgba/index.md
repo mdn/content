@@ -1,6 +1,7 @@
 ---
 title: rgba()
 slug: Web/CSS/color_value/rgba
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
