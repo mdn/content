@@ -400,9 +400,7 @@ function JSClock() {
   const hour = time.getHours();
   const minute = time.getMinutes();
   const second = time.getSeconds();
-  let temp = String(hour % 12);
-  if (hour === 0)
-    temp = '12';
+  let temp = String((hour + 11) % 12 + 1);
   temp += ((minute < 10) ? ':0' : ':') + minute;
   temp += ((second < 10) ? ':0' : ':') + second;
   temp += (hour >= 12) ? ' P.M.' : ' A.M.';
@@ -412,7 +410,7 @@ function JSClock() {
 
 The `JSClock` function first creates a new `Date` object called `time`; since no arguments are given, time is created with the current date and time. Then calls to the `getHours`, `getMinutes`, and `getSeconds` methods assign the value of the current hour, minute, and second to `hour`, `minute`, and `second`.
 
-The next four statements build a string value based on the time. The first statement creates a variable `temp`, assigning it a value using a conditional expression; if `hour` is greater than 12, (`hour - 12`), otherwise hour, unless hour is 0, in which case it becomes 12.
+The next four statements build a string value based on the time. The first statement creates a variable `temp`, and assigns to it a string expressing the hours component according to the 12-hour time system.  The expression `hour % 12` gives the appropriate conversion to 12-hour time for all values _except_ 0 and 12 (which return 0); adding 11 before and 1 after applying the `%` operator results in correcting the result for these values to 12, without changing any other values.
 
 The next statement appends a `minute` value to `temp`. If the value of `minute` is less than 10, the conditional expression adds a string with a preceding zero; otherwise it adds a string with a demarcating colon. Then a statement appends a seconds value to `temp` in the same way.
 
