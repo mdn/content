@@ -28,7 +28,7 @@ This property can have the following values:
 
 ### Getting the color space of canvas image data
 
-The [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) method allows you explicitly request a color space. If it doesn't match the color space the canvas was initialized with, a conversion will be performed.
+The [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) method allows you to explicitly request a color space. If it doesn't match the color space the canvas was initialized with, a conversion will be performed.
 Use the `colorSpace` property to know which color space your `ImageData` object is in.
 
 ```js
