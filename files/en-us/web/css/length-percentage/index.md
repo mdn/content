@@ -1,6 +1,7 @@
 ---
 title: <length-percentage>
 slug: Web/CSS/length-percentage
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

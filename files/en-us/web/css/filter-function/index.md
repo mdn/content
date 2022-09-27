@@ -1,6 +1,7 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
