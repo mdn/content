@@ -1,6 +1,7 @@
 ---
 title: rotate
 slug: Web/CSS/rotate
+page-type: css-property
 tags:
   - CSS
   - CSS Property

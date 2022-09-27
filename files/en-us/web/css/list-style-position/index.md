@@ -1,6 +1,7 @@
 ---
 title: list-style-position
 slug: Web/CSS/list-style-position
+page-type: css-property
 tags:
   - CSS
   - CSS Lists

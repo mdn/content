@@ -1,6 +1,7 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
+page-type: css-property
 tags:
   - CSS
   - CSS Images

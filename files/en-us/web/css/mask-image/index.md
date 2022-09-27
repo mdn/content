@@ -1,6 +1,7 @@
 ---
 title: mask-image
 slug: Web/CSS/mask-image
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
