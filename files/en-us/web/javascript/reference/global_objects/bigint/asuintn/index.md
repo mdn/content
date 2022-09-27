@@ -35,8 +35,8 @@ The value of `bigint` modulo 2^`bits`, as an unsigned integer.
 
 ### Exceptions
 
- - {{jsxref("RangeError")}}
-   - : Thrown if `bits` is negative or greater than 2<sup>53</sup> - 1.
+- {{jsxref("RangeError")}}
+  - : Thrown if `bits` is negative or greater than 2<sup>53</sup> - 1.
 
 ## Description
 
