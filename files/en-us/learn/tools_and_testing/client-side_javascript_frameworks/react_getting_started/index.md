@@ -331,7 +331,7 @@ reportWebVitals();
 
 As with `App.js`, the file starts by importing all the JS modules and other assets it needs to run. 
 
-The first two statements import the React and ReactDOM libraries because they are referenced later in the file. We don't write a path or extension when importing the `React` or `ReactDOM` modules — these are not local files; instead, these are listed as dependencies in our `package.json` file. Be careful of this distinction as you work through this lesson!
+The first two statements import the `React` and `ReactDOM` libraries because they are referenced later in the file. We don't write a path or extension when importing these libraries because they are not local files. In fact, they are listed as dependencies in our `package.json` file. Be careful of this distinction as you work through this lesson!
 
 `index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.js`.
 
