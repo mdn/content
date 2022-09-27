@@ -32,7 +32,7 @@ With a promise-based API, the asynchronous function starts the operation and ret
 
 ## Using the fetch() API
 
-> **Note:** In this article we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
+> **Note:** In this article, we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
 >
 > 1. open a browser tab and visit <https://example.org>
 > 2. in that tab, open the JavaScript console in your [browser's developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
@@ -168,7 +168,7 @@ Promises come with some quite specific terminology that it's worth getting clear
 First, a promise can be in one of three states:
 
 - **pending**: the promise has been created, and the asynchronous function it's associated with has not succeeded or failed yet. This is the state your promise is in when it's returned from a call to `fetch()`, and the request is still being made.
-- **fulfilled**: the asynchronous function has succeeded. When a promise is fulfilled, its `then()` handler is called.
+- **fulfilled**: the asynchronous function has succeeded. When a promise is fulfilled, it's `then()` handler is called.
 - **rejected**: the asynchronous function has failed. When a promise is rejected, its `catch()` handler is called.
 
 Note that what "succeeded" or "failed" means here is up to the API in question: for example, `fetch()` considers a request successful if the server returned an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404), but not if a network error prevented the request being sent.
@@ -183,12 +183,12 @@ The article [Let's talk about how to talk about promises](https://thenewtoys.dev
 
 The promise chain is what you need when your operation consists of several asynchronous functions, and you need each one to complete before starting the next one. But there are other ways you might need to combine asynchronous function calls, and the `Promise` API provides some helpers for them.
 
-Sometimes, you need all the promises to be fulfilled, but they don't depend on each other. In a case like that, it's much more efficient to start them all off together, then be notified when they have all fulfilled. The {{jsxref("Promise/all", "Promise.all()")}} method is what you need here. It takes an array of promises and returns a single promise.
+Sometimes, you need all the promises to be fulfilled, but they don't depend on each other. In a case like that, it's much more efficient to start them all off together, then be notified when they have all been fulfilled. The {{jsxref("Promise/all", "Promise.all()")}} method is what you need here. It takes an array of promises and returns a single promise.
 
 The promise returned by `Promise.all()` is:
 
 - fulfilled when and if _all_ the promises in the array are fulfilled. In this case, the `then()` handler is called with an array of all the responses, in the same order that the promises were passed into `all()`.
-- rejected when and if _any_ of the promises in the array are rejected. In this case, the `catch()` handler is called with the error thrown by the promise that rejected.
+- rejected when and if _any_ of the promises in the array are rejected. In this case, the `catch()` handler is called with the error thrown by the promise that was rejected.
 
 For example:
 
@@ -258,7 +258,7 @@ Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
   });
 ```
 
-Note that in this case we can't predict which fetch request will complete first.
+Note that in this case we can't predict which fetch request will be completed first.
 
 These are just two of the extra `Promise` functions for combining multiple promises. To learn about the rest, see the {{jsxref("Promise")}} reference documentation.
 
@@ -373,7 +373,7 @@ The `async` and `await` keywords make it easier to build an operation from a ser
 
 Promises work in the latest versions of all modern browsers; the only place where promise support will be a problem is in Opera Mini and IE11 and earlier versions.
 
-We didn't touch on all promise features in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across more features and techniques.
+We didn't touch on all the features of promises in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across more features and techniques.
 
 Many modern Web APIs are promise-based, including [WebRTC](/en-US/docs/Web/API/WebRTC_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API), and many more.
 
