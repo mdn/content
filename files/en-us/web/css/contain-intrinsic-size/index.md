@@ -86,3 +86,5 @@ The remembered value is not used if the child elements are being rendered (if si
 ## See also
 
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
+- {{CSSxRef("contain-intrinsic-block-size")}}
+- {{CSSxRef("contain-intrinsic-inline-size")}}
