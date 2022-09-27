@@ -4,7 +4,7 @@ slug: Web/CSS/math-style
 tags:
   - CSS
   - MathML
-  - Property
+  - CSS Property
   - Reference
   - math-style
   - Experimental
