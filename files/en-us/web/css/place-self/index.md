@@ -1,6 +1,7 @@
 ---
 title: place-self
 slug: Web/CSS/place-self
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Box Alignment
