@@ -1,6 +1,7 @@
 ---
 title: ":indeterminate"
 slug: Web/CSS/:indeterminate
+page-type: css-pseudo-class
 tags:
   - ":indeterminate"
   - CSS

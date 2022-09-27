@@ -1,6 +1,7 @@
 ---
 title: ":scope"
 slug: Web/CSS/:scope
+page-type: css-pseudo-class
 tags:
   - ":scope"
   - CSS

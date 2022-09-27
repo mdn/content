@@ -1,6 +1,7 @@
 ---
 title: ":checked"
 slug: Web/CSS/:checked
+page-type: css-pseudo-class
 tags:
   - ":checked"
   - CSS

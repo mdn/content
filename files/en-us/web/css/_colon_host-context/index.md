@@ -1,6 +1,7 @@
 ---
 title: ":host-context()"
 slug: Web/CSS/:host-context
+page-type: css-pseudo-class
 tags:
   - ":host-context()"
   - CSS

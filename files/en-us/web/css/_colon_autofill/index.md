@@ -1,6 +1,7 @@
 ---
 title: ":autofill"
 slug: Web/CSS/:autofill
+page-type: css-pseudo-class
 tags:
   - CSS
   - Pseudo-class
