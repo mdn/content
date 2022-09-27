@@ -1,6 +1,7 @@
 ---
 title: animation-duration
 slug: Web/CSS/animation-duration
+page-type: css-property
 tags:
   - CSS
   - CSS Animations

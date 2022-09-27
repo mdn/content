@@ -1,6 +1,7 @@
 ---
 title: border-bottom-left-radius
 slug: Web/CSS/border-bottom-left-radius
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

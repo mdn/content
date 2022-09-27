@@ -1,6 +1,7 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
+page-type: css-property
 tags:
   - CSS
   - CSS Box Alignment
