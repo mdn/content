@@ -39,6 +39,7 @@ manipulation of canvas contents in [Pixel manipulation with canvas](/en-US/docs/
 ## Syntax
 
 ```js-nolint
+getImageData(sx, sy, sw, sh)
 getImageData(sx, sy, sw, sh, settings)
 ```
 
