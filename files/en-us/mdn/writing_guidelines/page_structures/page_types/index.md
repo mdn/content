@@ -50,7 +50,7 @@ If you want to get a team together to work on an update, or you just want to rep
 
 ## The page-type front matter key
 
-We have defined a front matter key `page-type` to describe the type of page an MDN page is. This project is a work in progress: so far we have only defined `page-type` values for the [Web API pages](/en-US/docs/Web/API).
+We have defined a front matter key `page-type` to describe the type of MDN pages. This project is a work in progress: so far we have only defined `page-type` values for the [Web API pages](/en-US/docs/Web/API).
 
 ### Generic page types
 
