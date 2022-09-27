@@ -55,10 +55,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ### Alignment with row number
 
-Rendering: ![](mtable-1.png)
-
 ```html
-<math>
+<math display="block">
   <mi>X</mi>
   <mo>=</mo>
   <mtable frame="solid" rowlines="solid" align="axis 3">
@@ -77,6 +75,8 @@ Rendering: ![](mtable-1.png)
   </mtable>
 </math>
 ```
+
+{{ EmbedLiveSample('mtable_example', 700, 200, "", "") }}
 
 ## Specifications
 

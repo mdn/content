@@ -35,33 +35,42 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 The following example uses the "toggle" `actiontype`:
 
 ```html
-<math>
-  <maction actiontype="toggle">
-    <mfrac>
-      <mn>6</mn>
-      <mn>8</mn>
-    </mfrac>
+<p>Try clicking this formula several times:
 
-    <mfrac>
-      <mrow>
+  <math display="block">
+
+    <maction actiontype="toggle">
+
+      <mfrac>
+        <mn>6</mn>
+        <mn>8</mn>
+      </mfrac>
+
+      <mfrac>
+        <mrow>
+          <mn>3</mn>
+          <mo>×</mo>
+          <mn>2</mn>
+        </mrow>
+        <mrow>
+          <mn>4</mn>
+          <mo>×</mo>
+          <mn>2</mn>
+        </mrow>
+      </mfrac>
+
+      <mfrac>
         <mn>3</mn>
-        <mo>×</mo>
-        <mn>2</mn>
-      </mrow>
-      <mrow>
         <mn>4</mn>
-        <mo>×</mo>
-        <mn>2</mn>
-      </mrow>
-    </mfrac>
+      </mfrac>
 
-    <mfrac>
-      <mn>3</mn>
-      <mn>4</mn>
-    </mfrac>
-  </maction>
-</math>
+    </maction>
+
+  </math>
+</p>
 ```
+
+{{ EmbedLiveSample('maction_example', 700, 200, "", "") }}
 
 ## Specifications
 
