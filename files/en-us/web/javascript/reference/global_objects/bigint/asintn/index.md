@@ -25,13 +25,18 @@ BigInt.asIntN(bits, bigint)
 ### Parameters
 
 - `bits`
-  - : The amount of bits available for the integer size.
+  - : The amount of bits available for the returned BigInt. Should be an integer between 0 and 2<sup>53</sup> - 1, inclusive.
 - `bigint`
   - : The BigInt value to clamp to fit into the supplied bits.
 
-### Returns
+### Return value
 
 The value of `bigint` modulo 2^`bits`, as a signed integer.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if `bits` is negative or greater than 2<sup>53</sup> - 1.
 
 ## Description
 
