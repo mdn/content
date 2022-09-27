@@ -1,6 +1,7 @@
 ---
 title: '::part()'
 slug: Web/CSS/::part
+page-type: css-pseudo-element
 tags:
   - '::part'
   - CSS

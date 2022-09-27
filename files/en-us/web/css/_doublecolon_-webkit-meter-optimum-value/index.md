@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-meter-optimum-value'
 slug: Web/CSS/::-webkit-meter-optimum-value
+page-type: css-pseudo-element
 tags:
   - '::-webkit-meter-optimum-value'
   - CSS
