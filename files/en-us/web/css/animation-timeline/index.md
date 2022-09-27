@@ -1,6 +1,7 @@
 ---
 title: animation-timeline
 slug: Web/CSS/animation-timeline
+page-type: css-property
 tags:
   - CSS
   - CSS Animations

@@ -1,6 +1,7 @@
 ---
 title: border-inline-end-width
 slug: Web/CSS/border-inline-end-width
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
