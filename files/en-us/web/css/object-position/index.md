@@ -9,7 +9,7 @@ tags:
   - Position
   - Reference
   - Replaced Elements
-  - css layout
+  - CSS layout
   - object-position
   - recipe:css-property
 browser-compat: css.properties.object-position
