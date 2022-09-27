@@ -548,7 +548,7 @@ The methods which are available in the {{domxref("VTTCue")}} interface are:
 - {{domxref("VTTCue.getCueAsHTML", "getCueAsHTML()")}} to get the HTML of that cue.
 - A constructor, {{domxref("VTTCue.VTTCue", "VTTCue()")}} for creating new instances of this interface.
 
-Different properties allowing to read and set the characteristics of the cue, like its position, alignment or size are also available. Check {{domxref("VTTCue")}}) for a complete list.
+Different properties allowing to read and set the characteristics of the cue, like its position, alignment or size are also available. Check {{domxref("VTTCue")}} for a complete list.
 
 ### VTTRegion
 
