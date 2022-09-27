@@ -7,11 +7,10 @@ tags:
   - Canvas
   - Interface
   - Reference
-  - Experimental
 browser-compat: api.OffscreenCanvas
 ---
 
-{{APIRef("Canvas API")}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 When using the {{HtmlElement("canvas")}} element or the [Canvas API](/en-US/docs/Web/API/Canvas_API), rendering, animation, and user interaction usually happen on the main execution thread of a web application.
 The computation relating to canvas animations and rendering can have a significant impact on application performance.
