@@ -1,6 +1,7 @@
 ---
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

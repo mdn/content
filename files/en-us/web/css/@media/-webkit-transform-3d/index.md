@@ -1,6 +1,7 @@
 ---
 title: "-webkit-transform-3d"
 slug: Web/CSS/@media/-webkit-transform-3d
+page-type: css-media-feature
 tags:
   - "-webkit-transform-3d"
   - 3D

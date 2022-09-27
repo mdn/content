@@ -1,6 +1,7 @@
 ---
 title: grid
 slug: Web/CSS/@media/grid
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

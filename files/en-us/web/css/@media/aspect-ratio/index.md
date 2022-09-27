@@ -1,6 +1,7 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS
