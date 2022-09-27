@@ -1,6 +1,7 @@
 ---
 title: "-ms-high-contrast"
 slug: Web/CSS/@media/-ms-high-contrast
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

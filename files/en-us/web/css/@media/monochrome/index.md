@@ -1,6 +1,7 @@
 ---
 title: monochrome
 slug: Web/CSS/@media/monochrome
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS
