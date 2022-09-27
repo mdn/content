@@ -1,6 +1,7 @@
 ---
 title: Coordinate systems
 slug: Web/CSS/CSSOM_View/Coordinate_systems
+page-type: guide
 tags:
   - CSS
   - CSSOM

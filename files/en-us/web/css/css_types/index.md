@@ -1,6 +1,7 @@
 ---
 title: CSS data types
 slug: Web/CSS/CSS_Types
+page-type: guide
 tags:
   - CSS
   - CSS Data Type

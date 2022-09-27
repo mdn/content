@@ -1,6 +1,7 @@
 ---
 title: Mastering wrapping of flex items
 slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+page-type: guide
 tags:
   - CSS
   - Flex

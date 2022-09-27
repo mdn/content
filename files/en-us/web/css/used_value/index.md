@@ -1,6 +1,7 @@
 ---
 title: Used value
 slug: Web/CSS/used_value
+page-type: guide
 tags:
   - CSS
   - Guide

@@ -1,6 +1,7 @@
 ---
 title: Questions about CSS
 slug: Web/CSS/FAQ
+page-type: guide
 tags:
   - Beginner
   - CSS
