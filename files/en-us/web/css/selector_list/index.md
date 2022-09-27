@@ -84,7 +84,7 @@ h3 {
 
 ### Forgiving relative selector list
 
-A forgiving relative selector list is similar to the [forgiving selector list](#forgiving_selector_list); it just parses the list components as [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector) rather than [complex selectors](/en-US/docs/Web/CSS/CSS_Selectors#complex_selector).
+A forgiving relative selector list is similar to the [forgiving selector list](#forgiving_selector_list); it just parses the list components as [relative selectors](/en-US/docs/Web/CSS/CSS_Selectors#relative_selector), which begin with an explicit or implied combinator, rather than [complex selectors](/en-US/docs/Web/CSS/CSS_Selectors#complex_selector).
 
 ## Examples
 

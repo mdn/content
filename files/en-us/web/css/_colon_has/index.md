@@ -35,7 +35,7 @@ h1:has(+ p) { margin-bottom: 0; }
 
 ### With the sibling combinator
 
-The `:has()` rule in the following example adjusts the spacing after `H1` headings if they are immediately followed by an `H2` heading.
+The `:has()` style declaration in the following example adjusts the spacing after `H1` headings if they are immediately followed by an `H2` heading.
 
 #### HTML
 
@@ -91,7 +91,7 @@ h1:has(+ h2) {
 
 {{EmbedLiveSample('With_the_sibling_combinator', 600, 150)}}
 
-This example shows two similar texts side-by-side for comparison – the left one with an `H1` heading followed by a paragraph and the right one with an `H1` heading followed by an `H2` heading and then a paragraph. In the example on the right, `:has()` helps to select the `H1` element that is immediately followed by (indicated by [`+`](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)) an `H2` element and the CSS rule reduces the spacing after such an `H1` element. Without the `:has()` pseudo-class, you cannot select the preceding sibling or parent element.
+This example shows two similar texts side-by-side for comparison – the left one with an `H1` heading followed by a paragraph and the right one with an `H1` heading followed by an `H2` heading and then a paragraph. In the example on the right, `:has()` helps to select the `H1` element that is immediately followed by an `H2` element (indicated by [`+`](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)) and the CSS rule reduces the spacing after such an `H1` element. Without the `:has()` pseudo-class, you cannot select the preceding sibling or parent element.
 
 ### With the :is() pseudo-class
 
@@ -160,107 +160,6 @@ h1, h2, h3 {
 
 Here, the first [`:is()`](/en-US/docs/Web/CSS/:is) pseudo-class is used to select any of the heading elements in the list. The second `:is()` pseudo-class is used to pass a selector list as an argument to `:has()`. The `:has()` pseudo-class helps to select any `H1`, `H2`, or `H3` element that is immediately followed by (indicated by [`+`](/en-US/docs/Web/CSS/Adjacent_sibling_combinator)) an `H2`, `H3`, or `H4` element and the CSS rule reduces the spacing after such `H1`, `H2`, or `H3` elements.
 
-### With the :not() pseudo-class
-
-The form in this example contains three `<fieldset>` groups. The first two are indicated as mandatory and are styled pink when no option is selected. In addition, when no option is selected in the first two `<fieldset>` groups, an asterisk displays after the question. The `:has()` pseudo-class is used here to style the form elements based on the state of the child or sibling elements.
-
-#### HTML
-
-```html
-<form>
-  <p>Fill out our questionnaire:</p>
-  <fieldset class="required">
-    <legend>Which activity are you interested in?</legend>
-    <input type="radio" name="activity" id="activity1">
-    <label for="activity1">Running</label> 
-    <input type="radio" name="activity" id="activity2">
-    <label for="activity2">Rock climbing</label>
-    <input type="radio" name="activity" id="activity3">
-    <label for="activity3">Swimming</label>
-  </fieldset>
-
-  <fieldset class="required">
-    <legend>What days work for you?</legend>
-    <input type="checkbox" id="day1">
-    <label for="day1">Monday</label> 
-    <input type="checkbox" id="day2">
-    <label for="day2">Wednesday</label>
-    <input type="checkbox" id="day3">
-    <label for="day3">Friday</label>
-  </fieldset>
-
-  <fieldset>
-    <legend>Join our newsletter</legend>
-    <input type="radio" name="newsletter" id="newsweekly">
-    <label for="newsweekly">Weekly</label> 
-    <input type="radio" name="newsletter" id="newsmonthly">
-    <label for="newsmonthly">Monthly</label> 
-  </fieldset>
-</form>
-```
-
-#### CSS
-
-```css hidden
-form { 
-    border: 4px solid white;
-    width: max-content;
-    font-family: sans-serif;
-    margin-left: 2em;
-  }
-
-legend {
-    background: #7B0D1E;
-    color: #fff;
-    padding: 3px 6px;
-    background: white;
-    color: black;
-    font-weight: bold;
-}
-```
-
-```css
-
-fieldset:has(+ fieldset) {
-  margin-bottom: 1em;
-}
-
-fieldset.required:not(:has(input:checked)) {
-  background: pink;
-}
-
-fieldset.required:not(:has(input:checked)) legend::after {
-  content: " ✳︎";
-  color: red;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('With_the_:not()_pseudo-class', 600, 300)}}
-
-- The first `:has()` pseudo-class selects any `<fieldset>` element adjacent to another `<fieldset>` element and applies a bottom spacing to the preceding `<fieldset>` element. This selects the first and second `<fieldset>` elements, and the spacing is applied after them.
-
-- The second `:has()` pseudo-class in combination with the [`:not()`](/en-US/docs/Web/CSS/:not) pseudo-class selects any `<fieldset>` element with the `required` class containing an input radio or checkbox that hasn't been toggled to an [on state](/en-US/docs/Web/CSS/:checked). This selects the first and second `<fieldset>` elements, and applies the pink background to the `<fieldset>` elements.
-
-- The third `:has()` pseudo-class selects the same elements as the second `:has()` pseudo-class, but in this case the `<legend>` element is styled to add the asterisk after the question.
-
-- After you select an option in the first two groups, the `:has()` selection no longer applies and the initial formatting and asterisk are removed.
-
-Be careful about the order of `:has()` and [`:not()`](/en-US/docs/Web/CSS/:not) pseudo-classes because swapping the order does not select the same elements. For example, in the following rule, a [selector list](/en-US/docs/Web/CSS/Selector_list) is passed as an argument to `:has()`. The `:has()` and `:not()` pseudo-classes here will select only those `<section>` elements that don't contain any heading elements.
-
-```css
-section:not(:has(h1, h2, h3, h4, h5, h6)) {...}
-```
-
-However, if you swap the order of the two pseudo-classes as shown below:
-
-```css
-section:has(:not(h1, h2, h3, h4, h5, h6)) {...}
-```
-
-The `:not()` pseudo-class will select any element that's not a heading element, such as `<p>`, `<a>`, or `<button>` and pass that as an argument to `:has()`, which in turn, will select any `<section>` element that contains those other non-heading elements. This might eventually end up selecting even those `<section>` elements that do have a heading element along with other non-heading elements.
-
 ## Specifications
 
 {{Specifications}}
@@ -275,4 +174,3 @@ The `:not()` pseudo-class will select any element that's not a heading element, 
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-- For more inspiring ideas, see [Using :has() as a CSS parent selector and much more](https://webkit.org/blog/13096/css-has-pseudo-class/#using-has-with-the-child-combinator).
