@@ -121,6 +121,7 @@ if (parentNode){
   while(child){
   parentNode.removeChild(child);
   }
+}
 ```
 
 ## Specifications
