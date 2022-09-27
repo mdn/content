@@ -78,6 +78,17 @@ while (element.firstChild) {
 }
 ```
 
+To remove all the children from parent:
+
+```js
+if (parentNode){
+  let child = parentNode.lastElementChild;
+  while(child){
+  parentNode.removeChild(child);
+  }
+}
+```
+
 ### Causing a TypeError
 
 ```html
@@ -112,6 +123,8 @@ let garbage = top.removeChild(nested);
 // Throws NotFoundError
 garbage = top.removeChild(nested);
 ```
+
+
 
 ## Specifications
 
