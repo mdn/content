@@ -1,6 +1,7 @@
 ---
 title: inset-block
 slug: Web/CSS/inset-block
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Logical Property

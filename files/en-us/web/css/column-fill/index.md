@@ -1,6 +1,7 @@
 ---
 title: column-fill
 slug: Web/CSS/column-fill
+page-type: css-property
 tags:
   - CSS
   - CSS Multi-column Layout

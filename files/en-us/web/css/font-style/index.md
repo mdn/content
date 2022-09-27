@@ -1,6 +1,7 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

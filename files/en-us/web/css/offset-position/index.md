@@ -1,6 +1,7 @@
 ---
 title: offset-position
 slug: Web/CSS/offset-position
+page-type: css-property
 tags:
   - CSS
   - CSS Motion Path

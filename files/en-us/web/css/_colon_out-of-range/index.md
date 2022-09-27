@@ -1,6 +1,7 @@
 ---
-title: ':out-of-range'
+title: ":out-of-range"
 slug: Web/CSS/:out-of-range
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

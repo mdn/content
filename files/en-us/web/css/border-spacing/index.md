@@ -1,6 +1,7 @@
 ---
 title: border-spacing
 slug: Web/CSS/border-spacing
+page-type: css-property
 tags:
   - CSS
   - CSS Property

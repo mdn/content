@@ -44,7 +44,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ## Examples
 
 ```html
-<math>
+<math display="block">
   <menclose notation="circle box">
     <mi>x</mi>
     <mo>+</mo>
@@ -52,6 +52,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
   </menclose>
 </math>
 ```
+
+{{ EmbedLiveSample('menclose_example', 700, 200, "", "") }}
 
 ## Specifications
 

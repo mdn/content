@@ -1,6 +1,7 @@
 ---
 title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
+page-type: css-property
 browser-compat: css.properties.contain-intrinsic-size
 ---
 
@@ -8,18 +9,19 @@ browser-compat: css.properties.contain-intrinsic-size
 
 The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the size of an element that will be used for layout when it is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
-The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/contain) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility).
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
 
-- `contain-intrinsic-width`
-- `contain-intrinsic-height`
+- [`contain-intrinsic-width`](/en-US/docs/Web/CSS/contain-intrinsic-width)
+- [`contain-intrinsic-height`](/en-US/docs/Web/CSS/contain-intrinsic-height)
 
 ## Syntax
 
 ```css
+/* Keyword values */
+contain-intrinsic-width: none;
+
 /* <length> values */
 contain-intrinsic-size: 1000px;
 contain-intrinsic-size: 10rem;
@@ -55,14 +57,15 @@ If a single value is specified, it applies to both width and height.
 
 ## Description
 
+The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/contain) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility).
+
 Size containment allows a user agent to layout an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
 By default, size containment treats elements as though they had no contents, and may collapse the layout in the same way as if the contents had no width or height.
 The `contain-intrinsic-size` property allows authors to specify an appropriate value to be used as the size for layout.
 
-Determining the correct size to specify for an element can be difficult, and odd layout effects may result if an incorrect value is used.
-The `auto <length>` value can help.
-If the element is ever rendered with all its child elements (if the element is ever outside of size containment), then setting `auto` saves the size, which can be used instead of the `<length>`.
-In particular, this is recommended with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility), as elements are only in size containment when offscreen, and hence may have a remembered value.
+The `auto <length>` value allows the size of the element to be stored if the element is ever "normally rendered" (with its child elements), and then used instead of the specified length when the element is skipping its contents.
+This allows offscreen elements with [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility) to benefit from size containment without developers having to be as precise in their estimates of element size.
+The remembered value is not used if the child elements are being rendered (if size containment is enabled, the `<length>` will be used).
 
 ## Formal definition
 

@@ -1,6 +1,7 @@
 ---
 title: overflow-block
 slug: Web/CSS/overflow-block
+page-type: css-property
 tags:
   - CSS
   - CSS Box Model

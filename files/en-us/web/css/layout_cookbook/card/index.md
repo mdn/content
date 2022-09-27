@@ -7,7 +7,7 @@ tags:
   - CSS Grid
   - Guide
   - card
-  - css layout
+  - CSS layout
 browser-compat:
   - css.properties.grid-template-columns
   - css.properties.grid-template-rows

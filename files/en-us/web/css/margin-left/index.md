@@ -1,6 +1,7 @@
 ---
 title: margin-left
 slug: Web/CSS/margin-left
+page-type: css-property
 tags:
   - CSS
   - CSS Property

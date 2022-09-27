@@ -104,8 +104,6 @@ In the context of the rendering waterfall, some properties are more expensive th
   </tbody>
 </table>
 
-> **Note:** The [CSS Triggers](https://csstriggers.com/) website shows how much of the waterfall is triggered for each CSS property, with information for most CSS properties by browser engine.
-
 ## Developer tools
 
 Most web browsers include tools to provide insight into the work the browser is doing when it animates elements of a page. Using these tools you can measure an application's animation frame rate, and diagnose performance bottlenecks if any are found.

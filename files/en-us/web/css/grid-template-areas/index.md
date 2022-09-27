@@ -1,6 +1,7 @@
 ---
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
+page-type: css-property
 tags:
   - CSS
   - CSS Grid

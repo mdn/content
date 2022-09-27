@@ -16,9 +16,7 @@ tags:
 browser-compat: api.SyncManager
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}
-
-{{DefaultAPISidebar("Background Sync")}}
+{{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
 The Background Synchronization API provides a way to defer tasks to be run in a {{domxref('Service Worker API','service worker')}} until the user has a stable network connection.
 

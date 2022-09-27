@@ -1,6 +1,7 @@
 ---
-title: ':target-within'
+title: ":target-within"
 slug: Web/CSS/:target-within
+page-type: css-pseudo-class
 browser-compat: css.selectors.target-within
 ---
 

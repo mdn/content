@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: timer role'
+title: "ARIA: timer role"
 slug: Web/Accessibility/ARIA/Roles/timer_role
 tags:
   - ARIA

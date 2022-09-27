@@ -1,6 +1,7 @@
 ---
-title: ':nth-child()'
+title: ":nth-child()"
 slug: Web/CSS/:nth-child
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

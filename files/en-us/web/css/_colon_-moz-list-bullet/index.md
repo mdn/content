@@ -1,6 +1,7 @@
 ---
-title: '::-moz-list-bullet'
+title: "::-moz-list-bullet"
 slug: Web/CSS/:-moz-list-bullet
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions

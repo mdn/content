@@ -1,6 +1,7 @@
 ---
 title: flex-flow
 slug: Web/CSS/flex-flow
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Flexible Boxes

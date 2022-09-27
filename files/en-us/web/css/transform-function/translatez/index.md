@@ -1,6 +1,7 @@
 ---
 title: translateZ()
 slug: Web/CSS/transform-function/translateZ
+page-type: css-function
 tags:
   - 3D
   - CSS

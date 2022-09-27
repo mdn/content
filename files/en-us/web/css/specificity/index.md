@@ -33,7 +33,7 @@ The selector weight categories are listed here in the order of decreasing specif
 - TYPE column
   - : Includes [type selectors](/en-US/docs/Web/CSS/Type_selectors), such as `p`, `h1`, and `td`, and pseudo-elements like `::before`, `::placeholder`, and all other selectors with double-colon notation. For each type or pseudo-element in a matching selector, add 0-0-1 to the weight value.
 - No value
-  - : The universal selector ({{CSSxRef("Universal_selectors", "*")}}) and the pseudo-class {{CSSxRef(":where", ":where()")}} and its parameters aren't counted when calculating the weight, but they do match elements. The value for both the universal selector and the pseudo-class is 0-0-0; these selectors do not impact the specificity weight value.
+  - : The universal selector ({{CSSxRef("Universal_selectors", "*")}}) and the pseudo-class {{CSSxRef(":where", ":where()")}} and its parameters aren't counted when calculating the weight so their value is 0-0-0, but they do match elements. These selectors do not impact the specificity weight value.
 
 Combinators, such as {{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific in what is selected but they don't add any value to the specificity weight.
 

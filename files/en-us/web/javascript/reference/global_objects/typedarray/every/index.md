@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.TypedArray.every
 
 The **`every()`** method tests whether all elements in the
 typed array pass the test implemented by the provided function. This method has the same
-algorithm as {{jsxref("Array.prototype.every()")}}_._ _TypedArray_ is one
+algorithm as {{jsxref("Array.prototype.every()")}}. _TypedArray_ is one
 of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-every.html")}}

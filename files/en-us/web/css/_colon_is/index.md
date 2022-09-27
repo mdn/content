@@ -1,8 +1,9 @@
 ---
-title: ':is()'
+title: ":is()"
 slug: Web/CSS/:is
+page-type: css-pseudo-class
 tags:
-  - ':is'
+  - ":is"
   - CSS
   - Pseudo-class
   - Reference
@@ -50,93 +51,6 @@ Will still parse correctly and match `:valid` even in browsers which don't suppo
 Will be ignored in browsers which don't support `:unsupported` even if they support `:valid`.
 
 ## Examples
-
-### Cross-browser example
-
-```html
-<header>
-  <p>This is my header paragraph</p>
-</header>
-
-<main>
-  <ul>
-    <li>
-      <p>This is my first</p>
-      <p>list item</p>
-    </li>
-    <li>
-      <p>This is my second</p>
-      <p>list item</p>
-    </li>
-  </ul>
-</main>
-
-<footer>
-  <p>This is my footer paragraph</p>
-</footer>
-```
-
-```css
-:-webkit-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:-moz-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
-
-```js
-let matchedItems;
-
-try {
-  matchedItems = document.querySelectorAll(":is(header, main, footer) p");
-} catch (e) {
-  try {
-    matchedItems = document.querySelectorAll(
-      ":matches(header, main, footer) p"
-    );
-  } catch (e) {
-    try {
-      matchedItems = document.querySelectorAll(
-        ":-webkit-any(header, main, footer) p"
-      );
-    } catch (e) {
-      try {
-        matchedItems = document.querySelectorAll(
-          ":-moz-any(header, main, footer) p"
-        );
-      } catch (e) {
-        console.log(
-          "Your browser doesn't support :is(), :matches(), or :any()"
-        );
-      }
-    }
-  }
-}
-
-matchedItems.forEach(applyHandler);
-
-function applyHandler(elem) {
-  elem.addEventListener("click", (e) => {
-    alert(`This paragraph is inside a ${e.target.parentNode.nodeName}`);
-  });
-}
-```
-
-{{EmbedLiveSample("Cross-browser_example", "100%", 300)}}
 
 ### Simplifying list selectors
 

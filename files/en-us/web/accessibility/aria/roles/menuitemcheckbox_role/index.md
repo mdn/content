@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: menuitemcheckbox role'
+title: "ARIA: menuitemcheckbox role"
 slug: Web/Accessibility/ARIA/Roles/menuitemcheckbox_role
 tags:
   - Accessibility

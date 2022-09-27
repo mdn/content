@@ -1,6 +1,7 @@
 ---
 title: text-decoration-skip-ink
 slug: Web/CSS/text-decoration-skip-ink
+page-type: css-property
 tags:
   - CSS
   - CSS Property

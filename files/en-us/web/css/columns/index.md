@@ -1,6 +1,7 @@
 ---
 title: columns
 slug: Web/CSS/columns
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Multi-column Layout

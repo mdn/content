@@ -1,6 +1,7 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
+page-type: css-property
 tags:
   - Boxes
   - CSS

@@ -1,6 +1,7 @@
 ---
 title: accent-color
 slug: Web/CSS/accent-color
+page-type: css-property
 tags:
   - CSS
   - CSS Property

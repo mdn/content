@@ -1,8 +1,9 @@
 ---
-title: ':host'
+title: ":host"
 slug: Web/CSS/:host
+page-type: css-pseudo-class
 tags:
-  - ':host'
+  - ":host"
   - CSS
   - DOM
   - Layout
