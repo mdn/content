@@ -1,6 +1,7 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Box Alignment
