@@ -523,8 +523,8 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" />
+          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>Last name: <input type="text" name="lastname" /></label>
         </p>
         <p>
           <input type="submit" value="Submit" />
@@ -542,8 +542,12 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" />
+          <label>First name: 
+            <input type="text" name="firstname" />
+          </label><br />
+          <label>Last name: 
+            <input type="text" name="lastname" />
+          </label>
         </p>
         <p>
           <input type="submit" value="Submit" />
@@ -560,10 +564,15 @@ ways to _submit_, and to **upload files**:
       onsubmit="AJAXSubmit(this); return false;">
       <fieldset>
         <legend>Registration example</legend>
-        <p>Your name: <input type="text" name="user" /></p>
         <p>
-          Your message:<br />
-          <textarea name="message" cols="40" rows="8"></textarea>
+          <label>Your name: 
+            <input type="text" name="user" />
+          </label>
+        </p>
+        <p>
+          <label>Your message:<br />
+            <textarea name="message" cols="40" rows="8"></textarea>
+          </label>
         </p>
         <p>
           <input type="submit" value="Submit" />
@@ -581,24 +590,26 @@ ways to _submit_, and to **upload files**:
       <fieldset>
         <legend>Upload example</legend>
         <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" /><br />
+          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>Last name: <input type="text" name="lastname" /></label><br />
           Sex:
           <input id="sex_male" type="radio" name="sex" value="male" />
           <label for="sex_male">Male</label>
           <input id="sex_female" type="radio" name="sex" value="female" />
           <label for="sex_female">Female</label><br />
           Password: <input type="password" name="secret" /><br />
-          What do you prefer:
-          <select name="image_type">
-            <option>Books</option>
-            <option>Cinema</option>
-            <option>TV</option>
-          </select>
+          <label>What do you prefer:
+            <select name="image_type">
+              <option>Books</option>
+              <option>Cinema</option>
+              <option>TV</option>
+            </select>
+          </label>
         </p>
         <p>
-          Post your photos:
-          <input type="file" multiple name="photos[]" />
+          <label>Post your photos:
+            <input type="file" multiple name="photos[]" />
+          </label>
         </p>
         <p>
           <input
@@ -615,8 +626,9 @@ ways to _submit_, and to **upload files**:
           <label for="vehicle_car">I have a car</label>
         </p>
         <p>
-          Describe yourself:<br />
-          <textarea name="description" cols="50" rows="8"></textarea>
+          <label>Describe yourself:<br />
+            <textarea name="description" cols="50" rows="8"></textarea>
+          </label>
         </p>
         <p>
           <input type="submit" value="Submit" />
