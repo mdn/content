@@ -5,7 +5,7 @@ tags:
   - CSS
   - Guide
   - Overview
-  - css scrollbars
+  - CSS scrollbars
 browser-compat:
   - css.properties.scrollbar-width
   - css.properties.scrollbar-color

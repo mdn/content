@@ -8,7 +8,7 @@ tags:
   - CSS Property
   - Layout
   - Reference
-  - css layout
+  - CSS layout
   - object-fit
   - recipe:css-property
   - size

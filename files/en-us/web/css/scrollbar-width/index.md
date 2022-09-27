@@ -6,7 +6,7 @@ tags:
   - CSS
   - CSS Property
   - Reference
-  - css scrollbars
+  - CSS scrollbars
   - recipe:css-property
   - scrollbar-width
 browser-compat: css.properties.scrollbar-width
