@@ -1,6 +1,7 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
+page-type: css-property
 tags:
   - CSS
   - CSS Property

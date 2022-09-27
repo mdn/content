@@ -1,6 +1,7 @@
 ---
 title: box-flex-group
 slug: Web/CSS/box-flex-group
+page-type: css-property
 tags:
   - CSS
   - CSS Property

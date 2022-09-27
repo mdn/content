@@ -1,6 +1,7 @@
 ---
 title: inset-inline-end
 slug: Web/CSS/inset-inline-end
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
