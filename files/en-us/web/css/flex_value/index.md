@@ -1,6 +1,7 @@
 ---
 title: <flex>
 slug: Web/CSS/flex_value
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
