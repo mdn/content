@@ -1,6 +1,7 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
+page-type: css-property
 tags:
   - CSS
   - CSS Property

@@ -1,6 +1,7 @@
 ---
 title: scroll-padding-top
 slug: Web/CSS/scroll-padding-top
+page-type: css-property
 tags:
   - CSS
   - CSS Property

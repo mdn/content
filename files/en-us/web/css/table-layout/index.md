@@ -1,6 +1,7 @@
 ---
 title: table-layout
 slug: Web/CSS/table-layout
+page-type: css-property
 tags:
   - CSS
   - CSS Property

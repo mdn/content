@@ -1,6 +1,7 @@
 ---
 title: transition-duration
 slug: Web/CSS/transition-duration
+page-type: css-property
 tags:
   - CSS
   - CSS Property

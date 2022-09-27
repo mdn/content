@@ -1,6 +1,7 @@
 ---
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
+page-type: css-property
 tags:
   - CSS
   - CSS Property
