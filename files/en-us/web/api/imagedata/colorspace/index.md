@@ -13,7 +13,7 @@ browser-compat: api.ImageData.colorSpace
 
 {{APIRef("Canvas API")}}
 
-The read-only **`ImageData.colorSpace`** property is a string indicating the color space of the pixels.
+The read-only **`ImageData.colorSpace`** property is a string indicating the color space of the image data.
 
 The color space can be set during `ImageData` initialization using either the [`ImageData()`](/en-US/docs/Web/API/ImageData/ImageData) constructor or the [`createImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData) method.
 

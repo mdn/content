@@ -40,7 +40,7 @@ new ImageData(dataArray, width, height, settings)
     array is given: the height will be inferred from the array's size and the given width.
 - `settings` {{optional_inline}}
   - : An object with the following properties:
-    - `colorSpace`: Specifies the color space of the pixels. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+    - `colorSpace`: Specifies the color space of the image data. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
 - `dataArray`
   - : A {{jsxref("Uint8ClampedArray")}} containing the underlying pixel representation of the image. If no such array is given, an image with a transparent black rectangle of the specified `width` and `height` will be created.
 
