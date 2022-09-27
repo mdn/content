@@ -1,6 +1,7 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
+page-type: css-property
 tags:
   - CSS
   - CSS Multi-column Layout

@@ -1,6 +1,7 @@
 ---
 title: font-stretch
 slug: Web/CSS/font-stretch
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

@@ -1,6 +1,7 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes

@@ -1,6 +1,7 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
+page-type: css-property
 tags:
   - CSS
   - CSS Images

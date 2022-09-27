@@ -1,6 +1,7 @@
 ---
 title: color
 slug: Web/CSS/color
+page-type: css-property
 tags:
   - CSS
   - CSS Colors
