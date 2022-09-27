@@ -1,6 +1,7 @@
 ---
 title: "@property"
 slug: Web/CSS/@property
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS

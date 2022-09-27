@@ -1,6 +1,7 @@
 ---
 title: env()
 slug: Web/CSS/env
+page-type: css-function
 tags:
   - CSS
   - CSS Function

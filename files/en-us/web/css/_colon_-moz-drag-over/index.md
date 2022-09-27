@@ -1,6 +1,7 @@
 ---
 title: ':-moz-drag-over'
 slug: Web/CSS/:-moz-drag-over
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions

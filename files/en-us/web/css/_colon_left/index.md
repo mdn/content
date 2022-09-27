@@ -1,6 +1,7 @@
 ---
 title: ":left"
 slug: Web/CSS/:left
+page-type: css-pseudo-class
 tags:
   - "@page"
   - CSS

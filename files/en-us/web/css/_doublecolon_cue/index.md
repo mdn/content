@@ -1,6 +1,7 @@
 ---
 title: '::cue'
 slug: Web/CSS/::cue
+page-type: css-pseudo-element
 tags:
   - '::cue'
   - CSS

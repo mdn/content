@@ -1,6 +1,7 @@
 ---
 title: border-block-width
 slug: Web/CSS/border-block-width
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

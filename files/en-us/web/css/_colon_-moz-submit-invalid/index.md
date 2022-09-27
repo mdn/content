@@ -1,6 +1,7 @@
 ---
 title: ":-moz-submit-invalid"
 slug: Web/CSS/:-moz-submit-invalid
+page-type: css-pseudo-class
 tags:
   - ":-moz-submit-invalid"
   - CSS

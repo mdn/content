@@ -1,6 +1,7 @@
 ---
 title: border-image-width
 slug: Web/CSS/border-image-width
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

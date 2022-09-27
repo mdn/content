@@ -1,6 +1,7 @@
 ---
 title: padding-right
 slug: Web/CSS/padding-right
+page-type: css-property
 tags:
   - CSS
   - CSS Padding

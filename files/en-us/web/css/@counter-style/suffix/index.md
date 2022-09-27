@@ -1,6 +1,7 @@
 ---
 title: suffix
 slug: Web/CSS/@counter-style/suffix
+page-type: css-at-rule-descriptor
 tags:
   - "@counter-style"
   - At-rule descriptor

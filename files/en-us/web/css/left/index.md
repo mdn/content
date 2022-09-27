@@ -1,6 +1,7 @@
 ---
 title: left
 slug: Web/CSS/left
+page-type: css-property
 tags:
   - CSS
   - CSS Positioning

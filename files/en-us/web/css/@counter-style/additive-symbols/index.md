@@ -1,6 +1,7 @@
 ---
 title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
+page-type: css-at-rule-descriptor
 tags:
   - "@counter-style"
   - At-rule descriptor

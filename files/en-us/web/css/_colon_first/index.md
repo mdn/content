@@ -1,6 +1,7 @@
 ---
 title: ":first"
 slug: Web/CSS/:first
+page-type: css-pseudo-class
 tags:
   - "@page"
   - CSS

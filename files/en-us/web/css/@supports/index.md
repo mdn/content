@@ -1,6 +1,7 @@
 ---
 title: "@supports"
 slug: Web/CSS/@supports
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS

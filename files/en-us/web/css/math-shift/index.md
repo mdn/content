@@ -4,7 +4,7 @@ slug: Web/CSS/math-shift
 tags:
   - CSS
   - MathML
-  - Property
+  - CSS Property
   - Reference
   - math-shift
   - Experimental
