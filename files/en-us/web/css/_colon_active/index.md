@@ -1,6 +1,7 @@
 ---
 title: ":active"
 slug: Web/CSS/:active
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
