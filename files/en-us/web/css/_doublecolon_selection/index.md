@@ -1,6 +1,7 @@
 ---
 title: '::selection'
 slug: Web/CSS/::selection
+page-type: css-pseudo-element
 tags:
   - CSS
   - Layout
