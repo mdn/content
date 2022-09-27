@@ -1,6 +1,7 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
+page-type: css-property
 tags:
   - CSS
   - CSS Images

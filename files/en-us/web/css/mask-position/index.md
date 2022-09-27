@@ -1,6 +1,7 @@
 ---
 title: mask-position
 slug: Web/CSS/mask-position
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

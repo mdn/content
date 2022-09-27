@@ -1,6 +1,7 @@
 ---
 title: line-height-step
 slug: Web/CSS/line-height-step
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
