@@ -1,6 +1,7 @@
 ---
 title: translate
 slug: Web/CSS/translate
+page-type: css-property
 tags:
   - CSS
   - CSS Property

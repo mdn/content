@@ -1,6 +1,7 @@
 ---
 title: shape-margin
 slug: Web/CSS/shape-margin
+page-type: css-property
 tags:
   - Boundaries
   - CSS

@@ -1,6 +1,7 @@
 ---
 title: scroll-margin-right
 slug: Web/CSS/scroll-margin-right
+page-type: css-property
 tags:
   - CSS
   - CSS Property
