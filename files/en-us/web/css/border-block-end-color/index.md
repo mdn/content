@@ -1,6 +1,7 @@
 ---
 title: border-block-end-color
 slug: Web/CSS/border-block-end-color
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

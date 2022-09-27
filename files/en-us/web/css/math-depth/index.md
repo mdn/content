@@ -4,7 +4,7 @@ slug: Web/CSS/math-depth
 tags:
   - CSS
   - MathML
-  - Property
+  - CSS Property
   - Reference
   - math-depth
   - Experimental

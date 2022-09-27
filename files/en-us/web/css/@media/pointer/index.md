@@ -1,6 +1,7 @@
 ---
 title: pointer
 slug: Web/CSS/@media/pointer
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

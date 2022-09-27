@@ -1,6 +1,7 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

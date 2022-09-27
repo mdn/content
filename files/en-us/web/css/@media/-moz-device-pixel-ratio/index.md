@@ -1,6 +1,7 @@
 ---
 title: "-moz-device-pixel-ratio"
 slug: Web/CSS/@media/-moz-device-pixel-ratio
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

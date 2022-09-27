@@ -1,6 +1,7 @@
 ---
 title: color-gamut
 slug: Web/CSS/@media/color-gamut
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

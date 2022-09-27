@@ -1,6 +1,7 @@
 ---
 title: device-width
 slug: Web/CSS/@media/device-width
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

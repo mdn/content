@@ -1,6 +1,7 @@
 ---
 title: "-webkit-transition"
 slug: Web/CSS/@media/-webkit-transition
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

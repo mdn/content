@@ -1,6 +1,7 @@
 ---
 title: content
 slug: Web/CSS/content
+page-type: css-property
 tags:
   - CSS
   - CSS Counter

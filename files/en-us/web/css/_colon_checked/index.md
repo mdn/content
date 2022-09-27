@@ -41,10 +41,10 @@ The user can engage this state by checking/selecting an element, or disengage it
 
 ```html
 <div>
-  <input type="radio" name="my-input" id="yes" />
+  <input type="radio" name="my-input" id="yes" value="yes" />
   <label for="yes">Yes</label>
 
-  <input type="radio" name="my-input" id="no" />
+  <input type="radio" name="my-input" id="no" value="no" />
   <label for="no">No</label>
 </div>
 

@@ -1,6 +1,7 @@
 ---
 title: animation-direction
 slug: Web/CSS/animation-direction
+page-type: css-property
 tags:
   - CSS
   - CSS Animations

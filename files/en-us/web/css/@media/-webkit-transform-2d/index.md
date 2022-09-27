@@ -1,6 +1,7 @@
 ---
 title: "-webkit-transform-2d"
 slug: Web/CSS/@media/-webkit-transform-2d
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

@@ -1,6 +1,7 @@
 ---
 title: dynamic-range
 slug: Web/CSS/@media/dynamic-range
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

@@ -1,6 +1,7 @@
 ---
 title: height
 slug: Web/CSS/height
+page-type: css-property
 tags:
   - CSS
   - CSS Property
