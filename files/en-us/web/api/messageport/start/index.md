@@ -17,13 +17,13 @@ browser-compat: api.MessagePort.start
 The **`start()`** method of the {{domxref("MessagePort")}}
 interface starts the sending of messages queued on the port. This method is only needed
 when using {{domxref("EventTarget.addEventListener")}}; it is implied when using
-{{domxref("MessageChannel.message_event", "onmessage")}}.
+{{domxref("MessagePort.message_event", "onmessage")}}.
 
 {{AvailableInWorkers}}
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 ```
 

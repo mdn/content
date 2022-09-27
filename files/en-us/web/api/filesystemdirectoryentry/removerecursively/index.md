@@ -27,7 +27,7 @@ To remove a single file, or an empty directory, you can also use
 
 ## Syntax
 
-```js
+```js-nolint
 removeRecursively(successCallback)
 removeRecursively(successCallback, errorCallback)
 ```

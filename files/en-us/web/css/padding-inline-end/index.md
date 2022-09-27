@@ -1,6 +1,7 @@
 ---
 title: padding-inline-end
 slug: Web/CSS/padding-inline-end
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
@@ -81,7 +82,7 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-inline-end: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 
@@ -99,5 +100,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

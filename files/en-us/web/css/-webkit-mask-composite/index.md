@@ -1,8 +1,9 @@
 ---
-title: '-webkit-mask-composite'
+title: "-webkit-mask-composite"
 slug: Web/CSS/-webkit-mask-composite
+page-type: css-property
 tags:
-  - '-webkit-mask-composite'
+  - "-webkit-mask-composite"
   - CSS
   - CSS Masking
   - CSS Property
@@ -84,7 +85,7 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 
 ```css
 .example {
-  -webkit-mask-image: url(mask1.png), url('mask2.png');
+  -webkit-mask-image: url(mask1.png), url("mask2.png");
   -webkit-mask-composite: xor, source-over;
 }
 ```

@@ -1,6 +1,7 @@
 ---
 title: aural
 slug: Web/CSS/@media/aural
+page-type: css-media-feature
 tags:
   - CSS
   - Deprecated
@@ -31,7 +32,9 @@ The `aural` CSS media type was used to specify a block of CSS that applied only 
 
 ```css
 @media aural {
-  body { voice-family: Paul }
+  body {
+    voice-family: Paul;
+  }
 }
 ```
 

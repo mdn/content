@@ -47,50 +47,62 @@ A website specializing in providing information about planets provides a dropdow
   <p id="planetDescription">Select a planet to view its description</p>
 </div>
 
-<p><small>Information courtesy <a href="https://en.wikipedia.org/wiki/Solar_System#Inner_Solar_System">Wikipedia</a></small></p>
+<p>
+  <small>
+    Information from
+    <a href="https://en.wikipedia.org/wiki/Solar_System">Wikipedia</a>
+  </small>
+</p>
 ```
 
 ```js
 const PLANETS_INFO = {
   mercury: {
-    title: 'Mercury',
-    description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.'
+    title: "Mercury",
+    description:
+      "Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.",
   },
 
   venus: {
     title: "Venus",
-    description: 'Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.'
+    description:
+      "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.",
   },
 
   earth: {
     title: "Earth",
-    description: 'Earth is the third planet from the Sun and the only object in the Universe known to harbor life.'
+    description:
+      "Earth is the third planet from the Sun and the only object in the Universe known to harbor life.",
   },
 
   mars: {
     title: "Mars",
-    description: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".'
-  }
+    description:
+      'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".',
+  },
 };
 
 function renderPlanetInfo(planet) {
-  const planetTitle = document.querySelector('#planetTitle');
-  const planetDescription = document.querySelector('#planetDescription');
+  const planetTitle = document.querySelector("#planetTitle");
+  const planetDescription = document.querySelector("#planetDescription");
 
   if (planet in PLANETS_INFO) {
     planetTitle.textContent = PLANETS_INFO[planet].title;
     planetDescription.textContent = PLANETS_INFO[planet].description;
   } else {
-    planetTitle.textContent = 'No planet selected';
-    planetDescription.textContent = 'Select a planet to view its description';
+    planetTitle.textContent = "No planet selected";
+    planetDescription.textContent = "Select a planet to view its description";
   }
 }
 
-const renderPlanetInfoButton = document.querySelector('#renderPlanetInfoButton');
+const renderPlanetInfoButton = document.querySelector(
+  "#renderPlanetInfoButton"
+);
 
-renderPlanetInfoButton.addEventListener('click', (event) => {
-  const planetsSelect = document.querySelector('#planetsSelect');
-  const selectedPlanet = planetsSelect.options[planetsSelect.selectedIndex].value;
+renderPlanetInfoButton.addEventListener("click", (event) => {
+  const planetsSelect = document.querySelector("#planetsSelect");
+  const selectedPlanet =
+    planetsSelect.options[planetsSelect.selectedIndex].value;
 
   renderPlanetInfo(selectedPlanet);
 });
@@ -178,8 +190,9 @@ As an illustration of `aria-atomic`, consider a site with a simple clock, showin
 /* basic JavaScript to update the clock */
 function updateClock() {
   const now = new Date();
-  document.getElementById('clock-hours').innerHTML = now.getHours();
-  document.getElementById('clock-mins').innerHTML = (`0${now.getMinutes()}`).substr(-2);
+  document.getElementById("clock-hours").textContent = now.getHours();
+  document.getElementById("clock-mins").textContent =
+    `0${now.getMinutes()}`.substr(-2);
 }
 
 /* first run */
@@ -196,18 +209,15 @@ One way around this would be to first clear all the contents of the live region 
 `aria-atomic="true"` ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "17:34").
 
 ```html
-<div id="clock" role="timer" aria-live="polite" aria-atomic="true">
-  …
-</div>
+<div id="clock" role="timer" aria-live="polite" aria-atomic="true">…</div>
 ```
 
 Another example of `aria-atomic` - an update/notification made as a result of a user action.
 
 ```html
 <div id="date-input">
-  <label>Year:
-    <input type="text" id="year" value="1990" onblur="change(event)"/>
-  </label>
+  <label for="year">Year:</label>
+  <input type="text" id="year" value="1990" onblur="change(event)" />
 </div>
 
 <div id="date-output" aria-atomic="true" aria-live="polite">
@@ -227,7 +237,7 @@ function change(event) {
     default:
       return;
   }
-};
+}
 ```
 
 Without `aria-atomic="true"` the screen reader announces only the changed value of year. With `aria-atomic="true"`, the screen reader announces "The set year is: _changed value_"

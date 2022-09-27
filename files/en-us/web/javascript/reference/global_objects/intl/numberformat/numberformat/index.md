@@ -24,7 +24,7 @@ number formatting.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.NumberFormat()
 new Intl.NumberFormat(locales)
 new Intl.NumberFormat(locales, options)
@@ -72,6 +72,7 @@ Intl.NumberFormat(locales, options)
         - `"narrowSymbol"`: use a narrow format symbol ("$100" rather than "US$100").
         - `"code"`: use the ISO currency code.
         - `"name"`: use a localized currency name such as `"dollar"`.
+
     - `currencySign`
       - : In many locales, accounting format means to wrap the number with parentheses instead of appending a minus sign.
         You can enable this formatting by setting the `currencySign` option to `"accounting"`.
@@ -233,13 +234,13 @@ Intl.NumberFormat(locales, options)
       - : The minimum number of fraction digits to use.
         Possible values are from 0 to 20;
         the default for plain number and percent formatting is 0;
-        the default for currency formatting is the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml)
+        the default for currency formatting is the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml)
         (2 if the list doesn't provide that information).
     - `maximumFractionDigits`
       - : The maximum number of fraction digits to use.
         Possible values are from 0 to 20;
         the default for plain number formatting is the larger of `minimumFractionDigits` and 3;
-        the default for currency formatting is the larger of `minimumFractionDigits` and the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list_one.xml) (2 if the list doesn't provide that information);
+        the default for currency formatting is the larger of `minimumFractionDigits` and the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml) (2 if the list doesn't provide that information);
         the default for percent formatting is the larger of `minimumFractionDigits` and 0.
     - `minimumSignificantDigits`
       - : The minimum number of significant digits to use.
@@ -732,17 +733,17 @@ console.log(
 
 The table below show the effect of different rounding modes for positive and negative values that are on and around the half-increment.
 
-| rounding mode  | 2.23 | 2.25 | 2.28 | -2.23 | -2.25 | -2.28 |
-| -------------- | ---- | ---- | ---- | ----- | ----- | ----- |
-| `ceil`         | 2.3  | 2.3  | 2.3  | -2.2  | -2.2  | -2.2  |
-| `floor`        | 2.2  | 2.2  | 2.2  | -2.3  | -2.3  | -2.3  |
-| `expand`       | 2.3  | 2.3  | 2.3  | -2.3  | -2.3  | -2.3  |
-| `trunc`        | 2.2  | 2.2  | 2.2  | -2.2  | -2.2  | -2.2  |
-| `halfCeil`     | 2.2  | 2.3  | 2.3  | -2.2  | -2.2  | -2.3  |
-| `halfFloor`    | 2.2  | 2.2  | 2.3  | -2.2  | -2.3  | -2.3  |
-| `halfExpand`   | 2.2  | 2.3  | 2.3  | -2.2  | -2.3  | -2.3  |
-| `halfTrunc`    | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
-| `halfEven`     | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
+| rounding mode | 2.23 | 2.25 | 2.28 | -2.23 | -2.25 | -2.28 |
+| ------------- | ---- | ---- | ---- | ----- | ----- | ----- |
+| `ceil`        | 2.3  | 2.3  | 2.3  | -2.2  | -2.2  | -2.2  |
+| `floor`       | 2.2  | 2.2  | 2.2  | -2.3  | -2.3  | -2.3  |
+| `expand`      | 2.3  | 2.3  | 2.3  | -2.3  | -2.3  | -2.3  |
+| `trunc`       | 2.2  | 2.2  | 2.2  | -2.2  | -2.2  | -2.2  |
+| `halfCeil`    | 2.2  | 2.3  | 2.3  | -2.2  | -2.2  | -2.3  |
+| `halfFloor`   | 2.2  | 2.2  | 2.3  | -2.2  | -2.3  | -2.3  |
+| `halfExpand`  | 2.2  | 2.3  | 2.3  | -2.2  | -2.3  | -2.3  |
+| `halfTrunc`   | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
+| `halfEven`    | 2.2  | 2.2  | 2.3  | -2.2  | -2.2  | -2.3  |
 
 When using `halfEven`, its behavior also depends on the parity (odd or even) of the last digit of the rounded number. For example, the behavior of `halfEven` in the table above is the same as `halfTrunc`, because the magnitudes of all numbers are between a smaller "even" number (2.2) and a larger "odd" number (2.3). If the numbers are between ±2.3 and ±2.4, `halfEven` will behave like `halfExpand` instead. This behavior avoids consistently under- or over-estimating half-increments in a large data sample.
 

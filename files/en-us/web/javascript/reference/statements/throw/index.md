@@ -21,8 +21,8 @@ the program will terminate.
 
 ## Syntax
 
-```js
-throw expression;
+```js-nolint
+throw expression
 ```
 
 - `expression`

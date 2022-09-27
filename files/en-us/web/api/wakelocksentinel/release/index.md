@@ -23,7 +23,7 @@ once the sentinel has been successfully released.
 
 ## Syntax
 
-```js
+```js-nolint
 release()
 ```
 

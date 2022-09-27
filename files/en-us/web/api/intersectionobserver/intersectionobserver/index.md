@@ -25,7 +25,7 @@ If the threshold list is empty, it's set to the array `[0.0]`.
 
 ## Syntax
 
-```js
+```js-nolint
 new IntersectionObserver(callback)
 new IntersectionObserver(callback, options)
 ```

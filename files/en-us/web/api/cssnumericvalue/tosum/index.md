@@ -22,7 +22,7 @@ The **`toSum()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 toSum(units)
 ```
 

@@ -16,7 +16,7 @@ There are several ways to color shapes (including specifying attributes on the o
 
 ### Painting
 
-Basic coloring can be done by setting two attributes on the node: `fill` and `stroke`. Using `fill` sets the color inside the object and `stroke` sets the color of the line drawn around the object. You can use the same css color naming schemes that you use in HTML, whether that's color names (that is `red`), rgb values (that is `rgb(255,0,0)`), hex values, rgba values, etc.
+Basic coloring can be done by setting two attributes on the node: `fill` and `stroke`. Using `fill` sets the color inside the object and `stroke` sets the color of the line drawn around the object. You can use the same CSS color naming schemes that you use in HTML, whether that's color names (that is `red`), rgb values (that is `rgb(255,0,0)`), hex values, rgba values, etc.
 
 ```xml
  <rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
@@ -114,7 +114,7 @@ Or it can be moved to a special style section that you include. Instead of shovi
 <?xml version="1.0" standalone="no"?>
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
   <defs>
-    <style type="text/css"><![CDATA[
+    <style><![CDATA[
        #MyRect {
          stroke: black;
          fill: red;
@@ -128,10 +128,10 @@ Or it can be moved to a special style section that you include. Instead of shovi
 Moving styles to an area like this can make it easier to adjust properties on large groups of elements. You can also use things like the **`:hover` pseudo class** to create rollover effects:
 
 ```css
- #MyRect:hover {
-   stroke: black;
-   fill: blue;
- }
+#MyRect:hover {
+  stroke: black;
+  fill: blue;
+}
 ```
 
 You can also specify an external stylesheet for your CSS rules through [normal XML-stylesheet syntax](https://www.w3.org/TR/xml-stylesheet/):

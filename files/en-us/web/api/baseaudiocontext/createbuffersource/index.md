@@ -29,7 +29,7 @@ track.
 
 ## Syntax
 
-```js
+```js-nolint
 createBufferSource()
 ```
 
@@ -52,9 +52,9 @@ what is going on.
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const button = document.querySelector('button');
-const pre = document.querySelector('pre');
-const myScript = document.querySelector('script');
+const button = document.querySelector("button");
+const pre = document.querySelector("pre");
+const myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -64,19 +64,23 @@ const channels = 2;
 // sample rate of the AudioContext
 const frameCount = audioCtx.sampleRate * 2.0;
 
-const myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(
+  channels,
+  frameCount,
+  audioCtx.sampleRate
+);
 
 button.onclick = () => {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {
-   // This gives us the actual ArrayBuffer that contains the data
-   const nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (let i = 0; i < frameCount; i++) {
-     // Math.random() is in [0; 1.0]
-     // audio needs to be in [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // This gives us the actual ArrayBuffer that contains the data
+    const nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (let i = 0; i < frameCount; i++) {
+      // Math.random() is in [0; 1.0]
+      // audio needs to be in [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // Get an AudioBufferSourceNode.
@@ -89,7 +93,7 @@ button.onclick = () => {
   source.connect(audioCtx.destination);
   // start the source playing
   source.start();
-}
+};
 ```
 
 ## Specifications

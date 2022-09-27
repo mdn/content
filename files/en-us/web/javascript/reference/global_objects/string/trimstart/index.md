@@ -20,7 +20,7 @@ beginning of a string. `trimLeft()` is an alias of this method.
 
 ## Syntax
 
-```js
+```js-nolint
 trimStart()
 
 trimLeft()

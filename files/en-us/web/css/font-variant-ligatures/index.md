@@ -1,6 +1,7 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -22,14 +23,14 @@ The **`font-variant-ligatures`** CSS property controls which {{Glossary("ligatur
 /* Keyword values */
 font-variant-ligatures: normal;
 font-variant-ligatures: none;
-font-variant-ligatures: common-ligatures;           /* <common-lig-values> */
-font-variant-ligatures: no-common-ligatures;        /* <common-lig-values> */
-font-variant-ligatures: discretionary-ligatures;    /* <discretionary-lig-values> */
+font-variant-ligatures: common-ligatures; /* <common-lig-values> */
+font-variant-ligatures: no-common-ligatures; /* <common-lig-values> */
+font-variant-ligatures: discretionary-ligatures; /* <discretionary-lig-values> */
 font-variant-ligatures: no-discretionary-ligatures; /* <discretionary-lig-values> */
-font-variant-ligatures: historical-ligatures;       /* <historical-lig-values> */
-font-variant-ligatures: no-historical-ligatures;    /* <historical-lig-values> */
-font-variant-ligatures: contextual;                 /* <contextual-alt-values> */
-font-variant-ligatures: no-contextual;              /* <contextual-alt-values> */
+font-variant-ligatures: historical-ligatures; /* <historical-lig-values> */
+font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
+font-variant-ligatures: contextual; /* <contextual-alt-values> */
+font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
 
 /* Global values */
 font-variant-ligatures: inherit;
@@ -90,49 +91,45 @@ The `font-variant-ligatures` property is specified as one of the keyword values 
 #### HTML
 
 ```html
-<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet" />
 <p class="normal">
-  normal<br>
+  normal<br />
   if fi ff tf ft jf fj
 </p>
 <p class="none">
-  none<br>
+  none<br />
   if fi ff tf ft jf fj
 </p>
 <p class="common-ligatures">
-  common-ligatures<br>
+  common-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-common-ligatures">
-  no-common-ligatures<br>
+  no-common-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="discretionary-ligatures">
-  discretionary-ligatures<br>
+  discretionary-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-discretionary-ligatures">
-  no-discretionary-ligatures<br>
+  no-discretionary-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="historical-ligatures">
-  historical-ligatures<br>
+  historical-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-historical-ligatures">
-  no-historical-ligatures<br>
+  no-historical-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="contextual">
-  contextual<br>
+  contextual<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-contextual">
-  no-contextual<br>
-  if fi ff tf ft jf fj
-</p>
-<p class="contextual">
-  contextual<br>
+  no-contextual<br />
   if fi ff tf ft jf fj
 </p>
 ```
@@ -181,10 +178,6 @@ p {
 
 .no-contextual {
   font-variant-ligatures: no-contextual;
-}
-
-.contextual {
-  font-variant-ligatures: contextual;
 }
 ```
 

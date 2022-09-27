@@ -3,7 +3,6 @@ title: Sloppy mode
 slug: Glossary/Sloppy_mode
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
   - Sloppy
 ---

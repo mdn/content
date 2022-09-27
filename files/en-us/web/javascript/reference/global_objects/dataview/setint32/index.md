@@ -19,7 +19,7 @@ The **`setInt32()`** method stores a signed 32-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 setInt32(byteOffset, value)
 setInt32(byteOffset, value, littleEndian)
 ```

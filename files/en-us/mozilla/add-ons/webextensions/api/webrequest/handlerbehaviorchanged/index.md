@@ -14,7 +14,9 @@ tags:
 browser-compat: webextensions.api.webRequest.handlerBehaviorChanged
 ---
 
-{{AddonSidebar()}}This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache. If the browser has loaded a page, and the page is reloaded, the browser may reload the page from its in-memory cache, and in this case, events will not be triggered for the request.
+{{AddonSidebar()}}
+
+This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache. If the browser has loaded a page, and the page is reloaded, the browser may reload the page from its in-memory cache, and in this case, events will not be triggered for the request.
 
 Suppose an extension's job is to block web requests against a pattern, and the following scenario happens:
 
@@ -35,7 +37,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let flushingCache = browser.webRequest.handlerBehaviorChanged()
 ```
 

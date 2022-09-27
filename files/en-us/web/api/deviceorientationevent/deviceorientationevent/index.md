@@ -17,7 +17,7 @@ The **`DeviceOrientationEvent()`** constructor creates a new {{domxref("DeviceOr
 
 ## Syntax
 
-```js
+```js-nolint
 new DeviceOrientationEvent(type)
 new DeviceOrientationEvent(type, options)
 ```

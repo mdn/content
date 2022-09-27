@@ -19,7 +19,7 @@ values for generic vertex attributes.
 
 ## Syntax
 
-```js
+```js-nolint
 vertexAttrib1f(index, v0)
 vertexAttrib2f(index, v0, v1)
 vertexAttrib3f(index, v0, v1, v2)

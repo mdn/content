@@ -22,7 +22,7 @@ piece of code once the timer expires.
 
 ## Syntax
 
-```js
+```js-nolint
 setTimeout(code)
 setTimeout(code, delay)
 
@@ -407,7 +407,7 @@ function clearMessage() {
 
 ```css hidden
 #output {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 ```
 

@@ -34,14 +34,18 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
-  <a href="https://developer.mozilla.org/"><text x="10" y="25">MDN Web Docs</text></a>
+  <a href="https://developer.mozilla.org/">
+    <text x="10" y="25">MDN Web Docs</text>
+  </a>
 </svg>
 ```
 
@@ -189,14 +193,16 @@ For {{SVGElement("image")}}, `href` defines a URL referring to the image to rend
 </table>
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <image href="fxlogo.png" x="0" y="0" height="100" width="100"/>
+  <image href="fxlogo.png" x="0" y="0" height="100" width="100" />
 </svg>
 ```
 

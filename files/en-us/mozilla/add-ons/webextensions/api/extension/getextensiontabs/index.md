@@ -22,7 +22,7 @@ Returns an array of the JavaScript [Window](/en-US/docs/Web/API/Window) objects 
 
 ## Syntax
 
-```js
+```js-nolint
 chrome.extension.getExtensionTabs(
   windowId // optional integer
 )

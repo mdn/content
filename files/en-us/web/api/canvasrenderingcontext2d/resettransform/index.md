@@ -18,8 +18,8 @@ method of the Canvas 2D API resets the current transform to the identity matrix.
 
 ## Syntax
 
-```js
-void ctx.resetTransform();
+```js-nolint
+void ctx.resetTransform()
 ```
 
 ## Examples

@@ -19,7 +19,7 @@ The **`createProjectionLayer()`** method of the {{domxref("XRWebGLBinding")}} in
 
 ## Syntax
 
-```js
+```js-nolint
 createProjectionLayer(options)
 ```
 

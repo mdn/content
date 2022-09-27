@@ -1,6 +1,7 @@
 ---
 title: print-color-adjust
 slug: Web/CSS/print-color-adjust
+page-type: css-property
 tags:
   - Adjusting Colors
   - CSS
@@ -82,7 +83,10 @@ For whatever reason, this is the desired appearance in any rendering environment
 ```css
 .my-box {
   background-color: black;
-  background-image: linear-gradient(rgba(0, 0, 180, 0.5), rgba(70, 140, 220, 0.5));
+  background-image: linear-gradient(
+    rgba(0, 0, 180, 0.5),
+    rgba(70, 140, 220, 0.5)
+  );
   color: #900;
   width: 15rem;
   height: 6rem;

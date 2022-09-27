@@ -32,7 +32,7 @@ mode callback.
 
 ## Syntax
 
-```js
+```js-nolint
 createIndex(indexName, keyPath)
 createIndex(indexName, keyPath, objectParameters)
 ```

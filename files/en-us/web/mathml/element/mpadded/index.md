@@ -35,16 +35,17 @@ It is possible to use the keywords `"depth`", `"height"`, and `"width"` as a pse
 ## Examples
 
 ```html
-<math>
-
-  <mpadded height="+150px" width="100px" lspace="2height">
+<math display="block">
+  <mpadded height="+150px" width="100px" lspace="2height"
+           style="background: lightblue">
     <mi>x</mi>
     <mo>+</mo>
     <mi>y</mi>
   </mpadded>
-
 </math>
 ```
+
+{{ EmbedLiveSample('mover_example', 700, 200, "", "") }}
 
 ## Specifications
 

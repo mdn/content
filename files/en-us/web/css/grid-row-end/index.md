@@ -1,6 +1,7 @@
 ---
 title: grid-row-end
 slug: Web/CSS/grid-row-end
+page-type: css-property
 tags:
   - CSS
   - CSS Grid
@@ -120,7 +121,9 @@ grid-row-end: unset;
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

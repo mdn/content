@@ -1,6 +1,7 @@
 ---
 title: mask-mode
 slug: Web/CSS/mask-mode
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

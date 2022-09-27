@@ -32,7 +32,7 @@ represents an event regarding the state of a WebXR reference space object,
 
 ## Syntax
 
-```js
+```js-nolint
 new XRReferenceSpaceEvent(type, options)
 ```
 

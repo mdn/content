@@ -21,7 +21,7 @@ added to a particular element in this manner.
 
 ## Syntax
 
-```js
+```js-nolint
 createAttribute(name)
 ```
 

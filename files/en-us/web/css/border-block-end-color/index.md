@@ -1,6 +1,7 @@
 ---
 title: border-block-end-color
 slug: Web/CSS/border-block-end-color
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
@@ -24,7 +25,7 @@ The **`border-block-end-color`** [CSS](/en-US/docs/Web/CSS) property defines the
 
 ```css
 border-block-end-color: yellow;
-border-block-end-color: #F5F6F7;
+border-block-end-color: #f5f6f7;
 
 /* Global values */
 border-block-end-color: inherit;
@@ -91,5 +92,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - This property maps to one of the physical border properties: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

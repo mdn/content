@@ -1,6 +1,7 @@
 ---
 title: <alpha-value>
 slug: Web/CSS/alpha-value
+page-type: css-type
 tags:
   - Alpha
   - Alpha-value
@@ -43,7 +44,7 @@ Here an alpha value is used to set partially transparent text:
 ```css
 /* <rgba()> */
 color: rgba(34, 12, 64, 0.6);
-color: rgba(34.0 12 64 / 60%);
+color: rgba(34 12 64 / 60%);
 ```
 
 ### Setting shape image threshold

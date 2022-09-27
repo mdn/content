@@ -15,8 +15,8 @@ attached {{domxref("WebGLShader")}} from a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
-void gl.detachShader(program, shader);
+```js-nolint
+detachShader(program, shader)
 ```
 
 ### Parameters

@@ -1,5 +1,5 @@
 ---
-title: 'CSS: Cascading Style Sheets'
+title: "CSS: Cascading Style Sheets"
 slug: Web/CSS
 tags:
   - CSS
@@ -12,7 +12,7 @@ tags:
   - Style Sheets
   - Styles
   - Stylesheets
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{CSSRef}}

@@ -1,8 +1,9 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/@font-face/font-variation-settings
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - CSS Descriptor
@@ -49,11 +50,11 @@ normal                 |
 
 ```css
 @font-face {
-  font-family: 'OpenTypeFont';
-  src: url('open_type_font.woff2') format('woff2');
+  font-family: "OpenTypeFont";
+  src: url("open_type_font.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: 'wght' 400, 'wdth' 300;
+  font-variation-settings: "wght" 400, "wdth" 300;
 }
 ```
 

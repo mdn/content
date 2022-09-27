@@ -18,7 +18,7 @@ the drawing to a specified rectangle.
 
 ## Syntax
 
-```js
+```js-nolint
 scissor(x, y, width, height)
 ```
 

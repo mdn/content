@@ -51,7 +51,7 @@ Now let's introduce Vue, the third of our frameworks. In this article we'll look
 
 ## A clearer Vue
 
-Vue is a modern JavaScript framework that provides useful facilities for progressive enhancement — unlike many other frameworks, you can use Vue to enhance existing HTML. This lets you use Vue as a drop-in replacement for a library like [jQuery](/en-US/docs/Glossary/jQuery).
+Vue is a modern JavaScript framework that provides useful facilities for progressive enhancement — unlike many other frameworks, you can use Vue to enhance existing HTML. This lets you use Vue as a drop-in replacement for a library like [jQuery](https://jquery.com/).
 
 That being said, you can also use Vue to write entire Single Page Applications (SPAs). This allows you to create markup managed entirely by Vue, which can improve developer experience and performance when dealing with complex applications. It also allows you to take advantage of libraries for client-side routing and state management when you need to. Additionally, Vue takes a "middle ground" approach to tooling like client-side routing and state management. While the Vue core team maintains suggested libraries for these functions, they are not directly bundled into Vue. This allows you to select a different routing/state management library if they better fit your application.
 
@@ -242,7 +242,7 @@ If you navigate to the "local" address in a new browser tab (this should be some
 Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/en-US/docs/Web/HTML/Element/img) element from the template section:
 
 ```html
-<img alt="Vue logo" src="./assets/logo.png">
+<img alt="Vue logo" src="./assets/logo.png" />
 ```
 
 If your server is still running, you should see the logo removed from the rendered site almost instantly. Let's also remove the `HelloWorld` component from our template.
@@ -250,7 +250,7 @@ If your server is still running, you should see the logo removed from the render
 First of all delete this line:
 
 ```html
-<HelloWorld msg="Welcome to Your Vue.js App"/>
+<HelloWorld msg="Welcome to Your Vue.js App" />
 ```
 
 If you save your `App.vue` file now, the rendered app will throw an error because we've registered the component but are not using it. We also need to remove the lines from inside the `<script>` element that import and register the component:

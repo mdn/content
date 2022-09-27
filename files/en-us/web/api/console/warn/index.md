@@ -24,7 +24,7 @@ console.
 
 ## Syntax
 
-```js
+```js-nolint
 warn(obj1)
 warn(obj1, /* …, */ objN)
 warn(msg)

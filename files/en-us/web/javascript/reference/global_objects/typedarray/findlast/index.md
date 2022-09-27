@@ -24,7 +24,7 @@ See also the {{jsxref("TypedArray.findLastIndex()", "findLastIndex()")}} method,
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findLast((element) => { /* ... */ } )
 findLast((element, index) => { /* ... */ } )

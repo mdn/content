@@ -3,7 +3,6 @@ title: Attribute
 slug: Glossary/Attribute
 tags:
   - CodingScripting
-  - Glossary
   - HTML
 ---
 

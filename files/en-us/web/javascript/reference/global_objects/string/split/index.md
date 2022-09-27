@@ -20,7 +20,7 @@ The **`split()`** method takes a pattern and divides a {{jsxref("String")}} into
 
 ## Syntax
 
-```js
+```js-nolint
 split()
 split(separator)
 split(separator, limit)

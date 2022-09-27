@@ -1,6 +1,7 @@
 ---
-title: ':root'
+title: ":root"
 slug: Web/CSS/:root
+page-type: css-pseudo-class
 tags:
   - CSS
   - Element

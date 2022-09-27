@@ -16,8 +16,8 @@ revocable {{jsxref("Proxy")}} object.
 
 ## Syntax
 
-```js
-Proxy.revocable(target, handler);
+```js-nolint
+Proxy.revocable(target, handler)
 ```
 
 ### Parameters

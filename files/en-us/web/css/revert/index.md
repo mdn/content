@@ -77,9 +77,7 @@ Reverting all values is useful in a situation where you've made several style ch
 ```html
 <h3>This will have custom styles</h3>
 <p>Just some text</p>
-<h3 style="all: revert">
-  This should be reverted to browser/user defaults.
-</h3>
+<h3 style="all: revert">This should be reverted to browser/user defaults.</h3>
 <p>Just some text</p>
 ```
 
@@ -119,9 +117,15 @@ Reverting effectively removes the value for the element you select with some rul
 #### CSS
 
 ```css
-section { color: darkgreen }
-p { color: red }
-section.with-revert { color: revert }
+section {
+  color: darkgreen;
+}
+p {
+  color: red;
+}
+section.with-revert {
+  color: revert;
+}
 ```
 
 Notice how paragraph still has a red color even though a color property for the section was reverted. Also note that both the header and plain text node are black. This is exactly the same as if `section { color: darkgreen }` would not exist for the second section.

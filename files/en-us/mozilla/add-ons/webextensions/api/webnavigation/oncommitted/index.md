@@ -20,7 +20,7 @@ Fired when a navigation is committed. At least part of the new document has been
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onCommitted.addListener(
   listener,                 // function
   filter                    // optional object

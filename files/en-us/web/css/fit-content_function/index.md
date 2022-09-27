@@ -1,6 +1,7 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content_function
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -61,8 +62,8 @@ fit-content(40%)
 <div id="container">
   <div>Item as wide as the content.</div>
   <div>
-    Item with more text in it. Because the contents of it are
-    wider than the maximum width, it is clamped at 300 pixels.
+    Item with more text in it. Because the contents of it are wider than the
+    maximum width, it is clamped at 300 pixels.
   </div>
   <div>Flexible item</div>
 </div>

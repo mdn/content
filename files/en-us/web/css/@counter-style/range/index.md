@@ -1,8 +1,9 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
+page-type: css-at-rule-descriptor
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Counter Styles
@@ -88,7 +89,7 @@ auto
 ```css
 @counter-style range-multi-example {
   system: cyclic;
-  symbols: "\25A0" "\25A1";
+  symbols: "\25A0""\25A1";
   range: 2 4, 7 9;
 }
 

@@ -1,6 +1,7 @@
 ---
 title: ruby-position
 slug: Web/CSS/ruby-position
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -69,7 +70,7 @@ ruby-position: unset;
 
 ```css
 ruby {
-    ruby-position:over;
+  ruby-position: over;
 }
 ```
 
@@ -92,7 +93,7 @@ ruby {
 
 ```css
 ruby {
-    ruby-position:under;
+  ruby-position: under;
 }
 ```
 
@@ -106,7 +107,7 @@ ruby {
 
 ```html
 <ruby>
-  <rb>A<rb>B<rb>C</rb>
+  <rb>A</rb><rb>B</rb><rb>C</rb>
   <rtc>Above</rtc>
   <rtc>Below</rtc>
 </ruby>
@@ -116,7 +117,7 @@ ruby {
 
 ```css
 ruby {
-    ruby-position: alternate; /* this is also the initial value */
+  ruby-position: alternate; /* this is also the initial value */
 }
 ```
 

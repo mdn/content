@@ -1,6 +1,7 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -91,7 +92,9 @@ This property may take one of two forms:
 
 ```css
 @font-feature-values "Leitura Display Swashes" {
-    @swash { fancy: 1 }
+  @swash {
+    fancy: 1;
+  }
 }
 
 p {

@@ -22,7 +22,7 @@ method only stays for maintaining compatibility with very old scripts.
 
 ## Syntax
 
-```js
+```js-nolint
 taintEnabled()
 ```
 

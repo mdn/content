@@ -16,7 +16,7 @@ The **`Element.remove()`** method removes the element from the DOM.
 
 ## Syntax
 
-```js
+```js-nolint
 remove()
 ```
 

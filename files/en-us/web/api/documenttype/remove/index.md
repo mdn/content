@@ -22,7 +22,7 @@ The **`DocumentType.remove()`** method removes a document's `doctype`.
 
 ## Syntax
 
-```js
+```js-nolint
 remove()
 ```
 

@@ -18,7 +18,7 @@ buffer is enabled or disabled.
 
 ## Syntax
 
-```js
+```js-nolint
 depthMask(flag)
 ```
 

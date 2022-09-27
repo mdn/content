@@ -1,6 +1,7 @@
 ---
-title: ':playing'
+title: ":playing"
 slug: Web/CSS/:playing
+page-type: css-pseudo-class
 tags:
   - CSS
   - Pseudo-class
@@ -17,7 +18,6 @@ A resource is playing even if in buffering state or paused for any reason other 
 
 ```css
 :playing {
-
 }
 ```
 

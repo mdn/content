@@ -22,7 +22,7 @@ Iterator** object that contains the keys for each index in the array.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
@@ -30,9 +30,15 @@ keys()
 
 A new {{jsxref("Array")}} iterator object.
 
+## Description
+
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `keys()` method iterates empty slots as if they have the value `undefined`.
+
 ## Examples
 
-### Key iterator doesn't ignore holes
+### Using keys() on sparse arrays
+
+Unlike {{jsxref("Object.keys()")}}, which only includes keys that actually exist in the array, the `keys()` iterator doesn't ignore holes representing missing properties.
 
 ```js
 const arr = ['a', , 'c'];

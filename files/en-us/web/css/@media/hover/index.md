@@ -1,8 +1,9 @@
 ---
 title: hover
 slug: Web/CSS/@media/hover
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
@@ -34,12 +35,14 @@ The `hover` feature is specified as a keyword value chosen from the list below.
 ### CSS
 
 ```css
-a:hover { /* default hover effect */
+/* default hover effect */
+a:hover {
   color: black;
   background: yellow;
 }
 
-@media (hover: hover) { /* when supported */
+@media (hover: hover) {
+  /* when hover is supported */
   a:hover {
     color: white;
     background: black;

@@ -17,7 +17,7 @@ The **`handler.construct()`** method is a trap for the {{jsxref("Operators/new",
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   construct(target, argumentsList, newTarget) {
   }

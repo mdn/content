@@ -23,7 +23,7 @@ although in practice it seems to have the same effect as
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

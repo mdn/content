@@ -22,7 +22,7 @@ The **`values()`** method returns a new _array [iterator](/en-US/docs/Web/JavaSc
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
@@ -37,6 +37,8 @@ A new iterable iterator object.
 ```js
 Array.prototype.values === Array.prototype[Symbol.iterator]; // true
 ```
+
+The `values()` method does not special case [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). Empty slots are visited as if they have value `undefined`.
 
 ## Examples
 
@@ -118,6 +120,18 @@ console.log(iterator); // Array Iterator { }
 console.log(iterator.next().value); // "a"
 arr[1] = "n";
 console.log(iterator.next().value); // "n"
+```
+
+### Iterating sparse arrays
+
+`values()` will visit empty slots as if they are `undefined`.
+
+```js
+for (const element of [, "a"].values()) {
+  console.log(element);
+}
+// undefined
+// 'a'
 ```
 
 ## Specifications

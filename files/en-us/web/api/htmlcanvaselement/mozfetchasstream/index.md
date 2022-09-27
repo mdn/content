@@ -21,7 +21,7 @@ canvas as image data. However, this non-standard and internal method has been re
 
 ## Syntax
 
-```js
+```js-nolint
 mozFetchAsStream(callback)
 mozFetchAsStream(callback, type)
 ```

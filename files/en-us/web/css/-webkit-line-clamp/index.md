@@ -1,8 +1,9 @@
 ---
-title: '-webkit-line-clamp'
+title: "-webkit-line-clamp"
 slug: Web/CSS/-webkit-line-clamp
+page-type: css-property
 tags:
-  - '-webkit-line-clamp'
+  - "-webkit-line-clamp"
   - CSS
   - CSS Property
   - recipe:css-property
@@ -58,8 +59,9 @@ When applied to anchor elements, the truncating can happen in the middle of the 
 
 ```html
 <p>
-  In this example the <code>-webkit-line-clamp</code> property is set to <code>3</code>, which means the text is clamped after three lines.
-  An ellipsis will be shown at the point where the text is clamped.
+  In this example the <code>-webkit-line-clamp</code> property is set to
+  <code>3</code>, which means the text is clamped after three lines. An ellipsis
+  will be shown at the point where the text is clamped.
 </p>
 ```
 

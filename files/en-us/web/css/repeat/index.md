@@ -1,6 +1,7 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -74,8 +75,9 @@ Then if a property declaration uses `<auto-repeat>`, it is only allowed to use `
 
 ```css example-bad
 .wrapper {
-  grid-template-columns:  repeat(auto-fill, 10px)
-                          repeat(2, minmax(min-content, max-content));
+  grid-template-columns:
+    repeat(auto-fill, 10px)
+    repeat(2, minmax(min-content, max-content));
 }
 ```
 
@@ -132,21 +134,11 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 
 ```html
 <div id="container">
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    Inflexible item of 100 pixels width.
-  </div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>Inflexible item of 100 pixels width.</div>
 </div>
 ```
 

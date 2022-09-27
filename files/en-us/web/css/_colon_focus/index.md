@@ -1,8 +1,9 @@
 ---
-title: ':focus'
+title: ":focus"
 slug: Web/CSS/:focus
+page-type: css-pseudo-class
 tags:
-  - ':focus'
+  - ":focus"
   - CSS
   - Layout
   - Pseudo-class
@@ -31,8 +32,8 @@ The **`:focus`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 ### HTML
 
 ```html
-<div><input class="red-input" value="I'll be red when focused."></div>
-<div><input class="blue-input" value="I'll be blue when focused."></div>
+<div><input class="red-input" value="I'll be red when focused." /></div>
+<div><input class="blue-input" value="I'll be blue when focused." /></div>
 ```
 
 ### CSS

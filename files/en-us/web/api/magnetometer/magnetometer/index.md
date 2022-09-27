@@ -28,7 +28,7 @@ instructions.
 
 ## Syntax
 
-```js
+```js-nolint
 new Magnetometer()
 new Magnetometer(options)
 ```

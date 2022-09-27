@@ -19,7 +19,7 @@ for active uniform blocks.
 
 ## Syntax
 
-```js
+```js-nolint
 uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding)
 ```
 

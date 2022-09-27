@@ -1,6 +1,7 @@
 ---
-title: ':paused'
+title: ":paused"
 slug: Web/CSS/:paused
+page-type: css-pseudo-class
 tags:
   - CSS
   - Pseudo-class
@@ -17,7 +18,6 @@ A resource is paused either due to being in an non-activated state, or due to th
 
 ```css
 :paused {
-
 }
 ```
 

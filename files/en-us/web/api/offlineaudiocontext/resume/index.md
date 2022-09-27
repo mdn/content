@@ -22,7 +22,7 @@ context that has been suspended. The promise resolves immediately because the
 
 ## Syntax
 
-```js
+```js-nolint
 resume()
 ```
 

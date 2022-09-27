@@ -19,7 +19,7 @@ The **`insertAdjacentText()`** method of the {{domxref("Element")}} interface, g
 
 ## Syntax
 
-```js
+```js-nolint
 insertAdjacentText(where, data)
 ```
 

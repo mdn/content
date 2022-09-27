@@ -20,7 +20,7 @@ back.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.sub(typedArray, index, value)
 ```
 

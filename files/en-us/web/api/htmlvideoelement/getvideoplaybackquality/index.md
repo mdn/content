@@ -31,7 +31,7 @@ The data returned can be used to evaluate the quality of the video stream.
 
 ## Syntax
 
-```js
+```js-nolint
 getVideoPlaybackQuality()
 ```
 

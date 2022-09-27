@@ -4,7 +4,6 @@ slug: Glossary/Grid
 tags:
   - CSS
   - CSS Grid
-  - Glossary
 ---
 
 A _CSS grid_ is defined using the `grid` value of the {{cssxref("display")}} property; you can define columns and rows on your grid using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties.

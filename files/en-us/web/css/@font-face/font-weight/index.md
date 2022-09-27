@@ -1,8 +1,9 @@
 ---
 title: font-weight
 slug: Web/CSS/@font-face/font-weight
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference
@@ -97,8 +98,8 @@ The following finds a local Open Sans font or imports it, and allows using the f
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src: local("Open Sans") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+      format("woff");
   font-weight: 400;
 }
 ```

@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let opening = browser.downloads.open(
   downloadId      // integer
 )

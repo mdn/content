@@ -1,6 +1,7 @@
 ---
 title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Property
@@ -30,7 +31,7 @@ This property is a shorthand for the following CSS properties:
 ```css
 /* <length> values */
 scroll-margin-block: 10px;
-scroll-margin-block: 1em .5em ;
+scroll-margin-block: 1em 0.5em;
 
 /* Global values */
 scroll-margin-block: inherit;

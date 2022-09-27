@@ -18,7 +18,7 @@ The **`toString()`** method returns a string representing the specified {{jsxref
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

@@ -53,8 +53,12 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <label>Some text:
+    <input type="text" placeholder="text input" />
+  </label>
+  <label>Password:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 
@@ -84,8 +88,12 @@ There are two ways of implementing event delegation for this event: by using the
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <label>Some text:
+    <input type="text" placeholder="text input" />
+  </label>
+  <label>Password:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 

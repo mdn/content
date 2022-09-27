@@ -22,7 +22,7 @@ observer, emptying it out.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 

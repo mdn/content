@@ -23,7 +23,7 @@ The **`Intl.RelativeTimeFormat.prototype.format()`** method formats a `value` an
 
 ## Syntax
 
-```js
+```js-nolint
 format(value, unit)
 ```
 

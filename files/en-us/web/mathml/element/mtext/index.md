@@ -22,14 +22,16 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 ## Examples
 
 ```html
-<math>
-
+<math display="block">
   <mtext>Theorem of Pythagoras</mtext>
+</math>
 
+<math display="block">
   <mtext>/* comment here */</mtext>
-
 </math>
 ```
+
+{{ EmbedLiveSample('mtext_example', 700, 200, "", "") }}
 
 ## Specifications
 

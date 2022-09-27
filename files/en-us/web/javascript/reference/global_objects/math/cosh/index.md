@@ -20,7 +20,7 @@ The **`Math.cosh()`** function returns the hyperbolic cosine of a number. That i
 
 ## Syntax
 
-```js
+```js-nolint
 Math.cosh(x)
 ```
 

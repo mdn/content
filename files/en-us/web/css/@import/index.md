@@ -1,6 +1,7 @@
 ---
-title: '@import'
+title: "@import"
 slug: Web/CSS/@import
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS
@@ -40,7 +41,7 @@ where:
 
 ## Description
 
-Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules. The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
+Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules and layer creating [`@layer`](/en-US/docs/Web/CSS/@layer) statements. The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
 
 So that {{glossary("user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) after the URL. In the absence of any media query, the import is unconditional. Specifying `all` for the `list-of-media-queries` has the same effect.
 
@@ -59,7 +60,7 @@ The `@import` rule can also be used to create a [cascade layer](/en-US/docs/Web/
 ### Importing CSS rules
 
 ```css
-@import 'custom.css';
+@import "custom.css";
 @import url("chrome://communicator/skin/");
 ```
 
@@ -71,7 +72,7 @@ The two examples above show how to specify the _url_ as a `<string>` and as a `u
 @import url("fineprint.css") print;
 @import url("bluish.css") print, screen;
 @import "common.css" screen;
-@import url('landscape.css') screen and (orientation: landscape);
+@import url("landscape.css") screen and (orientation: landscape);
 @import url("narrow.css") supports(display: flex) screen and (max-width: 400px);
 ```
 
@@ -82,7 +83,7 @@ So for instance, the last `@import` rule will load the `narrow.css` stylesheet i
 ### Importing CSS rules into a cascade layer
 
 ```css
-@import 'theme.css' layer(utilities);
+@import "theme.css" layer(utilities);
 ```
 
 In the above example, a cascade layer named `utilities` is created and it will include rules from the imported stylesheet `theme`.
@@ -101,8 +102,8 @@ In the above example, a cascade layer named `utilities` is created and it will i
 In the above example, the rules in `headings.css` and `links.css` stylesheets cascade within the same layer as the `audio[controls]` rule.
 
 ```css
-@import 'theme.css' layer();
-@import 'style.css' layer;
+@import "theme.css" layer();
+@import "style.css" layer;
 ```
 
 This is an example of creating two separate anonymous cascade layers and importing the linked rules into each one separately. A cascade layer declared without a name is an anonymous cascade layer. Anonymous cascade layers are finalized when created: they do not provide any means for re-arranging or adding styles and they cannot be referenced from outside.

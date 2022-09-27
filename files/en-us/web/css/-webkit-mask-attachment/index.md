@@ -1,6 +1,7 @@
 ---
-title: '-webkit-mask-attachment'
+title: "-webkit-mask-attachment"
 slug: Web/CSS/-webkit-mask-attachment
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -58,7 +59,7 @@ If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determine
 
 ```css
 body {
-  -webkit-mask-image: url('images/mask.png');
+  -webkit-mask-image: url("images/mask.png");
   -webkit-mask-attachment: fixed;
 }
 ```

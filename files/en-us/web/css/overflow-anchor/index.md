@@ -1,6 +1,7 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/overflow-anchor
+page-type: css-property
 tags:
   - CSS
   - CSS Property

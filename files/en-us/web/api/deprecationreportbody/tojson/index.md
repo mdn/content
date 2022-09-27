@@ -18,7 +18,7 @@ The **`toJSON()`** method of the {{domxref("DeprecationReportBody")}} interface 
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

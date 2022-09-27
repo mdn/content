@@ -8,7 +8,7 @@ tags:
   - Learn
   - Styling
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
@@ -32,7 +32,7 @@ To make the code work, we still need to apply this CSS (above) to your HTML docu
 1. Open your `index.html` file. Paste the following line in the head (between the {{HTMLElement("head")}} and `</head>` tags):
 
    ```html
-   <link href="styles/style.css" rel="stylesheet">
+   <link href="styles/style.css" rel="stylesheet" />
    ```
 
 2. Save `index.html` and load it in your browser. You should see something like this:
@@ -77,7 +77,9 @@ p {
 You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:
 
 ```css
-p, li, h1 {
+p,
+li,
+h1 {
   color: red;
 }
 ```
@@ -155,7 +157,9 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
 1. First, find the [output from Google Fonts](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font) that you previously saved from [What will your website look like?](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like). Add the {{htmlelement("link")}} element somewhere inside your `index.html`'s head (anywhere between the {{HTMLElement("head")}} and `</head>` tags). It looks something like this:
 
    ```html
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <link
+     href="https://fonts.googleapis.com/css?family=Open+Sans"
+     rel="stylesheet" />
    ```
 
    This code links your page to a style sheet that loads the Open Sans font family with your webpage.
@@ -165,7 +169,7 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
 
    ```css
    html {
-     font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
+     font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high */
      font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google Fonts */
    }
    ```
@@ -180,7 +184,8 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
      text-align: center;
    }
 
-   p, li {
+   p,
+   li {
      font-size: 16px;
      line-height: 2;
      letter-spacing: 1px;
@@ -221,7 +226,7 @@ To continue, let's add more CSS. Keep adding these new rules at the bottom of `s
 
 ```css
 html {
-  background-color: #00539F;
+  background-color: #00539f;
 }
 ```
 
@@ -233,7 +238,7 @@ This rule sets a background color for the entire page. Change the color code to 
 body {
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #ff9500;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -253,7 +258,7 @@ There are several declarations for the {{htmlelement("body")}} element. Let's go
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: #00539f;
   text-shadow: 3px 3px 1px black;
 }
 ```

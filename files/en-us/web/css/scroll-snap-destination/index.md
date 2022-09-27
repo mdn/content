@@ -1,6 +1,7 @@
 ---
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -88,7 +89,7 @@ scroll-snap-destination =
   display: flex;
 }
 
-#container > div:nth-child(-n+2) {
+#container > div:nth-child(-n + 2) {
   margin-right: 20px;
 }
 
@@ -124,11 +125,11 @@ scroll-snap-destination =
 }
 
 .scrollContainer > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 .scrollContainer > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 

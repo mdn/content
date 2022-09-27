@@ -38,7 +38,7 @@ If no {{HTTPHeader("Accept")}} header has been set using the
 
 ## Syntax
 
-```js
+```js-nolint
 send()
 send(body)
 ```

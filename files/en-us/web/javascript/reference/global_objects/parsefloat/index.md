@@ -18,7 +18,7 @@ point number.
 
 ## Syntax
 
-```js
+```js-nolint
 parseFloat(string)
 ```
 
@@ -47,10 +47,10 @@ number.
   ignoring the invalid character and characters following it.
 - A _second_ decimal point also stops parsing (characters up to that point
   will still be parsed).
-- Leading and trailing spaces in the argument are ignored.
+- Leading spaces in the argument are ignored.
 - If the argument's first character can't be converted to a number (it's not any of
   the above characters), `parseFloat` returns {{jsxref("NaN")}}.
-- `parseFloat` can also parse and return {{jsxref("Infinity")}} if the string starts with "Infinity" preceded by none or more white spaces.
+- `parseFloat()` can also parse and return {{jsxref("Infinity")}} or `-Infinity` if the string starts with `"Infinity"` or `"-Infinity"` preceded by none or more white spaces.
 - For numbers outside the `-1.7976931348623158e+308 - 1.7976931348623158e+308` range `-Infinity` or `Infinity` is returned.
 - `parseFloat` converts {{jsxref("BigInt")}} syntax to {{jsxref("Number", "Numbers")}}, losing precision. This happens because the trailing `n`
   character is discarded.

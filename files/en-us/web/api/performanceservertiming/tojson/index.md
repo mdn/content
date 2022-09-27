@@ -20,7 +20,7 @@ is the JSON representation of the {{domxref('PerformanceServerTiming')}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

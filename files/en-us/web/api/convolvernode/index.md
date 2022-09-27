@@ -72,14 +72,14 @@ The following example shows basic usage of an AudioContext to create a convolver
 let audioCtx = new window.AudioContext();
 
 async function createReverb() {
-    let convolver = audioCtx.createConvolver();
+  let convolver = audioCtx.createConvolver();
 
-    // load impulse response from file
-    let response     = await fetch("path/to/impulse-response.wav");
-    let arraybuffer  = await response.arrayBuffer();
-    convolver.buffer = await audioCtx.decodeAudioData(arraybuffer);
+  // load impulse response from file
+  let response = await fetch("path/to/impulse-response.wav");
+  let arraybuffer = await response.arrayBuffer();
+  convolver.buffer = await audioCtx.decodeAudioData(arraybuffer);
 
-    return convolver;
+  return convolver;
 }
 
 // …

@@ -18,7 +18,7 @@ The **`Object.isFrozen()`** determines if an object is
 
 ## Syntax
 
-```js
+```js-nolint
 Object.isFrozen(obj)
 ```
 

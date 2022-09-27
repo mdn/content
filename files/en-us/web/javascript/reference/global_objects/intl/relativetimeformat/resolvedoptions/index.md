@@ -24,7 +24,7 @@ The **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** method returns a n
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

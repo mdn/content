@@ -18,7 +18,7 @@ Fires when the captive portal state changes.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.captivePortal.onStateChanged.addListener(callback)
 browser.captivePortal.onStateChanged.removeListener(listener)
 browser.captivePortal.onStateChanged.hasListener(listener)

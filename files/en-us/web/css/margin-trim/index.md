@@ -1,6 +1,7 @@
 ---
 title: margin-trim
 slug: Web/CSS/margin-trim
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -90,7 +91,7 @@ span:last-child {
 It is a pain having to write another rule to achieve this, and it is also not very flexible. Instead, `margin-trim` could fix it:
 
 ```css
- article {
+article {
   margin-trim: in-flow;
   /* … */
 }

@@ -104,8 +104,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 This example demonstrates using the `<i>` element to mark text that is in another language.
 
 ```html
-<p>The Latin phrase <i>Veni, vidi, vici</i> is often
-mentioned in music, art, and literature.</p>
+<p>
+  The Latin phrase <i>Veni, vidi, vici</i> is often mentioned in music, art, and
+  literature.
+</p>
 ```
 
 ### Result

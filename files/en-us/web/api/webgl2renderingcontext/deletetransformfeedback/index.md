@@ -19,7 +19,7 @@ method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) deletes a given
 
 ## Syntax
 
-```js
+```js-nolint
 deleteTransformFeedback(transformFeedback)
 ```
 

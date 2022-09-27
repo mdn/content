@@ -29,7 +29,7 @@ longer.
 
 ## Syntax
 
-```js
+```js-nolint
 revokeObjectURL(objectURL)
 ```
 

@@ -20,7 +20,7 @@ array, reading input values from a specified array.
 
 ## Syntax
 
-```js
+```js-nolint
 set(array)
 set(array, targetOffset)
 

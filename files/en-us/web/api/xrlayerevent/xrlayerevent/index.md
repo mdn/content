@@ -21,7 +21,7 @@ The **`XRLayerEvent`** constructor creates and returns a new {{domxref("XRLayerE
 
 ## Syntax
 
-```js
+```js-nolint
 new XRLayerEvent(type, options)
 ```
 

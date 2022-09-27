@@ -31,7 +31,7 @@ operations, such as storing and iterating.
 
 ## Syntax
 
-```js
+```js-nolint
 cmp(first, second)
 ```
 

@@ -25,7 +25,7 @@ A stringified version of the object can then be obtained by calling {{jsxref("JS
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

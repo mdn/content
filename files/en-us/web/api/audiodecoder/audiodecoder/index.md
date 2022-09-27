@@ -17,7 +17,7 @@ The **`AudioDecoder()`** constructor creates a new {{domxref("AudioDecoder")}} o
 
 ## Syntax
 
-```js
+```js-nolint
 new AudioDecoder(init)
 ```
 

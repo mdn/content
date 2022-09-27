@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: img role'
+title: "ARIA: img role"
 slug: Web/Accessibility/ARIA/Roles/img_role
 tags:
   - ARIA
@@ -17,8 +17,8 @@ The ARIA `img` role can be used to identify multiple elements inside page conten
 
 ```html
 <div role="img" aria-label="Description of the overall image">
-  <img src="graphic1.png" alt="">
-  <img src="graphic2.png">
+  <img src="graphic1.png" alt="" />
+  <img src="graphic2.png" />
 </div>
 ```
 
@@ -30,8 +30,8 @@ You shouldn't count on the alt text of individual images for conveying context t
 
 ```html
 <div role="img" aria-label="Description of the overall image">
-  <img src="graphic1.png" alt="">
-  <img src="graphic2.png">
+  <img src="graphic1.png" alt="" />
+  <img src="graphic2.png" />
 </div>
 ```
 
@@ -69,9 +69,7 @@ For example, if you use emojis in your text, the meaning might be obvious to a s
 
 ```html
 <div role="img" aria-label="That cat is so cute">
-  <p>
-    &#x1F408; &#x1F602;
-  </p>
+  <p>&#x1F408; &#x1F602;</p>
 </div>
 ```
 
@@ -83,9 +81,7 @@ Another example where this might be suitable is when using ASCII emoji combinati
 
 ```html
 <div role="img" aria-label="Table flip">
-  <p>
-    (╯°□°）╯︵ ┻━┻
-  </p>
+  <p>(╯°□°）╯︵ ┻━┻</p>
 </div>
 ```
 
@@ -122,11 +118,11 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ```html
 <span role="img" aria-label="Rating: 4 out of 5 stars">
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-    <span>☆</span>
+  <span>★</span>
+  <span>★</span>
+  <span>★</span>
+  <span>★</span>
+  <span>☆</span>
 </span>
 ```
 

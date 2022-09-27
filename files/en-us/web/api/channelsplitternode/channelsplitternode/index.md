@@ -20,7 +20,7 @@ The **`ChannelSplitterNode()`** constructor of the [Web Audio API](/en-US/docs/W
 
 ## Syntax
 
-```js
+```js-nolint
 new ChannelSplitterNode(context)
 new ChannelSplitterNode(context, options)
 ```
@@ -57,8 +57,8 @@ A new {{domxref("ChannelSplitterNode")}} object instance.
 const ac = new AudioContext();
 
 const options = {
-  numberOfOutputs : 2
-}
+  numberOfOutputs: 2,
+};
 
 const mySplitter = new ChannelSplitterNode(ac, options);
 ```

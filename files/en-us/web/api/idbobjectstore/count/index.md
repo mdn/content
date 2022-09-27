@@ -26,7 +26,7 @@ of records in the store.
 
 ## Syntax
 
-```js
+```js-nolint
 count()
 count(query)
 ```

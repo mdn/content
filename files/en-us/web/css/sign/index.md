@@ -4,13 +4,12 @@ slug: Web/CSS/sign
 tags:
   - CSS
   - CSS Function
-  - Sign-Related
   - Function
   - Layout
   - Reference
   - Web
   - sign
-browser-compat: css.types.sign
+  - Experimental
 spec-urls: https://drafts.csswg.org/css-values/#sign-funcs
 ---
 
@@ -18,16 +17,31 @@ spec-urls: https://drafts.csswg.org/css-values/#sign-funcs
 
 The **`sign()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) contains one calculation, and returns `-1` if the numeric value of the argument is negative, `+1` if the numeric value of the argument is positive, `0⁺` if the numeric value of the argument is 0⁺, and `0⁻` if the numeric value of the argument is 0⁻.
 
-> **Note:** While [`abs()`](/en-US/docs/Web/CSS/abs) returns the absolute value of the argument, `sign()` returns the sign of the argument.
+> **Note:** While `{{CSSxRef("abs")}}` returns the absolute value of the argument, `sign()` returns the sign of the argument.
 
 ## Syntax
 
 ```css
 /* property: sign(expression) */
-top: sign( --value );
+top: sign(--value);
 ```
 
-The `sign()` function takes only one expression as its argument.
+### Parameters
+
+The `sign(x)` function accepts only one value as its parameter.
+
+- `x`
+  - : A calculation which resolves to a number.
+
+### Return value
+
+A number representing the sign of `A`:
+
+- If `x` is positive, returns `1`.
+- If `x` is negative, returns `-1`.
+- If `x` is positive zero, returns `0`.
+- If `x` is negative zero, returns `-0`.
+- Otherwise, returns `NaN`.
 
 ### Formal syntax
 
@@ -59,10 +73,6 @@ div {
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

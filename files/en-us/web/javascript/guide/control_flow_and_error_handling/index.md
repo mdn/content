@@ -10,7 +10,7 @@ tags:
   - JavaScript
   - Logic
   - control
-  - l10n:priority
+  - "l10n:priority"
   - statements
 ---
 
@@ -495,7 +495,7 @@ If an inner `try` block does _not_ have a corresponding
 
 1. it _must_ contain a `finally` block, and
 2. the enclosing `try...catch` statement's `catch` block is
-    checked for a match.
+   checked for a match.
 
 For more information, see [nested try-blocks](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks)
 on the [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)

@@ -18,15 +18,14 @@ another object's prototype chain.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
 
-> **Note:** `isPrototypeOf()` differs from the {{jsxref("Operators/instanceof",
-    "instanceof")}} operator. In the expression
+> **Note:** `isPrototypeOf()` differs from the {{jsxref("Operators/instanceof", "instanceof")}} operator. In the expression
 > `object instanceof AFunction`, the `object` prototype chain is
 > checked against `AFunction.prototype`, not against `AFunction`
 > itself.
 
 ## Syntax
 
-```js
+```js-nolint
 isPrototypeOf(object)
 ```
 

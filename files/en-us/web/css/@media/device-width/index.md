@@ -1,8 +1,9 @@
 ---
 title: device-width
 slug: Web/CSS/@media/device-width
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Deprecated
   - Media Queries
@@ -26,7 +27,10 @@ The `device-width` feature is specified as a {{cssxref("&lt;length&gt;")}} value
 ### Applying a special stylesheet for devices that are narrower than 800 pixels
 
 ```html
-<link rel="stylesheet" media="screen and (max-device-width: 799px)" href="http://foo.bar.com/narrow-styles.css" />
+<link
+  rel="stylesheet"
+  media="screen and (max-device-width: 799px)"
+  href="http://foo.bar.com/narrow-styles.css" />
 ```
 
 ## Specifications

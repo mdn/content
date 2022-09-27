@@ -27,7 +27,7 @@ use `getAll()`.
 
 ## Syntax
 
-```js
+```js-nolint
 getAll()
 getAll(query)
 getAll(query, count)

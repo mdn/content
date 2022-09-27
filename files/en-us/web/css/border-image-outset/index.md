@@ -1,6 +1,7 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -84,7 +85,7 @@ The `border-image-outset` property may be specified as one, two, three, or four 
   background: #cef;
   border: 1.4rem solid;
   border-image: radial-gradient(#ff2, #55f) 40;
-  border-image-outset: 1.5;  /* 1.5 × 1.4rem = 2.1rem */
+  border-image-outset: 1.5; /* 1.5 × 1.4rem = 2.1rem */
   margin: 2.1rem;
 }
 ```

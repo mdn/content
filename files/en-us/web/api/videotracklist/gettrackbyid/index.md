@@ -31,7 +31,7 @@ you know its ID string.
 
 ## Syntax
 
-```js
+```js-nolint
 getTrackById(id)
 ```
 

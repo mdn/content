@@ -18,7 +18,7 @@ The **`MediaStreamAudioDestinationNode()`** constructor of the [Web Audio API](/
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamAudioDestinationNode(context)
 new MediaStreamAudioDestinationNode(context, options)
 ```

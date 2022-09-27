@@ -13,7 +13,7 @@ tags:
   - Math
   - Numbers
   - Numeric
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
@@ -105,33 +105,33 @@ You always refer to a property of the predefined `Number` object as shown above,
 
 The following table summarizes the `Number` object's properties.
 
-| Property                                             | Description                                                                                                                                        |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.MAX_VALUE")}}             | The largest positive representable number (`1.7976931348623157e+308`)                                                                                      |
-| {{jsxref("Number.MIN_VALUE")}}             | The smallest positive representable number (`5e-324`)                                                                                                      |
-| {{jsxref("Number.NaN")}}                     | Special "not a number" value                                                                                                                       |
-| {{jsxref("Number.NEGATIVE_INFINITY")}} | Special negative infinite value; returned on overflow                                                                                              |
-| {{jsxref("Number.POSITIVE_INFINITY")}} | Special positive infinite value; returned on overflow                                                                                              |
-| {{jsxref("Number.EPSILON")}}                 | Difference between `1` and the smallest value greater than `1` that can be represented as a {{jsxref("Number")}} (`2.220446049250313e-16`) |
-| {{jsxref("Number.MIN_SAFE_INTEGER")}}     | Minimum safe integer in JavaScript (−2^53 + 1, or `−9007199254740991`)                                                                             |
-| {{jsxref("Number.MAX_SAFE_INTEGER")}}     | Maximum safe integer in JavaScript (+2^53 − 1, or `+9007199254740991`)                                                                             |
+| Property                               | Description                                                                                                                                |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{jsxref("Number.MAX_VALUE")}}         | The largest positive representable number (`1.7976931348623157e+308`)                                                                      |
+| {{jsxref("Number.MIN_VALUE")}}         | The smallest positive representable number (`5e-324`)                                                                                      |
+| {{jsxref("Number.NaN")}}               | Special "not a number" value                                                                                                               |
+| {{jsxref("Number.NEGATIVE_INFINITY")}} | Special negative infinite value; returned on overflow                                                                                      |
+| {{jsxref("Number.POSITIVE_INFINITY")}} | Special positive infinite value; returned on overflow                                                                                      |
+| {{jsxref("Number.EPSILON")}}           | Difference between `1` and the smallest value greater than `1` that can be represented as a {{jsxref("Number")}} (`2.220446049250313e-16`) |
+| {{jsxref("Number.MIN_SAFE_INTEGER")}}  | Minimum safe integer in JavaScript (−2^53 + 1, or `−9007199254740991`)                                                                     |
+| {{jsxref("Number.MAX_SAFE_INTEGER")}}  | Maximum safe integer in JavaScript (+2^53 − 1, or `+9007199254740991`)                                                                     |
 
-| Method                                           | Description                                                                                                                                                                                           |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}     | Parses a string argument and returns a floating point number. Same as the global {{jsxref("parseFloat", "parseFloat()")}} function.                                                       |
-| {{jsxref("Number.parseInt()")}}         | Parses a string argument and returns an integer of the specified radix or base. Same as the global {{jsxref("parseInt", "parseInt()")}} function.                                         |
-| {{jsxref("Number.isFinite()")}}         | Determines whether the passed value is a finite number.                                                                                                                                               |
-| {{jsxref("Number.isInteger()")}}     | Determines whether the passed value is an integer.                                                                                                                                                    |
-| {{jsxref("Number.isNaN()")}}             | Determines whether the passed value is {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
-| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                                                                                           |
+| Method                               | Description                                                                                                                                                               |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Number.parseFloat()")}}    | Parses a string argument and returns a floating point number. Same as the global {{jsxref("parseFloat", "parseFloat()")}} function.                                       |
+| {{jsxref("Number.parseInt()")}}      | Parses a string argument and returns an integer of the specified radix or base. Same as the global {{jsxref("parseInt", "parseInt()")}} function.                         |
+| {{jsxref("Number.isFinite()")}}      | Determines whether the passed value is a finite number.                                                                                                                   |
+| {{jsxref("Number.isInteger()")}}     | Determines whether the passed value is an integer.                                                                                                                        |
+| {{jsxref("Number.isNaN()")}}         | Determines whether the passed value is {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
+| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                                                               |
 
 The `Number` prototype provides methods for retrieving information from `Number` objects in various formats. The following table summarizes the methods of `Number.prototype`.
 
-| Method                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| Method                                                | Description                                                                                |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | {{jsxref("Number/toExponential", "toExponential()")}} | Returns a string representing the number in exponential notation.                          |
-| {{jsxref("Number/toFixed", "toFixed()")}}                 | Returns a string representing the number in fixed-point notation.                          |
-| {{jsxref("Number/toPrecision", "toPrecision()")}}         | Returns a string representing the number to a specified precision in fixed-point notation. |
+| {{jsxref("Number/toFixed", "toFixed()")}}             | Returns a string representing the number in fixed-point notation.                          |
+| {{jsxref("Number/toPrecision", "toPrecision()")}}     | Returns a string representing the number to a specified precision in fixed-point notation. |
 
 ## Math object
 

@@ -21,7 +21,7 @@ collecting reports in its report queue.
 
 ## Syntax
 
-```js
+```js-nolint
 observe()
 ```
 

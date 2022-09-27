@@ -24,7 +24,7 @@ identifier or any other part of the records.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.id
 ```
 

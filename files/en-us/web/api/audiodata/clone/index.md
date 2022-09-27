@@ -18,7 +18,7 @@ The **`clone()`** method of the {{domxref("AudioData")}} interface creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

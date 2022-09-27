@@ -1,6 +1,7 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes
@@ -78,7 +79,7 @@ The `flex-shrink` property is specified as a single `<number>`.
 
 #content div {
   flex-basis: 120px;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box {

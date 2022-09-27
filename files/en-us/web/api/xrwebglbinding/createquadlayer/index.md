@@ -19,13 +19,13 @@ The **`createQuadLayer()`** method of the {{domxref("XRWebGLBinding")}} interfac
 
 ## Syntax
 
-```js
-createQuadLayer(init)
+```js-nolint
+createQuadLayer(options)
 ```
 
 ### Parameters
 
-- `init`
+- `options`
   - : An object to configure the {{domxref("XRQuadLayer")}}. It must have the `space`, `viewPixelHeight`, and `viewPixelWidth` properties. `init` has the following properties:
     - `colorFormat` {{optional_inline}}
       - : A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
@@ -58,10 +58,10 @@ createQuadLayer(init)
         - `gl.DEPTH_COMPONENT24`
         - `gl.DEPTH24_STENCIL24`
           The default value is `gl.DEPTH_COMPONENT`.
-    - `height`
-      - : Optional. A number specifying the height of the layer in meters. The default value is `1.0`.
-    - `isStatic`
-      - : Optional. A boolean that, if true, indicates you can only draw to this layer when {{domxref("XRCompositionLayer.needsRedraw", "needsRedraw")}} is `true`. The default value is `false`.
+    - `height` {{optional_inline}}
+      - : A number specifying the height of the layer in meters. The default value is `1.0`.
+    - `isStatic` {{optional_inline}}
+      - : A boolean that, if true, indicates you can only draw to this layer when {{domxref("XRCompositionLayer.needsRedraw", "needsRedraw")}} is `true`. The default value is `false`.
     - `layout` {{optional_inline}}
       - : A string indicating the layout of the layer. Possible values:
         - `default`

@@ -19,7 +19,7 @@ The **`matches()`** method of the {{domxref("Element")}} interface tests whether
 
 ## Syntax
 
-```js
+```js-nolint
 matches(selectors)
 ```
 

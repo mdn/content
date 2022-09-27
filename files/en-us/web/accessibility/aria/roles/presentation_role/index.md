@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: presentation role'
+title: "ARIA: presentation role"
 slug: Web/Accessibility/ARIA/Roles/presentation_role
 tags:
   - Accessibility
@@ -54,7 +54,7 @@ None. If a global ARIA state and property is set, `presentation` or `none` will 
 ## Examples
 
 ```html
-<hr role="none">
+<hr role="none" />
 ```
 
 ## Specifications

@@ -24,7 +24,11 @@ First, let's take a quick look at the [HTML that's needed](https://github.com/md
 <button id="connectButton" name="connectButton" class="buttonleft">
   Connect
 </button>
-<button id="disconnectButton" name="disconnectButton" class="buttonright" disabled>
+<button
+  id="disconnectButton"
+  name="disconnectButton"
+  class="buttonright"
+  disabled>
   Disconnect
 </button>
 ```
@@ -33,9 +37,17 @@ Then there's a box which contains the text input box into which the user can typ
 
 ```html
 <div class="messagebox">
-  <label for="message">Enter a message:
-    <input type="text" name="message" id="message" placeholder="Message text"
-            inputmode="latin" size=60 maxlength=120 disabled>
+  <label for="message"
+    >Enter a message:
+    <input
+      type="text"
+      name="message"
+      id="message"
+      placeholder="Message text"
+      inputmode="latin"
+      size="60"
+      maxlength="120"
+      disabled />
   </label>
   <button id="sendButton" name="sendButton" class="buttonright" disabled>
     Send

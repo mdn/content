@@ -21,7 +21,7 @@ Either by selecting an existing file, or entering a name for a new file.
 
 ## Syntax
 
-```js
+```js-nolint
 showSaveFilePicker()
 ```
 
@@ -59,6 +59,10 @@ A {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref('FileSyst
 - `AbortError`
   - : Thrown if the user dismisses the file picker without selecting or inputting a file,
     or if the user agent deems any selected files too sensitive or dangerous.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

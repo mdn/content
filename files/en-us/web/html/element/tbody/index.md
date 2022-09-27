@@ -180,7 +180,8 @@ table {
 First, the table's overall style attributes are set, configuring the thickness, style, and color of the table's exterior borders and using {{cssxref("border-collapse")}} to ensure that the border lines are shared among adjacent cells rather than each having its own borders with space in between. {{cssxref("font")}} is used to establish an initial font for the table.
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;
@@ -284,7 +285,8 @@ table {
   font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;

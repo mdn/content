@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-progress-inner-element'
 slug: Web/CSS/::-webkit-progress-inner-element
+page-type: css-pseudo-element
 tags:
   - CSS
   - Non-standard
@@ -33,7 +34,7 @@ In this example, a 2px black border is added around the progress bar.
 #### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 #### CSS

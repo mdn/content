@@ -21,7 +21,7 @@ change in volume.
 
 ## Syntax
 
-```js
+```js-nolint
 new GainNode(context, options)
 ```
 

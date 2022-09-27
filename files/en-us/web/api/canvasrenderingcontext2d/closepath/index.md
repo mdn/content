@@ -25,7 +25,7 @@ the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} or
 
 ## Syntax
 
-```js
+```js-nolint
 closePath()
 ```
 

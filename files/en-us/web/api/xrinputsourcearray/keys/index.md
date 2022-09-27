@@ -37,7 +37,7 @@ of input sources.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

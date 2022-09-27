@@ -22,7 +22,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(property)
 ```
 

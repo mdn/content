@@ -1,6 +1,7 @@
 ---
 title: min-height
 slug: Web/CSS/min-height
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -73,9 +74,13 @@ min-height: unset;
 ### Setting min-height
 
 ```css
-table { min-height: 75%; }
+table {
+  min-height: 75%;
+}
 
-form { min-height: 0; }
+form {
+  min-height: 0;
+}
 ```
 
 ## Specifications

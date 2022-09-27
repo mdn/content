@@ -18,7 +18,7 @@ The `commitStyles()` method of the [Web Animations API](/en-US/docs/Web/API/Web_
 
 ## Syntax
 
-```js
+```js-nolint
 commitStyles()
 ```
 
@@ -33,12 +33,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const divElem = document.querySelector('div');
+const divElem = document.querySelector("div");
 
-document.body.addEventListener('mousemove', (evt) => {
-  let anim = divElem.animate(
+document.body.addEventListener("mousemove", (evt) => {
+  const anim = divElem.animate(
     { transform: `translate(${evt.clientX}px, ${evt.clientY}px)` },
-    { duration: 500, fill: 'forwards' }
+    { duration: 500, fill: "forwards" }
   );
 
   anim.commitStyles();

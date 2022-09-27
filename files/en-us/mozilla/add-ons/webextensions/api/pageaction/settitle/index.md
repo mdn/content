@@ -20,7 +20,7 @@ Sets the title of the page action. The title is displayed in a tooltip when the 
 
 ## Syntax
 
-```js
+```js-nolint
 browser.pageAction.setTitle(
   details // object
 )

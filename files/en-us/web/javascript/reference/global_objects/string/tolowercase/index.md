@@ -19,7 +19,7 @@ converted to lower case.
 
 ## Syntax
 
-```js
+```js-nolint
 toLowerCase()
 ```
 

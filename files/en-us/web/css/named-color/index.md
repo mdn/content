@@ -1,6 +1,7 @@
 ---
 title: <named-color>
 slug: Web/CSS/named-color
+page-type: css-type
 tags:
   - Reference
   - CSS Data Type
@@ -896,7 +897,7 @@ Though many keywords have been adapted from [X11](https://en.wikipedia.org/wiki/
   padding: 20px;
 }
 
-#container>div {
+#container > div {
   height: 100px;
   width: 100px;
   margin: 3px;

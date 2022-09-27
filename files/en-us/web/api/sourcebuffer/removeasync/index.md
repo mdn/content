@@ -32,7 +32,7 @@ This method can only be called when {{domxref("SourceBuffer.updating", "updating
 
 ## Syntax
 
-```js
+```js-nolint
 removeAsync(start, end)
 ```
 

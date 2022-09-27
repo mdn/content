@@ -20,7 +20,7 @@ The **`Document.createRange()`** method returns a new
 
 ## Syntax
 
-```js
+```js-nolint
 createRange()
 ```
 

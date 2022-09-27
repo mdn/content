@@ -25,7 +25,7 @@ The timeout is based on active rather than elapsed time, and will effectively be
 
 ## Syntax
 
-```js
+```js-nolint
 timeout(time)
 ```
 
@@ -56,7 +56,9 @@ try {
   if (err.name === "TimeoutError") {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
-    console.error("Fetch aborted by user action (browser stop button, closing tab, etc.");
+    console.error(
+      "Fetch aborted by user action (browser stop button, closing tab, etc."
+    );
   } else if (err.name === "TypeError") {
     console.error("AbortSignal.timeout() method is not supported");
   } else {

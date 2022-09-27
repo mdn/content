@@ -1,6 +1,7 @@
 ---
 title: ':has()'
 slug: Web/CSS/:has
+page-type: css-pseudo-class
 tags:
   - ':has'
   - CSS

@@ -18,7 +18,7 @@ The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueu
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 
@@ -39,7 +39,7 @@ configure(config)
     - `displayAspectHeight` {{optional_inline}}
       - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}} in pixels when displayed.
     - `colorSpace`
-      - : An object. representing a {{domxref("VideoColorSpace")}}, containing the following members:
+      - : An object representing a {{domxref("VideoColorSpace")}}, containing the following members:
         - `primaries`
           - : A string representing the color {{glossary("gamut")}} of the video sample. One of:
             - `"bt709"`

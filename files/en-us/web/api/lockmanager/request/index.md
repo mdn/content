@@ -32,7 +32,7 @@ In the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), this is exposed as `"
 
 ## Syntax
 
-```js
+```js-nolint
 request(name, callback)
 request(name, options, callback)
 ```

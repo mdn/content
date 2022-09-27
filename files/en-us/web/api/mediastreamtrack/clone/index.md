@@ -22,7 +22,7 @@ interface creates a duplicate of the `MediaStreamTrack`. This new
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

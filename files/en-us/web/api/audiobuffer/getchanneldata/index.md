@@ -17,7 +17,7 @@ The **`getChannelData()`** method of the {{ domxref("AudioBuffer") }} Interface 
 
 ## Syntax
 
-```js
+```js-nolint
 getChannelData(channel)
 ```
 
@@ -36,9 +36,9 @@ In the following example we create a two second buffer, fill it with white noise
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-const button = document.querySelector('button');
-const pre = document.querySelector('pre');
-const myScript = document.querySelector('script');
+const button = document.querySelector("button");
+const pre = document.querySelector("pre");
+const myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -54,13 +54,13 @@ button.onclick = () => {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {
-   // This gives us the actual ArrayBuffer that contains the data
-   const nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (let i = 0; i < frameCount; i++) {
-     // Math.random() is in [0; 1.0]
-     // audio needs to be in [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // This gives us the actual ArrayBuffer that contains the data
+    const nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (let i = 0; i < frameCount; i++) {
+      // Math.random() is in [0; 1.0]
+      // audio needs to be in [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // Get an AudioBufferSourceNode.
@@ -73,7 +73,7 @@ button.onclick = () => {
   source.connect(audioCtx.destination);
   // start the source playing
   source.start();
-}
+};
 ```
 
 ## Specifications

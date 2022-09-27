@@ -23,7 +23,7 @@ includes a certain value among its entries, returning `true` or
 
 ## Syntax
 
-```js
+```js-nolint
 includes(searchElement)
 includes(searchElement, fromIndex)
 ```
@@ -54,11 +54,17 @@ includes(searchElement, fromIndex)
 
 A boolean value which is `true` if the value `searchElement` is found within the array (or the part of the array indicated by the index `fromIndex`, if specified).
 
+## Description
+
 Values of zero are all considered to be equal, regardless of sign. (That is, `-0` is considered to be equal to both `0` and `+0`), but `false` is _not_ considered to be the same as `0`. [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) can be correctly searched for.
 
 > **Note:** Technically speaking, `includes()` uses the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm to determine whether the given element is found.
 
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `includes()` method iterates empty slots as if they have the value `undefined`.
+
 ## Examples
+
+### Using includes()
 
 ```js
 [1, 2, 3].includes(2)         // true
@@ -99,6 +105,14 @@ arr.includes('a', -100) // true
 arr.includes('b', -100) // true
 arr.includes('c', -100) // true
 arr.includes('a', -2)   // false
+```
+
+### Using includes() on sparse arrays
+
+You can search for `undefined` in a sparse array and get `true`.
+
+```js
+console.log([1, , 3].includes(undefined)); // true
 ```
 
 ### includes() used as a generic method

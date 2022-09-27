@@ -20,7 +20,7 @@ The **`setKeyframes()`** method of the {{domxref("KeyframeEffect")}} interface r
 
 ## Syntax
 
-```js
+```js-nolint
 setKeyframes(keyframes)
 ```
 

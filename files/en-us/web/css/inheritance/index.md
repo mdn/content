@@ -27,7 +27,9 @@ When no value for an **inherited property** has been specified on an element, th
 A typical example of an inherited property is the {{ Cssxref("color") }} property. Consider the following style rules and the markup:
 
 ```css
-p { color: green; }
+p {
+  color: green;
+}
 ```
 
 ```html
@@ -43,11 +45,13 @@ When no value for a **non-inherited property** has been specified on an element,
 A typical example of a non-inherited property is the {{ Cssxref("border") }} property. Consider the following style rules and the markup:
 
 ```css
- p { border: medium solid; }
+p {
+  border: medium solid;
+}
 ```
 
 ```html
-  <p>This paragraph has <em>emphasized text</em> in it.</p>
+<p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
 The words "emphasized text" will not have a border (since the initial value of {{ Cssxref("border-style") }} is `none`).

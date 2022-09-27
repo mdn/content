@@ -8,11 +8,10 @@ tags:
   - CanvasRenderingContext2D
   - Method
   - Reference
-  - Experimental
 browser-compat: api.CanvasRenderingContext2D.roundRect
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`CanvasRenderingContext2D.roundRect()`** method of the Canvas 2D API adds a rounded rectangle to the current path.
 
@@ -23,7 +22,7 @@ To draw the rounded rectangle onto a canvas, you can use the {{domxref("CanvasRe
 
 ## Syntax
 
-```js
+```js-nolint
 roundRect(x, y, width, height, radii)
 ```
 

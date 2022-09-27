@@ -20,7 +20,7 @@ value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
 
 ## Syntax
 
-```js
+```js-nolint
 undefined
 ```
 

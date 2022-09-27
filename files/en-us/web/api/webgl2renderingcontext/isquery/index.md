@@ -18,7 +18,7 @@ passed object is a valid {{domxref("WebGLQuery")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 isQuery(query)
 ```
 

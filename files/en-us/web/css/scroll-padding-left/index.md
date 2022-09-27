@@ -1,6 +1,7 @@
 ---
 title: scroll-padding-left
 slug: Web/CSS/scroll-padding-left
+page-type: css-property
 tags:
   - CSS
   - CSS Property

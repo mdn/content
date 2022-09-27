@@ -20,7 +20,7 @@ the caret.
 
 ## Syntax
 
-```js
+```js-nolint
 getSelection()
 ```
 

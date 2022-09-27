@@ -26,7 +26,7 @@ The `__proto__` property can also be used in an object literal definition to set
 
 ## Syntax
 
-```js
+```js-nolint
 obj.__proto__
 ```
 

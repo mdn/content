@@ -18,7 +18,7 @@ expressions.
 
 ## Syntax
 
-```js
+```js-nolint
 ( )
 ```
 

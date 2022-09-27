@@ -1,6 +1,7 @@
 ---
 title: '::cue-region'
 slug: Web/CSS/::cue-region
+page-type: css-pseudo-element
 tags:
   - '::cue-region'
   - CSS

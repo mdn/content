@@ -1,6 +1,7 @@
 ---
 title: outline-color
 slug: Web/CSS/outline-color
+page-type: css-property
 tags:
   - CSS
   - CSS Outline
@@ -28,7 +29,7 @@ The **`outline-color`** CSS property sets the color of an element's outline.
 ```css
 /* <color> values */
 outline-color: #f92525;
-outline-color: rgb(30,222,121);
+outline-color: rgb(30, 222, 121);
 outline-color: blue;
 
 /* Keyword value */
@@ -89,8 +90,8 @@ Color contrast ratio is determined by comparing the luminosity of the text and b
 
 ```css
 p {
-  outline: 2px solid;      /* Set the outline width and style */
-  outline-color: #0000FF;  /* Make the outline blue */
+  outline: 2px solid; /* Set the outline width and style */
+  outline-color: #0000ff; /* Make the outline blue */
   margin: 5px;
 }
 ```

@@ -1,6 +1,7 @@
 ---
 title: '::-moz-color-swatch'
 slug: Web/CSS/::-moz-color-swatch
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:Mozilla Extensions
@@ -34,7 +35,7 @@ The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US
 ### CSS
 
 ```css
-input[type=color]::-moz-color-swatch {
+input[type="color"]::-moz-color-swatch {
   border-radius: 10px;
   border-style: none;
 }

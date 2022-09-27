@@ -22,7 +22,7 @@ If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set 
 
 ## Syntax
 
-```js
+```js-nolint
 setIdentityProvider(domainname)
 setIdentityProvider(domainname, protocol)
 setIdentityProvider(domainname, protocol, username)

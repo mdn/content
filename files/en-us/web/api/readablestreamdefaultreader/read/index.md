@@ -18,7 +18,7 @@ The **`read()`** method of the {{domxref("ReadableStreamDefaultReader")}} interf
 
 ## Syntax
 
-```js
+```js-nolint
 read()
 ```
 

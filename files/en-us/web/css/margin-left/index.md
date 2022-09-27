@@ -1,6 +1,7 @@
 ---
 title: margin-left
 slug: Web/CSS/margin-left
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -155,9 +156,15 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 ### Setting left margin using pixels and percentages
 
 ```css
-.content { margin-left: 5%; }
-.sidebox { margin-left: 10px; }
-.logo    { margin-left: -5px; }
+.content {
+  margin-left: 5%;
+}
+.sidebox {
+  margin-left: 10px;
+}
+.logo {
+  margin-left: -5px;
+}
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
+page-type: css-property
 tags:
   - CSS
   - CSS Property

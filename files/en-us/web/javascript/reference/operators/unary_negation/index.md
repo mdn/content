@@ -17,7 +17,7 @@ The unary negation operator (`-`) precedes its operand and negates it.
 
 ## Syntax
 
-```js
+```js-nolint
 -x
 ```
 
@@ -35,7 +35,7 @@ const y = -x;
 
 ### Negating non-numbers
 
-The unary negation operator can convert a non-number into a number.
+The unary negation operator can [convert a non-number into a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion).
 
 ```js
 const x = "4";

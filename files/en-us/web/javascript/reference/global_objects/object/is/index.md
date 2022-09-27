@@ -20,7 +20,7 @@ The **`Object.is()`** method determines whether two values are [the same value](
 
 ## Syntax
 
-```js
+```js-nolint
 Object.is(value1, value2)
 ```
 

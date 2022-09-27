@@ -21,7 +21,7 @@ This will be sent before any {{WebExtAPIRef("omnibox.onInputChanged")}} events.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.omnibox.onInputStarted.addListener(listener)
 browser.omnibox.onInputStarted.removeListener(listener)
 browser.omnibox.onInputStarted.hasListener(listener)

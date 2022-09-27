@@ -1,8 +1,9 @@
 ---
 title: pointer
 slug: Web/CSS/@media/pointer
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
@@ -34,7 +35,7 @@ This example creates a small checkbox for users with fine primary pointers and a
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
+<input id="test" type="checkbox" /> 
 <label for="test">Look at me!</label>
 ```
 

@@ -3,7 +3,6 @@ title: Namespace
 slug: Glossary/Namespace
 tags:
   - CodingScripting
-  - Glossary
   - Operating System
 ---
 

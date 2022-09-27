@@ -1,6 +1,7 @@
 ---
 title: flex
 slug: Web/CSS/flex
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Flexible Boxes
@@ -140,7 +141,7 @@ For most purposes, authors should set `flex` to one of the following values: `au
 }
 
 .flex-container {
-  background-color: #F4F7F8;
+  background-color: #f4f7f8;
   resize: horizontal;
   overflow: hidden;
   display: flex;
@@ -152,7 +153,7 @@ For most purposes, authors should set `flex` to one of the following values: `au
   padding: 0.5em;
   width: 110px;
   min-width: 0;
-  background-color: #1B5385;
+  background-color: #1b5385;
   color: white;
   font-family: monospace;
   font-size: 13px;

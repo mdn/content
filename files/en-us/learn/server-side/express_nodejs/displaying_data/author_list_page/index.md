@@ -18,16 +18,19 @@ Open **/controllers/authorController.js**. Find the exported `author_list()` con
 
 ```js
 // Display list of all Authors.
-exports.author_list = function(req, res, next) {
-
+exports.author_list = function (req, res, next) {
   Author.find()
-    .sort([['family_name', 'ascending']])
+    .sort([["family_name", "ascending"]])
     .exec(function (err, list_authors) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       //Successful, so render
-      res.render('author_list', { title: 'Author List', author_list: list_authors });
+      res.render("author_list", {
+        title: "Author List",
+        author_list: list_authors,
+      });
     });
-
 };
 ```
 

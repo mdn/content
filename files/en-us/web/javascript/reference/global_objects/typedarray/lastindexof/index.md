@@ -24,7 +24,7 @@ one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objec
 
 ## Syntax
 
-```js
+```js-nolint
 lastIndexOf(searchElement)
 lastIndexOf(searchElement, fromIndex)
 ```

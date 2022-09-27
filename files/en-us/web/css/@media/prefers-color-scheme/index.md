@@ -1,8 +1,9 @@
 ---
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Reference
   - Web
@@ -33,7 +34,8 @@ The elements below have an initial color theme. They can be further themed accor
 ```html
 <div class="day">Day (initial)</div>
 <div class="day light-scheme">Day (changes in light scheme)</div>
-<div class="day dark-scheme">Day (changes in dark scheme)</div> <br>
+<div class="day dark-scheme">Day (changes in dark scheme)</div>
+<br />
 
 <div class="night">Night (initial)</div>
 <div class="night light-scheme">Night (changes in light scheme)</div>
@@ -43,20 +45,39 @@ The elements below have an initial color theme. They can be further themed accor
 ### CSS
 
 ```css
-.day   { background: #eee; color: black; }
-.night { background: #333; color: white; }
+.day {
+  background: #eee;
+  color: black;
+}
+.night {
+  background: #333;
+  color: white;
+}
 
 @media (prefers-color-scheme: dark) {
-  .day.dark-scheme   { background:  #333; color: white; }
-  .night.dark-scheme { background: black; color:  #ddd; }
+  .day.dark-scheme {
+    background: #333;
+    color: white;
+  }
+  .night.dark-scheme {
+    background: black;
+    color: #ddd;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-  .day.light-scheme   { background: white; color:  #555; }
-  .night.light-scheme { background:  #eee; color: black; }
+  .day.light-scheme {
+    background: white;
+    color: #555;
+  }
+  .night.light-scheme {
+    background: #eee;
+    color: black;
+  }
 }
 
-.day, .night {
+.day,
+.night {
   display: inline-block;
   padding: 1em;
   width: 7em;

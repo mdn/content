@@ -20,7 +20,7 @@ The **`destroy()`** method of the {{domxref("XRCompositionLayer")}} interface de
 
 ## Syntax
 
-```js
+```js-nolint
 destroy()
 ```
 

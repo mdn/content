@@ -30,7 +30,7 @@ whatever value the {{domxref("Element.setAttribute", "setAttribute()")}} call se
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 

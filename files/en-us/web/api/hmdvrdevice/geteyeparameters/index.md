@@ -23,7 +23,7 @@ This includes field of view information, and more.
 
 ## Syntax
 
-```js
+```js-nolint
 getEyeParameters(whichEye)
 ```
 

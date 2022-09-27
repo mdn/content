@@ -19,7 +19,7 @@ indicating if the browser supports a given CSS feature, or not.
 
 ## Syntax
 
-```js
+```js-nolint
 supports(propertyName, value)
 supports(supportCondition)
 ```

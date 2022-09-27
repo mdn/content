@@ -2,7 +2,6 @@
 title: Glyph
 slug: Glossary/Glyph
 tags:
-  - Glossary
   - SVG
   - typography
 ---

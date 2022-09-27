@@ -21,7 +21,7 @@ The **`Math.cos()`** function returns the cosine of a number in radians.
 
 ## Syntax
 
-```js
+```js-nolint
 Math.cos(x)
 ```
 

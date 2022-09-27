@@ -18,9 +18,9 @@ the registry's callback may get called.
 
 ## Syntax
 
-```js
-register(target, heldValue);
-register(target, heldValue, unregisterToken);
+```js-nolint
+register(target, heldValue)
+register(target, heldValue, unregisterToken)
 ```
 
 ### Parameters

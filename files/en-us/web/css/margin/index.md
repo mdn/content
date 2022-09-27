@@ -1,6 +1,7 @@
 ---
 title: margin
 slug: Web/CSS/margin
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Property
@@ -126,7 +127,7 @@ margin: 5%;                 /* All sides: 5% margin */
 margin: 10px;               /* All sides: 10px margin */
 
 margin: 1.6em 20px;         /* top and bottom: 1.6em margin */
-                            /* left and right: 20px margin  */
+                            /* left and right: 20px margin */
 
 margin: 10px 3% -1em;       /* top:            10px margin */
                             /* left and right: 3% margin   */

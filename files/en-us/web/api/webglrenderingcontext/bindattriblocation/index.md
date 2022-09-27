@@ -19,7 +19,7 @@ to an attribute variable.
 
 ## Syntax
 
-```js
+```js-nolint
 bindAttribLocation(program, index, name)
 ```
 

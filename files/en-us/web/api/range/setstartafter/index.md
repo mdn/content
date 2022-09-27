@@ -19,7 +19,7 @@ for the `referenceNode`.
 
 ## Syntax
 
-```js
+```js-nolint
 setStartAfter(referenceNode)
 ```
 

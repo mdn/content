@@ -34,7 +34,7 @@ position relative to the [viewport](/en-US/docs/Glossary/Viewport).
 
 ## Syntax
 
-```js
+```js-nolint
 getBoundingClientRect()
 ```
 
@@ -111,7 +111,7 @@ let rect = elem.getBoundingClientRect();
 for (const key in rect) {
   if (typeof rect[key] !== 'function') {
     let para = document.createElement('p');
-    para.textContent  = `${key} : ${rect[key]}`;
+    para.textContent = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
 }
@@ -145,8 +145,12 @@ div#example {
   background: purple;
 }
 
-body { padding-bottom: 1000px; }
-p { margin: 0; }
+body {
+  padding-bottom: 1000px;
+}
+p {
+  margin: 0;
+}
 ```
 
 ```js
@@ -159,7 +163,7 @@ function update() {
   for (const key in rect) {
     if (typeof rect[key] !== 'function') {
       let para = document.createElement('p');
-      para.textContent  = `${key} : ${rect[key]}`;
+      para.textContent = `${key} : ${rect[key]}`;
       container.appendChild(para);
     }
   }

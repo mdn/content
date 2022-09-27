@@ -19,7 +19,7 @@ want to use {{jsxref("Number.isNaN()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 isNaN(value)
 ```
 

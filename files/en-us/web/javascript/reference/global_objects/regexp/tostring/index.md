@@ -19,7 +19,7 @@ The **`toString()`** method returns a string representing the regular expression
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

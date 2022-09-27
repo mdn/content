@@ -2,7 +2,6 @@
 title: Deep copy
 slug: Glossary/Deep_copy
 tags:
-  - Glossary
   - Deep copy
 ---
 

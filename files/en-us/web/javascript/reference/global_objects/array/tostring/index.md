@@ -18,7 +18,7 @@ specified array and its elements.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -42,13 +42,21 @@ JavaScript calls the `toString` method automatically when an array is to be repr
 
 ## Examples
 
-### Using toString
+### Using toString()
 
 ```js
 const array1 = [1, 2, 'a', '1a'];
 
 console.log(array1.toString());
 // expected output: "1,2,a,1a"
+```
+
+### Using toString() on sparse arrays
+
+Following the behavior of `join()`, `toString()` treats empty slots the same as `undefined` and produces an extra separator:
+
+```js
+console.log([1, , 3].toString()); // '1,,3'
 ```
 
 ## Specifications

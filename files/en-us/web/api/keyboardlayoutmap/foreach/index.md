@@ -23,7 +23,7 @@ each element of the map.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((currentValue) => { /* … */ } )
 forEach((currentValue, index) => { /* … */ } )

@@ -24,7 +24,7 @@ or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue'
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMathSum(values)
 ```
 

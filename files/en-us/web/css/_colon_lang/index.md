@@ -1,6 +1,7 @@
 ---
-title: ':lang()'
+title: ":lang()"
 slug: Web/CSS/:lang
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -39,17 +40,29 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 ### HTML
 
 ```html
-<div lang="en"><q>This English quote has a <q>nested</q> quote inside.</q></div>
-<div lang="fr"><q>This French quote has a <q>nested</q> quote inside.</q></div>
-<div lang="de"><q>This German quote has a <q>nested</q> quote inside.</q></div>
+<div lang="en">
+  <q>This English quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="fr">
+  <q>This French quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="de">
+  <q>This German quote has a <q>nested</q> quote inside.</q>
+</div>
 ```
 
 ### CSS
 
 ```css
-:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) > q { quotes: '« ' ' »'; }
-:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+:lang(en) > q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+:lang(fr) > q {
+  quotes: "« " " »";
+}
+:lang(de) > q {
+  quotes: "»" "«" "\2039""\203A";
+}
 ```
 
 ### Result

@@ -54,7 +54,7 @@ inappropriate, than it is to follow every guideline to the letter.
      submitter has not explained why they are making this change.
    - You have the right to close a pull request if it is too complex and/or
      contains multiple unrelated changes and ask the submitter to submit their
-    changes in smaller atomic chunks.
+     changes in smaller atomic chunks.
 4. When reviewing a pull request, use the [GitHub review tools](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews).
    Use "Request changes" when submitting a review that will require the
    submitter to do some more work, or "Approve" if the submission is ready to

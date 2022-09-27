@@ -20,7 +20,7 @@ operations.
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMMatrix()
 new DOMMatrix(init)
 ```

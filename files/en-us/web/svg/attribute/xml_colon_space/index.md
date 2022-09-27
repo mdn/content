@@ -21,15 +21,17 @@ You can use this attribute with any SVG element.
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg">
-  <text y="20" xml:space="default">Default   spacing</text>
-  <text y="40" xml:space="preserve">Preserved   spacing</text>
+  <text y="20" xml:space="default">Default spacing</text>
+  <text y="40" xml:space="preserve">Preserved spacing</text>
 </svg>
 ```
 

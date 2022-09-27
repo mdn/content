@@ -20,7 +20,7 @@ interface that might be shown.
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 

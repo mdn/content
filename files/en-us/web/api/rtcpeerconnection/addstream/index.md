@@ -30,8 +30,8 @@ be repeated to consider the new stream.
 
 ## Syntax
 
-```js
-rtcPeerConnection.addStream(mediaStream);
+```js-nolint
+addStream(mediaStream)
 ```
 
 ### Parameters

@@ -20,7 +20,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) copies pixels from the current
 
 ## Syntax
 
-```js
+```js-nolint
 copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height)
 ```
 

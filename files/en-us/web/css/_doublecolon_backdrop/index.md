@@ -1,6 +1,7 @@
 ---
 title: '::backdrop'
 slug: Web/CSS/::backdrop
+page-type: css-pseudo-element
 tags:
   - API
   - CSS
@@ -25,7 +26,7 @@ When multiple elements have been placed into fullscreen mode, the backdrop is dr
 ```css
 /* Backdrop is only displayed when dialog is opened with dialog.showModal() */
 dialog::backdrop {
-  background: rgba(255,0,0,.25);
+  background: rgba(255, 0, 0, 0.25);
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: border-image-source
 slug: Web/CSS/border-image-source
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -57,7 +58,7 @@ border-image-source: unset;
 
 ```css
 .box {
-  border-image-source: url('image.png');
+  border-image-source: url("image.png");
 }
 ```
 

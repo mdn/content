@@ -1,6 +1,7 @@
 ---
 title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -28,9 +29,9 @@ The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-U
    centered in the upper left quadrant,
    offset by 3degrees so there is no up/down straight line */
 background: repeating-conic-gradient(
-    from 3deg at 25% 25%,
-    hsl(200, 100%, 50%) 0deg 15deg,
-    hsl(200, 100%, 60%) 10deg 30deg
+  from 3deg at 25% 25%,
+  hsl(200, 100%, 50%) 0deg 15deg,
+  hsl(200, 100%, 60%) 10deg 30deg
 );
 ```
 
@@ -130,8 +131,7 @@ div {
 
 ```css
 div {
-  background-image:
-     repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
+  background-image: repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
 }
 ```
 
@@ -156,7 +156,12 @@ div {
 div {
   background: repeating-conic-gradient(
     from 3deg at 25% 25%,
-    green, blue 2deg 5deg, green, yellow 15deg 18deg, green 20deg);
+    green,
+    blue 2deg 5deg,
+    green,
+    yellow 15deg 18deg,
+    green 20deg
+  );
 }
 ```
 

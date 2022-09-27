@@ -39,11 +39,11 @@ size, and family.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = 'bold 48px serif';
-ctx.strokeText('Hello world', 50, 100);
+ctx.font = "bold 48px serif";
+ctx.strokeText("Hello world", 50, 100);
 ```
 
 #### Result
@@ -56,7 +56,7 @@ With the help of the {{domxref("FontFace")}} API, you can explicitly load fonts 
 using them in a canvas.
 
 ```js
-let f = new FontFace('test', 'url(x)');
+let f = new FontFace("test", "url(x)");
 
 f.load().then(() => {
   // Ready to use the font in a canvas context

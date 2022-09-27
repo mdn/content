@@ -17,7 +17,7 @@ The **`toJSON()`** method of the {{domxref("VideoColorSpace")}} interface is a _
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

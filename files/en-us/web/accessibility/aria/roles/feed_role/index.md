@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: feed role'
+title: "ARIA: feed role"
 slug: Web/Accessibility/ARIA/Roles/feed_role
 tags:
   - ARIA
@@ -48,7 +48,7 @@ Supporting the following, or a similar, interface is recommended when focus is i
 - <kbd>Control + End</kbd>: Move focus to the first focusable element after the feed.
 - <kbd>Control + Home</kbd>: Move focus to the first focusable element before the feed.
 
-If a feed is nested within a feed, such as a comments feed within a feed of blog posts, the convention is to tab into the nested feed with the <kbd>Tab</kbd> key and to provide another key, such as <kbd>Alt + Page Down</kbd>, to navigate from an 'outer' article to the first item in that article's nested feed. Navigate between the nested feed and main feed with <kbd>Control + End</kbd> , moving focus from the inner feed to the next article in the outer feed.
+If a feed is nested within a feed, such as a comments feed within a feed of blog posts, the convention is to tab into the nested feed with the <kbd>Tab</kbd> key and to provide another key, such as <kbd>Alt + Page Down</kbd>, to navigate from an 'outer' article to the first item in that article's nested feed. Navigate between the nested feed and main feed with <kbd>Control + End</kbd>, moving focus from the inner feed to the next article in the outer feed.
 
 ### <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties
 

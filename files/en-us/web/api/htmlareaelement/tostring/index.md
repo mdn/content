@@ -18,7 +18,7 @@ version of {{domxref("HTMLAreaElement.href")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

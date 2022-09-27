@@ -24,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.menus.remove(
   menuItemId      // integer or string
 )
@@ -55,7 +55,7 @@ function onError() {
 browser.menus.create({
   id: "remove-me",
   title: "Remove me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {

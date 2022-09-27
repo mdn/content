@@ -17,7 +17,7 @@ The **`toString()`** method of the {{domxref("TrustedScript")}} interface return
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

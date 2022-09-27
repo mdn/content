@@ -20,7 +20,7 @@ The `compile()` method is deprecated and is only specified for compatibility rea
 
 ## Syntax
 
-```js
+```js-nolint
 compile(pattern, flags)
 ```
 

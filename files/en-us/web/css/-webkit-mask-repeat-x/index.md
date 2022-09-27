@@ -1,6 +1,7 @@
 ---
-title: '-webkit-mask-repeat-x'
+title: "-webkit-mask-repeat-x"
 slug: Web/CSS/-webkit-mask-repeat-x
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
@@ -63,12 +64,12 @@ The `-webkit-mask-repeat-x` property specifies whether and how a mask image is r
 
 ```css
 .exampleone {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: repeat;
 }
 
 .exampletwo {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: no-repeat;
 }
 ```
@@ -79,7 +80,7 @@ You can specify a different `<repeat-style>` for each mask image, separated by c
 
 ```css
 .examplethree {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-x: repeat, space;
 }
 ```

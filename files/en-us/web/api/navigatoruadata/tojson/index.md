@@ -20,7 +20,7 @@ The **`toJSON()`** method of the {{domxref("NavigatorUAData")}} interface is a _
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

@@ -1,6 +1,7 @@
 ---
-title: ':nth-of-type()'
+title: ":nth-of-type()"
 slug: Web/CSS/:nth-of-type
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -48,7 +49,7 @@ See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
 ```css
 /* Odd paragraphs */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 
@@ -64,7 +65,7 @@ p:nth-of-type(1) {
 
 /* This will match the 3rd paragraph as it will match elements which are 2n+1 AND have a class of fancy.
 The second paragraph has a class of fancy but is not matched as it is not :nth-of-type(2n+1) */
-p.fancy:nth-of-type(2n+1) {
+p.fancy:nth-of-type(2n + 1) {
   text-decoration: underline;
 }
 ```

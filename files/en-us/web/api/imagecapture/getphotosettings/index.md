@@ -25,7 +25,7 @@ configuration settings.
 
 ## Syntax
 
-```js
+```js-nolint
 getPhotoSettings()
 ```
 

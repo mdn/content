@@ -19,7 +19,7 @@ setting them as the `result` of the request object.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllKeys()
 getAllKeys(query)
 getAllKeys(query, count)

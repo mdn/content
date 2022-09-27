@@ -17,7 +17,7 @@ a JSON representation of the {{domxref("PerformanceResourceTiming")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

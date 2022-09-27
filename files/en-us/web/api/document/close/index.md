@@ -18,7 +18,7 @@ document, opened with {{domxref("Document.open()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

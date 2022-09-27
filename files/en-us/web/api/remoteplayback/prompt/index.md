@@ -21,7 +21,7 @@ If the user chooses to instead disconnect from the device, the {{domxref("Remote
 
 ## Syntax
 
-```js
+```js-nolint
 prompt()
 ```
 
@@ -47,6 +47,10 @@ The promise will be rejected with one of the following exceptions:
   - : Thrown if the user agent knows that remote playback of this particular media is not feasible.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if remote playback is unavailable.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

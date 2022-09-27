@@ -30,7 +30,7 @@ original document. The imported node is a clone of the original.
 
 ## Syntax
 
-```js
+```js-nolint
 importNode(externalNode)
 importNode(externalNode, deep)
 ```

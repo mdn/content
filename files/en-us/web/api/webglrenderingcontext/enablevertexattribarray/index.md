@@ -44,7 +44,7 @@ access the attribute, including {{domxref("WebGLRenderingContext.vertexAttribPoi
 
 ## Syntax
 
-```js
+```js-nolint
 enableVertexAttribArray(index)
 ```
 

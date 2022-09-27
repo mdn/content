@@ -22,7 +22,7 @@ properties that take a position, for example {{cssxref('object-position')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSPositionValue(x, y)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -146,8 +147,7 @@ div {
 
 ```css
 div {
-  background-image:
-     conic-gradient(from 40deg, #fff, #000);
+  background-image: conic-gradient(from 40deg, #fff, #000);
 }
 ```
 
@@ -191,9 +191,8 @@ div {
 
 ```css
 div {
-  background: conic-gradient(
-     red 36deg, orange 36deg 170deg, yellow 170deg);
-  border-radius: 50%
+  background: conic-gradient(red 36deg, orange 36deg 170deg, yellow 170deg);
+  border-radius: 50%;
 }
 ```
 
@@ -214,9 +213,12 @@ div {
 
 ```css
 div {
-  background:
-     conic-gradient(#fff 0.25turn, #000 0.25turn 0.5turn, #fff 0.5turn 0.75turn, #000 0.75turn)
-     top left / 25% 25% repeat;
+  background: conic-gradient(
+      #fff 0.25turn,
+      #000 0.25turn 0.5turn,
+      #fff 0.5turn 0.75turn,
+      #000 0.75turn
+    ) top left / 25% 25% repeat;
   border: 1px solid;
 }
 ```

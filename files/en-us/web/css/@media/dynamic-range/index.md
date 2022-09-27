@@ -1,8 +1,9 @@
 ---
 title: dynamic-range
 slug: Web/CSS/@media/dynamic-range
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
@@ -31,15 +32,15 @@ The `dynamic-range` feature is specified as a keyword value chosen from the list
 
 ```css
 @media (dynamic-range: standard) {
-    p {
-        color: red;
-    }
+  p {
+    color: red;
+  }
 }
 
 @media (dynamic-range: high) {
-    p {
-        color: green;
-    }
+  p {
+    color: green;
+  }
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-meter-optimum-value'
 slug: Web/CSS/::-webkit-meter-optimum-value
+page-type: css-pseudo-element
 tags:
   - '::-webkit-meter-optimum-value'
   - CSS
@@ -42,9 +43,9 @@ This example will only work in browsers based on WebKit or Blink.
 ```css
 meter::-webkit-meter-bar {
   /* Required to get rid of the default background property */
-  background : none;
-  background-color : whiteSmoke;
-  box-shadow : 0 5px 5px -5px #333 inset;
+  background: none;
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #333 inset;
 }
 
 meter::-webkit-meter-optimum-value {

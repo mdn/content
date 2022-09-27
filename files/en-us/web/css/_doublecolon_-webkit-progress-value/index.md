@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-progress-value'
 slug: Web/CSS/::-webkit-progress-value
+page-type: css-pseudo-element
 tags:
   - CSS
   - Non-standard
@@ -29,7 +30,7 @@ This example will only work in browsers based on Blink or WebKit.
 ### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### CSS

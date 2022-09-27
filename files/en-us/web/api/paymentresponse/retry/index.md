@@ -28,7 +28,7 @@ cards.
 
 ## Syntax
 
-```js
+```js-nolint
 retry(errorFields)
 ```
 

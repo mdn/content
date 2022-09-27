@@ -37,7 +37,14 @@ In this example, the `aria-autocomplete` attribute on the element with an ID of 
 ```html
 <div class="animals-combobox">
   <label for="animal">Animal</label>
-  <input id="animal" type="text" role="combobox" aria-autocomplete="inline" aria-controls="animals-listbox" aria-expanded="false" aria-haspopup="listbox">
+  <input
+    id="animal"
+    type="text"
+    role="combobox"
+    aria-autocomplete="inline"
+    aria-controls="animals-listbox"
+    aria-expanded="false"
+    aria-haspopup="listbox" />
   <ul id="animals-listbox" role="listbox" aria-label="Animals">
     <li id="animal-cat" role="option">Cat</li>
     <li id="animal-dog" role="option">Dog</li>

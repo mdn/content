@@ -1,6 +1,7 @@
 ---
 title: padding-right
 slug: Web/CSS/padding-right
+page-type: css-property
 tags:
   - CSS
   - CSS Padding
@@ -61,8 +62,12 @@ The `padding-right` property is specified as a single value chosen from the list
 ### Setting right padding using pixels and percentages
 
 ```css
-.content { padding-right: 5%; }
-.sidebox { padding-right: 10px; }
+.content {
+  padding-right: 5%;
+}
+.sidebox {
+  padding-right: 10px;
+}
 ```
 
 ## Specifications

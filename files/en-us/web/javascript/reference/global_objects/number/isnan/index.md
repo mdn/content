@@ -21,7 +21,7 @@ version of the original, global {{jsxref("isNaN", "isNaN()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 Number.isNaN(value)
 ```
 

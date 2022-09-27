@@ -23,8 +23,8 @@ devices like cameras and microphones, as well as screen sharing.
 
 ## Syntax
 
-```js
-const mediaDevices = navigator.mediaDevices;
+```js-nolint
+navigator.mediaDevices
 ```
 
 ### Return value

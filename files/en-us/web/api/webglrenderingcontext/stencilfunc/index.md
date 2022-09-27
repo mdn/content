@@ -21,7 +21,7 @@ multipass rendering to achieve special effects.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilFunc(func, ref, mask)
 ```
 

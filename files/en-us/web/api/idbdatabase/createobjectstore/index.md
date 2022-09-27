@@ -30,7 +30,7 @@ transaction.
 
 ## Syntax
 
-```js
+```js-nolint
 createObjectStore(name)
 createObjectStore(name, options)
 ```

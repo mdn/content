@@ -23,7 +23,7 @@ non-Boolean value.
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 || expr2
 ```
 

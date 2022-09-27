@@ -21,7 +21,7 @@ generic library creation.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveUniform(program, index)
 ```
 

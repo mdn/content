@@ -18,7 +18,7 @@ destination blending factors.
 
 ## Syntax
 
-```js
+```js-nolint
 blendColor(red, green, blue, alpha)
 ```
 

@@ -178,7 +178,7 @@ Place the distances along the three axes in the corresponding positions in the t
 A really easy way to start using a matrix is to use the CSS {{cssxref("transform-function/matrix3d","matrix3d()")}} {{cssxref("transform")}}. First we'll set up a simple {{htmlelement("div")}} with some content. The style is not shown, but it's set to a fixed width and height and is centered on the page. The `<div>` has a transition set for the transform so that matrix is animated in making it easy to see what is being done.
 
 ```html
-<div id='move-me' class='transformable'>
+<div id="move-me" class="transformable">
   <h2>Move me with a matrix</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</p>
 </div>
@@ -208,7 +208,7 @@ moveMe.style.transform = matrix3dRule;
 
 ## Scale matrix
 
-A **scale matrix** makes something larger or smaller in one or more of the three dimensions: width, height, and depth. In typical (cartesian) coordinates. this causes stretching or contracting of the object in the corresponding directions.
+A **scale matrix** makes something larger or smaller in one or more of the three dimensions: width, height, and depth. In typical (cartesian) coordinates, this causes stretching or contracting of the object in the corresponding directions.
 
 The amount of change to apply to each of the width, height, and depth is placed diagonally starting at the top-left corner and making their way down toward the bottom-right.
 
@@ -327,7 +327,7 @@ The function that we will be using to compose our matrices is `multiplyArrayOfMa
 ```js
 let transformMatrix = MDN.multiplyArrayOfMatrices([
   rotateAroundZAxis(Math.PI * 0.5),    // Step 3: rotate around 90 degrees
-  translate(0, 200, 0),                // Step 2: move down 100 pixels
+  translate(0, 200, 0),                // Step 2: move down 200 pixels
   scale(0.8, 0.8, 0.8),                // Step 1: scale down
 ]);
 ```
@@ -344,7 +344,7 @@ let transformMatrix = MDN.multiplyArrayOfMatrices([
   translate(0, -200, 0),               // Step 5: move back up
   rotateAroundZAxis(-Math.PI * 0.5),   // Step 4: rotate back
   rotateAroundZAxis(Math.PI * 0.5),    // Step 3: rotate around 90 degrees
-  translate(0, 200, 0),                // Step 2: move down 100 pixels
+  translate(0, 200, 0),                // Step 2: move down 200 pixels
   scale(0.8, 0.8, 0.8),                // Step 1: scale down
 ]);
 ```

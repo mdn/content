@@ -1,8 +1,9 @@
 ---
-title: ':checked'
+title: ":checked"
 slug: Web/CSS/:checked
+page-type: css-pseudo-class
 tags:
-  - ':checked'
+  - ":checked"
   - CSS
   - Checked
   - Layout
@@ -41,15 +42,15 @@ The user can engage this state by checking/selecting an element, or disengage it
 
 ```html
 <div>
-  <input type="radio" name="my-input" id="yes">
+  <input type="radio" name="my-input" id="yes" value="yes" />
   <label for="yes">Yes</label>
 
-  <input type="radio" name="my-input" id="no">
+  <input type="radio" name="my-input" id="no" value="no" />
   <label for="no">No</label>
 </div>
 
 <div>
-  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <input type="checkbox" name="my-checkbox" id="opt-in" />
   <label for="opt-in">Check me!</label>
 </div>
 
@@ -105,14 +106,38 @@ This example utilizes the `:checked` pseudo-class to let the user toggle content
 
 <table>
   <thead>
-    <tr><th>Column #1</th><th>Column #2</th><th>Column #3</th></tr>
+    <tr>
+      <th>Column #1</th>
+      <th>Column #2</th>
+      <th>Column #3</th>
+    </tr>
   </thead>
   <tbody>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
   </tbody>
 </table>
 

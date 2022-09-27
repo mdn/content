@@ -21,7 +21,7 @@ interface changes the CSS declaration with the given property.
 
 ## Syntax
 
-```js
+```js-nolint
 set(property, value)
 ```
 

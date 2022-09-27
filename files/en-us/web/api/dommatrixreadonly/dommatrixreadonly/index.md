@@ -16,9 +16,9 @@ and 3D operations.
 
 ## Syntax
 
-```js
-DOMMatrixReadOnly();
-DOMMatrixReadOnly(init);
+```js-nolint
+DOMMatrixReadOnly()
+DOMMatrixReadOnly(init)
 ```
 
 ### Parameters

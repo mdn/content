@@ -1,6 +1,7 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -171,8 +172,14 @@ body {
 
 ```css
 body {
-  background: linear-gradient(to right,
-     red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%);
+  background: linear-gradient(
+    to right,
+    red 20%,
+    orange 20% 40%,
+    yellow 40% 60%,
+    green 60% 80%,
+    blue 80%
+  );
 }
 ```
 

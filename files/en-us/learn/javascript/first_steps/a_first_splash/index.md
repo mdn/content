@@ -13,7 +13,7 @@ tags:
   - Operators
   - Variables
   - events
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
@@ -101,9 +101,7 @@ The place where we'll be adding all our code is inside the {{htmlelement("script
 
 ```html
 <script>
-
   // Your JavaScript goes here
-
 </script>
 ```
 
@@ -150,8 +148,8 @@ In our example:
 
   ```html
   <label for="guessField">Enter a guess: </label>
-  <input type="number" id="guessField" class="guessField">
-  <input type="submit" value="Submit guess" class="guessSubmit">
+  <input type="number" id="guessField" class="guessField" />
+  <input type="submit" value="Submit guess" class="guessSubmit" />
   ```
 
 - Our final two variables store a guess count of 1 (used to keep track of how many guesses the player has had), and a reference to a reset button that doesn't exist yet (but will later).
@@ -273,7 +271,7 @@ When we are running true/false tests (for example inside conditionals — see [b
       <td>
         <pre class="brush: js">
 6 > 10 // false
-20 > 10  // true</pre
+20 > 10 // true</pre
         >
       </td>
     </tr>

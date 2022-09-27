@@ -27,7 +27,7 @@ The names returned by **`getAttributeNames()`** are _qualified_ attribute names,
 
 ## Syntax
 
-```js
+```js-nolint
 getAttributeNames()
 ```
 

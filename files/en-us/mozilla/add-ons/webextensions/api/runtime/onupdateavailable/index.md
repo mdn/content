@@ -26,7 +26,7 @@ If the extension is not listening for this event when an update becomes availabl
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onUpdateAvailable.addListener()
 browser.runtime.onUpdateAvailable.removeListener(listener)
 browser.runtime.onUpdateAvailable.hasListener(listener)

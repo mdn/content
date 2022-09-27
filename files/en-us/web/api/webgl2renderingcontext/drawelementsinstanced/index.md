@@ -24,7 +24,7 @@ of elements.
 
 ## Syntax
 
-```js
+```js-nolint
 drawElementsInstanced(mode, count, type, offset, instanceCount)
 ```
 

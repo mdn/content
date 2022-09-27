@@ -19,7 +19,7 @@ make active.
 
 ## Syntax
 
-```js
+```js-nolint
 activeTexture(texture)
 ```
 

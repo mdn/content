@@ -1,6 +1,7 @@
 ---
 title: grid-column-end
 slug: Web/CSS/grid-column-end
+page-type: css-property
 tags:
   - CSS
   - CSS Grid
@@ -120,7 +121,9 @@ grid-column-end: unset;
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

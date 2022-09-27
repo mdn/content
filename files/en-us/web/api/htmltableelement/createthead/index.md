@@ -26,7 +26,7 @@ method creates it, and then returns it.
 
 ## Syntax
 
-```js
+```js-nolint
 createTHead()
 ```
 

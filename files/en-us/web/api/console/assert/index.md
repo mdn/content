@@ -22,7 +22,7 @@ the console if the assertion is false. If the assertion is true, nothing happens
 
 ## Syntax
 
-```js
+```js-nolint
 assert(assertion, obj1)
 assert(assertion, obj1, obj2)
 assert(assertion, obj1, obj2, /* … ,*/ objN)
@@ -57,7 +57,7 @@ The following code example demonstrates the use of a JavaScript object following
 assertion:
 
 ```js
-const errorMsg = 'the # is not even';
+const errorMsg = "the # is not even";
 for (let number = 2; number <= 5; number++) {
   console.log(`the # is ${number}`);
   console.assert(number % 2 === 0, { number, errorMsg });

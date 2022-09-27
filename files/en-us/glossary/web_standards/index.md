@@ -2,7 +2,6 @@
 title: Web standards
 slug: Glossary/Web_standards
 tags:
-  - Glossary
   - Infrastructure
   - Web Standards
   - standards

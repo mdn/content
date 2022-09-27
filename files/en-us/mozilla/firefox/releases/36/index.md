@@ -126,7 +126,10 @@ _No change._
 - Implemented global `require` function to access sdk modules anywhere ({{bug(1070927)}}), using:
 
   ```js
-  var { require } = Cu.import("resource://gre/modules/commonjs/toolkit/require.js", {});
+  var { require } = Cu.import(
+    "resource://gre/modules/commonjs/toolkit/require.js",
+    {}
+  );
   ```
 
 #### Details

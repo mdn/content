@@ -1,6 +1,7 @@
 ---
 title: border-top
 slug: Web/CSS/border-top
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders
@@ -81,9 +82,7 @@ The three values of the shorthand property can be specified in any order, and on
 #### HTML
 
 ```html
-<div>
-  This box has a border on the top side.
-</div>
+<div>This box has a border on the top side.</div>
 ```
 
 #### CSS

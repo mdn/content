@@ -1,8 +1,9 @@
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - CSS Descriptor
@@ -77,8 +78,8 @@ The font display timeline is based on a timer that begins the moment the user ag
 ```css
 @font-face {
   font-family: ExampleFont;
-  src: url(/path/to/fonts/examplefont.woff) format('woff'),
-       url(/path/to/fonts/examplefont.eot) format('eot');
+  src: url(/path/to/fonts/examplefont.woff) format("woff"), url(/path/to/fonts/examplefont.eot)
+      format("eot");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

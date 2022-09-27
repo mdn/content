@@ -25,7 +25,7 @@ filter configurable as several different common filter types.
 
 ## Syntax
 
-```js
+```js-nolint
 createBiquadFilter()
 ```
 

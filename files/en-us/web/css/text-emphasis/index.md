@@ -1,6 +1,7 @@
 ---
 title: text-emphasis
 slug: Web/CSS/text-emphasis
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Property
@@ -36,11 +37,11 @@ This property is a shorthand for the following CSS properties:
 text-emphasis: none; /* No emphasis marks */
 
 /* <string> value */
-text-emphasis: 'x';
-text-emphasis: '点';
-text-emphasis: '\25B2';
-text-emphasis: '*' #555;
-text-emphasis: 'foo'; /* Should NOT use. It may be computed to or rendered as 'f' only */
+text-emphasis: "x";
+text-emphasis: "点";
+text-emphasis: "\25B2";
+text-emphasis: "*" #555;
+text-emphasis: "foo"; /* Should NOT use. It may be computed to or rendered as 'f' only */
 
 /* Keywords value */
 text-emphasis: filled;
@@ -100,7 +101,7 @@ This example draws a heading with triangles used to emphasize each character.
 
 ```css
 h2 {
-  text-emphasis: triangle #D55;
+  text-emphasis: triangle #d55;
 }
 ```
 

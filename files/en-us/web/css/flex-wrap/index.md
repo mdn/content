@@ -1,6 +1,7 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes
@@ -61,19 +62,19 @@ The following values are accepted:
 #### HTML
 
 ```html
-<h4>This is an example for flex-wrap:wrap </h4>
+<h4>This is an example for flex-wrap:wrap</h4>
 <div class="content">
   <div class="red">1</div>
   <div class="green">2</div>
   <div class="blue">3</div>
 </div>
-<h4>This is an example for flex-wrap:nowrap </h4>
+<h4>This is an example for flex-wrap:nowrap</h4>
 <div class="content1">
   <div class="red">1</div>
   <div class="green">2</div>
   <div class="blue">3</div>
 </div>
-<h4>This is an example for flex-wrap:wrap-reverse </h4>
+<h4>This is an example for flex-wrap:wrap-reverse</h4>
 <div class="content2">
   <div class="red">1</div>
   <div class="green">2</div>

@@ -38,7 +38,7 @@ sequence.
 
 ## Syntax
 
-```js
+```js-nolint
 escape(str)
 ```
 

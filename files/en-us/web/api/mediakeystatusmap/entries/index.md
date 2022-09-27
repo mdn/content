@@ -21,7 +21,7 @@ insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

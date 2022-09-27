@@ -24,7 +24,7 @@ remove information about the locale that would be added by calling
 
 ## Syntax
 
-```js
+```js-nolint
 minimize()
 ```
 

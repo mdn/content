@@ -2,7 +2,6 @@
 title: Long task
 slug: Glossary/Long_task
 tags:
-  - Glossary
   - Long Tasks API
   - Reference
   - Web Performance

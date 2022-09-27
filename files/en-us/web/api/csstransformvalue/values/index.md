@@ -23,7 +23,7 @@ each index in the CSSTransformValue object.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

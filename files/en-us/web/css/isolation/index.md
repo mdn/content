@@ -1,6 +1,7 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -72,7 +73,7 @@ The `isolation` property is specified as one of the keyword values listed below.
 
 ```css
 .a {
-  background-color: rgb(0,255,0);
+  background-color: rgb(0, 255, 0);
 }
 #b {
   width: 200px;

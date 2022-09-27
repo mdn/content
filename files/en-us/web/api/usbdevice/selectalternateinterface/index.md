@@ -23,7 +23,7 @@ the specified alternative endpoint is selected.
 
 ## Syntax
 
-```js
+```js-nolint
 selectAlternateInterface(interfaceNumber, alternateSetting)
 ```
 

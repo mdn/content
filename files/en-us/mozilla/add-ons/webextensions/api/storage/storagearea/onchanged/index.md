@@ -20,7 +20,7 @@ Fires when one or more items in a storage area change. Compared to {{WebExtAPIRe
 
 ## Syntax
 
-```js
+```js-nolint
 // local can also be sync, managed, or session
 browser.storage.local.onChanged.addListener(callback)
 browser.storage.local.onChanged.removeListener(listener)

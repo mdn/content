@@ -1,6 +1,7 @@
 ---
 title: max-height
 slug: Web/CSS/max-height
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -82,9 +83,13 @@ Ensure that elements set with a `max-height` are not truncated and/or do not obs
 ### Setting max-height using percentage and keyword values
 
 ```css
-table { max-height: 75%; }
+table {
+  max-height: 75%;
+}
 
-form { max-height: none; }
+form {
+  max-height: none;
+}
 ```
 
 ## Specifications

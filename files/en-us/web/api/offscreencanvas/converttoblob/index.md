@@ -5,14 +5,13 @@ page-type: web-api-instance-method
 tags:
   - API
   - Canvas
-  - Experimental
   - Method
   - OffscreenCanvas
   - Reference
 browser-compat: api.OffscreenCanvas.convertToBlob
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 The **`OffscreenCanvas.convertToBlob()`** method creates a {{domxref("Blob")}} object representing the image contained in the canvas.
 
@@ -24,7 +23,7 @@ The created image will have a resolution of 96dpi for file formats that support 
 
 ## Syntax
 
-```js
+```js-nolint
 convertToBlob()
 convertToBlob(options)
 ```

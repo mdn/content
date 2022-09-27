@@ -24,7 +24,7 @@ details and examples.
 
 ## Syntax
 
-```js
+```js-nolint
 timeLog(label)
 ```
 

@@ -2,7 +2,7 @@
 title: Firefox 91 for developers
 slug: Mozilla/Firefox/Releases/91
 tags:
-  - '91'
+  - "91"
   - Firefox
   - Mozilla
   - Release

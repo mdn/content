@@ -17,7 +17,7 @@ The **`FormDataEvent()`** constructor creates a new {{domxref("FormDataEvent")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new FormDataEvent(type, formEventInit)
 ```
 

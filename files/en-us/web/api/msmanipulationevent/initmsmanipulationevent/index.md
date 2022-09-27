@@ -20,7 +20,7 @@ This proprietary method is specific to Internet Explorer. Beginning with the Mic
 
 ## Syntax
 
-```js
+```js-nolint
 initMSManipulationEvent(type, canBubble, cancelable, view, detail, lastState, currentState)
 ```
 

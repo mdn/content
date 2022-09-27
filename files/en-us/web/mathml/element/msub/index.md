@@ -21,20 +21,16 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Examples
 
-Sample rendering: ![x1](msub.png)
-
-Rendering in your browser: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
-
 ```html
-<math>
-
+<math display="block">
   <msub>
     <mi>X</mi>
     <mn>1</mn>
   </msub>
-
 </math>
 ```
+
+{{ EmbedLiveSample('msub_example', 700, 200, "", "") }}
 
 ## Specifications
 

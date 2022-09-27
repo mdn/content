@@ -21,7 +21,7 @@ characters).
 
 ## Syntax
 
-```js
+```js-nolint
 encodeURIComponent(uriComponent)
 ```
 

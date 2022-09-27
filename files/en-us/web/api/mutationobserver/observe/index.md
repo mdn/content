@@ -31,7 +31,7 @@ To stop the `MutationObserver` (so that none of its callbacks will be triggered 
 
 ## Syntax
 
-```js
+```js-nolint
 observe(target, options)
 ```
 

@@ -20,7 +20,7 @@ Fired when any alarm set by the extension goes off.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.alarms.onAlarm.addListener(listener)
 browser.alarms.onAlarm.removeListener(listener)
 browser.alarms.onAlarm.hasListener(listener)

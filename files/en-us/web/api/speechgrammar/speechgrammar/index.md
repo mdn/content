@@ -23,7 +23,7 @@ instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new SpeechGrammar()
 ```
 

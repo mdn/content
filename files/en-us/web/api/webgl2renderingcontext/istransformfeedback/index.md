@@ -19,7 +19,7 @@ if the passed object is a valid {{domxref("WebGLTransformFeedback")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 isTransformFeedback(transformFeedback)
 ```
 

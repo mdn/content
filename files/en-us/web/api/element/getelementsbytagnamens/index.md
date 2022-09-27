@@ -20,7 +20,7 @@ that its search is restricted to descendants of the specified element.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByTagNameNS(namespaceURI, localName)
 ```
 

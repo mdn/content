@@ -29,7 +29,7 @@ call to the observer's callback.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 

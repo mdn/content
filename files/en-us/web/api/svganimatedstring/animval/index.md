@@ -13,7 +13,7 @@ AnimVal attribute or animVal property contains the same value as the {{domxref("
 
 ## Syntax
 
-```js
+```js-nolint
 const currentValue = object.animVal
 ```
 

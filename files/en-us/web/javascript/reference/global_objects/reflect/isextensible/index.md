@@ -19,7 +19,7 @@ The static **`Reflect.isExtensible()`** method determines if an object is extens
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.isExtensible(target)
 ```
 

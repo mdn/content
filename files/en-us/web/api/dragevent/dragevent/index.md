@@ -25,7 +25,7 @@ This interface inherits properties from {{domxref("MouseEvent")}} and
 
 ## Syntax
 
-```js
+```js-nolint
 new DragEvent(type)
 new DragEvent(type, dragEventInit)
 ```

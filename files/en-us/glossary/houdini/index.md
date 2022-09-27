@@ -4,7 +4,6 @@ slug: Glossary/Houdini
 tags:
   - CSS
   - CSS API
-  - Glossary
   - Houdini
   - Reference
 ---

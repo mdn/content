@@ -17,7 +17,7 @@ The **`createScriptURL()`** method of the {{domxref("TrustedTypePolicy")}} inter
 
 ## Syntax
 
-```js
+```js-nolint
 createScriptURL(input)
 createScriptURL(input, args)
 ```

@@ -31,7 +31,7 @@ request object.
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 

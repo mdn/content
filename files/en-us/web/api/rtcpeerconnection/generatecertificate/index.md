@@ -24,7 +24,7 @@ that resolves with the new {{domxref("RTCCertificate")}} once it's generated.
 
 ## Syntax
 
-```js
+```js-nolint
 generateCertificate(keygenAlgorithm) // static function
 ```
 

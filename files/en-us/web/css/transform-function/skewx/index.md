@@ -1,6 +1,7 @@
 ---
 title: skewX()
 slug: Web/CSS/transform-function/skewX
+page-type: css-function
 tags:
   - CSS
   - CSS Function

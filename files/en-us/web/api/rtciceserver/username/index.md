@@ -22,7 +22,7 @@ property is a string which specifies the username to use when authenticating wit
 
 ## Syntax
 
-```js
+```js-nolint
 const iceServer = {
   // ...
   username: someUsername,

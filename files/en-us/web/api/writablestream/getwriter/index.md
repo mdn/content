@@ -19,7 +19,7 @@ While the stream is locked, no other writer can be acquired until this one is re
 
 ## Syntax
 
-```js
+```js-nolint
 getWriter()
 ```
 

@@ -19,7 +19,7 @@ returns an integer of the specified radix or base.
 
 ## Syntax
 
-```js
+```js-nolint
 Number.parseInt(string)
 Number.parseInt(string, radix)
 ```

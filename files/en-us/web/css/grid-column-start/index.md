@@ -1,6 +1,7 @@
 ---
 title: grid-column-start
 slug: Web/CSS/grid-column-start
+page-type: css-property
 tags:
   - CSS
   - CSS Grid
@@ -128,7 +129,9 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

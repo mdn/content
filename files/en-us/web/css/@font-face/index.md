@@ -1,8 +1,9 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
+page-type: css-at-rule
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule
   - CSS
   - CSS Fonts
@@ -22,8 +23,8 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+      format("woff");
 }
 ```
 
@@ -60,8 +61,8 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
     To provide the browser with a hint as to what format a font resource is — so it can select a suitable one — it is possible to include a format type inside a `format()` function:
 
     ```css
-    src: url(ideal-sans-serif.woff) format("woff"),
-         url(basic-sans-serif.ttf) format("truetype");
+    src: url(ideal-sans-serif.woff) format("woff"), url(basic-sans-serif.ttf)
+        format("truetype");
     ```
 
     The available types are: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, and `"svg"`.
@@ -97,9 +98,8 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
   .className {
     @font-face {
       font-family: MyHelvetica;
-      src: local("Helvetica Neue Bold"),
-           local("HelveticaNeue-Bold"),
-           url(MgOpenModernaBold.ttf);
+      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+        url(MgOpenModernaBold.ttf);
       font-weight: bold;
     }
   }
@@ -122,22 +122,24 @@ This example specifies a downloadable font to use, applying it to the entire bod
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Web Font Sample</title>
-  <style media="screen, print">
-    @font-face {
-      font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
-    }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Web Font Sample</title>
+    <style media="screen, print">
+      @font-face {
+        font-family: "Bitstream Vera Serif Bold";
+        src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+      }
 
-    body { font-family: "Bitstream Vera Serif Bold", serif }
-  </style>
-</head>
-<body>
-  This is Bitstream Vera Serif Bold.
-</body>
+      body {
+        font-family: "Bitstream Vera Serif Bold", serif;
+      }
+    </style>
+  </head>
+  <body>
+    This is Bitstream Vera Serif Bold.
+  </body>
 </html>
 ```
 
@@ -152,9 +154,8 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-       local("HelveticaNeue-Bold"),
-       url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```

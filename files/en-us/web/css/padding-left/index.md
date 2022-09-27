@@ -1,6 +1,7 @@
 ---
 title: padding-left
 slug: Web/CSS/padding-left
+page-type: css-property
 tags:
   - CSS
   - CSS Padding
@@ -61,8 +62,12 @@ The `padding-left` property is specified as a single value chosen from the list 
 ### Setting left padding using pixels and percentages
 
 ```css
-.content { padding-left: 5%; }
-.sidebox { padding-left: 10px; }
+.content {
+  padding-left: 5%;
+}
+.sidebox {
+  padding-left: 10px;
+}
 ```
 
 ## Specifications

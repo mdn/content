@@ -18,7 +18,7 @@ specific method for that {{domxref("TextDecoder")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 decode()
 decode(buffer)
 decode(buffer, options)

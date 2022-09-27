@@ -25,7 +25,7 @@ it is available and supported. Otherwise it throws an error.
 
 ## Syntax
 
-```js
+```js-nolint
 readValue()
 ```
 

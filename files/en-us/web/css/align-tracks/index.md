@@ -1,6 +1,7 @@
 ---
 title: align-tracks
 slug: Web/CSS/align-tracks
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -24,7 +25,7 @@ The **`align-tracks`** CSS property sets the alignment in the masonry axis for g
 align-tracks: start;
 align-tracks: space-between;
 align-tracks: center;
-align-tracks: start,center,end;
+align-tracks: start, center, end;
 
 /* Global values */
 align-tracks: inherit;

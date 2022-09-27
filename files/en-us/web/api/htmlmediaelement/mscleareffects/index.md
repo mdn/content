@@ -16,8 +16,8 @@ The **`msClearEffects`** method of the [_HTMLMediaElement_](/en-US/docs/Web/API/
 
 ### Syntax
 
-```js
-HTMLMediaElement.msClearEffects();
+```js-nolint
+msClearEffects()
 ```
 
 ### Parameters

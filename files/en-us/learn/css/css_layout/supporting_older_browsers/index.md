@@ -76,10 +76,12 @@ CSS specifications contain information that explains what the browser does when 
 In the example below, we have floated three `<div>`s so they display in a row. Any browser that does not support [CSS Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view, if not it ignores the `display: grid` and related properties and the floated layout is used.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -89,7 +91,7 @@ In the example below, we have floated three `<div>`s so they display in a row. A
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -126,10 +128,12 @@ For many layout tweaks in older browsers, you may find you can give a decent exp
 In the floated layout, the percentage is calculated from the container — 33.333% is a third of the container width. In Grid however that 33.333% is calculated from the grid area the item is placed in, so it actually becomes a third of the size we want once the Grid Layout is introduced.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -139,7 +143,7 @@ In the floated layout, the percentage is calculated from the container — 33.33
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -164,10 +168,12 @@ Feature queries allow you to test whether a browser supports any particular CSS 
 If we add a feature query to the above example, we can use it to set the widths of our items back to `auto` if we know that we have grid support.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -177,14 +183,14 @@ If we add a feature query to the above example, we can use it to set the widths 
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 
 @supports (display: grid) {
   .item {
-      width: auto;
+    width: auto;
   }
 }
 ```

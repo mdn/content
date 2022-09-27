@@ -1,6 +1,7 @@
 ---
 title: <ratio>
 slug: Web/CSS/ratio
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -30,7 +31,9 @@ In Media Queries Level 4, the `<ratio>` date type is updated to consist of a str
 ### Use in a media query
 
 ```css
-@media screen and (min-aspect-ratio: 16/9) { /* … */ }
+@media screen and (min-aspect-ratio: 16/9) {
+  /* … */
+}
 ```
 
 ### Common aspect ratios

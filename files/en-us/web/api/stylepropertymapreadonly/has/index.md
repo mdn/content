@@ -22,7 +22,7 @@ property is in the `StylePropertyMapReadOnly` object.
 
 ## Syntax
 
-```js
+```js-nolint
 has(property)
 ```
 

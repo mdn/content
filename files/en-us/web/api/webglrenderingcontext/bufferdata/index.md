@@ -20,7 +20,7 @@ buffer object's data store.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL1
 bufferData(target, usage)
 bufferData(target, size, usage)

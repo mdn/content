@@ -1,6 +1,7 @@
 ---
-title: '-webkit-text-security'
+title: "-webkit-text-security"
 slug: Web/CSS/-webkit-text-security
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -41,8 +42,7 @@ Try typing in the field below. If your browser supports this property, the chara
 #### HTML
 
 ```html
-<label for="name">Name:</label>
-<input type="text" name="name" id="name" />
+<label for="name">Name:</label> <input type="text" name="name" id="name" />
 ```
 
 #### CSS

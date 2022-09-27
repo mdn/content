@@ -22,7 +22,7 @@ function. It returns true if, in the array, it finds an element for which the pr
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 some((element) => { /* … */ } )
 some((element, index) => { /* … */ } )
@@ -69,9 +69,9 @@ once for each element present in the array until it finds the one where
 `callbackFn` returns a _truthy_ value (a value that becomes
 true when converted to a Boolean). If such an element is found, `some()`
 immediately returns `true`. Otherwise, `some()` returns
-`false`. `callbackFn` is invoked only for indexes of the
-array with assigned values. It is not invoked for indexes which have been deleted or
-which have never been assigned values.
+`false`.
+
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 `callbackFn` is invoked with three arguments: the value of the
 element, the index of the element, and the Array object being traversed.
@@ -167,6 +167,16 @@ getBoolean(false);   // false
 getBoolean('false'); // false
 getBoolean(1);       // true
 getBoolean('true');  // true
+```
+
+### Using some() on sparse arrays
+
+`some()` will not run its predicate on empty slots.
+
+```js
+console.log([1, , 3].some((x) => x === undefined)); // false
+console.log([1, , 1].some((x) => x !== 1)); // false
+console.log([1, undefined, 1].some((x) => x !== 1)); // true
 ```
 
 ## Specifications

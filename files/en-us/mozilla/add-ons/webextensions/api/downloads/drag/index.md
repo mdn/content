@@ -20,7 +20,7 @@ The **`drag()`** function of the {{WebExtAPIRef("downloads")}} API initiates dra
 
 ## Syntax
 
-```js
+```js-nolint
 chrome.downloads.drag(
   downloadId // integer
 )

@@ -30,7 +30,7 @@ stylesheet. You should avoid using this method, and should instead use the more 
 
 ## Syntax
 
-```js
+```js-nolint
 addRule(selector, styleBlock, index)
 ```
 

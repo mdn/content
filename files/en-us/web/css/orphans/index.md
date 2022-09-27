@@ -1,6 +1,7 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
+page-type: css-property
 tags:
   - CSS
   - CSS Fragmentation
@@ -54,8 +55,14 @@ In typography, an _orphan_ is the first line of a paragraph that appears alone a
 ```html
 <div>
   <p>This is the first paragraph containing some text.</p>
-  <p>This is the second paragraph containing some more text than the first one. It is used to demonstrate how orphans work.</p>
-  <p>This is the third paragraph. It has a little bit more text than the first one.</p>
+  <p>
+    This is the second paragraph containing some more text than the first one.
+    It is used to demonstrate how orphans work.
+  </p>
+  <p>
+    This is the third paragraph. It has a little bit more text than the first
+    one.
+  </p>
 </div>
 ```
 

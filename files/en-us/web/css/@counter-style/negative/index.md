@@ -1,8 +1,9 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
+page-type: css-at-rule-descriptor
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Descriptor
@@ -18,8 +19,8 @@ When defining custom counter styles, the **`negative`** descriptor lets you alte
 
 ```css
 /* <symbol> values */
-negative: "-";       /* Prepends '-' if value is negative */
-negative: "(" ")";   /* Surrounds value by '(' and ')' if it is negative */
+negative: "-"; /* Prepends '-' if value is negative */
+negative: "(" ")"; /* Surrounds value by '(' and ')' if it is negative */
 ```
 
 ### Values

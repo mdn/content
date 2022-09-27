@@ -22,7 +22,7 @@ To define a right-click action, use the {{WebExtAPIRef('contextMenus')}} API wit
 
 ## Syntax
 
-```js
+```js-nolint
 browser.pageAction.onClicked.addListener(listener)
 browser.pageAction.onClicked.removeListener(listener)
 browser.pageAction.onClicked.hasListener(listener)

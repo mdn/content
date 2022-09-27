@@ -1,6 +1,7 @@
 ---
 title: overflow-x
 slug: Web/CSS/overflow-x
+page-type: css-property
 tags:
   - CSS
   - CSS Box Model
@@ -63,28 +64,26 @@ The `overflow-x` property is specified as a single keyword chosen from the list 
 
 ```html
 <ul>
-  <li><code>overflow-x:hidden</code> — hides the text outside the box
-    <div id="div1">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-x:hidden</code> — hides the text outside the box
+    <div id="div1">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-x:scroll</code> — always adds a scrollbar
-    <div id="div2">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-x:scroll</code> — always adds a scrollbar
+    <div id="div2">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-x:visible</code> — displays the text outside the box if needed
-    <div id="div3">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-x:visible</code> — displays the text outside the box if
+    needed
+    <div id="div3">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-x:auto</code> — on most browsers, equivalent to <code>scroll</code>
-    <div id="div4">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-x:auto</code> — on most browsers, equivalent to
+    <code>scroll</code>
+    <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 </ul>
 ```
@@ -92,16 +91,27 @@ The `overflow-x` property is specified as a single keyword chosen from the list 
 ### CSS
 
 ```css
-#div1, #div2, #div3, #div4 {
+#div1,
+#div2,
+#div3,
+#div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   margin-bottom: 12px;
 }
 
-#div1 { overflow-x: hidden;}
-#div2 { overflow-x: scroll;}
-#div3 { overflow-x: visible;}
-#div4 { overflow-x: auto;}
+#div1 {
+  overflow-x: hidden;
+}
+#div2 {
+  overflow-x: scroll;
+}
+#div3 {
+  overflow-x: visible;
+}
+#div4 {
+  overflow-x: auto;
+}
 ```
 
 ### Result

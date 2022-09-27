@@ -18,7 +18,7 @@ and/or back-facing polygons can be culled.
 
 ## Syntax
 
-```js
+```js-nolint
 cullFace(mode)
 ```
 

@@ -22,7 +22,7 @@ Fired when the currently focused window changes. Will be {{WebExtAPIRef('windows
 
 ## Syntax
 
-```js
+```js-nolint
 browser.windows.onFocusChanged.addListener(listener)
 browser.windows.onFocusChanged.removeListener(listener)
 browser.windows.onFocusChanged.hasListener(listener)

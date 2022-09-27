@@ -46,7 +46,10 @@ The following example resets the CSS {{cssxref('display')}} property to its defa
 ```
 
 ```html hidden
-<div id="myElement">Check the developer tools to see the log in the console and to inspect the style attribute on this div.</div>
+<div id="myElement">
+  Check the developer tools to see the log in the console and to inspect the
+  style attribute on this div.
+</div>
 ```
 
 ```js

@@ -28,7 +28,7 @@ with the `<textArea>` element.
 
 ```html
 <label id="label1" for="test">Label 1</label>
-<textArea id="test">Some text</textArea>
+<textarea id="test">Some text</textarea>
 <label id="label2" for="test">Label 2</label>
 ```
 

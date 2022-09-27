@@ -32,7 +32,7 @@ the properties within may be changed at will.
 
 ## Syntax
 
-```js
+```js-nolint
 fromPoint(sourcePoint)
 ```
 

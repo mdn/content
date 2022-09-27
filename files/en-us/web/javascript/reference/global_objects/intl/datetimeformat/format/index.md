@@ -25,7 +25,7 @@ a date according to the locale and formatting options of this
 
 ## Syntax
 
-```js
+```js-nolint
 format(date)
 ```
 

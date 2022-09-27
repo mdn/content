@@ -1,6 +1,7 @@
 ---
 title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Property
@@ -36,7 +37,7 @@ scroll-padding-inline: auto;
 
 /* <length> values */
 scroll-padding-inline: 10px;
-scroll-padding-inline: 1em .5em;
+scroll-padding-inline: 1em 0.5em;
 scroll-padding-inline: 10%;
 
 /* Global values */

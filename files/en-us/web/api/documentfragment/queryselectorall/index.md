@@ -23,7 +23,7 @@ a `SYNTAX_ERR` value is raised.
 
 ## Syntax
 
-```js
+```js-nolint
 querySelectorAll(selectors)
 ```
 

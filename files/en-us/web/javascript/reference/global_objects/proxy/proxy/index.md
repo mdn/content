@@ -16,7 +16,7 @@ The **`Proxy()`** constructor is used to create
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, handler)
 ```
 

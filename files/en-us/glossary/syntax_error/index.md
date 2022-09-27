@@ -3,7 +3,6 @@ title: Syntax error
 slug: Glossary/Syntax_error
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

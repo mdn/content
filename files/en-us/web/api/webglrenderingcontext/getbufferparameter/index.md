@@ -19,7 +19,7 @@ buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 getBufferParameter(target, pname)
 ```
 

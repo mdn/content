@@ -27,7 +27,7 @@ file contains.
 
 ## Syntax
 
-```js
+```js-nolint
 write(data)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: box-lines
 slug: Web/CSS/box-lines
+page-type: css-property
 tags:
   - CSS
   - CSS Property

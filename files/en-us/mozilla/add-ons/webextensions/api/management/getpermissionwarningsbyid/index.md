@@ -12,7 +12,9 @@ tags:
 browser-compat: webextensions.api.management.getPermissionWarningsById
 ---
 
-{{AddonSidebar()}}When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardized across browsers.
+{{AddonSidebar()}}
+
+When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardized across browsers.
 
 Given the ID of an add-on, this function returns the permission warnings for it as an array of strings.
 
@@ -22,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingWarnings = browser.management.getPermissionWarningsById(
   id                  // string
 )

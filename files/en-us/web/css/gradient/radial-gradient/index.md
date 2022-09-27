@@ -1,6 +1,7 @@
 ---
 title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -118,8 +119,11 @@ Color-stop points are positioned on a _virtual gradient ray_ that extends horizo
 
 ```css
 .radial-gradient {
-  background-image: radial-gradient(farthest-corner at 40px 40px,
-      #f35 0%, #43e 100%);
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #f35 0%,
+    #43e 100%
+  );
 }
 ```
 

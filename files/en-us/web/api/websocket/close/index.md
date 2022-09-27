@@ -21,7 +21,7 @@ already `CLOSED`, this method does nothing.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 close(code)
 close(code, reason)

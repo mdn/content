@@ -29,7 +29,7 @@ The `mark()'s` stores its data internally as
 
 ## Syntax
 
-```js
+```js-nolint
 mark(name)
 mark(name, markOptions)
 ```

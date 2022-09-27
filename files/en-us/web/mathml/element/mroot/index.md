@@ -19,20 +19,23 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
 ## Examples
 
-Sample Rendering: ![x](mroot.png)
-
-Rendering in your browser: <math><mroot><mi>x</mi> <mn>3</mn></mroot></math>
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
 
 ```html
-<math>
-
- <mroot>
+<math display="block">
+  <mroot>
     <mi>x</mi>
     <mn>3</mn>
- </mroot>
-
+  </mroot>
 </math>
 ```
+
+{{ EmbedLiveSample('mroot_example', 700, 200, "", "") }}
 
 ## Specifications
 

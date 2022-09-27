@@ -18,7 +18,7 @@ The **`flush()`** method of the {{domxref("VideoDecoder")}} interface returns a 
 
 ## Syntax
 
-```js
+```js-nolint
 flush()
 ```
 

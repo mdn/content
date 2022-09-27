@@ -27,7 +27,7 @@ The simplest way of styling content elements like `<p>` or `<span>` is by specif
 
 yields:
 
-{{EmbedGHLiveSample("imsc/inline-styles/inline-styles.html", '100%')}}
+{{EmbedGHLiveSample("imsc-examples/inline-styles/inline-styles.html", '100%')}}
 
 ## Referential styling
 

@@ -21,7 +21,7 @@ node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 parentNode()
 ```
 

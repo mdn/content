@@ -23,7 +23,7 @@ otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.getOwnPropertyDescriptor(target, propertyKey)
 ```
 

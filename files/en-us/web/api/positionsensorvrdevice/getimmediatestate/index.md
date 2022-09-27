@@ -23,7 +23,7 @@ For most standard uses, you'll probably want to use {{domxref("PositionSensorVRD
 
 ## Syntax
 
-```js
+```js-nolint
 getImmediateState()
 ```
 

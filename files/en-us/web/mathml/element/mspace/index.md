@@ -29,14 +29,15 @@ Note that some common attributes like `mathcolor`, `mathvariant` or `dir` have n
 ## Examples
 
 ```html
-<math>
-
-  <mspace depth="40px" height="20px" />
-
-  <mspace width="100px" />
-
+<math display="block">
+  <mn>1</mn>
+  <mspace depth="40px" height="20px" width="100px"
+          style="background: lightblue;"/>
+  <mn>2</mn>
 </math>
 ```
+
+{{ EmbedLiveSample('mspace_example', 700, 200, "", "") }}
 
 ## Specifications
 

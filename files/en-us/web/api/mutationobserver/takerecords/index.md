@@ -33,7 +33,7 @@ observer.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 
@@ -74,7 +74,7 @@ let mutations = observer.takeRecords();
 
 observer.disconnect();
 
-if (mutations) {
+if (mutations.length > 0) {
   callback(mutations);
 }
 ```

@@ -1,6 +1,7 @@
 ---
-title: ':nth-last-col'
+title: ":nth-last-col"
 slug: Web/CSS/:nth-last-col
+page-type: css-pseudo-class
 browser-compat: css.selectors.nth-last-col
 ---
 
@@ -40,7 +41,7 @@ See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
     <td>four</td>
   </tr>
   <tr>
-  <td>one</td>
+    <td>one</td>
     <td>two</td>
     <td>three</td>
     <td>four</td>
@@ -53,11 +54,11 @@ See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 ```css
 td {
   border: 1px solid #ccc;
-  padding: .2em;
+  padding: 0.2em;
 }
 
 /* Odd columns starting with the final column of the table */
-:nth-last-col(2n+1) {
+:nth-last-col(2n + 1) {
   background-color: pink;
 }
 ```

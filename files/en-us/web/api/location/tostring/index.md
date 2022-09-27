@@ -19,7 +19,7 @@ whole URL. It is a read-only version of {{domxref("Location.href")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

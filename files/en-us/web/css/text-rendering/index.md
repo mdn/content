@@ -1,6 +1,7 @@
 ---
 title: text-rendering
 slug: Web/CSS/text-rendering
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -85,8 +86,12 @@ This demonstrates how `optimizeLegibility` is used by browsers automatically whe
 #### CSS
 
 ```css
-.small { font: 19.9px "Constantia", "Times New Roman", "Georgia", "Palatino", serif; }
-.big   { font: 20px "Constantia", "Times New Roman", "Georgia", "Palatino", serif; }
+.small {
+  font: 19.9px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+}
+.big {
+  font: 20px "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+}
 ```
 
 #### Result
@@ -107,10 +112,16 @@ This example shows the difference between the appearance of `optimizeSpeed` and 
 #### CSS
 
 ```css
-p { font: 1.5em "Constantia", "Times New Roman", "Georgia", "Palatino", serif }
+p {
+  font: 1.5em "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
+}
 
-.speed       { text-rendering: optimizeSpeed; }
-.legibility  { text-rendering: optimizeLegibility; }
+.speed {
+  text-rendering: optimizeSpeed;
+}
+.legibility {
+  text-rendering: optimizeLegibility;
+}
 ```
 
 #### Result

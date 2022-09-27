@@ -18,7 +18,7 @@ The **`toString()`** method of a string object returns a string representing the
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

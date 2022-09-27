@@ -214,8 +214,7 @@ In `app.component.html`, replace the `<h2>` with the following:
   placeholder="add an item"
   (keyup.enter)="addItem(newItem.value); newItem.value = ''"
   class="lg-text-input"
-  id="addItemInput"
-/>
+  id="addItemInput" />
 
 <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
 ```

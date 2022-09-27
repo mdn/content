@@ -3,7 +3,6 @@ title: Flex Container
 slug: Glossary/Flex_Container
 tags:
   - CSS
-  - Glossary
   - flex container
   - flexbox
 ---

@@ -21,7 +21,7 @@ previously-defined custom element.
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 

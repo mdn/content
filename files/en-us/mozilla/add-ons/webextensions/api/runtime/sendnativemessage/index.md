@@ -28,7 +28,7 @@ For more information, see [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExte
 
 ## Syntax
 
-```js
+```js-nolint
 let sending = browser.runtime.sendNativeMessage(
   application,             // string
   message                  // object

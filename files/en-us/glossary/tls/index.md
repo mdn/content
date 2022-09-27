@@ -3,7 +3,6 @@ title: Transport Layer Security (TLS)
 slug: Glossary/TLS
 tags:
   - Cryptography
-  - Glossary
   - Infrastructure
   - Security
   - Web Performance

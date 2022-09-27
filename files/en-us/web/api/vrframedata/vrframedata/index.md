@@ -23,7 +23,7 @@ The **`VRFrameData()`** constructor creates a {{domxref("VRFrameData")}} object 
 
 ## Syntax
 
-```js
+```js-nolint
 new VRFrameData()
 ```
 

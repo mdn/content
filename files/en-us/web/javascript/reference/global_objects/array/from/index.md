@@ -19,7 +19,7 @@ The **`Array.from()`** static method creates a new, shallow-copied `Array` insta
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 Array.from(arrayLike, (element) => { /* … */ } )
 Array.from(arrayLike, (element, index) => { /* … */ } )
@@ -54,6 +54,8 @@ A new {{jsxref("Array")}} instance.
 
 - [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (objects such as {{jsxref("Map")}} and {{jsxref("Set")}}); or, if the object is not iterable,
 - array-like objects (objects with a `length` property and indexed elements).
+
+`Array.from()` never creates a sparse array. If the `arrayLike` object is missing some index properties, they become `undefined` in the new array.
 
 `Array.from()` has an optional parameter `mapFn`, which allows you to execute a {{jsxref("Array.prototype.map()", "map()")}} function on each element of the array being created.
 
@@ -101,7 +103,7 @@ Array.from(mapper.keys());
 
 ```js
 // Create an array based on a property of DOM Elements
-const images = document.getElementsByTagName('img');
+const images = document.querySelectorAll('img');
 const sources = Array.from(images, (image) => image.src);
 const insecureSources = sources.filter((link) => link.startsWith('http://'));
 ```

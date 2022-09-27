@@ -82,18 +82,21 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 250px;">
-</div>
+<div class="output" style="min-height: 250px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="width: 95%;min-height: 100px;">
-</textarea>
+<textarea
+  id="code"
+  class="input"
+  style="width: 95%;min-height: 100px;"></textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -209,14 +212,22 @@ There are some serious [Security concerns](#security_concerns) to consider with 
 
 ```html
 <head>
-  <style> iframe { border: none } </style>
+  <style>
+    iframe {
+      border: none;
+    }
+  </style>
 </head>
 <body>
-  <iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
-          width="100%" height="500" allowfullscreen sandbox>
+  <iframe
+    src="https://developer.mozilla.org/en-US/docs/Glossary"
+    width="100%"
+    height="500"
+    allowfullscreen
+    sandbox>
     <p>
       <a href="/en-US/docs/Glossary">
-         Fallback link for browsers that don't support iframes
+        Fallback link for browsers that don't support iframes
       </a>
     </p>
   </iframe>
@@ -350,11 +361,10 @@ If you find yourself needing to embed plugin content, this is the kind of inform
 Let's look at an `<object>` example that embeds a PDF into a page (see the [live example](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
 
 ```html
-<object data="mypdf.pdf" type="application/pdf"
-        width="800" height="1200">
-  <p>You don't have a PDF plugin, but you can
-    <a href="mypdf.pdf">download the PDF file.
-    </a>
+<object data="mypdf.pdf" type="application/pdf" width="800" height="1200">
+  <p>
+    You don't have a PDF plugin, but you can
+    <a href="mypdf.pdf">download the PDF file. </a>
   </p>
 </object>
 ```

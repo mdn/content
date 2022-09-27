@@ -22,7 +22,7 @@ _No specific property; inherits properties from its parent, {{DOMxRef("HTMLEleme
 
 ## Methods
 
-_No specific method; inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
+_No specific method; inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
 
 ## Specifications
 

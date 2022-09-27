@@ -11,7 +11,7 @@ tags:
   - Learn
   - Objects
   - Tutorial
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
@@ -38,7 +38,7 @@ In previous articles we looked at all the essential JavaScript object theory and
       <th scope="row">Objective:</th>
       <td>
         To get some practice with using objects and object-oriented techniques
-        in a real world context.
+        in a real-world context.
       </td>
     </tr>
   </tbody>
@@ -50,7 +50,7 @@ In this article we will write a classic "bouncing balls" demo, to show you how u
 
 ![Screenshot of a webpage titled "Bouncing balls". 23 balls of various pastel colors and sizes are visible across a black screen with long trails behind them indicating motion.](bouncing-balls.png)
 
-This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) for drawing the balls to the screen, and the [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame) API for animating the whole display — you don't need to have any previous knowledge of these APIs, and we hope that by the time you've finished this article you'll be interested in exploring them more. Along the way we'll make use of some nifty objects, and show you a couple of nice techniques like bouncing balls off walls, and checking whether they have hit each other (otherwise known as **collision detection**).
+This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) for drawing the balls to the screen, and the [`requestAnimationFrame`](/en-US/docs/Web/API/window/requestAnimationFrame) API for animating the whole display — you don't need to have any previous knowledge of these APIs, and we hope that by the time you've finished this article you'll be interested in exploring them more. Along the way, we'll make use of some nifty objects, and show you a couple of nice techniques like bouncing balls off walls, and checking whether they have hit each other (otherwise known as _collision detection_).
 
 ## Getting started
 
@@ -72,7 +72,7 @@ const height = canvas.height = window.innerHeight;
 
 This script gets a reference to the `<canvas>` element, then calls the [`getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) method on it to give us a context on which we can start to draw. The resulting constant (`ctx`) is the object that directly represents the drawing area of the canvas and allows us to draw 2D shapes on it.
 
-Next, we set constants called `width` and `height`, and the width and height of the canvas element (represented by the `canvas.width` and `canvas.height` properties) to equal the width and height of the browser viewport (the area that the webpage appears on — this can be gotten from the {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}} properties).
+Next, we set constants called `width` and `height`, and the width and height of the canvas element (represented by the `canvas.width` and `canvas.height` properties) to equal the width and height of the browser viewport (the area which the webpage appears on — this can be gotten from the {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}} properties).
 
 Note that we are chaining multiple assignments together, to get the variables all set quicker — this is perfectly OK.
 
@@ -289,7 +289,7 @@ This method is a little complex, so don't worry if you don't understand exactly 
 - For each ball, we need to check every other ball to see if it has collided with the current ball. To do this, we start another `for...of` loop to loop through all the balls in the `balls[]` array.
 - Immediately inside the for loop, we use an `if` statement to check whether the current ball being looped through is the same ball as the one we are currently checking. We don't want to check whether a ball has collided with itself! To do this, we check whether the current ball (i.e., the ball whose collisionDetect method is being invoked) is the same as the loop ball (i.e., the ball that is being referred to by the current iteration of the for loop in the collisionDetect method). We then use `!` to negate the check, so that the code inside the `if` statement only runs if they are **not** the same.
 - We then use a common algorithm to check the collision of two circles. We are basically checking whether any of the two circle's areas overlap. This is explained further in [2D collision detection](/en-US/docs/Games/Techniques/2D_collision_detection).
-- If a collision is detected, the code inside the inner `if` statement is run. In this case we only set the `color` property of both the circles to a new random color. We could have done something far more complex, like get the balls to bounce off each other realistically, but that would have been far more complex to implement. For such physics simulations, developers tend to use a games or physics library such as [PhysicsJS](https://wellcaffeinated.net/PhysicsJS/), [matter.js](https://brm.io/matter-js/), [Phaser](https://phaser.io/), etc.
+- If a collision is detected, the code inside the inner `if` statement is run. In this case, we only set the `color` property of both the circles to a new random color. We could have done something far more complex, like get the balls to bounce off each other realistically, but that would have been far more complex to implement. For such physics simulations, developers tend to use a games or physics libraries such as [PhysicsJS](https://wellcaffeinated.net/PhysicsJS/), [matter.js](https://brm.io/matter-js/), [Phaser](https://phaser.io/), etc.
 
 You also need to call this method in each frame of the animation. Update your `loop()` function to call `ball.collisionDetect()` after `ball.update()`:
 
@@ -314,7 +314,7 @@ Save and refresh the demo again, and you'll see your balls change color when the
 
 ## Summary
 
-We hope you had fun writing your own real world random bouncing balls example, using various object and object-oriented techniques from throughout the module! This should have given you some useful practice in using objects, and good real world context.
+We hope you had fun writing your own real-world random bouncing balls example, using various object and object-oriented techniques from throughout the module! This should have given you some useful practice in using objects, and good real-world context.
 
 That's it for object articles — all that remains now is for you to test your skills in the object assessment.
 

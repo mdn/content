@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: dialog role'
+title: "ARIA: dialog role"
 slug: Web/Accessibility/ARIA/Roles/dialog_role
 tags:
   - ARIA
@@ -16,9 +16,14 @@ spec-urls:
 The `dialog` role is used to mark up an HTML based application dialog or window that separates content or UI from the rest of the web application or page. Dialogs are generally placed on top of the rest of the page content using an overlay. Dialogs can be either non-modal (it's still possible to interact with content outside of the dialog) or modal (only the content in the dialog can be interacted with).
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <h2 id="dialog1Title">Your personal details were successfully updated</h2>
-  <p id="dialog1Desc">You can change your details at any time in the user account section.</p>
+  <p id="dialog1Desc">
+    You can change your details at any time in the user account section.
+  </p>
   <button>Close</button>
 </div>
 ```
@@ -41,9 +46,14 @@ Even though it is not required for the dialog itself to be able to receive focus
 If a dialog already has a visible title bar, the text inside that bar can be used to label the dialog itself. The best way to achieve this is by using the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute to the `role="dialog"` element. Additionally, if the dialog contains additional descriptive text besides the dialog title, this text can be associated with the dialog using the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute. This approach is shown in the code snippet below:
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <h2 id="dialog1Title">Your personal details were successfully updated</h2>
-  <p id="dialog1Desc">You can change your details at any time in the user account section.</p>
+  <p id="dialog1Desc">
+    You can change your details at any time in the user account section.
+  </p>
   <button>Close</button>
 </div>
 ```
@@ -85,34 +95,37 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 ### A dialog containing a form
 
 ```html
- <div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
-   <h2 id="dialog1Title">Subscription Form</h2>
-   <p id="dialog1Desc">We will not share this information with third parties.</p>
-   <form>
-     <p>
-       <label for="firstName">First Name</label>
-       <input id="firstName" type="text" />
-     </p>
-     <p>
-       <label for="lastName">Last Name</label>
-       <input id="lastName" type="text"/>
-     </p>
-     <p>
-       <label for="interests">Interests</label>
-       <textarea id="interests"></textarea>
-     </p>
-     <p>
-       <input type="checkbox" id="autoLogin"/>
-       <label for="autoLogin">Auto-login?</label>
-     </p>
-     <p>
-         <input type="submit" value="Save Information"/>
-     </p>
-   </form>
- </div>
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
+  <h2 id="dialog1Title">Subscription Form</h2>
+  <p id="dialog1Desc">We will not share this information with third parties.</p>
+  <form>
+    <p>
+      <label for="firstName">First Name</label>
+      <input id="firstName" type="text" />
+    </p>
+    <p>
+      <label for="lastName">Last Name</label>
+      <input id="lastName" type="text" />
+    </p>
+    <p>
+      <label for="interests">Interests</label>
+      <textarea id="interests"></textarea>
+    </p>
+    <p>
+      <input type="checkbox" id="autoLogin" />
+      <label for="autoLogin">Auto-login?</label>
+    </p>
+    <p>
+      <input type="submit" value="Save Information" />
+    </p>
+  </form>
+</div>
 ```
 
-#### Working Examples:
+#### Working Examples
 
 - [jQuery-UI Dialog](https://jqueryui.com/dialog/)
 

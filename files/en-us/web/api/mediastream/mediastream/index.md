@@ -28,7 +28,7 @@ Otherwise, the stream has no tracks.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStream()
 new MediaStream(stream)
 new MediaStream(tracks)

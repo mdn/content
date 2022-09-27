@@ -1,6 +1,7 @@
 ---
 title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
+page-type: css-property
 tags:
   - CSS
   - CSS Grid

@@ -23,7 +23,7 @@ the idle detector.
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 start(options)
 ```

@@ -1,8 +1,9 @@
 ---
-title: '-ms-high-contrast'
+title: "-ms-high-contrast"
 slug: Web/CSS/@media/-ms-high-contrast
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Non-standard
   - Reference
@@ -46,7 +47,9 @@ The **`-ms-high-contrast`** media feature is specified as one of the following v
 
 ```css
 @media screen and (-ms-high-contrast: black-on-white) {
-  div { background-image: url('image-bw.png'); }
+  div {
+    background-image: url("image-bw.png");
+  }
 }
 ```
 
@@ -54,7 +57,9 @@ The **`-ms-high-contrast`** media feature is specified as one of the following v
 
 ```css
 @media screen and (-ms-high-contrast: white-on-black) {
-  div { background-image: url('image-wb.png'); }
+  div {
+    background-image: url("image-wb.png");
+  }
 }
 ```
 

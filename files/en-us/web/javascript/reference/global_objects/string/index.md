@@ -83,22 +83,37 @@ if (a < b) { // true
 }
 ```
 
-A similar result can be achieved using the {{jsxref("String.prototype.localeCompare()",
-  "localeCompare()")}} method inherited by `String` instances.
-
-Note that `a === b` compares the strings in `a` and
-`b` for being equal in the usual case-sensitive way. If you wish
-to compare without regard to upper or lower case characters, use a function similar to
-this:
+Note that all comparison operators, including [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) and [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality), compare strings case-sensitively. A common way to compare strings case-insensitively is to convert both to the same case (upper or lower) before comparing them.
 
 ```js
-function isEqual(str1, str2) {
+function areEqualCaseInsensitive(str1, str2) {
   return str1.toUpperCase() === str2.toUpperCase();
 }
 ```
 
-Upper case is used instead of lower case in this function, due to problems with certain
-UTF-8 character conversions.
+The choice of whether to transform by [`toUpperCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) or [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) is mostly arbitrary, and neither one is fully robust when extending beyond the Latin alphabet. For example, the German lowercase letter `ß` and `ss` are both transformed to `SS` by `toUpperCase()`, while the Turkish letter `ı` would be falsely reported as unequal to `I` by `toLowerCase()` unless specifically using [`toLocaleLowerCase("tr")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase).
+
+```js
+const areEqualInUpperCase = (str1, str2) =>
+  str1.toUpperCase() === str2.toUpperCase();
+const areEqualInLowerCase = (str1, str2) =>
+  str1.toLowerCase() === str2.toLowerCase();
+
+areEqualInUpperCase("ß", "ss"); // true; should be false
+areEqualInLowerCase("ı", "I"); // false; should be true
+```
+
+A locale-aware and robust solution for testing case-insensitive equality is to use the {{jsxref("Intl.Collator")}} API or the string's [`localeCompare()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) method — they share the same interface — with the [`sensitivity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#sensitivity) option set to `"accent"` or `"base"`.
+
+```js
+const areEqual = (str1, str2, locale = "en-US") =>
+  str1.localeCompare(str2, locale, { sensitivity: "accent" }) === 0;
+
+areEqual("ß", "ss", "de"); // false
+areEqual("ı", "I", "tr"); // true
+```
+
+The `localeCompare()` method enables string comparison in a similar fashion as `strcmp()` — it allows sorting strings in a locale-aware manner.
 
 ### String primitives and String objects
 
@@ -152,7 +167,7 @@ console.log(eval(s2.valueOf()))  // returns the number 4
 
 ### String coercion
 
-Many built-in operations that expect strings would first coerce their arguments to strings (which is largely why `String` objects behave similarly to string primitives). [The operation](https://tc39.es/ecma262/#sec-tostring) can be summarized as follows:
+Many built-in operations that expect strings first coerce their arguments to strings (which is largely why `String` objects behave similarly to string primitives). [The operation](https://tc39.es/ecma262/#sec-tostring) can be summarized as follows:
 
 - Strings are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into `"undefined"`.
@@ -175,18 +190,18 @@ Depending on your use case, you may want to use `` `${x}` `` (to mimic built-in 
 
 Special characters can be encoded using escape sequences:
 
-| Escape sequence                                                                                                                                        | Unicode code point                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| `\0`                                                                                                                                                   | null character (U+0000 NULL)                                                                                               |
-| `\'`                                                                                                                                                   | single quote (U+0027 APOSTROPHE)                                                                                           |
-| `\"`                                                                                                                                                   | double quote (U+0022 QUOTATION MARK)                                                                                       |
-| `\\`                                                                                                                                                   | backslash (U+005C REVERSE SOLIDUS)                                                                                         |
-| `\n`                                                                                                                                                   | newline (U+000A LINE FEED; LF)                                                                                             |
-| `\r`                                                                                                                                                   | carriage return (U+000D CARRIAGE RETURN; CR)                                                                               |
-| `\v`                                                                                                                                                   | vertical tab (U+000B LINE TABULATION)                                                                                      |
-| `\t`                                                                                                                                                   | tab (U+0009 CHARACTER TABULATION)                                                                                          |
-| `\b`                                                                                                                                                   | backspace (U+0008 BACKSPACE)                                                                                               |
-| `\f`                                                                                                                                                   | form feed (U+000C FORM FEED)                                                                                               |
+| Escape sequence                                                                                                                                      | Unicode code point                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `\0`                                                                                                                                                 | null character (U+0000 NULL)                                                                                               |
+| `\'`                                                                                                                                                 | single quote (U+0027 APOSTROPHE)                                                                                           |
+| `\"`                                                                                                                                                 | double quote (U+0022 QUOTATION MARK)                                                                                       |
+| `\\`                                                                                                                                                 | backslash (U+005C REVERSE SOLIDUS)                                                                                         |
+| `\n`                                                                                                                                                 | newline (U+000A LINE FEED; LF)                                                                                             |
+| `\r`                                                                                                                                                 | carriage return (U+000D CARRIAGE RETURN; CR)                                                                               |
+| `\v`                                                                                                                                                 | vertical tab (U+000B LINE TABULATION)                                                                                      |
+| `\t`                                                                                                                                                 | tab (U+0009 CHARACTER TABULATION)                                                                                          |
+| `\b`                                                                                                                                                 | backspace (U+0008 BACKSPACE)                                                                                               |
+| `\f`                                                                                                                                                 | form feed (U+000C FORM FEED)                                                                                               |
 | `\uXXXX` …where `XXXX` is exactly 4 hex digits in the range `0000`–`FFFF`; e.g., `\u000A` is the same as `\n` (LINE FEED); `\u0021` is `!`           | Unicode code point between `U+0000` and `U+FFFF` (the Unicode Basic Multilingual Plane)                                    |
 | `\u{X}`…`\u{XXXXXX}` …where `X`…`XXXXXX` is 1–6 hex digits in the range `0`–`10FFFF`; e.g., `\u{A}` is the same as `\n` (LINE FEED); `\u{21}` is `!` | Unicode code point between `U+0000` and `U+10FFFF` (the entirety of Unicode)                                               |
 | `\xXX` …where `XX` is exactly 2 hex digits in the range `00`–`FF`; e.g., `\x0A` is the same as `\n` (LINE FEED); `\x21` is `!`                       | Unicode code point between `U+0000` and `U+00FF` (the Basic Latin and Latin-1 Supplement blocks; equivalent to ISO-8859-1) |
@@ -222,7 +237,7 @@ Both of the above methods result in identical strings.
 
 ### UTF-16 characters, Unicode codepoints, and grapheme clusters
 
-Strings are represented fundamentally as sequences of [UTF-16 code units](https://en.wikipedia.org/wiki/UTF-16). In UTF-16 encoding, every code unit is exact 16 bits long. This means there are a maximum of 2<sup>16</sup>, or 65536 possible characters representable as single UTF-16 code units. This character set is called the [basic multilingual plane (BMP)](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane), and includes the most common characters like the Latin, Greek, Cyrillic alphabets, as well as many East Asian characters. Each code unit can be written in a string with `\u` followed by exactly four hex digits.
+Strings are represented fundamentally as sequences of [UTF-16 code units](https://en.wikipedia.org/wiki/UTF-16). In UTF-16 encoding, every code unit is exact 16 bits long. This means there are a maximum of 2<sup>16</sup>, or 65536 possible characters representable as single UTF-16 code units. This character set is called the [basic multilingual plane (BMP)](<https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane>), and includes the most common characters like the Latin, Greek, Cyrillic alphabets, as well as many East Asian characters. Each code unit can be written in a string with `\u` followed by exactly four hex digits.
 
 However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. Therefore, "lone surrogates" are often not valid values for string manipulation — for example, [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) will throw a {{jsxref("URIError")}} for lone surrogates. Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode codepoint_. Each Unicode codepoint can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
 
@@ -378,8 +393,7 @@ You must be careful which level of characters you are iterating on. For example,
 
 > **Warning:** Deprecated. Avoid these methods.
 >
-> They are of limited use, as they provide only a subset of the available HTML tags
-> and attributes.
+> They are of limited use, as they are based on a very old HTML standard and provide only a subset of the currently available HTML tags and attributes. Many of them create deprecated or non-standard markup today. In addition, they do simple string concatenation without any validation or sanitation, which makes them a potential security threat when directly inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML). Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 - {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
   - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hypertext target)
@@ -407,6 +421,18 @@ You must be careful which level of characters you are iterating on. For example,
   - : {{HTMLElement("sub")}}
 - {{jsxref("String.prototype.sup()")}} {{Deprecated_Inline}}
   - : {{HTMLElement("sup")}}
+
+Note that these methods do not check if the string itself contains HTML tags, so it's possible to create invalid HTML:
+
+```js
+"</b>".bold(); // <b></b></b>
+```
+
+The only escaping they do is to replace `"` in the attribute value (for {{jsxref("String/anchor", "anchor()")}}, {{jsxref("String/fontcolor", "fontcolor()")}}, {{jsxref("String/fontsize", "fontsize()")}}, and {{jsxref("String/link", "link()")}}) with `&quot;`.
+
+```js
+"foo".anchor('"Hello"'); // <a name="&quot;Hello&quot;">foo</a>
+```
 
 ## Examples
 

@@ -32,7 +32,7 @@ record will be updated, instead of a new record being inserted.
 
 ## Syntax
 
-```js
+```js-nolint
 put(item)
 put(item, key)
 ```

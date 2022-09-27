@@ -21,7 +21,7 @@ The texture format is specified by the session's `reflectionFormat`. See the `op
 
 ## Syntax
 
-```js
+```js-nolint
 getReflectionCubeMap(lightProbe)
 ```
 

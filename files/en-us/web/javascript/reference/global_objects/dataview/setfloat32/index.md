@@ -19,7 +19,7 @@ The **`setFloat32()`** method stores a signed 32-bit float
 
 ## Syntax
 
-```js
+```js-nolint
 setFloat32(byteOffset, value)
 setFloat32(byteOffset, value, littleEndian)
 ```

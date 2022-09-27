@@ -18,7 +18,7 @@ from normalized device coordinates to window or viewport coordinates.
 
 ## Syntax
 
-```js
+```js-nolint
 depthRange(zNear, zFar)
 ```
 

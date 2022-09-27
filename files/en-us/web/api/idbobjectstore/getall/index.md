@@ -38,7 +38,7 @@ To tell these situations apart, you either call
 
 ## Syntax
 
-```js
+```js-nolint
 getAll()
 getAll(query)
 getAll(query, count)

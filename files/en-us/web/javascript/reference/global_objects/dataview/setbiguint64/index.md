@@ -23,7 +23,7 @@ integer (unsigned long long) value at the specified byte offset from the start o
 
 ## Syntax
 
-```js
+```js-nolint
 setBigUint64(byteOffset, value)
 setBigUint64(byteOffset, value, littleEndian)
 ```

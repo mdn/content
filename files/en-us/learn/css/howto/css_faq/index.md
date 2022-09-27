@@ -32,23 +32,19 @@ The standard `DOCTYPE` declaration that will trigger standards mode is:
 When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 ```
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 ## Why doesn't my CSS, which is valid, render at all?
@@ -79,16 +75,24 @@ Initially CSS didn't provide a "default" keyword and the only way to restore the
 
 ```css
 /* Heading default color is black */
-h1 { color: red; }
-h1 { color: black; }
+h1 {
+  color: red;
+}
+h1 {
+  color: black;
+}
 ```
 
 This has changed with CSS 2; the keyword [initial](/en-US/docs/Web/CSS/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
 
 ```css
 /* Heading default color is black */
-h1 { color: red; }
-h1 { color: initial; }
+h1 {
+  color: red;
+}
+h1 {
+  color: initial;
+}
 ```
 
 ## How do I derive one style from another?
@@ -101,13 +105,16 @@ HTML elements can be assigned multiple classes by listing the classes in the `cl
 
 ```html
 <style>
-.news { background: black; color: white; }
-.today { font-weight: bold; }
+  .news {
+    background: black;
+    color: white;
+  }
+  .today {
+    font-weight: bold;
+  }
 </style>
 
-<div class="news today">
-  Content of today's news goes here.
-</div>
+<div class="news today">Content of today's news goes here.</div>
 ```
 
 If the same property is declared in both rules, the conflict is resolved first through specificity, then according to the order of the CSS declarations. The order of classes in the `class` attribute is not relevant.
@@ -118,17 +125,23 @@ Style rules that are syntactically correct may not apply in certain situations. 
 
 ### HTML elements hierarchy
 
-The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendent overrides the style of the parent, in spite of any specificity or priority of CSS rules.
+The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendant overrides the style of the parent, in spite of any specificity or priority of CSS rules.
 
 ```css
-.news { color: black; }
-.corpName { font-weight: bold; color: red; }
+.news {
+  color: black;
+}
+.corpName {
+  font-weight: bold;
+  color: red;
+}
 ```
 
 ```html
 <!-- news item text is black, but corporate name is red and in bold -->
 <div class="news">
-    (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday…
+  (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on
+  Thursday…
 </div>
 ```
 
@@ -139,19 +152,23 @@ In case of complex HTML hierarchies, if a rule seems to be ignored, check if the
 In CSS stylesheets, order **is** important. If you define a rule and then you re-define the same rule, the last definition is used.
 
 ```css
-#stockTicker { font-weight: bold; }
-.stockSymbol { color: red; }
+#stockTicker {
+  font-weight: bold;
+}
+.stockSymbol {
+  color: red;
+}
 /*  other rules             */
 /*  other rules             */
 /*  other rules             */
-.stockSymbol { font-weight: normal; }
+.stockSymbol {
+  font-weight: normal;
+}
 ```
 
 ```html
 <!-- most text is in bold, except "GE", which is red and not bold -->
-<div id="stockTicker">
-    NYS: <span class="stockSymbol">GE</span> +1.0…
-</div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0…</div>
 ```
 
 To avoid this kind of error, try to define rules only once for a certain selector, and group all rules belonging to that selector.
@@ -161,22 +178,27 @@ To avoid this kind of error, try to define rules only once for a certain selecto
 Using shorthand properties for defining style rules is good because it uses a very compact syntax. Using shorthand with only some attributes is possible and correct, but it must be remembered that undeclared attributes are automatically reset to their default values. This means that a previous rule for a single attribute could be implicitly overridden.
 
 ```css
-#stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
-.stockSymbol { font: 14px Arial; color: red; }
+#stockTicker {
+  font-size: 12px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+.stockSymbol {
+  font: 14px Arial;
+  color: red;
+}
 ```
 
 ```html
-<div id="stockTicker">
-    NYS: <span class="stockSymbol">GE</span> +1.0…
-</div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0…</div>
 ```
 
 In the previous example the problem occurred on rules belonging to different elements, but it could happen also for the same element, because rule order **is** important.
 
 ```css
 #stockTicker {
-    font-weight: bold;
-    font: 12px Verdana;  /* font-weight is now set to normal */
+  font-weight: bold;
+  font: 12px Verdana; /* font-weight is now set to normal */
 }
 ```
 
@@ -185,15 +207,23 @@ In the previous example the problem occurred on rules belonging to different ele
 The `*` wildcard selector refers to any element, and it has to be used with particular care.
 
 ```css
-body * { font-weight: normal; }
-#stockTicker { font: 12px Verdana; }
-.corpName { font-weight: bold; }
-.stockUp { color: red; }
+body * {
+  font-weight: normal;
+}
+#stockTicker {
+  font: 12px Verdana;
+}
+.corpName {
+  font-weight: bold;
+}
+.stockUp {
+  color: red;
+}
 ```
 
 ```html
 <div id="section">
-    NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0…
+  NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0…
 </div>
 ```
 
@@ -206,9 +236,15 @@ The use of the \* selector should be minimized as it is a slow selector, especia
 When multiple rules apply to a certain element, the rule chosen depends on its style [specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity). Inline style (in HTML `style` attributes) has the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the below {{htmlelement("div")}} will therefore be red.
 
 ```css
-div { color: black; }
-#orange { color: orange; }
-.green { color: green; }
+div {
+  color: black;
+}
+#orange {
+  color: orange;
+}
+.green {
+  color: green;
+}
 ```
 
 ```html

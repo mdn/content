@@ -22,7 +22,7 @@ is true, because object objects are never candidates for constraint validation.
 
 ## Syntax
 
-```js
+```js-nolint
 checkValidity()
 ```
 

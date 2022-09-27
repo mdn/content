@@ -24,7 +24,7 @@ change the value of that parameter over time.
 
 ## Syntax
 
-```js
+```js-nolint
 connect(destination)
 connect(destination, outputIndex)
 connect(destination, outputIndex, inputIndex)

@@ -1,8 +1,9 @@
 ---
 title: descent-override
 slug: Web/CSS/@font-face/descent-override
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference

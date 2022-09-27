@@ -1,6 +1,7 @@
 ---
 title: column-rule-style
 slug: Web/CSS/column-rule-style
+page-type: css-property
 tags:
   - CSS
   - CSS Multi-column Layout
@@ -61,10 +62,11 @@ The `column-rule-style` property is specified as a single `<'border-style'>` val
 #### HTML
 
 ```html
-<p>This is a bunch of text split into three columns.
-   The `column-rule-style` property is used to change
-   the style of the line that is drawn between columns.
-   Don't you think that's wonderful?</p>
+<p>
+  This is a bunch of text split into three columns. The `column-rule-style`
+  property is used to change the style of the line that is drawn between
+  columns. Don't you think that's wonderful?
+</p>
 ```
 
 #### CSS

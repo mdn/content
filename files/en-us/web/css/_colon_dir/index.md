@@ -1,6 +1,7 @@
 ---
-title: ':dir()'
+title: ":dir()"
 slug: Web/CSS/:dir
+page-type: css-pseudo-class
 tags:
   - BiDi
   - CSS
@@ -49,7 +50,8 @@ The `:dir()` pseudo-class requires one parameter, representing the text directio
 ```html
 <div dir="rtl">
   <span>test1</span>
-  <div dir="ltr">test2
+  <div dir="ltr">
+    test2
     <div dir="auto">עִבְרִית</div>
   </div>
 </div>

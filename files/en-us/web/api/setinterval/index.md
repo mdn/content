@@ -30,7 +30,7 @@ can remove it later by calling {{domxref("clearInterval",
 
 ## Syntax
 
-```js
+```js-nolint
 setInterval(code)
 setInterval(code, delay)
 

@@ -20,7 +20,7 @@ The **`setFloat64()`** method stores a signed 64-bit float
 
 ## Syntax
 
-```js
+```js-nolint
 setFloat64(byteOffset, value)
 setFloat64(byteOffset, value, littleEndian)
 ```

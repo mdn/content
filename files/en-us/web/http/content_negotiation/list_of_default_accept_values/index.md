@@ -39,16 +39,16 @@ These are the values sent when the context doesn't give better information. Note
 
 When requesting an image, like through an HTML {{HTMLElement("img")}} element, user-agent often sets a specific list of media types to be welcomed.
 
-| User Agent                                                                                                                     | Value                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| Firefox 92 and later [1]                                                                                                       | `image/avif,image/webp,*/*`                                                 |
-| Firefox 65 to 91 [1]                                                                                                           | `image/webp,*/*`                                                           |
-| Firefox 47 to 63 [1]                                                                                                           | `*/*`                                                                      |
-| Firefox prior to 47 [1]                                                                                                        | `image/png,image/*;q=0.8,*/*;q=0.5`                                        |
-| Safari (since Mac OS Big Sur)                                                                                                  | `image/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5` |
-| Safari (before Mac OS Big Sur)                                                                                                 | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
-| Chrome                                                                                                                         | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
-| Internet Explorer 9                                                                                                            | `image/png,image/svg+xml,image/*;q=0.8, */*;q=0.5`                         |
+| User Agent                                                                                                               | Value                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| Firefox 92 and later [1]                                                                                                 | `image/avif,image/webp,*/*`                                                |
+| Firefox 65 to 91 [1]                                                                                                     | `image/webp,*/*`                                                           |
+| Firefox 47 to 63 [1]                                                                                                     | `*/*`                                                                      |
+| Firefox prior to 47 [1]                                                                                                  | `image/png,image/*;q=0.8,*/*;q=0.5`                                        |
+| Safari (since Mac OS Big Sur)                                                                                            | `image/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5` |
+| Safari (before Mac OS Big Sur)                                                                                           | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
+| Chrome                                                                                                                   | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
+| Internet Explorer 9                                                                                                      | `image/png,image/svg+xml,image/*;q=0.8, */*;q=0.5`                         |
 | Internet Explorer 8 or earlier _[source](https://docs.microsoft.com/archive/blogs/ieinternals/ie-and-the-accept-header)_ | `*/*`                                                                      |
 
 \[1] This value can be modified using the `image.http.accept` parameter (_[source](https://searchfox.org/mozilla-central/search?q=image.http.accept)_).
@@ -72,7 +72,7 @@ When an audio file is requested, like via the {{HTMLElement("audio")}} HTML elem
 | ------------------------------ | -------------------------------------------------------------------------------------------- |
 | Firefox 3.6 and later [1]      | `audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5` |
 | Safari, Chrome                 | `*/*`                                                                                        |
-| Internet Explorer 8 or earlier | _no support for {{HTMLElement("audio")}}_                                            |
+| Internet Explorer 8 or earlier | _no support for {{HTMLElement("audio")}}_                                                    |
 | Internet Explorer 9            | ?                                                                                            |
 
 \[1] See [bug 489071](https://bugzilla.mozilla.org/show_bug.cgi?id=489071).

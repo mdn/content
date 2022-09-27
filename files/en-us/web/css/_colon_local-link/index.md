@@ -1,6 +1,7 @@
 ---
-title: ':local-link'
+title: ":local-link"
 slug: Web/CSS/:local-link
+page-type: css-pseudo-class
 spec-urls: https://drafts.csswg.org/selectors/#local-link-pseudo
 ---
 
@@ -26,8 +27,8 @@ a:local-link {
 ### HTML
 
 ```html
-<a href="#target">This is a link on the current page.</a><br>
-<a href="https://example.com">This is an external link</a><br>
+<a href="#target">This is a link on the current page.</a><br />
+<a href="https://example.com">This is an external link</a><br />
 ```
 
 ### CSS

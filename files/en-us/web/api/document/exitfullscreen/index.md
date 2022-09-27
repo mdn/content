@@ -27,7 +27,7 @@ reverses the effects of a previous call to {{domxref("Element.requestFullscreen(
 
 ## Syntax
 
-```js
+```js-nolint
 exitFullscreen()
 ```
 

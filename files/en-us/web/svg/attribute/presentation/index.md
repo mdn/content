@@ -120,7 +120,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
     _Value_: **`ltr`**|`rtl`|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('display')}}
   - : It allows to control the rendering of graphical or container elements.
-    _Value_: see css {{cssxref('display')}}; _Animatable_: **Yes**
+    _Value_: see CSS {{cssxref('display')}}; _Animatable_: **Yes**
 - {{SVGAttr('dominant-baseline')}}
   - : It defines the baseline used to align the box's text and inline-level contents.
     _Value_: `auto`|`text-bottom`|`alphabetic`|`ideographic`|`middle`|`central`| `mathematical`|`hanging`|`text-top`; _Animatable_: **Yes**
@@ -147,22 +147,22 @@ SVG presentation attributes are CSS properties that can be used as attributes on
     _Value_: [\<number>](/en-US/docs/Web/SVG/Content_type#number)|[\<percentage>](/en-US/docs/Web/SVG/Content_type#percentage); _Animatable_: **Yes**
 - {{SVGAttr('font-family')}}
   - : It indicates which font family will be used to render the text of the element.
-    _Value_: see css {{cssxref('font-family')}}; _Animatable_: **Yes**
+    _Value_: see CSS {{cssxref('font-family')}}; _Animatable_: **Yes**
 - {{SVGAttr('font-size')}}
   - : It specifies the size of the font.
-    _Value_: see css {{cssxref('font-size')}}; _Animatable_: **Yes**
+    _Value_: see CSS {{cssxref('font-size')}}; _Animatable_: **Yes**
 - {{SVGAttr('font-size-adjust')}}
   - : It specifies that the font size should be chosen based on the height of lowercase letters rather than the height of capital letters.
     _Value_: [\<number>](/en-US/docs/Web/SVG/Content_type#number)|**`none`**|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('font-stretch')}}
   - : It selects a normal, condensed, or expanded face from a font.
-    _Value_: see css {{cssxref('font-stretch')}}; _Animatable_: **Yes**
+    _Value_: see CSS {{cssxref('font-stretch')}}; _Animatable_: **Yes**
 - {{SVGAttr('font-style')}}
   - : It specifies whether a font should be styled with a normal, italic, or oblique face from its {{SVGAttr('font-family')}}.
     _Value_: **`normal`**|`italic`|`oblique`; _Animatable_: **Yes**
 - {{SVGAttr('font-variant')}}
   - : It specifies whether a font should be used with some of their variation such as small caps or ligatures.
-    _Value_: see css {{cssxref('font-variant')}}; _Animatable_: **Yes**
+    _Value_: see CSS {{cssxref('font-variant')}}; _Animatable_: **Yes**
 - {{SVGAttr('font-weight')}}
   - : It specifies the weight (or boldness) of the font.
     _Value_: **`normal`**|`bold`|`lighter`|`bolder`|`100`|`200`|`300`|`400`|`500`|`600`|`700`|`800`|`900`; _Animatable_: **Yes**
@@ -195,7 +195,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
     _Value_: [\<FuncIRI>](/en-US/docs/Web/SVG/Content_type#funciri)|**`none`**|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('mask')}}
   - : It alters the visibility of an element by either masking or clipping the image at specific points.
-    _Value_: see css {{cssxref('mask')}}; _Animatable_: **Yes**
+    _Value_: see CSS {{cssxref('mask')}}; _Animatable_: **Yes**
 - {{SVGAttr('opacity')}}
   - : It specifies the transparency of an object or a group of objects.
     _Value_: [\<opacity-value>](/en-US/docs/Web/SVG/Content_type#opacity_value); _Animatable_: **Yes**
@@ -204,7 +204,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
     _Value_: **`visible`**|`hidden|scroll`|`auto`|`inherit`; _Animatable_: **Yes**
 - {{SVGAttr('pointer-events')}}
   - : Defines whether or when an element may be the target of a mouse event.
-    _Value_: `bounding-box`|**`visiblePainted`**|`visibleFil`|`visibleStroke`|`visible` |`painted`|`fill`|`stroke`|`all`|`none`; _Animatable_: **Yes**
+    _Value_: `bounding-box`|**`visiblePainted`**|`visibleFill`|`visibleStroke`|`visible` |`painted`|`fill`|`stroke`|`all`|`none`; _Animatable_: **Yes**
 - {{SVGAttr('shape-rendering')}}
   - : Hints about what tradeoffs to make as the browser renders {{SVGElement('path')}} element or basic shapes.
     _Value_: **`auto`**|`optimizeSpeed`|`crispEdges`|`geometricPrecision` |`inherit`; _Animatable_: **Yes**

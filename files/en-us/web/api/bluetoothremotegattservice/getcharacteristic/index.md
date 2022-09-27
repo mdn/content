@@ -23,7 +23,7 @@ returns a {{jsxref("Promise")}} to an instance of
 
 ## Syntax
 
-```js
+```js-nolint
 getCharacteristic(characteristic)
 ```
 

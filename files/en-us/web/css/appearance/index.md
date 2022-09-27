@@ -1,6 +1,7 @@
 ---
 title: appearance
 slug: Web/CSS/appearance
+page-type: css-property
 tags:
   - '-moz-appearance'
   - '-webkit-appearance'
@@ -264,9 +265,9 @@ The following values may be operational on historical browser versions using **`
 
 ```css
 .exampleone {
--webkit-appearance: menulist-button;
-   -moz-appearance: menulist-button;
-        appearance: menulist-button;
+  -webkit-appearance: menulist-button;
+  -moz-appearance: menulist-button;
+  appearance: menulist-button;
 }
 ```
 

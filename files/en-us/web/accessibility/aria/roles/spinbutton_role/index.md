@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: spinbutton role'
+title: "ARIA: spinbutton role"
 slug: Web/Accessibility/ARIA/Roles/spinbutton_role
 tags:
   - Accessibility
@@ -93,19 +93,18 @@ In the example below, a `spinbutton` role has been defined to allow users to sel
 
 ```html
 <p id="day">Enter the day of the month</p>
-<button type="button"
-        tabindex="-1"
-        aria-label="previous day">˱</button>
-<div role="spinbutton"
-     tabindex="0"
-     aria-valuenow="1"
-     aria-valuetext="first"
-     aria-valuemin="1"
-     aria-valuemax="31"
-     aria-labelledby="day">1</div>
-<button type="button"
-        tabindex="-1"
-        aria-label="next day">˲</button>
+<button type="button" tabindex="-1" aria-label="previous day">˱</button>
+<div
+  role="spinbutton"
+  tabindex="0"
+  aria-valuenow="1"
+  aria-valuetext="first"
+  aria-valuemin="1"
+  aria-valuemax="31"
+  aria-labelledby="day">
+  1
+</div>
+<button type="button" tabindex="-1" aria-label="next day">˲</button>
 ```
 
 In this example, we included a negative `tabindex` to remove the buttons from the default tabbing order. We also added `tabindex` to a normally non-interactive {{HTMLElement('div')}} to add the `spinbutton` itself to the tabbing order. This example requires JavaScript to handle keyboard actions when the spinbutton has focus and when a mouse user clicks on the buttons.
@@ -116,12 +115,13 @@ This could have also been written using semantic HTML, removing the need for any
 
 ```html
 <label for="day">Enter the day of the month</label>
-<input type="number"
+<input
+  type="number"
   value="1"
   aria-valuetext="first"
   min="1"
   max="31"
-  id="day">
+  id="day" />
 ```
 
 {{EmbedLiveSample("With_semantic_HTML", 50, 50)}}

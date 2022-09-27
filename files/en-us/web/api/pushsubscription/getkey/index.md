@@ -22,7 +22,7 @@ be sent to a server and used in encrypting push message data.
 
 ## Syntax
 
-```js
+```js-nolint
 getKey(name)
 ```
 

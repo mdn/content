@@ -20,7 +20,7 @@ elements with a given `name` attribute in the document.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByName(name)
 ```
 

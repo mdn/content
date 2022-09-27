@@ -24,7 +24,7 @@ media query.
 
 ## Syntax
 
-```js
+```js-nolint
 matchMedia(mediaQueryString)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: pointer-events
 slug: Web/CSS/pointer-events
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -116,7 +117,8 @@ This example disables pointer events on the link to `http://example.com`.
 #### CSS
 
 ```css
-a[href="http://example.com"] {
+a[href="http://example.com"]
+{
   pointer-events: none;
 }
 ```

@@ -9,7 +9,7 @@ tags:
   - Google App Engine
   - Learn
   - Web
-  - l10n:priority
+  - "l10n:priority"
   - publishing
   - web server
 ---

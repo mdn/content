@@ -4,7 +4,6 @@ slug: Glossary/array
 tags:
   - Array
   - CodingScripting
-  - Glossary
   - JavaScript
   - programming
 ---

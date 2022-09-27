@@ -17,7 +17,7 @@ The **`values()`** method of the {{domxref("FontFaceSet")}} interface returns a 
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

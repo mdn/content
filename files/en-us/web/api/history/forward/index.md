@@ -23,7 +23,7 @@ This method is {{glossary("asynchronous")}}. Add a listener for the
 
 ## Syntax
 
-```js
+```js-nolint
 forward()
 ```
 
@@ -43,7 +43,7 @@ history.
 ### HTML
 
 ```html
-<button id='go-forward'>Go Forward!</button>
+<button id="go-forward">Go Forward!</button>
 ```
 
 ### JavaScript

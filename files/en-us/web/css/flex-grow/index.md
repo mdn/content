@@ -1,6 +1,7 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes
@@ -89,12 +90,12 @@ The remaining space is the size of the flex container minus the size of all flex
 
 .box {
   flex-grow: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box1 {
   flex-grow: 2;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 ```
 

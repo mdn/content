@@ -18,7 +18,7 @@ The **`Number.parseFloat()`** method parses an argument and returns a floating p
 
 ## Syntax
 
-```js
+```js-nolint
 Number.parseFloat(string)
 ```
 

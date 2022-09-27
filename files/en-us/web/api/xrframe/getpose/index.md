@@ -28,7 +28,7 @@ For example, to get the position of a controller relative to the viewer's head, 
 
 ## Syntax
 
-```js
+```js-nolint
 getPose(space, baseSpace)
 ```
 

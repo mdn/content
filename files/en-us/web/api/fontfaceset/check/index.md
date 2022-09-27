@@ -19,7 +19,7 @@ fonts in the given font list have been loaded and are available.
 
 ## Syntax
 
-```js
+```js-nolint
 check(font)
 check(font, text)
 ```

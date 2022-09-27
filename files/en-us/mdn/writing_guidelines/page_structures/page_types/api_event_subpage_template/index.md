@@ -21,7 +21,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 >
 > ```md
 > ---
-> title: 'NameOfTheParentInterface: NameOfTheEvent event'
+> title: "NameOfTheParentInterface: NameOfTheEvent event"
 > slug: Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event
 > page-type: web-api-event
 > tags:
@@ -107,9 +107,9 @@ You could copy most of this from the property's summary on the corresponding API
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('NameOfTheEvent', (event) => {});
+addEventListener("NameOfTheEvent", (event) => {});
 
-onNameOfTheEvent = (event) => { };
+onNameOfTheEvent = (event) => {};
 ```
 
 ## Event type
@@ -148,6 +148,8 @@ which can provide more information.
 
 ## Examples
 
+Note that we use the plural "Examples" even if the page only contains one example.
+
 ### A descriptive heading
 
 Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
@@ -164,9 +166,11 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ## Examples
 >
 > ### Using the fetch API
+>
 > Example of Fetch
 >
 > ### More examples
+>
 > Links to more examples on other pages
 > ```
 >
@@ -175,10 +179,9 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > Don't add any H3 headings; just add the links directly under the H2 heading "Examples". For example:
 >
 > ```md
->  ## Examples
+> ## Examples
 >
->  For examples of this API, see [the page on fetch()](https://example.org).
->
+> For examples of this API, see [the page on fetch()](https://example.org).
 > ```
 
 ## Specifications

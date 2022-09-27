@@ -3,7 +3,6 @@ title: Hyperlink
 slug: Glossary/Hyperlink
 tags:
   - CodingScripting
-  - Glossary
   - HTML
   - Navigation
 ---

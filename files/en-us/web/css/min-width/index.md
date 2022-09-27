@@ -1,6 +1,7 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -74,9 +75,13 @@ min-width: unset;
 ### Setting minimum element width
 
 ```css
-table { min-width: 75%; }
+table {
+  min-width: 75%;
+}
 
-form { min-width: 0; }
+form {
+  min-width: 0;
+}
 ```
 
 ## Specifications

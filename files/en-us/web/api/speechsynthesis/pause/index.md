@@ -21,7 +21,7 @@ interface puts the `SpeechSynthesis` object into a paused state.
 
 ## Syntax
 
-```js
+```js-nolint
 pause()
 ```
 

@@ -2,7 +2,6 @@
 title: Packet
 slug: Glossary/Packet
 tags:
-  - Glossary
   - Network packet
   - Packet
   - Reference
@@ -17,7 +16,7 @@ A packet, or network packet, is a formatted chunk of data sent over a network. T
 
 ### Hop limit
 
-A hop occurs when a packet is passed from one network to the next network. It is a field that is decreases by one each time a packet goes through, once it reaches 0 it has failed and the packet is discarded.
+A hop occurs when a packet is passed from one network to the next network. It is a field that decreases by one each time a packet goes through; once the hop limit reaches 0, the send operation has failed and the packet is discarded.
 
 Over time the number packets can cause traversing within closed circuits, the number of packets circulating would build up and then ultimately lead to the networking in failing.
 

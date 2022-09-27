@@ -21,7 +21,7 @@ By default, all capabilities except `gl.DITHER` are
 
 ## Syntax
 
-```js
+```js-nolint
 isEnabled(cap)
 ```
 

@@ -21,7 +21,7 @@ for each array element.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((element) => { /* … */ })
 forEach((element, index) => { /* … */ })
@@ -63,8 +63,9 @@ forEach(function(element, index, array) { /* … */ }, thisArg)
 ## Description
 
 `forEach()` calls a provided `callbackFn` function once
-for each element in an array in ascending index order. It is not invoked for index properties
-that have been deleted or are uninitialized. (For sparse arrays, [see example below](#no_operation_for_uninitialized_values_sparse_arrays).)
+for each element in an array in ascending index order.
+
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 `callbackFn` is invoked with three arguments:
 
@@ -116,8 +117,9 @@ effects at the end of a chain.
 > - {{jsxref("Array.prototype.findIndex()")}}
 >
 > Array methods: {{jsxref("Array.prototype.every()", "every()")}},
-> {{jsxref("Array.prototype.some()", "some()")}}, {{jsxref("Array.prototype.find()",
-    "find()")}}, and {{jsxref("Array.prototype.findIndex()", "findIndex()")}} test the
+> {{jsxref("Array.prototype.some()", "some()")}},
+> {{jsxref("Array.prototype.find()", "find()")}}, and
+> {{jsxref("Array.prototype.findIndex()", "findIndex()")}} test the
 > array elements with a predicate returning a truthy value to determine if further
 > iteration is required.
 
@@ -143,7 +145,7 @@ effects at the end of a chain.
 
 ## Examples
 
-### No operation for uninitialized values (sparse arrays)
+### Using forEach() on sparse arrays
 
 ```js
 const arraySparse = [1, 3, /* empty */, 7];
@@ -162,7 +164,7 @@ console.log({ numCallbackRuns });
 // { numCallbackRuns: 3 }
 ```
 
-As you can seem the missing value between 3 and 7 didn't invoke callback function.
+The callback function is not invoked for the missing value at index 2.
 
 ### Converting a for loop to forEach
 

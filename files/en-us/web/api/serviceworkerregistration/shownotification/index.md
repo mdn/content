@@ -24,7 +24,7 @@ service worker.
 
 ## Syntax
 
-```js
+```js-nolint
 showNotification(title)
 showNotification(title, options)
 ```

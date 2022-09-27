@@ -29,7 +29,7 @@ examples.
 
 ## Syntax
 
-```js
+```js-nolint
 groupCollapsed()
 groupCollapsed(label)
 ```

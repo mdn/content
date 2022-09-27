@@ -20,7 +20,7 @@ that will be called when that property is looked up.
 
 ## Syntax
 
-```js
+```js-nolint
 { get prop() { /* … */ } }
 { get [expression]() { /* … */ } }
 ```

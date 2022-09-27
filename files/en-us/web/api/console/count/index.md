@@ -22,7 +22,7 @@ this particular call to `count()` has been called.
 
 ## Syntax
 
-```js
+```js-nolint
 count()
 count(label)
 ```
