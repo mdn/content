@@ -1,6 +1,7 @@
 ---
 title: acos()
 slug: Web/CSS/acos
+page-type: css-function
 tags:
   - CSS
   - CSS Function

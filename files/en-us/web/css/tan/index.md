@@ -1,6 +1,7 @@
 ---
 title: tan()
 slug: Web/CSS/tan
+page-type: css-function
 tags:
   - CSS
   - CSS Function
