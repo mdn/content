@@ -52,8 +52,8 @@ However, getting comfortable with JavaScript is more challenging than getting co
 4. Add this code to the `main.js` file:
 
    ```js
-   const myHeading = document.querySelector('h1');
-   myHeading.textContent = 'Hello world!';
+   const myHeading = document.querySelector("h1");
+   myHeading.textContent = "Hello world!";
    ```
 
 5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:
@@ -95,13 +95,13 @@ JavaScript is case sensitive. This means `myVariable` is not the same as `myvari
 After declaring a variable, you can give it a value:
 
 ```js
-myVariable = 'Bob';
+myVariable = "Bob";
 ```
 
 Also, you can do both these operations on the same line:
 
 ```js
-let myVariable = 'Bob';
+let myVariable = "Bob";
 ```
 
 You retrieve the value by calling the variable name:
@@ -113,8 +113,8 @@ myVariable;
 After assigning a value to a variable, you can change it later in the code:
 
 ```js
-let myVariable = 'Bob';
-myVariable = 'Steve';
+let myVariable = "Bob";
+myVariable = "Steve";
 ```
 
 Note that variables may hold values that have different [data types](/en-US/docs/Web/JavaScript/Data_structures):
@@ -282,11 +282,11 @@ There are a lot more operators to explore, but this is enough for now. See [Expr
 Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the `if...else` statement. For example:
 
 ```js
-let iceCream = 'chocolate';
-if (iceCream === 'chocolate') {
-  alert('Yay, I love chocolate ice cream!');
+let iceCream = "chocolate";
+if (iceCream === "chocolate") {
+  alert("Yay, I love chocolate ice cream!");
 } else {
-  alert('Awwww, but chocolate is my favorite…');
+  alert("Awwww, but chocolate is my favorite…");
 }
 ```
 
@@ -297,11 +297,11 @@ The expression inside the `if ()` is the test. This uses the strict equality ope
 {{Glossary("Function", "Functions")}} are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions. For example:
 
 ```js
-let myVariable = document.querySelector('h1');
+let myVariable = document.querySelector("h1");
 ```
 
 ```js
-alert('hello!');
+alert("hello!");
 ```
 
 These functions, `document.querySelector` and `alert`, are built into the browser.
@@ -313,7 +313,7 @@ For example, the `alert()` function makes a pop-up box appear inside the browser
 You can also define your own functions. In the next example, we create a simple function which takes two numbers as arguments and multiplies them:
 
 ```js
-function multiply(num1,num2) {
+function multiply(num1, num2) {
   let result = num1 * num2;
   return result;
 }
@@ -334,8 +334,8 @@ multiply(0.5, 3);
 Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the [click event](/en-US/docs/Web/API/Element/click_event), which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:
 
 ```js
-document.querySelector('html').addEventListener('click', function () {
-  alert('Ouch! Stop poking me!');
+document.querySelector("html").addEventListener("click", function () {
+  alert("Ouch! Stop poking me!");
 });
 ```
 
@@ -344,17 +344,17 @@ There are many ways to attach an event handler to an element. Here we select the
 Note that
 
 ```js
-document.querySelector('html').addEventListener('click', function () {
-  alert('Ouch! Stop poking me!');
+document.querySelector("html").addEventListener("click", function () {
+  alert("Ouch! Stop poking me!");
 });
 ```
 
 is equivalent to
 
 ```js
-let myHTML = document.querySelector('html');
-myHTML.addEventListener('click', function () {
-  alert('Ouch! Stop poking me!');
+let myHTML = document.querySelector("html");
+myHTML.addEventListener("click", function () {
+  alert("Ouch! Stop poking me!");
 });
 ```
 
@@ -363,8 +363,8 @@ It's just shorter.
 The functions we just passed to `addEventListener()` here are called _anonymous functions_, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an _arrow function_. An arrow function uses `() =>` instead of `function ()`:
 
 ```js
-document.querySelector('html').addEventListener('click', () => {
-  alert('Ouch! Stop poking me!');
+document.querySelector("html").addEventListener("click", () => {
+  alert("Ouch! Stop poking me!");
 });
 ```
 
@@ -384,16 +384,16 @@ In this section, you will learn how to use JavaScript and DOM API features to al
 4. Add the following JavaScript code to your `main.js` file.
 
    ```js
-   const myImage = document.querySelector('img');
+   const myImage = document.querySelector("img");
 
    myImage.onclick = () => {
-     const mySrc = myImage.getAttribute('src');
-     if (mySrc === 'images/firefox-icon.png') {
-       myImage.setAttribute('src','images/firefox2.png');
+     const mySrc = myImage.getAttribute("src");
+     if (mySrc === "images/firefox-icon.png") {
+       myImage.setAttribute("src", "images/firefox2.png");
      } else {
-       myImage.setAttribute('src','images/firefox-icon.png');
+       myImage.setAttribute("src", "images/firefox-icon.png");
      }
-   }
+   };
    ```
 
 5. Save all files and load `index.html` in the browser. Now when you click the image, it should change to the other one.
@@ -419,16 +419,16 @@ Next, let's change the page title to a personalized welcome message when the use
 2. In `main.js`, place the following code at the bottom of the file, exactly as it is written. This takes references to the new button and the heading, storing each inside variables:
 
    ```js
-   let myButton = document.querySelector('button');
-   let myHeading = document.querySelector('h1');
+   let myButton = document.querySelector("button");
+   let myHeading = document.querySelector("h1");
    ```
 
 3. Add the following function to set the personalized greeting. This won't do anything yet, but this will change soon.
 
    ```js
    function setUserName() {
-     const myName = prompt('Please enter your name.');
-     localStorage.setItem('name', myName);
+     const myName = prompt("Please enter your name.");
+     localStorage.setItem("name", myName);
      myHeading.textContent = `Mozilla is cool, ${myName}`;
    }
    ```
@@ -438,10 +438,10 @@ Next, let's change the page title to a personalized welcome message when the use
 4. Add the following condition block. We could call this initialization code, as it structures the app when it first loads.
 
    ```js
-   if (!localStorage.getItem('name')) {
+   if (!localStorage.getItem("name")) {
      setUserName();
    } else {
-     const storedName = localStorage.getItem('name');
+     const storedName = localStorage.getItem("name");
      myHeading.textContent = `Mozilla is cool, ${storedName}`;
    }
    ```
@@ -453,7 +453,7 @@ Next, let's change the page title to a personalized welcome message when the use
    ```js
    myButton.onclick = () => {
      setUserName();
-   }
+   };
    ```
 
 ### A user name of null?
@@ -466,11 +466,11 @@ To avoid these problems, you could check that the user hasn't entered a blank na
 
 ```js
 function setUserName() {
-  const myName = prompt('Please enter your name.');
+  const myName = prompt("Please enter your name.");
   if (!myName) {
     setUserName();
   } else {
-    localStorage.setItem('name', myName);
+    localStorage.setItem("name", myName);
     myHeading.textContent = `Mozilla is cool, ${myName}`;
   }
 }
