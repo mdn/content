@@ -1,6 +1,7 @@
 ---
 title: Comments
 slug: Web/CSS/Comments
+page-type: guide
 tags:
   - CSS
   - Guide

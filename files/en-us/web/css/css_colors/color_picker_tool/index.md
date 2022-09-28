@@ -1,6 +1,7 @@
 ---
 title: Color picker tool
 slug: Web/CSS/CSS_Colors/Color_picker_tool
+page-type: guide
 tags:
   - CSS
   - CSS Color Picker

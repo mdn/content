@@ -1,6 +1,7 @@
 ---
 title: Ordering flex items
 slug: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
+page-type: guide
 tags:
   - Accessibility
   - CSS

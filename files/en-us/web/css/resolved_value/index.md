@@ -1,6 +1,7 @@
 ---
 title: Resolved value
 slug: Web/CSS/resolved_value
+page-type: guide
 tags:
   - CSS
   - Guide
