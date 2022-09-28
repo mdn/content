@@ -1,6 +1,7 @@
 ---
 title: <calc-constant>
 slug: Web/CSS/calc-constant
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
