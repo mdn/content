@@ -1,6 +1,7 @@
 ---
 title: Compositing and Blending
 slug: Web/CSS/Compositing_and_Blending
+page-type: css-module
 tags:
   - CSS
   - Compositing and Blending
