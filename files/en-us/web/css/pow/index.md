@@ -10,10 +10,10 @@ tags:
   - Web
   - pow
   - Experimental
-spec-urls: https://w3c.github.io/csswg-drafts/css-values-4/#exponent-funcs
+browser-compat: css.types.pow
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`pow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is an exponential function that returns the value of a base raised to the power of a number.
 
@@ -33,14 +33,14 @@ width: calc(10px * pow(2, 10)); /* 10px * 1024 = 10240px */
 The `pow(base, number)` function accepts two comma-separated values as its parameters.
 
 - `base`
-  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, representing the base.
+  - : A calculation that resolves to a {{CSSxRef("&lt;number&gt;")}}, representing the base.
 
 - `number`
-  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, representing the exponent.
+  - : A calculation that resolves to a {{CSSxRef("&lt;number&gt;")}}, representing the exponent.
 
 ### Return value
 
-Returns a {{cssxref("&lt;number&gt;")}} representing `base` taken to the power of `number`.
+Returns a {{CSSxRef("&lt;number&gt;")}} representing base<sup>number</sup>, that is, `base` raised to the power of `number`.
 
 ## Formal syntax
 
@@ -93,6 +93,10 @@ h6 {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
