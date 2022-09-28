@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - mouse
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
@@ -34,7 +35,7 @@ We can update the paddle position based on the pointer coordinates — the follo
 function mouseMoveHandler(e) {
   const relativeX = e.clientX - canvas.offsetLeft;
   if (relativeX > 0 && relativeX < canvas.width) {
-    paddleX = relativeX - paddleWidth/2;
+    paddleX = relativeX - paddleWidth / 2;
   }
 }
 ```

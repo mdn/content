@@ -11,13 +11,14 @@ tags:
   - Web Animations
 browser-compat: api.AnimationEvent.AnimationEvent
 ---
+
 {{APIRef("Web Animations API")}}
 
 The **`AnimationEvent()`** constructor returns a new {{domxref("AnimationEvent")}} object, representing an event in relation with an animation.
 
 ## Syntax
 
-```js
+```js-nolint
 new AnimationEvent(type)
 new AnimationEvent(type, options)
 ```

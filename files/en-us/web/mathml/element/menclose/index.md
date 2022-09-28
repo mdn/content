@@ -8,6 +8,7 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.menclose
 ---
+
 {{MathMLRef}}
 
 The MathML `<menclose>` element renders its content inside an enclosing notation specified by the `notation` attribute.
@@ -43,16 +44,16 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ## Examples
 
 ```html
-<math>
-
+<math display="block">
   <menclose notation="circle box">
     <mi>x</mi>
     <mo>+</mo>
     <mi>y</mi>
   </menclose>
-
 </math>
 ```
+
+{{ EmbedLiveSample('menclose_example', 700, 200, "", "") }}
 
 ## Specifications
 

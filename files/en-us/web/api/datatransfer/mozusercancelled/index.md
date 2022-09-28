@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.DataTransfer.mozUserCancelled
 ---
+
 {{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`DataTransfer.mozUserCancelled`** property is used in the
@@ -21,7 +22,7 @@ event.
 
 > **Note:** This property is Firefox-specific.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 

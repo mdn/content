@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: api.AudioEncoder
 ---
+
 {{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 The **`AudioEncoder`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) encodes {{domxref("AudioData")}} objects.
 

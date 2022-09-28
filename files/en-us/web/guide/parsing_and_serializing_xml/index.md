@@ -19,6 +19,7 @@ tags:
   - XMLDocument
   - XMLHttpRequest
 ---
+
 At times, you may need to parse {{Glossary("XML")}} content and convert it into a {{Glossary("DOM")}} tree, or, conversely, serialize an existing DOM tree into XML. In this article, we'll look at the objects provided by the web platform to make the common tasks of serializing and parsing XML easy.
 
 - {{domxref("XMLSerializer")}}

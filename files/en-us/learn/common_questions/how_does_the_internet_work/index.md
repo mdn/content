@@ -6,6 +6,7 @@ tags:
   - Tutorial
   - WebMechanics
 ---
+
 {{LearnSidebar}}
 
 This article discusses what the Internet is and how it works.
@@ -41,7 +42,7 @@ The **Internet** is the backbone of the Web, the technical infrastructure that m
 ## Active Learning
 
 - [How the internet Works in 5 minutes](https://www.youtube.com/watch?v=7_LPdttKXPc): A 5 minute video to understand the very basics of Internet by Aaron Titus.
-- [How does the Internet work?](https://www.youtube.com/watch?v=x3c1ih2NJEg) Detailed well visualized 8 minute video.
+- [How does the Internet work?](https://www.youtube.com/watch?v=x3c1ih2NJEg) Detailed well visualized 9 minute video.
 
 ## Deeper dive
 

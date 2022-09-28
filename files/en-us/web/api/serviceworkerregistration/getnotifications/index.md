@@ -4,7 +4,6 @@ slug: Web/API/ServiceWorkerRegistration/getNotifications
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Notifications
   - Reference
@@ -15,6 +14,7 @@ tags:
   - getNotifications
 browser-compat: api.ServiceWorkerRegistration.getNotifications
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`getNotifications()`** method of
@@ -27,7 +27,7 @@ that same origin.
 
 ## Syntax
 
-```js
+```js-nolint
 getNotifications()
 getNotifications(options)
 ```

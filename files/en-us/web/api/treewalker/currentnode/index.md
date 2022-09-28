@@ -9,6 +9,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.currentNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.currentNode`** property represents the

@@ -12,6 +12,7 @@ tags:
   - Secure context
 browser-compat: api.Geolocation.clearWatch
 ---
+
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 
 The **`Geolocation.clearWatch()`** method is used to unregister
@@ -20,7 +21,7 @@ location/error monitoring handlers previously installed using
 
 ## Syntax
 
-```js
+```js-nolint
 clearWatch(id)
 ```
 

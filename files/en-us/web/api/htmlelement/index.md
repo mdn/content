@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLElement`** interface represents any [HTML](/en-US/docs/Web/HTML) element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
@@ -31,7 +32,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether or not the content of the element can be edited.
-- {{DOMxRef("HTMLElement.contextMenu")}} {{Deprecated_Inline}}
+- {{DOMxRef("HTMLElement.contextMenu")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A {{DOMxRef("HTMLMenuElement")}} representing the contextual menu associated with the element. It may be `null`.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`) .
@@ -79,14 +80,14 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A `long` representing the position of the element in the tabbing order.
 - {{DOMxRef("HTMLElement.title")}}
   - : A string containing the text that appears in a popup box when mouse is over the element.
-- {{DOMxRef("HTMLElement.translate")}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLElement.translate")}}
   - : A boolean value representing the translation.
 
 ## Methods
 
 _Inherits methods from its parent, {{DOMxRef("Element")}}._
 
-- {{DOMxRef("HTMLElement.attachInternals()")}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLElement.attachInternals()")}}
   - : Returns an {{DOMxRef("ElementInternals")}} object, and enables a custom element to participate in HTML forms.
 - {{DOMxRef("HTMLElement.blur()")}}
   - : Removes keyboard focus from the currently focused element.

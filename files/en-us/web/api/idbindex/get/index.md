@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBIndex.get
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`get()`** method of the {{domxref("IDBIndex")}}
@@ -28,7 +29,7 @@ with.
 
 ## Syntax
 
-```js
+```js-nolint
 get()
 get(key)
 ```
@@ -69,7 +70,7 @@ based on the index, not the primary key.
 the console when its success callback returns.
 
 Finally, we iterate through each record, and insert the data into an HTML table. For a
-complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
+complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {

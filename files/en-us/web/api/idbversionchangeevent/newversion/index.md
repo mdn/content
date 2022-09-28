@@ -13,6 +13,7 @@ tags:
   - newVersion
 browser-compat: api.IDBVersionChangeEvent.newVersion
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`newVersion`** read-only property of the
@@ -23,7 +24,7 @@ database.
 
 ## Value
 
-A number that is a 64-bit integer.
+A number that is a 64-bit integer or null if the database is being deleted.
 
 ## Examples
 

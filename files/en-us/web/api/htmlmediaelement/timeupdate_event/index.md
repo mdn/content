@@ -10,6 +10,7 @@ tags:
   - Video
 browser-compat: api.HTMLMediaElement.timeupdate_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `timeupdate` event is fired when the time indicated by the `currentTime` attribute has been updated.

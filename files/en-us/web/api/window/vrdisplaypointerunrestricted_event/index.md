@@ -9,9 +9,11 @@ tags:
   - Event
   - Deprecated
   - vrdisplaypointerunrestricted
+  - Non-standard
 browser-compat: api.Window.vrdisplaypointerunrestricted_event
 ---
-{{APIRef("Window")}}{{Deprecated_Header}}
+
+{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`vrdisplaypointerunrestricted`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when the VR display's pointer input is no longer restricted to consumption via a [pointerlocked element](/en-US/docs/Web/API/Pointer_Lock_API).
 
@@ -31,7 +33,7 @@ onvrdisplaypointerunrestricted = (event) => { };
 
 ## Event type
 
-An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("VRDisplayEvent")}}
 
@@ -39,9 +41,9 @@ An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
 
-- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.display")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.reason")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : A human-readable reason why the event was fired.
 
 ## Examples

@@ -9,6 +9,7 @@ tags:
   - HTML
   - Web
 ---
+
 {{LearnSidebar}}
 
 There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/en-US/docs/Learn/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element or if you want to provide custom behaviors, you may consider building your own controls.
@@ -93,7 +94,6 @@ Now that the control's basic functionality has been decided upon, it's time to s
      The tabindex attribute is what allows the user to focus the control.
      We'll see later that it's better to set it through JavaScript. -->
 <div class="select" tabindex="0">
-
   <!-- This container will be used to display the current value of the control -->
   <span class="value">Cherry</span>
 
@@ -108,7 +108,6 @@ Now that the control's basic functionality has been decided upon, it's time to s
     <li class="option">Strawberry</li>
     <li class="option">Apple</li>
   </ul>
-
 </div>
 ```
 
@@ -132,7 +131,7 @@ The required styles are those necessary to handle the three states of our contro
   position: relative;
 
   /* This will make our control become part of the text flow and sizable at the same time */
-  display : inline-block;
+  display: inline-block;
 }
 ```
 
@@ -157,9 +156,9 @@ Now, let's handle the list of options:
 .select .optList {
   /* This will make sure our list of options will be displayed below the value
      and out of the HTML flow */
-  position : absolute;
-  top      : 100%;
-  left     : 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 ```
 
@@ -184,31 +183,31 @@ So now that we have the basic functionality in place, the fun can start. The fol
 .select {
   /* The computations are made assuming 1em equals 16px which is the default value in most browsers.
      If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
-  font-size   : 0.625em; /* this (10px) is the new font size context for em value in this context */
-  font-family : Verdana, Arial, sans-serif;
+  font-size: 0.625em; /* this (10px) is the new font size context for em value in this context */
+  font-family: Verdana, Arial, sans-serif;
 
-  box-sizing : border-box;
+  box-sizing: border-box;
 
   /* We need extra room for the down arrow we will add */
-  padding : .1em 2.5em .2em .5em;
-  width   : 10em; /* 100px */
+  padding: 0.1em 2.5em 0.2em 0.5em;
+  width: 10em; /* 100px */
 
-  border        : .2em solid #000;
-  border-radius : .4em;
-  box-shadow    : 0 .1em .2em rgba(0,0,0,.45);
+  border: 0.2em solid #000;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
 
   /* The first declaration is for browsers that do not support linear gradients. */
-  background : #F0F0F0;
-  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
 .select .value {
   /* Because the value can be wider than our control, we have to make sure it will not
      change the control's width. If the content overflows, we display an ellipsis */
-  display  : inline-block;
-  width    : 100%;
-  overflow : hidden;
-  white-space : nowrap;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
   vertical-align: top;
 }
@@ -218,24 +217,24 @@ We don't need an extra element to design the down arrow; instead, we're using th
 
 ```css
 .select:after {
-  content : "▼"; /* We use the unicode character U+25BC; make sure to set a charset meta tag */
+  content: "▼"; /* We use the unicode character U+25BC; make sure to set a charset meta tag */
   position: absolute;
-  z-index : 1; /* This will be important to keep the arrow from overlapping the list of options */
-  top     : 0;
-  right   : 0;
+  z-index: 1; /* This will be important to keep the arrow from overlapping the list of options */
+  top: 0;
+  right: 0;
 
-  box-sizing : border-box;
+  box-sizing: border-box;
 
-  height  : 100%;
-  width   : 2em;
-  padding-top : .1em;
+  height: 100%;
+  width: 2em;
+  padding-top: 0.1em;
 
-  border-left  : .2em solid #000;
-  border-radius: 0 .1em .1em 0;
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
 
-  background-color : #000;
-  color : #FFF;
-  text-align : center;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 ```
 
@@ -243,18 +242,18 @@ Next, let's style the list of options:
 
 ```css
 .select .optList {
-  z-index : 2; /* We explicitly said the list of options will always be on top of the down arrow */
+  z-index: 2; /* We explicitly said the list of options will always be on top of the down arrow */
 
   /* this will reset the default style of the ul element */
   list-style: none;
-  margin : 0;
+  margin: 0;
   padding: 0;
 
-  box-sizing : border-box;
+  box-sizing: border-box;
 
   /* If the values are smaller than the control, the list of options
      will be as wide as the control itself */
-  min-width : 100%;
+  min-width: 100%;
 
   /* In case the list is too long, its content will overflow vertically
      (which will add a vertical scrollbar automatically) but never horizontally
@@ -264,11 +263,11 @@ Next, let's style the list of options:
   overflow-y: auto;
   overflow-x: hidden;
 
-  border: .2em solid #000;
-  border-top-width : .1em;
-  border-radius: 0 0 .4em .4em;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 .2em .4em rgba(0,0,0,.4);
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
   background: #f0f0f0;
 }
 ```
@@ -277,12 +276,12 @@ For the options, we need to add a `highlight` class to be able to identify the v
 
 ```css
 .select .option {
-  padding: .2em .3em; /* 2px 3px */
+  padding: 0.2em 0.3em; /* 2px 3px */
 }
 
 .select .highlight {
   background: #000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
@@ -367,7 +366,6 @@ First, we need to add a regular {{HTMLElement("select")}} element before each in
       </ul>
     </div>
   </form>
-
 </body>
 ```
 
@@ -380,10 +378,10 @@ Second, we need two new classes to let us hide the unneeded element: we visually
      - either we have set the body class to "widget" and thus we hide the actual {{HTMLElement("select")}} element
      - or we have not changed the body class, therefore the body class is still "no-widget",
        so the elements whose class is "select" must be hidden */
-  position : absolute;
-  left     : -5000em;
-  height   : 0;
-  overflow : hidden;
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
 }
 ```
 
@@ -433,18 +431,8 @@ In the code we are about to build, we will use the standard JavaScript and DOM A
 
 1. {{domxref("element.classList","classList")}}
 2. {{domxref("EventTarget.addEventListener","addEventListener()")}}
-3. [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+3. {{domxref("NodeList.forEach()")}}
 4. {{domxref("element.querySelector","querySelector()")}} and {{domxref("element.querySelectorAll","querySelectorAll()")}}
-
-Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). This is important because `Array` objects support the [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
-
-```js
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-}
-```
-
-If you need to support legacy browsers, ensure the browsers support these features. If not, you can iterate through the list or you may need to use a library or polyfill.
 
 ### Building event callbacks
 
@@ -585,10 +573,10 @@ window.addEventListener('load', () => {
 
 At that point, our control will change state according to our design, but its value doesn't get updated yet. We'll handle that next.
 
-| Live example                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Live example                                                                                                |
+| ----------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}} |
-| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)                                                 |
+| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)            |
 
 ### Handling the control's value
 
@@ -688,10 +676,10 @@ In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web
 
 With that, we're done! Here's the result:
 
-| Live example                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Live example                                                                                                |
+| ----------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
-| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)                                                 |
+| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)            |
 
 But wait a second, are we really done?
 
@@ -757,10 +745,10 @@ It might have seemed simpler to let a screen reader focus on the off-screen sele
 
 Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/vision/)):
 
-| Live example                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Live example                                                                                                |
+| ----------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
-| [Check out the final source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)                                           |
+| [Check out the final source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)      |
 
 If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise.
 
@@ -797,7 +785,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
   padding: 0;
   display: flex;
 }
-.styledSelect [type=radio] {
+.styledSelect [type="radio"] {
   position: absolute;
   left: -100vw;
   top: -100vh;
@@ -813,12 +801,12 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
   overflow: hidden;
 }
 .styledSelect:not(:focus-within) input:checked + label {
-  border: .2em solid #000;
-  border-radius: .4em;
-  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  border: 0.2em solid #000;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
 }
 .styledSelect:not(:focus-within) input:checked + label::after {
-  content : "▼";
+  content: "▼";
   background: black;
   float: right;
   color: white;
@@ -826,9 +814,9 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
   margin: 0 -4px 0 4px;
 }
 .styledSelect:focus-within {
-  border: .2em solid #000;
-  border-radius: .4em;
-  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  border: 0.2em solid #000;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
 }
 .styledSelect:focus-within input:checked + label {
   background-color: #333;

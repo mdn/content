@@ -12,9 +12,10 @@ tags:
   - Interface
 browser-compat: api.CSSNumericArray
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSNumericArray`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}}  contains a list of {{domxref("CSSNumericValue")}} objects.
+The **`CSSNumericArray`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} contains a list of {{domxref("CSSNumericValue")}} objects.
 
 ## Properties
 

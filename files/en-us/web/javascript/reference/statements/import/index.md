@@ -12,6 +12,7 @@ tags:
   - import
 browser-compat: javascript.statements.import
 ---
+
 {{jsSidebar("Statements")}}
 
 The static **`import`** declaration is used to import read-only live bindings which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be modified by the importing module.
@@ -22,7 +23,7 @@ There is also a function-like dynamic [`import()`](/en-US/docs/Web/JavaScript/Re
 
 ## Syntax
 
-```js
+```js-nolint
 import defaultExport from "module-name";
 import * as name from "module-name";
 import { export1 } from "module-name";
@@ -167,12 +168,14 @@ In this example, we create a re-usable module that exports a function to get all
 /**
  * Returns a list of prime numbers that are smaller than `max`.
  */
-export function getPrimes(max) {
-  const isPrime = new Map();
-  for (let i = 2; i < Math.sqrt(max); i++) {
-    if (isPrime.get(i) !== false) {
+function getPrimes(max) {
+  const isPrime = Array.from({ length: max }, () => true);
+  isPrime[0] = isPrime[1] = false;
+  isPrime[2] = true;
+  for (let i = 2; i * i < max; i++) {
+    if (isPrime[i]) {
       for (let j = i ** 2; j < max; j += i) {
-        isPrime.set(j, false);
+        isPrime[j] = false;
       }
     }
   }

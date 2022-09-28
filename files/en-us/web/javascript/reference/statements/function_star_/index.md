@@ -10,6 +10,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.generator_function
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`function*`** declaration (`function` keyword
@@ -23,7 +24,7 @@ constructor, or the function expression syntax.
 
 ## Syntax
 
-```js
+```js-nolint
 function* name(param0) {
   statements
 }

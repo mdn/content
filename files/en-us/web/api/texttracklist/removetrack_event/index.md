@@ -13,6 +13,7 @@ tags:
   - removeTrack
 browser-compat: api.TextTrackList.removetrack_event
 ---
+
 {{APIRef}}
 
 The **`removetrack`** event is fired when a track is removed from a [`TextTrackList`](/en-US/docs/Web/API/TextTrackList).
@@ -29,7 +30,7 @@ onremovetrack = (event) => { }
 
 ## Event type
 
-An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TrackEvent")}}
 

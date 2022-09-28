@@ -8,6 +8,7 @@ tags:
   - Web Components
   - shadow dom
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 An important aspect of web components is encapsulation — being able to keep the markup structure, style, and behavior hidden and separate from other code on the page so that different parts do not clash, and the code can be kept nice and clean. The Shadow DOM API is a key part of this, providing a way to attach a hidden separated DOM to an element. This article covers the basics of using the Shadow DOM.
@@ -20,14 +21,19 @@ This article assumes you are already familiar with the concept of the [DOM (Docu
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple DOM example</title>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <section>
+      <img
+        src="dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
   </body>
 </html>
 ```
@@ -116,27 +122,21 @@ Next, we use some DOM manipulation to create the element's internal shadow DOM s
 
 ```js
 // Create spans
-let wrapper = document.createElement('span');
+const wrapper = document.createElement('span');
 wrapper.setAttribute('class', 'wrapper');
-let icon = document.createElement('span');
+const icon = document.createElement('span');
 icon.setAttribute('class', 'icon');
 icon.setAttribute('tabindex', 0);
-let info = document.createElement('span');
+const info = document.createElement('span');
 info.setAttribute('class', 'info');
 
 // Take attribute content and put it inside the info span
-let text = this.getAttribute('data-text');
+const text = this.getAttribute('data-text');
 info.textContent = text;
 
 // Insert icon
-let imgUrl;
-if (this.hasAttribute('img')) {
-  imgUrl = this.getAttribute('img');
-} else {
-  imgUrl = 'img/default.png';
-}
-let img = document.createElement('img');
-img.src = imgUrl;
+const img = document.createElement('img');
+img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
 icon.appendChild(img);
 ```
 
@@ -200,9 +200,9 @@ customElements.define('popup-info', PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" data-text="Your card validation code (CVC) is an extra
-                                    security feature — it is the last 3 or 4
-                                    numbers on the back of your card.">
+<popup-info
+  img="img/alt.png"
+  data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."></popup-info>
 ```
 
 ### Internal versus external styles

@@ -5,10 +5,11 @@ page-type: guide
 tags:
   - Advanced
   - DOM
-  - HTML5
+  - HTML
   - JavaScript
   - Reference
 ---
+
 {{DefaultAPISidebar("Web Workers API") }}
 
 The **structured clone algorithm** copies complex JavaScript objects.

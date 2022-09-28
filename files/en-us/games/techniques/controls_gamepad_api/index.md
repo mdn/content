@@ -9,13 +9,14 @@ tags:
   - JavaScript
   - controllers
 ---
+
 {{GamesSidebar}}
 
 This article looks at implementing an effective, cross-browser control system for web games using the Gamepad API, allowing you to control your web games using console game controllers. It features a case study game — Hungry Fridge, created by [Enclave Games](https://enclavegames.com/).
 
 ## Controls for web games
 
-Historically playing games on a console connected to your TV was always a totally different experience to gaming on the PC, mostly because of the unique controls. Eventually, extra drivers and plugins allowed us to use console gamepads with desktop games — either native games or those running in the browser. Now in the era of HTML5, we finally have the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), which gives us the ability to play browser-based games using gamepad controllers without any plugins. The Gamepad API achieves this by providing an interface exposing button presses and axis changes that can be used inside JavaScript code to handle the input. These are good times for browser gaming.
+Historically playing games on a console connected to your TV was always a totally different experience to gaming on the PC, mostly because of the unique controls. Eventually, extra drivers and plugins allowed us to use console gamepads with desktop games — either native games or those running in the browser. Now we have the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), which gives us the ability to play browser-based games using gamepad controllers without any plugins. The Gamepad API achieves this by providing an interface exposing button presses and axis changes that can be used inside JavaScript code to handle the input. These are good times for browser gaming.
 
 ## API status and browser support
 
@@ -39,7 +40,7 @@ The game encapsulates two totally different types of "change" — good food vs. 
 
 The full version of the Hungry Fridge game was built first, and then to showcase the Gamepad API in action and show the JavaScript source code, a [simple demo](https://end3r.github.io/Gamepad-API-Content-Kit/demo/demo.html) was created. It's part of the [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/) available on GitHub where you can dive deep into the code and study exactly how it works.
 
-The code explained below is from the full version of the Hungry Fridge game, but it's almost identical to the one from the demo — the only difference is that the full version uses the `turbo` variable to decide whether or not the game will be launched using Super Turbo mode. It works independently, so it could be turned on even if the gamepad is not connected.
+The code explained below is from the full version of the Hungry Fridge game, but it's almost identical to the one from the demo — the only difference is that the full version uses the `turbo` variable to decide whether the game will be launched using Super Turbo mode. It works independently, so it could be turned on even if the gamepad is not connected.
 
 > **Note:** Easter Egg time: There's a hidden option to launch Super Turbo Hungry Fridge on the desktop without having a gamepad connected — click the gamepad icon in the top right corner of the screen. It will launch the game in the Super Turbo mode and you'll be able to control the Fridge with the keyboard: A and D for turning the turret left and right, W for shooting and arrow keys for movement.
 
@@ -58,7 +59,7 @@ const gamepadAPI = {
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
-  axesStatus: []
+  axesStatus: [],
 };
 ```
 
@@ -124,15 +125,15 @@ Beside `connect()` and `disconnect()`, there are two more methods in the `gamepa
 update() {
   // Clear the buttons cache
   gamepadAPI.buttonsCache = [];
-  
+
   // Move the buttons status from the previous frame to the cache
   for (let k = 0; k < gamepadAPI.buttonsStatus.length; k++) {
     gamepadAPI.buttonsCache[k] = gamepadAPI.buttonsStatus[k];
   }
-  
+
   // Clear the buttons status
   gamepadAPI.buttonsStatus = [];
-  
+
   // Get the gamepad object
   const c = gamepadAPI.controller || {};
 
@@ -145,7 +146,7 @@ update() {
       }
     }
   }
-  
+
   // Loop through axes and push their values to the array
   const axes = [];
   if (c.axes) {
@@ -153,11 +154,11 @@ update() {
       axes.push(c.axes[a].toFixed(2));
     }
   }
-  
+
   // Assign received values
   gamepadAPI.axesStatus = axes;
   gamepadAPI.buttonsStatus = pressed;
-  
+
   // Return buttons for debugging purposes
   return pressed;
 },
@@ -172,14 +173,14 @@ The `buttonPressed()` method is also placed in the main game loop to listen for 
 ```js
 buttonPressed(button, hold) {
   let newPress = false;
-  
+
   // Loop through pressed buttons
   for (let i = 0; i < gamepadAPI.buttonsStatus.length; i++) {
     // If we found the button we're looking for
     if (gamepadAPI.buttonsStatus[i] === button) {
       // Set the boolean variable to true
       newPress = true;
-      
+
       // If we want to check the single press
       if (!hold) {
         // Loop through the cached states from the previous frame
@@ -198,10 +199,10 @@ There are two types of action to consider for a button: a single press and a hol
 
 ```js
 if (gamepadAPI.turbo) {
-  if (gamepadAPI.buttonPressed('A', 'hold')) {
+  if (gamepadAPI.buttonPressed("A", "hold")) {
     this.turbo_fire();
   }
-  if (gamepadAPI.buttonPressed('B')) {
+  if (gamepadAPI.buttonPressed("B")) {
     this.managePause();
   }
 }
@@ -211,7 +212,7 @@ If `gamepadAPI.turbo` is `true` and the given buttons are pressed (or held), we 
 
 ### Axis threshold
 
-The buttons have only two states: `0` or `1`, but the analog sticks can have many different values — they have a float range between `-1` and `1` along both the `X` and `Y` axes.
+The buttons have only two states: `0` or `1`, but the analog sticks can have many values — they have a float range between `-1` and `1` along both the `X` and `Y` axes.
 
 Gamepads can get dusty from lying around inactive, meaning that checking for exact -1 or 1 values can be a problem. For this reason, it can be good to set a threshold for the value of the axis to take effect. For example, the Fridge tank will turn right only when the `X` value is bigger than `0.5`:
 
@@ -226,7 +227,7 @@ Even if we move it a little by mistake or the stick doesn't make it back to its 
 
 ## Specification update
 
-After more than a year of stability, in April 2015 the W3C Gamepad API spec was updated ([see the latest](https://w3c.github.io/gamepad/).) It hasn't changed much, but it's good to know whats going on — the updates are as follows.
+After more than a year of stability, in April 2015 the W3C Gamepad API spec was updated ([see the latest](https://w3c.github.io/gamepad/).) It hasn't changed much, but it's good to know what is going on — the updates are as follows.
 
 ### Getting the gamepads
 
@@ -239,7 +240,7 @@ The mapping type is now an enumerable object instead of a string:
 ```ts
 enum GamepadMappingType {
   "",
-  "standard"
+  "standard",
 }
 ```
 
@@ -247,7 +248,7 @@ This enum defines the set of known mappings for a Gamepad. For now, there's only
 
 ### Events
 
-There were more events available in the spec than just `gamepadconnected` and `gamepaddisconnected` available, but they were removed from the specification as they were thought to not be very useful. The discussion is still ongoing as to whether they should be put back, and in what form.
+There were more events available in the spec than just `gamepadconnected` and `gamepaddisconnected` available, but they were removed from the specification as they were thought to not be very useful. The discussion is still ongoing whether they should be put back, and in what form.
 
 ## Summary
 

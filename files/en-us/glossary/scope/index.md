@@ -3,9 +3,9 @@ title: Scope
 slug: Glossary/Scope
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
+
 The **scope** is the current context of execution in which {{glossary("value","values")}} and expressions are "visible" or can be referenced. If a {{glossary("variable")}} or expression is not in the current scope, it will not be available for use. Scopes can also be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.
 
 JavaScript has the following kinds of scopes:
@@ -22,12 +22,12 @@ A {{glossary("function")}} creates a scope, so that (for example) a variable def
 
 ```js example-bad
 function exampleFunction() {
-  const x = "declared inside function";  // x can only be used in exampleFunction
+  const x = "declared inside function"; // x can only be used in exampleFunction
   console.log("Inside function");
   console.log(x);
 }
 
-console.log(x);  // Causes error
+console.log(x); // Causes error
 ```
 
 However, the following code is valid due to the variable being declared outside the function, making it global:
@@ -64,4 +64,4 @@ console.log(x); // ReferenceError: x is not defined
 
 ## See also
 
-- [Scope (computer science)](https://en.wikipedia.org/wiki/Scope_(computer_science)) on Wikipedia
+- [Scope (computer science)](<https://en.wikipedia.org/wiki/Scope_(computer_science)>) on Wikipedia

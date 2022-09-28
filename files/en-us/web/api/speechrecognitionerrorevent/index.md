@@ -4,6 +4,7 @@ slug: Web/API/SpeechRecognitionErrorEvent
 page-type: web-api-interface
 browser-compat: api.SpeechRecognitionErrorEvent
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`SpeechRecognitionErrorEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents error messages from the recognition service.
@@ -14,9 +15,9 @@ The **`SpeechRecognitionErrorEvent`** interface of the [Web Speech API](/en-US/d
 
 _`SpeechRecognitionErrorEvent` also inherits properties from its parent interface, {{domxref("Event")}}._
 
-- {{domxref("SpeechRecognitionErrorEvent.error")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionErrorEvent.error")}} {{ReadOnlyInline}}
   - : Returns the type of error raised.
-- {{domxref("SpeechRecognitionErrorEvent.message")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionErrorEvent.message")}} {{ReadOnlyInline}}
   - : Returns a message describing the error in more detail.
 
 ## Examples

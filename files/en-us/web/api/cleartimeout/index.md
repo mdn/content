@@ -10,6 +10,7 @@ tags:
   - clearTimeout
 browser-compat: api.clearTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 The global **`clearTimeout()`** method cancels a timeout previously established
@@ -20,7 +21,7 @@ this method does nothing.
 
 ## Syntax
 
-```js
+```js-nolint
 clearTimeout(timeoutID)
 ```
 

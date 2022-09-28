@@ -23,6 +23,7 @@ tags:
   - XR
   - augmented
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_header}}
 
 Assuming you're already familiar with 3D graphics in general and WebGL in particular, taking that next bold step into mixed reality—the idea of presenting artificial scenery or objects in addition to or in place of the real world—is not overly complicated. Before you can begin to render your augmented or virtual reality scenario, you need to create and set up the WebXR session, and you should know how to shut it down properly as well. You will learn how to do these things in this article.
@@ -59,7 +60,7 @@ The [Mozilla WebXR team](https://mixedreality.mozilla.org/) has created a [WebXR
 
 While somewhat awkward compared to using an actual headset, this makes it possible to experiment with and developer WebXR code on a desktop computer, where WebXR isn't normally available. It also lets you perform some basic testing before taking your code to a real device. Be aware, however, that the emulator does not yet completely emulate all of the WebXR API, so you may run into problems you're not expecting. Again, carefully read the readme file and make sure you're aware of the limitations before you begin.
 
-**Important:** You should *always* test your code on actual AR and/or VR hardware before releasing or shipping a product! Emulated, simulated, or polyfilled environments are *not* an adequate substitute for actual testing on physical devices.
+**Important:** You should _always_ test your code on actual AR and/or VR hardware before releasing or shipping a product! Emulated, simulated, or polyfilled environments are _not_ an adequate substitute for actual testing on physical devices.
 
 ##### Getting the extension
 
@@ -128,7 +129,7 @@ Of course, you can simplify this depending on your needs; since your app is prob
 
 ### Permissions and security
 
-There are a number of security measures in place revolving around WebXR. First among these is that use of `immersive-vr` mode—which entirely replaces the user's view of the world—requires that the `xr-spatial-tracking`  [feature policy](/en-US/docs/Web/HTTP/Feature_Policy) be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.
+There are a number of security measures in place revolving around WebXR. First among these is that use of `immersive-vr` mode—which entirely replaces the user's view of the world—requires that the `xr-spatial-tracking` [feature policy](/en-US/docs/Web/HTTP/Feature_Policy) be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.
 
 For more specifics about securing WebXR activities and usage, see the article [Permissions and security for WebXR](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
 
@@ -164,7 +165,7 @@ Note the parameter passed into `requestSession()` in this code snippet: `immersi
 - `immersive-vr`
   - : A fully-immersive virtual reality session using a headset or similar device that fully replaces the world around the user with the images you present.
 - `immersive-ar`
-  - : An augmented reality session in which images are added to the real world using a headset or similar apparatus. *This option is not yet widely supported, as the AR specification is in flux.*
+  - : An augmented reality session in which images are added to the real world using a headset or similar apparatus. _This option is not yet widely supported, as the AR specification is in flux._
 - `inline`
   - : An on-screen presentation of the XR imagery within the context of the document window.
 
@@ -194,7 +195,7 @@ async function createImmersiveSession(xr) {
 }
 ```
 
-On the other hand, if you need an *inline* session and would prefer a `local` reference space, you can do this:
+On the other hand, if you need an _inline_ session and would prefer a `local` reference space, you can do this:
 
 ```js
 async function createInlineSession(xr) {
@@ -267,7 +268,7 @@ At this point, the `XRSession` itself has been fully configured, so we can begin
 
 > **Note:** To understand how to select the right reference space for your needs, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Geometry", "Selecting the reference space type")}}.
 
-The reference space returned by `requestReferenceSpace()` places the origin (0, 0, 0) in the center of the space. This is great—if your player's viewpoint starts in the exact center of the world. But most likely, that's not the case at all. If that's so, you call {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} on the initial reference space to create a *new* reference space [which offsets the coordinate system](/en-US/docs/Web/API/WebXR_Device_API/Geometry#establishing_the_reference_space) so that (0, 0, 0) is located at the position of the viewer, with the orientation likewise shifted to face in the desired direction. The input value into `getOffsetReferenceSpace()` is an {{domxref("XRRigidTransform")}} encapsulating the player's position and orientation as specified in the default world coordinates.
+The reference space returned by `requestReferenceSpace()` places the origin (0, 0, 0) in the center of the space. This is great—if your player's viewpoint starts in the exact center of the world. But most likely, that's not the case at all. If that's so, you call {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} on the initial reference space to create a _new_ reference space [which offsets the coordinate system](/en-US/docs/Web/API/WebXR_Device_API/Geometry#establishing_the_reference_space) so that (0, 0, 0) is located at the position of the viewer, with the orientation likewise shifted to face in the desired direction. The input value into `getOffsetReferenceSpace()` is an {{domxref("XRRigidTransform")}} encapsulating the player's position and orientation as specified in the default world coordinates.
 
 With the new reference space in hand and stored into the `worldData` object for safe-keeping, we call the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method to schedule a callback to be executed when it's time to render the next frame of animation for the WebXR session. The returned value is an ID we can use later to cancel the request if need be, so we save that into `worldData` as well.
 
@@ -358,7 +359,7 @@ session.onend = (event) => {
 };
 ```
 
-Here, when the session has ended and the `end` event is received, a `freeResources()` function is called to release the resources previously allocated and/or loaded to handle the XR presentation. By calling `freeResources()` in the `end` event handler, we call it both when the user clicks a button that triggers a shutdown such as by calling the `shutdownXR()` function shown above *and* when the session ends automatically, whether due to an error or some other reason.
+Here, when the session has ended and the `end` event is received, a `freeResources()` function is called to release the resources previously allocated and/or loaded to handle the XR presentation. By calling `freeResources()` in the `end` event handler, we call it both when the user clicks a button that triggers a shutdown such as by calling the `shutdownXR()` function shown above _and_ when the session ends automatically, whether due to an error or some other reason.
 
 ## See also
 

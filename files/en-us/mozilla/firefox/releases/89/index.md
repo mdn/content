@@ -2,11 +2,12 @@
 title: Firefox 89 for developers
 slug: Mozilla/Firefox/Releases/89
 tags:
-  - '89'
+  - "89"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 89 that will affect developers. Firefox 89 was released on June 1, 2021.

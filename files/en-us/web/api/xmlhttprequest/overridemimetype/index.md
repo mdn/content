@@ -14,6 +14,7 @@ tags:
   - overrideMimeType
 browser-compat: api.XMLHttpRequest.overrideMimeType
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method
@@ -28,7 +29,7 @@ as such. This method must be called before calling {{domxref("XMLHttpRequest.sen
 
 ## Syntax
 
-```js
+```js-nolint
 overrideMimeType(mimeType)
 ```
 

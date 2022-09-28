@@ -6,6 +6,7 @@ tags:
   - writing-guide
 page-type: mdn-writing-guide
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs is not a very video-heavy site, but there are certain places where video content makes sense to use as part of an article.
@@ -34,6 +35,7 @@ We tend to most commonly use video when describing some kind of instruction sequ
 It is especially useful when trying to describe processes that cross over multiple applications or windows and that include GUI interactions that might not be simple to describe: _"now click on the button near the top-left that looks a bit like a duck"_.
 
 In such cases, it is often more effective to just **show** what you mean.
+
 <!-- We most commonly use videos when explaining features of the [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).-->
 
 ## Guidelines for video content
@@ -169,7 +171,7 @@ This is used by inserting the following in your page at the position you want th
 ```
 
 The single property taken by the macro call is the string of characters at the end of the video URL, not the whole URL.
-For example, is the video URL is https\://www\.youtube.com/watch?v=ELS2OOUvxIw, the required macro call will be:
+For example, is the video URL is `https://www.youtube.com/watch?v=ELS2OOUvxIw`, the required macro call will be:
 
 ```
 \{{EmbedYouTube("ELS2OOUvxIw")}}

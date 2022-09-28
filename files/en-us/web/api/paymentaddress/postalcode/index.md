@@ -20,9 +20,12 @@ tags:
   - payment
   - paymentAddress
   - postalCode
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.postalCode
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`postalCode`** read-only property of the
 {{domxref('PaymentAddress')}} interface returns a string containing a code used by a

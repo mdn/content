@@ -8,6 +8,7 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.or
 ---
+
 {{JSRef}}
 
 The static **`Atomics.or()`**
@@ -19,7 +20,7 @@ write happens until the modified value is written back.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.or(typedArray, index, value)
 ```
 

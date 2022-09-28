@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.deleteProgram()`** method of the
@@ -19,7 +20,7 @@ been deleted.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteProgram(program)
 ```
 

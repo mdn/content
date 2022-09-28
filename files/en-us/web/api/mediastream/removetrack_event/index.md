@@ -6,6 +6,7 @@ tags:
   - Event
 browser-compat: api.MediaStream.removetrack_event
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The `removetrack` event is fired when a new [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack) object has been removed from a [`MediaStream`](/en-US/docs/Web/API/MediaStream).
@@ -24,7 +25,7 @@ onremovetrack = (event) => { };
 
 ## Event type
 
-An {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaStreamTrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaStreamTrackEvent")}}
 

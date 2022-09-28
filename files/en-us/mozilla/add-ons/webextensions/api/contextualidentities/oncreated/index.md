@@ -12,13 +12,14 @@ tags:
   - onCreated
 browser-compat: webextensions.api.contextualIdentities.onCreated
 ---
+
 {{AddonSidebar()}}
 
 Fired when a new contextual identity is created. Contextual identities may be created by extensions using the `contextualIdentities` API, or directly by the user, using the browser's user interface.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.contextualIdentities.onCreated.addListener(listener)
 browser.contextualIdentities.onCreated.removeListener(listener)
 browser.contextualIdentities.onCreated.hasListener(listener)
@@ -60,7 +61,8 @@ browser.contextualIdentities.onCreated.addListener(handleCreated);
 
 {{WebExtExamples}}
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -87,4 +89,4 @@ browser.contextualIdentities.onCreated.addListener(handleCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

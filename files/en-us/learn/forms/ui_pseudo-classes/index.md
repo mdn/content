@@ -12,6 +12,7 @@ tags:
   - Styling
   - Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
 In the previous articles, we covered the styling of various form controls, in a general manner. This included some usage of pseudo-classes, for example using `:checked` to target a checkbox only when it is selected. In this article, we will explore in detail the different UI pseudo-classes available to us in modern browsers for styling forms in different states.
@@ -80,15 +81,17 @@ One of the most basic concepts with regards to client-side form validation is wh
     <legend>Feedback form</legend>
     <div>
       <label for="fname">First name: </label>
-      <input id="fname" name="fname" type="text" required>
+      <input id="fname" name="fname" type="text" required />
     </div>
     <div>
       <label for="lname">Last name: </label>
-      <input id="lname" name="lname" type="text" required>
+      <input id="lname" name="lname" type="text" required />
     </div>
     <div>
-      <label for="email">Email address (include if you want a response): </label>
-      <input id="email" name="email" type="email">
+      <label for="email">
+        Email address (include if you want a response):
+      </label>
+      <input id="email" name="email" type="email" />
     </div>
     <div><button>Submit</button></div>
   </fieldset>
@@ -121,13 +124,13 @@ In the next section, we'll look at a better example of indicating required field
 
 > **Note:** You'll probably not find yourself using the `:optional` pseudo-class very often. Form controls are optional by default, so you could just do your optional styling by default, and add styles on top for required controls.
 
-> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}**.**
+> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}.
 
 ## Using generated content with pseudo-classes
 
 In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), but we thought now would be a good time to talk about it in a bit more detail.
 
-The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [`::after`](/en-US/docs/Web/CSS/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it's invisible to screenreaders; it is part of the document's styles. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
+The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [`::after`](/en-US/docs/Web/CSS/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it's invisible to screen readers; it is part of the document's styles. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
 
 This is really useful when you want to add a visual indicator to an element, such as a label or icon, but don't want it to be picked up by assistive technologies. For example, in our [custom radio buttons example](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), we use generated content to handle the placement and animation of the inner circle when a radio button is selected:
 
@@ -151,7 +154,7 @@ input[type="radio"]:checked::before {
 }
 ```
 
-This is really useful — screenreaders already let their users know when a radio button or checkbox they encounter is checked/selected, so you don't want them to read out another DOM element that indicates selection — that could be confusing. Having a purely visual indicator solves this problem.
+This is really useful — screen readers already let their users know when a radio button or checkbox they encounter is checked/selected, so you don't want them to read out another DOM element that indicates selection — that could be confusing. Having a purely visual indicator solves this problem.
 
 > **Note:** This also shows how you can combine a pseudo-class and pseudo-element if required.
 
@@ -163,14 +166,14 @@ First of all, we'll add a paragraph to the top of the form to say what you are l
 <p>Required fields are labelled with "required".</p>
 ```
 
-Screenreader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
+screen reader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
 
 Since form inputs don't directly support having generated content put on them (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements and therefore don't have one), we will add an empty [`<span>`](/en-US/docs/Web/HTML/Element/span) to hang the generated content on:
 
 ```html
 <div>
   <label for="fname">First name: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -233,7 +236,7 @@ As in the previous example, we've got extra `<span>`s to generate content on, wh
 ```html
 <div>
   <label for="fname">First name *: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -256,12 +259,12 @@ input:invalid {
 }
 
 input:invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 
 input:valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```
@@ -291,7 +294,7 @@ The numeric input looks like this:
 ```html
 <div>
   <label for="age">Age (must be 12+): </label>
-  <input id="age" name="age" type="number" min="12" max="120" required>
+  <input id="age" name="age" type="number" min="12" max="120" required />
   <span></span>
 </div>
 ```
@@ -350,34 +353,38 @@ Let's have a look at an example that does just this. First of all, the HTML is a
     <legend>Shipping address</legend>
     <div>
       <label for="name1">Name: </label>
-      <input id="name1" name="name1" type="text" required>
+      <input id="name1" name="name1" type="text" required />
     </div>
     <div>
       <label for="address1">Address: </label>
-      <input id="address1" name="address1" type="text" required>
+      <input id="address1" name="address1" type="text" required />
     </div>
     <div>
       <label for="pcode1">Zip/postal code: </label>
-      <input id="pcode1" name="pcode1" type="text" required>
+      <input id="pcode1" name="pcode1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
     <legend>Billing address</legend>
     <div>
       <label for="billing-checkbox">Same as shipping address:</label>
-      <input type="checkbox" id="billing-checkbox" checked>
+      <input type="checkbox" id="billing-checkbox" checked />
     </div>
     <div>
       <label for="name" class="billing-label disabled-label">Name: </label>
-      <input id="name" name="name" type="text" disabled required>
+      <input id="name" name="name" type="text" disabled required />
     </div>
     <div>
-      <label for="address2" class="billing-label disabled-label">Address: </label>
-      <input id="address2" name="address2" type="text" disabled required>
+      <label for="address2" class="billing-label disabled-label">
+        Address:
+      </label>
+      <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
-      <label for="pcode2" class="billing-label disabled-label">Zip/postal code: </label>
-      <input id="pcode2" name="pcode2" type="text" disabled required>
+      <label for="pcode2" class="billing-label disabled-label">
+        Zip/postal code:
+      </label>
+      <input id="pcode2" name="pcode2" type="text" disabled required />
     </div>
   </fieldset>
 
@@ -389,8 +396,8 @@ Now onto the CSS. The most relevant parts of this example are as follows:
 
 ```css
 input[type="text"]:disabled {
-    background: #eee;
-    border: 1px solid #ccc;
+  background: #eee;
+  border: 1px solid #ccc;
 }
 
 .disabled-label {
@@ -447,8 +454,7 @@ A fragment of the HTML is as follows — note the readonly attribute:
 ```html
 <div>
   <label for="name">Name: </label>
-  <input id="name" name="name" type="text"
-         value="Mr Soft" readonly>
+  <input id="name" name="name" type="text" value="Mr Soft" readonly />
 </div>
 ```
 
@@ -530,7 +536,7 @@ Let's look at a couple of modified versions of the previous example that remind 
 
 ```html
 <p>
-  <input type="radio" name="fruit" value="cherry" id="cherry">
+  <input type="radio" name="fruit" value="cherry" id="cherry" />
   <label for="cherry">Cherry</label>
   <span></span>
 </p>

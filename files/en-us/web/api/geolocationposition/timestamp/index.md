@@ -11,6 +11,7 @@ tags:
   - timeStamp
 browser-compat: api.GeolocationPosition.timestamp
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationPosition.timestamp`** read-only property returns a {{domxref("EpochTimeStamp")}} object that represents the date and time that the position was acquired by the device.

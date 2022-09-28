@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.region
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.region`** property is an accessor property that returns the region of the world (usually a country) associated with the locale.

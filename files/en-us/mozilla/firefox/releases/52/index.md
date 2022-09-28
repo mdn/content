@@ -6,6 +6,7 @@ tags:
   - Mozilla
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 52 was released on March 7, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -54,7 +55,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
   - Alpha values can now be specified as percentages as well as numbers, e.g. `rgb(255 0 0 / 50%)`.
   - The hue component in `hsl()` colors can now be specified as an angle, as well as a number, e.g. `hsl(120deg, 60%, 70%)`.
 
-- Firefox's implementation of child-indexed pseudo-classes (such as {{cssxref(":nth-child")}}, {{cssxref(":first-child")}}, and so forth) has been updated to match the CSS4 specification: these pseudo-classes now match the appropriate sibling elements rather than the children of their parent element. This allows these pseudo-classes to be used when there is no parent, or the parent is not an {{domxref("Element")}} ({{bug(1300374)}}.
+- Firefox's implementation of child-indexed pseudo-classes (such as {{cssxref(":nth-child")}}, {{cssxref(":first-child")}}, and so forth) has been updated to match the CSS selectors level 4 specification: these pseudo-classes now match the appropriate sibling elements rather than the children of their parent element. This allows these pseudo-classes to be used when there is no parent, or the parent is not an {{domxref("Element")}} ({{bug(1300374)}}.
 
 #### CSS Grids
 
@@ -167,7 +168,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 ### Security
 
-- When login pages (i.e those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ({{bug(1319119)}}). Autofill is also disabled on insecure login forms ({{bug(1217152)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
+- When login pages (i.e., those containing an [`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password) field) are created so that they would be submitted insecurely, Firefox displays an in-context warning message below the password field to warn users ({{bug(1319119)}}). Autofill is also disabled on insecure login forms ({{bug(1217152)}}). See [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords) for more details.
 - Support for SHA-1 SSL certificates has been removed; navigating to a secure page that uses a SHA-1 certificate will now result in an `Untrusted Connection` error ({{bug(1330043)}}).
 
 ## Plugins

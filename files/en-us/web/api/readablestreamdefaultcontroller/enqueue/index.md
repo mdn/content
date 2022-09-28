@@ -11,6 +11,7 @@ tags:
   - enqueue
 browser-compat: api.ReadableStreamDefaultController.enqueue
 ---
+
 {{APIRef("Streams")}}
 
 The **`enqueue()`** method of the
@@ -19,7 +20,7 @@ associated stream.
 
 ## Syntax
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 

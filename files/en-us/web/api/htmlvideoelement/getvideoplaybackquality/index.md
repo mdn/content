@@ -19,6 +19,7 @@ tags:
   - getVideoPlaybackQuality
 browser-compat: api.HTMLVideoElement.getVideoPlaybackQuality
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **{{domxref("HTMLVideoElement")}}** method
@@ -30,7 +31,7 @@ The data returned can be used to evaluate the quality of the video stream.
 
 ## Syntax
 
-```js
+```js-nolint
 getVideoPlaybackQuality()
 ```
 

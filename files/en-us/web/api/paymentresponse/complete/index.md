@@ -4,7 +4,6 @@ slug: Web/API/PaymentResponse/complete
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Payment Request
   - Payment Request API
@@ -14,6 +13,7 @@ tags:
   - complete
 browser-compat: api.PaymentResponse.complete
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentRequest")}} method
@@ -27,7 +27,7 @@ the payment request and the {{jsxref("Promise")}} returned by the
 
 ## Syntax
 
-```js
+```js-nolint
 complete()
 complete(result)
 ```

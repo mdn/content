@@ -11,7 +11,8 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.charCode
 ---
-{{APIRef("UI Events")}} {{non-standard_header}} {{deprecated_header}}
+
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
 The **`charCode`** read-only property of the
 {{domxref("KeyboardEvent")}} interface returns the Unicode value of a character key

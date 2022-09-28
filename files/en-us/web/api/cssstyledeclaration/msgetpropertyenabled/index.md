@@ -7,6 +7,7 @@ tags:
   - Method
   - Non-standard
 ---
+
 {{APIRef("CSSOM")}}
 
 {{Non-standard_header()}}
@@ -17,7 +18,7 @@ This proprietary method is specific to Internet Explorer browser.
 
 ### Syntax
 
-```js
+```js-nolint
 msGetPropertyEnabled(name)
 ```
 

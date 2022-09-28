@@ -5,6 +5,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 When writing documentation about an API, the sources of information are many: the specifications describe what should be implemented as well as the model, and the implementations describe what has actually been put in the browsers. WebIDL files are a very condensed way of giving a lot, but not all, of the information about the API. This document provides a reference to help understand WebIDL syntax.
@@ -297,14 +298,14 @@ _The **`HTMLMediaElement.buffered`** read-only property returns a new \\{{domxre
 
 and
 
-- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{readonlyinline}}_
+- _\\{{domxref("HTMLMediaElement.buffered")}}\\{{ReadOnlyInline}}_
   - : _Returns a new \\{{domxref("TimeRanges")}} object that …_
 
 In the case of a reference to a collection object (like `HTMLCollection`, `HTMLFormElementsCollection`, or `HTMLOptionsCollection`, always without `[NewObject]`), we make it explicit that changes to the underlying object will be available via the returned reference. To mark this, we qualify the collection as a **live** `HTMLCollection` (or `HTMLFormElementsCollections`, or `HTMLOptionsCollection`), both in the interface description and in the subpage.
 
 E.g.
 
-- \\{{domxref("HTMLFormElement.elements")}}\\{{readonlyinline}}
+- \\{{domxref("HTMLFormElement.elements")}}\\{{ReadOnlyInline}}
   - : Returns a live \\{{domxref("HTMLFormControlsCollection")}} containing…
 
 ### Availability in workers
@@ -358,7 +359,7 @@ DOMString canPlayType(DOMString type);
 
 The return value type is indicated first inside the parentheses — in the above case the value is an object of type `DOMString`. if followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here, the return value can't be `null`.
 
-The keyword `void` means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should contain only a simple _None_.
+The keyword `void` means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should contain only a simple "None.".
 
 ### Throwing exceptions
 
@@ -464,7 +465,7 @@ Such an iterator allows to use the syntax `for (const p in object)` as a shortha
 
 > **Note:** the value pairs to iterate over are _not_ defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over)…"_
 >
-> E.g, for {{domxref('FormData')}} you find in the spec: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry "concept-FormData-entry") with the key being the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name "concept-FormData-entry-name") and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value "concept-FormData-entry-value"). "_
+> E.g, for {{domxref('FormData')}} you find in the spec: _"The [value pairs to iterate over](https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over) are the [entries](https://xhr.spec.whatwg.org/#concept-formdata-entry) with the key being the [name](https://xhr.spec.whatwg.org/#concept-formdata-entry-name) and the value the [value](https://xhr.spec.whatwg.org/#concept-formdata-entry-value). "_
 
 ### Set-like methods
 

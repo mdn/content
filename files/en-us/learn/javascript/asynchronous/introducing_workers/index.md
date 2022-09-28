@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
 In this final article in our "Asynchronous JavaScript" module, we'll introduce _workers_, which enable you to run some tasks in a separate {{Glossary("Thread", "thread")}} of execution.
@@ -103,29 +104,27 @@ The "index.html" file and the "style.css" files are already complete:
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Prime numbers</title>
     <script src="main.js" defer></script>
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
-
     <label for="quota">Number of primes:</label>
-    <input type="text" id="quota" name="quota" value="1000000">
+    <input type="text" id="quota" name="quota" value="1000000" />
 
     <button id="generate">Generate primes</button>
     <button id="reload">Reload</button>
 
-    <textarea id="user-input" rows="5" cols="62">Try typing in here immediately after pressing "Generate primes"</textarea>
+    <textarea id="user-input" rows="5" cols="62">
+Try typing in here immediately after pressing "Generate primes"
+</textarea>
 
     <div id="output"></div>
-
   </body>
-
 </html>
-
 ```
 
 ```css
@@ -227,7 +226,7 @@ The `generatePrimes()` function is just like the synchronous version, except ins
 
 > **Note:** To run this site, you'll have to run a local web server, because file:// URLs are not allowed to load workers. See our guide to [setting up a local testing server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server). With that done, you should be able to click "Generate primes" and have your main page stay responsive.
 >
-> If you have any problems creating or running the example, you can see the finished version at https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished and try it live at https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished.
+> If you have any problems creating or running the example, you can review the [finished version](https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished) and try it [live](https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished).
 
 ## Other types of worker
 

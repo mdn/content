@@ -14,6 +14,7 @@ tags:
   - cross browser
   - feature detection
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Feature detection involves working out whether a browser supports a certain block of code, and running different code depending on whether it does (or doesn't), so that the browser can always provide a working experience rather than crashing/erroring in some browsers. This article details how to write your own simple feature detection, how to use a library to speed up implementation, and native features for feature detection such as `@supports`.
@@ -78,25 +79,26 @@ Let's implement something that demonstrates this, although we'll keep it simple 
 1. Start by making local copies of our [`css-feature-detect.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/css-feature-detect.html), [`flex-layout.css`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/flex-layout.css), [`float-layout.css`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/float-layout.css), and [`basic-styling.css`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/basic-styling.css) files. Save them in a new directory.
 2. We will add the HTML5 Shiv to our example too so that the HTML5 semantic elements will style properly in older versions of IE. Download the latest version (see [Manual installation](https://github.com/aFarkas/html5shiv#manual-installation)), unzip the ZIP file, copy the `html5shiv-printshiv.min.js` and `html5shiv.min.js` files into your example directory, and link to one of the files by putting the following under your {{htmlelement("title")}} element:
 
-    ```html
-    <script src="html5shiv.min.js"></script>
-    ```
-> **Note:** This step is no longer needed. All modern browsers are able to render semantic elements. 
+   ```html
+   <script src="html5shiv.min.js"></script>
+   ```
+
+   > **Note:** This step is no longer needed. All modern browsers are able to render semantic elements.
 
 3. Have a look at your example CSS files — you'll see that `basic-styling.css` handles all the styling that we want to give to every browser, whereas the other two CSS files contain the CSS we want to selectively apply to browsers depending on their support levels. You can look at the different effects these two files have by manually changing the CSS file referred to by the second {{htmlelement("link")}} element, but let's instead implement some JavaScript to automatically swap them as needed.
 4. First, remove the contents of the second `<link>` element's `href` attribute. We will fill this in dynamically later on.
 5. Next, add a `<script></script>` element at the bottom of your body (just before the closing `</body>` tag).
 6. Give it the following contents:
 
-    ```js
-    const conditional = document.querySelector('.conditional');
-    const testElem = document.createElement('div');
-    if (testElem.style.flex !== undefined && testElem.style.flexFlow !== undefined) {
-      conditional.setAttribute('href', 'flex-layout.css');
-    } else {
-      conditional.setAttribute('href', 'float-layout.css');
-    }
-    ```
+   ```js
+   const conditional = document.querySelector('.conditional');
+   const testElem = document.createElement('div');
+   if (testElem.style.flex !== undefined && testElem.style.flexFlow !== undefined) {
+     conditional.setAttribute('href', 'flex-layout.css');
+   } else {
+     conditional.setAttribute('href', 'float-layout.css');
+   }
+   ```
 
 Here we are grabbing a reference to the second `<link>` element, and creating a `<div>` element as part of our test. In our conditional statement, we test that the {{cssxref("flex")}} and {{cssxref("flex-flow")}} properties exist in the browser. Note how the JavaScript representations of those properties that are stored inside the {{domxref("HTMLElement.style")}} object use lower camel case, not hyphens, to separate the words.
 
@@ -114,7 +116,6 @@ For example, we could rewrite our previous example to use `@supports` — see [`
 
 ```css
 @supports (flex-flow: row) and (flex: 1) {
-
   main {
     display: flex;
   }
@@ -127,19 +128,16 @@ For example, we could rewrite our previous example to use `@supports` — see [`
   main div:last-child {
     padding-right: 0;
   }
-
 }
 ```
 
-This at-rule block applies the CSS rule within only if the current browser supports both the `flex-flow: row` and `flex: 1` declarations. For each condition to work, you need to include a complete declaration (not just a property name) and NOT include the semi-colon on the end.
+This at-rule block applies the CSS rule within only if the current browser supports both the `flex-flow: row` and `flex: 1` declarations. For each condition to work, you need to include a complete declaration (not just a property name) and NOT include the semicolon on the end.
 
 `@supports` also has `OR` and `NOT` logic available — the other block applies the float layout if the flexbox properties are not available:
 
 ```css
 @supports not (flex-flow: row) and (flex: 1) {
-
   /* rules in here */
-
 }
 ```
 
@@ -178,7 +176,7 @@ We already saw an example of a JavaScript feature detection test earlier on. Gen
         Create an element in memory using
         {{domxref("Document.createElement()")}} and then check if a
         property exists on it. The example shown is a way of detecting
-        <a href="/en-US/docs/Web/API/Canvas_API">HTML5 Canvas</a> support.
+        <a href="/en-US/docs/Web/API/Canvas_API">Canvas</a> support.
       </td>
       <td>
         <code
@@ -237,7 +235,7 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 
 As an example, our [Snapshot](https://github.com/chrisdavidmills/snapshot) demo makes use of it to selectively apply the Brick JavaScript library and use it to handle the UI layout, but only for the small screen layout (480px wide or less). We first use the `media` attribute to only apply the Brick CSS to the page if the page width is 480px or less:
 
-```css
+```html
 <link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)">
 ```
 
@@ -270,27 +268,28 @@ Let's have a look at how Modernizr works in terms of selectively applying CSS.
 1. First, make a copy of [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) and [`supports-styling.css`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Save them as `modernizr-css.html` and `modernizr-css.css`.
 2. Update your {{htmlelement("link")}} element in your HTML so it points to the correct CSS file (you should also update your {{htmlelement("title")}} element to something more suitable!):
 
-    ```html
-    <link href="modernizr-css.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="modernizr-css.css" rel="stylesheet" />
+   ```
 
 3. Above this `<link>` element, add a {{htmlelement("script")}} element to apply the Modernizr library to the page, as shown below. This needs to be applied to the page before any CSS (or JavaScript) that might make use of it.
 
-    ```html
-    <script src="modernizr-custom.js"></script>
-    ```
+   ```html
+   <script src="modernizr-custom.js"></script>
+   ```
 
 4. Now edit your opening `<html>` tag, so that it looks like this:
 
-    ```html
-    <html class="no-js">
-    ```
+   ```html
+   <html class="no-js">…</html>
+   ```
 
 At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated your `<html>` `class` value like so:
 
 ```html
-<html class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
-blob-constructor cookies cors (and loads of more values)">
+<html
+  class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
+blob-constructor cookies cors (and loads of more values)">…</html>
 ```
 
 It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support flexbox at all, `<html>` would be given a class name of `no-flexbox`. If it did support modern flexbox, it would get a class name of `flexbox`. If you search through the class list, you'll also see others relating to flexbox, like:
@@ -364,27 +363,27 @@ Let's look at an example to show how you'd use those properties.
 3. Next, fill in the `YOUR-API-KEY` placeholder text in the second `<script>` element (as it is now) with a valid Google Maps API key. To get a key, sign in to a Google account, go to the [Get a Key/Authentication](https://developers.google.com/maps/documentation/javascript/get-api-key) page, then click the blue _Get a Key_ button and follow the instructions.
 4. Finally, add another `<script>` element at the bottom of the HTML body (just before the `</body>` tag), and put the following script inside the tags:
 
-    ```js
-    if (Modernizr.geolocation) {
+   ```js
+   if (Modernizr.geolocation) {
 
-      navigator.geolocation.getCurrentPosition(function(position) {
+     navigator.geolocation.getCurrentPosition(function(position) {
 
-        let latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-        let myOptions = {
-          zoom: 8,
-          center: latlng,
-          mapTypeId: google.maps.MapTypeId.TERRAIN,
-          disableDefaultUI: true
-        }
-        let map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-      });
+       let latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+       let myOptions = {
+         zoom: 8,
+         center: latlng,
+         mapTypeId: google.maps.MapTypeId.TERRAIN,
+         disableDefaultUI: true
+       }
+       let map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+     });
 
-    } else {
-      const para = document.createElement('p');
-      para.textContent = 'Argh, no geolocation!';
-      document.body.appendChild(para);
-    }
-    ```
+   } else {
+     const para = document.createElement('p');
+     para.textContent = 'Argh, no geolocation!';
+     document.body.appendChild(para);
+   }
+   ```
 
 Try your example out! Here we use the `Modernizr.geolocation` test to check whether geolocation is supported by the current browser. If it is, we run some code that gets your device's current location, and plots it on a Google Map.
 

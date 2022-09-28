@@ -8,9 +8,11 @@ tags:
   - HTTP Header
   - Reference
   - Request header
+  - Experimental
 browser-compat: http.headers.Save-Data
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The **`Save-Data`** [network client hint](/en-US/docs/Web/HTTP/Client_hints#network_client_hints) request header field is a boolean which indicates the client's preference for reduced data usage.
 This could be for reasons such as high transfer costs, slow connection speeds, etc.
@@ -69,7 +71,7 @@ instance ensuring that the user is not served a lower-quality image from the cac
 
 Request:
 
-```
+```http
 GET /image.jpg HTTP/1.0
 Host: example.com
 Save-Data: on
@@ -77,7 +79,7 @@ Save-Data: on
 
 Response:
 
-```
+```http
 HTTP/1.0 200 OK
 Content-Length: 102832
 Vary: Accept-Encoding, Save-Data
@@ -91,14 +93,14 @@ Content-Type: image/jpeg
 
 Request:
 
-```
+```http
 GET /image.jpg HTTP/1.0
 Host: example.com
 ```
 
 Response:
 
-```
+```http
 HTTP/1.0 200 OK
 Content-Length: 481770
 Vary: Accept-Encoding, Save-Data

@@ -4,7 +4,6 @@ slug: Web/API/ServiceWorkerContainer/getRegistrations
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Service Workers
@@ -12,6 +11,7 @@ tags:
   - ServiceWorkerContainer
 browser-compat: api.ServiceWorkerContainer.getRegistrations
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`getRegistrations()`** method of the
@@ -23,7 +23,7 @@ The **`getRegistrations()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getRegistrations()
 ```
 

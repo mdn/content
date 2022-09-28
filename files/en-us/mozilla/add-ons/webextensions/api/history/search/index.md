@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.history.search
 ---
+
 {{AddonSidebar()}}
 
 Searches the browser's history for {{WebExtAPIRef("history.HistoryItem")}} objects matching the given criteria.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let searching = browser.history.search(
   query                  // object
 )
@@ -56,7 +57,7 @@ let searching = browser.history.search(
     - `startTime` {{optional_inline}}
       - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose `lastVisitTime` is earlier than this time. If it is omitted, the search is limited to the last 24 hours.
     - `endTime` {{optional_inline}}
-      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.
+      - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.
     - `maxResults` {{optional_inline}}
       - : `number`. The maximum number of results to retrieve. Defaults to 100, with a minimum value of 1. The function will throw an error if you pass it a `maxResults` value less than 1.
 
@@ -70,52 +71,50 @@ Logs the URL and last visit time for all history items visited in the last 24 ho
 
 ```js
 function onGot(historyItems) {
-  for (item of historyItems) {
+  for (const item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));
   }
 }
 
-let searching = browser.history.search({text: ""});
-
-searching.then(onGot);
+browser.history.search({ text: "" }).then(onGot);
 ```
 
 Logs the URL and last visit time for all history items ever visited:
 
 ```js
 function onGot(historyItems) {
-  for (item of historyItems) {
+  for (const item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));
   }
 }
 
-let searching = browser.history.search({
-   text: "",
-   startTime: 0
-});
-
-searching.then(onGot);
+browser.history
+  .search({
+    text: "",
+    startTime: 0,
+  })
+  .then(onGot);
 ```
 
 Logs the URL and last visit time of the most recent visit to a page that contain the string "mozilla":
 
 ```js
 function onGot(historyItems) {
-  for (item of historyItems) {
+  for (const item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));
   }
 }
 
-let searching = browser.history.search({
- text: "mozilla",
- startTime: 0,
- maxResults: 1
-});
-
-searching.then(onGot);
+browser.history
+  .search({
+    text: "mozilla",
+    startTime: 0,
+    maxResults: 1,
+  })
+  .then(onGot);
 ```
 
 {{WebExtExamples}}
@@ -128,7 +127,8 @@ searching.then(onGot);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -155,4 +155,4 @@ searching.then(onGot);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -14,6 +14,7 @@ tags:
   - id
 browser-compat: api.Document.getElementById
 ---
+
 {{ ApiRef("DOM") }}
 
 The {{domxref("Document")}} method **`getElementById()`** returns an {{domxref("Element")}} object representing the element whose {{domxref("Element.id", "id")}} property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.
@@ -22,7 +23,7 @@ If you need to get access to an element which doesn't have an ID, you can use {{
 
 ## Syntax
 
-```js
+```js-nolint
 getElementById(id)
 ```
 
@@ -40,15 +41,15 @@ An {{domxref("Element")}} object describing the DOM element object matching the 
 ### HTML
 
 ```html
-<html>
-<head>
-  <title>getElementById example</title>
-</head>
-<body>
-  <p id="para">Some text here</p>
-  <button onclick="changeColor('blue');">blue</button>
-  <button onclick="changeColor('red');">red</button>
-</body>
+<html lang="en">
+  <head>
+    <title>getElementById example</title>
+  </head>
+  <body>
+    <p id="para">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+  </body>
 </html>
 ```
 
@@ -76,24 +77,24 @@ Unlike some other element-lookup methods such as {{domxref("Document.querySelect
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="parent-id">
-        <p>hello word1</p>
-        <p id="test1">hello word2</p>
-        <p>hello word3</p>
-        <p>hello word4</p>
+      <p>hello word1</p>
+      <p id="test1">hello word2</p>
+      <p>hello word3</p>
+      <p>hello word4</p>
     </div>
     <script>
-        const parentDOM = document.getElementById('parent-id');
-        const test1 = parentDOM.getElementById('test1');
-        //throw error
-        //Uncaught TypeError: parentDOM.getElementById is not a function
+      const parentDOM = document.getElementById("parent-id");
+      const test1 = parentDOM.getElementById("test1");
+      // throw error
+      // Uncaught TypeError: parentDOM.getElementById is not a function
     </script>
-</body>
+  </body>
 </html>
 ```
 

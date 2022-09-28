@@ -11,6 +11,7 @@ tags:
 spec-urls: https://webaudio.github.io/web-midi-api/
 browser-compat: api.Navigator.requestMIDIAccess
 ---
+
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
 
 The Web MIDI API connects to and interacts with Musical Instrument Digital Interface (MIDI) Devices.
@@ -88,8 +89,8 @@ This example prints incoming MIDI messages on a single port to the console.
 ```js
 function onMIDIMessage(event) {
   let str = `MIDI message received at timestamp ${event.timeStamp}[${event.data.length} bytes]: `;
-  for (let i=0; i<event.data.length; i++) {
-    str += `0x${event.data[i].toString(16)} `;
+  for (const character of event.data) {
+    str += `0x${character.toString(16)} `;
   }
   console.log(str);
 }

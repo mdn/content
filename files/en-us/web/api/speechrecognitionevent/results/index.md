@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionEvent/results
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionEvent
@@ -14,7 +13,8 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionEvent.results
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`results`** read-only property of the
 {{domxref("SpeechRecognitionEvent")}} interface returns a
@@ -35,7 +35,7 @@ A {{domxref("SpeechRecognitionResultList")}} object.
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

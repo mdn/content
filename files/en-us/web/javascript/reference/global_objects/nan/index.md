@@ -7,11 +7,12 @@ tags:
   - Reference
 browser-compat: javascript.builtins.NaN
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`NaN`** property is a value representing Not-A-Number.
 
-{{js_property_attributes(0,0,0)}}
+{{js_property_attributes(0, 0, 0)}}
 
 {{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
 
@@ -23,52 +24,84 @@ The initial value of `NaN` is Not-A-Number — the same as the value of {{jsxref
 
 There are five different types of operations that return `NaN`:
 
-- Number cannot be parsed (e.g. `parseInt("blabla")` or `Number(undefined)`)
+- Failed number conversion (e.g. explicit ones like `parseInt("blabla")`, `Number(undefined)`, or implicit ones like `Math.abs(undefined)`)
 - Math operation where the result is not a real number (e.g. `Math.sqrt(-1)`)
-- Operand of an argument is `NaN` (e.g. `7 ** NaN`)
-- Indeterminate form (e.g. `0 * Infinity`, or `undefined + undefined`)
-- Any operation that involves a string and is not an addition operation (e.g. `"foo" / 3`)
+- Indeterminate form (e.g. `0 * Infinity`, `1 ** Infinity`, `Infinity / Infinity`, `Infinity - Infinity`)
+- A method or expression whose operand is or gets coerced to `NaN` (e.g. `7 ** NaN`, `7 * "blabla"`) — this means `NaN` is contagious
+- Other cases where an invalid value is to be represented as a number (e.g. an invalid [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) `new Date("blabla").getTime()`, `"".charCodeAt(1)`)
+
+`NaN` and its behaviors are not invented by JavaScript. Its semantics in floating point arithmetic (including that `NaN !== NaN`) are specified by [IEEE 754](https://en.wikipedia.org/wiki/Double_precision_floating-point_format). `NaN`'s behaviors include:
+
+- If `NaN` is involved in any mathematical operation, the result is also `NaN`.
+- When `NaN` is one of the operands of any relational comparison (`>`, `<`, `>=`, `<=`), the result is always `false`.
+- `NaN` compares unequal (via [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality), [`!=`](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality), [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality), and [`!==`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)) to any other value — including to another `NaN` value.
+
+`NaN` is also one of the [falsy](/en-US/docs/Glossary/Falsy) values in JavaScript.
 
 ## Examples
 
 ### Testing against NaN
 
-`NaN` compares unequal (via `==`, `!=`, `===`, and `!==`) to any other value — including to another `NaN` value. Use {{jsxref("Number.isNaN()")}} or {{jsxref("Global_Objects/isNaN", "isNaN()")}} to most clearly determine whether a value is `NaN`. Or perform a self-comparison: `NaN`, and only `NaN`, will compare unequal to itself.
+To tell if a value is `NaN`, use {{jsxref("Number.isNaN()")}} or {{jsxref("Global_Objects/isNaN", "isNaN()")}} to most clearly determine whether a value is `NaN` — or, since `NaN` is the only value that compares unequal to itself, you can perform a self-comparison like `x !== x`.
 
 ```js
-NaN === NaN;        // false
+NaN === NaN; // false
 Number.NaN === NaN; // false
-isNaN(NaN);         // true
-isNaN(Number.NaN);  // true
-Number.isNaN(NaN);  // true
+isNaN(NaN); // true
+isNaN(Number.NaN); // true
+Number.isNaN(NaN); // true
 
-function valueIsNaN(v) { return v !== v; }
-valueIsNaN(1);          // false
-valueIsNaN(NaN);        // true
+function valueIsNaN(v) {
+  return v !== v;
+}
+valueIsNaN(1); // false
+valueIsNaN(NaN); // true
 valueIsNaN(Number.NaN); // true
 ```
 
 However, do note the difference between `isNaN()` and `Number.isNaN()`: the former will return `true` if the value is currently `NaN`, or if it is going to be `NaN` after it is coerced to a number, while the latter will return `true` only if the value is currently `NaN`:
 
 ```js
-isNaN('hello world');        // true
-Number.isNaN('hello world'); // false
+isNaN("hello world"); // true
+Number.isNaN("hello world"); // false
 ```
 
-For the same reason, using a `bigint` value will throw an error with `isNaN()` and not with `Number.isNaN()`:
+For the same reason, using a BigInt value will throw an error with `isNaN()` and not with `Number.isNaN()`:
 
 ```js
-isNaN(1n);        // TypeError: Conversion from 'BigInt' to 'number' is not allowed.
+isNaN(1n); // TypeError: Conversion from 'BigInt' to 'number' is not allowed.
 Number.isNaN(1n); // false
 ```
 
-Additionally, some array methods cannot find `NaN`, while others can.
+Additionally, some array methods cannot find `NaN`, while others can. Namely, the index-finding ones ({{jsxref("Array/indexOf", "indexOf()")}}, {{jsxref("Array/lastIndexOf", "lastIndexOf()")}}) cannot find `NaN`, while the value-finding ones ({{jsxref("Array/includes", "includes()")}}) can:
 
 ```js
 const arr = [2, 4, NaN, 12];
-arr.indexOf(NaN);                      // -1 (false)
-arr.includes(NaN);                     // true
-arr.findIndex((n) => Number.isNaN(n));   // 2
+arr.indexOf(NaN); // -1
+arr.includes(NaN); // true
+
+// Methods accepting a properly defined predicate can always find NaN
+arr.findIndex((n) => Number.isNaN(n)); // 2
+```
+
+For more information about `NaN` and its comparison, see [Equality comparison and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+
+### Observably distinct NaN values
+
+There's a motivation for `NaN` being unequal to itself. It's possible to produce two floating point numbers with different binary representations but are both `NaN`, because in [IEEE 754 encoding](https://en.wikipedia.org/wiki/NaN#Floating_point), any floating point number with exponent `0x7ff` and a non-zero mantissa is `NaN`. In JavaScript, you can do bit-level manipulation using [typed arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays).
+
+```js
+const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
+const b2f = (x) => new Float64Array(x.buffer)[0];
+// Get a byte representation of NaN
+const n = f2b(NaN);
+// Change the first bit, which is the sign bit and doesn't matter for NaN
+n[0] = 1;
+const nan2 = b2f(n);
+console.log(nan2); // NaN
+console.log(Object.is(nan2, NaN)); // true
+console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 ```
 
 ## Specifications

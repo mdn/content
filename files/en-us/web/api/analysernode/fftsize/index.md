@@ -11,6 +11,7 @@ tags:
   - fftSize
 browser-compat: api.AnalyserNode.fftSize
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`fftSize`** property of the {{domxref("AnalyserNode")}} interface is an unsigned long value and represents the window size in samples that is used when performing a [Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) (FFT) to get frequency domain data.
@@ -44,7 +45,6 @@ analyser.getByteTimeDomainData(dataArray);
 // draw an oscilloscope of the current audio source
 
 function draw() {
-
   drawVisual = requestAnimationFrame(draw);
 
   analyser.getByteTimeDomainData(dataArray);

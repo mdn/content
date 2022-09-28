@@ -13,15 +13,16 @@ tags:
   - WebRTC Statistics API
 browser-compat: api.RTCRtpReceiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) manages the reception and decoding of data for a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}.
 
 ## Properties
 
-- {{domxref("RTCRtpReceiver.track")}} {{readonlyinline}}
+- {{domxref("RTCRtpReceiver.track")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("MediaStreamTrack")}} associated with the current `RTCRtpReceiver` instance.
-- {{domxref("RTCRtpReceiver.transport")}} {{readonlyinline}}
+- {{domxref("RTCRtpReceiver.transport")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("RTCDtlsTransport")}} instance over which the media for the receiver's track is received.
 
 ### Obsolete properties

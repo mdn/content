@@ -18,6 +18,7 @@ spec-urls:
   - https://w3c.github.io/payment-request/
   - https://w3c.github.io/payment-method-id/
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) makes it easy to handle payments in a web site or app. In this article, we'll take a look at how the API operates and what each of its components does.

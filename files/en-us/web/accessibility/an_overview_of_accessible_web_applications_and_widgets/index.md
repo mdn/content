@@ -8,6 +8,7 @@ tags:
   - Web apps
   - Widget
 ---
+
 Most JavaScript libraries offer a library of client-side widgets that mimic the behavior of familiar desktop interfaces. Sliders, menu bars, file list views, and more can be built with a combination of JavaScript, CSS, and HTML. Since the HTML4 specification doesn't provide built-in tags that semantically describe these kinds of widgets, developers typically resort to using generic elements such as {{HTMLElement('div')}} and {{HTMLElement('span')}}. While this results in a widget that looks like its desktop counterpart, there usually isn't enough semantic information in the markup to be usable by an assistive technology.
 
 ## The problem
@@ -43,7 +44,7 @@ _Example 2: How the tabs widget might be styled visually. Users might recognize 
 
 **ARIA** enables developers to describe their widgets in more detail by adding special attributes to the markup. Designed to fill the gap between standard HTML tags and the desktop-style controls found in dynamic web applications, ARIA provides roles and states that describe the behavior of most familiar UI widgets.
 
-> **Warning:** Many of these were later added in HTML5, and **developers should always prefer using the correct semantic HTML element over using ARIA**.
+> **Warning:** Many of these were later added when browsers didn't fully support modern HTML features. **Developers should always prefer using the correct semantic HTML element over using ARIA**.
 
 The ARIA specification is split up into three different types of attributes: roles, states, and properties. Roles describe widgets that aren't otherwise available in HTML 4, such as sliders, menu bars, tabs, and dialogs. Properties describe characteristics of these widgets, such as if they are draggable, have a required element, or have a popup associated with them. States describe the current interaction state of an element, informing the assistive technology if it is busy, disabled, selected, or hidden.
 
@@ -70,9 +71,15 @@ _Example 3: Markup for the tabs widget with ARIA attributes added._
 
 <div>
   <!-- Notice the role and aria-labelledby attributes we've added to describe these panels. -->
-  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">Chapter 1 content goes here</div>
-  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">Chapter 2 content goes here</div>
-  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">Quiz content goes here</div>
+  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">
+    Chapter 1 content goes here
+  </div>
+  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">
+    Chapter 2 content goes here
+  </div>
+  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">
+    Quiz content goes here
+  </div>
 </div>
 ```
 
@@ -86,9 +93,12 @@ Dynamic presentational changes include using CSS to change the appearance of con
 
 ARIA provides attributes for declaring the current state of a UI widget. Examples include (but are certainly not limited to):
 
-- **`aria-checked`**: indicates the state of a checkbox or radio button
-- **`aria-disabled`**: indicates that an element is visible, but not editable or otherwise operable
-- **`aria-grabbed`**: indicates the 'grabbed' state of an object in a drag-and-drop operation
+- `aria-checked`
+  - : Indicates the state of a checkbox or radio button.
+- `aria-disabled`
+  - : Indicates that an element is visible but not editable or otherwise operable.
+- `aria-grabbed`
+  - : Indicates the 'grabbed' state of an object in a drag-and-drop operation.
 
 (For a full list of ARIA states, consult the [ARIA list of states and properties](https://www.w3.org/TR/wai-aria-1.1/#introstates).)
 
@@ -100,26 +110,26 @@ When content visibility is changed (i.e., an element is hidden or shown), develo
 
 Here is an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. The example shows a simple web form with tooltips containing instructions associated with the entry fields.
 
-In this example, the HTML for the tooltip has the form shown in Example 2a. Line 9 sets the **`aria-hidden`** state to `true`.
-
-_Example 2a. HTML for a tooltip_
+In this example, the HTML for the tooltip has the form shown. Line 9 sets the **`aria-hidden`** state to `true`.
 
 ```html
 <div class="text">
-    <label id="tp1-label" for="first">First Name:</label>
-    <input type="text" id="first" name="first" size="20"
-           aria-labelledby="tp1-label"
-           aria-describedby="tp1"
-           aria-required="false" />
-    <div id="tp1" class="tooltip"
-         role="tooltip"
-         aria-hidden="true">Your first name is optional</div>
+  <label id="tp1-label" for="first">First Name:</label>
+  <input
+    type="text"
+    id="first"
+    name="first"
+    size="20"
+    aria-labelledby="tp1-label"
+    aria-describedby="tp1"
+    aria-required="false" />
+  <div id="tp1" class="tooltip" role="tooltip" aria-hidden="true">
+    Your first name is optional
+  </div>
 </div>
 ```
 
-The CSS for this markup is shown in Example 2b. Note that there is no custom classname used, only the status of the **`aria-hidden`** attribute on line 1.
-
-_Example 2b. Attribute-based selector for indicating state_
+The CSS for this markup is shown in the following code. Note that there is no custom classname used, only the status of the **`aria-hidden`** attribute on line 1.
 
 ```css
 div.tooltip[aria-hidden="true"] {
@@ -127,13 +137,11 @@ div.tooltip[aria-hidden="true"] {
 }
 ```
 
-The JavaScript to update the **`aria-hidden`** property has the form shown in Example 2c. Note that the script only updates the **`aria-hidden`** attribute (line 2); it does not need to also add or remove a custom classname.
-
-_Example 2c. JavaScript to update the aria-hidden attribute_
+The JavaScript to update the **`aria-hidden`** property has the form shown in the following code. Note that the script only updates the **`aria-hidden`** attribute (line 2); it does not need to also add or remove a custom classname.
 
 ```js
 function showTip(el) {
-  el.setAttribute('aria-hidden', 'false');
+  el.setAttribute("aria-hidden", "false");
 }
 ```
 

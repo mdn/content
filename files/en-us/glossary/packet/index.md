@@ -2,7 +2,6 @@
 title: Packet
 slug: Glossary/Packet
 tags:
-  - Glossary
   - Network packet
   - Packet
   - Reference
@@ -10,13 +9,14 @@ tags:
   - Web Performance
   - payload
 ---
+
 A packet, or network packet, is a formatted chunk of data sent over a network. The main components of a network packet are the user data and control information. The user data is known as the _payload_. The control information is the information for delivering the payload. It consists of network addresses for the source and destination, sequencing information, and error detection codes and is generally found in packet headers and footer.
 
 ## What a packet contains
 
 ### Hop limit
 
-A hop occurs when a packet is passed from one network to the next network. It is a field that is decreases by one each time a packet goes through, once it reaches 0 it has failed and the packet is discarded.
+A hop occurs when a packet is passed from one network to the next network. It is a field that decreases by one each time a packet goes through; once the hop limit reaches 0, the send operation has failed and the packet is discarded.
 
 Over time the number packets can cause traversing within closed circuits, the number of packets circulating would build up and then ultimately lead to the networking in failing.
 
@@ -40,6 +40,6 @@ Payload is the data that is carried on behalf of an application. It is usually o
 
 ## References used
 
-- <https://en.wikipedia.org/wiki/Network_packet>
-- [https://en.m.wikipedia.org/wiki/Hop\_(networking)](<https://en.wikipedia.org/wiki/Hop_(networking)>)
-- <https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736>
+- [Network packet](https://en.wikipedia.org/wiki/Network_packet)
+- [Hop (networking)](<https://en.wikipedia.org/wiki/Hop_(networking)>)
+- [How error detection and correction works](https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736)

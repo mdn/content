@@ -10,6 +10,7 @@ tags:
   - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.range
 ---
+
 {{DefaultAPISidebar("CSS Counter Styles")}}
 
 The **`range`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/range","range")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
@@ -25,7 +26,7 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
 ```css
 @counter-style range-multi-example {
   system: cyclic;
-  symbols: "\25A0" "\25A1";
+  symbols: "\25A0""\25A1";
   range: 2 4, 7 9;
 }
 ```

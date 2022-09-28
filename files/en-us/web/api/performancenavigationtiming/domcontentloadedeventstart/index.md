@@ -9,7 +9,8 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.domContentLoadedEventStart
 ---
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+
+{{APIRef("Navigation Timing")}}
 
 The **`domContentLoadedEventStart`** read-only property returns
 a {{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to
@@ -27,26 +28,25 @@ event at the current document.
 The following example illustrates this property's usage.
 
 ```js
-function print_nav_timing_data() {
+function printNavTimingData() {
   // Use getEntriesByType() to just get the "navigation" events
-  const perfEntries = performance.getEntriesByType("navigation");
+  performance.getEntriesByType("navigation")
+    .forEach((p, i) => {
+      console.log(`= Navigation entry[${i}]`);
 
-  for (let i=0; i < perfEntries.length; i++) {
-    console.log(`= Navigation entry[${i}]`);
-    const p = perfEntries[i];
-    // dom Properties
-    console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
-    console.log(`DOM complete = ${p.domComplete}`);
-    console.log(`DOM interactive = ${p.interactive}`);
+      // DOM Properties
+      console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
+      console.log(`DOM complete = ${p.domComplete}`);
+      console.log(`DOM interactive = ${p.domInteractive}`);
 
-    // document load and unload time
-    console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
-    console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
+      // Document load and unload time
+      console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
+      console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
 
-    // other properties
-    console.log(`type = ${p.type}`);
-    console.log(`redirectCount = ${p.redirectCount}`);
-  }
+      // Other properties
+      console.log(`type = ${p.type}`);
+      console.log(`redirectCount = ${p.redirectCount}`);
+    });
 }
 ```
 

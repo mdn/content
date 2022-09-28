@@ -1,6 +1,7 @@
 ---
-title: ':link'
+title: ":link"
 slug: Web/CSS/:link
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.link
 ---
+
 {{ CSSRef }}
 
 The **`:link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has not yet been visited. It matches every unvisited {{HTMLElement("a")}} or {{HTMLElement("area")}} element that has an `href` attribute.
@@ -33,8 +35,8 @@ By default, most browsers apply a special {{cssxref("color")}} value to visited 
 ### HTML
 
 ```html
-<a href="#ordinary-target">This is an ordinary link.</a><br>
-<a href="">You've already visited this link.</a><br>
+<a href="#ordinary-target">This is an ordinary link.</a><br />
+<a href="">You've already visited this link.</a><br />
 <a>Placeholder link (won't get styled)</a>
 ```
 

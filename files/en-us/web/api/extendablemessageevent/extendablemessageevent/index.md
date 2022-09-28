@@ -10,13 +10,14 @@ tags:
   - Service Workers
 browser-compat: api.ExtendableMessageEvent.ExtendableMessageEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ExtendableMessageEvent()`** constructor creates a new {{domxref("ExtendableMessageEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new ExtendableMessageEvent(type)
 new ExtendableMessageEvent(type, options)
 ```
@@ -25,7 +26,7 @@ new ExtendableMessageEvent(type, options)
 
 - `type`
   - : A string with the name of the event.
-    It is case-sensitive and browsers set it to  `messageerror` or `message`.
+    It is case-sensitive and browsers set it to `messageerror` or `message`.
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, can have the following properties:
     - `data` {{optional_inline}}
@@ -67,6 +68,6 @@ const myEME = new ExtendableMessageEvent('message', init);
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Channel Messaging](/en-US/docs/Web/API/Channel_Messaging_API)

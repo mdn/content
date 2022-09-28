@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 There are a number of types of pages that are used repeatedly on MDN.
@@ -45,7 +46,49 @@ If the work is more significant, then you should consider a few factors when pri
 - How low quality is the information?
 - How popular is the feature? How sought after is the information?
 
-If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+
+## The page-type front matter key
+
+We have defined a front matter key `page-type` to describe the type of MDN pages. This project is a work in progress: so far we have only defined `page-type` values for the [Web API pages](/en-US/docs/Web/API).
+
+### Generic page types
+
+These page types are not specific to a particular MDN technology area:
+
+- `guide`
+  - : A generic guide page with no specific structure. See [Conceptual page](#conceptual_page).
+- `landing-page`
+  - : A page that acts primarily as a navigation aid, listing links to other pages. See [Landing page](#landing_page).
+
+### Web API page types
+
+This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/API). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `web-api-overview`
+  - : A page giving an overview of a Web API, like the [Fetch API](/en-US/docs/Web/API/Fetch_API). See [API landing page](#api_landing_page).
+- `web-api-global-function`
+  - : A page documenting a Web API global function, like [`fetch()`](/en-US/docs/Web/API/fetch). See [API reference subpage](#api_reference_subpage).
+- `web-api-global-property`
+  - : A page documenting a Web API global property, like [`origin`](/en-US/docs/Web/API/origin). See [API reference subpage](#api_reference_subpage).
+- `web-api-interface`
+  - : A page documenting a Web API interface, like [`Request`](/en-US/docs/Web/API/Request). See [API reference page](#api_reference_page).
+- `web-api-constructor`
+  - : A page documenting a constructor for a Web API interface, like [`Request()`](/en-US/docs/Web/API/Request/Request). See [API reference subpage](#api_reference_subpage).
+- `web-api-instance-method`
+  - : A page documenting a method on a Web API interface instance, like [`geolocation.getCurrentPosition()`](/en-US/docs/Web/API/Geolocation/getCurrentPosition). See [API reference subpage](#api_reference_subpage).
+- `web-api-instance-property`
+  - : A page documenting a property of a Web API interface instance, like [`request.headers`](/en-US/docs/Web/API/Request/headers). See [API reference subpage](#api_reference_subpage).
+- `web-api-static-method`
+  - : A page documenting a static method on a Web API interface, like [`Response.error()`](/en-US/docs/Web/API/Response/error). See [API reference subpage](#api_reference_subpage).
+- `web-api-static-property`
+  - : A page documenting a static property of a Web API interface, like [`Notification.permission`](/en-US/docs/Web/API/Notification/permission). See [API reference subpage](#api_reference_subpage).
+- `web-api-event`
+  - : A page documenting a event fired on a Web API interface instance, like [`Notification.click`](/en-US/docs/Web/API/Notification/click_event). See [API reference subpage](#api_reference_subpage).
+- `webgl-extension`
+  - : A page documenting a WebGL extension, like [`WEBGL_draw_buffers`](/en-US/docs/Web/API/WEBGL_draw_buffers).
+- `webgl-extension-method`
+  - : A page documenting a method on WebGL extension, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES).
 
 ## API landing page
 
@@ -64,7 +107,7 @@ In such a case, it would make more sense in terms of repetition and findability 
 
 ### Templates
 
-- [API landing page template](/en-US/docs/MDN/Structures/Page_types/API_landing_page_template)
+- [API landing page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template)
 
 ## API reference page
 
@@ -80,7 +123,7 @@ It is more granular than an API landing page, which typically links to multiple 
 
 ### Templates
 
-- [API reference page template](/en-US/docs/MDN/Structures/Page_types/API_reference_page_template)
+- [API reference page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template)
 
 ## API reference subpage
 
@@ -96,10 +139,10 @@ It documents a single interface member in detail.
 
 ### Templates
 
-- [API method subpage template](/en-US/docs/MDN/Structures/Page_types/API_method_subpage_template)
-- [API property subpage template](/en-US/docs/MDN/Structures/Page_types/API_property_subpage_template)
-- [API constructor subpage template](/en-US/docs/MDN/Structures/Page_types/API_constructor_subpage_template)
-- [API event subpage template](/en-US/docs/MDN/Structures/Page_types/API_event_subpage_template)
+- [API method subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template)
+- [API property subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template)
+- [API constructor subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template)
+- [API event subpage template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template)
 
 ## HTML element reference page
 
@@ -111,7 +154,7 @@ An **HTML reference page** lists all the attributes that are available on an HTM
 
 ### Templates
 
-- [HTML element page template](/en-US/docs/MDN/Structures/Page_types/HTML_element_page_template)
+- [HTML element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template)
 
 ## SVG element reference page
 
@@ -123,7 +166,7 @@ An **SVG reference page** lists all the attributes that are available on an SVG 
 
 ### Templates
 
-- [SVG element page template](/en-US/docs/MDN/Structures/Page_types/SVG_element_page_template)
+- [SVG element page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template)
 
 ## CSS feature reference page
 
@@ -137,8 +180,8 @@ A **CSS reference page** lists all the available syntax for a CSS feature such a
 
 ### Templates
 
-- [CSS property page template](/en-US/docs/MDN/Structures/Page_types/CSS_property_page_template)
-- [CSS selector page template](/en-US/docs/MDN/Structures/Page_types/CSS_selector_page_template)
+- [CSS property page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)
+- [CSS selector page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template)
 
 ## HTTP header reference page
 
@@ -151,7 +194,7 @@ It also provides examples, browser compatibility information, and other importan
 
 ### Templates
 
-- [HTTP header page template](/en-US/docs/MDN/Structures/Page_types/HTTP_header_page_template)
+- [HTTP header page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template)
 
 ## Conceptual page
 
@@ -170,7 +213,7 @@ An extended discussion of a topic might be spread across multiple conceptual pag
 A **glossary page** contains a brief explanation of a term, topic, or concept.
 The first paragraph should be a simple, self-contained description of the term, no more than a couple sentences.
 This can be followed by links to further information in the **Learn more** section.
-If the page grows to more than a screenful or so, it's too long and should be converted to a conceptual page. See [How to write and reference an entry in the glossary](/en-US/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) for more details.
+If the page grows to more than a screenful or so, it's too long and should be converted to a conceptual page. See [How to write and reference an entry in the glossary](/en-US/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) for more details.
 
 ### Examples
 
@@ -180,7 +223,7 @@ If the page grows to more than a screenful or so, it's too long and should be co
 
 ### Templates
 
-- [Glossary page template](/en-US/docs/MDN/Structures/Page_types/Glossary_page_template)
+- [Glossary page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Glossary_page_template)
 
 ## Landing page
 

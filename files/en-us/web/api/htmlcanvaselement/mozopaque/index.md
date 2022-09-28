@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLCanvasElement.mozOpaque
 ---
+
 {{APIRef("Canvas API")}}{{deprecated_header}}{{non-standard_header}}
 
 The non-standard **`HTMLCanvasElement.mozOpaque`** property is

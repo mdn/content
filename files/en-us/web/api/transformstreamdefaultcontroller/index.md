@@ -9,6 +9,7 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 The **`TransformStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides methods to manipulate the associated {{domxref("ReadableStream")}} and {{domxref("WritableStream")}}.
@@ -17,7 +18,7 @@ When constructing a {{domxref("TransformStream")}}, the `TransformStreamDefaultC
 
 ## Properties
 
-- {{domxref("TransformStreamDefaultController.desiredSize")}} {{readonlyinline}}
+- {{domxref("TransformStreamDefaultController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size to fill the readable side of the stream's internal queue.
 
 ## Methods

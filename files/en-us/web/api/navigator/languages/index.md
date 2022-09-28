@@ -4,7 +4,6 @@ slug: Web/API/Navigator/languages
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Navigator
   - Property
   - Read-only
@@ -12,7 +11,8 @@ tags:
   - languages
 browser-compat: api.Navigator.languages
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`Navigator.languages`** read-only property
 returns an array of strings representing the user's preferred

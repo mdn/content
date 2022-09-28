@@ -9,9 +9,11 @@ tags:
   - Property
   - Reference
   - fetchPriority
+  - Experimental
 browser-compat: api.HTMLIFrameElement.fetchPriority
 ---
-{{APIRef}}
+
+{{APIRef}}{{SeeCompatTable}}
 
 The **`fetchPriority`** property of the
 {{domxref("HTMLIFrameElement")}} interface represents a hint given to the

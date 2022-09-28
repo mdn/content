@@ -14,6 +14,7 @@ tags:
   - track
 browser-compat: api.MediaStreamTrackEvent
 ---
+
 {{APIRef("Media Streams API")}}
 
 The **`MediaStreamTrackEvent`** interface represents events which indicate that a {{domxref("MediaStream")}} has had tracks added to or removed from the stream through calls to [Media Stream API](/en-US/docs/Web/API/Media_Streams_API) methods. These events are sent to the stream when these changes occur.

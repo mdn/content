@@ -1,6 +1,7 @@
 ---
-title: '::-moz-list-number'
+title: "::-moz-list-number"
 slug: Web/CSS/:-moz-list-number
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions
@@ -10,6 +11,7 @@ tags:
   - Reference
   - Selector
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-list-number`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the marker (typically a number) of a list item ({{HTMLElement("li")}}) in an ordered list ({{HTMLElement("ol")}}).

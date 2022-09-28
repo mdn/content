@@ -95,9 +95,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > - To align values, use the CSS {{cssxref("text-align")}} property instead.
 
-- {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
+- {{htmlattrdef("bgcolor")}} {{Deprecated_Inline}}
 
-  - : This attribute defines the background color of each cell of the column. It accepts a 6-digit hexadecimal color or a named color.  Alphatransparency is not supported.
+  - : This attribute defines the background color of each column cell. It accepts a 6-digit hexadecimal color or a named color. Alpha transparency is not supported.
 
     > **Note:** Do not use this attribute, as it is non-standard. The `thead` element should be styled using the CSS {{cssxref("background-color")}} property, which can be applied to any element, including the `thead`, {{HTMLElement("tr")}}, {{HTMLElement("td")}} and {{HTMLElement("th")}} elements.
 
@@ -105,7 +105,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "thead")}} is not set to `char`, this attribute is ignored.
 
-    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard. 
+    > **Note:** Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 
 - {{htmlattrdef("charoff")}} {{deprecated_inline}}
 

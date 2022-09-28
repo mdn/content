@@ -46,11 +46,9 @@ The **`<tfoot>`** [HTML](/en-US/docs/Web/HTML) element defines a set of rows sum
         {{HTMLElement("caption")}},
         {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
         {{HTMLElement("tbody")}}, or {{HTMLElement("tr")}}
-        element. Note that this is the requirement as of HTML5.<br />In HTML4,
-        the {{HTMLElement("tfoot")}} element cannot be placed after any
-        {{HTMLElement("tbody")}} and {{HTMLElement("tr")}}
-        element. Note that this directly contradicts the above normative
-        requirement from HTML5.
+        element. Note that this is the requirement in HTML.<br />Originally, in HTML4, the opposite was true: the {{HTMLElement("tfoot")}} element could not be placed after any
+        {{HTMLElement("tbody")}} or {{HTMLElement("tr")}}
+        element.
       </td>
     </tr>
     <tr>

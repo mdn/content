@@ -13,7 +13,8 @@ tags:
   - db
 browser-compat: api.IDBTransaction.objectStoreNames
 ---
-{{ APIRef("IndexedDB") }} {{SeeCompatTable}}
+
+{{ APIRef("IndexedDB") }}
 
 The **`objectStoreNames`** read-only property of the
 {{domxref("IDBTransaction")}} interface returns a {{domxref("DOMStringList")}} of names

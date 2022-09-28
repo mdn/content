@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLLinkElement.referrerPolicy
 ---
+
 {{APIRef}}
 
 The

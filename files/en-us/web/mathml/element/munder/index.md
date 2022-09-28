@@ -8,6 +8,7 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.munder
 ---
+
 {{MathMLRef}}
 
 The MathML `<munder>` element is used to attach an accent or a limit under an expression. It uses the following syntax: `<munder> base underscript </munder>`
@@ -19,32 +20,32 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `accentunder`
   - : If `true`, the element is an _accent_, which is drawn closer to the base expression.
     If `false` (default value), the element is a _limit_ under the base expression.
-- `align` {{deprecated_inline}}
-  - : The alignment of the underscript. Possible values are: `left`, `center`, and `right`.
-    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
 
 ## Examples
 
-Sample rendering: ![x+y+z](munder.png)
-
-Rendering in your browser: <math><munder accentunder="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>⏟</mo></munder></math>
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
 
 ```html
-<math>
-
-<munder accentunder="true">
-  <mrow>
-    <mi>x</mi>
-    <mo>+</mo>
-    <mi>y</mi>
-    <mo>+</mo>
-    <mi>z</mi>
-  </mrow>
-  <mo>&#x23DF;<!--BOTTOM CURLY BRACKET--></mo>
-</munder>
-
+<math display="block">
+  <munder accentunder="true">
+    <mrow>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>y</mi>
+      <mo>+</mo>
+      <mi>z</mi>
+    </mrow>
+    <mo>&#x23DF;<!--BOTTOM CURLY BRACKET--></mo>
+  </munder>
 </math>
 ```
+
+{{ EmbedLiveSample('munder_example', 700, 200, "", "") }}
 
 ## Specifications
 

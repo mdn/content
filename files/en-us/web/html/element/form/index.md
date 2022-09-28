@@ -100,7 +100,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Comma-separated [content types](/en-US/docs/Web/SVG/Content_type) the server accepts.
 
-    > **Note:** **This attribute was removed in HTML5 and should not be used.** Instead, use the {{htmlattrxref("accept", "input")}} attribute on `<input type=file>` elements.
+    > **Note:** **This attribute has been deprecated and should not be used.** Instead, use the {{htmlattrxref("accept", "input")}} attribute on `<input type=file>` elements.
 
 - {{htmlattrdef("accept-charset")}}
   - : Space-separated {{Glossary("character encoding", "character encodings")}} the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
@@ -138,7 +138,7 @@ The following attributes control behavior during form submission.
 
     - `application/x-www-form-urlencoded`: The default value.
     - `multipart/form-data`: Use this if the form contains {{HTMLElement("input")}} elements with `type=file`.
-    - `text/plain`: Introduced by HTML5 for debugging purposes.
+    - `text/plain`: Useful for debugging purposes.
 
     This value can be overridden by {{htmlattrxref("formenctype", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
 
@@ -157,7 +157,7 @@ The following attributes control behavior during form submission.
   - : This Boolean attribute indicates that the form shouldn't be validated when submitted. If this attribute is not set (and therefore the form **_is_** validated), it can be overridden by a {{htmlattrxref("formnovalidate", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element belonging to the form.
 - {{htmlattrdef("target")}}
 
-  - : Indicates where to display the response after submitting the form. In HTML 4, this is the name/keyword for a frame. In HTML5, it is a name/keyword for a _browsing context_ (for example, tab, window, or iframe). The following keywords have special meanings:
+  - : Indicates where to display the response after submitting the form. It is a name/keyword for a _browsing context_ (for example, tab, window, or iframe). The following keywords have special meanings:
 
     - `_self` (default): Load into the same browsing context as the current one.
     - `_blank`: Load into a new unnamed browsing context.
@@ -176,7 +176,7 @@ The following attributes control behavior during form submission.
 <!-- Form which will send a GET request to the current URL -->
 <form method="get">
   <label>Name:
-    <input name="submitted-name" autocomplete="name">
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
@@ -184,7 +184,7 @@ The following attributes control behavior during form submission.
 <!-- Form which will send a POST request to the current URL -->
 <form method="post">
   <label>Name:
-    <input name="submitted-name" autocomplete="name">
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
@@ -192,8 +192,9 @@ The following attributes control behavior during form submission.
 <!-- Form with fieldset, legend, and label -->
 <form method="post">
   <fieldset>
-    <legend>Title</legend>
-    <label><input type="radio" name="radio"> Select me</label>
+    <legend>Do you agree to the terms?</legend>
+    <label><input type="radio" name="radio" value="yes" /> Yes</label>
+    <label><input type="radio" name="radio" value="no" /> No</label>
   </fieldset>
 </form>
 ```

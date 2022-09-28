@@ -50,7 +50,7 @@ Tier 1 content is the most important content on MDN — it has the most users, a
 - [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly) (12)
 - [Web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) (5)
 
-**Total Tier 1 pages: 4150**
+Total Tier 1 pages: **4150**
 
 ## Tier 2
 
@@ -66,7 +66,7 @@ Tier 2 content is less commonly-used, but useful nonetheless.
 - [WebAPIs](https://developer.mozilla.org/en-US/docs/Web/API) that aren't in the "Tier 1 WebAPIs" list (4701)
 - [WebExtensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) (635). Not really web platform, but still important)
 
-**Total Tier 2 pages: 6502**
+Total Tier 2 pages: **6502**
 
 ## Other content
 

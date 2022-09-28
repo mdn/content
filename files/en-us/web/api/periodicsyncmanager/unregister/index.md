@@ -10,9 +10,11 @@ tags:
   - PeriodicSyncManager
   - Service Worker
   - Web Periodic Background Synchronization API
+  - Experimental
 browser-compat: api.PeriodicSyncManager.unregister
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`unregister()`** method of the
 {{domxref("PeriodicSyncManager")}} interface unregisters the periodic sync request
@@ -21,7 +23,7 @@ when unregistration completes.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister(tag)
 ```
 

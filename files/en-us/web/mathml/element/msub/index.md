@@ -8,6 +8,7 @@ tags:
   - MathML:Script and Limit Schemata
 browser-compat: mathml.elements.msub
 ---
+
 {{MathMLRef}}
 
 The MathML `<msub>` element is used to attach a subscript to an expression.
@@ -18,26 +19,18 @@ It uses the following syntax: `<msub> base subscript </msub>`.
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-- `subscriptshift` {{deprecated_inline}}
-  - : The minimum space by which to shift the subscript below the baseline of the expression, as a [length value](/en-US/docs/Web/MathML/Attribute/Values#lengths).
-    This attribute is deprecated and will be removed in the future.
-
 ## Examples
 
-Sample rendering: ![x1](msub.png)
-
-Rendering in your browser: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
-
 ```html
-<math>
-
+<math display="block">
   <msub>
     <mi>X</mi>
     <mn>1</mn>
   </msub>
-
 </math>
 ```
+
+{{ EmbedLiveSample('msub_example', 700, 200, "", "") }}
 
 ## Specifications
 

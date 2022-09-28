@@ -14,6 +14,7 @@ tags:
   - scrolling
 browser-compat: api.Element.scrollIntoView
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} interface's
@@ -23,7 +24,7 @@ visible to the user.
 
 ## Syntax
 
-```js
+```js-nolint
 scrollIntoView()
 scrollIntoView(alignToTop)
 scrollIntoView(scrollIntoViewOptions)

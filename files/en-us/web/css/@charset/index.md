@@ -1,6 +1,7 @@
 ---
 title: '@charset'
 slug: Web/CSS/@charset
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS
@@ -9,6 +10,7 @@ tags:
   - Web
 browser-compat: css.at-rules.charset
 ---
+
 {{ CSSRef }}
 
 The **`@charset`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) specifies the character encoding used in the style sheet. It must be the first element in the style sheet and not be preceded by any character; as it is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements), it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules). If several `@charset` at-rules are defined, only the first one is used, and it cannot be used inside a `style` attribute on an HTML element or inside the {{ HTMLElement("style") }} element where the character set of the HTML page is relevant.
@@ -24,7 +26,7 @@ As there are several ways to define the character encoding of a style sheet, the
 1. The value of the [Unicode byte-order](https://en.wikipedia.org/wiki/Byte_order_mark) character placed at the beginning of the file.
 2. The value given by the `charset` attribute of the `Content-Type:` HTTP header or the equivalent in the protocol used to serve the style sheet.
 3. The `@charset` CSS at-rule.
-4. Use the character encoding defined by the referring document: the `charset` attribute of the {{ HTMLElement("link") }} element. This method is obsoleted in HTML5 and must not be used.
+4. Use the character encoding defined by the referring document: the `charset` attribute of the {{ HTMLElement("link") }} element. This method is obsolete and should not be used.
 5. Assume that the document is UTF-8
 
 ## Syntax
@@ -41,7 +43,7 @@ As there are several ways to define the character encoding of a style sheet, the
 ```
 
 - _charset_
-  - : A {{cssxref("&lt;string&gt;")}} denoting the character encoding to be used. It must be the name of a web-safe character encoding defined in the [IANA-registry](https://www.iana.org/assignments/character-sets/character-sets.xhtml), and must be double-quoted, following exactly one space character (U+0020), and immediately terminated with a semicolon. If several names are associated with an encoding, only the one marked with *preferred* must be used.
+  - : A {{cssxref("&lt;string&gt;")}} denoting the character encoding to be used. It must be the name of a web-safe character encoding defined in the [IANA-registry](https://www.iana.org/assignments/character-sets/character-sets.xhtml), and must be double-quoted, following exactly one space character (U+0020), and immediately terminated with a semicolon. If several names are associated with an encoding, only the one marked with _preferred_ must be used.
 
 ## Examples
 

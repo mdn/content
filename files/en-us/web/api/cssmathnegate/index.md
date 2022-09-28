@@ -12,6 +12,7 @@ tags:
   - Interface
 browser-compat: api.CSSMathNegate
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathNegate`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} negates the value passed into it. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.

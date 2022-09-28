@@ -11,6 +11,7 @@ tags:
   - messageType
 browser-compat: api.MediaKeyMessageEvent.messageType
 ---
+
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeyMessageEvent.messageType`** read-only property indicates the
@@ -20,7 +21,7 @@ type of message. It may be one of `license-request`,
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `license-request`
 - `license-renewal`

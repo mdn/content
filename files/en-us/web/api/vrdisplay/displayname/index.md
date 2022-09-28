@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - displayName
+  - Non-standard
 browser-compat: api.VRDisplay.displayName
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`displayName`** read-only property of the {{domxref("VRDisplay")}} interface returns a human-readable name to identify the `VRDisplay`.
 

@@ -7,8 +7,9 @@ tags:
   - JavaScript
   - Learn
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
 JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc.
@@ -43,19 +44,21 @@ However, getting comfortable with JavaScript is more challenging than getting co
 1. Go to your test site and create a new folder named `scripts`. Within the scripts folder, create a new text document called `main.js`, and save it.
 2. In your `index.html` file, enter this code on a new line, just before the closing `</body>` tag:
 
-    ```html
-    <script src="scripts/main.js"></script>
-    ```
+   ```html
+   <script src="scripts/main.js"></script>
+   ```
 
 3. This is doing the same job as the {{htmlelement("link")}} element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).
 4. Add this code to the `main.js` file:
 
-    ```js
-    const myHeading = document.querySelector('h1');
-    myHeading.textContent = 'Hello world!';
-    ```
+   ```js
+   const myHeading = document.querySelector('h1');
+   myHeading.textContent = 'Hello world!';
+   ```
 
-5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:![](hello-world.png)
+5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:
+
+![Heading "hello world" above a firefox logo](hello-world.png)
 
 > **Note:** The reason the instructions (above) place the {{htmlelement("script")}} element near the bottom of the HTML file is that **the browser reads code in the order it appears in the file**.
 >
@@ -218,7 +221,7 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
       <td><code>-</code>, <code>*</code>, <code>/</code></td>
       <td>
         <code
-          >9 - 3;<br />8 * 2; // multiply in JS is an asterisk<br />9 / 3;</code
+>9 - 3;<br />8 * 2; // multiply in JS is an asterisk<br />9 / 3;</code
         >
       </td>
     </tr>
@@ -357,7 +360,7 @@ myHTML.addEventListener('click', function () {
 
 It's just shorter.
 
-The functions we just passed to `addEventListener()` here are called *anonymous functions*, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an *arrow function*. An arrow function uses `() =>` instead of `function ()`:
+The functions we just passed to `addEventListener()` here are called _anonymous functions_, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an _arrow function_. An arrow function uses `() =>` instead of `function ()`:
 
 ```js
 document.querySelector('html').addEventListener('click', () => {
@@ -380,18 +383,18 @@ In this section, you will learn how to use JavaScript and DOM API features to al
 3. Rename the image _firefox2.png_.
 4. Add the following JavaScript code to your `main.js` file.
 
-    ```js
-    const myImage = document.querySelector('img');
+   ```js
+   const myImage = document.querySelector('img');
 
-    myImage.onclick = () => {
-      const mySrc = myImage.getAttribute('src');
-      if (mySrc === 'images/firefox-icon.png') {
-        myImage.setAttribute('src','images/firefox2.png');
-      } else {
-        myImage.setAttribute('src','images/firefox-icon.png');
-      }
-    }
-    ```
+   myImage.onclick = () => {
+     const mySrc = myImage.getAttribute('src');
+     if (mySrc === 'images/firefox-icon.png') {
+       myImage.setAttribute('src','images/firefox2.png');
+     } else {
+       myImage.setAttribute('src','images/firefox-icon.png');
+     }
+   }
+   ```
 
 5. Save all files and load `index.html` in the browser. Now when you click the image, it should change to the other one.
 
@@ -400,8 +403,8 @@ This is what happened. You stored a reference to your {{htmlelement("img")}} ele
 1. The code retrieves the value of the image's `src` attribute.
 2. The code uses a conditional to check if the `src` value is equal to the path of the original image:
 
-    1. If it is, the code changes the `src` value to the path of the second image, forcing the other image to be loaded inside the {{htmlelement("img")}} element.
-    2. If it isn't (meaning it must already have changed), the `src` value swaps back to the original image path, to the original state.
+   1. If it is, the code changes the `src` value to the path of the second image, forcing the other image to be loaded inside the {{htmlelement("img")}} element.
+   2. If it isn't (meaning it must already have changed), the `src` value swaps back to the original image path, to the original state.
 
 ### Adding a personalized welcome message
 
@@ -409,49 +412,49 @@ Next, let's change the page title to a personalized welcome message when the use
 
 1. In `index.html`, add the following line just before the {{htmlelement("script")}} element:
 
-    ```html
-    <button>Change user</button>
-    ```
+   ```html
+   <button>Change user</button>
+   ```
 
 2. In `main.js`, place the following code at the bottom of the file, exactly as it is written. This takes references to the new button and the heading, storing each inside variables:
 
-    ```js
-    let myButton = document.querySelector('button');
-    let myHeading = document.querySelector('h1');
-    ```
+   ```js
+   let myButton = document.querySelector('button');
+   let myHeading = document.querySelector('h1');
+   ```
 
 3. Add the following function to set the personalized greeting. This won't do anything yet, but this will change soon.
 
-    ```js
-    function setUserName() {
-      const myName = prompt('Please enter your name.');
-      localStorage.setItem('name', myName);
-      myHeading.textContent = `Mozilla is cool, ${myName}`;
-    }
-    ```
+   ```js
+   function setUserName() {
+     const myName = prompt('Please enter your name.');
+     localStorage.setItem('name', myName);
+     myHeading.textContent = `Mozilla is cool, ${myName}`;
+   }
+   ```
 
-    The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK._ In this case, we are asking the user to enter a name. Next, the code calls on an API `localStorage`, which allows us to store data in the browser and retrieve it later. We use localStorage's `setItem()` function to create and store a data item called `'name'`, setting its value to the `myName` variable which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string, plus the user's newly stored name.
+   The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK._ In this case, we are asking the user to enter a name. Next, the code calls on an API `localStorage`, which allows us to store data in the browser and retrieve it later. We use localStorage's `setItem()` function to create and store a data item called `'name'`, setting its value to the `myName` variable which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string, plus the user's newly stored name.
 
 4. Add the following condition block. We could call this initialization code, as it structures the app when it first loads.
 
-    ```js
-    if (!localStorage.getItem('name')) {
-      setUserName();
-    } else {
-      const storedName = localStorage.getItem('name');
-      myHeading.textContent = `Mozilla is cool, ${storedName}`;
-    }
-    ```
+   ```js
+   if (!localStorage.getItem('name')) {
+     setUserName();
+   } else {
+     const storedName = localStorage.getItem('name');
+     myHeading.textContent = `Mozilla is cool, ${storedName}`;
+   }
+   ```
 
-    This first line of this block uses the negation operator (logical NOT, represented by the `!`) to check whether the `name` data exists. If not, the `setUserName()` function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using `getItem()` and set the `textContent` of the heading to a string, plus the user's name, as we did inside `setUserName()`.
+   This first line of this block uses the negation operator (logical NOT, represented by the `!`) to check whether the `name` data exists. If not, the `setUserName()` function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using `getItem()` and set the `textContent` of the heading to a string, plus the user's name, as we did inside `setUserName()`.
 
 5. Put this `onclick` event handler (below) on the button. When clicked, `setUserName()` runs. This allows the user to enter a different name by pressing the button.
 
-    ```js
-    myButton.onclick = () => {
-      setUserName();
-    }
-    ```
+   ```js
+   myButton.onclick = () => {
+     setUserName();
+   }
+   ```
 
 ### A user name of null?
 
@@ -479,7 +482,7 @@ In human language, this means: If `myName` has no value, run `setUserName()` aga
 
 If you have followed all the instructions in this article, you should end up with a page that looks something like the image below. You can also [view our version](https://mdn.github.io/beginner-html-site-scripted/).
 
-![](website-screen-scripted.png)
+![Final look of HTML page after creating elements: a header, large centered logo, content, and a button](website-screen-scripted.png)
 
 If you get stuck, you can compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js).
 

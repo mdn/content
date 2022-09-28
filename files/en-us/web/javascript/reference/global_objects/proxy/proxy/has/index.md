@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.has
 ---
+
 {{JSRef}}
 
 The **`handler.has()`** method is a trap for the
@@ -17,7 +18,7 @@ The **`handler.has()`** method is a trap for the
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   has(target, prop) {
   }

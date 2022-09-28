@@ -26,7 +26,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ### Deprecated attributes
 
-- {{htmlattrdef("clear")}}
+- {{htmlattrdef("clear")}} {{Deprecated_Inline}}
   - : Indicates where to begin the next line after the break.
 
 ## Styling with CSS
@@ -42,11 +42,11 @@ You can set a {{cssxref("margin")}} on `<br>` elements themselves to increase th
 In the following example we use `<br>` elements to create line breaks between the different lines of a postal address:
 
 ```html
-Mozilla<br>
-331 E. Evelyn Avenue<br>
-Mountain View, CA<br>
-94041<br>
-USA<br>
+Mozilla<br />
+331 E. Evelyn Avenue<br />
+Mountain View, CA<br />
+94041<br />
+USA<br />
 ```
 
 The result looks like so:

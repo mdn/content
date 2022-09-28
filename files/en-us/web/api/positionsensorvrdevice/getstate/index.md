@@ -4,7 +4,6 @@ slug: Web/API/PositionSensorVRDevice/getState
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Deprecated
   - PositionSensorVRDevice
@@ -12,15 +11,17 @@ tags:
   - VR
   - Virtual Reality
   - WebVR
+  - Non-standard
 browser-compat: api.PositionSensorVRDevice.getState
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+
+{{deprecated_header}}{{APIRef("WebVR API")}}{{Non-standard_header}}
 
 The **`getState()`** method of the {{domxref("PositionSensorVRDevice")}} interface returns the current state of the position sensor for the current frame (e.g. within the current {{domxref("window.requestAnimationFrame")}} callback) or for the previous frame, contained with a {{domxref("VRPose")}} object. This is the method you'd normally want to use, vs. {{domxref("PositionSensorVRDevice.getImmediateState")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getState()
 ```
 
@@ -43,11 +44,7 @@ function setView() {
     posPara.textContent = `Position: x${roundToTwo(posState.position.x)} y${roundToTwo(posState.position.y)} z${roundToTwo(posState.position.z)}`;
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
-    if (-posState.position.z > 0.01) {
-      zPos = -posState.position.z;
-    } else {
-      zPos = 0.01;
-    }
+    zPos = -posState.position.z > 0.01 ? -posState.position.z : 0.01;
   }
 
   if (posState.hasOrientation) {

@@ -8,6 +8,7 @@ tags:
   - part 6
   - server-side
 ---
+
 This subarticle shows how to define a page/form to create `Book` objects. This is a little more complicated than the equivalent `Author` or `Genre` pages because we need to get and display available `Author` and `Genre` records in our `Book` form.
 
 ## Import validation and sanitization methods
@@ -138,7 +139,6 @@ exports.book_create_post = [
       if (err) {
         return next(err);
       }
-      
       // Successful: redirect to new book record.
       res.redirect(book.url);
     });
@@ -243,7 +243,7 @@ The main differences are in how we implement the selection-type fields: `Author`
 
 Run the application, open your browser to `http://localhost:3000/`, then select the _Create new book_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid book, it should be saved and you'll be taken to the book detail page.
 
-![](locallibary_express_book_create_empty.png)
+![Screenshot of empty Local library Create Book form on localhost:3000. The page is divided into two columns. The narrow left column has a vertical navigation bar with 10 links separated into two sections by a light-colored horizontal line. The top section link to already created data. The bottom links go to create new data forms. The wide right column has the create book form with a 'Create Book' heading and four input fields labeled 'Title', 'Author', 'Summary', 'ISBN' and 'Genre' followed by four genre checkboxes: fantasy, science fiction, french poetry and action. There is a 'Submit' button at the bottom of the form.](locallibary_express_book_create_empty.png)
 
 ## Next steps
 

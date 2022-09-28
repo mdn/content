@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Releases
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 40 was released on August 11, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -44,7 +45,7 @@ Everything: [all devtools bugs fixed between Firefox 39 and Firefox 40](https://
 - Prefixed rules (`-moz-`) for {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, and {{cssxref("text-decoration-style")}} have been removed ({{bug(1097922)}}).
 - The property {{cssxref("text-align")}} now supports the `match-parent` value ({{bug(645642)}}).
 - In Quirks Mode, {{cssxref("empty-cells")}} now defaults to `show`, like in standard mode ({{bug(1020400)}}).
-- The {{cssxref("-moz-orient")}} non-standard property, used to style {{HTMLElement('meter')}} and {{HTMLElement('progress')}} element has been adapted for vertical writing-modes: the value `auto` has been dropped and the values `inline` and  `block` added, with `inline` being the new default value ({{bug(1028716)}}).
+- The {{cssxref("-moz-orient")}} non-standard property, used to style {{HTMLElement('meter')}} and {{HTMLElement('progress')}} element has been adapted for vertical writing-modes: the value `auto` has been dropped and the values `inline` and `block` added, with `inline` being the new default value ({{bug(1028716)}}).
 - The property {{cssxref("font-size-adjust")}} has been fixed so that `0` is treated as a multiplier (leading to a `0` height for the font, hence hiding it) instead of the `none` value (leading to no adjustment, or a `1.0` value) ({{bug(1144885)}}).
 - Fix text-overflow doesn't work in vertical writing mode ({{bug(1117227)}}).
 
@@ -93,7 +94,7 @@ Improvement in our experimental Web Animations implementation, mostly to match l
 
 #### DOM & HTML DOM
 
-- When unable to parse the {{htmlattrxref("srcset", "image")}},  the {{domxref("HTMLImageElement.currentSrc")}} method doesn't return `null` anymore but `""`, as requested by the latest specification ({{bug(1139560)}}).
+- When unable to parse the {{htmlattrxref("srcset", "image")}}, the {{domxref("HTMLImageElement.currentSrc")}} method doesn't return `null` anymore but `""`, as requested by the latest specification ({{bug(1139560)}}).
 - Like for images, Firefox now throttles {{domxref("Window.requestAnimationFrame()")}} for non-visible {{HTMLElement("iframe")}} ({{bug(1145439)}}).
 - {{domxref("NavigatorID/taintEnabled", "Navigator.taintEnabled")}} is no longer available for Web workers ({{bug(1154878)}}).
 

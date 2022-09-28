@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Event Handler
-  - Experimental
   - PermissionStatus
   - Permissions
   - Permissions API
@@ -14,7 +13,8 @@ tags:
   - status
 browser-compat: api.PermissionStatus.state
 ---
-{{APIRef("Permissions API")}}{{SeeCompatTable}}
+
+{{APIRef("Permissions API")}}
 
 The **`state`** read-only property of the
 {{domxref("PermissionStatus")}} interface returns the state of a requested permission.
@@ -23,7 +23,7 @@ This property returns one of `'granted'`, `'denied'`, or
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `'granted'`
 - `'denied'`

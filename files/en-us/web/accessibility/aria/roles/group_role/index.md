@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: group role'
+title: "ARIA: group role"
 slug: Web/Accessibility/ARIA/Roles/group_role
 tags:
   - Accessibility
@@ -10,6 +10,7 @@ tags:
   - document structure role
 spec-urls: https://w3c.github.io/aria/#group
 ---
+
 The `group` role identifies a set of user interface objects that is not intended to be included in a page summary or table of contents by assistive technologies.
 
 ## Description
@@ -34,7 +35,12 @@ The HTML code example below uses the `group` role with a `tree` view:
 
 ```html
 <div id="tree1" role="tree" tabindex="-1">
-  <div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true">
+  <div
+    id="animals"
+    class="groupHeader"
+    role="presentation"
+    aria-owns="animalGroup"
+    aria-expanded="true">
     <img role="presentation" tabindex="-1" src="images/treeExpanded.gif" />
     <span role="treeitem" tabindex="0">Animals</span>
   </div>
@@ -42,7 +48,12 @@ The HTML code example below uses the `group` role with a `tree` view:
     <div id="birds" role="treeitem">
       <span tabindex="-1">Birds</span>
     </div>
-    <div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false">
+    <div
+      id="cats"
+      class="groupHeader"
+      role="presentation"
+      aria-owns="catGroup"
+      aria-expanded="false">
       <img role="presentation" tabindex="-1" src="images/treeContracted.gif" />
       <span role="treeitem" tabindex="0">Cats</span>
     </div>
@@ -96,6 +107,6 @@ This menu could be constructed using {{HTMLElement('select')}} and {{HTMLElement
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

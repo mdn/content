@@ -8,6 +8,7 @@ tags:
   - Server
   - no framework
 ---
+
 {{LearnSidebar}}
 
 This article provides a simple static file server built with pure [Node.js](https://nodejs.org/en/) without the use of a framework. 

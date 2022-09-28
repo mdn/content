@@ -10,6 +10,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.reportValidity
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`reportValidity()`** method of the {{domxref("ElementInternals")}} interface checks if the element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it.
@@ -20,7 +21,7 @@ This method behaves in a similar way to {{domxref("ElementInternals.checkValidit
 
 ## Syntax
 
-```js
+```js-nolint
 reportValidity()
 ```
 

@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionErrorEvent/message
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionErrorEvent
@@ -14,7 +13,8 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionErrorEvent.message
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`message`** read-only property of the
 {{domxref("SpeechRecognitionErrorEvent")}} interface returns a message describing the

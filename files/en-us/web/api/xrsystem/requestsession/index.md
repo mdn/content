@@ -18,7 +18,8 @@ tags:
   - requestSession
 browser-compat: api.XRSystem.requestSession
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **{{domxref("XRSystem")}}** interface's
 **`requestSession()`** method returns a {{jsxref("promise")}}
@@ -30,7 +31,7 @@ inline sessions can be in progress at once.
 
 ## Syntax
 
-```js
+```js-nolint
 requestSession(mode)
 requestSession(mode, options)
 ```
@@ -41,7 +42,7 @@ requestSession(mode, options)
 
   - : A {{jsxref("String")}} defining the XR session mode. The supported modes are:
 
-    - {{experimental_inline}} `immersive-ar`: The session's output will be given exclusive access to the immersive device,
+    - {{Experimental_Inline}} `immersive-ar`: The session's output will be given exclusive access to the immersive device,
       but the rendered content will be blended with the real-world environment.
       The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
       to be used to blend the content together.
@@ -54,15 +55,15 @@ requestSession(mode, options)
       and may or may not have viewer tracking available. Inline sessions don't require special hardware and should be
       available on any {{Glossary("user agent")}} offering WebXR API support.
 
-- `options` {{optional_inline}}
+- `options` {{Optional_Inline}}
 
   - : An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature configuration for all options.
-    - `requiredFeatures` {{optional_inline}}: An array of values which the returned {{domxref("XRSession")}}
+    - `requiredFeatures` {{Optional_Inline}}: An array of values which the returned {{domxref("XRSession")}}
       _must_ support. See [Session features](#session_features) below.
-    - `optionalFeatures` {{optional_inline}}: An array of values identifying features which the returned
+    - `optionalFeatures` {{Optional_Inline}}: An array of values identifying features which the returned
       {{domxref("XRSession")}} may optionally support. See [Session features](#session_features) below.
-    - `domOverlay` {{optional_inline}}: An object with a required `root` property that specifies the overlay element that will be displayed to the user as the content of the DOM overlay. See the [example below](#requesting_a_session_with_a_dom_overlay).
-    - `depthSensing` {{optional_inline}}: An object with two required properties {{domxref("XRSession.depthUsage", "usagePreference")}} and {{domxref("XRSession.depthDataFormat", "dataFormatPreference")}} to configure how to perform depth sensing. See the [example below](#requesting_a_depth-sensing_session).
+    - `domOverlay` {{Optional_Inline}}: An object with a required `root` property that specifies the overlay element that will be displayed to the user as the content of the DOM overlay. See the [example below](#requesting_a_session_with_a_dom_overlay).
+    - `depthSensing` {{Optional_Inline}}: An object with two required properties {{domxref("XRSession.depthUsage", "usagePreference")}} and {{domxref("XRSession.depthDataFormat", "dataFormatPreference")}} to configure how to perform depth sensing. See the [example below](#requesting_a_depth-sensing_session).
 
 ### Return value
 
@@ -118,7 +119,7 @@ The following session features and reference spaces can be requested, either as 
 - `viewer`
   - : Enable a tracking space whose native origin tracks the viewer's position and orientation.
 
-### Security requirements
+## Security
 
 Several session features and the various reference spaces have minimum security and privacy requirements, like asking for user consent and/or requiring the {{HTTPHeader("Feature-Policy")}}: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking) directive to be set. See also [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security) for more details.
 
@@ -132,6 +133,8 @@ Several session features and the various reference spaces have minimum security 
 | `local-floor`   | Always required                     | `xr-spatial-tracking`      |
 | `unbounded`     | Always required                     | `xr-spatial-tracking`      |
 | `viewer`        | Always required                     | —                          |
+
+See also [transient user activation](/en-US/docs/Web/Security/User_activation).
 
 ## Examples
 

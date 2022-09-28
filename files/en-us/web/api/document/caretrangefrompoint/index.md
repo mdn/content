@@ -13,6 +13,7 @@ tags:
   - caretRangeFromPoint
 browser-compat: api.Document.caretRangeFromPoint
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`caretRangeFromPoint()`** method of the
@@ -21,7 +22,7 @@ fragment under the specified coordinates.
 
 ## Syntax
 
-```js
+```js-nolint
 caretRangeFromPoint(x, y)
 ```
 
@@ -81,18 +82,20 @@ function insertBreakAtPoint(e) {
 }
 
 let paragraphs = document.getElementsByTagName("p");
-for (let i = 0; i < paragraphs.length; i++) {
-  paragraphs[i].addEventListener('click', insertBreakAtPoint, false);
+for (const paragraph of paragraphs) {
+  paragraph.addEventListener('click', insertBreakAtPoint, false);
 }
 ```
 
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
 ```
 
 ## Browser compatibility

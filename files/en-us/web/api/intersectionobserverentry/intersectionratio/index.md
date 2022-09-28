@@ -12,6 +12,7 @@ tags:
   - intersectionRatio
 browser-compat: api.IntersectionObserverEntry.intersectionRatio
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's

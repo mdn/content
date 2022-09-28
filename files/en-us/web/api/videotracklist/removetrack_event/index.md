@@ -12,6 +12,7 @@ tags:
   - Event
 browser-compat: api.VideoTrackList.removetrack_event
 ---
+
 {{APIRef}}
 
 The `removetrack` event is fired when a video track is removed from a [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList).
@@ -28,7 +29,7 @@ onremovetrack = (event) => { }
 
 ## Event type
 
-An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TrackEvent")}}
 

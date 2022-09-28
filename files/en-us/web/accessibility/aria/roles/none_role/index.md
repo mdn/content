@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: none role'
+title: "ARIA: none role"
 slug: Web/Accessibility/ARIA/Roles/none_role
 tags:
   - Accessibility
@@ -20,6 +20,6 @@ See the [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_r
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

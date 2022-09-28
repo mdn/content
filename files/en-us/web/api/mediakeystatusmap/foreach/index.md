@@ -11,7 +11,8 @@ tags:
   - forEach()
 browser-compat: api.MediaKeyStatusMap.forEach
 ---
-{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions API")}}
 
 The **`forEach`** property of the
 {{domxref("MediaKeyStatusMap")}} interface calls callback once for each key-value pair
@@ -20,7 +21,7 @@ the callback.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((currentValue) => { /* … */ } )
 forEach((currentValue, index) => { /* … */ } )

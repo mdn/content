@@ -8,6 +8,7 @@ tags:
   - Reference
   - visual formatting model
 ---
+
 {{CSSRef}}
 
 In CSS The **Visual Formatting Model** describes how user agents take the document tree, and process and display it for visual media. This includes {{glossary("continuous media")}} such as a computer screen and {{glossary("paged media")}} such as a book or document printed by browser print functions. Most of the information applies equally to continuous and paged media.
@@ -142,12 +143,20 @@ A block box is a block-level box that is also a block container. As described in
 
 ## See also
 
-- CSS Key Concepts: [CSS syntax](/en-US/docs/Web/CSS/Syntax), [at-rule](/en-US/docs/Web/CSS/At-rule), [comments](/en-US/docs/Web/CSS/Comments),
-  [specificity](/en-US/docs/Web/CSS/Specificity) and [inheritance](/en-US/docs/Web/CSS/inheritance),
-  the [box](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model),
-  [layout modes](/en-US/docs/Web/CSS/Layout_mode) and [visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model),
-  and [margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing),
-  or the [initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [resolved](/en-US/docs/Web/CSS/resolved_value),
-  [specified](/en-US/docs/Web/CSS/specified_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values.
-  Definitions of [value syntax](/en-US/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  and [replaced elements](/en-US/docs/Web/CSS/Replaced_element).
+- CSS key concepts:
+  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - [Inheritance](/en-US/docs/Web/CSS/inheritance)
+  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Values
+    - [Initial values](/en-US/docs/Web/CSS/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

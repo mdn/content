@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSelectElement`** interface represents a {{HTMLElement("select")}} HTML Element. These elements also share all of the properties and methods of other HTML elements via the {{domxref("HTMLElement")}} interface.

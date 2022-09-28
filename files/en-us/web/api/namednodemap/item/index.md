@@ -7,25 +7,26 @@ tags:
   - Reference
 browser-compat: api.NamedNodeMap.item
 ---
+
 {{APIRef("DOM")}}
 
 The **`item()`** method of the {{domxref("NamedNodeMap")}} interface
 returns the item in the map matching the index.
 
 > **Note:** This method is also called when you use the operator `[]` syntax.
-> So, `myMap[i]`is equivalent to `myMap.item(i)` where `i` is a {{jsxref("Number")}}.
+> So, `myMap[i]`is equivalent to `myMap.item(i)` where `i` is a number.
 
 ## Syntax
 
-```js
-item(index);
-[index];
+```js-nolint
+item(index)
+[index]
 ```
 
 ### Parameters
 
 - `index`
-  - : A {{jsxref("Number")}} representing the index of the item you want to return.
+  - : A number representing the index of the item you want to return.
 
 ### Return value
 
@@ -39,7 +40,7 @@ the map.
 ```
 
 ```js
-const pre = document.getElementsByTagName("pre")[0];
+const pre = document.querySelector("pre");
 const attrMap = pre.attributes;
 
 pre.textContent = `The attribute map contains:

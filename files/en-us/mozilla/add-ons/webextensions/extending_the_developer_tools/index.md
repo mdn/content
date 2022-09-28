@@ -9,6 +9,7 @@ tags:
   - Needs Privileges
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 > **Note:** This page describes devtools APIs as they exist in Firefox 55. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/mv3/devtools/), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](#limitations_of_the_devtools_apis).
@@ -43,7 +44,7 @@ Note that the devtools page does not get access to any other WebExtension APIs, 
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>DevTools Extension</title>
   </head>
   <body>

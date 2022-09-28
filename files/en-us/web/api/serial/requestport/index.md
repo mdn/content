@@ -8,15 +8,17 @@ tags:
   - Reference
   - requestPort
   - Serial
+  - Experimental
 browser-compat: api.Serial.requestPort
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
+
+{{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`Serial.requestPort()`** method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.
 
 ## Syntax
 
-```js
+```js-nolint
 requestPort()
 requestPort(options)
 ```

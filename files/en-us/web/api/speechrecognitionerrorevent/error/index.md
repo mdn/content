@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Error
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionErrorEvent
@@ -14,7 +13,8 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionErrorEvent.error
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`error`** read-only property of the
 {{domxref("SpeechRecognitionErrorEvent")}} interface returns the type of error raised.

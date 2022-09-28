@@ -12,6 +12,7 @@ tags:
   - Web Audio
   - Web Audio API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.
@@ -64,7 +65,7 @@ change the volume of the notes E and G in the chord.</p>
   content: "⏸";
 }
 
-#playButton:not(checked) + label::after{
+#playButton:not(checked) + label::after {
   content: "▶️";
 }
 
@@ -74,7 +75,7 @@ change the volume of the notes E and G in the chord.</p>
 
 #playButton {
   vertical-align: middle;
-  display:none;
+  display: none;
 }
 
 #volumeControl {
@@ -168,7 +169,7 @@ Then we assign a handler for the volume slider's {{domxref("HTMLElement/input_ev
 
 Right after declaring the `setup()` function, we add a handler to the play checkbox's {{domxref("HTMLElement/change_event", "change")}} event (see [Toggling the oscillators on and off](#toggling_the_oscillators_on_and_off) for more on the `togglePlay()` method), and the stage is set. Let's see how the action plays out.
 
-```
+```js
 playButton.addEventListener("change", togglePlay, false);
 ```
 

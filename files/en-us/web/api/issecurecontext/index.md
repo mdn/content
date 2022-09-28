@@ -12,6 +12,7 @@ tags:
   - isSecureContext
 browser-compat: api.isSecureContext
 ---
+
 {{APIRef}}
 
 The global **`isSecureContext`** read-only property returns a boolean indicating whether

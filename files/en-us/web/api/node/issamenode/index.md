@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Node.isSameNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`isSameNode()`** method of the {{domxref("Node")}} interface
@@ -18,8 +19,8 @@ That is, it tests whether two nodes are the same
 
 ## Syntax
 
-```js
-isSameNode(otherNode);
+```js-nolint
+isSameNode(otherNode)
 ```
 
 ### Parameters

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.IDBObjectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents an object store in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
@@ -18,15 +19,15 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 
 ## Properties
 
-- {{domxref("IDBObjectStore.indexNames")}} {{readonlyInline}}
+- {{domxref("IDBObjectStore.indexNames")}} {{ReadOnlyInline}}
   - : A list of the names of [indexes](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) on objects in this object store.
-- {{domxref("IDBObjectStore.keyPath")}} {{readonlyInline}}
+- {{domxref("IDBObjectStore.keyPath")}} {{ReadOnlyInline}}
   - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of this object store. If this attribute is `null`, the application must provide a key for each modification operation.
 - {{domxref("IDBObjectStore.name")}}
   - : The name of this object store.
-- {{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}
+- {{domxref("IDBObjectStore.transaction")}} {{ReadOnlyInline}}
   - : The {{domxref("IDBTransaction")}} object to which this object store belongs.
-- {{domxref("IDBObjectStore.autoIncrement")}} {{readonlyInline}}
+- {{domxref("IDBObjectStore.autoIncrement")}} {{ReadOnlyInline}}
   - : The value of the auto increment flag for this object store.
 
 ## Methods

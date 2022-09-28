@@ -12,6 +12,7 @@ tags:
   - getBattery
 browser-compat: api.Navigator.getBattery
 ---
+
 {{ ApiRef("Battery API") }}
 
 The **`getBattery()`** method provides information about the
@@ -24,7 +25,7 @@ documentation for additional details, a guide to using the API, and sample code.
 
 ## Syntax
 
-```js
+```js-nolint
 getBattery()
 ```
 

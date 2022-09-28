@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.isComposing
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.isComposing`** read-only property returns

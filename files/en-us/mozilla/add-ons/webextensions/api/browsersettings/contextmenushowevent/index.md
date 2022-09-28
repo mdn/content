@@ -12,6 +12,7 @@ tags:
   - contextMenuShowEvent
 browser-compat: webextensions.api.browserSettings.contextMenuShowEvent
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object which determines whether the browser's context menu is shown on the mouseup event or on the mousedown event.

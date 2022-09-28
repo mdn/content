@@ -5,7 +5,6 @@ tags:
   - Deprecated
   - Element
   - HTML
-  - HTML5
   - Deprecated
   - Reference
   - Web

@@ -13,6 +13,7 @@ tags:
   - events
 browser-compat: api.PromiseRejectionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`PromiseRejectionEvent`** interface represents events which are sent to the global script context when JavaScript {{jsxref("Promise")}}s are rejected. These events are particularly useful for telemetry and debugging purposes.
@@ -30,9 +31,9 @@ For details on promise rejection events, see {{SectionOnPage("/en-US/docs/Web/Ja
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}
+- {{domxref("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
   - : The JavaScript {{jsxref("Promise")}} that was rejected.
-- {{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}
+- {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
   - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
 
 ## Methods

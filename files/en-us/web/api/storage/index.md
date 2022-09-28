@@ -11,6 +11,7 @@ tags:
   - data
 browser-compat: api.Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`Storage`** interface of the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.
@@ -19,7 +20,7 @@ To manipulate, for instance, the session storage for a domain, a call to {{domxr
 
 ## Properties
 
-- {{domxref("Storage.length")}} {{readonlyInline}}
+- {{domxref("Storage.length")}} {{ReadOnlyInline}}
   - : Returns an integer representing the number of data items stored in the `Storage` object.
 
 ## Methods

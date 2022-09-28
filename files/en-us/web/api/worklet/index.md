@@ -10,7 +10,8 @@ tags:
   - Worklets
 browser-compat: api.Worklet
 ---
-{{APIRef("Worklets")}}{{SeeCompatTable}}
+
+{{APIRef("Worklets")}}
 
 The **`Worklet`** interface is a lightweight version of {{domxref("Worker", "Web Workers")}} and gives developers access to low-level parts of the rendering pipeline.
 
@@ -92,7 +93,7 @@ _The Worklet interface does not define any properties._
 
 ## Methods
 
-- {{domxref("Worklet.addModule()")}} {{experimental_inline}}
+- {{domxref("Worklet.addModule()")}}
   - : Adds the script module at the given URL to the current worklet.
 
 ## Specifications

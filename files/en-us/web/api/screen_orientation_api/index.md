@@ -10,6 +10,7 @@ tags:
   - Screen Orientation
 browser-compat: api.ScreenOrientation
 ---
+
 {{DefaultAPISidebar("Screen Orientation API")}}
 
 The **Screen Orientation API** provides information about the orientation of the screen.

@@ -18,6 +18,7 @@ tags:
   - labels
   - slang
 ---
+
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Understandable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Understandable states that information and the operation of user interface must be understandable.
 
 > **Note:** To read the W3C definitions for Understandable and its guidelines and success criteria, see [Principle 3: Understandable — Information and the operation of user interface must be understandable](https://www.w3.org/TR/WCAG21/#understandable).
@@ -102,7 +103,7 @@ This guideline focuses on making text content as understandable as possible.
           takes a {{htmlattrxref("title")}} attribute that contains the
           expansion, and this appears when the acronym is moused over. However,
           the title contents are not accessible via keyboard, nor are they
-          reliably read out by screenreaders. A better way to handle this is to
+          reliably read out by screen readers. A better way to handle this is to
           again provide links to glossary pages containing the acronym expansion
           and explanation, or at the very least include them in the surrounding
           text in context.
@@ -146,7 +147,7 @@ This guideline focuses on making text content as understandable as possible.
           of words where they are is needed to understand the content fully.
         </p>
         <p>
-          The HTML5 {{htmlelement("audio")}} element can be used to
+          The HTML {{htmlelement("audio")}} element can be used to
           create a control that allows the reader to play back an audio file
           containing the correct pronunciation, and it also makes sense to
           include a textual pronunciation guide after difficult words, in the
@@ -326,10 +327,10 @@ This guideline centers around helping users enter correct information when requi
         </p>
         <p>
           It is advisable to implement client-side error detection and handling,
-          via HTML5 form validation features, and/or JavaScript, whatever is
+          via HTML form validation features, and/or JavaScript, whatever is
           best for your situation. When an error is detected, an intuitive error
           message should be shown next to the form input that is at fault to
-          help the user correct their inputs. For screenreader users, you can
+          help the user correct their inputs. For screen reader users, you can
           use aria live regions to alert the user to a change on the page.
         </p>
         <div class="note">

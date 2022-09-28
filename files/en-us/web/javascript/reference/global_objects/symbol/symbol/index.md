@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.Symbol
 ---
+
 {{JSRef}}
 
 The `Symbol()` constructor returns a value of type **symbol**,
@@ -24,10 +25,12 @@ call to it will cause an exception.
 
 ## Syntax
 
-```js
+```js-nolint
 Symbol()
 Symbol(description)
 ```
+
+> **Note:** `Symbol()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

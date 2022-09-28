@@ -11,6 +11,7 @@ tags:
   - createImageBitmap
 browser-compat: api.createImageBitmap
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`createImageBitmap()`** method creates a bitmap from a
@@ -21,7 +22,7 @@ different image sources, and returns a {{jsxref("Promise")}} which resolves to a
 
 ## Syntax
 
-```js
+```js-nolint
 createImageBitmap(image)
 createImageBitmap(image, options)
 createImageBitmap(image, sx, sy, sw, sh)

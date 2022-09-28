@@ -1,8 +1,9 @@
 ---
-title: '@page'
+title: "@page"
 slug: Web/CSS/@page
+page-type: css-at-rule
 tags:
-  - '@page'
+  - "@page"
   - At-rule
   - CSS
   - Layout
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.at-rules.page
 ---
+
 {{CSSRef}}
 
 The **`@page`** CSS at-rule is used to modify some CSS properties when printing a document.
@@ -29,6 +31,7 @@ The **`@page`** CSS at-rule is used to modify some CSS properties when printing 
 ### Descriptors
 
 - [`page-orientation`](/en-US/docs/Web/CSS/@page/page-orientation)
+
   - : Specifies the orientation of the document on the page, allowing it to be laid out and formatted as normal or be rotated to one either left or right side.
 
 - [`size`](/en-US/docs/Web/CSS/@page/size)

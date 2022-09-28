@@ -13,6 +13,7 @@ tags:
   - onfocus
 browser-compat: api.Window.focus_event
 ---
+
 {{APIRef}}
 
 The **`focus`** event fires when an element has received focus.
@@ -33,7 +34,7 @@ onfocus = (event) => { };
 
 ## Event type
 
-An {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 

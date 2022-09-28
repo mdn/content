@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.BiquadFilterNode.type
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `type` property of the {{ domxref("BiquadFilterNode") }} interface is a string (enum) value defining the kind of filtering algorithm the node is implementing.

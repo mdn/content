@@ -4,7 +4,6 @@ slug: Web/API/PositionSensorVRDevice/resetSensor
 page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Deprecated
   - PositionSensorVRDevice
@@ -13,15 +12,17 @@ tags:
   - Virtual Reality
   - WebVR
   - resetSensor
+  - Non-standard
 browser-compat: api.PositionSensorVRDevice.resetSensor
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+
+{{deprecated_header}}{{APIRef("WebVR API")}}{{Non-standard_header}}
 
 The **`resetSensor()`** method of the {{domxref("VRDisplay")}} interface _can be used to reset the sensor if desired, returning the_ position and orientation values to zero.
 
 ## Syntax
 
-```js
+```js-nolint
 resetSensor()
 ```
 

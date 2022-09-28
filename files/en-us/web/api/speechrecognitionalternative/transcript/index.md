@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionAlternative/transcript
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionAlternative
@@ -14,7 +13,8 @@ tags:
   - transcript
 browser-compat: api.SpeechRecognitionAlternative.transcript
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+
+{{APIRef("Web Speech API")}}
 
 The **`transcript`** read-only property of the
 {{domxref("SpeechRecognitionResult")}} interface returns a string containing the
@@ -31,7 +31,7 @@ A string.
 ## Examples
 
 This code is excerpted from our
-[Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+[Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

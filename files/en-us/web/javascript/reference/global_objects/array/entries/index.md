@@ -22,13 +22,17 @@ array.
 
 ## Syntax
 
-```js
-entries();
+```js-nolint
+entries()
 ```
 
 ### Return value
 
 A new {{jsxref("Array")}} iterator object.
+
+## Description
+
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `entries()` method iterates empty slots as if they have the value `undefined`.
 
 ## Examples
 
@@ -59,6 +63,18 @@ for (const element of arrayEntries) {
 // [0, 'a']
 // [1, 'b']
 // [2, 'c']
+```
+
+### Iterating sparse arrays
+
+`entries()` will visit empty slots as if they are `undefined`.
+
+```js
+for (const element of [, "a"].entries()) {
+  console.log(element);
+}
+// [0, undefined]
+// [1, 'a']
 ```
 
 ## Specifications

@@ -2,12 +2,12 @@
 title: Synthetic monitoring
 slug: Glossary/Synthetic_monitoring
 tags:
-  - Glossary
   - RUM
   - Reference
   - Synthetic monitoring
   - Web Performance
 ---
+
 **Synthetic monitoring** involves monitoring the performance of a page in a 'laboratory' environment, typically with automation tooling in an environment that is as consistent as possible.
 
 With a consistent baseline, synthetic monitoring is good for measuring the effects of code changes on performance. However, it doesn't necessarily reflect what users are experiencing.

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLSelectElement.autofocus
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.autofocus`** property has a value of either `true` or `false` that reflects the {{htmlattrxref("autofocus", "select")}} HTML

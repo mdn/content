@@ -8,6 +8,7 @@ tags:
   - MathML:Token Elements
 browser-compat: mathml.elements.mo
 ---
+
 {{MathMLRef}}
 
 The MathML `<mo>` element represents an operator in a broad sense. Besides operators in strict mathematical meaning, this element also includes "operators" like parentheses, separators like comma and semicolon, or "absolute value" bars.
@@ -41,7 +42,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 - `movablelimits`
   - : Specifies whether attached under- and overscripts move to sub- and superscript positions when `displaystyle` is `false`.
-    Allowed values are either `true` or `false.`
+    Allowed values are either `true` or `false`.
 - `rspace`
   - : The amount of space after the operator (see [length](/en-US/docs/Web/MathML/Attribute/Values#lengths) for values and units). The constant `thickmathspace` (5/18em) is the default value.
 - `separator`
@@ -57,26 +58,28 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ## Examples
 
 ```html
-<math>
-
-<mrow>
-  <mn>5</mn>
-  <mo>+</mo>
-  <mn>5</mn>
-</mrow>
-
-<mrow>
-  <mo>[</mo> <!-- default form value: prefix -->
+<math display="block">
   <mrow>
-    <mn>0</mn>
-    <mo>;</mo> <!-- default form value: infix -->
-    <mn>1</mn>
+    <mn>5</mn>
+    <mo>+</mo>
+    <mn>5</mn>
   </mrow>
-  <mo>)</mo> <!-- default form value: postfix -->
-</mrow>
+</math>
 
+<math display="block">
+  <mrow>
+    <mo>[</mo> <!-- default form value: prefix -->
+    <mrow>
+      <mn>0</mn>
+      <mo>;</mo> <!-- default form value: infix -->
+      <mn>1</mn>
+    </mrow>
+    <mo>)</mo> <!-- default form value: postfix -->
+  </mrow>
 </math>
 ```
+
+{{ EmbedLiveSample('mo_example', 700, 200, "", "") }}
 
 ## Specifications
 

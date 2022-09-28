@@ -15,6 +15,7 @@ tags:
   - lighting
   - rendering
 ---
+
 {{GamesSidebar}}
 
 Built for modern browsers, **PlayCanvas** is a fully-featured 3D game engine with resource loading, an entity and component system, advanced graphics manipulation, collision and physics engine (built with [ammo.js](https://github.com/kripken/ammo.js/)), audio, and facilities to handle control inputs from various devices (including gamepads).
@@ -41,22 +42,28 @@ Here's the HTML structure we will use.
 ```html
 <!DOCTYPE html>
 <html lang="en-GB">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>MDN Games: PlayCanvas demo</title>
     <style>
-        body { margin: 0; padding: 0; }
-        canvas { width: 100%; height: 100%; }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
     </style>
-</head>
-<body>
-<script src="playcanvas-latest.js"></script>
-<canvas id="application-canvas"></canvas>
-<script>
-    const canvas = document.getElementById("application-canvas");
-    /* all our JavaScript code goes here */
-</script>
-</body>
+  </head>
+  <body>
+    <script src="playcanvas-latest.js"></script>
+    <canvas id="application-canvas"></canvas>
+    <script>
+      const canvas = document.getElementById("application-canvas");
+      /* all our JavaScript code goes here */
+    </script>
+  </body>
 </html>
 ```
 
@@ -89,7 +96,7 @@ Now when the setup code is in place we need to think about implementing the stan
 ```js
 const camera = new pc.Entity();
 camera.addComponent("camera", {
-    clearColor: new pc.Color(0.8, 0.8, 0.8)
+  clearColor: new pc.Color(0.8, 0.8, 0.8),
 });
 
 app.root.addChild(camera);
@@ -127,7 +134,7 @@ The basic light types in PlayCanvas are directional and ambient. The first type 
 
 ```js
 const light = new pc.Entity();
-light.addComponent('light');
+light.addComponent("light");
 app.root.addChild(light);
 light.rotate(45, 0, 0);
 ```
@@ -151,7 +158,7 @@ boxMaterial.update();
 box.model.model.meshInstances[0].material = boxMaterial;
 ```
 
-By diffusing the light on the object we can give it it's own color —we'll choose a nice familiar blue.
+By diffusing the light on the object, we can give it its own color — we'll choose a nice familiar blue.
 
 > **Note:** In PlayCanvas, the color channel values are provided as floats in the range `0-1`, instead of integers of `0-255` as you might be used to using on the Web.
 
@@ -228,8 +235,8 @@ We already used `translate` or `rotate` to adjust the position of the shapes; we
 ```js
 let timer = 0;
 app.on("update", (deltaTime) => {
-    timer += deltaTime;
-    // code executed on every frame
+  timer += deltaTime;
+  // code executed on every frame
 });
 ```
 
@@ -240,7 +247,7 @@ The callback takes the `deltaTime` as the parameter, so we have the relative tim
 Rotating is quite easy — all you need to do is to add a defined value to the given direction of rotation on each frame. Add this line of code inside the `app.on("update")` callback function, right after the addition of the `deltaTime` to the `timer` variable:
 
 ```js
-box.rotate(deltaTime*10, deltaTime*20, deltaTime*30);
+box.rotate(deltaTime * 10, deltaTime * 20, deltaTime * 30);
 ```
 
 It will rotate the `box` by `deltaTime*10` on the `x` axis, `deltaTime*20` on the `y` axis and `deltaTime*30` on the `z` axis, on very frame — giving us a smooth animation.
@@ -262,7 +269,7 @@ Now onto the movement part.
 Beside rotation and scaling we can also move objects around the scene. Add the following code to achieve that.
 
 ```js
-cone.setPosition(2, Math.sin(timer*2), 0);
+cone.setPosition(2, Math.sin(timer * 2), 0);
 ```
 
 This will move the `cone` up and down by applying the `sin` value to the `y` axis on each frame, with a little bit of adjustment to make it look cooler. Try changing the value to see how it affects the animation.

@@ -6,7 +6,6 @@ tags:
   - Element
   - HTML
   - HTML scripting
-  - HTML5
   - Reference
   - Web
 browser-compat: html.elements.canvas
@@ -173,6 +172,6 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 
 - [MDN canvas portal](/en-US/docs/Web/API/Canvas_API)
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
-- [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
 - [Canvas-related demos](/en-US/docs/Web/Demos#canvas)
-- [Canvas introduction by Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
+- [Canvas cheat sheet (2009)](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
+- [Canvas introduction by Apple (2013)](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)

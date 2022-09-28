@@ -11,6 +11,7 @@ tags:
   - WebGL2RenderingContext
 browser-compat: api.WebGL2RenderingContext.uniform1ui
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.uniform[1234][uif][v]()`**
@@ -23,7 +24,7 @@ uniform variables.
 
 ## Syntax
 
-```js
+```js-nolint
 uniform1ui(location, v0)
 uniform2ui(location, v0, v1)
 uniform3ui(location, v0, v1, v2)

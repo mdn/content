@@ -1,6 +1,7 @@
 ---
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.transition-timing-function
 ---
+
 {{CSSRef}}
 
 The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
@@ -35,7 +37,7 @@ transition-timing-function: step-end;
 
 /* Function values */
 transition-timing-function: steps(4, jump-end);
-transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Steps Function keywords */
 transition-timing-function: steps(4, jump-start);
@@ -46,7 +48,7 @@ transition-timing-function: steps(6, start);
 transition-timing-function: steps(8, end);
 
 /* Multiple timing functions */
-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Global values */
 transition-timing-function: inherit;
@@ -78,7 +80,7 @@ transition-timing-function: unset;
       - : An author-defined cubic-Bezier curve, where the p1 and p3 values must be in the range of 0 to 1.
     - `steps( n, <jumpterm>)`
 
-      - : Displays the transition along _n stops along the transition, displaying each stop for_ equal lengths of time. For example, if _n_ is 5,  there are 5 steps. Whether the transition holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the transition, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
+      - : Displays the transition along _n stops along the transition, displaying each stop for_ equal lengths of time. For example, if _n_ is 5, there are 5 steps. Whether the transition holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the transition, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
 
         - `jump-start`
           - : Denotes a left-continuous function, so that the first jump happens when the transition begins;
@@ -128,25 +130,26 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 ```
 
 ```css hidden
-.parent {}
-.parent > div[class] {
-    width: 12em;
-    min-width: 12em;
-    margin-bottom: 4px;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
-    transition-property: all;
-    transition-duration: 7s;
+.parent {
 }
-.parent > div.box1{
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
-    transition-property: all;
-    transition-duration: 2s;
+.parent > div[class] {
+  width: 12em;
+  min-width: 12em;
+  margin-bottom: 4px;
+  background-color: black;
+  border: 1px solid red;
+  color: white;
+  transition-property: all;
+  transition-duration: 7s;
+}
+.parent > div.box1 {
+  width: 90vw;
+  min-width: 24em;
+  background-color: magenta;
+  color: yellow;
+  border: 1px solid orange;
+  transition-property: all;
+  transition-duration: 2s;
 }
 ```
 
@@ -163,22 +166,22 @@ const intervalID = setInterval(updateTransition, 10000);
 
 ```css
 .ease {
-   transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 .easein {
-   transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
 .easeout {
-   transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 .easeinout {
-   transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 .linear {
-   transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 .cb {
-   transition-timing-function: cubic-bezier(0.2,-2,0.8,2);
+  transition-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
 }
 ```
 
@@ -198,25 +201,26 @@ const intervalID = setInterval(updateTransition, 10000);
 ```
 
 ```css hidden
-.parent {}
-.parent > div[class] {
-    width: 12em;
-    min-width: 12em;
-    margin-bottom: 4px;
-    background-color: black;
-    border: 1px solid red;
-    color: white;
-    transition-property: all;
-    transition-duration:7s;
+.parent {
 }
-.parent > div.box1{
-    width: 90vw;
-    min-width: 24em;
-    background-color: magenta;
-    color: yellow;
-    border: 1px solid orange;
-    transition-property: all;
-    transition-duration:2s;
+.parent > div[class] {
+  width: 12em;
+  min-width: 12em;
+  margin-bottom: 4px;
+  background-color: black;
+  border: 1px solid red;
+  color: white;
+  transition-property: all;
+  transition-duration: 7s;
+}
+.parent > div.box1 {
+  width: 90vw;
+  min-width: 24em;
+  background-color: magenta;
+  color: yellow;
+  border: 1px solid orange;
+  transition-property: all;
+  transition-duration: 2s;
 }
 ```
 
@@ -233,22 +237,22 @@ const intervalID = setInterval(updateTransition, 10000);
 
 ```css
 .jump-start {
-   transition-timing-function: steps(5, jump-start);
+  transition-timing-function: steps(5, jump-start);
 }
 .jump-end {
-   transition-timing-function: steps(5, jump-end);
+  transition-timing-function: steps(5, jump-end);
 }
 .jump-none {
-   transition-timing-function: steps(5, jump-none);
+  transition-timing-function: steps(5, jump-none);
 }
 .jump-both {
-   transition-timing-function: steps(5, jump-both);
+  transition-timing-function: steps(5, jump-both);
 }
 .step-start {
-   transition-timing-function: step-start;
+  transition-timing-function: step-start;
 }
 .step-end {
-   transition-timing-function: step-end;
+  transition-timing-function: step-end;
 }
 ```
 
@@ -265,6 +269,7 @@ const intervalID = setInterval(updateTransition, 10000);
 ## See also
 
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}

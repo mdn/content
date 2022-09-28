@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.lang
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`lang`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the language of the utterance.

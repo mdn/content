@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLParagraphElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLParagraphElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} object interface it inherits) for manipulating {{HTMLElement("p")}} elements.

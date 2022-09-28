@@ -11,13 +11,14 @@ tags:
   - touch
 browser-compat: api.TouchEvent.altKey
 ---
+
 {{APIRef("Touch Events") }}
 
 ## Summary
 
 A boolean value indicating whether or not the <kbd>alt</kbd> (Alternate) key is enabled when the touch event is created. If the <kbd>alt</kbd> key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
 ## Value
 

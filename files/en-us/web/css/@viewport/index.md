@@ -1,8 +1,9 @@
 ---
-title: '@viewport'
+title: "@viewport"
 slug: Web/CSS/@viewport
+page-type: css-at-rule
 tags:
-  - '@viewport'
+  - "@viewport"
   - At-rule
   - CSS
   - Deprecated
@@ -13,6 +14,7 @@ tags:
   - viewport
 browser-compat: css.at-rules.viewport
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 > **Note:** See <https://github.com/w3c/csswg-drafts/issues/4766> for discussion around @viewport's removal from the standards track.

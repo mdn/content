@@ -1,5 +1,5 @@
 ---
-title: 'Animation: cancel event'
+title: "Animation: cancel event"
 slug: Web/API/Animation/cancel_event
 page-type: web-api-event
 tags:
@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Animation.cancel_event
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`cancel`** event of the {{domxref("Animation")}} interface is fired when the {{domxref("Animation.cancel()")}} method is called or when the animation enters the `"idle"` play state from another state, such as when the animation is removed from an element before it finishes playing.
@@ -18,8 +19,8 @@ The **`cancel`** event of the {{domxref("Animation")}} interface is fired when t
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('cancel', (event) => { })
+```js-nolint
+addEventListener("cancel", (event) => { })
 oncancel = (event) => { }
 ```
 
@@ -33,9 +34,9 @@ An {{domxref("AnimationPlaybackEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("AnimationPlaybackEvent.currentTime")}} {{readonlyinline}}
+- {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
   - : The current time of the animation that generated the event.
-- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{readonlyinline}}
+- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{ReadOnlyInline}}
   - : The time value of the timeline of the animation that generated the event.
 
 ## Examples
@@ -43,7 +44,9 @@ _In addition to the properties listed below, properties from the parent interfac
 If this animation is canceled, remove its element.
 
 ```js
-animation.oncancel = (event) => { animation.effect.target.remove(); };
+animation.oncancel = (event) => {
+  animation.effect.target.remove();
+};
 ```
 
 ## Specifications

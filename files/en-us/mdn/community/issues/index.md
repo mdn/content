@@ -7,22 +7,23 @@ tags:
   - community-guidelines
   - governance
 ---
+
 {{MDNSidebar}}
 
-[Issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) are used to track all bugs and work that has a clear actionable outcome. If you have found a bug with either our content or the platform, please search current open issues against the [relevant repository](/en-US/docs/MDN/Community/Contributing/Our_repositories/) to ensure someone has not already reported the issue. If the issue is new, please file an issue using the relevant template available in the repository.
+[Issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) are used to track all bugs and work that has a clear actionable outcome. If you have found a bug with either our content or the platform, please search current open issues against the [relevant repository](/en-US/docs/MDN/Community/Contributing/Our_repositories) to ensure someone has not already reported the issue. If the issue is new, please file an issue using the relevant template available in the repository.
 
 > **Note:** If an issue has a triage label, we haven't reviewed it yet, and you shouldn't begin work on it.
 
 If the issue you are filing is not to report a bug, please ensure that it lists actionable tasks or a clear outcome. For example:
 
 ```markdown
-## Remove {{ warning }} macro from documents
+## Remove \{{ warning }} macro from documents
 
-We should no longer be using the `{{ warning }}` macro in our documentation.
+We should no longer be using the `\{{ warning }}` macro in our documentation.
 
 ### Task description
 
-We should therefore replace all instances of the `{{ warning }}` macro with the following:
+We should therefore replace all instances of the `\{{ warning }}` macro with the following:
 
 > **Warning:** Main subject line
 >
@@ -31,8 +32,8 @@ We should therefore replace all instances of the `{{ warning }}` macro with the 
 
 ### Actionable outcome
 
-- [ ] There are no more instances of the ``{{ warning }}` macro in the `mdn/content` repository.
-- [ ] Deprecate `{{ warning }}` macro
+- [ ] There are no more instances of the `\{{ warning }}` macro in the `mdn/content` repository.
+- [ ] Deprecate `\{{ warning }}` macro
 - [ ] Notify localization team leads of the change.
 ```
 
@@ -81,8 +82,6 @@ Most issues need some investigation before work can start, if you need to ask qu
 If you take on an issue we expect work to happen in a timely manner. If you can no longer take on the task, leave a comment and unassign yourself.
 
 Fork and branch the repository, do your work and open a [pull request](/en-US/docs/MDN/Community/Pull_requests).
-
-_(more stuff)_
 
 Now and then, you may run into problems while using MDN. Whether it's a problem with site infrastructure or an error in documentation content, you can either try to fix it yourself or report the problem. While the former is preferred, the latter is sometimes the best you can manage, and that's okay too.
 

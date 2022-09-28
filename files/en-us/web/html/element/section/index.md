@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.section
 ---
+
 {{HTMLRef}}
 
 The **`<section>`** [HTML](/en-US/docs/Web/HTML) element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.
@@ -137,7 +138,7 @@ To reiterate, each `<section>` should be identified, typically by including a he
 
 ### Using a section without a heading
 
-Circumstances where you might see `<section>` used without a heading are typically found in web application/UI sections rather than in traditional document structures. In a document, it doesn't really make any sense to have a separate section of content without a heading to describe its contents. Such headings are useful for all readers, but particularly useful for users of assistive technologies like screenreaders, and they are also good for SEO.
+Circumstances where you might see `<section>` used without a heading are typically found in web application/UI sections rather than in traditional document structures. In a document, it doesn't really make any sense to have a separate section of content without a heading to describe its contents. Such headings are useful for all readers, but particularly useful for users of assistive technologies like screen readers, and they are also good for SEO.
 
 Consider however a secondary navigation mechanism. If the global navigation is already wrapped in a `<nav>` element, you could conceivably wrap a previous/next menu in a `<section>`:
 
@@ -171,7 +172,7 @@ Sections with no headings do not appear in the document outline. If you did want
 </section>
 ```
 
-Make sure to use some assistive technology and screenreader-friendly CSS to hide it, like so:
+Make sure to use some assistive technology and screen-reader-friendly CSS to hide it, like so:
 
 ```css
 .hidden {
