@@ -10,7 +10,7 @@ tags:
   - Web
   - sqrt
   - Experimental
-spec-urls: https://drafts.csswg.org/css-values/#sign-funcs
+browser-compat: css.types.sqrt
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
