@@ -1,6 +1,7 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -37,8 +38,7 @@ In the following example, span elements (normally displayed as inline elements) 
 ### HTML
 
 ```html
-<span>span 1</span>
-<span>span 2</span>
+<span>span 1</span> <span>span 2</span>
 ```
 
 ### CSS

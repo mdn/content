@@ -23,7 +23,7 @@ Async has a lot of useful methods (check out [the documentation](https://caolan.
 
 Most of the methods we use in _Express_ are asynchronous—you specify an operation to perform, passing a callback. The method returns immediately, and the callback is invoked when the requested operation completes. By convention in _Express_, callback functions pass an _error_ value as the first parameter (or `null` on success) and the results from the function (if there are any) as the second parameter.
 
-If a controller only needs to _perform **one** asynchronous operation_ to get the information required to render a page then the implementation is easy—we render the template in the callback. The code fragment below shows this for a function that renders the count of a model `SomeModel` (using the Mongoose [`countDocuments`](https://mongoosejs.com/docs/api.html#model_Model.countDocuments) method):
+If a controller only needs to _perform **one** asynchronous operation_ to get the information required to render a page then the implementation is easy—we render the template in the callback. The code fragment below shows this for a function that renders the count of a model `SomeModel` (using the Mongoose [`countDocuments`](https://mongoosejs.com/docs/api.html#model_Model-countDocuments) method):
 
 ```js
 exports.some_model_count = function (req, res, next) {

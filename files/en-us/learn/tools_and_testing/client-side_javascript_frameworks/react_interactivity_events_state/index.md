@@ -49,7 +49,7 @@ With our component plan worked out, it's now time to start updating our app from
 
 If you've only written vanilla JavaScript before now, you might be used to having a separate JavaScript file, where you query for some DOM nodes and attach listeners to them. For example:
 
-```js
+```jsx
 const btn = document.querySelector('button');
 
 btn.addEventListener('click', () => {
@@ -59,7 +59,7 @@ btn.addEventListener('click', () => {
 
 In React, we write event handlers directly on the elements in our JSX, like this:
 
-```js
+```jsx
 <button
   type="button"
   onClick={() => alert("hi!")}
@@ -83,7 +83,7 @@ Let's apply this to our app, starting in the `Form.js` component.
 
 At the top of the `Form()` component function, create a function named `handleSubmit()`. This function should [prevent the default behavior of the `submit` event](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior). After that, it should trigger an `alert()`, which can say whatever you'd like. It should end up looking something like this:
 
-```js
+```jsx
 function handleSubmit(e) {
   e.preventDefault();
   alert('Hello, world!');
@@ -92,7 +92,7 @@ function handleSubmit(e) {
 
 To use this function, add an `onSubmit` attribute to the [`<form>`](/en-US/docs/Web/HTML/Element/form) element, and set its value to the `handleSubmit` function:
 
-```js
+```jsx
 <form onSubmit={handleSubmit}>
 ```
 
@@ -108,7 +108,7 @@ We want our `handleSubmit()` function to ultimately help us create a new task, s
 
 Inside the top of our `App()` component function, create a function named `addTask()` which has a single parameter of `name`:
 
-```js
+```jsx
 function addTask(name) {
   alert(name);
 }
@@ -116,13 +116,13 @@ function addTask(name) {
 
 Next, we'll pass `addTask()` into `<Form />` as a prop. The prop can have whatever name you want, but pick a name you'll understand later. Something like `addTask` works, because it matches the name of the function as well as what the function will do. Your `<Form />` component call should be updated as follows:
 
-```js
+```jsx
 <Form addTask={addTask} />
 ```
 
 Finally, you can use this prop inside the `handleSubmit()` function in your `<Form />` component! Update it as follows:
 
-```js
+```jsx
 function handleSubmit(e) {
   e.preventDefault();
   props.addTask("Say hello!");
@@ -143,7 +143,7 @@ React provides a variety of special functions that allow us to provide new capab
 
 To use a React hook, we need to import it from the React module. In `Form.js`, change your very first line so that it reads like this:
 
-```js
+```jsx
 import React, { useState } from "react";
 ```
 
@@ -155,7 +155,7 @@ This is a lot to take in at once, so let's try it out. We're going to make ourse
 
 Write the following above your `handleSubmit()` function, inside `Form()`:
 
-```js
+```jsx
 const [name, setName] = useState('Use hooks!');
 ```
 
@@ -169,7 +169,7 @@ What's going on in this line of code?
 
 You can see the `name` state in action right away. Add a `value` attribute to the form's input, and set its value to `name`. Your browser will render "Use hooks!" inside the input.
 
-```js
+```jsx
 <input
   type="text"
   id="new-todo-input"
@@ -182,7 +182,7 @@ You can see the `name` state in action right away. Add a `value` attribute to th
 
 Change "Use hooks!" to an empty string once you're done; this is what we want for our initial state.
 
-```js
+```jsx
 const [name, setName] = useState('');
 ```
 
@@ -190,7 +190,7 @@ const [name, setName] = useState('');
 
 Before we can change the value of `name`, we need to capture a user's input as they type. For this, we can listen to the `onChange` event. Let's write a `handleChange()` function, and listen for it on the `<input />` tag.
 
-```js
+```jsx
 // near the top of the `Form` component
 function handleChange(e) {
   console.log("Typing!");
@@ -214,7 +214,7 @@ To read the contents of the input field as they change, you can access the input
 
 You can `console.log()` this value to see it in your browser's console.
 
-```js
+```jsx
 function handleChange(e) {
   console.log(e.target.value);
 }
@@ -224,7 +224,7 @@ function handleChange(e) {
 
 Logging isn't enough — we want to actually store the updated state of the name as the input value changes! Change the `console.log()` to `setName()`, as shown below:
 
-```js
+```jsx
 function handleChange(e) {
   setName(e.target.value);
 }
@@ -232,7 +232,7 @@ function handleChange(e) {
 
 Now we need to change our `handleSubmit()` function so that it calls `props.addTask` with name as an argument — remember our callback prop? This will serve to send the task back to the `App` component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form submits, so we'll call `setName()` again with an empty string to do so:
 
-```js
+```jsx
 function handleSubmit(e) {
   e.preventDefault();
   props.addTask(name);
@@ -244,7 +244,7 @@ At last, you can type something into the input field in your browser and click _
 
 Your `Form.js` file should now read like this:
 
-```js
+```jsx
 import React, { useState } from "react";
 
 function Form(props) {
@@ -295,19 +295,19 @@ Now that we've practiced with events, callback props, and hooks we're ready to w
 
 Import `useState` into `App.js`, so that we can store our tasks in state — update your `React` import line to the following:
 
-```js
+```jsx
 import React, { useState } from "react";
 ```
 
 We want to pass `props.tasks` into the `useState()` hook – this will preserve its initial state. Add the following right at the top of your App() function definition:
 
-```js
+```jsx
 const [tasks, setTasks] = useState(props.tasks);
 ```
 
 Now, we can change our `taskList` mapping so that it is the result of mapping `tasks`, instead of `props.tasks`. Your `taskList` constant declaration should now look like so:
 
-```js
+```jsx
 const taskList = tasks.map((task) => (
   <Todo
     id={task.id}
@@ -328,7 +328,7 @@ We then need to make a new array with this new task added to it and then update 
 
 Putting that all together, your `addTask()` function should read like so:
 
-```js
+```jsx
 function addTask(name) {
   const newTask = { id: "id", name, completed: false };
   setTasks([...tasks, newTask]);
@@ -351,13 +351,13 @@ npm install nanoid
 
 Now we can import `nanoid` into the top of `App.js` so we can use it to create unique IDs for our new tasks. First of all, include the following import line at the top of `App.js`:
 
-```js
+```jsx
 import { nanoid } from "nanoid";
 ```
 
 Now let's update `addTask()` so that each task ID becomes a prefix todo- plus a unique string generated by nanoid. Update your `newTask` constant declaration to this:
 
-```js
+```jsx
 const newTask = { id: `todo-${nanoid()}`, name, completed: false };
 ```
 
@@ -369,20 +369,20 @@ Now that we can add new tasks, you may notice a problem: our heading reads 3 tas
 
 Add this inside your `App()` definition, before the return statement:
 
-```js
+```jsx
 const headingText = `${taskList.length} tasks remaining`;
 ```
 
-Hrm. This is almost right, except that if our list ever contains a single task, the heading will still use the word "tasks". We can make this a variable, too. Update the code you just added as follows:
+This is almost right, except that if our list ever contains a single task, the heading will still use the word "tasks". We can make this a variable, too. Update the code you just added as follows:
 
-```js
+```jsx
 const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
 const headingText = `${taskList.length} ${tasksNoun} remaining`;
 ```
 
 Now you can replace the list heading's text content with the `headingText` variable. Update your `<h2>` like so:
 
-```js
+```jsx
 <h2 id="list-heading">{headingText}</h2>
 ```
 
@@ -398,7 +398,7 @@ We'll start by writing a `toggleTaskCompleted()` function in our `App()` compone
 
 Add this just above your `taskList` constant declaration:
 
-```js
+```jsx
 function toggleTaskCompleted(id) {
   console.log(tasks[0])
 }
@@ -406,7 +406,7 @@ function toggleTaskCompleted(id) {
 
 Next, we'll add `toggleTaskCompleted` to the props of each `<Todo />` component rendered inside our `taskList`; update it like so:
 
-```js
+```jsx
 const taskList = tasks.map((task) => (
   <Todo
       id={task.id}
@@ -420,7 +420,7 @@ const taskList = tasks.map((task) => (
 
 Next, go over to your `Todo.js` component and add an `onChange` handler to your `<input />` element, which should use an anonymous function to call `props.toggleTaskCompleted()` with a parameter of `props.id`. The `<input />` should now look like this:
 
-```js
+```jsx
 <input
   id={props.id}
   type="checkbox"
@@ -443,7 +443,7 @@ Let's revisit our `toggleTaskCompleted()` function in `App.js`. We want it to ch
 
 Update your `toggleTaskCompleted()` function to the following:
 
-```js
+```jsx
 function toggleTaskCompleted(id) {
   const updatedTasks = tasks.map((task) => {
     // if this task has the same ID as the edited task
@@ -470,7 +470,7 @@ Deleting a task will follow a similar pattern to toggling its completed state: W
 
 Here we'll start by writing a `deleteTask()` function in your `App` component. Like `toggleTaskCompleted()`, this function will take an `id` parameter, and we will log that `id` to the console to start with. Add the following below `toggleTaskCompleted()`:
 
-```js
+```jsx
 function deleteTask(id) {
   console.log(id)
 }
@@ -478,7 +478,7 @@ function deleteTask(id) {
 
 Next, add another callback prop to our array of `<Todo />` components:
 
-```js
+```jsx
 const taskList = tasks.map((task) => (
   <Todo
     id={task.id}
@@ -495,7 +495,7 @@ In `Todo.js`, we want to call `props.deleteTask()` when the "Delete" button is p
 
 Update the "Delete" button inside Todo.js, like so:
 
-```js
+```jsx
 <button
   type="button"
   className="btn btn__danger"
@@ -515,7 +515,7 @@ This is a perfect opportunity to use [`Array.prototype.filter()`](/en-US/docs/We
 
 Update the `deleteTask()` function inside your `App.js` file as follows:
 
-```js
+```jsx
 function deleteTask(id) {
   const remainingTasks = tasks.filter((task) => id !== task.id);
   setTasks(remainingTasks);

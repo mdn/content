@@ -1,6 +1,7 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Box Model
@@ -103,33 +104,37 @@ The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll a
 #### HTML
 
 ```html
-  <div>
-    <code>visible</code>
-    <p class="visible">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>visible</code>
+  <p class="visible">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>hidden</code>
-    <p class="hidden">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>hidden</code>
+  <p class="hidden">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>scroll</code>
-    <p class="scroll">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>scroll</code>
+  <p class="scroll">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>auto</code>
-    <p class="auto">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>auto</code>
+  <p class="auto">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 ```
 
 #### CSS

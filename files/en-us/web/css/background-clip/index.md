@@ -1,6 +1,7 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
+page-type: css-property
 tags:
   - CSS
   - CSS Background
@@ -72,8 +73,12 @@ Consider using feature queries with {{cssxref("@supports")}} to test for support
 
 ```html
 <p class="border-box">The background extends behind the border.</p>
-<p class="padding-box">The background extends to the inside edge of the border.</p>
-<p class="content-box">The background extends only to the edge of the content box.</p>
+<p class="padding-box">
+  The background extends to the inside edge of the border.
+</p>
+<p class="content-box">
+  The background extends only to the edge of the content box.
+</p>
 <p class="text">The background is clipped to the foreground text.</p>
 ```
 

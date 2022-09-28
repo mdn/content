@@ -31,7 +31,7 @@ _This interface also inherits properties from its parent {{domxref("Event")}}_.
 
 ## Methods
 
-_This interface also inherits properties from its parent {{domxref("Event")}}_.
+_This interface also inherits methods from its parent {{domxref("Event")}}_.
 
 ## Specifications
 

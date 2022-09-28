@@ -56,7 +56,7 @@ Get the popup's URL:
 
 ```js
 function gotPopup(popupURL) {
-  console.log(popupURL)
+  console.log(popupURL);
 }
 
 let gettingPopup = browser.action.getPopup({});

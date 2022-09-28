@@ -41,7 +41,10 @@ button, the
 ### HTML
 
 ```html
-<p>Try highlighting some of the text in this paragraph. Once you do, you can remove the selected content by clicking the button below.</p>
+<p>
+  Try highlighting some of the text in this paragraph. Once you do, you can
+  remove the selected content by clicking the button below.
+</p>
 <button>Delete selected text</button>
 ```
 

@@ -23,26 +23,29 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Examples
 
-Sample rendering: ![x+y+z](mover.png)
-
-Rendering in your browser: <math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>⏞</mo></mover></math>
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
 
 ```html
-<math>
-
-<mover accent="true">
-  <mrow>
-    <mi>x</mi>
-    <mo>+</mo>
-    <mi>y</mi>
-    <mo>+</mo>
-    <mi>z</mi>
-  </mrow>
-  <mo>&#x23DE;<!--TOP CURLY BRACKET--></mo>
-</mover>
-
+<math display="block">
+  <mover accent="true">
+    <mrow>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mi>y</mi>
+      <mo>+</mo>
+      <mi>z</mi>
+    </mrow>
+    <mo>&#x23DE;<!--TOP CURLY BRACKET--></mo>
+  </mover>
 </math>
 ```
+
+{{ EmbedLiveSample('mover_example', 700, 200, "", "") }}
 
 ## Specifications
 

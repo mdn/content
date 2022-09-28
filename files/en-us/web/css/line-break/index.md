@@ -1,6 +1,7 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
+page-type: css-property
 tags:
   - Asian
   - CSS
@@ -69,11 +70,21 @@ See whether the text is wrapped before "々", "ぁ" and "。".
 
 ```html
 <div lang="ja">
-  <p class="wrapbox auto">auto:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox loose">loose:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox normal">normal:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox strict">strict:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox anywhere">anywhere:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
+  <p class="wrapbox auto">
+    auto:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  </p>
+  <p class="wrapbox loose">
+    loose:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  </p>
+  <p class="wrapbox normal">
+    normal:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  </p>
+  <p class="wrapbox strict">
+    strict:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  </p>
+  <p class="wrapbox anywhere">
+    anywhere:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  </p>
 </div>
 ```
 

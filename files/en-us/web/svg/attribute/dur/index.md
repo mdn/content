@@ -32,12 +32,22 @@ svg {
 ```html
 <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="1s" repeatCount="indefinite"/>
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="1s"
+      repeatCount="indefinite" />
   </rect>
   <rect x="120" y="0" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="3s" repeatCount="indefinite"/>
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="3s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```

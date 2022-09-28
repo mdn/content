@@ -1,6 +1,7 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
+page-type: css-property
 tags:
   - CSS
   - CSS Grid

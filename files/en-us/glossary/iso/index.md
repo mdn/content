@@ -2,7 +2,6 @@
 title: ISO
 slug: Glossary/ISO
 tags:
-  - Glossary
   - ISO
   - Infrastructure
   - Web Standards

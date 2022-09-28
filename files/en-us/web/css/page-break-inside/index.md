@@ -1,6 +1,7 @@
 ---
 title: page-break-inside
 slug: Web/CSS/page-break-inside
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -70,16 +71,19 @@ For compatibility reasons, `page-break-inside` should be treated by browsers as 
     <span>A list</span>
     <ol>
       <li>one</li>
-<!--       <li>two</li> -->
+      <!-- <li>two</li> -->
     </ol>
   </section>
   <ul>
     <li>one</li>
-<!--     <li>two</li> -->
+    <!-- <li>two</li> -->
   </ul>
   <p>This is the second paragraph.</p>
   <p>This is the third paragraph, it contains more text.</p>
-  <p>This is the fourth paragraph. It has a little bit more text than the third one.</p>
+  <p>
+    This is the fourth paragraph. It has a little bit more text than the third
+    one.
+  </p>
 </div>
 ```
 

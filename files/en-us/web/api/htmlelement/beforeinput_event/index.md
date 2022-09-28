@@ -69,7 +69,7 @@ This example logs the current value of the element, immediately before replacing
 #### HTML
 
 ```html
-<input placeholder="Enter some text" name="name"/>
+<input placeholder="Enter some text" name="name" />
 <p id="values"></p>
 ```
 

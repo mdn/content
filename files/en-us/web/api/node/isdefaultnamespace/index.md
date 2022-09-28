@@ -38,10 +38,13 @@ indicating if the parameter is the default namespace, or not.
 ## Example
 
 ```html
-Is "" the default namespace for &lt;output&gt;: <output>Not tested</output>.<br/>
-Is "http://www.w3.org/2000/svg" the default namespace for &lt;output&gt;: <output>Not tested</output>.<br/>
-Is "" the default namespace for &lt;svg&gt;: <output>Not tested</output>.<br/>
-Is "http://www.w3.org/2000/svg" the default namespace for &lt;svg&gt;: <output>Not tested</output>.<br/>
+Is "" the default namespace for &lt;output&gt;:
+<output>Not tested</output>.<br />
+Is "http://www.w3.org/2000/svg" the default namespace for &lt;output&gt;:
+<output>Not tested</output>.<br />
+Is "" the default namespace for &lt;svg&gt;: <output>Not tested</output>.<br />
+Is "http://www.w3.org/2000/svg" the default namespace for &lt;svg&gt;:
+<output>Not tested</output>.<br />
 <svg xmlns="http://www.w3.org/2000/svg" height="1"></svg>
 <button>Click to see the results</button>
 ```

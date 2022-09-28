@@ -3,7 +3,6 @@ title: UTF-8
 slug: Glossary/UTF-8
 tags:
   - CodingScripting
-  - Glossary
   - HTML
   - JavaScript
   - Utf-8

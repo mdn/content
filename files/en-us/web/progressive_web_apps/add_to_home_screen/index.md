@@ -115,7 +115,7 @@ In terms of how to design the icon, you should follow the same best practices yo
 To finish setting up your manifest, you need to reference it from the HTML of your application's home page:
 
 ```html
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="manifest.webmanifest" />
 ```
 
 Browsers that support A2HS will know where to look for your manifest once this is in place.

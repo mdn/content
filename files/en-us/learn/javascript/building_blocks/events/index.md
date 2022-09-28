@@ -61,7 +61,7 @@ For example:
 - The user resizes or closes the browser window.
 - A web page finishes loading.
 - A form is submitted.
-- A video is played, paused, or finishes.
+- A video is played, paused, or ends.
 - An error occurs.
 
 You can gather from this (and from glancing at the MDN [event reference](/en-US/docs/Web/Events)) that there are **a lot** of events that can be fired.
@@ -110,7 +110,7 @@ We also define a function that returns a random number.
 The third part of the code is where we define and register the event handler. The `<button>` element has an event called `'click'` that fires when the user clicks the button. Objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, that takes at least two arguments: the name of the event and a function to handle the event. So we call the button's `addEventListener()` method, passing in:
 
 - the string `'click'`, to indicate that we want to listen to the click event
-- a function to call when the event happens. In our case the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
+- a function to call when the event happens. In our case, the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
 
 The example output is as follows. Try clicking the button:
 
@@ -177,7 +177,7 @@ First, make a local copy of [random-color-addeventlistener.html](https://github.
 It's just a copy of the simple random color example we've played with already. Now try changing `click` to the following different values in turn, and observing the results in the example:
 
 - [`focus`](/en-US/docs/Web/API/Element/focus_event) and [`blur`](/en-US/docs/Web/API/Element/blur_event) — The color changes when the button is focused and unfocused; try pressing the tab to focus on the button and press the tab again to focus away from the button.
-  These are often used to display information about filling in form fields when they are focused, or displaying an error message if a form field is filled with an incorrect value.
+  These are often used to display information about filling in form fields when they are focused, or to display an error message if a form field is filled with an incorrect value.
 - [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event) — The color changes only when the button is double-clicked.
 - [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event) and [`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) — The color changes when the mouse pointer hovers over the button, or when the pointer moves off the button, respectively.
 
@@ -303,7 +303,9 @@ The earliest method of registering event handlers found on the Web involved [_ev
 The above example invokes a function defined inside a {{htmlelement("script")}} element on the same page, but you could also insert JavaScript directly inside the attribute, for example:
 
 ```html
-<button onclick="alert('Hello, this is my old-fashioned event handler!');">Press me</button>
+<button onclick="alert('Hello, this is my old-fashioned event handler!');">
+  Press me
+</button>
 ```
 
 You can find HTML attribute equivalents for many of the event handler properties; however, you shouldn't use these — they are considered bad practice.
@@ -358,7 +360,7 @@ So, in this example, we are setting a random background color on the button, not
 > **Note:** See the [Event delegation](#event_delegation) section below for an example where we use `event.target`.
 
 > **Note:** You can use any name you like for the event object — you just need to choose a name that you can then use to reference it inside the event handler function.
-> `e`/`evt`/`event` are most commonly used by developers because they are short and easy to remember.
+> `e`/`evt`/`event` is most commonly used by developers because they are short and easy to remember.
 > It's always good to be consistent — with yourself, and with others if possible.
 
 ### Extra properties of event objects
@@ -368,7 +370,7 @@ Most event objects have a standard set of properties and methods available on th
 Some event objects add extra properties that are relevant to that particular type of event. For example, the {{domxref("Element/keydown_event", "keydown")}} event fires when the user presses a key. Its event object is a {{domxref("KeyboardEvent")}}, which is a specialized `Event` object with a `key` property that tells you which key was pressed:
 
 ```html
-<input id="textBox" type="text">
+<input id="textBox" type="text" />
 <div id="output"></div>
 ```
 
@@ -392,7 +394,7 @@ Try typing into the text box and see the output:
 
 Sometimes, you'll come across a situation where you want to prevent an event from doing what it does by default.
 The most common example is that of a web form, for example, a custom registration form.
-When you fill in the details and click the submit button, the natural behavior is for the data to be submitted to a specified page on the server for processing, and the browser to be redirected to a "success message" page of some kind (or the same page, if another is not specified.)
+When you fill in the details and click the submit button, the natural behavior is for the data to be submitted to a specified page on the server for processing, and the browser to be redirected to a "success message" page of some kind (or the same page, if another is not specified).
 
 The trouble comes when the user has not submitted the data correctly — as a developer, you want to prevent the submission to the server and give an error message saying what's wrong and what needs to be done to put things right.
 Some browsers support automatic form data validation features, but since many don't, you are advised to not rely on those and implement your own validation checks.
@@ -404,14 +406,14 @@ First, a simple HTML form that requires you to enter your first and last name:
 <form>
   <div>
     <label for="fname">First name: </label>
-    <input id="fname" type="text">
+    <input id="fname" type="text" />
   </div>
   <div>
     <label for="lname">Last name: </label>
-    <input id="lname" type="text">
+    <input id="lname" type="text" />
   </div>
   <div>
-     <input id="submit" type="submit">
+    <input id="submit" type="submit" />
   </div>
 </form>
 <p></p>
@@ -440,12 +442,12 @@ form.addEventListener('submit', (e) => {
 });
 ```
 
-Obviously, this is pretty weak form validation — it wouldn't stop the user validating the form with spaces or numbers entered into the fields, for example — but it is OK for example purposes.
+Obviously, this is pretty weak form validation — it wouldn't stop the user from validating the form with spaces or numbers entered into the fields, for example — but it is OK for example purposes.
 The output is as follows:
 
 {{ EmbedLiveSample('Preventing_default_behavior', '100%', 180, "", "") }}
 
-> **Note:** for the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) here.)
+> **Note:** For the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) here).
 
 ## Event bubbling and capture
 
@@ -531,7 +533,7 @@ In this case:
 
 We describe this by saying that the event **bubbles up** from the innermost element that was clicked.
 
-This behavior can be useful and can also cause unexpected problems. In the next section we'll see a problem that it causes, and find the solution.
+This behavior can be useful and can also cause unexpected problems. In the next section, we'll see a problem that it causes, and find the solution.
 
 ### Video player example
 
@@ -546,9 +548,16 @@ This example shows and hides a {{htmlelement("div")}} with a {{htmlelement("vide
 
 <div class="hidden">
   <video>
-    <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4">
-    <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source
+      src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4"
+      type="video/mp4" />
+    <source
+      src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm"
+      type="video/webm" />
+    <p>
+      Your browser doesn't support HTML video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 </div>
 ```
@@ -644,7 +653,7 @@ Along the way:
 > **Note:** All JavaScript events go through the capturing and target phases.
 > Whether an event enters the bubbling phase can be checked by the read-only {{domxref("Event.bubbles", "bubbles")}} property.
 
-> **Note:** Event listeners registered for the `<html>` element aren't at the top of hierarchy.
+> **Note:** Event listeners registered for the `<html>` element aren't at the top of the hierarchy.
 > For example, event listeners registered for the {{domxref("Window", "window")}} and {{domxref("Document", "document")}} objects are higher in the hierarchy.
 
 The following example demonstrates the behavior described above.
@@ -751,7 +760,7 @@ You can try making a local copy of the [show-video-box.html source code](https:/
 
 ### Event delegation
 
-Event bubbling isn't just annoying though: it can be very useful. In particular it enables a practice called **event delegation**. In this practice, when we want some code to run when the user interacts with any one of a large number of child elements, we set the event listener on their parent and have events that happen on them bubble up to their parent rather than having to set the event listener on every child individually.
+Event bubbling isn't just annoying though: it can be very useful. In particular, it enables a practice called **event delegation**. In this practice, when we want some code to run when the user interacts with any one of a large number of child elements, we set the event listener on their parent and have events that happen on them bubble up to their parent rather than having to set the event listener on every child individually.
 
 Let's go back to our first example, where we set the background color of the whole page when the user clicked a button. Suppose that instead, the page is divided into 16 tiles, and we want to set each tile to a random color when the user clicks that tile.
 
@@ -788,7 +797,7 @@ We have a little CSS, to set the size and position of the tiles:
 }
 ```
 
-Now in the JavaScript, we could add a click event handler for every tile. But a much simpler and more efficient option is to set the click event handler on the parent, and rely on event bubbling to ensure that the handler is executed when the user clicks on a tile:
+Now in JavaScript, we could add a click event handler for every tile. But a much simpler and more efficient option is to set the click event handler on the parent, and rely on event bubbling to ensure that the handler is executed when the user clicks on a tile:
 
 ```js
 function random(number) {
@@ -809,7 +818,7 @@ The output is as follows (try clicking around on it):
 
 {{ EmbedLiveSample('Event delegation', '100%', 430, "", "") }}
 
-> **Note:** In this example we're using `event.target` to get the element that was the target of the event (that is, the innermost element). If we wanted to access the element that handled this event (in this case the container) we could use `event.currentTarget`.
+> **Note:** In this example, we're using `event.target` to get the element that was the target of the event (that is, the innermost element). If we wanted to access the element that handled this event (in this case the container) we could use `event.currentTarget`.
 
 > **Note:** See [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here.
 

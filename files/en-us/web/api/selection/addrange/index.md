@@ -40,7 +40,10 @@ None ({{jsxref("undefined")}}).
 ### HTML
 
 ```html
-<p>I <strong>insist</strong> that you <strong>try</strong> selecting the <strong>strong words</strong>.</p>
+<p>
+  I <strong>insist</strong> that you <strong>try</strong> selecting the
+  <strong>strong words</strong>.
+</p>
 <button>Select strong words</button>
 ```
 

@@ -1,8 +1,9 @@
 ---
 title: any-pointer
 slug: Web/CSS/@media/any-pointer
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
@@ -36,8 +37,7 @@ This example creates a small checkbox for users with at least one fine pointer a
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
-<label for="test">Look at me!</label>
+<input id="test" type="checkbox" /> <label for="test">Look at me!</label>
 ```
 
 ### CSS

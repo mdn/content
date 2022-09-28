@@ -4,7 +4,6 @@ slug: Glossary/WebGL
 tags:
   - Advanced
   - CodingScripting
-  - Glossary
   - Web Graphics
   - WebGL
 ---

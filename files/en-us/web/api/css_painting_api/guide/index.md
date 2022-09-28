@@ -427,7 +427,7 @@ We can also specify that we want a particular type of argument. When we `get` ou
 static get inputArguments() { return ['*', '<length>']; }
 ```
 
-In this case, we specifically requested the `<length>` attribute. The first element in the returned array will be a [`CSSUnparsedValue`](/en-US/docs/Web/API/CSSUnparsedValue). The second will be a [`CSSStyleValue.`](/en-US/docs/Web/API/CSSStyleValue)
+In this case, we specifically requested the `<length>` attribute. The first element in the returned array will be a [`CSSUnparsedValue`](/en-US/docs/Web/API/CSSUnparsedValue). The second will be a [`CSSStyleValue`](/en-US/docs/Web/API/CSSStyleValue).
 
 If the custom argument is a CSS value, for instance a unit, we can invoke Typed OM CSSStyleValue class (and sub classes) by using the value type keyword when we retrieve it in the `registerPaint()` function.
 
@@ -552,7 +552,7 @@ li {
 
 li:nth-of-type(3n) {
    --boxColor: hsla(255, 90%, 60%, 0.5);
-   background-image: paint(hollowHighlights, filled,  3px);
+   background-image: paint(hollowHighlights, filled, 3px);
 }
 
 li:nth-of-type(3n+1) {

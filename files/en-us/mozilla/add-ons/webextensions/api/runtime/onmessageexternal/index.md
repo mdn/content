@@ -16,14 +16,16 @@ browser-compat: webextensions.api.runtime.onMessageExternal
 
 {{AddonSidebar()}}
 
-Use this event to listen for messages from another extension.
+Use this event to listen for messages from other extensions or web pages.
 
-To send a message which will be received by the `onMessageExternal` listener, use {{WebExtAPIRef("runtime.sendMessage()")}}, passing the ID of the recipient in the `extensionId` parameter.
+By default, an extension can receive messages from any other extension. However, the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) manifest key can be used to limit communication to specific extensions and enable communication with websites.
+
+To send a message that is received by the `onMessageExternal` listener, use {{WebExtAPIRef("runtime.sendMessage()")}}, passing the ID of the recipient in the `extensionId` parameter.
 
 Along with the message itself, the listener is passed:
 
 - a `sender` object giving details about the message sender
-- a `sendResponse` function which it can use to send a response back to the sender.
+- a `sendResponse` function that the listener can use to send a response back to the sender.
 
 This API can't be used in a content script.
 
@@ -50,7 +52,7 @@ Events have three functions:
 
 - `function`
 
-  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
+  - : A callback function that is called when this event occurs. The function is passed these arguments:
 
     - `message`
       - : `object`. The message itself. This is a JSON-ifiable object.
@@ -62,10 +64,10 @@ Events have three functions:
 
         If you have more than one `onMessageExternal` listener in the same document, then only one may send a response.
 
-        To send a response synchronously, call `sendResponse` before the listener function returns. To send a response asynchronously:
+        To send a response synchronously, call `sendResponse` before the listener function returns. To send a response asynchronously, do one of these:
 
-        - either keep a reference to the `sendResponse` argument and return `true` from the listener function. You will then be able to call `sendResponse` after the listener function has returned.
-        - or return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) from the listener function and resolve the promise when the response is ready.
+        - keep a reference to the `sendResponse` argument and return `true` from the listener function. You can then call `sendResponse` after the listener function has returned.
+        - return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) from the listener function and resolve the promise when the response is ready.
 
 ## Browser compatibility
 

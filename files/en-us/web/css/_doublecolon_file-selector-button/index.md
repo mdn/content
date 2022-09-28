@@ -1,6 +1,7 @@
 ---
 title: '::file-selector-button'
 slug: Web/CSS/::file-selector-button
+page-type: css-pseudo-element
 tags:
   - CSS
   - Pseudo-element
@@ -30,7 +31,7 @@ selector::file-selector-button
 ```html
 <form>
   <label for="fileUpload">Upload file</label>
-  <input type="file" id="fileUpload">
+  <input type="file" id="fileUpload" />
 </form>
 ```
 
@@ -72,7 +73,7 @@ Note that `::file-selector-button` is a whole element, and as such matches the r
 ```html
 <form>
   <label for="fileUpload">Upload file</label>
-  <input type="file" id="fileUpload">
+  <input type="file" id="fileUpload" />
 </form>
 ```
 

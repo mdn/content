@@ -1,6 +1,7 @@
 ---
 title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
+page-type: css-property
 tags:
   - Adjusting Colors
   - CSS

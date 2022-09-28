@@ -20,7 +20,7 @@ If the field is numeric in nature, including the {{HTMLElement("input/date", "da
 Given the following:
 
 ```html
-<input type="number" min="20" max="40" step="2"/>
+<input type="number" min="20" max="40" step="2" />
 ```
 
 if `(value - min) % 2 !== 0`, `stepMismatch` will be true.

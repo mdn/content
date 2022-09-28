@@ -1,6 +1,7 @@
 ---
 title: offset-path
 slug: Web/CSS/offset-path
+page-type: css-property
 tags:
   - CSS
   - CSS Motion Path
@@ -89,44 +90,45 @@ The `offset-path` properties in the CSS code sample defines a motion path that i
 The top and bottom halves of the scissors would appear in the top left of the canvas were they not positioned along the starting point of the motion path defined by `offset-path`.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="700"
-     height="450"
-     viewBox="350 0 1400 900">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="700"
+  height="450"
+  viewBox="350 0 1400 900">
   <title>House and Scissors</title>
-  <rect x="595"
-        y="423"
-        width="610"
-        height="377"
-        fill="blue" />
-  <polygon points="506,423 900,190 1294,423"
-           fill="yellow" />
-  <polygon points="993,245 993,190 1086,190 1086,300"
-           fill="red" />
-  <path id="house" d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
-        fill="none"
-        stroke="black"
-        stroke-width="13"
-        stroke-linejoin="round"
-        stroke-linecap="round" />
-  <path id="firstScissorHalf" class="scissorHalf"
-        d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0"
-        transform="translate(0,0)"
-        fill="green"
-        stroke="black"
-        stroke-width="5"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        fill-rule="evenodd" />
-  <path id="secondScissorHalf" class="scissorHalf"
-        d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0"
-        transform="translate(0,0)"
-        fill="forestgreen"
-        stroke="black"
-        stroke-width="5"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        fill-rule="evenodd" />
+  <rect x="595" y="423" width="610" height="377" fill="blue" />
+  <polygon points="506,423 900,190 1294,423" fill="yellow" />
+  <polygon points="993,245 993,190 1086,190 1086,300" fill="red" />
+  <path
+    id="house"
+    d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
+    fill="none"
+    stroke="black"
+    stroke-width="13"
+    stroke-linejoin="round"
+    stroke-linecap="round" />
+  <path
+    id="firstScissorHalf"
+    class="scissorHalf"
+    d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0"
+    transform="translate(0,0)"
+    fill="green"
+    stroke="black"
+    stroke-width="5"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    fill-rule="evenodd" />
+  <path
+    id="secondScissorHalf"
+    class="scissorHalf"
+    d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0"
+    transform="translate(0,0)"
+    fill="forestgreen"
+    stroke="black"
+    stroke-width="5"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    fill-rule="evenodd" />
 </svg>
 ```
 

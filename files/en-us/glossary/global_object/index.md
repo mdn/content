@@ -3,7 +3,6 @@ title: Global object
 slug: Glossary/Global_object
 tags:
   - CodingScripting
-  - Glossary
   - NeedsContent
 ---
 

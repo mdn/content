@@ -1,8 +1,9 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Reference
   - Experimental
@@ -59,9 +60,15 @@ This HTML will apply a special stylesheet for devices that have round screens.
 
 ```html
 <head>
-    <link rel="stylesheet" href="default.css" />
-    <link media="screen and (shape: rect)" rel="stylesheet" href="rectangle.css" />
-    <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
+  <link rel="stylesheet" href="default.css" />
+  <link
+    media="screen and (shape: rect)"
+    rel="stylesheet"
+    href="rectangle.css" />
+  <link 
+     media="screen and (shape: round)" 
+      rel="stylesheet" 
+      href="round.css" />
 </head>
 ```
 

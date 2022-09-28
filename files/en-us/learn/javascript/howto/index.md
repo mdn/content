@@ -26,9 +26,9 @@ Some common built-in browser functions that cause problems are:
 | `getElementsByClassName()` | `getElementByClassName()` |
 | `getElementById()`         | `getElementsById()`       |
 
-### Semi-colon position
+### Semicolon position
 
-You need to make sure you don't place any semi-colons incorrectly. For example:
+You need to make sure you don't place any semicolons incorrectly. For example:
 
 | Correct                     | Wrong                       |
 | --------------------------- | --------------------------- |

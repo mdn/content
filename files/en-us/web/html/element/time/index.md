@@ -159,8 +159,9 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 #### HTML
 
 ```html
-<p>The concert took place on <time
-  datetime="2001-05-15T19:00">May 15</time>.</p>
+<p>
+  The concert took place on <time datetime="2001-05-15T19:00">May 15</time>.
+</p>
 ```
 
 #### Output

@@ -85,9 +85,7 @@ audio track.
     `advanced` and any constraints which in turn have a member named
     `min` or `exact`.
 
-## Usage notes
-
-### Privacy and security
+## Security
 
 Because `getDisplayMedia()` could be used in nefarious ways, it can be a
 source of significant privacy and security concerns. For that reason, the specification
@@ -99,8 +97,7 @@ details measures browsers are required to take in order to fully support
   to generate output that matches the constraints.
 - The go-ahead permission to use `getDisplayMedia()` cannot be persisted
   for reuse. The user must be prompted for permission every time.
-- The call to `getDisplayMedia()` must be made from code which is running
-  in response to a user action, such as in an event handler.
+- [Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 - Browsers are encouraged to provide a warning to users about sharing displays or
   windows that contain browsers, and to keep a close eye on what other content might be
   getting captured and shown to other users.

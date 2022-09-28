@@ -1,6 +1,7 @@
 ---
 title: padding-block-start
 slug: Web/CSS/padding-block-start
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
@@ -99,5 +100,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

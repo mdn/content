@@ -1,8 +1,9 @@
 ---
 title: system
 slug: Web/CSS/@counter-style/system
+page-type: css-at-rule-descriptor
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Counter Styles
@@ -143,11 +144,11 @@ If your browser supports it, this example will render a list like this:
 
 ```html hidden
 <ul>
- <li>One</li>
- <li>Two</li>
- <li>Three</li>
- <li>Four</li>
- <li>Five</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
 </ul>
 ```
 
@@ -186,14 +187,14 @@ bbb. Eight
 
 ```html hidden
 <ul>
- <li>One</li>
- <li>Two</li>
- <li>Three</li>
- <li>Four</li>
- <li>Five</li>
- <li>Six</li>
- <li>Seven</li>
- <li>Eight</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+  <li>Six</li>
+  <li>Seven</li>
+  <li>Eight</li>
 </ul>
 ```
 
@@ -232,14 +233,14 @@ bb. Seven
 
 ```html hidden
 <ul>
- <li>One</li>
- <li>Two</li>
- <li>Three</li>
- <li>Four</li>
- <li>Five</li>
- <li>Six</li>
- <li>Seven</li>
- <li>Eight</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+  <li>Six</li>
+  <li>Seven</li>
+  <li>Eight</li>
 </ul>
 ```
 
@@ -280,14 +281,14 @@ The first symbol provided in the `symbols` descriptor is interpreted as `0` here
 
 ```html hidden
 <ul>
- <li>One</li>
- <li>Two</li>
- <li>Three</li>
- <li>Four</li>
- <li>Five</li>
- <li>Six</li>
- <li>Seven</li>
- <li>Eight</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+  <li>Six</li>
+  <li>Seven</li>
+  <li>Eight</li>
 </ul>
 ```
 
@@ -315,16 +316,16 @@ As shown in the following example, if digits from `0` to `9` are specified as sy
 
 ```html hidden
 <ul class="list">
- <li>One</li>
- <li>Two</li>
- <li>Three</li>
- <li>Four</li>
- <li>Five</li>
- <li>Six</li>
- <li>Seven</li>
- <li>Eight</li>
- <li>Nine</li>
- <li>Ten</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+  <li>Six</li>
+  <li>Seven</li>
+  <li>Eight</li>
+  <li>Nine</li>
+  <li>Ten</li>
 </ul>
 ```
 
@@ -352,11 +353,11 @@ This example renders a list using Roman numerals. Notice that a `range` is speci
 
 ```html
 <ul class="list">
- <li>One</li>
- <li>Two</li>
- <li>Three</li>
- <li>Four</li>
- <li>Five</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
 </ul>
 ```
 
@@ -387,11 +388,11 @@ This example will use the algorithm, symbols, and other properties of the `lower
 
 ```html
 <ul class="list">
- <li>One</li>
- <li>Two</li>
- <li>Three</li>
- <li>Four</li>
- <li>Five</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
 </ul>
 ```
 

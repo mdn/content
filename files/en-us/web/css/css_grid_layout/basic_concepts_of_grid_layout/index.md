@@ -397,7 +397,8 @@ Grid has a solution for this with the {{cssxref("minmax", "minmax()")}} function
 ```html
 <div class="wrapper">
   <div>One</div>
-  <div>Two
+  <div>
+    Two
     <p>I have some more content in.</p>
     <p>This makes me taller than 100 pixels.</p>
   </div>
@@ -592,16 +593,16 @@ If I set `box1` to `display: grid` I can give it a track definition and it too w
 
 ```html hidden
 <div class="wrapper">
-    <div class="box box1">
-      <div class="nested">a</div>
-      <div class="nested">b</div>
-      <div class="nested">c</div>
-    </div>
-    <div class="box box2">Two</div>
-    <div class="box box3">Three</div>
-    <div class="box box4">Four</div>
-    <div class="box box5">Five</div>
+  <div class="box box1">
+    <div class="nested">a</div>
+    <div class="nested">b</div>
+    <div class="nested">c</div>
   </div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
+</div>
 ```
 
 ```css

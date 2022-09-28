@@ -3,7 +3,6 @@ title: Plaintext
 slug: Glossary/Plaintext
 tags:
   - Cryptography
-  - Glossary
   - Security
 ---
 

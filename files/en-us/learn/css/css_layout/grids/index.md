@@ -103,13 +103,13 @@ body {
 
 ```html hidden
 <div class="container">
- <div>One</div>
- <div>Two</div>
- <div>Three</div>
- <div>Four</div>
- <div>Five</div>
- <div>Six</div>
- <div>Seven</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
 </div>
 ```
 
@@ -426,13 +426,34 @@ aside {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
   <aside>
     <h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contact me@example.com</footer>
 </div>
@@ -504,12 +525,34 @@ aside {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contact me@example.com</footer>
 </div>
@@ -587,12 +630,34 @@ aside {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contact me@example.com</footer>
 </div>

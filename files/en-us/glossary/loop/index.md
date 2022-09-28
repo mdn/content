@@ -3,7 +3,6 @@ title: Loop
 slug: Glossary/loop
 tags:
   - CodingScripting
-  - Glossary
   - control flow
   - programming
 ---
@@ -14,7 +13,7 @@ A loop is a sequence of instructions that is continually repeated until a certai
 
 ### For loop
 
-#### Syntax:
+#### Syntax
 
 ```
 for (statement 1; statement 2; statement 3) {
@@ -26,7 +25,7 @@ for (statement 1; statement 2; statement 3) {
 - Statement 2 defines the condition needed to execute the code block.
 - Statement 3 is executed every time the code block is run.
 
-#### Example:
+#### Example
 
 ```js
 for (let i = 0; i < 10; i++) {
@@ -43,7 +42,7 @@ For the above example, the syntax is as follows:
 
 ### While loop
 
-#### Syntax:
+#### Syntax
 
 ```
 while (condition) {
@@ -53,7 +52,7 @@ while (condition) {
 
 - The code block will continue to loop as long as the condition is true.
 
-#### Example:
+#### Example
 
 ```js
 let i = 0;

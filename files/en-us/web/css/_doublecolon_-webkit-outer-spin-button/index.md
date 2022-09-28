@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-outer-spin-button'
 slug: Web/CSS/::-webkit-outer-spin-button
+page-type: css-pseudo-element
 tags:
   - CSS
   - Non-standard
@@ -31,7 +32,7 @@ This example uses `input::-webkit-outer-spin-button` to find {{HTMLElement("inpu
 #### HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 #### CSS

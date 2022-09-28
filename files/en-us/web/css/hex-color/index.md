@@ -1,6 +1,7 @@
 ---
 title: <hex-color>
 slug: Web/CSS/hex-color
+page-type: css-type
 tags:
   - Reference
   - CSS
@@ -39,7 +40,8 @@ A `<hex-color>` value can be used everywhere where a [`<color>`](/en-US/docs/Web
 ## Examples
 
 ```html
-/* Hexadecimal syntax for a fully opaque hot pink */
+<p>Hexadecimal syntax for a fully opaque hot pink</p>
+
 #f09 <div class="c1"></div>
 #F09 <div class="c2"></div>
 #ff0099 <div class="c3"></div>

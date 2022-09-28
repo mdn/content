@@ -1,11 +1,12 @@
 ---
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
+page-type: css-property
 tags:
   - CSS
   - CSS Property
   - Reference
-  - css scrollbars
+  - CSS scrollbars
   - recipe:css-property
   - scrollbar-color
 browser-compat: css.properties.scrollbar-color
@@ -94,7 +95,13 @@ When using `scrollbar-color` property with specific color values, authors should
 #### HTML
 
 ```html
-<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+<div class="scroller">
+  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+  earthnut pea peanut soko zucchini.
+</div>
 ```
 
 #### Result

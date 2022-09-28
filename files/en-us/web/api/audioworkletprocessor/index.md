@@ -71,27 +71,30 @@ First, we need to define a custom `AudioWorkletProcessor`, which will output whi
 ```js
 // white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  process (inputs, outputs, parameters) {
-    const output = outputs[0]
+  process(inputs, outputs, parameters) {
+    const output = outputs[0];
     output.forEach((channel) => {
       for (let i = 0; i < channel.length; i++) {
-        channel[i] = Math.random() * 2 - 1
+        channel[i] = Math.random() * 2 - 1;
       }
-    })
-    return true
+    });
+    return true;
   }
 }
 
-registerProcessor('white-noise-processor', WhiteNoiseProcessor)
+registerProcessor("white-noise-processor", WhiteNoiseProcessor);
 ```
 
 Next, in our main script file we'll load the processor, create an instance of {{domxref("AudioWorkletNode")}}, passing it the name of the processor, then connect the node to an audio graph.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('white-noise-processor.js')
-const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
-whiteNoiseNode.connect(audioContext.destination)
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("white-noise-processor.js");
+const whiteNoiseNode = new AudioWorkletNode(
+  audioContext,
+  "white-noise-processor"
+);
+whiteNoiseNode.connect(audioContext.destination);
 ```
 
 ## Specifications

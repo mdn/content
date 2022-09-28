@@ -1,8 +1,9 @@
 ---
 title: color
 slug: Web/CSS/@media/color
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
@@ -27,7 +28,10 @@ See [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/A
 ### HTML
 
 ```html
-<p>This text should be black on non-color devices, red on devices with a low number of colors, and greenish on devices with a high number of colors.</p>
+<p>
+  This text should be black on non-color devices, red on devices with a low
+  number of colors, and greenish on devices with a high number of colors.
+</p>
 ```
 
 ### CSS

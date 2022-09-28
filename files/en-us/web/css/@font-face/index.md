@@ -1,8 +1,9 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
+page-type: css-at-rule
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule
   - CSS
   - CSS Fonts
@@ -121,22 +122,24 @@ This example specifies a downloadable font to use, applying it to the entire bod
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Web Font Sample</title>
-  <style media="screen, print">
-    @font-face {
-      font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
-    }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Web Font Sample</title>
+    <style media="screen, print">
+      @font-face {
+        font-family: "Bitstream Vera Serif Bold";
+        src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+      }
 
-    body { font-family: "Bitstream Vera Serif Bold", serif }
-  </style>
-</head>
-<body>
-  This is Bitstream Vera Serif Bold.
-</body>
+      body {
+        font-family: "Bitstream Vera Serif Bold", serif;
+      }
+    </style>
+  </head>
+  <body>
+    This is Bitstream Vera Serif Bold.
+  </body>
 </html>
 ```
 

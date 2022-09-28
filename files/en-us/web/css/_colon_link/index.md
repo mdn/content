@@ -1,6 +1,7 @@
 ---
-title: ':link'
+title: ":link"
 slug: Web/CSS/:link
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -34,8 +35,8 @@ By default, most browsers apply a special {{cssxref("color")}} value to visited 
 ### HTML
 
 ```html
-<a href="#ordinary-target">This is an ordinary link.</a><br>
-<a href="">You've already visited this link.</a><br>
+<a href="#ordinary-target">This is an ordinary link.</a><br />
+<a href="">You've already visited this link.</a><br />
 <a>Placeholder link (won't get styled)</a>
 ```
 

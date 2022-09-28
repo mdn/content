@@ -11,7 +11,7 @@ browser-compat: mathml.elements.mfrac
 
 {{MathMLRef}}
 
-The MathML `<mfrac>` element is used to display fractions.  It can also be used
+The MathML `<mfrac>` element is used to display fractions. It can also be used
 to mark up fraction-like objects such as
 [binomial coefficients](https://en.wikipedia.org/wiki/Binomial_coefficient)
 and [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol).
@@ -24,17 +24,14 @@ and [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol).
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
 - `denomalign` {{deprecated_inline}}
   - : The alignment of the denominator under the fraction. Possible values are: `left`, `center` (default), and `right`.
-    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
 - `linethickness`
-  - : The thickness of the horizontal fraction line. This attributes accepts any [length values](/en-US/docs/Web/CSS/length).
-    The values `medium`, `thin`, and `thick` are deprecated and will be removed in the future.
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the thickness of the horizontal fraction line. Some browsers may also accept deprecated values `medium`, `thin` and `thick` but their exact interpretation is left to implementers.
 - `numalign` {{deprecated_inline}}
   - : The alignment of the numerator over the fraction. Possible values are: `left`, `center` (default), and `right`.
-    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
 
 ## Examples
 
@@ -44,7 +41,6 @@ The following MathML code should render as a fraction with numerator "a + 2" and
 denominator "3 − b":
 
 ```html
-
 <math display="block">
   <mfrac>
     <mrow>
@@ -58,6 +54,7 @@ denominator "3 − b":
       <mi>b</mi>
     </mrow>
   </mfrac>
+</math>
 ```
 
 {{ EmbedLiveSample('simple_fraction', 700, 200, "", "") }}
@@ -67,10 +64,9 @@ denominator "3 − b":
 The following MathML code should render as a [binomial coefficient](https://en.wikipedia.org/wiki/Binomial_coefficient):
 
 ```html hidden
- <link
-   rel="stylesheet"
-   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-  />
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
 ```
 
 ```html

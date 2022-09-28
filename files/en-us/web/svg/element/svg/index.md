@@ -27,7 +27,11 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
+<svg
+  viewBox="0 0 300 100"
+  xmlns="http://www.w3.org/2000/svg"
+  stroke="red"
+  fill="grey">
   <circle cx="50" cy="50" r="40" />
   <circle cx="150" cy="50" r="4" />
 

@@ -1,6 +1,7 @@
 ---
 title: height
 slug: Web/CSS/height
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -28,6 +29,7 @@ The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override 
 /* <length> values */
 height: 120px;
 height: 10em;
+height: 100vh;
 
 /* <percentage> value */
 height: 75%;
@@ -90,9 +92,7 @@ Ensure that elements set with a `height` aren't truncated and/or don't obscure o
 <div id="taller">I'm 50 pixels tall.</div>
 <div id="shorter">I'm 25 pixels tall.</div>
 <div id="parent">
-  <div id="child">
-    I'm half the height of my parent.
-  </div>
+  <div id="child">I'm half the height of my parent.</div>
 </div>
 ```
 

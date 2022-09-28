@@ -3,7 +3,6 @@ title: Canvas
 slug: Glossary/Canvas
 tags:
   - CodingScripting
-  - Glossary
   - Graphics
   - HTML
   - JavaScript

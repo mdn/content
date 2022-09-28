@@ -55,11 +55,11 @@ With JavaScript, developers control the adding and removing of alerts as appropr
 ```
 
 ```js
-const btn = document.querySelector('button');
-btn.addEventListener('click', triggerAlert);
+const btn = document.querySelector("button");
+btn.addEventListener("click", triggerAlert);
 
 function triggerAlert() {
-  const alertEl = document.querySelector('.alert');
+  const alertEl = document.querySelector(".alert");
   alertEl.setAttribute("role", "alert");
 }
 ```
@@ -87,9 +87,11 @@ If the element is in the original source code when the page loads, the screen re
 This snippet dynamically creates an element with an alert role and adds it to the document structure.
 
 ```js
-let myAlert = document.createElement("p");
+const myAlert = document.createElement("p");
 myAlert.setAttribute("role", "alert");
-let myAlertText = document.createTextNode("You must agree with our terms of service to create an account.");
+const myAlertText = document.createTextNode(
+  "You must agree with our terms of service to create an account."
+);
 myAlert.appendChild(myAlertText);
 document.body.appendChild(myAlert);
 ```
@@ -113,7 +115,7 @@ If an element already has `role="alert"` and is initially hidden using CSS, maki
 
 ```css
 .hidden {
-  display:none;
+  display: none;
 }
 ```
 
@@ -125,7 +127,7 @@ If an element already has `role="alert"` and is initially hidden using CSS, maki
 
 ```js
 // removing the 'hidden' class makes the element visible, which will make the screen reader announce the alert:
-document.getElementById("expirationWarning").classList.remove('hidden');
+document.getElementById("expirationWarning").classList.remove("hidden");
 ```
 
 ## Specifications

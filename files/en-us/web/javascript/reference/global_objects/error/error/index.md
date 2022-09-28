@@ -51,7 +51,7 @@ Error(message, fileName, lineNumber)
 
 ### Function call or new construction
 
-When `Error` is used like a function, that is without {{JSxRef("Operators/new",  "new")}}, it will return an `Error` object.
+When `Error` is used like a function, that is without {{JSxRef("Operators/new", "new")}}, it will return an `Error` object.
 Therefore, a mere call to `Error` will produce the same output that constructing an `Error` object via the `new` keyword would.
 
 ```js

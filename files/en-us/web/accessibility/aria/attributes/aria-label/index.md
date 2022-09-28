@@ -72,7 +72,23 @@ If you give your {{HTMLElement('iframe')}}s a `title`, your images an `alt` attr
 
 Used in almost all roles **except** roles that can not be provided an accessible name by the author.
 
-The `aria-label` attribute is **NOT** supported in [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role), [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`mark`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role), [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)/[`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role), [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role), [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role), and [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+The `aria-label` attribute is **NOT** supported in:
+
+- [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)
+- [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`mark`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role)
+- [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role)
+- [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
+- [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
+- [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 
 > **Note:** The `aria-label` attribute is intended for interactive elements only. When placed on non-interactive elements, such as those listed above, it may not be read or may confuse your users as a non-interactive element that acts like an interactive one.
 

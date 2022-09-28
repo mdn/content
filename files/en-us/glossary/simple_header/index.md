@@ -3,7 +3,6 @@ title: Simple header
 slug: Glossary/Simple_header
 tags:
   - CORS
-  - Glossary
   - HTTP
   - Infrastructure
 ---

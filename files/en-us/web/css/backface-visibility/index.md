@@ -1,6 +1,7 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -77,9 +78,8 @@ This example shows a cube with transparent faces, and one with opaque faces.
         </div>
       </div>
       <p>
-        Since all faces are partially transparent,
-        the back faces (2, 4, 5) are visible
-        through the front faces (1, 3, 6).
+        Since all faces are partially transparent, the back faces (2, 4, 5) are
+        visible through the front faces (1, 3, 6).
       </p>
     </td>
     <td>
@@ -93,10 +93,7 @@ This example shows a cube with transparent faces, and one with opaque faces.
           <div class="face bottom">6</div>
         </div>
       </div>
-      <p>
-        The three back faces (2, 4, 5) are
-        hidden.
-      </p>
+      <p>The three back faces (2, 4, 5) are hidden.</p>
     </td>
   </tr>
 </table>

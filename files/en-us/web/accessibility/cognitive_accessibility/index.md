@@ -177,7 +177,7 @@ Content should be written as clearly and as possible. A good rule to go by is to
 - Using active voice in the present tense.
 - Using correct grammar and spelling.
 
-It helps users with cognitive disabilities to provide a text summary (sometimes referred to as a TL;DR; , or "too long, didn't read") at a low reading level. Another technique you can use is providing accompanying visuals to help explain ideas, events, and processes.
+It helps users with cognitive disabilities to provide a text summary (sometimes referred to as a TL;DR, or "too long; didn't read") at a low reading level. Another technique you can use is providing accompanying visuals to help explain ideas, events, and processes.
 
 There are tools that can rate the level of your content. For example, this document has an average grade level of about 11. This means it should be easily understood by a native English speaker aged 16 to 17. Some tools can even provide suggestions to help simplify it.
 

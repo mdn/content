@@ -1,6 +1,7 @@
 ---
 title: <translation-value>
 slug: Web/CSS/translation-value
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -31,12 +32,12 @@ Choose one, and the transform is applied to the cube; after 2 seconds, the cube 
 ```html
 <main>
   <section id="example-element">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
   </section>
 
   <div class="select-form">

@@ -2,7 +2,6 @@
 title: SCTP
 slug: Glossary/SCTP
 tags:
-  - Glossary
   - Infrastructure
   - SCTP
   - WebRTC

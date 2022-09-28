@@ -44,7 +44,7 @@ Note that the devtools page does not get access to any other WebExtension APIs, 
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>DevTools Extension</title>
   </head>
   <body>

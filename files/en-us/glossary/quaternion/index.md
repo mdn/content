@@ -3,7 +3,6 @@ title: Quaternion
 slug: Glossary/Quaternion
 tags:
   - Definition
-  - Glossary
   - Orientation
   - Quaternion
   - WebXR

@@ -1,6 +1,7 @@
 ---
 title: ':-moz-locale-dir(ltr)'
 slug: Web/CSS/:-moz-locale-dir(ltr)
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions

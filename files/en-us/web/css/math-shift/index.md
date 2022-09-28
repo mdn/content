@@ -4,7 +4,7 @@ slug: Web/CSS/math-shift
 tags:
   - CSS
   - MathML
-  - Property
+  - CSS Property
   - Reference
   - math-shift
   - Experimental
@@ -62,8 +62,7 @@ The following MathML displays two versions of "x squared" using the Latin Modern
 ```html hidden
 <link
   rel="stylesheet"
-  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
-/>
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
 ```
 
 ```html

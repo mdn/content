@@ -61,7 +61,9 @@ X-XSS-Protection: 1; report=<reporting-uri>
 Consider the following excerpt of HTML code for a webpage:
 
 ```html
-<script>var productionMode = true;</script>
+<script>
+  var productionMode = true;
+</script>
 <!-- [...] -->
 <script>
   if (!window.productionMode) {

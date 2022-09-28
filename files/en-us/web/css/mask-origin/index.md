@@ -1,6 +1,7 @@
 ---
 title: mask-origin
 slug: Web/CSS/mask-origin
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

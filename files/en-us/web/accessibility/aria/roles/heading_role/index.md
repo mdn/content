@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: heading role'
+title: "ARIA: heading role"
 slug: Web/Accessibility/ARIA/Roles/heading_role
 tags:
   - ARIA

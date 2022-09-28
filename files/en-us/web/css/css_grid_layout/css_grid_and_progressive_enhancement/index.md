@@ -81,7 +81,7 @@ img {
     align-self: end;
 }
 
-\* old code we can't remove *\
+/* old code we can't remove */
 .media .image {
     float: left;
     width: 150px;
@@ -91,8 +91,13 @@ img {
 
 ```html
 <div class="media">
-    <div class="image"><img src="https://via.placeholder.com/150x150" alt="placeholder"></div>
-    <div class="text">This is a media object example. I am using floats for older browsers and grid for new ones.</div>
+  <div class="image">
+    <img src="https://via.placeholder.com/150x150" alt="placeholder" />
+  </div>
+  <div class="text">
+    This is a media object example. I am using floats for older browsers and
+    grid for new ones.
+  </div>
 </div>
 ```
 
@@ -147,26 +152,32 @@ In this next example, I have a set of floated cards. I have given the cards a {{
 
 ```html
 <div class="wrapper">
-    <ul>
-        <li class="card"><h2>One</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card"><h2>Two</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card"><h2>Three</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card"><h2>Four</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card"><h2>Five</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card"><h2>Six</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-    </ul>
+  <ul>
+    <li class="card">
+      <h2>One</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Two</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Three</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Four</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Five</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Six</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+  </ul>
 </div>
 ```
 
@@ -250,27 +261,33 @@ I use an `@supports` rule to check for support of `display: grid`. I then do my 
 
 ```html
 <div class="wrapper">
-    <ul>
-        <li class="card"><h2>One</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card"><h2>Two</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card"><h2>Three</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card"><h2>Four</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card"><h2>Five</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card"><h2>Six</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-    </ul>
+  <ul>
+    <li class="card">
+      <h2>One</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Two</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Three</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Four</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Five</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Six</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+  </ul>
 </div>
 ```
 
@@ -333,33 +350,33 @@ Once again I can use feature queries to overwrite a layout that uses `display: i
 
 ```html
 <div class="wrapper">
-    <ul>
-        <li class="card">
-            <h2>One</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card">
-            <h2>Two</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card">
-            <h2>Three</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card">
-            <h2>Four</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card">
-            <h2>Five</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-        <li class="card">
-            <h2>Six</h2>
-            <p>We can use CSS Grid to overwrite older methods.</p>
-        </li>
-    </ul>
+  <ul>
+    <li class="card">
+      <h2>One</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Two</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Three</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Four</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Five</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+    <li class="card">
+      <h2>Six</h2>
+      <p>We can use CSS Grid to overwrite older methods.</p>
+    </li>
+  </ul>
 </div>
 ```
 

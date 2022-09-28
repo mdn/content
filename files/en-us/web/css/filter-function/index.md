@@ -1,6 +1,7 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -70,9 +71,7 @@ This example provides a simple graphic, along with a select menu to allow you to
       <option>sepia</option>
     </select>
   </li>
-  <li>
-    <input type="range"><output></output>
-  </li>
+  <li><input type="range" /><output></output></li>
   <li>
     <p>Current value: <code></code></p>
   </li>

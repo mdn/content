@@ -1,6 +1,7 @@
 ---
 title: clip
 slug: Web/CSS/clip
+page-type: css-property
 tags:
   - CSS
   - CSS Masking
@@ -94,10 +95,21 @@ clip: unset;
 
 ```html
 <p class="dotted-border">
-  <img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original graphic">
-  <img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left">
-  <img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle">
-  <img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right">
+  <img
+    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
+    title="Original graphic" />
+  <img
+    id="top-left"
+    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
+    title="Graphic clipped to upper left" />
+  <img
+    id="middle"
+    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
+    title="Graphic clipped towards middle" />
+  <img
+    id="bottom-right"
+    src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg"
+    title="Graphic clipped to bottom right" />
 </p>
 ```
 

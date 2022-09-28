@@ -1,6 +1,7 @@
 ---
 title: clear
 slug: Web/CSS/clear
+page-type: css-property
 tags:
   - CSS
   - CSS Positioning
@@ -82,7 +83,10 @@ clear: unset;
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
   <p class="left">This paragraph clears left.</p>
 </div>
@@ -125,7 +129,10 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
   <p class="right">This paragraph clears right.</p>
 </div>
@@ -168,8 +175,15 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.</p>
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus
+    ac dui.
+  </p>
+  <p class="red">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="both">This paragraph clears both.</p>
 </div>
 ```

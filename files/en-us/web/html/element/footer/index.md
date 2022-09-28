@@ -116,8 +116,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ```html
 <footer>
-  Some copyright info or perhaps some author
-  info for an &lt;article&gt;?
+  Some copyright info or perhaps some author info for an &lt;article&gt;?
 </footer>
 ```
 

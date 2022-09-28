@@ -5,7 +5,6 @@ tags:
   - Browser
   - CSS
   - CodingScripting
-  - Glossary
   - HTML
   - JavaScript
   - Web Performance

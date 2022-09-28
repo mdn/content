@@ -3,7 +3,6 @@ title: DSL (Domain-Specific Language)
 slug: Glossary/DSL/Domain_specific_language
 tags:
   - CodingScripting
-  - Glossary
   - ProgrammingLanguage
 ---
 

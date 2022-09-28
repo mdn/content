@@ -51,10 +51,10 @@ Inside our grid container we have four child elements. If we do not place these 
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -102,10 +102,10 @@ Addressing each item individually we can place all four items spanning row and c
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -167,10 +167,10 @@ We have quite a lot of code here to position each item. It should come as no sur
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -228,10 +228,10 @@ This means that our initial, long-hand, example would look like this:
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -288,10 +288,10 @@ Our shorthand would look like the following code, with no forward slash and seco
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -350,10 +350,10 @@ We can take things a step further and define each area with a single property â€
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -416,10 +416,10 @@ In this next example, we have flipped the layout we were working with by working
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -497,10 +497,10 @@ Gaps only appear between tracks of the grid, they do not add space to the top an
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -576,10 +576,10 @@ In addition to specifying the start and end lines by number, you can specify a s
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 

@@ -22,12 +22,6 @@ The **`id`** read-only property of the {{domxref("Client")}} interface returns t
 
 A string uniquely identifying the object.
 
-## Examples
-
-```js
-TBD
-```
-
 ## Specifications
 
 {{Specifications}}

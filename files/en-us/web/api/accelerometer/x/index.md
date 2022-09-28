@@ -32,9 +32,9 @@ A {{jsxref('Number')}}.
 Acceleration is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 
 ```js
-let accelerometer = new Accelerometer({frequency: 60});
+const accelerometer = new Accelerometer({ frequency: 60 });
 
-accelerometer.addEventListener('reading', (e) => {
+accelerometer.addEventListener("reading", (e) => {
   console.log(`Acceleration along the X-axis ${accelerometer.x}`);
   console.log(`Acceleration along the Y-axis ${accelerometer.y}`);
   console.log(`Acceleration along the Z-axis ${accelerometer.z}`);

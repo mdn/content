@@ -1,6 +1,7 @@
 ---
-title: ':invalid'
+title: ":invalid"
 slug: Web/CSS/:invalid
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -35,12 +36,12 @@ This pseudo-class is useful for highlighting field errors for the user.
 <form>
   <div class="field">
     <label for="url_input">Enter a URL:</label>
-    <input type="url" id="url_input">
+    <input type="url" id="url_input" />
   </div>
 
   <div class="field">
     <label for="email_input">Enter an email address:</label>
-    <input type="email" id="email_input" required>
+    <input type="email" id="email_input" required />
   </div>
 </form>
 ```
@@ -97,24 +98,22 @@ In this example we use `:invalid` along with `~`, the [general sibling combinato
 
 ```html
 <form>
-
   <fieldset>
-    <label for="form-name">Name</label><br>
-    <input type="text" name="name" id="form-name" required>
+    <label for="form-name">Name</label><br />
+    <input type="text" name="name" id="form-name" required />
   </fieldset>
 
   <fieldset>
-    <label for="form-email">Email Address</label><br>
-    <input type="email" name="email" id="form-email" required>
+    <label for="form-email">Email Address</label><br />
+    <input type="email" name="email" id="form-email" required />
   </fieldset>
 
   <fieldset>
-    <label for="form-message">Message</label><br>
+    <label for="form-message">Message</label><br />
     <textarea name="message" id="form-message" required></textarea>
   </fieldset>
 
   <button type="submit" name="send">Submit</button>
-
 </form>
 ```
 

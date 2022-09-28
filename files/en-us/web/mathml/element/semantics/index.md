@@ -44,9 +44,8 @@ By default, only the first child of the `<semantics>` element is rendered while 
 ## Example
 
 ```html
-<math>
+<math display="block">
   <semantics>
-
     <!-- The first child is the MathML expression rendered by default. -->
     <mrow>
       <msup>
@@ -61,9 +60,9 @@ By default, only the first child of the `<semantics>` element is rendered while 
          express the meaning of mathematical formulas. -->
     <annotation-xml encoding="MathML-Content">
       <apply>
-        <plus/>
+        <plus />
         <apply>
-          <power/>
+          <power />
           <ci>x</ci>
           <cn type="integer">2</cn>
         </apply>
@@ -72,17 +71,16 @@ By default, only the first child of the `<semantics>` element is rendered while 
     </annotation-xml>
 
     <!-- Annotate with a PNG image of the formula. -->
-    <annotation encoding="image/png" src="some/path/formula.png"/>
+    <annotation encoding="image/png" src="some/path/formula.png" />
 
     <!-- Annotate with LaTeX, a lightweight markup language to write
          mathematical formulas. -->
-    <annotation encoding="application/x-tex">
-      x^{2} + y
-    </annotation>
-
+    <annotation encoding="application/x-tex"> x^{2} + y </annotation>
   </semantics>
 </math>
 ```
+
+{{ EmbedLiveSample('semantics_example', 700, 200, "", "") }}
 
 ## Specifications
 

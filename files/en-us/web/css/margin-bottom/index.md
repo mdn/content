@@ -1,6 +1,7 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -65,9 +66,9 @@ The `margin-bottom` property is specified as the keyword `auto`, or a `<length>`
 
 ```html
 <div class="container">
-<div class="box0">Box 0</div>
-<div class="box1">Box 1</div>
-<div class="box2">Box one's negative margin pulls me up</div>
+  <div class="box0">Box 0</div>
+  <div class="box1">Box 1</div>
+  <div class="box2">Box one's negative margin pulls me up</div>
 </div>
 ```
 

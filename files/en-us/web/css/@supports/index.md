@@ -1,6 +1,7 @@
 ---
-title: '@supports'
+title: "@supports"
 slug: Web/CSS/@supports
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS
@@ -15,21 +16,7 @@ browser-compat: css.at-rules.supports
 
 The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you specify declarations that depend on a browser's support for one or more specific CSS features. This is called a _feature query_. The rule may be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
 
-```css
-@supports (display: grid) {
-  div {
-    display: grid;
-  }
-}
-```
-
-```css
-@supports not (display: grid) {
-  div {
-    float: right;
-  }
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
 
 In JavaScript, `@supports` can be accessed via the CSS object model interface {{DOMxRef("CSSSupportsRule")}}.
 

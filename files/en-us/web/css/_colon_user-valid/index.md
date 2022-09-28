@@ -1,6 +1,7 @@
 ---
-title: ':user-valid (:-moz-ui-valid)'
+title: ":user-valid (:-moz-ui-valid)"
 slug: web/css/:user-valid
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS Selectors
@@ -42,7 +43,12 @@ Try changing the email address to another valid email to see it in action.
 ```html
 <form>
   <label for="email">Email *: </label>
-  <input id="email" name="email" type="email" value="test@example.com" required>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    value="test@example.com"
+    required />
   <span></span>
 </form>
 ```

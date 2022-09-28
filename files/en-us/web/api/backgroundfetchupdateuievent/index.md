@@ -36,26 +36,28 @@ _This interface doesn't implement any specific properties, but inherits properti
 In this example, the `backgroundfetchsuccess` event is listened for, indicating that a fetch has completed successfully. The {{domxref("BackgroundFetchUpdateUIEvent.updateUI()", "updateUI()")}} method is then called, with a message to let the user know the episode they downloaded is ready.
 
 ```js
-addEventListener('backgroundfetchsuccess', (event) => {
+addEventListener("backgroundfetchsuccess", (event) => {
   const bgFetch = event.registration;
 
-  event.waitUntil((async () => {
-    // Create/open a cache.
-    const cache = await caches.open('downloads');
-    // Get all the records.
-    const records = await bgFetch.matchAll();
-    // Copy each request/response across.
-    const promises = records.map(async (record) => {
-      const response = await record.responseReady;
-      await cache.put(record.request, response);
-    });
+  event.waitUntil(
+    (async () => {
+      // Create/open a cache.
+      const cache = await caches.open("downloads");
+      // Get all the records.
+      const records = await bgFetch.matchAll();
+      // Copy each request/response across.
+      const promises = records.map(async (record) => {
+        const response = await record.responseReady;
+        await cache.put(record.request, response);
+      });
 
-    // Wait for the copying to complete.
-    await Promise.all(promises);
+      // Wait for the copying to complete.
+      await Promise.all(promises);
 
-    // Update the progress notification.
-    event.updateUI({ title: 'Episode 5 ready to listen!' });
-  })());
+      // Update the progress notification.
+      event.updateUI({ title: "Episode 5 ready to listen!" });
+    })()
+  );
 });
 ```
 

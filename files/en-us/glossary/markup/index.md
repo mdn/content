@@ -2,7 +2,6 @@
 title: markup
 slug: Glossary/markup
 tags:
-  - Glossary
   - Intro
   - Markup
   - NeedsContent

@@ -48,10 +48,10 @@ This element implements the {{domxref("SVGFEMorphologyElement")}} interface.
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="180">
   <filter id="erode">
-    <feMorphology operator="erode" radius="1"/>
+    <feMorphology operator="erode" radius="1" />
   </filter>
   <filter id="dilate">
-    <feMorphology operator="dilate" radius="2"/>
+    <feMorphology operator="dilate" radius="2" />
   </filter>
   <text y="1em">Normal text</text>
   <text id="thin" y="2em">Thinned text</text>
@@ -85,10 +85,10 @@ text {
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <filter id="erode">
-    <feMorphology operator="erode" radius="1"/>
+    <feMorphology operator="erode" radius="1" />
   </filter>
   <filter id="dilate">
-    <feMorphology operator="dilate" radius="2"/>
+    <feMorphology operator="dilate" radius="2" />
   </filter>
 </svg>
 

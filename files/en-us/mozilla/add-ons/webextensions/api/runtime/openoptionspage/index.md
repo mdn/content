@@ -14,7 +14,9 @@ tags:
 browser-compat: webextensions.api.runtime.openOptionsPage
 ---
 
-{{AddonSidebar()}}If your extension has an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) defined, this method opens it.
+{{AddonSidebar()}}
+
+If your extension has an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) defined, this method opens it.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

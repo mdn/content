@@ -92,7 +92,7 @@ You can set a default value for the input control by including a month and year 
 
 ```html
 <label for="bday-month">What month were you born in?</label>
-<input id="bday-month" type="month" name="bday-month" value="2001-06">
+ <input id="bday-month" type="month" name="bday-month" value="2001-06" />
 ```
 
 {{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
@@ -107,7 +107,7 @@ You can also get and set the date value in JavaScript using the {{domxref("HTMLI
 
 ```html
 <label for="bday-month">What month were you born in?</label>
-<input id="bday-month" type="month" name="bday-month">
+<input id="bday-month" type="month" name="bday-month" />
 ```
 
 ```js
@@ -177,7 +177,7 @@ The simplest use of `<input type="month">` involves a basic {{HTMLElement("input
 ```html
 <form>
   <label for="bday-month">What month were you born in?</label>
-  <input id="bday-month" type="month" name="bday-month">
+  <input id="bday-month" type="month" name="bday-month" />
 </form>
 ```
 
@@ -191,8 +191,12 @@ In the following example we specify a minimum month of `1900-01` and a maximum m
 ```html
 <form>
   <label for="bday-month">What month were you born in?</label>
-  <input id="bday-month" type="month" name="bday-month"
-         min="1900-01" max="2013-12">
+  <input
+    id="bday-month"
+    type="month"
+    name="bday-month"
+    min="1900-01"
+    max="2013-12" />
 </form>
 ```
 
@@ -221,13 +225,20 @@ Let's look at an example; here we've set minimum and maximum dates, and also mad
 ```html
 <form>
   <div>
-    <label for="month">What month would you like to visit (June to Sept.)?</label>
-    <input id="month" type="month" name="month"
-           min="2022-06" max="2022-09" required>
+    <label for="month">
+      What month would you like to visit (June to Sept.)?
+    </label>
+    <input
+      id="month"
+      type="month"
+      name="month"
+      min="2022-06"
+      max="2022-09"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -305,14 +316,21 @@ For example, try viewing the following demo in a browser that doesn't support `m
 ```html
 <form>
   <div>
-    <label for="month">What month would you like to visit (June to Sept.)?</label>
-    <input id="month" type="month" name="month"
-           min="2022-06" max="2022-09" required
-           pattern="[0-9]{4}-[0-9]{2}">
+    <label for="month">
+      What month would you like to visit (June to Sept.)?
+    </label>
+    <input
+      id="month"
+      type="month"
+      name="month"
+      min="2022-06"
+      max="2022-09"
+      required
+      pattern="[0-9]{4}-[0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -369,7 +387,7 @@ The form that requests the month and year looks like this:
 <form>
   <div class="nativeDatePicker">
     <label for="month-visit">What month would you like to visit us?</label>
-    <input type="month" id="month-visit" name="month-visit">
+    <input type="month" id="month-visit" name="month-visit" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">What month would you like to visit us?</p>
@@ -394,8 +412,7 @@ The form that requests the month and year looks like this:
       </span>
       <span>
         <label for="year">Year:</label>
-        <select id="year" name="year">
-        </select>
+        <select id="year" name="year"></select>
       </span>
     </div>
   </div>

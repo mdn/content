@@ -1,8 +1,9 @@
 ---
 title: prefers-reduced-data
 slug: Web/CSS/@media/prefers-reduced-data
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
@@ -38,8 +39,13 @@ In this example the `montserrat-regular.woff2` font file will neither be preload
 
 ```html
 <head>
-  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" media="(prefers-reduced-data: no-preference)" crossorigin>
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="preload"
+    href="fonts/montserrat-regular.woff2"
+    as="font"
+    media="(prefers-reduced-data: no-preference)"
+    crossorigin />
+  <link rel="stylesheet" href="style.css" />
 </head>
 ```
 

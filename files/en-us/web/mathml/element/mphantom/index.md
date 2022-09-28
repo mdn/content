@@ -19,25 +19,21 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 
 ## Examples
 
-Sample rendering: ![x+  z](mphantom.png)
-
-Rendering in your browser: <math><mrow><mi>x</mi><mo>+</mo><mphantom><mi>y</mi><mo>+</mo></mphantom><mi>z</mi></mrow></math>
-
 ```html
-<math>
-
-<mrow>
-  <mi>x</mi>
-  <mo>+</mo>
-  <mphantom>
-    <mi>y</mi>
+<math display="block">
+  <mrow>
+    <mi>x</mi>
     <mo>+</mo>
-  </mphantom>
-  <mi>z</mi>
-</mrow>
-
+    <mphantom>
+      <mi>y</mi>
+      <mo>+</mo>
+    </mphantom>
+    <mi>z</mi>
+  </mrow>
 </math>
 ```
+
+{{ EmbedLiveSample('mphantom_example', 700, 200, "", "") }}
 
 ## Specifications
 

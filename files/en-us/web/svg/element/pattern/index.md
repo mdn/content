@@ -28,12 +28,18 @@ svg {
 <svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
-      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2"/>
+      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" />
     </pattern>
   </defs>
 
-  <circle cx="50"  cy="50" r="50" fill="url(#star)"/>
-  <circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)"/>
+  <circle cx="50" cy="50" r="50" fill="url(#star)" />
+  <circle
+    cx="180"
+    cy="50"
+    r="40"
+    fill="none"
+    stroke-width="20"
+    stroke="url(#star)" />
 </svg>
 ```
 
@@ -57,7 +63,7 @@ svg {
   - : This attribute contains the definition of an optional additional transformation from the pattern coordinate system onto the target coordinate system.
     _Value type_: **[\<transform-list>](/en-US/docs/Web/SVG/Content_type#transform-list)**; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("patternUnits")}}
-  - : This attribute defines the coordinate system for attributes `x`, `y`, `width` , and `height`.
+  - : This attribute defines the coordinate system for attributes `x`, `y`, `width`, and `height`.
     _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
   - : This attribute defines how the SVG fragment must be deformed if it is embedded in a container with a different aspect ratio.

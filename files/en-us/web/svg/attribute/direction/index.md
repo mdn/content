@@ -36,10 +36,14 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 600 72" xmlns="http://www.w3.org/2000/svg"
-    direction="rtl" lang="fa">
-  <text x="300" y="50" text-anchor="middle"
-      font-size="36">داستان SVG 1.1 SE طولا ني است.</text>
+<svg
+  viewBox="0 0 600 72"
+  xmlns="http://www.w3.org/2000/svg"
+  direction="rtl"
+  lang="fa">
+  <text x="300" y="50" text-anchor="middle" font-size="36">
+    داستان SVG 1.1 SE طولا ني است.
+  </text>
 </svg>
 ```
 

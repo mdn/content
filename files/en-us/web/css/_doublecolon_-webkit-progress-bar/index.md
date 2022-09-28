@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-progress-bar'
 slug: Web/CSS/::-webkit-progress-bar
+page-type: css-pseudo-element
 tags:
   - CSS
   - Non-standard
@@ -39,7 +40,7 @@ progress {
 ### HTML content
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### Result

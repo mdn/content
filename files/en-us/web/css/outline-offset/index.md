@@ -1,6 +1,7 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
+page-type: css-property
 tags:
   - CSS
   - CSS Outline

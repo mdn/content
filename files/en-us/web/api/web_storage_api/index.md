@@ -23,7 +23,7 @@ The **Web Storage API** provides mechanisms by which browsers can store key/valu
 
 The two mechanisms within Web Storage are as follows:
 
-- `sessionStorage` maintains a separate storage area for each given origin that's available for the duration of the page session (as long as the browser is open, including page reloads and restores)
+- `sessionStorage` maintains a separate storage area for each given origin that's available for the duration of the page session (as long as the browser is open, including page reloads and restores).
 
   - Stores data only for a session, meaning that the data is stored until the browser (or tab) is closed.
   - Data is never transferred to the server.
@@ -38,7 +38,7 @@ These mechanisms are available via the {{domxref("Window.sessionStorage")}} and 
 
 > **Note:** From Firefox 45 onwards, when the browser crashes/restarts, the amount of data saved per origin is limited to 10MB. This has been done to avoid memory issues caused by excessive usage of web storage.
 
-> **Note:** Access to Web Storage from third-party IFrames is denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (Firefox implements this behavior from [version 43](/en-US/docs/Mozilla/Firefox/Releases/43) onwards.)
+> **Note:** Access to Web Storage from third-party IFrames is denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (Firefox implements this behavior from [version 43](/en-US/docs/Mozilla/Firefox/Releases/43) onwards).
 
 > **Note:** Web Storage is not the same as `mozStorage` (Mozilla's XPCOM interfaces to SQLite) or the `Session store API` (an XPCOM storage utility for use by extensions).
 
@@ -47,7 +47,7 @@ These mechanisms are available via the {{domxref("Window.sessionStorage")}} and 
 - {{domxref("Storage")}}
   - : Allows you to set, retrieve and remove data for a specific domain and storage type (session or local).
 - {{domxref("Window")}}
-  - : The Web Storage API extends the {{domxref("Window")}} object with two new properties — {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} — which provide access to the current domain's session and local {{domxref("Storage")}} objects respectively, and a {{domxref("Window/storage_event", "storage")}} event handler that fires when a storage area changes (e.g. a new item is stored.)
+  - : The Web Storage API extends the {{domxref("Window")}} object with two new properties — {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} — which provide access to the current domain's session and local {{domxref("Storage")}} objects respectively, and a {{domxref("Window/storage_event", "storage")}} event handler that fires when a storage area changes (e.g., a new item is stored).
 - {{domxref("StorageEvent")}}
   - : The `storage` event is fired on a document's `Window` object when a storage area changes.
 

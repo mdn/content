@@ -41,7 +41,7 @@ Commonly used vocabularies:
 - [`Thing`](https://schema.org/Thing)
 - [`Intangible`](https://schema.org/Intangible)
 
-Major search engine operators like Google, Microsoft, and Yahoo! rely on the [schema.org](https://schema.org/) vocabulary to improve search results. For some purposes, an ad-hoc vocabulary is adequate. For others, a vocabulary will need to be designed. Where possible, authors are encouraged to re-use existing vocabularies, as this makes content re-use easier.
+Major search engine operators like Google, Microsoft, and Yahoo! rely on the [schema.org](https://schema.org/) vocabulary to improve search results. For some purposes, an ad hoc vocabulary is adequate. For others, a vocabulary will need to be designed. Where possible, authors are encouraged to re-use existing vocabularies, as this makes content re-use easier.
 
 ## Localization
 
@@ -65,12 +65,16 @@ In some cases, search engines covering specific regions may provide locally-spec
 
 ```html
 <div itemscope itemtype="https://schema.org/SoftwareApplication">
-  <span itemprop="name">Angry Birds</span> -
+  <span itemprop="name">Angry Birds</span> - REQUIRES
+  <span itemprop="operatingSystem">ANDROID</span><br />
+  <link
+    itemprop="applicationCategory"
+    href="https://schema.org/GameApplication" />
 
-  REQUIRES <span itemprop="operatingSystem">ANDROID</span><br>
-  <link itemprop="applicationCategory" href="https://schema.org/GameApplication"/>
-
-  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+  <div
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="https://schema.org/AggregateRating">
     RATING:
     <span itemprop="ratingValue">4.6</span> (
     <span itemprop="ratingCount">8864</span> ratings )

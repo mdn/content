@@ -1,8 +1,9 @@
 ---
 title: device-height
 slug: Web/CSS/@media/device-height
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Deprecated
   - Media Queries
@@ -26,7 +27,10 @@ The `device-height` feature is specified as a {{cssxref("&lt;length&gt;")}} valu
 ### Applying a special stylesheet for devices that are shorter than 800 pixels
 
 ```html
-<link rel="stylesheet" media="screen and (max-device-height: 799px)" href="http://foo.bar.com/short-styles.css" />
+<link
+  rel="stylesheet"
+  media="screen and (max-device-height: 799px)"
+  href="http://foo.bar.com/short-styles.css" />
 ```
 
 ## Specifications

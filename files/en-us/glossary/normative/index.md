@@ -2,7 +2,6 @@
 title: Normative
 slug: Glossary/Normative
 tags:
-  - Glossary
   - Infrastructure
   - Specification
   - Standardization

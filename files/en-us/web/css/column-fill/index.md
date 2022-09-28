@@ -1,6 +1,7 @@
 ---
 title: column-fill
 slug: Web/CSS/column-fill
+page-type: css-property
 tags:
   - CSS
   - CSS Multi-column Layout
@@ -59,7 +60,8 @@ The `column-fill` property is specified as one of the keyword values listed belo
 
 ```html
 <p class="fill-auto">
-  This paragraph fills columns one at a time. Since all of the text can fit in the first column, the others are empty.
+  This paragraph fills columns one at a time. Since all of the text can fit in
+  the first column, the others are empty.
 </p>
 
 <p class="fill-balance">
