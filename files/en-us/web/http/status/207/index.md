@@ -7,6 +7,7 @@ tags:
   - Partial Success
 browser-compat: http.status.207
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`207 Multi Status`** response code indicates that there might be mixture of responses. We use {{HTTPStatus(204)}} if all the operations succededs or else if all fails we can use {{HTTPStatus(403)}}. But if half of them fails and half succedds we use Multi Status in such conditions.

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: http.status.421
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`421 Misdirected Request`** client error response code indicates that the request was directed at a server that is not able to produce a response. This might be possible if a connection is reused or if an alternative service is selected.
@@ -18,8 +19,9 @@ The HTTP **`421 Misdirected Request`** client error response code indicates that
 ```
 
 ## Specifications
-| Specification                                | Status   | Comments           |
-| -------------------------------------------- | -------- | ------------------ |
+
+| Specification                            | Status   | Comments           |
+| ---------------------------------------- | -------- | ------------------ |
 | {{RFC(7540, "421 Misdirected Request")}} | IETF RFC | Initial definition |
 
 ## Browser compatibility
@@ -27,4 +29,3 @@ The HTTP **`421 Misdirected Request`** client error response code indicates that
 {{Compat}}
 
 ## See also
-

@@ -1,6 +1,6 @@
 ---
 title: 424 Failed Dependency
-slug: Web/HTTP/Status/424 
+slug: Web/HTTP/Status/424
 tags:
   - HTTP
   - HTTP Status Code
@@ -8,6 +8,7 @@ tags:
   - Client Error
 browser-compat: http.status.424
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`424 Failed Dependency`** client error response code indicates that the method could not be performed on the resource because the requested action depended on another action and that action failed.
@@ -22,8 +23,8 @@ If a request was issued, and one property update failed (with for example {{HTTP
 
 ## Specifications
 
-| Specification                                | Status   | Comments           |
-| -------------------------------------------- | -------- | ------------------ |
+| Specification                          | Status   | Comments           |
+| -------------------------------------- | -------- | ------------------ |
 | {{RFC(4918, "424 Failed Dependency")}} | IETF RFC | Initial definition |
 
 ## Browser compatibility
@@ -31,4 +32,5 @@ If a request was issued, and one property update failed (with for example {{HTTP
 {{Compat}}
 
 ## See also
+
 - {{HTTPStatus(403)}}
