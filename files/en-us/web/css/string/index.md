@@ -1,6 +1,7 @@
 ---
 title: <string>
 slug: Web/CSS/string
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
