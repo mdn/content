@@ -1,6 +1,7 @@
 ---
 title: Selector list
 slug: Web/CSS/Selector_list
+page-type: css-combinator
 tags:
   - CSS
   - Selector
