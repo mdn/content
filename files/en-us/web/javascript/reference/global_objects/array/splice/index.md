@@ -71,6 +71,8 @@ The `splice()` method is a [mutating method](/en-US/docs/Web/JavaScript/Referenc
 
 If the deleted portion is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the array returned by `splice()` is sparse as well, with those corresponding indices being empty slots.
 
+The `splice()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
+
 ## Examples
 
 ### Remove 0 (zero) elements before index 2, and insert "drum"
@@ -161,6 +163,23 @@ The `splice()` method preserves the array's sparseness.
 const arr = [1, , 3, 4, , 6];
 console.log(arr.splice(1, 2)); // [empty, 3]
 console.log(arr); // [1, 4, empty, 6]
+```
+
+### Calling splice() on non-array objects
+
+The `splice()` method reads the `length` property of `this`. It then updates the integer-keyed properties and the `length` property as needed.
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  0: 5,
+  2: 4,
+};
+console.log(Array.prototype.splice.call(arrayLike, 0, 1, 2, 3));
+// [ 5 ]
+console.log(arrayLike);
+// { '0': 2, '1': 3, '3': 4, length: 4, unrelated: 'foo' }
 ```
 
 ## Specifications

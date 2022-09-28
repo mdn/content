@@ -70,6 +70,8 @@ The `slice()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/
 
 The `slice()` method preserves empty slots. If the sliced portion is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the returned array is sparse as well.
 
+The `slice()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Return a portion of an existing array
@@ -128,31 +130,26 @@ myCar[0].color = purple
 newCar[0].color = purple
 ```
 
-### Array-like objects
+### Calling slice() on non-array objects
 
-`slice` method can also be called to convert Array-like objects/collections
-to a new Array. You just {{jsxref("Function.prototype.bind", "bind")}} the method to the
-object. The {{jsxref("Functions/arguments", "arguments")}} inside a function is an
-example of an 'array-like object'.
+The `slice()` method reads the `length` property of `this`. It then reads the integer-keyed properties from `start` to `end` and defines them on a newly created array.
 
 ```js
-function list() {
-  return Array.prototype.slice.call(arguments);
-}
-
-const list1 = list(1, 2, 3); // [1, 2, 3]
+const arrayLike = {
+  length: 3,
+  2: 4,
+};
+console.log(Array.prototype.slice.call(arrayLike));
+// [empty, empty, 4]
 ```
 
-Binding can be done with the {{jsxref("Function.prototype.call", "call()")}} method of
-{{jsxref("Function")}} and it can also be reduced using
-`[].slice.call(arguments)` instead of
-`Array.prototype.slice.call`.
+### Using slice() to convert array-like objects to arrays
 
-Anyway, it can be simplified using {{jsxref("Function.prototype.bind", "bind")}}.
+The `slice()` method is often used with {{jsxref("Function.prototype.bind", "bind()")}} and {{jsxref("Function.prototype.call", "call()")}} to create a utility method that copies an array-like object to an array.
 
 ```js
-const unboundSlice = Array.prototype.slice;
-const slice = Function.prototype.call.bind(unboundSlice);
+// slice() is called with `this` passed as the first argument
+const slice = Function.prototype.call.bind(Array.prototype.slice);
 
 function list() {
   return slice(arguments);

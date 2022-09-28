@@ -100,6 +100,8 @@ effects at the end of a chain.
 `forEach()` does not mutate the array on which it is called. (However,
 `callbackFn` may do so)
 
+The `forEach()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 > **Note:** There is no way to stop or break a `forEach()` loop other than by throwing
 > an exception. If you need such behavior, the `forEach()` method is the
 > wrong tool.
@@ -311,6 +313,23 @@ const flatten = (arr) => {
 // Usage
 const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
 console.log(flatten(nested)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+### Calling forEach() on non-array objects
+
+The `forEach()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
+// 2
+// 3
+// 4
 ```
 
 ## Specifications

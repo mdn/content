@@ -96,6 +96,8 @@ Therefore:
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
+The `findLast()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Find last object in an array matching on element properties
@@ -196,6 +198,22 @@ array.findLast((value, index) => {
 // Visited index 2 with value undefined
 // Visited index 1 with value 1
 // Visited index 0 with value 0
+```
+
+### Calling findLast() on non-array objects
+
+The `findLast()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),
+); // 2
 ```
 
 ## Specifications

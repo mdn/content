@@ -97,6 +97,8 @@ for an empty array, it returns `true`. (It is [vacuously true](https://en.wikipe
 elements of the [empty set](https://en.wikipedia.org/wiki/Empty_set#Properties)
 satisfy any given condition.)
 
+The `every()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Testing size of all array elements
@@ -185,6 +187,22 @@ arr.every((elem, index, arr) => {
 //
 // 1st iteration: [1,2,3][0] -> 1
 // 2nd iteration: [1,2][1] -> 2
+```
+
+### Calling every() on non-array objects
+
+The `every()` method reads the `length` property of `this` and then accesses each integer index until the end is reached or `callbackFn` returns `false`.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+};
+console.log(
+  Array.prototype.every.call(arrayLike, (x) => typeof x === "string"),
+); // true
 ```
 
 ## Specifications

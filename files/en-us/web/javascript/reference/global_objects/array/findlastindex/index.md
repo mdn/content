@@ -88,6 +88,8 @@ Therefore:
 
 > **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
+The `findLastIndex()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
 ## Examples
 
 ### Find the index of the last prime number in an array
@@ -117,6 +119,22 @@ You can search for `undefined` in a sparse array and get the index of an empty s
 
 ```js
 console.log([1, , 3].findLastIndex((x) => x === undefined)); // 1
+```
+
+### Calling findLastIndex() on non-array objects
+
+The `findLastIndex()` method reads the `length` property of `this` and then accesses each integer index.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+};
+console.log(
+  Array.prototype.findLastIndex.call(arrayLike, (x) => Number.isInteger(x)),
+); // 0
 ```
 
 ## Specifications
