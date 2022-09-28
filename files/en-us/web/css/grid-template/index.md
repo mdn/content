@@ -1,6 +1,7 @@
 ---
 title: grid-template
 slug: Web/CSS/grid-template
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Grid

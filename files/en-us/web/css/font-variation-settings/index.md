@@ -1,6 +1,7 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/font-variation-settings
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

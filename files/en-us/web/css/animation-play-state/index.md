@@ -1,6 +1,7 @@
 ---
 title: animation-play-state
 slug: Web/CSS/animation-play-state
+page-type: css-property
 tags:
   - CSS
   - CSS Animations

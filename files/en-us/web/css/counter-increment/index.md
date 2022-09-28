@@ -1,6 +1,7 @@
 ---
 title: counter-increment
 slug: Web/CSS/counter-increment
+page-type: css-property
 tags:
   - CSS
   - CSS Counter

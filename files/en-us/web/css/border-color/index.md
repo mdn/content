@@ -1,6 +1,7 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders

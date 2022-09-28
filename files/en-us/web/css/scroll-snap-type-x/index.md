@@ -1,6 +1,7 @@
 ---
 title: scroll-snap-type-x
 slug: Web/CSS/scroll-snap-type-x
+page-type: css-property
 tags:
   - CSS
   - CSS Property

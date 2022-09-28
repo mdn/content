@@ -1,6 +1,7 @@
 ---
 title: hyphenate-character
 slug: Web/CSS/hyphenate-character
+page-type: css-property
 tags:
   - CSS
   - CSS Property

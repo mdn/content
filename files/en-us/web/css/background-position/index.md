@@ -1,6 +1,7 @@
 ---
 title: background-position
 slug: Web/CSS/background-position
+page-type: css-property
 tags:
   - CSS
   - CSS Background

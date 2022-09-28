@@ -1,6 +1,7 @@
 ---
 title: border-right-width
 slug: Web/CSS/border-right-width
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

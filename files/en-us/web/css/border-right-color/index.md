@@ -1,6 +1,7 @@
 ---
 title: border-right-color
 slug: Web/CSS/border-right-color
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

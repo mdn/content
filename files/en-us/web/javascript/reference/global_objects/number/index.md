@@ -58,6 +58,45 @@ Integers can only be represented without loss of precision in the range -2<sup>5
 
 More details on this are described in the [ECMAScript standard](https://tc39.es/ecma262/#sec-ecmascript-language-types-number-type).
 
+### Number coercion
+
+Many built-in operations that expect numbers first coerce their arguments to numbers (which is largely why `Number` objects behave similarly to number primitives). [The operation](https://tc39.es/ecma262/#sec-tonumber) can be summarized as follows:
+
+- Numbers are returned as-is.
+- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) turns into `0`.
+- `true` turns into `1`; `false` turns into `0`.
+- Strings are converted by parsing them as if they contain a [number literal](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals). Parsing failure results in `NaN`. There are some minor differences compared to an actual number literal:
+  - Leading and trailing whitespace/line terminators are ignored.
+  - A leading `0` digit does not cause the number to become a octal literal (or get rejected in strict mode).
+  - `+` and `-` are allowed at the start of the string to indicate its sign. (In actual code, they "look like" part of the literal, but are actually separate unary operators.) However, the sign can only appear once, and must not be followed by whitespace.
+  - `Infinity` and `-Infinity` are recognized as literals. In actual code, they are global variables.
+  - Empty or whitespace-only strings are converted to `0`.
+  - [Numeric separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators) are not allowed.
+- [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) throw a {{jsxref("TypeError")}} to prevent unintended implicit coercion causing loss of precision.
+- [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
+- Objects are first converted to a primitive by calling their [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), `valueOf()`, and `toString()` methods, in that order. The resulting primitive is then converted to a number.
+
+There are two ways to achieve nearly the same effect in JavaScript.
+
+- [Unary plus](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus): `+x` does exactly the number coercion steps explained above to convert `x`.
+- The [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) function: `Number(x)` uses the same algorithm to convert `x`, except that [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) don't throw a {{jsxref("TypeError")}}, but return their number value, with possible loss of precision.
+
+{{jsxref("Number.parseFloat()")}} and {{jsxref("Number.parseInt()")}} are similar to `Number()` but only convert strings, and have slightly different parsing rules. For example, `parseInt()` doesn't recognize the decimal point, and `parseFloat()` doesn't recognize the `0x` prefix.
+
+### Fixed-width number conversion
+
+JavaScript has some lower-level functions that deal with the binary encoding of integer numbers, most notably [bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators#bitwise_shift_operators) and {{jsxref("TypedArray")}} objects. Bitwise operators always convert the operands to 32-bit integers. In these cases, after converting the value to a number, the number is then normalized to the given width by first [truncating](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) the fractional part and then taking the lowest bits in the integer's two's complement encoding.
+
+```js
+new Int32Array([1.1, 1.9, -1.1, -1.9]); // Int32Array(4) [ 1, 1, -1, -1 ]
+new Int8Array([257, -257]); // Int8Array(1) [ 1, -1 ]
+// 257 = 0001 0000 0001 = 0000 0001 (mod 2^8) = 1
+// -257 = 1110 1111 1111 = 1111 1111 (mod 2^8) = -1 (as signed integer)
+new Uint8Array([257, -257]); // Uint8Array(1) [ 1, 255 ]
+// -257 = 1110 1111 1111 = 1111 1111 (mod 2^8) = 255 (as unsigned integer)
+```
+
 ## Constructor
 
 - [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)

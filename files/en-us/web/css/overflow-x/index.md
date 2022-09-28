@@ -1,6 +1,7 @@
 ---
 title: overflow-x
 slug: Web/CSS/overflow-x
+page-type: css-property
 tags:
   - CSS
   - CSS Box Model

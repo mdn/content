@@ -1,6 +1,7 @@
 ---
 title: max-block-size
 slug: Web/CSS/max-block-size
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

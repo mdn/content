@@ -1,6 +1,7 @@
 ---
 title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
+page-type: css-function
 tags:
   - CSS
   - CSS Function

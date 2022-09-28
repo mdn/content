@@ -1,6 +1,7 @@
 ---
-title: ':playing'
+title: ":playing"
 slug: Web/CSS/:playing
+page-type: css-pseudo-class
 tags:
   - CSS
   - Pseudo-class

@@ -1,6 +1,7 @@
 ---
 title: rgba()
 slug: Web/CSS/color_value/rgba
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
@@ -9,8 +10,7 @@ tags:
   - Web
   - color
   - rgba
-browser-compat:
-  - css.types.color.rgba
+browser-compat: css.types.color.rgba
 ---
 
 {{CSSRef}}

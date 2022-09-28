@@ -21,18 +21,23 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Examples
 
-Sample rendering: ![x1](msup.png)
-
-Rendering in your browser: <math><msup><mi>X</mi> <mn>2</mn></msup></math>
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
 
 ```html
-<math>
+<math display="block">
   <msup>
     <mi>X</mi>
     <mn>2</mn>
   </msup>
 </math>
 ```
+
+{{ EmbedLiveSample('msup_example', 700, 200, "", "") }}
 
 ## Specifications
 

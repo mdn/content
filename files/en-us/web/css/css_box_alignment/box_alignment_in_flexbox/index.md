@@ -1,6 +1,7 @@
 ---
 title: Box alignment in Flexbox
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
+page-type: guide
 tags:
   - CSS
   - Guide

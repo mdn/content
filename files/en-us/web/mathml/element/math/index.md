@@ -31,6 +31,13 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 This example contains two MathML formula. The first one is rendered in its own centered block, taking as much space as needed. The second one is rendered inside the paragraph of text, with reduced size and spacing in order to minimize its height.
 
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
+
 ```html
 <p>
   The infinite sum
@@ -69,6 +76,8 @@ This example contains two MathML formula. The first one is rendered in its own c
   </math>.
 </p>
 ```
+
+{{ EmbedLiveSample('math_example', 700, 200, "", "") }}
 
 ## Specifications
 

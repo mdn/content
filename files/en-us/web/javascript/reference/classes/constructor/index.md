@@ -11,7 +11,9 @@ browser-compat: javascript.classes.constructor
 
 {{jsSidebar("Classes")}}
 
-The `constructor` method is a special method of a {{jsxref("Statements/class", "class")}} for creating and initializing an object instance of that class.
+The **`constructor`** method is a special method of a [class](/en-US/docs/Web/JavaScript/Reference/Classes) for creating and initializing an object instance of that class.
+
+> **Note:** This page introduces the `constructor` syntax. For the `constructor` property present on all objects, see {{jsxref("Object.prototype.constructor")}}.
 
 {{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
 
@@ -30,7 +32,6 @@ A constructor enables you to provide any custom initialization that must be done
 
 ```js
 class Person {
-
   constructor(name) {
     this.name = name;
   }
@@ -38,12 +39,11 @@ class Person {
   introduce() {
     console.log(`Hello, my name is ${this.name}`);
   }
-
 }
 
-const otto = new Person('Otto');
+const otto = new Person("Otto");
 
-otto.introduce();
+otto.introduce(); // Hello, my name is Otto
 ```
 
 If you don't provide your own constructor, then a default constructor will be supplied for you.
@@ -61,6 +61,8 @@ constructor(...args) {
 }
 ```
 
+> **Note:** The difference between an explicit constructor like the one above and the default constructor is that the latter doesn't actually invoke [the array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator) through [argument spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+
 That enables code like this to work:
 
 ```js
@@ -77,7 +79,7 @@ try {
     console.log(error.name); // This is Error instead of ValidationError!
     console.log(error.printCustomerMessage());
   } else {
-    console.log('Unknown error', error);
+    console.log("Unknown error", error);
     throw error;
   }
 }
@@ -86,15 +88,15 @@ try {
 The `ValidationError` class doesn't need an explicit constructor, because it doesn't need to do any custom initialization.
 The default constructor then takes care of initializing the parent `Error` from the argument it is given.
 
-However, if you provide your own constructor, and your class derives from some parent class, then you must explicitly call the parent class constructor using `super`.
+However, if you provide your own constructor, and your class derives from some parent class, then you must explicitly call the parent class constructor using [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super).
 For example:
 
 ```js
 class ValidationError extends Error {
   constructor(message) {
-    super(message);  // call parent class constructor
-    this.name = 'ValidationError';
-    this.code = '42';
+    super(message); // call parent class constructor
+    this.name = "ValidationError";
+    this.code = "42";
   }
 
   printCustomerMessage() {
@@ -109,20 +111,69 @@ try {
     console.log(error.name); // Now this is ValidationError!
     console.log(error.printCustomerMessage());
   } else {
-    console.log('Unknown error', error);
+    console.log("Unknown error", error);
     throw error;
   }
 }
 ```
 
+Using [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) on a class goes through the following steps:
+
+1. (If it's a derived class) The `constructor` body before the `super()` call is evaluated. This part should not access `this` because it's not yet initialized.
+2. (If it's a derived class) The `super()` call is evaluated, which initializes the parent class through the same process.
+3. The current class's [fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) are initialized.
+4. The `constructor` body after the `super()` call (or the entire body, if it's a base class) is evaluated.
+
+Within the `constructor` body, you can access the object being created through [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) and access the class that is called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) through [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Note that methods (including [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set)) and the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) are already initialized on `this` before the `constructor` is executed, so you can even access methods of the subclass from the constructor of the superclass. However, if those methods use `this`, the `this` will not have been fully initialized yet. This means reading public fields of the derived class will result in `undefined`, while reading private fields will result in a `TypeError`.
+
+```js example-bad
+new (class C extends class B {
+  constructor() {
+    console.log(this.foo());
+  }
+} {
+  #a = 1;
+  foo() {
+    return this.#a; // TypeError: Cannot read private member #a from an object whose class did not declare it
+    // It's not really because the class didn't declare it,
+    // but because the private field isn't initialized yet
+    // when the superclass constructor is running
+  }
+})();
+```
+
+The `constructor` method may have a return value. While the base class may return anything from its constructor, the derived class must return an object or `undefined`, or a {{jsxref("TypeError")}} will be thrown.
+
+```js
+class ParentClass {
+  constructor() {
+    return 1;
+  }
+}
+
+console.log(new ParentClass()); // ParentClass {}
+// The return value is ignored because it's not an object
+// This is consistent with function constructors
+
+class ChildClass extends ParentClass {
+  constructor() {
+    return 1;
+  }
+}
+
+console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
+```
+
+If the parent class constructor returns an object, that object will be used as the `this` value on which [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) of the derived class will be defined. This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) ones) to be defined on unrelated objects.
+
 There can be only one special method with the name `constructor` in a class.
 Having more than one occurrence of a `constructor` method in a class will throw a {{jsxref("SyntaxError")}} error. Having a getter or setter called `constructor` is also a {{jsxref("SyntaxError")}}.
 
-The `constructor` follows normal method syntax, so [parameter default values](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), etc. can all be used.
+The `constructor` follows normal [method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) syntax, so [parameter default values](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), etc. can all be used.
 
 ```js
 class Person {
-  constructor(name = 'Anonymous') {
+  constructor(name = "Anonymous") {
     this.name = name;
   }
   introduce() {
@@ -139,8 +190,8 @@ The constructor must be a literal name. Computed properties cannot become constr
 ```js
 class Foo {
   // This is a computed property. It will not be picked up as a constructor.
-  ['constructor']() {
-    console.log('called');
+  ["constructor"]() {
+    console.log("called");
     this.a = 1;
   }
 }
@@ -153,7 +204,7 @@ console.log(foo); // Foo { a: 1 }
 
 ## Examples
 
-### Using the `constructor` method
+### Using the constructor
 
 This code snippet is taken from the [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)).
 
@@ -165,7 +216,7 @@ class Square extends Polygon {
     super(length, length);
     // NOTE: In derived classes, `super()` must be called before you
     // can use `this`. Leaving this out will cause a ReferenceError.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -179,9 +230,9 @@ class Square extends Polygon {
 }
 ```
 
-### Another example
+### Calling super in a constructor bound to a different prototype
 
-Here the prototype of `Square` class is changed—but the constructor of its base class `Polygon` is still called when a new instance of a square is created.
+Here the prototype of `Square` class is changed, but the constructor of its base class, `Polygon`, is still called when a new instance of a square is created. For more information on why, see [the `super` reference](/en-US/docs/Web/JavaScript/Reference/Operators/super#methods_that_read_super.prop_do_not_behave_differently_when_bound_to_other_objects).
 
 ```js
 class Polygon {
@@ -198,13 +249,15 @@ class Square extends Polygon {
 
 class Rectangle {}
 
+// Make Square extend Rectangle (which is a base class) instead of Polygon
 Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
 
-console.log(Object.getPrototypeOf(Square.prototype) === Polygon.prototype); //false
-console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //true
+// Polygon is no longer part of Square's prototype chain
+console.log(Square.prototype instanceof Polygon); // false
+console.log(Square.prototype instanceof Rectangle); // true
 
 const newInstance = new Square();
-console.log(newInstance.name); //Polygon
+console.log(newInstance.name); // Polygon
 ```
 
 ## Specifications
@@ -218,8 +271,8 @@ console.log(newInstance.name); //Polygon
 ## See also
 
 - {{jsxref("Operators/super", "super()")}}
-- {{jsxref("Statements/class", "class declaration", "", "true")}}
-- {{jsxref("Operators/class", "class expression", "", "true")}}
+- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
 - {{jsxref("Classes")}}
-- [Object.prototype.constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+- [`Object.prototype.constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
 - [Class static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks)

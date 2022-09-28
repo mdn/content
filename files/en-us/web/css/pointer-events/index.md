@@ -1,6 +1,7 @@
 ---
 title: pointer-events
 slug: Web/CSS/pointer-events
+page-type: css-property
 tags:
   - CSS
   - CSS Property

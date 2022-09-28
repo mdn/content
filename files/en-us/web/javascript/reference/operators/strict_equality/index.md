@@ -50,41 +50,39 @@ The most notable difference between this operator and the [equality](/en-US/docs
 ### Comparing operands of the same type
 
 ```js
-console.log("hello" === "hello");   // true
-console.log("hello" === "hola");    // false
+"hello" === "hello"; // true
+"hello" === "hola"; // false
 
-console.log(3 === 3);               // true
-console.log(3 === 4);               // false
+3 === 3; // true
+3 === 4; // false
 
-console.log(true === true);         // true
-console.log(true === false);        // false
+true === true; // true
+true === false; // false
 
-console.log(null === null);         // true
+null === null; // true
 ```
 
 ### Comparing operands of different types
 
 ```js
-console.log("3" === 3);           // false
-
-console.log(true === 1);          // false
-
-console.log(null === undefined);  // false
+"3" === 3; // false
+true === 1; // false
+null === undefined; // false
 ```
 
 ### Comparing objects
 
 ```js
 const object1 = {
-  name: "hello"
-}
+  key: "value",
+};
 
 const object2 = {
-  name: "hello"
-}
+  key: "value",
+};
 
-console.log(object1 === object2);  // false
-console.log(object1 === object1);  // true
+console.log(object1 === object2); // false
+console.log(object1 === object1); // true
 ```
 
 ## Specifications

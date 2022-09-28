@@ -1,6 +1,7 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
+page-type: css-property
 tags:
   - CSS
   - CSS Background

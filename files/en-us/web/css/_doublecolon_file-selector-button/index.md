@@ -1,6 +1,7 @@
 ---
 title: '::file-selector-button'
 slug: Web/CSS/::file-selector-button
+page-type: css-pseudo-element
 tags:
   - CSS
   - Pseudo-element

@@ -1,6 +1,7 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

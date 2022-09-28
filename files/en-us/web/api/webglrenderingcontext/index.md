@@ -302,9 +302,9 @@ The following properties and methods provide general information and functionali
 
 ## Color spaces
 
-- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}}
+- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}} {{Experimental_Inline}}
   - : Specifies the color space of the WebGL drawing buffer.
-- {{domxref("WebGLRenderingContext.unpackColorSpace")}}
+- {{domxref("WebGLRenderingContext.unpackColorSpace")}} {{Experimental_Inline}}
   - : Specifies the color space to convert to when importing textures.
 
 ## Working with extensions

@@ -1,6 +1,7 @@
 ---
 title: Actual value
 slug: Web/CSS/actual_value
+page-type: guide
 tags:
   - CSS
   - Guide

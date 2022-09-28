@@ -1,6 +1,7 @@
 ---
 title: abs()
 slug: Web/CSS/abs
+page-type: css-function
 tags:
   - CSS
   - CSS Function

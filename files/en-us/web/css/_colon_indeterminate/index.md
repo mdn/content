@@ -1,8 +1,9 @@
 ---
-title: ':indeterminate'
+title: ":indeterminate"
 slug: Web/CSS/:indeterminate
+page-type: css-pseudo-class
 tags:
-  - ':indeterminate'
+  - ":indeterminate"
   - CSS
   - Layout
   - Pseudo-class
@@ -58,11 +59,11 @@ This example applies special styles to the labels associated with indeterminate 
 <fieldset>
   <legend>Radio</legend>
   <div>
-    <input type="radio" id="radio1" name="radioButton" />
+    <input type="radio" id="radio1" name="radioButton" value="val1" />
     <label for="radio1">First radio label starts out lime.</label>
   </div>
   <div>
-    <input type="radio" id="radio2" name="radioButton" />
+    <input type="radio" id="radio2" name="radioButton" value="val2" />
     <label for="radio2">Second radio label also starts out lime.</label>
   </div>
 </fieldset>
