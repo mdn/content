@@ -492,7 +492,7 @@
 /en-US/docs/CSS/Currentcolor	/en-US/docs/Web/CSS/color_value#currentcolor_keyword
 /en-US/docs/CSS/Descendant_selectors	/en-US/docs/Web/CSS/Descendant_combinator
 /en-US/docs/CSS/Draft_Implementations_of_CSS_Features	/en-US/docs/Web/CSS/Mozilla_Extensions
-/en-US/docs/CSS/FAQ	/en-US/docs/Web/CSS/FAQ
+/en-US/docs/CSS/FAQ	/en-US/docs//en-US/docs/Web/CSS
 /en-US/docs/CSS/Flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/CSS/Flexbox-redirect-1	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/CSS/Flexbox-redirect-2	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
@@ -960,7 +960,7 @@
 /en-US/docs/CSS:Aural	/en-US/docs/Web/CSS/@media/aural
 /en-US/docs/CSS:Child_selectors	/en-US/docs/Web/CSS/Child_combinator
 /en-US/docs/CSS:Descendant_selectors	/en-US/docs/Web/CSS/Descendant_combinator
-/en-US/docs/CSS:FAQ	/en-US/docs/Web/CSS/FAQ
+/en-US/docs/CSS:FAQ	/en-US/docs//en-US/docs/Web/CSS
 /en-US/docs/CSS:Getting_Started	/en-US/docs/Learn/CSS/First_steps
 /en-US/docs/CSS:Getting_Started:Boxes	/en-US/docs/Learn/CSS/Building_blocks
 /en-US/docs/CSS:Getting_Started:Cascading_and_inheritance	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
@@ -11212,6 +11212,7 @@
 /en-US/docs/Web/CSS/Currentcolor	/en-US/docs/Web/CSS/color_value#currentcolor_keyword
 /en-US/docs/Web/CSS/Descendant_selectors	/en-US/docs/Web/CSS/Descendant_combinator
 /en-US/docs/Web/CSS/Draft_Implementations_of_CSS_Features	/en-US/docs/Web/CSS/Mozilla_Extensions
+/en-US/docs/Web/CSS/FAQ	/en-US/docs//en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Filters_Effects	/en-US/docs/Web/CSS/Filter_Effects
 /en-US/docs/Web/CSS/Flexbox	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/Web/CSS/General_sibling_selectors	/en-US/docs/Web/CSS/General_sibling_combinator
