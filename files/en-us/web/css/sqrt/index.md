@@ -39,9 +39,9 @@ The `sqrt(x)` function accepts only one value as its parameter.
 
 Returns a {{cssxref("&lt;number&gt;")}} which is the square root of `x`.
 
-* if `x` is `+∞`, the result is `+∞`.
-* If `x` is `0⁻`, the result is `0⁻`.
-* If `x` is less than `0`, the result is `NaN`.
+- if `x` is `+∞`, the result is `+∞`.
+- If `x` is `0⁻`, the result is `0⁻`.
+- If `x` is less than `0`, the result is `NaN`.
 
 ### Formal syntax
 
