@@ -429,7 +429,7 @@ const fruitsCopy3 = fruits.slice();
 // ["Strawberry", "Mango"]
 ```
 
-All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), and [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)) create [shallow copies](/en-US/docs/Glossary/Shallow_copy). If you instead want a [deep copy](/en-US/docs/Glossary/Deep_copy) of an array, you can use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a new array that's completely independent from the original array.
+All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), and [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)) create [deep copy](/en-US/docs/Glossary/Deep_copy). Another way of doing a deep copy of an array is, you can use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a new array that's completely independent from the original array.
 
 ```js
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
