@@ -25,7 +25,6 @@ function square(num) { // the square function creates its own execution context,
 
 const square2 = square(n); // square2 is available to the global execution context
 const square4 = square(4); 
-
 ```
 
 ### Components of Execution Context:
