@@ -22,7 +22,7 @@ Often `activeElement` will return a {{domxref("HTMLInputElement")}} or
 {{domxref("HTMLTextAreaElement")}} object if it has the text selection at the time. If
 so, you can get more detail by using the object's `selectionStart` and `selectionEnd` properties.
 Other times the focused element might be a {{HTMLElement("select")}} element (menu) or
-an {{HTMLElement("input")}} element, of `type` `"button"`,
+an {{HTMLElement("input")}} element, of `type` value of `"button"`,
 `"checkbox"`, or `"radio"`.
 
 Typically a user can press the tab key to move the focus around the page among

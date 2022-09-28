@@ -147,7 +147,7 @@ Send the following the HTTP header:
 Feature-Policy: layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';
 ```
 
-Using the `<iframe>` `allow` attribute:
+Using the `<iframe>`'s `allow` attribute:
 
 ```html
 <iframe

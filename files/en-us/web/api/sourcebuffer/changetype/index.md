@@ -63,7 +63,7 @@ None ({{jsxref("undefined")}}).
 
 If the parent {{domxref("MediaSource")}} is in its `"ended"`
 {{domxref("MediaSource.readyState", "readyState")}}, calling `changeType()`
-will transition the media source to the `"open"` `readyState` and
+will transition the media source to the `"open"`, `readyState` and
 fire a simple event named {{domxref("MediaSource.sourceopen_event", "sourceopen")}} at the parent media source.
 
 ## Browser compatibility

@@ -141,7 +141,7 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
    const removeCompletedTodos = () => todos = todos.filter((t) => !t.completed);
    ```
 
-5. Now go to the bottom of the `Todos.svelte` markup section and replace the `btn-group` `<div>` that we copied into `MoreActions.svelte` with a call to the `MoreActions` component, like so:
+5. Now go to the bottom of the `Todos.svelte` markup section and replace the `btn-group`'s `<div>` that we copied into `MoreActions.svelte` with a call to the `MoreActions` component, like so:
 
    ```html
    <!-- MoreActions -->
@@ -371,7 +371,7 @@ Let's begin by extracting our new to-do form out to its own component. With what
 
 ## Working with DOM nodes using the `bind:this={dom_node}` directive
 
-Now we want the `NewTodo` `<input>` to re-gain focus every time the _Add_ button is pressed. For that we'll need a reference to the DOM node of the input. Svelte provides a way to do this with the `bind:this={dom_node}` directive. When specified, as soon as the component is mounted and the DOM node is created, Svelte assigns a reference to the DOM node to the specified variable.
+Now we want the `NewTodo`'s `<input>` to re-gain focus every time the _Add_ button is pressed. For that we'll need a reference to the DOM node of the input. Svelte provides a way to do this with the `bind:this={dom_node}` directive. When specified, as soon as the component is mounted and the DOM node is created, Svelte assigns a reference to the DOM node to the specified variable.
 
 We'll create a `nameEl` variable and bind it to the input it using `bind:this={nameEl}`. Then inside `addTodo()`, after adding the new to-do we will call `nameEl.focus()` to refocus the `<input>` again. We will do the same when the user presses the <kbd>Escape</kbd> key, with the `onCancel()` function.
 
@@ -412,7 +412,7 @@ Try the app out: type a new to-do name in to the `<input>` field, press <kbd>tab
 
 The next feature will add to our `NewTodo` component will be an `autofocus` prop, which will allow us to specify that we want the `<input>` field to be focused on page load.
 
-1. Our first attempt is as follows: let's try adding the `autofocus` prop and just call `nameEl.focus()` from the `<script>` block. Update the first part of the `NewTodo.svelte` `<script>` section (the first four lines) to look like this:
+1. Our first attempt is as follows: let's try adding the `autofocus` prop and just call `nameEl.focus()` from the `<script>` block. Update the first part of the `NewTodo.svelte`'s `<script>` section (the first four lines) to look like this:
 
    ```html
    <script>
@@ -446,7 +446,7 @@ So how can you know when the component has already been created and mounted on t
 
 The one you'll use most frequently is `onMount()`, which lets us run a callback as soon as the component has been mounted on the DOM. Let's give it a try and see what happens to the `nameEl` variable.
 
-1. To start with, add the following line at the beginning of the `NewTodo.svelte` `<script>` section:
+1. To start with, add the following line at the beginning of the `NewTodo.svelte`'s `<script>` section:
 
    ```js
    import { onMount } from 'svelte';
@@ -571,7 +571,7 @@ That's where Svelte actions come into play. Basically they let us run a function
 
 In our immediate use case, we will define a function called `selectOnFocus()` that will receive a node as a parameter. The function will add an event listener to that node so that whenever it gets focused it will select the text. Then it will return an object with a `destroy` property. The `destroy` property is what Svelte will execute after removing the node from the DOM. Here we will remove the listener to make sure we don't leave any memory leak behind.
 
-1. Let's create the function `selectOnFocus()`. Add the following to the bottom of the `Todo.svelte` `<script>` section:
+1. Let's create the function `selectOnFocus()`. Add the following to the bottom of the `Todo.svelte`'s `<script>` section:
 
    ```js
    function selectOnFocus(node) {

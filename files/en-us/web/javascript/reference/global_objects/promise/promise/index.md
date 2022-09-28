@@ -68,7 +68,7 @@ resolutionFunc(value) // call on resolved
 rejectionFunc(reason) // call on rejected
 ```
 
-The `resolutionFunc` `value` parameter can be another promise object, in which case the promise gets dynamically inserted into the [promise chain](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises). The `rejectionFunc` has semantics close to the [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw) statement, so `reason` is typically an [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) instance. If either `value` or `reason` is omitted, the promise is fulfilled/rejected with `undefined`.
+The `resolutionFunc`'s `value` parameter can be another promise object, in which case the promise gets dynamically inserted into the [promise chain](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises). The `rejectionFunc` has semantics close to the [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw) statement, so `reason` is typically an [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) instance. If either `value` or `reason` is omitted, the promise is fulfilled/rejected with `undefined`.
 
 About the `executor`, it's important to understand the following:
 

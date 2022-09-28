@@ -204,7 +204,7 @@ There are certain features and best practices in HTML designed to provide contex
 
 The key to accessible link text is that people using screen readers will often use a common feature whereby they pull up a list of all the links on the page. In this case, the link text needs to make sense out of context. For example, a list of links labeled "click here", "click me", etc. is really bad for accessibility. It is better for link text to make sense in context and out of context.
 
-Next on our list, the form {{htmlelement("label")}} element is one of the central features that allows us to make forms accessible. The trouble with forms is that you need labels to say what data should be entered into each form input. Each label needs to be included inside a {{htmlelement("label")}} to link it unambiguously to its partner form input (each `<label>` `for` attribute value needs to match the form element `id` value), and it will make sense even if the source order is not completely logical (which to be fair it should be).
+Next on our list, the form {{htmlelement("label")}} element is one of the central features that allows us to make forms accessible. The trouble with forms is that you need labels to say what data should be entered into each form input. Each label needs to be included inside a {{htmlelement("label")}} to link it unambiguously to its partner form input (each `<label>`'s `for` attribute value needs to match the form element `id` value), and it will make sense even if the source order is not completely logical (which to be fair it should be).
 
 > **Note:** For more information about link text and form labels, read [Meaningful text labels](/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels).
 

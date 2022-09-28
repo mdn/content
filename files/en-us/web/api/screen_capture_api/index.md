@@ -23,7 +23,7 @@ The Screen Capture API introduces additions to the existing Media Capture and St
 
 The Screen Capture API is relatively simple to use. Its sole method is {{domxref("MediaDevices.getDisplayMedia()")}}, whose job is to ask the user to select a screen or portion of a screen to capture in the form of a {{domxref("MediaStream")}}.
 
-To start capturing video from the screen, you call `getDisplayMedia()` on the instance of `Media` `navigator.mediaDevices`:
+To start capturing video from the screen, you call `getDisplayMedia()` on the instance of `Media`'s `navigator.mediaDevices`:
 
 ```js
 captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);

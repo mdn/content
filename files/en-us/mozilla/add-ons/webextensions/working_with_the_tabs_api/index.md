@@ -155,10 +155,10 @@ Now, `listTabs()` is ready to create the content for the popup.
 
 To start with:
 
-1. Grab the `tabs-list` `div`.
+1. Grab the `tabs-list`'s `div`.
 2. Create a document fragment (into which the list will be built).
 3. Set counters.
-4. Clear the content of the `tabs-list` `div`.
+4. Clear the content of the `tabs-list`'s `div`.
 
 ```js
 function listTabs() {
@@ -195,7 +195,7 @@ for (const tab of tabs) {
 }
 ```
 
-Finally, the document fragment is written to the `tabs-list` `div`:
+Finally, the document fragment is written to the `tabs-list`'s `div`:
 
 ```js
     tabsList.appendChild(currentTabs);

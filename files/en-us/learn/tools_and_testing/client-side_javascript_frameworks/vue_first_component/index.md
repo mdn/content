@@ -131,7 +131,7 @@ To actually render the `ToDoItem` component in the app, you need to go up into y
 1. Underneath the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), create an unordered list ([`<ul>`](/en-US/docs/Web/HTML/Element/ul)) containing a single list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)).
 2. Inside the list item add `<to-do-item></to-do-item>`.
 
-Your `App.vue` `<template>` contents should now look something like this:
+Your `App.vue`'s `<template>` contents should now look something like this:
 
 ```html
 <div id="app">

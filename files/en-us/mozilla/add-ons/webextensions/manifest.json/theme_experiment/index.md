@@ -162,7 +162,7 @@ The stylesheet defines:
 
 where `#reload-button` is the Firefox internal CSS selector for the reload button and `--reload-button-color` is an arbitrary name.
 
-In the `manifest.json` file, `--reload-button-color` is then mapped to the name to be used in the `theme` `colors` property:
+In the `manifest.json` file, `--reload-button-color` is then mapped to the name to be used in the `theme`'s `colors` property:
 
 ```json
 "theme_experiment": {

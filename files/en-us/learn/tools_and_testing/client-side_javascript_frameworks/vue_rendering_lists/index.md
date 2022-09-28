@@ -97,7 +97,7 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
 
 2. Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `uniqueId('todo-')`.
 
-   Your `App.vue` `<script>` element contents should now look like this:
+   Your `App.vue`'s `<script>` element contents should now look like this:
 
    ```js
    import ToDoItem from './components/ToDoItem.vue';

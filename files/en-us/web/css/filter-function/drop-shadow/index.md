@@ -31,7 +31,7 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 
 ### Parameters
 
-- `offset-x` `offset-y` (required)
+- `offset-x offset-y` (required)
   - : Two {{cssxref("&lt;length&gt;")}} values that determine the shadow offset. `offset-x` specifies the horizontal distance, where negative values place the shadow to the left of the element. `offset-y` specifies the vertical distance, where negative values place the shadow above the element. If both values are `0`, the shadow is placed directly behind the element.
 - `blur-radius` (optional)
   - : The shadow's blur radius, specified as a {{cssxref("&lt;length&gt;")}}. The larger the value, the larger and more blurred the shadow becomes. If unspecified, it defaults to `0`, resulting in a sharp, unblurred edge. Negative values are not allowed.

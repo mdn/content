@@ -170,7 +170,7 @@ This script displays the following:
 ### Splitting with a `RegExp` to include parts of the separator in the result
 
 If `separator` is a regular expression that contains capturing
-parentheses `(` `)`, matched results are included in the array.
+parentheses `( )`, matched results are included in the array.
 
 ```js
 const myString = 'Hello 1 word. Sentence number 2.'

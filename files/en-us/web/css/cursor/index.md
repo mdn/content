@@ -57,7 +57,7 @@ The `cursor` property is specified as zero or more `<url>` values, separated by 
 Each `<url>` should point to an image file.
 The browser will try to load the first image specified, falling back to the next if it can't, and falling back to the keyword value if no images could be loaded (or if none were specified).
 
-Each `<url>` may be optionally followed by a pair of space-separated numbers, which set the `<x>` `<y>` coordinates of the cursor's hotspot relative to the top-left corner of the image.
+Each `<url>` may be optionally followed by a pair of space-separated numbers, which set the `<x>`, `<y>` coordinates of the cursor's hotspot relative to the top-left corner of the image.
 
 ### Values
 
@@ -65,12 +65,12 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
   - : A `url()` or a comma separated list `url(), url(), …`, pointing to an image file.
     More than one {{cssxref("url", "url()")}} may be provided as fallbacks, in case some cursor image types are not supported.
     A non-URL fallback (one or more of the keyword values) _must_ be at the end of the fallback list.
-- `<x>` `<y>` {{optional_inline}}
+- `<x> <y>` {{optional_inline}}
 
   - : Optional x- and y-coordinates indicating the cursor hotspot; the precise position within the cursor that is being pointed to.
 
     The numbers are in units of image pixels.
-    They are relative to the top left corner of the image, which corresponds to "`0` `0`", and are clamped within the boundaries of the cursor image.
+    They are relative to the top left corner of the image, which corresponds to "`0 0`", and are clamped within the boundaries of the cursor image.
     If these values are not specified, they may be read from the file itself, and will otherwise default to the top-left corner of the image.
 
 - `keyword`

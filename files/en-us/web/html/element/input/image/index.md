@@ -78,7 +78,7 @@ For example, if you have a graphical button that shows an image with an icon and
 
 > **Note:** While the `alt` attribute is technically optional, you should always include one to maximize the usability of your content.
 
-Functionally, the `<input type="image">` `alt` attribute works just like the {{htmlattrxref("alt", "img")}} attribute on {{HTMLElement("img")}} elements.
+Functionally, the `<input type="image">`'s `alt` attribute works just like the {{htmlattrxref("alt", "img")}} attribute on {{HTMLElement("img")}} elements.
 
 ### formaction
 
