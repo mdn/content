@@ -103631,10 +103631,6 @@
     "modified": "2020-10-15T21:50:29.782Z",
     "contributors": ["mfuji09", "Sheppy", "vrana", "fscholz", "teoli"]
   },
-  "Web/HTTP/Headers/Content-Security-Policy/navigate-to": {
-    "modified": "2020-10-15T22:21:27.572Z",
-    "contributors": ["bershanskiy"]
-  },
   "Web/HTTP/Headers/Content-Security-Policy/object-src": {
     "modified": "2020-10-15T21:50:32.476Z",
     "contributors": ["mfuji09", "Sheppy", "vrana", "Malvoz", "fscholz"]
