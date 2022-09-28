@@ -9,7 +9,7 @@ tags:
   - NeedsContent
   - Reference
   - Security
-spec-urls: https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes
+spec-urls: https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-settings-attributes
 browser-compat:
   - html.elements.img.crossorigin
   - html.elements.link.crossorigin
