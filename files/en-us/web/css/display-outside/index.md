@@ -1,6 +1,7 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

@@ -1,6 +1,7 @@
 ---
 title: <easing-function>
 slug: Web/CSS/easing-function
+page-type: css-type
 tags:
   - API
   - CSS

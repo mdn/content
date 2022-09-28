@@ -1,6 +1,7 @@
 ---
 title: margin-block
 slug: Web/CSS/margin-block
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Logical Property

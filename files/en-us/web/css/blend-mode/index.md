@@ -1,6 +1,7 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
+page-type: css-type
 tags:
   - Blend modes
   - CSS

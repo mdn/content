@@ -1,6 +1,7 @@
 ---
 title: grid-row
 slug: Web/CSS/grid-row
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Grid
