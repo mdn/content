@@ -153,7 +153,14 @@ The `saveItem()` method takes the value from the `#editedItem` `<input>` and cha
 ## Prepare the AppComponent
 
 In the next section, you will add code that relies on communication between the `AppComponent` and the `ItemComponent`.
-Configure the AppComponent first by adding the following to `app.component.ts`:
+
+Add the following line near the top of the `app.component.ts` file to import the `Item`:
+
+```
+import { Item } from "./item";
+```
+
+Then, configure the AppComponent first by adding the following to the same file's class:
 
 ```js
 remove(item: Item) {
