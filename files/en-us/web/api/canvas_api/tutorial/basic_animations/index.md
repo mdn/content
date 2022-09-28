@@ -6,10 +6,10 @@ tags:
   - Canvas
   - Graphics
   - HTML
-  - HTML5
   - Intermediate
   - Tutorial
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 Since we're using JavaScript to control {{HTMLElement("canvas")}} elements, it's also very easy to make (interactive) animations. In this chapter we will take a look at how to do some basic animations.
@@ -21,13 +21,13 @@ Probably the biggest limitation is, that once a shape gets drawn, it stays that 
 These are the steps you need to take to draw a frame:
 
 1. **Clear the canvas**
-    Unless the shapes you'll be drawing fill the complete canvas (for instance a backdrop image), you need to clear any shapes that have been drawn previously. The easiest way to do this is using the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method.
+   Unless the shapes you'll be drawing fill the complete canvas (for instance a backdrop image), you need to clear any shapes that have been drawn previously. The easiest way to do this is using the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method.
 2. **Save the canvas state**
-    If you're changing any setting (such as styles, transformations, etc.) which affect the canvas state and you want to make sure the original state is used each time a frame is drawn, you need to save that original state.
+   If you're changing any setting (such as styles, transformations, etc.) which affect the canvas state and you want to make sure the original state is used each time a frame is drawn, you need to save that original state.
 3. **Draw animated shapes**
-    The step where you do the actual frame rendering.
+   The step where you do the actual frame rendering.
 4. **Restore the canvas state**
-    If you've saved the state, restore it before drawing a new frame.
+   If you've saved the state, restore it before drawing a new frame.
 
 ## Controlling an animation
 
@@ -156,7 +156,7 @@ function clock() {
   // Minute marks
   ctx.save();
   ctx.lineWidth = 5;
-  for (i = 0; i < 60; i++) {
+  for (let i = 0; i < 60; i++) {
     if (i % 5 !== 0) {
       ctx.beginPath();
       ctx.moveTo(117, 0);
@@ -173,7 +173,7 @@ function clock() {
 
   ctx.fillStyle = 'black';
 
-  // write Hours
+  // Write Hours
   ctx.save();
   ctx.rotate((Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec);
   ctx.lineWidth = 14;
@@ -183,7 +183,7 @@ function clock() {
   ctx.stroke();
   ctx.restore();
 
-  // write Minutes
+  // Write Minutes
   ctx.save();
   ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec);
   ctx.lineWidth = 10;
@@ -238,7 +238,7 @@ In this example, a panorama is scrolled left-to-right. We're using [an image of 
 
 ### HTML
 
-The HTML includes the {{HTMLElement("canvas")}} in which the image is scrolled. Note that the width and height specified here must match the values of the `CanvasXZSize` and `CanvasYSize` variables in the JavaScript code.
+The HTML includes the {{HTMLElement("canvas")}} in which the image is scrolled. Note that the width and height specified here must match the values of the `canvasXSize` and `canvasYSize` variables in the JavaScript code.
 
 ```html
 <canvas id="canvas" width="800" height="200"></canvas>
@@ -251,16 +251,14 @@ const img = new Image();
 
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
-
 img.src = 'capitan_meadows_yosemite_national_park.jpg';
-const CanvasXSize = 800;
-const CanvasYSize = 200;
+const canvasXSize = 800;
+const canvasYSize = 200;
 const speed = 30; // lower is faster
 const scale = 1.05;
 const y = -4.5; // vertical offset
 
 // Main program
-
 const dx = 0.75;
 let imgW;
 let imgH;
@@ -269,68 +267,63 @@ let clearX;
 let clearY;
 let ctx;
 
-img.onload = function() {
-    imgW = img.width * scale;
-    imgH = img.height * scale;
+img.onload = () => {
+  imgW = img.width * scale;
+  imgH = img.height * scale;
 
-    if (imgW > CanvasXSize) {
-        // image larger than canvas
-        x = CanvasXSize - imgW;
-    }
-    if (imgW > CanvasXSize) {
-        // image width larger than canvas
-        clearX = imgW;
-    } else {
-        clearX = CanvasXSize;
-    }
-    if (imgH > CanvasYSize) {
-        // image height larger than canvas
-        clearY = imgH;
-    } else {
-        clearY = CanvasYSize;
-    }
+  if (imgW > canvasXSize) {
+    // Image larger than canvas
+    x = canvasXSize - imgW;
+  }
 
-    // get canvas context
-    ctx = document.getElementById('canvas').getContext('2d');
+  // Check if image dimension is larger than canvas
+  clearX = Math.max(imgW, canvasXSize);
+  clearY = Math.max(imgH, canvasYSize);
 
-    // set refresh rate
-    return setInterval(draw, speed);
+  // Get canvas context
+  ctx = document.getElementById('canvas').getContext('2d');
+
+  // Set refresh rate
+  return setInterval(draw, speed);
 }
 
 function draw() {
-    ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
+  ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-    // if image is <= Canvas Size
-    if (imgW <= CanvasXSize) {
-        // reset, start from beginning
-        if (x > CanvasXSize) {
-            x = -imgW + x;
-        }
-        // draw additional image1
-        if (x > 0) {
-            ctx.drawImage(img, -imgW + x, y, imgW, imgH);
-        }
-        // draw additional image2
-        if (x - imgW > 0) {
-            ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
-        }
+  // If image is <= canvas size
+  if (imgW <= canvasXSize) {
+    // Reset, start from beginning
+    if (x > canvasXSize) {
+      x = -imgW + x;
     }
 
-    // image is > Canvas Size
-    else {
-        // reset, start from beginning
-        if (x > (CanvasXSize)) {
-            x = CanvasXSize - imgW;
-        }
-        // draw additional image
-        if (x > (CanvasXSize-imgW)) {
-            ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
-        }
+    // Draw additional image1
+    if (x > 0) {
+      ctx.drawImage(img, -imgW + x, y, imgW, imgH);
     }
-    // draw image
-    ctx.drawImage(img, x, y,imgW, imgH);
-    // amount to move
-    x += dx;
+
+    // Draw additional image2
+    if (x - imgW > 0) {
+      ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+    }
+  } else {
+    // Image is > canvas size
+    // Reset, start from beginning
+    if (x > canvasXSize) {
+      x = canvasXSize - imgW;
+    }
+
+    // Draw additional image
+    if (x > canvasXSize - imgW) {
+      ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+    }
+  }
+
+  // Draw image
+  ctx.drawImage(img, x, y, imgW, imgH);
+
+  // Amount to move
+  x += dx;
 }
 ```
 

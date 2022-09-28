@@ -15,6 +15,7 @@ tags:
   - generateCertificate
 browser-compat: api.RTCPeerConnection.generateCertificate
 ---
+
 {{APIRef("WebRTC")}}
 
 The static **`RTCPeerConnection.generateCertificate()`**
@@ -23,7 +24,7 @@ that resolves with the new {{domxref("RTCCertificate")}} once it's generated.
 
 ## Syntax
 
-```js
+```js-nolint
 generateCertificate(keygenAlgorithm) // static function
 ```
 
@@ -63,7 +64,7 @@ of the Web Crypto API's {{domxref("Algorithm")}} class's subclasses.
 ### Standard configurations
 
 All browsers are required to support the following two configurations. It's entirely
-possible that a browser's *default* settings may be different, but these are
+possible that a browser's _default_ settings may be different, but these are
 always supported.
 
 #### RSASSA-PKCS1-v1_5
@@ -106,7 +107,7 @@ RTCPeerConnection.generateCertificate({
     hash: 'SHA-256',
     modulusLength: 2048,
     publicExponent: new Uint8Array([1, 0, 1])
-}).then(function(cert) {
+}).then((cert) => {
   const pc = new RTCPeerConnection({certificates: [cert]});
 });
 ```

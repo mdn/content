@@ -5,7 +5,6 @@ page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - Method
@@ -13,9 +12,12 @@ tags:
   - SourceBuffer
   - Video
   - appendstream
+  - Deprecated
+  - Non-standard
 browser-compat: api.SourceBuffer.appendStream
 ---
-{{APIRef("Media Source Extensions")}}{{deprecated_header}}
+
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`appendStream()`** method of the
 {{domxref("SourceBuffer")}} interface appends media segment data from a
@@ -23,7 +25,7 @@ The **`appendStream()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 appendStream(stream, maxSize)
 ```
 

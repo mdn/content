@@ -11,6 +11,7 @@ tags:
   - Building
   - Resources
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 This final Angular article covers how to build an app ready for production, and provides further resources for you to continue your learning journey.
@@ -45,11 +46,11 @@ When you run the `build` command in your `todo` directory, your application comp
 In the `todo` directory, run the following command at the command line:
 
 ```bash
-ng  build --prod
+ng build -c production
 ```
 
 The CLI compiles the application and puts the output in a new `dist` directory.
-The `--prod` flag with `ng build` gets rid of stuff you don't need for production.
+The `--configuration production`/`-c production` flag with `ng build` gets rid of stuff you don't need for production.
 
 ## Deploying your application
 

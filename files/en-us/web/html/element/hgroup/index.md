@@ -2,11 +2,8 @@
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
 tags:
-  - Deprecated
   - Element
-  - Experimental
   - HTML
-  - HTML5
   - Reference
   - Web
 browser-compat: html.elements.hgroup
@@ -14,7 +11,7 @@ browser-compat: html.elements.hgroup
 
 {{HTMLRef}}
 
-The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more  [`<p>`](/en-US/docs/Web/HTML/Element/p).
+The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more [`<p>`](/en-US/docs/Web/HTML/Element/p).
 
 {{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
@@ -96,7 +93,9 @@ The `<hgroup>` itself has no impact on the document outline of a web page. Rathe
   </hgroup>
   <p>Some intro to the document.</p>
   <h2>Table of contents</h2>
-  <ol id=toc>…</ol>
+  <ol id="toc">
+    …
+  </ol>
   <h2>First section</h2>
   <p>Some intro to the first section.</p>
 </body>
@@ -117,4 +116,4 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
 ## See also
 
 - Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Sections and outlines of an HTML5 document](/en-US/docs/Web/HTML/Element/Heading_Elements).
+- [Sections and outlines of an HTML document](/en-US/docs/Web/HTML/Element/Heading_Elements).

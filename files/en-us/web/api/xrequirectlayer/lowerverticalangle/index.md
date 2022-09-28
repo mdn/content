@@ -11,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XREquirectLayer.lowerVerticalAngle
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`lowerVerticalAngle`** property of the {{domxref("XREquirectLayer")}} interface represents the lower vertical angle in radians for the sphere.
 

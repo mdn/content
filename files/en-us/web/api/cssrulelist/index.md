@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSRuleList
 ---
+
 {{ APIRef("CSSOM") }}
 
 A `CSSRuleList` represents an ordered collection of read-only {{domxref("CSSRule")}} objects.

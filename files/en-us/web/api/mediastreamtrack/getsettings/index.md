@@ -11,7 +11,8 @@ tags:
   - Reference
 browser-compat: api.MediaStreamTrack.getSettings
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`getSettings()`** method of the
 {{domxref("MediaStreamTrack")}} interface returns a {{domxref("MediaTrackSettings")}}
@@ -22,7 +23,7 @@ See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_
 
 ## Syntax
 
-```js
+```js-nolint
 getSettings()
 ```
 

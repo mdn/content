@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingEnabled
 ---
+
 {{APIRef}}
 
 The **`imageSmoothingEnabled`** property of the
@@ -54,7 +55,7 @@ ctx.textAlign = 'center';
 
 const img = new Image();
 img.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/star.png';
-img.onload = function() {
+img.onload = () => {
   const w = img.width,
         h = img.height;
 

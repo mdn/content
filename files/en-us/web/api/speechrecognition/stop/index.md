@@ -13,6 +13,7 @@ tags:
   - stop
 browser-compat: api.SpeechRecognition.stop
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`stop()`** method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) stops the speech
@@ -21,7 +22,7 @@ recognition service from listening to incoming audio, and attempts to return a
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 
@@ -45,17 +46,17 @@ recognition.grammars = speechRecognitionList;
 const diagnostic = document.querySelector('.output');
 const bg = document.querySelector('html');
 
-document.body.onclick = function() {
+document.body.onclick = () => {
   recognition.start();
   console.log('Ready to receive a color command.');
 }
 
-abortBtn.onclick = function() {
+abortBtn.onclick = () => {
   recognition.abort();
   console.log('Speech recognition aborted.');
 }
 
-recognition.onspeechend = function() {
+recognition.onspeechend = () => {
   recognition.stop();
   console.log('Speech recognition has stopped.');
 }

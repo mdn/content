@@ -13,6 +13,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.commands.getAll
 ---
+
 {{AddonSidebar()}}
 
 Gets all commands for the extension that you have registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
@@ -23,7 +24,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getCommands = browser.commands.getAll();
 ```
 
@@ -43,7 +44,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function logCommands(commands) {
-  commands.forEach(function(command) {
+  commands.forEach((command) => {
     console.log(command);
   });
 }

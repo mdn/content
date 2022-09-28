@@ -11,7 +11,8 @@ tags:
   - Reference
 browser-compat: api.MediaRecorder.audioBitsPerSecond
 ---
-{{SeeCompatTable}}{{APIRef("MediaStream Recording")}}
+
+{{APIRef("MediaStream Recording")}}
 
 The **`audioBitsPerSecond`** read-only
 property of the {{domxref("MediaRecorder")}} interface returns the audio encoding bit

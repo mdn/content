@@ -14,14 +14,15 @@ tags:
   - Reference
 browser-compat: api.ImageCapture.ImageCapture
 ---
-{{APIRef("MediaStream Image")}}
+
+{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`ImageCapture()`** constructor
 creates a new {{domxref("ImageCapture")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new ImageCapture(videoTrack)
 ```
 

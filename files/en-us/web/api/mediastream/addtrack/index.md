@@ -11,7 +11,8 @@ tags:
   - addTrack
 browser-compat: api.MediaStream.addTrack
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`MediaStream.addTrack()`** method adds a new track to the
 stream. The track is specified as a parameter of type {{domxref("MediaStreamTrack")}}.
@@ -21,7 +22,7 @@ stream. The track is specified as a parameter of type {{domxref("MediaStreamTrac
 
 ## Syntax
 
-```js
+```js-nolint
 addTrack(track)
 ```
 

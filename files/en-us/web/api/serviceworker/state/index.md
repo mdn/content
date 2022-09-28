@@ -11,6 +11,7 @@ tags:
   - state
 browser-compat: api.ServiceWorker.state
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`state`** read-only property of the
@@ -57,8 +58,8 @@ if (registration.installing) {
 
 if (serviceWorker) {
   logState(serviceWorker.state);
-  serviceWorker.addEventListener('statechange', function(e) {
-  logState(e.target.state);
+  serviceWorker.addEventListener('statechange', (e) => {
+    logState(e.target.state);
   });
 }
 ```

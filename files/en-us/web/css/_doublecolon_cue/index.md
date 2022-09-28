@@ -1,6 +1,7 @@
 ---
 title: '::cue'
 slug: Web/CSS/::cue
+page-type: css-pseudo-element
 tags:
   - '::cue'
   - CSS
@@ -13,16 +14,12 @@ tags:
   - cue
 browser-compat: css.selectors.cue
 ---
+
 {{CSSRef}}
 
 The **`::cue`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webtt_cues) in media with VTT tracks.
 
-```css
-::cue {
-  color: yellow;
-  font-weight: bold;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-cue.html", "tabbed-shorter")}}
 
 The properties are applied to the entire set of cues as if they were a single unit. The only exception is that `background` and its longhand properties apply to each cue individually, to avoid creating boxes and obscuring unexpectedly large areas of the media.
 

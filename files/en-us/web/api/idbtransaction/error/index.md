@@ -13,6 +13,7 @@ tags:
   - Storage
 browser-compat: api.IDBTransaction.error
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`IDBTransaction.error`** property of the {{domxref("IDBTransaction")}} interface
@@ -35,7 +36,7 @@ was successfully committed.
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event
 handlers to report on the outcome of the transaction opening in the event of success or
-failure. Note the `transaction.onerror = function(event) { };` block, making
+failure. Note the `transaction.onerror = (event) => { };` block, making
 use of `transaction.error` to help in reporting what went wrong when the
 transaction was unsuccessful. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([View example live](https://mdn.github.io/to-do-notifications/)).
 

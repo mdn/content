@@ -12,6 +12,7 @@ tags:
   - result
 browser-compat: api.FileReader.result
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("FileReader")}} **`result`** property returns the
@@ -90,7 +91,7 @@ function read(callback) {
   const file = fileInput.files.item(0);
   const reader = new FileReader();
 
-  reader.onload = function() {
+  reader.onload = () => {
     callback(reader.result);
   }
 

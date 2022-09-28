@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSS
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSS`** interface holds useful CSS-related methods. No objects with this interface are implemented: it contains only static methods and is therefore a utilitarian interface.
@@ -31,7 +32,7 @@ _The CSS interface is a utility interface and no object of this type can be crea
 
 _No inherited static methods_.
 
-- {{DOMxRef("CSS.registerProperty()")}}
+- {{DOMxRef("CSS.registerProperty()")}} {{Experimental_Inline}}
   - : Registers {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.
 - {{DOMxRef("CSS.supports()")}}
   - : Returns a boolean value indicating if the pair _property-value_, or the condition, given in parameter is supported.

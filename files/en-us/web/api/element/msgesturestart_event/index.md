@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Element.MSGestureStart_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 The **`MSGestureStart`** event is fired when there's a new point of contact on the touch surface, thus starting a new gesture. When the gesture has ended, a {{domxref("Element/MSGestureEnd_event", "MSGestureEnd")}} event will be fired.

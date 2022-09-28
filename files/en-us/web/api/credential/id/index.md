@@ -12,7 +12,8 @@ tags:
   - id
 browser-compat: api.Credential.id
 ---
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}
+
+{{APIRef("Credential Management API")}}
 
 The **`id`** property of the
 {{domxref("Credential")}} interface returns a string containing the

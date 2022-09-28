@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getShaderParameter()`** method of
@@ -18,7 +19,7 @@ given shader.
 
 ## Syntax
 
-```js
+```js-nolint
 getShaderParameter(shader, pname)
 ```
 

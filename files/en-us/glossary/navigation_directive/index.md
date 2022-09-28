@@ -6,6 +6,7 @@ tags:
   - HTTP
   - Security
 ---
+
 **{{Glossary("CSP")}} navigation directives** are used in a {{HTTPHeader("Content-Security-Policy")}} header and govern to which location a user can navigate to or submit a form to, for example.
 
 Navigation directives don't fall back to the {{CSP("default-src")}} directive.

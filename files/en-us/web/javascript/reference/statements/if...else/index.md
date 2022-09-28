@@ -10,6 +10,7 @@ tags:
   - if
 browser-compat: javascript.statements.if_else
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`if`** statement executes a statement if a specified condition is {{Glossary("truthy")}}. If the condition is {{Glossary("falsy")}}, another statement in the optional `else` clause will be executed.
@@ -18,7 +19,7 @@ The **`if`** statement executes a statement if a specified condition is {{Glossa
 
 ## Syntax
 
-```js
+```js-nolint
 if (condition)
   statement1
 
@@ -30,7 +31,7 @@ else
 ```
 
 - `condition`
-  - : An [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions) that is considered to be either {{Glossary("truthy")}} or {{Glossary("falsy")}}.
+  - : An expression that is considered to be either {{Glossary("truthy")}} or {{Glossary("falsy")}}.
 - `statement1`
   - : Statement that is executed if _condition_ is {{Glossary("truthy")}}. Can be any statement, including further nested `if` statements. To execute multiple statements, use a [block](/en-US/docs/Web/JavaScript/Reference/Statements/block) statement (`{ /* ... */ }`) to group those statements. To execute no statements, use an [empty](/en-US/docs/Web/JavaScript/Reference/Statements/Empty) statement.
 - `statement2`
@@ -127,11 +128,11 @@ if (b) // this condition is truthy
 ### Using if...else
 
 ```js
-if (cipher_char === from_char) {
-  result = result + to_char;
+if (cipherChar === fromChar) {
+  result += toChar;
   x++;
 } else {
-  result = result + clear_char;
+  result += clearChar;
 }
 ```
 
@@ -151,7 +152,7 @@ if (x > 50) {
 
 ### Using an assignment as a condition
 
-You should almost never have an `if...else` with an assignment like "`x = y`" as a condition:
+You should almost never have an `if...else` with an assignment like `x = y` as a condition:
 
 ```js example-bad
 if (x = y) {

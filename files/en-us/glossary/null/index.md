@@ -1,19 +1,19 @@
 ---
-title: 'Null'
+title: "Null"
 slug: Glossary/Null
 tags:
   - CodingScripting
-  - Glossary
 ---
+
 In computer science, a **`null`** value represents a reference that points, generally intentionally, to a nonexistent or invalid {{glossary("object")}} or address. The meaning of a null reference varies among language implementations.
 
-In {{Glossary("JavaScript")}}, `null` is marked as one of the {{Glossary("Primitive", "primitive values")}}, because its behavior is seemingly primitive.
-
-But in certain cases, `null` is not as "primitive" as it first seems! Every Object is derived from `null` value, and therefore `typeof` operator returns `object` for it:
+In {{Glossary("JavaScript")}}, `null` is marked as one of the {{Glossary("Primitive", "primitive values")}}, because its behavior is seemingly primitive. However, when using the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator, it returns `"object"`.
 
 ```js
-typeof null === 'object' // true
+console.log(typeof null); // "object"
 ```
+
+This is considered [a bug](/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null), but one which cannot be fixed because it will break too many scripts.
 
 ## See also
 

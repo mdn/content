@@ -10,6 +10,7 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.enqueue
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 The **`enqueue()`** method of the {{domxref("TransformStreamDefaultController")}} interface enqueues the given chunk in the readable side of the stream.
@@ -18,7 +19,7 @@ For more information on readable streams and chunks see [Using Readable Streams]
 
 ## Syntax
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 

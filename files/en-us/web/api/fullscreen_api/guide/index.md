@@ -18,6 +18,7 @@ browser-compat:
   - api.Document.fullscreen
   - api.Document.fullscreenEnabled
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 This article demonstrates how to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) to place a given element into fullscreen mode, as well as how to detect when the browser enters or exits fullscreen mode.
@@ -99,7 +100,7 @@ In this example, a video is presented in a web page. Pressing the <kbd>Return</k
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", (e) => {
   if (e.keyCode === 13) {
     toggleFullScreen();
   }

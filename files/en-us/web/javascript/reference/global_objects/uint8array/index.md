@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Uint8Array
 ---
+
 {{JSRef}}
 
 The **`Uint8Array`** typed array represents an array of 8-bit unsigned integers. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
@@ -24,7 +25,7 @@ The **`Uint8Array`** typed array represents an array of 8-bit unsigned integers.
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `1` in the case of an `Uint8Array`.
 - {{jsxref("TypedArray.name", "Uint8Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Uint8Array` type: "`Uint8Array`".
+  - : Returns the string value of the constructor name. In the case of the `Uint8Array` type: `"Uint8Array"`.
 
 ## Static methods
 

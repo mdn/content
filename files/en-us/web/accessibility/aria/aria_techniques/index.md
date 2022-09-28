@@ -1,5 +1,5 @@
 ---
-title: 'Using ARIA: Roles, states, and properties'
+title: "Using ARIA: Roles, states, and properties"
 slug: Web/Accessibility/ARIA/ARIA_Techniques
 tags:
   - ARIA
@@ -7,6 +7,7 @@ tags:
   - Overview
   - Reference
 ---
+
 ARIA defines semantics that can be applied to elements, with these divided into **roles** (defining a type of user interface element) and **states** and **properties** that are supported by a role. Authors must assign an ARIA role and the appropriate states and properties to an element during its life-cycle, unless the element already has appropriate ARIA semantics (via use of an appropriate HTML element). Addition of ARIA semantics only exposes extra information to a browser's accessibility API, and does not affect a page's DOM.
 
 ## Roles

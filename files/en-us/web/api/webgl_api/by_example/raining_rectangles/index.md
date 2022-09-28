@@ -12,6 +12,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}
 
 A simple WebGL game that demonstrates clearing with solid colors, scissoring, animation, and user interaction.
@@ -27,44 +28,40 @@ This example combines clearing the drawing buffer with solid colors and scissori
 In addition, the example demonstrates how to integrate the WebGL function calls within a game loop. The game loop is responsible for drawing the animation frames, and keeping the animation responsive to user input. Here, the game loop is implemented using timeouts.
 
 ```html hidden
-<p>You caught
-<strong>0</strong>.
-  You missed
-<strong>0</strong>.</p>
+<p>You caught <strong>0</strong>. You missed <strong>0</strong>.</p>
 ```
 
 ```html hidden
-<canvas>Your browser does not seem to support
-    HTML5 canvas.</canvas>
+<canvas>Your browser does not seem to support canvases.</canvas>
 ```
 
 ```css hidden
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
 ```js hidden
-;(function(){
+;(() => {
+  "use strict";
 ```
 
 ```js
-"use strict"
 window.addEventListener("load", setupAnimation, false);
 let gl;
 let timer;
@@ -73,8 +70,7 @@ let scoreDisplay;
 let missesDisplay;
 function setupAnimation(evt) {
   window.removeEventListener(evt.type, setupAnimation, false);
-  if (!(gl = getRenderingContext()))
-    return;
+  if (!(gl = getRenderingContext())) return;
   gl.enable(gl.SCISSOR_TEST);
 
   rainingRect = new Rectangle();
@@ -110,14 +106,15 @@ function drawAnimation() {
 function playerClick(evt) {
   // We need to transform the position of the click event from
   // window coordinates to relative position inside the canvas.
-// In addition we need to remember that vertical position in
+  // In addition we need to remember that vertical position in
   // WebGL increases from bottom to top, unlike in the browser
   // window.
   const position = [
     evt.pageX - evt.target.offsetLeft,
     gl.drawingBufferHeight - (evt.pageY - evt.target.offsetTop),
   ];
-  // if the click falls inside the rectangle, we caught it.
+  // If the click falls inside the rectangle, we caught it.
+
   // Increment score and create a new rectangle.
   const diffPos = [
     position[0] - rainingRect.position[0],
@@ -162,11 +159,10 @@ function getRenderingContext() {
   const canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  const gl = canvas.getContext("webgl")
-    || canvas.getContext("experimental-webgl");
+  const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
   if (!gl) {
     const paragraph = document.querySelector("p");
-    paragraph.textContent = "Failed to get WebGL context. Your browser or device may not support WebGL.";
+    paragraph.textContent = "Failed. Your browser or device may not support WebGL.";
     return null;
   }
   gl.viewport(

@@ -1,6 +1,7 @@
 ---
 title: hsla()
 slug: Web/CSS/color_value/hsla
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
@@ -11,6 +12,7 @@ tags:
   - hsla
 browser-compat: css.types.color.hsla
 ---
+
 {{CSSRef}}
 
 The **`hsla()`** functional notation expresses a given color according to its hue, saturation, and lightness components. An optional alpha component represents the color's transparency.

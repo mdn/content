@@ -11,7 +11,8 @@ tags:
   - Reference
 browser-compat: api.KeyboardEvent.charCode
 ---
-{{APIRef("UI Events")}} {{non-standard_header}} {{deprecated_header}}
+
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
 The **`charCode`** read-only property of the
 {{domxref("KeyboardEvent")}} interface returns the Unicode value of a character key
@@ -38,10 +39,10 @@ A number that represents the Unicode value of the character key that was pressed
 ### JavaScript
 
 ```js
-let input = document.querySelector('input');
-let log = document.querySelector('#log');
+const input = document.querySelector('input');
+const log = document.querySelector('#log');
 
-input.addEventListener('keypress', function(e) {
+input.addEventListener('keypress', (e) => {
   log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${e.charCode}`;
 });
 ```

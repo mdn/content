@@ -14,6 +14,7 @@ browser-compat:
   - api.Navigator.share
   - api.Navigator.canShare
 ---
+
 {{DefaultAPISidebar("Web Share API")}}
 
 The **Web Share API** provides a mechanism for sharing text, links, files, and other content to an arbitrary _share target_ selected by the user.
@@ -22,7 +23,7 @@ The **Web Share API** provides a mechanism for sharing text, links, files, and o
 
 > **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
-> **Note:** This API should not be confused with the [Web Share Target API](https://w3c.github.io/web-share-target/), which allows a website to specify itself as a share target.
+> **Note:** This API should not be confused with the [Web Share Target API](/en-US/docs/Web/Manifest/share_target), which allows a website to specify itself as a share target.
 
 ## Concepts and usage
 
@@ -66,13 +67,13 @@ btn.addEventListener('click', async () => {
   try {
     await navigator.share(shareData)
     resultPara.textContent = 'MDN shared successfully'
-  } catch(err) {
+  } catch (err) {
     resultPara.textContent = `Error: ${err}`
   }
 });
 ```
 
-The above example is taken from our [Web share test](https://mdn.github.io/dom-examples/web-share/) ([see the source code](https://github.com/mdn/dom-examples/blob/master/web-share/index.html)). You can also see this as a live example in {{domxref("navigator.share()")}}.
+The above example is taken from our [Web share test](https://mdn.github.io/dom-examples/web-share/) ([see the source code](https://github.com/mdn/dom-examples/blob/main/web-share/index.html)). You can also see this as a live example in {{domxref("navigator.share()")}}.
 
 ## Specifications
 
@@ -84,4 +85,4 @@ The above example is taken from our [Web share test](https://mdn.github.io/dom-e
 
 ## See also
 
-- [Receiving shared data with the Web Share Target API](https://web.dev/web-share-target/) (https\://web.dev/)
+- [Web Share Target API](/en-US/docs/Web/Manifest/share_target)

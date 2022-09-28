@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: main role'
+title: "ARIA: main role"
 slug: Web/Accessibility/ARIA/Roles/main_role
 tags:
   - ARIA
@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#main
   - https://w3c.github.io/aria-practices/#aria_lh_main
 ---
+
 The `main` landmark role is used to indicate the primary content of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the main function of an application.
 
 ```html
@@ -54,7 +55,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
     <!-- article content -->
   </div>
 
- <!-- sidebar and footer -->
+  <!-- sidebar and footer -->
 </body>
 ```
 
@@ -136,6 +137,6 @@ Which is the equivalent of:
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

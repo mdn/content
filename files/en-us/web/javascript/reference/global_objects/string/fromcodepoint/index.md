@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fromCodePoint
 ---
+
 {{JSRef}}
 
 The static **`String.fromCodePoint()`** method returns a string
@@ -21,10 +22,10 @@ created by using the specified sequence of code points.
 
 ## Syntax
 
-```js
+```js-nolint
 String.fromCodePoint(num1)
 String.fromCodePoint(num1, num2)
-String.fromCodePoint(num1, num2, ..., numN)
+String.fromCodePoint(num1, num2, /* …, */ numN)
 ```
 
 ### Parameters

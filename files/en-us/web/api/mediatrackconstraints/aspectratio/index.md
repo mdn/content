@@ -16,11 +16,10 @@ tags:
   - getusermedia
 browser-compat: api.MediaTrackConstraints.aspectRatio
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackConstraints")}} dictionary's
-**`aspectRatio`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble)
-describing the requested or mandatory constraints placed upon the value of the
+{{APIRef("Media Capture and Streams")}}
+
+The {{domxref("MediaTrackConstraints")}} dictionary's **`aspectRatio`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) describing the requested or mandatory constraints placed upon the value of the
 {{domxref("MediaTrackSettings.aspectRatio", "aspectRatio")}} constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking

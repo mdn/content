@@ -13,6 +13,7 @@ tags:
   - bound
 browser-compat: api.IDBKeyRange.bound
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`bound()`** method of the {{domxref("IDBKeyRange")}}
@@ -24,7 +25,7 @@ is, the bounds include the endpoint values). By default, the bounds are closed.
 
 ## Syntax
 
-```js
+```js-nolint
 bound(lower, upper)
 bound(lower, upper, lowerOpen)
 bound(lower, upper, lowerOpen, upperOpen)
@@ -68,7 +69,7 @@ used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not
 include `"A"` and `"F"`, only the values between them.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at the idbkeyrange directory in the [indexeddb-examples](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbkeyrange) repo. (View the example [live](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/) too.
+> key range, have a look at the idbkeyrange directory in the [indexeddb-examples](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo. (View the example [live](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/) too.
 
 ```js
 function displayData() {
@@ -77,9 +78,9 @@ function displayData() {
   const transaction = db.transaction(['fThings'], 'readonly');
   const objectStore = transaction.objectStore('fThings');
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
-      if(cursor) {
+      if (cursor) {
         const listItem = document.createElement('li');
         listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
         list.appendChild(listItem);

@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.some
 ---
+
 {{JSRef}}
 
 The **`some()`** method tests whether
@@ -21,7 +22,7 @@ function. It returns true if, in the array, it finds an element for which the pr
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 some((element) => { /* … */ } )
 some((element, index) => { /* … */ } )
@@ -68,9 +69,9 @@ once for each element present in the array until it finds the one where
 `callbackFn` returns a _truthy_ value (a value that becomes
 true when converted to a Boolean). If such an element is found, `some()`
 immediately returns `true`. Otherwise, `some()` returns
-`false`. `callbackFn` is invoked only for indexes of the
-array with assigned values. It is not invoked for indexes which have been deleted or
-which have never been assigned values.
+`false`.
+
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 `callbackFn` is invoked with three arguments: the value of the
 element, the index of the element, and the Array object being traversed.
@@ -129,9 +130,7 @@ function returns `true` if the element exists in the array:
 const fruits = ['apple', 'banana', 'mango', 'guava'];
 
 function checkAvailability(arr, val) {
-  return arr.some(function(arrVal) {
-    return val === arrVal;
-  });
+  return arr.some((arrVal) => val === arrVal);
 }
 
 checkAvailability(fruits, 'kela');   // false
@@ -157,21 +156,27 @@ checkAvailability(fruits, 'banana'); // true
 const TRUTHY_VALUES = [true, 'true', 1];
 
 function getBoolean(value) {
-  'use strict';
-
   if (typeof value === 'string') {
     value = value.toLowerCase().trim();
   }
 
-  return TRUTHY_VALUES.some(function(t) {
-    return t === value;
-  });
+  return TRUTHY_VALUES.some((t) => t === value);
 }
 
 getBoolean(false);   // false
 getBoolean('false'); // false
 getBoolean(1);       // true
 getBoolean('true');  // true
+```
+
+### Using some() on sparse arrays
+
+`some()` will not run its predicate on empty slots.
+
+```js
+console.log([1, , 3].some((x) => x === undefined)); // false
+console.log([1, , 1].some((x) => x !== 1)); // false
+console.log([1, undefined, 1].some((x) => x !== 1)); // true
 ```
 
 ## Specifications

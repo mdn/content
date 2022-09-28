@@ -12,6 +12,7 @@ tags:
   - downlink
 browser-compat: api.NetworkInformation.downlink
 ---
+
 {{SeeCompatTable}}{{APIRef("Network Information API")}}
 
 The **`downlink`** read-only property of the

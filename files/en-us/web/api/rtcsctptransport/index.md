@@ -3,7 +3,6 @@ title: RTCSctpTransport
 slug: Web/API/RTCSctpTransport
 page-type: web-api-interface
 tags:
-  - Experimental
   - Interface
   - NeedsExample
   - RTCSctpTransport
@@ -12,7 +11,8 @@ tags:
   - WebRTC
 browser-compat: api.RTCSctpTransport
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+
+{{APIRef("WebRTC")}}
 
 The **`RTCSctpTransport`** interface provides information which describes a Stream Control Transmission Protocol (**{{Glossary("SCTP")}}**) transport. This provides information about limitations of the transport, but also provides a way to access the underlying Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport over which SCTP packets for all of an {{DOMxRef("RTCPeerConnection")}}'s data channels are sent and received.
 
@@ -24,7 +24,7 @@ Possibly the most useful property on this interface is its {{DOMxRef("RTCSctpTra
 
 ## Properties
 
-_Also inherits properties from: {{DOMxRef("EventTarget")}}_
+_Also inherits properties from: {{DOMxRef("EventTarget")}}_.
 
 - {{DOMxRef("RTCSctpTransport.maxChannels")}} {{ReadOnlyInline}}
   - : An integer value indicating the maximum number of {{DOMxRef("RTCDataChannel", "<code>RTCDataChannel</code>s", "", 1)}} that can be open simultaneously.
@@ -42,7 +42,7 @@ _Also inherits properties from: {{DOMxRef("EventTarget")}}_
 
 ## Methods
 
-_This interface has no methods, but inherits methods from: {{DOMxRef("EventTarget")}}_
+_This interface has no methods, but inherits methods from: {{DOMxRef("EventTarget")}}._
 
 ## Example
 

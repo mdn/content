@@ -10,6 +10,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.previousNode
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.previousNode()`** method moves the current
@@ -20,7 +21,7 @@ construction, returns `null` and the current node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 previousNode()
 ```
 

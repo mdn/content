@@ -8,6 +8,7 @@ tags:
   - Reference
   - z-index
 ---
+
 {{CSSRef}}
 
 The **stacking context** is a three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user, who is assumed to be facing the viewport or the webpage. HTML elements occupy this space in priority order based on element attributes.
@@ -38,7 +39,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with a {{cssxref("will-change")}} value specifying any property that would create a stacking context on non-initial value (see [this post](https://dev.opera.com/articles/css-will-change-property/)).
 - Element with a {{cssxref("contain")}} value of `layout`, or `paint`, or a composite value that includes either of them (i.e. `contain: strict`, `contain: content`).
 
-Within a stacking context, child elements are stacked according to the same rules previously explained. Importantly, the `z-index` values of its child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context.
+Within a stacking context, child elements are stacked according to the same rules explained just above. Importantly, the `z-index` values of its child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context.
 
 In summary:
 
@@ -52,7 +53,7 @@ In summary:
 
 ![Example of stacking rules modified using z-index](understanding_zindex_04.png)
 
-In this example, every positioned element creates its own stacking context, because of their positioning and `z-index` values. The hierarchy of [stacking contexts](en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) is organized as follows:
+In this example, every positioned element creates its own stacking context, because of their positioning and `z-index` values. The hierarchy of [stacking contexts](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) is organized as follows:
 
 - Root
 

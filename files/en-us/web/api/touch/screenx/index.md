@@ -10,6 +10,7 @@ tags:
   - touch
 browser-compat: api.Touch.screenX
 ---
+
 {{ APIRef("Touch Events") }}
 
 ## Summary
@@ -30,7 +31,7 @@ In following simple code snippet, we assume the user initiates multiple touch co
 // Register a touchstart listeners for the 'source' element
 const src = document.getElementById("source");
 
-src.addEventListener('touchstart', function(e) {
+src.addEventListener('touchstart', (e) => {
   // Iterate through the touch points and log each screenX/Y coordinate.
   // The unit of each coordinate is CSS pixels.
   for (let i = 0; i < e.touches.length; i++) {

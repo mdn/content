@@ -88,7 +88,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   - Technical terms
   - Transliterations
   - Thoughts (such as "She wondered, _What is this writer talking about, anyway?_")
-  - Ship or vessel names in Western writing systems (such as "They searched the docks for the *Empress of the Galaxy*, the ship to which they were assigned.")
+  - Ship or vessel names in Western writing systems (such as "They searched the docks for the _Empress of the Galaxy_, the ship to which they were assigned.")
 
 - In earlier versions of the HTML specification, the `<i>` element was merely a presentational element used to display text in italics, much like the `<b>` element was used to display text in bold letters. This is no longer true, as these tags now define semantics rather than typographic appearance. A browser will typically still display the contents of the `<i>` element in italic type, but is, by definition, no longer required to do so. To display text in italic type, authors should use the CSS {{cssxref("font-style")}} property.
 - Be sure the text in question is not actually more appropriately marked up with another element.
@@ -104,8 +104,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 This example demonstrates using the `<i>` element to mark text that is in another language.
 
 ```html
-<p>The Latin phrase <i>Veni, vidi, vici</i> is often
-mentioned in music, art, and literature.</p>
+<p>
+  The Latin phrase <i>Veni, vidi, vici</i> is often mentioned in music, art, and
+  literature.
+</p>
 ```
 
 ### Result

@@ -9,9 +9,11 @@ tags:
   - Method
   - Reference
   - Deprecated
+  - Non-standard
 browser-compat: api.HTMLCanvasElement.mozFetchAsStream
 ---
-{{APIRef("Canvas API")}} {{deprecated_header}}
+
+{{APIRef("Canvas API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLCanvasElement.mozFetchAsStream()`** internal method
 used to create a new input stream that, when ready, would provide the contents of the
@@ -19,7 +21,7 @@ canvas as image data. However, this non-standard and internal method has been re
 
 ## Syntax
 
-```js
+```js-nolint
 mozFetchAsStream(callback)
 mozFetchAsStream(callback, type)
 ```
@@ -56,8 +58,8 @@ ctx.closePath();
 ctx.fillStyle = 'yellow';
 ctx.fill();
 
-const netutilCallback = function() {
-    return function(result) {
+const netutilCallback = () => {
+    return (result) => {
        if (!Components.isSuccessCode(result)) {
           alert('FAILED to create icon');
        } else {
@@ -66,8 +68,8 @@ const netutilCallback = function() {
     };
 }
 
-const mfasCallback = function(iconName) {
-    return function(inStream) {
+const mfasCallback = (iconName) => {
+    return (inStream) => {
        const file = FileUtils.getFile('Desk', [`${iconName}.ico`]);
        const outStream = FileUtils.openFileOutputStream(file);
        Cu.import('resource://gre/modules/NetUtil.jsm');

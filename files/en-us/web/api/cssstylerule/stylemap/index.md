@@ -8,11 +8,11 @@ tags:
   - CSSStyleRule
   - Reference
   - Houdini
-  - Experimental
   - Property
 browser-compat: api.CSSStyleRule.styleMap
 ---
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+
+{{APIRef("CSSOM")}}
 
 The **`styleMap`** read-only property of the
 {{domxref("CSSStyleRule")}} interface returns a {{domxref('StylePropertyMap')}} object

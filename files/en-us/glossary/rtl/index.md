@@ -3,9 +3,9 @@ title: RTL (Right to Left)
 slug: Glossary/rtl
 tags:
   - Composing
-  - Glossary
   - Localization
 ---
+
 **RTL** (**Right To Left**) is a {{Glossary("locale")}} property indicating that text is written from right to left.
 
 For example, the `he` locale (for Hebrew) specifies right-to-left. Arabic (`ar`) is another common language written RTL.

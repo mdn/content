@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.update
 ---
+
 {{AddonSidebar()}}
 
 Updates a notification, given its ID.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let updating = browser.notifications.update(
   id,                            // string
   options                        // NotificationOptions
@@ -65,19 +66,17 @@ let CAKE_PREP_INTERVAL = 0.005;
 
 let progress = 0;
 
-browser.alarms.onAlarm.addListener(function(alarm) {
-  progress = progress + 10;
+browser.alarms.onAlarm.addListener((alarm) => {
+  progress += 10;
   if (progress > 100) {
     browser.notifications.clear(cakeNotification);
     browser.alarms.clear("cake-progress");
   } else {
-    browser.notifications.update(cakeNotification, {
-      "progress": progress
-    });
+    browser.notifications.update(cakeNotification, { progress });
   }
 });
 
-browser.browserAction.onClicked.addListener(function () {
+browser.browserAction.onClicked.addListener(() => {
   browser.notifications.getAll((all) => {
     if (all.length > 0) {
       browser.notifications.clear(cakeNotification);
@@ -85,15 +84,15 @@ browser.browserAction.onClicked.addListener(function () {
     }
     progress = 0;
     browser.notifications.create(cakeNotification, {
-      "type": "progress",
-      "iconUrl": browser.extension.getURL("icons/cake-48.png"),
-      "title": "Your cake is being prepared…",
-      "message": "Something something cake",
-      "progress": progress
+      type: "progress",
+      iconUrl: browser.extension.getURL("icons/cake-48.png"),
+      title: "Your cake is being prepared…",
+      message: "Something something cake",
+      progress,
     });
     browser.alarms.create(
       "cake-progress",
-      {periodInMinutes: CAKE_PREP_INTERVAL}
+      { periodInMinutes: CAKE_PREP_INTERVAL }
     );
   });
 });

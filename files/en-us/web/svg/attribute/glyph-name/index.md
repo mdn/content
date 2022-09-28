@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.glyph.glyph-name
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`glyph-name`** attribute specifies the name of a {{Glossary("glyph")}}.

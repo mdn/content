@@ -4,7 +4,6 @@ slug: Web/HTML/Element/nobr
 tags:
   - Element
   - HTML
-  - Non-standard
   - Deprecated
   - Reference
   - Web
@@ -12,7 +11,7 @@ tags:
 browser-compat: html.elements.nobr
 ---
 
-{{HTMLRef}}{{Non-standard_Header}}{{deprecated_header}}
+{{HTMLRef}}{{deprecated_header}}
 
 The **`<nobr>`** [HTML](/en-US/docs/Web/HTML) element prevents the text it contains from automatically wrapping across multiple lines, potentially resulting in the user having to scroll horizontally to see the entire width of the text.
 

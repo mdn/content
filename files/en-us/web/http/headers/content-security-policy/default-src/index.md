@@ -13,6 +13,7 @@ tags:
   - source
 browser-compat: http.headers.Content-Security-Policy.default-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** directive serves as a fallback for the other CSP {{Glossary("fetch directive", "fetch directives")}}. For each of the following directives that are absent, the user agent looks for the `default-src` directive and uses this value for it:
@@ -51,7 +52,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** direc
 
 One or more sources can be allowed for the `default-src` policy:
 
-```
+```http
 Content-Security-Policy: default-src <source>;
 Content-Security-Policy: default-src <source> <source>;
 ```
@@ -68,13 +69,13 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 
 If there are other directives specified, `default-src` does not influence them. The following header:
 
-```
+```http
 Content-Security-Policy: default-src 'self'; script-src https://example.com
 ```
 
 is the same as:
 
-```
+```http
 Content-Security-Policy: connect-src 'self';
                          font-src 'self';
                          frame-src 'self';

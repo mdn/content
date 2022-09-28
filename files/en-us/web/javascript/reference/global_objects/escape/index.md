@@ -8,7 +8,8 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.escape
 ---
-{{jsSidebar("Objects")}}
+
+{{jsSidebar("Objects")}}{{Deprecated_Header}}
 
 > **Warning:** Although `escape()` is not
 > strictly deprecated (as in "removed from the Web standards"), it is defined in
@@ -27,7 +28,7 @@ sequence.
 
 > **Note:** This function was used mostly for URL queries (the part of a
 > URL following `?`)—_not_ for escaping ordinary String literals,
-> which use the format "`\xHH`". (`HH` are
+> which use the format `\xHH`. (`HH` are
 > two hexadecimal digits, and the form `\xHH\xHH` is
 > used for higher-plane Unicode characters.)
 >
@@ -37,7 +38,7 @@ sequence.
 
 ## Syntax
 
-```js
+```js-nolint
 escape(str)
 ```
 

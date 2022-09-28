@@ -16,7 +16,8 @@ tags:
   - latency
 browser-compat: api.MediaTrackSettings.latency
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`latency`** property is a double-precision floating-point

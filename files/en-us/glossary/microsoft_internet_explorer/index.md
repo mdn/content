@@ -3,7 +3,6 @@ title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
 tags:
   - Browser
-  - Glossary
   - Internet Explorer
   - Microsoft
   - Microsoft Internet Explorer
@@ -12,6 +11,7 @@ tags:
   - Windows
   - Windows Operating System
 ---
+
 Internet Explorer (or IE) is a free graphical {{glossary("browser")}} maintained by Microsoft for legacy enterprise uses. {{glossary("Microsoft Edge")}} is currently the default Windows browser.
 
 Microsoft first bundled IE with Windows in 1995 as part of the package called "Microsoft Plus!". By around 2002, Internet Explorer had become the most used browser in the world, but has since lost ground to Chrome, Firefox, Edge, and Safari.
@@ -29,4 +29,4 @@ IE has gone through many releases and currently stands at version 11.0.12, with 
 - [http://windows.microsoft.com/en-us/internet-explorer/make-ie-default-browser#ie=ie-11](https://support.microsoft.com/en-gb/windows/make-internet-explorer-your-default-browser-c7120423-82a6-e001-be2f-5d4fb9d442b4)
 - [http://windows.microsoft.com/en-us/internet-explorer/products/ie-8/system-requirements](https://support.microsoft.com/en-us/windows/internet-explorer-help-23360e49-9cd3-4dda-ba52-705336cc0de2)
 - [http://windows.microsoft.com/en-us/internet-explorer/products/ie-9/system-requirements](https://support.microsoft.com/en-us/windows/internet-explorer-help-23360e49-9cd3-4dda-ba52-705336cc0de2)
-- [http://support.microsoft.com/kb/969393](https://docs.microsoft.com/en-US/troubleshoot/developer/browsers/general/information-about-ie-version)
+- [http://support.microsoft.com/kb/969393](https://docs.microsoft.com/troubleshoot/developer/browsers/general/information-about-ie-version)

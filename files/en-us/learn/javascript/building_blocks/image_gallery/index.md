@@ -11,8 +11,9 @@ tags:
   - Learn
   - Loops
   - events
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 Now that we've looked at the fundamental building blocks of JavaScript, we'll test your knowledge of loops, functions, conditionals and events by getting you to build a fairly common item you'll see on a lot of websites — a JavaScript-powered image gallery.
@@ -52,19 +53,20 @@ You have been provided with some HTML, CSS and image assets and a few lines of J
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img
+    class="displayed-img"
+    src="images/pic1.jpg"
+    alt="Closeup of a blue human eye" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 The example looks like this:
 
-![](gallery.png)
+![An image gallery with a large image on top and five thumbnails below](gallery.png)
 
 The most interesting parts of the example's CSS file:
 
@@ -74,8 +76,9 @@ The most interesting parts of the example's CSS file:
 Your JavaScript needs to:
 
 - Declare a `const` array listing the filenames of each image, such as `'pic1.jpg'`.
-- Loop through the array of filenames, and for each one insert an `<img>` element inside the `thumb-bar <div>` that embeds that image in the page.
-- Add a click event listener to each `<img>` inside the `thumb-bar <div>` so that when they are clicked, the corresponding image is displayed in the `displayed-img <img>` element.
+- Declare a `const` object listing the alternative text for each image.
+- Loop through the array of filenames, and for each one, insert an `<img>` element inside the `thumb-bar <div>` that embeds that image in the page along with its alternative text.
+- Add a click event listener to each `<img>` inside the `thumb-bar <div>` so that, when they are clicked, the corresponding image and alternative text are displayed in the `displayed-img <img>` element.
 - Add a click event listener to the `<button>` so that when it is clicked, a darken effect is applied to the full-size image. When it is clicked again, the darken effect is removed again.
 
 To give you more of an idea, have a look at the [finished example](https://mdn.github.io/learning-area/javascript/building-blocks/gallery/) (no peeking at the source code!)
@@ -90,16 +93,16 @@ You need to create an array listing the filenames of all the images to include i
 
 ### Looping through the images
 
-We've already provided you with lines that store a reference to the `thumb-bar <div>` inside a constant called `thumbBar`, create a new `<img>` element, set its `src` attribute to a placeholder value `xxx`, and append this new `<img>` element inside `thumbBar`.
+We've already provided you with lines that store a reference to the `thumb-bar <div>` inside a constant called `thumbBar`, create a new `<img>` element, set its `src` and `alt` attributes to a placeholder value `xxx`, and append this new `<img>` element inside `thumbBar`.
 
 You need to:
 
 1. Put the section of code below the "Looping through images" comment inside a loop that loops through all the filenames in the array.
-2. In each loop iteration, replace the `xxx` placeholder value with a string that will equal the path to the image in each case. We are setting the value of the `src` attribute to this value in each case. Bear in mind that in each case, the image is inside the images directory and its name is `pic1.jpg`, `pic2.jpg`, etc.
+2. In each loop iteration, replace the `xxx` placeholder values with a string that will equal the path to the image and alt attributes in each case. Set the value of the `src` and `alt` attributes to these values in each case. Remember that the image is inside the images directory, and its name is `pic1.jpg`, `pic2.jpg`, etc.
 
 ### Adding a click event listener to each thumbnail image
 
-In each loop iteration, you need to add a click event listener to the current `newImage` — this listener should find the value of the `src` attribute of the current image. Set the `src` attribute value of the `displayed-img <img>` to the `src` value passed in as a parameter.
+In each loop iteration, you need to add a click event listener to the current `newImage` — this listener should find the value of the `src` attribute of the current image. Set the `src` attribute value of the `displayed-img <img>` to the `src` value passed in as a parameter. Then do the same for the `alt` attribute.
 
 Alternatively, you can add one event listener to the thumb bar.
 
@@ -114,7 +117,7 @@ That just leaves our darken/lighten `<button>` — we've already provided a line
 The following lines provide a basis for achieving the changes stipulated in points 2 and 3 above.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```
@@ -130,10 +133,10 @@ If you would like your work assessed, or are stuck and want to ask for help:
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Image gallery".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+   - A descriptive title such as "Assessment wanted for Image gallery".
+   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+   - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 

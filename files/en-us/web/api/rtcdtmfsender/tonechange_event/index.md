@@ -13,6 +13,7 @@ tags:
   - tonechange
 browser-compat: api.RTCDTMFSender.tonechange_event
 ---
+
 {{WebRTCSidebar}}
 
 The **`tonechange`** event is sent to an {{domxref("RTCDTMFSender")}} by the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) to indicate when {{Glossary("DTMF")}} tones previously queued for sending (by calling {{domxref("RTCDTMFSender.insertDTMF()")}}) begin and end.
@@ -41,7 +42,7 @@ An {{domxref("RTCDTMFToneChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
 
-- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{readOnlyInline}}
+- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{ReadOnlyInline}}
   - : A string specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
 
 ## Examples

@@ -13,6 +13,7 @@ tags:
   - Deprecated
 browser-compat: api.HTMLTableElement.cellSpacing
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 While you should instead use the CSS

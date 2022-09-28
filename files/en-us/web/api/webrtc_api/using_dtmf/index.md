@@ -14,6 +14,7 @@ tags:
   - WebRTC
   - WebRTC API
 ---
+
 {{APIRef("WebRTC")}}
 
 In order to more fully support audio/video conferencing, [WebRTC](/en-US/docs/Web/API/WebRTC_API) supports sending {{Glossary("DTMF")}} to the remote peer on an {{domxref("RTCPeerConnection")}}. This article offers a brief high-level overview of how DTMF works over WebRTC, then provides a guide for everyday developers about how to send DTMF over an `RTCPeerConnection`. The DTMF system is often referred to as "touch tone," after an old trade name for the system.
@@ -53,14 +54,16 @@ The HTML for this example is very basic; there are only three elements of import
 - A {{HTMLElement("div")}} to receive and display log text to show status information.
 
 ```html
-  <p>This example demonstrates the use of DTMF in WebRTC. Note that this
-     example is "cheating" by generating both peers in one code stream,
-     rather than having each be a truly separate entity.</p>
+<p>
+  This example demonstrates the use of DTMF in WebRTC. Note that this example is
+  "cheating" by generating both peers in one code stream, rather than having
+  each be a truly separate entity.
+</p>
 
-  <audio id="audio" autoplay controls></audio><br/>
-  <button name="dial" id="dial">Dial</button>
+<audio id="audio" autoplay controls></audio><br />
+<button name="dial" id="dial">Dial</button>
 
-  <div class="log"></div>
+<div class="log"></div>
 ```
 
 ### JavaScript
@@ -116,7 +119,7 @@ These are, in order:
 When the page loads, we do some basic setup: we fetch references to the dial button and the log output box elements, and we use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add an event listener to the dial button so that clicking it calls the `connectAndDial()` function to begin the connection process.
 
 ```js
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
   logElement = document.querySelector(".log");
   dialButton = document.querySelector("#dial");
 
@@ -218,13 +221,13 @@ function handleToneChangeEvent(event) {
     log(`Tone played: ${event.tone}`);
   } else {
     log("All tones have played. Disconnecting.");
-    callerPC.getLocalStreams().forEach(function(stream) {
-      stream.getTracks().forEach(function(track) {
+    callerPC.getLocalStreams().forEach((stream) => {
+      stream.getTracks().forEach((track) => {
         track.stop();
       });
     });
-    receiverPC.getLocalStreams().forEach(function(stream) {
-      stream.getTracks().forEach(function(track) {
+    receiverPC.getLocalStreams().forEach((stream) => {
+      stream.getTracks().forEach((track) => {
         track.stop();
       });
     });
@@ -294,23 +297,23 @@ When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after
 function handleCallerNegotiationNeeded() {
   log("Negotiating…");
   callerPC.createOffer(offerOptions)
-  .then(function(offer) {
+  .then((offer) => {
     log(`Setting caller's local description: ${offer.sdp}`);
     return callerPC.setLocalDescription(offer);
   })
-  .then(function() {
+  .then(() => {
     log("Setting receiver's remote description to the same as caller's local");
     return receiverPC.setRemoteDescription(callerPC.localDescription)
   })
-  .then(function() {
+  .then(() => {
     log("Creating answer");
     return receiverPC.createAnswer();
   })
-  .then(function(answer) {
+  .then((answer) => {
     log(`Setting receiver's local description to ${answer.sdp}`);
     return receiverPC.setLocalDescription(answer);
   })
-  .then(function() {
+  .then(() => {
     log("Setting caller's remote description to match");
     return callerPC.setRemoteDescription(receiverPC.localDescription);
   })

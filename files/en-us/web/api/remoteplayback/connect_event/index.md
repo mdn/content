@@ -10,6 +10,7 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.connect_event
 ---
+
 {{APIRef()}}
 
 The **`connect`** event of the {{domxref("RemotePlayback")}} interface fires when the user agent connects to the remote device.
@@ -33,7 +34,7 @@ A generic {{domxref("Event")}}.
 In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent successfully connects.
 
 ```js
-RemotePlayback.onconnect = function() {
+RemotePlayback.onconnect = () => {
   console.log(RemotePlayback.state);
 }
 ```

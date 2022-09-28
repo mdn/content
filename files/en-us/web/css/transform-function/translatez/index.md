@@ -1,6 +1,7 @@
 ---
 title: translateZ()
 slug: Web/CSS/transform-function/translateZ
+page-type: css-function
 tags:
   - 3D
   - CSS
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.translateZ
 ---
+
 {{CSSRef}}
 
 The **`translateZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element along the z-axis in 3D space, i.e.,

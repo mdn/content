@@ -9,9 +9,10 @@ tags:
   - NeedsContent
   - Site-wide
 ---
+
 {{MDNSidebar}}
 
-On the [Yari](/en-US/docs/MDN/Yari) platform that powers MDN, we still have a legacy template/macro system available called [KumaScript](https://github.com/mdn/yari/tree/main/kumascript) for automating certain aspects of content. We are hoping to stop using it some day, but until then MDN will still rely on it. This article provides basic information about using KumaScript
+On the [Yari](/en-US/docs/MDN/Yari) platform that powers MDN, we still have a legacy template/macro system available called [KumaScript](https://github.com/mdn/yari/tree/main/kumascript) for automating certain aspects of content. We are hoping to stop using it some day, but until then MDN will still rely on it. This article provides basic information about using KumaScript.
 
 ### What is KumaScript?
 
@@ -32,7 +33,7 @@ KumaScript does not
 
 KumaScript is used on MDN via [embedded JavaScript templates](https://github.com/mde/ejs). These templates can be invoked in document content by any MDN author, through the use of macros.
 
-A script in KumaScript is a _template_, and each template is a file in [the macros directory](https://github.com/mdn/yari/tree/main/kumascript/macros) of the yari/kumascript repository on GitHub. A sample template might look like this:
+A script in KumaScript is a _template_, and each template is a file in [the macros directory](https://github.com/mdn/yari/tree/main/kumascript/macros) of the `mdn/yari` repository on GitHub. A sample template might look like this:
 
 ```js
 <% for (let i = 0; i < $0; i++) { %>
@@ -40,7 +41,7 @@ A script in KumaScript is a _template_, and each template is a file in [the macr
 <% } %>
 ```
 
-Invoking a template is done with a _macro_, which can be used anywhere in any wiki content. Invoking the above template would look like this (provided it was saved in the macros directory with a filename of `hello.ejs`):
+Invoking a template is done with a _macro_, which can be used anywhere in any page content. Invoking the above template would look like this (provided it was saved in the macros directory with a filename of `hello.ejs`):
 
 ```plain
 \{{hello(3)}}
@@ -48,7 +49,7 @@ Invoking a template is done with a _macro_, which can be used anywhere in any wi
 
 The output of the macro would look like this:
 
-```html
+```
 Hello #0
 Hello #1
 Hello #2
@@ -64,7 +65,7 @@ Macro syntax takes the following general form:
 
 Macro syntax follows these rules:
 
-- Macros start and end with `\{{</code> and <code>\}}` characters.
+- Macros start and end with `\{{` and `\}}` characters.
 - The first part of the macro is the name of a template. The lowercase value of this name should match the lowercase value of one of the filenames under the macros directory.
 - A template can accept parameters, and this parameter list starts and ends with parentheses.
 - All non-numeric parameters must be in quotes. Numbers can be left unquoted.
@@ -81,15 +82,15 @@ The data from this macro is available in template code as an object in the `$0` 
 
 Note that this parameter style is very picky — it must adhere to [JSON syntax](https://json.org/) exactly, which has some requirements about escaping characters that are easy to miss (e.g., all forward slashes are escaped). When in doubt, [try running your JSON through a validator](https://jsonlint.com/).
 
-<h4 id="How_to_write_in_text">How to write "\{{" in text</h4>
+#### How to write "\\{{" in text
 
-<p>Since the character sequence "<code>\{{</code>" is used to indicate the start of a macro, this can be troublesome if you actually just want to use "<code>\{{</code>" and "<code>\}\}</code>" in a page. It will probably produce <code>DocumentParsingError</code> messages.</p>
+Since the character sequence "`\{{`" is used to indicate the start of a macro, this can be troublesome if you actually just want to use "`\{{`" and "`\}\}`" in a page. It will probably produce `DocumentParsingError` messages.
 
-<p>In this case, you can escape the first brace with a backslash, like so: <code>\\{{</code>.</p>
+In this case, you can escape the first brace with a backslash, like so: `\\{{`.
 
 ### Template syntax
 
-Each KumaScript template is a file under [the macros directory](https://github.com/mdn/yari/tree/main/kumascript/macros) of the yari/kumascript repository on GitHub. You create and edit these files as you would the files of any open-source project on GitHub.
+Each KumaScript template is a file under [the macros directory](https://github.com/mdn/yari/tree/main/kumascript/macros) of the `mdn/yari` repository on GitHub. You create and edit these files as you would the files of any open-source project on GitHub.
 
 KumaScript templates are processed by an [embedded JavaScript template engine](https://ejs.co) with a few simple rules:
 
@@ -105,7 +106,7 @@ KumaScript templates are processed by an [embedded JavaScript template engine](h
 - Nothing inside a `<% %>` block can ever contribute to the output stream. But, you can transition from JS mode to output mode using `<% %>`—for example:
 
   ```js
-  <% for (var i = 0; i < $0; i++) { %>
+  <% for (let i = 0; i < $0; i++) { %>
     Hello #<%= i %>
   <% } %>
   ```
@@ -197,7 +198,7 @@ KumaScript offers some built-in methods and APIs for KumaScript macros. Macros c
 
 #### Built-in methods
 
-This manually-maintained documentation is likely to fall out of date with the code. With that in mind, [you can always check out the latest state of built-in APIs in the KumaScript source](https://github.com/mdn/yari/tree/main/kumascript/src/api). But here is a selection of useful methods exposed to templates:
+This manually-maintained documentation is likely to fall out of date with the code. With that in mind, you can always check out the latest state of built-in APIs in the [KumaScript source](https://github.com/mdn/yari/tree/main/kumascript/src/api). But here is a selection of useful methods exposed to templates:
 
 - `md5(string)`
   - : Returns an MD5 hex digest of the given string.
@@ -209,7 +210,7 @@ This manually-maintained documentation is likely to fall out of date with the co
 
     Example using the `DOMxRef` macro: `<%- template("DOMxRef", ["Event.bubbles", "bubbles"]) %>`.
 
-    This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: `<%- template("warning", [$1, $2, "baz"]) %>`. If you need to call another template from within a block of code, do not use `<%` … `%>`. Example: `myvar = "<li>" + template("LXRSearch", ["ident", "i", $1]) + "</li>";`
+    This is a JavaScript function. So, if one of the parameters is an arg variable like `$2`, do not put it in quotes. Like this: `<%- template("warning", [$1, $2, "baz"]) %>`. If you need to call another template from within a block of code, do not use `<%` … `%>`. Example: `myvar = "<li>" + template("LXRSearch", ["ident", "i", $1]) + "</li>";`
 
 - `require(name)`
   - : Loads another template as a module; any output is ignored. Anything assigned to `module.exports` in the template is returned. Used in templates like so: `<% const my_module = require('MyModule'); %>`.
@@ -262,14 +263,14 @@ Assuming this template were saved in the macros directory as `MathLib.ejs`, you 
 
 ```js
 <%
-var math_lib = require("MathLib");
+const math_lib = require("MathLib");
 %>
 The result of 2 + 2 = <%= math_lib.add(2, 2) %>
 ```
 
 And, the output of this template would be:
 
-```html
+```
 The result of 2 + 2 = 4
 ```
 
@@ -373,52 +374,81 @@ If the file isn't found, an empty string is returned. There is currently no way 
 
 Templates are not translated like wiki pages, rather any single template might be used for any number of locales.
 
-So the main way to output content tailored to the current document locale is to pivot on the value of `env.locale`. There are many ways to do this, but a few patterns are common in the conversion of legacy DekiScript templates:
+Templates can be localized using the `mdn.localString()` method, which takes an object containing a mapping of locales to strings. For example:
 
-#### If/else blocks in KumaScript
-
-The KumaScript equivalent of this can be achieved with simple if/else blocks, like so:
-
-```html
-<% if ("fr" == env.locale) { %>
-<%- template("CSSRef") %> « <a href="/fr/docs/Référence_CSS/Extensions_Mozilla">Référence CSS: Extensions Mozilla</a>
-<% } else if ("ja" == env.locale) { %>
-<%- template("CSSRef") %> « <a href="/ja/docs/CSS_Reference/Mozilla_Extensions">CSS リファレンス: Mozilla 拡張仕様</a>
-<% } else if ("pl" == env.locale) { %>
-<%- template("CSSRef") %> « <a href="/pl/docs/Dokumentacja_CSS/Rozszerzenia_Mozilli">Dokumentacja CSS: Rozszerzenia Mozilli</a>
-<% } else if ("de" == env.locale) { %>
-<%- template("CSSRef") %> « <a href="/de/docs/CSS_Referenz/Mozilla_CSS_Erweiterungen">CSS Referenz: Mozilla Erweiterungen</a>
-<% } else { %>
-<%- template("CSSRef") %> « <a href="/en-US/docs/CSS_Reference/Mozilla_Extensions">CSS Reference: Mozilla Extensions</a>
-<% } %>
-```
-
-Depending on what text editor is your favorite, you may be able to copy & paste from the browser-based editor and attack this pattern with a series of search/replace regexes to get you most of the way there.
-
-My favorite editor is MacVim, and a series of regexes like this does the bulk of the work with just a little manual clean up following:
-
-```plain
-%s#<span#^M<span#g
-%s#<span lang="\(.*\)" .*>#<% } else if ("\1" == env.locale) { %>#g
-%s#<span class="script">template.CSSxRef(#<%- template("CSSxRef", [#
-%s#)</span> </span>#]) %>
-```
-
-Your mileage may vary, and patterns change slightly from template to template. That's why the migration script was unable to just handle this automatically, after all.
-
-#### String variables and switch
-
-Different strings are defined and chosen depending on locale using `mdn.localString()`, like this:
-
-```html
+```js
 <%
-var s_title = mdn.localString({
+const text = mdn.localString({
+  "en-US": "Hello world!",
+  "es": "¡Hola mundo!",
+  // ...
+});
+%>
+```
+
+Each locale may also take an object containing a mapping of keys to strings, for more than one string. For example;
+
+```js
+<%
+const text = mdn.localStringMap({
+  'en-US': {
+    'Complete_beginners_start_here': 'Complete beginners start here!',
+    'Getting_started_with_the_web': 'Getting started with the web',
+  },
+  'de': {
+    'Complete_beginners_start_here': 'Anfänger starten hier!',
+    'Getting_started_with_the_web': 'Lernen Sie das Internet kennen',
+  },
+  'fr': {
+    'Complete_beginners_start_here': 'Bienvenue aux débutants !',
+    'Getting_started_with_the_web': 'Commencer avec le Web',
+  },
+  // ...
+});
+%>
+```
+
+The `mdn.localString()` function will automatically load strings for the appropriate locale. If a string is missing for a locale, it will fall back to `en-US` for that string. For example:
+
+```js
+<%
+const s_title = mdn.localString({
   "en-US": "Firefox for Developers",
   "de": "Firefox für Entwickler",
   "es": "Firefox para desarrolladores"
 });
+
+const body = mdn.localString({
+  "en-US": {
+    "hello": "Hello!",
+    "goodbye": "Goodbye!",
+  },
+  "de": {
+    "hello": "Hallo!",
+    "goodbye": "Auf Wiedersehen!",
+  },
+  "es": {
+    "hello": "¡Hola!"
+  }
+});
 %>
-<span class="title"><%= s_title %></span>
+<%= s_title %> / <%= body['hello'] %> / <%= body['goodbye'] %>
 ```
 
-When the object does not have the appropriate locale, the value of "en-US" is used as the initial value.
+Will render, for `de`:
+
+```
+Firefox für Entwickler / Hallo! / Auf Wiedersehen!
+```
+
+...and for `es`:
+
+```
+Firefox para desarrolladores / ¡Hola! / Goodbye!
+```
+
+...and for `en-US` / `ko`:
+
+```
+Firefox for Developers / Hello! / Goodbye!
+```

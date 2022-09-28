@@ -12,6 +12,7 @@ tags:
   - isIntersecting
 browser-compat: api.IntersectionObserverEntry.isIntersecting
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
@@ -37,7 +38,7 @@ many targeted elements are currently intersecting with the
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       intersectingCount += 1;
     } else {

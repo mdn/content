@@ -13,6 +13,7 @@ tags:
   - openCursor
 browser-compat: api.IDBObjectStore.openCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openCursor()`** method of the
@@ -27,7 +28,7 @@ To determine if the add operation has completed successfully, listen for the res
 
 ## Syntax
 
-```js
+```js-nolint
 openCursor()
 openCursor(query)
 openCursor(query, direction)
@@ -79,9 +80,9 @@ cursor to iterate through all the records in the object store:
 const transaction = db.transaction("name", "readonly");
 const objectStore = transaction.objectStore("name");
 const request = objectStore.openCursor();
-request.onsuccess = function(event) {
+request.onsuccess = (event) => {
   const cursor = event.target.result;
-  if(cursor) {
+  if (cursor) {
     // cursor.value contains the current record being iterated through
     // this is where you'd do something with the result
     cursor.continue();

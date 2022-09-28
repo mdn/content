@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/44
 tags:
   - Firefox
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)Firefox 44 was released on January 26, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -91,7 +92,7 @@ Highlights:
 #### Removals
 
 - Support for the non-standard [`let` blocks](/en-US/docs/Web/JavaScript/Reference/Statements/let#let_blocks) has been dropped ({{bug(1167029)}}.
-- The non-standard and deprecated property {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} has been removed ({{bug(683218)}}).
+- The non-standard and deprecated property `Object.prototype.__noSuchMethod__` has been removed ({{bug(683218)}}).
 
 ### Interfaces/APIs/DOM
 
@@ -197,7 +198,7 @@ _No change._
 
 ### Interfaces
 
-_No change_
+_No change._
 
 ### XUL
 

@@ -6,9 +6,11 @@ tags:
   - NDEF
   - Reference
   - Web NFC
+  - Experimental
 browser-compat: api.NDEFRecord.lang
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`lang`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the language of
@@ -19,7 +21,7 @@ not locale-specific.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.lang
 ```
 

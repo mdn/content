@@ -9,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.compareBoundaryPoints
 ---
+
 {{ApiRef("DOM")}}
 
 The
@@ -17,7 +18,7 @@ boundary points of the {{domxref("Range")}} with those of another range.
 
 ## Syntax
 
-```js
+```js-nolint
 compareBoundaryPoints(how, sourceRange)
 ```
 
@@ -42,8 +43,8 @@ compareBoundaryPoints(how, sourceRange)
 ### Return value
 
 A number, `-1`, `0`, or `1`, indicating whether the
-    corresponding boundary-point of the {{domxref("Range")}} is respectively before, equal
-    to, or after the corresponding boundary-point of _sourceRange_.
+corresponding boundary-point of the {{domxref("Range")}} is respectively before, equal
+to, or after the corresponding boundary-point of _sourceRange_.
 
 ### Exceptions
 
@@ -54,7 +55,7 @@ A number, `-1`, `0`, or `1`, indicating whether the
 
 ```js
 const range = document.createRange();
-range.selectNode(document.getElementsByTagName("div")[0]);
+range.selectNode(document.querySelector("div"));
 const sourceRange = document.createRange();
 sourceRange.selectNode(document.getElementsByTagName("div")[1]);
 const compare = range.compareBoundaryPoints(Range.START_TO_END, sourceRange);

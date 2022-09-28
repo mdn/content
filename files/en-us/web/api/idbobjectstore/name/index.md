@@ -13,6 +13,7 @@ tags:
   - name
 browser-compat: api.IDBObjectStore.name
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`name`** property of the {{domxref("IDBObjectStore")}}
@@ -52,7 +53,7 @@ our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -71,12 +72,12 @@ function addData() {
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
-  transaction.oncomplete = function(event) {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed.</li>';
   };
 
-  transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  transaction.onerror = (event) => {
+    note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
   // create an object store on the transaction
@@ -86,7 +87,7 @@ function addData() {
   // Make a request to add our newItem object to the object store
   const objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
     note.innerHTML += '<li>Request successful.</li>';
   };

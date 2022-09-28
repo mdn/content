@@ -9,9 +9,10 @@ tags:
   - Streams API
 browser-compat: api.TransformStream
 ---
+
 {{APIRef("Streams")}}
 
-The `TransformStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a concrete implementation of the [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) *transform stream* concept.
+The **`TransformStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a concrete implementation of the [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) _transform stream_ concept.
 
 It may be passed to the {{domxref("ReadableStream.pipeThrough()")}} method in order to transform a stream of data from one format into another.
 For example, it might be used to decode (or encode) video frames, decompress data, or convert the stream from XML to JSON.
@@ -28,9 +29,9 @@ If not supplied, data is not modified when piped through the stream.
 
 ## Properties
 
-- {{domxref("TransformStream.readable")}} {{readonlyInline}}
+- {{domxref("TransformStream.readable")}} {{ReadOnlyInline}}
   - : The `readable` end of a `TransformStream`.
-- {{domxref("TransformStream.writable")}} {{readonlyInline}}
+- {{domxref("TransformStream.writable")}} {{ReadOnlyInline}}
   - : The `writable` end of a `TransformStream`.
 
 ## Methods
@@ -47,19 +48,28 @@ In the following example, a transform stream passes through all chunks it receiv
 const transformContent = {
   start() {}, // required.
   async transform(chunk, controller) {
-    chunk = await chunk
+    chunk = await chunk;
     switch (typeof chunk) {
       case 'object':
         // just say the stream is done I guess
-        if (chunk === null) controller.terminate()
-        else if (ArrayBuffer.isView(chunk))
-          controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength))
-        else if (Array.isArray(chunk) && chunk.every((value) => typeof value === 'number'))
-          controller.enqueue(new Uint8Array(chunk))
-        else if ('function' === typeof chunk.valueOf && chunk.valueOf() !== chunk)
-          this.transform(chunk.valueOf(), controller) // hack
-        else if ('toJSON' in chunk) this.transform(JSON.stringify(chunk), controller)
-        break
+        if (chunk === null) {
+          controller.terminate();
+        } else if (ArrayBuffer.isView(chunk)) {
+          controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength));
+        } else if (
+          Array.isArray(chunk) &&
+          chunk.every((value) => typeof value === 'number')
+        ) {
+          controller.enqueue(new Uint8Array(chunk));
+        } else if (
+          typeof chunk.valueOf === 'function' &&
+          chunk.valueOf() !== chunk
+        ) {
+          this.transform(chunk.valueOf(), controller); // hack
+        } else if ('toJSON' in chunk) {
+          this.transform(JSON.stringify(chunk), controller);
+        }
+        break;
       case 'symbol':
         controller.error("Cannot send a symbol as a chunk part")
         break

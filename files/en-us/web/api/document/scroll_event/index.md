@@ -12,6 +12,7 @@ tags:
   - UIEvent
 browser-compat: api.Document.scroll_event
 ---
+
 {{APIRef}}
 
 The **`scroll`** event fires when the document view has been scrolled. For element scrolling, see {{domxref("Element/scroll_event", "Element:&nbsp;scroll&nbsp;event")}}.
@@ -40,9 +41,9 @@ Since `scroll` events can fire at a high rate, the event handler shouldn't execu
 
 Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the `scroll` event for `requestAnimationFrame`.
 
-```js
-// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
+<!--Reference: http://www.html5rocks.com/en/tutorials/speed/animations/ no longer exists. -->
 
+```js
 let lastKnownScrollPosition = 0;
 let ticking = false;
 
@@ -50,11 +51,11 @@ function doSomething(scrollPos) {
   // Do something with the scroll position
 }
 
-document.addEventListener('scroll', function(e) {
+document.addEventListener('scroll', (e) => {
   lastKnownScrollPosition = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(() => {
       doSomething(lastKnownScrollPosition);
       ticking = false;
     });

@@ -49,8 +49,9 @@ In the context of the rendering waterfall, some properties are more expensive th
         <em>position</em> trigger a style recalculation, a layout and a repaint.
       </td>
       <td>
-        <img alt="" src="recalculate-style.png" />
-        <img alt="" src="layout.png" /> <img alt="" src="paint.png" />
+        <img alt="Recalculate: Yes" src="recalculate-style.png" />
+        <img alt="Does calculate layout" src="layout.png" />
+        <img alt="Does repaint" src="paint.png" />
       </td>
       <td>
         <p>
@@ -75,8 +76,9 @@ In the context of the rendering waterfall, some properties are more expensive th
         </p>
       </td>
       <td>
-        <img alt="" src="recalculate-style.png" />
-        <img alt="" src="layout-faint.png" /> <img alt="" src="paint.png" />
+        <img alt="does recalculate styles " src="recalculate-style.png" />
+        <img alt="No layout" src="layout-faint.png" />
+        <img alt="does repaint" src="paint.png" />
       </td>
       <td>
         <p>
@@ -90,9 +92,9 @@ In the context of the rendering waterfall, some properties are more expensive th
         repaint, because the update is handled in composition.
       </td>
       <td>
-        <img alt="" src="recalculate-style.png" />
-        <img alt="" src="layout-faint.png" />
-        <img alt="" src="paint-faint.png" />
+        <img alt="Does recalculate styles" src="recalculate-style.png" />
+        <img alt="No layout" src="layout-faint.png" />
+        <img alt="No repaint" src="paint-faint.png" />
       </td>
       <td>
         <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code
@@ -101,8 +103,6 @@ In the context of the rendering waterfall, some properties are more expensive th
     </tr>
   </tbody>
 </table>
-
-> **Note:** The [CSS Triggers](https://csstriggers.com/) website shows how much of the waterfall is triggered for each CSS property, with information for most CSS properties by browser engine.
 
 ## Developer tools
 

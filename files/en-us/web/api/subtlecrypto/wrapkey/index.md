@@ -11,6 +11,7 @@ tags:
   - wrapKey
 browser-compat: api.SubtleCrypto.wrapKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`wrapKey()`** method of the {{domxref("SubtleCrypto")}}
@@ -34,7 +35,7 @@ of import + decrypt.
 
 ## Syntax
 
-```js
+```js-nolint
 wrapKey(format, key, wrappingKey, wrapAlgo)
 ```
 
@@ -109,7 +110,7 @@ AES-KW is specified in [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394)
 ### Raw wrap
 
 This example wraps an AES key. It uses "raw" as the export format and AES-KW, with a
-password-derived key, to encrypt it. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/raw.js).
+password-derived key, to encrypt it. [See the complete code on GitHub](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js).
 
 ```js
 let salt;
@@ -182,7 +183,7 @@ window.crypto.subtle
 
 This example wraps an RSA private signing key. It uses "pkcs8" as the export format and
 AES-GCM, with a password-derived key, to encrypt it.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/pkcs8.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/pkcs8.js)
 
 ```js
 let salt;
@@ -266,7 +267,7 @@ window.crypto.subtle
 
 This example wraps an RSA public encryption key. It uses "spki" as the export format
 and AES-CBC, with a password-derived key, to encrypt it.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/spki.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/spki.js)
 
 ```js
 let salt;
@@ -296,7 +297,7 @@ function getKey(keyMaterial, salt) {
   return window.crypto.subtle.deriveKey(
     {
       name: 'PBKDF2',
-      salt: salt,
+      salt,
       iterations: 100000,
       hash: 'SHA-256',
     },
@@ -348,7 +349,7 @@ window.crypto.subtle
 
 This code wraps an ECDSA private signing key. It uses "jwk" as the export format and
 AES-GCM, with a password-derived key, to encrypt it.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/wrap-key/jwk.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/jwk.js)
 
 ```js
 let salt;

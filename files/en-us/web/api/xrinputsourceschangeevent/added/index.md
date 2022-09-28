@@ -20,6 +20,7 @@ tags:
   - augmented
 browser-compat: api.XRInputSourcesChangeEvent.added
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRInputSourcesChangeEvent")}}
@@ -42,12 +43,12 @@ removed devices whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}
 
 ```js
 xrSession.oninputsourcescchange = (event) => {
-  for (let input of event.added) {
+  for (const input of event.added) {
     if (input.targetRayMode === "tracked-pointer") {
       addedPointerDevice(input);
     }
   }
-  for (let input of event.removed) {
+  for (const input of event.removed) {
     if (input.targetRayMode === "tracked-pointer") {
       removedPointerDevice(input);
     }

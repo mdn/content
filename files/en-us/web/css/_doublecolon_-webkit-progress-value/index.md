@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-progress-value'
 slug: Web/CSS/::-webkit-progress-value
+page-type: css-pseudo-element
 tags:
   - CSS
   - Non-standard
@@ -9,6 +10,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-webkit-progress-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-progress-value`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the filled-in portion of the bar of a {{HTMLElement("progress")}} element. It is a child of the {{cssxref("::-webkit-progress-bar")}} pseudo-element.
@@ -28,7 +30,7 @@ This example will only work in browsers based on Blink or WebKit.
 ### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### CSS
@@ -51,7 +53,7 @@ progress {
 
 A progress bar using the style above would look like this:
 
-![](progress-value.png)
+![A long orange and grey box. The left 20% is orange. The right 80% is grey.](progress-value.png)
 
 ## Specifications
 

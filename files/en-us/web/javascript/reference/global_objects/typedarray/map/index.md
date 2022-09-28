@@ -11,11 +11,12 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.map
 ---
+
 {{JSRef}}
 
 The **`map()`** method creates a new typed array with the
 results of calling a provided function on every element in this typed array. This method
-has the same algorithm as {{jsxref("Array.prototype.map()")}}_._
+has the same algorithm as {{jsxref("Array.prototype.map()")}}.
 _TypedArray_ is one of the
 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
@@ -23,7 +24,7 @@ _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 map((currentValue) => { /* ... */ } )
 map((currentValue, index) => { /* ... */ } )
@@ -114,9 +115,7 @@ the typed array as `map()` loops through the original typed array.
 
 ```js
 const numbers = new Uint8Array([1, 4, 9]);
-const doubles = numbers.map(function(num) {
-  return num * 2;
-});
+const doubles = numbers.map((num) => num * 2);
 // doubles is now Uint8Array [2, 8, 18]
 // numbers is still Uint8Array [1, 4, 9]
 ```

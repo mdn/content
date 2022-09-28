@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTextAreaElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLTextAreaElement.labels`** read-only property returns
@@ -27,14 +28,14 @@ with the `<textArea>` element.
 
 ```html
 <label id="label1" for="test">Label 1</label>
-<textArea id="test">Some text</textArea>
+<textarea id="test">Some text</textarea>
 <label id="label2" for="test">Label 2</label>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const textArea = document.getElementById("test");
   for (const label of textArea.labels) {
     console.log(label.textContent); // "Label 1" and "Label 2"

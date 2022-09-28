@@ -9,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Number.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string with a language-sensitive representation of this number. In implementations with [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) support, this method simply calls `Intl.NumberFormat`.
@@ -17,7 +18,7 @@ The **`toLocaleString()`** method returns a string with a language-sensitive rep
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 toLocaleString(locales)
 toLocaleString(locales, options)
@@ -30,10 +31,13 @@ The `locales` and `options` parameters customize the behavior of the function an
 In implementations that support the [`Intl.NumberFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat), these parameters correspond exactly to the [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) constructor's parameters. Implementations without `Intl.NumberFormat` support are asked to ignore both parameters, making the locale used and the form of the string returned entirely implementation-dependent.
 
 - `locales` {{optional_inline}}
+
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) parameter of the `Intl.NumberFormat()` constructor.
 
     In implementations without `Intl.NumberFormat` support, this parameter is ignored and the host's locale is usually used.
+
 - `options` {{optional_inline}}
+
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) parameter of the `Intl.NumberFormat()` constructor.
 
     In implementations without `Intl.NumberFormat` support, this parameter is ignored.
@@ -54,7 +58,7 @@ When formatting large numbers of numbers, it is better to create a
 
 ## Examples
 
-### Using `toLocaleString`
+### Using toLocaleString()
 
 In basic use without specifying a locale, a formatted string in the default locale and
 with default options is returned.
@@ -65,12 +69,9 @@ const number = 3500;
 console.log(number.toLocaleString()); // Displays "3,500" if in U.S. English locale
 ```
 
-### Checking for support for `locales` and `options` arguments
+### Checking for support for locales and options arguments
 
-The `locales` and `options` arguments are not supported in all
-browsers yet. To check for support in ES5.1 and later implementations, the requirement
-that illegal language tags are rejected with a {{jsxref("Global_Objects/RangeError",
-  "RangeError")}} exception can be used:
+Not all implementations are required to support ECMA-402 (the Internationalization API). For those that don't, the `locales` and `options` arguments must both be ignored. You can check support by testing if illegal language tags are rejected with a {{jsxref("Global_Objects/RangeError", "RangeError")}}:
 
 ```js
 function toLocaleStringSupportsLocales() {
@@ -84,12 +85,7 @@ function toLocaleStringSupportsLocales() {
 }
 ```
 
-Prior to ES5.1, implementations were not required to throw a range error exception if
-`toLocaleString` is called with arguments.
-
-A check that works in all hosts, including those supporting ECMA-262 prior to ed 5.1,
-is to test for the features specified in ECMA-402 that are required to support regional
-options for `Number.prototype.toLocaleString` directly:
+However, prior to ES5.1, implementations were not required to throw a range error exception if `toLocaleString` is called with illegal arguments. A check that works in all hosts, including those supporting ECMA-262 prior to ed 5.1, is to test for the features specified in ECMA-402 that are required to support regional options for `Number.prototype.toLocaleString` directly:
 
 ```js
 function toLocaleStringSupportsOptions() {
@@ -101,7 +97,7 @@ This tests for a global `Intl` object, checks that it's not
 `null` and that it has a `NumberFormat` property that is a
 function.
 
-### Using `locales`
+### Using locales
 
 This example shows some of the variations in localized number formats. In order to get
 the format of the language used in the user interface of your application, make sure to
@@ -133,7 +129,7 @@ console.log(number.toLocaleString(['ban', 'id']));
 // → 123.456,789
 ```
 
-### Using `options`
+### Using options
 
 The results provided by `toLocaleString` can be customized using the
 `options` parameter:

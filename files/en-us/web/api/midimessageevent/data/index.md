@@ -10,6 +10,7 @@ tags:
   - MIDIMessageEvent
 browser-compat: api.MIDIMessageEvent.data
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`data`** read-only property of the {{domxref("MIDIMessageEvent")}} interface returns the MIDI data bytes of a single MIDI message.

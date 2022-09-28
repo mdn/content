@@ -8,6 +8,7 @@ tags:
   - Specifications
 browser-compat: javascript.builtins.Atomics
 ---
+
 {{JSRef}}
 
 The **`Atomics`** object provides atomic operations as static methods. They are used with {{jsxref("SharedArrayBuffer")}} and {{jsxref("ArrayBuffer")}} objects.
@@ -47,7 +48,7 @@ The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-spa
 - {{jsxref("Atomics.sub()")}}
   - : Subtracts a value at the specified index of the array. Returns the old value at that index.
 - {{jsxref("Atomics.wait()")}}
-  - : Verifies that the specified index of the array still contains a value and sleeps awaiting or times out. Returns either "`ok`", "`not-equal`", or "`timed-out`". If waiting is not allowed in the calling agent then it throws an {{JSxref("Error")}} exception. (Most browsers will not allow `wait()` on the browser's main thread.)
+  - : Verifies that the specified index of the array still contains a value and sleeps awaiting or times out. Returns either `"ok"`, `"not-equal"`, or `"timed-out"`. If waiting is not allowed in the calling agent then it throws an exception. (Most browsers will not allow `wait()` on the browser's main thread.)
 - {{jsxref("Atomics.waitAsync()")}}
   - : Waits asynchronously (i.e. without blocking, unlike `Atomics.wait`) on a shared memory location and returns a {{jsxref("Promise")}}.
 - {{jsxref("Atomics.xor()")}}

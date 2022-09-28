@@ -15,7 +15,8 @@ tags:
   - deviceId
 browser-compat: api.MediaTrackSettings.deviceId
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`deviceId`** property is a string which

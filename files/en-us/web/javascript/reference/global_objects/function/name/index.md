@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Function.name
 ---
+
 {{JSRef}}
 
 A {{jsxref("Function")}} object's read-only **`name`** property indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
@@ -223,7 +224,7 @@ new Foo().getNames();
 You can use `obj.constructor.name` to check the "class" of an object.
 
 ```js
-function Foo() {}  // ES2015 Syntax: class Foo {}
+function Foo() {}  // Or: class Foo {}
 
 const fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"
@@ -292,7 +293,7 @@ if (b.constructor.name === 'Foo') {
 }
 ```
 
-In the uncompressed version, the program runs into the truthy branch and logs "'foo' is an instance of 'Foo'" — whereas, in the compressed version it behaves differently, and runs into the else branch. If you rely on the `name` property, like in the example above, make sure your build pipeline doesn't change function names, or don't assume a function has a particular name.
+In the uncompressed version, the program runs into the truthy branch and logs "'foo' is an instance of 'Foo'" — whereas, in the compressed version it behaves differently, and runs into the else branch. If you rely on the `name` property, like in the example above, make sure your build pipeline doesn't change function names, or don't assume a function has a particular name.
 
 ## Specifications
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Presentation
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{DefaultAPISidebar("Presentation API")}}
 
 The Presentation API lets a {{Glossary("user agent")}} (such as a Web browser) effectively display web content through large presentation devices such as projectors and network-connected televisions. Supported types of multimedia devices include both displays which are wired using HDMI, DVI, or the like, or wireless, using [DLNA](https://www.dlna.org/), [Chromecast](https://developers.google.com/cast/), [AirPlay](https://developer.apple.com/airplay/), or [Miracast](https://www.wi-fi.org/discover-wi-fi/miracast).
@@ -48,71 +49,83 @@ Example codes below highlight the usage of main features of the Presentation API
 
 ### Monitor availability of presentation displays
 
+In `controller.html`:
+
 ```html
-<!-- controller.html -->
 <button id="presentBtn" style="display: none;">Present</button>
 <script>
   // The Present button is visible if at least one presentation display is available
   const presentBtn = document.getElementById("presentBtn");
+
   // It is also possible to use relative presentation URL e.g. "presentation.html"
-  const presUrls = ["http://example.com/presentation.html",
-                  "http://example.net/alternate.html"];
-  // show or hide present button depending on display availability
-  const handleAvailabilityChange = function(available) {
+  const presUrls = [
+    "http://example.com/presentation.html",
+    "http://example.net/alternate.html",
+  ];
+
+  // Show or hide present button depending on display availability
+  const handleAvailabilityChange = (available) => {
     presentBtn.style.display = available ? "inline" : "none";
   };
-  // Promise is resolved as soon as the presentation display availability is
-  // known.
+
+  // Promise is resolved as soon as the presentation display availability is known.
   const request = new PresentationRequest(presUrls);
-  request.getAvailability().then(function(availability) {
-    // availability.value may be kept up-to-date by the controlling UA as long
-    // as the availability object is alive. It is advised for the web developers
-    // to discard the object as soon as it's not needed.
-    handleAvailabilityChange(availability.value);
-    availability.onchange = function() { handleAvailabilityChange(this.value); };
-  }).catch(function() {
-    // Availability monitoring is not supported by the platform, so discovery of
-    // presentation displays will happen only after request.start() is called.
-    // Pretend the devices are available for simplicity; or, one could implement
-    // a third state for the button.
-    handleAvailabilityChange(true);
-  });
+  request
+    .getAvailability()
+    .then((availability) => {
+      // availability.value may be kept up-to-date by the controlling UA as long
+      // as the availability object is alive. It is advised for the web developers
+      // to discard the object as soon as it's not needed.
+      handleAvailabilityChange(availability.value);
+      availability.onchange = () => {
+        handleAvailabilityChange(availability.value);
+      };
+    })
+    .catch(() => {
+      // Availability monitoring is not supported by the platform, so discovery of
+      // presentation displays will happen only after request.start() is called.
+      // Pretend the devices are available for simplicity; or, one could implement
+      // a third state for the button.
+      handleAvailabilityChange(true);
+    });
 </script>
 ```
 
 ### Starting a new presentation
 
+In `controller.html`:
+
 ```html
-<!-- controller.html -->
 <script>
-  presentBtn.onclick = function () {
+  presentBtn.onclick = () => {
     // Start new presentation.
-    request.start()
-      // The connection to the presentation will be passed to setConnection on
-      // success.
+    request
+      .start()
+      // The connection to the presentation will be passed to setConnection on success.
       .then(setConnection);
-      // Otherwise, the user canceled the selection dialog or no screens were
-      // found.
+    // Otherwise, the user canceled the selection dialog or no screens were found.
   };
 </script>
 ```
 
 ### Reconnect to a presentation
 
+In the `controller.html` file:
+
 ```html
-<!-- controller.html -->
 <button id="reconnectBtn" style="display: none;">Reconnect</button>
 <script>
-  const reconnect = function () {
+  const reconnect = () => {
     // read presId from localStorage if exists
     const presId = localStorage["presId"];
     // presId is mandatory when reconnecting to a presentation.
-    if (!!presId) {
-      request.reconnect(presId)
+    if (presId) {
+      request
+        .reconnect(presId)
         // The new connection to the presentation will be passed to
         // setConnection on success.
         .then(setConnection);
-        // No connection found for presUrl and presId, or an error occurred.
+      // No connection found for presUrl and presId, or an error occurred.
     }
   };
   // On navigation of the controller, reconnect automatically.
@@ -124,23 +137,24 @@ Example codes below highlight the usage of main features of the Presentation API
 
 ### Presentation initiation by the controlling UA
 
+In the `controller.html` file:
+
 ```html
-<!-- controller.html -->
-<!-- Setting presentation.defaultRequest allows the page to specify the
-     PresentationRequest to use when the controlling UA initiates a
-     presentation. -->
 <script>
   navigator.presentation.defaultRequest = new PresentationRequest(presUrls);
-  navigator.presentation.defaultRequest.onconnectionavailable = function(evt) {
+  navigator.presentation.defaultRequest.onconnectionavailable = (evt) => {
     setConnection(evt.connection);
   };
 </script>
 ```
 
+Setting `presentation.defaultRequest` allows the page to specify the `PresentationRequest` to use when the controlling UA initiates a presentation.
+
 ### Monitor connection's state and exchange data
 
+In `presentation.html`:
+
 ```html
-<!-- controller.html -->
 <button id="disconnectBtn" style="display: none;">Disconnect</button>
 <button id="stopBtn" style="display: none;">Stop</button>
 <button id="reconnectBtn" style="display: none;">Reconnect</button>
@@ -153,16 +167,20 @@ Example codes below highlight the usage of main features of the Presentation API
   const disconnectBtn = document.querySelector("#disconnectBtn");
 
   stopBtn.onclick = () => {
-    connection && connection.terminate();
+    connection?.terminate();
   };
 
   disconnectBtn.onclick = () => {
-    connection && connection.close();
+    connection?.close();
   };
 
   function setConnection(newConnection) {
     // Disconnect from existing presentation, if not attempting to reconnect
-    if (connection && connection !== newConnection && connection.state !== 'closed') {
+    if (
+      connection &&
+      connection !== newConnection &&
+      connection.state !== "closed"
+    ) {
       connection.onclosed = undefined;
       connection.close();
     }
@@ -208,47 +226,49 @@ Example codes below highlight the usage of main features of the Presentation API
       connection = null;
       showDisconnectedUI();
     };
-  };
+  }
 </script>
 ```
 
 ### Monitor available connection(s) and say hello
 
-```html
-<!-- presentation.html -->
-<script>
-  const addConnection = function(connection) {
-    this.onmessage = function (message) {
-      if (message.data === "say hello")
-        this.send("hello");
-    };
-  };
+In `presentation.html`:
 
-  navigator.presentation.receiver.connectionList.then(function (list) {
-    list.connections.map(function (connection) {
-      addConnection(connection);
-    });
-    list.onconnectionavailable = function (evt) {
-      addConnection(evt.connection);
-    };
+```js
+const addConnection = (connection) => {
+  window.onmessage = (message) => {
+    if (message.data === "say hello") window.send("hello");
+  };
+};
+
+navigator.presentation.receiver.connectionList.then((list) => {
+  list.connections.forEach((connection) => {
+    addConnection(connection);
   });
-</script>
+  list.onconnectionavailable = (evt) => {
+    addConnection(evt.connection);
+  };
+});
 ```
 
 ### Passing locale information with a message
 
+In the `controller.html` file:
+
 ```html
-<!-- controller.html -->
 <script>
   connection.send("{string: '你好，世界!', lang: 'zh-CN'}");
   connection.send("{string: 'こんにちは、世界!', lang: 'ja'}");
   connection.send("{string: '안녕하세요, 세계!', lang: 'ko'}");
   connection.send("{string: 'Hello, world!', lang: 'en-US'}");
 </script>
+```
 
-<!-- presentation.html -->
+In the `presentation.html` file:
+
+```html
 <script>
-  connection.onmessage = function (message) {
+  connection.onmessage = (message) => {
     const messageObj = JSON.parse(message.data);
     const spanElt = document.createElement("SPAN");
     spanElt.lang = messageObj.lang;

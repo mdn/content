@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.v-alphabetic
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`v-alphabetic`** attribute defines indicates the alignment coordinate for {{Glossary("glyphs")}} to achieve alphabetic baseline alignment. The value is an offset in the font coordinate system relative to the glyph-specific {{SVGAttr("vert-origin-x")}} attribute.

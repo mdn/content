@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Number.toFixed
 ---
+
 {{JSRef}}
 
 The **`toFixed()`** method formats a number using fixed-point
@@ -18,7 +19,7 @@ notation.
 
 ## Syntax
 
-```js
+```js-nolint
 toFixed()
 toFixed(digits)
 ```
@@ -64,7 +65,7 @@ and returns a string in exponential notation.
 ### Using toFixed
 
 ```js
-let numObj = 12345.6789
+const numObj = 12345.6789;
 
 numObj.toFixed()       // Returns '12346': rounding, no fractional part
 numObj.toFixed(1)      // Returns '12345.7': it rounds up

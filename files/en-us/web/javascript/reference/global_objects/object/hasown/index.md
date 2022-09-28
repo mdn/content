@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.hasOwn
 ---
+
 {{JSRef}}
 
 The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property.
@@ -20,7 +21,7 @@ If the property is inherited, or does not exist, the method returns `false`.
 
 ## Syntax
 
-```js
+```js-nolint
 hasOwn(instance, prop)
 ```
 
@@ -29,8 +30,7 @@ hasOwn(instance, prop)
 - `instance`
   - : The JavaScript object instance to test.
 - `prop`
-  - : The {{jsxref("String")}} name or {{Glossary("Symbol")}} of
-    the property to test.
+  - : The {{jsxref("String")}} name or [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) of the property to test.
 
 ### Return value
 
@@ -59,7 +59,7 @@ The following code shows how to determine whether the `example` object contains 
 
 ```js
 const example = {};
-Object.hasOwn(example, 'prop');   // false = 'prop' has not been defined
+Object.hasOwn(example, 'prop');   // false - 'prop' has not been defined
 
 example.prop = 'exists';
 Object.hasOwn(example, 'prop');   // true - 'prop' has been defined
@@ -125,7 +125,7 @@ Object.hasOwn(fruits, 4);   // false - not defined
 
 ### Problematic cases for hasOwnProperty
 
-This section demonstrate that `hasOwn()` is immune to the problems that affect
+This section demonstrates that `hasOwn()` is immune to the problems that affect
 `hasOwnProperty`. Firstly, it can be used with objects that have reimplemented
 `hasOwnProperty()`:
 

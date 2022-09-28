@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat.prototype.formatRange()`** formats a
@@ -26,7 +27,7 @@ date range in the most concise way based on the **`locale`** and
 
 ## Syntax
 
-```js
+```js-nolint
 formatRange(startDate, endDate)
 ```
 
@@ -39,19 +40,19 @@ concise way based on the `locale` and `options` provided when
 instantiating {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}.
 
 ```js
-let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
-let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
-let date3 = new Date(Date.UTC(2007, 0, 20, 10, 0, 0));
+const date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
+const date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
+const date3 = new Date(Date.UTC(2007, 0, 20, 10, 0, 0));
 // > 'Wed, 10 Jan 2007 10:00:00 GMT'
 // > 'Wed, 10 Jan 2007 11:00:00 GMT'
 // > 'Sat, 20 Jan 2007 10:00:00 GMT'
 
-let fmt1 = new Intl.DateTimeFormat("en", {
-    year: '2-digit',
-    month: 'numeric',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric'
+const fmt1 = new Intl.DateTimeFormat("en", {
+  year: '2-digit',
+  month: 'numeric',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
 });
 console.log(fmt1.format(date1));
 console.log(fmt1.formatRange(date1, date2));
@@ -60,10 +61,10 @@ console.log(fmt1.formatRange(date1, date3));
 // > '1/10/07, 10:00 – 11:00 AM'
 // > '1/10/07, 10:00 AM – 1/20/07, 10:00 AM'
 
-let fmt2 = new Intl.DateTimeFormat("en", {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
+const fmt2 = new Intl.DateTimeFormat("en", {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
 });
 console.log(fmt2.format(date1));
 console.log(fmt2.formatRange(date1, date2));

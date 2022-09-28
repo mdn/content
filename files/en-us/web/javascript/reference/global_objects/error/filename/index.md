@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.fileName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The **`fileName`** property contains the path to the file that raised this error.

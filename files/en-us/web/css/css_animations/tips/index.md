@@ -8,6 +8,7 @@ tags:
   - Guide
   - Reference
 ---
+
 {{CSSRef}}
 
 CSS Animations make it possible to do incredible things with the elements that make up your documents and apps. However, there are things you might want to do that aren't obvious, or clever ways to do things that you might not come up with right away. This article is a collection of tips and tricks we've found that may make your work easier, including how to run a stopped animation again.
@@ -23,8 +24,7 @@ Here's one way to do it that we feel is stable and reliable enough to suggest to
 First, let's define the HTML for a {{HTMLElement("div")}} we wish to animate and a button that will play (or replay) the animation.
 
 ```html
-<div class="box">
-</div>
+<div class="box"></div>
 
 <div class="runButton">Click me to run the animation</div>
 ```
@@ -51,8 +51,12 @@ Now we'll define the animation itself using CSS. Some CSS that's not important (
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {
@@ -77,8 +81,8 @@ Next we'll look at the JavaScript that does the work. The meat of this technique
 ```js
 function play() {
   document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function(time) {
-    window.requestAnimationFrame(function(time) {
+  requestAnimationFrame((time) => {
+    requestAnimationFrame((time) => {
       document.querySelector(".box").className = "box changing";
     });
   });
@@ -141,7 +145,7 @@ The following demo shows how you'd achieve the aforementioned JavaScript techniq
 ```
 
 ```js
-let watchme = document.getElementById('watchme')
+const watchme = document.getElementById('watchme');
 
 watchme.className = 'slidein'
 const listener = (e) => {

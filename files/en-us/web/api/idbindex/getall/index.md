@@ -11,6 +11,7 @@ tags:
   - Storage
 browser-compat: api.IDBIndex.getAll
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getAll()`** method of the {{domxref("IDBIndex")}}
@@ -26,7 +27,7 @@ use `getAll()`.
 
 ## Syntax
 
-```js
+```js-nolint
 getAll()
 getAll(query)
 getAll(query, count)
@@ -65,7 +66,7 @@ not between `0` and `2^32> - 1` included.
 ```js
 const myIndex = objectStore.index('index');
 const getAllRequest = myIndex.getAll();
-getAllRequest.onsuccess = function() {
+getAllRequest.onsuccess = () => {
   console.log(getAllRequest.result);
 }
 ```

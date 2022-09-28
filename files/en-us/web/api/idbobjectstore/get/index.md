@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBObjectStore.get
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`get()`** method of the {{domxref("IDBObjectStore")}}
@@ -30,7 +31,7 @@ request object.
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 
@@ -68,7 +69,7 @@ normal JavaScript, then put it back into the database using a
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -84,11 +85,11 @@ function getData() {
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
-  transaction.oncomplete = function(event) {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed.</li>';
   };
 
-  transaction.onerror = function(event) {
+  transaction.onerror = (event) => {
     note.innerHTML += `<li>Transaction not opened due to error: ${transaction.error}</li>`;
   };
 
@@ -98,7 +99,7 @@ function getData() {
   // Make a request to get a record by key from the object store
   const objectStoreRequest = objectStore.get("Walk dog");
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
     note.innerHTML += '<li>Request successful.</li>';
 

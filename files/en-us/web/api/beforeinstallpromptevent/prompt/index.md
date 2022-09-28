@@ -11,13 +11,16 @@ tags:
   - prompt
 browser-compat: api.BeforeInstallPromptEvent.prompt
 ---
+
+{{SeeCompatTable}}
+
 The **`prompt()`** method of the
 {{domxref("BeforeInstallPromptEvent")}} interface allows a developer to show the
 install prompt at a time of their own choosing.
 
 ## Syntax
 
-```js
+```js-nolint
 prompt()
 ```
 
@@ -27,17 +30,24 @@ None.
 
 ### Return value
 
-An empty {{jsxref("Promise")}}.
+A {{jsxref("Promise")}} resolving to an object containing:
+
+- `userChoice` {{experimental_inline}}
+
+  - : A string, either `"accepted"` or `"dismissed"`, reflecting the {{jsxref("BeforeInstallPromptEvent.userChoice")}} property.
+
+- `platform` {{non-standard_inline}}
+  - : A string containing the selected platform, reflecting the {{jsxref("BeforeInstallPromptEvent.platform")}} property.
 
 ## Examples
 
 ```js
 let isTooSoon = true;
-window.addEventListener("beforeinstallprompt", function(e) {
+window.addEventListener("beforeinstallprompt", (e) => {
   if (isTooSoon) {
     e.preventDefault(); // Prevents prompt display
     // Prompt later instead:
-    setTimeout(function() {
+    setTimeout(() => {
       isTooSoon = false;
       e.prompt(); // Throws if called more than once or default not prevented
     }, 10000);

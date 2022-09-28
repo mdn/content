@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement.deleteTFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.deleteTFoot()`** method removes the
@@ -18,7 +19,7 @@ The **`HTMLTableElement.deleteTFoot()`** method removes the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteTFoot()
 ```
 
@@ -38,10 +39,22 @@ This example uses JavaScript to delete a table's footer.
 
 ```html
 <table>
-  <thead><th>Name</th><th>Score</th></thead>
-  <tr><td>Bob</td><td>541</td></tr>
-  <tr><td>Jim</td><td>225</td></tr>
-  <tfoot><th>Average</th><td>383</td></tfoot>
+  <thead>
+    <th>Name</th>
+    <th>Score</th>
+  </thead>
+  <tr>
+    <td>Bob</td>
+    <td>541</td>
+  </tr>
+  <tr>
+    <td>Jim</td>
+    <td>225</td>
+  </tr>
+  <tfoot>
+    <th>Average</th>
+    <td>383</td>
+  </tfoot>
 </table>
 ```
 

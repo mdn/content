@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Generator
 ---
+
 {{JSRef}}
 
 The **`Generator`** object is returned by a {{JSxRef("Statements/function*", "generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
@@ -52,11 +53,11 @@ With a generator function, values are not evaluated until they are needed. There
 
 ```js
 function* infinite() {
-    let index = 0;
+  let index = 0;
 
-    while (true) {
-        yield index++;
-    }
+  while (true) {
+    yield index++;
+  }
 }
 
 const generator = infinite(); // "Generator { }"
@@ -78,6 +79,6 @@ console.log(generator.next().value); // 2
 ## See also
 
 - {{JSxRef("Statements/function*", "function*")}}
-- {{JSxRef("Operators/function*", '<code>function*</code> expression', "", 1)}}
+- [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{JSxRef("GeneratorFunction")}}
 - [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

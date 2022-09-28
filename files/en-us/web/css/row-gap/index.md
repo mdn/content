@@ -1,6 +1,7 @@
 ---
-title: row-gap (grid-row-gap)
+title: row-gap
 slug: Web/CSS/row-gap
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes
@@ -11,6 +12,7 @@ tags:
   - row-gap
 browser-compat: css.properties.row-gap
 ---
+
 {{CSSRef}}
 
 The **`row-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's rows.
@@ -36,6 +38,8 @@ row-gap: revert;
 row-gap: revert-layer;
 row-gap: unset;
 ```
+
+Note that `grid-row-gap` is an alias for this property.
 
 ### Values
 

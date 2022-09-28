@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.find
 ---
+
 {{JSRef}}
 
 The **`find()`** method returns a value of an element in the
@@ -26,7 +27,7 @@ the **index** of a found element in the typed array instead of its value.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 find((element) => { /* ... */ } )
 find((element, index) => { /* ... */ } )

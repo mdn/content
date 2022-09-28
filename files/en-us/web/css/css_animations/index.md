@@ -9,15 +9,17 @@ tags:
   - Reference
 browser-compat: css.properties.animation
 ---
+
 {{CSSRef}}
 
 **CSS Animations** is a module of CSS that lets you animate the values of CSS properties over time, using keyframes. The behavior of these keyframe animations can be controlled by specifying their timing function, duration, their number of repetitions, and other attributes.
 
 ## Reference
 
-### CSS Properties
+### Properties
 
 - {{cssxref("animation")}}
+- {{cssxref("animation-composition")}}
 - {{cssxref("animation-delay")}}
 - {{cssxref("animation-direction")}}
 - {{cssxref("animation-duration")}}
@@ -28,7 +30,7 @@ browser-compat: css.properties.animation
 - {{cssxref("animation-timeline")}}
 - {{cssxref("animation-timing-function")}}
 
-### CSS At-rules
+### At-rules
 
 - {{cssxref("@keyframes")}}
 - {{cssxref("@scroll-timeline")}}

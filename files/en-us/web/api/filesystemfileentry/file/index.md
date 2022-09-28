@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.FileSystemFileEntry.file
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemFileEntry")}} interface's method
@@ -21,7 +22,7 @@ the directory entry.
 
 ## Syntax
 
-```js
+```js-nolint
 file(successCallback)
 file(successCallback, errorCallback)
 ```
@@ -49,14 +50,14 @@ called.
 
 ```js
 function readFile(entry, successCallback, errorCallback) {
-  entry.file(function(file) {
+  entry.file((file) => {
     let reader = new FileReader();
 
-    reader.onload = function() {
+    reader.onload = () => {
       successCallback(reader.result);
     };
 
-    reader.onerror = function() {
+    reader.onerror = () => {
       errorCallback(reader.error);
     }
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 The **right shift operator (`>>`)** returns the signed number represented by the result of performing a sign-extending shift of the binary representation of the first operand (evaluated as a [two's complement](https://en.wikipedia.org/wiki/Two's_complement) bit string) to the right by the number of bits, modulo 32, specified in the second operand. Excess bits shifted off to the right are discarded, and copies of the leftmost bit are shifted in from the left.
@@ -19,7 +20,7 @@ The resulting binary representation is evaluated as a [two's complement](https:/
 
 ## Syntax
 
-```js
+```js-nolint
 a >> b
 ```
 
@@ -33,12 +34,12 @@ leftmost bit, the sign bit (the leftmost bit) does not change. Hence the name
 
 Consider the 32-bit binary representations of the decimal (base 10) numbers `9` and `-9`:
 
-```js
+```
      9 (base 10): 00000000000000000000000000001001 (base 2)
     -9 (base 10): 11111111111111111111111111110111 (base 2)
 ```
 
-Notice that the binary representation of the negative decimal (base 10) number `-9` is the [two's complement](https://en.wikipedia.org/wiki/Two's_complement) of the binary representation of the positive decimal (base 10) number `9`. That is, it’s calculated by inverting all the bits of `00000000000000000000000000001001` and adding `1`.
+Notice that the binary representation of the negative decimal (base 10) number `-9` is the [two's complement](https://en.wikipedia.org/wiki/Two's_complement) of the binary representation of the positive decimal (base 10) number `9`. That is, it's calculated by inverting all the bits of `00000000000000000000000000001001` and adding `1`.
 
 In both cases, the sign of the binary number is given by its leftmost bit: for the positive decimal number `9`, the leftmost bit of the binary representation is `0`, and for the negative decimal number `-9`, the leftmost bit of the binary representation is `1`.
 
@@ -46,7 +47,7 @@ Given those binary representations of the decimal (base 10) numbers `9`, and `-9
 
 `9 >> 2` yields 2:
 
-```js
+```
      9 (base 10): 00000000000000000000000000001001 (base 2)
                   --------------------------------
 9 >> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
@@ -56,7 +57,7 @@ Notice how two rightmost bits, `01`, have been shifted off, and two copies of th
 
 `-9 >> 2` yields `-3`:
 
-```js
+```
      -9 (base 10): 11111111111111111111111111110111 (base 2)
                    --------------------------------
 -9 >> 2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)

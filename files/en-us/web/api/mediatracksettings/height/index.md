@@ -16,7 +16,8 @@ tags:
   - height
 browser-compat: api.MediaTrackSettings.height
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`height`**
 property is an integer indicating the number of pixels tall

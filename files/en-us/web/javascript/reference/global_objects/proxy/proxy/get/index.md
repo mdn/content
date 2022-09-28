@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.get
 ---
+
 {{JSRef}}
 
 The **`handler.get()`** method is a trap for getting a property
@@ -17,7 +18,7 @@ value.
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   get(target, property, receiver) {
   }
@@ -32,7 +33,7 @@ is bound to the handler.
 - `target`
   - : The target object.
 - `property`
-  - : The name or {{jsxref("Symbol")}}  of the property to get.
+  - : The name or {{jsxref("Symbol")}} of the property to get.
 - `receiver`
   - : Either the proxy or an object that inherits from the proxy.
 
@@ -76,9 +77,9 @@ The following code traps getting a property value.
 ```js
 const p = new Proxy({}, {
   get(target, property, receiver) {
-    console.log('called: ' + property);
+    console.log(`called: ${property}`);
     return 10;
-  }
+  },
 });
 
 console.log(p.a); // "called: a"
@@ -93,13 +94,13 @@ Object.defineProperty(obj, 'a', {
   configurable: false,
   enumerable: false,
   value: 10,
-  writable: false
+  writable: false,
 });
 
 const p = new Proxy(obj, {
   get(target, property) {
     return 20;
-  }
+  },
 });
 
 p.a; // TypeError is thrown
@@ -116,5 +117,5 @@ p.a; // TypeError is thrown
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Reflect.get()")}}

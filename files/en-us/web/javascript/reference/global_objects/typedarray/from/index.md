@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.from
 ---
+
 {{JSRef}}
 
 The **`TypedArray.from()`** method creates a new
@@ -22,7 +23,7 @@ from an array-like or iterable object. This method is nearly the same as
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 TypedArray.from(arrayLike, (element) => { /* ... */ } )
 TypedArray.from(arrayLike, (element, index) => { /* ... */ } )
@@ -94,12 +95,7 @@ Some subtle distinctions between {{jsxref("Array.from()")}} and
   `TypedArray.from()` is not a constructor,
   `TypedArray.from()` will throw a {{jsxref("TypeError")}},
   where `Array.from()` defaults to creating a new {{jsxref("Array")}}.
-- `TypedArray.from()` uses `[[Set]]` where
-  `Array.from()` uses `[[DefineOwnProperty]]`. Hence, when
-  working with {{jsxref("Proxy")}} objects, it calls
-  {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} to create new
-  elements rather than {{jsxref("Global_Objects/Proxy/handler/defineProperty",
-        "handler.defineProperty()")}}.
+- `TypedArray.from()` uses `[[Set]]` where `Array.from()` uses `[[DefineOwnProperty]]`. Hence, when working with {{jsxref("Proxy")}} objects, it calls [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) to create new elements rather than [`handler.defineProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty).
 - When the `source` parameter is an iterator, the
   `TypedArray.from()` first collects all the values from the
   iterator, then creates an instance of `thisArg` using the

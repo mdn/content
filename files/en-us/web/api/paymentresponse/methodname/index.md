@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Commerce
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentResponse
@@ -15,6 +14,7 @@ tags:
   - methodName
 browser-compat: api.PaymentResponse.methodName
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`methodName`** read-only

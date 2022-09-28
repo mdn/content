@@ -15,6 +15,7 @@ tags:
   - list
 browser-compat: api.TextTrackList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`TextTrackList`** interface is used to represent a list of the text tracks defined by the {{HTMLElement("track")}} element, with each track represented by a separate {{domxref("textTrack")}} object in the list.
@@ -23,7 +24,7 @@ Retrieve an instance of this object with the {{domxref('HTMLMediaElement.textTra
 
 For a given {{domxref('HTMLMediaElement')}} object _media_, the individual tracks can be accessed using:
 
-- `media.TextTracks[n]`, to get the *n*th text track from the object's list of text tracks
+- `media.TextTracks[n]`, to get the n-th text track from the object's list of text tracks
 
 - the `media.textTracks`.[`getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById) method
 

@@ -9,13 +9,14 @@ tags:
   - DecompressionStream
 browser-compat: api.DecompressionStream.DecompressionStream
 ---
+
 {{APIRef("Compression Streams API")}}
 
 The **`DecompressionStream()`** constructor creates a new {{domxref("DecompressionStream")}} object which decompresses a stream of data.
 
 ## Syntax
 
-```js
+```js-nolint
 new DecompressionStream(format)
 ```
 

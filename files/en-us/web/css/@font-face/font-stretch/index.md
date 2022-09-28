@@ -1,8 +1,9 @@
 ---
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
+page-type: css-at-rule-descriptor
 tags:
-  - '@font-face'
+  - "@font-face"
   - At-rule descriptor
   - CSS
   - Reference
@@ -10,6 +11,7 @@ tags:
   - font-stretch
 browser-compat: css.at-rules.font-face.font-stretch
 ---
+
 {{CSSRef}}
 
 The **`font-stretch`** CSS descriptor allows authors to specify a normal, condensed, or expanded face for the fonts specified in the {{cssxref("@font-face")}} rule.
@@ -150,8 +152,8 @@ The following find a local Open Sans font or import it, and allow using the font
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src: local("Open Sans") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+      format("woff");
   font-stretch: 87.5% 112.5%;
 }
 ```

@@ -13,9 +13,12 @@ tags:
   - Reference
   - Volume
   - WebRTC
+  - Deprecated
+  - Non-standard
 browser-compat: api.MediaTrackSettings.volume
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
+
+{{APIRef("Media Capture and Streams")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`volume`**
 property is a double-precision floating-point number indicating the volume of the
@@ -38,8 +41,7 @@ audio track as currently configured.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} for an example.
 
 ## Browser compatibility
 

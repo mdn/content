@@ -9,6 +9,7 @@ tags:
   - Primary Expressions
 browser-compat: javascript.operators.function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`function`** keyword can be used to define a function inside an expression.
@@ -43,7 +44,7 @@ function name(param0, param1, /* … ,*/ paramN) {
 }
 ```
 
-As of ES2015, you can also use {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}}.
+You can also create functions using the [arrow function syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Parameters
 
@@ -70,12 +71,12 @@ Function expressions in JavaScript are not hoisted, unlike {{jsxref("Statements/
 You can't use function expressions before you create them:
 
 ```js
-console.log(notHoisted) // undefined
+console.log(notHoisted); // undefined
 //  even though the variable name is hoisted, the definition isn't. so it's undefined.
 notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function () {
-   console.log('bar');
+  console.log('bar');
 };
 ```
 
@@ -87,7 +88,7 @@ This also avoids using the non-standard {{jsxref("Functions/arguments/callee", "
 
 ```js
 const math = {
-  'factit': function factorial(n) {
+  factit: function factorial(n) {
     console.log(n)
     if (n <= 1) {
       return 1;
@@ -103,7 +104,7 @@ The variable to which the function expression is assigned will have a `name` pro
 The name doesn't change if it's assigned to a different variable.
 If function name is omitted, it will be the variable name (implicit name).
 If function name is present, it will be the function name (explicit name).
-This also applies to {{jsxref("Functions/Arrow_functions", "arrow functions")}} (arrows don't have a name so you can only give the variable an implicit name).
+This also applies to [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (arrows don't have a name so you can only give the variable an implicit name).
 
 ```js
 const foo = function () {};
@@ -138,8 +139,8 @@ const x = function (y) {
 More commonly it is used as a {{Glossary("Callback_function", "callback")}}:
 
 ```js
-button.addEventListener('click', function(event) {
-    console.log('button is clicked!')
+button.addEventListener('click', function (event) {
+  console.log('button is clicked!');
 })
 ```
 
@@ -148,14 +149,14 @@ button.addEventListener('click', function(event) {
 An anonymous function is created and called:
 
 ```js
-(function() {
-    console.log('Code runs!')
+(function () {
+  console.log('Code runs!');
 })();
 
 // or
 
-!function() {
-  console.log('Code runs!')
+!function () {
+  console.log('Code runs!');
 }();
 ```
 

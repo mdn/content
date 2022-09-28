@@ -10,6 +10,7 @@ tags:
   - Operator
 browser-compat: javascript.operators.super
 ---
+
 {{jsSidebar("Operators")}}
 
 The **super** keyword is used to access properties on an object literal or class's [[Prototype]], or invoke a superclass's constructor.
@@ -18,7 +19,7 @@ The `super.prop` and `super[expr]` expressions are valid in any [method definiti
 
 ## Syntax
 
-```js
+```js-nolint
 super([arguments]) // calls the parent constructor.
 super.propertyOnParent
 super[expression]
@@ -60,7 +61,7 @@ class Rectangle {
     this.width = width;
   }
   sayName() {
-    console.log('Hi, I am a ', this.name + '.');
+    console.log(`Hi, I am a ${this.name}.`);
   }
   get area() {
     return this.height * this.width;
@@ -98,7 +99,7 @@ class Rectangle {
 
 class Square extends Rectangle {
   static logDescription() {
-    return super.logNbSides() + ' which are all equal';
+    return `${super.logNbSides()} which are all equal`;
   }
 }
 Square.logDescription(); // 'I have 4 sides which are all equal'

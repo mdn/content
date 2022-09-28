@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: javascript.statements.switch
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators), matching the expression's value against a series of `case` clauses, and executes [statements](/en-US/docs/Web/JavaScript/Reference/Statements) after the first `case` clause with a matching value, until a `break` statement is encountered. The `default` clause of a `switch` statement will be jumped to if no `case` matches the expression's value.
@@ -17,7 +18,7 @@ The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/
 
 ## Syntax
 
-```js
+```js-nolint
 switch (expression) {
   case value1:
     //Statements executed when the
@@ -95,7 +96,7 @@ You can use other control-flow statements to replace `break`, such as a [`return
 
 The `case` and `default` clauses are like [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label): they indicate possible places that control flow may jump to. However, they don't create lexical [scopes](/en-US/docs/Glossary/Scope) themselves (neither do they automatically break out — as demonstrated above). For example:
 
-```js
+```js example-bad
 const action = 'say_hello';
 switch (action) {
   case 'say_hello':
@@ -161,7 +162,7 @@ switch (expr) {
     console.log('Mangoes and papayas are $2.79 a pound.');
     break;
   default:
-    console.log('Sorry, we are out of ' + expr + '.');
+    console.log(`Sorry, we are out of ${expr}.`);
 }
 
 console.log("Is there anything else you'd like?");

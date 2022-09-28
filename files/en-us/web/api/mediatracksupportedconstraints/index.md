@@ -17,7 +17,8 @@ tags:
   - screen
 browser-compat: api.MediaTrackSupportedConstraints
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`MediaTrackSupportedConstraints`** dictionary establishes the list of constrainable properties recognized by the {{Glossary("user agent")}} or browser in its implementation of the {{domxref("MediaStreamTrack")}} object. An object conforming to `MediaTrackSupportedConstraints` is returned by {{domxref("MediaDevices.getSupportedConstraints()")}}.
 
@@ -45,7 +46,7 @@ Some combination—but not necessarily all—of the following properties will ex
   - : A Boolean value whose value is `true` if the [`facingMode`](/en-US/docs/Web/API/MediaTrackConstraints#facingmode) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.resizeMode", "resizeMode")}}
   - : A Boolean value whose value is `true` if the [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode) constraint is supported in the current environment.
-- {{domxref("MediaTrackSupportedConstraints.volume", "volume")}}
+- {{domxref("MediaTrackSupportedConstraints.volume", "volume")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A Boolean value whose value is `true` if the [`volume`](/en-US/docs/Web/API/MediaTrackConstraints#volume) constraint is supported in the current environment.
 - {{domxref("MediaTrackSupportedConstraints.sampleRate", "sampleRate")}}
   - : A Boolean value whose value is `true` if the [`sampleRate`](/en-US/docs/Web/API/MediaTrackConstraints#samplerate) constraint is supported in the current environment.

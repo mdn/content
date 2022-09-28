@@ -17,6 +17,7 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidate.type
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`type`** specifies the type of candidate the object represents.

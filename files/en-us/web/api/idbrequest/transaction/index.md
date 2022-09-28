@@ -13,6 +13,7 @@ tags:
   - transaction
 browser-compat: api.IDBRequest.transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`transaction`** read-only property of the IDBRequest
@@ -56,7 +57,7 @@ const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoL
 // Get the to-do list object that has this title as it's title
 const objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = () => {
   // Grab the data object returned as the result
   const data = objectStoreTitleRequest.result;
 
@@ -72,7 +73,7 @@ objectStoreTitleRequest.onsuccess = function() {
 
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = () => {
     displayData();
   };
 };
@@ -85,7 +86,7 @@ used during a version upgrade to access existing object stores:
 const openRequest = indexedDB.open('db', 2);
 console.log(openRequest.transaction); // Will log "null".
 
-openRequest.onupgradeneeded = function(event) {
+openRequest.onupgradeneeded = (event) => {
   console.log(openRequest.transaction.mode); // Will log "versionchange".
   const db = openRequest.result;
   if (event.oldVersion < 1) {
@@ -99,7 +100,7 @@ openRequest.onupgradeneeded = function(event) {
   }
 };
 
-openRequest.onsuccess = function() {
+openRequest.onsuccess = () => {
   console.log(openRequest.transaction); // Will log "null".
 };
 ```

@@ -7,9 +7,11 @@ tags:
   - Interface
   - Reference
   - BackgroundFetchRecord
+  - Experimental
 browser-compat: api.BackgroundFetchRecord
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`BackgroundFetchRecord`** interface of the {{domxref('Background Fetch API','','',' ')}} represents an individual request and response.
 
@@ -19,9 +21,9 @@ There will be one `BackgroundFetchRecord` for each resource requested by `fetch(
 
 ## Properties
 
-- {{domxref("BackgroundFetchRecord.request","request")}} {{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRecord.request","request")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Request")}}.
-- {{domxref("BackgroundFetchRecord.responseReady","responseReady")}} {{ReadOnlyInline}}
+- {{domxref("BackgroundFetchRecord.responseReady","responseReady")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a promise that resolves with a {{domxref("Response")}}.
 
 ## Examples
@@ -29,9 +31,9 @@ There will be one `BackgroundFetchRecord` for each resource requested by `fetch(
 In this example an individual `BackgroundFetchRecord` is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The {{domxref("BackgroundFetchRecord.request")}} and {{domxref("BackgroundFetchRecord.responseReady")}} are returned and logged to the console.
 
 ```js
-bgFetch.match('/ep-5.mp3').then(async (record) => {
+bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log('No record found');
+    console.log("No record found");
     return;
   }
 

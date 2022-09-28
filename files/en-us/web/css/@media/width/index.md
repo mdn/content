@@ -1,14 +1,16 @@
 ---
 title: width
 slug: Web/CSS/@media/width
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
   - media feature
 browser-compat: css.at-rules.media.width
 ---
+
 {{CSSRef}}
 
 The **`width`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the width of the {{glossary("viewport")}} (or the page box, for [paged media](/en-US/docs/Web/CSS/Paged_Media)).

@@ -11,6 +11,7 @@ tags:
   - Web Components
 browser-compat: api.DocumentFragment
 ---
+
 {{ APIRef("DOM") }}
 
 The **`DocumentFragment`** interface represents a minimal document object that has no parent.
@@ -28,13 +29,13 @@ It is used as a lightweight version of {{domxref("Document")}} that stores a seg
 
 _This interface has no specific properties, but inherits those of its parent, {{domxref("Node")}}._
 
-- {{ domxref("DocumentFragment.childElementCount") }} {{readonlyInline}}
+- {{ domxref("DocumentFragment.childElementCount") }} {{ReadOnlyInline}}
   - : Returns the amount of child {{domxref("Element","elements")}} the `DocumentFragment` has.
-- {{ domxref("DocumentFragment.children") }} {{readonlyInline}}
+- {{ domxref("DocumentFragment.children") }} {{ReadOnlyInline}}
   - : Returns a live {{domxref("HTMLCollection")}} containing all objects of type {{domxref("Element")}} that are children of the `DocumentFragment` object.
-- {{ domxref("DocumentFragment.firstElementChild") }} {{readonlyInline}}
+- {{ domxref("DocumentFragment.firstElementChild") }} {{ReadOnlyInline}}
   - : Returns the {{domxref("Element")}} that is the first child of the `DocumentFragment` object, or `null` if there is none.
-- {{ domxref("DocumentFragment.lastElementChild") }} {{readonlyInline}}
+- {{ domxref("DocumentFragment.lastElementChild") }} {{ReadOnlyInline}}
   - : Returns the {{domxref("Element")}} that is the last child of the `DocumentFragment` object, or `null` if there is none.
 
 ## Methods

@@ -20,26 +20,19 @@ tags:
   - screen
 browser-compat: api.MediaTrackSettings.cursor
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackSettings")}} dictionary's
-**`cursor`** property indicates whether or not the cursor
-should be captured as part of the video track included in the
-{{domxref("MediaStream")}} returned by {{domxref("MediaDevices.getDisplayMedia",
-    "getDisplayMedia()")}}.
+{{APIRef("Media Capture and Streams")}}
+
+The {{domxref("MediaTrackSettings")}} dictionary's **`cursor`** property indicates whether or not the cursor should be captured as part of the video track included in the {{domxref("MediaStream")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}.
 
 ## Value
 
-The value of `cursor` comes from the `CursorCaptureConstraint`
-enumerated string type, and may have one of the following values:
+The value of `cursor` comes from the `CursorCaptureConstraint` enumerated string type, and may have one of the following values:
 
 - `always`
-  - : The mouse should always be visible in the video content of the
-    {{domxref("MediaStream")}}, unless the mouse has moved outside the area of the
-    content.
+  - : The mouse should always be visible in the video content of the {{domxref("MediaStream")}}, unless the mouse has moved outside the area of the content.
 - `motion`
-  - : The mouse cursor should always be included in the video if it's moving, and for a
-    short time after it stops moving.
+  - : The mouse cursor should always be included in the video if it's moving, and for a short time after it stops moving.
 - `never`
   - : The mouse cursor is never included in the shared video.
 

@@ -2,11 +2,12 @@
 title: Firefox 80 for developers
 slug: Mozilla/Firefox/Releases/80
 tags:
-  - '80'
+  - "80"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 80 that will affect developers. Firefox 80 was released on August 25, 2020.
@@ -22,7 +23,7 @@ This article provides information about the changes in Firefox 80 that will affe
 
 ### HTML
 
-_No changes_
+_No changes._
 
 ### CSS
 
@@ -59,7 +60,7 @@ _No changes_
 
 ## Changes for add-on developers
 
-_No changes_
+_No changes._
 
 ## Older versions
 

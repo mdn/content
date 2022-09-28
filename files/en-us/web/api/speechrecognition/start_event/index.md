@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.start_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`start`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechRecognition")}} object is fired when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current `SpeechRecognition`.
@@ -33,7 +34,7 @@ You can use the `start` event in an [`addEventListener`](/en-US/docs/Web/API/Eve
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('start', function() {
+recognition.addEventListener('start', () => {
   console.log('Speech recognition service has started');
 });
 ```
@@ -41,7 +42,7 @@ recognition.addEventListener('start', function() {
 Or use the `onstart` event handler property:
 
 ```js
-recognition.onstart = function() {
+recognition.onstart = () => {
   console.log('Speech recognition service has started');
 }
 ```

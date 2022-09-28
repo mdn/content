@@ -5,13 +5,13 @@ page-type: web-api-instance-method
 tags:
   - API
   - Clients
-  - Experimental
   - Method
   - Reference
   - Service Workers
   - ServiceWorker
 browser-compat: api.Clients.matchAll
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`matchAll()`** method of the {{domxref("Clients")}}
@@ -23,7 +23,7 @@ service worker.
 
 ## Syntax
 
-```js
+```js-nolint
 matchAll()
 matchAll(options)
 ```
@@ -57,7 +57,7 @@ order, correct as per spec.
 ```js
 clients.matchAll(options).then((clientList) => {
   for (const client of clientList) {
-    if (client.url === 'index.html') {
+    if (client.url === "index.html") {
       clients.openWindow(client);
       // or do something else involving the matching client
     }

@@ -13,6 +13,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.keys
 ---
+
 {{JSRef}}
 
 The **`keys()`** method returns a new _array iterator_ object
@@ -22,7 +23,7 @@ that contains the keys for each index in the array.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
@@ -36,10 +37,8 @@ A new _array iterator_ object.
 
 ```js
 const arr = new Uint8Array([10, 20, 30, 40, 50]);
-const eArray = arr.keys();
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-for (const n of eArray) {
+const arrKeys = arr.keys();
+for (const n of arrKeys) {
   console.log(n);
 }
 ```
@@ -48,12 +47,12 @@ for (const n of eArray) {
 
 ```js
 const arr = new Uint8Array([10, 20, 30, 40, 50]);
-const eArr = arr.keys();
-console.log(eArr.next().value); // 0
-console.log(eArr.next().value); // 1
-console.log(eArr.next().value); // 2
-console.log(eArr.next().value); // 3
-console.log(eArr.next().value); // 4
+const arrKeys = arr.keys();
+console.log(arrKeys.next().value); // 0
+console.log(arrKeys.next().value); // 1
+console.log(arrKeys.next().value); // 2
+console.log(arrKeys.next().value); // 3
+console.log(arrKeys.next().value); // 4
 ```
 
 ## Specifications

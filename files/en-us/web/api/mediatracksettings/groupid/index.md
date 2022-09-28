@@ -15,7 +15,8 @@ tags:
   - groupId
 browser-compat: api.MediaTrackSettings.groupId
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`groupId`** property is a browsing-session unique

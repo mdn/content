@@ -8,6 +8,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechSynthesis.voiceschanged_event
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`voiceschanged`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the list of {{domxref("SpeechSynthesisVoice")}} objects that would be returned by the {{domxref("SpeechSynthesis.getVoices()")}} method has changed (when the `voiceschanged` event fires.)
@@ -33,7 +34,7 @@ This could be used to repopulate a list of voices that the user can choose betwe
 ```js
 const synth = window.speechSynthesis;
 
-synth.addEventListener('voiceschanged', function() {
+synth.addEventListener('voiceschanged', () => {
   const voices = synth.getVoices();
   for (let i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');
@@ -49,7 +50,7 @@ Or use the `onvoiceschanged` event handler property:
 
 ```js
 const synth = window.speechSynthesis;
-synth.onvoiceschanged = function() {
+synth.onvoiceschanged = () => {
   const voices = synth.getVoices();
   for (let i = 0; i < voices.length ; i++) {
     const option = document.createElement('option');

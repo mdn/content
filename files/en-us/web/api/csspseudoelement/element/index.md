@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.CSSPseudoElement.element
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`element`** read-only property of the

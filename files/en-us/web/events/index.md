@@ -7,6 +7,7 @@ tags:
   - Reference
 spec-urls: https://html.spec.whatwg.org/multipage/indices.html#events-2
 ---
+
 [Events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.
 
 Each event is represented by an object that is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in [Event > Interfaces based on Event](/en-US/docs/Web/API/Event#introduction).
@@ -330,13 +331,6 @@ This topic provides an index to the main _sorts_ of events you might be interest
             <a href="/en-US/docs/Web/API/Element/MSGestureTap_event"
               ><code>MSGestureTap</code></a
             >.
-          </li>
-          <li>
-            Deprecated/non-standard Mozilla touch events
-            <a
-              href="/en-US/docs/Web/API/Touch_events/Mozilla_experimental_events"
-              >Touch events (Mozilla experimental)</a
-            >
           </li>
           <li>
             <a href="/en-US/docs/Web/Events/Mouse_gesture_events"
@@ -937,7 +931,6 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [readystatechange event](/en-US/docs/Web/API/Document/readystatechange_event)
   - [scroll event](/en-US/docs/Web/API/Document/scroll_event)
   - [selectionchange event](/en-US/docs/Web/API/Document/selectionchange_event)
-  - [selectstart event](/en-US/docs/Web/API/Document/selectstart_event)
   - [touchcancel event](/en-US/docs/Web/API/Document/touchcancel_event)
   - [touchend event](/en-US/docs/Web/API/Document/touchend_event)
   - [touchmove event](/en-US/docs/Web/API/Document/touchmove_event)

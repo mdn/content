@@ -31,7 +31,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -53,7 +53,7 @@
         "description": "anyElementsOrCharacterData"
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -105,7 +105,7 @@
         "elements": ["descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "animationEventAttributes",
         "xLinkAttributes",
@@ -130,7 +130,7 @@
         "elements": ["descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "animationEventAttributes",
         "xLinkAttributes",
@@ -152,7 +152,7 @@
         "elements": ["descriptiveElements", "&lt;mpath&gt;"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "animationEventAttributes",
         "xLinkAttributes",
@@ -225,7 +225,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "presentationAttributes",
         "'class'",
@@ -259,7 +259,7 @@
         "elements": ["descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "xLinkAttributes",
         "'externalResourcesRequired'",
@@ -300,7 +300,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -326,7 +326,7 @@
         "elements": ["descriptiveElements", "&lt;script&gt;"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "'begin'",
         "'href'"
@@ -339,7 +339,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -911,7 +911,7 @@
         "description": "anyElementsOrCharacterData"
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -957,7 +957,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1101,7 +1101,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "xLinkAttributes",
@@ -1126,7 +1126,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1250,7 +1250,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "presentationAttributes",
         "'class'",
@@ -1337,7 +1337,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1381,7 +1381,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "presentationAttributes",
         "xLinkAttributes",
@@ -1408,7 +1408,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1427,7 +1427,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1477,7 +1477,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1515,7 +1515,7 @@
         "elements": ["descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "animationEventAttributes",
         "xLinkAttributes",
@@ -1582,7 +1582,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "documentEventAttributes",
         "graphicalEventAttributes",
@@ -1622,7 +1622,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1688,7 +1688,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1723,7 +1723,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1758,7 +1758,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1786,7 +1786,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1814,7 +1814,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",

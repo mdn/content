@@ -9,6 +9,7 @@ tags:
   - BarProp
 browser-compat: api.BarProp
 ---
+
 {{APIRef("DOM")}}
 
 The **`BarProp`** interface of the {{domxref('Document Object Model')}} represents the web browser user interface elements that are exposed to scripts in web pages. Each of the following interface elements are represented by a `BarProp` object.

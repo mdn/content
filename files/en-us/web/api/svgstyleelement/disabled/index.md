@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStyleElement.disabled
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGStyleElement.disabled`** property can be used to get and set whether the stylesheet is disabled (`true`) or not (`false`).
@@ -36,7 +37,9 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 
 ```html
 <button>Enable</button>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style id="circle_style_id">
     circle {
       fill: gold;
@@ -51,12 +54,12 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 #### JavaScript
 
 The code below gets the `style` element (an `SVGStyleElement`) using its id, and then sets it as disabled.
-As the style already exists, as it is defined in the SVG, this should succeed.
+The style already exists because it is defined in the SVG, so this should succeed.
 
 ```js
-const svg = document.getElementsByTagName("svg")[0];
+const svg = document.querySelector("svg");
 const style = svg.getElementById("circle_style_id")
-style.disabled = true;  
+style.disabled = true;
 ```
 
 We then add an event handler for the button that toggles the disabled state and button text.
@@ -66,8 +69,7 @@ const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
    style.disabled = !style.disabled;
-   const buttonText = style.disabled ? 'Enable' : 'Disable';
-   button.innerText = buttonText;
+   button.textContent = style.disabled ? 'Enable' : 'Disable';
    });
 ```
 
@@ -91,8 +93,10 @@ The HTML is similar to the previous case, but the SVG definition does not includ
 
 ```html
 <button>Enable</button>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <circle cx="50" cy="50" r="25" />
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle cx="50" cy="50" r="25" />
 </svg>
 ```
 
@@ -104,7 +108,7 @@ This is done by first creating a style element in the SVG namespace using [`Docu
 > **Note:** You must use [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS) and not [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) to create the style, or by default you'll create the equivalent HTML style element.
 
 ```js
-const svg = document.getElementsByTagName("svg")[0];
+const svg = document.querySelector("svg");
 
 // Create the `style` element in the SVG namespace
 const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
@@ -129,8 +133,7 @@ const button = document.querySelector('button');
 
 button.addEventListener('click', () => {
    style.disabled = !style.disabled;
-   const buttonText = style.disabled ? 'Enable' : 'Disable';
-   button.innerText = buttonText;
+   button.textContent = style.disabled ? 'Enable' : 'Disable';
    });
 ```
 

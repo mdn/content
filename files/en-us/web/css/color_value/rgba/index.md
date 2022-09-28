@@ -1,6 +1,7 @@
 ---
 title: rgba()
 slug: Web/CSS/color_value/rgba
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type
@@ -9,9 +10,9 @@ tags:
   - Web
   - color
   - rgba
-browser-compat:
-  - css.types.color.rgba
+browser-compat: css.types.color.rgba
 ---
+
 {{CSSRef}}
 
 The **`rgba()`** functional notation expresses a color according to its red, green, and blue components. An optional alpha component represents the color's transparency.

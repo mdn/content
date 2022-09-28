@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onMessage
 ---
+
 {{AddonSidebar()}}
 
 Use this event to listen for messages from another part of your extension.
@@ -46,7 +47,7 @@ To send an asynchronous response, there are two options:
 
 ## Syntax
 
-```js
+```js-nolint
 browser.runtime.onMessage.addListener(listener)
 browser.runtime.onMessage.removeListener(listener)
 browser.runtime.onMessage.hasListener(listener)
@@ -247,9 +248,7 @@ Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` 
 function isBookmarked(message, sender, response) {
   return browser.bookmarks.search({
     url: message.url
-  }).then(function(results) {
-    return results.length > 0;
-  });
+  }).then((results) => results.length > 0);
 }
 
 browser.runtime.onMessage.addListener(isBookmarked);
@@ -277,7 +276,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre class="brush: js">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -304,4 +304,4 @@ browser.runtime.onMessage.addListener(handleMessage);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

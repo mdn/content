@@ -7,9 +7,9 @@ tags:
   - Example
   - Graphics
   - HTML
-  - HTML5
   - Tutorial
 ---
+
 {{CanvasSidebar}}
 
 This sample program demonstrates a number of [compositing operations](/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). The output looks like this:
@@ -66,7 +66,7 @@ const height = 340;
 When the page loads, this code runs to set up and run the example:
 
 ```js
-window.onload = function() {
+window.onload = () => {
     // lum in sRGB
     const lum = {
         r: 0.33,
@@ -165,7 +165,7 @@ function runComposite() {
 The program relies on a number of utility functions.
 
 ```js
-const lightMix = function() {
+const lightMix = () => {
     const ctx = canvas2.getContext("2d");
     ctx.save();
     ctx.globalCompositeOperation = "lighter";
@@ -190,7 +190,7 @@ const lightMix = function() {
 ```
 
 ```js
-const colorSphere = function(element) {
+const colorSphere = (element) => {
     const ctx = canvas1.getContext("2d");
     const width = 360;
     const halfWidth = width / 2;
@@ -225,7 +225,7 @@ const colorSphere = function(element) {
 ```js
 // HSV (1978) = H: Hue / S: Saturation / V: Value
 Color = {};
-Color.HSV_RGB = function (o) {
+Color.HSV_RGB = (o) => {
     const S = o.S / 100;
     let H = o.H / 360,
         V = o.V / 100;
@@ -235,7 +235,7 @@ Color.HSV_RGB = function (o) {
         R = G = B = Math.round(V * 255);
     } else {
         if (H >= 1) H = 0;
-        H = 6 * H;
+        H *= 6;
         D = H - Math.floor(H);
         A = Math.round(255 * V * (1 - S));
         B = Math.round(255 * V * (1 - (S * D)));
@@ -274,14 +274,10 @@ Color.HSV_RGB = function (o) {
                 break;
         }
     }
-    return {
-        R: R,
-        G: G,
-        B: B
-    };
+    return { R, G, B };
 };
 
-const createInterlace = function (size, color1, color2) {
+const createInterlace = (size, color1, color2) => {
     const proto = document.createElement("canvas").getContext("2d");
     proto.canvas.width = size * 2;
     proto.canvas.height = size * 2;

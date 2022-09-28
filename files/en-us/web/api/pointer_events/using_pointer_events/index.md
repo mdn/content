@@ -11,13 +11,14 @@ tags:
   - touch
 browser-compat: api.PointerEvent
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 This guide demonstrates how to use [pointer events](/en-US/docs/Web/API/Pointer_events) and the HTML {{HTMLElement("canvas")}} element to build a multi-touch enabled drawing application. This example is based on the one in the [touch events overview](/en-US/docs/Web/API/Touch_events), except it uses the {{domxref("PointerEvent","pointer events", "", 1)}} input event model. Another difference is that because pointer events are pointer device agnostic, the application accepts coordinate-based inputs from a mouse, a pen, or a fingertip using the same code.
 
 This application will only work on a browser that supports pointer events.
 
-A live version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Using_Pointer_Events.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/blob/master/pointerevents/Using_Pointer_Events.html) and pull requests and bug reports are welcome.
+A live version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Using_Pointer_Events.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/blob/main/pointerevents/Using_Pointer_Events.html) and pull requests and bug reports are welcome.
 
 ## Definitions
 
@@ -35,13 +36,18 @@ A live version of this application is available on [GitHub](https://mdn.github.i
 The {{cssxref("touch-action")}} property is set to `none` to prevent the browser from applying its default touch behavior to the application.
 
 ```html
-<canvas id="canvas" width="600" height="600" style="border:solid black 1px; touch-action:none">
+<canvas
+  id="canvas"
+  width="600"
+  height="600"
+  style="border:solid black 1px; touch-action:none">
   Your browser does not support canvas element.
 </canvas>
-<br>
+<br />
 <button onclick="startup()">Initialize</button>
-<br>
-Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Log:
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ### Setting up the event handlers
@@ -211,7 +217,7 @@ function ongoingTouchIndexById(idToFind) {
   for (let i = 0; i < ongoingTouches.length; i++) {
     const id = ongoingTouches[i].identifier;
 
-    if (id == idToFind) {
+    if (id === idToFind) {
       return i;
     }
   }

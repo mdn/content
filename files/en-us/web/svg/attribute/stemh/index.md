@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.stemh
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`stemh`** attribute indicates the horizontal stem width of the font.

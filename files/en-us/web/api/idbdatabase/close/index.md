@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBDatabase.close
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`close()`** method of the {{domxref("IDBDatabase")}}
@@ -26,7 +27,7 @@ operation is pending.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

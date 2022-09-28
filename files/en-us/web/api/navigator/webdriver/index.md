@@ -10,7 +10,8 @@ tags:
   - WebDriver
 browser-compat: api.Navigator.webdriver
 ---
-{{SeeCompatTable}}{{APIRef("WebDriver")}}
+
+{{APIRef("WebDriver")}}
 
 The **`webdriver`** read-only property
 of the {{domxref("navigator")}} interface indicates whether the user agent is

@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceResourceTiming.initiatorType
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`initiatorType`** read-only property is a
@@ -36,20 +37,17 @@ initiated the performance event, as specified above.
 ## Examples
 
 ```js
-function print_PerformanceEntries() {
+function printPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  const p = performance.getEntriesByType("resource");
-  for (let i=0; i < p.length; i++) {
-    print_initiatorType(p[i]);
-  }
+  performance.getEntriesByType("resource")
+    .forEach((entry) => {
+      printInitiatorType(entry);
+    });
 }
-function print_initiatorType(perfEntry) {
+
+function printInitiatorType(perfEntry) {
   // Print this performance entry object's initiatorType value
-  const value = "initiatorType" in perfEntry;
-  if (value)
-    console.log(`… initiatorType = ${perfEntry.initiatorType}`);
-  else
-    console.log("… initiatorType = NOT supported");
+  console.log(`… initiatorType = ${perfEntry.initiatorType ?? "NOT supported"}`);
 }
 ```
 

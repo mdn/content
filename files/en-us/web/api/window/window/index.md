@@ -12,6 +12,7 @@ tags:
   - Window
 browser-compat: api.Window.window
 ---
+
 {{APIRef}}
 
 The **`window`** property of a {{domxref("Window")}} object points to the window object itself.
@@ -27,21 +28,21 @@ window.window.window.window
 
 In web pages, the window object is also a _global object_. This means:
 
-1. global variables of your script are in fact properties of `window`:
+1. Global variables of your script are, in fact, properties of `window`:
 
-    ```js
-    const global = {data: 0};
-    alert(global === window.global); // displays "true"
-    ```
+   ```js
+   const global = { data: 0 };
+   alert(global === window.global); // displays "true"
+   ```
 
-2. you can access built-in properties of the window object without having to type `window.` prefix:
+2. You can access the built-in properties of the window object without having to prefix them with `window.`:
 
-    ```js
-    setTimeout("alert('Hi!')", 50); // equivalent to using window.setTimeout.
-    alert(window === window.window); // displays "true"
-    ```
+   ```js
+   setTimeout("alert('Hi!')", 50); // equivalent to using window.setTimeout().
+   alert(window === window.window); // displays "true"
+   ```
 
-The point of having the `window` property refer to the object itself, was likely to make it easy to refer to the global object. Otherwise, you'd have to do a manual `var window = this;` assignment at the top of your script.
+The point of having the `window` property refer to the object itself, was likely to make it easy to refer to the global object. Otherwise, you'd have to do a manual `let window = this;` assignment at the top of your script.
 
 Another reason, is that without this property you wouldn't be able to write, for example, "{{domxref("window.open","window.open('http://google.com/')")}}". You'd have to use "open('http\://google.com/')" instead.
 

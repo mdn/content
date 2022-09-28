@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Cross-Origin-Opener-Policy
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Cross-Origin-Opener-Policy`** (COOP) response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.
@@ -32,7 +33,7 @@ If a cross-origin document with COOP is opened in a new window, the opening docu
 
 ## Syntax
 
-```
+```http
 Cross-Origin-Opener-Policy: unsafe-none
 Cross-Origin-Opener-Policy: same-origin-allow-popups
 Cross-Origin-Opener-Policy: same-origin
@@ -53,7 +54,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers are only available if your document has a COOP header with the value `same-origin` value set.
 
-```
+```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```

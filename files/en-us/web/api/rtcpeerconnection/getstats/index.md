@@ -19,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCPeerConnection.getStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method
@@ -28,7 +29,7 @@ providing statistics about either the overall connection or about the specified
 
 ## Syntax
 
-```js
+```js-nolint
 getStats()
 getStats(selector)
 ```
@@ -51,8 +52,8 @@ providing connection statistics. The contents of the report depend on the
 This method does not throw exceptions; instead, it rejects the returned promise with
 one of the following errors:
 
-- `InvalidAccessError`
-  - : There is no {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}} whose
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown when there is no {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}} whose
     `track` matches the specified `selector`, or
     `selector` matches more than one sender or receiver.
 
@@ -95,7 +96,7 @@ statistics for an {{domxref("RTCPeerConnection")}} every second, generating an
 HTML-formatted report and inserting it into a specific element in the DOM.
 
 ```js
-window.setInterval(function() {
+setInterval(() => {
   myPeerConnection.getStats(null).then((stats) => {
     let statsOutput = "";
 

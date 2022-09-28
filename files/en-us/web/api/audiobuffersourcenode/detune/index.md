@@ -12,6 +12,7 @@ tags:
   - detune
 browser-compat: api.AudioBufferSourceNode.detune
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`detune`** property of the
@@ -37,7 +38,11 @@ const audioCtx = new AudioContext();
 const channelCount = 2;
 const frameCount = audioCtx.sampleRate * 2.0; // 2 seconds
 
-const myArrayBuffer = audioCtx.createBuffer(channelCount, frameCount, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(
+  channelCount,
+  frameCount,
+  audioCtx.sampleRate
+);
 
 for (let channel = 0; channel < channelCount; channel++) {
   const nowBuffering = myArrayBuffer.getChannelData(channel);

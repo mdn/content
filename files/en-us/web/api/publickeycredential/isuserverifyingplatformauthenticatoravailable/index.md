@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`isUserVerifyingPlatformAuthenticatorAvailable()`** is a
@@ -31,7 +32,7 @@ from the user in order to identify them. Common user-verifying platform authenti
 
 ## Syntax
 
-```js
+```js-nolint
 isUserVerifyingPlatformAuthenticatorAvailable()
 ```
 
@@ -54,15 +55,15 @@ a not a user-verifying platform authenticator is available.
 
 ```js
 PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
-  .then(function(available){
-    if(available){
+  .then((available) => {
+    if (available) {
       // We can proceed with the creation of a PublicKeyCredential
       // with this authenticator
     } else {
       // Use another kind of authenticator or a classical login/password
       // workflow
     }
-  }).catch(function(err){
+  }).catch((err) => {
     // Something went wrong
     console.error(err);
   });
@@ -78,5 +79,5 @@ PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 
 ## See also
 
-- [Windows Hello](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello)
-- [Web Authentication and Windows Hello - MSDN Guide](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) and especially the [special considerations mentioning `isUserVerifyingPlatformAuthenticator()`](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/#special-considerations-for-windows-hello)
+- [Windows Hello](https://docs.microsoft.com/windows-hardware/design/device-experiences/windows-hello)
+- [Web Authentication and Windows Hello - MSDN Guide](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) and especially the [special considerations mentioning `isUserVerifyingPlatformAuthenticator()`](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/#special-considerations-for-windows-hello)

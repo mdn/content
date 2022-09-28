@@ -19,6 +19,7 @@ tags:
   - XMLDocument
   - XMLHttpRequest
 ---
+
 At times, you may need to parse {{Glossary("XML")}} content and convert it into a {{Glossary("DOM")}} tree, or, conversely, serialize an existing DOM tree into XML. In this article, we'll look at the objects provided by the web platform to make the common tasks of serializing and parsing XML easy.
 
 - {{domxref("XMLSerializer")}}
@@ -60,11 +61,11 @@ Here is sample code that reads and parses a URL-addressable XML file into a DOM 
 ```js
 const xhr = new XMLHttpRequest();
 
-xhr.onload = function() {
+xhr.onload = () => {
   dump(xhr.responseXML.documentElement.nodeName);
 }
 
-xhr.onerror = function() {
+xhr.onerror = () => {
   dump("Error while getting XML.");
 }
 

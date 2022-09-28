@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.clearMeasures
 ---
+
 {{APIRef("User Timing API")}}
 
 The **`clearMeasures()`** method removes the _named
@@ -21,7 +22,7 @@ removed from the performance entry buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 clearMeasures()
 clearMeasures(name)
 ```

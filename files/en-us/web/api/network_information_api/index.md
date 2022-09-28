@@ -12,6 +12,7 @@ browser-compat:
   - api.NetworkInformation
   - api.Navigator.connection
 ---
+
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
 The Network Information API provides information about the system's connection in terms of general connection type (e.g., 'wifi, 'cellular', etc.).
@@ -36,11 +37,11 @@ This example watches for changes to the user's connection.
 let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
-  console.log(`Connection type changed from ${type} to ${connection.effectiveType}`);
-  type = navigation.connection.effectiveType;
+  console.log(`Connection type changed from ${type} to ${navigator.connection.effectiveType}`);
+  type = navigator.connection.effectiveType;
 }
 
-connection.addEventListener('change', updateConnectionStatus);
+navigator.connection.addEventListener('change', updateConnectionStatus);
 ```
 
 ### Preload large resources

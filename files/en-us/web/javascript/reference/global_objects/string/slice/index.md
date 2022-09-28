@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.slice
 ---
+
 {{JSRef}}
 
 The **`slice()`** method extracts a section of a string and
@@ -18,7 +19,7 @@ returns it as a new string, without modifying the original string.
 
 ## Syntax
 
-```js
+```js-nolint
 slice(indexStart)
 slice(indexStart, indexEnd)
 ```

@@ -11,13 +11,14 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.deleteRule
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`deleteRule()`** method of the {{domxref("CSSKeyframeRule")}} interface deletes the {{domxref("CSSKeyFrameRule")}} that matches the specified keyframe selector.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteRule(select)
 ```
 

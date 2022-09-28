@@ -5,13 +5,13 @@ page-type: web-api-event
 tags:
   - API
   - Event
-  - Experimental
   - HTML DOM
   - HTMLDialogElement
   - Reference
   - close
 browser-compat: api.HTMLDialogElement.close_event
 ---
+
 {{ APIRef() }}
 
 The `close` event is fired on an `HTMLDialogElement` object when the dialog it represents has been closed.
@@ -40,7 +40,7 @@ A generic {{domxref("Event")}}.
 
 ```html
 <dialog class="example-dialog">
-    <button class="close" type="reset">Close</button>
+  <button class="close" type="reset">Close</button>
 </dialog>
 
 <button class="open-dialog">Open dialog</button>
@@ -49,12 +49,13 @@ A generic {{domxref("Event")}}.
 ```
 
 ```css hidden
-button, div {
-    margin: .5rem;
+button,
+div {
+  margin: 0.5rem;
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const result = document.querySelector('.result');

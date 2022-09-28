@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.script
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.script`** property is an accessor property which returns the script used for writing the particular language used in the locale.
@@ -27,7 +28,7 @@ A script, sometimes called writing system, is one of the core attributes of a lo
 The script is the second part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. Note that the script is not a required part of a locale identifier.
 
 ```js
-let locale = new Intl.Locale("en-Latn-US");
+const locale = new Intl.Locale("en-Latn-US");
 console.log(locale.script); // Prints "Latn"
 ```
 
@@ -36,7 +37,7 @@ console.log(locale.script); // Prints "Latn"
 The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes a configuration object, which can be used to set the script subtag and property.
 
 ```js
-let locale = new Intl.Locale("fr-FR", { script: "Latn" });
+const locale = new Intl.Locale("fr-FR", { script: "Latn" });
 console.log(locale.script); // Prints "Latn"
 ```
 

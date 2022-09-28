@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.OES_texture_float_linear
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_texture_float_linear`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows linear filtering with floating-point pixel types for textures.

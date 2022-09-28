@@ -8,11 +8,12 @@ tags:
   - Tools
   - Web
 ---
+
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
 
 Measuring performance provides an important metric to help you asses the success of your app, site, or web service.
 
-For example, you can use performance metrics to determine how your app performs in comparison to a competitor or you can compare your app's performance across releases.  The metrics you choose to measure should be relevant to your users, site, and business goals. They should be collected and measured in a consistent manner and analyzed in a format that can be consumed and understood by non-technical stakeholders.
+For example, you can use performance metrics to determine how your app performs in comparison to a competitor or you can compare your app's performance across releases. The metrics you choose to measure should be relevant to your users, site, and business goals. They should be collected and measured in a consistent manner and analyzed in a format that can be consumed and understood by non-technical stakeholders.
 
 This article introduces web performance metrics that you can use to measure and optimize your site's performance.
 
@@ -85,9 +86,9 @@ Try running your favorite website now, on both webpagetest.org and PageSpeed Ins
 
 ### Network tools
 
-Most browsers have tools available that you can use to run against loaded pages and determine how they are performing. For example, the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) returns detailed information on all the assets downloaded form the network, along with a time graph that shows how long each one took to download.
+Most browsers have tools available that you can use to run against loaded pages and determine how they are performing. For example, the Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) returns detailed information on all the assets downloaded from the network, along with a time graph that shows how long each one took to download.
 
-![](network-monitor.png)
+![Firefox network monitor showing a list of assets that has loaded as well as load time per asset](network-monitor.png)
 
 You can also use the [Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) to measure the performance of a web app or site's user interface as you perform different actions. This indicates the features that might be slowing down your web app or site.
 

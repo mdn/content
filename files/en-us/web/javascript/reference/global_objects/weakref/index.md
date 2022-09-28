@@ -8,6 +8,7 @@ tags:
   - WeakRef
 browser-compat: javascript.builtins.WeakRef
 ---
+
 {{JSRef}}
 
 A **`WeakRef`** object lets you hold a weak reference to another object, without preventing that object from getting garbage-collected.
@@ -25,7 +26,7 @@ A `WeakRef` object contains a weak reference to an object, which is called its _
 
 ## Instance methods
 
-- {{jsxref("WeakRef.deref", "WeakRef.prototype.deref()")}}
+- {{jsxref("WeakRef.prototype.deref()")}}
   - : Returns the `WeakRef` object's target object, or `undefined` if the target object has been reclaimed.
 
 ## Avoid where possible

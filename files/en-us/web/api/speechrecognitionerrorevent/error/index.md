@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Error
-  - Experimental
   - Property
   - Reference
   - SpeechRecognitionErrorEvent
@@ -14,7 +13,8 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionErrorEvent.error
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`error`** read-only property of the
 {{domxref("SpeechRecognitionErrorEvent")}} interface returns the type of error raised.
@@ -51,7 +51,7 @@ A string naming the type of error. The possible error types are:
 ```js
 const recognition = new SpeechRecognition();
 
-recognition.onerror = function(event) {
+recognition.onerror = (event) => {
   console.log(`Speech recognition error detected: ${event.error}`);
   console.log(`Additional information: ${event.message}`);
 }

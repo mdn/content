@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.flat
 ---
+
 {{JSRef}}
 
 The **`flat()`** method creates a new array with all sub-array
@@ -20,7 +21,7 @@ elements concatenated into it recursively up to the specified depth.
 
 ## Syntax
 
-```js
+```js-nolint
 flat()
 flat(depth)
 ```
@@ -34,6 +35,12 @@ flat(depth)
 ### Return value
 
 A new array with the sub-array elements concatenated into it.
+
+## Description
+
+The `flat()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) that contains the same elements as the ones from the original array.
+
+The `flat()` method ignores empty slots if the array being flattened is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). For example, if `depth` is 1, both empty slots in the root array and in the first level of nested arrays are ignored, but empty slots in further nested arrays are preserved with the arrays themselves.
 
 ## Alternatives
 
@@ -59,9 +66,13 @@ const arr = [1, 2, [3, 4, [5, 6]]];
 
 // to enable deep level flatten use recursion with reduce and concat
 function flatDeep(arr, d = 1) {
-   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
-                : arr.slice();
-};
+  if (!Array.isArray(arr)) {
+    return arr;
+  }
+  return d > 0
+    ? arr.reduce((acc, val) => acc.concat(flatDeep(val, d - 1)), [])
+    : arr.slice();
+}
 
 flatDeep(arr, Infinity);
 // [1, 2, 3, 4, 5, 6]
@@ -139,14 +150,20 @@ arr4.flat(Infinity);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Flattening and array holes
+### Using flat() on sparse arrays
 
-The flat method removes empty slots in arrays:
+The `flat()` method removes empty slots in arrays:
 
 ```js
 const arr5 = [1, 2, , 4, 5];
-arr5.flat();
-// [1, 2, 4, 5]
+console.log(arr5.flat()); // [1, 2, 4, 5]
+
+const array = [1, , 3, ["a", , "c"]];
+console.log(array.flat()); // [ 1, 3, "a", "c" ]
+
+const array2 = [1, , 3, ["a", , ["d", , "e"]]];
+console.log(array2.flat()); // [ 1, 3, "a", ["d", empty, "e"] ]
+console.log(array2.flat(2)); // [ 1, 3, "a", "d", "e"]
 ```
 
 ## Specifications

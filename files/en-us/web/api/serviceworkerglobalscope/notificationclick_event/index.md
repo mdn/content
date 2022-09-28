@@ -11,6 +11,7 @@ tags:
   - notificationclick
 browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event
 ---
+
 {{APIRef}}
 
 The **`notificationclick`** event is fired to indicate that a system notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}} has been clicked.
@@ -29,7 +30,7 @@ onnotificationclick = (event) => { };
 
 ## Event type
 
-An {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("NotificationEvent")}}
 
@@ -37,9 +38,9 @@ An {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("NotificationEvent.notification")}} {{readonlyInline}}
+- {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Notification")}} object representing the notification that was clicked to fire the event.
-- {{domxref("NotificationEvent.action")}} {{readonlyinline}}
+- {{domxref("NotificationEvent.action")}} {{ReadOnlyInline}}
   - : Returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button.
 
 ## Examples
@@ -47,7 +48,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 You can use the `notificationclick` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
 ```js
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -55,7 +56,7 @@ self.addEventListener('notificationclick', function(event) {
   // focuses if it is
   event.waitUntil(clients.matchAll({
     type: "window"
-  }).then(function(clientList) {
+  }).then((clientList) => {
     for (const client of clientList) {
       if (client.url === '/' && 'focus' in client)
         return client.focus();
@@ -69,7 +70,7 @@ self.addEventListener('notificationclick', function(event) {
 Or use the {{domxref("ServiceWorkerGlobalScope/onnotificationclick", "onnotificationclick")}} event handler property:
 
 ```js
-self.onnotificationclick = function(event) {
+self.onnotificationclick = (event) => {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -77,7 +78,7 @@ self.onnotificationclick = function(event) {
   // focuses if it is
   event.waitUntil(clients.matchAll({
     type: "window"
-  }).then(function(clientList) {
+  }).then((clientList) => {
     for (const client of clientList) {
       if (client.url === '/' && 'focus' in client)
         return client.focus();
@@ -92,9 +93,9 @@ You can handle event actions using `event.action` within a {{domxref("ServiceWor
 
 ```js
 navigator.serviceWorker.register('sw.js');
-Notification.requestPermission(function(result) {
+Notification.requestPermission((result) => {
   if (result === 'granted') {
-    navigator.serviceWorker.ready.then(function(registration) {
+    navigator.serviceWorker.ready.then((registration) => {
       // Show a notification that includes an action titled Archive.
       registration.showNotification('New mail from Alice',
         {
@@ -110,7 +111,7 @@ Notification.requestPermission(function(result) {
   }
 });
 
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   if (event.action === 'archive') {
     // User selected the Archive action.

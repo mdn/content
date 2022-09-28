@@ -10,8 +10,10 @@ tags:
   - Reference
   - StylePropertyMap
   - set()
+  - Experimental
 browser-compat: api.StylePropertyMap.set
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`set()`** method of the {{domxref("StylePropertyMap")}}
@@ -19,7 +21,7 @@ interface changes the CSS declaration with the given property.
 
 ## Syntax
 
-```js
+```js-nolint
 set(property, value)
 ```
 

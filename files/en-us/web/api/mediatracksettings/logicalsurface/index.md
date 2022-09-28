@@ -22,7 +22,8 @@ tags:
   - Property
 browser-compat: api.MediaTrackSettings.logicalSurface
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`logicalSurface`** property indicates whether or not the

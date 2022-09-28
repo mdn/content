@@ -2,12 +2,12 @@
 title: Request header
 slug: Glossary/Request_header
 tags:
-  - Glossary
   - WebMechanics
 ---
-A **request header** is an {{glossary("HTTP header")}} that can be used in an HTTP request to provide information about the request context, so that the server can tailor the response. For example, the {{HTTPHeader("Accept", "Accept-*")}} headers indicate the allowed and preferred formats of the response. Other headers can be used to supply authentication credentials (e.g.  {{HTTPHeader("Authorization")}}), to control caching, or to get information about the user agent or referrer, etc.
 
-Not all headers that can appear in a request are referred to as *request headers* by the specification. For example, the {{HTTPHeader("Content-Type")}} header is referred to as a {{glossary("representation header")}}.
+A **request header** is an {{glossary("HTTP header")}} that can be used in an HTTP request to provide information about the request context, so that the server can tailor the response. For example, the {{HTTPHeader("Accept", "Accept-*")}} headers indicate the allowed and preferred formats of the response. Other headers can be used to supply authentication credentials (e.g. {{HTTPHeader("Authorization")}}), to control caching, or to get information about the user agent or referrer, etc.
+
+Not all headers that can appear in a request are referred to as _request headers_ by the specification. For example, the {{HTTPHeader("Content-Type")}} header is referred to as a {{glossary("representation header")}}.
 
 In addition, [CORS](/en-US/docs/Glossary/CORS) defines a subset of request headers as {{glossary('simple header', 'simple headers')}}, request headers that are always considered authorized and are not explicitly listed in responses to {{glossary("preflight request", "preflight")}} requests.
 
@@ -31,4 +31,4 @@ Cache-Control: max-age=0
 ## See also
 
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
-- [RFC 7231, section 5: Request header fields](https://datatracker.ietf.org/doc/html/rfc7231#section-5)
+- [RFC 9110, section 6.3: Header Fields](https://httpwg.org/specs/rfc9110.html#header.fields)

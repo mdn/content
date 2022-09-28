@@ -6,6 +6,7 @@ tags:
   - Advanced
   - WebGL
 ---
+
 {{WebGLSidebar}}
 
 WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the [khronos webgl extension registry](https://www.khronos.org/registry/webgl/extensions/).
@@ -115,4 +116,3 @@ If an extension defines specific symbols or functions that are not available in 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
 - {{domxref("WebGLRenderingContext.getExtension()")}}
 - [webglreport.com](https://webglreport.com/)
-- [webglstats.com](http://webglstats.com)

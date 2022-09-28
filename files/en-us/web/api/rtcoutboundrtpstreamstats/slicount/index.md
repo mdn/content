@@ -21,6 +21,7 @@ tags:
   - stream
 browser-compat: api.RTCOutboundRtpStreamStats.sliCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`sliCount`** property of the

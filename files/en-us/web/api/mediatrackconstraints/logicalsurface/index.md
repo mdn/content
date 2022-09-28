@@ -21,13 +21,10 @@ tags:
   - screen
 browser-compat: api.MediaTrackConstraints.logicalSurface
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackConstraints")}} dictionary's
-**`logicalSurface`** property is a
-[`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the requested or mandatory constraints
-placed upon the value of the {{domxref("MediaTrackSettings.logicalSurface",
-    "logicalSurface")}} constrainable property.
+{{APIRef("Media Capture and Streams")}}
+
+The {{domxref("MediaTrackConstraints")}} dictionary's **`logicalSurface`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.logicalSurface","logicalSurface")}} constrainable property.
 
 This is used to specify whether or
 not {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} should allow the
@@ -42,11 +39,9 @@ is unnecessary since browsers will ignore any constraints they're unfamiliar wit
 
 ## Value
 
-A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) which is `true` if logical surfaces should
-be permitted among the selections available to the user.
+A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) which is `true` if logical surfaces should be permitted among the selections available to the user.
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "How
-  constraints are defined")}} for an explanation of how to define constraints.
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "How constraints are defined")}} for an explanation of how to define constraints.
 
 ## Usage notes
 
@@ -64,7 +59,7 @@ one:
 let isLogicalSurface = displayStream.getVideoTracks()[0].getSettings().logicalSurface;
 ```
 
-Following this code, `isLogicalSurface`  is `true` if the display
+Following this code, `isLogicalSurface` is `true` if the display
 surface contained in the stream is a logical surface; that is, one which may not be
 entirely onscreen, or may even be entirely offscreen.
 

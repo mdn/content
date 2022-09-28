@@ -1,6 +1,7 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
+page-type: css-property
 tags:
   - CSS
   - CSS Outline
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.outline-offset
 ---
+
 {{CSSRef}}
 
 The **`outline-offset`** CSS property sets the amount of space between an [outline](/en-US/docs/Web/CSS/outline) and the edge or border of an element.
