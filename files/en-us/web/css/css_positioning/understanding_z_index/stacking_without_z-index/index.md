@@ -1,6 +1,7 @@
 ---
 title: Stacking without the z-index property
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -9,13 +10,14 @@ tags:
   - Understanding_CSS_z-index
   - z-index
 ---
+
 {{CSSRef}}
 
 When the {{cssxref("z-index")}} property is not specified on any element, elements are stacked in the following order (from bottom to top):
 
-1.  The background and borders of the root element
-2.  Descendant non-positioned blocks, in order of appearance in the HTML
-3.  Descendant positioned elements, in order of appearance in the HTML
+1. The background and borders of the root element
+2. Descendant non-positioned blocks, in order of appearance in the HTML
+3. Descendant positioned elements, in order of appearance in the HTML
 
 See [types of positioning](/en-US/docs/Web/CSS/position#types_of_positioning) for an explanation of positioned and non-positioned elements.
 
@@ -31,21 +33,26 @@ In the example below, elements #1 through #4 are positioned elements. Element #5
 
 ```html
 <div id="abs1" class="absolute">
-  <b>DIV #1</b><br />position: absolute;</div>
+  <strong>DIV #1</strong><br />position: absolute;
+</div>
 <div id="rel1" class="relative">
-  <b>DIV #2</b><br />position: relative;</div>
+  <strong>DIV #2</strong><br />position: relative;
+</div>
 <div id="rel2" class="relative">
-  <b>DIV #3</b><br />position: relative;</div>
+  <strong>DIV #3</strong><br />position: relative;
+</div>
 <div id="abs2" class="absolute">
-  <b>DIV #4</b><br />position: absolute;</div>
+  <strong>DIV #4</strong><br />position: absolute;
+</div>
 <div id="sta1" class="static">
-  <b>DIV #5</b><br />position: static;</div>
+  <strong>DIV #5</strong><br />position: static;
+</div>
 ```
 
 ### CSS
 
 ```css
-b {
+strong {
   font-family: sans-serif;
 }
 

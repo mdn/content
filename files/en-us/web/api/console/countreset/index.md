@@ -1,6 +1,7 @@
 ---
 title: console.countReset()
 slug: Web/API/console/countReset
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -12,6 +13,7 @@ tags:
   - web console
 browser-compat: api.console.countReset
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.countReset()`** method resets counter used with
@@ -21,16 +23,21 @@ The **`console.countReset()`** method resets counter used with
 
 ## Syntax
 
-```js
-console.countReset([label]);
+```js-nolint
+countReset()
+countReset(label)
 ```
 
 ### Parameters
 
 - `label` {{optional_inline}}
-  - : A {{jsxref("String")}}. If supplied, `countReset()` resets the count for
+  - : A string. If supplied, `countReset()` resets the count for
     that label to 0. If omitted, `countReset()` resets the default counter to
     0\.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -41,7 +48,7 @@ let user = "";
 
 function greet() {
   console.count();
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";
@@ -75,7 +82,7 @@ let user = "";
 
 function greet() {
   console.count(user);
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";

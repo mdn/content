@@ -14,6 +14,7 @@ tags:
   - remove
 browser-compat: webextensions.api.storage.StorageArea.clear
 ---
+
 {{AddonSidebar()}}
 
 Removes all items from the storage area.
@@ -22,8 +23,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var clearing = browser.storage.<storageType>.clear()
+```js-nolint
+let clearing = browser.storage.<storageType>.clear()
 ```
 
 `<storageType>` will be one of the writable storage types — {{WebExtAPIRef("storage.sync")}} or {{WebExtAPIRef("storage.local")}}.
@@ -51,12 +52,12 @@ function onError(e) {
   console.log(e);
 }
 
-var clearStorage = browser.storage.local.clear();
+let clearStorage = browser.storage.local.clear();
 clearStorage.then(onCleared, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

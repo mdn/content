@@ -9,6 +9,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.theme.onUpdated
 ---
+
 {{AddonSidebar()}}
 
 Fires when a theme supplied as a browser extension is applied or removed. Specifically:
@@ -21,7 +22,7 @@ Note that this event is not fired for changes to the built-in themes.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.theme.onUpdated.addListener(listener)
 browser.theme.onUpdated.removeListener(listener)
 browser.theme.onUpdated.hasListener(listener)
@@ -50,7 +51,7 @@ Events have three functions:
 
         - `theme`
           - : `object`. If the event fired because an extension-supplied theme was removed, this will be an empty object. If it fired because an extension-supplied theme was applied, then it will be a {{WebExtAPIRef("theme.Theme")}} object representing the theme that was applied.
-        - `windowId`{{optional_inline}}
+        - `windowId` {{optional_inline}}
           - : `integer`. The ID of the window for which theme has been updated. If this property is not present, it means that the theme was updated globally.
 
 ## Browser compatibility

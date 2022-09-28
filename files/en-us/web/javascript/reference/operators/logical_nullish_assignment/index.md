@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_nullish_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical nullish assignment (`x ??= y`) operator only assigns if
@@ -19,7 +20,7 @@ The logical nullish assignment (`x ??= y`) operator only assigns if
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 ??= expr2
 ```
 
@@ -27,9 +28,8 @@ expr1 ??= expr2
 
 ### Short-circuit evaluation
 
-The [nullish
-coalescing](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) operator is evaluated left to right, it is tested for possible
-short-circuit evaluation using the following rule:
+The [nullish coalescing](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) operator
+is evaluated left to right, it is tested for possible short-circuit evaluation using the following rule:
 
 `(some expression that is neither null nor undefined) ?? expr` is
 short-circuit evaluated to the left-hand side expression if the left-hand side proves to
@@ -77,8 +77,7 @@ config({}); // { duration: 100, speed: 25 }
 
 ## See also
 
-- [The
-  nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 - {{Glossary("Nullish")}}
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

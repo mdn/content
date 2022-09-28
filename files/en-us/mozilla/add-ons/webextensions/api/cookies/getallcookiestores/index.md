@@ -13,6 +13,7 @@ tags:
   - getAllCookieStores
 browser-compat: webextensions.api.cookies.getAllCookieStores
 ---
+
 {{AddonSidebar()}}
 
 The **`getAllCookieStores()`** method of the {{WebExtAPIRef("cookies")}} API returns a list of all cookie stores.
@@ -21,8 +22,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var gettingStores = browser.cookies.getAllCookieStores()
+```js-nolint
+let gettingStores = browser.cookies.getAllCookieStores()
 ```
 
 ### Parameters
@@ -43,24 +44,24 @@ In the following snippet, the `getAllCookieStores()` method is used to retrieve 
 
 ```js
 function logStores(cookieStores) {
-  for (let store of cookieStores) {
+  for (const store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }
 
-var getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);
+browser.cookies.getAllCookieStores().then(logStores);
 ```
 
 Each member of the `cookieStores` array is a {{WebExtAPIRef("cookies.CookieStore")}} object.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-getAllCookieStores) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-getAllCookieStores) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -87,4 +88,4 @@ Each member of the `cookieStores` array is a {{WebExtAPIRef("cookies.CookieStore
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

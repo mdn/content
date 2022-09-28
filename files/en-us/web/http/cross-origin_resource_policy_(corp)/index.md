@@ -5,7 +5,9 @@ tags:
   - HTTP
   - Reference
   - Security
+browser-compat: http.headers.Cross-Origin-Resource-Policy
 ---
+
 {{HTTPSidebar}}
 
 **Cross-Origin Resource Policy** is a policy set by the [`Cross-Origin-Resource-Policy` HTTP header](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) that lets web sites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative side-channel attacks, like [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>), as well as Cross-Site Script Inclusion attacks.
@@ -33,7 +35,7 @@ Web applications set a Cross-Origin Resource Policy via the {{HTTPHeader("Cross-
 - `cross-origin`
   - : Requests from any _{{Glossary("origin")}}_ (both same-site and cross-site) can read the resource. This is useful when COEP is used (see below).
 
-```
+```http
 Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 ```
 
@@ -53,15 +55,13 @@ In response, Chromium shipped [Cross-Origin Read Blocking](https://fetch.spec.wh
 
 `Cross-Origin-Resource-Policy` is an opt-in response header which can protect _any_ resource; there is no need for browsers to sniff MIME types.
 
-## Browser compatibility
-
-{{Compat("http.headers.Cross-Origin-Resource-Policy")}}
-
 ## Specifications
 
-| Specification                                                                    | Status                                                                       | Comment            |
-| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------ |
-| {{SpecName("Fetch", '#cross-origin-resource-policy-header')}} | {{Spec2("Fetch", '#cross-origin-resource-policy-header')}} | Initial definition |
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

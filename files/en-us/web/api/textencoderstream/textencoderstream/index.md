@@ -1,6 +1,7 @@
 ---
 title: TextEncoderStream()
 slug: Web/API/TextEncoderStream/TextEncoderStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -8,15 +9,20 @@ tags:
   - TextEncoderStream
 browser-compat: api.TextEncoderStream.TextEncoderStream
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextEncoderStream()`** constructor creates a new {{domxref("TextEncoderStream")}} object which is used to convert a stream of strings into bytes using UTF-8 encoding.
 
 ## Syntax
 
-```js
-var TextEncoderStream = new TextEncoderStream();
+```js-nolint
+new TextEncoderStream()
 ```
+
+### Parameters
+
+None.
 
 ## Examples
 

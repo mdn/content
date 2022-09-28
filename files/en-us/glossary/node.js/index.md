@@ -2,12 +2,12 @@
 title: Node.js
 slug: Glossary/Node.js
 tags:
-  - Glossary
   - Infrastructure
   - JavaScript
   - node.js
 ---
-Node.js is a cross-platform {{Glossary("JavaScript")}} runtime environment that allows developers to build server-side and network applications with JavaScript.
+
+Node.js is a cross-platform {{Glossary("JavaScript")}} runtime environment that allows developers to build server-side and network applications with JavaScript.
 
 ## Node Package Manager (npm)
 
@@ -15,8 +15,8 @@ Node.js is a cross-platform {{Glossary("JavaScript")}} runtime environment that
 
 ## See also
 
-- {{Interwiki("Wikipedia", "Node.js")}} on Wikipedia
+- [Node.js](https://en.wikipedia.org/wiki/Node.js) on Wikipedia
 - [Node.js website](https://nodejs.org/)
 - [API reference documentation](https://nodejs.org/api/)
-- [Tutorials](https://nodejs.org/documentation/tutorials/)
+- [Guides](https://nodejs.org/en/docs/guides/)
 - [npm Documentation](https://docs.npmjs.com/)

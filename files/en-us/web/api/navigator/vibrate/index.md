@@ -1,6 +1,7 @@
 ---
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - Vibration API
 browser-compat: api.Navigator.vibrate
 ---
+
 {{APIRef("Vibration API")}}
 
 The **`Navigator.vibrate()`** method pulses the vibration
@@ -22,9 +24,11 @@ long vibration, it is truncated: the max length depends on the implementation.
 
 ## Syntax
 
-```js
-var successBool = navigator.vibrate(pattern);
+```js-nolint
+vibrate(pattern)
 ```
+
+### Parameters
 
 - `pattern`
   - : Provides a pattern of vibration and pause intervals. Each value indicates a number
@@ -34,6 +38,14 @@ var successBool = navigator.vibrate(pattern);
 
 Passing a value of `0`, an empty array, or an array containing all zeros
 will cancel any currently ongoing vibration pattern.
+
+### Return value
+
+A boolean.
+
+## Security
+
+[Sticky user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

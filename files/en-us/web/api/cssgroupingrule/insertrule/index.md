@@ -1,6 +1,7 @@
 ---
 title: CSSGroupingRule.insertRule()
 slug: Web/API/CSSGroupingRule/insertRule
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSGroupingRule.insertRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`insertRule()`** method of the
@@ -16,16 +18,16 @@ The **`insertRule()`** method of the
 
 ## Syntax
 
-```js
-cssGroupingRule.insertRule(rule);
-cssGroupingRule.insertRule(rule, index);
+```js-nolint
+insertRule(rule)
+insertRule(rule, index)
 ```
 
 ### Parameters
 
-- rule
-  - : A {{domxref("CSSOMString")}}
-- index{{optional_inline}}
+- `rule`
+  - : A string
+- `index` {{optional_inline}}
   - : An optional index at which to insert the rule; defaults to 0.
 
 ### Return value
@@ -46,7 +48,7 @@ The index of the new rule.
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-myRules[0].insertRule('html {background-color: blue;}',0); /* inserts a rule for the html element at position 0 */
+myRules[0].insertRule('html {background-color: blue;}',0); /* inserts a rule for the HTML element at position 0 */
 ```
 
 ## Specifications

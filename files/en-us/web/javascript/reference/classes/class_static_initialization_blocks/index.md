@@ -9,8 +9,9 @@ tags:
   - Static
   - Reference
   - Initialization
-browser-compat: javascript.classes.class_static_initialization_blocks
+browser-compat: javascript.classes.static_initialization_blocks
 ---
+
 {{jsSidebar("Classes")}}
 
 **Class static initialization blocks** are a special feature of a {{jsxref("Statements/class", "class")}} that enable more flexible initialization of {{jsxref("Classes/static", "static")}} properties than can be achieved using per-field initialization.
@@ -24,8 +25,8 @@ This means that static blocks can also be used to share information between clas
 
 ## Syntax
 
-```js
-static { /* ... */ }
+```js-nolint
+static { /* … */ }
 ```
 
 ## Description
@@ -35,7 +36,7 @@ These are evaluated, along with any interleaved static field initializers, in th
 Any static initialization of a super class is performed first, before that of its sub classes.
 
 The scope of the variables declared inside the static block is local to the block.
-Since `var`, `function`, `const` or  `let` declared in a `static {}` initialization block are local to the block, any `var` declarations in the block are not hoisted.
+Since `var`, `function`, `const` or `let` declared in a `static {}` initialization block are local to the block, any `var` declarations in the block are not hoisted.
 
 ```js
 var y = 'Outer y';
@@ -89,7 +90,7 @@ class MyClass {
 
 Note that any static initialization of a super class is performed first, before that of its sub classes.
 
-### Using `this` and `super.property`
+### Using this and super
 
 The `this` inside a static block refers to the constructor object of the class.
 This code shows how to access a public static field.
@@ -98,7 +99,7 @@ This code shows how to access a public static field.
 class A {
   static field = 'A static field';
   static {
-    var y = this.field;
+    console.log(this.field);
   }
 }
 ```
@@ -112,7 +113,7 @@ class A {
 }
 class B extends A {
   static {
-    let x = super.fieldA;
+    console.log(super.fieldA);
     // 'A.fieldA'
   }
 }

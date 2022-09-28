@@ -13,6 +13,7 @@ tags:
   - clear
 browser-compat: webextensions.api.notifications.clear
 ---
+
 {{AddonSidebar()}}
 
 Clears a notification, given its ID.
@@ -21,8 +22,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var clearing = browser.notifications.clear(
+```js-nolint
+let clearing = browser.notifications.clear(
   id                            // string
 )
 ```
@@ -45,7 +46,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification:
 
 ```js
-var myNotification = "my-notification";
+let myNotification = "my-notification";
 
 function toggleAlarm(all) {
   if (myNotification in all) {
@@ -61,7 +62,7 @@ function toggleAlarm(all) {
 }
 
 function handleClick() {
-  var gettingAll = browser.notifications.getAll();
+  let gettingAll = browser.notifications.getAll();
   gettingAll.then(toggleAlarm);
 }
 
@@ -70,6 +71,6 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

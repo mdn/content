@@ -10,6 +10,9 @@ tags:
   - Reference
   - maxlength
   - textarea
+browser-compat:
+  - html.elements.input.maxlength
+  - html.elements.textarea.maxlength
 ---
 
 {{HTMLSidebar}}
@@ -27,39 +30,18 @@ While the browser will generally prevent user from entering more text than the m
 ## Examples
 
 ```html
-<input type="password" maxlength="4"/>
+<input type="password" maxlength="4" />
 ```
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'input.html#attr-input-maxlength', 'maxlength attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5.1', 'input.html#attr-maxlength-accept', 'maxlength attribute')}}
-      </td>
-      <td>{{Spec2('HTML5.1')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.maxlength")}}
+{{Compat}}
 
 ## See also
 

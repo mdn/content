@@ -1,6 +1,7 @@
 ---
 title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-numeric
 ---
+
 {{CSSRef}}
 
 The **`font-variant-numeric`** CSS property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
@@ -21,18 +23,19 @@ The **`font-variant-numeric`** CSS property controls the usage of alternate glyp
 font-variant-numeric: normal;
 font-variant-numeric: ordinal;
 font-variant-numeric: slashed-zero;
-font-variant-numeric: lining-nums;         /* <numeric-figure-values> */
-font-variant-numeric: oldstyle-nums;       /* <numeric-figure-values> */
-font-variant-numeric: proportional-nums;   /* <numeric-spacing-values> */
-font-variant-numeric: tabular-nums;        /* <numeric-spacing-values> */
-font-variant-numeric: diagonal-fractions;  /* <numeric-fraction-values> */
-font-variant-numeric: stacked-fractions;   /* <numeric-fraction-values> */
+font-variant-numeric: lining-nums; /* <numeric-figure-values> */
+font-variant-numeric: oldstyle-nums; /* <numeric-figure-values> */
+font-variant-numeric: proportional-nums; /* <numeric-spacing-values> */
+font-variant-numeric: tabular-nums; /* <numeric-spacing-values> */
+font-variant-numeric: diagonal-fractions; /* <numeric-fraction-values> */
+font-variant-numeric: stacked-fractions; /* <numeric-fraction-values> */
 font-variant-numeric: oldstyle-nums stacked-fractions;
 
 /* Global values */
 font-variant-numeric: inherit;
 font-variant-numeric: initial;
 font-variant-numeric: revert;
+font-variant-numeric: revert-layer;
 font-variant-numeric: unset;
 ```
 
@@ -51,7 +54,7 @@ This property can take one of two forms:
   - : This keyword forces the use of a 0 with a slash; this is useful when a clear distinction between O and 0 is needed. It corresponds to the OpenType values `zero`.
 - _\<numeric-figure-values_>
 
-  - : These values control the figures used for numbers. Two values are possible:
+  - : These values control the figures used for numbers. Two values are possible:
 
     - `lining-nums` activating the set of figures where numbers are all lying on the baseline. It corresponds to the OpenType values `lnum`.
     - `oldstyle-nums` activating the set of figures where some numbers, like 3, 4, 7, 9 have descenders. It corresponds to the OpenType values `onum`.

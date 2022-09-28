@@ -7,7 +7,9 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.426
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`426 Upgrade Required`** client error response code
@@ -25,7 +27,7 @@ required protocol(s).
 
 ## Examples
 
-```
+```http
 HTTP/1.1 426 Upgrade Required
 Upgrade: HTTP/2.0
 Connection: Upgrade
@@ -37,11 +39,9 @@ This service requires use of the HTTP/2.0 protocol
 
 ## Specifications
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "426 Upgrade Required" , "6.5.15")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 
 - {{HTTPHeader("Upgrade")}}
-- {{HTTPStatus("101")}} `Switching Protocol`
+- {{HTTPStatus("101")}} `Switching Protocols`

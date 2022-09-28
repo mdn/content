@@ -1,22 +1,25 @@
 ---
 title: LayoutShiftAttribution.toJSON()
 slug: Web/API/LayoutShiftAttribution/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - toJSON
   - LayoutShiftAttribution
+  - Experimental
 browser-compat: api.LayoutShiftAttribution.toJSON
 ---
-{{APIRef("Layout Instability API")}}
+
+{{APIRef("Layout Instability API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("LayoutShiftAttribution")}} interface is a _serializer_ that returns a JSON representation of the `LayoutShiftAttribution` object.
 
 ## Syntax
 
-```js
-LayoutShiftAttribution.toJSON();
+```js-nolint
+toJSON()
 ```
 
 ### Parameters

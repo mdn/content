@@ -1,15 +1,19 @@
 ---
 title: WebGLBuffer
 slug: Web/API/WebGLBuffer
+page-type: web-api-interface
 tags:
   - API
   - Reference
   - WebGL
 browser-compat: api.WebGLBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLBuffer** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents an opaque buffer object storing data such as vertices or colors.
+
+{{InheritanceDiagram}}
 
 ## Description
 
@@ -25,9 +29,9 @@ The `WebGLBuffer` object does not define any methods or properties of its own an
 ### Creating a buffer
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var buffer = gl.createBuffer();
+const canvas = document.getElementById('canvas');
+const gl = canvas.getContext('webgl');
+const buffer = gl.createBuffer();
 ```
 
 ## Specifications

@@ -9,6 +9,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.storage
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -20,6 +21,10 @@ browser-compat: webextensions.manifest.storage
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
@@ -64,4 +69,4 @@ The `storage` key is an object that has the following required property:
 
 > **Note:**
 >
-> This page includes details from the Chrome developer website page [Manifest for storage areas](https://developer.chrome.com/apps/manifest/storage) included here under the Creative Commons Attribution 3.0 United States License.
+> This page includes details from the Chrome developer website page [Manifest for storage areas](https://developer.chrome.com/docs/extensions/mv2/manifest/storage/) included here under the Creative Commons Attribution 3.0 United States License.

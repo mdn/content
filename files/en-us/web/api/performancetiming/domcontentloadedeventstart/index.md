@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.domContentLoadedEventStart
 slug: Web/API/PerformanceTiming/domContentLoadedEventStart
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -13,6 +14,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceTiming.domContentLoadedEventStart
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
@@ -22,14 +24,12 @@ The legacy
 **`PerformanceTiming.domContentLoadedEventStart`**
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, right before the parser sent the
-{{event("DOMContentLoaded")}} event, that is right after all the scripts that need to be
+{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event, that is right after all the scripts that need to be
 executed right after parsing has been executed.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domContentLoadedEventStart;
-```
+An `unsigned long long`.
 
 ## Specifications
 

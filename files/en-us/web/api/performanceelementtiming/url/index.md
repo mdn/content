@@ -1,39 +1,40 @@
 ---
 title: PerformanceElementTiming.url
 slug: Web/API/PerformanceElementTiming/url
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - url
   - PerformanceElementTiming
+  - Experimental
 browser-compat: api.PerformanceElementTiming.url
 ---
-{{DefaultAPISidebar("Element Timing")}}
+
+{{APIRef("Element Timing")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the initial URL of the resource request when the element is an image.
 
-## Syntax
+## Value
 
-```js
-var url = PerformanceElementTiming.url;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which is the initial URL of the resources request for images or 0 for text.
+A string which is the initial URL of the resources request for images or 0 for text.
 
 ## Examples
 
 In this example calling `entry.url` returns `https://example.com/image.jpg`.
 
 ```html
-<img src="https://example.com/image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+<img
+  src="https://example.com/image.jpg"
+  alt="a nice image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js
 const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
+  list.getEntries().forEach((entry) => {
     if (entry.identifier === "big-image") {
       console.log(entry.url);
     }

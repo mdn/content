@@ -1,6 +1,7 @@
 ---
 title: TouchEvent.ctrlKey
 slug: Web/API/TouchEvent/ctrlKey
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -10,26 +11,20 @@ tags:
   - touch
 browser-compat: api.TouchEvent.ctrlKey
 ---
+
 {{ APIRef("Touch Events") }}
 
 ## Summary
 
-A boolean value indicating whether the <kbd>control</kbd> (Control) key is enabled when the touch event is created. If this key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
+A boolean value indicating whether the <kbd>control</kbd> (Control) key is enabled when the touch event is created. If this key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
 
-This property is {{readonlyInline}}.
+This property is {{ReadOnlyInline}}.
 
-## Syntax
+## Value
 
-```js
-var ctrlEnabled = touchEvent.ctrlKey;
-```
+A boolean value that is `true` if the <kbd>control</kbd> key is enabled for this event; and `false` if the <kbd>control</kbd> is not enabled.
 
-### Return value
-
-- `ctrlEnabled`
-  - : `true` if the <kbd>control</kbd> key is enabled for this event; and `false` if the <kbd>control</kbd> is not enabled.
-
-## Example
+## Examples
 
 The [TouchEvent.altKey example](/en-US/docs/Web/API/TouchEvent/altKey#example) includes an example of this property's usage.
 

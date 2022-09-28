@@ -1,6 +1,7 @@
 ---
 title: 'XRSession: selectend event'
 slug: Web/API/XRSession/selectend_event
+page-type: web-api-event
 tags:
   - API
   - AR
@@ -20,20 +21,24 @@ tags:
   - augmented
   - controllers
   - selectend
+  - Experimental
 browser-compat: api.XRSession.selectend_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The WebXR event **`selectend`** is sent to an {{domxref("XRSession")}} when one of its input sources ends its [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_actions) or when an input source that's in the process of handling an ongoing primary action is disconnected without successfully completing the action.
+
+The {{domxref("Element.beforexrselect_event", "beforexrselect")}} is fired before this event and can prevent this event from being raised.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectend', event => { })
+addEventListener('selectend', (event) => { })
 
-onselectend = event => { }
+onselectend = (event) => { }
 ```
 
 ## Event type
@@ -49,7 +54,7 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}}
   - : An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an _event_ frame, not an _animation_ frame, you cannot call the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.
 - {{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}}
-  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
+  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
 
 ## Description
 
@@ -80,3 +85,4 @@ See the [`selectstart`](/en-US/docs/Web/API/XRSession/selectstart_event#examples
 ## See also
 
 - {{domxref("XRSession.select_event", "select")}} and {{domxref("XRSession.selectstart_event", "selectstart")}}
+- {{domxref("Element.beforexrselect_event", "beforexrselect")}}

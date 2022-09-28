@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setFloat64
 ---
+
 {{JSRef}}
 
 The **`setFloat64()`** method stores a signed 64-bit float
@@ -19,7 +20,7 @@ The **`setFloat64()`** method stores a signed 64-bit float
 
 ## Syntax
 
-```js
+```js-nolint
 setFloat64(byteOffset, value)
 setFloat64(byteOffset, value, littleEndian)
 ```
@@ -50,8 +51,8 @@ setFloat64(byteOffset, value, littleEndian)
 ### Using the setFloat64 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.setFloat64(0, 3);
 dataview.getFloat64(0); // 3
 ```

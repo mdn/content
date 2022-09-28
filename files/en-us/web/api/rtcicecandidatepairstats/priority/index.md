@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.priority
 slug: Web/API/RTCIceCandidatePairStats/priority
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -15,6 +16,7 @@ tags:
   - priority
 browser-compat: api.RTCIceCandidatePairStats.priority
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
 The _obsolete_ {{domxref("RTCIceCandidatePairStats")}}
@@ -23,13 +25,7 @@ pair as an integer value. The higher the value, the more likely the WebRTC
 layer is to select the candidate pair when the time comes to establish (or re-establish)
 a connection between the two peers.
 
-## Syntax
-
-```js
-pairPriority = rtcIceCandidatePairStats.priority;
-```
-
-### Value
+## Value
 
 An integer value indicating the priority of this pair of candidates as compared to
 other pairs on the same peer connection. The higher this value, the better the WebRTC

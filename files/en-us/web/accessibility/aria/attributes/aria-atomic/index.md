@@ -1,20 +1,21 @@
 ---
-title: 'aria-atomic'
-slug: web/Accessibility/ARIA/Attributes/aria-atomic
-tags: 
+title: "aria-atomic"
+slug: Web/Accessibility/ARIA/Attributes/aria-atomic
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-atomic
   - NeedsExample
+spec-urls: https://w3c.github.io/aria/#aria-atomic
 ---
 
 In ARIA live regions, the global `aria-atomic` attribute indicates whether assistive technologies such as a screen reader will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
 
 ## Description
 
-Live regions are sections of a web page that are updated, whether by user interaction or not, when user focus is elsewhere. As they update outside the user's focus, assistive technologies such as screen readers may not "see" the update to report it to the user. WAI-ARIA has 4 properties that allow the developer to identify these live regions and tell the assistive technology how to process them, including [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live), [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant),  [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) and `aria-atomic`.
+Live regions are sections of a web page that are updated, whether by user interaction or not, when user focus is elsewhere. As they update outside the user's focus, assistive technologies such as screen readers may not "see" the update to report it to the user. WAI-ARIA has 4 properties that allow the developer to identify these live regions and tell the assistive technology how to process them, including [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live), [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant), [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) and `aria-atomic`.
 
 When the content of a live region changes, the DOM is traversed from the changed element through its ancestors to find the first element with `aria-atomic` set. This determines the content that the user should be presented with.
 
@@ -26,16 +27,14 @@ If no ancestor has explicitly set `aria-atomic`, only the node or nodes of live 
   - : present only the changed node or nodes.
 - `true`
   - : present the entire changed region as a whole, including the author-defined label if one exists.
-  
+
 ## Associated roles
 
 Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles).
 
 ## Specifications
 
-| Specification         | Status            |
-| ---------------- | ---------------- |
-| {{SpecName("ARIA","#aria-atomic","ARIA: aria-atomic Attribute")}}              | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 
@@ -45,6 +44,6 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles).
 
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>

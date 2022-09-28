@@ -13,6 +13,7 @@ tags:
   - onRequest
 browser-compat: webextensions.api.extension.onRequest
 ---
+
 {{AddonSidebar()}}
 
 > **Warning:** This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use [runtime.onMessage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) instead.
@@ -21,12 +22,12 @@ Fired when a request is sent from either an extension process or a content scrip
 
 ## Syntax
 
-```js
+```js-nolint
 chrome.extension.onRequest.addListener(function(
   request,         // optional any
   sender,          // runtime.MessageSender
-  function() {...} // function
-) {...})
+  () => {/* … */}  // function
+) {/* … */})
 chrome.extension.onRequest.removeListener(listener)
 chrome.extension.onRequest.hasListener(listener)
 ```
@@ -50,14 +51,8 @@ Events have three functions:
 
     - `request`
       - : `any`. The request sent by the calling script.
-
-    <!---->
-
     - `sender`
       - : {{WebExtAPIRef('runtime.MessageSender')}}.
-
-    <!---->
-
     - `sendResponse`
       - : `function`. Function to call (at most once) when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response. If you have more than one `onRequest` listener in the same document, then only one may send a response.
 
@@ -67,11 +62,12 @@ Events have three functions:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#event-onRequest) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#event-onRequest) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -98,4 +94,4 @@ Events have three functions:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

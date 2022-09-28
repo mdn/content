@@ -12,7 +12,7 @@ tags:
   - Reference
   - Web
   - slider
-browser-compat: html.elements.input.input-range
+browser-compat: html.elements.input.type_range
 ---
 
 {{HTMLRef("Input_types")}}
@@ -28,9 +28,9 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} containing the string representation
+        A string containing the string representation
         of the selected numeric value; use
         {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
         to get the value as a number.
@@ -38,7 +38,10 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{event("change")}} and {{event("input")}}</td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
@@ -55,6 +58,10 @@ If the user's browser doesn't support type `range`, it will fall back and treat 
       <td>
         <code>list</code>, <code>value</code>, and <code>valueAsNumber</code>
       </td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>Methods</strong></td>
@@ -77,7 +84,7 @@ There is no pattern validation available; however, the following forms of automa
 
 ### Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
+The {{htmlattrxref("value", "input")}} attribute contains a string which contains a string representation of the selected number. The value is never an empty string (`""`). The default value is halfway between the specified minimum and maximum—unless the maximum is actually less than the minimum, in which case the default is set to the value of the `min` attribute. The algorithm for determining the default value is:
 
 ```js
 defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
@@ -110,13 +117,13 @@ This value must be less than or equal to the value of the [`max`](/en-US/docs/We
 
 ### step
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping (`{{anch("min")}}` if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
 
-A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
+A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
-The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,... in the positive direction and -0.5, -1.5, -2.5,... in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
+The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
 
 ## Non Standard Attributes
 
@@ -146,7 +153,7 @@ By default, the minimum is 0 and the maximum is 100. If that's not what you want
 For example, to ask the user for a value between -10 and 10, you can use:
 
 ```html
-<input type="range" min="-10" max="10">
+<input type="range" min="-10" max="10" />
 ```
 
 {{EmbedLiveSample("Specifying_the_minimum_and_maximum", 600, 40)}}
@@ -158,7 +165,7 @@ By default, the granularity, is 1, meaning that the value is always an integer. 
 #### Setting the step attribute
 
 ```html
-<input type="range" min="5" max="10" step="0.01">
+<input type="range" min="5" max="10" step="0.01" />
 ```
 
 {{EmbedLiveSample("Setting_the_step_attribute", 600, 40)}}
@@ -168,7 +175,7 @@ By default, the granularity, is 1, meaning that the value is always an integer. 
 If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of `any` for the {{htmlattrxref("step", "input")}} attribute:
 
 ```html
-<input type="range" min="0" max="3.14" step="any">
+<input type="range" min="0" max="3.14" step="any" />
 ```
 
 {{EmbedLiveSample("Setting_step_to_any", 600, 40)}}
@@ -337,7 +344,7 @@ In the meantime, we can make the range vertical by rotating it using CSS transfo
 Consider this range control:
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("Horizontal_range_control", 200, 200, "orientation_sample1.png")}}
@@ -356,7 +363,7 @@ According to the specification, making it vertical requires adding CSS to change
 ```
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("Standards-based_vertical_range_control", 200, 200, "orientation_sample2.png")}}
@@ -371,7 +378,7 @@ The HTML needs to be updated to wrap the {{HTMLElement("input")}} in a {{HTMLEle
 
 ```html
 <div class="slider-wrapper">
-  <input type="range" min="0" max="11" value="7" step="1">
+  <input type="range" min="0" max="11" value="7" step="1" />
 </div>
 ```
 
@@ -409,7 +416,7 @@ The {{cssxref('appearance')}} property has a non-standard value of `slider-verti
 We use the same HTML as in the previous examples:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 We target just the inputs with a type of range:
@@ -429,19 +436,19 @@ In Firefox only, there is a non-standard `orient` property.
 Use similar HTML as in the previous examples, we add the attribute with a value of `vertical`:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 {{EmbedLiveSample("Using_the_orient_attribute", 200, 200)}}
 
-#### writing-mode: bt-lr;
+#### writing-mode: bt-lr
 
 The {{cssxref('writing-mode')}} property should generally not be used to alter text direction for internationalization or localization purposes, but can be used for special effects.
 
 We use the same HTML as in the previous examples:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right:
@@ -461,7 +468,7 @@ As each of the above examples works in different browsers, you can put all of th
 We keep the `orient` attribute with a value of `vertical` for Firefox:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right, for Edge and Internet Explorer, and add `-webkit-appearance: slider-vertical` for all -webkit-based browsers:
@@ -490,5 +497,5 @@ input[type="range"] {
 - [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)
+- [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input/)
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

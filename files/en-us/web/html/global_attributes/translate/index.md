@@ -2,7 +2,6 @@
 title: translate
 slug: Web/HTML/Global_attributes/translate
 tags:
-  - Experimental
   - Global attributes
   - HTML
   - Reference
@@ -15,8 +14,8 @@ The **`translate`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) i
 
 It can have the following values:
 
-- empty string or "`yes`", which indicates that the element should be translated when the page is localized.
-- "`no`", which indicates that the element must not be translated.
+- empty string or `yes`, which indicates that the element should be translated when the page is localized.
+- `no`, which indicates that the element must not be translated.
 
 Although not all browsers recognize this attribute, it is respected by automatic translation systems such as Google Translate, and may also be respected by tools used by human translators. As such it's important that web authors use this attribute to mark content that should not be translated.
 

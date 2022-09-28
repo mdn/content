@@ -1,13 +1,16 @@
 ---
 title: Bluetooth.getAvailability()
 slug: Web/API/Bluetooth/getAvailability
+page-type: web-api-instance-method
 tags:
   - API
   - Bluetooth
   - Reference
   - Web Bluetooth API
+  - Experimental
 browser-compat: api.Bluetooth.getAvailability
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
 
 The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface returns `true` if the device has a Bluetooth adapter, and false otherwise (unless the user has configured the browser to not expose a real value).
@@ -19,8 +22,8 @@ The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface ret
 
 ## Syntax
 
-```js
-var readerPromise = Bluetooth.getAvailability();
+```js-nolint
+getAvailability()
 ```
 
 ### Parameters
@@ -41,11 +44,12 @@ The following snippet prints out a message in the console specifying whether or 
 Bluetooth is supported:
 
 ```js
-navigator.bluetooth.getAvailability().then(available => {
-  if (available)
-      console.log("This device supports Bluetooth!");
-  else
-      console.log("Doh! Bluetooth is not supported");
+navigator.bluetooth.getAvailability().then((available) => {
+  if (available) {
+    console.log("This device supports Bluetooth!");
+  } else {
+    console.log("Doh! Bluetooth is not supported");
+  }
 });
 ```
 

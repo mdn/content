@@ -1,12 +1,14 @@
 ---
 title: Dragging and Dropping Multiple Items
 slug: Web/API/HTML_Drag_and_Drop_API/Multiple_items
+page-type: guide
 tags:
   - Gecko
   - Guide
   - Non-standard
   - drag and drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 > **Warning:** All of the methods and properties with a **moz** prefix (such as **mozSetDataAt()** are Gecko specific interfaces. These interfaces will **only** work with Gecko based browsers.
@@ -17,10 +19,10 @@ The drag processing described in this document use the {{domxref("DataTransfer")
 
 ## Setting and getting with indices
 
-The {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method allows you to add multiple items during a {{event("dragstart")}} event. This function similarly to {{domxref("DataTransfer.setData","setData()")}}
+The {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method allows you to add multiple items during a {{domxref("HTMLElement/dragstart_event", "dragstart")}} event. This function similarly to {{domxref("DataTransfer.setData","setData()")}}
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.mozSetDataAt("text/plain", "Data to drag", 0);
 dt.mozSetDataAt("text/plain", "Second data to drag", 1);
 ```
@@ -36,7 +38,7 @@ event.dataTransfer.mozClearDataAt("text/plain", 1);
 Caution: removing the last format for a particular index will remove that item entirely, shifting the remaining items down, so the later items will have different indices. For example:
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.mozSetDataAt("text/uri-list", "URL1", 0);
 dt.mozSetDataAt("text/plain",    "URL1", 0);
 dt.mozSetDataAt("text/uri-list", "URL2", 1);
@@ -66,18 +68,17 @@ Fortunately, you don't normally need to clear items often; it's more common to j
 
 Common cases where dragging multiple items is used is when dragging multiple files or bookmarks. In this case, add the appropriate formats for each item. Although not required, you should always add the same formats for each item. The ensures that receiving drop targets can expect consistent data.
 
-To check if multiple files are being dragged, check the {{domxref("DataTransfer.mozItemCount","mozItemCount")}} property. It will be set to the number of items being dragged. If a particular drop target only supports dropping a single item, it could either reject the dragged items or it could just use just the first item. To reject the items, either don't cancel the {{event("dragover")}} event, or set the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property to `none`. You may wish to do both in case another listener has already cancelled the event.
+To check if multiple files are being dragged, check the {{domxref("DataTransfer.mozItemCount","mozItemCount")}} property. It will be set to the number of items being dragged. If a particular drop target only supports dropping a single item, it could either reject the dragged items or it could just use just the first item. To reject the items, either don't cancel the {{domxref("HTMLElement/dragover_event", "dragover")}} event, or set the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property to `none`. You may wish to do both in case another listener has already cancelled the event.
 
 To just take the first item being dropped, use the {{domxref("DataTransfer.getData","getData()")}} method as with a single item. This is convenient as drop targets which only need to support a single item do not need to do anything extra.
 
 However, use the {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} method to retrieve a specific item from the data transfer. The following example retrieves a set of files being dragged and adds them to an array.
 
 ```js
-function onDrop(event)
-{
-  var files = [];
-  var dt = event.dataTransfer;
-  for (var i = 0; i < dt.mozItemCount; i++)
+function onDrop(event) {
+  const files = [];
+  const dt = event.dataTransfer;
+  for (let i = 0; i < dt.mozItemCount; i++)
     files.push(dt.mozGetDataAt("application/x-moz-file", i));
 }
 ```
@@ -85,12 +86,12 @@ function onDrop(event)
 You may also wish to check if the desired format exists using the {{domxref("DataTransfer.mozTypesAt","mozTypesAt")}} method. As with the {{domxref("DataTransfer.types","types")}} property, it returns a list of strings of the types for an item. {{domxref("DataTransfer.types","types ")}} property is equivalent to retrieving the list of types for the item at index 0.
 
 ```js
-var types = event.dataTransfer.mozTypesAt(1);
+const types = event.dataTransfer.mozTypesAt(1);
 ```
 
 ## Dragging Non-String Data
 
-The additional methods described above are also not restricted to string data; you can specify any type of data. For example, files are dragged using the [application/x-moz-file](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#file) type stored as [nsIFile](/en-US/docs/XPCOM_Interface_Reference/nsIFile) objects. As the {{domxref("DataTransfer.setData","setData()")}} method only supports strings, it cannot be used to specify files for dragging in this manner. Instead the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method must be used.
+The additional methods described above are also not restricted to string data; you can specify any type of data. For example, files are dragged using the [application/x-moz-file](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#file) type stored as `nsIFile` objects. As the {{domxref("DataTransfer.setData","setData()")}} method only supports strings, it cannot be used to specify files for dragging in this manner. Instead the {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} method must be used.
 
 ```js
 dt.mozSetDataAt("application/x-moz-file", file, 0);
@@ -105,65 +106,58 @@ Similarly, you will need to retrieve the file object or objects using the {{domx
 The following example provides a box where the lists of items and formats dropped on it are displayed.
 
 ```html
-<html>
-<head>
-<script>
+<html lang="en">
+  <head>
+    <script>
+      function doDrop(event) {
+        const dt = event.dataTransfer;
+        const count = dt.mozItemCount;
+        output(`Items: ${count}\n`);
 
-function dodrop(event)
-{
-  var dt = event.dataTransfer;
-  var count = dt.mozItemCount;
-  output("Items: " + count + "\n");
-
-  for (var i = 0; i < count; i++) {
-    output(" Item " + i + ":\n");
-    var types = dt.mozTypesAt(i);
-    for (var t = 0; t < types.length; t++) {
-      output("  " + types[t] + ": ");
-      try {
-        var data = dt.mozGetDataAt(types[t], i);
-        output("(" + (typeof data) + ") : <" + data + " >\n");
-      } catch (ex) {
-        output("<<error>>\n");
-        dump(ex);
+        for (let i = 0; i < count; i++) {
+          output(` Item ${i}:\n`);
+          const types = dt.mozTypesAt(i);
+          for (let t = 0; t < types.length; t++) {
+            output(`  ${types[t]}: `);
+            try {
+              const data = dt.mozGetDataAt(types[t], i);
+              output(`(${typeof data}) : <${data} >\n`);
+            } catch (ex) {
+              output("<<error>>\n");
+              dump(ex);
+            }
+          }
+        }
       }
-    }
-  }
-}
 
-function output(text)
-{
-  document.getElementById("output").textContent += text;
-  dump(text);
-}
-
-</script>
-</head>
-<body>
-
-<div id="output" style="min-height: 100px; white-space: pre; border: 1px solid black;"
+      function output(text) {
+        document.getElementById("output").textContent += text;
+        dump(text);
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      id="output"
+      style="min-height: 100px; white-space: pre; border: 1px solid black;"
       ondragenter="document.getElementById('output').textContent = ''; event.stopPropagation(); event.preventDefault();"
       ondragover="event.stopPropagation(); event.preventDefault();"
-      ondrop="event.stopPropagation(); event.preventDefault(); dodrop(event);">
-
-<div>
-
-  Fix</div>
-</div>
-
-</body>
+      ondrop="event.stopPropagation(); event.preventDefault(); doDrop(event);">
+      <div>Fix</div>
+    </div>
+  </body>
 </html>
 ```
 
-This example cancels both the `{{event("dragenter")}}` and `{{event("dragover")}}` events by calling the {{domxref("Event.preventDefault","preventDefault()")}}. method. This allows a drop to occur on that element.
+This example cancels both the {{domxref("HTMLElement/dragenter_event", "dragenter")}} and `{{domxref("HTMLElement/dragover_event", "dragover")}}` events by calling the {{domxref("Event.preventDefault","preventDefault()")}}. method. This allows a drop to occur on that element.
 
-The `dodrop` event handler is called when dropping an item. It checks the {{domxref("DataTransfer.mozItemCount","mozItemCount")}} property to check how many items have been dropped and iterates over them. For each item, the {{domxref("DataTransfer.mozTypesAt","mozTypesAt()")}} method is called to get the list of types. This list is iterated over to get all of the data associated with the drag.
+The `doDrop` event handler is called when dropping an item. It checks the {{domxref("DataTransfer.mozItemCount","mozItemCount")}} property to check how many items have been dropped and iterates over them. For each item, the {{domxref("DataTransfer.mozTypesAt","mozTypesAt()")}} method is called to get the list of types. This list is iterated over to get all of the data associated with the drag.
 
 This processing is useful if you wish to examine the data that a drag is holding. Drop an item on the drop target in the example to see what items, formats and data was being dragged.
 
 ## See also
 
 - [HTML Drag and Drop API (Overview)](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](Web/Guide/HTML/Drag_operations)
+- [Drag Operations](/en-US/docs/Web/Guide/HTML/Drag_operations)
 - [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

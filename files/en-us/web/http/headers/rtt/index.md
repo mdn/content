@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.rtt
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The **`RTT`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header field provides the approximate round trip time on the application layer, in milliseconds. The RTT hint, unlike transport layer RTT, includes server processing time.
@@ -35,11 +36,11 @@ The RTT value is rounded to the nearest 25 milliseconds to prevent fingerprintin
 
 The hint allows a server to choose what information is sent based on the network responsiveness/latency. For example, it might choose to send fewer resources.
 
-> **Note:** The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses)). Even if {{HTTPHeader("RTT")}} is used to configure what resources are sent consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncachable.
+> **Note:** The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses)). Even if {{HTTPHeader("RTT")}} is used to configure what resources are sent consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncacheable.
 
 ## Syntax
 
-```
+```http
 RTT: <number>
 ```
 
@@ -52,13 +53,13 @@ RTT: <number>
 
 A server first needs to opt in to receive the `RTT` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `RTT`.
 
-```
+```http
 Accept-CH: RTT
 ```
 
 Then on subsequent requests the client might send an `RTT` header back:
 
-```
+```http
 RTT: 125
 ```
 

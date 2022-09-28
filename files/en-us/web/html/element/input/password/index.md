@@ -14,7 +14,7 @@ tags:
   - Reference
   - Web
   - password
-browser-compat: html.elements.input.input-password
+browser-compat: html.elements.input.type_password
 ---
 
 {{HTMLRef("Input_types")}}
@@ -36,9 +36,9 @@ Both approaches help a user check that they entered the intended password, which
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
+      <td><strong><a href="#value">Value</a></strong></td>
       <td>
-        A {{domxref("DOMString")}} representing a password, or empty
+        A string representing a password, or empty
       </td>
     </tr>
     <tr>
@@ -70,6 +70,10 @@ Both approaches help a user check that they entered the intended password, which
       </td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -83,9 +87,9 @@ Both approaches help a user check that they entered the intended password, which
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the {{htmlattrxref("required")}} property is specified, then the password edit box must contain a value other than an empty string to be valid.
+The {{htmlattrxref("value", "input")}} attribute contains a string whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the {{htmlattrxref("required")}} property is specified, then the password edit box must contain a value other than an empty string to be valid.
 
-If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content of a `password` control is only considered valid if the value passes validation; see {{anch("Validation")}} for more information.
+If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content of a `password` control is only considered valid if the value passes validation; see [Validation](#validation) for more information.
 
 > **Note:** The line feed (U+000A) and carriage return (U+000D) characters are not permitted in a `password` value. When setting the value of a password control, line feed and carriage return characters are stripped out of the value.
 
@@ -113,7 +117,7 @@ If the specified pattern is not specified or is invalid, no regular expression i
 
 > **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
-Use of a pattern is strongly recommended for password inputs, in order to help ensure that valid passwords using a wide assortment of character classes are selected and used by your users. With a pattern, you can mandate case rules, require the use of some number of digits and/or punctuation characters, and so forth. See the section {{anch("Validation")}} for details and an example.
+Use of a pattern is strongly recommended for password inputs, in order to help ensure that valid passwords using a wide assortment of character classes are selected and used by your users. With a pattern, you can mandate case rules, require the use of some number of digits and/or punctuation characters, and so forth. See the section [Validation](#validation) for details and an example.
 
 ### placeholder
 
@@ -133,7 +137,7 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the [`maxlength`](#maxlength) attribute.
 
 ## Using password inputs
 
@@ -145,7 +149,7 @@ Here we see the most basic password input, with a label established using the {{
 
 ```html
 <label for="userPassword">Password: </label>
-<input id="userPassword" type="password">
+<input id="userPassword" type="password" />
 ```
 
 {{EmbedLiveSample("A_simple_password_input", 600, 40)}}
@@ -165,7 +169,7 @@ To allow the user's password manager to automatically enter the password, specif
 
 ```html
 <label for="userPassword">Password:</label>
-<input id="userPassword" type="password" autocomplete="current-password">
+<input id="userPassword" type="password" autocomplete="current-password" />
 ```
 
 {{EmbedLiveSample("Allowing_autocomplete", 600, 40)}}
@@ -176,8 +180,8 @@ To tell the user's browser that the password field must have a valid value befor
 
 ```html
 <label for="userPassword">Password: </label>
-<input id="userPassword" type="password" required>
-<input type="submit" value="Submit">
+<input id="userPassword" type="password" required />
+<input type="submit" value="Submit" />
 ```
 
 {{EmbedLiveSample("Making_the_password_mandatory", 600, 40)}}
@@ -188,7 +192,7 @@ If your recommended (or required) password syntax rules would benefit from an al
 
 ```html
 <label for="pin">PIN: </label>
-<input id="pin" type="password" inputmode="numeric">
+<input id="pin" type="password" inputmode="numeric" />
 ```
 
 {{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}
@@ -199,8 +203,13 @@ As usual, you can use the {{htmlattrxref("minlength", "input")}} and {{htmlattrx
 
 ```html
 <label for="pin">PIN:</label>
-<input id="pin" type="password" inputmode="numeric" minlength="4"
-       maxlength="8" size="8">
+<input
+  id="pin"
+  type="password"
+  inputmode="numeric"
+  minlength="4"
+  maxlength="8"
+  size="8" />
 ```
 
 {{EmbedLiveSample("Setting_length_requirements", 600, 40)}}
@@ -213,14 +222,14 @@ As with other textual entry controls, you can use the {{domxref("HTMLInputElemen
 
 ```html
 <label for="userPassword">Password: </label>
-<input id="userPassword" type="password" size="12">
+<input id="userPassword" type="password" size="12" />
 <button id="selectAll">Select All</button>
 ```
 
 #### JavaScript
 
 ```js
-document.getElementById("selectAll").onclick = function() {
+document.getElementById("selectAll").onclick = () => {
   document.getElementById("userPassword").select();
 }
 ```
@@ -239,9 +248,12 @@ In this example, only values consisting of at least four and no more than eight 
 
 ```html
 <label for="hexId">Hex ID: </label>
-<input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
-       title="Enter an ID consisting of 4-8 hexadecimal digits"
-       autocomplete="new-password">
+<input
+  id="hexId"
+  type="password"
+  pattern="[0-9a-fA-F]{4,8}"
+  title="Enter an ID consisting of 4-8 hexadecimal digits"
+  autocomplete="new-password" />
 ```
 
 {{EmbedLiveSample("Validation", 600, 40)}}
@@ -256,10 +268,16 @@ This example only accepts input which matches the format for a [valid United Sta
 
 ```html
 <label for="ssn">SSN:</label>
-<input type="password" id="ssn" inputmode="numeric" minlength="9" maxlength="12"
-    pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
-    required autocomplete="off">
-<br>
+<input
+  type="password"
+  id="ssn"
+  inputmode="numeric"
+  minlength="9"
+  maxlength="12"
+  pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
+  required
+  autocomplete="off" />
+<br />
 <label for="ssn">Value:</label>
 <span id="current"></span>
 ```
@@ -273,10 +291,10 @@ The {{htmlattrxref("inputmode", "input")}} is set to `numeric` to encourage devi
 This is just some simple code to display the entered SSN onscreen so you can see it. Obviously this defeats the purpose of a password field, but it's helpful for experimenting with the `pattern`.
 
 ```js
-var ssn = document.getElementById("ssn");
-var current = document.getElementById("current");
+const ssn = document.getElementById("ssn");
+const current = document.getElementById("current");
 
-ssn.oninput = function(event) {
+ssn.oninput = (event) => {
   current.textContent = ssn.value;
 }
 ```

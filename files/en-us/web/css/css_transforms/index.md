@@ -7,7 +7,9 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-transforms/
 ---
+
 {{CSSRef}}
 
 **CSS Transforms** is a module of CSS that defines how elements styled with CSS can be transformed in two-dimensional or three-dimensional space.
@@ -38,7 +40,4 @@ tags:
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment                     |
-| -------------------------------------------- | ---------------------------------------- | --------------------------- |
-| {{ SpecName('CSS Transforms 2') }} | {{ Spec2('CSS Transforms 2') }} | Adds individual transforms. |
-| {{ SpecName('CSS3 Transforms') }} | {{ Spec2('CSS3 Transforms') }} | Initial definition.         |
+{{Specifications}}

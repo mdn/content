@@ -1,6 +1,7 @@
 ---
 title: Notification.requestPermission()
 slug: Web/API/Notification/requestPermission
+page-type: web-api-static-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Notification.requestPermission
 ---
+
 {{APIRef("Web Notifications")}}{{securecontext_header}}
 
 > **Note:** Safari still uses the callback syntax to get the permission. Read [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API) for a good example of how to feature detect this and run code as appropriate.
@@ -18,16 +20,12 @@ The **`requestPermission()`** method of the {{domxref("Notification")}} interfac
 
 ## Syntax
 
-The latest spec has updated this method to a promise-based syntax that works like this:
+```js-nolint
+// The latest spec has updated this method to a promise-based syntax that works like this:
+requestPermission()
 
-```js
-Notification.requestPermission().then(function(permission) { /* ... */ });
-```
-
-Previously, the syntax was based on a simple callback; this version is now deprecated:
-
-```js
-Notification.requestPermission(callback);
+// Previously, the syntax was based on a simple callback; this version is now deprecated:
+requestPermission(callback)
 ```
 
 ### Parameters
@@ -35,9 +33,9 @@ Notification.requestPermission(callback);
 - `callback` {{optional_inline}} {{deprecated_inline}}
   - : An optional callback function that is called with the permission value. Deprecated in favor of the promise return value.
 
-### Returns
+### Return value
 
-A {{jsxref("Promise")}} that resolves to a {{domxref("DOMString")}} with the permission picked by the user. Possible values for this string are:
+A {{jsxref("Promise")}} that resolves to a string with the permission picked by the user. Possible values for this string are:
 
 - `granted`
 - `denied`
@@ -55,29 +53,27 @@ It's possible to send a notification as follows — here we present a fairly ver
 
 ```js
 function notifyMe() {
-  // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
+    // Check if the browser supports notifications
     alert("This browser does not support desktop notification");
-  }
-
-  // Let's check whether notification permissions have already been granted
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    var notification = new Notification("Hi there!");
-  }
-
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== "denied") {
-    Notification.requestPermission().then(function (permission) {
+  } else if (Notification.permission === "granted") {
+    // Check whether notification permissions have already been granted;
+    // if so, create a notification
+    const notification = new Notification("Hi there!");
+    // …
+  } else if (Notification.permission !== "denied") {
+    // We need to ask the user for permission
+    Notification.requestPermission().then((permission) => {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        var notification = new Notification("Hi there!");
+        const notification = new Notification("Hi there!");
+        // …
       }
     });
   }
 
   // At last, if the user has denied notifications, and you
-  // want to be respectful there is no need to bother them any more.
+  // want to be respectful there is no need to bother them anymore.
 }
 ```
 

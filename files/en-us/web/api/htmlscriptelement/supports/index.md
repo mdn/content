@@ -1,17 +1,18 @@
 ---
 title: HTMLScriptElement.supports()
 slug: Web/API/HTMLScriptElement/supports
+page-type: web-api-static-method
 tags:
   - API
   - HTMLScriptElement
   - Method
   - Reference
   - supports
-  - Experimental
   - Feature detection
 browser-compat: api.HTMLScriptElement.supports
 ---
-{{APIRef}}{{SeeCompatTable}}
+
+{{APIRef}}
 
 The **`supports()`** static method of the {{domxref("HTMLScriptElement")}} interface provides a simple and consistent method to feature-detect what types of scripts are supported by the user agent.
 
@@ -19,21 +20,26 @@ The method is expected to return `true` for classic and module scripts, which ar
 
 ## Syntax
 
-```js
-HTMLScriptElement.supports(type)
+```js-nolint
+supports(type)
 ```
 
 ### Parameters
 
 - `type`
+
   - : A string literal that indicates the type of script for which support is to be checked.
-      Supported values are case sensitive, and include:
-  
-    - `"classic"`: Test if _classic scripts_ are supported.
-      "Classic" scripts are the normal/traditional JavaScript files that predate module scripts.
-    - `"module"`: Test if [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) are supported.
-    - `"importmap"`: Test if import maps are supported.
-    - `"speculationrules"`: Test if speculation rules are supported and enabled.
+    Supported values are case sensitive, and include:
+
+    - `"classic"`
+      - : Test if _classic scripts_ are supported.
+        "Classic" scripts are the normal/traditional JavaScript files that predate module scripts.
+    - `"module"`
+      - : Test if [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) are supported.
+    - `"importmap"`
+      - : Test if import maps are supported.
+    - `"speculationrules"`
+      - : Test if speculation rules are supported and enabled.
 
     Any other value will cause the method to return `false`.
 
@@ -50,20 +56,20 @@ The code below shows how to check if `HTMLScriptElement.supports()` is defined, 
 ```
 
 ```js
-if (typeof HTMLScriptElement.supports == 'undefined') {
+if (typeof HTMLScriptElement.supports === 'undefined') {
   //Check if method is defined
-  log.textContent+="HTMLScriptElement.supports() method is not supported\n";
+  console.log("HTMLScriptElement.supports() method is not supported");
 }
 else
 {
   //Returns true for the supported values
-  log.textContent+="HTMLScriptElement.supports('module'): " + HTMLScriptElement.supports('module') +"\n";
-  log.textContent+="HTMLScriptElement.supports('classic'): " + HTMLScriptElement.supports('classic') +"\n";
-  log.textContent+="HTMLScriptElement.supports('importmap'): " + HTMLScriptElement.supports('importmap') +"\n";
-  log.textContent+="HTMLScriptElement.supports('speculationrules'): " + HTMLScriptElement.supports('speculationrules') +"\n";
+  console.log(`HTMLScriptElement.supports('module'): ${HTMLScriptElement.supports('module')}`);
+  console.log(`HTMLScriptElement.supports('classic'): ${HTMLScriptElement.supports('classic')}`);
+  console.log(`HTMLScriptElement.supports('importmap'): ${HTMLScriptElement.supports('importmap')}`);
+  console.log(`HTMLScriptElement.supports('speculationrules'): ${HTMLScriptElement.supports('speculationrules')}`);
 
   //Returns false for any other values
-  log.textContent+="HTMLScriptElement.supports('anything else'): " + HTMLScriptElement.supports('anything else') +"\n";
+  console.log(`HTMLScriptElement.supports('anything else'): ${HTMLScriptElement.supports('anything else')}`);
 }
 ```
 

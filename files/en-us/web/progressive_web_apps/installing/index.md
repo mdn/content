@@ -21,17 +21,17 @@ tags:
 ---
 
 
-Web application installation is a feature available in modern browsers that allows users to choose to easily and conveniently “install” a web application on their device so they can access it in the same way they would any other installed app. Depending on the device and features of the operating system and browser, this can result in what is essentially a fully featured application (for example, using [WebAPK](https://developers.google.com/web/fundamentals/integration/webapks) on Android) or as a shortcut added to their device’s screen. This guide explains how installation is performed, what it means, and what you need to do as a developer to let your users take advantage of it.
+Web application installation is a feature available in modern browsers that allows users to choose to easily and conveniently "install" a web application on their device so they can access it in the same way they would any other installed app. Depending on the device and features of the operating system and browser, this can result in what is essentially a fully featured application (for example, using [WebAPK](https://web.dev/webapks/) on Android) or as a shortcut added to their device's screen. This guide explains how installation is performed, what it means, and what you need to do as a developer to let your users take advantage of it.
 
 ## Why installation?
 
-The option to install a web application is part of the [Progressive Web App](/en-US/docs/Web/Progressive_web_apps) philosophy—giving web apps the same user experience advantages as native apps so they can be competitive. Installed applications are more conveniently invoked as they have a presence in a device’s home screen or app list or bar. This makes it simple for a user to use a gesture to access an app by tapping or clicking its icon. The application itself may then manifest as in a chromeless view (without the full browser chrome) but it nevertheless is executing effectively as a tab within the browser.
+The option to install a web application is part of the [Progressive Web App](/en-US/docs/Web/Progressive_web_apps) philosophy—giving web apps the same user experience advantages as native apps so they can be competitive. Installed applications are more conveniently invoked as they have a presence in a device's home screen or app list or bar. This makes it simple for a user to use a gesture to access an app by tapping or clicking its icon. The application itself may then manifest as in a chromeless view (without the full browser chrome) but it nevertheless is executing effectively as a tab within the browser.
 
 For users, the experience of a seemingly-native PWA is more comfortable and convenient than a typical web site. By reducing the user experience differential between the web app and native apps on the user's device, you reduce both the loss of any muscle memory they have revolving around the native interface of the device and the sensation of "something isn't quite right" that users can experience when switching between native and web-based apps.
 
 ## What browsers support installation?
 
-Installation is supported by Chrome for Android and Android WebView version 31 and later, Opera for Android 32 onward, Samsung Internet from version 4 onward, and Firefox for Android[version 58](/en-US/docs/Mozilla/Firefox/Releases/58) and later.
+Installation is supported by Chrome for Android and Android WebView version 31 and later, Opera for Android 32 onward, Samsung Internet from version 4 onward, and Firefox for Android [version 58](/en-US/docs/Mozilla/Firefox/Releases/58) and later.
 
 Safari on iOS is a little different. Some parts of the PWA ecosystem are supported, while others are not. iOS 13 introduced a much more comparable install experience, which is also described here.
 

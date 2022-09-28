@@ -8,11 +8,14 @@ tags:
   - Extension capabilities
   - firefoxOptions
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}
+
 The **`moz:firefoxOptions` capability** is a namespaced set of
 capabilities specific to [Firefox](https://www.mozilla.org/en-US/firefox/). It is used to control the
 behavior of Firefox and can be used as a member of
-[`alwaysMatch`](en-US/docs/Web/WebDriver/Capabilities#alwaysMatch) or as a member of one of the
-[`firstMatch`](en-US/docs/Web/WebDriver/Capabilities#firstMatch) entries.
+[`alwaysMatch`](/en-US/docs/Web/WebDriver/Capabilities#alwaysmatch) or as a member of one of the
+[`firstMatch`](/en-US/docs/Web/WebDriver/Capabilities#firstmatch) entries.
 
 It is used to define options which control how Firefox gets started and run.
 
@@ -134,23 +137,23 @@ Map of environment variable name to environment variable value, both of which mu
 
 Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an application embedding [GeckoView](https://wiki.mozilla.org/Mobile/GeckoView) has to be controlled on Android:
 
-##### `androidPackage` (string, required)
+#### `androidPackage` (string, required)
 
 The package name of Firefox, e.g. `org.mozilla.firefox`,
 `org.mozilla.firefox_beta,` or `org.mozilla.fennec` depending on the release
 channel, or the package name of the application embedding GeckoView, e.g. `org.mozilla.geckoview_example`.
 
-##### `androidActivity` (string, optional)
+#### `androidActivity` (string, optional)
 
 The fully qualified class name of the activity to be launched, e.g. `.GeckoViewActivity`. If not
-specified, the package’s default activity will be used.
+specified, the package's default activity will be used.
 
-##### `androidDeviceSerial` (string, optional)
+#### `androidDeviceSerial` (string, optional)
 
 The serial number of the device on which to launch the application. If not specified and multiple devices are
 attached, an error will be returned.
 
-##### `androidIntentArguments` (array of strings, optional)
+#### `androidIntentArguments` (array of strings, optional)
 
 Arguments to launch the intent with. Under the hood, geckodriver uses [Android am](https://developer.android.com/studio/command-line/adb#am) to start the Android application
 under test. The given intent arguments are appended to the `am start` command. See Android's [specification for intent arguments](https://developer.android.com/studio/command-line/adb#IntentSpec) for
@@ -181,7 +184,7 @@ For example, to specify a boolean extra that can be processed with [android.cont
 
 A JSON Object that may have any of these fields:
 
-##### `level` (string)
+#### `level` (string)
 
 Set the level of verbosity of geckodriver and Firefox. Available levels are `trace`, `debug`,
 `config`, `info`, `warn`, `error`, and `fatal`. If left
@@ -285,8 +288,7 @@ This runs the GeckoView example application as installed on the first Android em
 
 ## See also
 
-- [geckodriver’s
-  documentation on supported Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/geckodriver/Capabilities.html#capabilities-example)
+- [geckodriver's documentation on supported Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html)
 - [Chrome-specific WebDriver capabilities](https://chromedriver.chromium.org/capabilities)
   (`goog:chromeOptions)`
 - [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Capabilities)

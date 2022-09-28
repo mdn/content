@@ -1,10 +1,11 @@
 ---
 title: Document.fullscreenElement
 slug: Web/API/Document/fullscreenElement
+page-type: web-api-instance-property
 tags:
   - API
   - Document
-  - Full-screen
+  - Fullscreen
   - Fullscreen API
   - Graphics
   - Property
@@ -14,41 +15,36 @@ tags:
   - screen
 browser-compat: api.Document.fullscreenElement
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 The
 **`Document.fullscreenElement`** read-only
 property returns the {{ domxref("Element") }} that is currently being presented in
-full-screen mode in this document, or `null` if full-screen mode is not
+fullscreen mode in this document, or `null` if fullscreen mode is not
 currently in use.
 
 Although this property is read-only, it will not throw if it is modified (even in
 strict mode); the setter is a no-operation and it will be ignored.
 
-## Syntax
+## Value
 
-```js
-document.fullscreenElement
-```
-
-### Return value
-
-The {{domxref("Element")}} object that's currently in full-screen mode; if full-screen
+The {{domxref("Element")}} object that's currently in fullscreen mode; if fullscreen
 mode isn't currently in use by the `document`>, the returned
 value is `null`.
 
-## Example
+## Examples
 
 This example presents a function, `isVideoInFullscreen()`, which looks at
-the value returned by `fullscreenElement`; if the document is in full-screen
-mode (`fullscreenElement` isn't `null`) and the full-screen
+the value returned by `fullscreenElement`; if the document is in fullscreen
+mode (`fullscreenElement` isn't `null`) and the fullscreen
 element's {{domxref("Node.nodeName", "nodeName")}} is `VIDEO`, indicating a
 {{HTMLElement("video")}} element, the function returns `true`, indicating
-that the video is in full-screen mode.
+that the video is in fullscreen mode.
 
 ```js
 function isVideoInFullscreen() {
-  if (document.fullscreenElement && document.fullscreenElement.nodeName == 'VIDEO') {
+  if (document.fullscreenElement?.nodeName === 'VIDEO') {
     return true;
   }
   return false;

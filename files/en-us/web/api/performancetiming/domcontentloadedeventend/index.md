@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.domContentLoadedEventEnd
 slug: Web/API/PerformanceTiming/domContentLoadedEventEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -13,6 +14,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceTiming.domContentLoadedEventEnd
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
@@ -24,11 +26,9 @@ read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, right after all the scripts that need to be
 executed as soon as possible, in order or not, has been executed.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domContentLoadedEventEnd;
-```
+An `unsigned long long`.
 
 ## Specifications
 

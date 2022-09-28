@@ -7,7 +7,9 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-lists/
 ---
+
 {{CSSRef}}
 
 **CSS Lists** is a module of CSS that defines how lists can be laid out and styled.
@@ -30,7 +32,4 @@ tags:
 
 ## Specifications
 
-| Specification                                        | Status                           | Comment            |
-| ---------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Lists')}}                 | {{Spec2('CSS3 Lists')}} |                    |
-| {{SpecName('CSS2.1', 'generate.html')}} | {{Spec2('CSS2.1')}}         | Initial definition |
+{{Specifications}}

@@ -8,6 +8,7 @@ tags:
   - add-on
 browser-compat: webextensions.api.theme
 ---
+
 {{AddonSidebar}}
 
 Enables browser extensions to update the browser theme.
@@ -26,7 +27,7 @@ To use this API, an extension must request the "theme" [permission](/en-US/docs/
 - {{WebExtAPIRef("theme.getCurrent()")}}
   - : Gets the current browser theme.
 - {{WebExtAPIRef("theme.update()")}}
-  - : Updates the browser’s theme.
+  - : Updates the browser's theme.
 - {{WebExtAPIRef("theme.reset()")}}
   - : Removes any theme updates made in a call to {{WebExtAPIRef("theme.update()")}}.
 

@@ -1,6 +1,7 @@
 ---
 title: Document.compatMode
 slug: Web/API/Document/compatMode
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -9,19 +10,14 @@ tags:
   - Reference
 browser-compat: api.Document.compatMode
 ---
+
 {{ ApiRef("DOM") }}
 
-The **`Document.compatMode`** read-only property indicates
+The **`Document.compatMode`** read-only property indicates
 whether the document is rendered in [Quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) or
 Standards mode.
 
-## Syntax
-
-```js
-const mode = document.compatMode
-```
-
-### Value
+## Value
 
 An enumerated value that can be:
 
@@ -32,10 +28,10 @@ An enumerated value that can be:
 > **Note:** All these modes are now standardized, so the older "standards"
 > and "almost standards" names are nonsensical and no longer used in standards.
 
-## Example
+## Examples
 
 ```js
-if (document.compatMode == "BackCompat") {
+if (document.compatMode === "BackCompat") {
   // in Quirks mode
 }
 ```

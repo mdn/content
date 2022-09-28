@@ -26,6 +26,7 @@ tags:
   - gif
   - icon
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 In this guide, we'll cover the image file types generally supported by web browsers, and provide insights that will help you select the most appropriate formats to use for your site's imagery.
@@ -66,7 +67,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td>
         <p>
           Good choice for both images and animated images due to high performance and royalty free image format.
-          It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc.
+          It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
           <strong>Supported:</strong> Chrome, Opera, Firefox (still images only: animated images not implemented).
@@ -98,7 +99,7 @@ The image file formats that are most commonly used on the web are listed below.
         <p>
           Good choice for lossy compression of still images (currently the most
           popular). Prefer PNG when more precise reproduction of the image is
-          required, or WebP/AVIF if both better reproduction and highercompression are required.<br />
+          required, or WebP/AVIF if both better reproduction and higher compression are required.<br />
           <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
         </p>
       </td>
@@ -184,7 +185,7 @@ The following list includes image formats that appear on the web, but which shou
 
 > **Note:** Safari 11.1 added the ability to use a video format, as an animated gif replacement.
 > No other browser supports this.
-> See the [Chromium bug](https://crbug.com/791658), and [Firefox bug](https://bugzil.la/895131) for more information.
+> See the [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id=791658), and [Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=895131) for more information.
 
 ## Image file type details
 
@@ -196,11 +197,11 @@ For example, an RGB color depth of 8 indicates that each of the red, green, and 
 
 ### APNG (Animated Portable Network Graphics)
 
-APNG is a file format first introduced by Mozilla which extends the {{anch("PNG")}} standard to add support for animated images.
-Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of {{interwiki("wikipedia", "color depth", "color depths")}}, whereas animated GIF supports only 8-bit {{interwiki("wikipedia", "indexed color")}}.
+APNG is a file format first introduced by Mozilla which extends the [PNG](#png_portable_network_graphics) standard to add support for animated images.
+Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of [color depths](https://en.wikipedia.org/wiki/Color_depth), whereas animated GIF supports only 8-bit [indexed color](https://en.wikipedia.org/wiki/Indexed_color).
 
-APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity {{interwiki("wikipedia", "throbber", "throbbers")}}, and other animated sequences.
-For example, APNG is [one of the formats supported when creating animated stickers](https://developer.apple.com/stickers/) for Apple's iMessage application (and the Messages application on iOS).
+APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity [throbbers](https://en.wikipedia.org/wiki/Throbber), and other animated sequences.
+For example, APNG is [one of the formats supported when creating animated stickers](https://developer.apple.com/imessage/) for Apple's iMessage application (and the Messages application on iOS).
 They're also commonly used for the animated portions of web browsers' user interfaces.
 
 <table class="standard-table">
@@ -299,13 +300,13 @@ They're also commonly used for the animated portions of web browsers' user inter
 
 ### AVIF image
 
-AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes *AV1 bitstreams in the High Efficiency Image File Format (HEIF) container.*
+AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes _AV1 bitstreams in the High Efficiency Image File Format (HEIF) container._
 
 > **Note:** AVIF has potential to become the "next big thing" for sharing images in web content.
 > It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.
 
 AV1 is a coding format that was originally designed for video transmission over the Internet.
-The format benefits from the signficant advances in video encoding in recent years, and may potentially benefit from the associated support for hardware rendering.
+The format benefits from the significant advances in video encoding in recent years, and may potentially benefit from the associated support for hardware rendering.
 However it also has disadvantages for some cases, as video and image encoding have some different requirements.
 
 The format offers:
@@ -323,7 +324,7 @@ This often has little impact on real-world user experience because AVIF files ar
 For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.
 
 AVIF is supported on desktop in Chrome, Opera and Firefox (Firefox supports still images but not animations).
-As support is not yet comprehensive (and has little historical depth) you should provide a fallback in {{anch("WebP")}}, {{anch("JPEG")}} or {{anch("PNG")}} format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
+As support is not yet comprehensive (and has little historical depth) you should provide a fallback in [WebP](#webp_image), [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
 
 <table class="standard-table">
   <tbody>
@@ -378,7 +379,7 @@ As support is not yet comprehensive (and has little historical depth) you should
         <ul>
           <li>Color modes: YUV444, YUV422, YUV420</li>
           <li>Greyscale support: YUV400</li>
-          <li>Bits: 8/10/12 bit</li>
+          <li>Bits: 8/10/12-bit</li>
           <li>Alpha support</li>
           <li>ICC profile support</li>
           <li>
@@ -415,7 +416,7 @@ The simplest, and most commonly used, form of BMP file is an uncompressed raster
 While other data representations are defined in the specification, they are not widely used and often completely unimplemented.
 These features include: support for different bit depths, indexed color, alpha channels, and different pixel orders (by default, BMP is written from bottom-left corner toward the right and top, rather than from the top-left corner toward the right and bottom).
 
-Theoretically, several compression algorithms are supported, and the image data can also be stored in {{anch("JPEG")}} or {{anch("PNG")}} format within the BMP file.
+Theoretically, several compression algorithms are supported, and the image data can also be stored in [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format within the BMP file.
 
 <table class="standard-table">
   <tbody>
@@ -431,7 +432,7 @@ Theoretically, several compression algorithms are supported, and the image data 
       <th scope="row">Specification</th>
       <td>
         No specification; however, Microsoft provides general documentation of the format at
-        <a href="https://docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage">docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage</a>
+        <a href="https://docs.microsoft.com/windows/desktop/gdi/bitmap-storage">docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage</a>
       </td>
     </tr>
     <tr>
@@ -505,7 +506,7 @@ Theoretically, several compression algorithms are supported, and the image data 
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        Covered by the <a href="https://docs.microsoft.com/en-us/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc">Microsoft Open Specification Promise</a>;
+        Covered by the <a href="https://docs.microsoft.com/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc">Microsoft Open Specification Promise</a>;
         while Microsoft holds patents against BMP, they have published a promise not to assert its patent rights as long as specific conditions are met.
         This is not the same as a license, however. BMP is included under the Windows Metafile Format (<code>.wmf</code>).
       </td>
@@ -515,12 +516,12 @@ Theoretically, several compression algorithms are supported, and the image data 
 
 ### GIF (Graphics Interchange Format)
 
-In 1987, the CompuServe online service provider introduced the **{{interwiki("wikipedia", "GIF")}}** (**Graphics Interchange Format**) image file format to provide a compressed graphics format that all members of their service would be able to use.
-GIF uses the {{interwiki("wikipedia", "Lempel-Ziv-Welch")}} (LZW) algorithm to losslessly compress 8-bit indexed color graphics.
-GIF was one of the first two graphics formats supported by {{Glossary("HTML")}}, along with {{anch("XBM")}}.
+In 1987, the CompuServe online service provider introduced the **[GIF](https://en.wikipedia.org/wiki/GIF)** (**Graphics Interchange Format**) image file format to provide a compressed graphics format that all members of their service would be able to use.
+GIF uses the [Lempel-Ziv-Welch](https://en.wikipedia.org/wiki/Lempel-Ziv-Welch) (LZW) algorithm to losslessly compress 8-bit indexed color graphics.
+GIF was one of the first two graphics formats supported by {{Glossary("HTML")}}, along with [XBM](#xbm_x_window_system_bitmap_file).
 
 Each pixel in a GIF is represented by a single 8-bit value serving as an index into a palette of 24-bit colors (8 bits each of red, green, and blue). The length of a color table is always a power of 2 (that is, each palette has 2, 4, 8, 16, 32, 64, or 256 entries).
-To simulate more than 255 or 256 colors, {{interwiki("wikipedia", "dithering")}} is generally used.
+To simulate more than 255 or 256 colors, [dithering](https://en.wikipedia.org/wiki/Dithering) is generally used.
 It is [technically possible](https://gif.ski/) to tile multiple image blocks, each with its own color palette, to create truecolor images, but in practice this is rarely done.
 
 Pixels are opaque, unless a specific color index is designated as transparent, in which case pixels colored that value are entirely transparent.
@@ -530,11 +531,11 @@ GIF supports simple animation, in which following an initial full-size frame, a 
 GIF has been extremely popular for decades, due to its simplicity and compatibility.
 Its animation support caused a resurgence in its popularity in the social media era, when animated GIFs began to be widely used for short "videos", memes, and other simple animation sequences.
 
-Another popular feature of GIF is support for {{interwiki("wikipedia", "Interlacing_(bitmaps)", "interlacing")}}, where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
+Another popular feature of GIF is support for [interlacing](https://en.wikipedia.org/wiki/Interlacing_(bitmaps)), where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
 This is particularly useful when network connections are slow.
 
 GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering.
-Typically, modern content should use {{anch("PNG")}} for lossless _and_ indexed still images, and should consider using {{anch("APNG")}} for lossless animation sequences.
+Typically, modern content should use [PNG](#png_portable_network_graphics) for lossless _and_ indexed still images, and should consider using [APNG](#apng_animated_portable_network_graphics) for lossless animation sequences.
 
 <table class="standard-table">
   <tbody>
@@ -626,7 +627,7 @@ However, early versions of Internet Explorer introduced the ability for a web si
 
 An ICO file can contain multiple icons, and begins with a directory listing details about each.
 Following the directory comes the data for the icons.
-Each icon's data can be either a {{anch("BMP")}} image without the file header, or a complete {{anch("PNG")}} image (including the file header).
+Each icon's data can be either a [BMP](#bmp_bitmap_file) image without the file header, or a complete [PNG](#png_portable_network_graphics) image (including the file header).
 If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.
 
 > **Warning:** ICO files _should not_ be used in web content.
@@ -824,7 +825,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
             <tr>
               <th scope="row">Greyscale</th>
               <td><em>n/a</em></td>
-              <td>JPEG has no distinct greyscale mode.</td>
+              <td>True greyscale can be supported using the single luma channel (Y).</td>
             </tr>
             <tr>
               <th scope="row">True color</th>
@@ -855,8 +856,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
     <tr>
       <th scope="row">Compression</th>
       <td>
-        Lossy; based on the
-        {{interwiki("wikipedia", "discrete cosine transform")}}
+        Lossy; based on the <a href="https://en.wikipedia.org/wiki/Discrete_cosine_transform">discrete cosine transform</a>
       </td>
     </tr>
     <tr>
@@ -868,7 +868,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
 
 ### PNG (Portable Network Graphics)
 
-The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless or lossy compression to provide more efficient compression, and supports higher color depths than {{anch("GIF")}}, as well as full alpha transparency support.
+The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless compression, while supporting higher color depths than [GIF](#gif_graphics_interchange_format) and being more efficient, as well as featuring full alpha transparency support.
 
 PNG is widely supported, with all major browsers offering full support for its features.
 Internet Explorer, which introduced PNG support in versions 4–5, did not fully support it until IE 9, and had many infamous bugs for many of the intervening years, including in the once-omnipresent Internet Explorer 6.
@@ -1032,7 +1032,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
 
 ### SVG (Scalable Vector Graphics)
 
-SVG is an [XML](/en-US/docs/Glossary/XML)-based {{interwiki("wikipedia", "vector graphics")}} format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth.
+SVG is an [XML](/en-US/docs/Glossary/XML)-based [vector graphics](https://en.wikipedia.org/wiki/Vector_graphics) format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth.
 SVG files are ideal for diagrams, icons, and other images which can be accurately drawn at any size.
 As such, SVG is popular for user interface elements in modern Web design.
 
@@ -1047,7 +1047,7 @@ For instance, this example defines an drawing area with initial size 100 by 100 
 
 SVG can be used in web content in two ways:
 
-1. You can directly write the {{HTMLElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Element) to draw the image.
+1. You can directly write the {{SVGElement("svg")}} element within the HTML, containing [SVG elements](/en-US/docs/Web/SVG/Element) to draw the image.
 2. You can display an SVG image anywhere you can use any of the other image types, including with the {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements, the {{cssxref("background-image")}} CSS property, and so forth.
 
 SVG is an ideal choice for images which can be represented using a series of drawing commands, especially if the size at which the image will be rendered is unknown or may vary, since SVG will smoothly scale to the desired size.
@@ -1094,7 +1094,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
             </tr>
             <tr>
               <th scope="row">
-                SVG as image ({{HTMLElement("img")}} etc)
+                SVG as image ({{HTMLElement("img")}}, etc.)
               </th>
               <td>28</td>
               <td>12</td>
@@ -1148,7 +1148,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
 
 ### TIFF (Tagged Image File Format)
 
-{{interwiki("wikipedia", "TIFF")}} is a raster graphics file format which was created to store scanned photos, although it can be any kind of image.
+[TIFF](https://en.wikipedia.org/wiki/TIFF) is a raster graphics file format which was created to store scanned photos, although it can be any kind of image.
 It is a somewhat "heavy" format, in that TIFF files have a tendency to be larger than images in other formats.
 This is because of the metadata often included, as well as the fact that most TIFF images are either uncompressed or use compression algorithms that still leave fairly large files after compression.
 
@@ -1191,9 +1191,8 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
     <tr>
       <th scope="row">Specification</th>
       <td>
-        <a href="https://www.adobe.io/open/standards/TIFF.html"
-          >adobe.io/open/standards/TIFF.html</a
-        >
+        <a href="https://www.adobe.com/devnet-apps/photoshop/fileformatashtml"
+          >https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/#50577413_pgfId-1035272</a>
       </td>
     </tr>
     <tr>
@@ -1245,7 +1244,7 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
                 Each pixel is an index into a <code>ColorMap</code> record,
                 which defines the colors used in the image. The color map lists
                 all of the red values, then all of the green values, then all of
-                the blue values (rather than <code>rgb, rgb, rgb...</code>).
+                the blue values (rather than <code>rgb, rgb, rgb…</code>).
               </td>
             </tr>
             <tr>
@@ -1298,7 +1297,7 @@ Lossless WebP holds the `ANIM` chunk, which describes the animation, and the `AN
 Looping is supported.
 
 WebP now has broad support in the latest versions of major web browsers, although it does not have deep historical support.
-Provide a fallback in either {{anch("JPEG")}} or {{anch("PNG")}} format, such as with [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture).
+Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format, such as with [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture).
 
 <table class="standard-table">
   <tbody>
@@ -1489,8 +1488,8 @@ Picking the best image format for your needs is likely easier than video formats
 ### Photographs
 
 Photographs typically fare well with lossy compression (depending on the encoder's configuration).
-This makes {{anch("JPEG")}} and {{anch("WebP")}} good choices for photographs, with JPEG being more compatible but WebP perhaps offering better compression.
-To maximize quality and minimize download time, consider providing both {{anch("Providing image fallbacks", "using a fallback")}} with WebP as the first choice and JPEG as the second.
+This makes [JPEG](#jpeg_joint_photographic_experts_group_image) and [WebP](#webp_image) good choices for photographs, with JPEG being more compatible but WebP perhaps offering better compression.
+To maximize quality and minimize download time, consider providing both [using a fallback](#providing_image_fallbacks) with WebP as the first choice and JPEG as the second.
 Otherwise, JPEG is the safe choice for compatibility.
 
 <table class="standard-table" style="max-width: 42rem">
@@ -1511,10 +1510,10 @@ Otherwise, JPEG is the safe choice for compatibility.
 ### Icons
 
 For smaller images such as icons, use a lossless format to avoid loss of detail in a size-constrained image.
-While lossless WebP is ideal for this purpose, support is not widespread yet, so PNG is a better choice unless you offer a {{anch("Providing image fallbacks", "fallback")}}.
+While lossless WebP is ideal for this purpose, support is not widespread yet, so PNG is a better choice unless you offer a [fallback](#providing_image_fallbacks).
 If your image contains fewer than 256 colors, GIF is an option, although PNG often compresses even smaller with its indexed compression option (PNG-8).
 
-If the icon can be represented using vector graphics, consider {{anch("SVG")}}, since it scales across various resolutions and sizes, so it's perfect for responsive design.
+If the icon can be represented using vector graphics, consider [SVG](#svg_scalable_vector_graphics), since it scales across various resolutions and sizes, so it's perfect for responsive design.
 Although SVG support is good, it may be worth offering a PNG fallback for older browsers.
 
 <table class="standard-table" style="max-width: 42rem">
@@ -1566,8 +1565,8 @@ If you do choose a lossy format, such as JPEG or lossy WebP, carefully weigh the
       <th scope="col">Fallback</th>
     </tr>
     <tr>
-      <td>{{anch("SVG")}}</td>
-      <td>{{anch("PNG")}}</td>
+      <td><a href="#svg_scalable_vector_graphics">SVG</a></td>
+      <td><a href="#png_portable_network_graphics">PNG</a></td>
     </tr>
   </thead>
 </table>
@@ -1581,10 +1580,13 @@ For example, if you're displaying a diagram best displayed with SVG, but wish to
 
 ```html
 <picture>
-  <source srcset="diagram.svg" type="image/svg+xml">
-  <source srcset="diagram.png" type="image/png">
-  <img src="diagram.gif" width="620" height="540"
-       alt="Diagram showing the data channels">
+  <source srcset="diagram.svg" type="image/svg+xml" />
+  <source srcset="diagram.png" type="image/png" />
+  <img
+    src="diagram.gif"
+    width="620"
+    height="540"
+    alt="Diagram showing the data channels" />
 </picture>
 ```
 

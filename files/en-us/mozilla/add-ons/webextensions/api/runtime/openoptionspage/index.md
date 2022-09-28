@@ -13,14 +13,17 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.openOptionsPage
 ---
-{{AddonSidebar()}}If your extension has an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) defined, this method opens it.
+
+{{AddonSidebar()}}
+
+If your extension has an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) defined, this method opens it.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
-```js
-var openingPage = browser.runtime.openOptionsPage()
+```js-nolint
+let openingPage = browser.runtime.openOptionsPage()
 ```
 
 ### Parameters
@@ -48,17 +51,18 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var opening = browser.runtime.openOptionsPage();
+let opening = browser.runtime.openOptionsPage();
 opening.then(onOpened, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -85,4 +89,4 @@ opening.then(onOpened, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

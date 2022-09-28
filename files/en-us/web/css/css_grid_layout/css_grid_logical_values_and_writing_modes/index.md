@@ -1,14 +1,16 @@
 ---
-title: CSS grids, logical values, and writing modes
+title: Grids, logical values, and writing modes
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
+page-type: guide
 tags:
   - CSS
   - CSS Grids
   - Guide
 ---
+
 {{CSSRef}}
 
-In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.
+In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.
 
 ## Logical and physical properties and values
 
@@ -35,7 +37,7 @@ Another place you might see physical keywords in use, is when using `text-align:
 
 We call these keywords and properties _physical_ because they relate to the screen you are looking at. Left is always left, no matter what direction your text is running.
 
-This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don’t even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. One has no {{cssxref("text-align")}} property set, the second has `text-align` set to left. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left` . The second however, switches direction and the text runs from right to left .
+This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don't even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. The first paragraph has {{cssxref("text-align")}} set to `left`, the second has no `text-align` property set. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left`. The second however, switches direction and the text runs from right to left .
 
 ![A simple example of text direction.](8_direction_simple_example.png)
 
@@ -43,7 +45,7 @@ This is a very simple example of the problem with physical values and properties
 
 ### Logical properties and values
 
-Logical properties and values do not make an assumption about text direction. Which is why in Grid Layout we use the keyword `start` when aligning something to the start of the container. For me, working in English, `start` may well be on the left, however it doesn’t have to be, and the word `start` infers no physical location.
+Logical properties and values do not make an assumption about text direction. Which is why in Grid Layout we use the keyword `start` when aligning something to the start of the container. For me, working in English, `start` may well be on the left, however it doesn't have to be, and the word `start` infers no physical location.
 
 ## Block and Inline
 
@@ -53,7 +55,7 @@ Once we begin dealing with logical, rather than physical properties, we stop see
 
 ## CSS writing modes
 
-I’m going to introduce another specification here, that I will be using in my examples: the CSS Writing Modes specification. This spec details how we can use these different writing modes in CSS, not just for the support of languages that have a different writing mode to English, but also for creative purposes. I’ll be using the {{cssxref("writing-mode")}} property to make changes to the writing mode applied to our grid, in order to demonstrate how the logical values work. If you want to dig into writing modes further, however, then I would recommend that you read Jen Simmons excellent article on [CSS Writing Modes](https://24ways.org/2016/css-writing-modes/). This goes into more depth on that specification than we will touch upon here.
+I'm going to introduce another specification here, that I will be using in my examples: the CSS Writing Modes specification. This spec details how we can use these different writing modes in CSS, not just for the support of languages that have a different writing mode to English, but also for creative purposes. I'll be using the {{cssxref("writing-mode")}} property to make changes to the writing mode applied to our grid, in order to demonstrate how the logical values work. If you want to dig into writing modes further, however, then I would recommend that you read Jen Simmons excellent article on [CSS Writing Modes](https://24ways.org/2016/css-writing-modes/). This goes into more depth on that specification than we will touch upon here.
 
 ### writing-mode
 
@@ -65,24 +67,28 @@ Writing Modes are more than just left to right and right to left text, and the `
 - `sideways-rl`
 - `sideways-lr`
 
-The value `horizontal-tb` is the default for text on the web. It is the direction in which you are reading this guide. The other properties will change the way that text flows in our document, matching the different writing modes found around the world. Again, for full details of these see [Jen’s article](https://24ways.org/2016/css-writing-modes/). As a simple example, I have two paragraphs below. The first uses the default `horizontal-tb`, and the second uses `vertical-rl`. In the mode text still runs left to right, however the direction of the text is vertical - inline text now runs down the page, from top to bottom.
+The value `horizontal-tb` is the default for text on the web. It is the direction in which you are reading this guide. The other properties will change the way that text flows in our document, matching the different writing modes found around the world. Again, for full details of these see [Jen's article](https://24ways.org/2016/css-writing-modes/). As a simple example, I have two paragraphs below. The first uses the default `horizontal-tb`, and the second uses `vertical-rl`. In the mode text still runs left to right, however the direction of the text is vertical - inline text now runs down the page, from top to bottom.
 
 ```css hidden
 .wrapper > p {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    margin: 1em;
-    color: #d9480f;
-    max-width: 300px;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  margin: 1em;
+  color: #d9480f;
+  max-width: 300px;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <p style="writing-mode: horizontal-tb">I have writing mode set to the default <code>horizontal-tb</code></p>
-  <p style="writing-mode: vertical-rl">I have writing mode set to <code>vertical-rl</code></p>
+  <p style="writing-mode: horizontal-tb">
+    I have writing mode set to the default <code>horizontal-tb</code>
+  </p>
+  <p style="writing-mode: vertical-rl">
+    I have writing mode set to <code>vertical-rl</code>
+  </p>
 </div>
 ```
 
@@ -97,20 +103,22 @@ If we now take a look at a grid layout example, we can see how changing the writ
 The grid in this example has three columns and two row tracks. This means there are three tracks running down the block axis. In default writing mode, grid auto-places items starting at the top left, moving along to the right, filling up the three cells on the inline axis. It then moves onto the next line, creating a new Row track, and fills in more items:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -119,7 +127,7 @@ The grid in this example has three columns and two row tracks. This means there 
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(2, 100px);
-gap: 10px;
+  gap: 10px;
 }
 ```
 
@@ -140,20 +148,22 @@ gap: 10px;
 If we add `writing-mode: vertical-lr` to the grid container, we can see that the block and inline Axis are now running in a different direction. The block or _column_ axis now runs across the page from left to right, Inline runs down the page, creating rows from top to bottom.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -188,20 +198,22 @@ With the block and inline axis able to change direction, the logical values for 
 In this next example, I am using alignment to align items inside a grid that is set to `writing-mode: vertical-lr`. The `start` and `end` properties work in exactly the same way that they do in the default writing mode, and remain logical in a way that using left and right, top and bottom to align items would not do. This occurs once we've flipped the grid onto the side, like this:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -215,21 +227,21 @@ In this next example, I am using alignment to align items inside a grid that is 
 }
 
 .item1 {
-    grid-column: 1 / 4;
-    align-self: start;
+  grid-column: 1 / 4;
+  align-self: start;
 }
 
 .item2 {
-    grid-column: 1 / 3;
-    grid-row: 2 / 4;
-    align-self: start;
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+  align-self: start;
 }
 
 .item3 {
-    grid-column: 3;
-    grid-row: 2 / 4;
-    align-self: end;
-    justify-self: end;
+  grid-column: 3;
+  grid-row: 2 / 4;
+  align-self: end;
+  justify-self: end;
 }
 ```
 
@@ -262,20 +274,22 @@ In this next example, I have a grid which is in the default `ltr` direction. I h
 - Item 3 starts at column line 1, spanning to column line 3.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -287,46 +301,48 @@ In this next example, I have a grid which is in the default `ltr` direction. I h
   gap: 10px;
 }
 .item1 {
-    grid-column: 1 ;
+  grid-column: 1;
 }
 .item2 {
-    grid-column: -1 / -3;
+  grid-column: -1 / -3;
 }
 .item3 {
-    grid-column: 1 / 3;
-    grid-row: 2;
+  grid-column: 1 / 3;
+  grid-row: 2;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="item1">Item 1</div>
-        <div class="item2">Item 2</div>
-        <div class="item3">Item 3</div>
-    </div>
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+</div>
 ```
 
 {{ EmbedLiveSample('Line-based_placement_with_left_to_right_text', '500', '330') }}
 
 ### Line-based placement with right to left text
 
-If I now add the {{cssxref("direction")}} property with a value of `rtl` to the grid container, line 1 becomes the right hand side of the grid, and line -1 on the left.
+If I now add the {{cssxref("direction")}} property with a value of `rtl` to the grid container, line 1 becomes the right-hand side of the grid, and line -1 on the left.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -339,23 +355,23 @@ If I now add the {{cssxref("direction")}} property with a value of `rtl` to the 
   gap: 10px;
 }
 .item1 {
-    grid-column: 1 ;
+  grid-column: 1;
 }
 .item2 {
-    grid-column: -1 / -3;
+  grid-column: -1 / -3;
 }
 .item3 {
-    grid-column: 1 / 3;
-    grid-row: 2;
+  grid-column: 1 / 3;
+  grid-row: 2;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="item1">Item 1</div>
-        <div class="item2">Item 2</div>
-        <div class="item3">Item 3</div>
-    </div>
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+</div>
 ```
 
 {{ EmbedLiveSample('Line-based_placement_with_right_to_left_text', '500', '330') }}
@@ -384,44 +400,59 @@ This is anti-clockwise! So the reverse of what we do for margins and padding. On
 
 ## Mixed writing modes and grid layout
 
-In addition to displaying documents, using the correct writing mode for the language, writing modes can be used creatively within documents that are otherwise `ltr`. In this next example I have a grid layout with a set of links down one side. I’ve used writing modes to turn these on their side in the column track:
+In addition to displaying documents, using the correct writing mode for the language, writing modes can be used creatively within documents that are otherwise `ltr`. In this next example I have a grid layout with a set of links down one side. I've used writing modes to turn these on their side in the column track:
 
 ```css
 .wrapper {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr auto;
-    font: 1em Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr auto;
+  font: 1em Helvetica, Arial, sans-serif;
 }
 .wrapper nav {
-    writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
 }
 .wrapper ul {
-    list-style: none;
-    margin: 0;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
 }
 .wrapper a {
-    text-decoration: none;
+  text-decoration: none;
 }
 ```
 
 ```html
 <div class="wrapper">
-        <div class="content">
-            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
-            <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jícama salsify.</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">Link 1</a></li>
-                <li><a href="">Link 2</a></li>
-                <li><a href="">Link 3</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="content">
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo
+      shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.
+      Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi
+      beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki
+      bean chickweed potato bell pepper artichoke.
+    </p>
+    <p>
+      Nori grape silver beet broccoli kombu beet greens fava bean potato
+      quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
+      turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter
+      purslane fennel azuki bean earthnut pea sierra leone bologi leek soko
+      chicory celtuce parsley jícama salsify.
+    </p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="">Link 1</a></li>
+      <li><a href="">Link 2</a></li>
+      <li><a href="">Link 3</a></li>
+    </ul>
+  </nav>
+</div>
 ```
 
 {{ EmbedLiveSample('Mixed_writing_modes_and_grid_layout', '500', '330') }}
@@ -436,4 +467,4 @@ If you use absolute positioning within a grid area, then you will again be using
 
 Our new layout methods give us the ability to use these logical values to place items, however, as soon as we start to combine them with the physical properties used for margins and padding, we need to remember that those physical properties will not change according to writing mode.
 
-The [CSS Logical Properties specification](https://drafts.csswg.org/css-logical-props/) means that you can use the [logical equivalents](/en-US/docs/Web/CSS/CSS_Logical_Properties) for properties, such as {{cssxref("margin-left")}} and {{cssxref("margin-right")}}, in your CSS. These properties and values have good support in modern browsers. Your understanding of block and inline through grid will help you to understand how to use these too.
+The [CSS Logical Properties specification](https://drafts.csswg.org/css-logical/) means that you can use the [logical equivalents](/en-US/docs/Web/CSS/CSS_Logical_Properties) for properties, such as {{cssxref("margin-left")}} and {{cssxref("margin-right")}}, in your CSS. These properties and values have good support in modern browsers. Your understanding of block and inline through grid will help you to understand how to use these too.

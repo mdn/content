@@ -1,6 +1,7 @@
 ---
 title: CSSImportRule.href
 slug: Web/API/CSSImportRule/href
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -10,6 +11,7 @@ tags:
   - Read-only
 browser-compat: api.CSSImportRule.href
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only **`href`** property of the
@@ -19,15 +21,9 @@ The read-only **`href`** property of the
 The resolved URL will be the {{HTMLAttrxRef("href","link")}} attribute of the
 associated stylesheet.
 
-## Syntax
+## Value
 
-```js
-var href = CSSImportRule.href;
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

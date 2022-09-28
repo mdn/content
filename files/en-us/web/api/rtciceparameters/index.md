@@ -1,6 +1,7 @@
 ---
 title: RTCIceParameters
 slug: Web/API/RTCIceParameters
+page-type: web-api-interface
 tags:
   - API
   - Candidate
@@ -19,6 +20,7 @@ tags:
   - username
 browser-compat: api.RTCIceParameters
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCIceParameters`** dictionary specifies the username fragment and password assigned to an {{Glossary("ICE")}} session.
@@ -28,9 +30,9 @@ During ICE negotiation, each peer's username fragment and password are recorded 
 ## Properties
 
 - {{domxref("RTCIceParameters.usernameFragment", "usernameFragment")}}
-  - : A {{domxref("DOMString")}} specifying the value of the ICE session's username fragment field, `ufrag`.
+  - : A string specifying the value of the ICE session's username fragment field, `ufrag`.
 - {{domxref("RTCIceParameters.password", "password")}}
-  - : A {{domxref("DOMString")}} specifying the session's password string.
+  - : A string specifying the session's password string.
 
 ## Usage notes
 

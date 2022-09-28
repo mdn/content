@@ -9,6 +9,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications
 ---
+
 {{AddonSidebar}}
 
 Display notifications to the user, using the underlying operating system's notification mechanism. Because this API uses the operating system's notification mechanism, the details of how notifications appear and behave may differ according to the operating system and the user's settings.
@@ -54,4 +55,4 @@ The notification looks the same on all desktop operating systems. Something like
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.

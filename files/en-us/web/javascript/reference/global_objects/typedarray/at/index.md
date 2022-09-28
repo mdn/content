@@ -10,27 +10,27 @@ tags:
   - Reference
   - Polyfill
   - at
-  - Experimental
 browser-compat: javascript.builtins.TypedArray.at
 ---
+
 {{JSRef}}
 
 The **`at()`** method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
 
-This is not to suggest there is anything wrong with using the square bracket notation. For example `array[0]` would return the first item. However instead of using {{jsxref('TypedArray.prototype.length','array.length')}} for latter items; e.g. `array[array.length-1]` for the last item, you can call `array.at(-1)`. [(See the examples below)](#Examples)
+This is not to suggest there is anything wrong with using the square bracket notation. For example `array[0]` would return the first item. However instead of using {{jsxref('TypedArray.prototype.length','array.length')}} for latter items; e.g. `array[array.length-1]` for the last item, you can call `array.at(-1)`. [(See the examples below)](#examples)
 
 {{EmbedInteractiveExample("pages/js/typedarray-at.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 at(index)
 ```
 
 ### Parameters
 
 - `index`
-  - : The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index. i.e. If a negative number is used the element returned will be found by counting back from the end of the array.
+  - : The index (position) of the array element to be returned. Supports relative indexing from the end of the array when passed a negative index; that is, if a negative number is used, the element returned will be found by counting back from the end of the array.
 
 ### Return value
 
@@ -85,7 +85,7 @@ console.log(atWay); // Logs: 11
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.at` is available in [`core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [Polyfill of `TypedArray.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
 - [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
 - {{jsxref("TypedArray.prototype.find()")}} – return a value based on a given test.
 - {{jsxref("TypedArray.prototype.includes()")}} – test whether a value exists in the array.

@@ -1,6 +1,7 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -8,10 +9,12 @@ tags:
   - Data Type
   - Reference
   - display-outside
+browser-compat: css.properties.display.display-outside
 ---
+
 {{CSSRef}}
 
-The `<display-outside>` keywords specify the element’s outer {{CSSxRef("display")}} type, which is essentially its role in flow layout. These keywords are used as values of the `display` property, and can be used for legacy purposes as a single keyword, or as defined in the Level 3 specification alongside a value from the {{CSSxRef("&lt;display-inside&gt;")}} keywords.
+The `<display-outside>` keywords specify the element's outer {{CSSxRef("display")}} type, which is essentially its role in flow layout. These keywords are used as values of the `display` property, and can be used for legacy purposes as a single keyword, or as defined in the Level 3 specification alongside a value from the {{CSSxRef("&lt;display-inside&gt;")}} keywords.
 
 ## Syntax
 
@@ -24,6 +27,10 @@ Valid `<display-outside>` values:
 
 > **Note:** Browsers that support the two value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 In the following example, span elements (normally displayed as inline elements) are set to `display: block` and so break onto new lines and expand to fill their container in the inline dimension.
@@ -31,16 +38,15 @@ In the following example, span elements (normally displayed as inline elements) 
 ### HTML
 
 ```html
-<span>span 1</span>
-<span>span 2</span>
+<span>span 1</span> <span>span 2</span>
 ```
 
 ### CSS
 
 ```css
 span {
-    display: block;
-    border: 1px solid rebeccapurple;
+  display: block;
+  border: 1px solid rebeccapurple;
 }
 ```
 
@@ -50,13 +56,11 @@ span {
 
 ## Specifications
 
-| Specification                                                                                        | Status                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-outside', 'display-outside')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.properties.display.display-outside", 10)}}
+{{Compat}}
 
 ## See also
 

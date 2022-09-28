@@ -12,6 +12,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.show
 ---
+
 {{AddonSidebar()}}
 
 Shows one or more tabs that were previously hidden by a call to {{WebExtAPIRef("tabs.hide")}}.
@@ -20,8 +21,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var showing = browser.tabs.show(
+```js-nolint
+let showing = browser.tabs.show(
   tabIds          // integer or integer array
 )
 ```

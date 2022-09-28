@@ -1,6 +1,7 @@
 ---
 title: VTTCue.size
 slug: Web/API/VTTCue/size
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,18 +10,12 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.size
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`size`** property of the {{domxref("VTTCue")}} interface represents the size of the cue as a percentage of the video size.
 
-## Syntax
-
-```js
-let size = VTTCue.size;
-VTTCue.size = 50;
-```
-
-### Value
+## Value
 
 A number representing the size of the cue as a percentage of the video size.
 

@@ -10,8 +10,9 @@ tags:
   - Security
   - connect-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.connect-src
+browser-compat: http.headers.Content-Security-Policy.connect-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -26,7 +27,7 @@ loaded using script interfaces. The APIs that are restricted are:
 - {{domxref("Navigator.sendBeacon()")}}.
 
 > **Note:** `connect-src 'self'` does not resolve to websocket
-> schemas in all browsers, more info in this [issue](https://github.com/w3c/webappsec-csp/issues/7).
+> schemes in all browsers, more info in this [issue](https://github.com/w3c/webappsec-csp/issues/7).
 
 <table class="properties">
   <tbody>
@@ -77,18 +78,19 @@ The following connections are blocked and won't load:
 
 ```html
 <a ping="https://not-example.com">
+  <script>
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://not-example.com/");
+    xhr.send();
 
-<script>
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://not-example.com/');
-  xhr.send();
+    const ws = new WebSocket("https://not-example.com/");
 
-  var ws = new WebSocket("https://not-example.com/");
+    const es = new EventSource("https://not-example.com/");
 
-  var es = new EventSource("https://not-example.com/");
-
-  navigator.sendBeacon("https://not-example.com/", { ... });
-</script>
+    navigator.sendBeacon("https://not-example.com/", {
+      /* … */
+    });
+  </script></a>
 ```
 
 ## Specifications
@@ -99,7 +101,7 @@ The following connections are blocked and won't load:
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
 - Prior to Firefox 23, `xhr-src` was used in place of the
   `connect-src` directive and only restricted the use of

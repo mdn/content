@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.muted
 slug: Web/API/HTMLMediaElement/muted
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,27 +10,21 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.muted
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.muted`** indicates whether the media
 element muted.
 
-## Syntax
-
-```js
-var isMuted = audioOrVideo.muted
-audio.muted = true;
-```
-
-### Value
+## Value
 
 A boolean value. `true` means muted and `false` means
 not muted.
 
-## Example
+## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.muted); // false
 ```
 

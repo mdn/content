@@ -11,6 +11,7 @@ tags:
   - rsync
   - SFTP
 ---
+
 This article shows you how to publish your site online using file transfer tools.
 
 <table>
@@ -54,11 +55,11 @@ If you have built a simple web page (see [HTML basics](/en-US/docs/Learn/Getting
 
 There are several SFTP clients out there. Our demo covers [FileZilla](https://filezilla-project.org/), since it's free and available for Windows, macOS and Linux. To install FileZilla go to the [FileZilla downloads page](https://filezilla-project.org/download.php?type=client), click the big Download button, then install from the installer file in the usual way.
 
-> **Note:** Of course there are lots of other options. See [Publishing tools](/en-US/docs/Learn/Common_questions/How_much_does_it_cost#publishing_tools.3a_ftp_client) for more information.
+> **Note:** Of course there are lots of other options. See [Publishing tools](/en-US/docs/Learn/Common_questions/How_much_does_it_cost#publishing_tools) for more information.
 
 Open the FileZilla application; you should see something like this:
 
-![](filezilla-ui.png)
+![Screenshot of the user interface of Filezilla FTP application. Host input has focus.](filezilla-ui.png)
 
 ### Logging in
 
@@ -84,11 +85,11 @@ Let's first look at `http://demozilla.examplehostingprovider.net/` — as you ca
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **Note:** Depending on your hosting provider, most of the time you'll see a page saying something like “This website is hosted by \[Hosting Service].” when you first go to your web address.
+> **Note:** Depending on your hosting provider, most of the time you'll see a page saying something like "This website is hosted by \[Hosting Service]." when you first go to your web address.
 
 To connect your SFTP client to the distant server, follow these steps:
 
-1. Choose _File > Site Manager..._ from the main menu.
+1. Choose _File > Site Manager…_ from the main menu.
 2. In the _Site Manager_ window, press the _New Site_ button, then fill in the site name as **demozilla** in the provided space.
 3. Fill in the SFTP server your host provided in the _Host:_ field.
 4. In the _Logon Type:_ drop down, choose _Normal_, then fill in your provided username and password in the relevant fields.
@@ -96,7 +97,7 @@ To connect your SFTP client to the distant server, follow these steps:
 
 Your window should look something like this:
 
-![](site-manager.png)
+![Screenshot of default landing page of a fictitious website when the file directory is empty](site-manager.png)
 
 Now press _Connect_ to connect to the SFTP server.
 
@@ -106,7 +107,7 @@ Note: Make sure your hosting provider offers SFTP (Secure FTP) connection to you
 
 Once connected, your screen should look something like this (we've connected to an example of our own to give you an idea):
 
-![](connected.png)
+![SFTP client displaying website contents once it has been connected to the SFTP server. Local files are on the left. Remote files are on the right.](connected.png)
 
 Let's examine what you're seeing:
 
@@ -146,7 +147,7 @@ rsync [-options] SOURCE user@x.x.x.x:DESTINATION
 
 You'd need to get such details from your hosting provider.
 
-For more information and further examples, see [How to Use Rsync to Copy/Sync Files Between Servers](https://www.atlantic.net/hipaa-compliant-cloud-hosting-services/how-to-use-rsync-copy-sync-files-servers/).
+For more information and further examples, see [How to Use Rsync to Copy/Sync Files Between Servers](https://www.atlantic.net/vps-hosting/how-to-use-rsync-copy-sync-files-servers/).
 
 Of course, it is a good idea to use a secure connection, as with FTP. In the case of Rsync, you specify SSH details to make the connection over SSH, using the `-e` option. For example:
 
@@ -168,7 +169,7 @@ GitHub allows you to publish websites via [GitHub pages](https://pages.github.co
 
 We've covered the basics of using this in the [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website) article from our [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) guide, so we aren't going to repeat it all here.
 
-However, it is worth knowing that you can also host a website on GitHub, but use a custom domain with it. See [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) for a detailed guide.
+However, it is worth knowing that you can also host a website on GitHub, but use a custom domain with it. See [Using a custom domain with GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) for a detailed guide.
 
 ## Other methods to upload files
 

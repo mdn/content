@@ -1,6 +1,7 @@
 ---
 title: PerformanceServerTiming.description
 slug: Web/API/PerformanceServerTiming/description
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -8,17 +9,16 @@ tags:
   - ServerTiming
 browser-compat: api.PerformanceServerTiming.description
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`description`** read-only property returns a
-{{domxref("DOMString")}} value of the server-specified metric description, or an empty
+string value of the server-specified metric description, or an empty
 string.
 
-## Syntax
+## Value
 
-```js
-serverTiming.description;
-```
+A string.
 
 ## Specifications
 

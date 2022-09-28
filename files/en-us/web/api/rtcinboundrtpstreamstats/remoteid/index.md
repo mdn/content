@@ -1,6 +1,7 @@
 ---
 title: RTCInboundRtpStreamStats.remoteId
 slug: Web/API/RTCInboundRtpStreamStats/remoteId
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -20,6 +21,7 @@ tags:
   - stream
 browser-compat: api.RTCInboundRtpStreamStats.remoteId
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`remoteId`** property of the
@@ -28,15 +30,9 @@ The **`remoteId`** property of the
 object representing the remote peer's {{domxref("RTCRtpSender")}} which is sending the
 media to the local peer.
 
-## Syntax
+## Value
 
-```js
-var remoteStatsId = rtcInboundRtpStreamStats.remoteId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the ID of the
+A string containing the ID of the
 {{domxref("RTCRemoteOutboundRtpStreamStats")}} object that represents the remote peer's
 {{domxref("RTCRtpSender")}} for the synchronization source represented by this stats
 object.

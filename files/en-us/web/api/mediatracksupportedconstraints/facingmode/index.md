@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.facingMode
 slug: Web/API/MediaTrackSupportedConstraints/facingMode
+page-type: web-api-instance-property
 tags:
   - API
   - Constraints
@@ -14,6 +15,7 @@ tags:
   - facingMode
 browser-compat: api.MediaTrackSupportedConstraints.facingMode
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
@@ -27,24 +29,17 @@ constraint isn't supported, it's not included in the list, so this value will ne
 You can access the supported constraints dictionary by calling
 `navigator.mediaDevices.getSupportedConstraints()`.
 
-## Syntax
-
-```js
-facingModeConstraintSupported = supportedConstraintsDictionary.facingMode;
-```
-
-### Value
+## Value
 
 This property is present in the dictionary (and its value is always `true`)
 if the user agent supports the `facingMode` constraint. If the property isn't
 present, this property is missing from the supported constraints dictionary, and you'll
 get {{jsxref("undefined")}} if you try to look at its value.
 
-## Example
+## Examples
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
@@ -54,18 +49,14 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().facingMode) {
-    result.textContent = "Supported!";
-} else {
-    result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().facingMode;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

@@ -15,9 +15,9 @@ The **`accesskey`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) p
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
 
-> **Note:** In the WHATWG spec, it says you can specify multiple space-separated characters, and the browser will use the first one it supports. However, this does not work in most browsers. IE/Edge uses the first one it supports without problems, provided there are no conflicts with other commands.
+> **Note:** In the WHATWG spec, it says you can specify multiple space-separated characters, and the browser will use the first one it supports. However, this does not work in most browsers. IE/Edge uses the first one it supports without problems, provided there are no conflicts with other commands.
 
-The way to activate the accesskey depends on the browser and its platform:
+The way to activate the accesskey depends on the browser and its platform:
 
 <table class="standard-table">
   <tbody>
@@ -93,12 +93,12 @@ The way to activate the accesskey depends on the browser and its platform:
 
 In addition to poor browser support, there are numerous concerns with the `accesskey` attribute:
 
-- An `accesskey` value can conflict with a system or browser keyboard shortcut, or assistive technology functionality. What may work for one combination of operating system, assistive technology, and browser may not work with other combinations.
+- An `accesskey` value can conflict with a system or browser keyboard shortcut, or assistive technology functionality. What may work for one combination of operating system, assistive technology, and browser may not work with other combinations.
 - Certain `accesskey` values may not be present on certain keyboards, especially when internationalization is a concern. So adapting to specific languages could cause further problems.
-- `accesskey` values that rely on numbers may be confusing to individuals experiencing cognitive concerns, where the number doesn't have a logical association with the functionality it triggers.
-- Informing the user that `accesskey`s are present, so that they are aware of the functionality. If the system lacks a method of notifying the user about this feature, the user might accidentally activate `accesskey`s.
+- `accesskey` values that rely on numbers may be confusing to individuals experiencing cognitive concerns, where the number doesn't have a logical association with the functionality it triggers.
+- Informing the user that `accesskey`s are present, so that they are aware of the functionality. If the system lacks a method of notifying the user about this feature, the user might accidentally activate `accesskey`s.
 
-Because of these issues, it is generally advised not to use `accesskey`s for most general-purpose websites and web apps.
+Because of these issues, it is generally advised not to use `accesskey`s for most general-purpose websites and web apps.
 
 - [WebAIM: Keyboard Accessibility - Accesskey](https://webaim.org/techniques/keyboard/accesskey#spec)
 

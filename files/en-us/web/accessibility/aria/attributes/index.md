@@ -10,9 +10,10 @@ tags:
   - States
   - Properties
 ---
-This page lists reference pages covering all the WAI-ARIA attributes discussed on MDN.
 
-ARIA attributes enable modifying an element's states and properties as defined in the accessibility tree.
+This page lists reference pages covering all the <abbr>WAI-ARIA</abbr> attributes discussed on MDN.
+
+<abbr>ARIA</abbr> attributes enable modifying an element's states and properties as defined in the accessibility tree.
 
 > **Note:** ARIA only modifies the accessibility tree, modifying how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior, focus, and ARIA states.
 
@@ -61,23 +62,23 @@ There are 4 categories of ARIA states and properties:
 
 4. ### Relationship attributes
 
-    - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
-    - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
-    - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
-    - [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
-    - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-    - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-    - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
-    - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-    - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-    - [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
-    - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-    - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-    - [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-    - [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
-    - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
-    - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
-    - [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+   - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
+   - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
+   - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+   - [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
+   - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
+   - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+   - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
+   - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+   - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+   - [`aria-flowto`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
+   - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+   - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
+   - [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
+   - [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
+   - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
+   - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
+   - [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
 
 ## Global ARIA attributes
 
@@ -108,22 +109,22 @@ Many of the above attributes are global, meaning they can be included on any ele
 - [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
 
-By "specifically disallowed," all the above attributes are global except for the `aria-label` and `aria-labelledby` properties, which are not allowed on elements with role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/Presentation_role) nor its synonym [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/None_role) role.
+By "specifically disallowed," all the above attributes are global except for the `aria-label` and `aria-labelledby` properties, which are not allowed on elements with role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) nor its synonym [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role) role.
 
 ## States and properties defined on MDN
 
-The following are the reference pages covering the WAI-ARIA states and properties discussed on <abbr title="Mozilla Developer Network">MDN</abbr>.
+The following are the reference pages covering the <abbr>WAI-ARIA</abbr> states and properties discussed on <abbr>MDN</abbr>.
 
 {{SubpagesWithSummaries}}
 
 ## See also
 
-* [Using ARIA: roles, states, and properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [Using ARIA: roles, states, and properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 
 <section id="Quick_links">
 
-1. [**WAI-ARIA attributes**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+1. [**<abbr>WAI-ARIA</abbr> attributes**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>

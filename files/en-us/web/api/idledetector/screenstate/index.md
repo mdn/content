@@ -1,15 +1,18 @@
 ---
 title: IdleDetector.screenState
 slug: Web/API/IdleDetector/screenState
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - screenState
   - IdleDetector
+  - Experimental
 browser-compat: api.IdleDetector.screenState
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
+
+{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
 
 The **`screenState`** read-only property of the {{domxref("IdleDetector")}} interface
 returns a string indicating whether the screen is locked, one of `"locked"` or

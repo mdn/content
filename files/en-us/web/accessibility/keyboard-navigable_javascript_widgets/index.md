@@ -1,11 +1,16 @@
 ---
 title: Keyboard-navigable JavaScript widgets
-slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets 
+slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 tags:
   - Accessibility
   - DOM
   - NeedsUpdate
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 ### Overview
 
 Web applications often use JavaScript to mimic desktop widgets such as menus, tree views, rich text fields, and tab panels. These widgets are typically composed of {{ HTMLElement("div") }} and {{ HTMLElement("span") }} elements that do not, by nature, offer the same keyboard functionality that their desktop counterparts do. This document describes techniques to make JavaScript widgets accessible with the keyboard.
@@ -16,7 +21,7 @@ By default, when people use the tab key to browse a webpage, only interactive el
 
 The order in which elements gain focus when using a keyboard, is the source order by default. In exceptional circumstances, authors may want to redefine the order. To do this, authors can set `tabindex` to any positive number.
 
-> **Warning:** avoid using positive values for `tabindex`.  Elements with a positive `tabindex` are put before the default interactive elements on the page, which means page authors will have to set (and maintain) `tabindex` values for all focusable elements on the page whenever they use one or more positive values for `tabindex`.
+> **Warning:** avoid using positive values for `tabindex`. Elements with a positive `tabindex` are put before the default interactive elements on the page, which means page authors will have to set (and maintain) `tabindex` values for all focusable elements on the page whenever they use one or more positive values for `tabindex`.
 
 The following table describes `tabindex` behavior in modern browsers:
 
@@ -31,13 +36,13 @@ The following table describes `tabindex` behavior in modern browsers:
   <tbody>
     <tr>
       <td>not present</td>
-      <td>Follows the platform convention of the element (yes for form controls,links, etc.).</td>
+      <td>Follows the platform convention of the element (yes for form controls, links, etc.).</td>
       <td>Follows the platform convention of the element.</td>
     </tr>
     <tr>
       <td>Negative (i.e. <code>tabindex="-1"</code>)</td>
       <td>Yes</td>
-      <td>No; author must focus the element with <a href="/en-US/docs/Web/API/Element/focus_event"><code>focus()</code></a> in response to arrow or other key presses.</td>
+      <td>No; author must focus the element with <a href="/en-US/docs/Web/API/HTMLElement/focus"><code>focus()</code></a> in response to arrow or other key presses.</td>
     </tr>
     <tr>
       <td>Zero (i.e. <code>tabindex="0"</code>)</td>
@@ -60,15 +65,14 @@ Authors can also make a {{ HTMLElement("div") }} or {{ HTMLElement("span") }} ke
 
 #### Grouping controls
 
-For grouping widgets such as menus, tablists, grids, or tree views, the parent element should be in the tab order (`tabindex="0"`), and each descendent choice/tab/cell/row should be removed from the tab order (`tabindex="-1"`). Users should be able to navigate the descendent elements using arrow keys. (For a full description of the keyboard support that is normally expected for typical widgets, see the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/).)
+For grouping widgets such as menus, tablists, grids, or tree views, the parent element should be in the tab order (`tabindex="0"`), and each descendant choice/tab/cell/row should be removed from the tab order (`tabindex="-1"`). Users should be able to navigate the descendant elements using arrow keys. (For a full description of the keyboard support that is normally expected for typical widgets, see the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/).)
 
 The example below shows this technique used with a nested menu control. Once keyboard focus lands on the containing {{ HTMLElement("ul") }} element, the JavaScript developer must programmatically manage focus and respond to arrow keys. For techniques for managing focus within widgets, see "Managing focus inside groups" below.
 
-_Example 2: A menu control using tabindex to control keyboard access_
-
 ```html
 <ul id="mb1" tabindex="0">
-  <li id="mb1_menu1" tabindex="-1"> Font
+  <li id="mb1_menu1" tabindex="-1">
+    Font
     <ul id="fontMenu" title="Font" tabindex="-1">
       <li id="sans-serif" tabindex="-1">Sans-serif</li>
       <li id="serif" tabindex="-1">Serif</li>
@@ -76,14 +80,16 @@ _Example 2: A menu control using tabindex to control keyboard access_
       <li id="fantasy" tabindex="-1">Fantasy</li>
     </ul>
   </li>
-  <li id="mb1_menu2" tabindex="-1"> Style
+  <li id="mb1_menu2" tabindex="-1">
+    Style
     <ul id="styleMenu" title="Style" tabindex="-1">
       <li id="italic" tabindex="-1">Italics</li>
       <li id="bold" tabindex="-1">Bold</li>
       <li id="underline" tabindex="-1">Underlined</li>
     </ul>
   </li>
-  <li id="mb1_menu3" tabindex="-1"> Justification
+  <li id="mb1_menu3" tabindex="-1">
+    Justification
     <ul id="justificationMenu" title="Justification" tabindex="-1">
       <li id="left" tabindex="-1">Left</li>
       <li id="center" tabindex="-1">Centered</li>
@@ -102,8 +108,8 @@ When a custom control becomes disabled, remove it from the tab order by setting 
 
 When a user tabs away from a widget and returns, focus should return to the specific element that had focus, for example, the tree item or grid cell. There are two techniques for accomplishing this:
 
-1.  Roving `tabindex`: programmatically moving focus
-2.  `aria-activedescendant`: managing a 'virtual' focus
+1. Roving `tabindex`: programmatically moving focus
+2. `aria-activedescendant`: managing a 'virtual' focus
 
 #### Technique 1: Roving tabindex
 
@@ -111,9 +117,9 @@ Setting the `tabindex` of the focused element to "0" ensures that if the user ta
 
 Bind a key down handler to each element in the group, and when an arrow key is used to move to another element:
 
-1.  programmatically apply focus to the new element,
-2.  update the `tabindex` of the focused element to "0", and
-3.  update the `tabindex` of the previously focused element to "-1".
+1. programmatically apply focus to the new element,
+2. update the `tabindex` of the focused element to "0", and
+3. update the `tabindex` of the previously focused element to "-1".
 
 Here's an example of a [WAI-ARIA tree view](https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html) using this technique.
 
@@ -127,13 +133,13 @@ Do not use `createEvent()`, `initEvent()` and `dispatchEvent()` to send focus to
 
 Don't assume that all focus changes will come via key and mouse events: assistive technologies such as screen readers can set the focus to any focusable element. Track focus using `onfocus` and `onblur` instead.
 
-`onfocus` and `onblur` can now be used with every element. There is no standard DOM interface to get the current document focus. If you want to track the focus status, you can use the [document.activeElement](/en-US/docs/Web/API/Document/activeElement) to get the active element. You can also use [document.hasFocus](/en-US/docs/Web/API/Document/hasFocus) to make sure if the current document focus.
+`onfocus` and `onblur` can now be used with every element. There is no standard DOM interface to get the current document focus. If you want to track the focus status, you can use the [document.activeElement](/en-US/docs/Web/API/Document/activeElement) to get the active element. You can also use [document.hasFocus](/en-US/docs/Web/API/Document/hasFocus) to make sure if the current document focus.
 
 ### Technique 2: `aria-activedescendant`
 
 This technique involves binding a single event handler to the container widget and using the `aria-activedescendant` to track a "virtual" focus. (For more information about ARIA, see this [overview of accessible web applications and widgets](/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets).)
 
-The `aria-activedescendant` property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of `aria-activedescendant` and ensuring that the current item is styled appropriately (for example, with a border or background color).
+The `aria-activedescendant` property identifies the ID of the descendant element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of `aria-activedescendant` and ensuring that the current item is styled appropriately (for example, with a border or background color).
 
 ### General Guidelines
 
@@ -147,7 +153,7 @@ To ensure that the user experience is consistent regardless of input device, key
 
 #### Ensure that the keyboard can be used to activate element
 
-To ensure that the keyboard can be used to activate elements, any handlers bound to mouse events should also be bound to keyboard events. For example, to ensure that the Enter key will activate an element, if you have an `onclick="doSomething()"`, you should bind `doSomething()` to the key down event as well: `onkeydown="return event.keyCode != 13 || doSomething();"`.
+To ensure that the keyboard can be used to activate elements, any handlers bound to mouse events should also be bound to keyboard events. For example, to ensure that the Enter key will activate an element, if you have an `onclick="doSomething()"`, you should bind `doSomething()` to the key down event as well: `onkeydown="return event.keyCode !== 13 || doSomething();"`.
 
 #### Always draw the focus for tabindex="-1" items and elements that receive focus programmatically
 
@@ -160,7 +166,7 @@ If your widget handles a key event, prevent the browser from also handling it (f
 For example:
 
 ```html
-<span tabindex="-1" onkeydown="return handleKeyDown();">
+<span tabindex="-1" onkeydown="return handleKeyDown();">…</span>
 ```
 
 If `handleKeyDown()` returns `false`, the event will be consumed, preventing the browser from performing any action based on the keystroke.

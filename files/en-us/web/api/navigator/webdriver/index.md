@@ -1,16 +1,17 @@
 ---
 title: Navigator.webdriver
 slug: Web/API/Navigator/webdriver
+page-type: web-api-instance-property
 tags:
   - API
   - Navigator
   - Property
   - Reference
   - WebDriver
-  - weblock
 browser-compat: api.Navigator.webdriver
 ---
-{{SeeCompatTable}}{{APIRef("WebDriver")}}
+
+{{APIRef("WebDriver")}}
 
 The **`webdriver`** read-only property
 of the {{domxref("navigator")}} interface indicates whether the user agent is
@@ -29,13 +30,7 @@ The `navigator.webdriver` property is true when in:
   - : The `marionette.enabled` preference or `--marionette` flag is
     passed.
 
-## Syntax
-
-```js
-var isAutomated = navigator.webdriver
-```
-
-### Value
+## Value
 
 A {{JSxRef("Boolean")}}
 

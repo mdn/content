@@ -1,26 +1,27 @@
 ---
 title: Selection.modify()
 slug: Web/API/Selection/modify
+page-type: web-api-instance-method
 tags:
   - API
   - API:Mozilla Extensions
   - API:WebKit Extensions
   - HTML Editing
   - Method
-  - Non-standard
   - Reference
   - Selection
 browser-compat: api.Selection.modify
 ---
-{{APIRef("DOM")}}{{Non-standard_Header}}
+
+{{APIRef("DOM")}}
 
 The **`Selection.modify()`** method applies a change to the
 current selection or cursor position, using simple textual commands.
 
 ## Syntax
 
-```js
-sel.modify(alter, direction, granularity)
+```js-nolint
+modify(alter, direction, granularity)
 ```
 
 ### Parameters
@@ -40,17 +41,21 @@ sel.modify(alter, direction, granularity)
     `"sentenceboundary"`, `"paragraphboundary"`, or
     `"documentboundary"`.
 
-> **Note:** Gecko does **not** implement
+> **Note:** Firefox does **not** implement
 > `"sentence"`, `"paragraph"`, `"sentenceboundary"`,
 > `"paragraphboundary"`, or `"documentboundary"`. WebKit and Blink
 > do.
 
-> **Note:** Starting in {{Gecko("5.0")}}, the `"word"`
+> **Note:** Starting in Firefox 5, the `"word"`
 > granularity no longer includes the following space, regardless of the default platform
 > behavior. This makes the behavior more consistent, as well as making it work the same
 > way WebKit used to work, but unfortunately they have recently changed their behavior.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 This example demonstrates the various `granularity` options for modifying a
 selection. Click somewhere inside the example (optionally selecting some text), and then
@@ -59,8 +64,16 @@ click the button to expand the selection.
 ### HTML
 
 ```html
-<p>Click somewhere in this example. Then click the button below to expand the selection. Watch what happens!</p>
-<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+<p>
+  Click somewhere in this example. Then click the button below to expand the
+  selection. Watch what happens!
+</p>
+<p>
+  Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,
+  cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+  maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+  repellendus.
+</p>
 
 <label for="granularity">Granularity:</label>
 <select id="granularity">
@@ -75,7 +88,7 @@ click the button to expand the selection.
   <option value="documentboundary">Document Boundary</option>
 </select>
 
-<br><br>
+<br /><br />
 
 <button>Extend selection</button>
 ```
@@ -96,7 +109,7 @@ function modify() {
 
 ### Result
 
-{{EmbedLiveSample("Example", 700, 200)}}
+{{EmbedLiveSample("Examples", 700, 200)}}
 
 ## Specifications
 

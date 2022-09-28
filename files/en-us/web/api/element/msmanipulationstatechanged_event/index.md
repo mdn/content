@@ -1,6 +1,7 @@
 ---
 title: 'Element: MSManipulationStateChanged event'
 slug: Web/API/Element/MSManipulationStateChanged_event
+page-type: web-api-event
 tags:
   - Event
   - Event:Microsoft Extensions
@@ -9,9 +10,10 @@ tags:
   - Reference
 browser-compat: api.Element.MSManipulationStateChanged_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
-**`MSManipulationStateChanged`** fires when the state of an element being manipulated has changed (ie. whenever you start or finish panning or zooming an element).
+**`MSManipulationStateChanged`** fires when the state of an element being manipulated has changed (i.e. whenever you start or finish panning or zooming an element).
 
 It is a proprietary event specific to Microsoft Edge and Internet Explorer.
 
@@ -50,7 +52,7 @@ Get manipulation states using the `lastState` and `currentState` properties.
 // Listen for panning state change events
 outerScroller.addEventListener("MSManipulationStateChanged", function(e) {
     // Check to see if they lifted while pulled to the top
-    if (e.currentState == MS_MANIPULATION_STATE_INERTIA &&
+    if (e.currentState === MS_MANIPULATION_STATE_INERTIA &&
         outerScroller.scrollTop === 0) {
         refreshItemsAsync();
     }

@@ -1,6 +1,7 @@
 ---
 title: HTMLTableRowElement.insertCell()
 slug: Web/API/HTMLTableRowElement/insertCell
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLTableRowElement.insertCell
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableRowElement.insertCell()`** method inserts a new
@@ -26,8 +28,9 @@ reference to the cell.
 
 ## Syntax
 
-```js
-var newCell = HTMLTableRowElement.insertCell(index);
+```js-nolint
+insertCell()
+insertCell(index)
 ```
 
 {{domxref("HTMLTableRowElement")}} is a reference to an HTML {{HtmlElement("tr")}}
@@ -48,7 +51,7 @@ cell.
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `index` is greater than the number of cells.
 
-## Example
+## Examples
 
 This example uses {{domxref("HTMLTableElement.insertRow()")}} to append a new row to a
 table.
@@ -62,9 +65,15 @@ element.) Finally, we add some text to the cell using
 
 ```html
 <table id="my-table">
-  <tr><td>Row 1</td></tr>
-  <tr><td>Row 2</td></tr>
-  <tr><td>Row 3</td></tr>
+  <tr>
+    <td>Row 1</td>
+  </tr>
+  <tr>
+    <td>Row 2</td>
+  </tr>
+  <tr>
+    <td>Row 3</td>
+  </tr>
 </table>
 ```
 
@@ -92,7 +101,7 @@ addRow('my-table');
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -105,4 +114,4 @@ addRow('my-table');
 ## See also
 
 - {{domxref("HTMLTableElement.insertRow()")}}
-- The HTML element representing cells: {{domxref("HTMLTableCellElement")}}
+- The HTML element representing cells: {{domxref("HTMLTableCellElement")}}

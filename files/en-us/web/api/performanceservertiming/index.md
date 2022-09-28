@@ -1,6 +1,7 @@
 ---
 title: PerformanceServerTiming
 slug: Web/API/PerformanceServerTiming
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,6 +9,7 @@ tags:
   - ServerTiming
 browser-compat: api.PerformanceServerTiming
 ---
+
 {{APIRef("Resource Timing API")}} {{AvailableInWorkers}} {{securecontext_header}}
 
 The **`PerformanceServerTiming`** interface surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
@@ -16,21 +18,21 @@ This interface is restricted to the same origin, but you can use the {{HTTPHeade
 
 ## Properties
 
-- {{domxref('PerformanceServerTiming.description')}}{{readonlyInline}}
-  - : A {{domxref("DOMString")}} value of the server-specified metric description, or an empty string.
-- {{domxref('PerformanceServerTiming.duration')}}{{readonlyInline}}
+- {{domxref('PerformanceServerTiming.description')}} {{ReadOnlyInline}}
+  - : A string value of the server-specified metric description, or an empty string.
+- {{domxref('PerformanceServerTiming.duration')}} {{ReadOnlyInline}}
   - : A double that contains the server-specified metric duration, or value `0.0`.
-- {{domxref('PerformanceServerTiming.name')}}{{readonlyInline}}
-  - : A {{domxref("DOMString")}} value of the server-specified metric name.
+- {{domxref('PerformanceServerTiming.name')}} {{ReadOnlyInline}}
+  - : A string value of the server-specified metric name.
 
 ## Methods
 
 - {{domxref('PerformanceServerTiming.toJSON()')}}
-  - : Returns a {{domxref("DOMString")}} that is the JSON representation of the `PerformanceServerTiming` object.
+  - : Returns a string that is the JSON representation of the `PerformanceServerTiming` object.
 
 ## Example
 
-Given a server that sends the {{HTTPHeader("Server-Timing")}} header, for example a node.js server like this:
+Given a server that sends the {{HTTPHeader("Server-Timing")}} header, for example a Node.js server like this:
 
 ```js
 const http = require('http');
@@ -45,7 +47,7 @@ function requestHandler(request, response) {
   };
   response.writeHead(200, headers);
   response.write('');
-  return setTimeout(_ => {
+  return setTimeout(() => {
    response.end();
  }, 1000)
 };

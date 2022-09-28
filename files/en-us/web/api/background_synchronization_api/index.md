@@ -1,6 +1,7 @@
 ---
 title: Background Synchronization API
 slug: Web/API/Background_Synchronization_API
+page-type: web-api-overview
 tags:
   - API
   - Background
@@ -11,10 +12,11 @@ tags:
   - Service Workers
   - Sync
   - Web Background Synchronization API
+  - Experimental
+browser-compat: api.SyncManager
 ---
-{{securecontext_header}}
 
-{{DefaultAPISidebar("Background Sync")}}
+{{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
 The Background Synchronization API provides a way to defer tasks to be run in a {{domxref('Service Worker API','service worker')}} until the user has a stable network connection.
 
@@ -32,7 +34,7 @@ As this API relies on service workers, functionality provided by this API is onl
 
 ## Background Synchronization Interfaces
 
-- {{domxref('SyncManager')}}
+- {{domxref('SyncManager')}} {{Experimental_Inline}}
   - : Registers tasks to be run in a service worker at a later time with network connectivity. These tasks are referred to as _background sync requests_.
 - {{domxref('SyncEvent')}}
   - : Represents a synchronization event, sent to the {{domxref('ServiceWorkerGlobalScope', 'global scope')}} of a {{domxref('ServiceWorker')}}. It provides a way to run tasks in the service worker with network connectivity.
@@ -41,10 +43,10 @@ As this API relies on service workers, functionality provided by this API is onl
 
 The following additions to the {{domxref('Service Worker API')}} are specified in the Background Sync specification to provide an entry point for using Background Sync.
 
-- {{domxref("ServiceWorkerRegistration.sync")}} {{readonlyinline}}
+- {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run with network connectivity.
-- {{domxref("ServiceWorkerGlobalScope.onsync")}}
-  - : An event handler fired whenever a {{Event("sync")}} event occurs. This happens either immediately if the network is available or as soon as the network becomes available.
+- {{domxref("ServiceWorkerGlobalScope.sync_event", "onsync")}}
+  - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}} event occurs. This happens either immediately if the network is available or as soon as the network becomes available.
 
 ## Examples
 
@@ -58,9 +60,9 @@ The following asynchronous function registers a background sync from a browsing 
 async function syncMessagesLater() {
   const registration = await navigator.serviceWorker.ready;
   try {
-    await registration.sync.register('sync-messages');
+    await registration.sync.register("sync-messages");
   } catch {
-    console.log('Background Sync could not be registered!');
+    console.log("Background Sync could not be registered!");
   }
 }
 ```
@@ -70,10 +72,10 @@ async function syncMessagesLater() {
 This code checks to see if a background sync task with a given tag is registered.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
-  registration.sync.getTags().then(tags => {
-    if (tags.includes('sync-messages'))
-      console.log('Messages sync already requested');
+navigator.serviceWorker.ready.then((registration) => {
+  registration.sync.getTags().then((tags) => {
+    if (tags.includes("sync-messages"))
+      console.log("Messages sync already requested");
   });
 });
 ```
@@ -83,8 +85,8 @@ navigator.serviceWorker.ready.then(registration => {
 The following example shows how to respond to a background sync event in the service worker.
 
 ```js
-self.addEventListener('sync', event => {
-  if (event.tag == 'sync-messages') {
+self.addEventListener("sync", (event) => {
+  if (event.tag === "sync-messages") {
     event.waitUntil(sendOutboxMessages());
   }
 });
@@ -92,12 +94,12 @@ self.addEventListener('sync', event => {
 
 ## Specifications
 
-{{Specifications("api.SyncManager")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.SyncManager")}}
+{{Compat}}
 
 ## See also
 
-- [Introducing Background Sync](https://developers.google.com/web/updates/2015/12/background-sync)
+- [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/)

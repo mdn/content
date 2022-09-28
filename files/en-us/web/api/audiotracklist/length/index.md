@@ -1,6 +1,7 @@
 ---
 title: AudioTrackList.length
 slug: Web/API/AudioTrackList/length
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -15,6 +16,7 @@ tags:
   - track
 browser-compat: api.AudioTrackList.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrackList")}}**
@@ -23,27 +25,21 @@ property **`length`** returns the number of entries in the
 representing one audio track in the media element. A value of 0 indicates that
 there are no audio tracks in the media.
 
-## Syntax
-
-```js
-var trackCount = AudioTrackList.length;
-```
-
-### Value
+## Value
 
 A number indicating how many audio tracks are included in the
 `AudioTrackList`. Each track can be accessed by treating the
 `AudioTrackList` as an array of objects of type {{domxref("AudioTrack")}}.
 
-## Example
+## Examples
 
 This snippet gets the number of audio tracks in the first {{HTMLElement("video")}}
 element found in the {{Glossary("DOM")}} by {{domxref("Document.querySelector",
   "querySelector()")}}.
 
 ```js
-var videoElem = document.querySelector("video");
-var numAudioTracks = 0;
+const videoElem = document.querySelector("video");
+let numAudioTracks = 0;
 
 if (videoElem.audioTracks) {
   numAudioTracks = videoElem.audioTracks.length;

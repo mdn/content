@@ -6,6 +6,7 @@ tags:
   - HTTP
   - WebMechanics
 ---
+
 {{HTTPSidebar}}
 
 HTTP messages are how data is exchanged between a server and a client. There are two types of messages: _requests_ sent by the client to trigger an action on the server, and _responses_, the answer from the server.
@@ -22,7 +23,7 @@ HTTP requests, and responses, share similar structure and are composed of:
 
 1. A _start-line_ describing the requests to be implemented, or its status of whether successful or a failure. This start-line is always a single line.
 2. An optional set of _HTTP headers_ specifying the request, or describing the body included in the message.
-3. A blank line indicating all meta-information for the request has been sent.
+3. A blank line indicating all meta-information for the request has been sent.
 4. An optional _body_ containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
 
 The start-line and HTTP headers of the HTTP message are collectively known as the _head_ of the requests, whereas its payload is known as the _body_.
@@ -38,17 +39,17 @@ HTTP requests are messages sent by the client to initiate an action on the serve
 1. An _[HTTP method](/en-US/docs/Web/HTTP/Methods)_, a verb (like {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}) or a noun (like {{HTTPMethod("HEAD")}} or {{HTTPMethod("OPTIONS")}}), that describes the action to be performed. For example, `GET` indicates that a resource should be fetched or `POST` means that data is pushed to the server (creating or modifying a resource, or generating a temporary document to send back).
 2. The _request target_, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be
 
-    - An absolute path, ultimately followed by a `'?'` and query string. This is the most common form, known as the _origin form_, and is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods.
-      - `POST / HTTP/1.1`
-      - `GET /background.png HTTP/1.0`
-      - `HEAD /test.html?query=alibaba HTTP/1.1`
-      - `OPTIONS /anypage.html HTTP/1.0`
-    - A complete URL, known as the _absolute form_, is mostly used with `GET` when connected to a proxy.
-      `GET https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
-    - The authority component of a URL, consisting of the domain name and optionally the port (prefixed by a `':'`), is called the _authority form_. It is only used with `CONNECT` when setting up an HTTP tunnel.
-      `CONNECT developer.mozilla.org:80 HTTP/1.1`
-    - The _asterisk form_, a simple asterisk (`'*'`) is used with `OPTIONS`, representing the server as a whole.
-      `OPTIONS * HTTP/1.1`
+   - An absolute path, ultimately followed by a `'?'` and query string. This is the most common form, known as the _origin form_, and is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods.
+     - `POST / HTTP/1.1`
+     - `GET /background.png HTTP/1.0`
+     - `HEAD /test.html?query=alibaba HTTP/1.1`
+     - `OPTIONS /anypage.html HTTP/1.0`
+   - A complete URL, known as the _absolute form_, is mostly used with `GET` when connected to a proxy.
+     `GET https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
+   - The authority component of a URL, consisting of the domain name and optionally the port (prefixed by a `':'`), is called the _authority form_. It is only used with `CONNECT` when setting up an HTTP tunnel.
+     `CONNECT developer.mozilla.org:80 HTTP/1.1`
+   - The _asterisk form_, a simple asterisk (`'*'`) is used with `OPTIONS`, representing the server as a whole.
+     `OPTIONS * HTTP/1.1`
 
 3. The _HTTP version_, which defines the structure of the remaining message, acting as an indicator of the expected version to use for the response.
 
@@ -99,7 +100,7 @@ Many different headers can appear in responses. These can be divided into severa
 
 ### Body
 
-The last part of a response is the body. Not all responses have one: responses with a status code that sufficiently answers the request without the need for corresponding payload (like {{HTTPStatus("201")}} **`Created`** or {{HTTPStatus("204")}} **`No Content`**) usually don't.
+The last part of a response is the body. Not all responses have one: responses with a status code that sufficiently answers the request without the need for corresponding payload (like {{HTTPStatus("201")}} **`Created`** or {{HTTPStatus("204")}} **`No Content`**) usually don't.
 
 Bodies can be broadly divided into three categories:
 

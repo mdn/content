@@ -8,11 +8,13 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.escape
 ---
-{{jsSidebar("Objects")}}
+
+{{jsSidebar("Objects")}}{{Deprecated_Header}}
 
 > **Warning:** Although `escape()` is not
-> strictly deprecated (as in "removed from the Web standards"), it is defined in [Annex
-> B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) of the ECMA-262 standard, whose introduction states:
+> strictly deprecated (as in "removed from the Web standards"), it is defined in
+> [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers)
+> of the ECMA-262 standard, whose introduction states:
 >
 > > … All of the language features and behaviors specified in this annex have
 > > one or more undesirable characteristics and in the absence of legacy usage would be
@@ -26,7 +28,7 @@ sequence.
 
 > **Note:** This function was used mostly for URL queries (the part of a
 > URL following `?`)—_not_ for escaping ordinary String literals,
-> which use the format "`\xHH`". (`HH` are
+> which use the format `\xHH`. (`HH` are
 > two hexadecimal digits, and the form `\xHH\xHH` is
 > used for higher-plane Unicode characters.)
 >
@@ -36,7 +38,7 @@ sequence.
 
 ## Syntax
 
-```js
+```js-nolint
 escape(str)
 ```
 
@@ -82,7 +84,7 @@ escape('@*_+-./');    // "@*_+-./"
 
 ## See also
 
-- A polyfill of `escape` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `escape` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("encodeURI")}}
 - {{jsxref("encodeURIComponent")}}
 - {{jsxref("unescape")}}

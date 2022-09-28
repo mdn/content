@@ -8,23 +8,16 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.menclose
 ---
+
 {{MathMLRef}}
 
 The MathML `<menclose>` element renders its content inside an enclosing notation specified by the `notation` attribute.
 
 ## Attributes
 
-- class, id, style
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
-- href
-  - : Used to set a hyperlink to a specified URI.
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- notation
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+
+- `notation`
 
   - : A list of notations, separated by white space, to apply to the child elements. The symbols are each drawn as if the others are not present, and therefore may overlap. Possible values are:
 
@@ -51,16 +44,16 @@ The MathML `<menclose>` element renders its content inside an enclosing notation
 ## Examples
 
 ```html
-<math>
-
-  <menclose notation="circle box">
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-  </menclose>
-
+<math display="block">
+  <menclose notation="circle box">
+    <mi>x</mi>
+    <mo>+</mo>
+    <mi>y</mi>
+  </menclose>
 </math>
 ```
+
+{{ EmbedLiveSample('menclose_example', 700, 200, "", "") }}
 
 ## Specifications
 
@@ -69,11 +62,3 @@ The MathML `<menclose>` element renders its content inside an enclosing notation
 ## Browser compatibility
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- Addtional values for the `notation` attribute have been added in the following releases:
-
-  - `madruwb` in Gecko 2.0 {{GeckoRelease("2.0")}}.
-  - `updiagonalarrow` in Gecko 24.0 {{GeckoRelease("24.0")}}
-  - `phasorangle` in Gecko 32.0 {{GeckoRelease("32.0")}}

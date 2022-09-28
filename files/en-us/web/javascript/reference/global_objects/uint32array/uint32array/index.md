@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Uint32Array.Uint32Array
 ---
+
 {{JSRef}}
 
 The **`Uint32Array()`** typed array constructor creates an
@@ -20,16 +21,18 @@ notation).
 
 ## Syntax
 
-```js
-new Uint32Array(); // new in ES2017
-new Uint32Array(length);
-new Uint32Array(typedArray);
-new Uint32Array(object);
+```js-nolint
+new Uint32Array()
+new Uint32Array(length)
+new Uint32Array(typedArray)
+new Uint32Array(object)
 
-new Uint32Array(buffer);
-new Uint32Array(buffer, byteOffset);
-new Uint32Array(buffer, byteOffset, length);
+new Uint32Array(buffer)
+new Uint32Array(buffer, byteOffset)
+new Uint32Array(buffer, byteOffset, length)
 ```
+
+> **Note:** `Uint32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -64,29 +67,30 @@ new Uint32Array(buffer, byteOffset, length);
 
 ```js
 // From a length
-var uint32 = new Uint32Array(2);
+const uint32 = new Uint32Array(2);
 uint32[0] = 42;
 console.log(uint32[0]); // 42
 console.log(uint32.length); // 2
 console.log(uint32.BYTES_PER_ELEMENT); // 4
 
 // From an array
-var arr = new Uint32Array([21,31]);
-console.log(arr[1]); // 31
+const x = new Uint32Array([21, 31]);
+console.log(x[1]); // 31
 
 // From another TypedArray
-var x = new Uint32Array([21, 31]);
-var y = new Uint32Array(x);
+const y = new Uint32Array(x);
 console.log(y[0]); // 21
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(16);
-var z = new Uint32Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(32);
+const z = new Uint32Array(buffer, 4, 4);
+console.log(z.byteOffset); // 4
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
-var uint32 = new Uint32Array(iterable);
-// Uint32Array[1, 2, 3]
+const iterable = function*() { yield* [1, 2, 3]; }();
+const uint32FromIterable = new Uint32Array(iterable);
+console.log(uint32FromIterable);
+// Uint32Array [1, 2, 3]
 ```
 
 ## Specifications
@@ -97,26 +101,9 @@ var uint32 = new Uint32Array(iterable);
 
 {{Compat}}
 
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Uint32Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Uint32Array` constructor as a function without `new`, will throw
-a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-var dv = Uint32Array([1, 2, 3]);
-// TypeError: calling a builtin Uint32Array constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new Uint32Array([1, 2, 3]);
-```
-
 ## See also
 
-- A polyfill of `Uint32Array` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `Uint32Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

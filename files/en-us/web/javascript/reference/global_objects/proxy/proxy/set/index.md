@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.set
 ---
+
 {{JSRef}}
 
 The **`handler.set()`** method is a trap for setting a property
@@ -17,9 +18,9 @@ value.
 
 ## Syntax
 
-```js
-const p = new Proxy(target, {
-  set: function(target, property, value, receiver) {
+```js-nolint
+new Proxy(target, {
+  set(target, property, value, receiver) {
   }
 });
 ```
@@ -92,9 +93,9 @@ The following code traps setting a property value.
 
 ```js
 const p = new Proxy({}, {
-  set: function(target, prop, value, receiver) {
+  set(target, prop, value, receiver) {
     target[prop] = value;
-    console.log('property set: ' + prop + ' = ' + value);
+    console.log(`property set: ${prop} = ${value}`);
     return true;
   }
 })
@@ -117,5 +118,5 @@ console.log(p.a);       // 10
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Reflect.set()")}}

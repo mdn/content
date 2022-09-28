@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.split
 ---
+
 {{JSRef}}
 
 The **`Symbol.split`** well-known symbol specifies the method that splits a string at the indices that match a regular expression. This function is called by the {{jsxref("String.prototype.split()")}} method.
@@ -43,7 +44,7 @@ console.log('Another one bites the dust'.split(new ReverseSplit()));
 
 ## See also
 
-- A polyfill of `Symbol.split` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.split` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}

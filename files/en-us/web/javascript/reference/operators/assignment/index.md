@@ -9,17 +9,18 @@ tags:
   - Reference
 browser-compat: javascript.operators.assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The simple assignment operator (`=`) is used to assign a value to a
-variable. The assignment operation evaluates to the assigned value. Chaining the
+variable. The assignment operation evaluates to the assigned value. Chaining the
 assignment operator is possible in order to assign a single value to multiple variables.
 
 {{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 x = y
 ```
 
@@ -47,5 +48,4 @@ x = y = z // x, y and z are all 25
 
 ## See also
 
-- [Assignment
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)

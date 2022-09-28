@@ -2,7 +2,6 @@
 title: Link prefetching FAQ
 slug: Web/HTTP/Link_prefetching_FAQ
 tags:
-  - Gecko
   - HTML
   - HTTP
   - Link
@@ -11,25 +10,20 @@ tags:
   - Prefetch
   - Web Development
 ---
-### What is link prefetching?
 
 Link prefetching is a browser mechanism, which utilizes browser idle time to download or _prefetch_ documents that the user might visit in the near future. A web page provides a set of prefetching hints to the browser, and after the browser is finished loading the page, it begins silently prefetching specified documents and stores them in its cache. When the user visits one of the prefetched documents, it can be served up quickly out of the browser's cache.
-
-### Does prefetching work with HTTPS?
-
-Starting in Gecko 1.9.1 (Firefox 3.5), HTTPS content can be prefetched.
 
 ### What are the prefetching hints?
 
 The browser looks for either an HTML {{ HTMLElement("link") }} or an [HTTP `Link:` header](/en-US/docs/Web/HTTP/Headers) with a relation type of either `next` or `prefetch`. An example using the `link` tag follows:
 
 ```html
-<link rel="prefetch" href="/images/big.jpeg">
+<link rel="prefetch" href="/images/big.jpeg" />
 ```
 
 The same prefetching hint using an HTTP `Link:` header:
 
-```
+```http
 Link: </images/big.jpeg>; rel=prefetch
 ```
 
@@ -40,8 +34,11 @@ The browser observes all of these hints and queues up each unique request to be 
 Some more examples follow:
 
 ```html
-<link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css">
-<link rel="next" href="2.html">
+<link
+  rel="prefetch alternate stylesheet"
+  title="Designed for Mozilla"
+  href="mozspecific.css" />
+<link rel="next" href="2.html" />
 ```
 
 ### Are anchor (\<a>) tags prefetched?
@@ -52,7 +49,7 @@ No, only `<link>` tags with a relation type of `next` or `prefetch` are prefetch
 
 Yes, link prefetching as outlined in this document does not violate any existing web standards. In fact, the HTML 4.01 specification explicitly allows for the definition of new link relation types ([see Section 6.12: Link types](https://www.w3.org/TR/html4/types.html#type-links)). However, the exact mechanism employed by Mozilla is not yet standardized. An Internet-Draft is in the works.
 
-Standardization of this technique is part of the scope of HTML 5, see the current working draft, [section §5.11.3.13. Link type "prefetch"](https://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch) .
+Standardization of this technique is part of the scope of HTML 5, see the current working draft, [section §5.11.3.13. Link type "prefetch"](https://html.spec.whatwg.org/#link-type-prefetch) .
 
 ### How is browser idle time determined?
 
@@ -68,7 +65,7 @@ Yes and no. If you are downloading something using Mozilla, link prefetching wil
 
 ### Are there any restrictions on what is prefetched?
 
-Yes, only `http://` (and, starting in {{ Gecko("1.9.1") }} `https://`) URLs can be prefetched. Other protocols (such as FTP) do not provide rich enough support for client side caching.
+Yes, only `http://` and `https://` URLs can be prefetched. Other protocols (such as FTP) do not provide rich enough support for client side caching.
 
 ### Will Mozilla prefetch documents from a different host?
 
@@ -84,7 +81,7 @@ This may impact referrer tracking that is commonly used on many sites. For this 
 
 Yes, we send the following header along with each prefetch request:
 
-```
+```http
 X-moz: prefetch
 ```
 
@@ -108,21 +105,12 @@ It is important that websites adopt `<link>` tag based prefetching instead of tr
 
 ### Which browsers support link prefetching?
 
-Browsers based on Mozilla 1.2 (or later) as well as browsers based on Mozilla 1.0.2 (or later) support prefetching. This includes Firefox and Netscape 7.01+. Camino builds as of March 2003 are based on Mozilla 1.0.1, and therefore do not support prefetching. [Test](https://gemal.dk/browserspy/prefetch.php) your browser to see if it supports Link Prefetching.
+Browsers based on Mozilla 1.2 (or later), as well as browsers based on Mozilla 1.0.2 (or later), support prefetching. This includes Firefox and Netscape 7.01+. Camino builds as of March 2003 are based on Mozilla 1.0.1, and therefore do not support prefetching. [Test](https://browserspy.dk/prefetch.php) your browser to see if it supports Link Prefetching.
 
 ### Privacy implications
 
-Along with the referral and URL-following implications already mentioned above, prefetching will generally cause the cookies of the prefetched site to be accessed. (For example, if you google amazon, the google results page will prefetch `www.amazon.com`, causing amazon cookies to be sent back and forth. You can block 3rd party cookies in Firefox, see [Disabling third party cookies](https://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies).)
-
-### What about...?
-
-If you have any questions or comments about link prefetching, please feel free to send them my way :-)
+Along with the referral and URL-following implications already mentioned above, prefetching will generally cause the cookies of the prefetched site to be accessed. (For example, if you google amazon, the Google results page will prefetch `www.amazon.com`, causing amazon cookies to be sent back and forth. You can block 3rd party cookies in Firefox, see [Disabling third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection).)
 
 #### See also
 
 [Prefetching Hints](https://www.edochan.com/programming/pf.htm)
-
-## Original Document Information
-
-- Author(s): Darin Fisher (darin at meer dot net)
-- Last Updated Date: Updated: March 3, 2003

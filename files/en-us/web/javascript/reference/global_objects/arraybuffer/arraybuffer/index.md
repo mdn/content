@@ -9,18 +9,20 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 ---
+
 {{JSRef}}
 
-The **`ArrayBuffer()`** constructor is used to create
-{{jsxref("ArrayBuffer")}} objects.
+The **`ArrayBuffer()`** constructor is used to create {{jsxref("ArrayBuffer")}} objects.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html","shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new ArrayBuffer(length)
 ```
+
+> **Note:** `ArrayBuffer()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -34,25 +36,8 @@ initialized to 0.
 
 ### Exceptions
 
-A {{jsxref("RangeError")}} is thrown if the `length` is larger than
-{{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) or negative.
-
-## Compatibility notes
-
-Starting with ECMAScript 2015, `ArrayBuffer` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an
-`ArrayBuffer` constructor as a function without `new`, will throw
-a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-var dv = ArrayBuffer(10);
-// TypeError: calling a builtin ArrayBuffer constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new ArrayBuffer(10);
-```
+- {{jsxref("RangeError")}}
+  - : Thrown if the `length` is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (≥ 2<sup>53</sup>) or negative.
 
 ## Examples
 
@@ -62,8 +47,8 @@ In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32
   "Int32Array")}} view referring to the buffer:
 
 ```js
-var buffer = new ArrayBuffer(8);
-var view   = new Int32Array(buffer);
+const buffer = new ArrayBuffer(8);
+const view = new Int32Array(buffer);
 ```
 
 ## Specifications
@@ -76,6 +61,6 @@ var view   = new Int32Array(buffer);
 
 ## See also
 
-- A polyfill of `ArrayBuffer` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `ArrayBuffer` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("SharedArrayBuffer")}}

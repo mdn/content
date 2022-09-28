@@ -1,6 +1,7 @@
 ---
 title: WebVR concepts
 slug: Web/API/WebVR_API/Concepts
+page-type: guide
 tags:
   - Acceleration
   - Apps
@@ -14,6 +15,7 @@ tags:
   - concepts
   - velocity
 ---
+
 {{APIRef("WebVR API")}}{{deprecated_header}}
 
 > **Note:** WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
@@ -32,9 +34,9 @@ The first VR gaming attempts were big and expensive — in 1991 Virtuality Group
 
 ### VR in recent times
 
-So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an affordable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas more recent headsets such as the [HTC VIVE](https://www.vive.com/uk/) and [Oculus Rift](https://www.oculus.com/rift/) are available for hundreds of dollars, and cheaper solutions are available — mobile device-based solutions like [Gear VR](http://www.samsung.com/global/galaxy/gear-vr/) and [Google Cardboard](https://www.google.com/get/cardboard/).
+So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an affordable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas more recent headsets such as the [HTC VIVE](https://www.vive.com/uk/) and [Oculus Rift](https://www.oculus.com/rift/) are available for hundreds of dollars, and cheaper solutions are available — mobile device-based solutions like [Gear VR](https://www.samsung.com/global/galaxy/what-is/gear-vr/) and [Google Cardboard](https://arvr.google.com/cardboard/).
 
-On the software side, Valve has created [SteamVR](http://store.steampowered.com/universe/vr) software, which is compatible with the VIVE and other solutions, and serves to provide access to software, such as a usable VR UI.
+On the software side, Valve has created [SteamVR](https://store.steampowered.com/search/?category1=993) software, which is compatible with the VIVE and other solutions, and serves to provide access to software, such as a usable VR UI.
 
 The technology itself is here, and the more expensive headsets will only get cheaper over time so more people can experience virtual reality on their own in the future.
 
@@ -53,10 +55,10 @@ There are two main types of setup, mobile or computer-connected. Their minimum h
 
 Other hardware that complements the VR experience includes:
 
-- **A hand recognition sensor**: A sensor that tracks the position and movement of your hand, allowing it to become an interesting controller, and an object in VR gameworlds. The most advanced to date is the [Leap Motion](https://www.leapmotion.com/), which works with the computer (connected to the Oculus Rift) and can also work connected to a mobile device (the latter is in an experimental phase.)
-- **A gamepad**: We can configure an XBox controller or similar to work as a keyboard in the browser — this offers further possibilities of interaction with a VR webpage. There are some gamepads that work with a mobile setup — like the [MergeVR headset](http://www.mergevr.com/) — but these are connected via Bluetooth so don't work with WebVR.
+- **A hand recognition sensor**: A sensor that tracks the position and movement of your hand, allowing it to become an interesting controller, and an object in VR gameworlds. The most advanced to date is the [Leap Motion](https://www.ultraleap.com/), which works with the computer (connected to the Oculus Rift) and can also work connected to a mobile device (the latter is in an experimental phase.)
+- **A gamepad**: We can configure an XBox controller or similar to work as a keyboard in the browser — this offers further possibilities of interaction with a VR webpage. There are some gamepads that work with a mobile setup but these are connected via Bluetooth so don't work with WebVR.
 - **An eye tracking sensor (experimental)**: The FOVE project is the first headset that reads subtle eye movements.
-- **A facial expression tracker (experimental)**: Researchers at the University of Southern California and Facebook’s Oculus division have been testing new ways of tracking facial expressions and transferring them to a virtual character.
+- **A facial expression tracker (experimental)**: Researchers at the University of Southern California and Facebook's Oculus division have been testing new ways of tracking facial expressions and transferring them to a virtual character.
 - **A more complex positional sensor system**: As an example, the HTC VIVE features two position sensors that sit in opposite corners of a space, mapping it all out and allowing VR experiences to be enjoyed in spaces of up to 5m x 5m.
 
 ## Position and orientation, velocity and acceleration
@@ -67,21 +69,21 @@ As mentioned above, the position sensor detects information concerning the HMD a
 
 The output information falls into four categories:
 
-1.  Position — The position of the HMD along three axes in a 3D coordinate space. x is to the left and right, y is up and down, and z is towards and away from the position sensor. In WebVR, the x, y, and z coordinates are represented by the array contained in {{domxref("VRPose.position")}}.
-2.  Orientation — The rotation of the HMD around three axes in a 3D coordinate space. Pitch is rotation around the x axis, yaw is rotation around the y axis, and roll is rotation around the z axis. In WebVR, the pitch, yaw, and roll are represented by the first three elements of the array contained in {{domxref("VRPose.orientation")}}.
-3.  Velocity — There are two types of velocity to consider in VR:
+1. Position — The position of the HMD along three axes in a 3D coordinate space. x is to the left and right, y is up and down, and z is towards and away from the position sensor. In WebVR, the x, y, and z coordinates are represented by the array contained in {{domxref("VRPose.position")}}.
+2. Orientation — The rotation of the HMD around three axes in a 3D coordinate space. Pitch is rotation around the x axis, yaw is rotation around the y axis, and roll is rotation around the z axis. In WebVR, the pitch, yaw, and roll are represented by the first three elements of the array contained in {{domxref("VRPose.orientation")}}.
+3. Velocity — There are two types of velocity to consider in VR:
 
-    - Linear — The speed along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearVelocity")}}.
-    - Angular — The speed at which the HMD is rotating around any one of the axes. This information can be accessed using {{domxref("VRPose.angularVelocity")}}.
+   - Linear — The speed along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearVelocity")}}.
+   - Angular — The speed at which the HMD is rotating around any one of the axes. This information can be accessed using {{domxref("VRPose.angularVelocity")}}.
 
-4.  Acceleration — There are two types of acceleration to consider in VR:
+4. Acceleration — There are two types of acceleration to consider in VR:
 
-    - Linear — The acceleration of travel along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearAcceleration")}}.
-    - Angular — The acceleration of rotation of the HMD around any one of the axes. This information can be accessed using {{domxref("VRPose.angularAcceleration")}}.
+   - Linear — The acceleration of travel along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPose.linearAcceleration")}}.
+   - Angular — The acceleration of rotation of the HMD around any one of the axes. This information can be accessed using {{domxref("VRPose.angularAcceleration")}}.
 
 ## Field of view
 
-The field of view (FOV) is the area that each of the user's eyes can reasonably be expected to see. It roughly takes the form of a pyramid shape, laid down on one side, with the apex inside the user's head, and the rest of the pyramid emanating from the user's eye. Each eye has it's own FOV, one slightly overlapping the other.
+The field of view (FOV) is the area that each of the user's eyes can reasonably be expected to see. It roughly takes the form of a pyramid shape, laid down on one side, with the apex inside the user's head, and the rest of the pyramid emanating from the user's eye. Each eye has its own FOV, one slightly overlapping the other.
 
 ![FOV related properties](fovrelatedproperties.png)
 
@@ -137,7 +139,7 @@ To avoid bringing on motion sickness in our users (or at least minimize the effe
 
 - Always maintain head tracking (this is the most important of all, especially if it occurs in middle of the experience.)
 - Use constant velocity; avoid acceleration or deceleration camera movements (use linear acceleration, and avoid vs easing if you can.)
-- Keep the framerate up (less than 30fps is uncomfortable.)
+- Keep the frame rate up (less than 30fps is uncomfortable.)
 - Avoid sharp and/or unexpected camera rotations.
 - Add fixed points of reference for fixed objects (otherwise the user will believe they are on the move.)
 - Do not use Depth of Field or Motion Blur post processing because you do not know where the eyes will focus.
@@ -151,21 +153,21 @@ Latency is the time between the physical head movement and the visual display re
 
 The Oculus Rift headset has a latency of 20 ms or less, but with mobile device-based setups it will depend heavily on the smartphone CPU power and other capabilities.
 
-### Framerate ( Frames per second / FPS )
+### Frame rate (Frames per second / FPS)
 
-Based on the Wikipedia definition, framerate is the frequency at which an imaging device produces unique consecutive images, called frames. A rate of 60fps is an acceptable rate for a smooth user experience, but depending on the performance of the machine the app is running on, or the complexity of the content you want to show, it can drastically lower. Less than 30fps is generally considered jittery, and annoying to the user.
+Based on the Wikipedia definition, frame rate is the frequency at which an imaging device produces unique consecutive images, called frames. A rate of 60fps is an acceptable rate for a smooth user experience, but depending on the performance of the machine the app is running on, or the complexity of the content you want to show, it can drastically lower. Less than 30fps is generally considered jittery, and annoying to the user.
 
-One of the most difficult tasks is to maintain a constant and high framerate value, so we must optimize our code to make it as efficient as possible. It is preferable to have a decent framerate that doesn't constantly or suddenly change; for this you need to as few necessary objects moving into the scene as possible and (in the case of WebGL) try to reduce draw calls.
+One of the most difficult tasks is to maintain a constant and high frame rate value, so we must optimize our code to make it as efficient as possible. It is preferable to have a decent frame rate that doesn't constantly or suddenly change; for this you need to as few necessary objects moving into the scene as possible and (in the case of WebGL) try to reduce draw calls.
 
-### Interpupillary distance ( IPD )
+### Interpupillary distance (IPD)
 
 Based on the Wikipedia definition, IPD is the distance between the centers of the pupils of the two eyes. IPD is critical for the design of binocular viewing systems, where both eye pupils need to be positioned within the exit pupils of the viewing system.
 
-Interpupillary distance ( IPD ) can be calculated using {{domxref("VREyeParameters.offset")}} in WebVR, which is equal to half the IPD.
+Interpupillary distance (IPD) can be calculated using {{domxref("VREyeParameters.offset")}} in WebVR, which is equal to half the IPD.
 
 This value is returned by the HMD and its value may be around 60 to 70 mm; in the case of some HMDs like Oculus Rift's, you can set your own IPD. Normally we don't change this value but you can play with it to change the scale of the entire scene. For example, if your IPD is set to 6000 mm, the user would view the scene like a giant looking at a Lilliputian world.
 
-### Degrees of Freedom ( DoF )
+### Degrees of Freedom (DoF)
 
 DoF refers to the movement of a rigid body inside space. There is no uniformity in creating acronyms for this term — we can find references to 3DoF in the context of sensors that detect only rotational head tracking, and 6DoF when an input allows us to control position and orientation simultaneously. We even sometimes find 9DoF references when the hardware contains three sensors like gyroscope, accelerometer and magnetometer, but the results of the 3 x 3DoF values will actually return a 6 degrees of freedom tracking.
 
@@ -175,7 +177,7 @@ DoF is directly related to the tracking of the user's head movement.
 
 Although our field of view is much larger (approximately 180º), we need to be aware that only in a small portion of that field can you perceive symbols (the center 60º) or read text (the center 10º). If you do not have an eye tracking sensor we assume that the center of the screen is where the user is focusing their eyes.
 
-This limitation is important to consider when deciding where place visuals on the app canvas — too far towards the edge of the cone of focus can lead to eye strain much more quickly. There is a very interesting post about this (amongst other things) at https\://mixedreality.mozilla.org/ — see [Quick VR Mockups with Illustrator](https://blog.mozvr.com/quick-vr-prototypes/).
+This limitation is important to consider when deciding where to place visuals on the app canvas — too far toward the edge of the cone of focus can lead to eye strain much more quickly. There is a very interesting post about this (amongst other things) at [Mozilla's Mixed Reality site](https://mixedreality.mozilla.org/>) — in particular, read [Quick VR Mockups with Illustrator](https://blog.mozvr.com/quick-vr-prototypes/).
 
 ### 3D Positional Audio
 

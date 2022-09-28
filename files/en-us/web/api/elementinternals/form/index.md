@@ -1,6 +1,7 @@
 ---
 title: ElementInternals.form
 slug: Web/API/ElementInternals/form
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,6 +10,7 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.form
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`form`** read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("HTMLFormElement")}} associated with this element.
@@ -23,26 +25,28 @@ The following example shows a custom checkbox component inside a form with an ID
 Printing `form.length` to the console, gives us the value of {{domxref("HTMLFormElement.length")}}.
 
 ```html
-<form id="myForm"><custom-checkbox id="join-checkbox"></custom-checkbox>
-  <custom-label for="custom-checkbox">Join newsletter</custom-label></form>
+<form id="myForm">
+  <custom-checkbox id="custom-checkbox"></custom-checkbox>
+  <custom-label for="custom-checkbox">Join newsletter</custom-label>
+</form>
 ```
 
 ```js
 class CustomCheckbox extends HTMLElement {
   static formAssociated = true;
+  #internals;
 
   constructor() {
     super();
-    this.internals_ = this.attachInternals();
+    this.#internals = this.attachInternals();
   }
 
-  /* ... */
+  connectedCallback() {
+    console.log(this.#internals.form.length)
+  }
+}
 
-  window.customElements.define("custom-checkbox", CustomCheckbox);
-})();
-
-let element = document.getElementById("custom-checkbox");
-console.log(element.internals_.form.length);
+window.customElements.define("custom-checkbox", CustomCheckbox);
 ```
 
 ## Specifications

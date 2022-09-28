@@ -1,6 +1,7 @@
 ---
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -20,6 +21,7 @@ tags:
   - track
 browser-compat: api.MediaStreamAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`MediaStreamAudioSourceNode`** interface is a type of {{domxref("AudioNode")}} which operates as an audio source whose media is received from a {{domxref("MediaStream")}} obtained using the WebRTC or Media Capture and Streams APIs.
@@ -28,9 +30,11 @@ This media could be from a microphone (through {{domxref("MediaDevices.getUserMe
 
 A `MediaStreamAudioSourceNode` has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaStreamSource()")}} method.
 
-The `MediaStreamAudioSourceNode` takes the audio from the _first_ {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} attribute's value is `audio`. See {{anch("Track ordering")}} for more information about the order of tracks.
+The `MediaStreamAudioSourceNode` takes the audio from the _first_ {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} attribute's value is `audio`. See [Track ordering](#track_ordering) for more information about the order of tracks.
 
 The number of channels output by the node matches the number of tracks found in the selected audio track.
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>
@@ -45,10 +49,7 @@ The number of channels output by the node matches the number of tracks found in 
     <tr>
       <th scope="row">Channel count</th>
       <td>
-        defined by the first audio {{domxref("MediaStreamTrack")}}
-        passed to the
-        {{domxref("AudioContext.createMediaStreamSource()")}}
-        method that created it.
+        2 (but note that {{domxref("AudioNode.channelCount")}} is only used for up-mixing and down-mixing {{domxref("AudioNode")}} inputs, and {{domxref("MediaStreamAudioSourceNode")}} doesn't have any input)
       </td>
     </tr>
   </tbody>

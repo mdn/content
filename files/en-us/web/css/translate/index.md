@@ -1,6 +1,7 @@
 ---
 title: translate
 slug: Web/CSS/translate
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.translate
 ---
+
 {{CSSRef}}
 
 The **`translate`** [CSS](/en-US/docs/Web/CSS) property allows you to specify translation transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` value.
@@ -34,13 +36,14 @@ translate: 50% 105px 5rem;
 translate: inherit;
 translate: initial;
 translate: revert;
+translate: revert-layer;
 translate: unset;
 ```
 
 ### Values
 
 - Single {{cssxref("&lt;length-percentage&gt;")}} value
-  - : A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} that specifies a 2D translation, with the same translation along both the X and Y axes. Equivalent to a `translate()` (2D translation) function with a single value specified.
+  - : A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} that specifies a translation along the X-axis. Equivalent to a `translate()` (2D translation) function with a single value specified.
 - Two {{cssxref("&lt;length-percentage&gt;")}} values
   - : Two {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} that specify the X and Y axis translation values (respectively) of a 2D translation. Equivalent to a `translate()` (2D translation) function with two values specified.
 - Three values
@@ -62,7 +65,7 @@ translate: unset;
 
 ```html
 <div>
-  <p class="translate">Translation</p>
+  <p class="translate">Translation</p>
 </div>
 ```
 

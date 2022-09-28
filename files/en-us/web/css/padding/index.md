@@ -1,6 +1,7 @@
 ---
 title: padding
 slug: Web/CSS/padding
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Padding
@@ -9,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.padding
 ---
+
 {{CSSRef}}
 
 The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the [padding area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding_area) on all four sides of an element at once.
@@ -47,6 +49,7 @@ padding: 5px 1em 0 2em;
 padding: inherit;
 padding: initial;
 padding: revert;
+padding: revert-layer;
 padding: unset;
 ```
 
@@ -62,7 +65,7 @@ The `padding` property may be specified using one, two, three, or four values. E
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the _width_ of the containing block.
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
 
 ## Formal definition
 

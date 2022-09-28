@@ -1,6 +1,7 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.types.percentage
 ---
+
 {{CSSRef}}
 
 The **`<percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}, and {{CSSxRef("font-size")}}.
@@ -22,7 +24,7 @@ The `<percentage>` data type consists of a {{CSSxRef("&lt;number&gt;")}} followe
 
 ## Interpolation
 
-When animated, values of the `<percentage>` data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
+When animated, values of the `<percentage>` data type are {{Glossary("interpolation", "interpolated")}} as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 

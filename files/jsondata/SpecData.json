@@ -15,6 +15,11 @@
     "status": "CR"
   },
   "ARIA": {
+    "name": "Accessible Rich Internet Applications (WAI-ARIA) 1.3",
+    "url": "https://w3c.github.io/aria/",
+    "status": "ED"
+  },
+  "ARIA 1.1": {
     "name": "Accessible Rich Internet Applications (WAI-ARIA) 1.1",
     "url": "https://www.w3.org/TR/wai-aria-1.1/",
     "status": "REC"
@@ -22,7 +27,12 @@
   "ARIA 1.2": {
     "name": "Accessible Rich Internet Applications (WAI-ARIA) 1.2",
     "url": "https://www.w3.org/TR/wai-aria-1.2/",
-    "status": "WD"
+    "status": "CR"
+  },
+  "ARIA Authoring Practices": {
+    "name": "WAI-ARIA Authoring Practices",
+    "url": "https://w3c.github.io/aria-practices/",
+    "status": "Living"
   },
   "ARIA Authoring Practices 1.1": {
     "name": "WAI-ARIA Authoring Practices 1.1",
@@ -694,6 +704,11 @@
     "url": "https://w3c.github.io/deviceorientation/",
     "status": "ED"
   },
+  "Digest Headers": {
+    "name": "Digest Headers",
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-05",
+    "status": "Draft"
+  },
   "DOM Parsing": {
     "name": "DOM Parsing and Serialization",
     "url": "https://w3c.github.io/DOM-Parsing/",
@@ -837,6 +852,11 @@
   "EyeDropper": {
     "name": "EyeDropper",
     "url": "https://wicg.github.io/eyedropper-api/",
+    "status": "Draft"
+  },
+  "Expect-CT": {
+    "name": "Expect-CT Extension for HTTP",
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-08",
     "status": "Draft"
   },
   "Feature Policy": {
@@ -1073,6 +1093,11 @@
     "name": "Legacy RegExp features in JavaScript",
     "url": "https://github.com/tc39/proposal-regexp-legacy-features/",
     "status": "Draft"
+  },
+  "Linked Data Platform": {
+    "name": "Linked Data Platform",
+    "url": "https://www.w3.org/TR/ldp/",
+    "status": "REC"
   },
   "Local Font Access API": {
     "name": "Local Font Access API",
@@ -1389,6 +1414,61 @@
     "url": "https://w3c.github.io/resource-timing/",
     "status": "ED"
   },
+  "RFC 2295": {
+    "name": "Transparent Content Negotiation in HTTP",
+    "url": "https://www.rfc-editor.org/rfc/rfc2295",
+    "status": "RFC"
+  },
+  "RFC 2324": {
+    "name": "Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0)",
+    "url": "https://www.rfc-editor.org/rfc/rfc2324",
+    "status": "RFC"
+  },
+  "RFC 2774": {
+    "name": "An HTTP Extension Framework",
+    "url": "https://www.rfc-editor.org/rfc/rfc2774",
+    "status": "RFC"
+  },
+  "RFC 2965": {
+    "name": "HTTP State Management Mechanism",
+    "url": "https://www.rfc-editor.org/rfc/rfc2965",
+    "status": "RFC"
+  },
+  "RFC 4918": {
+    "name": "HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)",
+    "url": "https://www.rfc-editor.org/rfc/rfc4918",
+    "status": "RFC"
+  },
+  "RFC 5789": {
+    "name": "PATCH Method for HTTP",
+    "url": "https://www.rfc-editor.org/rfc/rfc5789",
+    "status": "RFC"
+  },
+  "RFC 5842": {
+    "name": "Binding Extensions to Web Distributed Authoring and Versioning (WebDAV)",
+    "url": "https://www.rfc-editor.org/rfc/rfc5842",
+    "status": "RFC"
+  },
+  "RFC 6585": {
+    "name": "Additional HTTP Status Codes",
+    "url": "https://www.rfc-editor.org/rfc/rfc6585",
+    "status": "RFC"
+  },
+  "RFC 7168": {
+    "name": "The Hyper Text Coffee Pot Control Protocol for Tea Efflux Appliances (HTCPCP-TEA)",
+    "url": "https://www.rfc-editor.org/rfc/rfc7168",
+    "status": "RFC"
+  },
+  "RFC 8288": {
+    "name": "Web Linking",
+    "url": "https://www.rfc-editor.org/rfc/rfc8288",
+    "status": "RFC"
+  },
+  "RFC 8297": {
+    "name": "An HTTP Status Code for Indicating Hints",
+    "url": "https://www.rfc-editor.org/rfc/rfc8297",
+    "status": "RFC"
+  },
   "Screen Capture": {
     "name": "Screen Capture",
     "url": "https://w3c.github.io/mediacapture-screen-share/",
@@ -1448,6 +1528,11 @@
     "name": "Accelerated Shape Detection in Images",
     "url": "https://wicg.github.io/shape-detection-api/",
     "status": "Draft"
+  },
+  "Source Map": {
+    "name": "Source Map",
+    "url": "https://sourcemaps.info/spec.html",
+    "status": "Standard"
   },
   "Static Range": {
     "name": "Static Range",

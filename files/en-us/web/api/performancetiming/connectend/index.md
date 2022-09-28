@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.connectEnd
 slug: Web/API/PerformanceTiming/connectEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -12,6 +13,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceTiming.connectEnd
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
@@ -27,11 +29,9 @@ value will be the same as {{domxref("PerformanceTiming.fetchStart")}}. A connect
 considered as opened when all secure connection handshake, or SOCKS authentication, is
 terminated.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.connectEnd;
-```
+An `unsigned long long`.
 
 ## Specifications
 

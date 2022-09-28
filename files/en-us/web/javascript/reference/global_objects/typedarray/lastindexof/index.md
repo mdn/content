@@ -11,20 +11,20 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.lastIndexOf
 ---
+
 {{JSRef}}
 
 The **`lastIndexOf()`** method returns the last index at which
 a given element can be found in the typed array, or -1 if it is not present. The typed
 array is searched backwards, starting at `fromIndex`. This method has the
 same algorithm as {{jsxref("Array.prototype.lastIndexOf()")}}. _TypedArray_ is
-one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
 
 {{EmbedInteractiveExample("pages/js/typedarray-lastindexof.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 lastIndexOf(searchElement)
 lastIndexOf(searchElement, fromIndex)
 ```
@@ -48,16 +48,16 @@ The last index of the element in the array; `-1` if not found.
 
 ## Description
 
-`lastIndexOf` compares `searchElement` to elements of
-the typed array using [strict
-equality](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (the same method used by the ===, or triple-equals, operator).
+`lastIndexOf` compares `searchElement` to elements of the typed array using
+[strict equality](/en-US/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators)
+(the same method used by the ===, or triple-equals, operator).
 
 ## Examples
 
 ### Using lastIndexOf
 
 ```js
-var uint8 = new Uint8Array([2, 5, 9, 2]);
+const uint8 = new Uint8Array([2, 5, 9, 2]);
 uint8.lastIndexOf(2);     // 3
 uint8.lastIndexOf(7);     // -1
 uint8.lastIndexOf(2, 3);  // 3
@@ -76,6 +76,6 @@ uint8.lastIndexOf(2, -1); // 3
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.lastIndexOf` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.indexOf()")}}
 - {{jsxref("Array.prototype.lastIndexOf()")}}

@@ -1,15 +1,16 @@
 ---
 title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
+page-type: web-api-global-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - crossOriginIsolated
 browser-compat: api.crossOriginIsolated
 ---
-{{APIRef()}}{{SeeCompatTable}}
+
+{{APIRef()}}
 
 The global **`crossOriginIsolated`** read-only property returns a boolean value that
 indicates whether a {{JSxRef("SharedArrayBuffer")}} can be sent via a
@@ -18,20 +19,14 @@ indicates whether a {{JSxRef("SharedArrayBuffer")}} can be sent via a
 This value is dependent on any {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers present in the response.
 
-## Syntax
+## Value
 
-```js
-var myCrossOriginIsolated = self.crossOriginIsolated; // or just crossOriginIsolated
-```
-
-### Value
-
-A boolean value
+A boolean value.
 
 ## Examples
 
 ```js
-if(crossOriginIsolated) {
+if (crossOriginIsolated) {
   // Post SharedArrayBuffer
 } else {
   // Do something else
@@ -48,5 +43,5 @@ if(crossOriginIsolated) {
 
 ## See also
 
-- [Service Workers](/en-US/docs/Web/API/ServiceWorker_API)
+- [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)

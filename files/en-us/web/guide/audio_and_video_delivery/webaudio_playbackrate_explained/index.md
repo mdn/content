@@ -8,19 +8,20 @@ tags:
   - Video
   - playbackRate
 ---
+
 The `playbackRate` property of the {{ htmlelement("audio") }} and {{ htmlelement("video") }} elements allows us to change the speed, or rate, at which a piece of web audio or video is playing. This article explains `playbackRate` in detail.
 
 ## playbackRate basics
 
 Let's starting by looking at a brief example of `playbackRate` usage:
 
-```java
-var myAudio = document.createElement('audio');
-myAudio.setAttribute('src','audiofile.mp3');
-myAudio.playbackRate = 0.5;
+```js
+const audio = document.createElement('audio');
+audio.setAttribute('src','audiofile.mp3');
+audio.playbackRate = 0.5;
 ```
 
-Here we create an {{ htmlelement("audio") }} element, and set its `src` to a file of our choice. Next we set `playbackRate` to 0.5, which represents half normal speed (the `playbackRate` is a multiplier applied to the original rate.)
+Here we create an {{ htmlelement("audio") }} element, and set its `src` to a file of our choice. Next we set `playbackRate` to 0.5, which represents half normal speed (the `playbackRate` is a multiplier applied to the original rate).
 
 ## A complete example
 
@@ -28,12 +29,16 @@ Let's create a {{ htmlelement("video") }} element first, and set up video and pl
 
 ```html
 <video id="myVideo" controls>
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type='video/mp4' />
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type='video/webm' />
+  <source
+    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
+  <source
+    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
 </video>
 
 <form>
-  <input id="pbr" type="range" value="1" min="0.5" max="4" step="0.1" >
+  <input id="pbr" type="range" value="1" min="0.5" max="4" step="0.1" />
   <p>Playback Rate <span id="currentPbr">1</span></p>
 </form>
 ```
@@ -41,16 +46,15 @@ Let's create a {{ htmlelement("video") }} element first, and set up video and pl
 And apply some JavaScript to it:
 
 ```js
-window.onload = function () {
+window.onload = () => {
+  const v = document.getElementById("myVideo");
+  const p = document.getElementById("pbr");
+  const c = document.getElementById("currentPbr");
 
-  var v = document.getElementById("myVideo");
-  var p = document.getElementById("pbr");
-  var c = document.getElementById("currentPbr");
-
-  p.addEventListener('input',function(){
+  p.addEventListener('input', () => {
     c.innerHTML = p.value;
     v.playbackRate = p.value;
-  },false);
+  }, false);
 
 };
 ```
@@ -61,7 +65,7 @@ Finally, we listen for the `input` event firing on the {{ htmlelement("input") }
 
 ## defaultPlaybackRate and ratechange
 
-In addition to `playbackRate,` we also have a `defaultPlaybackRate` property available, which lets us set the default playback rate: the playback rate to which the media resets; for example, if we change the source of the video, or (in some browsers) when an `ended` event is generated.
+In addition to `playbackRate`, we also have a `defaultPlaybackRate` property available, which lets us set the default playback rate: the playback rate to which the media resets; for example, if we change the source of the video, or (in some browsers) when an `ended` event is generated.
 
 So `defaultPlaybackRate` allows us to set the playback rate _before_ playing the media, while `playbackRate` allows us to change it during media playback.
 
@@ -84,7 +88,7 @@ There is also an event available called `ratechange`, which fires every time the
 
 - Most browsers stop playing audio outside `playbackRate` bounds of 0.5 and 4, leaving the video playing silently. For most applications, it's recommended that you limit the range to between 0.5 and 4.
 - The pitch of the audio track does not change when `playBackRate` is altered.
-- Negative values will not cause the media to play in reverse.
+- Negative values will not cause the media to play in reverse.
 - IE9+ switches to the default playback rate when an `ended` event is fired.
 - Firefox generates a `ratechange` event when the media source is substituted.
 - On iOS 7 you can only affect the `playbackRate` when the media is paused (not while it's playing).

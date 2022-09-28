@@ -12,6 +12,7 @@ tags:
   - getCurrent
 browser-compat: webextensions.api.theme.getCurrent
 ---
+
 {{AddonSidebar()}}
 
 Gets the currently used theme as a {{WebExtAPIRef("theme.Theme", "Theme")}} object. The arguments available in the color object are listed in the [properties of the color](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors).
@@ -20,8 +21,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var getting = browser.theme.getCurrent(
+```js-nolint
+let getting = browser.theme.getCurrent(
   windowId    // integer
 )
 ```
@@ -44,18 +45,15 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The 
 Gets the properties `frame` and `toolbar` colors of the current theme
 
 ```js
-function getStyle(themeInfo)
-{
-  if (themeInfo.colors)
-  {
-    console.log("accent color : " +  themeInfo.colors.frame);
-    console.log("toolbar : " + themeInfo.colors.toolbar);
+function getStyle(themeInfo) {
+  if (themeInfo.colors) {
+    console.log(`accent color: ${themeInfo.colors.frame}`);
+    console.log(`toolbar: ${themeInfo.colors.toolbar}`);
   }
 }
 
-async function getCurrentThemeInfo()
-{
-  var themeInfo = await browser.theme.getCurrent();
+async function getCurrentThemeInfo() {
+  const themeInfo = await browser.theme.getCurrent();
   getStyle(themeInfo);
 }
 

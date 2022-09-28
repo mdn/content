@@ -11,6 +11,7 @@ tags:
   - Learn
   - Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 In the previous few articles we looked at all the HTML you'll need to create and structure your web forms. In this article we will move on to looking at how to use [CSS](/en-US/docs/Web/CSS) to style your form controls. This has historically been difficult — form controls vary greatly in how easy they are to customize with CSS — but it is getting easier as old browsers are retired and modern browsers give us more features to use.
@@ -51,13 +52,13 @@ At present, some difficulties remain when using CSS with forms. These problems c
 
 Some elements can be styled with few if any problems across platforms. These include the following elements:
 
-1.  {{HTMLElement("form")}}
-2.  {{HTMLElement("fieldset")}} and {{HTMLElement("legend")}}
-3.  Single-line text {{HTMLElement("input")}}s (e.g. type text, url, email...), except for [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search).
-4.  Multi-line {{HTMLElement("textarea")}}s
-5.  Buttons (both {{HTMLElement("input")}} and {{HTMLElement("button")}}s)
-6.  {{HTMLElement("label")}}
-7.  {{HTMLElement("output")}}
+1. {{HTMLElement("form")}}
+2. {{HTMLElement("fieldset")}} and {{HTMLElement("legend")}}
+3. Single-line text {{HTMLElement("input")}}s (e.g. type text, url, email), except for [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search).
+4. Multi-line {{HTMLElement("textarea")}}
+5. Buttons (both {{HTMLElement("input")}} and {{HTMLElement("button")}})
+6. {{HTMLElement("label")}}
+7. {{HTMLElement("output")}}
 
 #### The bad
 
@@ -66,7 +67,7 @@ Some elements are more difficult to style, requiring more complex CSS or some mo
 - Checkboxes and radio buttons
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 
-We describe how to handle these more specific features in the article [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)[.](/en-US/docs/Learn/Forms/Advanced_form_styling)
+We describe how to handle these more specific features in the article [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
 
 #### The ugly
 
@@ -79,7 +80,7 @@ Some elements can't be styled thoroughly using CSS. These include:
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
-Again, we'll describe what can be done in terms of styling these elements in [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)[.](/en-US/docs/Learn/Forms/Advanced_form_styling)
+Again, we'll describe what can be done in terms of styling these elements in [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling).
 
 The real problem with all these controls is that they have a very complex structure, and beyond some basic styling (such as changing the width or margin of the control) you generally don't have the ability to style the controls' internal components (such as the date picker calendar, or the button on the \<select> that causes the options list to display) making up those widgets.
 
@@ -100,7 +101,10 @@ We'll walk through an example at the end of this article to give you some more i
 CSS font and text features can be used easily with any widget (and yes, you can use {{cssxref("@font-face")}} with form widgets). However, browser behavior is often inconsistent. By default, some widgets do not inherit {{cssxref("font-family")}} and {{cssxref("font-size")}} from their parents. Many browsers use the system default appearance instead. To make your forms' appearance consistent with the rest of your content, you can add the following rules to your stylesheet:
 
 ```css
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: 100%;
 }
@@ -123,8 +127,11 @@ All text fields have complete support for every property related to the CSS box 
 **This is because each widget has their own rules for border, padding and margin.** To give the same size to several different widgets, you can use the {{cssxref("box-sizing")}} property along with some consistent values for other properties:
 
 ```css
-input, textarea, select, button {
-  width : 150px;
+input,
+textarea,
+select,
+button {
+  width: 150px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -159,7 +166,7 @@ legend {
 }
 ```
 
-The `<fieldset>` needs to be positioned too, so that the `<legend>` is positioned relative to it (otherwise the `<legend>` would be positioned relative to the `<body>`.)
+The `<fieldset>` needs to be positioned too, so that the `<legend>` is positioned relative to it (otherwise the `<legend>` would be positioned relative to the `<body>`).
 
 The {{HTMLElement("legend")}} element is very important for accessibility — it will be spoken by assistive technologies as part of the label of each form element inside the fieldset — but using a technique like the one above is fine. The legend contents will still be spoken in the same way; it is just the visual position that has changed.
 
@@ -169,7 +176,7 @@ The {{HTMLElement("legend")}} element is very important for accessibility — it
 
 Let's look at a concrete example of how to style an HTML form. We will build a fancy-looking "postcard" contact form; [see here for the finished version](https://mdn.github.io/learning-area/html/forms/postcard-example/).
 
-If you want to follow along with this example, make a local copy of our [postcard-start.html file](https://github.com/mdn/learning-area/blob/master/html/forms/postcard-example/postcard-start.html), and follow the below instructions.
+If you want to follow along with this example, make a local copy of our [postcard-start.html file](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/postcard-start.html), and follow the below instructions.
 
 ### The HTML
 
@@ -181,12 +188,12 @@ The HTML is only slightly more involved than the example we used in [the first a
 
   <div id="from">
     <label for="name">from:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" />
   </div>
 
   <div id="reply">
     <label for="mail">reply:</label>
-    <input type="email" id="mail" name="user_email">
+    <input type="email" id="mail" name="user_email" />
   </div>
 
   <div id="message">
@@ -206,16 +213,16 @@ Add the above code into the body of your HTML.
 
 This is where the fun begins! Before we start coding, we need three additional assets:
 
-1.  [The postcard background](background.jpg) — download this image and save it in the same directory as your working HTML file.
-2.  A typewriter font: [The "Secret Typewriter" font from fontsquirrel.com](https://www.fontsquirrel.com/fonts/Secret-Typewriter) — download the TTF file into the same directory as above.
-3.  A hand drawn font: [The "Journal" font from fontsquirrel.com](https://www.fontsquirrel.com/fonts/Journal) — download the TTF file into the same directory as above.
+1. [The postcard background](background.jpg) — download this image and save it in the same directory as your working HTML file.
+2. A typewriter font: [The "Mom's Typewriter" font from dafont.com](https://www.dafont.com/moms-typewriter.font?back=theme) — download the TTF file into the same directory as above.
+3. A hand drawn font: [The "Journal" font from dafont.com](https://www.dafont.com/journal.font) — download the TTF file into the same directory as above.
 
 Your fonts need some more processing before you start:
 
-1.  Go to the fontsquirrel [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
-2.  Using the form, upload both your font files and generate a webfont kit. Download the kit to your computer.
-3.  Unzip the provided zip file.
-4.  Inside the unzipped contents you will find some font files (at the time of writing, two `.woff` files and two `.woff2` files; they might vary in the future.) Copy these files into a directory called fonts, in the same directory as before. We are using two different files for each font to maximize browser compatibility; see our [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) article for a lot more information.
+1. Go to the fontsquirrel.com [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
+2. Using the form, upload both your font files and generate a webfont kit. Download the kit to your computer.
+3. Unzip the provided zip file.
+4. Inside the unzipped contents you will find some font files (at the time of writing, two `.woff` files and two `.woff2` files; they might vary in the future.) Copy these files into a directory called fonts, in the same directory as before. We are using two different files for each font to maximize browser compatibility; see our [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) article for a lot more information.
 
 ### The CSS
 
@@ -227,42 +234,42 @@ First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the b
 
 ```css
 @font-face {
-    font-family: 'handwriting';
-    src: url('fonts/journal-webfont.woff2') format('woff2'),
-         url('fonts/journal-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "handwriting";
+  src: url("fonts/journal-webfont.woff2") format("woff2"), url("fonts/journal-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'typewriter';
-    src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
-         url('fonts/veteran_typewriter-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "typewriter";
+  src: url("fonts/momt___-webfont.woff2") format("woff2"), url("fonts/momt___-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font  : 1.3rem sans-serif;
-  padding : 0.5em;
-  margin  : 0;
-  background : #222;
+  font: 1.3rem sans-serif;
+  padding: 0.5em;
+  margin: 0;
+  background: #222;
 }
 
 form {
-  position : relative;
-  width  : 740px;
-  height : 498px;
-  margin : 0 auto;
+  position: relative;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background : #FFF url(background.jpg);
+  background: #fff url(background.jpg);
 
   /* we create our grid */
-  display  : grid;
-  grid-gap : 20px;
-  grid-template-columns : repeat(2, 1fr);
-  grid-template-rows    : 10em 1em 1em 1em;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10em 1em 1em 1em;
 }
 ```
 
@@ -270,16 +277,17 @@ Notice that we've used some [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) and 
 
 ```css
 h1 {
-  font : 1em "typewriter", monospace;
-  align-self : end;
+  font: 1em "typewriter", monospace;
+  align-self: end;
 }
 
 #message {
-   grid-row: 1 / 5;
+  grid-row: 1 / 5;
 }
 
-#from, #reply {
-   display: flex;
+#from,
+#reply {
+  display: flex;
 }
 ```
 
@@ -289,28 +297,30 @@ Now we can start working on the form elements themselves. First, let's ensure th
 
 ```css
 label {
-  font : .8em "typewriter", sans-serif;
+  font: 0.8em "typewriter", sans-serif;
 }
 ```
 
 The text fields require some common rules. In other words, we remove their {{cssxref("border","borders")}} and {{cssxref("background","backgrounds")}}, and redefine their {{cssxref("padding")}} and {{cssxref("margin")}}:
 
 ```css
-input, textarea {
-  font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
-  border  : none;
-  padding : 0 10px;
-  margin  : 0;
-  width   : 80%;
-  background : none;
+input,
+textarea {
+  font: 1.4em/1.5em "handwriting", cursive, sans-serif;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 80%;
+  background: none;
 }
 ```
 
 When one of these fields gains focus, we highlight them with a light grey, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):
 
 ```css
-input:focus, textarea:focus {
-  background   : rgba(0,0,0,.1);
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 ```
@@ -323,12 +333,12 @@ Now that our text fields are complete, we need to adjust the display of the sing
 
 ```css
 textarea {
-  display : block;
+  display: block;
 
-  padding : 10px;
-  margin  : 10px 0 0 -10px;
-  width   : 100%;
-  height  : 90%;
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 100%;
+  height: 90%;
 
   border-right: 1px solid;
 
@@ -343,24 +353,24 @@ The {{HTMLElement("button")}} element is really convenient to style with CSS; yo
 
 ```css
 button {
-  padding      : 5px;
-  font         : bold .6em sans-serif;
-  border       : 2px solid #333;
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
   border-radius: 5px;
-  background   : none;
-  cursor       : pointer;
-  transform    : rotate(-1.5deg);
+  background: none;
+  cursor: pointer;
+  transform: rotate(-1.5deg);
 }
 
 button:after {
-  content      : " >>>";
+  content: " >>>";
 }
 
 button:hover,
 button:focus {
-  outline     : none;
-  background  : #000;
-  color       : #FFF;
+  outline: none;
+  background: #000;
+  color: #fff;
 }
 ```
 
@@ -368,11 +378,11 @@ button:focus {
 
 And voila! Your form should now look like this:
 
-![](updated-form-screenshot.jpg)
+![The final look and layout of the form after applying all styling and tweaking to it as described above](updated-form-screenshot.jpg)
 
-> **Note:** If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)).
+> **Note:** If your example does not work quite like you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
 
-## Test your skills!
+## Test your skills
 
 You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Styling basics](/en-US/docs/Learn/Forms/Test_your_skills:_Styling_basics).
 

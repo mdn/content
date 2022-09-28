@@ -13,6 +13,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onSendHeaders
 ---
+
 {{AddonSidebar()}}
 
 This event is fired just before sending headers. If your extension or some other extension modified headers in `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}`, you'll see the modified version here.
@@ -21,7 +22,7 @@ This event is informational only.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onSendHeaders.addListener(
   listener,             // function
   filter,               //  object
@@ -53,7 +54,7 @@ Events have three functions:
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
-- `extraInfoSpec`{{optional_inline}}
+- `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can only pass one value here:
 
@@ -109,7 +110,7 @@ Events have three functions:
 
 - `requestId`
   - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.
-- `requestHeaders`{{optional_inline}}
+- `requestHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP request headers that have been sent out with this request.
 - `tabId`
   - : `integer`. ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
@@ -134,7 +135,7 @@ Events have three functions:
 
     - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
-    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`,  and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
     - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
     - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
     - `any_social_tracking`: a meta flag that combines any social tracking flags.
@@ -149,12 +150,12 @@ This code logs all cookies that will be sent in making requests to the target [m
 
 ```js
 // The target match pattern
-var targetPage = "*://*.google.ca/*";
+let targetPage = "*://*.google.ca/*";
 
 // Log cookies sent with this request
 function logCookies(e) {
-  for (var header of e.requestHeaders) {
-    if (header.name == "Cookie") {
+  for (const header of e.requestHeaders) {
+    if (header.name === "Cookie") {
       console.log(header.value);
     }
   }
@@ -171,11 +172,12 @@ browser.webRequest.onSendHeaders.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -202,4 +204,4 @@ browser.webRequest.onSendHeaders.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

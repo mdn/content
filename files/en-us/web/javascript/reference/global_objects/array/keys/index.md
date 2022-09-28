@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.keys
 ---
+
 {{JSRef}}
 
 The **`keys()`** method returns a new **Array
@@ -21,7 +22,7 @@ Iterator** object that contains the keys for each index in the array.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
@@ -29,14 +30,20 @@ keys()
 
 A new {{jsxref("Array")}} iterator object.
 
+## Description
+
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `keys()` method iterates empty slots as if they have the value `undefined`.
+
 ## Examples
 
-### Key iterator doesn't ignore holes
+### Using keys() on sparse arrays
+
+Unlike {{jsxref("Object.keys()")}}, which only includes keys that actually exist in the array, the `keys()` iterator doesn't ignore holes representing missing properties.
 
 ```js
-var arr = ['a', , 'c'];
-var sparseKeys = Object.keys(arr);
-var denseKeys = [...arr.keys()];
+const arr = ['a', , 'c'];
+const sparseKeys = Object.keys(arr);
+const denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
 console.log(denseKeys);  // [0, 1, 2]
 ```
@@ -51,8 +58,8 @@ console.log(denseKeys);  // [0, 1, 2]
 
 ## See also
 
-- A polyfill of `Array.prototype.keys` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.values()")}}
 - {{jsxref("Array.prototype.entries()")}}
-- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

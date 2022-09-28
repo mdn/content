@@ -5,9 +5,10 @@ tags:
   - WCAG
   - Web Content Accessibility Guidelines
 ---
+
 This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the W3C Web Content Accessibility Guidelines 2.0 or 2.1 (or just WCAG, for the purposes of this writing).
 
-The WCAG 2.0 and 2.1 provide a detailed set of guidelines for making web content more accessible to people with a wide variety of disabilities. It is comprehensive but incredibly detailed, and quite difficult to gain a rapid understanding of. For this reason, we have summarised the practical steps you need to take to satisfy the different recommendations, with further links to more details where required.
+The WCAG 2.0 and 2.1 provide a detailed set of guidelines for making web content more accessible to people with a wide variety of disabilities. It is comprehensive but incredibly detailed, and quite difficult to gain a rapid understanding of. For this reason, we have summarized the practical steps you need to take to satisfy the different recommendations, with further links to more details where required.
 
 ## The four principles
 
@@ -41,7 +42,7 @@ WCAG 2.1 includes:
 
   - W3C/WAI: [What's new in WCAG 2.1?](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-21/)
   - Deque: [WCAG 2.1: What is Next for Accessibility Guidelines](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
-  - TPG: [Web Content Accessibility Guidelines (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
+  - TPG: [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.tpgi.com/web-content-accessibility-guidelines-wcag-2-1/)
 
 ## Legal standing
 

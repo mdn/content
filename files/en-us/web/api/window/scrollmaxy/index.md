@@ -1,6 +1,7 @@
 ---
 title: Window.scrollMaxY
 slug: Web/API/Window/scrollMaxY
+page-type: web-api-instance-property
 tags:
   - API
   - DOM_0
@@ -14,20 +15,17 @@ tags:
   - Window
 browser-compat: api.Window.scrollMaxY
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 The **`Window.scrollMaxY`** read-only property returns the
 maximum number of pixels that the document can be scrolled vertically.
 
-## Syntax
+## Value
 
-```js
-yMax = window.scrollMaxY
-```
+A number.
 
-- `yMax` is the number of pixels.
-
-## Example
+## Examples
 
 ```js
 // Scroll to the bottom of the page

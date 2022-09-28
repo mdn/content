@@ -11,37 +11,38 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.finally
 ---
+
 {{JSRef}}
 
-The **`finally()`** method returns a {{jsxref("Promise")}}.
-When the promise is finally either fulfilled or rejected, the specified callback
-function is executed. This provides a way for code to be run whether the promise was
-fulfilled successfully, or instead rejected.
+The **`finally()`** method of a {{jsxref("Promise")}} schedules a function,
+the _callback function_, to be called when the promise is settled.
+Like `then()` and `catch()`, it immediately returns an equivalent {{jsxref("Promise")}} object,
+allowing you to chain calls to another promise method, an operation called _composition_.
 
-This helps to avoid duplicating code in both the promise's {{jsxref("Promise.then",
-  "then()")}} and {{jsxref("Promise.catch", "catch()")}} handlers.
+This lets you avoid duplicating code in both the promise's {{jsxref("Promise/then",
+  "then()")}} and {{jsxref("Promise/catch", "catch()")}} handlers.
 
 {{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
 
 ## Syntax
 
-```js
-p.finally(onFinally);
+```js-nolint
+promise.finally(onFinally)
 
-p.finally(function() {
-   // settled (fulfilled or rejected)
-});
+promise.finally(() => {
+  // Code that will run after promise is settled (fulfilled or rejected)
+})
 ```
 
 ### Parameters
 
 - `onFinally`
-  - : A {{jsxref("Function")}} called when the `Promise` is settled.
+  - : A {{jsxref("Function")}} called when the `Promise` is settled. This handler receives no parameters.
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} whose `finally` handler is set to the
-specified function, `onFinally`.
+Returns an equivalent {{jsxref("Promise")}} with its `finally` handler set to the specified function.
+If the handler throws an error or returns a rejected promise, the promise returned by `finally()` will be rejected with that value instead. Otherwise, the return value of the handler does not affect the state of the original promise.
 
 ## Description
 
@@ -49,45 +50,55 @@ The `finally()` method can be useful if you want to do some processing or
 cleanup once the promise is settled, regardless of its outcome.
 
 The `finally()` method is very similar to calling
-`.then(onFinally, onFinally)` however there are a couple of differences:
+`.then(onFinally, onFinally)`, however, there are a couple of differences:
 
 - When creating a function inline, you can pass it once, instead of being forced to
-  either declare it twice, or create a variable for it
-- A `finally` callback will not receive any argument, since there's no
-  reliable means of determining if the promise was fulfilled or rejected. This use case
+  either declare it twice, or create a variable for it.
+- A `finally` callback will not receive any argument. This use case
   is for precisely when you _do not care_ about the rejection reason, or the
-  fulfillment value, and so there's no need to provide it. So for example:
-
-  - Unlike `Promise.resolve(2).then(() => {}, () => {})` (which
-    will be resolved with `undefined`),
-    `Promise.resolve(2).finally(() => {})` will be resolved with
-    `2`.
-  - Similarly, unlike `Promise.reject(3).then(() => {}, () => {})`
-    (which will be fulfilled with `undefined`),
-    `Promise.reject(3).finally(() => {})` will be rejected with
-    `3`.
+  fulfillment value, and so there's no need to provide it.
+- A `finally` call will usually chain through an equivalent to the original promise.
+  So for example:
+  - Unlike `Promise.resolve(2).then(() => 77, () => {})` (which
+    will return a resolved promise with the result `77`),
+    `Promise.resolve(2).finally(() => 77)` will return a
+    new resolved promise with the result `2`.
+  - Similarly, unlike `Promise.reject(3).then(() => {}, () => 88)`
+    (which will return a resolved promise with the value `88`),
+    `Promise.reject(3).finally(() => 88)` will return a rejected promise
+    with the reason `3`.
+  - But, both `Promise.reject(3).finally(() => {throw 99})` and
+    `Promise.reject(3).finally(() => Promise.reject(99))` will reject the returned promise
+    with the reason `99`.
 
 > **Note:** A `throw` (or returning a rejected promise) in the
-> `finally` callback will reject the new promise with the rejection reason
-> specified when calling `throw`.
+> `finally` callback will reject the returned promise, with the reason
+> specified when throwing, as shown in the last example.
 
 ## Examples
 
-### Using finally
+### Using finally()
 
 ```js
 let isLoading = true;
 
-fetch(myRequest).then(function(response) {
-    var contentType = response.headers.get("content-type");
-    if(contentType && contentType.includes("application/json")) {
+fetch(myRequest)
+  .then((response) => {
+    const contentType = response.headers.get("content-type");
+    if (contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
   })
-  .then(function(json) { /* process your JSON further */ })
-  .catch(function(error) { console.error(error); /* this line can also throw, e.g. when console = {} */ })
-  .finally(function() { isLoading = false; });
+  .then((json) => {
+    /* process your JSON further */
+  })
+  .catch((error) => {
+    console.error(error); // this line can also throw, e.g. when console = {}
+  })
+  .finally(() => {
+    isLoading = false;
+  });
 ```
 
 ## Specifications
@@ -100,7 +111,7 @@ fetch(myRequest).then(function(response) {
 
 ## See also
 
-- A polyfill of `Promise.prototype.finally` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise.prototype.finally` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
 - {{jsxref("Promise.prototype.catch()")}}

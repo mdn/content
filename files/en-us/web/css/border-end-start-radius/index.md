@@ -1,20 +1,27 @@
 ---
 title: border-end-start-radius
 slug: Web/CSS/border-end-start-radius
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-end-start-radius
   - recipe:css-property
   - writing modes
 browser-compat: css.properties.border-end-start-radius
 ---
+
 {{CSSRef}}
 
-The **`border-end-start-radius`** [CSS](/en-US/docs/Web/CSS) property defines a logical border radius on an element, which maps to a physical border radius depending on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the [text orientation](/en-US/docs/Web/CSS/text-orientation) and [writing mode](/en-US/docs/Web/CSS/CSS_Writing_Modes).
+The **`border-end-start-radius`** [CSS](/en-US/docs/Web/CSS) property defines a logical border radius on an element, which maps to a physical border radius depending on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}. This is useful when building styles to work regardless of the [text orientation](/en-US/docs/Web/CSS/text-orientation) and [writing mode](/en-US/docs/Web/CSS/CSS_Writing_Modes).
+
+{{EmbedInteractiveExample("pages/css/border-end-start-radius.html")}}
+
+This property affects the corner between the block-end and the inline-start sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-bottom-left-radius")}} property.
+
+## Syntax
 
 ```css
 /* <length> values */
@@ -29,12 +36,9 @@ border-end-start-radius: 1em 2em;
 border-end-start-radius: inherit;
 border-end-start-radius: initial;
 border-end-start-radius: revert;
+border-end-start-radius: revert-layer;
 border-end-start-radius: unset;
 ```
-
-This property affects the corner between the block-end and the inline-start sides of the element. For instance, in a `horizontal-tb` writing mode with `ltr` direction, it corresponds to the {{CSSxRef("border-bottom-left-radius")}} property.
-
-## Syntax
 
 ### Values
 
@@ -68,14 +72,14 @@ div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
-  border-end-start-radius: 10px;
+  border-end-start-radius: 10px;
 }
 
 .exampleText {
   writing-mode: vertical-rl;
   padding: 10px;
   background-color: #fff;
-  border-end-start-radius: 10px;
+  border-end-start-radius: 10px;
 }
 ```
 
@@ -93,5 +97,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical property: {{CSSxRef("border-top-right-radius")}}
 - {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

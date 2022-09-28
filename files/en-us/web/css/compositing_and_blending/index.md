@@ -7,7 +7,12 @@ tags:
   - Guide
   - Overview
   - Reference
+browser-compat:
+  - css.properties.background-blend-mode
+  - css.properties.isolation
+  - css.properties.mix-blend-mode
 ---
+
 {{CSSRef}}
 
 **Compositing and Blending** is a CSS module that defines how shapes of different elements are combined into a single image.
@@ -26,20 +31,8 @@ tags:
 
 ## Specifications
 
-| Specification                        | Status                           | Comment            |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Compositing")}} | {{Spec2("Compositing")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `background-blend-mode` property
-
-{{Compat("css.properties.background-blend-mode")}}
-
-### `isolation` property
-
-{{Compat("css.properties.isolation")}}
-
-### `mix-blend-mode` property
-
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}

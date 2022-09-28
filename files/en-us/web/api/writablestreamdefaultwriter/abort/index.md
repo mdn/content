@@ -1,9 +1,9 @@
 ---
 title: WritableStreamDefaultWriter.abort()
 slug: Web/API/WritableStreamDefaultWriter/abort
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - Streams
@@ -11,7 +11,8 @@ tags:
   - abort
 browser-compat: api.WritableStreamDefaultWriter.abort
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`abort()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface aborts the stream, signaling that
@@ -24,14 +25,15 @@ rejected promise.
 
 ## Syntax
 
-```js
-var promise = writableStreamDefaultWriter.abort(reason);
+```js-nolint
+abort()
+abort(reason)
 ```
 
 ### Parameters
 
-- reason {{optional_inline}}
-  - : A {{domxref("DOMString")}} representing a human-readable reason for the abort.
+- `reason` {{optional_inline}}
+  - : A string representing a human-readable reason for the abort.
 
 ### Return value
 
@@ -40,7 +42,7 @@ parameter.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The stream you are trying to abort is not a {{domxref("WritableStream")}}, or it is
     locked.
 
@@ -49,21 +51,21 @@ parameter.
 ```js
 const writableStream = new WritableStream({
   write(chunk) {
-    ...
+    // ...
   },
   close() {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 }, queuingStrategy);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 
-...
+// ...
 
 // abort the stream when desired
 writer.abort.then((reason) => {

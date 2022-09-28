@@ -1,6 +1,7 @@
 ---
 title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -9,6 +10,7 @@ tags:
   - TextEncoder
 browser-compat: api.TextEncoder.TextEncoder
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextEncoder()`** constructor returns a newly created
@@ -16,8 +18,8 @@ The **`TextEncoder()`** constructor returns a newly created
 
 ## Syntax
 
-```js
-new TextEncoder();
+```js-nolint
+new TextEncoder()
 ```
 
 ### Parameters

@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createConvolver()
 slug: Web/API/BaseAudioContext/createConvolver
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -11,12 +12,12 @@ tags:
   - createConvolver
 browser-compat: api.BaseAudioContext.createConvolver
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createConvolver()` method of the {{ domxref("BaseAudioContext") }}
 interface creates a {{ domxref("ConvolverNode") }}, which is commonly used to apply
-reverb effects to your audio. See the [spec definition of
-Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more information.
+reverb effects to your audio. See the [spec definition of Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more information.
 
 > **Note:** The {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}}
 > constructor is the recommended way to create a {{domxref("ConvolverNode")}}; see
@@ -24,15 +25,19 @@ Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more in
 
 ## Syntax
 
-```js
-baseAudioContext.createConvolver();
+```js-nolint
+createConvolver()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("ConvolverNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of an AudioContext to create a convolver node.
 The basic premise is that you create an AudioBuffer containing a sound sample to be used
@@ -40,35 +45,38 @@ as an ambience to shape the convolution (called the _impulse response_,) and
 apply that to the convolver. The example below uses a short sample of a concert hall
 crowd, so the reverb effect applied is really deep and echoey.
 
-For applied examples/information, check out our [Voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) ([see
-app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
+For applied examples/information, check out our [Voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) ([see app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var convolver = audioCtx.createConvolver();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const convolver = audioCtx.createConvolver();
 
-  ...
+// …
 
 // grab audio track via XHR for convolver node
 
-var soundSource, concertHallBuffer;
+let soundSource, concertHallBuffer;
 
 ajaxRequest = new XMLHttpRequest();
-ajaxRequest.open('GET', 'concert-crowd.ogg', true);
-ajaxRequest.responseType = 'arraybuffer';
+ajaxRequest.open("GET", "concert-crowd.ogg", true);
+ajaxRequest.responseType = "arraybuffer";
 
-ajaxRequest.onload = function() {
-  var audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(audioData, function(buffer) {
-      concertHallBuffer = buffer;
-      soundSource = audioCtx.createBufferSource();
-      soundSource.buffer = concertHallBuffer;
-    }, function(e){"Error with decoding audio data" + e.err});
-}
+ajaxRequest.onload = () => {
+  const audioData = ajaxRequest.response;
+  audioCtx.decodeAudioData(
+    audioData,
+    (buffer) => {
+      concertHallBuffer = buffer;
+      soundSource = audioCtx.createBufferSource();
+      soundSource.buffer = concertHallBuffer;
+    },
+    (e) => console.error(`Error with decoding audio data: ${e.err}`)
+  );
+};
 
 ajaxRequest.send();
 
-  ...
+// …
 
 convolver.buffer = concertHallBuffer;
 ```

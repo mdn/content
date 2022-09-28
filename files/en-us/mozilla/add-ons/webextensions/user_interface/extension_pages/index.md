@@ -6,6 +6,7 @@ tags:
   - User Interface
   - WebExtensions
 ---
+
 {{AddonSidebar()}}
 
 You can include HTML pages in your extension to provide forms, help, or any other content your extension needs.
@@ -14,7 +15,7 @@ You can include HTML pages in your extension to provide forms, help, or any othe
 
 These pages also get access to the same privileged JavaScript APIs that are available to your extension's background scripts. However, they are in their own tab, with their own JavaScript event queue, their own globals, etc.
 
-Think of the background page as a "hidden extension page".
+Think of the background page as a "hidden extension page".
 
 ## Specifying extension pages
 
@@ -48,7 +49,7 @@ When the window is no longer needed, it can be closed programmatically.
 For example, after the user clicks a button, you may pass the current window's id to {{WebExtAPIRef("windows.remove()")}}:
 
 ```js
-document.getElementById("closeme").addEventListener("click", function(){
+document.getElementById("closeme").addEventListener("click", () => {
   let winId = browser.windows.WINDOW_ID_CURRENT;
   let removing = browser.windows.remove(winId);
 });
@@ -60,7 +61,7 @@ By default, pages you open in this way will be stored in the user's history, jus
 
 ```js
 function onVisited(historyItem) {
-  if (historyItem.url == browser.extension.getURL(myPage)) {
+  if (historyItem.url === browser.extension.getURL(myPage)) {
     browser.history.deleteUrl({url: historyItem.url});
   }
 }

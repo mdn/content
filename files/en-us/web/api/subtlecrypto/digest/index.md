@@ -1,6 +1,7 @@
 ---
 title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -10,6 +11,7 @@ tags:
   - digest
 browser-compat: api.SubtleCrypto.digest
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`digest()`** method of the {{domxref("SubtleCrypto")}}
@@ -23,32 +25,29 @@ digest. It returns a {{jsxref("Promise")}} which will be fulfilled with the dige
 
 ## Syntax
 
-```js
-const digest = crypto.subtle.digest(algorithm, data);
+```js-nolint
+digest(algorithm, data)
 ```
 
 ### Parameters
 
-- `algorithm` is a {{domxref("DOMString")}} defining the hash
-  function to use. Supported values are:
-
-  - `SHA-1` (but don't use this in cryptographic applications)
-  - `SHA-256`
-  - `SHA-384`
-  - `SHA-512`.
-
-- `data` is an {{jsxref("ArrayBuffer")}} or
-  {{domxref("ArrayBufferView")}} containing the data to be digested.
+- `algorithm`
+  - : This may be a string or an object with a single property `name` that is a string. The string names the hash function to use. Supported values are:
+    - `"SHA-1"` (but don't use this in cryptographic applications)
+    - `"SHA-256"`
+    - `"SHA-384"`
+    - `"SHA-512"`.
+- `data`
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object containing the data to be digested.
 
 ### Return value
 
-- `digest` is a {{jsxref("Promise")}} that fulfills with an
-  {{jsxref("ArrayBuffer")}} containing the digest.
+A {{jsxref("Promise")}} that fulfills with an {{jsxref("ArrayBuffer")}} containing the digest.
 
 ## Supported algorithms
 
-Digest algorithms, also known as [cryptographic hash
-functions](/en-US/docs/Glossary/Cryptographic_hash_function), transform an arbitrarily large block of data into a fixed-size output,
+Digest algorithms, also known as [cryptographic hash functions](/en-US/docs/Glossary/Cryptographic_hash_function),
+transform an arbitrarily large block of data into a fixed-size output,
 usually much shorter than the input. They have a variety of applications in
 cryptography.
 
@@ -127,7 +126,7 @@ async function digestMessage(message) {
 }
 
 digestMessage(text)
-  .then(digestBuffer => console.log(digestBuffer.byteLength));
+  .then((digestBuffer) => console.log(digestBuffer.byteLength));
 ```
 
 ### Converting a digest to a hex string
@@ -143,12 +142,12 @@ async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
   const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+  const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
   return hashHex;
 }
 
 digestMessage(text)
-  .then(digestHex => console.log(digestHex));
+  .then((digestHex) => console.log(digestHex));
 ```
 
 ## Specifications
@@ -165,6 +164,5 @@ digestMessage(text)
 ## See also
 
 - [Non-cryptographic uses of SubtleCrypto](/en-US/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto)
-- [Chromium
-  secure origins specification](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features)
+- [Chromium secure origins specification](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features/)
 - [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) specifies the SHA family of digest algorithms.

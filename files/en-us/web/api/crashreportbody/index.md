@@ -1,6 +1,7 @@
 ---
 title: CrashReportBody
 slug: Web/API/CrashReportBody
+page-type: web-api-interface
 tags:
   - API
   - CrashReportBody
@@ -10,15 +11,18 @@ tags:
   - Reporting API
 browser-compat: api.CrashReportBody
 ---
+
 {{SeeCompatTable}}{{APIRef("Reporting API")}}
 
 The `CrashReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of a crash report (the return value of its {{domxref("Report.body")}} property).
 
 A crash report is generated when a document becomes unusable due to the browser (or one of its processes) crashing. For security reasons, no details of the crash are communicated in the body except for a general crash reason.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
-- `reason`
+- `reason` {{experimental_inline}}
 
   - : A string representing the reason for the crash. Current possible reasons are:
 

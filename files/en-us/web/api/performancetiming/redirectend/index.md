@@ -1,6 +1,7 @@
 ---
 title: PerformanceTiming.redirectEnd
 slug: Web/API/PerformanceTiming/redirectEnd
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -13,6 +14,7 @@ tags:
   - legacy
 browser-compat: api.PerformanceTiming.redirectEnd
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
@@ -25,11 +27,9 @@ in milliseconds since the UNIX epoch, the last HTTP redirect is completed, that 
 the last byte of the HTTP response has been received. If there is no redirect, or if one
 of the redirect is not of the same origin, the value returned is `0`.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.redirectEnd;
-```
+An `unsigned long long`.
 
 ## Specifications
 

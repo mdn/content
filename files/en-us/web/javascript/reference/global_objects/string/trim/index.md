@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.trim
 ---
+
 {{JSRef}}
 
 The **`trim()`** method removes whitespace from both ends of a
@@ -22,7 +23,7 @@ no-break space, etc.) and all the line terminator characters (LF, CR, etc.).
 
 ## Syntax
 
-```js
+```js-nolint
 trim()
 ```
 
@@ -41,7 +42,7 @@ To return a new string with whitespace trimmed from just one end, use {{jsxref("
 The following example displays the lowercase string `'foo'`:
 
 ```js
-var orig = '   foo  ';
+const orig = '   foo  ';
 console.log(orig.trim()); // 'foo'
 ```
 

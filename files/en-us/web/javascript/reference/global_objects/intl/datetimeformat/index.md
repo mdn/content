@@ -11,11 +11,12 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DateTimeFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.DateTimeFormat`** object enables language-sensitive date and time formatting.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html")}}
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
@@ -49,7 +50,7 @@ The **`Intl.DateTimeFormat`** object enables language-sensitive date and time fo
 In basic use without specifying a locale, `DateTimeFormat` uses the default locale and default options.
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
@@ -62,7 +63,7 @@ console.log(new Intl.DateTimeFormat().format(date));
 This example shows some of the variations in localized date and time formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Results below use the time zone of America/Los_Angeles (UTC-0800, Pacific Standard Time)
 
@@ -98,10 +99,10 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 The date and time formats can be customized using the `options` argument:
 
 ```js
-var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
 
 // request a weekday along with a long date
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 console.log(new Intl.DateTimeFormat('de-DE', options).format(date));
 // → "Donnerstag, 20. Dezember 2012"
 
@@ -148,9 +149,9 @@ console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 The used calendar and numbering formats can also be set independently via `options` arguments:
 
 ```js
-var options = {calendar: 'chinese', numberingSystem: 'arab'};
-var dateFormat = new Intl.DateTimeFormat('default', options);
-var usedOptions = dateFormat.resolvedOptions();
+const options = {calendar: 'chinese', numberingSystem: 'arab'};
+const dateFormat = new Intl.DateTimeFormat('default', options);
+const usedOptions = dateFormat.resolvedOptions();
 
 console.log(usedOptions.calendar);
 // → "chinese"
@@ -161,10 +162,6 @@ console.log(usedOptions.numberingSystem);
 console.log(usedOptions.timeZone);
 // → "America/New_York" (the users default timezone)
 ```
-
-## Polyfill
-
-[formatjs Intl.DateTimeFormat polyfill](https://formatjs.io/docs/polyfills/intl-datetimeformat)
 
 ## Specifications
 
@@ -177,3 +174,4 @@ console.log(usedOptions.timeZone);
 ## See also
 
 - {{jsxref("Intl")}}
+- [A polyfill of `Intl.DateTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-datetimeformat/)

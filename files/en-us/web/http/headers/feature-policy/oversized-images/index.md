@@ -10,13 +10,14 @@ tags:
   - Non-standard
 browser-compat: http.headers.Feature-Policy.oversized-images
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `oversized-images` directive controls whether the current document is allowed to download and display large images.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: oversized-images <allowlist>;
 ```
 

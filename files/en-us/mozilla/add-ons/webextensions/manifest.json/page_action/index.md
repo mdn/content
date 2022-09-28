@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.page_action
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -18,6 +19,10 @@ browser-compat: webextensions.manifest.page_action
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
@@ -48,7 +53,7 @@ You can also create and manipulate page actions programmatically using the {{Web
 
 Page actions are like browser actions, except that they are associated with particular web pages rather than with the browser as a whole. If an action is only relevant on certain pages, then you should use a page action and display it only on relevant pages. If an action is relevant to all pages or to the browser itself, use a browser action.
 
-While browser actions are displayed by default, page actions are hidden by default. They can be shown for a particular tab by calling {{WebExtAPIRef("pageAction.show()")}} , passing in the tab's `id`. You can also change this default behavior using the `show_matches` property.
+While browser actions are displayed by default, page actions are hidden by default. They can be shown for a particular tab by calling {{WebExtAPIRef("pageAction.show()")}}, passing in the tab's `id`. You can also change this default behavior using the `show_matches` property.
 
 ## Syntax
 
@@ -235,7 +240,7 @@ The `page_action` key is an object that may have any of three properties, all op
 }</pre
         >
         <p>
-          This shows the page action by default for all HTTPS  URLs under the
+          This shows the page action by default for all HTTPS URLs under the
           <code>"mozilla.org"</code> domain, except for pages under
           <code>"developer.mozilla.org"</code>.
         </p>
@@ -246,7 +251,7 @@ The `page_action` key is an object that may have any of three properties, all op
       <td><code>Array</code> of <code>Match Pattern</code></td>
       <td>
         <p>
-          Show the page action by default for pages whose URLs match any of the
+          Show the page action by default for pages whose URLs match any of the
           given patterns.
         </p>
         <p>See also <code>hide_matches</code>.</p>

@@ -1,6 +1,7 @@
 ---
 title: MouseScrollEvent
 slug: Web/API/MouseScrollEvent
+page-type: web-api-interface
 tags:
   - API
   - DOM
@@ -9,9 +10,11 @@ tags:
   - Event
   - Interface
   - Reference
+  - Non-standard
 browser-compat: api.MouseScrollEvent
 ---
-{{APIRef("DOM Events")}}{{ non-standard_header() }}{{deprecated_header}}
+
+{{APIRef("UI Events")}}{{ Non-standard_Header }}{{Deprecated_Header}}
 
 The **`MouseScrollEvent`** interface represents events that occur due to the user moving a mouse wheel or similar input device.
 
@@ -43,8 +46,8 @@ void initMouseScrollEvent(
 
 ## Attributes
 
-| Attribute                       | Type   | Description                 |
-| ------------------------------- | ------ | --------------------------- |
+| Attribute                 | Type   | Description                 |
+| ------------------------- | ------ | --------------------------- |
 | `axis` {{ReadOnlyInline}} | `long` | Indicates scroll direction. |
 
 ## Constants
@@ -59,7 +62,7 @@ void initMouseScrollEvent(
 ## Methods
 
 - `initMouseScrollEvent()`
-  - : See [nsIDOMMouseScrollEvent::initMouseScrollEvent()](/en-US/docs/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent#initMouseScrollEvent%28%29).
+  - : See `nsIDOMMouseScrollEvent::initMouseScrollEvent()`.
 
 ## Browser compatibility
 

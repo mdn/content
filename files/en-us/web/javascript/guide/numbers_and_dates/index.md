@@ -13,8 +13,9 @@ tags:
   - Math
   - Numbers
   - Numeric
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 This chapter introduces the concepts, objects and functions used to work with and perform calculations using numbers and dates in JavaScript. This includes using numbers written in various bases including decimal, binary, and hexadecimal, as well as the use of the global {{jsxref("Math")}} object to perform a wide variety of mathematical operations on numbers.
@@ -24,8 +25,6 @@ This chapter introduces the concepts, objects and functions used to work with an
 In JavaScript, numbers are implemented in [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) (i.e., a number between ±2^−1022 and ±2^+1023, or about ±10^−308 to ±10^+308, with a numeric precision of 53 bits). Integer values up to ±2^53 − 1 can be represented exactly.
 
 In addition to being able to represent floating-point numbers, the number type has three symbolic values: `+`{{jsxref("Infinity")}}, `-`{{jsxref("Infinity")}}, and {{jsxref("NaN")}} (not-a-number).
-
-A more recent addition to JavaScript is {{jsxref("BigInt")}} which lets you represent integers that may be very large. There are caveats to using `BigInt`, however; for example, you can't mix and match `BigInt` and {{jsxref("Number")}} values in the same operation, and you can't use the {{jsxref("Math")}} object with `BigInt` values.
 
 See also [JavaScript data types and structures](/en-US/docs/Web/JavaScript/Data_structures) for context with other primitive types in JavaScript.
 
@@ -50,25 +49,27 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). If the digits after the `0b` are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+const FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+const FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
+const FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 ```
 
 ### Octal numbers
 
-Octal number syntax uses a leading zero. If the digits after the `0` are outside the range 0 through 7, the number will be interpreted as a decimal number.
+The standard syntax for octal numbers is to prefix them with `0o`. For example:
 
 ```js
-var n = 0755; // 493
-var m = 0644; // 420
+const a = 0o10; // 8
 ```
 
-Strict mode in ECMAScript 5 forbids octal syntax. Octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: `0644 === 420` and `"\045" === "%"`. In ECMAScript 2015, octal numbers are supported if they are prefixed with `0o`, e.g.:
+There's also a legacy syntax for octal numbers — by prefixing the octal number with a zero: `0644 === 420` and `"\045" === "%"`. If the digits after the `0` are outside the range 0 through 7, the number will be interpreted as a decimal number.
 
 ```js
-var a = 0o10; // ES2015: 8
+const n = 0755; // 493
+const m = 0644; // 420
 ```
+
+[Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) forbids this octal syntax.
 
 ### Hexadecimal numbers
 
@@ -93,48 +94,48 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 The built-in {{jsxref("Number")}} object has properties for numerical constants, such as maximum value, not-a-number, and infinity. You cannot change the values of these properties and you use them as follows:
 
 ```js
-var biggestNum = Number.MAX_VALUE;
-var smallestNum = Number.MIN_VALUE;
-var infiniteNum = Number.POSITIVE_INFINITY;
-var negInfiniteNum = Number.NEGATIVE_INFINITY;
-var notANum = Number.NaN;
+const biggestNum = Number.MAX_VALUE;
+const smallestNum = Number.MIN_VALUE;
+const infiniteNum = Number.POSITIVE_INFINITY;
+const negInfiniteNum = Number.NEGATIVE_INFINITY;
+const notANum = Number.NaN;
 ```
 
 You always refer to a property of the predefined `Number` object as shown above, and not as a property of a `Number` object you create yourself.
 
 The following table summarizes the `Number` object's properties.
 
-| Property                                             | Description                                                                                                                                        |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.MAX_VALUE")}}             | The largest representable number (`±1.7976931348623157e+308`)                                                                                      |
-| {{jsxref("Number.MIN_VALUE")}}             | The smallest representable number (`±5e-324`)                                                                                                      |
-| {{jsxref("Number.NaN")}}                     | Special "not a number" value                                                                                                                       |
-| {{jsxref("Number.NEGATIVE_INFINITY")}} | Special negative infinite value; returned on overflow                                                                                              |
-| {{jsxref("Number.POSITIVE_INFINITY")}} | Special positive infinite value; returned on overflow                                                                                              |
-| {{jsxref("Number.EPSILON")}}                 | Difference between `1` and the smallest value greater than `1` that can be represented as a {{jsxref("Number")}} (`2.220446049250313e-16`) |
-| {{jsxref("Number.MIN_SAFE_INTEGER")}}     | Minimum safe integer in JavaScript (−2^53 + 1, or `−9007199254740991`)                                                                             |
-| {{jsxref("Number.MAX_SAFE_INTEGER")}}     | Maximum safe integer in JavaScript (+2^53 − 1, or `+9007199254740991`)                                                                             |
+| Property                               | Description                                                                                                                                |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{jsxref("Number.MAX_VALUE")}}         | The largest positive representable number (`1.7976931348623157e+308`)                                                                      |
+| {{jsxref("Number.MIN_VALUE")}}         | The smallest positive representable number (`5e-324`)                                                                                      |
+| {{jsxref("Number.NaN")}}               | Special "not a number" value                                                                                                               |
+| {{jsxref("Number.NEGATIVE_INFINITY")}} | Special negative infinite value; returned on overflow                                                                                      |
+| {{jsxref("Number.POSITIVE_INFINITY")}} | Special positive infinite value; returned on overflow                                                                                      |
+| {{jsxref("Number.EPSILON")}}           | Difference between `1` and the smallest value greater than `1` that can be represented as a {{jsxref("Number")}} (`2.220446049250313e-16`) |
+| {{jsxref("Number.MIN_SAFE_INTEGER")}}  | Minimum safe integer in JavaScript (−2^53 + 1, or `−9007199254740991`)                                                                     |
+| {{jsxref("Number.MAX_SAFE_INTEGER")}}  | Maximum safe integer in JavaScript (+2^53 − 1, or `+9007199254740991`)                                                                     |
 
-| Method                                           | Description                                                                                                                                                                                           |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}     | Parses a string argument and returns a floating point number. Same as the global {{jsxref("parseFloat", "parseFloat()")}} function.                                                       |
-| {{jsxref("Number.parseInt()")}}         | Parses a string argument and returns an integer of the specified radix or base. Same as the global {{jsxref("parseInt", "parseInt()")}} function.                                         |
-| {{jsxref("Number.isFinite()")}}         | Determines whether the passed value is a finite number.                                                                                                                                               |
-| {{jsxref("Number.isInteger()")}}     | Determines whether the passed value is an integer.                                                                                                                                                    |
-| {{jsxref("Number.isNaN()")}}             | Determines whether the passed value is {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
-| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                                                                                           |
+| Method                               | Description                                                                                                                                                               |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Number.parseFloat()")}}    | Parses a string argument and returns a floating point number. Same as the global {{jsxref("parseFloat", "parseFloat()")}} function.                                       |
+| {{jsxref("Number.parseInt()")}}      | Parses a string argument and returns an integer of the specified radix or base. Same as the global {{jsxref("parseInt", "parseInt()")}} function.                         |
+| {{jsxref("Number.isFinite()")}}      | Determines whether the passed value is a finite number.                                                                                                                   |
+| {{jsxref("Number.isInteger()")}}     | Determines whether the passed value is an integer.                                                                                                                        |
+| {{jsxref("Number.isNaN()")}}         | Determines whether the passed value is {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
+| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                                                               |
 
 The `Number` prototype provides methods for retrieving information from `Number` objects in various formats. The following table summarizes the methods of `Number.prototype`.
 
-| Method                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| {{jsxref("Number.toExponential", "toExponential()")}} | Returns a string representing the number in exponential notation.                          |
-| {{jsxref("Number.toFixed", "toFixed()")}}                 | Returns a string representing the number in fixed-point notation.                          |
-| {{jsxref("Number.toPrecision", "toPrecision()")}}         | Returns a string representing the number to a specified precision in fixed-point notation. |
+| Method                                                | Description                                                                                |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| {{jsxref("Number/toExponential", "toExponential()")}} | Returns a string representing the number in exponential notation.                          |
+| {{jsxref("Number/toFixed", "toFixed()")}}             | Returns a string representing the number in fixed-point notation.                          |
+| {{jsxref("Number/toPrecision", "toPrecision()")}}     | Returns a string representing the number to a specified precision in fixed-point notation. |
 
 ## Math object
 
-The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the `Math` object's `PI` property has the value of pi (3.141...), which you would use in an application as
+The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the `Math` object's `PI` property has the value of pi (3.141…), which you would use in an application as
 
 ```js
 Math.PI
@@ -205,6 +206,7 @@ The following table summarizes the `Math` object's methods.
           {{jsxref("Math.pow", "pow()")}},
           {{jsxref("Math.exp", "exp()")}},
           {{jsxref("Math.expm1", "expm1()")}},
+          {{jsxref("Math.log", "log()")}},
           {{jsxref("Math.log10", "log10()")}},
           {{jsxref("Math.log1p", "log1p()")}},
           {{jsxref("Math.log2", "log2()")}}
@@ -275,6 +277,46 @@ The following table summarizes the `Math` object's methods.
 
 Unlike many other objects, you never create a `Math` object of your own. You always use the built-in `Math` object.
 
+## BigInts
+
+One shortcoming of number values is they only have 64 bits. In practice, due to using IEEE 754 encoding, they cannot represent any integer larger than [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) (which is 2<sup>53</sup> - 1) accurately. To solve the need of encoding binary data and to interoperate with other languages that offer wide integers like `i64` (64-bit integers) and `i128` (128-bit integers), JavaScript also offers another data type to represent _arbitrarily large integers_: [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
+
+A BigInt can be defined as an integer literal suffixed by `n`:
+
+```js
+const b1 = 123n;
+// Can be arbitrarily large.
+const b2 = -1234567890987654321n;
+```
+
+BigInts can also be constructed from number values or string values using the [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) constructor.
+
+```js
+const b1 = BigInt(123);
+// Using a string prevents loss of precision, since long number
+// literals don't represent what they seem like.
+const b2 = BigInt("-1234567890987654321");
+```
+
+Conceptually, a BigInt is just an arbitrarily long sequence of bits which encodes an integer. You can safely do any arithmetic operations without losing precision or over-/underflowing.
+
+```js
+const integer = 12 ** 34; // 4.9222352429520264e+36; only has limited precision
+const bigint = 12n ** 34n; // 4922235242952026704037113243122008064n
+```
+
+Compared to numbers, BigInt values yield higher precision when representing large _integers_; however, they cannot represent _floating-point numbers_. For example, division would round to zero:
+
+```js
+const bigintDiv = 5n / 2n; // 2n, because there's no 2.5 in BigInt
+```
+
+`Math` functions cannot be used on BigInt values. There is [an open proposal](https://github.com/tc39/proposal-bigint-math) to overload certain `Math` functions like `Math.max()` to allow BigInt values.
+
+Choosing between BigInt and number depends on your use-case and your input's range. The precision of numbers should be able to accommodate most day-to-day tasks already, and BigInts are most suitable for handling binary data.
+
+Read more about what you can do with BigInt values in the [Expressions and Operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bigint_operators) section, or the [BigInt reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
+
 ## Date object
 
 JavaScript does not have a date data type. However, you can use the {{jsxref("Date")}} object and its methods to work with dates and times in your applications. The `Date` object has a large number of methods for setting, getting, and manipulating dates. It does not have any properties.
@@ -286,7 +328,7 @@ The `Date` object range is -100,000,000 days to 100,000,000 days relative to 01 
 To create a `Date` object:
 
 ```js
-var dateObjectName = new Date([parameters]);
+const dateObjectName = new Date([parameters]);
 ```
 
 where `dateObjectName` is the name of the `Date` object being created; it can be a new object or a property of an existing object.
@@ -296,9 +338,9 @@ Calling `Date` without the `new` keyword returns a string representing the curre
 The `parameters` in the preceding syntax can be any of the following:
 
 - Nothing: creates today's date and time. For example, `today = new Date();`.
-- A string representing a date in the following form: "Month day, year hours:minutes:seconds." For example, `var Xmas95 = new Date("December 25, 1995 13:30:00")`. If you omit hours, minutes, or seconds, the value will be set to zero.
-- A set of integer values for year, month, and day. For example, `var Xmas95 = new Date(1995, 11, 25)`.
-- A set of integer values for year, month, day, hour, minute, and seconds. For example, `var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
+- A string representing a date in the following form: "Month day, year hours:minutes:seconds." For example, `let Xmas95 = new Date("December 25, 1995 13:30:00")`. If you omit hours, minutes, or seconds, the value will be set to zero.
+- A set of integer values for year, month, and day. For example, `let Xmas95 = new Date(1995, 11, 25)`.
+- A set of integer values for year, month, day, hour, minute, and seconds. For example, `let Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
 
 ### Methods of the Date object
 
@@ -321,7 +363,7 @@ With the "get" and "set" methods you can get and set seconds, minutes, hours, da
 For example, suppose you define the following date:
 
 ```js
-var Xmas95 = new Date('December 25, 1995');
+const Xmas95 = new Date('December 25, 1995');
 ```
 
 Then `Xmas95.getMonth()` returns 11, and `Xmas95.getFullYear()` returns 1995.
@@ -331,21 +373,21 @@ The `getTime` and `setTime` methods are useful for comparing dates. The `getTime
 For example, the following code displays the number of days left in the current year:
 
 ```js
-var today = new Date();
-var endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Set day and month
+const today = new Date();
+const endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Set day and month
 endYear.setFullYear(today.getFullYear()); // Set year to this year
-var msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
-var daysLeft = (endYear.getTime() - today.getTime()) / msPerDay;
-var daysLeft = Math.round(daysLeft); //returns days left in the year
+const msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
+let daysLeft = (endYear.getTime() - today.getTime()) / msPerDay;
+daysLeft = Math.round(daysLeft); //returns days left in the year
 ```
 
 This example creates a `Date` object named `today` that contains today's date. It then creates a `Date` object named `endYear` and sets the year to the current year. Then, using the number of milliseconds per day, it computes the number of days between `today` and `endYear`, using `getTime` and rounding to a whole number of days.
 
-The `parse` method is useful for assigning values from date strings to existing `Date` objects. For example, the following code uses `parse` and `setTime` to assign a date value to the `IPOdate` object:
+The `parse` method is useful for assigning values from date strings to existing `Date` objects. For example, the following code uses `parse` and `setTime` to assign a date value to the `ipoDate` object:
 
 ```js
-var IPOdate = new Date();
-IPOdate.setTime(Date.parse('Aug 9, 1995'));
+const ipoDate = new Date();
+ipoDate.setTime(Date.parse('Aug 9, 1995'));
 ```
 
 ### Example
@@ -354,12 +396,12 @@ In the following example, the function `JSClock()` returns the time in the forma
 
 ```js
 function JSClock() {
-  var time = new Date();
-  var hour = time.getHours();
-  var minute = time.getMinutes();
-  var second = time.getSeconds();
-  var temp = '' + ((hour > 12) ? hour - 12 : hour);
-  if (hour == 0)
+  const time = new Date();
+  const hour = time.getHours();
+  const minute = time.getMinutes();
+  const second = time.getSeconds();
+  let temp = String(hour % 12);
+  if (hour === 0)
     temp = '12';
   temp += ((minute < 10) ? ':0' : ':') + minute;
   temp += ((second < 10) ? ':0' : ':') + second;

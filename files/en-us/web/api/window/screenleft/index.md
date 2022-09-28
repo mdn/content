@@ -1,6 +1,7 @@
 ---
 title: Window.screenLeft
 slug: Web/API/Window/screenLeft
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -11,6 +12,7 @@ tags:
   - screenLeft
 browser-compat: api.Window.screenLeft
 ---
+
 {{APIRef}}
 
 The **`Window.screenLeft`** read-only property returns the
@@ -21,16 +23,10 @@ to the left side of the screen.
 > {{domxref("Window.screenX")}} property. `screenLeft` was originally
 > supported only in IE but was introduced everywhere due to popularity.
 
-## Syntax
-
-```js
-leftWindowPos = window.screenLeft
-```
-
-### Returns
+## Value
 
 A number equal to the number of CSS pixels from the left edge of the browser viewport
-to the  left edge of the screen.
+to the left edge of the screen.
 
 ## Examples
 
@@ -58,7 +54,7 @@ function positionElem() {
   ctx.arc(leftUpdate + (width/2), topUpdate + (height/2) + 35, 50, degToRad(0), degToRad(360), false);
   ctx.fill();
 
-  pElem.textContent = 'Window.screenLeft: ' + window.screenLeft + ', Window.screenTop: ' + window.screenTop;
+  pElem.textContent = `Window.screenLeft: ${window.screenLeft}, Window.screenTop: ${window.screenTop}`;
 
   window.requestAnimationFrame(positionElem);
 }
@@ -71,7 +67,7 @@ supported, and if not, polyfills in `screenLeft`/`screenTop` using
 {{domxref("Window.screenX")}}/{{domxref("Window.screenY")}}.
 
 ```js
-if(!window.screenLeft) {
+if (!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
 }

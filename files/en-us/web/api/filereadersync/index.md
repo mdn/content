@@ -1,11 +1,13 @@
 ---
 title: FileReaderSync
 slug: Web/API/FileReaderSync
+page-type: web-api-interface
 tags:
   - API
   - NeedsMarkupWork
 browser-compat: api.FileReaderSync
 ---
+
 {{APIRef("File API")}}
 
 The `FileReaderSync` interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects synchronously.
@@ -23,11 +25,11 @@ This interface does not have any properties.
 - {{DOMxRef("FileReaderSync.readAsArrayBuffer","FileReaderSync.readAsArrayBuffer()")}}
   - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into an {{jsxref("ArrayBuffer")}} representing the input data as a binary string.
 - {{DOMxRef("FileReaderSync.readAsBinaryString","FileReaderSync.readAsBinaryString()")}} {{deprecated_inline}}
-  - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a {{DOMxRef("DOMString")}} representing the input data as a binary string. This method is deprecated, consider using `readAsArrayBuffer()` instead.
+  - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a string representing the input data as a binary string. This method is deprecated, consider using `readAsArrayBuffer()` instead.
 - {{DOMxRef("FileReaderSync.readAsText","FileReaderSync.readAsText()")}}
-  - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a {{DOMxRef("DOMString")}} representing the input data as a text string. The optional **`encoding`** parameter indicates the encoding to be used (e.g., iso-8859-1 or UTF-8). If not present, the method will apply a detection algorithm for it.
+  - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a string representing the input data as a text string. The optional **`encoding`** parameter indicates the encoding to be used (e.g., iso-8859-1 or UTF-8). If not present, the method will apply a detection algorithm for it.
 - {{DOMxRef("FileReaderSync.readAsDataURL","FileReaderSync.readAsDataURL()")}}
-  - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a {{DOMxRef("DOMString")}} representing the input data as a data URL.
+  - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into a string representing the input data as a data URL.
 
 ## Specifications
 
@@ -40,6 +42,6 @@ This interface does not have any properties.
 ## See also
 
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{DOMxRef("Blob")}}
+- {{DOMxRef("Blob")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReader")}}

@@ -77,7 +77,7 @@ The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element is used to indicate the ter
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-In HTML5, the {{htmlattrxref("title")}} attribute has special meaning, as noted below.
+The {{htmlattrxref("title")}} attribute has special meaning, as noted below.
 
 ## Usage notes
 
@@ -87,9 +87,9 @@ There are some not-entirely-obvious aspects to using the `<dfn>` element. We exa
 
 The term being defined is identified following these rules:
 
-1.  If the `<dfn>` element has a {{htmlattrxref("title")}} attribute, the value of the `title` attribute is considered to be the term being defined. The element must still have text within it, but that text may be an abbreviation (perhaps using {{HTMLElement("abbr")}}) or another form of the term.
-2.  If the `<dfn>` contains a single child element and does not have any text content of its own, and the child element is an {{HTMLElement("abbr")}} element with a `title` attribute itself, then the exact value of the `<abbr>` element's `title` is the term being defined.
-3.  Otherwise, the text content of the `<dfn>` element is the term being defined. This is shown {{anch("Basic identification of a term", "in the first example below")}}.
+1. If the `<dfn>` element has a {{htmlattrxref("title")}} attribute, the value of the `title` attribute is considered to be the term being defined. The element must still have text within it, but that text may be an abbreviation (perhaps using {{HTMLElement("abbr")}}) or another form of the term.
+2. If the `<dfn>` contains a single child element and does not have any text content of its own, and the child element is an {{HTMLElement("abbr")}} element with a `title` attribute itself, then the exact value of the `<abbr>` element's `title` is the term being defined.
+3. Otherwise, the text content of the `<dfn>` element is the term being defined. This is shown [in the first example below](#basic_identification_of_a_term).
 
 > **Note:** If the `<dfn>` element has a `title` attribute, it _must_ contain the term being defined and no other text.
 
@@ -97,7 +97,7 @@ The term being defined is identified following these rules:
 
 If you include an {{htmlattrxref("id")}} attribute on the `<dfn>` element, you can then link to it using {{HTMLElement("a")}} elements. Such links should be uses of the term, with the intent being that the reader can quickly navigate to the term's definition if they're not already aware of it, by clicking on the term's link.
 
-This is shown in the example under {{anch("Links to definitions")}} below.
+This is shown in the example under [Links to definitions](#links_to_definitions) below.
 
 ## Examples
 
@@ -136,17 +136,22 @@ To add links to the definitions, you create the link the same way you always do,
 used to indicate the term being defined within the context of a
 definition phrase or sentence.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece
-donan, Latine voluptatem vocant. Confecta res esset. Duo Reges:
-constructio interrete. Scrupulum, inquam, abeunti; </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine
+  voluptatem vocant. Confecta res esset. Duo Reges: constructio interrete.
+  Scrupulum, inquam, abeunti;
+</p>
 
-<p>Negare non possum. Dat enim intervalla et relaxat. Quonam modo?
-Equidem e Cn. Quid de Pythagora? In schola desinis. </p>
+<p>
+  Negare non possum. Dat enim intervalla et relaxat. Quonam modo? Equidem e Cn.
+  Quid de Pythagora? In schola desinis.
+</p>
 
-<p>Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum
-est igitur, quid sit voluptas; Quid enim? Non est igitur voluptas
-bonum. Urgent tamen et nihil remittunt. Quid enim possumus hoc
-agere divinius? </p>
+<p>
+  Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum est igitur,
+  quid sit voluptas; Quid enim? Non est igitur voluptas bonum. Urgent tamen et
+  nihil remittunt. Quid enim possumus hoc agere divinius?
+</p>
 
 <p>Because of all of that, we decided to use the
 <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> element for
@@ -168,14 +173,17 @@ In some cases, you may wish to use an abbreviation for a term when defining it. 
 #### HTML
 
 ```html
-<p>The <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn>
-is among the most productive scientific instruments ever constructed.
-It has been in orbit for over 20 years, scanning the sky and
-returning data and photographs of unprecedented quality and
-detail.</p>
+<p>
+  The <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn> is among the
+  most productive scientific instruments ever constructed. It has been in orbit
+  for over 20 years, scanning the sky and returning data and photographs of
+  unprecedented quality and detail.
+</p>
 
-<p>Indeed, the <abbr title="Hubble Space Telescope">HST</abbr> has
-arguably done more to advance science than any device ever built.</p>
+<p>
+  Indeed, the <abbr title="Hubble Space Telescope">HST</abbr> has arguably done
+  more to advance science than any device ever built.
+</p>
 ```
 
 Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that the term is an abbreviation ("HST") and specifies the full term ("Hubble Space Telescope") in its `title` attribute. The latter indicates that the abbreviated term represents a term being defined.

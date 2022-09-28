@@ -77,7 +77,7 @@ The contact information provided by an `<address>` element's contents can take w
       </td>
     </tr>
     <tr>
-      <th scope="row">Implicit ARIA role</th>
+      <th scope="row">Implicit ARIA role</th>
       <td>
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >No corresponding role</a
@@ -114,17 +114,17 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 This example demonstrates the use of `<address>` to demarcate the contact information for an article's author.
 
 ```html
-  <address>
-    You can contact author at <a href="http://www.somedomain.com/contact">
-    www.somedomain.com</a>.<br>
-    If you see any bugs, please <a href="mailto:webmaster@somedomain.com">
-    contact webmaster</a>.<br>
-    You may also want to visit us:<br>
-    Mozilla Foundation<br>
-    331 E Evelyn Ave<br>
-    Mountain View, CA 94041<br>
-    USA
-  </address>
+<address>
+  You can contact author at
+  <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>.<br />
+  If you see any bugs, please
+  <a href="mailto:webmaster@somedomain.com"> contact webmaster</a>.<br />
+  You may also want to visit us:<br />
+  Mozilla Foundation<br />
+  331 E Evelyn Ave<br />
+  Mountain View, CA 94041<br />
+  USA
+</address>
 ```
 
 ### Result
@@ -144,4 +144,4 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
 ## See also
 
 - Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};
-- [Sections and outlines of an HTML5 document](/en-US/docs/Web/HTML/Element/Heading_Elements).
+- [Sections and outlines of an HTML document](/en-US/docs/Web/HTML/Element/Heading_Elements).

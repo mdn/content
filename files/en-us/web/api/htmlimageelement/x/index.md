@@ -1,6 +1,7 @@
 ---
 title: HTMLImageElement.x
 slug: Web/API/HTMLImageElement/x
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -15,8 +16,10 @@ tags:
   - border
   - left
   - x
+  - Property
 browser-compat: api.HTMLImageElement.x
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} property
@@ -31,13 +34,7 @@ either of those values set explicitly on it, or it has inherited it from a conta
 element, or by being located within a column described by either {{HTMLElement("col")}}
 or {{HTMLElement("colgroup")}}.
 
-## Syntax
-
-```js
-let imageX = htmlImageElement.x;
-```
-
-### Value
+## Value
 
 An integer value indicating the distance in pixels from the left edge of the element's
 nearest root element and the left edge of the {{HTMLElement("img")}} element's border
@@ -98,7 +95,7 @@ The JavaScript code that fetches the image from the table and looks up its
 let logBox = document.querySelector("pre");
 let tbl = document.getElementById("userinfo")
 
-let log = msg => {
+let log = (msg) => {
   logBox.innerHTML += `${msg}<br>`;
 }
 
@@ -138,7 +135,8 @@ table {
   font-family: sans-serif;
 }
 
-td, th {
+td,
+th {
   border: 1px solid rgb(100, 100, 100);
   padding: 10px 14px;
 }

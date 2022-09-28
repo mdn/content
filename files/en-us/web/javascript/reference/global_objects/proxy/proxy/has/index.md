@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.has
 ---
+
 {{JSRef}}
 
 The **`handler.has()`** method is a trap for the
@@ -17,9 +18,9 @@ The **`handler.has()`** method is a trap for the
 
 ## Syntax
 
-```js
-const p = new Proxy(target, {
-  has: function(target, prop) {
+```js-nolint
+new Proxy(target, {
+  has(target, prop) {
   }
 });
 ```
@@ -32,7 +33,7 @@ bound to the handler.
 - `target`
   - : The target object.
 - `prop`
-  - : The name or {{jsxref("Symbol")}} of the property to check for existence.
+  - : The name or {{jsxref("Symbol")}} of the property to check for existence.
 
 ### Return value
 
@@ -70,10 +71,10 @@ The following code traps the {{jsxref("Operators/in", "in")}} operator.
 
 ```js
 const p = new Proxy({}, {
-  has: function(target, prop) {
-    console.log('called: ' + prop);
+  has(target, prop) {
+    console.log(`called: ${prop}`);
     return true;
-  }
+  },
 });
 
 console.log('a' in p); // "called: a"
@@ -87,9 +88,9 @@ const obj = { a: 10 };
 Object.preventExtensions(obj);
 
 const p = new Proxy(obj, {
-  has: function(target, prop) {
+  has(target, prop) {
     return false;
-  }
+  },
 });
 
 'a' in p; // TypeError is thrown
@@ -106,6 +107,6 @@ const p = new Proxy(obj, {
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Operators/in", "in")}} operator
 - {{jsxref("Reflect.has()")}}

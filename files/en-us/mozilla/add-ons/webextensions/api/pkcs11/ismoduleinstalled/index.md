@@ -12,6 +12,7 @@ tags:
   - pkcs11
 browser-compat: webextensions.api.pkcs11.isModuleInstalled
 ---
+
 {{AddonSidebar()}}
 
 Checks whether the named PKCS #11 module is currently installed in Firefox.
@@ -20,8 +21,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var checking = browser.pkcs11.isModuleInstalled(
+```js-nolint
+let checking = browser.pkcs11.isModuleInstalled(
   name              // string
 )
 ```

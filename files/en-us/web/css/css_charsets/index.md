@@ -7,7 +7,9 @@ tags:
   - Guide
   - Overview
   - Reference
+browser-compat: css.at-rules.charset
 ---
+
 {{CSSRef}}
 
 **CSS Charsets** is a module of CSS that lets you specify the character set used in the style sheet.
@@ -20,12 +22,8 @@ tags:
 
 ## Specifications
 
-| Specification                                                            | Status                   | Comment            |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('CSS2.1', 'syndata.html#x57', '@charset')}} | {{Spec2('CSS2.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `@charset` rule
-
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

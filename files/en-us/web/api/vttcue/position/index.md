@@ -1,6 +1,7 @@
 ---
 title: VTTCue.position
 slug: Web/API/VTTCue/position
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,18 +10,12 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.position
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`position`** property of the {{domxref("VTTCue")}} interface represents the indentation of the cue within the line.
 
-## Syntax
-
-```js
-let position = VTTCue.position;
-VTTCue.position = "auto";
-```
-
-### Value
+## Value
 
 A number, or `"auto"` representing the indentation of the cue within the line.
 

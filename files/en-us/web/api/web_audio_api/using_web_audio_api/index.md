@@ -1,6 +1,7 @@
 ---
 title: Using the Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
+page-type: guide
 tags:
   - API
   - Audio
@@ -13,6 +14,7 @@ tags:
   - basics
   - sound
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 Let's take a look at getting started with the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). We'll briefly look at some concepts, then study a simple boombox example that allows us to load an audio track, play and pause it, and change its volume and stereo panning.
@@ -92,7 +94,7 @@ Since our scripts are playing audio in response to a user input event (a click o
 
 ```html
 <button data-playing="false" role="switch" aria-checked="false">
-    <span>Play/Pause</span>
+  <span>Play/Pause</span>
 </button>
 ```
 
@@ -111,25 +113,23 @@ A good way to visualize these nodes is by drawing an audio graph so you can visu
 Now we can add the play and pause functionality.
 
 ```js
-// select our play button
+// Select our play button
 const playButton = document.querySelector('button');
 
-playButton.addEventListener('click', function() {
+playButton.addEventListener('click', () => {
+  // Check if context is in suspended state (autoplay policy)
+  if (audioContext.state === 'suspended') {
+    audioContext.resume();
+  }
 
-    // check if context is in suspended state (autoplay policy)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
-    }
-
-    // play or pause track depending on state
-    if (this.dataset.playing === 'false') {
-        audioElement.play();
-        this.dataset.playing = 'true';
-    } else if (this.dataset.playing === 'true') {
-        audioElement.pause();
-        this.dataset.playing = 'false';
-    }
-
+  // Play or pause track depending on state
+  if (playButton.dataset.playing === 'false') {
+    audioElement.play();
+    playButton.dataset.playing = 'true';
+  } else if (playButton.dataset.playing === 'true') {
+    audioElement.pause();
+    playButton.dataset.playing = 'false';
+  }
 }, false);
 ```
 
@@ -137,7 +137,7 @@ We also need to take into account what to do when the track finishes playing. Ou
 
 ```js
 audioElement.addEventListener('ended', () => {
-    playButton.dataset.playing = 'false';
+  playButton.dataset.playing = 'false';
 }, false);
 ```
 
@@ -161,12 +161,12 @@ This will make our audio graph look like this:
 
 ![an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination](graph2.jpg)
 
-The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4028235E38 and a max of about 3.4028235E38 (float number range in Javascript). Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
+The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4028235E38 and a max of about 3.4028235E38 (float number range in JavaScript). Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
 
 Let's give the user control to do this — we'll use a [range input](/en-US/docs/Web/HTML/Element/input/range):
 
 ```html
-<input type="range" id="volume" min="0" max="2" value="1" step="0.01">
+<input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
 ```
 
 > **Note:** Range inputs are a really handy input type for updating values on audio nodes. You can specify a range's values and use them directly with the audio node's parameters.
@@ -176,8 +176,8 @@ So let's grab this input's value and update the gain value when the input node h
 ```js
 const volumeControl = document.querySelector('#volume');
 
-volumeControl.addEventListener('input', function() {
-    gainNode.gain.value = this.value;
+volumeControl.addEventListener('input', () => {
+  gainNode.gain.value = volumeControl.value;
 }, false);
 ```
 
@@ -211,7 +211,7 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 Here our values range from -1 (far left) and 1 (far right). Again let's use a range type input to vary this parameter:
 
 ```html
-<input type="range" id="panner" min="-1" max="1" value="0" step="0.01">
+<input type="range" id="panner" min="-1" max="1" value="0" step="0.01" />
 ```
 
 We use the values from that input to adjust our panner values in the same way as we did before:
@@ -219,8 +219,8 @@ We use the values from that input to adjust our panner values in the same way as
 ```js
 const pannerControl = document.querySelector('#panner');
 
-pannerControl.addEventListener('input', function() {
-    panner.pan.value = this.value;
+pannerControl.addEventListener('input', () => {
+  panner.pan.value = pannerControl.value;
 }, false);
 ```
 
@@ -246,7 +246,7 @@ The [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic) is a fun
 
 ![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](voice-change-o-matic.png)
 
-Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/violent-theremin)).
+Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/webaudio-examples/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)).
 
 ![A page full of rainbow colors, with two buttons labeled Clear screen and mute.](violent-theremin.png)
 

@@ -14,6 +14,7 @@ tags:
   - Webapps
   - contents
 ---
+
 While progressive web apps (PWAs) can do anything any web content can do, they need to have a particular structure and include specific components in order to be recognized as a web app that can be used both on the web and installed and run as a local application. In this structural overview, we'll look at the features that make up a standard web application, as well as some design patterns you can follow when building your PWA.
 
 ## Architecture of an app
@@ -29,7 +30,7 @@ PWAs can be built using any approach you like, but some will work better than th
 
 ## The app shell concept
 
-The **app shell** concept is concerned with loading a minimal user interface and content as soon as possible, caching it so it's available offline for subsequent visits before then loading the remainder of the app's contents. That way, the next time someone visits the app from the device, the UI loads from the cache immediately and any new content is requested from the server (if it isn’t available in the cache already).
+The **app shell** concept is concerned with loading a minimal user interface and content as soon as possible, caching it so it's available offline for subsequent visits before then loading the remainder of the app's contents. That way, the next time someone visits the app from the device, the UI loads from the cache immediately and any new content is requested from the server (if it isn't available in the cache already).
 
 This structure is fast, and also feels fast as the user sees "something" instantly, instead of a loading spinner or a blank page. It also allows the website to be accessible offline if the network connection is not available.
 
@@ -46,7 +47,7 @@ The website feels like a native app with instant interaction and solid performan
 It's important to remember the PWA advantages and keep them in mind when designing the application. The app shell approach allows websites to be:
 
 - Linkable: Even though it behaves like a native app, it is still a website — you can click on the links within the page and send a URL to someone if you want to share it.
-- Progressive: Start with the "good, old basic website” and progressively add new features while remembering to detect if they are available in the browser and gracefully handle any errors that crop up if support is not available. For example, an offline mode with the help of service workers is just an extra trait that makes the website experience better, but it's still perfectly usable without it.
+- Progressive: Start with the "good, old basic website" and progressively add new features while remembering to detect if they are available in the browser and gracefully handle any errors that crop up if support is not available. For example, an offline mode with the help of service workers is just an extra trait that makes the website experience better, but it's still perfectly usable without it.
 - Responsive: Responsive web design also applies to progressive web apps, as both are mainly for mobile devices. There are so many varied devices with browsers — it's important to prepare your website so it works on different screen sizes, viewports or pixel densities, using technologies like the [viewport meta tag](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag), [CSS media queries](/en-US/docs/Web/CSS/Media_Queries), [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout).
 
 ## Another approach: Streams
@@ -91,40 +92,52 @@ The HTML in the file `index.html` creates the structure of the app. The parts th
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>js13kGames A-Frame entries</title>
-  <meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
-  <meta name="author" content="end3r">
-  <meta name="theme-color" content="#B12A34">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="icons/icon-512.png">
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="js13kpwa.webmanifest">
-  <script src="data/games.js" defer></script>
-  <script src="app.js" defer></script>
-</head>
-<body>
-<header>
-  <p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
-</header>
-<main>
-  <h1>js13kGames A-Frame entries</h1>
-  <p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">
-    A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a>
-    competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">
-    fork js13kPWA on GitHub</a> to check its source code.</p>
-  <button id="notifications">Request dummy notifications</button>
-  <section id="content">
-    // Content inserted in here
-  </section>
-</main>
-<footer>
-  <p>© js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">
-    Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
-</footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>js13kGames A-Frame entries</title>
+    <meta
+      name="description"
+      content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps." />
+    <meta name="author" content="end3r" />
+    <meta name="theme-color" content="#B12A34" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="icons/icon-512.png" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="js13kpwa.webmanifest" />
+    <script src="data/games.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p>
+        <a class="logo" href="http://js13kgames.com">
+          <img src="img/js13kgames.png" alt="js13kGames" />
+        </a>
+      </p>
+    </header>
+    <main>
+      <h1>js13kGames A-Frame entries</h1>
+      <p class="description">
+        List of games submitted to the
+        <a href="http://js13kgames.com/aframe"> A-Frame category</a> in the
+        <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition.
+        You can
+        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">
+          fork js13kPWA on GitHub</a>
+        to check its source code.
+      </p>
+      <button id="notifications">Request dummy notifications</button>
+      <section id="content">// Content inserted in here</section>
+    </main>
+    <footer>
+      <p>
+        © js13kGames 2012-2018, created and maintained by
+        <a href="http://end3r.com"> Andrzej Mazur</a> from
+        <a href="http://enclavegames.com">Enclave Games</a>.
+      </p>
+    </footer>
+  </body>
 </html>
 ```
 
@@ -138,7 +151,7 @@ The CSS for this simple example is also as plain as possible: it uses {{cssxref(
 
 ### app.js: The main app JavaScript
 
-The file `app.js` is run when the app is first loaded; its job is primarily to initialize the app, though it c can do other things as well. We'll look at how the app functions more closely in later articles in this guide.
+The file `app.js` is run when the app is first loaded; its job is primarily to initialize the app, though it can do other things as well. We'll look at how the app functions more closely in later articles in this guide.
 
 The first thing it does is to generate the app's displayed content using the following template:
 
@@ -281,7 +294,7 @@ self.addEventListener('fetch', (e) => {
 The games data for this app example is provided in a JavaScript source file called `games.js`. Other apps might use JSON or other formats for this data.
 
 ```js
-var games = [
+const games = [
   {
     slug: 'lost-in-cyberspace',
     name: 'Lost in Cyberspace',

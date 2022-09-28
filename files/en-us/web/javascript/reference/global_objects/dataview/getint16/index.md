@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getInt16
 ---
+
 {{JSRef}}
 
 The **`getInt16()`** method gets a signed 16-bit integer
@@ -18,7 +19,7 @@ The **`getInt16()`** method gets a signed 16-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 getInt16(byteOffset)
 getInt16(byteOffset, littleEndian)
 ```
@@ -51,8 +52,8 @@ There is no alignment constraint; multi-byte values may be fetched from any offs
 ### Using the getInt16 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.getInt16(1); // 0
 ```
 

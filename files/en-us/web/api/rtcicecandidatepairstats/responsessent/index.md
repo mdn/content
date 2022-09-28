@@ -1,6 +1,7 @@
 ---
 title: RTCIceCandidatePairStats.responsesSent
 slug: Web/API/RTCIceCandidatePairStats/responsesSent
+page-type: web-api-instance-property
 tags:
   - API
   - Connectivity
@@ -18,6 +19,7 @@ tags:
   - responsesSent
 browser-compat: api.RTCIceCandidatePairStats.responsesSent
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} dictionary's
@@ -25,13 +27,7 @@ The {{domxref("RTCIceCandidatePairStats")}} dictionary's
 {{Glossary("STUN")}} connectivity check responses that have been sent so far on the
 connection described by this pair of candidates.
 
-## Syntax
-
-```js
-responsesSent = rtcIceCandidatePairStats.responsesSent;
-```
-
-### Value
+## Value
 
 An integer value indicating the number of times a response has been sent to a
 {{Glossary("STUN")}} connectivity check request.

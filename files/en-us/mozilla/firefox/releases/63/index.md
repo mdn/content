@@ -2,11 +2,12 @@
 title: Firefox 63 for developers
 slug: Mozilla/Firefox/Releases/63
 tags:
-  - '63'
+  - "63"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 63 that will affect developers. Firefox 63 was released on October 23, 2018.
@@ -15,14 +16,14 @@ This article provides information about the changes in Firefox 63 that will affe
 
 ### Developer tools
 
-- The Fonts tab in the [Page Inspector](/en-US/docs/Tools/Page_Inspector) now includes an editor that makes it easy to view and edit the settings of the fonts on your page. See [Edit fonts](/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts) for details.
-- The [Accessibility inspector](/en-US/docs/Tools/Accessibility_inspector) is now enabled by default ({{bug(1482454)}}).
-- When you hover over an object in the [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector), [the item is highlighted](/en-US/docs/Tools/Accessibility_inspector#highlighting_of_ui_items) and its role and name will be shown in an information bar on the page ({{bug(1473030)}}).
-- The command line in the [Web Console](/en-US/docs/Tools/Web_Console) is now shown immediately following the console output ({{bug(1136299)}}).
-- A new icon has been added to the content in the [Network Monitor](/en-US/docs/Tools/Network_Monitor) to indicate when a URL belongs to a known tracker — see {{SectionOnPage("/en-US/docs/Tools/Network_Monitor/request_list", "Security icons")}} ({{bug(1333994)}}).
+- The Fonts tab in the [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) now includes an editor that makes it easy to view and edit the settings of the fonts on your page. See [Edit fonts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) for details.
+- The [Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) is now enabled by default ({{bug(1482454)}}).
+- When you hover over an object in the [Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), [the item is highlighted](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting-of-ui-items) and its role and name will be shown in an information bar on the page ({{bug(1473030)}}).
+- The command line in the [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) is now shown immediately following the console output ({{bug(1136299)}}).
+- A new icon has been added to the content in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) to indicate when a URL belongs to a known tracker — see [security icons](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-monitor-request-list-security-icons) ({{bug(1333994)}}).
 - The default value of `devtools.aboutdebugging.showSystemAddons` is now `false`, meaning that system add-ons will not be listed on the `about:debugging` page. You can change the settings by navigating to `about:config` ({{bug(1425347)}}).
-- The [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode) toolbar was simplified, and we added the option to left-align the viewport.
-- The Page Inspector includes a [link to the class definition](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#custom_element_definition) for a custom element. ({{bug(1443923)}}).
+- The [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) toolbar was simplified, and we added the option to left-align the viewport.
+- The Page Inspector includes a [link to the class definition](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#custom-element-definition) for a custom element. ({{bug(1443923)}}).
 
 ### HTML
 
@@ -39,7 +40,7 @@ This article provides information about the changes in Firefox 63 that will affe
 - Re-enabled support for [webkit-prefixed pixel-density @media queries](/en-US/docs/Web/CSS/@media/-webkit-device-pixel-ratio) ({{bug(1444139)}}).
 - Support added for the [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) properties {{CSSxRef("align-self")}}, {{CSSxRef("align-content")}}, and {{CSSxRef("align-items")}} as well as the {{CSSxRef("justify-content")}} property ({{bug(1472843)}}).
 - Implemented the `path()` function for {{CSSxRef("offset-path")}} ({{bug(1429298)}}).
-- Implemented [syntax improvements from the Media Queries Level 4 specification](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax_improvements_in_level_4) ({{bug(1472843)}}).
+- Implemented [syntax improvements from the Media Queries Level 4 specification](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax_improvements_in_level_4) ({{bug(1422225)}}).
 - Renamed `offset-*` properties to {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}}, and {{CSSxRef("inset-inline-end")}} ({{bug(1464782)}}).
 - Added support for the [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media feature ({{bug(1365045)}}, {{bug(1475462)}}).
 - Added flow relative values (`block`, `inline`) for the {{CSSxRef("resize")}} property ({{bug(1464786)}}).

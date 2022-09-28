@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.rel
 slug: Web/API/HTMLAnchorElement/rel
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,28 +10,25 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.rel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.rel`** property reflects the
-{{htmlattrxref("rel", "a")}} attribute. It is a {{domxref("DOMString")}} containing a
+{{htmlattrxref("rel", "a")}} attribute. It is a string containing a
 space-separated list of [link types](/en-US/docs/Web/HTML/Link_types)
 indicating the relationship between the resource represented by the {{HTMLElement("a")}}
 element and the current document.
 
-## Syntax
+## Value
+
+A string.
+
+## Examples
 
 ```js
-var relstr = anchorElt.rel;
-anchorElt.rel = relstr;
-```
-
-## Example
-
-```js
-var anchors = document.getElementsByTagName("a");
-var length = anchors.length;
-for (var i = 0; i < length; i++) {
-  alert("Rel: " + anchors[i].rel);
+const anchors = document.getElementsByTagName("a");
+for (const anchor of anchors) {
+  alert(`Rel: ${anchor.rel}`);
 }
 ```
 

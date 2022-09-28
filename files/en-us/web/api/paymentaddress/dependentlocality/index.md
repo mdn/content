@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress.dependentLocality
 slug: Web/API/PaymentAddress/dependentLocality
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request
@@ -9,25 +10,22 @@ tags:
   - Property
   - Reference
   - paymentAddress
+  - Deprecated
+  - Non-standard
 browser-compat: api.PaymentAddress.dependentLocality
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only **`dependentLocality`**
 property of the {{domxref('PaymentAddress')}} interface is a string containing a
-sublocality designation within a city, such as a  neighborhood, borough, district, or,
+sublocality designation within a city, such as a neighborhood, borough, district, or,
 in the United Kingdom, a dependent locality. Also known as a _post
 town_.
 
-## Syntax
+## Value
 
-```js
-var paymentDependentLocality = PaymentAddress.dependentLocality;
-```
-
-### Value
-
-A {{domxref("DOMString")}} indicating the sublocality portion of the address. This may
+A string indicating the sublocality portion of the address. This may
 be an empty string if no sublocality is available or required. It's used to provide
 disambiguation when a city may include areas that duplicate street names
 

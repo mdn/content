@@ -8,7 +8,12 @@ tags:
   - NeedsContent
   - Overview
   - Reference
+browser-compat:
+  - css.at-rules.counter-style
+  - css.properties.counter-increment
+  - css.properties.counter-reset
 ---
+
 {{CSSRef}}
 
 **CSS Counter Styles** is a module of CSS that lets you define your own counter styles.
@@ -22,7 +27,7 @@ tags:
 
 ### Functions
 
-- {{cssxref("symbols()")}}
+- {{cssxref("symbols", "symbols()")}}
 
 ### At-rules
 
@@ -45,20 +50,8 @@ tags:
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment             |
-| ------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Counter Styles')}} | {{Spec2('CSS3 Counter Styles')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### `@counter-style` rule
-
-{{Compat("css.at-rules.counter-style")}}
-
-### `counter-increment` property
-
-{{Compat("css.properties.counter-increment")}}
-
-### `counter-reset` property
-
-{{Compat("css.properties.counter-reset")}}
+{{Compat}}

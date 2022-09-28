@@ -1,14 +1,16 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
+page-type: css-at-rule-descriptor
 tags:
-  - '@counter-style'
+  - "@counter-style"
   - At-rule descriptor
   - CSS
   - CSS Descriptor
   - Reference
 browser-compat: css.at-rules.counter-style.negative
 ---
+
 {{CSSRef}}
 
 When defining custom counter styles, the **`negative`** descriptor lets you alter the representations of negative counter values, by providing a way to specify symbols to be appended or prepended to the counter representation when the value is negative.
@@ -17,8 +19,8 @@ When defining custom counter styles, the **`negative`** descriptor lets you alte
 
 ```css
 /* <symbol> values */
-negative: "-";       /* Prepends '-' if value is negative */
-negative: "(" ")";   /* Surrounds value by '(' and ')' if it is negative */
+negative: "-"; /* Prepends '-' if value is negative */
+negative: "(" ")"; /* Surrounds value by '(' and ')' if it is negative */
 ```
 
 ### Values
@@ -38,7 +40,14 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+<symbol> <symbol>?
+
+<symbol> =
+  <string>       |
+  <image>        |
+  <custom-ident>
+```
 
 ## Examples
 
@@ -49,10 +58,10 @@ If the counter value is negative, the symbol provided as value for the descripto
 ```html
 <ol class="list" start="-3">
   <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
 </ol>
 ```
 
@@ -72,7 +81,7 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 #### Result
 
-{{ EmbedLiveSample('Rendering_negative_counters', '', '', '', 'Web/CSS/@counter-style/negative') }}
+{{ EmbedLiveSample('Rendering negative counters') }}
 
 ## Specifications
 
@@ -85,4 +94,4 @@ If the counter value is negative, the symbol provided as value for the descripto
 ## See also
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()", "symbols()")}}, the functional notation creating anonymous counter styles.
+- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.

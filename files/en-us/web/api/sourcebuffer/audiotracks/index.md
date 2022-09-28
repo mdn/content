@@ -1,10 +1,10 @@
 ---
 title: SourceBuffer.audioTracks
 slug: Web/API/SourceBuffer/audioTracks
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - Property
@@ -13,23 +13,18 @@ tags:
   - audiotracks
 browser-compat: api.SourceBuffer.audioTracks
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`audioTracks`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns a list of the audio tracks currently
 contained inside the `SourceBuffer`.
 
-## Syntax
-
-```js
-var myAudioTracks = sourceBuffer.audioTracks;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioTrackList")}} object.
 
-## Example
+## Examples
 
 TBD
 

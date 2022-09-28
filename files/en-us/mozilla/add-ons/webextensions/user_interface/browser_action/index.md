@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 tags:
   - WebExtension
 ---
+
 {{AddonSidebar}}
 
 Commonly referred to as a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), this user interface option is a button added to the browser toolbar. Users click the button to interact with your extension.
@@ -47,5 +48,5 @@ For details on how to create icons to use with your browser action, see [Iconogr
 
 The [`webextensions-examples`](https://github.com/mdn/webextensions-examples) repository on GitHub contains two examples of extensions that implement browser actions:
 
-- [bookmark-it](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/) uses a browser action without a popup
+- [bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it) uses a browser action without a popup
 - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) uses a browser action with a popup

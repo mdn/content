@@ -8,6 +8,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.class
 ---
+
 {{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **class selector** matches elements based on the contents of their {{htmlattrxref("class")}} attribute.
@@ -65,7 +66,9 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
 
 ```html
 <p class="red">This paragraph has red text.</p>
-<p class="red yellow-bg">This paragraph has red text and a yellow background.</p>
+<p class="red yellow-bg">
+  This paragraph has red text and a yellow background.
+</p>
 <p class="red fancy">This paragraph has red text and "fancy" styling.</p>
 <p>This is just a regular paragraph.</p>
 ```
@@ -76,12 +79,7 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
 
 ## Specifications
 
-| Specification                                                                                | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS4 Selectors')}} | No changes         |
-| {{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS3 Selectors')}} |                    |
-| {{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}} | {{Spec2('CSS2.1')}}             |                    |
-| {{SpecName('CSS1', '#class-as-selector', 'child selectors')}}             | {{Spec2('CSS1')}}             | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

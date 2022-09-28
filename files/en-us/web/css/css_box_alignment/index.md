@@ -11,6 +11,7 @@ tags:
   - flexbox
   - multi-column
 ---
+
 {{CSSRef}}
 
 The CSS Box Alignment module specifies CSS features that relate to the alignment of boxes in the various CSS box layout models: block layout, table layout, flex layout, and grid layout. The module aims to create a consistent method of alignment across all of CSS. This document details the general concepts found in the specification.
@@ -51,7 +52,7 @@ Alignment is linked to writing modes in that when we align an item we do not con
 
 When using the box alignment properties you will align content on one of two axes — the inline (or main) axis, and the block (or cross) axis. The inline axis is the axis along which words in a sentence flow in the writing mode being used — for English, for example, the inline axis is horizontal. The block axis is the axis along which blocks, such as paragraph elements, are laid out and it runs across the Inline axis.
 
-![](two-axes.png)
+![Inline axis is the left / right, or horizontal, direction. Block axis is vertical, or top / bottom.](two-axes.png)
 
 When aligning items on the inline axis you will use the properties which begin with `justify-`:
 
@@ -73,11 +74,11 @@ The **alignment subject** is the thing that is being aligned. For `justify-self`
 
 ### The alignment container
 
-The **alignment container** is the box the subject is being aligned inside. This will typically be the alignment subject’s containing block. An alignment container may contain one or many alignment subjects.
+The **alignment container** is the box the subject is being aligned inside. This will typically be the alignment subject's containing block. An alignment container may contain one or many alignment subjects.
 
 The below image shows an alignment container with two alignment subjects inside.
 
-![](align-container-subjects.png)
+![A box containing two rectangles of the same width but different heights. The two rectangles are top aligned, meaning they both have their top lines about 10px inside the top of the box in which they are contained.](align-container-subjects.png)
 
 ### Fallback alignment
 
@@ -111,7 +112,7 @@ For example, when working in CSS Grid Layout, if you are working in English and 
 
 Both of these examples have `justify-content: start`, however the location of start changes according to the writing mode.
 
-![](writing-mode-start.png)
+![There are two boxes, each with 3 children of differing heights but similar widths. The first box has three children with the letters A, B, and C. These three boxes are all aligned to the left. The second box has three children with arabic letters in them. Those three boxes are all aligned to the right.](writing-mode-start.png)
 
 ### Baseline alignment
 
@@ -136,17 +137,17 @@ The **distributed alignment keywords** are used with the `align-content` and `ju
 
 For example, in Flex Layout items are aligned with `flex-start` initially. Working in a horizontal top to bottom writing mode such as English, with `flex-direction` as `row` the items start on the far left and any available space after displaying the items is placed after the items.
 
-![](justify-content-start.png)
+![Three rectangles of different widths are inside a box. They are all aligned to the left side of the containing box, with about 10px between them, and 10px between the left side of the first rectangle and the parent container.](justify-content-start.png)
 
 If you set `justify-content: space-between` on the flex container, the available space is now shared out and placed between the items.
 
-![](justify-content-space-between.png)
+![Three rectangles of different widths are inside a box. The first rectangle is aligned to the left side of the containing box, the third rectangle is aligned right, and the middle rectangle is equally spaced between the first and last.](justify-content-space-between.png)
 
 There needs to be space available in the dimension you wish to align the items in, in order for these keywords to take effect. With no space, there is nothing to distribute.
 
 ## Overflow alignment
 
-The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid “data loss” where part of the item is outside of the boundaries of the alignment container and can’t be scrolled to.
+The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid "data loss" where part of the item is outside of the boundaries of the alignment container and can't be scrolled to.
 
 If you specify `unsafe` then the alignment will be honoured even if it would cause such data loss.
 

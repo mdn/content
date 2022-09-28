@@ -1,6 +1,7 @@
 ---
 title: Range.createContextualFragment()
 slug: Web/API/Range/createContextualFragment
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Range.createContextualFragment
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.createContextualFragment()`** method returns a
@@ -22,8 +24,8 @@ algorithm is invoked with `body` as the context instead.
 
 ## Syntax
 
-```js
-documentFragment = range.createContextualFragment(tagString)
+```js-nolint
+createContextualFragment(tagString)
 ```
 
 ### Parameters
@@ -31,15 +33,19 @@ documentFragment = range.createContextualFragment(tagString)
 - `tagString`
   - : Text that contains text and tags to be converted to a document fragment.
 
-## Example
+### Return value
+
+A {{domxref("DocumentFragment")}} object.
+
+## Examples
 
 ```js
-var tagString = "<div>I am a div node</div>";
-var range = document.createRange();
+const tagString = "<div>I am a div node</div>";
+const range = document.createRange();
 
 // Make the parent of the first div in the document become the context node
 range.selectNode(document.getElementsByTagName("div").item(0));
-var documentFragment = range.createContextualFragment(tagString);
+const documentFragment = range.createContextualFragment(tagString);
 document.body.appendChild(documentFragment);
 ```
 

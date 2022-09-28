@@ -1,6 +1,7 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.touch-action
 ---
+
 {{CSSRef}}
 
 The **`touch-action`** CSS property sets how an element's region can be manipulated by a touchscreen user (for example, by zooming features built into the browser).
@@ -30,6 +32,7 @@ touch-action: manipulation;
 touch-action: inherit;
 touch-action: initial;
 touch-action: revert;
+touch-action: revert-layer;
 touch-action: unset;
 ```
 
@@ -67,7 +70,7 @@ The `touch-action` property may be specified as either:
 
 A declaration of `touch-action: none;` may inhibit operating a browser's zooming capabilities. This will prevent people experiencing low vision conditions from being able to read and understand page content.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Formal definition
@@ -117,6 +120,6 @@ The most common usage is to disable all gestures on an element (and its non-scro
 
 - {{cssxref("pointer-events","pointer-events")}}
 - {{domxref("Pointer_events","Pointer Events")}}
-- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/ "Permanent Link: More Responsive Tapping on iOS")
-- Google Developers Blog [Making touch scrolling fast by default](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
+- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
+- Google Developers Blog [Making touch scrolling fast by default](https://developer.chrome.com/blog/scrolling-intervention/)
 - [Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)

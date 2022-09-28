@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.right_shift_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The right shift assignment operator (`>>=`) moves the specified amount
@@ -18,7 +19,7 @@ of bits to the right and assigns the result to the variable.
 
 ## Syntax
 
-```js
+```js-nolint
 x >>= y // x = x >> y
 ```
 
@@ -44,7 +45,5 @@ b >>= 2;  // -2 (-00000000000000000000000000000010)
 
 ## See also
 
-- [Assignment
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
-- [Right shift
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
+- [Right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)

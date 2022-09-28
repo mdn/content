@@ -9,13 +9,16 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.Segmenter.prototype.resolvedOptions()`** method returns a new object with properties reflecting the locale and granularity options computed during the initialization of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
 
+{{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-resolvedoptions.html")}}
+
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 
@@ -66,7 +69,7 @@ console.log(options.granularity); // "grapheme"
 ```js
 const banSegmenter = new Intl.Segmenter("ban");
 const options = banSegmenter.resolvedOptions();
-console.log(options.locale); 
+console.log(options.locale);
 // "fr" on a runtime where the Balinese locale
 // is not supported and French is the default locale
 console.log(options.granularity); // "grapheme"

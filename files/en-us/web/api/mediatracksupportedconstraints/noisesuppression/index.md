@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSupportedConstraints.noiseSuppression
 slug: Web/API/MediaTrackSupportedConstraints/noiseSuppression
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -14,6 +15,7 @@ tags:
   - noiseSuppression
 browser-compat: api.MediaTrackSupportedConstraints.noiseSuppression
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
@@ -32,13 +34,7 @@ offers the ability to automatically control the gain (volume) on media tracks; t
 obviously is contingent on whether or not the individual device supports automatic gain
 control as well.
 
-## Syntax
-
-```js
-noiseSuppressionSupported = supportedConstraintsDictionary.noiseSuppression;
-```
-
-### Value
+## Value
 
 This property is present in the dictionary (and its value is always `true`)
 if the user agent supports the `noiseSuppression` constraint (and therefore
@@ -46,14 +42,13 @@ supports noise suppression on audio tracks). If the property isn't present, this
 property is missing from the supported constraints dictionary, and you'll get
 {{jsxref("undefined")}} if you try to look at its value.
 
-## Example
+## Examples
 
 This example displays whether or not your browser supports the
 `noiseSuppression` constraint.
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
@@ -63,18 +58,14 @@ This example displays whether or not your browser supports the
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().noiseSuppression) {
-    result.textContent = "Supported!";
-} else {
-    result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().noiseSuppression;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 

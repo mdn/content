@@ -1,6 +1,7 @@
 ---
 title: Window.top
 slug: Web/API/Window/top
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -11,15 +12,14 @@ tags:
   - Window
 browser-compat: api.Window.top
 ---
+
 {{APIRef}}
 
 Returns a reference to the topmost window in the window hierarchy.
 
-## Syntax
+## Value
 
-```js
-var topWindow = window.top;
-```
+The reference to the topmost window.
 
 ## Notes
 

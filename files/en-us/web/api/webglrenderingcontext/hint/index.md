@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.hint()
 slug: Web/API/WebGLRenderingContext/hint
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.hint
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.hint()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies hints for certain
@@ -16,31 +18,35 @@ behaviors. The interpretation of these hints depend on the implementation.
 
 ## Syntax
 
-```js
-void gl.hint(target, mode);
+```js-nolint
+hint(target, mode)
 ```
 
 ### Parameters
 
-- target
+- `target`
 
   - : Sets which behavior to be controlled. Possible values:
 
-    - `gl.GENERATE_MIPMAP_HINT`: Quality of filtering when generating
-      mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}.
-    - When using the {{domxref("OES_standard_derivatives")}} extension:
+    - `gl.GENERATE_MIPMAP_HINT`
 
-      - `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`: Accuracy of the
-        derivative calculation for the GLSL built-in functions: `dFdx`,
-        `dFdy`, and `fwidth`.
+      - : Quality of filtering when generating
+        mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}.
 
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    When using the {{domxref("OES_standard_derivatives")}} extension:
 
-      - `gl.FRAGMENT_SHADER_DERIVATIVE_HINT`: Same as
-        `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
+    - `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
+      - : Accuracy of the
+          derivative calculation for the GLSL built-in functions: `dFdx`,
+          `dFdy`, and `fwidth`.
 
-- mode
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
+
+    - `gl.FRAGMENT_SHADER_DERIVATIVE_HINT`
+      - : Same as `ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES`
+
+- `mode`
 
   - : Sets the behavior. The default value is `gl.DONT_CARE`. The possible
     values are:
@@ -52,12 +58,12 @@ void gl.hint(target, mode);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 The following example hints that the quality of filtering when generating mipmap images
-should be most efficient instead of best quality.
+should be most efficient instead of the best quality.
 
 ```js
 gl.hint(gl.GENERATE_MIPMAP_HINT, gl.FASTEST);

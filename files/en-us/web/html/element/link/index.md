@@ -18,12 +18,12 @@ browser-compat: html.elements.link
 The **`<link>`** [HTML](/en-US/docs/Web/HTML) element specifies relationships between the current document and an external resource.
 This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
 
-{{EmbedInteractiveExample("pages/tabbed/link.html")}}
+{{EmbedInteractiveExample("pages/tabbed/link.html", "tabbed-shorter")}}
 
 To link an external stylesheet, you'd include a `<link>` element inside your {{HTMLElement("head")}} like this:
 
 ```html
-<link href="main.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet" />
 ```
 
 This simple example provides the path to the stylesheet inside an `href` attribute, and a `rel` attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is probably one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
@@ -32,14 +32,17 @@ As you'll see from our [Link types](/en-US/docs/Web/HTML/Link_types) reference, 
 There are a number of other common types you'll come across. For example, a link to the site's favicon:
 
 ```html
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="favicon.ico" />
 ```
 
 There are a number of other icon `rel` values, mainly used to indicate special icon types for use on various mobile platforms, e.g.:
 
 ```html
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-      href="apple-icon-114.png" type="image/png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="apple-icon-114.png"
+  type="image/png" />
 ```
 
 The `sizes` attribute indicates the icon size, while the `type` contains the MIME type of the resource being linked.
@@ -48,15 +51,22 @@ These provide useful hints to allow the browser to choose the most appropriate i
 You can also provide a media type or query inside a `media` attribute; this resource will then only be loaded if the media condition is true. For example:
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link
+  href="mobile.css"
+  rel="stylesheet"
+  media="screen and (max-width: 600px)" />
 ```
 
 Some interesting new performance and security features have been added to the `<link>` element too. Take this example:
 
 ```html
-<link rel="preload" href="myFont.woff2" as="font"
-      type="font/woff2" crossorigin="anonymous">
+<link
+  rel="preload"
+  href="myFont.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous" />
 ```
 
 A `rel` value of `preload` indicates that the browser should preload this resource (see [Preloading content with rel="preload"](/en-US/docs/Web/HTML/Link_types/preload) for more details), with the `as` attribute indicating the specific class of content being fetched.
@@ -176,13 +186,24 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     If the attribute is not present, the resource is fetched without a {{Glossary("CORS")}} request (i.e. without sending the `Origin` HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword **anonymous** was used.
     See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- {{HTMLAttrDef("disabled")}}
+- {{HTMLAttrDef("disabled")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
 
   - : For `rel="stylesheet"` only, the `disabled` Boolean attribute indicates whether or not the described stylesheet should be loaded and applied to the document.
     If `disabled` is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load.
     Instead, the stylesheet will be loaded on-demand, if and when the `disabled` attribute is changed to `false` or removed.
 
     Setting the `disabled` property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.
+
+- {{htmlattrdef("fetchpriority")}} {{Experimental_Inline}}
+
+  - : Provides a hint of the relative priority to use when fetching a preloaded resource. Allowed values:
+
+    - `high`
+      - : Signals a high-priority fetch relative to other resources of the same type.
+    - `low`
+      - : Signals a low-priority fetch relative to other resources of the same type.
+    - `auto`
+      - : Default: Signals automatic determination of fetch priority relative to other resources of the same type.
 
 - {{HTMLAttrDef("href")}}
   - : This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.
@@ -195,8 +216,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute is [a sizes attribute](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute) that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - {{HTMLAttrDef("imagesrcset")}}
   - : For `rel="preload"` and `as="image"` only, the `imagesrcset` attribute is [a sourceset attribute](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute) that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
-- {{HTMLAttrDef("integrity")}} {{Experimental_Inline}}
-  - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you’re telling the browser to fetch.
+- {{HTMLAttrDef("integrity")}}
+  - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch.
     The browser can use this to verify that the fetched resource has been delivered free of unexpected manipulation.
     See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
 - {{HTMLAttrDef("media")}}
@@ -208,18 +229,18 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > - In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/en-US/docs/Web/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`.
     >   HTML5 extended this to any kind of [media queries](/en-US/docs/Web/CSS/Media_Queries), which are a superset of the allowed values of HTML 4.
-    > - Browsers not supporting [CSS3 Media Queries](/en-US/docs/Web/CSS/Media_Queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
+    > - Browsers not supporting [CSS Media Queries](/en-US/docs/Web/CSS/Media_Queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
 
 - {{HTMLAttrDef("prefetch")}} {{secureContext_inline}} {{experimental_inline}}
   - : Identifies a resource that might be required by the next navigation and that the user agent should retrieve it.
     This allows the user agent to respond faster when the resource is requested in the future.
-- {{HTMLAttrDef("referrerpolicy")}} {{Experimental_Inline}}
+- {{HTMLAttrDef("referrerpolicy")}}
 
   - : A string indicating which referrer to use when fetching the resource:
 
     - `no-referrer` means that the {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade` means that no {{HTTPHeader("Referer")}} header will be sent when navigating to an origin without TLS (HTTPS).
-      This is a user agent’s default behavior, if no policy is otherwise specified.
+      This is a user agent's default behavior, if no policy is otherwise specified.
     - `origin` means that the referrer will be the origin of the page, which is roughly the scheme, the host, and the port.
     - `origin-when-cross-origin` means that navigating to other origins will be limited to the scheme, the host, and the port, while navigating on the same origin will include the referrer's path.
     - `unsafe-url` means that the referrer will include the origin and the path (but not the fragment, password, or username).
@@ -227,7 +248,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - {{HTMLAttrDef("rel")}}
   - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Link_types).
-- {{HTMLAttrDef("sizes")}}
+- {{HTMLAttrDef("sizes")}} {{Experimental_Inline}}
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
     It must be present only if the {{HTMLAttrxRef("rel", "link")}} contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`.
@@ -250,13 +271,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Non-standard attributes
 
-- {{HTMLAttrDef("methods")}} {{Non-standard_Inline}}
+- {{HTMLAttrDef("methods")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : The value of this attribute provides information about the functions that might be performed on an object.
     The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link.
     For example, the browser might choose a different rendering of a link as a function of the methods specified;
     something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site.
     This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4.
-- {{HTMLAttrDef("target")}} {{Non-standard_Inline}}
+- {{HTMLAttrDef("target")}} {{Deprecated_Inline}}
   - : Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.
 
 ### Obsolete attributes
@@ -285,7 +306,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 To include a stylesheet in a page, use the following syntax:
 
 ```html
-<link href="style.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
 ```
 
 ### Providing alternative stylesheets
@@ -296,9 +317,9 @@ The user can choose which style sheet to use by choosing it from the **View > Pa
 This provides a way for users to see multiple versions of a page.
 
 ```html
-<link href="default.css" rel="stylesheet" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" title="Basic">
+<link href="default.css" rel="stylesheet" title="Default Style" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+<link href="basic.css" rel="alternate stylesheet" title="Basic" />
 ```
 
 ### Providing icons for different usage contexts
@@ -307,15 +328,21 @@ You can include links to several different icons on the same page, and the brows
 
 ```html
 <!-- third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="favicon57.png">
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- basic favicon -->
-<link rel="icon" href="favicon32.png">
+<link rel="icon" href="favicon32.png" />
 ```
 
 ### Conditionally loading resources with media queries
@@ -324,10 +351,16 @@ You can provide a media type or query inside a `media` attribute;
 this resource will then only be loaded if the media condition is true. For example:
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="all">
-<link href="desktop.css" rel="stylesheet" media="screen and (min-width: 600px)">
-<link href="highres.css" rel="stylesheet" media="screen and (min-resolution: 300dpi)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link href="mobile.css" rel="stylesheet" media="all" />
+<link
+  href="desktop.css"
+  rel="stylesheet"
+  media="screen and (min-width: 600px)" />
+<link
+  href="highres.css"
+  rel="stylesheet"
+  media="screen and (min-resolution: 300dpi)" />
 ```
 
 ### Stylesheet load events
@@ -336,18 +369,18 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 
 ```html
 <script>
-var myStylesheet = document.querySelector('#my-stylesheet');
+  const stylesheet = document.querySelector("#my-stylesheet");
 
-myStylesheet.onload = function() {
-  // Do something interesting; the sheet has been loaded
-}
+  stylesheet.onload = () => {
+    // Do something interesting; the sheet has been loaded
+  };
 
-myStylesheet.onerror = function() {
-  console.log("An error occurred loading the stylesheet!");
-}
+  stylesheet.onerror = () => {
+    console.log("An error occurred loading the stylesheet!");
+  };
 </script>
 
-<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet">
+<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
 ```
 
 > **Note:** The `load` event fires once the stylesheet and all of its imported content has been loaded and parsed, and immediately before the styles start being applied to the content.

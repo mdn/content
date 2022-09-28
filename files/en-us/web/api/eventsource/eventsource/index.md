@@ -1,6 +1,7 @@
 ---
 title: EventSource()
 slug: Web/API/EventSource/EventSource
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -9,6 +10,7 @@ tags:
   - Server-sent events
 browser-compat: api.EventSource.EventSource
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`EventSource()`**
@@ -17,38 +19,39 @@ remote resource.
 
 ## Syntax
 
-```js
-eventSource = new EventSource(url, configuration);
+```js-nolint
+new EventSource(url)
+new EventSource(url, options)
 ```
 
 ### Parameters
 
 - `url`
-  - : A {{domxref("USVString")}} that represents the location of the remote resource
+  - : A string that represents the location of the remote resource
     serving the events/messages.
-- `configuration` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Provides options to configure the new connection. The possible entries are:
 
-    - `withCredentials`, defaulting to `false`, indicating if
-      CORS should be set to `include` credentials.
+    - `withCredentials` {{optional_inline}}
+      - : A boolean value, defaulting to `false`, indicating
+        if CORS should be set to `include` credentials.
 
 ## Examples
 
 ```js
-var evtSource = new EventSource('sse.php');
-var eventList = document.querySelector('ul');
+const evtSource = new EventSource('sse.php');
+const eventList = document.querySelector('ul');
 
-evtSource.onmessage = function(e) {
-  var newElement = document.createElement("li");
+evtSource.onmessage = (e) => {
+  const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 }
 ```
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE
-> demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Specifications
 

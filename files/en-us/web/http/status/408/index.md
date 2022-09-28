@@ -7,11 +7,13 @@ tags:
   - HTTP Status Code
   - Reference
   - Status code
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.408
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP)
-**`408 Request Timeout`** response status code means that the
+**`408 Request Timeout`** response status code means that the
 server would like to shut down this unused connection. It is sent on an idle connection
 by some servers, _even without any previous request by the client_.
 
@@ -33,9 +35,7 @@ use HTTP pre-connection mechanisms to speed up surfing.
 
 ## Specifications
 
-| Specification                                                    | Title                                                         |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "408 Request Timeout" , "6.5.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## See also
 

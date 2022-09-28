@@ -1,6 +1,7 @@
 ---
 title: BaseAudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
+page-type: web-api-instance-method
 tags:
   - API
   - AudioContext
@@ -11,6 +12,7 @@ tags:
   - createBiquadFilter
 browser-compat: api.BaseAudioContext.createBiquadFilter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createBiquadFilter()` method of the {{ domxref("BaseAudioContext") }}
@@ -23,29 +25,33 @@ filter configurable as several different common filter types.
 
 ## Syntax
 
-```js
-baseAudioContext.createBiquadFilter();
+```js-nolint
+createBiquadFilter()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("BiquadFilterNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of an AudioContext to create a Biquad filter
 node. For a complete working example, check out our [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) demo (look
 at the [source code](https://github.com/mdn/voice-change-o-matic) too).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 //set up the different audio nodes we will use for the app
-var analyser = audioCtx.createAnalyser();
-var distortion = audioCtx.createWaveShaper();
-var gainNode = audioCtx.createGain();
-var biquadFilter = audioCtx.createBiquadFilter();
-var convolver = audioCtx.createConvolver();
+const analyser = audioCtx.createAnalyser();
+const distortion = audioCtx.createWaveShaper();
+const gainNode = audioCtx.createGain();
+const biquadFilter = audioCtx.createBiquadFilter();
+const convolver = audioCtx.createConvolver();
 
 // connect the nodes together
 

@@ -1,13 +1,15 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
+page-type: web-api-overview
 tags:
   - API
-  - Experimental
   - Gamepad API
   - Games
   - Overview
+browser-compat: api.Gamepad
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Gamepad API")}}
 
 The **Gamepad API** is a way for developers to access and respond to signals from gamepads and other game controllers in a simple, consistent way. It contains three interfaces, two events and one specialist function, to respond to gamepads being connected and disconnected, and to access other information about the gamepads themselves, and what buttons and other controls are currently being pressed.
@@ -26,7 +28,7 @@ The **Gamepad API** is a way for developers to access and respond to signals fro
 - [`GamepadHapticActuator`](/en-US/docs/Web/API/GamepadHapticActuator)
   - : Represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.
 - [`GamepadPose`](/en-US/docs/Web/API/GamepadPose)
-  - : Represents the pose of a controller (e.g. position and orientation in 3D space) in the case of a [WebVR](/en-US/docs/Web/API/WebVR_API) controller. This is *not* used by the newer [WebXR](/en-US/docs/Web/API/WebXR_Device_API) standard.
+  - : Represents the pose of a controller (e.g. position and orientation in 3D space) in the case of a [WebVR](/en-US/docs/Web/API/WebVR_API) controller. This is _not_ used by the newer [WebXR](/en-US/docs/Web/API/WebXR_Device_API) standard.
 
 See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#experimental_extensions_to_gamepad), for features that allow you to access the above information.
 
@@ -39,10 +41,10 @@ See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#e
 
 #### Window events
 
-- {{domxref("Window.ongamepadconnected")}}
-  - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
-- {{domxref("Window.ongamepaddisconnected")}}
-  - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
+- {{domxref("Window.gamepadconnected_event", "gamepadconnected")}}
+  - : An event that will fire when a gamepad is connected.
+- {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}
+  - : An event that will fire when a gamepad is disconnected.
 
 ## Tutorials and guides
 
@@ -51,33 +53,11 @@ See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#e
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("GamepadExtensions")}}</td>
-      <td>{{Spec2("GamepadExtensions")}}</td>
-      <td>
-        Defines the {{anch("Experimental Gamepad extensions")}}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Gamepad", "", "The Gamepad API specification")}}
-      </td>
-      <td>{{Spec2("Gamepad")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## See also
 

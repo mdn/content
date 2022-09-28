@@ -1,6 +1,7 @@
 ---
 title: Navigator.canShare()
 slug: Web/API/Navigator/canShare
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - Share
 browser-compat: api.Navigator.canShare
 ---
+
 {{APIRef("Web Share API")}}{{securecontext_header}}
 
 The **`Navigator.canShare()`** method of the [Web Share API](/en-US/docs/Web/API/Web_Share_API) returns `true` if the equivalent call to {{domxref("navigator.share()")}} would succeed.
@@ -25,9 +27,9 @@ The **`canShare()`** method will return `false` if the permission is supported b
 
 ## Syntax
 
-```js
-navigator.canShare()
-navigator.canShare(data)
+```js-nolint
+canShare()
+canShare(data)
 ```
 
 ### Parameters
@@ -42,9 +44,9 @@ navigator.canShare(data)
 
     Possible values are:
 
-    - `url`: A {{domxref("USVString")}} representing a URL to be shared.
-    - `text`: A {{domxref("USVString")}} representing text to be shared.
-    - `title`: A {{domxref("USVString")}} representing the title to be shared.
+    - `url`: A string representing a URL to be shared.
+    - `text`: A string representing text to be shared.
+    - `title`: A string representing the title to be shared.
     - `files`: An array of {{domxref("File")}} objects representing files to be shared.
 
 ### Return value

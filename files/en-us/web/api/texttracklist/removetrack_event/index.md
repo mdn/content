@@ -1,6 +1,7 @@
 ---
 title: 'TextTrackList: removeTrack event'
 slug: Web/API/TextTrackList/removeTrack_event
+page-type: web-api-event
 tags:
   - API
   - Media Streams API
@@ -8,39 +9,37 @@ tags:
   - Reference
   - Removing Tracks
   - events
+  - Event
   - removeTrack
-browser-compat: api.TextTrackList.removeTrack_event
+browser-compat: api.TextTrackList.removetrack_event
 ---
+
 {{APIRef}}
 
-The `removetrack` event is fired when a track is removed from a [`TextTrackList`](/en-US/docs/Web/API/TextTrackList).
+The **`removetrack`** event is fired when a track is removed from a [`TextTrackList`](/en-US/docs/Web/API/TextTrackList).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("TrackEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/VideoTrackList/onremovetrack"
-            >onremovetrack</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('removetrack', (event) => { })
+
+onremovetrack = (event) => { }
+```
+
+## Event type
+
+A {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("TrackEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
+  - : The {{domxref("TextTrack")}} object to which the event refers.
 
 ## Examples
 

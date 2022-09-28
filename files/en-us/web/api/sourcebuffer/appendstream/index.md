@@ -1,10 +1,10 @@
 ---
 title: SourceBuffer.appendStream()
 slug: Web/API/SourceBuffer/appendStream
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
-  - Experimental
   - MSE
   - Media Source Extensions
   - Method
@@ -12,9 +12,12 @@ tags:
   - SourceBuffer
   - Video
   - appendstream
+  - Deprecated
+  - Non-standard
 browser-compat: api.SourceBuffer.appendStream
 ---
-{{APIRef("Media Source Extensions")}}{{deprecated_header}}
+
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`appendStream()`** method of the
 {{domxref("SourceBuffer")}} interface appends media segment data from a
@@ -22,28 +25,28 @@ The **`appendStream()`** method of the
 
 ## Syntax
 
-```js
-sourceBuffer.appendStream(stream, maxSize);
+```js-nolint
+appendStream(stream, maxSize)
 ```
 
 ### Parameters
 
-- stream
+- `stream`
   - : The {{domxref("ReadableStream")}} that is the source of the media segment data you
     want to append to the `SourceBuffer`.
-- maxSize
+- `maxSize`
   - : An unsigned long value indicating the maximum number of bytes that can be appended
     in this operation.
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 None.
 
-## Example
+## Examples
 
 TBD.
 

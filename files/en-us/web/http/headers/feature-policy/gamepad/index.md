@@ -9,15 +9,16 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.gamepad
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Feature-Policy")}} header `gamepad` directive controls whether the current document is allowed to use the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
 When this policy is disabled, calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}}.
-In addition, the {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events will not fire.
+In addition, the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events will not fire.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: gamepad <allowlist>;
 ```
 
@@ -35,7 +36,7 @@ Default allow list for `gamepad` is `'self'`.
 SecureCorp Inc. wants to disable the Gamepad API within all browsing contexts except for its own origin and those whose origin is `https://example.com`.
 It can do so by delivering the following HTTP response header to define a feature policy:
 
-```
+```http
 Feature-Policy: gamepad 'self' https://example.com
 ```
 
@@ -44,7 +45,7 @@ Feature-Policy: gamepad 'self' https://example.com
 FastCorp Inc. wants to disable `gamepad` for all cross-origin child frames, except for a specific \<iframe>.
 It can do so by delivering the following HTTP response header to define a feature policy:
 
-```
+```http
 Feature-Policy: gamepad 'self'
 ```
 
@@ -68,5 +69,4 @@ iframe attributes can selectively enable features in certain frames, and not in 
 
 - {{HTTPHeader("Feature-Policy")}} header
 - [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
-- [Using Feature
-  Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

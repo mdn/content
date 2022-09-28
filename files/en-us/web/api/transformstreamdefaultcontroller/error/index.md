@@ -1,6 +1,7 @@
 ---
 title: TransformStreamDefaultController.error()
 slug: Web/API/TransformStreamDefaultController/error
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,14 +10,15 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController.error
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 The **`error()`** method of the {{domxref("TransformStreamDefaultController")}} interface errors both sides of the stream. Any further interactions with it will fail with the given error message, and any chunks in the queue will be discarded.
 
 ## Syntax
 
-```js
-TransformStreamDefaultController.error(reason);
+```js-nolint
+error(reason)
 ```
 
 ### Parameters
@@ -24,14 +26,27 @@ TransformStreamDefaultController.error(reason);
 - `reason`
   - : A string containing the error message to be returned on any further interaction with the stream.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
-In this example the `error()` method is used when a chunk contains a symbol.
+In this example the `error()` method is used when a chunk could not be transformed.
 
 ```js
-case 'symbol':
-  controller.error("Cannot send a symbol as a chunk part")
-  break
+const transformContent = {
+  start() { /* … */ },
+  async transform(chunk, controller) {
+    try {
+      chunk = await applyMyTransformation(chunk);
+    } catch (err) {
+      controller.error(`Unable to transform chunk: ${err}`);
+    }
+    // …
+  },
+  // …
+};
 ```
 
 ## Specifications

@@ -6,8 +6,9 @@ tags:
   - HTTP
   - Overview
   - WebMechanics
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** is a {{Glossary("protocol")}} for fetching resources such as HTML documents.
@@ -173,7 +174,7 @@ When a client wants to communicate with a server, either the final server or an 
    Content-Length: 29769
    Content-Type: text/html
 
-   <!DOCTYPE html... (here come the 29769 bytes of the requested web page)
+   <!DOCTYPE html>… (here come the 29769 bytes of the requested web page)
    ```
 
 4. Close or reuse the connection for further requests.
@@ -197,7 +198,7 @@ An example HTTP request:
 
 ![A basic HTTP request](http_request.png)
 
-Requests consists of the following elements:
+Requests consist of the following elements:
 
 - An HTTP [method](/en-US/docs/Web/HTTP/Methods), usually a verb like {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, or a noun like {{HTTPMethod("OPTIONS")}} or {{HTTPMethod("HEAD")}} that defines the operation the client wants to perform.
   Typically, a client wants to fetch a resource (using `GET`) or post the value of an [HTML form](/en-US/docs/Learn/Forms) (using `POST`), though more operations may be needed in other cases.
@@ -227,7 +228,7 @@ The modern {{domxref("Fetch API")}} provides the same features with a more power
 
 Another API, [server-sent events](/en-US/docs/Web/API/Server-sent_events), is a one-way service that allows a server to send events to the client, using HTTP as a transport mechanism.
 Using the {{domxref("EventSource")}} interface, the client opens a connection and establishes event handlers.
-The client browser automatically converts the messages that arrive on the HTTP stream into appropriate {{domxref("Event")}} objects, delivering them to the event handlers that have been registered for the events' {{domxref("Event.type", "type")}} if known, or to the {{domxref("EventSource.onmessage", "onmessage")}} event handler if no type-specific event handler was established.
+The client browser automatically converts the messages that arrive on the HTTP stream into appropriate {{domxref("Event")}} objects. Then it delivers them to the event handlers that have been registered for the events' {{domxref("Event.type", "type")}} if known, or to the {{domxref("EventSource.message_event", "onmessage")}} event handler if no type-specific event handler was established.
 
 ## Conclusion
 
@@ -235,4 +236,4 @@ HTTP is an extensible protocol that is easy to use.
 The client-server structure, combined with the ability to add headers, allows HTTP to advance along with the extended capabilities of the Web.
 
 Though HTTP/2 adds some complexity by embedding HTTP messages in frames to improve performance, the basic structure of messages has stayed the same since HTTP/1.0.
-Session flow remains simple, allowing it to be investigated and debugged with a simple [HTTP message monitor](/en-US/docs/Tools/Network_Monitor).
+Session flow remains simple, allowing it to be investigated and debugged with a simple [HTTP message monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).

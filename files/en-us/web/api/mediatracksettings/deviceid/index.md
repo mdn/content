@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.deviceId
 slug: Web/API/MediaTrackSettings/deviceId
+page-type: web-api-instance-property
 tags:
   - API
   - Media
@@ -14,10 +15,11 @@ tags:
   - deviceId
 browser-compat: api.MediaTrackSettings.deviceId
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
-**`deviceId`** property is a {{domxref("DOMString")}} which
+**`deviceId`** property is a string which
 uniquely identifies the source for the corresponding {{domxref("MediaStreamTrack")}} for
 the origin corresponding to the browsing session. This lets you determine what value was
 selected to comply with your specified constraints for this property's value as
@@ -33,15 +35,9 @@ Because {{Glossary("RTP")}} doesn't include this information, tracks associated 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
 will never include this property.
 
-## Syntax
+## Value
 
-```js
-var deviceId = MediaTrackSettings.deviceId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} whose value is an origin-unique identifier for the track's
+A string whose value is an origin-unique identifier for the track's
 source. This ID is valid across multiple browsing sessions for the same origin and is
 guaranteed to be different for all other origins, so you can safely use it to request
 the same source be used for multiple sessions, for example.
@@ -60,7 +56,7 @@ constraints when calling {{domxref("MediaStreamTrack.applyConstraints()")}}.
 > private browsing mode will use a different ID, and will change it each browsing
 > session.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.
@@ -76,8 +72,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackSettings.groupId")}}
 - {{domxref("MediaTrackConstraints.deviceId")}}
 - {{domxref("MediaTrackSettings")}}

@@ -1,6 +1,7 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders
@@ -9,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-width
 ---
+
 {{CSSRef}}
 
 The **`border-width`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width of an element's border.
@@ -45,10 +47,11 @@ border-width: 1px 2em 1.5cm;
 /* top | right | bottom | left */
 border-width: 1px 2em 0 4rem;
 
-/* Global keywords */
+/* Global values */
 border-width: inherit;
 border-width: initial;
 border-width: revert;
+border-width: revert-layer;
 border-width: unset;
 ```
 
@@ -63,7 +66,7 @@ The `border-width` property may be specified using one, two, three, or four valu
 
 - `<line-width>`
 
-  - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
+  - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
 
     - `thin`
     - `medium`
@@ -86,39 +89,43 @@ The `border-width` property may be specified using one, two, three, or four valu
 #### HTML
 
 ```html
-<p id="sval">
-    one value: 6px wide border on all 4 sides</p>
+<p id="sval">one value: 6px wide border on all 4 sides</p>
 <p id="bival">
-    two different values: 2px wide top and bottom border, 10px wide right and left border</p>
+  two different values: 2px wide top and bottom border, 10px wide right and left
+  border
+</p>
 <p id="treval">
-    three different values: 0.3em top, 9px bottom, and zero width right and left</p>
+  three different values: 0.3em top, 9px bottom, and zero width right and left
+</p>
 <p id="fourval">
-    four different values: "thin" top, "medium" right, "thick" bottom, and 1em left</p>
+  four different values: "thin" top, "medium" right, "thick" bottom, and 1em
+  left
+</p>
 ```
 
 #### CSS
 
 ```css
 #sval {
-  border: ridge #ccc;
-  border-width: 6px;
+  border: ridge #ccc;
+  border-width: 6px;
 }
 #bival {
-  border: solid red;
-  border-width: 2px 10px;
+  border: solid red;
+  border-width: 2px 10px;
 }
 #treval {
-  border: dotted orange;
-  border-width: 0.3em 0 9px;
+  border: dotted orange;
+  border-width: 0.3em 0 9px;
 }
 #fourval {
-  border: solid lightgreen;
-  border-width: thin medium thick 1em;
+  border: solid lightgreen;
+  border-width: thin medium thick 1em;
 }
 p {
-  width: auto;
-  margin: 0.25em;
-  padding: 0.25em;
+  width: auto;
+  margin: 0.25em;
+  padding: 0.25em;
 }
 ```
 

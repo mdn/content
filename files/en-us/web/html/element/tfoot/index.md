@@ -46,11 +46,9 @@ The **`<tfoot>`** [HTML](/en-US/docs/Web/HTML) element defines a set of rows sum
         {{HTMLElement("caption")}},
         {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
         {{HTMLElement("tbody")}}, or {{HTMLElement("tr")}}
-        element. Note that this is the requirement as of HTML5.<br />In HTML4,
-        the {{HTMLElement("tfoot")}} element cannot be placed after any
-        {{HTMLElement("tbody")}} and {{HTMLElement("tr")}}
-        element. Note that this directly contradicts the above normative
-        requirement from HTML5.
+        element. Note that this is the requirement in HTML.<br />Originally, in HTML4, the opposite was true: the {{HTMLElement("tfoot")}} element could not be placed after any
+        {{HTMLElement("tbody")}} or {{HTMLElement("tr")}}
+        element.
       </td>
     </tr>
     <tr>
@@ -90,18 +88,18 @@ The following attributes are deprecated and should not be used. They are documen
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "tbody")}} and {{htmlattrxref("charoff", "tbody")}} attributes.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "tfoot")}} and {{htmlattrxref("charoff", "tfoot")}} attributes.
 
     If this attribute is not set, the `left` value is assumed.
 
     > **Note:**
     >
     > - To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "tfoot")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > - To achieve the same effect as the `char` value, in CSS, you can use the value of the {{htmlattrxref("char", "tfoot")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color kewords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 

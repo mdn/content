@@ -11,6 +11,7 @@ tags:
   - getAll
 browser-compat: webextensions.api.permissions.getAll
 ---
+
 {{AddonSidebar()}}
 
 Retrieve a {{WebExtAPIRef("permissions.Permissions")}} object containing all the permissions currently granted to the extension.
@@ -19,8 +20,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var gettingAll = browser.permissions.getAll()
+```js-nolint
+let gettingAll = browser.permissions.getAll()
 ```
 
 ### Parameters
@@ -49,6 +50,6 @@ browser.permissions.getAll().then((result) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.
+> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

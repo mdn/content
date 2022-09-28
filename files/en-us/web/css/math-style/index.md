@@ -1,15 +1,18 @@
 ---
 title: math-style
 slug: Web/CSS/math-style
+page-type: css-property
 tags:
   - CSS
   - MathML
-  - Property
+  - CSS Property
   - Reference
   - math-style
+  - Experimental
 browser-compat: css.properties.math-style
 ---
-{{MDNSidebar}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The `math-style` property indicates whether MathML equations should render with normal or compact height.
 
@@ -24,6 +27,7 @@ math-style: compact;
 math-style: inherit;
 math-style: initial;
 math-style: revert;
+math-style: revert-layer;
 math-style: unset;
 ```
 
@@ -59,3 +63,8 @@ math {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{cssxref("math-depth")}}
+- {{cssxref("font-size")}}

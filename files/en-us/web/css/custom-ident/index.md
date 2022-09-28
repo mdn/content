@@ -1,6 +1,7 @@
 ---
 title: <custom-ident>
 slug: Web/CSS/custom-ident
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -8,7 +9,13 @@ tags:
   - Layout
   - Reference
   - Web
+spec-urls:
+  - https://drafts.csswg.org/css-values/#custom-idents
+  - https://drafts.csswg.org/css-will-change/#valdef-will-change-custom-ident
+  - https://drafts.csswg.org/css-counter-styles/#typedef-counter-style-name
+  - https://drafts.csswg.org/css-lists/#counter-properties
 ---
+
 {{CSSRef}}
 
 The **`<custom-ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes an arbitrary user-defined string used as an {{glossary("identifier")}}. It is case-sensitive, and certain values are forbidden in various contexts to prevent ambiguity.
@@ -28,7 +35,7 @@ Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers as they ar
 
 ### Forbidden values
 
-A `<custom-ident>` must not be placed between single or double quotes as this would be identical to a {{CSSxRef("&lt;string&gt;")}}. Moreover, the first character must not be a decimal digit, nor a hyphen (`-`) followed by a decimal digit or another hyphen.
+A `<custom-ident>` must not be placed between single or double quotes as this would be identical to a {{CSSxRef("&lt;string&gt;")}}. Moreover, the first character must not be a decimal digit, nor a hyphen (`-`) followed by a decimal digit or another hyphen.
 
 To prevent ambiguity, each property that uses `<custom-ident>` forbids the use of specific values:
 
@@ -37,7 +44,69 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
 - {{CSSxRef("counter-reset")}}, {{CSSxRef("counter-increment")}}
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as `none`.
 - {{CSSxRef("@counter-style")}}, {{CSSxRef("list-style-type")}}
-  - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as the values `none`, `inline`, and `outside`. Also, quite a few predefined values are implemented by the different browsers: `disc`, `circle`, `square`, `decimal`, `cjk-decimal`, `decimal-leading-zero`, `lower-roman`, `upper-roman`, `lower-greek`, `lower-alpha`, `lower-latin`, `upper-alpha`, `upper-latin`, `arabic-indic`, `armenian`, `bengali`, `cambodian`, `cjk-earthly-branch`, `cjk-heavenly-stem`, `cjk-ideographic`, `devanagari`, `ethiopic-numeric`, `georgian`, `gujarati`, `gurmukhi`, `hebrew`, `hiragana`, `hiragana-iroha`, `japanese-formal`, `japanese-informal`, `kannada`, `katakana`, `katakana-iroha`, `khmer`, `korean-hangul-formal`, `korean-hanja-formal`, `korean-hanja-informal`, `lao`, `lower-armenian`, `malayalam`, `mongolian`, `myanmar`, `oriya`, `persian`, `simp-chinese-formal`, `simp-chinese-informal`, `tamil`, `telugu`, `thai`, `tibetan`, `trad-chinese-formal`, `trad-chinese-informal`, `upper-armenian`, `disclosure-open`, and `disclosure-close`.
+  - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as the values:
+
+    - `none`
+    - `inline`
+    - `outside`
+
+    Also, quite a few predefined values are implemented by the different browsers:
+
+    - `disc`
+    - `circle`
+    - `square`
+    - `decimal`
+    - `cjk-decimal`
+    - `decimal-leading-zero`
+    - `lower-roman`
+    - `upper-roman`
+    - `lower-greek`
+    - `lower-alpha`
+    - `lower-latin`
+    - `upper-alpha`
+    - `upper-latin`
+    - `arabic-indic`
+    - `armenian`
+    - `bengali`
+    - `cambodian`
+    - `cjk-earthly-branch`
+    - `cjk-heavenly-stem`
+    - `cjk-ideographic`
+    - `devanagari`
+    - `ethiopic-numeric`
+    - `georgian`
+    - `gujarati`
+    - `gurmukhi`
+    - `hebrew`
+    - `hiragana`
+    - `hiragana-iroha`
+    - `japanese-formal`
+    - `japanese-informal`
+    - `kannada`
+    - `katakana`
+    - `katakana-iroha`
+    - `khmer`
+    - `korean-hangul-formal`
+    - `korean-hanja-formal`
+    - `korean-hanja-informal`
+    - `lao`
+    - `lower-armenian`
+    - `malayalam`
+    - `mongolian`
+    - `myanmar`
+    - `oriya`
+    - `persian`
+    - `simp-chinese-formal`
+    - `simp-chinese-informal`
+    - `tamil`
+    - `telugu`
+    - `thai`
+    - `tibetan`
+    - `trad-chinese-formal`
+    - `trad-chinese-informal`
+    - `upper-armenian`
+    - `disclosure-open`
+    - `disclosure-close`
 - {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}}
   - : Forbids the `span` value.
 - {{CSSxRef("will-change")}}
@@ -69,15 +138,7 @@ bili.bob          Only alphanumeric characters, _, and - needn't be escaped.
 
 ## Specifications
 
-| Specification                                                                                                                                                                        | Status                                       | Comment                                                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Values', '#custom-idents', '<code>&lt;custom-ident&gt;</code>')}}                                                                         | {{Spec2('CSS4 Values')}}             |                                                                                                                                                                                          |
-| {{SpecName('CSS Will Change', '#valdef-will-change-custom-ident', '<code>&lt;custom-ident&gt;</code> for <code>will-change</code>')}}     | {{Spec2('CSS Will Change')}}         | Defines which values are excluded for {{CSSxRef("will-change")}}.                                                                                                              |
-| {{SpecName('CSS3 Counter Styles', '#typedef-counter-style-name', '<code>&lt;custom-ident&gt;</code> for <code>list-style-type</code>')}} | {{Spec2('CSS3 Counter Styles')}} | Uses `<custom-ident>` instead of a finite list of keywords. Defines which values are excluded for {{CSSxRef("list-style-type")}} and {{CSSxRef("@counter-style")}}. |
-| {{SpecName('CSS3 Lists', '#counter-properties', '<code>&lt;custom-ident&gt;</code> for <code>counter-*</code>')}}                             | {{Spec2('CSS3 Lists')}}             | Renames `<identifier>` to `<custom-ident>`. Adds its usage to the new `counter-set` property.                                                                                            |
-| {{SpecName('CSS3 Animations', '#typedef-single-animation-name', '<code>&lt;custom-ident&gt;</code> for <code>animation-name</code>')}} | {{Spec2('CSS3 Animations')}}         | Defines which values are excluded for {{CSSxRef("animation-name")}}.                                                                                                          |
-| {{SpecName('CSS3 Values', '#custom-idents', '<code>&lt;custom-ident&gt;</code>')}}                                                                         | {{Spec2('CSS3 Values')}}             | Renames `<identifier>` to `<custom-ident>`. Makes it a pseudo-type and forbids the use of excluded values.                                                                               |
-| {{SpecName('CSS2.1', 'syndata.html#value-def-identifier', '<code>&lt;identifier&gt;</code>')}}                                                         | {{Spec2('CSS2.1')}}                     | Initial definition.                                                                                                                                                                      |
+{{Specifications}}
 
 ## Browser compatibility
 

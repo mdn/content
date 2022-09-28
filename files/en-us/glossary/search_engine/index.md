@@ -3,7 +3,6 @@ title: Search engine
 slug: Glossary/Search_engine
 tags:
   - Definition
-  - Glossary
   - Indexing
   - Search Engine
   - Searching
@@ -13,6 +12,7 @@ tags:
   - details
   - google
 ---
+
 A search engine is a software system that collects information from the {{Glossary("World Wide Web")}} and presents it to users who are looking for specific information.
 
 A search engine conducts the following processes:
@@ -26,5 +26,5 @@ The most popular search engine is Google. Other top search engines include Yahoo
 ## See also
 
 - [Web search engine](https://en.wikipedia.org/wiki/Web_search_engine) on Wikipedia
-- [Search engine](https://www.webopedia.com/TERM/S/search_engine.html) on Webopedia
+- [Search engine](https://www.webopedia.com/definitions/search-engine/) on Webopedia
 - [How Internet search engines work](https://computer.howstuffworks.com/internet/basics/search-engine.htm) on How Stuff Works

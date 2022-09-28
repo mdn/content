@@ -8,6 +8,7 @@ tags:
   - parseInt
 browser-compat: javascript.builtins.parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`parseInt()`** function parses a string argument and
@@ -18,7 +19,7 @@ systems).
 
 ## Syntax
 
-```js
+```js-nolint
 parseInt(string)
 parseInt(string, radix)
 ```
@@ -26,19 +27,10 @@ parseInt(string, radix)
 ### Parameters
 
 - `string`
-  - : The value to parse. If this argument is not a string, then it is converted to one
-    using the [`ToString`](https://tc39.es/ecma262/#sec-tostring)
-    abstract operation. Leading {{glossary("whitespace")}} in this argument is ignored.
-- `radix`_ {{optional_inline}}_
+  - : A string starting with an integer. Leading {{glossary("whitespace")}} in this argument is ignored.
+- `radix` {{optional_inline}}
 
-  - : An integer between `2` and `36` that represents the
-    _radix_ (the base in mathematical numeral systems) of the
-    `string`. Be careful—this does **_not_**
-    default to `10`! If the radix value is not of the `Number` type
-    it will be coerced to a `Number`.
-
-    > **Warning:** The [description below](#description) explains
-    > in more detail what happens when `radix` is not provided.
+  - : An integer between `2` and `36` that represents the _radix_ (the base in mathematical numeral systems) of the `string`. If outside this range, the function will always return `NaN`. If `0` or not provided, the radix will be inferred based on `string`'s value. Be careful — this does NOT always default to `10`! The [description below](#description) explains in more detail what happens when `radix` is not provided.
 
 ### Return value
 
@@ -50,87 +42,49 @@ Or {{jsxref("NaN")}} when
   `36`, or
 - the first non-whitespace character cannot be converted to a number.
 
+> **Note:** JavaScript does not have the distinction of "floating point numbers" and "integers" on the language level. `parseInt()` and [`parseFloat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) only differ in their parsing behavior, but not necessarily their return values. For example, `parseInt("42")` and `parseFloat("42")` would return the same value: a {{jsxref("Number")}} 42.
+
 ## Description
 
-The `parseInt` function converts its first argument to a string, parses that
-string, then returns an integer or `NaN`.
+The `parseInt` function converts its first argument to a string, parses that string, then returns an integer or `NaN`.
 
-If not `NaN`, the return value will be the integer that is the first
-argument taken as a number in the specified `radix`. (For example,
-a `radix` of `10` converts from a decimal number,
-`8` converts from octal, `16` from hexadecimal, and so on.)
+If not `NaN`, the return value will be the integer that is the first argument taken as a number in the specified `radix`. (For example, a `radix` of `10` converts from a decimal number, `8` converts from octal, `16` from hexadecimal, and so on.)
 
-For radices above `10`, letters of the English alphabet indicate numerals
-greater than `9`. For example, for hexadecimal numbers (base
-`16`), `A` through `F` are used.
+A value passed as the `radix` argument is {{glossary("Type_coercion", "coerced")}} to a `Number` (if necessary). If it's unprovided, or if the value becomes 0, `NaN` or `Infinity` (`undefined` is coerced to `NaN`), JavaScript assumes the following:
 
-If `parseInt` encounters a character that is not a numeral in the specified
-`radix`, it ignores it and all succeeding characters and returns the integer
-value parsed up to that point. `parseInt` truncates numbers to integer
-values. Leading and trailing spaces are allowed.
+1. If the input `string`, with leading whitespace and possible `+`/`-` signs removed, begins with `0x` or `0X` (a zero, followed by lowercase or uppercase X), `radix` is assumed to be `16` and the rest of the string is parsed as a hexadecimal number.
+2. If the input `string` begins with any other value, the radix is `10` (decimal).
 
-Because some numbers use the `e` character in their string representation
-(e.g. **`6.022E23`** for 6.022 × 10^23), using
-`parseInt` to truncate numbers will produce unexpected results when used on
-very large or very small numbers. `parseInt` should _not_ be used as a
-substitute for {{jsxref("Math.floor()")}}.
+> **Note:** Other prefixes like `0b`, which are valid in number literals, are not supported in `parseInt()`.
 
-`parseInt` understands exactly two signs: `+` for positive, and
-`-` for negative (since ECMAScript 1). It is done as an initial step in the
-parsing after whitespace is removed. If no signs are found, the algorithm moves to the
-following step; otherwise, it removes the sign and runs the number-parsing on the rest
-of the string.
+Else if the radix value (coerced if necessary) is not in range \[2, 36] (inclusive) `parseInt` returns `NaN`.
 
-A value passed as the radix argument is coerced to a Number (if necessary), then if the
-value is 0, `NaN` or `Infinity` (undefined is coerced to
-`NaN`), JavaScript assumes the following:
+For radices above `10`, letters of the English alphabet indicate numerals greater than `9`. For example, for hexadecimal numbers (base `16`), `A` through `F` are used. The letters are case-insensitive.
 
-1.  If the input `string` begins with "`0x`" or "`0X`"
-    (a zero, followed by lowercase or uppercase X), `radix` is
-    assumed to be `16` and the rest of the string is parsed as a hexadecimal
-    number.
-2.  If the input `string` begins with any other value, the radix is
-    `10` (decimal).
+`parseInt` understands exactly two signs: `+` for positive, and `-` for negative. It is done as an initial step in the parsing after whitespace is removed. If no signs are found, the algorithm moves to the following step; otherwise, it removes the sign and runs the number-parsing on the rest of the string.
 
-Else if the radix value (coerced if necessary) is not in range \[2, 36] (inclusive)
-`parseInt` returns `NaN`.
+If `parseInt` encounters a character that is not a numeral in the specified `radix`, it ignores it and all succeeding characters and returns the integer value parsed up to that point. For example, although `1e3` technically encodes an integer (and will be correctly parsed to the integer `1000` by [`parseFloat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)), `parseInt("1e3", 10)` returns `1`, because `e` is not a valid numeral in base 10. Because `.` is not a numeral either, the return value will always be an integer.
 
-If the first character cannot be converted to a number with the radix in use,
-`parseInt` returns `NaN`.
+If the first character cannot be converted to a number with the radix in use, `parseInt` returns `NaN`. Leading whitespace is allowed.
 
-For arithmetic purposes, the `NaN` value is not a number in any radix. You
-can call the {{jsxref("isNaN")}} function to determine if the result of
-`parseInt` is `NaN`. If `NaN` is passed on to
-arithmetic operations, the operation result will also be `NaN`.
+For arithmetic purposes, the `NaN` value is not a number in any radix. You can call the [`Number.isNaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN) function to determine if the result of `parseInt` is `NaN`. If `NaN` is passed on to arithmetic operations, the operation result will also be `NaN`.
 
-To convert a number to its string literal in a particular radix, use
-`thatNumber.toString(radix)`.
+Because large numbers use the `e` character in their string representation (e.g. `6.022e23` for 6.022 × 10<sup>23</sup>), using `parseInt` to truncate numbers will produce unexpected results when used on very large or very small numbers. `parseInt` should _not_ be used as a substitute for {{jsxref("Math.floor()")}}.
+
+To convert a number to its string literal in a particular radix, use [`thatNumber.toString(radix)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 
 > **Warning:** `parseInt` converts a
 > {{jsxref("BigInt")}} to a {{jsxref("Number")}} and loses precision in the process.
-> This is because trailing non-numeric values, including "`n`", are
+> This is because trailing non-numeric characters, including the `n` suffix, are
 > discarded.
 
 ### Octal interpretations with no radix
 
-Please note that following information doesn't apply to recent implementations as of 2021.
-
-Although discouraged by ECMAScript 3, many ECMAScript 3
-implementations had interpreted a numeric string beginning with a leading `0` as
-octal. The following might have had an octal result, or it might have had a decimal result.
+Contrary to number literals (and some legacy implementations), `parseInt()` does _not_ treat strings beginning with a `0` character as octal values.
 
 ```js
 parseInt('0e0')  // 0
-parseInt('08')   // 0, because '8' is not an octal digit.
-```
-
-The ECMAScript 5 specification of the function `parseInt` no longer allows
-implementations to treat Strings beginning with a `0` character as octal
-values. Many implementations have adopted this behavior as of 2021.
-
-```js
-parseInt('0e0')  // 0
-parseInt('08')   // 8
+parseInt('011')  // 11
 ```
 
 ### A stricter parse function
@@ -141,11 +95,7 @@ Regular expressions can help:
 
 ```js
 function filterInt(value) {
-  if (/^[-+]?(\d+|Infinity)$/.test(value)) {
-    return Number(value)
-  } else {
-    return NaN
-  }
+  return /^[-+]?(\d+|Infinity)$/.test(value) ? Number(value) : NaN;
 }
 
 console.log(filterInt('421'))                // 421
@@ -234,27 +184,20 @@ parseInt('900719925474099267n')
 // 900719925474099300
 ```
 
-`parseInt` doesn't work with [numeric
-separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators):
+`parseInt` doesn't work with [numeric separators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators):
 
 ```js
 parseInt('123_456')
 // 123
 ```
 
-The radix is coerced to a `Number`:
+### Using parseInt() on non-strings
+
+`parseInt()` can have interesting results when working on non-strings combined with a high radix, for example, `36` (which makes all alphanumeric characters valid numerics).
 
 ```js
-const obj = {
-  valueOf() {return 8}
-};
-parseInt('11', obj); // 9
-
-obj.valueOf = function() {return 1};
-parseInt('11', obj); // NaN
-
-obj.valueOf = function() {return Infinity};
-parseInt('11', obj); // 11
+parseInt(null, 36) // 1112745: The string "null" is 1112745 in base 36
+parseInt(undefined, 36) // 86464843759093: The string "undefined" is 86464843759093 in base 36
 ```
 
 ## Specifications
@@ -271,5 +214,5 @@ parseInt('11', obj); // 11
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-- {{jsxref("Number.toString()")}}
-- {{jsxref("Object.valueOf")}}
+- {{jsxref("Number.prototype.toString()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

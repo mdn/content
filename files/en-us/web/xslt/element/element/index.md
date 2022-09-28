@@ -6,6 +6,7 @@ tags:
   - Reference
   - XSLT
 ---
+
 {{ XsltRef() }}
 
 The `<xsl:element>` element creates an element in the output document.
@@ -28,7 +29,7 @@ The `<xsl:element>` element creates an element in the output document.
 - `namespace`
   - : Specifies the namespace of the output element.
 - `use-attribute-sets`
-  - : A whitespace‐separated list of [`attribute-set` element](/en-US/docs/Web/XSLT/Element/attribute-set) names to be applied to the `element` element’s output element. Applied attributes can be overridden via nested `attribute` elements.
+  - : A whitespace‐separated list of [`attribute-set` element](/en-US/docs/Web/XSLT/Element/attribute-set) names to be applied to the `element` element's output element. Applied attributes can be overridden via nested `attribute` elements.
 
 ### Type
 

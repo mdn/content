@@ -10,8 +10,9 @@ tags:
   - OOJS
   - Object-Oriented
   - Objects
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 In this assessment, you are expected to use the bouncing balls demo from the previous article as a starting point, and add some new and interesting features to it.
@@ -37,11 +38,11 @@ In this assessment, you are expected to use the bouncing balls demo from the pre
 
 ## Starting point
 
-To get this assessment started, make a local copy of [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), and [main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) from our last article in a new directory in your local computer.
+To get this assessment started, make a local copy of [index-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/style.css), and [main-finished.js](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js) from our last article in a new directory in your local computer.
 
-Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>`/`<style>` elements inside the HTML page.
+Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>`/`<style>` elements inside the HTML page.
 
-> **Note:** If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> **Note:** If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
 
 ## Hints and tips
 
@@ -56,7 +57,7 @@ Our bouncy ball demo is fun, but now we want to make it a little bit more intera
 
 The following screenshot gives you an idea of what the finished program should look like:
 
-![](bouncing-evil-circle.png)
+![Screenshot of the bouncing balls demo page. A white-outlined circle is visible in addition to the colored balls, and the text "Ball count: 23" is visible under the heading.](bouncing-evil-circle.png)
 
 To give you more of an idea, have a look at the [finished example](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (no peeking at the source code!)
 
@@ -117,25 +118,25 @@ The constructor for `EvilCircle` should:
 Finally, the constructor should set up the code enabling the user to move the evil circle around the screen:
 
 ```js
-window.addEventListener('keydown', (e) => {
-  switch(e.key) {
-    case 'a':
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "a":
       this.x -= this.velX;
       break;
-    case 'd':
+    case "d":
       this.x += this.velX;
       break;
-    case 'w':
+    case "w":
       this.y -= this.velY;
       break;
-    case 's':
+    case "s":
       this.y += this.velY;
       break;
   }
 });
 ```
 
-This adds a `keydown` event listener to the `window` object so that when a key is pressed, the event object's [`key`](/en-US/docs/Web/API/KeyboardEvent/key) property is consulted to see which key is pressed. If it is one of the four specified keys, then the evil circle will move left/right/up/down.
+This adds a `keydown` event listener to the `window` object so that when a key is pressed, the event object's [`key`](/en-US/docs/Web/API/KeyboardEvent/key) property is consulted to see which key is pressed. If it is one of the four specified keys, then the evil circle will move left/right/up/down.
 
 ### Defining methods for EvilCircle
 
@@ -145,7 +146,7 @@ The `EvilCircle` class should have three methods, as described below.
 
 This method has the same purpose as the `draw()` method for `Ball`: it draws the object instance on the canvas. The `draw()` method for `EvilCircle` will work in a very similar way, so you can start by copying the `draw()` method for `Ball`. You should then make the following changes:
 
-- We want the evil circle to not be filled in, but rather just have an outer line (stroke). You can achieve this by updating [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) and [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) to [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) and [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke).
+- We want the evil circle to not be filled in, but rather just have an outer line (stroke). You can achieve this by updating [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) and [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) to [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) and [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke) respectively.
 - We also want to make the stroke a bit thicker, so you can see the evil circle a bit more easily. This can be achieved by setting a value for [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) somewhere after the [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) call (3 will do).
 
 #### checkBounds()
@@ -153,13 +154,13 @@ This method has the same purpose as the `draw()` method for `Ball`: it draws the
 This method will do the same thing as the first part of the `update()` method for `Ball` — look to see whether the evil circle is going to go off the edge of the screen, and stop it from doing so. Again, you can mostly just copy the `update()` method for `Ball`, but there are a few changes you should make:
 
 - Get rid of the last two lines — we don't want to automatically update the evil circle's position on every frame, because we will be moving it in some other way, as you'll see below.
-- Inside the `if()` statements, if the tests return true we don't want to update `velX`/`velY`; we want to instead change the value of `x`/`y` so the evil circle is bounced back onto the screen slightly. Adding or subtracting (as appropriate) the evil circle's `size` property would make sense.
+- Inside the `if ()` statements, if the tests return true we don't want to update `velX`/`velY`; we want to instead change the value of `x`/`y` so the evil circle is bounced back onto the screen slightly. Adding or subtracting (as appropriate) the evil circle's `size` property would make sense.
 
 #### collisionDetect()
 
 This method will act in a very similar way to the `collisionDetect()` method for `Ball` method, so you can use a copy of that as the basis of this new method. But there are a couple of differences:
 
-- In the outer `if` statement, you no longer need to check whether the current ball in the iteration is the same as the ball that is doing the checking — because it is no longer a ball, it is the evil circle! Instead, you need to do a test to see if the ball being checked exists (with which property could you do this with?). If it doesn't exist, it has already been eaten by the evil circle, so there is no need to check it again.
+- In the outer `if` statement, you no longer need to check whether the current ball in the iteration is the same as the ball that is doing the checking — because it is no longer a ball, it is the evil circle! Instead, you need to do a test to see if the ball being checked exists (with which property could you do this with?). If it doesn't exist, it has already been eaten by the evil circle, so there is no need to check it again.
 - In the inner `if` statement, you no longer want to make the objects change color when a collision is detected — instead, you want to set any balls that collide with the evil circle to not exist any more (again, how do you think you'd do that?).
 
 ### Bringing the evil circle into the program
@@ -174,37 +175,37 @@ Now we've defined the evil circle, we need to actually make it appear in our sce
 
 To implement the score counter, follow the following steps:
 
-1.  In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
-2.  In your CSS file, add the following rule at the bottom:
+1. In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
+2. In your CSS file, add the following rule at the bottom:
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
-3.  In your JavaScript, make the following updates:
+3. In your JavaScript, make the following updates:
 
-    - Create a variable that stores a reference to the paragraph.
-    - Keep a count of the number of balls on screen in some way.
-    - Increment the count and display the updated number of balls each time a ball is added to the scene.
-    - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
+   - Create a variable that stores a reference to the paragraph.
+   - Keep a count of the number of balls on screen in some way.
+   - Increment the count and display the updated number of balls each time a ball is added to the scene.
+   - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
 
 ## Assessment or further help
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Adding bouncing balls features".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+   - A descriptive title such as "Assessment wanted for Adding bouncing balls features".
+   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+   - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 

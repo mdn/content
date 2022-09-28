@@ -9,15 +9,16 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.iterator
 ---
+
 {{JSRef}}
 
-The well-known **`Symbol.iterator`** symbol specifies the default iterator for an object. Used by [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
+The well-known **`Symbol.iterator`** symbol specifies the default iterator for an object. Used by [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
 
 {{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
 
 ## Description
 
-Whenever an object needs to be iterated (such as at the beginning of a `for..of` loop), its `@@iterator` method is called with no arguments, and the returned **iterator** is used to obtain the values to be iterated.
+Whenever an object needs to be iterated (such as at the beginning of a `for...of` loop), its `@@iterator` method is called with no arguments, and the returned **iterator** is used to obtain the values to be iterated.
 
 Some built-in types have a default iteration behavior, while other types (such as {{jsxref("Object")}}) do not. The built-in types with a `@@iterator` method are:
 
@@ -38,16 +39,16 @@ See also [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_pr
 We can make our own iterables like this:
 
 ```js
-var myIterable = {}
+const myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
 [...myIterable] // [1, 2, 3]
 ```
 
-Or iterables can be defined directly inside a class or object using a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names):
+Or iterables can be defined directly inside a class or object using a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names):
 
 ```js
 class Foo {
@@ -74,9 +75,9 @@ console.log(...someObj); // 'a', 'b'
 If an iterable's `@@iterator` method does not return an iterator object, then it is a non-well-formed iterable. Using it as such is likely to result in runtime exceptions or buggy behavior:
 
 ```js example-bad
-var nonWellFormedIterable = {}
-nonWellFormedIterable[Symbol.iterator] = () => 1
-[...nonWellFormedIterable] // TypeError: [] is not a function
+const nonWellFormedIterable = {};
+nonWellFormedIterable[Symbol.iterator] = () => 1;
+[...nonWellFormedIterable] // TypeError: [Symbol.iterator]() returned a non-object value
 ```
 
 ## Specifications
@@ -89,7 +90,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 ## See also
 
-- A polyfill of `Symbol.iterator` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.iterator` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
 - {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}

@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.trimStart
 ---
+
 {{JSRef}}
 
 The **`trimStart()`** method removes whitespace from the
@@ -19,7 +20,7 @@ beginning of a string. `trimLeft()` is an alias of this method.
 
 ## Syntax
 
-```js
+```js-nolint
 trimStart()
 
 trimLeft()
@@ -49,50 +50,13 @@ String.prototype.trimLeft.name === "trimStart";
 The following example displays the lowercase string `'foo '`:
 
 ```js
-var str = '   foo  ';
+let str = '   foo  ';
 
 console.log(str.length); // 8
 
 str = str.trimStart();
 console.log(str.length); // 5
 console.log(str);        // 'foo  '
-```
-
-## Polyfill
-
-```js
-//https://github.com/FabioVergani/js-Polyfill_String-trimStart
-
-(function(w){
-    var String=w.String, Proto=String.prototype;
-
-    (function(o,p){
-        if(p in o?o[p]?false:true:true){
-            var r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
-
-})(window);
-
-/*
-ES6:
-(w=>{
-    const String=w.String, Proto=String.prototype;
-
-    ((o,p)=>{
-        if(p in o?o[p]?false:true:true){
-            const r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
-
-})(window);
-*/
 ```
 
 ## Specifications
@@ -105,6 +69,6 @@ ES6:
 
 ## See also
 
-- A polyfill of `String.prototype.trimStart` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.trimStart` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.trim()")}}
 - {{jsxref("String.prototype.trimEnd()")}}

@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.save()
 slug: Web/API/CanvasRenderingContext2D/save
+page-type: web-api-instance-method
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.save
 ---
+
 {{APIRef}}
 
 The
@@ -46,9 +48,17 @@ The drawing state that gets saved onto a stack consists of:
 
 ## Syntax
 
-```js
-void ctx.save();
+```js-nolint
+save()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -67,13 +77,13 @@ default state later.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Save the default state
 ctx.save();
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
 // Restore the default state

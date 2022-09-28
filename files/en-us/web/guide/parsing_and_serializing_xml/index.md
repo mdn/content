@@ -19,6 +19,7 @@ tags:
   - XMLDocument
   - XMLHttpRequest
 ---
+
 At times, you may need to parse {{Glossary("XML")}} content and convert it into a {{Glossary("DOM")}} tree, or, conversely, serialize an existing DOM tree into XML. In this article, we'll look at the objects provided by the web platform to make the common tasks of serializing and parsing XML easy.
 
 - {{domxref("XMLSerializer")}}
@@ -39,7 +40,7 @@ Using one of the following approaches to create an XML document (which is an ins
 This example converts an XML fragment in a string into a DOM tree using a {{domxref("DOMParser")}}:
 
 ```js
-const xmlStr = '<a id="a"><b id="b">hey!</b></a>';
+const xmlStr = '<q id="a"><span id="b">hey!</span></q>';
 const parser = new DOMParser();
 const doc = parser.parseFromString(xmlStr, "application/xml");
 // print the name of the root element or error message
@@ -60,11 +61,11 @@ Here is sample code that reads and parses a URL-addressable XML file into a DOM 
 ```js
 const xhr = new XMLHttpRequest();
 
-xhr.onload = function() {
+xhr.onload = () => {
   dump(xhr.responseXML.documentElement.nodeName);
 }
 
-xhr.onerror = function() {
+xhr.onerror = () => {
   dump("Error while getting XML.");
 }
 
@@ -104,7 +105,7 @@ If the DOM you have is an HTML document, you can serialize using `serializeToStr
 const docInnerHtml = document.documentElement.innerHTML;
 ```
 
-As a result, `docInnerHtml` is a {{domxref("DOMString")}} containing the HTML of the contents of the document; that is, the {{HTMLElement("body")}} element's contents.
+As a result, `docInnerHtml` is a string containing the HTML of the contents of the document; that is, the {{HTMLElement("body")}} element's contents.
 
 You can get HTML corresponding to the `<body>` _and_ its descendants with this code:
 

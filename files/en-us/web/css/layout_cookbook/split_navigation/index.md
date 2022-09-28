@@ -8,7 +8,9 @@ tags:
   - Navigation
   - cookbook
   - flexbox
+browser-compat: css.properties.flex
 ---
+
 {{CSSRef}}
 
 A navigation pattern where one or more elements are separated from the rest of the navigation items.
@@ -25,7 +27,7 @@ A common navigation pattern is to have one element pushed away from the others. 
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/split-navigation--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/split-navigation--download.html)
 
 ## Choices made
 
@@ -37,11 +39,7 @@ In this case the left auto margin takes up any available space and pushes the it
 
 ## Browser compatibility
 
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-### Flexbox
-
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## See also
 

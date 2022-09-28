@@ -13,13 +13,14 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.onBeforeNavigate
 ---
+
 {{AddonSidebar()}}
 
 Fired when the browser is about to start a navigation event.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webNavigation.onBeforeNavigate.addListener(
   listener,                   // function
   filter                      // optional object
@@ -48,7 +49,7 @@ Events have three functions:
     - `details`
       - : [`object`](#details). Details about the navigation event.
 
-- `filter`{{optional_inline}}
+- `filter` {{optional_inline}}
   - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event will fire for all transitions.
 
 ## Additional objects
@@ -94,11 +95,12 @@ browser.webNavigation.onBeforeNavigate.addListener(logOnBefore, filter);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -125,4 +127,4 @@ browser.webNavigation.onBeforeNavigate.addListener(logOnBefore, filter);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

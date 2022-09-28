@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.WeakSet.WeakSet
 ---
+
 {{JSRef}}
 
 The **`WeakSet`** constructor lets you create
@@ -16,26 +17,27 @@ The **`WeakSet`** constructor lets you create
 
 ## Syntax
 
-```js
+```js-nolint
 new WeakSet()
 new WeakSet(iterable)
 ```
 
+> **Note:** `WeakSet()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
-- _iterable_
-  - : If an [iterable
-    object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
+- `iterable` {{optional_inline}}
+  - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
     `WeakSet`. null is treated as undefined.
 
 ## Examples
 
-### Using the WeakSet object
+### Using the WeakSet object
 
 ```js
-var ws = new WeakSet();
-var foo = {};
-var bar = {};
+const ws = new WeakSet();
+const foo = {};
+const bar = {};
 
 ws.add(foo);
 ws.add(bar);
@@ -61,5 +63,5 @@ Note that `foo !== bar`. While they are similar objects, _they are not
 
 ## See also
 
-- A polyfill of `WeakSet` is available in [`core-js`](https://github.com/zloirock/core-js#weakset)
+- [Polyfill of `WeakSet` in `core-js`](https://github.com/zloirock/core-js#weakset)
 - {{jsxref("WeakSet")}}

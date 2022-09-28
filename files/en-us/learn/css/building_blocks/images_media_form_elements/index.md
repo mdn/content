@@ -10,6 +10,7 @@ tags:
   - Media
   - replaced content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
 
 In this lesson we will take a look at how certain special elements are treated in CSS. Images, other media, and form elements behave a little differently from regular boxes in terms of your ability to style them with CSS. Understanding what is and isn't possible can save some frustration, and this lesson will highlight some of the main things that you need to know.
@@ -104,9 +105,9 @@ This would, however, stretch the image, so it's probably not what you'd want to 
 
 Form elements can be a tricky issue when it comes to styling with CSS. The [Web Forms module](/en-US/docs/Learn/Forms) contains detailed guides to the trickier aspects of styling these, which I will not fully reproduce here. There are, however, a few key basics worth highlighting in this section.
 
-Many form controls are added to your page by way of the [`<input>`](/en-US/docs/Web/HTML/Element/input) element — this defines simple form fields such as text inputs, through to more complex fields added in HTML5 such as color and date pickers. There are some additional elements, such as [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) for multiline text input, and also elements used to contain and label parts of forms such as [`<fieldset>`](/en-US/docs/Web/HTML/Element/fieldset) and [`<legend>`](/en-US/docs/Web/HTML/Element/legend).
+Many form controls are added to your page by way of the [`<input>`](/en-US/docs/Web/HTML/Element/input) element — this defines simple form fields such as text inputs, through to more complex fields such as color and date pickers. There are some additional elements, such as [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) for multiline text input, and also elements used to contain and label parts of forms such as [`<fieldset>`](/en-US/docs/Web/HTML/Element/fieldset) and [`<legend>`](/en-US/docs/Web/HTML/Element/legend).
 
-HTML5 also contains attributes that enable web developers to indicate which fields are required, and even the type of content that needs to be entered. If the user enters something unexpected, or leaves a required field blank, the browser can show an error message. Different browsers vary with one another in how much styling and customization they allow for such items.
+HTML also contains attributes that enable web developers to indicate which fields are required, and even the type of content that needs to be entered. If the user enters something unexpected, or leaves a required field blank, the browser can show an error message. Different browsers vary with one another in how much styling and customization they allow for such items.
 
 ### Styling text input elements
 
@@ -129,8 +130,8 @@ button,
 input,
 select,
 textarea {
-  font-family : inherit;
-  font-size : 100%;
+  font-family: inherit;
+  font-size: 100%;
 }
 ```
 
@@ -191,31 +192,36 @@ For further information on styling forms, take a look at the two articles in the
 
 ## Test your skills!
 
-We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_tasks).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_tasks).
 
 ## Summary
 
-This lesson has highlighted some of the differences you will encounter when working with images, media, and other unusual elements in CSS. In the next article we'll look over a few tips you'll find useful when you have to style HTML tables.
+This lesson has highlighted some of the differences you will encounter when working with images, media, and other unusual elements in CSS.
+
+In the next article, we'll learn how to [style HTML tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
 
 ## In this module
 
-1. [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+  - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+  - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+  - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+  - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3. [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+- [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
+- [Creating fancy letterheaded paper](/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
+- [A cool-looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

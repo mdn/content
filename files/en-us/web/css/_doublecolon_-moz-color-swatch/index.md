@@ -1,6 +1,7 @@
 ---
 title: '::-moz-color-swatch'
 slug: Web/CSS/::-moz-color-swatch
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:Mozilla Extensions
@@ -10,6 +11,7 @@ tags:
   - Selector
 browser-compat: css.selectors.-moz-color-swatch
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the color selected in an {{HTMLElement("input")}} of `type="color"`.
@@ -18,7 +20,9 @@ The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US
 
 ## Syntax
 
-{{csssyntax}}
+```
+::-moz-color-swatch
+```
 
 ## Examples
 
@@ -31,7 +35,7 @@ The **`::-moz-color-swatch`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US
 ### CSS
 
 ```css
-input[type=color]::-moz-color-swatch {
+input[type="color"]::-moz-color-swatch {
   border-radius: 10px;
   border-style: none;
 }

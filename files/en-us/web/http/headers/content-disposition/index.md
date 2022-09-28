@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: http.headers.Content-Disposition
 ---
+
 {{HTTPSidebar}}
 
 In a regular HTTP response, the **`Content-Disposition`** response header is a header indicating if the content is expected to be displayed _inline_ in the browser, that is, as a Web page or as part of a Web page, or as an _attachment_, that is downloaded and saved locally.
@@ -40,7 +41,7 @@ The `Content-Disposition` header is defined in the larger context of MIME messag
 
 The first parameter in the HTTP context is either `inline` (default value, indicating it can be displayed inside the Web page, or as the Web page) or `attachment` (indicating it should be downloaded; most browsers presenting a 'Save as' dialog, prefilled with the value of the `filename` parameters if present).
 
-```
+```http
 Content-Disposition: inline
 Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"
@@ -50,9 +51,9 @@ Content-Disposition: attachment; filename="filename.jpg"
 
 ### As a header for a multipart body
 
-A `multipart/form-data` body requires a `Content-Disposition` header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always `form-data`, and the header _must_ also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `'='` sign. Multiple parameters are separated by a semi-colon (`';'`).
+A `multipart/form-data` body requires a `Content-Disposition` header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always `form-data`, and the header _must_ also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `'='` sign. Multiple parameters are separated by a semicolon (`';'`).
 
-```
+```http
 Content-Disposition: form-data; name="fieldName"
 Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 ```
@@ -83,7 +84,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 A response triggering the "Save As" dialog:
 
-```
+```http
 200 OK
 Content-Type: text/html; charset=utf-8
 Content-Disposition: attachment; filename="cool.html"
@@ -96,7 +97,7 @@ This simple HTML file will be saved as a regular download rather than displayed 
 
 An example of an HTML form posted using the `multipart/form-data` format that makes use of the `Content-Disposition` header:
 
-```
+```http
 POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"
@@ -120,10 +121,10 @@ value2
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
 - Firefox 5 handles the `Content-Disposition` HTTP response header more effectively if both the `filename` and `filename*` parameters are provided; it looks through all provided names, using the `filename*` parameter if one is available, even if a `filename` parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See {{bug(588781)}}.
-- Firefox 82 (and later) and Chrome prioritize the HTML [\<a> element's](/en-US/docs/Web/HTML/Element/a) `download` attribute over the `Content-Disposition` `inline` parameter (for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy)). Earlier Firefox versions prioritize the header and will display the content inline.
+- Firefox 82 (and later) and Chrome prioritize the HTML [\<a> element's](/en-US/docs/Web/HTML/Element/a) `download` attribute over the `Content-Disposition` `inline` parameter (for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy)). Earlier Firefox versions prioritize the header and will display the content inline.
 
 ## See also
 

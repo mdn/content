@@ -7,8 +7,9 @@ tags:
   - JavaScript
   - Learn
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
 JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc.
@@ -17,7 +18,7 @@ This article helps you get started with JavaScript and furthers your understandi
 ## What is JavaScript?
 
 {{Glossary("JavaScript")}} is a powerful programming language that can add interactivity to a website.
-It was invented by Brendan Eich (co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation).
+It was invented by Brendan Eich.
 
 JavaScript is versatile and beginner-friendly.
 With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more!
@@ -38,24 +39,26 @@ JavaScript is one of the most popular modern web technologies! As your JavaScrip
 
 However, getting comfortable with JavaScript is more challenging than getting comfortable with HTML and CSS. You may have to start small, and progress gradually. To begin, let's examine how to add JavaScript to your page for creating a _Hello world!_ example. (_Hello world!_ is [the standard for introductory programming examples](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program).)
 
-> **Warning:** If you haven't been following along with the rest of our course, [download this example code](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) and use it as a starting point.
+> **Warning:** If you haven't been following along with the rest of our course, [download this example code](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages) and use it as a starting point.
 
-1.  Go to your test site and create a new folder named `scripts`. Within the scripts folder, create a new text document called `main.js`, and save it.
-2.  In your `index.html` file, enter this code on a new line, just before the closing `</body>` tag:
+1. Go to your test site and create a new folder named `scripts`. Within the scripts folder, create a new text document called `main.js`, and save it.
+2. In your `index.html` file, enter this code on a new line, just before the closing `</body>` tag:
 
-    ```html
-    <script src="scripts/main.js"></script>
-    ```
+   ```html
+   <script src="scripts/main.js"></script>
+   ```
 
-3.  This is doing the same job as the {{htmlelement("link")}} element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).
-4.  Add this code to the `main.js` file:
+3. This is doing the same job as the {{htmlelement("link")}} element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).
+4. Add this code to the `main.js` file:
 
-    ```js
-    const myHeading = document.querySelector('h1');
-    myHeading.textContent = 'Hello world!';
-    ```
+   ```js
+   const myHeading = document.querySelector("h1");
+   myHeading.textContent = "Hello world!";
+   ```
 
-5.  Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:![](hello-world.png)
+5. Make sure the HTML and JavaScript files are saved. Then load `index.html` in your browser. You should see something like this:
+
+![Heading "hello world" above a firefox logo](hello-world.png)
 
 > **Note:** The reason the instructions (above) place the {{htmlelement("script")}} element near the bottom of the HTML file is that **the browser reads code in the order it appears in the file**.
 >
@@ -63,9 +66,9 @@ However, getting comfortable with JavaScript is more challenging than getting co
 
 ### What happened?
 
-The heading text changed to _Hello world!_ using JavaScript. You did this by using a function called `{{domxref("Document.querySelector", "querySelector()")}}` to grab a reference to your heading, and then store it in a variable called `myHeading`. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
+The heading text changed to _Hello world!_ using JavaScript. You did this by using a function called {{domxref("Document.querySelector", "querySelector()")}} to grab a reference to your heading, and then store it in a variable called `myHeading`. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.
 
-Following that, the code set the value of the `myHeading` variable's `{{domxref("Node.textContent", "textContent")}}` property (which represents the content of the heading) to _Hello world!_.
+Following that, the code set the value of the `myHeading` variable's {{domxref("Node.textContent", "textContent")}} property (which represents the content of the heading) to _Hello world!_.
 
 > **Note:** Both of the features you used in this exercise are parts of the [Document Object Model (DOM) API](/en-US/docs/Web/API/Document_Object_Model), which has the capability to manipulate documents.
 
@@ -77,30 +80,28 @@ To give you a better understanding of how JavaScript works, let's explain some o
 
 ### Variables
 
-{{Glossary("Variable", "Variables")}} are containers that store values. You start by declaring a variable with the [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) (less recommended, dive deeper for the explanation) or the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword, followed by the name you give to the variable:
+{{Glossary("Variable", "Variables")}} are containers that store values. You start by declaring a variable with the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword, followed by the name you give to the variable:
 
 ```js
 let myVariable;
 ```
 
-> **Note:** A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see [Your Guide to Semicolons in JavaScript](https://news.codecademy.com/your-guide-to-semicolons-in-javascript/).
+A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see [Your Guide to Semicolons in JavaScript](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/).
 
-> **Note:** You can name a variable nearly anything, but there are some restrictions. (See [this section about naming rules](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables).) If you are unsure, you can [check your variable name](https://mothereff.in/js-variables) to see if it's valid.
+You can name a variable nearly anything, but there are some restrictions. (See [this section about naming rules](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables).) If you are unsure, you can [check your variable name](https://mothereff.in/js-variables) to see if it's valid.
 
-> **Note:** JavaScript is case sensitive. This means `myVariable` is not the same as `myvariable`. If you have problems in your code, check the case!
-
-> **Note:** For more details about the difference between `var` and `let`, see [The difference between var and let](/en-US/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let).
+JavaScript is case sensitive. This means `myVariable` is not the same as `myvariable`. If you have problems in your code, check the case!
 
 After declaring a variable, you can give it a value:
 
 ```js
-myVariable = 'Bob';
+myVariable = "Bob";
 ```
 
 Also, you can do both these operations on the same line:
 
 ```js
-let myVariable = 'Bob';
+let myVariable = "Bob";
 ```
 
 You retrieve the value by calling the variable name:
@@ -112,8 +113,8 @@ myVariable;
 After assigning a value to a variable, you can change it later in the code:
 
 ```js
-let myVariable = 'Bob';
-myVariable = 'Steve';
+let myVariable = "Bob";
+myVariable = "Steve";
 ```
 
 Note that variables may hold values that have different [data types](/en-US/docs/Web/JavaScript/Data_structures):
@@ -220,7 +221,7 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
       <td><code>-</code>, <code>*</code>, <code>/</code></td>
       <td>
         <code
-          >9 - 3;<br />8 * 2; // multiply in JS is an asterisk<br />9 / 3;</code
+>9 - 3;<br />8 * 2; // multiply in JS is an asterisk<br />9 / 3;</code
         >
       </td>
     </tr>
@@ -231,7 +232,7 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
       <td><code>let myVariable = 'Bob';</code></td>
     </tr>
     <tr>
-      <th scope="row">Equality</th>
+      <th scope="row">Strict equality</th>
       <td>
         This performs a test to see if two values are equal. It returns a
         <code>true</code>/<code>false</code> (Boolean) result.
@@ -278,30 +279,30 @@ There are a lot more operators to explore, but this is enough for now. See [Expr
 
 ### Conditionals
 
-Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the `if ... else` statement. For example:
+Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the `if...else` statement. For example:
 
 ```js
-let iceCream = 'chocolate';
-if(iceCream === 'chocolate') {
-  alert('Yay, I love chocolate ice cream!');
+let iceCream = "chocolate";
+if (iceCream === "chocolate") {
+  alert("Yay, I love chocolate ice cream!");
 } else {
-  alert('Awwww, but chocolate is my favorite...');
+  alert("Awwww, but chocolate is my favorite…");
 }
 ```
 
-The expression inside the `if( ... )` is the test. This uses the identity operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
+The expression inside the `if ()` is the test. This uses the strict equality operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
 
 ### Functions
 
-{{Glossary("Function", "Functions")}} are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions previously. For example:
+{{Glossary("Function", "Functions")}} are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions. For example:
 
-1.  ```js
-    let myVariable = document.querySelector('h1');
-    ```
+```js
+let myVariable = document.querySelector("h1");
+```
 
-2.  ```js
-    alert('hello!');
-    ```
+```js
+alert("hello!");
+```
 
 These functions, `document.querySelector` and `alert`, are built into the browser.
 
@@ -312,7 +313,7 @@ For example, the `alert()` function makes a pop-up box appear inside the browser
 You can also define your own functions. In the next example, we create a simple function which takes two numbers as arguments and multiplies them:
 
 ```js
-function multiply(num1,num2) {
+function multiply(num1, num2) {
   let result = num1 * num2;
   return result;
 }
@@ -333,27 +334,39 @@ multiply(0.5, 3);
 Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the [click event](/en-US/docs/Web/API/Element/click_event), which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:
 
 ```js
-document.querySelector('html').onclick = function() {
-    alert('Ouch! Stop poking me!');
-}
+document.querySelector("html").addEventListener("click", function () {
+  alert("Ouch! Stop poking me!");
+});
 ```
 
-There are many ways to attach an event handler to an element. Here we select the {{htmlelement("html")}} element, setting its [`onclick`](/en-US/docs/Web/API/GlobalEventHandlers/onclick) handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.
+There are many ways to attach an event handler to an element. Here we select the {{htmlelement("html")}} element. We then call its [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) function, passing in the name of the event to listen to (`'click'`) and a function to run when the event happens.
 
 Note that
 
 ```js
-document.querySelector('html').onclick = function() {};
+document.querySelector("html").addEventListener("click", function () {
+  alert("Ouch! Stop poking me!");
+});
 ```
 
 is equivalent to
 
 ```js
-let myHTML = document.querySelector('html');
-myHTML.onclick = function() {};
+let myHTML = document.querySelector("html");
+myHTML.addEventListener("click", function () {
+  alert("Ouch! Stop poking me!");
+});
 ```
 
 It's just shorter.
+
+The functions we just passed to `addEventListener()` here are called _anonymous functions_, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an _arrow function_. An arrow function uses `() =>` instead of `function ()`:
+
+```js
+document.querySelector("html").addEventListener("click", () => {
+  alert("Ouch! Stop poking me!");
+});
+```
 
 ## Supercharging our example website
 
@@ -365,87 +378,87 @@ Before going any further, delete the current contents of your `main.js` file —
 
 In this section, you will learn how to use JavaScript and DOM API features to alternate the display of one of two images. This change will happen as a user clicks the displayed image.
 
-1.  Choose an image you want to feature on your example site. Ideally, the image will be the same size as the image you added previously, or as close as possible.
-2.  Save this image in your `images` folder.
-3.  Rename the image _firefox2.png_.
-4.  Add the JavaScript below to your `main.js` file.
+1. Choose an image you want to feature on your example site. Ideally, the image will be the same size as the image you added previously, or as close as possible.
+2. Save this image in your `images` folder.
+3. Rename the image _firefox2.png_.
+4. Add the following JavaScript code to your `main.js` file.
 
-    ```js
-    let myImage = document.querySelector('img');
+   ```js
+   const myImage = document.querySelector("img");
 
-    myImage.onclick = function() {
-        let mySrc = myImage.getAttribute('src');
-        if(mySrc === 'images/firefox-icon.png') {
-          myImage.setAttribute('src','images/firefox2.png');
-        } else {
-          myImage.setAttribute('src','images/firefox-icon.png');
-        }
-    }
-    ```
+   myImage.onclick = () => {
+     const mySrc = myImage.getAttribute("src");
+     if (mySrc === "images/firefox-icon.png") {
+       myImage.setAttribute("src", "images/firefox2.png");
+     } else {
+       myImage.setAttribute("src", "images/firefox-icon.png");
+     }
+   };
+   ```
 
-5.  Save all files and load `index.html` in the browser. Now when you click the image, it should change to the other one.
+5. Save all files and load `index.html` in the browser. Now when you click the image, it should change to the other one.
 
 This is what happened. You stored a reference to your {{htmlelement("img")}} element in the `myImage` variable. Next, you made this variable's `onclick` event handler property equal to a function with no name (an "anonymous" function). So every time this element is clicked:
 
-1.  The code retrieves the value of the image's `src` attribute.
-2.  The code uses a conditional to check if the `src` value is equal to the path of the original image:
+1. The code retrieves the value of the image's `src` attribute.
+2. The code uses a conditional to check if the `src` value is equal to the path of the original image:
 
-    1.  If it is, the code changes the `src` value to the path of the second image, forcing the other image to be loaded inside the {{htmlelement("img")}} element.
-    2.  If it isn't (meaning it must already have changed), the `src` value swaps back to the original image path, to the original state.
+   1. If it is, the code changes the `src` value to the path of the second image, forcing the other image to be loaded inside the {{htmlelement("img")}} element.
+   2. If it isn't (meaning it must already have changed), the `src` value swaps back to the original image path, to the original state.
 
 ### Adding a personalized welcome message
 
 Next, let's change the page title to a personalized welcome message when the user first visits the site. This welcome message will persist. Should the user leave the site and return later, we will save the message using the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API). We will also include an option to change the user, and therefore, the welcome message.
 
-1.  In `index.html`, add the following line just before the {{htmlelement("script")}} element:
+1. In `index.html`, add the following line just before the {{htmlelement("script")}} element:
 
-    ```html
-    <button>Change user</button>
-    ```
+   ```html
+   <button>Change user</button>
+   ```
 
-2.  In `main.js`, place the following code at the bottom of the file, exactly as it is written. This takes references to the new button and the heading, storing each inside variables:
+2. In `main.js`, place the following code at the bottom of the file, exactly as it is written. This takes references to the new button and the heading, storing each inside variables:
 
-    ```js
-    let myButton = document.querySelector('button');
-    let myHeading = document.querySelector('h1');
-    ```
+   ```js
+   let myButton = document.querySelector("button");
+   let myHeading = document.querySelector("h1");
+   ```
 
-3.  Add the function below to set the personalized greeting. This won't do anything yet, but this will change soon.
+3. Add the following function to set the personalized greeting. This won't do anything yet, but this will change soon.
 
-    ```js
-    function setUserName() {
-      let myName = prompt('Please enter your name.');
-      localStorage.setItem('name', myName);
-      myHeading.textContent = 'Mozilla is cool, ' + myName;
-    }
-    ```
+   ```js
+   function setUserName() {
+     const myName = prompt("Please enter your name.");
+     localStorage.setItem("name", myName);
+     myHeading.textContent = `Mozilla is cool, ${myName}`;
+   }
+   ```
 
-    The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK._ In this case, we are asking the user to enter a name. Next, the code calls on an API `localStorage`, which allows us to store data in the browser and retrieve it later. We use localStorage's `setItem()` function to create and store a data item called `'name'`, setting its value to the `myName` variable which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string, plus the user's newly stored name.
+   The `setUserName()` function contains a [`prompt()`](/en-US/docs/Web/API/Window/prompt) function, which displays a dialog box, similar to `alert()`. This `prompt()` function does more than `alert()`, asking the user to enter data, and storing it in a variable after the user clicks _OK._ In this case, we are asking the user to enter a name. Next, the code calls on an API `localStorage`, which allows us to store data in the browser and retrieve it later. We use localStorage's `setItem()` function to create and store a data item called `'name'`, setting its value to the `myName` variable which contains the user's entry for the name. Finally, we set the `textContent` of the heading to a string, plus the user's newly stored name.
 
-4.  Add the `if ... else` block (below). We could call this initialization code, as it structures the app when it first loads.
+4. Add the following condition block. We could call this initialization code, as it structures the app when it first loads.
 
-    ```js
-    if(!localStorage.getItem('name')) {
-      setUserName();
-    } else {
-      let storedName = localStorage.getItem('name');
-      myHeading.textContent = 'Mozilla is cool, ' + storedName;
-    }
-    ```
+   ```js
+   if (!localStorage.getItem("name")) {
+     setUserName();
+   } else {
+     const storedName = localStorage.getItem("name");
+     myHeading.textContent = `Mozilla is cool, ${storedName}`;
+   }
+   ```
 
-    This first line of this block uses the negation operator (logical NOT, represented by the `!`) to check whether the `name` data exists. If not, the `setUserName()` function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using `getItem()` and set the `textContent` of the heading to a string, plus the user's name, as we did inside `setUserName()`.
+   This first line of this block uses the negation operator (logical NOT, represented by the `!`) to check whether the `name` data exists. If not, the `setUserName()` function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve the stored name using `getItem()` and set the `textContent` of the heading to a string, plus the user's name, as we did inside `setUserName()`.
 
-5.  Put this `onclick` event handler (below) on the button. When clicked, `setUserName()` runs. This allows the user to enter a different name by pressing the button.
+5. Put this `onclick` event handler (below) on the button. When clicked, `setUserName()` runs. This allows the user to enter a different name by pressing the button.
 
-    ```js
-    myButton.onclick = function() {
-      setUserName();
-    }
-    ```
+   ```js
+   myButton.onclick = () => {
+     setUserName();
+   };
+   ```
 
 ### A user name of null?
 
-When you run the example and get the dialog box that prompts you to enter your user name, try pressing the _Cancel_ button. You should end up with a title that reads _Mozilla is cool, null_. This happens because—when you cancel the prompt—the value is set as [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null). _Null_ is a special value in JavaScript that refers to the absence of a value.
+When you run the example and get the dialog box that prompts you to enter your user name, try pressing the _Cancel_ button. You should end up with a title that reads _Mozilla is cool, null_. This happens because—when you cancel the prompt—the value is set as [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). _Null_ is a special value in JavaScript that refers to the absence of a value.
 
 Also, try clicking _OK_ without entering a name. You should end up with a title that reads _Mozilla is cool,_ for fairly obvious reasons.
 
@@ -453,12 +466,12 @@ To avoid these problems, you could check that the user hasn't entered a blank na
 
 ```js
 function setUserName() {
-  let myName = prompt('Please enter your name.');
-  if(!myName) {
+  const myName = prompt("Please enter your name.");
+  if (!myName) {
     setUserName();
   } else {
-    localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
+    localStorage.setItem("name", myName);
+    myHeading.textContent = `Mozilla is cool, ${myName}`;
   }
 }
 ```
@@ -469,7 +482,7 @@ In human language, this means: If `myName` has no value, run `setUserName()` aga
 
 If you have followed all the instructions in this article, you should end up with a page that looks something like the image below. You can also [view our version](https://mdn.github.io/beginner-html-site-scripted/).
 
-![](website-screen-scripted.png)
+![Final look of HTML page after creating elements: a header, large centered logo, content, and a button](website-screen-scripted.png)
 
 If you get stuck, you can compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js).
 

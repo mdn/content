@@ -9,13 +9,14 @@ tags:
   - WebMechanics
   - XMLHttpRequest
 ---
+
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
 This article guides you through the AJAX basics and gives you some simple hands-on examples to get you started.
 
 ## What's AJAX?
 
-AJAX stands for **A**synchronous **J**avaScript **A**nd **X**ML. In a nutshell, it is the use of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files. AJAX’s most appealing characteristic is its "asynchronous" nature, which means it can communicate with the server, exchange data, and update the page without having to refresh the page.
+AJAX stands for **A**synchronous **J**avaScript **A**nd **X**ML. In a nutshell, it is the use of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files. AJAX's most appealing characteristic is its "asynchronous" nature, which means it can communicate with the server, exchange data, and update the page without having to refresh the page.
 
 The two major features of AJAX allow you to do the following:
 
@@ -24,29 +25,26 @@ The two major features of AJAX allow you to do the following:
 
 ## Step 1 – How to make an HTTP request
 
-In order to make an [HTTP](/en-US/docs/Web/HTTP) request to the server with JavaScript, you need an instance of an object with the necessary functionality. This is where `XMLHttpRequest` comes in. Its predecessor originated in Internet Explorer as an ActiveX object called `XMLHTTP`. Then, Mozilla, Safari, and other browsers followed, implementing an `XMLHttpRequest` object that supported the methods and properties of Microsoft's original ActiveX object. Meanwhile, Microsoft implemented XMLHttpRequest as well.
+To make an [HTTP](/en-US/docs/Web/HTTP) request to the server with JavaScript, you need an instance of an object with the necessary functionality. This is where `XMLHttpRequest` comes in.
 
 ```js
-// Old compatibility code, no longer needed.
-if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
-    httpRequest = new XMLHttpRequest();
-} else if (window.ActiveXObject) { // IE 6 and older
-    httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
-}
+const httpRequest = new XMLHttpRequest();
 ```
 
-> **Note:** For illustration purposes, the above is a somewhat simplified version of the code to be used for creating an XMLHttp instance. For a more realistic example, see step 3 of this article.
-
-After making a request, you will receive a response back. At this stage, you need to tell the XMLHttp request object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object and naming it after the function to call when the request changes state, like this:
+After making a request, you will receive a response back. At this stage, you need to tell the `XMLHttpRequest` object which JavaScript function will handle the response, by setting the `onreadystatechange` property of the object to the function called when the request changes state, like this:
 
 ```js
-httpRequest.onreadystatechange = nameOfTheFunction;
+function handler() {
+  // Process the server response here.
+}
+
+httpRequest.onreadystatechange = handler;
 ```
 
 Note that there are no parentheses or parameters after the function name, because you're assigning a reference to the function, rather than actually calling it. Alternatively, instead of giving a function name, you can use the JavaScript technique of defining functions on the fly (called "anonymous functions") to define the actions that will process the response, like this:
 
 ```js
-httpRequest.onreadystatechange = function(){
+httpRequest.onreadystatechange = () => {
     // Process the server response here.
 };
 ```
@@ -129,32 +127,34 @@ Let's put it all together with a simple HTTP request. Our JavaScript will reques
 <button id="ajaxButton" type="button">Make a request</button>
 
 <script>
-(function() {
-  var httpRequest;
-  document.getElementById("ajaxButton").addEventListener('click', makeRequest);
+  (() => {
+    let httpRequest;
+    document
+      .getElementById("ajaxButton")
+      .addEventListener("click", makeRequest);
 
-  function makeRequest() {
-    httpRequest = new XMLHttpRequest();
+    function makeRequest() {
+      httpRequest = new XMLHttpRequest();
 
-    if (!httpRequest) {
-      alert('Giving up :( Cannot create an XMLHTTP instance');
-      return false;
+      if (!httpRequest) {
+        alert("Giving up :( Cannot create an XMLHTTP instance");
+        return false;
+      }
+      httpRequest.onreadystatechange = alertContents;
+      httpRequest.open("GET", "test.html");
+      httpRequest.send();
     }
-    httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('GET', 'test.html');
-    httpRequest.send();
-  }
 
-  function alertContents() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
-      } else {
-        alert('There was a problem with the request.');
+    function alertContents() {
+      if (httpRequest.readyState === XMLHttpRequest.DONE) {
+        if (httpRequest.status === 200) {
+          alert(httpRequest.responseText);
+        } else {
+          alert("There was a problem with the request.");
+        }
       }
     }
-  }
-})();
+  })();
 </script>
 ```
 
@@ -171,7 +171,7 @@ In this example:
 
 > **Note:** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/en-US/docs/Web/JavaScript/Closures) containing the AJAX functions avoids this.
 
-In the event of a communication error (such as the server going down), an exception will be thrown in the `onreadystatechange` method when accessing the response status. To mitigate this problem, you could wrap your `if...then` statement in a `try...catch`:
+In the event of a communication error (such as the server going down), an exception will be thrown in the `onreadystatechange` method when accessing the response status. To mitigate this problem, you could wrap your `if...else` statement in a `try...catch`:
 
 ```js
 function alertContents() {
@@ -183,39 +183,34 @@ function alertContents() {
         alert('There was a problem with the request.');
       }
     }
-  }
-  catch( e ) {
-    alert('Caught Exception: ' + e.description);
+  } catch (e) {
+    alert(`Caught Exception: ${e.description}`);
   }
 }
 ```
 
 ## Step 4 – Working with the XML response
 
-In the previous example, after receiving the response to the HTTP request we used the request object's `responseText` property , which contained the contents of the `test.html` file. Now let's try the `responseXML` property.
+In the previous example, after receiving the response to the HTTP request we used the request object's `responseText` property, which contained the contents of the `test.html` file. Now let's try the `responseXML` property.
 
 First off, let's create a valid XML document that we'll request later on. The document (`test.xml`) contains the following:
 
 ```html
 <?xml version="1.0" ?>
-<root>
-    I'm a test.
-</root>
+<root> I'm a test. </root>
 ```
 
-In the script we only need to change the request line to:
+Next, in `makeRequest()`, we need to replace `test.html` with the XML file we just created:
 
-```html
-...
-onclick="makeRequest('test.xml')">
-...
+```js
+httpRequest.open('GET', 'test.xml');
 ```
 
 Then in `alertContents()`, we need to replace the line `alert(httpRequest.responseText);` with:
 
 ```js
-var xmldoc = httpRequest.responseXML;
-var root_node = xmldoc.getElementsByTagName('root').item(0);
+const xmldoc = httpRequest.responseXML;
+const root_node = xmldoc.querySelector('root');
 alert(root_node.firstChild.data);
 ```
 
@@ -239,9 +234,9 @@ First we'll add a text box to our HTML so the user can enter their name:
 We'll also add a line to our event handler to get the user's data from the text box and send it to the `makeRequest()` function along with the URL of our server-side script:
 
 ```js
-document.getElementById("ajaxButton").onclick = function() {
-    var userName = document.getElementById("ajaxTextbox").value;
-    makeRequest('test.php',userName);
+document.getElementById("ajaxButton").onclick = () => {
+  const userName = document.getElementById("ajaxTextbox").value;
+  makeRequest('test.php', userName);
 };
 ```
 
@@ -250,18 +245,20 @@ We need to modify `makeRequest()` to accept the user data and pass it along to t
 ```js
 function makeRequest(url, userName) {
 
-  ...
+  // …
 
   httpRequest.onreadystatechange = alertContents;
   httpRequest.open('POST', url);
   httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  httpRequest.send('userName=' + encodeURIComponent(userName));
+  httpRequest.send(`userName=${encodeURIComponent(userName)}`);
 }
 ```
 
 The function `alertContents()` can be written the same way it was in Step 3 to alert our computed string, if that's all the server returns. However, let's say the server is going to return both the computed string and the original user data. So if our user typed "Jane" in the text box, the server's response would look like this:
 
-`{"userData":"Jane","computedString":"Hi, Jane!"}`
+```json
+{ "userData": "Jane", "computedString": "Hi, Jane!" }
+```
 
 To use this data within `alertContents()`, we can't just alert the `responseText`, we have to parse it and alert `computedString`, the property we want:
 
@@ -269,7 +266,7 @@ To use this data within `alertContents()`, we can't just alert the `responseText
 function alertContents() {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
-      var response = JSON.parse(httpRequest.responseText);
+      const response = JSON.parse(httpRequest.responseText);
       alert(response.computedString);
     } else {
       alert('There was a problem with the request.');
@@ -281,7 +278,7 @@ function alertContents() {
 The `test.php` file should contain the following:
 
 ```php
-$name = (isset($_POST['userName'])) ? $_POST['userName'] : 'no name';
+$name = $_POST['userName'] ?? 'no name';
 $computedString = "Hi, " . $name . "!";
 $array = ['userName' => $name, 'computedString' => $computedString];
 echo json_encode($array);
@@ -308,47 +305,44 @@ This is repeated every 5 seconds, using a `setInterval()` call. The idea would b
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>XHR log time</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
     <p id="writeData" class="data">Off-Line</p>
     <p id="lastStamp">No Data yet</p>
 
     <script>
+      const fullData = document.getElementById("writeData");
+      const lastData = document.getElementById("lastStamp");
 
-    const fullData = document.getElementById('writeData');
-    const lastData = document.getElementById('lastStamp');
-
-    function fetchData() {
-      console.log('Fetching updated data.');
-      let xhr = new XMLHttpRequest();
-      xhr.open("GET", "time-log.txt", true);
-      xhr.onload = function() {
-        updateDisplay(xhr.response);
-      }
-      xhr.send();
-    }
-
-    function updateDisplay(text) {
-      fullData.textContent = text;
-
-      let timeArray = text.split('\n');
-
-      // included because some file systems always include a blank line at the end of text files.
-      if(timeArray[timeArray.length-1] === '') {
-        timeArray.pop();
+      function fetchData() {
+        console.log("Fetching updated data.");
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "time-log.txt", true);
+        xhr.onload = () => {
+          updateDisplay(xhr.response);
+        };
+        xhr.send();
       }
 
-      lastData.textContent = timeArray[timeArray.length-1];
-    }
+      function updateDisplay(text) {
+        fullData.textContent = text;
 
-    setInterval(fetchData, 5000);
+        const timeArray = text.split("\n");
+
+        // included because some file systems always include a blank line at the end of text files.
+        if (timeArray[timeArray.length - 1] === "") {
+          timeArray.pop();
+        }
+
+        lastData.textContent = timeArray[timeArray.length - 1];
+      }
+
+      setInterval(fetchData, 5000);
     </script>
   </body>
 </html>

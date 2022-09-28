@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.pictureInPictureElement
 slug: Web/API/ShadowRoot/pictureInPictureElement
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -10,6 +11,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.pictureInPictureElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`pictureInPictureElement`** read-only property of the
@@ -17,13 +19,7 @@ The **`pictureInPictureElement`** read-only property of the
 presented in picture-in-picture mode in this shadow tree, or `null` if
 picture-in-picture mode is not currently in use.
 
-## Syntax
-
-```js
-shadowRoot.pictureInPictureElement
-```
-
-### Value
+## Value
 
 A reference to the {{domxref("Element")}} object that's currently in
 picture-in-picture mode, or, if picture-in-picture mode isn't currently in use by the

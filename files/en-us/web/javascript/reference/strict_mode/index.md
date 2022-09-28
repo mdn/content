@@ -7,19 +7,20 @@ tags:
   - JavaScript
   - Strict Mode
 ---
+
 {{JsSidebar("More")}}
 
 ## Strict Mode Overview
 
-> **Note:** Sometimes you'll see the default, non-strict mode referred to as **"[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)"**. This isn't an official term, but be aware of it, just in case.
+> **Note:** Sometimes you'll see the default, non-strict mode referred to as _[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)_. This isn't an official term, but be aware of it, just in case.
 
-JavaScript's strict mode, introduced in ECMAScript 5, is a way to _opt in_ to a restricted variant of JavaScript, thereby implicitly opting-out of "[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)". Strict mode isn't just a subset: it _intentionally_ has different semantics from normal code. Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode. Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.
+JavaScript's strict mode is a way to _opt in_ to a restricted variant of JavaScript, thereby implicitly opting-out of "[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)". Strict mode isn't just a subset: it _intentionally_ has different semantics from normal code. Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode. Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.
 
 Strict mode makes several changes to normal JavaScript semantics:
 
-1.  Eliminates some JavaScript silent errors by changing them to throw errors.
-2.  Fixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code that's not strict mode.
-3.  Prohibits some syntax likely to be defined in future versions of ECMAScript.
+1. Eliminates some JavaScript silent errors by changing them to throw errors.
+2. Fixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code that's not strict mode.
+3. Prohibits some syntax likely to be defined in future versions of ECMAScript.
 
 See [transitioning to strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode), if you want to change your code to work in the restricted variant of JavaScript.
 
@@ -34,41 +35,60 @@ To invoke strict mode for an entire script, put the _exact_ statement `"use stri
 ```js
 // Whole-script strict mode syntax
 'use strict';
-var v = "Hi! I'm a strict mode script!";
+const v = "Hi! I'm a strict mode script!";
 ```
-
-This syntax has a trap that has [already bitten](https://bugzilla.mozilla.org/show_bug.cgi?id=579119) [a major site](https://bugzilla.mozilla.org/show_bug.cgi?id=627531): it isn't possible to blindly concatenate conflicting scripts. Consider concatenating a strict mode script with a non-strict mode script: the entire concatenation looks strict! The inverse is also true: non-strict plus strict looks non-strict. Obviously, concatenation of scripts is never ideal, but if you must, consider enabling strict on a function-by-function basis.
-
-You can also take the approach of wrapping the entire contents of a script in a function and having that outer function use strict mode. This eliminates the concatenation problem and it means that you have to explicitly export any shared variables out of the function scope.
 
 ### Strict mode for functions
 
 Likewise, to invoke strict mode for a function, put the _exact_ statement `"use strict";` (or `'use strict';`) in the function's body before any other statements.
 
 ```js
-function strict() {
+function myStrictFunction() {
   // Function-level strict mode syntax
   'use strict';
-  function nested() { return 'And so am I!'; }
-  return "Hi!  I'm a strict mode function!  " + nested();
+  function nested() {
+    return 'And so am I!';
+  }
+  return `Hi! I'm a strict mode function! ${nested()}`;
 }
-function notStrict() { return "I'm not strict."; }
+function myNotStrictFunction() {
+  return "I'm not strict.";
+}
 ```
+
+In strict mode, starting with ES2015, functions inside blocks are scoped to that block. Prior to ES2015, block-level functions were forbidden in strict mode.
 
 ### Strict mode for modules
 
-ECMAScript 2015 introduced [JavaScript modules](/en-US/docs/Web/JavaScript/Reference/Statements/export) and therefore a 3rd way to enter strict mode.  The entire contents of JavaScript modules are automatically in strict mode, with no statement needed to initiate it.
+ECMAScript 2015 introduced [JavaScript modules](/en-US/docs/Web/JavaScript/Reference/Statements/export) and therefore a 3rd way to enter strict mode. The entire contents of JavaScript modules are automatically in strict mode, with no statement needed to initiate it.
 
 ```js
-function strict() {
-    // because this is a module, I'm strict by default
+function myStrictFunction() {
+  // because this is a module, I'm strict by default
 }
-export default strict;
+export default myStrictFunction;
 ```
 
 ### Strict mode for classes
 
 All parts of ECMAScript [classes](/en-US/docs/Web/JavaScript/Reference/Classes) are strict mode code, including both [class declarations](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) — and so also including all parts of class bodies.
+
+```js
+class C1 {
+  // All code here is evaluated in strict mode
+  test() {
+    delete Object.prototype;
+  }
+}
+new C1().test(); // TypeError, because test() is in strict mode
+
+const C2 = class {
+  // All code here is evaluated in strict mode
+};
+
+// Code here may not be in strict mode
+delete Object.prototype; // Will not throw error
+```
 
 ## Changes in strict mode
 
@@ -82,9 +102,11 @@ First, strict mode makes it impossible to accidentally create global variables. 
 
 ```js
 'use strict';
-                       // Assuming no global variable mistypeVariable exists
-mistypeVariable = 17;  // this line throws a ReferenceError due to the
-                       // misspelling of variable
+let mistypeVariable;
+
+mistypeVarible = 17;  // Assuming no global variable mistypeVarible exists
+                      // this line throws a ReferenceError due to the
+                      // misspelling of "mistypeVariable" (lack of an "a")
 ```
 
 Second, strict mode makes assignments which would otherwise silently fail to throw an exception. For example, `NaN` is a non-writable global variable. In normal code assigning to `NaN` does nothing; the developer receives no failure feedback. In strict mode assigning to `NaN` throws an exception. Any assignment that silently fails in normal code (assignment to a non-writable global or property, assignment to a getter-only property, assignment to a new property on a [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) object) will throw in strict mode:
@@ -97,21 +119,21 @@ var undefined = 5; // throws a TypeError
 var Infinity = 5; // throws a TypeError
 
 // Assignment to a non-writable property
-var obj1 = {};
+const obj1 = {};
 Object.defineProperty(obj1, 'x', { value: 42, writable: false });
 obj1.x = 9; // throws a TypeError
 
 // Assignment to a getter-only property
-var obj2 = { get x() { return 17; } };
+const obj2 = { get x() { return 17; } };
 obj2.x = 5; // throws a TypeError
 
 // Assignment to a new property on a non-extensible object
-var fixed = {};
+const fixed = {};
 Object.preventExtensions(fixed);
 fixed.newProp = 'ohai'; // throws a TypeError
 ```
 
-Third, strict mode makes attempts to delete undeletable properties throw (where before the attempt would have no effect):
+Third, attempts to delete undeletable properties throw in strict mode (where before the attempt would have no effect):
 
 ```js
 'use strict';
@@ -120,50 +142,49 @@ delete Object.prototype; // throws a TypeError
 
 Fourth, strict mode requires that function parameter names be unique. In normal code the last duplicated argument hides previous identically-named arguments. Those previous arguments remain available through `arguments[i]`, so they're not completely inaccessible. Still, this hiding makes little sense and is probably undesirable (it might hide a typo, for example), so in strict mode duplicate argument names are a syntax error:
 
-```js
+```js example-bad
 function sum(a, a, c) { // !!! syntax error
   'use strict';
   return a + a + c; // wrong if this code ran
 }
 ```
 
-Fifth, a strict mode in ECMAScript 5 [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). Outside strict mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. In ECMAScript 2015, octal literals are supported by prefixing a number with "`0o`"; for example:
+Fifth, strict mode [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). Outside strict mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. The standardized way to denote octal literals is via the `0o` prefix. For example:
 
 ```js
-var a = 0o10; // ES2015: Octal
+const a = 0o10;
 ```
 
-Novice developers sometimes believe a leading zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading zero syntax for the octals is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
+Novice developers sometimes believe a leading zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading zero syntax for the octal is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
 
-```js
+```js example-bad
 'use strict';
-var sum = 015 + // !!! syntax error
-          197 +
-          142;
+const sum = 015 + // !!! syntax error
+            197 +
+            142;
 
-var sumWithOctal = 0o10 + 8;
+const sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 ```
 
-Sixth, strict mode in ECMAScript 2015 forbids setting properties on [primitive](/en-US/docs/Glossary/Primitive) values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.
+Sixth, strict mode forbids setting properties on [primitive](/en-US/docs/Glossary/Primitive) values. Without strict mode, setting properties is ignored (no-op), with strict mode, however, a {{jsxref("TypeError")}} is thrown.
 
 ```js
-(function() {
 'use strict';
 
 false.true = '';         // TypeError
 (14).sailing = 'home';   // TypeError
 'with'.you = 'far away'; // TypeError
-
-})();
 ```
 
-In ECMAScript 5 strict-mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}. With the introduction of [computed property names](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), making duplication possible at runtime, ECMAScript 2015 removed that restriction.
+Duplicate property names used to be considered a {{jsxref("SyntaxError")}} in strict mode. With the introduction of [computed property names](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), making duplication possible at runtime, this restriction was removed in ES2015.
 
 ```js
 'use strict';
-var o = { p: 1, p: 2 }; // syntax error prior to ECMAScript 2015
+const o = { p: 1, p: 2 }; // syntax error prior to ECMAScript 2015
 ```
+
+> **Note:** Making code that used to error become non-errors is always considered backwards-compatible. This is a good part of the language being strict about throwing errors: it leaves room for future semantic changes.
 
 ### Simplifying variable uses
 
@@ -171,12 +192,12 @@ Strict mode simplifies how variable names map to particular variable definitions
 
 First, strict mode prohibits [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with). The problem with `with` is that any name inside the block might map either to a property of the object passed to it, or to a variable in surrounding (or even global) scope, at runtime; it's impossible to know which beforehand. Strict mode makes `with` a syntax error, so there's no chance for a name in a `with` to refer to an unknown location at runtime:
 
-```js
+```js example-bad
 'use strict';
-var x = 17;
+const x = 17;
 with (obj) { // !!! syntax error
-  // If this weren't strict mode, would this be var x, or
-  // would it instead be obj.x?  It's impossible in general
+  // If this weren't strict mode, would this be const x, or
+  // would it instead be obj.x? It's impossible in general
   // to say without running the code, so the name can't be
   // optimized.
   x;
@@ -223,7 +244,7 @@ Thus names in strict mode `eval` code behave identically to names in strict mode
 
 Third, strict mode forbids deleting plain names. `delete name` in strict mode is a syntax error:
 
-```js
+```js example-bad
 'use strict';
 
 var x;
@@ -238,18 +259,18 @@ Strict mode makes `arguments` and `eval` less bizarrely magical. Both involve a 
 
 First, the names `eval` and `arguments` can't be bound or assigned in language syntax. All these attempts to do so are syntax errors:
 
-```js
+```js example-bad
 'use strict';
 eval = 17;
 arguments++;
 ++eval;
-var obj = { set p(arguments) { } };
-var eval;
+const obj = { set p(arguments) { } };
+let eval;
 try { } catch (arguments) { }
 function x(eval) { }
 function arguments() { }
-var y = function eval() { };
-var f = new Function('arguments', "'use strict'; return 17;");
+const y = function eval() { };
+const f = new Function('arguments', "'use strict'; return 17;");
 ```
 
 Second, strict mode code doesn't alias properties of `arguments` objects created within it. In normal code within a function whose first argument is `arg`, setting `arg` also sets `arguments[0]`, and vice versa (unless no arguments were provided or `arguments[0]` is deleted). `arguments` objects for strict mode functions store the original arguments when the function was invoked. `arguments[i]` does not track the value of the corresponding named argument, nor does a named argument track the value in the corresponding `arguments[i]`.
@@ -260,7 +281,7 @@ function f(a) {
   a = 42;
   return [a, arguments[0]];
 }
-var pair = f(17);
+const pair = f(17);
 console.assert(pair[0] === 42);
 console.assert(pair[1] === 17);
 ```
@@ -269,7 +290,9 @@ Third, `arguments.callee` is no longer supported. In normal code `arguments.call
 
 ```js
 'use strict';
-var f = function() { return arguments.callee; };
+const f = function () {
+  return arguments.callee;
+};
 f(); // throws a TypeError
 ```
 
@@ -286,10 +309,8 @@ console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
 console.assert(fun.apply(null) === null);
 console.assert(fun.call(undefined) === undefined);
-console.assert(fun.bind(true)() === true);
+console.assert(fun.bind(true)());
 ```
-
-That means, among other things, that in browsers it's no longer possible to reference the `window` object through `this` inside a strict mode function.
 
 Second, in strict mode it's no longer possible to "walk" the JavaScript stack via commonly-implemented extensions to ECMAScript. In normal code with these extensions, when a function `fun` is in the middle of being called, `fun.caller` is the function that most recently called `fun`, and `fun.arguments` is the `arguments` for that invocation of `fun`. Both extensions are problematic for "secure" JavaScript because they allow "secured" code to access "privileged" functions and their (potentially unsecured) arguments. If `fun` is in strict mode, both `fun.caller` and `fun.arguments` are non-deletable properties which throw when set or retrieved:
 
@@ -305,42 +326,15 @@ function privilegedInvoker() {
 privilegedInvoker();
 ```
 
-Third, `arguments` for strict mode functions no longer provide access to the corresponding function call's variables. In some old ECMAScript implementations `arguments.caller` was an object whose properties aliased variables in that function. This is a [security hazard](https://stuff.mit.edu/iap/2008/facebook/) because it breaks the ability to hide privileged values via function abstraction; it also precludes most optimizations. For these reasons no recent browsers implement it. Yet because of its historical functionality, `arguments.caller` for a strict mode function is also a non-deletable property which throws when set or retrieved:
+## Strict mode in browsers
 
-```js
-'use strict';
-function fun(a, b) {
-  'use strict';
-  var v = 12;
-  return arguments.caller; // throws a TypeError
-}
-fun(1, 2); // doesn't expose v (or a or b)
-```
+The major browsers have fully implemented strict mode since approximately 2012, including [IE since version 10, Firefox since version 4. Chrome since version 13, etc](https://caniuse.com/use-strict). If you still support very old JS environments prior to the roll-outs of strict mode support, be careful to test any of your code that declares strict mode code to verify that its expected behaviors aren't violated when running in non-strict mode conforming JS engines.
 
-### Paving the way for future ECMAScript versions
+There are however some nuances to consider with how strict mode behaves in browsers.
 
-Future ECMAScript versions will likely introduce new syntax, and strict mode in ECMAScript 5 applies some restrictions to ease the transition. It will be easier to make some changes if the foundations of those changes are prohibited in strict mode.
+Strict mode prohibits function statements that are not at the top level of a script or function. In normal mode in browsers, function statements are permitted "everywhere". _This is not part of ES5 (or even ES3)!_ It's an extension with incompatible semantics in different browsers. Note that function statements outside top level are permitted in ES2015.
 
-First, in strict mode, a short list of identifiers become reserved keywords. These words are `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, and `yield`. In strict mode, then, you can't name or use variables or arguments with these names.
-
-```js
-function package(protected) { // !!!
-  'use strict';
-  var implements; // !!!
-
-  interface: // !!!
-  while (true) {
-    break interface; // !!!
-  }
-
-  function private() { } // !!!
-}
-function fun(static) { 'use strict'; } // !!!
-```
-
-Two Mozilla-specific caveats: First, if your code is JavaScript 1.7 or greater (for example in chrome code or when using the right `<script type="">`) and is strict mode code, `let` and `yield` have the functionality they've had since those keywords were first introduced. But strict mode code on the web, loaded with `<script src="">` or `<script>...</script>`, won't be able to use `let`/`yield` as identifiers. Second, while ES5 unconditionally reserves the words `class`, `enum`, `export`, `extends`, `import`, and `super`, before Firefox 5 Mozilla reserved them only in strict mode.
-
-Second, [strict mode prohibits function statements that are not at the top level of a script or function](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/). In normal mode in browsers, function statements are permitted "everywhere". _This is not part of ES5 (or even ES3)!_ It's an extension with incompatible semantics in different browsers. Note that function statements outside top level are permitted in ES2015.
+For example, these block-level function declarations should be disallowed in strict mode by the specification's text proper:
 
 ```js
 'use strict';
@@ -349,7 +343,7 @@ if (true) {
   f();
 }
 
-for (var i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
   function f2() { } // !!! syntax error
   f2();
 }
@@ -359,20 +353,9 @@ function baz() { // kosher
 }
 ```
 
-This prohibition isn't strict mode proper because such function statements are an extension of basic ES5. But it is the recommendation of the ECMAScript committee, and browsers will implement it.
-
-## Strict mode in browsers
-
-The major browsers now implement strict mode. However, don't blindly depend on it since there still are numerous [Browser versions used in the wild that only have partial support for strict mode](https://caniuse.com/use-strict "caniuse.com availability of strict mode") or do not support it at all (e.g. Internet Explorer below version 10!). _Strict mode changes semantics._ Relying on those changes will cause mistakes and errors in browsers which don't implement strict mode. Exercise caution in using strict mode, and back up reliance on strict mode with feature tests that check whether relevant parts of strict mode are implemented. Finally, make sure to _test your code in browsers that do and don't support strict mode_. If you test only in browsers that don't support strict mode, you're very likely to have problems in browsers that do, and vice versa.
+However, [Appendix B of the specification](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) recognizes _on-the-ground reality_ of how code has behaved historically in the majority of JS engines/environments, particularly JS engines used by web browsers (including the engine used by Node.js). As such, while strict mode in the specification in proper restricts function declarations _not_ at the top level of a script or function, [Appendix B's "Block-Level Function Declarations Web Legacy Compatibility Semantics"](https://tc39.es/ecma262/#sec-block-level-function-declarations-web-legacy-compatibility-semantics) modifies (reduces or removes) this restriction for the applicable JS environments.
 
 ## See also
 
 - [Strict Mode Code in the ECMAScript specification](https://tc39.es/ecma262/#sec-strict-mode-code)
-- [Where's Walden? » New ES5 strict mode support: now with poison pills!](https://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/)
-- [Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)
-- [Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only](https://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/)
-- [JavaScript "use strict" tutorial for beginners.](http://qnimate.com/javascript-strict-mode-in-nutshell/)
-- [John Resig - ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
-- [ECMA-262-5 in detail. Chapter 2. Strict Mode.](http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
 - [Strict mode compatibility table](https://kangax.github.io/compat-table/es5/#Strict_mode)
-- [Transitioning to strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)

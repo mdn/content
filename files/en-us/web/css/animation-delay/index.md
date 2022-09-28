@@ -1,6 +1,7 @@
 ---
 title: animation-delay
 slug: Web/CSS/animation-delay
+page-type: css-property
 tags:
   - CSS
   - CSS Animations
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.animation-delay
 ---
+
 {{CSSRef}}
 
 The **`animation-delay`** [CSS](/en-US/docs/Web/CSS) property specifies the amount of time to wait from applying the animation to an element before beginning to perform the animation. The animation can start later, immediately from its beginning, or immediately and partway through the animation.
@@ -32,6 +34,7 @@ animation-delay: 2.1s, 480ms;
 animation-delay: inherit;
 animation-delay: initial;
 animation-delay: revert;
+animation-delay: revert-layer;
 animation-delay: unset;
 ```
 
@@ -45,7 +48,7 @@ animation-delay: unset;
 
     A negative value causes the animation to begin immediately, but partway through its cycle. For example, if you specify `-1s` as the animation delay time, the animation will begin immediately but will start 1 second into the animation sequence. If you specify a negative value for the animation delay, but the starting value is implicit, the starting value is taken from the moment the animation is applied to the element.
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
 ## Formal definition
 
@@ -57,7 +60,9 @@ animation-delay: unset;
 
 ## Examples
 
-### The animation has a delay of 2 seconds
+### Setting an animation delay
+
+This animation has a delay of 2 seconds.
 
 #### HTML
 
@@ -69,28 +74,33 @@ animation-delay: unset;
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  background-color: rebeccapurple;
+  border-radius: 10px;
   width: 100px;
-  height: 100px;
-  animation-name: rotate;
-  animation-duration: 0.7s;
+  height: 100px;
+}
+
+.box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
   animation-delay: 2s;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Examples","100%","250")}}
+Hover over the rectangle to start the animation.
+
+{{EmbedLiveSample("Setting an animation delay","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples.
 
@@ -106,3 +116,4 @@ See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) fo
 
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
+- Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

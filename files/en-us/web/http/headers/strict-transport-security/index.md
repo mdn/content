@@ -9,6 +9,7 @@ tags:
   - header
 browser-compat: http.headers.Strict-Transport-Security
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Strict-Transport-Security`** response header (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS.
@@ -43,27 +44,27 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 - `includeSubDomains` {{optional_inline}}
   - : If this optional parameter is specified, this rule applies to all of the site's subdomains as well.
 - `preload` {{optional_inline}} {{non-standard_inline}}
-  - : See {{anch("Preloading Strict Transport Security")}} for details.
+  - : See [Preloading Strict Transport Security](#preloading_strict_transport_security) for details.
     Not part of the specification.
 
 ## Description
 
-If a website accepts a connection through HTTP and redirects to HTTPS, visitors may initially communicate with the non-encrypted version of the site before being redirected, if, for example, the visitor types http\://www\.foo.com/ or even just foo.com.
+If a website accepts a connection through HTTP and redirects to HTTPS, visitors may initially communicate with the non-encrypted version of the site before being redirected, if, for example, the visitor types `http://www.foo.com/` or even just foo.com.
 This creates an opportunity for a man-in-the-middle attack.
 The redirect could be exploited to direct visitors to a malicious site instead of the secure version of the original site.
 
 The HTTP Strict Transport Security header informs the browser that it should never load a site using HTTP and should automatically convert all attempts to access the site using HTTP to HTTPS requests instead.
 
-> **Note:** The `Strict-Transport-Security` header is **ignored** by the browser when your site is accessed using HTTP;
-> this is because an attacker may intercept HTTP connections and inject the header or remove it.
-> When your site is accessed over HTTPS with no certificate errors, the browser knows your site is HTTPS capable and will honor the `Strict-Transport-Security` header.
+> **Note:** The `Strict-Transport-Security` header is _ignored_ by the browser when your site has only been accessed using HTTP.
+> Once your site is accessed over HTTPS with no certificate errors, the browser knows your site is HTTPS capable and will honor the `Strict-Transport-Security` header.
+> Browsers do this as attackers may intercept HTTP connections to the site and inject or remove the header.
 
 ### An example scenario
 
-You log into a free WiFi access point at an airport and start surfing the web, visiting your online banking service to check your balance and pay a couple of bills.
+You log into a free Wi-Fi access point at an airport and start surfing the web, visiting your online banking service to check your balance and pay a couple of bills.
 Unfortunately, the access point you're using is actually a hacker's laptop, and they're intercepting your original HTTP request and redirecting you to a clone of your bank's site instead of the real thing. Now your private data is exposed to the hacker.
 
-Strict Transport Security resolves this problem; as long as you've accessed your bank's web site once using HTTPS, and the bank's web site uses Strict Transport Security, your
+Strict Transport Security resolves this problem; as long as you've accessed your bank's website once using HTTPS, and the bank's web site uses Strict Transport Security, your
 browser will know to automatically use only HTTPS, which prevents hackers from performing this sort of man-in-the-middle attack.
 
 ### How the browser handles it
@@ -78,8 +79,8 @@ Should it be necessary to disable Strict Transport Security, setting the `max-ag
 ## Preloading Strict Transport Security
 
 Google maintains [an HSTS preload service](https://hstspreload.org/).
-By following the guidelines and successfully submitting your domain, browsers will never connect to your domain using an insecure connection.
-While the service is hosted by Google, all browsers have stated an intent to use (or actually started using) the preload list.
+By following the guidelines and successfully submitting your domain, you can ensure that browsers will connect to your domain only via secure connections.
+While the service is hosted by Google, all browsers are using this preload list.
 However, it is not part of the HSTS specification and should not be treated as official.
 
 - Information regarding the HSTS preload list in Chrome : <https://www.chromium.org/hsts>
@@ -96,7 +97,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 If a `max-age` of 1 year is acceptable for a domain, however, two years is the recommended value as explained on <https://hstspreload.org>.
 
-In the following example, `max-age` is set to 2 years, and is suffixed with `preload`, which is necessary for inclusion in most major web browsers' HSTS preload lists, like Chromium, Edge, and Firefox.
+In the following example, `max-age` is set to 2 years, and is suffixed with `preload`, which is necessary for inclusion in all major web browsers' HSTS preload lists, like Chromium, Edge, and Firefox.
 
 ```http
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
@@ -115,6 +116,6 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 - Blog post: [HTTP Strict Transport Security has landed!](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
 - Blog post: [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - OWASP Article: [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
-- Wikipedia: {{interwiki("wikipedia", "HTTP Strict Transport Security")}}
-- Browser test site: [HSTS and HPKP test](https://projects.dm.id.lv/Public-Key-Pins_test)
+- Wikipedia: [HTTP Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
+- [HSTS preload service](https://hstspreload.org/)
 - [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)

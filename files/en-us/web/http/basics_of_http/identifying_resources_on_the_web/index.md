@@ -15,7 +15,9 @@ tags:
   - port
   - query
   - resources
+spec-urls: https://httpwg.org/specs/rfc9110.html#uri
 ---
+
 {{HTTPSidebar}}
 
 The target of an HTTP request is called a "resource", whose nature isn't defined further; it can be a document, a photo, or anything else. Each resource is identified by a Uniform Resource Identifier ({{Glossary("URI")}}) used throughout HTTP for identifying resources.
@@ -63,9 +65,9 @@ The two URNs correspond to
 
 | Scheme      | Description                                                          |
 | ----------- | -------------------------------------------------------------------- |
-| data        | [Data URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)           |
+| data        | [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)           |
 | file        | Host-specific file names                                             |
-| ftp         | {{Glossary("FTP","File Transfer Protocol")}}         |
+| ftp         | {{Glossary("FTP","File Transfer Protocol")}}                         |
 | http/https  | [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)   |
 | javascript  | URL-embedded JavaScript code                                         |
 | mailto      | Electronic mail address                                              |
@@ -119,9 +121,7 @@ mailto:help@supercyberhelpdesk.info
 
 ## Specifications
 
-| Specification                                                            | Title                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| {{RFC("7230", "Uniform Resource Identifiers", "2.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+{{Specifications}}
 
 ## See also
 

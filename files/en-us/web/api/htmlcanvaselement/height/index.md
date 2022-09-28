@@ -1,6 +1,7 @@
 ---
 title: HTMLCanvasElement.height
 slug: Web/API/HTMLCanvasElement/height
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -8,6 +9,7 @@ tags:
   - Property
 browser-compat: api.HTMLCanvasElement.height
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`HTMLCanvasElement.height`** property is a
@@ -19,12 +21,9 @@ default value of `150` is used.
 This is one of the two properties, the other being
 {{domxref("HTMLCanvasElement.width")}}, that controls the size of the canvas.
 
-## Syntax
+## Value
 
-```js
-var pxl = canvas.height;
-canvas.height = pxl;
-```
+A number.
 
 ## Examples
 
@@ -37,7 +36,7 @@ Given this {{HTMLElement("canvas")}} element:
 You can get the height of the canvas with the following code:
 
 ```js
-var canvas = document.getElementById('canvas');
+const canvas = document.getElementById('canvas');
 console.log(canvas.height); // 300
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: XRReferenceSpace
 slug: Web/API/XRReferenceSpace
+page-type: web-api-interface
 tags:
   - API
   - AR
@@ -22,22 +23,25 @@ tags:
   - transform
 browser-compat: api.XRReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
-The WebXR Device API's **`XRReferenceSpace`** interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior. The tracking behavior is defined by the selected [reference space type](#reference_space_types). It expands upon the base class, {{domxref("XRSpace")}}, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.
+The WebXR Device API's **`XRReferenceSpace`** interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior. The tracking behavior is defined by the selected [reference space type](#reference_space_types). It expands upon the base class, {{domxref("XRSpace")}}, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.
 
-All reference spaces—with the sole exception being bounded reference spaces—are described using the `XRReferenceSpace` type. Bounded spaces are implemented as {{domxref("XRBoundedReferenceSpace")}} objects. These are special spaces which let you establish a perimeter within which it's "safe" for the viewer to move. For XR systems that allow the user to physically move around, such as those that track movement with a real-world camera, this boundary establishes the edges of the area the user is able to move around in, whether due to physical obstacles or due to limitations of the XR hardware. See the article [Using bounded reference spaces to protect the viewer](/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces) for more on using boundaries to keep the user from colliding with obstacles both physical and virtual.
+All reference spaces—with the sole exception being bounded reference spaces—are described using the `XRReferenceSpace` type. Bounded spaces are implemented as {{domxref("XRBoundedReferenceSpace")}} objects. These are special spaces which let you establish a perimeter within which it's "safe" for the viewer to move. For XR systems that allow the user to physically move around, such as those that track movement with a real-world camera, this boundary establishes the edges of the area the user is able to move around in, whether due to physical obstacles or due to limitations of the XR hardware. See the article [Using bounded reference spaces to protect the viewer](/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces) for more on using boundaries to keep the user from colliding with obstacles both physical and virtual.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
-_`XRReferenceSpace`inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._
+_`XRReferenceSpace` inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._
 
 ## Methods
 
-_`XRReferenceSpace` also inherits methods from {{domxref("EventTarget")}} in addition to the following methods._
+_`XRReferenceSpace` also inherits methods from {{domxref("EventTarget")}} in addition to the following methods._
 
 - {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}
-  - : Creates and returns a new reference space object as the same type as the one on which you call the method (so, either `XRReferenceSpace` or {{domxref("XRBoundedReferenceSpace")}}). The new reference space can be used to transform a coordinate from the reference space of the object on which the method is called into a different coordinate space. This is useful for positioning objects while rendering, and to perform the needed transforms when changing the viewer's position and/or orientation in 3D space.
+  - : Creates and returns a new reference space object as the same type as the one on which you call the method (so, either `XRReferenceSpace` or {{domxref("XRBoundedReferenceSpace")}}). The new reference space can be used to transform a coordinate from the reference space of the object on which the method is called into a different coordinate space. This is useful for positioning objects while rendering, and to perform the needed transforms when changing the viewer's position and/or orientation in 3D space.
 
 ## Events
 
@@ -64,26 +68,26 @@ The types of reference space are listed in the table below, with brief informati
 
 ### Creating an XRReferenceSpace
 
-There are two situations in which you need to obtain an `XRReferenceSpace`. The first is when you set up your scene and need to obtain a reference space to represent the user's viewpoint on the world for the duration of the {{domxref("XRSession")}}. To do that, call the {{domxref("XRSession")}} method {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}, specifying the reference space type you wish to obtain.
+There are two situations in which you need to obtain an `XRReferenceSpace`. The first is when you set up your scene and need to obtain a reference space to represent the user's viewpoint on the world for the duration of the {{domxref("XRSession")}}. To do that, call the {{domxref("XRSession")}} method {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}, specifying the reference space type you wish to obtain.
 
 ```js
 xrSession.requestReferenceSpace("local").then((refSpace) => {
   xrReferenceSpace = refSpace;
-  /* ... */
+  // …
 });
 ```
 
-The other situation in which you may need to acquire a new reference space is if you need to move the origin to a new position; this is commonly done, for example, when your project allows the user to move through the environment using input devices such as the keyboard, mouse, touchpad, or game controls that are not connected through the XR device. Since the origin will typically be the user's location in the space, you need to change the origin to reflect their movement and any orientation changes they make.
+The other situation in which you may need to acquire a new reference space is if you need to move the origin to a new position; this is commonly done, for example, when your project allows the user to move through the environment using input devices such as the keyboard, mouse, touchpad, or game controls that are not connected through the XR device. Since the origin will typically be the user's location in the space, you need to change the origin to reflect their movement and any orientation changes they make.
 
-To move or rotate the user's view of the world, you need to change the `XRReferenceSpace` used to represent that viewpoint. However, `XRReferenceSpace` is immutable, so you need to instead create a new reference space representing the changed viewpoint. This is easily done using the {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} method.
+To move or rotate the user's view of the world, you need to change the `XRReferenceSpace` used to represent that viewpoint. However, `XRReferenceSpace` is immutable, so you need to instead create a new reference space representing the changed viewpoint. This is easily done using the {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} method.
 
 ```js
 let offsetTransform = new XRRigidTransform({x: 2, y: 0, z: 1},
-                                           {x: 0, y: 1, z: 0, w: 1});
+                                           {x: 0, y: 0, z: 0, w: 1});
 xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(offsetTransform);
 ```
 
-This replaces the `XRReferenceSpace` with a new one whose origin and orientation are adjusted to place the new origin at (2, 0, 1) relative to the current origin and rotated given a unit {{Glossary("quaternion")}} that orients the space to put the viewer facing straight up relative to the previous world orientation.
+This replaces the `XRReferenceSpace` with a new one whose origin and orientation are adjusted to place the new origin at (2, 0, 1) relative to the current origin and rotated given a unit {{Glossary("quaternion")}} that orients the space to put the viewer facing straight up relative to the previous world orientation.
 
 ### Geometry
 

@@ -1,6 +1,7 @@
 ---
 title: MediaTrackSettings.channelCount
 slug: Web/API/MediaTrackSettings/channelCount
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -15,6 +16,7 @@ tags:
   - channelCount
 browser-compat: api.MediaTrackSettings.channelCount
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
@@ -31,18 +33,12 @@ the value of {{domxref("MediaTrackSupportedConstraints.channelCount")}} as retur
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
-
-```js
-var channelCount = MediaTrackSettings.channelCount;
-```
-
-### Value
+## Value
 
 An integer value indicating the number of audio channels on the track. A value of 1
 indicates monaural sound, 2 means stereo, and so forth.
 
-## Example
+## Examples
 
 See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
   Constraint exerciser")}} for an example.
@@ -58,7 +54,6 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.channelCount")}}
 - {{domxref("MediaTrackSettings")}}

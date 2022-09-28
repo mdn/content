@@ -7,23 +7,33 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-position/
 ---
+
 {{CSSRef}}
 
 **CSS Positioned Layout** is a module of CSS that defines how to position elements on the page.
 
 ## Reference
 
-### CSS properties
+### Properties
 
-- {{cssxref("bottom")}}
-- {{cssxref("clear")}}
-- {{cssxref("float")}}
-- {{cssxref("left")}}
-- {{cssxref("position")}}
-- {{cssxref("right")}}
 - {{cssxref("top")}}
+- {{cssxref("right")}}
+- {{cssxref("bottom")}}
+- {{cssxref("left")}}
+- {{cssxref("inset")}}
+- {{cssxref("inset-inline")}}
+- {{cssxref("inset-inline-start")}}
+- {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-block")}}
+- {{cssxref("inset-block-start")}}
+- {{cssxref("inset-block-end")}}
+- {{cssxref("float")}}
+- {{cssxref("clear")}}
+- {{cssxref("position")}}
 - {{cssxref("z-index")}}
+- {{cssxref("transform")}}
 
 ## Guides
 
@@ -32,7 +42,4 @@ tags:
 
 ## Specifications
 
-| Specification                                        | Status                                   | Comment |
-| ---------------------------------------------------- | ---------------------------------------- | ------- |
-| {{ SpecName('CSS3 Positioning') }}         | {{ Spec2('CSS3 Positioning') }} |         |
-| {{ SpecName('CSS2.1', 'visuren.html') }} | {{ Spec2('CSS2.1') }}             |         |
+{{Specifications}}

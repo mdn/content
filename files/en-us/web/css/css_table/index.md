@@ -7,7 +7,9 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://www.w3.org/TR/CSS22/tables.html
 ---
+
 {{CSSRef}}
 
 **CSS Table** is a CSS module that defines how to lay out table data.
@@ -25,6 +27,4 @@ tags:
 
 ## Specifications
 
-| Specification                                    | Status                   | Comment            |
-| ------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName("CSS2.1", "tables.html")}} | {{Spec2("CSS2.1")}} | Initial definition |
+{{Specifications}}

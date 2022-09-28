@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Object.valueOf
 ---
+
 {{JSRef}}
 
 The **`valueOf()`** method returns the primitive value of the
@@ -17,7 +18,7 @@ specified object.
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 
@@ -25,8 +26,8 @@ valueOf()
 
 The primitive value of the specified object.
 
-> **Note:** A [(unary)
-> plus sign](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus) can sometimes be used as a shorthand for `valueOf`, e.g. in
+> **Note:** A [(unary) plus sign](/en-US/docs/Web/JavaScript/Reference/Operators#unary_plus)
+> can sometimes be used as a shorthand for `valueOf`, e.g. in
 > `+new Number()`. Also see [Using unary plus](#using_unary_plus).
 
 ## Description
@@ -56,7 +57,9 @@ Suppose you have an object type `MyNumberType` and you want to create a
 to the object's `valueOf` method:
 
 ```js
-MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
+MyNumberType.prototype.valueOf = function () {
+  return customPrimitiveValue;
+};
 ```
 
 With the preceding code in place, any time an object of type `MyNumberType`
@@ -71,10 +74,10 @@ myNumberType.valueOf()
 ```
 
 > **Note:** Objects in string contexts convert via the
-> {{jsxref("Object.toString", "toString()")}} method, which is different from
+> {{jsxref("Object/toString", "toString()")}} method, which is different from
 > {{jsxref("String")}} objects converting to string primitives using
 > `valueOf`. All objects have a string conversion, if only
-> "`[object type]`". But many objects do not convert to number,
+> `"[object type]"`. But many objects do not convert to number,
 > boolean, or function.
 
 ## Examples
@@ -83,14 +86,14 @@ myNumberType.valueOf()
 
 ```js
 function MyNumberType(n) {
-    this.number = n;
+  this.number = n;
 }
 
-MyNumberType.prototype.valueOf = function() {
-    return this.number;
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
 };
 
-var myObj = new MyNumberType(4);
+const myObj = new MyNumberType(4);
 myObj + 3; // 7
 ```
 

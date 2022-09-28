@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.getUint16
 ---
+
 {{JSRef}}
 
 The **`getUint16()`** method gets an unsigned 16-bit integer
@@ -19,7 +20,7 @@ The **`getUint16()`** method gets an unsigned 16-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 getUint16(byteOffset)
 getUint16(byteOffset, littleEndian)
 ```
@@ -52,8 +53,8 @@ There is no alignment constraint; multi-byte values may be fetched from any offs
 ### Using the getUint16 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.getUint16(1); // 0
 ```
 

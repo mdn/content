@@ -1,6 +1,7 @@
 ---
 title: HTMLFormElement.action
 slug: Web/API/HTMLFormElement/action
+page-type: web-api-instance-property
 tags:
   - API
   - Forms
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.action
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.action`** property represents the action
@@ -20,14 +22,11 @@ of the {{HTMLElement("form")}} element.
 The action of a form is the program that is executed on the server when the form is
 submitted. This property can be retrieved or set.
 
-## Syntax
+## Value
 
-```js
-var string = form.action;
-form.action = string;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
 form.action = '/cgi-bin/publish';

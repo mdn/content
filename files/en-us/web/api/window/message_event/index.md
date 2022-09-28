@@ -1,40 +1,48 @@
 ---
 title: 'Window: message event'
 slug: Web/API/Window/message_event
+page-type: web-api-event
 tags:
   - Event
 browser-compat: api.Window.message_event
 ---
+
 {{APIRef}}
 
 The `message` event is fired on a {{domxref('Window')}} object when the window receives a message, for example from a call to [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) from another browsing context.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("MessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessage"
-            >onmessage</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancellable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('message', (event) => { });
+
+onmessage = (event) => { };
+```
+
+## Event type
+
+A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("MessageEvent")}}
+
+## Event properties
+
+_This interface also inherits properties from its parent, {{domxref("Event")}}._
+
+- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+  - : The data sent by the message emitter.
+- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+  - : A string representing the origin of the message emitter.
+- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
+  - : A string representing a unique ID for the event.
+- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
+  - : A `MessageEventSource` (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
+- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
+  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
 ## Examples
 
@@ -58,7 +66,7 @@ window.addEventListener('message', (event) => {
 });
 ```
 
-Alternatively the listener could use the [`onmessage`](/en-US/docs/Web/API/WindowEventHandlers/onmessage) event handler property:
+Alternatively the listener could use the `onmessage` event handler property:
 
 ```js
 window.onmessage = (event) => {

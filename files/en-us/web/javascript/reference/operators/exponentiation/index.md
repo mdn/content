@@ -8,24 +8,25 @@ tags:
   - Reference
 browser-compat: javascript.operators.exponentiation
 ---
+
 {{jsSidebar("Operators")}}
 
 The exponentiation operator (`**`) returns the result of raising the first
-operand to the power of the second operand. It is equivalent to `Math.pow`,
+operand to the power of the second operand. It is equivalent to `Math.pow`,
 except it also accepts BigInts as operands.
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 x ** y
 ```
 
 ## Description
 
 The exponentiation operator is
-right-associative: `a ** b ** c` is equal to
+right-associative: `a ** b ** c` is equal to
 `a ** (b ** c)`.
 
 In most languages, such as PHP, Python, and others that have an exponentiation operator
@@ -36,20 +37,13 @@ have a lower precedence than unary operators.
 
 In JavaScript, it is impossible to write an ambiguous exponentiation expression. That
 is, you cannot put a unary operator (`+/-/~/!/delete/void/typeof`)
-immediately before the base number; doing so will cause a SyntaxError.
+immediately before the base number; [doing so will cause a SyntaxError](/en-US/docs/Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation).
 
-```js
--2 ** 2;
-// 4 in Bash, -4 in other languages.
-// This is invalid in JavaScript, as the operation is ambiguous.
-
--(2 ** 2);
-// -4 in JavaScript and the author's intention is unambiguous.
-```
+For example, `-2 ** 2` is 4 in Bash, but is -4 in other languages (such as Python). This is invalid in JavaScript, as the operation is ambiguous. You have to parenthesize either side — for example, as `-(2 ** 2)` — to make the intention unambiguous.
 
 Note that some programming languages use the caret symbol <kbd>^</kbd> for
-exponentiation, but JavaScript uses that symbol for the [bitwise
-logical XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
+exponentiation, but JavaScript uses that symbol for the
+[bitwise logical XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR).
 
 ## Examples
 
@@ -95,21 +89,12 @@ To force the base of an exponentiation expression to be a negative number:
 
 ## See also
 
-- [Addition
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Increment
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary
-  negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus
-  operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

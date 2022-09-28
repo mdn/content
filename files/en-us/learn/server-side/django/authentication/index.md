@@ -16,6 +16,7 @@ tags:
   - server-side
   - sessions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
 In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
@@ -25,10 +26,7 @@ In this tutorial, we'll show you how to allow users to log in to your site with 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, up to and including
-        <a href="/en-US/docs/Learn/Server-side/Django/Sessions"
-          >Django Tutorial Part 7: Sessions framework</a
-        >.
+        Complete all previous tutorial topics, up to and including <a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a>.
       </td>
     </tr>
     <tr>
@@ -62,24 +60,26 @@ The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of
 
 ```python
 INSTALLED_APPS = [
-    ...
+    # …
     'django.contrib.auth',  #Core authentication framework and its default models.
     'django.contrib.contenttypes',  #Django content type system (allows permissions to be associated with models).
-    ....
+    # …
 
 MIDDLEWARE = [
-    ...
+    # …
     'django.contrib.sessions.middleware.SessionMiddleware',  #Manages sessions across requests
-    ...
+    # …
     'django.contrib.auth.middleware.AuthenticationMiddleware',  #Associates users with requests using sessions.
-    ....
+    # …
 ```
 
 ## Creating users and groups
 
-You already created your first user when we looked at the [Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site) in tutorial 4 (this was a superuser, created with the command `python manage.py createsuperuser)`. Our superuser is already authenticated and has all permissions, so we'll need to create a test user to represent a normal site user. We'll be using the admin site to create our _locallibrary_ groups and website logins, as it is one of the quickest ways to do so.
+You already created your first user when we looked at the [Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site) in tutorial 4 (this was a superuser, created with the command `python manage.py createsuperuser`).
+Our superuser is already authenticated and has all permissions, so we'll need to create a test user to represent a normal site user. We'll be using the admin site to create our _locallibrary_ groups and website logins, as it is one of the quickest ways to do so.
 
-> **Note:** You can also create users programmatically, as shown below. You would have to do this, for example, if developing an interface to allow users to create their own logins (you shouldn't give users access to the admin site).
+> **Note:** You can also create users programmatically, as shown below.
+> You would have to do this, for example, if developing an interface to allow "ordinary" users to create their own logins (you shouldn't give most users access to the admin site).
 >
 > ```python
 > from django.contrib.auth.models import User
@@ -93,7 +93,7 @@ You already created your first user when we looked at the [Django admin site](/e
 > user.save()
 > ```
 >
-> It is highly recommended to set up a custom user model when starting an actual project. You'll be able to easily customize it in the future if the need arises. For more information, see [Using a custom user model when starting](https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
+> It is highly recommended to set up a custom user model when starting an actual project. You'll be able to easily customize it in the future if the need arises. For more information, see [Using a custom user model when starting a project](https://docs.djangoproject.com/en/4.0/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
 
 Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.
 
@@ -103,23 +103,24 @@ Start the development server and navigate to the admin site in your local web br
 
 First lets create a new group for our library members.
 
-1.  Click the **Add** button (next to Group) to create a new _Group_; enter the **Name** "Library Members" for the group.
-    ![Admin site - add group](admin_authentication_add_group.png)
-2.  We don't need any permissions for the group, so just press **SAVE** (you will be taken to a list of groups).
+1. Click the **Add** button (next to Group) to create a new _Group_; enter the **Name** "Library Members" for the group.
+   ![Admin site - add group](admin_authentication_add_group.png)
+2. We don't need any permissions for the group, so just press **SAVE** (you will be taken to a list of groups).
 
 Now let's create a user:
 
-1.  Navigate back to the home page of the admin site
-2.  Click the **Add** button next to _Users_ to open the _Add user_ dialog box.![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
-3.  Enter an appropriate **Username** and **Password**/**Password confirmation** for your test user
-4.  Press **SAVE** to create the user.
+1. Navigate back to the home page of the admin site
+2. Click the **Add** button next to _Users_ to open the _Add user_ dialog box.
+   ![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
+3. Enter an appropriate **Username** and **Password**/**Password confirmation** for your test user
+4. Press **SAVE** to create the user.
 
-    The admin site will create the new user and immediately take you to a _Change user_ screen where you can change your **username** and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the **Active** flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g. their join date and last login date).
-    ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
+   The admin site will create the new user and immediately take you to a _Change user_ screen where you can change your **username** and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the **Active** flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g. their join date and last login date).
+   ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
-5.  In the _Groups_ section, select **Library Member** group from the list of _Available groups_, and then press the **right-arrow** between the boxes to move it into the _Chosen groups_ box.
-    ![Admin site - add user to group](admin_authentication_user_add_group.png)
-6.  We don't need to do anything else here, so just select **SAVE** again, to go to the list of users.
+5. In the _Groups_ section, select **Library Member** group from the list of _Available groups_, and then press the **right-arrow** between the boxes to move it into the _Chosen groups_ box.
+   ![Admin site - add user to group](admin_authentication_user_add_group.png)
+6. We don't need to do anything else here, so just select **SAVE** again, to go to the list of users.
 
 That's it! Now you have a "normal library member" account that you will be able to use for testing (once we've implemented the pages to enable them to log in).
 
@@ -147,7 +148,9 @@ urlpatterns += [
 ]
 ```
 
-Navigate to the `http://127.0.0.1:8000/accounts/` URL (note the trailing forward slash!) and Django will show an error that it could not find this URL, and listing all the URLs it tried. From this you can see the URLs that will work, for example:
+Navigate to the `http://127.0.0.1:8000/accounts/` URL (note the trailing forward slash!).
+Django will show an error that it could not find this URL, and list all the URLs it tried.
+From this you can see the URLs that will work, for example:
 
 > **Note:** Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
 >
@@ -176,16 +179,20 @@ The next step is to create a registration directory on the search path and then 
 
 The URLs (and implicitly, views) that we just added expect to find their associated templates in a directory **/registration/** somewhere in the templates search path.
 
-For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, i.e the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
+For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, that is, the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
 
 > **Note:** Your folder structure should now look like the below:
-> locallibrary (Django project folder) \
-> \\_catalog \
-> \\_locallibrary \
-> \\_templates **(new)** \
-> \\_registration
+>
+> ```
+> locallibrary/   #Django project folder
+>   catalog/
+>   locallibrary/
+>   templates/
+>     registration/
+> ```
 
-To make the **templates** directory visible to the template loader we need to add it in the template search path. Open the project settings (**/locallibrary/locallibrary/settings.py**).
+To make the **templates** directory visible to the template loader we need to add it in the template search path.
+Open the project settings (**/locallibrary/locallibrary/settings.py**).
 
 Then import the `os` module (add the following line near the top of the file).
 
@@ -196,14 +203,13 @@ import os # needed by code below
 Update the `TEMPLATES` section's `'DIRS'` line as shown:
 
 ```python
-    ...
+    # …
     TEMPLATES = [
       {
-       ...
+       # …
        'DIRS': [os.path.join(BASE_DIR, 'templates')],
        'APP_DIRS': True,
-       ...
-
+       # …
 ```
 
 ### Login template
@@ -242,8 +248,8 @@ Create a new HTML file called /**locallibrary/templates/registration/login.html*
         <td>\{{ form.password }}</td>
       </tr>
     </table>
-    <input type="submit" value="login" />
-    <input type="hidden" name="next" value="\{{ next }}" />
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="\{{ next }}">
   </form>
 
   {# Assumes you setup the password_reset view in your URLconf #}
@@ -357,7 +363,7 @@ This page is where you enter your new password after clicking the link in the pa
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" value="Change my password" /></td>
+                    <td><input type="submit" value="Change my password"></td>
                 </tr>
             </table>
         </form>
@@ -398,7 +404,7 @@ You'll be able to test the password reset functionality from the link in the log
 > EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 > ```
 >
-> For more information, see [Sending email](https://docs.djangoproject.com/en/3.1/topics/email/) (Django docs).
+> For more information, see [Sending email](https://docs.djangoproject.com/en/4.0/topics/email/) (Django docs).
 
 ## Testing against authenticated users
 
@@ -415,7 +421,7 @@ Open the base template (**/locallibrary/catalog/templates/base_generic.html**) a
 ```html
   <ul class="sidebar-nav">
 
-    ...
+    …
 
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
@@ -441,7 +447,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def my_view(request):
-    ...
+    # …
 ```
 
 > **Note:** You can do the same sort of thing manually by testing on `request.user.is_authenticated`, but the decorator is much more convenient!
@@ -452,7 +458,7 @@ Similarly, the easiest way to restrict access to logged-in users in your class-b
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 class MyView(LoginRequiredMixin, View):
-    ...
+    # …
 ```
 
 This has exactly the same redirect behavior as the `login_required` decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (`login_url`), and a URL parameter name instead of "`next`" to insert the current absolute path (`redirect_field_name`).
@@ -463,7 +469,7 @@ class MyView(LoginRequiredMixin, View):
     redirect_field_name = 'redirect_to'
 ```
 
-For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/3.1/topics/auth/default/#limiting-access-to-logged-in-users).
+For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/4.0/topics/auth/default/#limiting-access-to-logged-in-users).
 
 ## Example — listing the current user's books
 
@@ -487,7 +493,8 @@ Next, add the `borrower` field to the `BookInstance` model:
 borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
 ```
 
-While we're here, let's add a property that we can call from our templates to tell if a particular book instance is overdue. While we could calculate this in the template itself, using a [property](https://docs.python.org/3/library/functions.html#property) as shown below will be much more efficient.
+While we're here, let's add a property that we can call from our templates to tell if a particular book instance is overdue.
+While we could calculate this in the template itself, using a [property](https://docs.python.org/3/library/functions.html#property) as shown below will be much more efficient.
 
 Add this somewhere near the top of the file:
 
@@ -497,12 +504,14 @@ from datetime import date
 
 Now add the following property definition to the `BookInstance` class:
 
+> **Note:** The following code uses Python's `bool()` function, which evaluates an object or the resulting object of an expression, and returns `True` unless the result is "falsy", in which case it returns `False`.
+> In Python an object is _falsy_ (evaluates as `False`) if it is: empty (like `[]`, `()`, `{}`), `0`, `None` or if it is `False`.
+
 ```python
 @property
 def is_overdue(self):
-    if self.due_back and date.today() > self.due_back:
-        return True
-    return False
+    """Determines if the book is overdue based on due date and current date."""
+    return bool(self.due_back and date.today() > self.due_back)
 ```
 
 > **Note:** We first verify whether `due_back` is empty before making a comparison. An empty `due_back` field would cause Django to throw an error instead of showing the page: empty values are not comparable. This is not something we would want our users to experience!
@@ -598,7 +607,8 @@ Now, all we need to do for this page is add a template. First, create the templa
 {% endblock %}
 ```
 
-This template is very similar to those we've created previously for the `Book` and `Author` objects. The only thing "new" here is that we check the method we added in the model `(bookinst.is_overdue`) and use it to change the color of overdue items.
+This template is very similar to those we've created previously for the `Book` and `Author` objects.
+The only "new" thing here is that we check the method we added in the model `(bookinst.is_overdue`) and use it to change the color of overdue items.
 
 When the development server is running, you should now be able to view the list for a logged in user in your browser at `http://127.0.0.1:8000/catalog/mybooks/`. Try this out with your user logged in and logged out (in the second case, you should be redirected to the login page).
 
@@ -632,7 +642,7 @@ When any user is logged in, they'll see the _My Borrowed_ link in the sidebar, a
 
 Permissions are associated with models and define the operations that can be performed on a model instance by a user who has the permission. By default, Django automatically gives _add_, _change_, and _delete_ permissions to all models, which allow users with the permissions to perform the associated actions via the admin site. You can define your own permissions to models and grant them to specific users. You can also change the permissions associated with different instances of the same model.
 
-Testing on permissions in views and templates is then very similar for testing on the authentication status (and in fact, testing for a permission also tests for authentication).
+Testing on permissions in views and templates is then very similar to testing on the authentication status (and in fact, testing for a permission also tests for authentication).
 
 ### Models
 
@@ -642,9 +652,9 @@ For example, we might define a permission to allow a user to mark that a book ha
 
 ```python
 class BookInstance(models.Model):
-    ...
+    # …
     class Meta:
-        ...
+        # …
         permissions = (("can_mark_returned", "Set book as returned"),)
 ```
 
@@ -675,7 +685,7 @@ from django.contrib.auth.decorators import permission_required
 @permission_required('catalog.can_mark_returned')
 @permission_required('catalog.can_edit')
 def my_view(request):
-    ...
+    # …
 ```
 
 A permission-required mixin for class-based views.
@@ -704,7 +714,7 @@ class MyView(PermissionRequiredMixin, View):
 > @login_required
 > @permission_required('catalog.can_mark_returned', raise_exception=True)
 > def my_view(request):
->     ...
+>     # …
 > ```
 
 ### Example
@@ -713,7 +723,8 @@ We won't update the _LocalLibrary_ here; perhaps in the next tutorial!
 
 ## Challenge yourself
 
-Earlier in this article, we showed you how to create a page for the current user listing the books that they have borrowed. The challenge now is to create a similar page that is only visible for librarians, that displays _all_ books that have been borrowed, and which includes the name of each borrower.
+Earlier in this article, we showed you how to create a page for the current user, listing the books that they have borrowed.
+The challenge now is to create a similar page that is only visible for librarians, that displays _all_ books that have been borrowed, and which includes the name of each borrower.
 
 You should be able to follow the same pattern as for the other view. The main difference is that you'll need to restrict the view to only librarians. You could do this based on whether the user is a staff member (function decorator: `staff_member_required`, template variable: `user.is_staff`) but we recommend that you instead use the `can_mark_returned` permission and `PermissionRequiredMixin`, as described in the previous section.
 
@@ -725,15 +736,15 @@ When you are finished, your page should look something like the screenshot below
 
 ## Summary
 
-Excellent work — you've now created a website that library members can log in into and view their own content and that librarians (with the correct permission) can use to view all loaned books and their borrowers. At the moment we're still just viewing content, but the same principles and techniques are used when you want to start modifying and adding data.
+Excellent work — you've now created a website where library members can log in and view their own content, and where librarians (with the correct permission) can view all loaned books and their borrowers. At the moment we're still just viewing content, but the same principles and techniques are used when you want to start modifying and adding data.
 
 In our next article, we'll look at how you can use Django forms to collect user input, and then start modifying some of our stored data.
 
 ## See also
 
-- [User authentication in Django](https://docs.djangoproject.com/en/3.1/topics/auth/) (Django docs)
-- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/3.1/topics/auth/default/) (Django docs)
-- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/3.1/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
+- [User authentication in Django](https://docs.djangoproject.com/en/4.0/topics/auth/) (Django docs)
+- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/4.0/topics/auth/default/) (Django docs)
+- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 

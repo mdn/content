@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "`'use strict'` not allowed in function" occurs
@@ -17,17 +18,12 @@ when a `"use strict"` directive is used at the top of a function with
 
 ## Message
 
-```js
-Edge:
-Cannot apply strict mode on functions with non-simple parameter list
-
-Firefox:
-SyntaxError: "use strict" not allowed in function with default parameter
-SyntaxError: "use strict" not allowed in function with rest parameter
-SyntaxError: "use strict" not allowed in function with destructuring parameter
-
-Chrome:
-SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
+```
+SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list (V8-based)
+SyntaxError: "use strict" not allowed in function with default parameter (Firefox)
+SyntaxError: "use strict" not allowed in function with rest parameter (Firefox)
+SyntaxError: "use strict" not allowed in function with destructuring parameter (Firefox)
+SyntaxError: 'use strict' directive not allowed inside a function with a non-simple parameter list. (Safari)
 ```
 
 ## Error type
@@ -77,7 +73,7 @@ function sum(a = 1, b = 2) {
 A function expression can use yet another workaround:
 
 ```js example-bad
-var sum = function sum([a, b]) {
+const sum = function sum([a, b]) {
   // SyntaxError: "use strict" not allowed in function with destructuring parameter
   'use strict';
   return a + b;
@@ -87,7 +83,7 @@ var sum = function sum([a, b]) {
 This can be converted to the following expression:
 
 ```js example-good
-var sum = (function() {
+const sum = (function() {
   'use strict';
   return function sum([a, b]) {
     return a + b;
@@ -101,7 +97,7 @@ If an arrow function needs to access the `this` variable, you can use the
 arrow function as the enclosing function:
 
 ```js example-bad
-var callback = (...args) => {
+const callback = (...args) => {
   // SyntaxError: "use strict" not allowed in function with rest parameter
   'use strict';
   return this.run(args);
@@ -111,7 +107,7 @@ var callback = (...args) => {
 This can be converted to the following expression:
 
 ```js example-good
-var callback = (() => {
+const callback = (() => {
   'use strict';
   return (...args) => {
     return this.run(args);

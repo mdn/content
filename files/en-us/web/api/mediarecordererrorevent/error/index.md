@@ -1,6 +1,7 @@
 ---
 title: MediaRecorderErrorEvent.error
 slug: Web/API/MediaRecorderErrorEvent/error
+page-type: web-api-instance-property
 tags:
   - API
   - Error
@@ -10,9 +11,12 @@ tags:
   - MediaStream Recording API
   - Property
   - Reference
+  - Deprecated
+  - Non-standard
 browser-compat: api.MediaRecorderErrorEvent.error
 ---
-{{APIRef("MediaStream Recording")}}
+
+{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only `error` property in the
 **{{domxref("MediaRecorderErrorEvent")}}** interface is a
@@ -22,15 +26,9 @@ by a {{domxref("MediaRecorder")}} instance.
 When a `MediaRecorderErrorEvent` occurs, you can determine to some extent
 what went wrong by examining the `error` property within the
 `MediaRecorderErrorEvent` received by the `MediaRecorder`'s
-{{event("error")}} event handler, {{domxref("MediaRecorder.onerror", "onerror")}}.
+{{domxref("MediaRecorder/error_event", "error")}} event handler, {{domxref("MediaRecorder/error_event", "onerror")}}.
 
-## Syntax
-
-```js
-error = MediaRecorderErrorEvent.error;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMException")}} describing the error represented by the event. The
 error's {{domxref("DOMException.name", "name")}} property's value may be any exception
@@ -56,9 +54,9 @@ method references.
 - `UnknownError`
   - : A non-security related error occurred that cannot otherwise be categorized.
     Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state",
-    "state")}} becomes `inactive`, one last {{event("dataavailable")}} event is
+    "state")}} becomes `inactive`, one last {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is
     sent to the `MediaRecorder` with the remaining received data, and finally a
-    {{event("stop")}} event is sent.
+    {{domxref("MediaRecorder/stop_event", "stop")}} event is sent.
 
 ## Examples
 
@@ -75,16 +73,16 @@ function recordStream(stream) {
 
   try {
     recorder = new MediaRecorder(stream);
-  } catch(err) {
+  } catch (err) {
     /* exception while trying to create the recorder; handle that */
   }
 
-  recorder.ondataavailable = function(event) {
+  recorder.ondataavailable = (event) => {
     bufferList.push(event.data);
   };
 
-  recorder.onerror = function(event) {
-    let error = event.error;
+  recorder.onerror = (event) => {
+    console.error(`Error: ${event.error}`);
   };
 
   recorder.start(100);  /* 100ms time slices per buffer */
@@ -102,7 +100,5 @@ function recordStream(stream) {
 
 ## See also
 
-- [MediaStream Recording
-  API](/en-US/docs/Web/API/MediaStream_Recording_API)
-- [Using
-  the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

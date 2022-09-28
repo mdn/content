@@ -1,6 +1,7 @@
 ---
 title: content
 slug: Web/CSS/content
+page-type: css-property
 tags:
   - CSS
   - CSS Counter
@@ -10,9 +11,14 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.content
 ---
+
 {{CSSRef}}
 
 The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces an element with a generated value. Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
+
+{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+
+## Syntax
 
 ```css
 /* Keywords that cannot be combined with other values */
@@ -52,10 +58,9 @@ content: open-quote counter(chapter_counter);
 content: inherit;
 content: initial;
 content: revert;
+content: revert-layer;
 content: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -66,14 +71,14 @@ content: unset;
 - {{cssxref("&lt;string&gt;")}}
   - : Specifies the "alt text" for the element. This value can be any number of text characters. Non-Latin characters must be encoded using their Unicode escape sequences: for example, `\000A9` represents the copyright symbol.
 - {{cssxref("&lt;image&gt;")}}
-  - : An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element()", "element()")}} function, denoting the content to display.
-- {{cssxref("counter()")}}
+  - : An {{cssxref("&lt;image&gt;")}}, denoted by the {{cssxref("url", "url()")}} or {{cssxref("&lt;gradient&gt;")}} data type, or part of the webpage, defined by the {{cssxref("element", "element()")}} function, denoting the content to display.
+- {{cssxref("counter", "counter()")}}
 
-  - : The value of a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.
+  - : The value of a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function.
 
-    The {{cssxref("counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+    The {{cssxref("counter", "counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
 
-    The {{cssxref("counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+    The {{cssxref("counters", "counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
 
 - `attr(x)`
   - : The value of the element's attribute `x` as a string. If there is no attribute `x`, an empty string is returned. The case-sensitivity of attribute names depends on the document language.
@@ -108,21 +113,25 @@ This example inserts quotation marks around quotes, and adds the word "Chapter" 
 
 ```html
 <h1>5</h1>
-<p>According to Sir Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
-    lucky enough to invent the Web at the time when the Internet
-    already existed - and had for a decade and a half.</q>
-  We must understand that there is nothing fundamentally wrong
-  with building on the contributions of others.
+<p>
+  According to Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
+    I was lucky enough to invent the Web at the time when the Internet already
+    existed - and had for a decade and a half.
+  </q>
+  We must understand that there is nothing fundamentally wrong with building on
+  the contributions of others.
 </p>
 
 <h1>6</h1>
-<p>According to the Mozilla Manifesto,
-  <q cite="http://www.mozilla.org/en-US/about/manifesto/">Individuals
-    must have the ability to shape the Internet and
-    their own experiences on the Internet.</q>
-  Therefore, we can infer that contributing to the open web
-  can protect our own individual experiences on it.
+<p>
+  According to the Mozilla Manifesto,
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/">
+    Individuals must have the ability to shape the Internet and their own
+    experiences on the Internet.
+  </q>
+  Therefore, we can infer that contributing to the open web can protect our own
+  individual experiences on it.
 </p>
 ```
 
@@ -141,10 +150,10 @@ q::after {
   content: close-quote;
 }
 
-h1::before  {
-  content: "Chapter ";  /* The trailing space creates separation
-                           between the added content and the
-                           rest of the content */
+h1::before {
+  content: "Chapter "; /* The trailing space creates separation
+                          between the added content and the
+                          rest of the content */
 }
 ```
 
@@ -166,7 +175,8 @@ This example inserts an image before the link. If the image is not found, it ins
 
 ```css
 a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") / " MOZILLA: ";
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
+    " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
 }
@@ -196,9 +206,9 @@ This example inserts additional text after special items in a list.
 
 ```css
 .new-entry::after {
-  content: " New!";  /* The leading space creates separation
-                        between the added content and the
-                        rest of the content */
+  content: " New!"; /* The leading space creates separation
+                       between the added content and the
+                       rest of the content */
   color: red;
 }
 ```
@@ -215,10 +225,12 @@ This example inserts an image before each link, and adds its `id` attribute afte
 
 ```html
 <ul>
-  <li><a id="moz" href="https://www.mozilla.org/">
-    Mozilla Home Page</a></li>
-  <li><a id="mdn" href="https://developer.mozilla.org/">
-    Mozilla Developer Network</a></li>
+  <li><a id="moz" href="https://www.mozilla.org/"> Mozilla Home Page</a></li>
+  <li>
+    <a id="mdn" href="https://developer.mozilla.org/">
+      Mozilla Developer Network</a
+    >
+  </li>
 </ul>
 ```
 
@@ -253,7 +265,7 @@ li {
 
 ### Element replacement
 
-This example replaces an element's content with an image. You can replace the contents of an element with either a {{cssxref("url()")}} or an {{cssxref("&lt;image&gt;")}} value. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
+This example replaces an element's content with an image. You can replace the contents of an element with either a {{cssxref("url", "url()")}} or an {{cssxref("&lt;image&gt;")}} value. Content added with `::before` or `::after` will not be generated as the contents of the element have been replaced.
 
 #### HTML
 
@@ -268,7 +280,8 @@ This example replaces an element's content with an image. You can replace the co
   content: url("mdn.svg");
 }
 
-#replaced::after { /* will not show if element replacement is supported */
+/* will not show if element replacement is supported */
+#replaced::after {
   content: " (" attr(id) ")";
 }
 ```
@@ -291,5 +304,6 @@ This example replaces an element's content with an image. You can replace the co
 - {{Cssxref("::after")}}
 - {{Cssxref("::before")}}
 - {{Cssxref("::marker")}}
+- {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
-- {{cssxref("url()", "url()")}} function
+- {{cssxref("url", "url()")}} function

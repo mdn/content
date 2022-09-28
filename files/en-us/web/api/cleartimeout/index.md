@@ -1,6 +1,7 @@
 ---
 title: clearTimeout()
 slug: Web/API/clearTimeout
+page-type: web-api-global-function
 tags:
   - API
   - HTML DOM
@@ -9,14 +10,18 @@ tags:
   - clearTimeout
 browser-compat: api.clearTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 The global **`clearTimeout()`** method cancels a timeout previously established
 by calling {{domxref("setTimeout()")}}.
 
+If the parameter provided does not identify a previously established action,
+this method does nothing.
+
 ## Syntax
 
-```js
+```js-nolint
 clearTimeout(timeoutID)
 ```
 
@@ -33,34 +38,38 @@ means you can technically use `clearTimeout()` and
 {{domxref("clearInterval", "clearInterval()")}}
 interchangeably. However, for clarity, you should avoid doing so.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 Run the script below in the context of a web page and click on the page once. You'll
-see a message popping up in a second. If you click the page multiple times in
-one second, the alert only appears once.
+see a message popping up in a second. If you click the page multiple times in
+one second, the alert only appears once.
 
 ```js
 const alarm = {
-  remind: function(aMessage) {
-    alert(aMessage);
-    this.timeoutID = undefined;
-  },
+  remind(aMessage) {
+    alert(aMessage);
+    this.timeoutID = undefined;
+  },
 
-  setup: function() {
-    if (typeof this.timeoutID === 'number') {
-      this.cancel();
-    }
+  setup() {
+    if (typeof this.timeoutID === 'number') {
+      this.cancel();
+    }
 
-    this.timeoutID = setTimeout(function(msg) {
-      this.remind(msg);
-    }.bind(this), 1000, 'Wake up!');
-  },
+    this.timeoutID = setTimeout((msg) => {
+      this.remind(msg);
+    }, 1000, 'Wake up!');
+  },
 
-  cancel: function() {
-    clearTimeout(this.timeoutID);
-  }
+  cancel() {
+    clearTimeout(this.timeoutID);
+  }
 };
-window.addEventListener('click', () => alarm.setup() );
+window.addEventListener('click', () => alarm.setup());
 ```
 
 ## Notes
@@ -82,4 +91,3 @@ exception is thrown.
 - {{domxref("setInterval()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)

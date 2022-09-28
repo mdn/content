@@ -1,6 +1,7 @@
 ---
 title: Window.pageXOffset
 slug: Web/API/Window/pageXOffset
+page-type: web-api-instance-property
 tags:
   - API
   - Alias
@@ -12,6 +13,7 @@ tags:
   - scrolling
 browser-compat: api.Window.pageXOffset
 ---
+
 {{ APIRef("CSSOM View") }}
 
 The read-only {{domxref("Window")}} property **`pageXOffset`** is an alias for [`scrollX`](/en-US/docs/Web/API/Window/scrollX).

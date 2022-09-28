@@ -118,7 +118,7 @@ In the context of the `<cite>` element, a creative work that might be cited coul
 - A written or oral statement
 - And so forth.
 
-It's worth noting that the W3C specification says that a reference to a creative work, as included within a `<cite>` element, may include the name of the work’s author. However, the WHATWG specification for `<cite>` says the opposite: that a person’s name must _never_ be included, under any circumstances.
+It's worth noting that the W3C specification says that a reference to a creative work, as included within a `<cite>` element, may include the name of the work's author. However, the WHATWG specification for `<cite>` says the opposite: that a person's name must _never_ be included, under any circumstances.
 
 To include a reference to the source of quoted material which is contained within a {{HTMLElement("blockquote")}} or {{HTMLElement("q")}} element, use the {{htmlattrxref("cite", "blockquote")}} attribute on the element.
 
@@ -132,7 +132,7 @@ Typically, browsers style the contents of a `<cite>` element in italics by defau
 
 The HTML above outputs:
 
-{{EmbedLiveSample("Example", 640, 60)}}
+{{EmbedLiveSample("Example", 640, 80)}}
 
 ## Specifications
 

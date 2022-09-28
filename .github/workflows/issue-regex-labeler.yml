@@ -1,0 +1,14 @@
+name: "Label issues by MDN URL or other regex match in issue description"
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: github/issue-labeler@v2.5
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/issue-regex-labeler.yml
+          enable-versioned-regex: 0

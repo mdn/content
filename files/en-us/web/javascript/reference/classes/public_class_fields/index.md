@@ -7,6 +7,7 @@ tags:
   - Language feature
 browser-compat: javascript.classes.public_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 Both static and instance public fields are writable, enumerable, and configurable
@@ -15,18 +16,18 @@ inheritance.
 
 ## Syntax
 
-```js
+```js-nolint
 class ClassWithInstanceField {
-  instanceField = 'instance field'
+  instanceField = 'instance field';
 }
 
 class ClassWithStaticField {
-  static staticField = 'static field'
+  static staticField = 'static field';
 }
 
 class ClassWithPublicInstanceMethod {
   publicMethod() {
-    return 'hello world'
+    return 'hello world';
   }
 }
 ```
@@ -46,10 +47,10 @@ accessed again from the class constructor.
 
 ```js
 class ClassWithStaticField {
-  static staticField = 'static field'
+  static staticField = 'static field';
 }
 
-console.log(ClassWithStaticField.staticField)
+console.log(ClassWithStaticField.staticField);
 // expected output: "static field"
 ```
 
@@ -57,11 +58,11 @@ Fields without initializers are initialized to `undefined`.
 
 ```js
 class ClassWithStaticField {
-  static staticField
+  static staticField;
 }
 
-console.assert(ClassWithStaticField.hasOwnProperty('staticField'))
-console.log(ClassWithStaticField.staticField)
+console.assert(Object.hasOwn(ClassWithStaticField, 'staticField'));
+console.log(ClassWithStaticField.staticField);
 // expected output: "undefined"
 ```
 
@@ -70,17 +71,17 @@ prototype chain.
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base field'
+  static baseStaticField = 'base field';
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = 'sub class field'
+  static subStaticField = 'sub class field';
 }
 
-console.log(SubClassWithStaticField.subStaticField)
+console.log(SubClassWithStaticField.subStaticField);
 // expected output: "sub class field"
 
-console.log(SubClassWithStaticField.baseStaticField)
+console.log(SubClassWithStaticField.baseStaticField);
 // expected output: "base field"
 ```
 
@@ -90,20 +91,20 @@ also reference it by name, and use `super` to get the superclass constructor
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base static field'
-  static anotherBaseStaticField = this.baseStaticField
+  static baseStaticField = 'base static field';
+  static anotherBaseStaticField = this.baseStaticField;
 
-  static baseStaticMethod() { return 'base static method output' }
+  static baseStaticMethod() { return 'base static method output'; }
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = super.baseStaticMethod()
+  static subStaticField = super.baseStaticMethod();
 }
 
-console.log(ClassWithStaticField.anotherBaseStaticField)
+console.log(ClassWithStaticField.anotherBaseStaticField);
 // expected output: "base static field"
 
-console.log(SubClassWithStaticField.subStaticField)
+console.log(SubClassWithStaticField.subStaticField);
 // expected output: "base static method output"
 ```
 
@@ -119,11 +120,11 @@ constructor body runs), or just after `super()` returns in a subclass.
 
 ```js
 class ClassWithInstanceField {
-  instanceField = 'instance field'
+  instanceField = 'instance field';
 }
 
-const instance = new ClassWithInstanceField()
-console.log(instance.instanceField)
+const instance = new ClassWithInstanceField();
+console.log(instance.instanceField);
 // expected output: "instance field"
 ```
 
@@ -131,26 +132,26 @@ Fields without initializers are initialized to `undefined`.
 
 ```js
 class ClassWithInstanceField {
-  instanceField
+  instanceField;
 }
 
-const instance = new ClassWithInstanceField()
-console.assert(instance.hasOwnProperty('instanceField'))
-console.log(instance.instanceField)
+const instance = new ClassWithInstanceField();
+console.assert(Object.hasOwn(instance, 'instanceField'));
+console.log(instance.instanceField);
 // expected output: "undefined"
 ```
 
 Like properties, field names may be computed.
 
 ```js
-const PREFIX = 'prefix'
+const PREFIX = 'prefix';
 
 class ClassWithComputedFieldName {
-    [`${PREFIX}Field`] = 'prefixed field'
+  [`${PREFIX}Field`] = 'prefixed field';
 }
 
-const instance = new ClassWithComputedFieldName()
-console.log(instance.prefixField)
+const instance = new ClassWithComputedFieldName();
+console.log(instance.prefixField);
 // expected output: "prefixed field"
 ```
 
@@ -160,24 +161,89 @@ the superclass prototype using `super`.
 
 ```js
 class ClassWithInstanceField {
-  baseInstanceField = 'base field'
-  anotherBaseInstanceField = this.baseInstanceField
-  baseInstanceMethod() { return 'base method output' }
+  baseInstanceField = 'base field';
+  anotherBaseInstanceField = this.baseInstanceField;
+  baseInstanceMethod() { return 'base method output'; }
 }
 
 class SubClassWithInstanceField extends ClassWithInstanceField {
-  subInstanceField = super.baseInstanceMethod()
+  subInstanceField = super.baseInstanceMethod();
 }
 
-const base = new ClassWithInstanceField()
-const sub = new SubClassWithInstanceField()
+const base = new ClassWithInstanceField();
+const sub = new SubClassWithInstanceField();
 
-console.log(base.anotherBaseInstanceField)
+console.log(base.anotherBaseInstanceField);
 // expected output: "base field"
 
-console.log(sub.subInstanceField)
+console.log(sub.subInstanceField);
 // expected output: "base method output"
 ```
+
+Because instance fields of a class are added before the respective constructor runs, you can access the fields' values within the constructor.
+
+```js
+class ClassWithInstanceField {
+  instanceField = 'instance field';
+
+  constructor() {
+    console.log(this.instanceField);
+    this.instanceField = 'new value';
+  }
+}
+
+const instance = new ClassWithInstanceField(); // Logs "instance field"
+console.log(instance.instanceField); // "new value"
+```
+
+However, because instance fields of a derived class are defined after `super()` returns, the base class's constructor does not have access to the derived class's fields.
+
+```js
+class Base {
+  constructor() {
+    console.log('Base constructor:', this.field);
+  }
+}
+
+class Derived extends Base {
+  field = 1;
+  constructor() {
+    super();
+    console.log('Derived constructor:', this.field);
+  }
+}
+
+const instance = new Derived();
+// Base constructor: undefined
+// Derived constructor: 1
+```
+
+Because class fields are added using the `[[Define]]` semantic (which is essentially {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}), field declarations in derived classes do not invoke setters in the base class. This behavior differs from using `this.field = …` in the constructor.
+
+```js
+class Base {
+  set field(val) {
+    console.log(val);
+  }
+}
+
+class DerivedWithField extends Base {
+  field = 1;
+}
+
+const instance = new DerivedWithField(); // No log
+
+class DerivedWithConstructor extends Base {
+  constructor() {
+    super();
+    this.field = 1;
+  }
+}
+
+const instance2 = new DerivedWithConstructor(); // Logs 1
+```
+
+> **Note:** Before the class fields specification was finalized with the `[[Define]]` semantic, most transpilers, including [Babel](https://babeljs.io/) and [tsc](https://www.typescriptlang.org/), transformed class fields to the `DerivedWithConstructor` form, which has caused subtle bugs after class fields were standardized.
 
 ### Public methods
 
@@ -210,12 +276,12 @@ As the name implies, public instance methods are methods available on class inst
 ```js
 class ClassWithPublicInstanceMethod {
   publicMethod() {
-    return 'hello world'
+    return 'hello world';
   }
 }
 
-const instance = new ClassWithPublicInstanceMethod()
-console.log(instance.publicMethod())
+const instance = new ClassWithPublicInstanceMethod();
+console.log(instance.publicMethod());
 // expected output: "hello world"
 ```
 
@@ -239,20 +305,20 @@ call methods from the superclass.
 
 ```js
 class BaseClass {
-  msg = 'hello world'
+  msg = 'hello world';
   basePublicMethod() {
-    return this.msg
+    return this.msg;
   }
 }
 
 class SubClass extends BaseClass {
   subPublicMethod() {
-    return super.basePublicMethod()
+    return super.basePublicMethod();
   }
 }
 
-const instance = new SubClass()
-console.log(instance.subPublicMethod())
+const instance = new SubClass();
+console.log(instance.subPublicMethod());
 // expected output: "hello world"
 ```
 
@@ -262,21 +328,21 @@ public instance getter or setter.
 
 ```js
 class ClassWithGetSet {
-  #msg = 'hello world'
+  #msg = 'hello world';
   get msg() {
-    return this.#msg
+    return this.#msg;
   }
   set msg(x) {
-    this.#msg = `hello ${x}`
+    this.#msg = `hello ${x}`;
  }
 }
 
-const instance = new ClassWithGetSet()
-console.log(instance.msg)
+const instance = new ClassWithGetSet();
+console.log(instance.msg);
 // expected output: "hello world"
 
-instance.msg = 'cake'
-console.log(instance.msg)
+instance.msg = 'cake';
+console.log(instance.msg);
 // expected output: "hello cake"
 ```
 
@@ -290,7 +356,6 @@ console.log(instance.msg)
 
 ## See also
 
-- [The
-  Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
 - [Public and private class fields](https://v8.dev/features/class-fields)
   article at the v8.dev site

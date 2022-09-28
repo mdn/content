@@ -10,24 +10,16 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toLocaleString
 ---
+
 {{JSRef}}
 
-The **`toLocaleString()`** method returns a string with a
-language sensitive representation of this date.
-
-The new `locales` and `options` arguments
-let applications specify the language whose formatting conventions should be used and
-customize the behavior of the function.
-
-In older implementations, which ignore the `locales` and
-`options` arguments, the locale used and the form of the string
-returned are entirely implementation-dependent.
+The **`toLocaleString()`** method returns a string with a language-sensitive representation of this date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
 
 {{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 toLocaleString(locales)
 toLocaleString(locales, options)
@@ -35,23 +27,29 @@ toLocaleString(locales, options)
 
 ### Parameters
 
-The `locales` and `options` arguments
-customize the behavior of the function and let applications specify the language whose
-formatting conventions should be used. In implementations which ignore the
-`locales` and `options` arguments, the
-locale used and the form of the string returned are entirely implementation-dependent.
+The `locales` and `options` arguments customize the behavior of the function and let applications specify the language whose formatting conventions should be used.
 
-See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
-constructor for details on these parameters and how to use them.
+In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), these parameters correspond exactly to the [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) constructor's parameters. Implementations without `Intl.DateTimeFormat` support are asked to ignore both parameters, making the locale used and the form of the string returned entirely implementation-dependent.
 
-The default value for each date-time component property is {{jsxref("undefined")}}.
-But if the `weekday`, `year`, `month`, and
-`day` properties are all {{jsxref("undefined")}}, then `year`,
-`month`, and `day` are assumed to be `"numeric"`.
+- `locales` {{optional_inline}}
+
+  - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) parameter of the `Intl.DateTimeFormat()` constructor.
+
+    In implementations without `Intl.DateTimeFormat` support, this parameter is ignored and the host's locale is usually used.
+
+- `options` {{optional_inline}}
+
+  - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. If `weekday`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, and `fractionalSecondDigits` are all undefined, then `year`, `month`, `day`, `hour`, `minute`, `second` will be set to `"numeric"`.
+
+    In implementations without `Intl.DateTimeFormat` support, this parameter is ignored.
+
+See the [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) for details on these parameters and how to use them.
 
 ### Return value
 
 A string representing the given date according to language-specific conventions.
+
+In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.DateTimeFormat(locales, options).format(date)`.
 
 ## Examples
 
@@ -61,7 +59,7 @@ In basic use without specifying a locale, a formatted string in the default loca
 with default options is returned.
 
 ```js
-let date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleString() without arguments depends on the
 // implementation, the default locale, and the default time zone
@@ -95,7 +93,7 @@ sure to specify that language (and possibly some fallback languages) using the
 `locales` argument:
 
 ```js
-let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Formats below assume the local time zone of the locale;
 // America/Los_Angeles for the US
@@ -133,10 +131,15 @@ The results provided by `toLocaleString()` can be customized using the
 `options` argument:
 
 ```js
-let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Request a weekday along with a long date
-let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+};
 
 console.log(date.toLocaleString('de-DE', options));
 // → "Donnerstag, 20. Dezember 2012"
@@ -171,8 +174,9 @@ For this reason, you cannot expect to be able to compare the results of
 // false in IE and Edge
 ```
 
-> **Note:** See also this [StackOverflow
-> thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) for more details and examples.
+> **Note:** See also this
+> [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
+> for more details and examples.
 
 ## Specifications
 

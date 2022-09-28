@@ -1,27 +1,24 @@
 ---
 title: LargestContentfulPaint.size
 slug: Web/API/LargestContentfulPaint/size
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - size
   - LargestContentfulPaint
+  - Experimental
 browser-compat: api.LargestContentfulPaint.size
 ---
-{{DefaultAPISidebar("Largest Contentful Paint API")}}
+
+{{APIRef("Largest Contentful Paint API")}}{{SeeCompatTable}}
 
 The **`size`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the intrinsic size of the element that is the largest contentful paint.
 
 The `size` of the element is the `width` times `height` of the {{domxref("DOMRectReadOnly","rectangle")}} that this element creates on the screen.
 
-## Syntax
-
-```js
-let size = LargestContentfulPaint.size;
-```
-
-### Value
+## Value
 
 An integer representing the width times height of the element.
 

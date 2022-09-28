@@ -1,6 +1,7 @@
 ---
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Window.scrollTo
 ---
+
 {{APIRef}}
 
 **`Window.scrollTo()`** scrolls to a particular set of
@@ -16,9 +18,9 @@ coordinates in the document.
 
 ## Syntax
 
-```js
-window.scrollTo(x-coord, y-coord)
-window.scrollTo(options)
+```js-nolint
+scrollTo(x-coord, y-coord)
+scrollTo(options)
 ```
 
 ### Parameters
@@ -38,6 +40,10 @@ window.scrollTo(options)
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
       - : Specifies whether the scrolling should animate smoothly (`smooth`), or happen instantly in a single jump (`auto`, the default value).
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

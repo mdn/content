@@ -14,6 +14,7 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.getAllInWindow
 ---
+
 {{AddonSidebar}}
 
 > **Warning:** This method has been deprecated. Use {{WebExtAPIRef("tabs.query", "tabs.query({currentWindow: true})")}} instead.
@@ -24,15 +25,15 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var getting = browser.tabs.getAllInWindow(
+```js-nolint
+let getting = browser.tabs.getAllInWindow(
   windowId            // optional integer
 )
 ```
 
 ### Parameters
 
-- `windowId`{{Optional_Inline}}
+- `windowId` {{optional_inline}}
   - : `integer`. Defaults to the current window.
 
 ### Return value
@@ -45,11 +46,12 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-getAllInWindow) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-getAllInWindow) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -76,4 +78,4 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

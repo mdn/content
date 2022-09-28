@@ -1,47 +1,47 @@
 ---
-title: 'SVGAnimationElement: repeatEvent event'
+title: "SVGAnimationElement: repeatEvent event"
 slug: Web/API/SVGAnimationElement/repeatEvent_event
+page-type: web-api-event
 tags:
   - API
   - Reference
   - SMIL
   - SVG animations
   - SVGAnimationElement
-  - events
+  - Event
 browser-compat: api.SVGAnimationElement.repeatEvent_event
 ---
+
 {{APIRef("SVG")}}
 
-The `repeatEvent` event of the {{domxref("SVGAnimationElement")}} interface is fired when the element's local timeline repeats. It will be fired each time the element repeats, after the first iteration.
+The **`repeatEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when the element's local timeline repeats. It will be fired each time the element repeats, after the first iteration.
 
 > **Note:** Associated with the `repeatEvent` event is an integer that indicates which repeat iteration is beginning; this can be found in the `detail` property of the event object. The value is a 0-based integer, but the repeat event is not raised for the first iteration and so the observed values will be >= 1. This is supported in Firefox, but not in Chrome.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("TimeEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/SVGAnimationElement/onrepeat"
-            >onrepeat</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('repeatEvent', (event) => { });
+
+onrepeat = (event) => { };
+```
+
+## Event type
+
+A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("TimeEvent")}}
+
+## Event properties
+
+- {{domxref("TimeEvent.detail")}} {{ReadOnlyInline}}
+  - : A `long` that specifies some detail information about the Event, depending on the type of the event. For this event type, indicates the repeat number for the animation.
+- {{domxref("TimeEvent.view")}} {{ReadOnlyInline}}
+  - : A {{domxref("WindowProxy")}} that identifies the Window from which the event was generated.
 
 ## Examples
 
@@ -51,17 +51,13 @@ The `repeatEvent` event of the {{domxref("SVGAnimationElement")}} interface is f
 <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
   <title>SVG SMIL Animate with Path</title>
   <circle cx="0" cy="50" r="50" fill="blue" stroke="black" stroke-width="1">
-    <animateMotion
-       path="M 0 0 H 300 Z"
-       dur="5s" repeatCount="indefinite" />
+    <animateMotion path="M 0 0 H 300 Z" dur="5s" repeatCount="indefinite" />
   </circle>
 </svg>
 
-<hr>
+<hr />
 
-<ul>
-
-</ul>
+<ul></ul>
 ```
 
 ```css
@@ -87,8 +83,8 @@ animateElem.addEventListener('beginEvent', () => {
 animateElem.addEventListener('repeatEvent', (e) => {
   let listItem = document.createElement('li');
   let msg = 'repeatEvent fired';
-  if(e.detail) {
-    msg += '; repeat number: ' + e.detail;
+  if (e.detail) {
+    msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;
   list.appendChild(listItem);
@@ -99,7 +95,7 @@ animateElem.addEventListener('repeatEvent', (e) => {
 
 ### Event handler property equivalent
 
-Note that you can also create an event listener for the `repeat` event using the [`onrepeat`](/en-US/docs/Web/API/SVGAnimationElement/onrepeat) event handler property:
+Note that you can also create an event listener for the `repeat` event using the `onrepeat` event handler property:
 
 ```js
 animateElem.onrepeat = () => {
@@ -117,6 +113,6 @@ animateElem.onrepeat = () => {
 
 ## See also
 
-- [SVG animation with SMIL](/en-US/docs/SVG/SVG_animation_with_SMIL)
-- {{event("beginEvent")}}
-- {{event("endEvent")}}
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- {{domxref("SVGAnimationElement.beginEvent_event", "beginEvent")}} event
+- {{domxref("SVGAnimationElement.endEvent_event", "endEvent")}} event

@@ -1,15 +1,16 @@
 ---
 title: Headers.set()
 slug: Web/API/Headers/set
+page-type: web-api-instance-method
 tags:
   - API
-  - Experimental
   - Fetch
   - Method
   - Reference
   - set
 browser-compat: api.Headers.set
 ---
+
 {{APIRef("Fetch")}}
 
 The **`set()`** method of the {{domxref("Headers")}} interface
@@ -28,8 +29,8 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 
 ## Syntax
 
-```js
-myHeaders.set(name, value);
+```js-nolint
+set(name, value)
 ```
 
 ### Parameters
@@ -40,16 +41,16 @@ myHeaders.set(name, value);
 - `value`
   - : The new value you want to set.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 ```
 
 You could add a header to this using {{domxref("Headers.append")}}, then set a new

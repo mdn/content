@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `translate` function evaluates a string and a set of characters to translate and returns the translated string.
@@ -17,12 +18,12 @@ translate(string, abc, XYZ)
 
 ### Arguments
 
-- _`string`_
+- `string`
   - : The string to evaluate.
-- _`abc`_
+- `abc`
   - : The string of characters that will be replaced.
-- _`XYZ`_
-  - : The string of characters used for replacement. The first character in _`XYZ`_ will replace every occurrence of the first character in _`abc`_ that appears in _`string`_.
+- `XYZ`
+  - : The string of characters used for replacement. The first character in `XYZ` will replace every occurrence of the first character in `abc` that appears in `string`.
 
 ### Returns
 
@@ -46,7 +47,7 @@ Output
 THE QUICK BROWN FOX.
 ```
 
-- If *`abc`* is longer than *`XYZ`*, then every occurrence of characters in *`abc`* that do not have a corresponding character in *`XYZ`* will be removed.
+- If `abc` is longer than `XYZ`, then every occurrence of characters in `abc` that do not have a corresponding character in `XYZ` will be removed.
 
 Example
 
@@ -57,14 +58,14 @@ Example
 Output
 
 ```
-The quick red fdx.
+The quick red fox.
 ```
 
-- If *`XYZ`* contains more characters than *`abc`*, the extra characters are ignored.
+- If `XYZ` contains more characters than `abc`, the extra characters are ignored.
 
 ### Defined
 
-[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-translate)
+[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-translate)
 
 ### Gecko support
 

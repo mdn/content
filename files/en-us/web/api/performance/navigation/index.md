@@ -1,6 +1,7 @@
 ---
 title: Performance.navigation
 slug: Web/API/Performance/navigation
+page-type: web-api-instance-property
 tags:
   - API
   - Backwards compatibility
@@ -13,6 +14,7 @@ tags:
   - legacy
 browser-compat: api.Performance.navigation
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
 The legacy
@@ -26,11 +28,9 @@ This property is not available in workers.
 > **Warning:** This property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the
 > {{domxref("PerformanceNavigationTiming")}} interface instead.
 
-## Syntax
+## Value
 
-```js
-navObject = performance.navigation;
-```
+A {{domxref("PerformanceNavigation")}} object.
 
 ## Specifications
 

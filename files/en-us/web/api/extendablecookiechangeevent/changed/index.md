@@ -1,6 +1,7 @@
 ---
 title: ExtendableCookieChangeEvent.changed
 slug: Web/API/ExtendableCookieChangeEvent/changed
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,28 +10,23 @@ tags:
   - ExtendableCookieChangeEvent
 browser-compat: api.ExtendableCookieChangeEvent.changed
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 The **`changed`** read-only property of the {{domxref("ExtendableCookieChangeEvent")}} interface returns any cookies that have been changed by the given `ExtendableCookieChangeEvent` instance.
 
-## Syntax
-
-```js
-var array = ExtendableCookieChangeEvent.changed;
-```
-
-### Value
+## Value
 
 An array of objects containing the changed cookie(s). Each object contains the following properties:
 
 - `name`
-  - : A {{domxref("USVString")}} containing the name of the cookie.
+  - : A string containing the name of the cookie.
 - `value`
-  - : A {{domxref("USVString")}} containing the value of the cookie.
+  - : A string containing the value of the cookie.
 - `domain`
-  - : A {{domxref("USVString")}} containing the domain of the cookie.
+  - : A string containing the domain of the cookie.
 - `path`
-  - : A {{domxref("USVString")}} containing the path of the cookie.
+  - : A string containing the path of the cookie.
 - `expires`
   - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
 - `secure`

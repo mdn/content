@@ -16,6 +16,7 @@ tags:
   - grid framework
   - grid system
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 
 CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and columns. It has many features that make building complex layouts straightforward. This article will explain all you need to know to get started with page layout.
@@ -49,7 +50,7 @@ A grid is a collection of horizontal and vertical lines creating a pattern again
 
 A grid will typically have **columns**, **rows**, and then gaps between each row and column. The gaps are commonly referred to as **gutters**.
 
-![](grid.png)
+![CSS grid with parts labelled as rows, columns and gutters. Rows are the horizontal segments of the grid and Columns are the vertical segments of the grid. The space between two rows is called as 'row gutter' and the space between 2 columns is called as 'column gutter'.](grid.png)
 
 ## Creating your grid in CSS
 
@@ -61,13 +62,13 @@ The following video provides a nice visual explanation of using CSS Grid:
 
 ### Defining a grid
 
-As a starting point, download and open [the starting point file](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html) in your text editor and browser (you can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)). You will see an example with a container, which has some child items. These display in normal flow by default, so the boxes display one below the other. We'll be working with this file for the first part of this lesson, making changes to see how its grid behaves.
+As a starting point, download and open [the starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/0-starting-point.html) in your text editor and browser (you can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)). You will see an example with a container, which has some child items. These display in normal flow by default, so the boxes display one below the other. We'll be working with this file for the first part of this lesson, making changes to see how its grid behaves.
 
 To define a grid we use the `grid` value of the {{cssxref("display")}} property. As with Flexbox, this enables Grid Layout; all of the direct children of the container become grid items. Add this to the CSS inside your file:
 
 ```css
 .container {
-    display: grid;
+  display: grid;
 }
 ```
 
@@ -77,8 +78,8 @@ To see something that looks more grid-like, we'll need to add some columns to th
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
 }
 ```
 
@@ -89,26 +90,26 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
 ```html hidden
 <div class="container">
- <div>One</div>
- <div>Two</div>
- <div>Three</div>
- <div>Four</div>
- <div>Five</div>
- <div>Six</div>
- <div>Seven</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
 </div>
 ```
 
@@ -122,8 +123,8 @@ Change your track listing to the following definition, creating three `1fr` trac
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 ```
 
@@ -131,8 +132,8 @@ You should now see that you have flexible tracks. The `fr` unit distributes spac
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 }
 ```
 
@@ -143,14 +144,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
@@ -176,9 +177,9 @@ To create gaps between tracks we use the properties {{cssxref("column-gap")}} fo
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
 }
 ```
 
@@ -189,16 +190,15 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
-
 ```
 
 ```html hidden
@@ -219,10 +219,10 @@ body {
 >
 > ```css
 > .container {
->     display: grid;
->     grid-template-columns: 2fr 1fr 1fr;
->     grid-gap: 20px;
->     gap: 20px;
+>   display: grid;
+>   grid-template-columns: 2fr 1fr 1fr;
+>   grid-gap: 20px;
+>   gap: 20px;
 > }
 > ```
 
@@ -233,9 +233,9 @@ Change your track listing to the following:
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 ```
 
@@ -252,14 +252,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
@@ -284,20 +284,20 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('The_implicit_and_explicit_grid', '100%', 400) }}
+{{ EmbedLiveSample('The_implicit_and_explicit_grid', '100%', 500) }}
 
 ### The minmax() function
 
-Our 100-pixel tall tracks won’t be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are _at least_ 100 pixels tall and can still expand if more content becomes added. A fairly basic fact about the web is that you never really know how tall something is going to be — additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.
+Our 100-pixel tall tracks won't be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are _at least_ 100 pixels tall and can still expand if more content becomes added. A fairly basic fact about the web is that you never really know how tall something is going to be — additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.
 
-The {{cssxref("minmax()")}} function lets us set a minimum and maximum size for a track, for example, `minmax(100px, auto)`. The minimum size is 100 pixels, but the maximum is `auto`, which will expand to accommodate more content. Try changing `grid-auto-rows` to use a minmax value:
+The {{cssxref("minmax", "minmax()")}} function lets us set a minimum and maximum size for a track, for example, `minmax(100px, auto)`. The minimum size is 100 pixels, but the maximum is `auto`, which will expand to accommodate more content. Try changing `grid-auto-rows` to use a minmax value:
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 20px;
 }
 ```
 
@@ -305,7 +305,7 @@ If you add extra content, you'll see that the track expands to allow it to fit. 
 
 ### As many columns as will fit
 
-We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat()")}} function, but instead of passing in a number, pass in the keyword `auto-fill`. For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
+We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax", "minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat", "repeat()")}} function, but instead of passing in a number, pass in the keyword `auto-fill`. For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
 
 Try this in your file now using the CSS below:
 
@@ -314,14 +314,14 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
@@ -368,7 +368,7 @@ These properties can all have a line number as their value. You can also use the
 
 These let you specify the start and end lines at once, separated by a forward slash `/`.
 
-[Download this file as a starting point](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/8-placement-starting-point.html) or [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html). It has a defined grid and a simple article outlined. You can see that _auto-placement_ is placing each item into its own cell on the grid.
+[Download this file as a starting point](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/8-placement-starting-point.html) or [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html). It has a defined grid and a simple article outlined. You can see that _auto-placement_ is placing each item into its own cell on the grid.
 
 Let's instead arrange all of the elements for our site by using the grid lines. Add the following rules to the bottom of your CSS:
 
@@ -395,25 +395,25 @@ footer {
 ```
 
 ```css hidden
-  body {
-    width: 90%;
-    max-width: 900px;
-    margin: 2em auto;
-    font: .9em/1.2 Arial, Helvetica, sans-serif;
+body {
+  width: 90%;
+  max-width: 900px;
+  margin: 2em auto;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
@@ -426,21 +426,42 @@ aside {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
   <aside>
     <h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
 {{ EmbedLiveSample('Line-based_placement', '100%', 600) }}
 
-> **Note:** you can also use the value `-1` to target the end column or row line, then count inwards from the end using negative values. Note also that lines count always from the edges of the explicit grid, not the [implicit grid](/en-US/docs/Glossary/Grid).
+> **Note:** You can also use the value `-1` to target the end column or row line, then count inwards from the end using negative values. Note also that lines count always from the edges of the explicit grid, not the [implicit grid](/en-US/docs/Glossary/Grid).
 
 ## Positioning with grid-template-areas
 
@@ -452,9 +473,9 @@ Remove the line-based positioning from the last example (or re-download the file
 .container {
   display: grid;
   grid-template-areas:
-      "header header"
-      "sidebar content"
-      "footer footer";
+    "header header"
+    "sidebar content"
+    "footer footer";
   grid-template-columns: 1fr 3fr;
   gap: 20px;
 }
@@ -483,15 +504,15 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
@@ -504,14 +525,36 @@ aside {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
@@ -522,16 +565,16 @@ The rules for `grid-template-areas` are as follows:
 - You need to have every cell of the grid filled.
 - To span across two cells, repeat the name.
 - To leave a cell empty, use a `.` (period).
-- Areas must be rectangular — for example, you can’t have an L-shaped area.
+- Areas must be rectangular — for example, you can't have an L-shaped area.
 - Areas can't be repeated in different locations.
 
 You can play around with our layout, changing the footer to only sit underneath the article and the sidebar to span all the way down. This is a very nice way to describe a layout because it's clear just from looking at the CSS to know exactly what's happening.
 
 ## Grid frameworks in CSS Grid
 
-Grid "frameworks" tend to be based around 12 or 16-column grids. With CSS Grid, you don’t need any third party tool to give you such a framework — it's already there in the spec.
+Grid "frameworks" tend to be based around 12 or 16-column grids. With CSS Grid, you don't need any third party tool to give you such a framework — it's already there in the spec.
 
-[Download the starting point file](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/11-grid-system-starting-point.html). This has a container with a 12-column grid defined and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
+[Download the starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/11-grid-system-starting-point.html). This has a container with a 12-column grid defined and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
 
 ```css
 header {
@@ -560,12 +603,12 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -573,8 +616,8 @@ header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
@@ -587,26 +630,48 @@ aside {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
-{{ EmbedLiveSample('A_CSS_Grid_grid_framework', '100%', 600) }}
+{{ EmbedLiveSample('Grid frameworks in CSS Grid', '100%', 600) }}
 
-If you use the [Firefox Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) to overlay the grid lines on your design, you can see how our 12-column grid works.
+If you use the [Firefox Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) to overlay the grid lines on your design, you can see how our 12-column grid works.
 
 ![A 12 column grid overlaid on our design.](learn-grids-inspector.png)
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grids](/en-US/docs/Learn/CSS/CSS_layout/Grid_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Grid](/en-US/docs/Learn/CSS/CSS_layout/Grid_skills).
 
 ## Summary
 
@@ -615,7 +680,9 @@ In this overview, we've toured the main features of CSS Grid Layout. You should 
 ## See also
 
 - [CSS Grid guides](/en-US/docs/Web/CSS/CSS_Grid_Layout#guides)
-- [CSS Grid Inspector: Examine grid layouts](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- [CSS Grid Inspector: Examine grid layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [CSS-Tricks Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) — an article explaining everything about Grid in a visually appealing way
+- [Grid Garden](https://cssgridgarden.com/) — an educational game to learn and better understand the basics of Grid
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 
@@ -624,7 +691,7 @@ In this overview, we've toured the main features of CSS Grid Layout. You should 
 - [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
 - [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
 - [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- **Grid**
+- [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
 - [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
 - [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 - [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
@@ -632,4 +699,4 @@ In this overview, we've toured the main features of CSS Grid Layout. You should 
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 - [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

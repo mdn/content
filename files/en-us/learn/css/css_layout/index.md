@@ -18,6 +18,7 @@ tags:
   - float
   - table
 ---
+
 {{LearnSidebar}}
 
 At this point, we've looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to correctly arrange your boxes in relation to the viewport as well as to one another. We've covered the necessary prerequisites, so let's dive deep into CSS layout, looking at such various features as: different display settings, positioning, modern layout tools like flexbox and CSS grid, and some of the legacy techniques you might still want to know about.
@@ -35,9 +36,9 @@ At this point, we've looked at CSS fundamentals, how to style text, and how to s
 
 Before starting this module, you should already:
 
-1.  Have basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
-2.  Be comfortable with CSS fundamentals, as discussed in [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps).
-3.  Understand how to [style boxes](/en-US/docs/Learn/CSS/Building_blocks).
+1. Have basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
+2. Be comfortable with CSS fundamentals, as discussed in [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps).
+3. Understand how to [style boxes](/en-US/docs/Learn/CSS/Building_blocks).
 
 > **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
@@ -79,3 +80,5 @@ The following assessment will test your understanding of the CSS layout methods 
 
 - [Practical positioning examples](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
   - : This article shows how to build some real world examples to illustrate what kinds of things you can do with positioning.
+- [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook)
+  - : The CSS layout cookbook aims to bring together recipes for common layout patterns, things you might need to implement in your sites. In addition to providing code you can use as a starting point in your projects, these recipes highlight the different ways layout specifications can be used and the choices you can make as a developer.

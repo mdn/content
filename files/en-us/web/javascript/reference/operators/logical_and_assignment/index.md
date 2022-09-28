@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_and_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The logical AND assignment (`x &&= y`) operator only assigns if
@@ -18,7 +19,7 @@ The logical AND assignment (`x &&= y`) operator only assigns if
 
 ## Syntax
 
-```js
+```js-nolint
 expr1 &&= expr2
 ```
 
@@ -26,9 +27,8 @@ expr1 &&= expr2
 
 ### Short-circuit evaluation
 
-The [logical
-AND](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) operator is evaluated left to right, it is tested for possible short-circuit
-evaluation using the following rule:
+The [logical AND](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) operator is evaluated left to right,
+it is tested for possible short-circuit evaluation using the following rule:
 
 `(some falsy expression) && expr` is short-circuit evaluated to the
 falsy expression;
@@ -74,11 +74,8 @@ y &&= 0; // 0
 
 ## See also
 
-- [Logical AND
-  (&&)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [The
-  nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
-- [Bitwise
-  AND assignment (`&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+- [Logical AND (&&)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
+- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Bitwise AND assignment (`&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

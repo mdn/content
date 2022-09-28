@@ -8,6 +8,7 @@ tags:
   - User-agent
 browser-compat: http.headers.User-Agent
 ---
+
 {{HTTPSidebar}}
 
 The **User-Agent** {{Glossary("request header")}} is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting {{Glossary("user agent")}}.
@@ -29,13 +30,13 @@ The **User-Agent** {{Glossary("request header")}} is a characteristic string tha
 
 ## Syntax
 
-```
+```http
 User-Agent: <product> / <product-version> <comment>
 ```
 
 Common format for web browsers:
 
-```
+```http
 User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <extensions>
 ```
 
@@ -71,7 +72,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 
 ## Chrome UA string
 
-The Chrome (or Chromium/Blink-based engines) user agent string is similar to Firefox’s. For compatibility, it adds strings like `KHTML, like Gecko` and `Safari`.
+The Chrome (or Chromium/Blink-based engines) user agent string is similar to Firefox's. For compatibility, it adds strings like `KHTML, like Gecko` and `Safari`.
 
 ### Examples
 

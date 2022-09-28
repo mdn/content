@@ -1,6 +1,7 @@
 ---
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -10,28 +11,23 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.offsetTop
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetTop`** read-only property returns the
 distance of the outer border of the current element relative to the inner border of
-the top of the {{domxref("HTMLelement.offsetParent","offsetParent")}} node.
+the top of the {{domxref("HTMLelement.offsetParent","offsetParent")}}, the _closest positioned_
+ancestor element.
 
-## Syntax
+## Value
 
-```js
-topPos = element.offsetTop;
-```
+A number.
 
-### Parameters
-
-- `topPos` is the number of pixels from the top of the *closest
-  relatively positioned* parent element.
-
-## Example
+## Examples
 
 ```js
-var d = document.getElementById("div1");
-var topPos = d.offsetTop;
+const d = document.getElementById("div1");
+const topPos = d.offsetTop;
 
 if (topPos > 10) {
   // object offset is more

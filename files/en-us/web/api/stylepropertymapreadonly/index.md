@@ -1,6 +1,7 @@
 ---
 title: StylePropertyMapReadOnly
 slug: Web/API/StylePropertyMapReadOnly
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -11,30 +12,31 @@ tags:
   - StylePropertyMapReadOnly
 browser-compat: api.StylePropertyMapReadOnly
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_Object_Model_API) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
+The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
 
 ## Properties
 
-- {{domxref('StylePropertyMapReadOnly.size')}}
-  - : Returns an unsinged long integer containing the size of the `StylePropertyMapReadOnly` object.
+- {{domxref('StylePropertyMapReadOnly.size')}} {{Experimental_Inline}}
+  - : Returns an unsigned long integer containing the size of the `StylePropertyMapReadOnly` object.
 
 ## Methods
 
-- {{domxref('StylePropertyMapReadOnly.entries()')}}
+- {{domxref('StylePropertyMapReadOnly.entries()')}} {{Experimental_Inline}}
   - : Returns an array of a given object's own enumerable property `[key, value]` pairs, in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
-- {{domxref('StylePropertyMapReadOnly.forEach()')}}
+- {{domxref('StylePropertyMapReadOnly.forEach()')}} {{Experimental_Inline}}
   - : Executes a provided function once for each element of `StylePropertyMapReadOnly`.
-- {{domxref('StylePropertyMapReadOnly.get()')}}
+- {{domxref('StylePropertyMapReadOnly.get()')}} {{Experimental_Inline}}
   - : Returns the value of the specified property.
-- {{domxref('StylePropertyMapReadOnly.getAll()')}}
+- {{domxref('StylePropertyMapReadOnly.getAll()')}} {{Experimental_Inline}}
   - : Returns an array of {{domxref("CSSStyleValue")}} objects containing the values for the provided property.
-- {{domxref('StylePropertyMapReadOnly.has()')}}
+- {{domxref('StylePropertyMapReadOnly.has()')}} {{Experimental_Inline}}
   - : Indicates whether the specified property is in the `StylePropertyMapReadOnly` object.
-- {{domxref('StylePropertyMapReadOnly.keys()')}}
+- {{domxref('StylePropertyMapReadOnly.keys()')}} {{Experimental_Inline}}
   - : Returns a new _array iterator_ containing the keys for each item in `StylePropertyMapReadOnly`.
-- {{domxref('StylePropertyMapReadOnly.values()')}}
+- {{domxref('StylePropertyMapReadOnly.values()')}} {{Experimental_Inline}}
   - : Returns a new _array iterator_ containing the values for each index in the `StylePropertyMapReadOnly` object.
 
 ## Examples
@@ -43,8 +45,8 @@ We have to have an element to observe:
 
 ```html
 <p>
-   This is a paragraph with some text. We can add some CSS, or not. The
-   style map will include all the default and inherited CSS property values.
+  This is a paragraph with some text. We can add some CSS, or not. The style map
+  will include all the default and inherited CSS property values.
 </p>
 <dl id="output"></dl>
 ```
@@ -53,10 +55,10 @@ We add a touch of CSS with a custom property to better demonstrate the output:
 
 ```css
 p {
-   --someVariable: 1.6em;
-   --someOtherVariable: translateX(33vw);
-   --anotherVariable: 42;
-   line-height: var(--someVariable);
+  --someVariable: 1.6em;
+  --someOtherVariable: translateX(33vw);
+  --anotherVariable: 42;
+  line-height: var(--someVariable);
 }
 ```
 

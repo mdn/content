@@ -4,13 +4,14 @@ slug: Web/CSS/CSS_Motion_Path
 tags:
   - CSS
   - CSS Motion Path
-  - Experimental
   - Guide
   - Motion Path
   - Overview
   - Reference
+browser-compat: css.properties.offset-path
 ---
-{{CSSRef}}{{SeeCompatTable}}
+
+{{CSSRef}}
 
 **Motion Path** is a CSS module that allows authors to animate any graphical object along a custom path.
 
@@ -24,7 +25,7 @@ The idea is that when you want to animate an element moving along a path, you pr
 
 ```css
 #motion-demo {
-  offset-path: path('M20,20 C20,100 200,0 200,100');
+  offset-path: path("M20,20 C20,100 200,0 200,100");
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
   height: 40px;
@@ -56,12 +57,8 @@ The idea is that when you want to animate an element moving along a path, you pr
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment             |
-| ------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('Motion Path Level 1')}} | {{Spec2('Motion Path Level 1')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### offset property
-
-{{Compat("css.properties.offset-path")}}
+{{Compat}}

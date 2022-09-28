@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.getParameter()
 slug: Web/API/WebGLRenderingContext/getParameter
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getParameter()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a value for the passed
@@ -16,8 +18,8 @@ parameter name.
 
 ## Syntax
 
-```js
-any gl.getParameter(pname);
+```js-nolint
+getParameter(pname)
 ```
 
 ### Parameters
@@ -416,7 +418,7 @@ You can query the following `pname` parameters when using a
     </tr>
     <tr>
       <td><code>gl.RENDERER</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td></td>
     </tr>
     <tr>
@@ -451,7 +453,7 @@ You can query the following `pname` parameters when using a
     </tr>
     <tr>
       <td><code>gl.SHADING_LANGUAGE_VERSION</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td></td>
     </tr>
     <tr>
@@ -576,12 +578,12 @@ You can query the following `pname` parameters when using a
     </tr>
     <tr>
       <td><code>gl.VENDOR</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td></td>
     </tr>
     <tr>
       <td><code>gl.VERSION</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>string</td>
       <td></td>
     </tr>
     <tr>

@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 The **`parseFloat()`** function parses
@@ -17,17 +18,14 @@ point number.
 
 ## Syntax
 
-```js
+```js-nolint
 parseFloat(string)
 ```
 
 ### Parameters
 
 - `string`
-  - : The value to parse. If this argument is not a string, then it is converted to one
-    using the
-    [`ToString`](https://tc39.es/ecma262/#sec-tostring) abstract
-    operation. Leading {{glossary("whitespace")}} in this argument is ignored.
+  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading {{glossary("whitespace")}} in this argument is ignored.
 
 ### Return value
 
@@ -35,6 +33,8 @@ A floating point number parsed from the given `string`.
 
 Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted to a
 number.
+
+> **Note:** JavaScript does not have the distinction of "floating point numbers" and "integers" on the language level. [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) and `parseFloat()` only differ in their parsing behavior, but not necessarily their return values. For example, `parseInt("42")` and `parseFloat("42")` would return the same value: a {{jsxref("Number")}} 42.
 
 ## Description
 
@@ -47,10 +47,11 @@ number.
   ignoring the invalid character and characters following it.
 - A _second_ decimal point also stops parsing (characters up to that point
   will still be parsed).
-- Leading and trailing spaces in the argument are ignored.
-- If the argument’s first character can’t be converted to a number (it’s not any of
+- Leading spaces in the argument are ignored.
+- If the argument's first character can't be converted to a number (it's not any of
   the above characters), `parseFloat` returns {{jsxref("NaN")}}.
-- `parseFloat` can also parse and return {{jsxref("Infinity")}}.
+- `parseFloat()` can also parse and return {{jsxref("Infinity")}} or `-Infinity` if the string starts with `"Infinity"` or `"-Infinity"` preceded by none or more white spaces.
+- For numbers outside the `-1.7976931348623158e+308 - 1.7976931348623158e+308` range `-Infinity` or `Infinity` is returned.
 - `parseFloat` converts {{jsxref("BigInt")}} syntax to {{jsxref("Number", "Numbers")}}, losing precision. This happens because the trailing `n`
   character is discarded.
 
@@ -58,7 +59,7 @@ Consider {{jsxref("Number", "Number(value)")}} for stricter parsing, which conve
 {{jsxref("NaN")}} for arguments with invalid characters anywhere.
 
 `parseFloat` will parse non-string objects if they have a
-{{jsxref("Object.toString", "toString")}} or {{jsxref("Object.valueOf", "valueOf")}}
+{{jsxref("Object/toString", "toString")}} or {{jsxref("Object/valueOf", "valueOf")}}
 method. The returned value is the same as if `parseFloat` had been called
 on the result of those methods.
 
@@ -75,7 +76,7 @@ parseFloat('  3.14  ');
 parseFloat('314e-2');
 parseFloat('0.0314E+2');
 parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat({ toString() { return "3.14" } });
 ```
 
 ### `parseFloat` returning `NaN`
@@ -86,7 +87,16 @@ The following example returns `NaN`:
 parseFloat('FF2');
 ```
 
-### `parseFloat` and `BigInt`
+### Returning infinity
+
+Infinity values are returned when the number is outside the double-precision 64-bit IEEE 754-2019 format range:
+
+```js
+parseFloat('1.7976931348623159e+308');  //  Infinity
+parseFloat('-1.7976931348623159e+308'); // -Infinity
+```
+
+### Interaction with BigInt values
 
 The following examples both return `900719925474099300`, losing precision as
 the integer is too large to be represented as a float:
@@ -109,5 +119,4 @@ parseFloat('900719925474099267n');
 - {{jsxref("parseInt", "parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("Number.prototype.toFixed()")}}

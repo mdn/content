@@ -14,14 +14,18 @@ tags:
   - custom elements
   - shadow dom
   - slot
+browser-compat:
+  - html.elements.template
+  - api.ShadowRoot
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Web Components is a suite of different technologies allowing you to create reusable custom elements — with their functionality encapsulated away from the rest of your code — and utilize them in your web apps.
 
 ## Concepts and usage
 
-As developers, we all know that reusing code as much as possible is a good idea. This has traditionally not been so easy for custom markup structures — think of the complex HTML (and associated style and script) you've sometimes had to write to render custom UI controls, and how using them multiple times can turn your page into a mess if you are not careful.
+As developers, we all know that reusing code as much as possible is a good idea. This has traditionally not been so easy for custom markup structures — think of the complex HTML (and associated style and script) you've sometimes had to write to render custom UI controls, and how using them multiple times can turn your page into a mess if you are not careful.
 
 Web Components aims to solve such problems — it consists of three main technologies, which can be used together to create versatile custom elements with encapsulated functionality that can be reused wherever you like without fear of code collisions.
 
@@ -31,11 +35,11 @@ Web Components aims to solve such problems — it consists of three main technol
 
 The basic approach for implementing a web component generally looks something like this:
 
-1.  Create a class in which you specify your web component functionality, using the ECMAScript 2015 class syntax (see [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) for more information).
-2.  Register your new custom element using the {{domxref("CustomElementRegistry.define()")}} method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from.
-3.  If required, attach a shadow DOM to the custom element using {{domxref("Element.attachShadow()")}} method. Add child elements, event listeners, etc., to the shadow DOM using regular DOM methods.
-4.  If required, define an HTML template using {{htmlelement("template")}} and {{htmlelement("slot")}}. Again use regular DOM methods to clone the template and attach it to your shadow DOM.
-5.  Use your custom element wherever you like on your page, just like you would any regular HTML element.
+1. Create a class in which you specify your web component functionality, using the [class](/en-US/docs/Web/JavaScript/Reference/Classes) syntax.
+2. Register your new custom element using the {{domxref("CustomElementRegistry.define()")}} method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from.
+3. If required, attach a shadow DOM to the custom element using {{domxref("Element.attachShadow()")}} method. Add child elements, event listeners, etc., to the shadow DOM using regular DOM methods.
+4. If required, define an HTML template using {{htmlelement("template")}} and {{htmlelement("slot")}}. Again use regular DOM methods to clone the template and attach it to your shadow DOM.
+5. Use your custom element wherever you like on your page, just like you would any regular HTML element.
 
 ## Tutorials
 
@@ -67,7 +71,7 @@ The basic approach for implementing a web component generally looks something li
 
   - : The following extensions are defined:
 
-    - The {{htmlattrxref("is")}} global HTML attribute: Allows you to specify that a standard HTML element should behave like a registered custom built-in element.
+    - The [`is`](/en-US/docs/Web/HTML/Global_attributes/is) global HTML attribute: Allows you to specify that a standard HTML element should behave like a registered custom built-in element.
     - The "is" option of the {{domxref("Document.createElement()")}} method: Allows you to create an instance of a standard HTML element that behaves like a given registered custom built-in element.
 
 - CSS pseudo-classes
@@ -76,8 +80,8 @@ The basic approach for implementing a web component generally looks something li
 
     - {{cssxref(":defined")}}: Matches any element that is defined, including built in elements and custom elements defined with `CustomElementRegistry.define()`).
     - {{cssxref(":host")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside.
-    - {{cssxref(":host()")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.
-    - {{cssxref(":host-context()")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
+    - {{cssxref(":host", ":host()")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host.
+    - {{cssxref(":host-context", ":host-context()")}}: Selects the shadow host of the [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
 
 - CSS pseudo-elements
 
@@ -108,7 +112,7 @@ The basic approach for implementing a web component generally looks something li
   - : Extensions to the `Event` interface related to shadow DOM:
 
     - {{domxref("Event.composed")}}: Returns `true` if the event will propagate across the shadow DOM boundary into the standard DOM, otherwise `false`.
-    - {{domxref("Event.composedPath")}}: Returns the event’s path (objects on which listeners will be invoked). This does not include nodes in shadow trees if the shadow root was created with {{domxref("ShadowRoot.mode")}} closed.
+    - {{domxref("Event.composedPath")}}: Returns the event's path (objects on which listeners will be invoked). This does not include nodes in shadow trees if the shadow root was created with {{domxref("ShadowRoot.mode")}} closed.
 
 ### HTML templates
 
@@ -143,30 +147,19 @@ We are building up a number of examples in our [web-components-examples](https:/
 
 ## Specifications
 
-### The `template` element and custom elements
-
-{{Specifications("html.elements.template")}}
-
-### The shadow DOM
-
-{{Specifications("api.ShadowRoot")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-In general:
-
-- Web components are supported by default in Firefox (version 63), Chrome, Opera, and Edge (version 79).
-- Safari supports a number of web component features, but less than the above browsers.
-
-For detailed browser support of specific features, you'll have to consult the reference pages listed above.
+{{Compat}}
 
 ## See also
 
 - [Open Web Components](https://open-wc.org/) — Guides, tools and libraries for developing web components.
-- [DataFormsJS](https://www.dataformsjs.com/) — Open source web components library — Set of Web Components that can be used to build Single Page Apps (SPA), Display JSON data from API’s and Web Services, and bind data to different elements on screen. All Web Components are plain JavaScript and require no build process.
-- [FAST](https://fast.design/) is a web component library built by Microsoft which offers several packages to leverage depending on your project needs. [Fast Element](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-element) is a lightweight means to easily build performant, memory-efficient, standards-compliant Web Components. [Fast Foundation](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-foundation) is a library of Web Component classes, templates, and other utilities built on fast-element intended to be composed into registered Web Components.
-- [Hybrids](https://github.com/hybridsjs/hybrids) — Open source web components library, which favors plain objects and pure functions over `class` and `this` syntax. It provides a simple and functional API for creating custom elements.
+- [DataFormsJS](https://www.dataformsjs.com/) — Open source web components library — Set of Web Components that can be used to build Single Page Apps (SPA), Display JSON data from API's and Web Services, and bind data to different elements on screen. All Web Components are plain JavaScript and require no build process.
+- [FAST](https://www.fast.design/) is a web component library built by Microsoft which offers several packages to leverage depending on your project needs. [Fast Element](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-element) is a lightweight means to easily build performant, memory-efficient, standards-compliant Web Components. [Fast Foundation](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-foundation) is a library of Web Component classes, templates, and other utilities built on fast-element intended to be composed into registered Web Components.
+- [Hybrids](https://github.com/hybridsjs/hybrids) — Open source web components library, which favors plain objects and pure functions over `class` and `this` syntax. It provides a simple and functional API for creating custom elements.
 - [Lit](https://lit.dev/) — Google's web components library, the core of which is a component base class designed to reduce boilerplate while providing reactive state, scoped styles, and a declarative template system.
-- [Snuggsi](https://github.com/devpunks/snuggsi#readme) — Easy Web Components in \~1kB _Including polyfill_ — All you need is a browser and basic understanding of HTML, CSS, and JavaScript classes to be productive.
-- [Slim.js](https://github.com/slimjs/slim.js) — Open source web components library — a high-performant library for rapid and easy component authoring; extensible and pluggable and cross-framework compatible.
-- [Stencil](https://stenciljs.com/) — Toolchain for building reusable, scalable design systems in web components.
+- [Snuggsi](https://github.com/devpunks/snuggsi#readme) — Easy Web Components in \~1kB _Including polyfill_ — All you need is a browser and basic understanding of HTML, CSS, and JavaScript classes to be productive.
+- [Slim.js](https://github.com/slimjs/slim.js) — Open source web components library — a high-performant library for rapid and easy component authoring; extensible and pluggable and cross-framework compatible.
+- [Stencil](https://stenciljs.com/) — Toolchain for building reusable, scalable design systems in web components.

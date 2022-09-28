@@ -13,13 +13,16 @@ tags:
   - onCommand
 browser-compat: webextensions.api.commands.onCommand
 ---
-{{AddonSidebar()}}Fired when a command is executed using its associated keyboard shortcut.
+
+{{AddonSidebar()}}
+
+Fired when a command is executed using its associated keyboard shortcut.
 
 The listener is passed the command's name. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Syntax
 
-```js
+```js-nolint
 browser.commands.onCommand.addListener(listener)
 browser.commands.onCommand.removeListener(listener)
 browser.commands.onCommand.hasListener(listener)
@@ -67,8 +70,8 @@ Given a manifest.json entry like this:
 You could listen for this particular command like this:
 
 ```js
-browser.commands.onCommand.addListener(function(command) {
-  if (command == "toggle-feature") {
+browser.commands.onCommand.addListener((command) => {
+  if (command === "toggle-feature") {
     console.log("toggling the feature!");
   }
 });
@@ -76,4 +79,4 @@ browser.commands.onCommand.addListener(function(command) {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/extensions/commands) API.
+> **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.

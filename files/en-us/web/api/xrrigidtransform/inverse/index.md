@@ -1,6 +1,7 @@
 ---
 title: XRRigidTransform.inverse
 slug: Web/API/XRRigidTransform/inverse
+page-type: web-api-instance-property
 tags:
   - API
   - AR
@@ -20,6 +21,7 @@ tags:
   - transform
 browser-compat: api.XRRigidTransform.inverse
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only **`inverse`** property
@@ -45,19 +47,19 @@ In this example, the model view matrix for an object is computed by taking the v
 matrix and multiplying it by the object's pose matrix.
 
 ```js
-let modelViewMatrix = mat4.create();
+const modelViewMatrix = mat4.create();
 
-for (let view of pose.view) {
-  let viewport = glLayer.getViewport(view);
+for (const view of pose.view) {
+  const viewport = glLayer.getViewport(view);
   gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
-  /* ... */
+  // …
 
   mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, objectMatrix);
   gl.uniformMatrix4fv(programInfo.uniformLocations.modelViewMatrix,
                       false, modelViewMatrix);
 
-  /* ... */
+  // …
 }
 ```
 

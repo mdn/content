@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.defineProperty
 ---
+
 {{JSRef}}
 
 The static **`Reflect.defineProperty()`** method is like
@@ -19,7 +20,7 @@ The static **`Reflect.defineProperty()`** method is like
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.defineProperty(target, propertyKey, attributes)
 ```
 
@@ -48,7 +49,7 @@ The `Reflect.defineProperty` method allows precise addition to or
 modification of a property on an object. For more details, see the
 {{jsxref("Object.defineProperty")}} which is similar.
 
-> **Note:** `Object.defineProperty` returns the
+> **Note:** `Object.defineProperty` returns the
 > object or throws a {{jsxref("TypeError")}} if the property has not been successfully
 > defined. `Reflect.defineProperty`, however, returns a {{jsxref("Boolean")}}
 > indicating whether or not the property was successfully defined.
@@ -58,9 +59,9 @@ modification of a property on an object. For more details, see the
 ### Using Reflect.defineProperty()
 
 ```js
-let obj = {}
-Reflect.defineProperty(obj, 'x', {value: 7})  // true
-obj.x                                         // 7
+const obj = {};
+Reflect.defineProperty(obj, 'x', { value: 7 }); // true
+console.log(obj.x); // 7
 ```
 
 ### Checking if property definition has been successful
@@ -93,6 +94,6 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 ## See also
 
-- A polyfill of `Reflect.defineProperty` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.defineProperty` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.defineProperty()")}}

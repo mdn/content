@@ -1,6 +1,7 @@
 ---
 title: Range.extractContents()
 slug: Web/API/Range/extractContents
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Range
 browser-compat: api.Range.extractContents
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.extractContents()`** method moves contents of the
@@ -24,18 +26,26 @@ document fragment valid.
 
 ## Syntax
 
-```js
-documentFragment = range.extractContents();
+```js-nolint
+extractContents()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ### Basic example
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
-var documentFragment = range.extractContents();
+const documentFragment = range.extractContents();
 document.body.appendChild(documentFragment);
 ```
 
@@ -62,12 +72,12 @@ body {
 p {
   border: 1px solid;
   font-size: 2em;
-  padding: .3em;
+  padding: 0.3em;
 }
 
 button {
   font-size: 1.2em;
-  padding: .5em;
+  padding: 0.5em;
   pointer-events: auto;
 }
 ```
@@ -79,7 +89,7 @@ const list1 = document.getElementById('list1');
 const list2 = document.getElementById('list2');
 const button = document.getElementById('swap');
 
-button.addEventListener('click', e => {
+button.addEventListener('click', (e) => {
   selection = window.getSelection();
 
   for (let i = 0; i < selection.rangeCount; i++) {

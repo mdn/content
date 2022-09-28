@@ -1,6 +1,7 @@
 ---
 title: TextDecoderStream()
 slug: Web/API/TextDecoderStream/TextDecoderStream
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -8,21 +9,23 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.TextDecoderStream
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextDecoderStream()`** constructor creates a new {{domxref("TextDecoderStream")}} object which is used to convert a stream of text in a binary encoding into strings.
 
 ## Syntax
 
-```js
-var TextDecoderStream = new TextDecoderStream(label,options);
+```js-nolint
+new TextDecoderStream(label)
+new TextDecoderStream(label, options)
 ```
 
 ### Parameters
 
-- label
-  - : A {{domxref("DOMString")}} defaulting to `utf-8`. This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
-- `options`{{optional_inline}}
+- `label`
+  - : A string defaulting to `utf-8`. This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
+- `options` {{optional_inline}}
 
   - : A `TextDecoderOptions` dictionary with the property:
 

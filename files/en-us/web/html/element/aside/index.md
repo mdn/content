@@ -5,7 +5,6 @@ tags:
   - Element
   - HTML
   - HTML sections
-  - HTML5
   - HTML:Flow content
   - HTML:Palpable Content
   - HTML:Sectioning content
@@ -64,7 +63,7 @@ The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a
       </td>
     </tr>
     <tr>
-      <th scope="row">Implicit ARIA role</th>
+      <th scope="row">Implicit ARIA role</th>
       <td>
         <code
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
@@ -76,7 +75,7 @@ The **`<aside>`** [HTML](/en-US/docs/Web/HTML) element represents a portion of a
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        {{ARIARole("feed")}}, {{ARIARole("none")}},
+        {{ARIARole("feed")}}, {{ARIARole("none")}},
         {{ARIARole("note")}}, {{ARIARole("presentation")}},
         {{ARIARole("region")}}, {{ARIARole("search")}}
       </td>
@@ -105,17 +104,13 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
 ```html
 <article>
   <p>
-    The Disney movie <cite>The Little Mermaid</cite> was
-    first released to theatres in 1989.
+    The Disney movie <cite>The Little Mermaid</cite> was first released to
+    theatres in 1989.
   </p>
   <aside>
-    <p>
-      The movie earned $87 million during its initial release.
-    </p>
+    <p>The movie earned $87 million during its initial release.</p>
   </aside>
-  <p>
-    More info about the movie...
-  </p>
+  <p>More info about the movie…</p>
 </article>
 ```
 
@@ -133,4 +128,4 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
 
 - Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA: Complementary role](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
+- [ARIA: Complementary role](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)

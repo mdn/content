@@ -1,23 +1,26 @@
 ---
-title: EyeDropper.prototype.open()
+title: EyeDropper.open()
 slug: Web/API/EyeDropper/open
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
   - EyeDropper
   - open
+  - Experimental
 browser-compat: api.EyeDropper.open
 ---
+
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
-The **`EyeDropper.prototype.open()`** method starts the eyedropper mode, returning a promise which is fulfilled once the user has either selected a color or dismissed the eyedropper mode.
+The **`EyeDropper.open()`** method starts the eyedropper mode, returning a promise which is fulfilled once the user has either selected a color or dismissed the eyedropper mode.
 
 ## Syntax
 
-```js
-eyeDropper.open();
-eyeDropper.open({ signal: abortController.signal });
+```js-nolint
+open()
+open(options)
 ```
 
 ### Parameters
@@ -43,8 +46,8 @@ The promise resolves to an object with the following property:
 Exceptions are not thrown but returned when the {{jsxref("Promise")}} is rejected.
 The promise is rejected in two cases:
 
-* When the user dismisses the eyedropper mode by pressing the <kbd>Escape</kbd> key.
-* When the eyedropper mode is aborted by the {{domxref("AbortController")}} passed as an argument to `open()`.
+- When the user dismisses the eyedropper mode by pressing the <kbd>Escape</kbd> key.
+- When the eyedropper mode is aborted by the {{domxref("AbortController")}} passed as an argument to `open()`.
 
 ## Specifications
 

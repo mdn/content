@@ -1,5 +1,5 @@
 ---
-title: 'Using ARIA: Roles, states, and properties'
+title: "Using ARIA: Roles, states, and properties"
 slug: Web/Accessibility/ARIA/ARIA_Techniques
 tags:
   - ARIA
@@ -14,93 +14,93 @@ ARIA defines semantics that can be applied to elements, with these divided into 
 
 ### Widget roles
 
-   - [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
-   - [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-   - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role)
-   - [`link`](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role)
-   - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-   - [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-   - [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-   - [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-   - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role)
-   - [`radio`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role)
-   - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
-   - [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
-   - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (when focusable)
-   - [`slider`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role)
-   - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
-   - [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role)
-   - [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
-   - [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role)
-   - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
-   - [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
+- [`link`](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
+- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
+- [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (when focusable)
+- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
+- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
 
 ### Composite roles
 
 The techniques below describe each composite role as well as their required and optional child roles.
 
-   - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-   - [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) (including [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role), [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role), [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role), [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) roles)
-   - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) (including [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) role)
-   - [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
-   - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
-   - [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) (see [`radio role`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role))
-   - [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) (including [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role) and [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role) roles)
-   - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
-   - [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+- [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) (including [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role), [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role), [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) roles)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) (including [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) role)
+- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
+- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
+- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) (see [`radio role`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role))
+- [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) (including [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) and [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) roles)
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
 
 ### Document structure roles
 
-   - [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role)
-   - [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role)
-   - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role)
-   - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-   - [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role)
-   - [`directory`](/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role)
-   - [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role)
-   - [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role)
-   - [`figure`](/en-US/docs/Web/Accessibility/ARIA/Roles/Figure_Role)
-   - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
-   - [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role)
-   - [`img`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role)
-   - [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
-   - [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
-   - [`math`](/en-US/docs/Web/Accessibility/ARIA/Roles/math_role)
-   - [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role)
-   - [`note`](/en-US/docs/Web/Accessibility/ARIA/Roles/note_role)
-   - [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)
-   - [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
-   - [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
-   - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-   - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
-   - [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
-   - [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
-   - [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
-   - [`tooltip`](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
+- [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
+- [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role)
+- [`directory`](/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role)
+- [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role)
+- [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role)
+- [`figure`](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role)
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role)
+- [`img`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role)
+- [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
+- [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
+- [`math`](/en-US/docs/Web/Accessibility/ARIA/Roles/math_role)
+- [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role)
+- [`note`](/en-US/docs/Web/Accessibility/ARIA/Roles/note_role)
+- [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
+- [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
+- [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
+- [`tooltip`](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
 
 ### Landmark roles
 
-   - [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role)
-   - [`complementary`](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
-   - [`contentinfo`](/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
-   - [`form`](/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role)
-   - [`main`](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role)
-   - [`navigation`](/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
-   - [`region`](/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role)
-   - [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)
+- [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role)
+- [`complementary`](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)
+- [`contentinfo`](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)
+- [`form`](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role)
+- [`main`](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role)
+- [`navigation`](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role)
+- [`region`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role)
+- [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
 
 ### Live Region Roles
 
-   - [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role)
-   - [`log`](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
-   - [`marquee`](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
-   - [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
-   - [`timer`](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
+- [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [`log`](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
+- [`marquee`](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
+- [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
+- [`timer`](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 
 ### Window Roles
 
-   - [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
-   - [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+- [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
+- [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 
 ## States and properties
 
@@ -165,4 +165,4 @@ The techniques below describe each composite role as well as their required and 
 
 ### MicrosoftEdge-specific properties
 
-   - [`x-ms-aria-flowfrom`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom) {{Non-standard_Inline}}
+- [`x-ms-aria-flowfrom`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom) {{Non-standard_Inline}}

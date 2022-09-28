@@ -10,6 +10,7 @@ tags:
   - lastIndexOf
 browser-compat: javascript.builtins.String.lastIndexOf
 ---
+
 {{JSRef}}
 
 The **`lastIndexOf()`** method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the last occurrence of the specified substring. Given a second argument: a number, the method returns the last occurrence of the specified substring at an index less than or equal to the specified number.
@@ -18,7 +19,7 @@ The **`lastIndexOf()`** method, given one argument: a substring to search for, s
 
 ## Syntax
 
-```js
+```js-nolint
 lastIndexOf(searchString)
 lastIndexOf(searchString, position)
 ```
@@ -27,9 +28,9 @@ lastIndexOf(searchString, position)
 
 - `searchString`
 
-  - : Substring to search for.
+  - : Substring to search for, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
 
-    If the method is called with no arguments, `searchString` [is coerced](https://tc39.github.io/ecma262/#sec-tostring) to "`undefined`". Therefore,`'undefined'.lastIndexOf()` returns `0` — because the substring `undefined` is found at position `0` in the string `undefined`. But `'undefine'.lastIndexOf()`, returns `-1` — because the substring `undefined` is not found in the string `undefine`.
+    If the method is called with no arguments, `searchString` is coerced to `"undefined"`. Therefore,`"undefined".lastIndexOf()` returns `0` — because the substring `"undefined"` is found at position `0` in the string `"undefined"`. But `"undefine".lastIndexOf()`, returns `-1` — because the substring `"undefined"` is not found in the string `"undefine"`.
 
 - `position` {{optional_inline}}
 
@@ -47,7 +48,7 @@ The index of the last occurrence of `searchString` found, or `-1` if not found.
 
 ## Description
 
-Strings are zero-indexed: The index of a string’s first character is `0`, and the index of a string’s last character is the length of the string minus 1.
+Strings are zero-indexed: The index of a string's first character is `0`, and the index of a string's last character is the length of the string minus 1.
 
 ```js
 'canal'.lastIndexOf('a');     // returns 3
@@ -78,11 +79,11 @@ The following example uses {{jsxref("String.prototype.indexOf()", "indexOf()")}}
 "`Brave, Brave New World`".
 
 ```js
-let anyString = 'Brave, Brave New World';
+const anyString = 'Brave, Brave New World';
 
-console.log('The index of the first "Brave" is ' + anyString.indexOf('Brave'));
+console.log(`The index of the first "Brave" is ${anyString.indexOf('Brave')}`);
 // logs 0
-console.log('The index of the last "Brave" is ' + anyString.lastIndexOf('Brave'));
+console.log(`The index of the last "Brave" is ${anyString.lastIndexOf('Brave')}`);
 // logs 7
 ```
 

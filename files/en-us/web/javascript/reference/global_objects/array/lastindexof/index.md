@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.lastIndexOf
 ---
+
 {{JSRef}}
 
 The **`lastIndexOf()`** method returns the last index at which
@@ -20,7 +21,7 @@ searched backwards, starting at `fromIndex`.
 
 ## Syntax
 
-```js
+```js-nolint
 lastIndexOf(searchElement)
 lastIndexOf(searchElement, fromIndex)
 ```
@@ -30,6 +31,7 @@ lastIndexOf(searchElement, fromIndex)
 - `searchElement`
   - : Element to locate in the array.
 - `fromIndex` {{optional_inline}}
+
   - : The position in the array at which to start searching backwards. Defaults to the array's length minus one (`arr.length - 1`), causing the whole array to be searched.
 
     A `fromIndex` value greater than or equal to the length of the array also causes the whole array to be searched. (In this case, you can think of it conceptually as causing the method to start its search at a nonexistent position beyond the end of the array, but to then go backwards from there looking for the real end position of the array, at which point it starts searching backwards through the actual array elements.)
@@ -45,17 +47,19 @@ The last index of the element in the array; **-1** if not found.
 ## Description
 
 `lastIndexOf` compares `searchElement` to elements of the Array
-using [strict
-equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (the same method used by the `===`, or triple-equals, operator).
+using [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+(the same method used by the `===`, or triple-equals, operator).
+
+The `lastIndexOf()` method skips empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 ## Examples
 
-### Using `lastIndexOf`
+### Using lastIndexOf()
 
 The following example uses `lastIndexOf` to locate values in an array.
 
 ```js
-var numbers = [2, 5, 9, 2];
+const numbers = [2, 5, 9, 2];
 numbers.lastIndexOf(2);     // 3
 numbers.lastIndexOf(7);     // -1
 numbers.lastIndexOf(2, 3);  // 3
@@ -71,11 +75,11 @@ element in a given array, using {{jsxref("Array.prototype.push", "push")}} to ad
 to another array as they are found.
 
 ```js
-var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
-var idx = array.lastIndexOf(element);
-while (idx != -1) {
+const indices = [];
+const array = ['a', 'b', 'a', 'c', 'a', 'd'];
+const element = 'a';
+let idx = array.lastIndexOf(element);
+while (idx !== -1) {
   indices.push(idx);
   idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
 }
@@ -84,10 +88,18 @@ console.log(indices);
 // [4, 2, 0]
 ```
 
-Note that we have to handle the case `idx == 0` separately here because the
+Note that we have to handle the case `idx === 0` separately here because the
 element will always be found regardless of the `fromIndex` parameter if it is
 the first element of the array. This is different from the
 {{jsxref("Array.prototype.indexOf", "indexOf")}} method.
+
+### Using lastIndexOf() on sparse arrays
+
+You cannot use `lastIndexOf()` to search for empty slots in sparse arrays.
+
+```js
+console.log([1, , 3].lastIndexOf(undefined)); // -1
+```
 
 ## Specifications
 
@@ -99,6 +111,6 @@ the first element of the array. This is different from the
 
 ## See also
 
-- A polyfill of `Array.prototype.lastIndexOf` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}

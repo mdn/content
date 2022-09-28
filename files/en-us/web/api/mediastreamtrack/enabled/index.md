@@ -1,6 +1,7 @@
 ---
 title: MediaStreamTrack.enabled
 slug: Web/API/MediaStreamTrack/enabled
+page-type: web-api-instance-property
 tags:
   - Media
   - Media Capture and Streams
@@ -13,6 +14,7 @@ tags:
   - enabled
 browser-compat: api.MediaStreamTrack.enabled
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`enabled`** property on the
@@ -36,14 +38,7 @@ data, such as a scenario in which frames have been lost in transit.
 > **Note:** If the track has been disconnected, the value of this property
 > can be changed, but has no effect.
 
-## Syntax
-
-```js
-const enabledFlag = track.enabled
-track.enabled = [true | false]
-```
-
-### Value
+## Value
 
 When `true`, `enabled` indicates that the track is permitted to
 render its actual media to the output. When `enabled` is set to
@@ -65,10 +60,10 @@ computers turns off while the track is muted in this way.
 
 ## Example
 
-This example demonstrates a {{event("click")}} event handler for a pause button.
+This example demonstrates a {{domxref("Element/click_event", "click")}} event handler for a pause button.
 
 ```js
-pauseButton.onclick = function(evt) {
+pauseButton.onclick = (evt) => {
   const newState = !myAudioTrack.enabled;
 
   pauseButton.innerHTML = newState ? "&#x25B6;&#xFE0F;" : "&#x23F8;&#xFE0F;";

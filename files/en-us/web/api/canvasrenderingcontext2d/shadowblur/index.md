@@ -1,6 +1,7 @@
 ---
 title: CanvasRenderingContext2D.shadowBlur
 slug: Web/API/CanvasRenderingContext2D/shadowBlur
+page-type: web-api-instance-property
 tags:
   - API
   - Canvas
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowBlur
 ---
+
 {{APIRef}}
 
 The
@@ -23,18 +25,9 @@ default is `0` (no blur).
 > {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} properties must
 > be non-zero, as well.
 
-## Syntax
+## Value
 
-```js
-ctx.shadowBlur = level;
-```
-
-- `level`
-  - : A non-negative float specifying the level of shadow blur, where `0`
-    represents no blur and larger numbers represent increasingly more blur. This value
-    doesn't correspond to a number of pixels, and is not affected by the current
-    transformation matrix. The default value is `0`. Negative,
-    {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored.
+A non-negative float specifying the level of shadow blur, where `0` represents no blur and larger numbers represent increasingly more blur. This value doesn't correspond to a number of pixels, and is not affected by the current transformation matrix. The default value is `0`. Negative, {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored.
 
 ## Examples
 
@@ -52,15 +45,15 @@ property sets its color, and `shadowBlur` sets its level of blurriness.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Shadow
-ctx.shadowColor = 'red';
+ctx.shadowColor = "red";
 ctx.shadowBlur = 15;
 
 // Rectangle
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(20, 20, 150, 100);
 ```
 

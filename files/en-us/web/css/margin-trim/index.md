@@ -1,6 +1,7 @@
 ---
 title: margin-trim
 slug: Web/CSS/margin-trim
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -13,9 +14,10 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.margin-trim
 ---
-{{CSSRef}}
 
-The `margin-trim` property allows the container to trim the margins of its children where they adjoin the container’s edges.
+{{CSSRef}}{{SeeCompatTable}}
+
+The `margin-trim` property allows the container to trim the margins of its children where they adjoin the container's edges.
 
 ## Syntax
 
@@ -28,6 +30,7 @@ margin-trim: all;
 margin-trim: inherit;
 margin-trim: initial;
 margin-trim: revert;
+margin-trim: revert-layer;
 margin-trim: unset;
 ```
 
@@ -88,9 +91,9 @@ span:last-child {
 It is a pain having to write another rule to achieve this, and it is also not very flexible. Instead, `margin-trim` could fix it:
 
 ```css
- article {
+article {
   margin-trim: in-flow;
-  ...
+  /* … */
 }
 ```
 

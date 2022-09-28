@@ -5,6 +5,7 @@ tags:
   - Web Development
   - Web Performance
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Performance/Mobile", "Learn/Performance")}}
 
 We've discussed the importance of web performance. You've learned what you need to do to optimize for web performance. But how do you convince your clients and/or management to prioritize and invest in performance? In this section, we discuss creating a clear business case to convince decision-makers to make the investment.
@@ -37,7 +38,7 @@ We've discussed how prioritizing performance can improve user experience and the
 
 ### Performance budgets
 
-Setting a web performance budget can help you make sure the team stays on track in keeping the site and help prevent regressions. A performance budget is a set of limits that are set to specify limits, such as the maximum number of HTTP requests allowed, the maximum total size of all the assets combined, the minimum allowable FPS on a specific device, etc, that must be maintained. The budget can be applied to a single file, a file type, all files loaded on a page, a specific metric, or a threshold over a period of time. The budget reflects reachable goals; whether they are time, quantity, or rule-based.
+Setting a web performance budget can help you make sure the team stays on track in keeping the site and help prevent regressions. A performance budget is a set of limits that are set to specify limits, such as the maximum number of HTTP requests allowed, the maximum total size of all the assets combined, the minimum allowable FPS on a specific device, etc., that must be maintained. The budget can be applied to a single file, a file type, all files loaded on a page, a specific metric, or a threshold over a period of time. The budget reflects reachable goals; whether they are time, quantity, or rule-based.
 
 Defining and promoting a budget helps performance proponent advocates for good user experience against competing interests, such as marketing, sales, or even other developers that may want to add videos, 3rd party scripts, or even frameworks. [Performance budgets](/en-US/docs/Web/Performance/Performance_budgets) help developer teams protect optimal performance for users while enabling the business to tap into new markets and deliver custom experiences.
 
@@ -50,7 +51,7 @@ Setting key performance indicators (KPI) as objectives can highlight performance
 - **Time on Site**
   - : The average time that your users in aggregate spend on your site. When a site performance slowly, users are more likely to abandon the site prematurely which can lead to low time on site metrics.
 - **Net Promotion Score**
-  - : The net promoter score (NPS) is a metric for assessing customer-loyalty for a company’s brand, product, or service. Poor user performance experiences can equation to poor brand reputation.
+  - : The net promoter score (NPS) is a metric for assessing customer-loyalty for a company's brand, product, or service. Poor user performance experiences can equation to poor brand reputation.
 
 Setting conversion rate, time on site, and/or net promotion scores as KPIs give financial and other business goal value to the web performance efforts, and get help boost buy-in, with metrics to prove the efforts worth.
 
@@ -64,7 +65,7 @@ Setting conversion rate, time on site, and/or net promotion scores as KPIs give 
 - [Measuring performance](/en-US/docs/Learn/Performance/Measuring_performance)
 - [Multimedia: images](/en-US/docs/Learn/Performance/Multimedia)
 - [Multimedia: video](/en-US/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript).
+- [JavaScript performance](/en-US/docs/Learn/Performance/JavaScript)
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
 - [Fonts and performance](/en-US/docs/Learn/Performance/Fonts)

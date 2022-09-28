@@ -1,6 +1,7 @@
 ---
 title: font-variant-position
 slug: Web/CSS/font-variant-position
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-position
 ---
+
 {{CSSRef}}
 
 The **`font-variant-position`** CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.
@@ -25,6 +27,7 @@ font-variant-position: super;
 font-variant-position: inherit;
 font-variant-position: initial;
 font-variant-position: revert;
+font-variant-position: revert-layer;
 font-variant-position: unset;
 ```
 

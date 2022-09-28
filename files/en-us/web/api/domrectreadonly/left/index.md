@@ -1,29 +1,22 @@
 ---
 title: DOMRectReadOnly.left
 slug: Web/API/DOMRectReadOnly/left
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
-  - DOMRect
   - DOMRectReadOnly
-  - Experimental
   - Geometry
   - Property
   - Reference
-  - left
 browser-compat: api.DOMRectReadOnly.left
 ---
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-The **`left`** read-only property of the **`DOMRectReadOnly`** interface returns the left coordinate value of the `DOMRect.` (Has the same value as `x`, or `x + width` if `width` is negative.)
+{{APIRef("Geometry Interfaces")}}
 
-## Syntax
+The **`left`** read-only property of the **`DOMRectReadOnly`** interface returns the left coordinate value of the `DOMRect`. (Has the same value as `x`, or `x + width` if `width` is negative.)
 
-```js
-var recLeft = DOMRect.left;
-```
-
-### Value
+## Value
 
 A double.
 

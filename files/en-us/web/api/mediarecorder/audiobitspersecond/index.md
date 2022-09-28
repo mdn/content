@@ -1,6 +1,7 @@
 ---
 title: MediaRecorder.audioBitsPerSecond
 slug: Web/API/MediaRecorder/audioBitsPerSecond
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -10,7 +11,8 @@ tags:
   - Reference
 browser-compat: api.MediaRecorder.audioBitsPerSecond
 ---
-{{SeeCompatTable}}{{APIRef("MediaStream Recording")}}
+
+{{APIRef("MediaStream Recording")}}
 
 The **`audioBitsPerSecond`** read-only
 property of the {{domxref("MediaRecorder")}} interface returns the audio encoding bit
@@ -19,13 +21,7 @@ rate in use.
 This may differ from the bit rate specified in the constructor (if
 it was provided).
 
-## Syntax
-
-```js
-var audioBitsPerSecond = MediaRecorder.audioBitsPerSecond
-```
-
-### Value
+## Value
 
 A {{jsxref("Number")}} (unsigned long).
 

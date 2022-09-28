@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.bitwise_not
 ---
+
 {{jsSidebar("Operators")}}
 
 The bitwise NOT operator (`~`) inverts the bits of its operand. Like other bitwise operators, it converts the operand to a 32-bit signed integer
@@ -17,7 +18,7 @@ The bitwise NOT operator (`~`) inverts the bits of its operand. Like other bitwi
 
 ## Syntax
 
-```js
+```js-nolint
 ~a
 ```
 
@@ -25,10 +26,10 @@ The bitwise NOT operator (`~`) inverts the bits of its operand. Like other bitwi
 
 The operand is converted to a 32-bit signed integer and expressed as a series of bits (zeroes
 and ones). Numbers with more than 32 bits get their most significant bits discarded. For
-example, the following integer, with more than 32 bits, will be converted to a 32-bit signed
+example, the following integer, with more than 32 bits, will be converted to a 32-bit signed
 integer:
 
-```js
+```
 Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001
 ```
@@ -42,8 +43,8 @@ The truth table for the `NOT` operation is:
 | 0   | 1     |
 | 1   | 0     |
 
-```js
- 9 (base 10) = 00000000000000000000000000001001 (base 2)
+```
+ 9 (base 10) = 00000000000000000000000000001001 (base 2)
                --------------------------------
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 ```
@@ -56,7 +57,7 @@ Bitwise NOTing any number `x` yields `-(x + 1)`. For example,
 `~-5` yields `4`.
 
 Note that due to using 32-bit representation for numbers both `~-1` and
-`~4294967295` (2^32 - 1) results in `0`.
+`~4294967295` (2<sup>32</sup> - 1) results in `0`.
 
 ## Examples
 
@@ -78,5 +79,4 @@ Note that due to using 32-bit representation for numbers both `~-1` and
 
 ## See also
 
-- [Bitwise
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)

@@ -5,6 +5,7 @@ tags:
   - XSLT
   - XSLT_Reference
 ---
+
 {{ XsltRef() }}
 
 The `element-available` function determines if an element is available and returns true or false.
@@ -26,7 +27,7 @@ Returns true if and only if the expanded-name is the name of an instruction. If 
 
 ### Defined
 
-[XSLT 1.0 15](https://www.w3.org/TR/xslt#function-element-available)
+[XSLT 1.0 15](https://www.w3.org/TR/1999/REC-xslt-19991116/#function-element-available)
 
 ### Gecko support
 

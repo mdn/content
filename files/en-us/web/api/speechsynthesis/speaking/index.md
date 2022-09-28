@@ -1,6 +1,7 @@
 ---
 title: SpeechSynthesis.speaking
 slug: Web/API/SpeechSynthesis/speaking
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -12,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.speaking
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`speaking`** read-only property of the
@@ -27,15 +29,15 @@ A boolean value.
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
-var utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
+const utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
+const utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
 
 synth.speak(utterance1);
 synth.speak(utterance2);
 
-var amISpeaking = synth.speaking; // will return true if utterance 1 or utterance 2 are currently being spoken
+const amISpeaking = synth.speaking; // will return true if utterance 1 or utterance 2 are currently being spoken
 ```
 
 ## Specifications

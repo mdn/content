@@ -1,6 +1,7 @@
 ---
 title: Element.ariaHasPopup
 slug: Web/API/Element/ariaHasPopup
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,20 +12,14 @@ tags:
   - Element
 browser-compat: api.Element.ariaHasPopup
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaHasPopup`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
 
-## Syntax
+## Value
 
-```js
-var ariaHasPopup = element.ariaHasPopup;
-element.ariaHasPopup = ariaHasPopup
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"false"`
   - : The element does not have a popup.
@@ -50,7 +45,15 @@ In this example, the `aria-haspopup` attribute on the element with an ID of `ani
 ```html
 <div class="animals-combobox">
   <label for="animal">Animal</label>
-  <input id="animal" type="text" role="combobox" aria-autocomplete="list" aria-controls="animals-listbox" aria-activedescendant="" aria-expanded="false" aria-haspopup="true">
+  <input
+    id="animal"
+    type="text"
+    role="combobox"
+    aria-autocomplete="list"
+    aria-controls="animals-listbox"
+    aria-activedescendant=""
+    aria-expanded="false"
+    aria-haspopup="true" />
   <ul id="animals-listbox" role="listbox" aria-label="Animals">
     <li id="animal-cat" role="option">Cat</li>
     <li id="animal-dog" role="option">Dog</li>

@@ -8,7 +8,9 @@ tags:
   - Pseudo-element
   - Reference
   - Selectors
+spec-urls: https://www.w3.org/TR/CSS22/selector.html#pseudo-element-selectors
 ---
+
 {{CSSRef}}
 
 A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s). For example, {{CSSxRef("::first-line")}} can be used to change the font of the first line of a paragraph.
@@ -35,18 +37,18 @@ You can use only one pseudo-element in a selector. It must appear after the simp
 
 > **Note:** As a rule, double colons (`::`) should be used instead of a single colon (`:`). This distinguishes pseudo-classes from pseudo-elements. However, since this distinction was not present in older versions of the W3C spec, most browsers support both syntaxes for the original pseudo-elements.
 
-## Index
+## Alphabetical index
 
 Pseudo-elements defined by a set of CSS specifications include the following:
 
 A
 
-- {{CSSxRef("::after", "::after (:after)")}}
+- {{CSSxRef("::after", "::after (:after)")}}
 
 B
 
-- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
-- {{CSSxRef("::before", "::before (:before)")}}
+- {{CSSxRef("::backdrop")}}
+- {{CSSxRef("::before", "::before (:before)")}}
 
 C
 
@@ -55,28 +57,28 @@ C
 
 F
 
-- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
-- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
+- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
+- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
 - {{CSSxRef("::file-selector-button")}}
 
 G
 
-- {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
+- {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
 
 M
 
-- {{CSSxRef("::marker")}} {{Experimental_Inline}}
+- {{CSSxRef("::marker")}}
 
 P
 
-- {{CSSxRef("::part", "::part()")}} {{Experimental_Inline}}
-- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
+- {{CSSxRef("::part", "::part()")}}
+- {{CSSxRef("::placeholder")}}
 
 S
 
 - {{CSSxRef("::selection")}}
 - {{CSSxRef("::slotted", "::slotted()")}}
-- {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
+- {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
 
 T
 
@@ -84,9 +86,7 @@ T
 
 ## Specifications
 
-| Specification                | Status                   | Comment                                     |
-| ---------------------------- | ------------------------ | ------------------------------------------- |
-| {{SpecName("CSS1")}} | {{Spec2("CSS1")}} | Defined pseudo-classes and pseudo-elements. |
+{{Specifications}}
 
 ## Browser compatibility
 

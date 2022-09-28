@@ -1,13 +1,14 @@
 ---
-title: 'aria-owns'
+title: "aria-owns"
 slug: Web/Accessibility/ARIA/Attributes/aria-owns
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
   - ARIA property
   - aria-owns
   - Reference
+spec-urls: https://w3c.github.io/aria/#aria-owns
 ---
 
 The `aria-owns` attribute identifies an element (or elements) in order to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship.
@@ -28,7 +29,7 @@ Referencing the ID of one or more elements allows any element to "own" any other
 
 Do not use `aria-owns` as a replacement for the DOM hierarchy. If the relationship is represented in the DOM, do not use `aria-owns`.
 
-A child element is owned by it's DOM parent by default: in this case, `aria-owns` should not be used. Avoid using the `aria-owns` attribute to rearrange existing child elements into a different order.
+A child element is owned by its DOM parent by default: in this case, `aria-owns` should not be used. Avoid using the `aria-owns` attribute to rearrange existing child elements into a different order.
 
 When using `aria-owns`, make sure you [manage focus order](https://css-tricks.com/focus-management-and-inert/). Ensure the visual focus order matches this assistive technology reading order.
 
@@ -51,8 +52,8 @@ Make sure your owned elements have only one owner. Do not specify the `id` of an
 
 ## Values
 
- - `id` list
-   - : Space separated list of one or more ID values referencing the elements being owned by the current element
+- `id` list
+  - : Space separated list of one or more ID values referencing the elements being owned by the current element
 
 ## Associated roles
 
@@ -60,9 +61,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-owns","ARIA: aria-owns Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

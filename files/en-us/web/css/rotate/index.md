@@ -1,6 +1,7 @@
 ---
 title: rotate
 slug: Web/CSS/rotate
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -12,6 +13,7 @@ tags:
   - rotation
 browser-compat: css.properties.rotate
 ---
+
 {{CSSRef}}
 
 The **`rotate`** [CSS](/en-US/docs/Web/CSS) property allows you to specify rotation transforms individually and independently of the {{CSSxRef("transform")}} property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` property.
@@ -39,6 +41,7 @@ rotate: 1 1 1 90deg;
 rotate: inherit;
 rotate: initial;
 rotate: revert;
+rotate: revert-layer;
 rotate: unset;
 ```
 
@@ -69,7 +72,7 @@ rotate: unset;
 
 ```html
 <div>
-  <p class="rotate">Rotation</p>
+  <p class="rotate">Rotation</p>
 </div>
 ```
 

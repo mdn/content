@@ -1,7 +1,7 @@
 ---
-title: 'ARIA: alertdialog role'
+title: "ARIA: alertdialog role"
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-tags: 
+tags:
   - Alert
   - Alertdialog
   - Accessibility
@@ -9,13 +9,16 @@ tags:
   - roles
   - Reference
   - ARIA roles
+spec-urls:
+  - https://w3c.github.io/aria/#alertdialog
+  - https://w3c.github.io/aria-practices/#alertdialog
 ---
 
 The **alertdialog** role is to be used on modal alert dialogs that interrupt a user's workflow to communicate an important message and require a response.
 
 ## Description
 
-The `alertdialog` role is used to notify users of urgent information that demands the user's immediate attention. Including `role="alertdialog"` on the element containing the dialog helps assistive technology identify the content as being grouped and separated from the rest of the page content.  Examples include error messages that require confirmation and other action confirmation prompts.  
+The `alertdialog` role is used to notify users of urgent information that demands the user's immediate attention. Including `role="alertdialog"` on the element containing the dialog helps assistive technology identify the content as being grouped and separated from the rest of the page content. Examples include error messages that require confirmation and other action confirmation prompts.
 
 As the name implies, `alertdialog` is a mashup of the [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) and [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role) roles. `alertdialog` is a type of `dialog` with similar use cases as `alert`, but for when a user response is required.
 
@@ -31,8 +34,8 @@ The `alertdialog` role is not to be used as a replacement for other dialogs, inc
 
 Adding `role="alertdialog"` alone is not sufficient to make an alert dialog accessible. The following also need to be done:
 
-  - The alert dialog must be properly labeled
-  - Keyboard focus must be managed correctly
+- The alert dialog must be properly labeled
+- Keyboard focus must be managed correctly
 
 The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). The alert dialog text must have an accessible description using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
 
@@ -41,7 +44,10 @@ The `alertdialog` must have an accessible name, defined with [`aria-labelledby`]
 ### Example 1: A basic alert dialog
 
 ```html
-<div role="alertdialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="alertdialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <div role="document" tabindex="0">
     <h2 id="dialog1Title">Your login session is about to expire</h2>
     <p id="dialog1Desc">To extend your session, click the OK button</p>
@@ -75,30 +81,28 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+
   - : Use this attribute to label the alertdialog. The `aria-labelledby` attribute is generally the id of the element used to title the alertdialog.
 
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-  - :  Use this attribute to encompass the description of the contents of the alert dialog. The value of the `aria-describedby` attribute is generally the ID of the element containing the alert dialog's messaging, usually coming right after the title.
+  - : Use this attribute to encompass the description of the contents of the alert dialog. The value of the `aria-describedby` attribute is generally the ID of the element containing the alert dialog's messaging, usually coming right after the title.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#alertdialog","ARIA: alertdialog role")}}                                             | {{Spec2('ARIA')}}  |
-| {{SpecName("ARIA Authoring Practices 1.2","#alertdialog","Alertdialog")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 
-  * [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-  * [The `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
-  * [`aria-modal` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
-  * [`Window.alert()`](/en-US/docs/Web/API/Window/alert)
-  * [`Window.prompt()`](/en-US/docs/Web/API/Window/prompt)
+- [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+- [The `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [`aria-modal` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
+- [`Window.alert()`](/en-US/docs/Web/API/Window/alert)
+- [`Window.prompt()`](/en-US/docs/Web/API/Window/prompt)
 
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -8,6 +8,7 @@ tags:
   - Selectors
 browser-compat: css.selectors.list
 ---
+
 {{CSSRef}}
 
 The CSS **selector list** (`,`) selects all the matching nodes.
@@ -35,7 +36,9 @@ element, element, element { style properties }
 Grouping selectors in a single line using a comma-separated lists.
 
 ```css
-h1, h2, h3, h4, h5, h6 { font-family: helvetica; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: helvetica;
+}
 ```
 
 ### Multi Line Grouping
@@ -55,27 +58,45 @@ article {
 A downside to using selector lists is that the following aren't equivalent:
 
 ```css
-h1 { font-family: sans-serif }
-h2:maybe-unsupported { font-family: sans-serif }
-h3 { font-family: sans-serif }
+h1 {
+  font-family: sans-serif;
+}
+h2:maybe-unsupported {
+  font-family: sans-serif;
+}
+h3 {
+  font-family: sans-serif;
+}
 ```
 
 ```css
-h1, h2:maybe-unsupported, h3 { font-family: sans-serif }
+h1,
+h2:maybe-unsupported,
+h3 {
+  font-family: sans-serif;
+}
 ```
 
 This is because a single unsupported selector in a selector list invalidates the whole rule.
 
-A way to remedy this us to use the {{CSSxRef(":is", ":is()")}} or {{CSSxRef(":where", ":where()")}} selectors, which accept a forgiving selector list. This will ignore invalid selectors in the list but accept those which are valid.
+A way to remedy this is to use the {{CSSxRef(":is", ":is()")}} or {{CSSxRef(":where", ":where()")}} selectors, which accept a forgiving selector list. This will ignore invalid selectors in the list but accept those which are valid.
 
 ```css
-h1 { font-family: sans-serif }
-h2:maybe-unsupported { font-family: sans-serif }
-h3 { font-family: sans-serif }
+h1 {
+  font-family: sans-serif;
+}
+h2:maybe-unsupported {
+  font-family: sans-serif;
+}
+h3 {
+  font-family: sans-serif;
+}
 ```
 
 ```css
-:is(h1, h2:maybe-unsupported, h3) { font-family: sans-serif }
+:is(h1, h2:maybe-unsupported, h3) {
+  font-family: sans-serif;
+}
 ```
 
 ## Specifications
@@ -88,4 +109,4 @@ h3 { font-family: sans-serif }
 
 ## See also
 
-- The {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} pseudo-classes, which accept a forgiving selector list.
+- The {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} pseudo-classes, which accept a forgiving selector list.

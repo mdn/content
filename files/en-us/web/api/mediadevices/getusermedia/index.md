@@ -1,6 +1,7 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -17,29 +18,19 @@ tags:
   - getusermedia
 browser-compat: api.MediaDevices.getUserMedia
 ---
+
 {{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
-The
-{{domxref("MediaDevices")}}**`.getUserMedia()`** method
-prompts the user for permission to use a media input which produces a
-{{domxref("MediaStream")}} with tracks containing the requested types of media.
+The {{domxref("MediaDevices")}}**`.getUserMedia()`** method prompts the user for permission to use a media input which produces a {{domxref("MediaStream")}} with tracks containing the requested types of media.
 
-That stream can include, for example, a video track (produced by either a hardware or
-virtual video source such as a camera, video recording device, screen sharing service,
-and so forth), an audio track (similarly, produced by a physical or virtual audio source
-like a microphone, A/D converter, or the like), and possibly other track types.
+That stream can include, for example, a video track (produced by either a hardware or virtual video source such as a camera, video recording device, screen sharing service, and so forth), an audio track (similarly, produced by a physical or virtual audio source like a microphone, A/D converter, or the like), and possibly other track types.
 
-It returns a {{jsxref("Promise")}} that resolves to a {{domxref("MediaStream")}}
-object. If the user denies permission, or matching media is not available, then the
-promise is rejected with `NotAllowedError` or `NotFoundError` {{domxref("DOMException")}}
-respectively.
+It returns a {{jsxref("Promise")}} that resolves to a {{domxref("MediaStream")}} object.
+If the user denies permission, or matching media is not available, then the promise is rejected with `NotAllowedError` or `NotFoundError` {{domxref("DOMException")}} respectively.
 
-> **Note:** It's possible for the returned promise to _neither_
-> resolve nor reject, as the user is not required to make a choice at all and may ignore
-> the request.
+> **Note:** It's possible for the returned promise to _neither_ resolve nor reject, as the user is not required to make a choice at all and may ignore the request.
 
-Generally, you will access the {{domxref("MediaDevices")}} singleton object using
-{{domxref("navigator.mediaDevices")}}, like this:
+Generally, you will access the {{domxref("MediaDevices")}} singleton object using {{domxref("navigator.mediaDevices")}}, like this:
 
 ```js
 async function getMedia(constraints) {
@@ -48,7 +39,7 @@ async function getMedia(constraints) {
   try {
     stream = await navigator.mediaDevices.getUserMedia(constraints);
     /* use the stream */
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -58,23 +49,23 @@ Similarly, using the raw promises directly, the code looks like this:
 
 ```js
 navigator.mediaDevices.getUserMedia(constraints)
-.then(function(stream) {
-  /* use the stream */
-})
-.catch(function(err) {
-  /* handle the error */
-});
+  .then((stream) => {
+    /* use the stream */
+  })
+  .catch((err) => {
+    /* handle the error */
+  });
 ```
 
 > **Note:** If the current document isn't loaded securely,
 > `navigator.mediaDevices` will be `undefined`, and you cannot use
-> `getUserMedia()`. See {{anch("Security")}} for more information on this and
+> `getUserMedia()`. See [Security](#security) for more information on this and
 > other security issues related to using `getUserMedia()`.
 
 ## Syntax
 
-```js
-var promise = navigator.mediaDevices.getUserMedia(constraints);
+```js-nolint
+getUserMedia(constraints)
 ```
 
 ### Parameters
@@ -93,7 +84,10 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
     The following requests both audio and video without any specific requirements:
 
     ```js
-    { audio: true, video: true }
+    getUserMedia({
+      audio: true,
+      video: true
+    })
     ```
 
     If `true` is specified for a media type, the resulting stream is
@@ -106,27 +100,27 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
     preference for 1280x720 camera resolution:
 
     ```js
-    {
+    getUserMedia({
       audio: true,
       video: { width: 1280, height: 720 }
-    }
+    })
     ```
 
     The browser will try to honour this, but may return other
     resolutions if an exact match is not available, or the user overrides it.
 
     To _require_ a capability, use the keywords `min`,
-    `max`, or `exact` (a.k.a. `min == max`). The
+    `max`, or `exact` (a.k.a. `min === max`). The
     following demands a minimum resolution of 1280x720:
 
     ```js
-    {
+    getUserMedia({
       audio: true,
       video: {
         width: { min: 1280 },
         height: { min: 720 }
       }
-    }
+    })
     ```
 
     If no camera exists with this resolution or higher, then the returned promise will
@@ -138,44 +132,51 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
     values and a keyword called `ideal` are not. Here's a full example:
 
     ```js
-    {
+    getUserMedia({
       audio: true,
       video: {
         width: { min: 1024, ideal: 1280, max: 1920 },
         height: { min: 576, ideal: 720, max: 1080 }
       }
-    }
+    })
     ```
 
     An `ideal` value, when used, has gravity, which means that the browser
     will try to find the setting (and camera, if you have more than one), with the
-    smallest [fitness
-    distance](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance) from the ideal values given.
+    smallest [fitness distance](https://w3c.github.io/mediacapture-main/#dfn-fitness-distance) from the ideal values given.
 
     Plain values are inherently ideal, which means that the first of our resolution
     examples above could have been written like this:
 
     ```js
-    {
+    getUserMedia({
       audio: true,
       video: {
         width: { ideal: 1280 },
         height: { ideal: 720 }
       }
-    }
+    })
     ```
 
     Not all constraints are numbers. For example, on mobile devices, the following will
     prefer the front camera (if one is available) over the rear one:
 
     ```js
-    { audio: true, video: { facingMode: "user" } }
+    getUserMedia({
+      audio: true,
+      video: { facingMode: "user" }
+    })
     ```
 
     To _require_ the rear camera, use:
 
     ```js
-    { audio: true, video: { facingMode: { exact: "environment" } } }
+    getUserMedia({
+      audio: true,
+      video: {
+        facingMode: { exact: "environment" }
+      }
+    })
     ```
 
     Another non-number constraint is the `deviceId` constraint. If you have
@@ -183,7 +184,11 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
     use it to request a specific device:
 
     ```js
-    { video: { deviceId: myPreferredCameraDeviceId } }
+    getUserMedia({
+      video: {
+        deviceId: myPreferredCameraDeviceId
+      }
+    })
     ```
 
     The above will return the camera you requested, or a different camera if that
@@ -191,7 +196,13 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
     camera, you would use:
 
     ```js
-    { video: { deviceId: { exact: myExactCameraOrBustDeviceId } } }
+    getUserMedia({
+      video: {
+        deviceId: {
+          exact: myExactCameraOrBustDeviceId
+        }
+      }
+    })
     ```
 
 ### Return value
@@ -205,7 +216,8 @@ object when the requested media has successfully been obtained.
   - : Although the user and operating system both granted access to the hardware device,
     and no hardware issues occurred that would cause a `NotReadableError` {{domxref("DOMException")}}, throw if some
     problem occurred which prevented the device from being used.
-- `NotAllowedError`  {{domxref("DOMException")}}
+- `NotAllowedError` {{domxref("DOMException")}}
+
   - : Thrown if one or more of the requested source devices cannot be used at this time. This will
     happen if the browsing context is insecure (that is, the page was loaded using HTTP
     rather than HTTPS). It also happens if the user has specified that the current
@@ -216,13 +228,15 @@ object when the requested media has successfully been obtained.
 
     > **Note:** Older versions of the specification used `SecurityError`
     > for this instead; `SecurityError` has taken on a new meaning.
-- `NotFoundError`  {{domxref("DOMException")}}
+
+- `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if no media tracks of the type specified were found that satisfy the given constraints.
-- `NotReadableError`  {{domxref("DOMException")}}
+- `NotReadableError` {{domxref("DOMException")}}
   - : Thrown if, although the user granted permission to use the matching devices, a hardware error
     occurred at the operating system, browser, or Web page level which prevented access to
     the device.
-- `OverconstrainedError`  {{domxref("DOMException")}}
+- `OverconstrainedError` {{domxref("DOMException")}}
+
   - : Thrown if the specified constraints resulted in no candidate devices which met the criteria
     requested. The error is an object of type `OverconstrainedError`, and has a
     `constraint` property whose string value is the name of a constraint which
@@ -232,11 +246,12 @@ object when the requested media has successfully been obtained.
     > **Note:** Because this error can occur even when the user has not yet granted
     > permission to use the underlying device, it can potentially be used as a
     > fingerprinting surface.
-- `SecurityError`  {{domxref("DOMException")}}
+
+- `SecurityError` {{domxref("DOMException")}}
   - : Thrown if user media support is disabled on the {{domxref("Document")}} on which
     `getUserMedia()` was called. The mechanism by which user media support is
     enabled and disabled is left up to the individual user agent.
-- `TypeError`  {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the list of constraints specified is empty, or has all constraints set to
     `false`. This can also happen if you try to call
     `getUserMedia()` in an insecure context, since
@@ -319,14 +334,14 @@ For example, this line in the HTTP headers will enable use of a camera for the d
 and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same
 origin:
 
-```
+```http
 Feature-Policy: camera 'self'
 ```
 
 This will request access to the microphone for the current origin and the specific
-origin https\://developer.mozilla.org:
+origin `https://developer.mozilla.org`:
 
-```
+```http
 Feature-Policy: microphone 'self' https://developer.mozilla.org
 ```
 
@@ -340,8 +355,7 @@ microphone:
 </iframe>
 ```
 
-Read our guide, [Using Feature
-Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy), to learn more about how it works.
+Read our guide, [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy), to learn more about how it works.
 
 #### Encryption based security
 
@@ -352,7 +366,7 @@ isn't loaded in a secure context, the {{domxref("navigator.mediaDevices")}} prop
 `undefined`, making access to `getUserMedia()` impossible.
 
 Attempting to access `getUserMedia()` in this situation will result in a
-`TypeError`.
+{{jsxref("TypeError")}}.
 
 #### Document source security
 
@@ -382,72 +396,23 @@ This example gives a preference for camera resolution, and assigns the resulting
 
 ```js
 // Prefer camera resolution nearest to 1280x720.
-var constraints = { audio: true, video: { width: 1280, height: 720 } };
+const constraints = {
+  audio: true,
+  video: { width: 1280, height: 720 }
+};
 
 navigator.mediaDevices.getUserMedia(constraints)
-.then(function(mediaStream) {
-  var video = document.querySelector('video');
-  video.srcObject = mediaStream;
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
-```
-
-### Using the new API in older browsers
-
-Here's an example of using `navigator.mediaDevices.getUserMedia()`, with a
-polyfill to cope with older browsers. Note that this polyfill does not correct for
-legacy differences in constraints syntax, which means constraints won't work well across
-browsers. It is recommended to use the [adapter.js](https://github.com/webrtc/adapter) polyfill instead, which does
-handle constraints.
-
-```js
-// Older browsers might not implement mediaDevices at all, so we set an empty object first
-if (navigator.mediaDevices === undefined) {
-  navigator.mediaDevices = {};
-}
-
-// Some browsers partially implement mediaDevices. We can't just assign an object
-// with getUserMedia as it would overwrite existing properties.
-// Here, we will just add the getUserMedia property if it's missing.
-if (navigator.mediaDevices.getUserMedia === undefined) {
-  navigator.mediaDevices.getUserMedia = function(constraints) {
-
-    // First get ahold of the legacy getUserMedia, if present
-    var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-
-    // Some browsers just don't implement it - return a rejected promise with an error
-    // to keep a consistent interface
-    if (!getUserMedia) {
-      return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
-    }
-
-    // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
-    return new Promise(function(resolve, reject) {
-      getUserMedia.call(navigator, constraints, resolve, reject);
-    });
-  }
-}
-
-navigator.mediaDevices.getUserMedia({ audio: true, video: true })
-.then(function(stream) {
-  var video = document.querySelector('video');
-  // Older browsers may not have srcObject
-  if ("srcObject" in video) {
-    video.srcObject = stream;
-  } else {
-    // Avoid using this in new browsers, as it is going away.
-    video.src = window.URL.createObjectURL(stream);
-  }
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});
+  .then((mediaStream) => {
+    const video = document.querySelector('video');
+    video.srcObject = mediaStream;
+    video.onloadedmetadata = () => {
+      video.play();
+    };
+  })
+  .catch((err) => {
+    // always check for errors at the end.
+    console.error(`${err.name}: ${err.message}`);
+  });
 ```
 
 ### Frame rate
@@ -456,7 +421,9 @@ Lower frame-rates may be desirable in some cases, like WebRTC transmissions with
 bandwidth restrictions.
 
 ```js
-var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
+const constraints = {
+  video: { frameRate: { ideal: 10, max: 15 } }
+};
 ```
 
 ### Front and back camera
@@ -464,10 +431,14 @@ var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
 On mobile phones.
 
 ```js
-var front = false;
-document.getElementById('flip-button').onclick = function() { front = !front; };
+let front = false;
+document.getElementById("flip-button").onclick = () => {
+  front = !front;
+};
 
-var constraints = { video: { facingMode: (front? "user" : "environment") } };
+const constraints = {
+  video: { facingMode: front ? "user" : "environment" }
+};
 ```
 
 ## Specifications
@@ -480,15 +451,13 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
 
 ## See also
 
-- The older {{domxref("navigator.getUserMedia()")}} legacy API.
+- The older {{domxref("navigator.getUserMedia()")}} legacy API
 - {{domxref("mediaDevices.enumerateDevices()")}}: Listing available media devices
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Media Capture and Streams API (Media
-  Streams)](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): Capturing
   screen contents as a {{domxref("MediaStream")}}
 - {{domxref("mediaDevices.getDisplayMedia()")}}: Getting a stream containing screen
   contents
-- [Taking webcam
-  photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
+- [Taking webcam photos](/en-US/docs/Web/API/Media_Streams_API/Taking_still_photos): A tutorial on using `getUserMedia()` to take still photos
   rather than video

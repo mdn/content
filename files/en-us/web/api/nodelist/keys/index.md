@@ -1,6 +1,7 @@
 ---
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
+page-type: web-api-instance-method
 tags:
   - DOM
   - Iterator
@@ -11,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: api.NodeList.keys
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeList.keys()`** method returns an
@@ -19,8 +21,8 @@ in this object. The keys are `unsigned integer`.
 
 ## Syntax
 
-```js
-nodeList.keys();
+```js-nolint
+keys()
 ```
 
 ### Return value
@@ -30,19 +32,19 @@ Returns an {{jsxref("Iteration_protocols","iterator")}}.
 ## Example
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+const node = document.createElement("div");
+const kid1 = document.createElement("p");
+const kid2 = document.createTextNode("hey");
+const kid3 = document.createElement("span");
 
 node.appendChild(kid1);
 node.appendChild(kid2);
 node.appendChild(kid3);
 
-var list = node.childNodes;
+let list = node.childNodes;
 
-// Using for..of
-for(var key of list.keys()) {
+// Using for...of
+for (const key of list.keys()) {
    console.log(key);
 }
 ```
@@ -61,6 +63,6 @@ The result is:
 
 ## See also
 
-- A polyfill of `NodeList.prototype.keys` is available in [`core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- [Polyfill of `NodeList.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

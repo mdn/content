@@ -1,9 +1,9 @@
 ---
 title: WindowClient.visibilityState
 slug: Web/API/WindowClient/visibilityState
+page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Service Workers
@@ -12,6 +12,7 @@ tags:
   - visibilityState
 browser-compat: api.WindowClient.visibilityState
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`visibilityState`** read-only property of the
@@ -19,36 +20,26 @@ The **`visibilityState`** read-only property of the
 This value can be one of `"hidden"`, `"visible"`, or
 `"prerender"`.
 
-## Syntax
+## Value
 
-```js
-var myVisState = windowClient.visibilityState;
-```
+A string (See {{domxref("Document.visibilityState")}} for values).
 
-### Value
-
-A {{domxref("DOMString")}} (See {{domxref("Document.visibilityState")}} for values).
-
-## Example
+## Examples
 
 ```js
 event.waitUntil(clients.matchAll({
     type: "window"
-  }).then(function(clientList) {
-    for (let i = 0; i < clientList.length; i++) {
-      let client = clientList[i];
-      if (client.url == '/' && 'focus' in client) {
-        if (client.visibilityState === 'hidden')
-          return client.focus();
-        }
+  }).then((clientList) => {
+    for (const client of clientList) {
+      if (client.url === '/' && 'focus' in client) {
+        if (client.visibilityState === 'hidden') return client.focus();
       }
     }
-
     if (clients.openWindow) {
       return clients.openWindow('/');
     }
-  }));
-});
+  })
+);
 ```
 
 ## Specifications

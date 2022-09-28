@@ -1,21 +1,23 @@
 ---
 title: SyncEvent
 slug: Web/API/SyncEvent
+page-type: web-api-interface
 tags:
   - API
   - Background Sync
   - Interface
-  - Non-standard
   - Offline
   - Reference
   - ServiceWorker
   - SyncEvent
   - Workers
+  - Experimental
 browser-compat: api.SyncEvent
 ---
-{{APIRef("Service Workers API")}} {{Non-standard_header}}
 
-The **`SyncEvent`** interface represents a sync action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a ServiceWorker.
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+
+The **`SyncEvent`** interface represents a sync action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a ServiceWorker.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
@@ -23,16 +25,16 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Constructor
 
-- {{domxref("SyncEvent.SyncEvent()")}}
+- {{domxref("SyncEvent.SyncEvent", "SyncEvent()")}} {{Experimental_Inline}}
   - : Creates a new `SyncEvent` object.
 
 ## Properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("SyncEvent.tag")}} {{readonlyinline}}
+- {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the developer-defined identifier for this `SyncEvent`.
-- {{domxref("SyncEvent.lastChance")}} {{readonlyinline}}
+- {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if the user agent will not make further synchronization attempts after the current attempt.
 
 ## Methods

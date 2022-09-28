@@ -1,6 +1,7 @@
 ---
 title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -11,6 +12,7 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot.delegatesFocus
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`delegatesFocus`** read-only property of the {{domxref("ShadowRoot")}} interface returns `true` if the shadow root delegates focus, and `false` otherwise.
@@ -25,7 +27,7 @@ The property value is set using the `delegatesFocus` property of the object pass
 let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 
-  ...
+// ...
 
 // Does it delegate focus?
 let hostElem = shadow.delegatesFocus;

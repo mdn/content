@@ -6,6 +6,7 @@ tags:
   - Firefox
   - Mozilla
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 28 was released on March 18, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -41,7 +42,7 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 
 ### JavaScript
 
-- [ECMAScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues:
+- [ECMAScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues:
 
   - New `Array` methods have been implemented: {{jsxref("Array.prototype.entries()")}} and {{jsxref("Array.prototype.keys()")}} ({{bug("894658")}}).
 
@@ -52,13 +53,13 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 - `HTMLVideoElement.canPlayType('video/webm')` now reports `maybe`. ({{bug("884275")}}).
 - The {{domxref("DocumentFragment.getElementById()")}} method has been implemented. E.g. `document.createDocumentFragment().getElementById()` ({{bug("933193")}}).
 - The {{domxref("KeyboardEvent.repeat")}} attribute has been implemented ({{bug("600117")}}).
-- The {{domxref("File")}} constructor, e.g. `new File(["foo"], "foo.txt")` has been implemented. ({{bug("819900")}}).
+- The {{domxref("File")}} constructor, e.g. `new File(["foo"], "foo.txt")` has been implemented. ({{bug("819900")}}).
 - The {{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} is no more enumerable, for privacy reasons ({{bug(757726)}}).
 - The two attributes {{domxref("Window.screenX")}} and {{domxref("Window.screenY")}} now return CSS pixels (and no more device pixels) ({{bug(943668)}}).
 - The two methods {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} and {{domxref("CanvasRenderingContext2D/drawFocusIfNeeded", "CanvasRenderingContext2D.drawCustomFocusRing()")}} have been implemented. The preference `canvas.focusring.enabled` must be set to `true` to activate both ({{bug(540456)}}).
 - The `willReadFrequently` context attribute for "`2d`" canvas contexts has been implemented (see {{domxref("HTMLCanvasElement.getContext()")}}) ({{bug(884226)}}).
 - The following attributes and methods of {{domxref("NavigatorID")}} have been implemented on {{domxref("WorkerNavigator")}} to allow their use in workers: {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, and {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}} ({{bug(925847)}}).
-- The {{domxref("Element/previousElementSibling" , "previousElementSibling")}} and {{domxref("Element/nextElementSibling" , "nextElementSibling")}} properties has been removed from {{domxref("DocumentType")}}, because of compatibility problems ({{bug(932501)}}).
+- The {{domxref("Element/previousElementSibling", "previousElementSibling")}} and {{domxref("Element/nextElementSibling", "nextElementSibling")}} properties has been removed from {{domxref("DocumentType")}}, because of compatibility problems ({{bug(932501)}}).
 
 ### MathML
 

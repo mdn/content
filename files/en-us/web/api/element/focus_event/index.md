@@ -1,6 +1,7 @@
 ---
 title: 'Element: focus event'
 slug: Web/API/Element/focus_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -11,42 +12,37 @@ tags:
   - Reference
 browser-compat: api.Element.focus_event
 ---
+
 {{APIRef}}
 
 The **`focus`** event fires when an element has received focus. The main difference between this event and {{domxref("Element/focusin_event", "focusin")}} is that `focusin` bubbles while `focus` does not.
 
 The opposite of `focus` is {{domxref("Element/blur_event", "blur")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("FocusEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onfocus", "onfocus")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Sync / Async</th>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <th scope="row">Composed</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('focus', (event) => { });
+
+onfocus = (event) => { };
+```
+
+## Event type
+
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("FocusEvent")}}
+
+## Event properties
+
+_This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
+
+- {{domxref("FocusEvent.relatedTarget")}}
+  - : An {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to `null` for security reasons.
 
 ## Examples
 
@@ -56,8 +52,12 @@ The opposite of `focus` is {{domxref("Element/blur_event", "blur")}}.
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <label>Some text:
+    <input type="text" placeholder="text input" />
+  </label>
+  <label>Password:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 
@@ -81,14 +81,18 @@ password.addEventListener('blur', (event) => {
 
 ### Event delegation
 
-There are two ways of implementing event delegation for this event: by using the {{Event("focusin")}} event, or by setting the `useCapture` parameter of {{domxref("EventTarget.addEventListener()", "addEventListener()")}} to `true`.
+There are two ways of implementing event delegation for this event: by using the {{domxref("Element/focusin_event", "focusin")}} event, or by setting the `useCapture` parameter of {{domxref("EventTarget.addEventListener()", "addEventListener()")}} to `true`.
 
 #### HTML
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input">
-  <input type="password" placeholder="password">
+  <label>Some text:
+    <input type="text" placeholder="text input" />
+  </label>
+  <label>Password:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 

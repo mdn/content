@@ -1,6 +1,7 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
+page-type: css-property
 tags:
   - CSS
   - CSS Images
@@ -10,6 +11,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.image-rendering
 ---
+
 {{CSSRef}}
 
 The **`image-rendering`** [CSS](/en-US/docs/Web/CSS) property sets an image scaling algorithm. The property applies to an element itself, to any images set in its other properties, and to its descendants.
@@ -30,6 +32,7 @@ image-rendering: pixelated;
 image-rendering: inherit;
 image-rendering: initial;
 image-rendering: revert;
+image-rendering: revert-layer;
 image-rendering: unset;
 ```
 
@@ -64,9 +67,18 @@ In practical use, the `pixelated` and `crisp-edges` rules can be combined to pro
 
 ```html hidden
 <div>
-  <img class="auto" alt="auto" src="blumen.jpg" />
-  <img class="pixelated" alt="pixelated" src="blumen.jpg" />
-  <img class="crisp-edges" alt="crisp-edges" src="blumen.jpg" />
+  <img
+    class="auto"
+    alt="A small photo of some white and yellow flower against a leafy green background. The image is about 33% smaller than the size it is being displayed at. This upscaling causes the image to appear blurry, with notable soft edges between objects."
+    src="blumen.jpg" />
+  <img
+    class="pixelated"
+    alt="The same photo as the previous image, which is also being upscaled the same amount. Browsers that support the pixelated value for the image-rendering property display the image as very pixelated. Individual pixels are clearly visible and edges appear much sharper."
+    src="blumen.jpg" />
+  <img
+    class="crisp-edges"
+    alt="The same photo as the previous images, which is also being upscaled the same amount. Browsers that support the crisp-edges value for the image-rendering property display the image as very pixelated. In these examples, there is virtually no perceivable difference between the pixelated and crisp-edges versions."
+    src="blumen.jpg" />
 </div>
 ```
 
@@ -84,7 +96,6 @@ img {
 }
 
 .pixelated {
-  -ms-interpolation-mode: nearest-neighbor;
   image-rendering: pixelated;
 }
 
@@ -106,9 +117,9 @@ img {
 
 {{Compat}}
 
-> **Note:** Although `crisp-edges` is supposed to use a pixel-art scaler like in the specification example, in practice no browsers (as of January 2020) do so. [In Firefox](https://dxr.mozilla.org/mozilla-central/rev/5fd4cfacc90ddd975c82ba27fdc56f4187b3f180/gfx/wr/webrender/src/resource_cache.rs#1727), `crisp-edges` is interpreted as nearest-neighbor, `pixelated` is not supported, and `auto` is interpolated as trilinear or linear.
+> **Note:** Although `crisp-edges` is supposed to use a pixel-art scaler like in the specification example, in practice no browsers (as of January 2020) do so. [In Firefox](https://searchfox.org/mozilla-central/rev/1061fae5e225a99ef5e43dbdf560a91a0c0d00d1/gfx/wr/webrender/src/resource_cache.rs#1356), `crisp-edges` is interpreted as nearest-neighbor, `pixelated` is not supported, and `auto` is interpolated as trilinear or linear.
 >
-> For behavior on Chromium and Safari (WebKit), see the [`GetInterpolationQuality`](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/style/computed_style.cc?type=cs&q=GetInterpolationQuality&g=0&l=1160) function and [`CSSPrimitiveValue::operator ImageRendering()`](https://github.com/WebKit/webkit/blob/9b169b6c85394d94f172e5d75ca2f6c74830e99c/Source/WebCore/css/CSSPrimitiveValueMappings.h#L4324) respectively.
+> For behavior on Chromium and Safari (WebKit), see the [`GetInterpolationQuality`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/style/computed_style.cc;l=1160) function and [`CSSPrimitiveValue::operator ImageRendering()`](https://github.com/WebKit/WebKit/blob/9b26fc6081e0db8a1304cf4b4f8f1c67efb9bc0c/Source/WebCore/css/CSSPrimitiveValueMappings.h#L4045) respectively.
 
 ## See also
 

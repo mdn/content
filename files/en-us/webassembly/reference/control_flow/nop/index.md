@@ -8,11 +8,12 @@ tags:
   - Reference
   - Control flow
 ---
+
 {{WebAssemblySidebar}}
 
 **`nop`** stands for no-operation. It literally does nothing.
 
-{{EmbedInteractiveExample("pages/wat/nop.html")}}
+{{EmbedInteractiveExample("pages/wat/nop.html", "tabbed-shorter")}}
 
 ## Syntax
 

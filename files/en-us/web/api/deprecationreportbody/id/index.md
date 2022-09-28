@@ -1,27 +1,24 @@
 ---
 title: DeprecationReportBody.id
 slug: Web/API/DeprecationReportBody/id
+page-type: web-api-instance-property
 tags:
   - API
   - Property
   - Reference
   - id
+  - Experimental
   - DeprecationReportBody
 browser-compat: api.DeprecationReportBody.id
 ---
-{{APIRef("Reporting API")}}
+
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns a string representing the feature or API that is deprecated. This can be used to group or count related reports.
 
-## Syntax
+## Value
 
-```js
-let id = DeprecationReportBody.id;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}}.
+A string.
 
 ## Examples
 
@@ -33,7 +30,7 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.id);

@@ -1,6 +1,7 @@
 ---
 title: ReadableStreamDefaultController
 slug: Web/API/ReadableStreamDefaultController
+page-type: web-api-interface
 tags:
   - API
   - Fetch
@@ -10,9 +11,10 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamDefaultController
 ---
+
 {{APIRef("Streams")}}
 
-The **`ReadableStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Default controllers are for streams that are not byte streams.
+The **`ReadableStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Default controllers are for streams that are not byte streams.
 
 ## Constructor
 
@@ -20,7 +22,7 @@ None. `ReadableStreamDefaultController` instances are created automatically duri
 
 ## Properties
 
-- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{readonlyInline}}
+- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size required to fill the stream's internal queue.
 
 ## Methods
@@ -55,7 +57,7 @@ const stream = new ReadableStream({
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', () => {
       clearInterval(interval);
       fetchStream();
       controller.close();

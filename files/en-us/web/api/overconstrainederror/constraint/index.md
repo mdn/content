@@ -1,6 +1,7 @@
 ---
 title: OverconstrainedError.constraint
 slug: Web/API/OverconstrainedError/constraint
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -14,20 +15,14 @@ tags:
   - constraint
 browser-compat: api.OverconstrainedError.constraint
 ---
-{{securecontext_header}}{{APIRef("Media Capture and
-  Streams")}}{{SeeCompatTable}}
+
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 The **`constraint`** read-only property of the
 {{domxref("OverconstrainedError")}} interface returns the constraint that was supplied
 in the constructor, meaning the constraint that was not satisfied.
 
-## Syntax
-
-```js
-var constraint = Overconstrainederror.constraint;
-```
-
-### Value
+## Value
 
 A {{domxref('String')}}
 

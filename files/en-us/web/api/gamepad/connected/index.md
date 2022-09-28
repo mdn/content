@@ -1,6 +1,7 @@
 ---
 title: Gamepad.connected
 slug: Web/API/Gamepad/connected
+page-type: web-api-instance-property
 tags:
   - API
   - Gamepad API
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.connected
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.connected`** property of the
@@ -20,22 +22,16 @@ still connected to the system.
 If the gamepad is connected, the value is `true`; if not, it is
 `false`.
 
-## Syntax
-
-```js
-const connected = gamepad.connected;
-```
-
-## Example
-
-```js
-var gp = navigator.getGamepads()[0];
-console.log(gp.connected);
-```
-
 ## Value
 
-A boolean value.
+A boolean.
+
+## Examples
+
+```js
+const gp = navigator.getGamepads()[0];
+console.log(gp.connected);
+```
 
 ## Specifications
 

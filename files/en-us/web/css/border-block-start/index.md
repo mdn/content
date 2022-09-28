@@ -1,11 +1,11 @@
 ---
 title: border-block-start
 slug: Web/CSS/border-block-start
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Logical Property
   - CSS Property
-  - Experimental
   - Reference
   - border-block
   - border-block-start
@@ -15,6 +15,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-block-start
 ---
+
 {{CSSRef}}
 
 The **`border-block-start`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical block-start border property values in a single place in the style sheet.
@@ -40,6 +41,7 @@ border-block-start: medium dashed blue;
 border-block-start: inherit;
 border-block-start: initial;
 border-block-start: revert;
+border-block-start: revert-layer;
 border-block-start: unset;
 ```
 
@@ -105,5 +107,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

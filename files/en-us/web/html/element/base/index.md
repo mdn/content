@@ -14,7 +14,7 @@ browser-compat: html.elements.base
 
 The **`<base>`** [HTML](/en-US/docs/Web/HTML) element specifies the base URL to use for all _relative_ URLs in a document. There can be only one `<base>` element in a document.
 
-A document's used base URL can be accessed by scripts with {{domxref('Node/baseURI')}}. If the document has no `<base>` elements, then `baseURI` defaults to {{domxref("location.href")}}.
+A document's used base URL can be accessed by scripts with {{domxref('Node.baseURI')}}. If the document has no `<base>` elements, then `baseURI` defaults to {{domxref("location.href")}}.
 
 <table class="properties">
   <tbody>
@@ -64,7 +64,7 @@ A document's used base URL can be accessed by scripts with {{domxref('Node/baseU
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Warning:** If either of the following attributes are specified, this element **must** come before other elements with attribute values of URLs, such as {{HTMLElement("link")}}’s `href` attribute.
+> **Warning:** If either of the following attributes are specified, this element **must** come before other elements with attribute values of URLs, such as {{HTMLElement("link")}}'s `href` attribute.
 
 - {{htmlattrdef("href")}}
   - : The base URL to be used throughout the document for relative URLs. Absolute and relative URLs are allowed.
@@ -85,26 +85,24 @@ If multiple `<base>` elements are used, only the first `href` and first `target`
 
 ### In-page anchors
 
-Links pointing to a fragment in the document — e.g. `<a href="#some-id">` — are resolved with the `<base>`, triggering an HTTP request to the base URL with the fragment attached. For example:
+Links pointing to a fragment in the document — e.g. `<a href="#some-id">` — are resolved with the `<base>`, triggering an HTTP request to the base URL with the fragment attached.
 
-1.  Given `<base href="https://example.com">`
-2.  ...and this link: `<a href="#anchor">Anker</a>`
-3.  ...the link points to `https://example.com/#anchor`.
+For example, given `<base href="https://example.com">` and this link: `<a href="#anchor">To anchor</a>`. The link points to `https://example.com/#anchor`.
 
 ### Open Graph
 
 [Open Graph](https://ogp.me/) tags do not acknowledge `<base>`, and should always have full absolute URLs. For example:
 
 ```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg">
+<meta property="og:image" content="https://example.com/thumbnail.jpg" />
 ```
 
 ## Examples
 
 ```html
-<base href="https://www.example.com/">
-<base target="_blank">
-<base target="_top" href="https://example.com/">
+<base href="https://www.example.com/" />
+<base target="_blank" />
+<base target="_top" href="https://example.com/" />
 ```
 
 ## Specifications

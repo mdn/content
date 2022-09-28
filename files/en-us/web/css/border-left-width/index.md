@@ -1,6 +1,7 @@
 ---
 title: border-left-width
 slug: Web/CSS/border-left-width
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-left-width
 ---
+
 {{CSSRef}}
 
 The **`border-left-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the left border of an element.
@@ -32,6 +34,7 @@ border-left-width: 6px;
 border-left-width: inherit;
 border-left-width: initial;
 border-left-width: revert;
+border-left-width: revert-layer;
 border-left-width: unset;
 ```
 

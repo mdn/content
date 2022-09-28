@@ -1,6 +1,7 @@
 ---
 title: Screen Wake Lock API
 slug: Web/API/Screen_Wake_Lock_API
+page-type: web-api-overview
 tags:
   - API
   - Overview
@@ -9,8 +10,11 @@ tags:
   - Wake Lock
   - WakeLock
   - screen
+  - Experimental
+browser-compat: api.WakeLock
 ---
-{{DefaultAPISidebar("Screen Wake Lock API")}}
+
+{{DefaultAPISidebar("Screen Wake Lock API")}}{{SeeCompatTable}}
 
 The Screen Wake Lock API provides a way to prevent devices from dimming or locking the screen when an application needs to keep running.
 
@@ -63,11 +67,11 @@ let wakeLock = null;
 
 // create an async function to request a wake lock
 try {
-  wakeLock = await navigator.wakeLock.request('screen');
-  statusElem.textContent = 'Wake Lock is active!';
+  wakeLock = await navigator.wakeLock.request('screen');
+  statusElem.textContent = 'Wake Lock is active!';
 } catch (err) {
-  // The Wake Lock request has failed - usually system related, such as battery.
-  statusElem.textContent = `${err.name}, ${err.message}`;
+  // The Wake Lock request has failed - usually system related, such as battery.
+  statusElem.textContent = `${err.name}, ${err.message}`;
 }
 ```
 
@@ -107,13 +111,13 @@ document.addEventListener('visibilitychange', async () => {
 
 ### Putting it all together
 
-You can find the [complete code on GitHub here](https://github.com/mdn/dom-examples/tree/master/screen-wake-lock-api). The [demo](https://mdn.github.io/dom-examples/screen-wake-lock-api/) uses a button to acquire a wake lock and also release it, which in turn updates the UI. The UI also updates if the wake lock is released automatically for any reason. There's a checkbox which when checked, will automatically reacquire the wake lock if the document's visibility state changes and becomes visible again.
+You can find the [complete code on GitHub here](https://github.com/mdn/dom-examples/tree/main/screen-wake-lock-api). The [demo](https://mdn.github.io/dom-examples/screen-wake-lock-api/) uses a button to acquire a wake lock and also release it, which in turn updates the UI. The UI also updates if the wake lock is released automatically for any reason. There's a checkbox which when checked, will automatically reacquire the wake lock if the document's visibility state changes and becomes visible again.
 
 ### Performance considerations
 
 - Release the screen wake lock when user ends activity that required always-on screen. For example, a ticketing app which uses QR codes to transmit ticket information, might acquire screen wake lock when the QR code is displayed (so that code is successfully scanned) but release afterwards. A presentation app might hold the lock only while a presentation is active, but not when presentation is being edited.
 - If your app is performing long-running downloads, consider using background fetch.
-- If you app is synchronizing data from a remote server, consider using background sync.
+- If your app is synchronizing data from a remote server, consider using background sync.
 - Only active documents can acquire screen wake locks and previously acquired locks are automatically released when document becomes inactive. Therefore make sure to re-acquire screen wake lock if necessary when document becomes active (listen for [visibilitychange](/en-US/docs/Web/API/Document/visibilitychange_event) event).
 
 ## Feature Policy integration
@@ -122,16 +126,14 @@ Access to Screen Wake Lock API is controlled by [Feature Policy](/en-US/docs/Web
 
 ## Specifications
 
-| Specification                                                   |
-| --------------------------------------------------------------- |
-| [Screen Wake Lock API](https://w3c.github.io/screen-wake-lock/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.WakeLock")}}
+{{Compat}}
 
 ## See also
 
-- [An introductory article on the Screen Wake Lock API](https://web.dev/wakelock/)
+- [An introductory article on the Screen Wake Lock API](https://web.dev/wake-lock/)
 - [A Screen Wake Lock API demo on glitch](https://wake-lock-demo.glitch.me/)
 - [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) directive {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}}

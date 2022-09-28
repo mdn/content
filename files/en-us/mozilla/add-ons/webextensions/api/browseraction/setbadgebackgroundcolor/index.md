@@ -13,6 +13,7 @@ tags:
   - setBadgeBackgroundColor
 browser-compat: webextensions.api.browserAction.setBadgeBackgroundColor
 ---
+
 {{AddonSidebar()}}
 
 Sets the background color for the badge. Tabs without a specific badge background color will inherit the global badge background color, which defaults to `[217, 0, 0, 255]` in Firefox.
@@ -23,7 +24,7 @@ Other browsers always use a white text color, so setting a dark background may b
 
 ## Syntax
 
-```js
+```js-nolint
 browser.browserAction.setBadgeBackgroundColor(
   details // object
 )
@@ -43,9 +44,9 @@ browser.browserAction.setBadgeBackgroundColor(
         - a `{{WebExtAPIRef('browserAction.ColorArray')}}` object.
         - `null`. If a `tabId` is specified, it removes the tab-specific badge background color so that the tab inherits the global badge background color. Otherwise it reverts the global badge background color to the default value.
 
-    - `tabId`{{optional_inline}}
+    - `tabId` {{optional_inline}}
       - : `integer`. Sets the badge background color only for the given tab. The color is reset when the user navigates this tab to a new page.
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. Sets the badge background color only for the given tab.
 
 <!---->
@@ -64,35 +65,36 @@ The default color in Firefox is: `[217, 0, 0, 255]`.
 A background color that starts off as red, and turns green when the browser action is clicked:
 
 ```js
-browser.browserAction.setBadgeText({text: "1234"});
-browser.browserAction.setBadgeBackgroundColor({color: "red"});
+browser.browserAction.setBadgeText({ text: "1234" });
+browser.browserAction.setBadgeBackgroundColor({ color: "red" });
 
-browser.browserAction.onClicked.addListener(()=> {
-  browser.browserAction.setBadgeBackgroundColor({color: "green"});
+browser.browserAction.onClicked.addListener(() => {
+  browser.browserAction.setBadgeBackgroundColor({ color: "green" });
 });
 ```
 
 Set the badge background color only for the active tab:
 
 ```js
-browser.browserAction.setBadgeText({text: "1234"});
-browser.browserAction.setBadgeBackgroundColor({color: "red"});
+browser.browserAction.setBadgeText({ text: "1234" });
+browser.browserAction.setBadgeBackgroundColor({ color: "red" });
 
-browser.browserAction.onClicked.addListener((tab)=> {
+browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.setBadgeBackgroundColor({
     color: "green",
-    tabId: tab.id
+    tabId: tab.id,
   });
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-setBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/#method-setBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -119,4 +121,4 @@ browser.browserAction.onClicked.addListener((tab)=> {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

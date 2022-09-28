@@ -1,11 +1,11 @@
 ---
 title: AudioParam.cancelAndHoldAtTime()
 slug: Web/API/AudioParam/cancelAndHoldAtTime
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
   - AudioParam
-  - Experimental
   - Method
   - Reference
   - Web Audio API
@@ -13,6 +13,7 @@ tags:
   - cancelValuesAndHoldAtTime
 browser-compat: api.AudioParam.cancelAndHoldAtTime
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`cancelAndHoldAtTime()`** property of the
@@ -22,13 +23,13 @@ made using other methods.
 
 ## Syntax
 
-```js
-var audioParam = AudioParam.cancelAndHoldAtTime(cancelTime)
+```js-nolint
+cancelAndHoldAtTime(cancelTime)
 ```
 
 ### Parameters
 
-- cancelTime
+- `cancelTime`
   - : A double representing the time (in seconds) after the [`AudioContext`](/en-US/docs/Web/API/AudioContext) was
     first created after which all scheduled changes will be cancelled.
 

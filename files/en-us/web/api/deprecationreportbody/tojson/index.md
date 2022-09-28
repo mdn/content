@@ -1,22 +1,25 @@
 ---
 title: DeprecationReportBody.toJSON()
 slug: Web/API/DeprecationReportBody/toJSON
+page-type: web-api-instance-method
 tags:
   - API
   - Method
   - Reference
+  - Experimental
   - toJSON
   - DeprecationReportBody
 browser-compat: api.DeprecationReportBody.toJSON
 ---
-{{APIRef("Reporting API")}}
+
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("DeprecationReportBody")}} interface is a _serializer_, and returns a JSON representation of the `InterventionReportBody` object.
 
 ## Syntax
 
-```js
-DeprecationReportBody.toJSON();
+```js-nolint
+toJSON()
 ```
 
 ### Parameters
@@ -37,7 +40,7 @@ let options = {
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   console.log(firstReport.toJSON());
 }, options);

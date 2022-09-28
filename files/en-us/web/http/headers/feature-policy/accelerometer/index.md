@@ -10,13 +10,14 @@ tags:
   - Experimental
 browser-compat: http.headers.Feature-Policy.accelerometer
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP {{HTTPHeader('Feature-Policy')}} header `accelerometer` directive controls whether the current document is allowed to gather information about the acceleration of the device through the {{domxref('Accelerometer')}} interface.
+The HTTP {{HTTPHeader('Feature-Policy')}} header `accelerometer` directive controls whether the current document is allowed to gather information about the acceleration of the device through the {{domxref('Accelerometer')}} interface.
 
 ## Syntax
 
-```
+```http
 Feature-Policy: accelerometer <allowlist>;
 ```
 

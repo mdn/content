@@ -1,15 +1,18 @@
 ---
 title: animation-timeline
 slug: Web/CSS/animation-timeline
+page-type: css-property
 tags:
   - CSS
   - CSS Animations
   - CSS Property
   - Reference
   - recipe:css-property
+  - Experimental
 browser-compat: css.properties.animation-timeline
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the names of one or more {{cssxref("@scroll-timeline")}} at-rules describing the scroll animations to apply to the element.
 
@@ -31,9 +34,10 @@ animation-timeline: test1, animation4;
 animation-timeline: none, -moz-specific, sliding;
 
 /* Global values */
-animation-timeline: initial;
 animation-timeline: inherit;
+animation-timeline: initial;
 animation-timeline: revert;
+animation-timeline: revert-layer;
 animation-timeline: unset;
 ```
 
@@ -56,7 +60,7 @@ animation-timeline: unset;
 
 ## Examples
 
-### Simple example
+### Setting a scroll timeline
 
 A scroll timeline named `squareTimeline` is declared and applied to the `#square` element using `animation-timeline: squareTimeline`.
 
@@ -77,7 +81,8 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 
 #square {
   background-color: deeppink;
-  width: 100px; height: 100px;
+  width: 100px;
+  height: 100px;
   margin-top: 100px;
   animation-name: rotateAnimation;
   animation-duration: 3s;
@@ -86,9 +91,9 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 }
 
 @scroll-timeline squareTimeline {
-  source: selector('#container');
+  source: selector("#container");
   orientation: "vertical";
-  scroll-offsets:  0px, 300px;
+  scroll-offsets: 0px, 300px;
 }
 
 @keyframes rotateAnimation {
@@ -103,8 +108,9 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 
 #### Result
 
-{{EmbedLiveSample("Simple example")}}
+Scroll to see the animation.
 
+{{EmbedLiveSample("Setting a scroll timeline")}}
 
 ## Specifications
 
@@ -118,3 +124,4 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - [@scroll-timeline at rule](/en-US/docs/Web/CSS/@scroll-timeline)
+- Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}

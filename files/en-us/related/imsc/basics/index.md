@@ -8,6 +8,7 @@ tags:
   - captions
   - subtitles
 ---
+
 IMSC allows you to add subtitles or captions to your online video. In this article we'll take you through what you need to get started, including basic document structure, and the basics of how to style, time, and position subtitles.
 
 > **Note:** IMSC can be used for any kind of timed text you might want to include on a web document, not just for subtitles and captions. But because subtitles and captions represent the most common use cases for IMSC, we will focus on those. For readability we only use the term subtitles. In the technical context we describe, the term "subtitles" is interchangeable with "captions".
@@ -27,15 +28,15 @@ If you are not already familiar with XML or HTML, read up on them first and then
 
 IMSC is always specified as a complete XML document. As a file it should have the extension "_ttml_".
 
-> **Note:** IMSC does not have native support in browsers at this current moment, but the [imscJS](https://github.com/sandflow/imscJS) polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC  XML document.
+> **Note:** IMSC does not have native support in browsers at this current moment, but the [imscJS](https://github.com/sandflow/imscJS) polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC XML document.
 
-Let’s look at a minimal IMSC document and how it is rendered:
+Let's look at a minimal IMSC document and how it is rendered:
 
-{{EmbedGHLiveSample("imsc/minimal_ttml/minimal.html", '100%', 560)}}
+{{EmbedGHLiveSample("imsc-examples/minimal_ttml/minimal.html", '100%', 560)}}
 
 The most important features are as follows:
 
-- `<tt></tt>` — You always start an IMSC document with the root element `<tt>`. You should also specify the default namespace of the document by using the `xmlns` attribute. Don’t worry for now about namespaces. We will come to that in a separate guide.
+- `<tt></tt>` — You always start an IMSC document with the root element `<tt>`. You should also specify the default namespace of the document by using the `xmlns` attribute. Don't worry for now about namespaces. We will come to that in a separate guide.
 - `xml:lang` — You must specify the language of your content with the `xml:lang` attribute. Note that the `lang` attribute must have the prefix `xml:`, unlike HTML. In IMSC `<tt lang="en">` is not correct — you always have to write `<tt xml:lang="en">`.
 - `<body></body>` — As in HTML, the `<body>` element contains all content that you want to show. For IMSC this is typically subtitle content that you want to show at certain time intervals during the playback of a video.
 - `<div></div>` — The `<div>` element is used as a container for subtitle content; you always need to have at least one of these. The `<p>` elements that contain the actual subtitle content always have a `<div>` element as their parent.
@@ -47,7 +48,7 @@ The minimal IMSC document from the previous example had no timing. That means th
 
 Consider the following editable example:
 
-{{EmbedGHLiveSample("imsc/minimal-timing/minimal-timing-player.html", '100%', 590)}}
+{{EmbedGHLiveSample("imsc-examples/minimal-timing/minimal-timing-player.html", '100%', 590)}}
 
 This includes the following new attributes:
 
@@ -60,7 +61,7 @@ Play around with the second values in the code sample and push the reload button
 
 You can also use the `dur` attribute for timing:
 
-{{EmbedGHLiveSample("imsc/minimal-timing/minimal-timing-player-dur.html", '100%', 590)}}
+{{EmbedGHLiveSample("imsc-examples/minimal-timing/minimal-timing-player-dur.html", '100%', 590)}}
 
 This attribute can be used as an alternative to the `end` attribute. It defines "how long" the subtitle is shown after the `begin` time has elapsed. In the example the second paragraph shall be displayed for 2s. As it starts at second 2 it shall disappear at second 4.
 
@@ -70,7 +71,7 @@ Note what has changed at second 2 compared to the previous example.
 
 Often subtitles are shown on an opaque or semi-opaque background to improve readability. You can use the `backgroundColor` and `color` attributes to change the colors, as demonstrated in this editable example:
 
-{{EmbedGHLiveSample("imsc/minimal-colors/minimal-colors.html", '100%', 620)}}
+{{EmbedGHLiveSample("imsc-examples/minimal-colors/minimal-colors.html", '100%', 620)}}
 
 Here we've introduced the following:
 
@@ -87,9 +88,9 @@ Try setting some other colors for the text and background colors:
 - You can use other color schemes like `rgb(0,255,255)`.
 - Finally, try semi-transparent variations, like `rgba(0,0,0, 80)`.
 
-> **Note:** Don’t worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
+> **Note:** Don't worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
 
-As explained in the [IMSC Styling](/en-US/docs/Related/IMSC/Styling) guide, it is possible to define a collection of styling properties that can be used any number of times. The style `s1` below is applied three times:
+As explained in the [IMSC Styling](/en-US/docs/Related/IMSC/Styling) guide, it is possible to define a collection of styling properties that can be used any number of times. The style `s1` below is applied three times:
 
 ```xml
 <tt xmlns="http://www.w3.org/ns/ttml"
@@ -121,46 +122,46 @@ See below for a minimal document that uses regions for positioning.
 <tt xmlns="http://www.w3.org/ns/ttml"
  xmlns:tts="http://www.w3.org/ns/ttml#styling"
  xml:lang="en">
-  <head>
-    <layout>
-      <region tts:origin="10% 80%"
-              tts:extent="80% 20%"
-              xml:id="bottom"/>
-      <region tts:origin="10% 10%"
-              tts:extent="80% 20%"
-              xml:id="top"/>
-    </layout>
+  <head>
+    <layout>
+      <region tts:origin="10% 80%"
+              tts:extent="80% 20%"
+              xml:id="bottom"/>
+      <region tts:origin="10% 10%"
+              tts:extent="80% 20%"
+              xml:id="top"/>
+    </layout>
 </head>
 <body>
-    <div>
-      <p region="bottom"
-          tts:backgroundColor="black">
-          Hello, I am Mork from Ork.
-      </p>
-    </div>
+    <div>
+      <p region="bottom"
+          tts:backgroundColor="black">
+          Hello, I am Mork from Ork.
+      </p>
+    </div>
   </body>
 </tt>
 ```
 
 This includes the following new features:
 
-- `<head></head>` — As in HTML, the `<head>` element acts as a container for all the stuff you want to include in an IMSC document that isn’t subtitle content, most commonly metadata about the content or document. You'll use it mostly to store positioning and styling information.
+- `<head></head>` — As in HTML, the `<head>` element acts as a container for all the stuff you want to include in an IMSC document that isn't subtitle content, most commonly metadata about the content or document. You'll use it mostly to store positioning and styling information.
 - `<layout></layout>` — This element acts as a wrapper for positioning information. It has `<region>` elements as its children.
 - `<region></region>` — this element can be used to define `region`s, rectangular areas you can place on top of your video. They have a defined position, width, and height, plus an `id` to uniquely identify them. You can think of it as being similar to a `<div>` element in HTML that is given an absolute position, width, and height via CSS. If subtitle content is "linked" to a region (by specifying the region's `id` in its `region` attribute), it will be shown inside the area generated by that region.
-- `xml:id` - the `xml:id` attribute. The value of the `xml:id` attribute is a string that can be used to link subtitle content to a `region.`
+- `xml:id` - the `xml:id` attribute. The value of the `xml:id` attribute is a string that can be used to link subtitle content to a `region`.
 - `tts:origin` — This attribute defines the position of the top-left corner of the region. It uses the % (percentage) metric. The first value defines how far the top left corner of the region is pushed to the right — in this case the value `10%` places the region 10% of the video's width to the right. The second value defines how far the top left corner of the region is placed towards the bottom of the video — in this case the value `80%` pushes the top left corner of the region 80% of the video's height towards the bottom of the video.
 - `tts:extent` — This attribute defines the width and height of the region. In this case `80%` sets the width to 80% of the video's width, and `20%` sets the height of the region to 20% of the video's height.
 - `region` — setting this on some subtitle content and then giving it a region's `xml:id` as its value causes it to _reference_ that region, meaning that at the specified time, it will appear in the area defined by that region. So here, the value `bottom` places the subtitle content represented by this `<p>` element in the region with an `xml:id` of `bottom`.
 
 This sample will be rendered as shown below. Give it a try and play around with the code in the two boxes. You could for example set the `tts:origin` attribute to "_0% 0%_". Or see what happens when you change the value of the `region` attribute of the `<p>` element to "_top_".
 
-{{EmbedGHLiveSample("imsc/minimal-region/minimal-region.html", '100%', 650)}}
+{{EmbedGHLiveSample("imsc-examples/minimal-region/minimal-region.html", '100%', 650)}}
 
 ## Expanded example
 
 The more expanded example below gives you an idea what you can do with IMSC after you worked through our tutorials.
 
-{{EmbedGHLiveSample("imsc/basic-expanded/basics-expanded.html", '100%', 300)}}
+{{EmbedGHLiveSample("imsc-examples/basic-expanded/basics-expanded.html", '100%', 300)}}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -236,4 +237,24 @@ The more expanded example below gives you an idea what you can do with IMSC afte
 
 That's it for your crash course in IMSC code basics! We've only really scratched the surface here, and you'll go much deeper into the above topics in subsequent articles.
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li><li class="toggle"><details open><summary>IMSC guides</summary><ol><li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li><li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li><li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li><li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li></ol></details></li></ol></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
+    <li class="toggle">
+      <details open>
+        <summary>IMSC guides</summary>
+        <ol>
+          <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
+          <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a>
+          </li>
+          <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>

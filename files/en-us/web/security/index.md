@@ -6,6 +6,7 @@ tags:
   - Security
   - Web
 ---
+
 Ensuring that your website or open web application is secure is critical. Even simple bugs in your code can result in private information being leaked, and bad people are out there trying to find ways to steal data. The web security-oriented articles listed here provide information that may help you secure your site and its code from attacks and data theft.
 
 ## Content security
@@ -26,9 +27,9 @@ Ensuring that your website or open web application is secure is critical. Even s
 - [Mixed content](/en-US/docs/Web/Security/Mixed_content)
   - : An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers.
 - [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
-  - : If your website delivers HTTPS pages, all [active mixed content](/en-US/docs/Web/Security/Mixed_content/#Mixed_active_content) delivered via HTTP on these pages will be blocked by default. Consequently, your website may appear broken to users (if iframes or plugins don't load, etc.). [Passive mixed content](/en-US/docs/Web/Security/Mixed_content/#Mixed_passivedisplay_content) is displayed by default, but users can set a preference to block this type of content, as well. This page explains what you should be aware of as a web developer.
+  - : If your website delivers HTTPS pages, all [active mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_active_content) delivered via HTTP on these pages will be blocked by default. Consequently, your website may appear broken to users (if iframes or plugins don't load, etc.). [Passive mixed content](/en-US/docs/Web/Security/Mixed_content#mixed_passivedisplay_content) is displayed by default, but users can set a preference to block this type of content, as well. This page explains what you should be aware of as a web developer.
 - [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
-  - : A **secure context** is a `Window` or `Worker` for which there is reasonable confidence that the content has been delivered securely (via HTTPS/TLS), and for which the potential for communication with contexts that are **not** secure is limited. Many Web APIs and features are accessible only in a secure context. The primary goal of secure contexts is to prevent {{interwiki("wikipedia", "man-in-the-middle attack", "man-in-the-middle attackers")}} from accessing powerful APIs that could further compromise the victim of an attack.
+  - : A **secure context** is a `Window` or `Worker` for which there is reasonable confidence that the content has been delivered securely (via HTTPS/TLS), and for which the potential for communication with contexts that are **not** secure is limited. Many Web APIs and features are accessible only in a secure context. The primary goal of secure contexts is to prevent [man-in-the-middle attackers](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) from accessing powerful APIs that could further compromise the victim of an attack.
 - [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
   - : This reference lists the web platform features available only in secure contexts.
 - [Weak signature algorithms](/en-US/docs/Web/Security/Weak_Signature_Algorithm)
@@ -61,7 +62,7 @@ Ensuring that your website or open web application is secure is critical. Even s
 - [HTTP Access-Control-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
   - : The **`Access-Control-Allow-Origin`** response header indicates whether the response can be shared with requesting code from the given {{glossary("origin")}}.
 - [HTTP X-Content-Type-Options](/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : The **`X-Content-Type-Options`** response HTTP header is a marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should not be changed and be followed. This is a way to opt out of [MIME type sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing), or, in other words, to say that the MIME types are deliberately configured.
+  - : The **`X-Content-Type-Options`** response HTTP header is a marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should not be changed and be followed. This is a way to opt out of [MIME type sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing), or, in other words, to say that the MIME types are deliberately configured.
 
 ## Clickjacking protection
 
@@ -75,7 +76,7 @@ In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clic
 ## User information security
 
 - [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords)
-  - : Serving login forms over HTTP is especially dangerous because of the wide variety of attacks that can be used against them to extract a user’s password. Network eavesdroppers could steal a user's password by sniffing the network, or by modifying the served page in transit.
+  - : Serving login forms over HTTP is especially dangerous because of the wide variety of attacks that can be used against them to extract a user's password. Network eavesdroppers could steal a user's password by sniffing the network, or by modifying the served page in transit.
 - [Privacy and the :visited selector](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : Before about 2010, the [CSS](/en-US/docs/Web/CSS) {{cssxref(":visited")}} selector allowed websites to uncover a user's browsing history and figure out what sites the user had visited. To mitigate this problem, browsers have limited the amount of information that can be obtained from visited links.
 
@@ -120,14 +121,11 @@ In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clic
 - {{Glossary("SQL injection")}}
 - {{Glossary("Symmetric-key cryptography")}}
 - {{Glossary("TOFU")}}
-
-<!---->
-
 - {{Glossary("TLS")}}
 
 ## See also
 
-- [Security Blog](https://blog.mozilla.com/security/)
+- [Security Blog](https://blog.mozilla.org/security/)
 - [@mozsec on Twitter](https://twitter.com/mozsec)
 
 {{QuickLinksWithSubpages}}

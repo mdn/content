@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent.topOrigin
 slug: Web/API/PaymentRequestEvent/topOrigin
+page-type: web-api-instance-property
 tags:
   - API
   - Payment Request API
@@ -9,23 +10,19 @@ tags:
   - Reference
   - payment
   - topLevelOrigin
+  - Experimental
 browser-compat: api.PaymentRequestEvent.topOrigin
 ---
+
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
 The **`topOrigin`** read-only property of the
 {{domxref("PaymentRequestEvent")}} interface returns the top level payee origin where
 the {{domxref("PaymentRequest")}} object was initialized.
 
-## Syntax
+## Value
 
-```js
-var aUsvString = paymentRequestEvent.topOrigin
-```
-
-### Value
-
-A USVString
+A string
 
 ## Specifications
 

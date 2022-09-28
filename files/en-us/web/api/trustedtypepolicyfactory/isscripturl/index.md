@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicyFactory.isScriptURL()
 slug: Web/API/TrustedTypePolicyFactory/isScriptURL
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.isScriptURL
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`isScriptURL()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedScriptURL")}} object.
@@ -17,8 +19,8 @@ The **`isScriptURL()`** method of the {{domxref("TrustedTypePolicyFactory")}} in
 
 ## Syntax
 
-```js
-var isScriptURL = TrustedTypePolicyFactory.isScriptURL(value);
+```js-nolint
+isScriptURL(value)
 ```
 
 ### Parameters

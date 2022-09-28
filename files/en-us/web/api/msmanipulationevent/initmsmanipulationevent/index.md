@@ -1,6 +1,7 @@
 ---
 title: MSManipulationEvent.initMSManipulationEvent()
 slug: Web/API/MSManipulationEvent/initMSManipulationEvent
+page-type: web-api-instance-method
 tags:
   - API
   - API:Microsoft Extensions
@@ -10,69 +11,55 @@ tags:
   - Reference
   - initMSManipulationEvent
 ---
-{{APIRef("Microsoft Extensions")}}{{Non-standard_Header}}{{Deprecated_Header}}
+
+{{APIRef("UI Events")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`initMSManipulationEvent`** method is used to create a {{DOMxRef("MSManipulationEvent")}} that can be called from JavaScript.
 
 This proprietary method is specific to Internet Explorer. Beginning with the Microsoft Edge browser, the [initEvent()](/en-US/docs/Web/API/Event/initEvent) constructor pattern for synthetic events is deprecated.
 
-### Syntax
+## Syntax
 
-```js
-MSManipulationEvent.initMSManipulationEvent(typeArg, canBubbleArg, cancelableArg, viewArg, detailArg, lastState, currentState);
+```js-nolint
+initMSManipulationEvent(type, canBubble, cancelable, view, detail, lastState, currentState)
 ```
 
 ### Parameters
 
-**typeArg** \[in]
+- `type`
 
-Type: _DOMString_
+  - : A string that represents the type of the event being created.
 
-The type of the event being created.
+- `canBubble`
 
-**canBubbleArg** \[in]
+  - : A boolean value that indicates whether the event can bubble. When `true` the event should propagate upward. When `false` the event does not propagate upward.
 
-Type: _boolean_
+- `cancelable`
 
-Indicates whether the event can bubble. When true the event should propagate upward. When false the event does not propagate upward.
+  - : A boolean value that indicates whether the event's default action can be prevented. When `true`, the default action can be canceled. When `false`, the default action cannot be canceled.
 
-**cancelableArg** \[in]
+- `view`
 
-Type: _boolean_
+  - : An {{domxref("AbstractView")}} representing the view in which the event is taking place.
 
-Indicates whether the event’s default action can be prevented. When true, the default action can be canceled. When false, the default action cannot be canceled.
+- `detail`
 
-**viewArg** \[in]
+  - : An integer that specifies some detailed information depending upon the event.
 
-Type: _AbstractView_
+- `lastState`
 
-The view in which the event is taking place.
+  - : An integer that indicates the last state of the manipulation event.
 
-**detailArg** \[in]
-
-Type: _Integer_
-
-Specifies some detailed information depending upon the event.
-
-**lastState** \[in]
-
-Type: _Integer_
-
-Indicates the last state of the manipulation event.
-
-**currentState** \[in]
-
-Type: _Integer_
-
-Indicates the current state of the manipulation event.
+- `currentState`
+  - : An integer that indicates the current state of the manipulation event.
 
 ### Return value
 
-This method does not return a value.
+None ({{jsxref("undefined")}}).
 
-### Example
+## Examples
 
-```js
+```
 interface MSManipulationEvent extends UIEvent {
     readonly currentState: number;
     readonly inertiaDestinationX: number;

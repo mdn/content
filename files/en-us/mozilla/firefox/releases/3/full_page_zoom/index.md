@@ -6,6 +6,7 @@ tags:
   - Firefox 3
   - XUL
 ---
+
 {{FirefoxSidebar}}
 
 Full page zoom (or just fullZoom) is a new feature in [Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3).
@@ -30,13 +31,14 @@ You may use the fullZoom feature for a [XUL:iframe](/en-US/docs/XUL/iframe) as w
 var zoom = 1.5;
 var iframe = document.getElementById("authorFrame");
 var contViewer = iframe.docShell.contentViewer;
-var docViewer = contViewer.QueryInterface(Components.interfaces.nsIMarkupDocumentViewer);
+var docViewer = contViewer.QueryInterface(
+  Components.interfaces.nsIMarkupDocumentViewer
+);
 docViewer.fullZoom = zoom;
 ```
 
 ### References
 
 - Page zoom extension by Ted Mielczarek [fullpagezoom.xpi](https://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi) for latest Firefox 3.0 nightlies
-- [Glazoom extension](https://addons.mozilla.org/en-US/firefox/addon/6489) by Daniel Glazman for Firefox 3.0
 - The [bugzilla bug](https://bugzilla.mozilla.org/show_bug.cgi?id=4821) about fullZoom.
-- {{ Interface("nsIMarkupDocumentViewer") }} Interface documentation.
+- `nsIMarkupDocumentViewer` Interface documentation.

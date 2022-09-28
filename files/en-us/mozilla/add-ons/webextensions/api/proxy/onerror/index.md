@@ -11,6 +11,7 @@ tags:
   - onProxyError
 browser-compat: webextensions.api.proxy.onError
 ---
+
 {{AddonSidebar()}}
 
 Fired when there is an error evaluating the PAC file or the `onRequest` listener.
@@ -19,7 +20,7 @@ The error can be triggered by throwing or returning an invalid value in the prox
 
 ## Syntax
 
-```js
+```js-nolint
 browser.proxy.onError.addListener(listener)
 browser.proxy.onError.removeListener(listener)
 browser.proxy.onError.hasListener(listener)
@@ -43,7 +44,7 @@ Events have three functions:
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
     - `newState`
-      - : `Object`. An [Error](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object representing the error.
+      - : `Object`. An [Error](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object representing the error.
 
 {{WebExtExamples}}
 

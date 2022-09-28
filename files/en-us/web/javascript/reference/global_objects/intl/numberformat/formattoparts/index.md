@@ -12,15 +12,18 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 ---
+
 {{JSRef}}
 
-The **`Intl.Numberformat.prototype.formatToParts()`** method
+The **`Intl.NumberFormat.prototype.formatToParts()`** method
 allows locale-aware formatting of strings produced by `NumberFormat`
 formatters.
 
+{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-formattoparts.html")}}
+
 ## Syntax
 
-```js
+```js-nolint
 formatToParts()
 formatToParts(number)
 ```
@@ -87,9 +90,9 @@ Possible types are the following:
 directly:
 
 ```js
-var number = 3500;
+const number = 3500;
 
-var formatter = new Intl.NumberFormat('de-DE', {
+const formatter = new Intl.NumberFormat('de-DE', {
   style: 'currency',
   currency: 'EUR'
 });
@@ -120,13 +123,12 @@ formatter.formatToParts(number);
 
 Now the information is available separately and it can be formatted and concatenated
 again in a customized way. For example by using {{jsxref("Array.prototype.map()")}},
-[arrow
-functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a [switch
-statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch), [template
-literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and {{jsxref("Array.prototype.reduce()")}}.
+[arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
+a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch),
+[template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and {{jsxref("Array.prototype.reduce()")}}.
 
 ```js
-var numberString = formatter.formatToParts(number).map(({type, value}) => {
+const numberString = formatter.formatToParts(number).map(({type, value}) => {
   switch (type) {
     case 'currency': return `<strong>${value}</strong>`;
     default : return value;

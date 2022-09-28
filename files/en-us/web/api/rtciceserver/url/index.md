@@ -1,8 +1,8 @@
 ---
 title: RTCIceServer.url
 slug: Web/API/RTCIceServer/url
+page-type: web-api-instance-property
 tags:
-  - Experimental
   - Deprecated
   - Property
   - RTCIceServer
@@ -11,12 +11,8 @@ tags:
   - WebRTC
 browser-compat: api.RTCIceServer.url
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
-
-{{draft("I'm experimenting with structure for pages documenting members of
-  dictionaries. Please contact ~~sheppy with any feedback.")}}
-
-{{SeeCompatTable}}
 
 The **obsolete** {{domxref("RTCIceServer")}} dictionary's
 **`url`** property specifies the URL of a single ICE server to
@@ -32,19 +28,19 @@ property instead.
 
 ## Syntax
 
-```js
-var iceServer = {
-                  ...
-                  url = iceServerUrl,
-                  ...
-                };
+```js-nolint
+const iceServer = {
+  // ...
+  url: iceServerUrl,
+  // ...
+};
 
-var serverUrl = iceServer.url;
+const serverUrl = iceServer.url;
 
 iceServer.url = iceServerUrl;
 ```
 
-The value of this property is a {{domxref("DOMString")}} containing the full URL of a
+The value of this property is a string containing the full URL of a
 server to use during ICE negotiation.
 
 ## Example

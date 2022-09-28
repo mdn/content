@@ -9,22 +9,22 @@ tags:
   - String
 browser-compat: javascript.builtins.String.toString
 ---
+
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the
-specified object.
+The **`toString()`** method of a string object returns a string representing the specified string.
 
 {{EmbedInteractiveExample("pages/js/string-tostring.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
 ### Return value
 
-A string representing the calling object.
+The string value of the `String` wrapper object.
 
 ## Description
 
@@ -36,12 +36,12 @@ same as the {{jsxref("String.prototype.valueOf()")}} method.
 
 ## Examples
 
-### Using `toString()`
+### Using toString()
 
 The following example displays the string value of a {{jsxref("String")}} object:
 
 ```js
-var x = new String('Hello world');
+const x = new String("Hello world");
 
 console.log(x.toString()); // logs 'Hello world'
 ```
@@ -56,5 +56,4 @@ console.log(x.toString()); // logs 'Hello world'
 
 ## See also
 
-- {{jsxref("Object.prototype.toSource()")}}
 - {{jsxref("String.prototype.valueOf()")}}

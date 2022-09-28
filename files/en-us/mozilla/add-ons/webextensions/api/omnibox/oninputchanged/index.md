@@ -12,6 +12,7 @@ tags:
   - onInputChanged
 browser-compat: webextensions.api.omnibox.onInputChanged
 ---
+
 {{AddonSidebar()}}
 
 Fired whenever the user changes their input, after they have started interacting with your extension by entering its keyword in the address bar and then pressing the space key.
@@ -23,7 +24,7 @@ This is the event you'll use to populate the address bar's drop-down list with s
 
 ## Syntax
 
-```js
+```js-nolint
 browser.omnibox.onInputChanged.addListener(listener)
 browser.omnibox.onInputChanged.removeListener(listener)
 browser.omnibox.onInputChanged.hasListener(listener)
@@ -57,7 +58,7 @@ The listener function will be passed two parameters: a string `text`, and a call
 
 This example interprets the user's input as a CSS property name and populates the drop-down list with one {{WebExtAPIRef("omnibox.SuggestResult")}} object for each CSS property matching the input. The `SuggestResult` `description` is the full name of the property, and the `content` is the MDN page for that property.
 
-The example also listens to {{WebExtAPIRef("omnibox.onInputEntered")}}, and opens the MDN page corresponding to the selection, according to the  {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} argument.
+The example also listens to {{WebExtAPIRef("omnibox.onInputEntered")}}, and opens the MDN page corresponding to the selection, according to the {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} argument.
 
 ```js
 browser.omnibox.setDefaultSuggestion({
@@ -95,19 +96,17 @@ Return an array of SuggestResult objects,
 one for each CSS property that matches the user's input.
 */
 function getMatchingProperties(input) {
-  var result = [];
-  for (prop of props) {
-    if (prop.indexOf(input) === 0) {
+  const result = [];
+  for (const prop of props) {
+    if (prop.startsWith(input)) {
       console.log(prop);
-      let suggestion = {
-        content: baseURL + prop,
+      const suggestion = {
+        content: `${baseURL}${prop}`,
         description: prop
       }
       result.push(suggestion);
-    } else {
-      if (result.length != 0) {
-        return result;
-      }
+    } else if (result.length !== 0) {
+      return result;
     }
   }
   return result;
@@ -134,6 +133,6 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox) API.
+> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

@@ -11,6 +11,7 @@ tags:
   - Server-side programming
   - Web frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 The previous article showed you what the communication between web clients and servers looks like, the nature of HTTP requests and responses, and what a server-side web application needs to do in order to respond to requests from a web browser. With this knowledge under our belt, it's time to explore how web frameworks can simplify these tasks, and give you an idea of how you'd choose a framework for your first server-side web application.
@@ -106,7 +107,7 @@ Using an ORM has two benefits:
 - You can replace the underlying database without necessarily needing to change the code that uses it. This allows developers to optimize for the characteristics of different databases based on their usage.
 - Basic validation of data can be implemented within the framework. This makes it easier and safer to check that data is stored in the correct type of database field, has the correct format (e.g. an email address), and isn't malicious in any way (hackers can use certain patterns of code to do bad things such as deleting database records).
 
-For example, the Django web framework provides an ORM, and refers to the object used to define the structure of a record as the _model_. The model specifies the field *types* to be stored, which may provide field-level validation on what information can be stored (e.g. an email field would only allow valid email addresses). The field definitions may also specify their maximum size, default values, selection list options, help text for documentation, label text for forms etc. The model doesn't state any information about the underlying database as that is a configuration setting that may be changed separately of our code.
+For example, the Django web framework provides an ORM, and refers to the object used to define the structure of a record as the _model_. The model specifies the field _types_ to be stored, which may provide field-level validation on what information can be stored (e.g. an email field would only allow valid email addresses). The field definitions may also specify their maximum size, default values, selection list options, help text for documentation, label text for forms etc. The model doesn't state any information about the underlying database as that is a configuration setting that may be changed separately of our code.
 
 The first code snippet below shows a very simple Django model for a `Team` object. This stores the team name and team level as character fields and specifies a maximum number of characters to be stored for each record. The `team_level` is a choice field, so we also provide a mapping between choices to be displayed and data to be stored, along with a default value.
 
@@ -122,7 +123,7 @@ class Team(models.Model):
         ('U09', 'Under 09s'),
         ('U10', 'Under 10s'),
         ('U11', 'Under 11s'),
-        ...  #list our other teams
+        # List our other teams
     )
     team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 ```
@@ -149,7 +150,7 @@ Web frameworks often provide templating systems. These allow you to specify the 
 
 Web frameworks often provide a mechanism to make it easy to generate other formats from stored data, including {{glossary("JSON")}} and {{glossary("XML")}}.
 
-For example, the Django template system allows you to specify variables using a "double-handlebars" syntax (e.g. `\{{ variable_name }}`),  which will be replaced by values passed in from the view function when a page is rendered. The template system also provides support for expressions (with syntax: `{% expression %}`), which allow templates to perform simple operations like iterating list values passed into the template.
+For example, the Django template system allows you to specify variables using a "double-handlebars" syntax (e.g. `\{{ variable_name }}`), which will be replaced by values passed in from the view function when a page is rendered. The template system also provides support for expressions (with syntax: `{% expression %}`), which allow templates to perform simple operations like iterating list values passed into the template.
 
 > **Note:** Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
 
@@ -185,7 +186,7 @@ Some of the factors that may affect your decision are:
 - **Effort to learn:** The effort to learn a web framework depends on how familiar you are with the underlying programming language, the consistency of its API, the quality of its documentation, and the size and activity of its community. If you're starting from absolutely no programming experience then consider Django (it is one of the easiest to learn based on the above criteria). If you are part of a development team that already has significant experience with a particular web framework or programming language, then it makes sense to stick with that.
 - **Productivity:** Productivity is a measure of how quickly you can create new features once you are familiar with the framework, and includes both the effort to write and maintain code (since you can't write new features while old ones are broken). Many of the factors affecting productivity are similar to those for "Effort to learn" — e.g. documentation, community, programming experience, etc. — other factors include:
 
-  - _Framework purpose/origin_: Some web frameworks were initially created to solve certain types of problems, and remain *better* at creating web apps with similar constraints. For example, Django was created to support development of a newspaper website, so it's good for blogs and other sites that involve publishing things. By contrast, Flask is a much lighter-weight framework and is great for creating web apps running on embedded devices.
+  - _Framework purpose/origin_: Some web frameworks were initially created to solve certain types of problems, and remain _better_ at creating web apps with similar constraints. For example, Django was created to support development of a newspaper website, so it's good for blogs and other sites that involve publishing things. By contrast, Flask is a much lighter-weight framework and is great for creating web apps running on embedded devices.
   - _Opinionated vs unopinionated_: An opinionated framework is one in which there are recommended "best" ways to solve a particular problem. Opinionated frameworks tend to be more productive when you're trying to solve common problems, because they lead you in the right direction, however they are sometimes less flexible.
   - _Batteries included vs. get it yourself_: Some web frameworks include tools/libraries that address every problem their developers can think "by default", while more lightweight frameworks expect web developers to pick and choose solution to problems from separate libraries (Django is an example of the former, while Flask is an example of a very light-weight framework). Frameworks that include everything are often easier to get started with because you already have everything you need, and the chances are that it is well integrated and well documented. However if a smaller framework has everything you (will ever) need then it can run in more constrained environments and will have a smaller and easier subset of things to learn.
   - _Whether or not the framework encourages good development practices_: For example, a framework that encourages a [Model-View-Controller](/en-US/docs/Glossary/MVC) architecture to separate code into logical functions will result in more maintainable code than one that has no expectations on developers. Similarly, framework design can have a large impact on how easy it is to test and re-use code.
@@ -201,17 +202,17 @@ If you're an absolute beginner at programming then you'll probably choose your f
 
 > **Note:** Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
 >
-> 1.  Navigate to the main sites (linked above)
+> 1. Navigate to the main sites (linked above)
 >
->     - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started", etc.).
->     - Can you see topics showing how to set up URL routing, templates, and databases/models?
->     - Are the documents clear?
+>    - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started", etc.).
+>    - Can you see topics showing how to set up URL routing, templates, and databases/models?
+>    - Are the documents clear?
 >
-> 2.  Navigate to mailing lists for each site (accessible from Community links).
+> 2. Navigate to mailing lists for each site (accessible from Community links).
 >
->     - How many questions have been posted in the last few days
->     - How many have responses?
->     - Do they have an active community?
+>    - How many questions have been posted in the last few days
+>    - How many have responses?
+>    - Do they have an active community?
 
 ## A few good web frameworks?
 
@@ -223,7 +224,7 @@ The server-side frameworks below represent _a few_ of the most popular available
 
 ### Django (Python)
 
-[Django](https://www.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+[Django](https://www.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It's free and open source.
 
 Django follows the "Batteries included" philosophy and provides almost everything most developers might want to do "out of the box". Because everything is included, it all works together, follows consistent design principles, and has extensive and up-to-date documentation. It is also fast, secure, and very scalable. Being based on Python, Django code is easy to read and to maintain.
 
@@ -231,11 +232,11 @@ Popular sites using Django (from Django home page) include: Disqus, Instagram, K
 
 ### Flask (Python)
 
-[Flask](http://flask.pocoo.org/) is a microframework for Python.
+[Flask](https://flask.palletsprojects.com) is a microframework for Python.
 
 While minimalist, Flask can create serious websites out of the box. It contains a development server and debugger, and includes support for [Jinja2](https://github.com/pallets/jinja) templating, secure cookies, [unit testing](https://en.wikipedia.org/wiki/Unit_testing), and [RESTful](https://www.restapitutorial.com/lessons/restfulresourcenaming.html) request dispatching. It has good documentation and an active community.
 
-Flask has become extremely popular, particularly for developers who need to provide web services on small, resource-constrained systems (e.g. running a web server on a [Raspberry Pi](https://www.raspberrypi.org/), [Drone controllers](https://blogtarkin.com/drone-definitions-learning-the-drone-lingo/), etc.)
+Flask has become extremely popular, particularly for developers who need to provide web services on small, resource-constrained systems (e.g. running a web server on a [Raspberry Pi](https://www.raspberrypi.org/), [Drone controllers](https://www.techuseful.com/drone-definitions-learning-the-drone-lingo/), etc.)
 
 ### Express (Node.js/JavaScript)
 
@@ -245,13 +246,13 @@ Express is extremely popular, partially because it eases the migration of client
 
 Because Express is a minimalist web framework it does not incorporate every component that you might want to use (for example, database access and support for users and sessions are provided through independent libraries). There are many excellent independent components, but sometimes it can be hard to work out which is the best for a particular purpose!
 
-Many popular server-side and full stack frameworks (comprising both server and client-side frameworks) are based on Express, including [Feathers](https://feathersjs.com/), [ItemsAPI](https://www.itemsapi.com/), [KeystoneJS](https://keystonejs.com/), [Kraken](https://krakenjs.com/), [LoopBack](https://loopback.io/), [MEAN](https://mean.io/), and [Sails](https://sailsjs.org/).
+Many popular server-side and full stack frameworks (comprising both server and client-side frameworks) are based on Express, including [Feathers](https://feathersjs.com/), [ItemsAPI](https://itemsapi.com/), [KeystoneJS](https://keystonejs.com/), [Kraken](https://krakenjs.com/), [LoopBack](https://loopback.io/), [MEAN](https://github.com/linnovate/mean), and [Sails](https://sailsjs.com/).
 
 A lot of high profile companies use Express, including: Uber, Accenture, IBM, etc. (a list is provided [here](https://expressjs.com/en/resources/companies-using-express.html)).
 
 ### Deno (JavaScript)
 
-[Deno](https://deno.land/) is a simple, modern, and secure [JavaScript](/en-US/docs/Web/JavaScript)/TypeScript runtime and framework built on top of Chrome V8 and [Rust](/en-US/docs/Mozilla/Rust).
+[Deno](https://deno.land/) is a simple, modern, and secure [JavaScript](/en-US/docs/Web/JavaScript)/TypeScript runtime and framework built on top of Chrome V8 and [Rust](https://www.rust-lang.org/).
 
 Deno is powered by [Tokio](https://tokio.rs/) — a Rust-based asynchronous runtime which lets it serve web pages faster. It also has internal support for [WebAssembly](/en-US/docs/WebAssembly), which enables the compilation of binary code for use on the client-side. Deno aims to fill in some of the loop-holes in [Node.js](/en-US/docs/Learn/Server-side/Node_server_without_framework) by providing a mechanism that naturally maintains better security.
 
@@ -274,7 +275,7 @@ Rails follows a very similar design philosophy to Django. Like Django it provide
 
 There are of course many differences due to specific design decisions and the nature of the languages.
 
-Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://shopify.com/), [Airbnb](https://airbnb.com/), [Twitch](https://twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://hulu.com/), [Zendesk](https://zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
+Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://www.shopify.com/), [Airbnb](https://www.airbnb.com/), [Twitch](https://www.twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://www.hulu.com/welcome), [Zendesk](https://www.zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
 
 ### Laravel (PHP)
 
@@ -292,7 +293,7 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 
 ### ASP.NET
 
-[ASP.NET](https://www.asp.net/) is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create web sites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.
+[ASP.NET](https://dotnet.microsoft.com/en-us/apps/aspnet) is an open source web framework developed by Microsoft for building modern web applications and services. With ASP.NET you can quickly create web sites based on HTML, CSS, and JavaScript, scale them for use by millions of users and easily add more complex capabilities like Web APIs, forms over data, or real time communications.
 
 One of the differentiators for ASP.NET is that it is built on the [Common Language Runtime](https://en.wikipedia.org/wiki/Common_Language_Runtime) (CLR), allowing programmers to write ASP.NET code using any supported .NET language (C#, Visual Basic, etc.). Like many Microsoft products it benefits from excellent tools (often free), an active developer community, and well-written documentation.
 
@@ -302,7 +303,7 @@ ASP.NET is used by Microsoft, Xbox.com, Stack Overflow, and many others.
 
 [Mojolicious](https://mojolicious.org/) is a next-generation web framework for the Perl programming language.
 
-Back in the early days of the web, many people learned Perl because of a wonderful Perl library called [CGI](https://metacpan.org/module/CGI). It was simple enough to get started without knowing much about the language and powerful enough to keep you going. Mojolicious implements this idea using bleeding edge technologies.
+Back in the early days of the web, many people learned Perl because of a wonderful Perl library called [CGI](https://metacpan.org/pod/CGI). It was simple enough to get started without knowing much about the language and powerful enough to keep you going. Mojolicious implements this idea using bleeding edge technologies.
 
 Some of the features provided by Mojolicious are:
 

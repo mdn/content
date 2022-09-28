@@ -1,6 +1,7 @@
 ---
 title: HTMLAnchorElement.relList
 slug: Web/API/HTMLAnchorElement/relList
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -10,6 +11,7 @@ tags:
   - relList
 browser-compat: api.HTMLAnchorElement.relList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.relList`** read-only property reflects
@@ -21,24 +23,20 @@ element and the current document.
 The property itself is read-only, meaning you can't substitute the
 {{domxref("DOMTokenList")}} with another one, but its contents can still be changed.
 
-## Syntax
+## Value
+
+A live {{domxref("DOMTokenList")}} of strings.
+
+## Examples
 
 ```js
-var relstr = anchorElt.relList;
-```
-
-## Example
-
-```js
-var anchors = document.getElementsByTagName("a");
-var length = anchors.length;
-for (var i = 0; i < length; i++) {
-  var list = anchors[i].relList;
-  var listLength = list.length;
-  console.log("New anchor node found with", listLength, "link types in relList.");
-  for (var j = 0; j < listLength; j++) {
-    console.log(list[j]);
-  }
+const anchors = document.getElementsByTagName("a");
+for (const anchor of anchors) {
+  const list = anchor.relList;
+  console.log(`New anchor node found with ${list.length} link types in relList.`);
+  list.forEach((relValue) => {
+    console.log(relValue);
+  });
 }
 ```
 
@@ -54,5 +52,5 @@ for (var i = 0; i < length; i++) {
 
 - The equivalent property on {{HTMLElement("area")}} and {{HTMLElement("link")}},
   {{domxref("HTMLAreaElement.relList")}} and {{domxref("HTMLLinkElement.relList")}}.
-- The very same list but as a space-separated tokens in a {{domxref("DOMString")}}:
+- The very same list but as a space-separated tokens in a string:
   {{domxref("HTMLAnchorElement.rel")}}

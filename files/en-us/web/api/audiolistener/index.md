@@ -1,6 +1,7 @@
 ---
 title: AudioListener
 slug: Web/API/AudioListener
+page-type: web-api-interface
 tags:
   - API
   - AudioListener
@@ -9,6 +10,7 @@ tags:
   - Web Audio API
 browser-compat: api.AudioListener
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `AudioListener` interface represents the position and orientation of the unique person listening to the audio scene, and is used in [audio spatialization](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics). All {{domxref("PannerNode")}}s spatialize in relation to the `AudioListener` stored in the {{domxref("BaseAudioContext.listener")}} attribute.
@@ -54,7 +56,7 @@ It is important to note that there is only one listener per context and that it 
 - {{domxref("AudioListener.dopplerFactor")}} {{deprecated_inline}}
   - : A double value representing the amount of pitch shift to use when rendering a [doppler effect](https://en.wikipedia.org/wiki/Doppler_effect).
 - {{domxref("AudioListener.speedOfSound")}} {{deprecated_inline}}
-  - : Is a double value representing the speed of sound, in _meters per second_.
+  - : A double value representing the speed of sound, in _meters per second_.
 
 In a previous version of the specification, the `dopplerFactor` and `speedOfSound` properties and the `setPosition()` method could be used to control the doppler effect applied to {{domxref("AudioBufferSourceNode")}}s connected downstream — these would be pitched up and down according to the relative speed of the {{domxref("PannerNode")}} and the {{domxref("AudioListener")}}. These features had a number of problems:
 

@@ -4,12 +4,13 @@ slug: Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sou
 tags:
   - Audio
   - HLS
-  - HTML5
+  - HTML
   - HTTP Live Streaming
   - MPEG-DASH
   - Video
   - adaptive streaming
 ---
+
 Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)
 
 ## Choosing formats
@@ -39,12 +40,12 @@ For live services streaming, the LIVE profile is a requirement. The stream switc
 
 Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
-1.  Your client or server does not support range requests
-2.  Your server cannot cache range requests efficiently
-3.  Your server cannot prefetch range requests efficiently
-4.  The SIDX\* is large and having to load it first slows down startup a little
-5.  You want to use the original files for both DASH and other forms of delivery (such as Microsoft Smooth Streaming) as a transition strategy
-6.  You can use the same media files for both live transmission and VOD at a later stage
+1. Your client or server does not support range requests
+2. Your server cannot cache range requests efficiently
+3. Your server cannot prefetch range requests efficiently
+4. The SIDX\* is large and having to load it first slows down startup a little
+5. You want to use the original files for both DASH and other forms of delivery (such as Microsoft Smooth Streaming) as a transition strategy
+6. You can use the same media files for both live transmission and VOD at a later stage
 
 \*SIDX or SegmentIndexBox is a structure describing a segment by giving its earliest presentation time and other meta-data and can often make up a large portion of the MPD file.
 
@@ -101,16 +102,16 @@ it might be wise to provide a fallback for browsers that don't yet support MPEG-
 
 ```html
 <video>
-  <source src="my.mpd" type="application/dash+xml">
+  <source src="my.mpd" type="application/dash+xml" />
   <!-- fallback -->
-  <source src="my.mp4" type="video/mp4">
-  <source src="my.webm" type="video/webm">
+  <source src="my.mp4" type="video/mp4" />
+  <source src="my.webm" type="video/webm" />
 </video>
 ```
 
 ### LIVE Profile
 
-A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder). This uses [MP4Box](https://gpac.wp.mines-telecom.fr/mp4box/dash/) to encode media into MPEG-DASH format.
+A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https://github.com/slederer/DASHEncoder). This uses [MP4Box](https://github.com/gpac/gpac/wiki/mp4box-dash-opts) to encode media into MPEG-DASH format.
 
 > **Note:** You will need to be comfortable with make files and installing dependencies to get this software up and running.
 
@@ -125,20 +126,20 @@ play list ->                /segments/news.mp4.mpd
 
 main segment folder ->      /segments/main/
 
-100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
+100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s … )
 
-200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
+200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s … )
 
-300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
+300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s … )
 
-400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )
+400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s … )
 ```
 
 The playlist or `.mpd` file contains XML that explicitly lists where all the various bitrate files reside.
 
 ```xml
 <?xml version="1.0"?>
-  <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011"  xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S">
+  <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S">
     <BaseURL>
       http://example.com/segments
     </BaseURL>
@@ -178,7 +179,7 @@ The playlist or `.mpd` file contains XML that explicitly lists where all the var
           </SegmentList>
         </Representation>
 
-        ...
+        …
 
       </AdaptationSet>
     </Period>
@@ -199,18 +200,18 @@ it might be wise to provide a fallback:
 
 ```html
 <video>
-  <source src="my.mpd" type="application/dash+xml">
+  <source src="my.mpd" type="application/dash+xml" />
   <!-- fallback -->
-  <source src="my.mp4" type="video/mp4">
-  <source src="my.webm" type="video/webm">
+  <source src="my.mp4" type="video/mp4" />
+  <source src="my.webm" type="video/webm" />
 </video>
 ```
 
-> **Note:** MPEG-DASH playback relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and browser support for [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html), see the latest [dash.js reference player](https://dashif.org/reference/players/javascript/index.html).
+> **Note:** MPEG-DASH playback relies on [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) and browser support for [Media Source Extensions](https://w3c.github.io/media-source/), see the latest [dash.js reference player](https://reference.dashif.org/dash.js/v4.4.0/samples/dash-if-reference-player/index.html).
 
 ## HLS Encoding
 
-HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://www.jwplayer.com/html5/hls/).
+HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://www.jwplayer.com/blog/hls-in-html5).
 
 Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into an MPEG-2 Transport Stream, which is then broken into segments and saved as one or more `.ts` media files. Apple provides tools to convert media files to the appropriate format.
 
@@ -218,11 +219,10 @@ Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into
 
 There are a number of useful tools available for HLS encoding
 
-- For HLS live stream encoding [Adobe provide a Media Encoder for Mac](http://www.adobe.com/support/downloads/product.jsp?product=160&platform=Macintosh).
 - The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.
 - Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.
 
-> **Note:** You can find more details about these tools at [Using HTTP Live Streaming](https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html).
+> **Note:** You can find more details about these tools at [Using HTTP Live Streaming](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StreamingMediaGuide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html).
 
 ### Index Files (Playlists)
 
@@ -260,24 +260,24 @@ Further resources on adaptive streaming.
 
 - [HTTP Live Streaming](https://developer.apple.com/streaming/)
 - [What is HLS (HTTP-Live-Streaming)?](<https://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-HLS-(HTTP-Live-Streaming)-78221.aspx>)
-- [HTTP Live Streaming Overview](https://developer.apple.com/library/ios/documentation/networkinginternet/conceptual/streamingmediaguide/Introduction/Introduction.html)
+- [HTTP Live Streaming Overview](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/StreamingMediaGuide/Introduction/Introduction.html)
 
 ### MPEG-DASH overview and references
 
 - [Dynamic Adaptive Streaming over HTTP Dataset](https://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
-- [MPEG-DASH and streaming reference and resources (MSDN)](<https://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx>)
+- [MPEG-DASH and streaming reference and resources (MSDN)](<https://msdn.microsoft.com/library/dn551370(v=vs.85).aspx>)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
 - [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/christian.timmerer/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption)
 
 ### MPEG-DASH tools
 
 - [DASHEncoder](https://github.com/slederer/DASHEncoder)
-- [MP4Box](https://gpac.wp.mines-telecom.fr/mp4box)
+- [MP4Box](https://github.com/gpac/gpac/wiki/MP4Box)
 - [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
 - [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
 - [Akamai Dash Diagnostic Player](http://mediapm.edgesuite.net/dash/public/support-player/current/index.html)
 
 Adaptive streaming examples
 
-- [ITEC – Dynamic Adaptive Streaming over HTTP](https://www-itec.uni-klu.ac.at/dash/?page_id=207)
-- [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
+- [ITEC – Dynamic Adaptive Streaming over HTTP](https://dash.itec.aau.at/dash-dataset/)
+- [MPEG DASH Media Source Demo](https://web.archive.org/web/20170703160817/https://dash-mse-test.appspot.com/media.html)

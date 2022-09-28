@@ -1,6 +1,7 @@
 ---
 title: PerformanceResourceTiming.workerStart
 slug: Web/API/PerformanceResourceTiming/workerStart
+page-type: web-api-instance-property
 tags:
   - API
   - PerformanceResourceTiming
@@ -10,6 +11,7 @@ tags:
   - workerStart
 browser-compat: api.PerformanceResourceTiming.workerStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`workerStart`** read-only property of the
@@ -21,32 +23,27 @@ is not intercepted by a Service Worker the property will always return 0.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-resource.workerStart;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}}.
 
-## Example
+## Examples
 
 In the following example, the value of the `*Start` and `*End`
 properties of all "`resource`"
 {{domxref("PerformanceEntry.entryType","type")}} events are logged.
 
 ```js
-function print_PerformanceEntries() {
+function printPerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
+  performance.getEntriesByType("resource")
+    .forEach((entry) => {
+      printStartAndEndProperties(entry);
+    });
 }
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the PerformanceEntry *start and *end properties
+
+function printStartAndEndProperties(perfEntry) {
+  // Print timestamps of the *start and *end properties
   properties = ["connectStart", "connectEnd",
                 "domainLookupStart", "domainLookupEnd",
                 "fetchStart",
@@ -56,15 +53,9 @@ function print_start_and_end_properties(perfEntry) {
                 "secureConnectionStart",
                 "workerStart"];
 
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = NOT supported");
-    }
+  for (const property of properties) {
+    // Log the property
+    console.log(`… ${property} = ${perfEntry[property] ?? "NOT supported"}`);
   }
 }
 ```

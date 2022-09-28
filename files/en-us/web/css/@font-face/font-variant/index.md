@@ -1,11 +1,13 @@
 ---
 title: font-variant
 slug: Web/CSS/@font-face/font-variant
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-variant
 ---
+
 {{CSSRef}}
 
-The **`font-variant`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to set all the font variants for the fonts specified in the {{cssxref("@font-face")}} rule.
+The **`font-variant`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to set all the font variants for the fonts specified in the {{cssxref("@font-face")}} rule.
 
 ## Constituent properties
 
@@ -42,7 +44,7 @@ font-variant: unset;
 - `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
   - : Specifies the keywords and functions related to the {{cssxref("font-variant-caps")}} longhand property.
 - `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
-  - : Specifies the keywords related to the {{cssxref("font-variant-numeric")}} longhand property. The possible values are:  `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, and `slashed-zero`.
+  - : Specifies the keywords related to the {{cssxref("font-variant-numeric")}} longhand property. The possible values are: `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, and `slashed-zero`.
 - `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
   - : Specifies the keywords related to the {{cssxref("font-variant-east-asian")}} longhand property. The possible values are: `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, `ruby`.
 
@@ -52,7 +54,37 @@ font-variant: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+```
+normal |
+none   |
+[ <common-lig-values>                      ||
+  <discretionary-lig-values>               ||
+  <historical-lig-values>                  ||
+  <contextual-alt-values>                  ||
+  stylistic(<feature-value-name>)          ||
+  historical-forms                         ||
+  styleset(<feature-value-name>#)          ||
+  character-variant(<feature-value-name>#) ||
+  swash(<feature-value-name>)              ||
+  ornaments(<feature-value-name>)          ||
+  annotation(<feature-value-name>)         ||
+  [ small-caps      |
+    all-small-caps  |
+    petite-caps     |
+    all-petite-caps |
+    unicase         |
+    titling-caps
+  ]                                        ||
+  <numeric-figure-values>                  ||
+  <numeric-spacing-values>                 ||
+  <numeric-fraction-values>                ||
+  ordinal                                  ||
+  slashed-zero                             ||
+  <east-asian-variant-values>              ||
+  <east-asian-width-values>                ||
+  ruby
+]
+```
 
 ## Examples
 
@@ -63,8 +95,8 @@ The following finds a local Open Sans font or imports it, and allows using the f
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src: local("Open Sans") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+      format("woff");
   font-variant: small-caps;
 }
 ```

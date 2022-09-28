@@ -7,6 +7,7 @@ tags:
   - Constraint Validation API
   - HTML
   - Reference
+browser-compat: html.elements.input.pattern
 ---
 
 {{HTMLSidebar}}
@@ -40,11 +41,30 @@ Given the following:
 
 ```html
 <p>
- <label>Enter your phone number in the format (123) - 456 - 7890
-  (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/>) -
-   <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/> -
-   <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/>
- </label>
+  <label>
+    Enter your phone number in the format (123) - 456 - 7890 (<input
+      name="tel1"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit area code"
+      size="2" />) -
+    <input
+      name="tel2"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit prefix"
+      size="2" />
+    -
+    <input
+      name="tel3"
+      type="tel"
+      pattern="[0-9]{4}"
+      placeholder="####"
+      aria-label="4-digit number"
+      size="3" />
+  </label>
 </p>
 ```
 
@@ -72,8 +92,14 @@ The example below restricts the value to 4-8 characters and requires that it con
 <form>
   <div>
     <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}" title="4 to 8 lowercase letters">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      pattern="[a-z]{4,8}"
+      title="4 to 8 lowercase letters" />
     <span class="validity"></span>
     <p>Usernames must be lowercase and 4-8 characters in length.</p>
   </div>
@@ -98,15 +124,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -123,15 +149,11 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 ## Specifications
 
-| Specification                                                             | Status                   | Comment |
-| ------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{ SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'pattern') }} | {{Spec2('HTML WHATWG')}} |         |
-| {{ SpecName('HTML5.1', 'forms.html#attr-input-pattern', 'pattern') }}     | {{Spec2('HTML5.1')}}     |         |
-| {{ SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'pattern') }}   | {{Spec2('HTML5 W3C')}}   |         |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## See also
 

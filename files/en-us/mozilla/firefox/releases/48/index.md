@@ -2,11 +2,12 @@
 title: Firefox 48 for developers
 slug: Mozilla/Firefox/Releases/48
 tags:
-  - '48'
+  - "48"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 48 was released on August 2, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
@@ -16,12 +17,12 @@ tags:
 ### Developer Tools
 
 - The position of elements can now be changed within the content ({{bug(1139187)}}).
-- Implemented {{domxref("console.clear()")}} to clear the console output ({{bug(659625)}}).
-- Added [HTTP log inspection to the Web Console](/en-US/docs/Tools/Web_Console/Console_messages#viewing_network_request_details) ({{bug(1211525)}}).
-- Added a [Firebug theme](/en-US/docs/Tools/Tools_Toolbox#choose_devtools_theme) ({{bug(1244054)}}).
-- Added the [DOM Inspector](/en-US/docs/Tools/DOM_Property_Viewer) ({{bug(1201475)}}).
-- [Font inspector](/en-US/docs/Tools/Page_Inspector/UI_Tour#fonts_view) has been enabled by default again ({{bug(1280121)}}).
-- [Improved suggestions](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#edit_rules) for CSS properties ({{bug(1168246)}}).
+- Implemented {{domxref("console.clear()")}} to clear the console output ({{bug(659625)}}).
+- Added [HTTP log inspection to the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#viewing-network-request-details) ({{bug(1211525)}}).
+- Added a [Firebug theme](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#choose-devtools-theme) ({{bug(1244054)}}).
+- Added the [DOM Inspector](https://firefox-source-docs.mozilla.org/devtools-user/dom_property_viewer/index.html) ({{bug(1201475)}}).
+- [Font inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#fonts-view) has been enabled by default again ({{bug(1280121)}}).
+- [Improved suggestions](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#edit-rules) for CSS properties ({{bug(1168246)}}).
 - Cookies, localstorage and sessionstorage entries are editable via double-click ({{bug(1231154)}}, {{bug(1231179)}}, {{bug(1231155)}}).
 
 ### HTML
@@ -29,16 +30,16 @@ tags:
 - The {{HTMLElement("details")}} and {{HTMLElement("summary")}} elements have been activated by default on Nightly and Aurora (DevTools), but not on Beta or Release:
 
   - The default style for these elements has been adapted to match the spec ({{bug(1258657)}}).
-  - The {{event("toggle")}} event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ({{bug(1225412)}}).
+  - The {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ({{bug(1225412)}}).
 
 - The {{htmlattrxref("meta", "referrer")}} attributes now also supports the `no-referrer-when-downgrade` and `origin-when-cross-origin` values ({{bug(1178337)}}).
 
 ### CSS
 
-- The {{cssxref("calc()")}} has been improved to be closer to the specification:
+- The {{cssxref("calc", "calc()")}} has been improved to be closer to the specification:
 
-  - {{cssxref("calc()")}} is now supported on the {{cssxref("line-height")}} property ({{bug(594933)}}).
-  - Added support for nested CSS {{cssxref("calc()")}} ({{bug(968761)}}).
+  - {{cssxref("calc", "calc()")}} is now supported on the {{cssxref("line-height")}} property ({{bug(594933)}}).
+  - Added support for nested CSS {{cssxref("calc", "calc()")}} ({{bug(968761)}}).
 
 - Our experimental implementation of CSS grids has been updated:
 
@@ -55,7 +56,7 @@ tags:
 
   - {{cssxref("-webkit-text-fill-color")}} ({{bug(1247777)}}).
   - {{cssxref("-webkit-text-stroke")}}, {{cssxref("-webkit-text-stroke-color")}}, {{cssxref("-webkit-text-stroke-width")}} ({{bug(1248708)}}).
-  - `-webkit-background-clip`  (as background-clip) text value ({{bug(759568)}}).
+  - `-webkit-background-clip` (as background-clip) text value ({{bug(759568)}}).
   - `-webkit-box-direction`, `-webkit-box-orient` ({{bug(1262049)}}.
   - The value `-webkit-inline-box` is now an alias of `inline-flex` on the {{cssxref("display")}} property. ({{bug(1257661)}}).
   - `-webkit-flex-direction`, `-webkit-flex-wrap`, `-webkit-flex-flow`, `-webkit-order`, `-webkit-flex`, `-webkit-flex-grow`, `-webkit-flex-shrink`, `-webkit-flex-basis`, `-webkit-justify-content`, `-webkit-align-items`, `-webkit-align-self` and `-webkit-align-content` were added as aliases for the unprefixed properties and the values `-webkit-flex` and `-webkit-inline-flex` for the {{cssxref("display")}} property as aliases for the unprefixed values ({{bug(1274096)}}).
@@ -63,25 +64,25 @@ tags:
 
 - The `text` value of {{cssxref("background-clip")}} is now available in all type of Firefox (and not only non-release builds) ({{bug(1263516)}}).
 - The `absolute` value of {{cssxref("position")}} properties on the top layer element ({{bug(1236828)}}).
-- Added an internal-only syntax for {{domxref("@supports")}} to detect pref ({{bug(1259889)}}).
+- Added an internal-only syntax for {{domxref("@supports")}} to detect pref ({{bug(1259889)}}).
 
 ### JavaScript
 
 #### New APIs
 
 - The {{jsxref("String.prototype.padStart()")}} and {{jsxref("String.prototype.padEnd()")}} methods have been implemented ({{bug(1260509)}}).
-- The ES2015 {{jsxref("Symbol.unscopables")}} and {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} properties have been implemented ({{bug(1054759)}} and {{bug(1258163)}}).
+- The ES2015 {{jsxref("Symbol.unscopables")}} and {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} properties have been implemented ({{bug(1054759)}} and {{bug(1258163)}}).
 - The ES2015 {{jsxref("Symbol.isConcatSpreadable")}} symbol has been implemented ({{bug(1041586)}}).
 - The ES2015 {{jsxref("Array.@@species", "Array[@@species]")}} getter has been implemented ({{bug(1165052)}}).
 - The ES2015 {{jsxref("ArrayBuffer.@@species", "ArrayBuffer[@@species]")}} getter and {{jsxref("TypedArray.@@species", "%TypedArray%[@@species]")}} getter have been implemented ({{bug(1165053)}}).
-- The {{jsxref("Intl.getCanonicalLocales()")}} method of the ECMAScript Internationalization API draft has been implemented ({{bug(1263040)}}).
+- The {{jsxref("Intl.getCanonicalLocales()")}} method of the ECMAScript Internationalization API draft has been implemented ({{bug(1263040)}}).
 
 #### Deprecations and removals
 
 - The deprecated [old Proxy API](/en-US/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` and `Proxy.createFunction()`) has been removed. Use the standard {{jsxref("Proxy")}} object instead ({{bug(892903)}}).
 - The `String.prototype.contains()` method has been removed (it was deprecated since version 40). Use the {{jsxref("String.prototype.includes()")}} method instead ({{bug(1103588)}}).
 - The non-standard `RegExp.multiline` property (not {{jsxref("RegExp.prototype.multiline")}}) has been removed. Use the standard [m flag](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags) instead ({{bug(1219757)}}).
-- The {{jsxref("Object.__defineGetter__", "__defineGetter__")}} and {{jsxref("Object.__defineSetter__", "__defineSetter__")}} methods can no longer be called at the global scope without any object. ({{bug(1253016)}}).
+- The [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) and [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) methods can no longer be called at the global scope without any object. ({{bug(1253016)}}).
 
 ### Interfaces/APIs/DOM
 
@@ -109,7 +110,7 @@ tags:
 #### WebRTC
 
 - The two methods {{domxref("MediaStream.clone()")}} and {{domxref("MediaStreamTrack.clone()")}} have been implemented ({{bug(1208371)}}).
-- The `iceRestart` entry is now supported in the `RTCOfferOptions`code> dictionary, allowing {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} to be used to request ICE restarts ({{bug(906986)}}).
+- The `iceRestart` entry is now supported in the `RTCOfferOptions` code dictionary, allowing {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} to be used to request ICE restarts ({{bug(906986)}}).
 - The {{domxref("RTCPeerConnection.createOffer()")}} method now prefers the VP9 video codec by default; previously VP8 was preferred ({{bug(1242324)}}.
 - WebM/VP8 video that includes video resolution changes that has been recorded using {{domxref("MediaRecorder")}} can now be played back successfully.
 
@@ -122,7 +123,7 @@ tags:
 - Support for UTF-16 has been removed from {{domxref("TextEncoder")}} ({{bug(1257877)}}).
 - {{domxref("RTCStatsReport")}} is now a true `maplike` interface: in addition to {{domxref("RTCStatsReport.forEach()", "forEach()")}}, {{domxref("RTCStatsReport.get()", "get()")}}, and {{domxref("RTCStatsReport.has()", "has()")}}, the methods {{domxref("RTCStatsReport.entries", "entries()")}}, {{domxref("RTCStatsReport.values", "values()")}}, {{domxref("RTCStatsReport.keys()", "keys()")}}, as well as the {{domxref("RTCStatsReport.size", "size")}} getter have been implemented ({{bug(906986)}}).
 - The {{domxref("Request.cache")}} property has been added allowing to control the cache behavior ({{bug(1120715)}}).
-- Handling of dead keys on Mac OS X has been changed to work the same as other platforms; they no longer fire a {{event("keypress")}} event when no text is generated when the focused element isn't editable (when the focused element is editable, dead key causes composition events instead of keyboard events on Mac OS X). Also, like on other platforms, the value of {{domxref("KeyboardEvent.key")}} is now `"Dead"` for dead keypresses which don't generate text in other situations.
+- Handling of dead keys on Mac OS X has been changed to work the same as other platforms; they no longer fire a {{domxref("Element/keypress_event", "keypress")}} event when no text is generated when the focused element isn't editable (when the focused element is editable, dead key causes composition events instead of keyboard events on Mac OS X). Also, like on other platforms, the value of {{domxref("KeyboardEvent.key")}} is now `"Dead"` for dead keypresses which don't generate text in other situations.
 
 ## HTTP
 

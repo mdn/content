@@ -1,6 +1,7 @@
 ---
 title: PannerNode.setVelocity()
 slug: Web/API/PannerNode/setVelocity
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -13,9 +14,8 @@ tags:
   - setVelocity
 browser-compat: api.PannerNode.setVelocity
 ---
-{{ APIRef("Web Audio API") }}
 
-{{deprecated_header}}
+{{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
 The `setVelocity()` method of the {{ domxref("PannerNode") }} Interface defines the velocity vector of the audio source — how fast it is moving and in what direction.
 
@@ -27,21 +27,11 @@ As the vector controls both the direction of travel and its velocity, the three 
 
 ## Syntax
 
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.setVelocity(0,0,17);
+```js-nolint
+setVelocity(x, y, z)
 ```
 
-### Returns
-
-{{jsxref('undefined')}}.
-
-## Example
-
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
-
-## Parameters
+### Parameters
 
 - `x`
   - : The x value of the panner's velocity vector.
@@ -49,6 +39,14 @@ See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/cre
   - : The y value of the panner's velocity vector.
 - `z`
   - : The z value of the panner's velocity vector.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
+
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
 ## Specifications
 

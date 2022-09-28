@@ -1,6 +1,7 @@
 ---
 title: border-image-source
 slug: Web/CSS/border-image-source
+page-type: css-property
 tags:
   - CSS
   - CSS Borders
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.border-image-source
 ---
+
 {{CSSRef}}
 
 The **`border-image-source`** [CSS](/en-US/docs/Web/CSS) property sets the source image used to create an element's [border image](/en-US/docs/Web/CSS/border-image).
@@ -31,6 +33,7 @@ border-image-source: linear-gradient(to top, red, yellow);
 border-image-source: inherit;
 border-image-source: initial;
 border-image-source: revert;
+border-image-source: revert-layer;
 border-image-source: unset;
 ```
 
@@ -55,7 +58,7 @@ border-image-source: unset;
 
 ```css
 .box {
-  border-image-source: url('image.png');
+  border-image-source: url("image.png");
 }
 ```
 
@@ -73,4 +76,4 @@ border-image-source: unset;
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url()", "url()")}} function
+- {{cssxref("url", "url()")}} function

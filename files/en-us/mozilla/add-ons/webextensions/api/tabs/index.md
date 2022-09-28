@@ -12,9 +12,12 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs
 ---
+
 {{AddonSidebar}}
 
 Interact with the browser's tab system.
+
+> **Note:** When using Manifest V3 or higher, the methods to execute scripts, insert CSS, and remove CSS are provided by the {{WebExtAPIRef("scripting")}} API through the {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} methods.
 
 You can use this API to get a list of opened tabs, filtered by various criteria, and to open, update, move, reload, and remove tabs. You can't directly access the content hosted by tabs using this API, but you can insert JavaScript and CSS into tabs using the {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}} APIs.
 
@@ -49,7 +52,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.ZoomSettingsScope")}}
   - : Defines whether zoom changes will persist for the page's origin, or only take effect in this tab.
 - {{WebExtAPIRef("tabs.ZoomSettings")}}
-  - : Defines zoom settings {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, and default zoom factor.
+  - : Defines zoom settings {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, and default zoom factor.
 
 ## Properties
 
@@ -59,9 +62,9 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 ## Functions
 
 - {{WebExtAPIRef("tabs.captureTab()")}}
-  - : Creates a data URI encoding an image of the visible area of the given tab.
+  - : Creates a data URL encoding an image of the visible area of the given tab.
 - {{WebExtAPIRef("tabs.captureVisibleTab()")}}
-  - : Creates a data URI encoding an image of the visible area of the currently active tab in the specified window.
+  - : Creates a data URL encoding an image of the visible area of the currently active tab in the specified window.
 - {{WebExtAPIRef("tabs.connect()")}}
   - : Sets up a messaging connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) running in the specified tab.
 - {{WebExtAPIRef("tabs.create()")}}
@@ -72,7 +75,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
   - : Discards one or more tabs.
 - {{WebExtAPIRef("tabs.duplicate()")}}
   - : Duplicates a tab.
-- {{WebExtAPIRef("tabs.executeScript()")}}
+- {{WebExtAPIRef("tabs.executeScript()")}} (Manifest V2 only)
   - : Injects JavaScript code into a page.
 - {{WebExtAPIRef("tabs.get()")}}
   - : Retrieves details about the specified tab.
@@ -94,7 +97,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
   - : Hides one or more tabs.
 - {{WebExtAPIRef("tabs.highlight()")}}
   - : Highlights one or more tabs.
-- {{WebExtAPIRef("tabs.insertCSS()")}}
+- {{WebExtAPIRef("tabs.insertCSS()")}} (Manifest V2 only)
   - : Injects CSS into a page.
 - {{WebExtAPIRef("tabs.move()")}}
   - : Moves one or more tabs to a new position in the same window or to a different window.
@@ -110,7 +113,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
   - : Reload a tab, optionally bypassing the local web cache.
 - {{WebExtAPIRef("tabs.remove()")}}
   - : Closes one or more tabs.
-- {{WebExtAPIRef("tabs.removeCSS()")}}
+- {{WebExtAPIRef("tabs.removeCSS()")}} (Manifest V2 only)
   - : Removes from a page CSS which was previously injected by calling {{WebExtAPIRef("tabs.insertCSS()")}}.
 - {{WebExtAPIRef("tabs.saveAsPDF()")}}
   - : Saves the current page as a PDF.
@@ -128,7 +131,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
   - : Toggles Reader mode for the specified tab.
 - {{WebExtAPIRef("tabs.update()")}}
   - : Navigate the tab to a new URL, or modify other properties of the tab.
-- {{WebExtAPIRef("tabs.warmup")}}
+- {{WebExtAPIRef("tabs.warmup()")}}
   - : Prepare the tab to make a potential following switch faster.
 
 ## Events
@@ -166,11 +169,12 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -197,4 +201,4 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

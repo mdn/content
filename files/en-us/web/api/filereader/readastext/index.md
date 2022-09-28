@@ -1,6 +1,7 @@
 ---
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
+page-type: web-api-instance-method
 tags:
   - API
   - File API
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.FileReader.readAsText
 ---
+
 {{APIRef("File API")}}
 
 The **`readAsText()`** method is used to read the contents of the specified {{domxref("Blob")}} or {{domxref("File")}}.
@@ -19,7 +21,7 @@ the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered, and t
 
 ## Syntax
 
-```js
+```js-nolint
 readAsText(blob)
 readAsText(blob, encoding)
 ```
@@ -31,12 +33,16 @@ readAsText(blob, encoding)
 - `encoding` {{optional_inline}}
   - : A string specifying the encoding to use for the returned data. By default, UTF-8 is assumed if this parameter is not specified.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
+<input type="file" onchange="previewFile()" /><br />
 <p class="content"></p>
 ```
 
@@ -61,7 +67,7 @@ function previewFile() {
 
 ### Result
 
-{{EmbedLiveSample("Example", "100%", 240)}}
+{{EmbedLiveSample("Examples", "100%", 240)}}
 
 ## Specifications
 

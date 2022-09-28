@@ -8,7 +8,11 @@ tags:
   - Overview
   - Reference
   - Responsive Design
+spec-urls:
+  - https://drafts.csswg.org/mediaqueries/
+  - https://drafts.csswg.org/css-conditional/
 ---
+
 {{CSSRef}}
 
 **Media queries** let you adapt your site or app depending on the presence or value of various device characteristics and parameters.
@@ -44,18 +48,12 @@ You can learn more about programmatically using media queries in [Testing media 
   - : Introduces media queries, their syntax, and the operators and media features which are used to construct media query expressions.
 - [Testing media queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
   - : Describes how to use media queries in your JavaScript code to determine the state of a device, and to set up listeners that notify your code when the results of media queries change (such as when the user rotates the screen or resizes the browser).
-- [Using Media Queries for Accessibility](/en-US/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
+- [Using media queries for accessibility](/en-US/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
   - : Learn how Media Queries can help users understand your website better.
 
 ## Specifications
 
-| Specification                                    | Status                                   | Comment            |
-| ------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS5 Media Queries')}}     | {{Spec2('CSS5 Media Queries')}} |                    |
-| {{SpecName('CSS3 Conditional')}}     | {{Spec2('CSS3 Conditional')}} |                    |
-| {{SpecName('CSS4 Media Queries')}}     | {{Spec2('CSS4 Media Queries')}} |                    |
-| {{SpecName('CSS3 Media Queries')}}     | {{Spec2('CSS3 Media Queries')}} |                    |
-| {{SpecName('CSS2.1', 'media.html')}} | {{Spec2('CSS2.1')}}                 | Initial definition |
+{{Specifications}}
 
 ## See also
 

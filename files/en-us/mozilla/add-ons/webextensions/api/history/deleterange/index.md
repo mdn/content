@@ -13,6 +13,7 @@ tags:
   - deleteRange
 browser-compat: webextensions.api.history.deleteRange
 ---
+
 {{AddonSidebar()}}
 
 Removes all visits to pages that the user made during the given time range. If this removes all visits made to a given page, then the page will be no longer appear in the browser history and {{WebExtAPIRef("history.onVisitRemoved")}} will fire for it.
@@ -21,8 +22,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var deletingRange = browser.history.deleteRange(
+```js-nolint
+let deletingRange = browser.history.deleteRange(
   range           // object
 )
 ```
@@ -34,9 +35,9 @@ var deletingRange = browser.history.deleteRange(
   - : `object`. Specification of the time range for which to delete visits.
 
     - `startTime`
-      - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time). Specifies the start time for the range.
+      - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time). Specifies the start time for the range.
     - `endTime`
-      - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time). Specifies the end time for the range.
+      - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso-8601-date-and-time-format.html), or the number of [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time). Specifies the end time for the range.
 
 ### Return value
 
@@ -65,11 +66,12 @@ browser.history.deleteRange({
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-deleteRange) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#method-deleteRange) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,4 +98,4 @@ browser.history.deleteRange({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,6 +1,7 @@
 ---
 title: PerformanceNavigationTiming.type
 slug: Web/API/PerformanceNavigationTiming/type
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -8,13 +9,14 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceNavigationTiming.type
 ---
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+
+{{APIRef("Navigation Timing")}}
 
 The **`type`** read-only property returns the type of navigation.
 
 ## Value
 
-A {{domxref("DOMString","string")}} containing one of the following values:
+A string containing one of the following values:
 
 - `"navigate"`
   - : Navigation started by clicking a link, entering the URL in the browser's address
@@ -28,31 +30,30 @@ A {{domxref("DOMString","string")}} containing one of the following values:
 - `"prerender"`
   - : Navigation is initiated by a [prerender hint](https://www.w3.org/TR/resource-hints/#prerender).
 
-## Example
+## Examples
 
 The following example illustrates this property's usage.
 
 ```js
-function print_nav_timing_data() {
+function printNavTimingData() {
   // Use getEntriesByType() to just get the "navigation" events
-  var perfEntries = performance.getEntriesByType("navigation");
+  performance.getEntriesByType("navigation")
+    .forEach((p, i) => {
+      console.log(`= Navigation entry[${i}]`);
 
-  for (var i=0; i < perfEntries.length; i++) {
-    console.log("= Navigation entry[" + i + "]");
-    var p = perfEntries[i];
-    // dom Properties
-    console.log("DOM content loaded = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
-    console.log("DOM complete = " + p.domComplete);
-    console.log("DOM interactive = " + p.interactive);
+      // DOM Properties
+      console.log(`DOM content loaded = ${p.domContentLoadedEventEnd - p.domContentLoadedEventStart}`);
+      console.log(`DOM complete = ${p.domComplete}`);
+      console.log(`DOM interactive = ${p.domInteractive}`);
 
-    // document load and unload time
-    console.log("document load = " + (p.loadEventEnd - p.loadEventStart));
-    console.log("document unload = " + (p.unloadEventEnd - p.unloadEventStart));
+      // Document load and unload time
+      console.log(`document load = ${p.loadEventEnd - p.loadEventStart}`);
+      console.log(`document unload = ${p.unloadEventEnd - p.unloadEventStart}`);
 
-    // other properties
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
-  }
+      // Other properties
+      console.log(`type = ${p.type}`);
+      console.log(`redirectCount = ${p.redirectCount}`);
+    });
 }
 ```
 

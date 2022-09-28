@@ -7,14 +7,18 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls:
+  - https://drafts.csswg.org/css-page/
+  - https://drafts.csswg.org/css-break/
 ---
+
 {{CSSRef}}
 
 **CSS Paged Media** is a module of CSS that defines how page switches are handled.
 
 ## Reference
 
-### CSS properties
+### Properties
 
 - {{cssxref("page-break-after")}}
 - {{cssxref("page-break-before")}}
@@ -33,8 +37,4 @@ tags:
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment |
-| -------------------------------------------- | ---------------------------------------- | ------- |
-| {{SpecName('CSS3 Paged Media')}} | {{Spec2('CSS3 Paged Media')}} |         |
-| {{SpecName('CSS3 Fragmentation')}} | {{Spec2('CSS3 Fragmentation')}} |         |
-| {{SpecName('CSS2.1')}}                 | {{Spec2('CSS2.1')}}                 |         |
+{{Specifications}}

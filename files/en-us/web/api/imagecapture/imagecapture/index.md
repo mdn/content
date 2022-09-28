@@ -1,6 +1,7 @@
 ---
 title: ImageCapture() constructor
 slug: Web/API/ImageCapture/ImageCapture
+page-type: web-api-constructor
 tags:
   - API
   - Constructor
@@ -13,15 +14,16 @@ tags:
   - Reference
 browser-compat: api.ImageCapture.ImageCapture
 ---
-{{APIRef("MediaStream Image")}}
+
+{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
 
 The **`ImageCapture()`** constructor
 creates a new {{domxref("ImageCapture")}} object.
 
 ## Syntax
 
-```js
-const imageCapture = new ImageCapture(videoTrack)
+```js-nolint
+new ImageCapture(videoTrack)
 ```
 
 ### Parameters
@@ -36,7 +38,7 @@ const imageCapture = new ImageCapture(videoTrack)
 A new `ImageCapture` object which can be used to capture still frames from
 the specified video track.
 
-## Example
+## Examples
 
 The following example shows how to use a call to
 {{domxref("MediaDevices.getUserMedia()")}} to retrieve the
@@ -44,12 +46,12 @@ The following example shows how to use a call to
 
 ```js
  navigator.mediaDevices.getUserMedia({video: true})
-  .then(mediaStream => {
-    document.querySelector('video').srcObject = mediaStream
-    const track = mediaStream.getVideoTracks()[0];
-    imageCapture = new ImageCapture(track);
+  .then((mediaStream) => {
+    document.querySelector('video').srcObject = mediaStream
+    const track = mediaStream.getVideoTracks()[0];
+    imageCapture = new ImageCapture(track);
   })
-  .catch(error => console.log(error));
+  .catch((error) => console.error(error));
 ```
 
 ## Specifications

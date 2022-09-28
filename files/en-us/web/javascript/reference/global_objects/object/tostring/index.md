@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the
@@ -18,9 +19,13 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
+
+### Parameters
+
+By default `toString()` takes no parameters. However, objects that inherit from `Object` may override it with their own implementations that do take parameters. For example, the [`Number.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) and [`BigInt.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) methods take an optional `radix` parameter.
 
 ### Return value
 
@@ -28,7 +33,7 @@ A string representing the object.
 
 ## Description
 
-An object's `toString()` method is most commonly invoked when that object undergoes...
+An object's `toString()` method is most commonly invoked when that object undergoes:
 
 - explicit {{Glossary("type conversion")}} to a string (for example, `{{jsxref("String/String", "String")}}(myObject)`)
 - implicit {{Glossary("type coercion")}} into a string (for example, `myObject + "hello world"`)
@@ -37,32 +42,41 @@ An object's `toString()` method is most commonly invoked when that object underg
 
 While not as common, the method can be invoked directly (for example, `myObject.toString()`).
 
-By default `toString()` returns `"[object Type]"`, where `Type` is the object type.
+This method is inherited by every object descended from `Object`, but can be overridden by descendant objects (for example, {{jsxref("Number.prototype.toString()")}}). To use the base `Object.prototype.toString()` with an object that has it overridden (or to invoke it on `null` or `undefined`), you need to call {{jsxref("Function.prototype.call()")}} or {{jsxref("Function.prototype.apply()")}} on it, passing the object you want to inspect as the first parameter (called `thisArg`).
 
 ```js
-const o = new Object().toString() // o is "[object Object]";
+const arr = [1, 2, 3];
+
+arr.toString() // "1,2,3"
+Object.prototype.toString.call(arr) // "[object Array]"
 ```
 
-This method is inherited by every object descended from `Object`, but can be overridden by either the author or built-in descendant objects (for example, `{{jsxref("Number.prototype.toString()")}}`).
+`Object.prototype.toString()` returns `"[object Type]"`, where `Type` is the object type. If the object has a [`Symbol.toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property whose value is a string, that value will be used as the `Type`. Many built-in objects, including [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [`Symbol`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol), have a `Symbol.toStringTag`. Some objects predating ES6 do not have `Symbol.toStringTag`, but have a special tag nonetheless. They include (the tag is the same as the type name given below):
 
-> **Note:** Starting in JavaScript 1.8.5, `toString()` called
-> on {{jsxref("null")}} returns `[object Null]`, and
-> {{jsxref("undefined")}} returns `[object Undefined]`, as defined
-> in the 5th Edition of ECMAScript and subsequent Errata.
->
-> See [Using `toString()` to
-> detect object class](#using_tostring_to_detect_object_class).
+- [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [`Function`](/en-US/docs/Web/JavaScript/Reference/Functions) (anything whose [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) returns `"function"`)
+- [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+- [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+- [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-## Parameters
+The [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object returns `"[object Arguments]"`. Everything else, including user-defined classes, unless with a custom `Symbol.toStringTag`, will return `"[object Object]"`.
 
-By default `toString()` takes no parameters. However, objects that inherit from `Object` may override it with their own implementation that do take parameters. For example, the `toString()` methods implemented by {{jsxref("Number")}} and {{jsxref("BigInt")}} take an optional `radix` parameter.
+`Object.prototype.toString()` invoked on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}} returns `[object Null]` and `[object Undefined]`, respectively.
 
 ## Examples
 
 ### Overriding the default toString method
 
 You can create a function to be called in place of the default `toString()`
-method. The `toString()` function you create must return a primitive, otherwise it will be ignored.
+method. The `toString()` function you create must return a primitive. If it
+returns an object and the method is called implicitly (i.e. during type
+conversion or coercion), then its result will be ignored and the value of a
+related method, `{{jsxref("Object/valueOf", "valueOf()")}}`, will be used
+instead, or a `TypeError` will be thrown if none of these methods return a
+primitive.
 
 The following code defines the `Dog` object type and creates
 `theDog`, an object of type `Dog`:
@@ -88,7 +102,7 @@ theDog.toString(); // returns [object Object]
 The following code creates and assigns `dogToString()` to override the
 default `toString()` method. This function generates a string containing the
 `name`, `breed`, `color`, and `sex` of the
-object, in the form "`property = value;`".
+object.
 
 ```js
 Dog.prototype.toString = function dogToString() {
@@ -117,19 +131,14 @@ returns the following string:
 `toString()` can be used with every object and (by default) allows you to
 get its class.
 
-To use the base `Object.prototype.toString()` with an object that has had it overridden, you need to call
-{{jsxref("Function.prototype.call()")}} or {{jsxref("Function.prototype.apply()")}} on
-it, passing the object you want to inspect as the first parameter (called
-`thisArg`).
-
 ```js
 const toString = Object.prototype.toString;
 
 toString.call(new Date);    // [object Date]
 toString.call(new String);  // [object String]
+// Math has its Symbol.toStringTag
 toString.call(Math);        // [object Math]
 
-// Since JavaScript 1.8.5
 toString.call(undefined);   // [object Undefined]
 toString.call(null);        // [object Null]
 ```
@@ -159,8 +168,8 @@ Object.prototype.toString.call(new Date()); // [object prototype polluted]
 
 ## See also
 
-- A polyfill of `Object.prototype.toString` with `Symbol.toStringTag` support is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- {{jsxref("Object.prototype.toSource()")}}
+- [Polyfill of `Object.prototype.toString` with `Symbol.toStringTag` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Number.prototype.toString()")}}
 - {{jsxref("Symbol.toPrimitive")}}
+- {{jsxref("Symbol.toStringTag")}}

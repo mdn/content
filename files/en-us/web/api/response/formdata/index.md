@@ -1,6 +1,7 @@
 ---
 title: Response.formData()
 slug: Web/API/Response/formData
+page-type: web-api-instance-method
 tags:
   - API
   - Fetch
@@ -12,6 +13,7 @@ tags:
   - Response
 browser-compat: api.Response.formData
 ---
+
 {{APIRef("Fetch")}}
 
 The **`formData()`** method of the {{domxref("Response")}} interface
@@ -25,11 +27,8 @@ that resolves with a {{domxref("FormData")}} object.
 
 ## Syntax
 
-```js
-response.formData()
-.then(function(formdata) {
-  // do something with your formdata
-});
+```js-nolint
+formData()
 ```
 
 ### Parameters
@@ -40,7 +39,7 @@ None.
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("FormData")}} object.
 
-## Example
+## Examples
 
 TBD.
 

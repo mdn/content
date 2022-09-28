@@ -4,19 +4,20 @@ slug: Web/Guide/HTML/Constraint_validation
 tags:
   - CSS
   - Guide
-  - HTML5
+  - HTML
   - NeedsContent
   - Selectors
 ---
+
 The creation of web forms has always been a complex task. While marking up the form itself is easy, checking whether each field has a valid and coherent value is more difficult, and informing the user about the problem may become a headache. [HTML5](/en-US/docs/Glossary/HTML5) introduced new mechanisms for forms: it added new semantic types for the {{ HTMLElement("input") }} element and _constraint validation_ to ease the work of checking the form content on the client side. Basic, usual constraints can be checked, without the need for JavaScript, by setting new attributes; more complex constraints can be tested using the [Constraint validation API](/en-US/docs/Web/API/Constraint_validation).
 
 For a basic introduction to these concepts, with examples, see the [Form validation tutorial](/en-US/docs/Learn/Forms/Form_validation).
 
-> **Note:** HTML5 Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent by non-compliant browsers (for instance, browsers without HTML5 and without JavaScript) or by bad people trying to trick your web application. Therefore, like with HTML4, you need to also validate input constraints on the server side, in a way that is consistent with what is done on the client side.
+> **Note:** HTML Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent such as by bad people trying to trick your web application. Therefore, you need to always also validate input constraints on the server side, in a way that is consistent with what is done on the client side.
 
 ## Intrinsic and basic constraints
 
-In HTML5, basic constraints are declared in two ways:
+In HTML, basic constraints are declared in two ways:
 
 - By choosing the most semantically appropriate value for the {{ htmlattrxref("type", "input") }} attribute of the {{ HTMLElement("input") }} element, e.g., choosing the `email` type automatically creates a constraint that checks whether the value is a valid e-mail address.
 - By setting values on validation-related attributes, allowing basic constraints to be described in a simple way, without the need for JavaScript.
@@ -25,12 +26,12 @@ In HTML5, basic constraints are declared in two ways:
 
 The intrinsic constraints for the {{ htmlattrxref("type", "input") }} attribute are:
 
-| Input type                                                         | Constraint description                                                                                                                                        | Associated violation                                                                    |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/). | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
-| [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) | The value must be a syntactically valid email address, which generally has the format `username@hostname.tld`.                                                | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
+| Input type                                                         | Constraint description                                                                                                                                           | Associated violation                                                                    |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn/Common_questions/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/).    | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
+| [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) | The value must be a syntactically valid email address, which generally has the format `username@hostname.tld` but can also be local such as `username@hostname`. | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
 
-For both of these input types, if the {{ htmlattrxref("multiple", "input") }} attribute is set, several values can be set, as a comma-separated list, for this input. If any of these do not satisfy the condition described here, the **Type mismatch** constraint violation is triggered.
+For both of these input types, if the {{ htmlattrxref("multiple", "input") }} attribute is set, several values can be set, as a comma-separated list. If any of these do not satisfy the condition described here, the **Type mismatch** constraint violation is triggered.
 
 Note that most input types don't have intrinsic constraints, as some are barred from constraint validation or have a sanitization algorithm transforming incorrect values to a correct default.
 
@@ -64,13 +65,8 @@ In addition to the `type` attribute described above, the following attributes ar
         <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"
           >JavaScript regular expression</a
         >
-        (compiled with the
-        <a
-          href="http://www.ecma-international.org/publications/standards/Ecma-262.htm"
-          >ECMAScript 5</a
-        >
-        <code>global</code>, <code>ignoreCase</code>, and
-        <code>multiline</code> flags <em>disabled)</em>
+        (compiled with the {{jsxref("RegExp.global", "global")}}, {{jsxref("RegExp.ignoreCase", "ignoreCase")}}, and
+        {{jsxref("RegExp.multiline", "multiline")}} flags <em>disabled</em>)
       </td>
       <td>The value must match the pattern.</td>
       <td>
@@ -104,7 +100,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>A valid date and time</td>
     </tr>
@@ -132,7 +128,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>A valid date and time</td>
     </tr>
@@ -145,7 +141,7 @@ In addition to the `type` attribute described above, the following attributes ar
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
         <code>tel</code>, <code>email</code>, <code>password</code>,
-        <code>date</code>, <code>datetime</code>, <code>datetime-local</code>,
+        <code>date</code>, <code>datetime-local</code>,
         <code>month</code>, <code>week</code>, <code>time</code>,
         <code>number</code>, <code>checkbox</code>, <code>radio</code>,
         <code>file</code>; also on the {{ HTMLElement("select") }} and
@@ -198,7 +194,7 @@ In addition to the `type` attribute described above, the following attributes ar
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>An integer number of seconds</td>
     </tr>
@@ -273,7 +269,7 @@ In addition to the `type` attribute described above, the following attributes ar
 
 Constraint validation is done through the Constraint Validation API either on a single form element or at the form level, on the {{ HTMLElement("form") }} element itself. The constraint validation is done in the following ways:
 
-- By a call to the `checkValidity()` or `reportValidity()` method of a form-associated DOM interface, ([`HTMLInputElement`](/en-US/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/en-US/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/en-US/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/en-US/docs/Web/API/HTMLOutputElement) or [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement)), which evaluates the constraints only on this element, allowing a script to get this information. The `checkValidity()` method returns a Boolean indicating whether the element's value passes its constraints. (This is typically done by the user-agent when determining which of the CSS pseudo-classes, {{ Cssxref(":valid") }} or {{ Cssxref(":invalid") }}, applies.) In contrast, the `reportValidity()` method reports any constraint failures to the user.
+- By a call to the `checkValidity()` or `reportValidity()` method of a form-associated DOM interface, ([`HTMLInputElement`](/en-US/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/en-US/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/en-US/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/en-US/docs/Web/API/HTMLOutputElement) or [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement)), which evaluates the constraints only on this element, allowing a script to get this information. The `checkValidity()` method returns a Boolean indicating whether the element's value passes its constraints. (This is typically done by the user-agent when determining which of the CSS pseudo-classes, {{ Cssxref(":valid") }} or {{ Cssxref(":invalid") }}, applies.) In contrast, the `reportValidity()` method reports any constraint failures to the user.
 - By a call to the `checkValidity()` or `reportValidity()` method on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface.
 - By submitting the form itself.
 
@@ -300,16 +296,16 @@ As an example, we will add a script checking the constraint validation for this 
 
 ```html
 <form>
-    <label for="ZIP">ZIP : </label>
-    <input type="text" id="ZIP">
-    <label for="Country">Country : </label>
-    <select id="Country">
-      <option value="ch">Switzerland</option>
-      <option value="fr">France</option>
-      <option value="de">Germany</option>
-      <option value="nl">The Netherlands</option>
-    </select>
-    <input type="submit" value="Validate">
+  <label for="ZIP">ZIP : </label>
+  <input type="text" id="ZIP" />
+  <label for="Country">Country : </label>
+  <select id="Country">
+    <option value="ch">Switzerland</option>
+    <option value="fr">France</option>
+    <option value="de">Germany</option>
+    <option value="nl">The Netherlands</option>
+  </select>
+  <input type="submit" value="Validate" />
 </form>
 ```
 
@@ -322,7 +318,7 @@ First, we write a function checking the constraint itself:
 ```js
 function checkZIP() {
   // For each country, defines the pattern that the ZIP has to follow
-  var constraints = {
+  const constraints = {
     ch : [ '^(CH-)?\\d{4}$', "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950" ],
     fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
     de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
@@ -331,21 +327,20 @@ function checkZIP() {
   };
 
   // Read the country id
-  var country = document.getElementById("Country").value;
+  const country = document.getElementById("Country").value;
 
   // Get the NPA field
-  var ZIPField = document.getElementById("ZIP");
+  const ZIPField = document.getElementById("ZIP");
 
   // Build the constraint checker
-  var constraint = new RegExp(constraints[country][0], "");
-    console.log(constraint);
+  const constraint = new RegExp(constraints[country][0], "");
+  console.log(constraint);
 
   // Check it!
   if (constraint.test(ZIPField.value)) {
     // The ZIP follows the constraint, we use the ConstraintAPI to tell it
     ZIPField.setCustomValidity("");
-  }
-  else {
+  } else {
     // The ZIP doesn't follow the constraint, we use the ConstraintAPI to
     // give a message about the format required for this country
     ZIPField.setCustomValidity(constraints[country][1]);
@@ -356,13 +351,11 @@ function checkZIP() {
 Then we link it to the **onchange** event for the {{ HTMLElement("select") }} and the **oninput** event for the {{ HTMLElement("input") }}:
 
 ```js
-window.onload = function () {
-    document.getElementById("Country").onchange = checkZIP;
-    document.getElementById("ZIP").oninput = checkZIP;
+window.onload = () => {
+  document.getElementById("Country").onchange = checkZIP;
+  document.getElementById("ZIP").oninput = checkZIP;
 }
 ```
-
-You can see a [live example](/@api/deki/files/4744/=constraint.html) of the postal code validation.
 
 ### Limiting the size of a file before its upload
 
@@ -372,7 +365,7 @@ Here is the HTML part:
 
 ```html
 <label for="FS">Select a file smaller than 75 kB : </label>
-<input type="file" id="FS">
+<input type="file" id="FS" />
 ```
 
 This displays:
@@ -383,8 +376,8 @@ The JavaScript reads the file selected, uses the `File.size()` method to get its
 
 ```js
 function checkFileSize() {
-  var FS = document.getElementById("FS");
-  var files = FS.files;
+  const FS = document.getElementById("FS");
+  const files = FS.files;
 
   // If there is (at least) one file selected
   if (files.length > 0) {
@@ -401,12 +394,10 @@ function checkFileSize() {
 Finally we hook the method with the correct event:
 
 ```js
-window.onload = function () {
+window.onload = () => {
   document.getElementById("FS").onchange = checkFileSize;
 }
 ```
-
-You can see a [live example](/@api/deki/files/4745/=fileconstraint.html) of the File size constraint validation.
 
 ## Visual styling of constraint validation
 

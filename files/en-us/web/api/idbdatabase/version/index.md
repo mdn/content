@@ -1,6 +1,7 @@
 ---
 title: IDBDatabase.version
 slug: Web/API/IDBDatabase/version
+page-type: web-api-instance-property
 tags:
   - API
   - Database
@@ -12,38 +13,33 @@ tags:
   - version
 browser-compat: api.IDBDatabase.version
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`version`** property of the {{domxref("IDBDatabase")}}
-interface is a [64-bit
-integer](/en-US/docs/NSPR_API_Reference/Long_Long_%2864-bit%29_Integers) that contains the version of the connected database. When a database is
-first created, this attribute is an empty string.
+interface is a [64-bit integer](/en-US/docs/NSPR_API_Reference/Long_Long_%2864-bit%29_Integers)
+that contains the version of the connected database.
+When a database is first created, this attribute is an empty string.
 
 {{AvailableInWorkers}}
 
-## Syntax
-
-```js
-var myInteger = IDBDatabase.version;
-```
-
-### Value
+## Value
 
 An integer containing the version of the connected database.
 
-## Example
+## Examples
 
 ```js
 // Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database
 // being opened successfully, or not
-DBOpenRequest.onerror = function(event) {
+DBOpenRequest.onerror = (event) => {
   note.innerHTML += '<li>Error loading database.</li>';
 };
 
-DBOpenRequest.onsuccess = function(event) {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
@@ -70,5 +66,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

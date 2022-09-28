@@ -1,6 +1,7 @@
 ---
 title: PictureInPictureWindow
 slug: Web/API/PictureInPictureWindow
+page-type: web-api-interface
 tags:
   - API
   - Advanced
@@ -12,11 +13,14 @@ tags:
   - pip
 browser-compat: api.PictureInPictureWindow
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 The **`PictureInPictureWindow`** interface represents an object able to programmatically obtain the **`width`** and **`height`** and **`resize event`** of the floating video window.
 
 An object with this interface is obtained using the {{domxref("HTMLVideoElement.requestPictureInPicture()")}} promise return value.
+
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -35,8 +39,8 @@ _The `PictureInPictureWindow` interface doesn't inherit any methods._
 
 _The `PictureInPictureWindow` interface doesn't inherit any events._
 
-- {{domxref("PictureInPictureWindow.resize_event", "PictureInPictureWindow.resize")}}
-  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when the floating video window is resized. The associated event handler is {{domxref("PictureInPictureWindow.onresize")}}.
+- {{domxref("PictureInPictureWindow.resize_event", "resize")}}
+  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when the floating video window is resized.
 
 ## Examples
 
@@ -53,8 +57,8 @@ function printPipWindowDimensions(evt) {
   // The floating window dimensions are: 640x360px
 }
 
-button.onclick = function() {
-  video.requestPictureInPicture().then(pictureInPictureWindow => {
+button.onclick = () => {
+  video.requestPictureInPicture().then((pictureInPictureWindow) => {
     pictureInPictureWindow.onresize = printPipWindowDimensions;
   });
 };

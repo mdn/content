@@ -9,13 +9,14 @@ tags:
   - Literal
 browser-compat: javascript.grammar
 ---
+
 {{JsSidebar("More")}}
 
-This page describes JavaScript's lexical grammar. The source text of ECMAScript scripts gets scanned from left to right and is converted into a sequence of input elements which are tokens, control characters, line terminators, comments or [white space](/en-US/docs/Glossary/Whitespace). ECMAScript also defines certain keywords and literals and has rules for automatic insertion of semicolons to end statements.
+This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include control characters, line terminators, [white space](/en-US/docs/Glossary/Whitespace), and comments. The others, such as identifiers and punctuators, will be used for further syntax analysis. ECMAScript also defines certain keywords and literals and has rules for automatic insertion of semicolons to make certain invalid token sequences become valid.
 
-## Control characters
+## Format-control characters
 
-Control characters have no visual representation but are used to control the interpretation of the text.
+Format-control characters have no visual representation but are used to control the interpretation of the text.
 
 | Code point | Name                  | Abbreviation | Description                                                                                                                                                                                                                    |
 | ---------- | --------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -23,13 +24,15 @@ Control characters have no visual representation but are used to control the int
 | `U+200D`   | Zero width joiner     | \<ZWJ>       | Placed between characters that would not normally be connected in order to cause the characters to be rendered using their connected form in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
 | `U+FEFF`   | Byte order mark       | \<BOM>       | Used at the start of the script to mark it as Unicode and the text's byte order ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                                                                  |
 
+In JavaScript source text, \<ZWNJ> and \<ZWJ> are treated as identifier parts, while \<BOM> (also called a zero-width no-break space \<ZWNBSP> when not at the start of text) is treated as whitespace.
+
 ## White space
 
 [White space](/en-US/docs/Glossary/Whitespace) characters improve the readability of source text and separate tokens from each other. These characters are usually unnecessary for the functionality of the code. [Minification tools](https://en.wikipedia.org/wiki/Minification_%28programming%29) are often used to remove whitespace in order to reduce the amount of data that needs to be transferred.
 
 | Code point | Name                           | Abbreviation | Description                                                                                               | Escape sequence |
 | ---------- | ------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------- | --------------- |
-| U+0009     | Character tabulation           | \<HT>        | Horizontal tabulation                                                                                     | \t              |
+| U+0009     | Character tabulation           | \<TAB>       | Horizontal tabulation                                                                                     | \t              |
 | U+000B     | Line tabulation                | \<VT>        | Vertical tabulation                                                                                       | \v              |
 | U+000C     | Form feed                      | \<FF>        | Page breaking control character ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)).        | \f              |
 | U+0020     | Space                          | \<SP>        | Normal space                                                                                              |                 |
@@ -38,7 +41,7 @@ Control characters have no visual representation but are used to control the int
 
 ## Line terminators
 
-In addition to [white space](/en-US/docs/Glossary/Whitespace) characters, line terminator characters are used to improve the readability of the source text. However, in some cases, line terminators can influence the execution of JavaScript code as there are a few places where they are forbidden. Line terminators also affect the process of [automatic semicolon insertion](#automatic_semicolon_insertion). Line terminators are matched by the **\s** class in [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+In addition to [white space](/en-US/docs/Glossary/Whitespace) characters, line terminator characters are used to improve the readability of the source text. However, in some cases, line terminators can influence the execution of JavaScript code as there are a few places where they are forbidden. Line terminators also affect the process of [automatic semicolon insertion](#automatic_semicolon_insertion). Line terminators are matched by the `\s` class in [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
 
 Only the following Unicode code points are treated as line terminators in ECMAScript, other line breaking characters are treated as white space (for example, Next Line, NEL, U+0085 is considered as white space).
 
@@ -108,13 +111,9 @@ comment();
 
 In this case, the `console.log()` call is never issued, since it's inside a comment. Any number of lines of code can be disabled this way.
 
-## Hashbang comments
+There's a special third comment syntax, the **hashbang comment**. A hashbang comment behaves exactly like a single line-only (`//`) comment, except that it begins with `#!` and **is only valid at the absolute start of a script or module**. Note also that no whitespace of any kind is permitted before the `#!`. The comment consists of all the characters after `#!` up to the end of the first line; only one such comment is permitted.
 
-A specialized third comment syntax, the **hashbang comment**, is in the process of being standardized in ECMAScript (see the [Hashbang Grammar proposal](https://github.com/tc39/proposal-hashbang)).
-
-A hashbang comment behaves exactly like a single line-only (`//`) comment. Instead, it begins with `#!` and **is only valid at the absolute start of a script or module**. Note also that no whitespace of any kind is permitted before the `#!`. The comment consists of all the characters after `#!` up to the end of the first line; only one such comment is permitted.
-
-The hashbang comment specifies the path to a specific JavaScript interpreter that you want to use to execute the script. An example is as follows:
+Hashbang comments in JavaScript resemble [shebangs in Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) which provide the path to a specific JavaScript interpreter that you want to use to execute the script. Before the hashbang comment became standardized, it had already been de-facto implemented in non-browser hosts like Node.js, where it was stripped from the source text before being passed to the engine. An example is as follows:
 
 ```js
 #!/usr/bin/env node
@@ -122,15 +121,68 @@ The hashbang comment specifies the path to a specific JavaScript interpreter tha
 console.log("Hello world");
 ```
 
-> **Note:** Hashbang comments in JavaScript mimic [shebangs in Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) used to run files with proper interpreter.
+The JavaScript interpreter will treat it as a normal comment — it only has semantic meaning to the shell if the script is directly run in a shell.
 
 > **Warning:** If you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a [BOM](https://en.wikipedia.org/wiki/Byte_order_mark). Although a BOM will not cause any problems for code running in a browser, it is not advised to use a BOM with a hashbang in a script — because the BOM will prevent the script from working when you try to run it in a Unix/Linux shell environment. So if you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a BOM.
 
 You must only use the `#!` comment style to specify a JavaScript interpreter. In all other cases just use a `//` comment (or multiline comment).
 
+## Identifiers
+
+An _identifier_ is used to link a value with a name. Identifiers can be used in various places:
+
+```js
+const decl = 1; // Variable declaration (may also be `let` or `var`)
+function fn() {} // Function declaration
+const obj = { key: 'value' }; // Object keys
+class C { // Class declaration
+  #priv = 'value'; // Private property
+}
+lbl: console.log(1); // Label
+```
+
+In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (`_`), and dollar signs (`$`). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to ASCII — most Unicode codepoints are allowed as well.
+
+> **Note:** If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e. ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (excluding unicode escape sequences).
+
+In addition, JavaScript allows using [Unicode escape sequences](#unicode_escape_sequences) in the form of `\u0000` or `\u{000000}` in identifiers, which encode the same string value as the actual Unicode characters. For example, `你好` and `\u4f60\u597d` are the same identifiers:
+
+```js
+const 你好 = "Hello";
+console.log(\u4f60\u597d); // Hello
+```
+
+Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifiers names that are not [reserved words](#reserved_words).
+
+```js example-bad
+function import() {} // Illegal: import is a reserved word.
+```
+
+Most notably, private properties and object properties allow reserved words.
+
+```js
+const obj = { import: "value" }; // Legal despite `import` being reserved
+class C {
+  #import = "value";
+}
+```
+
 ## Keywords
 
-### Reserved keywords as of ECMAScript 2015
+_Keywords_ are tokens that look like identifiers but have special meanings in JavaScript. For example, the keyword [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) before a function declaration indicates that the function is asynchronous.
+
+Some keywords are _reserved_, meaning that cannot be used as an identifier for variable declarations, function declarations, etc. They are often called _reserved words_. [A list of these reserved words](#reserved_words) is provided below. Not all keywords are reserved — for example, `async` can be used as an identifier anywhere. Some keywords are only _contextually reserved_ — for example, `await` is only reserved within the body of an async function, and `let` is only reserved in strict mode code, or `const`- and `let`-declarations.
+
+Identifiers are always compared by _string value_, so escape sequences are interpreted. For example, this is still a syntax error:
+
+```js example-bad
+const els\u{65} = 1;
+// `els\u{65}` encodes the same identifier as `else`
+```
+
+### Reserved words
+
+These keywords cannot be used as identifiers for variables, functions, classes, etc. anywhere in JavaScript source.
 
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/switch", "case")}}
@@ -144,7 +196,8 @@ You must only use the `#!` comment style to specify a JavaScript interpreter. In
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
 - {{jsxref("Statements/export", "export")}}
-- {{jsxref("Statements/class", "extends")}}
+- [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends)
+- `false`
 - {{jsxref("Statements/try...catch", "finally")}}
 - {{jsxref("Statements/for", "for")}}
 - {{jsxref("Statements/function", "function")}}
@@ -153,11 +206,14 @@ You must only use the `#!` comment style to specify a JavaScript interpreter. In
 - {{jsxref("Operators/in", "in")}}
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Operators/new", "new")}}
+- {{jsxref("Operators/null", "null")}}
 - {{jsxref("Statements/return", "return")}}
+- [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
 - {{jsxref("Operators/this", "this")}}
 - {{jsxref("Statements/throw", "throw")}}
+- `true`
 - {{jsxref("Statements/try...catch", "try")}}
 - {{jsxref("Operators/typeof", "typeof")}}
 - {{jsxref("Statements/var", "var")}}
@@ -166,7 +222,16 @@ You must only use the `#!` comment style to specify a JavaScript interpreter. In
 - {{jsxref("Statements/with", "with")}}
 - {{jsxref("Operators/yield", "yield")}}
 
-### Future reserved keywords
+The following are only reserved when they are found in strict mode code:
+
+- {{jsxref("Statements/let", "let")}} (also reserved in `const`, `let`, and class declarations)
+- {{jsxref("Operators/yield", "yield")}} (also reserved in generator function bodies)
+
+The following are only reserved when they are found in module code or async function bodies:
+
+- [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await)
+
+### Future reserved words
 
 The following are reserved as future keywords by the ECMAScript specification. They have no special functionality at present, but they might at some future time, so they cannot be used as identifiers.
 
@@ -178,19 +243,12 @@ The following are only reserved when they are found in strict mode code:
 
 - `implements`
 - `interface`
-- {{jsxref("Statements/let", "let")}}
 - `package`
 - `private`
 - `protected`
 - `public`
-- `static`
-- {{jsxref("Operators/yield", "yield")}}
 
-The following are only reserved when they are found in module code:
-
-- `await`
-
-#### Future reserved keywords in older standards
+#### Future reserved words in older standards
 
 The following are reserved as future keywords by older ECMAScript specifications (ECMAScript 1 till 3).
 
@@ -211,29 +269,13 @@ The following are reserved as future keywords by older ECMAScript specifications
 - `transient`
 - `volatile`
 
-Additionally, the literals `null`, `true`, and `false` cannot be used as identifiers in ECMAScript.
-
-### Reserved word usage
-
-Reserved words actually only apply to *Identifier*s (vs. *IdentifierName*s) . As indicated in the [ECMAScript Lexical Grammar](https://tc39.es/ecma262/multipage/grammar-summary.html#sec-lexical-grammar), these are all *IdentifierName*s which do not exclude _ReservedWords_.
-
-```js
-a.import
-a['import']
-a = { import: 'test' }.
-```
-
-On the other hand the following is illegal because it's an _Identifier_, which is an _IdentifierName_ without the reserved words. Identifiers are used for _FunctionDeclaration_, _FunctionExpression_, _VariableDeclaration_ and so on. _IdentifierNames_ are used for _MemberExpression_, _CallExpression_ and so on.
-
-```js
-function import() {} // Illegal.
-```
-
 ### Identifiers with special meanings
 
-A few identifiers have a special meaning in some contexts without being keywords of any kind. They include:
+A few identifiers have a special meaning in some contexts without being reserved words of any kind. They include:
 
-- {{jsxref("Functions/arguments", "arguments")}}
+- {{jsxref("Functions/arguments", "arguments")}} (not a keyword, but cannot be declared as identifier in strict mode)
+- [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- {{jsxref("Global_Objects/eval", "eval")}} (not a keyword, but cannot be declared as identifier in strict mode)
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Functions/set", "set")}}
 
@@ -241,7 +283,7 @@ A few identifiers have a special meaning in some contexts without being keywords
 
 ### Null literal
 
-See also {{jsxref("null")}} for more information.
+See also [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) for more information.
 
 ```js
 null
@@ -271,42 +313,39 @@ The [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type) and [BigInt
 0777 // parsed as octal, 511 in decimal
 ```
 
-Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see [bug 957513](https://bugzilla.mozilla.org/show_bug.cgi?id=957513). See also the page about {{jsxref("parseInt", "parseInt()")}}
+Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but if all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. Moreover, number literals prefixed with `0`, whether interpreted as octal or decimal, will cause a syntax error in strict mode — so, use the `0o` prefix instead.
 
 ##### Exponential
 
-The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by `e` char (which serves as separator or _exponent indicator_) and `N`, which is *exponent* or *power* number – a signed integer (as per 2019 ECMA-262 specs):
+The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is _exponent_ or _power_ number – a signed integer.
 
 ```js
-0e-5   // => 0
-0e+5   // => 0
-5e1    // => 50
+0e-5   // => 0
+0e+5   // => 0
+5e1    // => 50
 175e-2 // => 1.75
-1e3    // => 1000
-1e-3   // => 0.001
+1e3    // => 1000
+1e-3   // => 0.001
+1E3    // => 1000
 ```
 
 #### Binary
 
-Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0b` are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".
+Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). If the digits after the `0b` are not 0 or 1, the following {{jsxref("SyntaxError")}} is thrown: "Missing binary digits after 0b".
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+const FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+const FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
+const FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 ```
 
 #### Octal
 
-Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0o` are outside the range (01234567), the following {{jsxref("SyntaxError")}} is thrown: "Missing octal digits after 0o".
+Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. If the digits after the `0o` are outside the range (01234567), the following {{jsxref("SyntaxError")}} is thrown: "Missing octal digits after 0o".
 
 ```js
-var n = 0O755; // 493
-var m = 0o644; // 420
-
-// Also possible with just a leading zero (see note about decimals above)
-0755
-0644
+const n = 0O755; // 493
+const m = 0o644; // 420
 ```
 
 #### Hexadecimal
@@ -324,16 +363,16 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 The [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
 
 ```js
-123456789123456789n     // 123456789123456789
-0o777777777777n         // 68719476735
-0x123456789ABCDEFn      // 81985529216486895
+123456789123456789n     // 123456789123456789
+0o777777777777n         // 68719476735
+0x123456789ABCDEFn      // 81985529216486895
 0b11101001010101010101n // 955733
 ```
 
 Note that legacy octal numbers with just a leading zero won't work for `BigInt`:
 
 ```js example-bad
-// 0755n
+0755n
 // SyntaxError: invalid BigInt syntax
 ```
 
@@ -385,14 +424,14 @@ Note these limitations:
 See also {{jsxref("Object")}} and [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) for more information.
 
 ```js
-var o = { a: 'foo', b: 'bar', c: 42 };
+const o = { a: 'foo', b: 'bar', c: 42 };
 
-// shorthand notation. New in ES2015
-var a = 'foo', b = 'bar', c = 42;
-var o = {a, b, c};
+// shorthand notation
+const a = 'foo', b = 'bar', c = 42;
+const o = { a, b, c };
 
 // instead of
-var o = { a: a, b: b, c: c };
+const o = { a: a, b: b, c: c };
 ```
 
 ### Array literals
@@ -411,13 +450,11 @@ A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is ze
 - U+000D \<CR>,
 - and U+000A \<LF>.
 
-Prior to the [proposal to make all JSON text valid ECMA-262](https://github.com/tc39/proposal-json-superset), U+2028 \<LS> and U+2029 \<PS>, were also disallowed from appearing unescaped in string literals.
-
 Any code points may appear in the form of an escape sequence. String literals evaluate to ECMAScript String values. When generating these String values Unicode code points are UTF-16 encoded.
 
 ```js
-'foo'
-"bar"
+'foo';
+"bar";
 ```
 
 #### Hexadecimal escape sequences
@@ -440,7 +477,7 @@ See also {{jsxref("String.fromCharCode()")}} and {{jsxref("String.prototype.char
 
 #### Unicode code point escapes
 
-A Unicode code point escape consists of `\u{`, followed by a code point in hexadecimal base, followed by `}`. The value of the hexadecimal digits must be in the range 0 and 0x10FFFF inclusive. Code points in the range U+10000 to U+10FFFF do not need to be represented as a surrogate pair. Code point escapes were added to JavaScript in ECMAScript 2015 (ES6).
+A Unicode code point escape consists of `\u{`, followed by a code point in hexadecimal base, followed by `}`. The value of the hexadecimal digits must be in the range 0 and 0x10FFFF inclusive. Code points in the range U+10000 to U+10FFFF do not need to be represented as a surrogate pair.
 
 See also {{jsxref("String.fromCodePoint()")}} and {{jsxref("String.prototype.codePointAt()")}}.
 
@@ -456,12 +493,12 @@ See also {{jsxref("String.fromCodePoint()")}} and {{jsxref("String.prototype.cod
 See also {{jsxref("RegExp")}} for more information.
 
 ```js
-/ab+c/g
+/ab+c/g;
 
 // An "empty" regular expression literal
 // The empty non-capturing group is necessary
 // to avoid ambiguity with single-line comments.
-/(?:)/
+/(?:)/;
 ```
 
 ### Template literals
@@ -483,7 +520,6 @@ tag `string text ${expression} string text`
 
 Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) must be terminated with semicolons and are therefore affected by automatic semicolon insertion (ASI):
 
-- Empty statement
 - `let`, `const`, variable statement
 - `import`, `export`, module declaration
 - Expression statement
@@ -491,9 +527,9 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) mu
 - `continue`, `break`, `throw`
 - `return`
 
-The ECMAScript specification mentions [three rules of semicolon insertion](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion).
+There are three cases when semicolons are automatically inserted:
 
-1\. A semicolon is inserted before, when a [Line terminator](#line_terminators) or "}" is encountered that is not allowed by the grammar.
+1\. When a token not allowed by the grammar is encountered, and it's separated from the previous token by at least one [line terminator](#line_terminators), or the token is "}", then a semicolon is inserted before the token.
 
 ```js
 { 1
@@ -503,9 +539,39 @@ The ECMAScript specification mentions [three rules of semicolon insertion](https
 
 { 1
 ;2 ;} 3;
+
+// Which is valid grammar encoding three statements,
+// each consisting of a number literal
 ```
 
-2\. A semicolon is inserted at the end, when the end of the input stream of tokens is detected and the parser is unable to parse the single input stream as a complete program.
+The ending ")" of [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) is taken care of as a special case by this rule as well.
+
+```js
+do {
+  // ...
+} while (condition) /* ; */ // ASI here
+const a = 1
+```
+
+2\. When the end of the input stream of tokens is reached, and the parser is unable to parse the single input stream as a complete program, a semicolon is inserted at the end.
+
+```js
+const a = 1 /* ; */ // ASI here
+```
+
+This rule is a complement to the previous rule, specifically for the case where there's no "offending token" but the end of input stream.
+
+3\. When the grammar forbids line terminators in some place but a line terminator is found, a semicolon is inserted. These places include:
+
+- `expr <here> ++`, `expr <here> --`
+- `continue <here> lbl`
+- `break <here> lbl`
+- `return <here> expr`
+- `throw <here> expr`
+- `yield <here> expr`
+- `yield <here> * expr`
+- `(param) <here> => {}`
+- `async <here> function`, `async <here> prop()`, `async <here> function*`, `async <here> *prop()`, `async <here> (param) <here> => {}`
 
 Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators#increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
@@ -513,20 +579,13 @@ Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Refe
 a = b
 ++c
 
-// is transformend by ASI into
+// is transformed by ASI into
 
 a = b;
 ++c;
 ```
 
-3\. A semicolon is inserted at the end, when a statement with restricted productions in the grammar is followed by a line terminator. These statements with "no LineTerminator here" rules are:
-
-- PostfixExpressions (`++` and `--`)
-- `continue`
-- `break`
-- `return`
-- `yield`, `yield*`
-- `module`
+Here the `return` statement returns `undefined`, and the `a + b` becomes an unreachable statement.
 
 ```js
 return
@@ -537,6 +596,55 @@ a + b
 return;
 a + b;
 ```
+
+Note that ASI would only be triggered if a line break separates tokens that would otherwise produce invalid syntax. If the next token can be parsed as part of a valid structure, semicolons would not be inserted. For example:
+
+```js example-bad
+const a = 1
+(1).toString()
+
+const b = 1
+[1, 2, 3].forEach(console.log)
+```
+
+Because `()` can be seen as a function call, it would usually not trigger ASI. Similarly, `[]` may be a member access. The code above is equivalent to:
+
+```js example-bad
+const a = 1(1).toString()
+
+const b = 1[1, 2, 3].forEach(console.log)
+```
+
+Therefore, you would get errors like "1 is not a function" and "Cannot read properties of undefined (reading 'forEach')" when running the code.
+
+Within classes, class fields and generator methods can be a pitfall as well.
+
+```js example-bad
+class A {
+  a = 1
+  *gen() {}
+}
+```
+
+It is seen as:
+
+```js example-bad
+class A {
+  a = 1 * gen() {}
+}
+```
+
+And therefore will be a syntax error around `{`.
+
+There are the following rules-of-thumb for dealing with ASI, if you want to enforce semicolon-less style:
+
+- Write postfix `++` and `--` on the same line as their operands.
+- The expressions after `return`, `throw`, or `yield` should be on the same line as the keyword.
+- Similarly, the label identifier after `break` or `continue` should be on the same line as the keyword.
+- The `=>` of an arrow function should be on the same line as the end of its parameters.
+- The `async` of async functions, methods, etc. cannot be directly followed by a line terminator.
+- If a line starts with one of `(`, `[`, `` ` ``, `+`, `-`, `/` (as in regex literals), prefix it with a semicolon, or end the previous line with a semicolon.
+- Class fields should preferably always be ended with semicolons — in addition to the previous rule (which includes a field declaration followed by a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), since the latter starts with `[`), semicolons are also required between a field declaration and a generator method.
 
 ## Browser compatibility
 

@@ -1,6 +1,7 @@
 ---
 title: Report.type
 slug: Web/API/Report/type
+page-type: web-api-instance-property
 tags:
   - API
   - Experimental
@@ -11,19 +12,14 @@ tags:
   - Type
 browser-compat: api.Report.type
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`type`** read-only property of the {{domxref("Report")}}
 interface returns the type of report generated, e.g. `deprecation` or
 `intervention`.
 
-## Syntax
-
-```js
-let reportType = reportInstance.type
-```
-
-### Returns
+## Value
 
 A string representing the type of the report. Currently the available types are
 `deprecation`, `intervention`, and `crash`.
@@ -31,13 +27,12 @@ A string representing the type of the report. Currently the available types are
 ## Examples
 
 ```js
-let options = {
+const options = {
   types: ['deprecation'],
   buffered: true
 }
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver(([firstReport], observer) => {
   // Log the first report's report type, i.e. "deprecation"
   console.log(firstReport.type);
 }, options);

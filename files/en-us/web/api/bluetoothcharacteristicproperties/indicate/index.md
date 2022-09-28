@@ -1,6 +1,7 @@
 ---
 title: BluetoothCharacteristicProperties.indicate
 slug: Web/API/BluetoothCharacteristicProperties/indicate
+page-type: web-api-instance-property
 tags:
   - API
   - Bluetooth
@@ -13,20 +14,15 @@ tags:
   - indicate
 browser-compat: api.BluetoothCharacteristicProperties.indicate
 ---
-{{securecontext_header}}{{APIRef("Bluetooth API")}}
+
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`indicate`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if indications of the characteristic
 value with acknowledgement is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.indicate;
-```
-
-### Value
+## Value
 
 A boolean value.
 

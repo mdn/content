@@ -1,6 +1,7 @@
 ---
-title: Flow Layout and Overflow
+title: Flow layout and overflow
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
+page-type: guide
 tags:
   - CSS
   - Flow Layout
@@ -11,6 +12,7 @@ tags:
   - overflow
   - text-overflow
 ---
+
 When there is more content than can fit into a container, an overflow situation occurs. Understanding how overflow behaves is important in dealing with any element with a constrained size in CSS. This guide explains how overflow works when working with normal flow.
 
 ## What is overflow?
@@ -31,7 +33,7 @@ Using a value of `scroll` contains the content in its box and add scrollbars to 
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/scroll.html", '100%', 700)}}
 
-Using a value of `auto` will display the content with no scrollbars if the content fits inside the box. If it doesn’t fit then scrollbars will be added. Comparing the next example with the example for `overflow: scroll` you should see `overflow scroll` has horizontal and vertical scrollbars when it only needs vertical scrolling. The `auto` example below only adds the scrollbar in the direct we need to scroll.
+Using a value of `auto` will display the content with no scrollbars if the content fits inside the box. If it doesn't fit then scrollbars will be added. Comparing the next example with the example for `overflow: scroll` you should see `overflow scroll` has horizontal and vertical scrollbars when it only needs vertical scrolling. The `auto` example below only adds the scrollbar in the direct we need to scroll.
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/auto.html", '100%', 700)}}
 

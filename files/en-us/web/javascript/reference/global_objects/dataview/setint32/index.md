@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.DataView.setInt32
 ---
+
 {{JSRef}}
 
 The **`setInt32()`** method stores a signed 32-bit integer
@@ -18,7 +19,7 @@ The **`setInt32()`** method stores a signed 32-bit integer
 
 ## Syntax
 
-```js
+```js-nolint
 setInt32(byteOffset, value)
 setInt32(byteOffset, value, littleEndian)
 ```
@@ -49,8 +50,8 @@ setInt32(byteOffset, value, littleEndian)
 ### Using the setInt32 method
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.setInt32(1, 3);
 dataview.getInt32(1); // 3
 ```

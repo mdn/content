@@ -1,6 +1,7 @@
 ---
 title: PaymentRequestEvent.respondWith()
 slug: Web/API/PaymentRequestEvent/respondWith
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,8 +10,10 @@ tags:
   - Reference
   - payment
   - respondWith()
+  - Experimental
 browser-compat: api.PaymentRequestEvent.respondWith
 ---
+
 {{APIRef("Payment Request API")}}{{SeeCompatTable}}
 
 The **`respondWith`** property of the
@@ -20,20 +23,18 @@ object yourself.
 
 ## Syntax
 
-```js
-paymentRequestEvent.respondWith(
-  // Promise that resolves with a PaymentResponse.
-)
+```js-nolint
+respondWith(promise)
 ```
 
 ### Parameters
 
-- promise
+- `promise`
   - : A {{jsxref('Promise')}} that resolves with a {{domxref("PaymentResponse")}} object.
 
 ### Return value
 
-A {{domxref("PaymentResponse")}} object.
+A {{domxref("PaymentResponse")}} object.
 
 ## Specifications
 

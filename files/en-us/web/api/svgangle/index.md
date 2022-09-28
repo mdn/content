@@ -1,6 +1,7 @@
 ---
 title: SVGAngle
 slug: Web/API/SVGAngle
+page-type: web-api-interface
 tags:
   - API
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAngle
 ---
+
 {{APIRef("SVG")}}
 
 The `SVGAngle` interface is used to represent a value that can be an {{cssxref("&lt;angle&gt;")}} or {{cssxref("&lt;number&gt;")}} value. An `SVGAngle` reflected through the {{SVGAttr("animVal")}} attribute is always read only.
@@ -18,8 +20,8 @@ An `SVGAngle` object can be associated with a particular element. The associated
 
 Every `SVGAngle` object operates in one of two modes:
 
-1.  **_Reflect the base value_** of a reflected animatable attribute (being exposed through the {{SVGAttr("baseVal")}} member of an {{domxref("SVGAnimatedAngle")}}),
-2.  **_Be detached_,** which is the case for `SVGAngle` objects created with {{domxref("SVGSVGElement.createSVGAngle()")}}.
+1. **_Reflect the base value_** of a reflected animatable attribute (being exposed through the {{SVGAttr("baseVal")}} member of an {{domxref("SVGAnimatedAngle")}}),
+2. **_Be detached_,** which is the case for `SVGAngle` objects created with {{domxref("SVGSVGElement.createSVGAngle()")}}.
 
 ## Constants
 
@@ -48,11 +50,11 @@ Every `SVGAngle` object operates in one of two modes:
 
   - : The value as a floating point value, in the units expressed by `unitType`. Setting this attribute will cause `value` and `valueAsString` to be updated automatically to reflect this setting.
 
-    **Exceptions on setting:** A {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is raised when the length corresponds to a read-only attribute, or when the object itself is read-only.
+    **Exceptions on setting:** A {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is raised when the length corresponds to a read-only attribute, or when the object itself is read-only.
 
 - `valueAsString`
 
-  - : The value as a {{domxref("DOMString")}} value, in the units expressed by `unitType`. Setting this attribute will cause `value`, `valueInSpecifiedUnits`, and `unitType` to be updated automatically to reflect this setting.
+  - : The value as a string value, in the units expressed by `unitType`. Setting this attribute will cause `value`, `valueInSpecifiedUnits`, and `unitType` to be updated automatically to reflect this setting.
 
     **Exceptions on setting:**
 

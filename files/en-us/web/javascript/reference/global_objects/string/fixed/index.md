@@ -12,35 +12,31 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.fixed
 ---
+
 {{JSRef}} {{deprecated_header}}
 
-The **`fixed()`** method creates a {{HTMLElement("tt")}} HTML
-element that causes a string to be displayed in fixed-pitch font.
+The **`fixed()`** method creates a string that embeds a string in a {{HTMLElement("tt")}} element (`<tt>str</tt>`), which causes a string to be displayed in a fixed-pitch font.
+
+> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 ## Syntax
 
-```js
+```js-nolint
 fixed()
 ```
 
 ### Return value
 
-A string representing a {{HTMLElement("tt")}} HTML element.
-
-## Description
-
-The `fixed()` method embeds a string in a `<tt>` element:
-"`<tt>str</tt>`".
+A string beginning with a `<tt>` start tag, then the text `str`, and then a `</tt>` end tag.
 
 ## Examples
 
 ### Using fixed()
 
-The following example uses the `fixed` method to change the formatting of a
-string:
+The following example uses the `fixed` method to change the formatting of a string:
 
 ```js
-var worldString = 'Hello, world';
+const worldString = "Hello, world";
 console.log(worldString.fixed()); // "<tt>Hello, world</tt>"
 ```
 
@@ -54,7 +50,7 @@ console.log(worldString.fixed()); // "<tt>Hello, world</tt>"
 
 ## See also
 
-- A polyfill of `String.prototype.fixed` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.fixed` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.bold()")}}
 - {{jsxref("String.prototype.italics()")}}
 - {{jsxref("String.prototype.strike()")}}

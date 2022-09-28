@@ -1,6 +1,7 @@
 ---
 title: scroll-snap-coordinate
 slug: Web/CSS/scroll-snap-coordinate
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -8,9 +9,11 @@ tags:
   - Deprecated
   - Reference
   - recipe:css-property
+  - Non-standard
 browser-compat: css.properties.scroll-snap-coordinate
 ---
-{{CSSRef}}{{deprecated_header}}
+
+{{CSSRef}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`scroll-snap-coordinate`** [CSS](/en-US/docs/Web/CSS) property defines the x and y coordinate positions within an element that will align with its nearest ancestor scroll container's {{cssxref("scroll-snap-destination")}} for each respective axis.
 
@@ -19,8 +22,8 @@ The **`scroll-snap-coordinate`** [CSS](/en-US/docs/Web/CSS) property defines the
 scroll-snap-coordinate: none;
 
 /* <position> values */
-scroll-snap-coordinate: 50px 50px;                   /* Single coordinate */
-scroll-snap-coordinate: 100px 100px, 100px bottom;   /* Multiple coordinates */
+scroll-snap-coordinate: 50px 50px; /* Single coordinate */
+scroll-snap-coordinate: 100px 100px, 100px bottom; /* Multiple coordinates */
 
 /* Global values */
 scroll-snap-coordinate: inherit;
@@ -37,7 +40,7 @@ If the element has been transformed, the snap coordinates are likewise transform
 - `none`
   - : Specifies that the element does not contribute to a snap point.
 - {{cssxref("&lt;position&gt;")}}
-  - : Specifies the offset of the snap coordinates from the start edge of the element’s border box. For each pairing, the first value gives the x coordinate of the snap coordinate, the second value its y coordinate.
+  - : Specifies the offset of the snap coordinates from the start edge of the element's border box. For each pairing, the first value gives the x coordinate of the snap coordinate, the second value its y coordinate.
 
 ## Formal definition
 
@@ -45,7 +48,10 @@ If the element has been transformed, the snap coordinates are likewise transform
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+scroll-snap-coordinate =
+  none | <position>#
+```
 
 ## Examples
 
@@ -56,31 +62,31 @@ If the element has been transformed, the snap coordinates are likewise transform
 ```html
 <div id="container">
   <div>
-    <p>At coordinate (0, 0)</p>
-    <div class="scrollContainer coordinate0">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  </div>
+    <p>At coordinate (0, 0)</p>
+    <div class="scrollContainer coordinate0">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  <div>
-    <p>At coordinate (25, 0)</p>
-    <div class="scrollContainer coordinate25">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  </div>
+  <div>
+    <p>At coordinate (25, 0)</p>
+    <div class="scrollContainer coordinate25">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  <div>
-    <p>At coordinate (50, 0)</p>
-    <div class="scrollContainer coordinate50">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-    </div>
-  </div>
+  <div>
+    <p>At coordinate (50, 0)</p>
+    <div class="scrollContainer coordinate50">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 </div>
 ```
 
@@ -91,7 +97,7 @@ If the element has been transformed, the snap coordinates are likewise transform
   display: flex;
 }
 
-#container > div:nth-child(-n+2) {
+#container > div:nth-child(-n + 2) {
   margin-right: 20px;
 }
 

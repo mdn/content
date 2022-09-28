@@ -1,6 +1,7 @@
 ---
 title: color-scheme
 slug: Web/CSS/color-scheme
+page-type: css-property
 tags:
   - CSS
   - CSS Colors
@@ -16,11 +17,14 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.color-scheme
 ---
+
 {{CSSRef}}
 
 The **`color-scheme`** CSS property allows an element to indicate which color schemes it can comfortably be rendered in.
 
 Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes form controls, scrollbars, and the used values of CSS system colors.
+
+{{EmbedInteractiveExample("pages/css/color-scheme.html")}}
 
 ## Syntax
 
@@ -34,6 +38,7 @@ color-scheme: light dark;
 color-scheme: inherit;
 color-scheme: initial;
 color-scheme: revert;
+color-scheme: revert-layer;
 color-scheme: unset;
 ```
 
@@ -78,7 +83,7 @@ To opt the entire page into the user's color scheme preferences declare `color-s
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}

@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat`** object enables language-sensitive number formatting.
@@ -35,10 +36,10 @@ The **`Intl.NumberFormat`** object enables language-sensitive number formatting.
   - : Getter function that formats a number according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
 - {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
   - : Returns an {{jsxref("Array")}} of objects representing the number string in parts that can be used for custom locale-aware formatting.
-- {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
+- {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}} {{experimental_inline}}
   - : Getter function that formats a range of numbers according to the locale and formatting options of the {{jsxref("Intl.NumberFormat")}} object from which the method is called.
-- {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
-   - : Returns an {{jsxref("Array")}} of objects representing the range of number strings in parts that can be used for custom locale-aware formatting.
+- {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}} {{experimental_inline}}
+  - : Returns an {{jsxref("Array")}} of objects representing the range of number strings in parts that can be used for custom locale-aware formatting.
 - {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.
 
@@ -49,7 +50,7 @@ The **`Intl.NumberFormat`** object enables language-sensitive number formatting.
 In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.
 
 ```js
-var number = 3500;
+const number = 3500;
 
 console.log(new Intl.NumberFormat().format(number));
 // → '3,500' if in US English locale
@@ -60,7 +61,7 @@ console.log(new Intl.NumberFormat().format(number));
 This example shows some of the variations in localized number formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
 
 ```js
-var number = 123456.789;
+const number = 123456.789;
 
 // German uses comma as decimal separator and period for thousands
 console.log(new Intl.NumberFormat('de-DE').format(number));
@@ -86,10 +87,10 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 
 ### Using options
 
-The results can be customized using the `options` argument:
+The results can be customized using the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) argument:
 
 ```js
-var number = 123456.789;
+const number = 123456.789;
 
 // request a currency format
 console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
@@ -102,28 +103,23 @@ console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' 
 // limit to three significant digits
 console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
 // → 1,23,000
-```
 
-### Using style and unit
-
-```js
-console.log(new Intl.NumberFormat('pt-PT',  {
-    style: 'unit',
-    unit: 'kilometer-per-hour'
+// Formatting with units
+console.log(new Intl.NumberFormat('pt-PT', {
+  style: 'unit',
+  unit: 'kilometer-per-hour'
 }).format(50));
 // → 50 km/h
 
 console.log((16).toLocaleString('en-GB', {
-    style: 'unit',
-    unit: 'liter',
-    unitDisplay: 'long'
+  style: 'unit',
+  unit: 'liter',
+  unitDisplay: 'long',
 }));
 // → 16 litres
 ```
 
-## Polyfill
-
-[formatjs Intl.NumberFormat polyfill](https://formatjs.io/docs/polyfills/intl-numberformat)
+For an exhaustive list of options, see the [`Intl.NumberFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) page.
 
 ## Specifications
 
@@ -136,3 +132,4 @@ console.log((16).toLocaleString('en-GB', {
 ## See also
 
 - {{jsxref("Intl")}}
+- [A polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat/)

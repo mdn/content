@@ -4,9 +4,9 @@ slug: Glossary/NaN
 tags:
   - CodingScripting
   - Computing
-  - Glossary
   - NaN
 ---
+
 NaN (Not a Number) is a numeric {{Glossary("Type", "data type")}} that means an undefined value or value that cannot be represented, especially results of floating-point calculations.
 
 For example, NaNs can represent infinity, result of division by zero, missing value, or the square root of a negative (which is imaginary, whereas a floating-point number is real).
@@ -15,5 +15,5 @@ Practically speaking, if I divide two variables in a {{glossary("JavaScript")}} 
 
 ## See also
 
-- {{Interwiki("wikipedia", "NaN")}} on Wikipedia
+- [NaN](https://en.wikipedia.org/wiki/NaN) on Wikipedia
 - [NaN in JavaScript](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)

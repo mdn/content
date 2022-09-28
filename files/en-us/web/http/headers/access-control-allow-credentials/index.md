@@ -10,6 +10,7 @@ tags:
   - header
 browser-compat: http.headers.Access-Control-Allow-Credentials
 ---
+
 {{HTTPSidebar}}
 
 The **`Access-Control-Allow-Credentials`** response header
@@ -34,7 +35,7 @@ The `Access-Control-Allow-Credentials` header works in conjunction with the
 constructor of the Fetch API. For a CORS request with credentials, for browsers
 to expose the response to the frontend JavaScript code, both the server (using the
 `Access-Control-Allow-Credentials` header) and the client (by setting the
-credentials mode for the XHR, Fetch, or Ajax request) must indicate that they’re opting
+credentials mode for the XHR, Fetch, or Ajax request) must indicate that they're opting
 into including credentials.
 
 <table class="properties">
@@ -52,7 +53,7 @@ into including credentials.
 
 ## Syntax
 
-```
+```http
 Access-Control-Allow-Credentials: true
 ```
 
@@ -67,14 +68,14 @@ Access-Control-Allow-Credentials: true
 
 Allow credentials:
 
-```
+```http
 Access-Control-Allow-Credentials: true
 ```
 
 Using [XHR](/en-US/docs/Web/API/XMLHttpRequest) with credentials:
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/', true);
 xhr.withCredentials = true;
 xhr.send(null);

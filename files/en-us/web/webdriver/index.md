@@ -10,6 +10,9 @@ tags:
   - Web
   - WebDriver
 ---
+
+{{QuickLinksWithSubpages}}
+
 WebDriver is a remote control interface that enables introspection and control of user agents. It provides a platform- and language-neutral wire protocol as a way for out-of-process programs to remotely instruct the behavior of web browsers.
 
 To have the ability to write instruction sets that can be run interchangeably in many browsers on different platforms is critical to deliver a consistent experience to users. With the new wave of developments on the web platform, the increase diversity in devices and demands for real interoperability between the technologies, WebDriver provides tooling for [cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction).
@@ -18,7 +21,7 @@ Provided is a set of interfaces to discover and manipulate DOM elements in web d
 
 ## Usage
 
-So what does WebDriver let you do and what does it look like? Since WebDriver is programming language neutral, the answer to this question depends on which WebDriver client you’re using and the choice of language.
+So what does WebDriver let you do and what does it look like? Since WebDriver is programming language neutral, the answer to this question depends on which WebDriver client you're using and the choice of language.
 
 But using a popular client written in Python, your interaction with WebDriver might look like this:
 
@@ -87,5 +90,3 @@ This might produce output akin to this:
 
 - [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)
 - [Selenium documentation](https://www.selenium.dev/documentation/)
-
-{{QuickLinksWithSubpages}}

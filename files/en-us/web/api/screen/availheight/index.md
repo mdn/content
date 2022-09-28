@@ -1,6 +1,7 @@
 ---
 title: Screen.availHeight
 slug: Web/API/Screen/availHeight
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM View
@@ -10,6 +11,7 @@ tags:
   - availHeight
 browser-compat: api.Screen.availHeight
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only {{DOMxRef("Screen")}} interface's
@@ -22,13 +24,7 @@ exposed on the {{DOMxRef("Window")}} interface's {{DOMxRef("Window.screen",
 You can similarly use {{DOMxRef("Screen.availWidth")}} to get the number of pixels
 which are horizontally available to the browser for its use.
 
-## Syntax
-
-```js
-let availHeight = window.screen.availHeight;
-```
-
-### Value
+## Value
 
 A numeric value indicating the number of CSS pixels tall the screen's available space
 is. This can be no larger than the value of {{DOMxRef("Screen.height",
@@ -42,7 +38,7 @@ the Dock and menu bar, as seen in the diagram below.
 
 [![Diagram showing how Screen.availHeight relates to Screen.height and the screen's contents](availheight-diagram.svg)](availheight-diagram.svg)
 
-## Example
+## Examples
 
 If your web application needs to open a new window, such as a tool palette which can
 contain multiple panels, and wants to position it so that it occupies the entire
@@ -50,8 +46,8 @@ vertical space available, you can do so using code similar to what's seen here.
 
 In the main window, when it's time to open the panels, code like the following is used.
 
-```html
-let paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");
+```js
+const paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");
 ```
 
 The Panels window's HTML, in `panels.html`, has JavaScript code of its own,
@@ -85,4 +81,4 @@ other interface elements that reserve space.
 - {{DOMxRef("Window")}}
 - {{DOMxRef("Screen")}}
 - {{DOMxRef("Screen.availWidth")}}
-- {{DOMxRef("Window.height")}}
+- {{DOMxRef("Window.innerHeight")}}

@@ -1,6 +1,7 @@
 ---
 title: CSSMediaRule.media
 slug: Web/API/CSSMediaRule/media
+page-type: web-api-instance-property
 tags:
   - API
   - CSSOM
@@ -9,19 +10,14 @@ tags:
   - Reference
 browser-compat: api.CSSMediaRule.media
 ---
+
 {{ APIRef("CSSOM") }}
 
 The read-only **`media`** property of the
 {{domxref("CSSMediaRule")}} interface {{domxref("MediaList")}} represents the intended
 destination medium for style information.
 
-## Syntax
-
-```js
-var media = CSSMediaRule.media;
-```
-
-### Value
+## Value
 
 a {{domxref("MediaList")}}
 

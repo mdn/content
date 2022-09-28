@@ -2,11 +2,12 @@
 title: Firefox 77 for developers
 slug: Mozilla/Firefox/Releases/77
 tags:
-  - '77'
+  - "77"
   - Firefox
   - Mozilla
   - Releases
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 77 that will affect developers. Firefox 77 was released on [June 2, 2020](https://wiki.mozilla.org/RapidRelease/Calendar).
@@ -17,18 +18,18 @@ This article provides information about the changes in Firefox 77 that will affe
 
 ### Developer tools
 
-- Firefox Developer Edition offers a [Compatibility panel](/en-US/docs/Tools/Page_Inspector/UI_Tour#compatibility_view) in the Page Inspector, to show the browsers supported by the CSS properties used on the page. ({{bug("1625134")}})
-- The Debugger has a [Settings menu in its toolbar](/en-US/docs/Tools/Page_Inspector/UI_Tour#toolbar); the only menu option (yet) is **Disable JavaScript**. ({{bug("1630957")}})
-- The [Network Monitor toolbar](/en-US/docs/Tools/Network_Monitor/toolbar) has an **Actions** menu for managing log data ({{bug("1459175")}}):
+- Firefox Developer Edition offers a [Compatibility panel](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#compatibility-view) in the Page Inspector, to show the browsers supported by the CSS properties used on the page. ({{bug("1625134")}})
+- The Debugger has a [Settings menu in its toolbar](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#toolbar); the only menu option (yet) is **Disable JavaScript**. ({{bug("1630957")}})
+- The [Network Monitor toolbar](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/toolbar/index.html) has an **Actions** menu for managing log data ({{bug("1459175")}}):
 
   - **Persist Logs**
   - **Import HAR File**
   - **Save All as HAR**
   - **Copy All as HAR**
 
-- The [Request Blocking panel](/en-US/docs/Tools/Network_Monitor/request_list#blocking_specific_urls) of the Network Monitor has a context menu for enabling, disabling or removing all request block items. ({{bug("1588076")}})
-- If you change the selected source line in the Debugger by clicking a frame in the [Call Stack](/en-US/docs/Tools/Debugger/UI_Tour#call_stack), and then click **Step over** (`F10`), the debugger executes until reaching the line following the newly-selected line (disregarding whatever line the debugger originally stopped at). ({{bug("1630642")}})
-- You can set a watchpoint that pauses execution when a value is [either read or assigned ("get or set")](/en-US/docs/Tools/Debugger/How_to/Use_watchpoints#set_a_watchpoint), as well as just read ("get") or just assigned ("set"). ({{bug("1580585")}}
+- The [Request Blocking panel](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#blocking-specific-urls) of the Network Monitor has a context menu for enabling, disabling or removing all request block items. ({{bug("1588076")}})
+- If you change the selected source line in the Debugger by clicking a frame in the [Call Stack](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#call-stack), and then click **Step over** (`F10`), the debugger executes until reaching the line following the newly-selected line (disregarding whatever line the debugger originally stopped at). ({{bug("1630642")}})
+- You can set a watchpoint that pauses execution when a value is [either read or assigned ("get or set")](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_watchpoints/index.html#set-a-watchpoint), as well as just read ("get") or just assigned ("set"). ({{bug("1580585")}}
 
 ### HTML
 
@@ -50,7 +51,7 @@ This article provides information about the changes in Firefox 77 that will affe
 
 ### WebDriver conformance (Marionette)
 
-- Certain commands could have caused a hang of Marionette when the currently selected top-level browsing context gets removed, eg. closing the window by a click ({{bug(1619481)}}).
+- Certain commands could have caused a hang of Marionette when the currently selected top-level browsing context gets removed (e.g., closing the window by a click) ({{bug(1619481)}}).
 - Known issue: Because of changes in Firefox 77 an open user prompt could be closed too early when navigating away from the current page. This problem will be fixed in Firefox 78 ({{bug(1631362)}}).
 
 ## Changes for add-on developers

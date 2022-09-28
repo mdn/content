@@ -11,6 +11,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.permissions.contains
 ---
+
 {{AddonSidebar()}}
 
 Check whether the extension has the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
@@ -21,8 +22,8 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-var getContains = browser.permissions.contains(
+```js-nolint
+let getContains = browser.permissions.contains(
   permissions                // Permissions object
 )
 ```
@@ -46,7 +47,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 // Extension permissions are:
 // "webRequest", "tabs", "*://*.mozilla.org/*"
 
-var testPermissions1 = {
+let testPermissions1 = {
   origins: ["*://mozilla.org/"],
   permissions: ["tabs"]
 };
@@ -55,26 +56,26 @@ browser.permissions.contains(testPermissions1).then((result) => {
   console.log(result);    // true
 });
 
-var testPermissions2 = {
-  origins: ["*://mozilla.org/"],
-  permissions: ["tabs", "alarms"]
+let testPermissions2 = {
+  origins: ["*://mozilla.org/"],
+  permissions: ["tabs", "alarms"]
 };
 
 browser.permissions.contains(testPermissions2).then((result) => {
   console.log(result);   // false, "alarms" doesn't match
 });
 
-var testPermissions3 = {
-  origins: ["https://developer.mozilla.org/"],
-  permissions: ["tabs", "webRequest"]
+let testPermissions3 = {
+  origins: ["https://developer.mozilla.org/"],
+  permissions: ["tabs", "webRequest"]
 };
 
 browser.permissions.contains(testPermissions3).then((result) => {
   console.log(result);   // true: "https://developer.mozilla.org/"
 });                      // matches: "*://*.mozilla.org/*"
 
-var testPermissions4 = {
-  origins: ["https://example.org/"]
+let testPermissions4 = {
+  origins: ["https://example.org/"]
 };
 
 browser.permissions.contains(testPermissions4).then((result) => {
@@ -84,6 +85,6 @@ browser.permissions.contains(testPermissions4).then((result) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.
+> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

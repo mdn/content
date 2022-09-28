@@ -11,6 +11,7 @@ tags:
   - browserSettings
 browser-compat: webextensions.api.browserSettings
 ---
+
 {{AddonSidebar}}
 
 Enables an extension to modify certain global browser settings. Each property of this API is a {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object, providing the ability to modify a particular setting.
@@ -42,7 +43,7 @@ To use this API you need to have the "browserSettings" [permission](/en-US/docs/
 - {{WebExtAPIRef("browserSettings.newTabPosition")}}
   - : Controls the position of newly opened tabs relative to already open tabs.
 - {{WebExtAPIRef("browserSettings.openBookmarksInNewTabs")}}
-  - : Determines whether bookmarks are opened in the current tab or a new tab.
+  - : Determines whether bookmarks are opened in the current tab or a new tab.
 - {{WebExtAPIRef("browserSettings.openSearchResultsInNewTabs")}}
   - : Determines whether search results are opened in the current tab or a new tab.
 - {{WebExtAPIRef("browserSettings.openUrlbarResultsInNewTabs")}}
@@ -51,6 +52,8 @@ To use this API you need to have the "browserSettings" [permission](/en-US/docs/
   - : Controls whether to override the browser theme (light or dark) when setting pages' preferred color scheme.
 - {{WebExtAPIRef("browserSettings.overrideDocumentColors")}}
   - : Controls whether the user-chosen colors override the page's colors.
+- {{WebExtAPIRef("browserSettings.tlsVersionRestrictionConfig")}}
+  - : Read the highest and lowest versions of TLS supported by the browser.
 - {{WebExtAPIRef("browserSettings.useDocumentFonts")}}
   - : Controls whether the browser will use the fonts specified by a web page or use only built-in fonts.
 - {{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}

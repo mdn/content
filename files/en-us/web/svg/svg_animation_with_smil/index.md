@@ -8,14 +8,15 @@ tags:
   - SVG
   - SVG Animation
 ---
+
 > **Warning:** Although Chrome 45 deprecated SMIL in favor of CSS animations and Web animations, the Chrome developers have since [suspended](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ) that deprecation.
 
-Firefox 4 introduced support for animating [SVG](/en-US/docs/Web/SVG) using [Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil) (SMIL). SMIL allows you to:
+Firefox 4 introduced support for animating [SVG](/en-US/docs/Web/SVG) using [Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil/) (SMIL). SMIL allows you to:
 
-*   animate the numeric attributes of an element (x, y, ...)
-*   animate transform attributes (translation or rotation)
-*   animate color attributes
-*   follow a motion path
+- animate the numeric attributes of an element (x, y, …)
+- animate transform attributes (translation or rotation)
+- animate color attributes
+- follow a motion path
 
 This is done adding an SVG element like {{ SVGElement("animate") }} inside the SVG element to animate. Below are examples for the four different ways.
 
@@ -23,14 +24,14 @@ This is done adding an SVG element like {{ SVGElement("animate") }} inside the S
 
 The following example animates the **cx** attribute of a circle. To do so, we add an {{ SVGElement("animate") }} element inside the {{ SVGElement("circle") }} element. The important attributes for {{ SVGElement("animate") }} are:
 
-*   **attributeName**
-    *   : The name of the attribute to animate.
-*   from
-    *   : The initial value of the attribute.
-*   to
-    *   : The final value.
-*   dur
-    *   : The duration of the animation (for example, write '5s' for 5 seconds).
+- **attributeName**
+  - : The name of the attribute to animate.
+- from
+  - : The initial value of the attribute.
+- to
+  - : The final value.
+- dur
+  - : The duration of the animation (for example, write '5s' for 5 seconds).
 
 If you want to animate more attributes inside the same element, just add more {{ SVGElement("animate") }} elements.
 
@@ -40,8 +41,11 @@ If you want to animate more attributes inside the same element, just add more {{
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
   <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
     <animate
-       attributeName="cx" from="0" to="500"
-       dur="5s" repeatCount="indefinite" />
+      attributeName="cx"
+      from="0"
+      to="500"
+      dur="5s"
+      repeatCount="indefinite" />
   </circle>
 </svg>
 ```
@@ -56,16 +60,22 @@ The {{ SVGElement("animateTransform") }} element let you animate **transform** a
 <svg width="300" height="100">
   <title>SVG SMIL Animate with transform</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-  <rect x="0" y="50" width="15" height="34" fill="blue" stroke="black" stroke-width="1">
+  <rect
+    x="0"
+    y="50"
+    width="15"
+    height="34"
+    fill="blue"
+    stroke="black"
+    stroke-width="1">
     <animateTransform
-       attributeName="transform"
-       begin="0s"
-       dur="20s"
-       type="rotate"
-       from="0 60 60"
-       to="360 100 60"
-       repeatCount="indefinite"
-    />
+      attributeName="transform"
+      begin="0s"
+      dur="20s"
+      type="rotate"
+      from="0 60 60"
+      to="360 100 60"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
@@ -85,9 +95,7 @@ In this example, a blue circle bounces between the left and right edges of a bla
   <title>SVG SMIL Animate with Path</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
   <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
-    <animateMotion
-       path="M 0 0 H 300 Z"
-       dur="3s" repeatCount="indefinite" />
+    <animateMotion path="M 0 0 H 300 Z" dur="3s" repeatCount="indefinite" />
   </circle>
 </svg>
 ```
@@ -104,10 +112,19 @@ Same example as before with a curved path and following the direction of the pat
 <svg width="300" height="100">
   <title>SVG SMIL Animate with Path</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-  <rect x="0" y="0" width="20" height="20" fill="blue" stroke="black" stroke-width="1">
+  <rect
+    x="0"
+    y="0"
+    width="20"
+    height="20"
+    fill="blue"
+    stroke="black"
+    stroke-width="1">
     <animateMotion
-       path="M 250,80 H 50 Q 30,80 30,50 Q 30,20 50,20 H 250 Q 280,20,280,50 Q 280,80,250,80Z"
-       dur="3s" repeatCount="indefinite" rotate="auto" />
+      path="M 250,80 H 50 Q 30,80 30,50 Q 30,20 50,20 H 250 Q 280,20,280,50 Q 280,80,250,80Z"
+      dur="3s"
+      repeatCount="indefinite"
+      rotate="auto" />
   </rect>
 </svg>
 ```
@@ -116,6 +133,6 @@ Same example as before with a curved path and following the direction of the pat
 
 ## See also
 
-*   [SVG](/en-US/docs/Web/SVG)
-*   [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
-*   [SMIL Specification](https://www.w3.org/TR/REC-smil)
+- [SVG](/en-US/docs/Web/SVG)
+- [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
+- [SMIL Specification](https://www.w3.org/TR/REC-smil/)

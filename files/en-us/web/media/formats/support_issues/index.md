@@ -40,8 +40,9 @@ Images—whether embedded using {{HTMLElement("img")}} or {{HTMLElement("picture
 Once your image has been converted to progressive form, you can use it as usual.
 
 ```html
-<img src="/images/stafff-photo-huge-progressive.jpg"
-     alt="Staff Photo, taken in January of 1972">
+<img
+  src="/images/staff-photo-huge-progressive.jpg"
+  alt="Staff Photo, taken in January of 1972" />
 ```
 
 When using a progressive image, the data is stored in such a way that the browser is able to render a low-quality representation of the image as soon as possible, then update the image as it loads—or after it's finished loading—to present it in full quality.
@@ -52,7 +53,7 @@ When using a progressive image, the data is stored in such a way that the browse
 
 ## Checking compatibility in JavaScript
 
-{{domxref("HTMLMediaElement.canPlayType")}} and {{domxref("MediaSource.isTypeSupported")}}...
+{{domxref("HTMLMediaElement.canPlayType")}} and {{domxref("MediaSource.isTypeSupported")}}…
 
 ## Detecting playback errors
 

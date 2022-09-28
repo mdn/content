@@ -1,6 +1,7 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
+page-type: web-api-overview
 tags:
   - API
   - Clipping
@@ -11,7 +12,9 @@ tags:
   - Performance
   - Reference
   - Web
+browser-compat: api.IntersectionObserver
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's {{Glossary("viewport")}}.
@@ -87,7 +90,7 @@ Whenever the target meets a threshold specified for the `IntersectionObserver`, 
 
 ```js
 let callback = (entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     // Each entry describes an intersection change for one observed
     // target element:
     //   entry.boundingClientRect
@@ -101,7 +104,7 @@ let callback = (entries, observer) => {
 };
 ```
 
-The list of entries received by the callback includes one entry for each target which reported a change in its intersection status. Check the value of the {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property to see if the entry represents an element that currently intersects with the root.
+The list of entries received by the callback includes one entry for each target which reported a change in its intersection status. Check the value of the {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property to see if the entry represents an element that currently intersects with the root.
 
 Be aware that your callback is executed on the main thread. It should operate as quickly as possible; if anything time-consuming needs to be done, use {{domxref("Window.requestIdleCallback()")}}.
 
@@ -109,7 +112,7 @@ Also, note that if you specified the `root` option, the target must be a descend
 
 ### How intersection is calculated
 
-All areas considered by the Intersection Observer API are rectangles; elements which are irregularly shaped are considered as occupying the smallest rectangle which encloses all of the element's parts. Similarly, if the visible portion of an element is not rectangular, the element's intersection rectangle is construed to be the smallest rectangle that contains all the visible portions of the element.
+All areas considered by the Intersection Observer API are rectangles; elements which are irregularly shaped are considered as occupying the smallest rectangle which encloses all of the element's parts. Similarly, if the visible portion of an element is not rectangular, the element's intersection rectangle is considered to be the smallest rectangle that contains all the visible portions of the element.
 
 It's useful to understand a bit about how the various properties provided by {{domxref("IntersectionObserverEntry")}} describe an intersection.
 
@@ -131,15 +134,15 @@ Rather than reporting every infinitesimal change in how much a target element is
 
 For example, if you want to be informed every time a target's visibility passes backward or forward through each 25% mark, you would specify the array \[0, 0.25, 0.5, 0.75, 1] as the list of thresholds when creating the observer.
 
-When the callback is invoked, it receives a list of `IntersectionObserverEntry` objects, one for each observed target which has had the degree to which it intersects the root change such that the amount exposed crosses over one of the thresholds, in either direction.
+When the callback is invoked, it receives a list of `IntersectionObserverEntry` objects, one for each observed target which has had the degree to which it intersects the root change such that the amount exposed crosses over one of the thresholds, in either direction.
 
-You can see if the target *currently* intersects the root by looking at the entry's  {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property; if its value is `true`, the target is at least partially intersecting the root element or document. This lets you determine whether the entry represents a transition from the elements intersecting to no longer intersecting or a transition from not intersecting to intersecting.
+You can see if the target _currently_ intersects the root by looking at the entry's {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property; if its value is `true`, the target is at least partially intersecting the root element or document. This lets you determine whether the entry represents a transition from the elements intersecting to no longer intersecting or a transition from not intersecting to intersecting.
 
-Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
+Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
 
 To get a feeling for how thresholds work, try scrolling the box below around. Each colored box within it displays the percentage of itself that's visible in all four of its corners, so you can see these ratios change over time as you scroll the container. Each box has a different set of thresholds:
 
-- The first box has a threshold for each percentage point of visibility; that is, the {{domxref("IntersectionObserver.thresholds")}} array is `[0.00, 0.01, 0.02, ..., 0.99, 1.00]`.
+- The first box has a threshold for each percentage point of visibility; that is, the {{domxref("IntersectionObserver.thresholds")}} array is `[0.00, 0.01, 0.02, /*…,*/ 0.99, 1.00]`.
 - The second box has a single threshold, at the 50% mark.
 - The third box has thresholds every 10% of visibility (0%, 10%, 20%, etc.).
 - The last box has thresholds each 25%.
@@ -156,8 +159,7 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
 
 <main>
   <div class="contents">
-    <div class="wrapper">
-    </div>
+    <div class="wrapper"></div>
   </div>
 </main>
 ```
@@ -267,7 +269,7 @@ startup = () => {
 
   for (let i=0; i<4; i++) {
     let template = document.querySelector("#boxTemplate").content.cloneNode(true);
-    let boxID = "box" + (i+1);
+    let boxID = `box${i + 1}`;
     template.querySelector(".sampleBox").id = boxID;
     wrapper.appendChild(document.importNode(template, true));
 
@@ -275,7 +277,7 @@ startup = () => {
 
     observerOptions.threshold = thresholdSets[i];
     observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
-    observers[i].observe(document.querySelector("#" + boxID));
+    observers[i].observe(document.querySelector(`#${boxID}`));
   }
 
   // Scroll to the starting position
@@ -287,7 +289,7 @@ startup = () => {
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
     let box = entry.target;
-    let visiblePct = (Math.floor(entry.intersectionRatio * 100)) + "%";
+    let visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
 
     box.querySelector(".topLeft").innerHTML = visiblePct;
     box.querySelector(".topRight").innerHTML = visiblePct;
@@ -305,24 +307,24 @@ startup();
 
 The browser computes the final intersection rectangle as follows; this is all done for you, but it can be helpful to understand these steps in order to better grasp exactly when intersections will occur.
 
-1.  The target element's bounding rectangle (that is, the smallest rectangle that fully encloses the bounding boxes of every component that makes up the element) is obtained by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on the target. This is the largest the intersection rectangle may be. The remaining steps will remove any portions that don't intersect.
-2.  Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting `overflow` to anything but `visible` causes clipping to occur.
-3.  If one of the containing elements is the root of a nested browsing context (such as the document contained in an {{HTMLElement("iframe")}}, the intersection rectangle is clipped to the containing context's viewport, and recursion upward through the containers continues with the container's containing block. So if the top level of an `<iframe>` is reached, the intersection rectangle is clipped to the frame's viewport, then the frame's parent element is the next block recursed through toward the intersection root.
-4.  When recursion upward reaches the intersection root, the resulting rectangle is mapped to the intersection root's coordinate space.
-5.  The resulting rectangle is then updated by intersecting it with the [root intersection rectangle](#root-intersection-rectangle).
-6.  This rectangle is, finally, mapped to the coordinate space of the target's {{domxref("document")}}.
+1. The target element's bounding rectangle (that is, the smallest rectangle that fully encloses the bounding boxes of every component that makes up the element) is obtained by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on the target. This is the largest the intersection rectangle may be. The remaining steps will remove any portions that don't intersect.
+2. Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting `overflow` to anything but `visible` causes clipping to occur.
+3. If one of the containing elements is the root of a nested browsing context (such as the document contained in an {{HTMLElement("iframe")}}), the intersection rectangle is clipped to the containing context's viewport, and recursion upward through the containers continues with the container's containing block. So if the top level of an `<iframe>` is reached, the intersection rectangle is clipped to the frame's viewport, then the frame's parent element is the next block recursed through toward the intersection root.
+4. When recursion upward reaches the intersection root, the resulting rectangle is mapped to the intersection root's coordinate space.
+5. The resulting rectangle is then updated by intersecting it with the [root intersection rectangle](#root-intersection-rectangle).
+6. This rectangle is, finally, mapped to the coordinate space of the target's {{domxref("document")}}.
 
 ### Intersection change callbacks
 
-When the amount of a target element which is visible within the root element crosses one of the visibility thresholds, the {{domxref("IntersectionObserver")}} object's callback is executed. The callback receives as input an array of all of {{domxref("IntersectionObserverEntry")}} objects, one for each threshold which was crossed, and a reference to the `IntersectionObserver` object itself.
+When the amount of a target element which is visible within the root element crosses one of the visibility thresholds, the {{domxref("IntersectionObserver")}} object's callback is executed. The callback receives as input an array of all of {{domxref("IntersectionObserverEntry")}} objects, one for each threshold which was crossed, and a reference to the `IntersectionObserver` object itself.
 
 Each entry in the list of thresholds is an {{domxref("IntersectionObserverEntry")}} object describing one threshold that was crossed; that is, each entry describes how much of a given element is intersecting with the root element, whether or not the element is considered to be intersecting or not, and the direction in which the transition occurred.
 
 The code snippet below shows a callback which keeps a counter of how many times elements transition from not intersecting the root to intersecting by at least 75%. For a threshold value of 0.0 (default) the callback is called [approximately](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) upon transition of the boolean value of {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}}. The snippet thus first checks that the transition is a positive one, then determines whether {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is above 75%, in which case it increments the counter.
 
 ```js
-intersectionCallback(entries) => {
-  entries.forEach(entry => {
+const intersectionCallback = (entries) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       let elem = entry.target;
 
@@ -343,7 +345,7 @@ intersectionCallback(entries) => {
 
 ## A simple example
 
-This simple example causes a target element to change its color and transparency as it becomes more or less visible. At [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility), you can find a more extensive example showing how to time how long a set of elements (such as ads) are visible to the user and to react to that information by recording statistics or by updating elements..
+This simple example causes a target element to change its color and transparency as it becomes more or less visible. At [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility), you can find a more extensive example showing how to time how long a set of elements (such as ads) are visible to the user and to react to that information by recording statistics or by updating elements.
 
 ### HTML
 
@@ -351,9 +353,7 @@ The HTML for this example is very short, with a primary element which is the box
 
 ```html
 <div id="box">
-  <div class="vertical">
-    Welcome to <strong>The Box!</strong>
-  </div>
+  <div class="vertical">Welcome to <strong>The Box!</strong></div>
 </div>
 ```
 
@@ -363,7 +363,7 @@ The CSS isn't terribly important for the purposes of this example; it lays out t
 
 ```css
 #box {
-  background-color: rgba(40, 40, 190, 255);
+  background-color: rgba(40, 40, 190, 1);
   border: 4px solid rgb(20, 20, 120);
   transition: background-color 1s, border 1s;
   width: 350px;
@@ -424,7 +424,7 @@ The constants and variables we set up here are:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{event("load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{domxref("Window/load_event", "load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 
@@ -581,13 +581,11 @@ There's an even more extensive example at [Timing element visibility with the In
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment |
-| ------------------------------------------------ | -------------------------------------------- | ------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## See also
 

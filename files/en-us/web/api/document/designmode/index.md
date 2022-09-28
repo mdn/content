@@ -1,6 +1,7 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
+page-type: web-api-instance-property
 tags:
   - API
   - Document
@@ -12,6 +13,7 @@ tags:
   - editor
 browser-compat: api.Document.designMode
 ---
+
 {{ApiRef()}}
 
 **`document.designMode`** controls whether the entire document
@@ -21,19 +23,12 @@ this standard. The earlier versions of Chrome and IE default to `"inherit"`.
 Starting in Chrome 43, the default is `"off"` and `"inherit"` is
 no longer supported. In IE6-10, the value is capitalized.
 
-## Syntax
-
-```js
-var mode = document.designMode;
-document.designMode = value;
-```
-
-### Value
+## Value
 
 A string indicating whether `designMode` is (or should be) set to on or off.
 Valid values are `on` and `off`.
 
-## Example
+## Examples
 
 Make an {{HTMLElement("iframe")}}'s document editable:
 

@@ -1,6 +1,6 @@
 ---
 title: Robust
-slug: Web/Accessibility/Understanding_WCAG/Robust 
+slug: Web/Accessibility/Understanding_WCAG/Robust
 tags:
   - Accessibility
   - HTML
@@ -14,6 +14,7 @@ tags:
   - Web Content Accessibility Guidelines
   - value
 ---
+
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Robust** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Robust states that content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies. This can generally be achieved by following web standards and [testing rigorously](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing).
 
 > **Note:** To read the W3C definitions for Robust and its guidelines and success criteria, see [Principle 4: Robust — Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.](https://www.w3.org/TR/WCAG21/#robust)
@@ -36,7 +37,7 @@ This guideline focuses on making content as compatible as possible, not only wit
       <td>
         <p>
           Content should be well-formed so it can be parsed successfully by
-          browsers and other user agents such as screenreaders.
+          browsers and other user agents such as screen readers.
         </p>
         <p>
           To pass this criterion, make sure that your HTML is as valid as
@@ -66,7 +67,7 @@ This guideline focuses on making content as compatible as possible, not only wit
           components, you will need to use WAI-ARIA roles and other features to
           make sure your controls will be interpreted and are able to be used as
           intended, e.g. not only by sighted mouse users, but also by
-          screenreader users, keyboard-only users, etc.
+          screen reader users, keyboard-only users, etc.
         </p>
       </td>
       <td>
@@ -82,7 +83,7 @@ This guideline focuses on making content as compatible as possible, not only wit
     </tr>
     <tr>
       <td>
-        4.1.3 Status Messages (AA) <em
+        4.1.3 Status Messages (AA) <em
           ><a
             href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             rel="noopener"
@@ -92,7 +93,7 @@ This guideline focuses on making content as compatible as possible, not only wit
       </td>
       <td>
         <p>
-          Assistive technology users are made aware of new status messages added
+          Assistive technology users are made aware of new status messages added
           to the page.
         </p>
       </td>
@@ -110,9 +111,9 @@ This guideline focuses on making content as compatible as possible, not only wit
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
-  1.  [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  2.  [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3.  [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4.  Robust
+  1. [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+  2. [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  3. [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
+  4. Robust

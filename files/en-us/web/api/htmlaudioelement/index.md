@@ -1,6 +1,7 @@
 ---
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -13,6 +14,7 @@ tags:
   - sound
 browser-compat: api.HTMLAudioElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAudioElement`** interface provides access to the properties of {{HTMLElement("audio")}} elements, as well as methods to manipulate them.
@@ -39,7 +41,7 @@ _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from {{d
 _The following methods are non-standard and should not be used._
 
 - {{domxref("HTMLAudioElement.mozCurrentSampleOffset", "mozCurrentSampleOffset()")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Returns the number of samples form the beginning of the stream that have been written so far into the audio stream created by calling {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}}.
+  - : Returns the number of samples from the beginning of the stream that have been written so far into the audio stream created by calling {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}}.
 - {{domxref("HTMLAudioElement.mozSetup", "mozSetup()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Sets up the audio stream to allow writing, given the number of audio channels (1 or 2) and the sample rate in kHz.
 - {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}} {{non-standard_inline}} {{deprecated_inline}}
@@ -52,7 +54,7 @@ _The following methods are non-standard and should not be used._
 You can create a `HTMLAudioElement` entirely with JavaScript using the {{domxref("HTMLAudioElement.Audio", "Audio()")}} constructor:
 
 ```js
-var audioElement = new Audio('car_horn.wav');
+const audioElement = new Audio('car_horn.wav');
 ```
 
 then you can invoke the `play()` method on the element
@@ -61,12 +63,12 @@ then you can invoke the `play()` method on the element
 audioElement.play();
 ```
 
-> **Note:** A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to [firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) and [chrome](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes) for best practices and work arounds.
+> **Note:** A common gotcha is trying to play an audio element immediately on page load. Modern browser's default autoplay policy will block that from happening. Refer to [Firefox](https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/) and [chrome](https://developer.chrome.com/blog/autoplay/) for best practices and work arounds.
 
 Some of the more commonly used properties of the audio element include {{domxref("HTMLMediaElement.src", "src")}}, {{domxref("HTMLMediaElement.currentTime", "currentTime")}}, {{domxref("HTMLMediaElement.duration", "duration")}}, {{domxref("HTMLMediaElement.paused", "paused")}}, {{domxref("HTMLMediaElement.muted", "muted")}}, and {{domxref("HTMLMediaElement.volume", "volume")}}. This snippet copies the audio file's duration to a variable:
 
 ```js
-var audioElement = new Audio('car_horn.wav');
+const audioElement = new Audio('car_horn.wav');
 audioElement.addEventListener('loadeddata', () => {
   let duration = audioElement.duration;
   // The duration variable now holds the duration (in seconds) of the audio clip

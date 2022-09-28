@@ -1,6 +1,7 @@
 ---
 title: IntersectionObserver.disconnect()
 slug: Web/API/IntersectionObserver/disconnect
+page-type: web-api-instance-method
 tags:
   - API
   - Disconnect
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.IntersectionObserver.disconnect
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} method
@@ -19,8 +21,8 @@ for visibility changes.
 
 ## Syntax
 
-```js
-intersectionObserver.disconnect();
+```js-nolint
+disconnect()
 ```
 
 ### Parameters
@@ -29,7 +31,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

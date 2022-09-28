@@ -1,6 +1,7 @@
 ---
 title: VTTCue.positionAlign
 slug: Web/API/VTTCue/positionAlign
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,20 +10,14 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.positionAlign
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`positionAlign`** property of the {{domxref("VTTCue")}} interface is used to determine what {{domxref("VTTCue.position")}} is anchored to.
 
-## Syntax
+## Value
 
-```js
-let positionAlign = VTTCue.position;
-VTTCue.position = a;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing one of the following values:
+A string containing one of the following values:
 
 - `"line-left"`
   - : Line-left alignment.

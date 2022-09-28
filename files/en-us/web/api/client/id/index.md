@@ -1,10 +1,10 @@
 ---
 title: Client.id
 slug: Web/API/Client/id
+page-type: web-api-instance-property
 tags:
   - API
   - Client
-  - Experimental
   - NeedsExample
   - Property
   - Reference
@@ -13,21 +13,14 @@ tags:
   - id
 browser-compat: api.Client.id
 ---
+
 {{APIRef("Service Workers API")}}
 
-The **`id`** read-only property of the {{domxref("Client")}} interface returns the universally unique identifier of the {{domxref("Client")}} object.
+The **`id`** read-only property of the {{domxref("Client")}} interface returns the universally unique identifier of the {{domxref("Client")}} object.
 
-## Syntax
+## Value
 
-```js
-var clientId = client.id;
-```
-
-## Example
-
-```js
-TBD
-```
+A string uniquely identifying the object.
 
 ## Specifications
 

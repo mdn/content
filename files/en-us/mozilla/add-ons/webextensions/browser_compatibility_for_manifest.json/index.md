@@ -5,10 +5,12 @@ tags:
   - Add-ons
   - WebExtensions
   - manifest.json
+browser-compat: webextensions.manifest
 ---
+
 {{AddonSidebar}}
 
-{{Compat("webextensions.manifest",2)}}
+{{Compat}}
 
 > **Note:**
 >

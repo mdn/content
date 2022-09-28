@@ -1,6 +1,7 @@
 ---
 title: Transcoding assets for Media Source Extensions
 slug: Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE
+page-type: guide
 tags:
   - DASH
   - Dynamic Adaptive Streaming over HTTP
@@ -9,29 +10,30 @@ tags:
   - Media Source Extensions
   - adaptive
 ---
+
+{{DefaultAPISidebar("Media Source Extensions")}}
+
 When working with Media Source Extensions, it is likely that you need to condition your assets before you can stream them. This article takes you through the requirements and shows you a toolchain you can use to encode your assets appropriately.
 
 ## Getting started
 
-1.  The first and most important step is to ensure that your files are comprised of a container and codec that users' browsers support.
-2.  Depending on the codec, you might need to fragment the file to comply with the [ISO BMFF spec](https://www.w3.org/TR/mse-byte-stream-format-isobmff/).
-3.  (Optional) If you decide to use Dynamic Adaptive Streaming over HTTP (DASH) for adaptive bitrate streaming, you need to transcode your assets into multiple resolutions. Most DASH clients expect a corresponding Media Presentation Description (MPD) manifest file, which is typically generated while generating the multiple resolution asset files.
+1. The first and most important step is to ensure that your files are comprised of a container and codec that users' browsers support.
+2. Depending on the codec, you might need to fragment the file to comply with the [ISO BMFF spec](https://www.w3.org/TR/mse-byte-stream-format-isobmff/).
+3. (Optional) If you decide to use Dynamic Adaptive Streaming over HTTP (DASH) for adaptive bitrate streaming, you need to transcode your assets into multiple resolutions. Most DASH clients expect a corresponding Media Presentation Description (MPD) manifest file, which is typically generated while generating the multiple resolution asset files.
 
 Below we'll cover all of these steps, but first let's look at a toolchain we can use to do this fairly easily.
 
 ### Sample Media
 
-If you're looking to follow the steps listed here, but don't have any media to experiment with, you can grab the trailer to Big Buck Bunny \[0] [here](http://wayback.archive.org/web/20161102172252id_/http://video.blendertestbuilds.de/download.php?file=download.blender.org/peach/trailer_1080p.mov). Big Buck Bunny is licensed under the [Creative Commons Attribution 3.0](http://creativecommons.org/licenses/by/3.0/) license. Throughout this tutorial, you'll see the filename trailer_1080p.mov which is the download.
-
-\[0] (c) Copyright 2008, Blender Foundation / www\.bigbuckbunny.org / https\://peach.blender.org/about/
+If you're looking to follow the steps listed here, but don't have any media to experiment with, you can grab the [trailer to Big Buck Bunny](https://web.archive.org/web/20161102172252id_/http://video.blendertestbuilds.de/download.php?file=download.blender.org/peach/trailer_1080p.mov). Big Buck Bunny copyrighted by the Blender Foundation and is licensed under the [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) license. Throughout this tutorial, you'll see the filename trailer_1080p.mov, which is the download.
 
 ### Tools required
 
 When working with MSE, the following tools are a must have:
 
-1.  [ffmpeg](http://ffmpeg.org/) — A command-line utility for transcoding your media into the required formats. You can download a version for your system at the [Download FFmpeg page](http://ffmpeg.org/download.html). Extract the executable from the archive file and add it's location to your PATH statement. OSX users can also use [homebrew](http://brew.sh/) to install ffmpeg.
-2.  [Bento4](https://github.com/axiomatic-systems/Bento4) — A set of command-line utilities for getting asset metadata and creating content for DASH. To install, you'll need to build/compile the application yourself from the provided project files/source files, depending on your OS and preferences. See the [Building instructions](https://github.com/axiomatic-systems/Bento4#building) for more details. The prebuilt file is [here](https://www.bento4.com/downloads/). Put the contents of the `bin` directory in the same place as ffmpeg.
-3.  python2 — Bento4 uses it.
+1. [ffmpeg](https://ffmpeg.org/) — A command-line utility for transcoding your media into the required formats. You can download a version for your system at the [Download FFmpeg page](https://ffmpeg.org/download.html). Extract the executable from the archive file and add it's location to your PATH statement. OSX users can also use [homebrew](https://brew.sh/) to install ffmpeg.
+2. [Bento4](https://github.com/axiomatic-systems/Bento4) — A set of command-line utilities for getting asset metadata and creating content for DASH. To install, you'll need to build/compile the application yourself from the provided project files/source files, depending on your OS and preferences. See the [Building instructions](https://github.com/axiomatic-systems/Bento4#building) for more details. The prebuilt file is [here](https://www.bento4.com/downloads/). Put the contents of the `bin` directory in the same place as ffmpeg.
+3. python2 — Bento4 uses it.
 
 Get these installed successfully before moving to the next step.
 
@@ -76,13 +78,13 @@ To check whether an MP4 file is a proper MP4 stream, you can again use the [mp4i
 If you have an asset that is not already an MP4, ffmpeg can handle emitting a properly fragmented MP4 during the transcode process, with the `-movflags frag_keyframe+empty_moov` command line flag:
 
 ```bash
-$ ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy -movflags frag_keyframe+empty_moov bunny_fragmented.mp4
+ffmpeg -i trailer_1080p.mov -c:v copy -c:a copy -movflags frag_keyframe+empty_moov bunny_fragmented.mp4
 ```
 
 If you already have an MP4, but it's not properly fragmented, you can again use ffmpeg:
 
 ```bash
-$ ffmpeg -i non_fragmented.mp4 -movflags frag_keyframe+empty_moov fragmented.mp4
+ffmpeg -i non_fragmented.mp4 -movflags frag_keyframe+empty_moov fragmented.mp4
 ```
 
 In both cases, Chrome may require an extra movie flag to be set:

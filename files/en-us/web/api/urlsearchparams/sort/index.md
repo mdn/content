@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.sort()
 slug: Web/API/URLSearchParams/sort
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - sort
 browser-compat: api.URLSearchParams.sort
 ---
+
 {{APIRef("URL API")}}
 
 The **`URLSearchParams.sort()`** method sorts all key/value
@@ -21,8 +23,8 @@ preserved).
 
 ## Syntax
 
-```js
-searchParams.sort();
+```js-nolint
+sort()
 ```
 
 ### Parameters
@@ -31,13 +33,13 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
 // Create a test URLSearchParams object
-var searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
+const searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
 
 // Sort the key/value pairs
 searchParams.sort();

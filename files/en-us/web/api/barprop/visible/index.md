@@ -1,6 +1,7 @@
 ---
 title: BarProp.visible
 slug: Web/API/BarProp/visible
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,17 +10,12 @@ tags:
   - BarProp
 browser-compat: api.BarProp.visible
 ---
+
 {{APIRef("DOM")}}
 
 The **`visible`** read-only property of the {{domxref("BarProp")}} interface returns `true` if the user interface element it represents is visible.
 
-## Syntax
-
-```js
-let visible = BarProp.visible;
-```
-
-### Value
+## Value
 
 A {{jsxref("Boolean")}}, which is true if the top-level window is opened by
 {{domxref("window.open")}} with the {{domxref("window.open", "requesting a popup window", "popup_feature", 1)}}.

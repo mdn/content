@@ -1,15 +1,17 @@
 ---
 title: XSL Transformations in Mozilla FAQ
 slug: Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
+page-type: guide
 tags:
   - Guide
   - XSLT
 ---
+
 ## Why isn't my stylesheet applied?
 
 Make sure the mime type for both source and stylesheet are set to an XML mimetype, namely `text/xml` or `application/xml`. The XSLT namespace is `http://www.w3.org/1999/XSL/Transform`. Use the \<?xml-stylesheet ?> processing instruction instead of the non-standard xml:stylesheet. The most common cause is the MIME type handling. To find out which MIME type your server sends, look at Page Info, use extensions like [LiveHTTPHeaders](http://livehttpheaders.mozdev.org/) or a download manager like `wget`. Mozilla won't load XSLT stylesheets from a different domain for security reasons.
 
-> **Note:** Starting in {{Gecko("7.0") }}, both `text/xsl` and `application/xslt+xml` are supported MIME types for XSLT media stylesheets.
+> **Note:** Since Firefox 7, both `text/xsl` and `application/xslt+xml` are supported MIME types for XSLT media stylesheets.
 
 Note that Firefox will override your XSLT stylesheet if your XML is detected as an RSS or Atom feed. A known workaround is to add a sufficiently long XML comment to the beginning of your XML file in order to "push" the `<feed>` or `<rss>` tag out of the first 512 bytes, which is analyzed by Firefox to determine if it's a feed or not. See the discussion on bug [#338621](https://bugzilla.mozilla.org/show_bug.cgi?id=338621) for more information.
 

@@ -7,16 +7,18 @@ tags:
   - Guide
   - Overview
   - Reference
+spec-urls: https://drafts.csswg.org/css-scroll-snap/
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
-**CSS Scroll Snap Points** is a module of CSS that introduces scroll snap positions. These determine the specific positions that a container’s scrollport may end at after a scrolling operation has completed.
+**CSS Scroll Snap Points** is a module of CSS that introduces scroll snap positions. These determine the specific positions that a container's scrollport may end at after a scrolling operation has completed.
 
 > **Note:** [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap) is the modern specification that defines this functionality.
 
 ## Reference
 
-### CSS properties
+### Properties
 
 - {{cssxref("scroll-snap-coordinate")}}
 - {{cssxref("scroll-snap-destination")}}
@@ -26,6 +28,4 @@ tags:
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           | Comment            |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-points-y", "scroll-snap-points-y")}} | {{Spec2("CSS Scroll Snap Points")}} | Initial definition |
+{{Specifications}}

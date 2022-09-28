@@ -1,6 +1,7 @@
 ---
 title: RemotePlayback
 slug: Web/API/RemotePlayback
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -8,13 +9,16 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback
 ---
+
 {{DefaultAPISidebar("Remote Playback API")}}
 
 The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',' ')}} allows the page to detect availability of remote playback devices, then connect to and control playing on these devices.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
-- {{domxref("RemotePlayback.state")}}{{ReadOnlyInline}}
+- {{domxref("RemotePlayback.state")}} {{ReadOnlyInline}}
 
   - : Represents the `RemotePlayback` connection's state. One of:
 
@@ -25,15 +29,6 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
     - `"disconnected"`
       - : The remote playback has not been initiated, has failed to initiate, or has been stopped.
 
-### Event handlers
-
-- {{domxref("RemotePlayback.onconnecting")}}
-  - : Fired when the user agent initiates remote playback.
-- {{domxref("RemotePlayback.onconnect")}}
-  - : Fired when the user agent successfully connects to the remote device.
-- {{domxref("RemotePlayback.ondisconnect")}}
-  - : Fired when the user agent disconnects from the remote device.
-
 ## Methods
 
 - {{domxref("RemotePlayback.watchAvailability()")}}
@@ -43,13 +38,23 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
 - {{domxref("RemotePlayback.prompt()")}}
   - : Prompts the user to select and give permission to connect to a remote playback device.
 
+## Events
+
+- {{domxref("RemotePlayback.connecting_event", "connecting")}}
+  - : Fired when the user agent initiates remote playback.
+- {{domxref("RemotePlayback.connect_event", "connect")}}
+  - : Fired when the user agent successfully connects to the remote device.
+- {{domxref("RemotePlayback.disconnect_event", "disconnect")}}
+  - : Fired when the user agent disconnects from the remote device.
+
 ## Examples
 
 The following example demonstrates a player with custom controls that support remote playback. Initially the button used to select a device is hidden:
 
 ```html
 <video id="videoElement" src="https://example.org/media.ext">
-<button id="deviceBtn" style="display: none;">Pick device</button>
+  <button id="deviceBtn" style="display: none;">Pick device</button>
+</video>
 ```
 
 The {{domxref("RemotePlayback.watchAvailability()")}} method is used to watch for available remote playback devices. If a device is available, use the callback to show the button.

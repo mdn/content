@@ -1,6 +1,7 @@
 ---
 title: WebGLRenderingContext.colorMask()
 slug: Web/API/WebGLRenderingContext/colorMask
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.colorMask
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.colorMask()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets which color components to
@@ -16,8 +18,8 @@ enable or to disable when drawing or rendering to a {{domxref("WebGLFramebuffer"
 
 ## Syntax
 
-```js
-void gl.colorMask(red, green, blue, alpha);
+```js-nolint
+colorMask(red, green, blue, alpha)
 ```
 
 ### Parameters
@@ -37,7 +39,7 @@ void gl.colorMask(red, green, blue, alpha);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

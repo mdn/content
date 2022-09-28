@@ -1,6 +1,7 @@
 ---
 title: FileSystemDirectoryHandle.resolve()
 slug: Web/API/FileSystemDirectoryHandle/resolve
+page-type: web-api-instance-method
 tags:
   - Directory
   - File
@@ -9,6 +10,7 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.resolve
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`resolve()`** method of the
@@ -18,8 +20,8 @@ the child entry as the last array item.
 
 ## Syntax
 
-```js
-var pathArr = FileSystemDirectoryHandle.resolve(possibleDescendant);
+```js-nolint
+resolve(possibleDescendant)
 ```
 
 ### Parameters
@@ -31,7 +33,7 @@ var pathArr = FileSystemDirectoryHandle.resolve(possibleDescendant);
 ### Return value
 
 A {{jsxref('Promise')}} which resolves with an {{jsxref('Array')}} of
-{{jsxref('USVString','strings')}}, or `null` if `possibleDescendant` is not a descendant of this {{domxref('FileSystemDirectoryHandle')}}.
+strings, or `null` if `possibleDescendant` is not a descendant of this {{domxref('FileSystemDirectoryHandle')}}.
 
 ### Exceptions
 
@@ -79,5 +81,4 @@ async function returnPathDirectories(directoryHandle) {
 ## See also
 
 - [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

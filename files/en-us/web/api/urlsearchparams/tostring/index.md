@@ -1,6 +1,7 @@
 ---
 title: URLSearchParams.toString()
 slug: Web/API/URLSearchParams/toString
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,10 +10,11 @@ tags:
   - toString
 browser-compat: api.URLSearchParams.toString
 ---
+
 {{ApiRef("URL API")}}
 
 The **`toString()`** method of the
-{{domxref("URLSearchParams")}} interface returns a query string suitable for use in a
+{{domxref("URLSearchParams")}} interface returns a query string suitable for use in a
 URL.
 
 > **Note:** This method returns the query string without the question
@@ -23,8 +25,8 @@ URL.
 
 ## Syntax
 
-```js
-URLSearchParams.toString()
+```js-nolint
+toString()
 ```
 
 ### Parameters
@@ -33,26 +35,18 @@ None.
 
 ### Return value
 
-A {{domxref("DOMString")}}, without the question mark. (Returns an empty string if no
+A string, without the question mark. (Returns an empty string if no
 search parameters have been set.)
 
 ## Examples
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
-let params = new URLSearchParams(url.search);
+const url = new URL('https://example.com?foo=1&bar=2');
+const params = new URLSearchParams(url.search);
 
-//Add a second foo parameter.
+// Add a second foo parameter.
 params.append('foo', 4);
-console.log(params.toString());
-//Prints 'foo=1&bar=2&foo=4'
-
-// note: params can also be directly created
-let url = new URL('https://example.com?foo=1&bar=2');
-let params = url.searchParams;
-
-// or even simpler
-let params = new URLSearchParams('foo=1&bar=2');
+console.log(params.toString()); // Prints 'foo=1&bar=2&foo=4'
 ```
 
 ## Specifications
@@ -66,5 +60,4 @@ let params = new URLSearchParams('foo=1&bar=2');
 ## See also
 
 - The {{domxref("URL")}} interface.
-- [Google
-  Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)
+- [Google Developers: Easy URL manipulation with URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)

@@ -6,13 +6,14 @@ tags:
   - NeedsSpecTable
   - Reference
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `set:trailing()` returns the nodes in one node-set that come after the first node in the other node-set.
 
 ## Syntax
 
-```js
+```plain
 set:trailing(nodeSet1, nodeSet2)
 ```
 
@@ -31,4 +32,4 @@ A node-set containing the nodes from `nodeSet1` whose values follow the first no
 
 ## Specifications
 
-[EXSLT - SET:TRAILING](http://www.exslt.org/set/functions/trailing/index.html)
+[EXSLT - SET:TRAILING](http://exslt.org/set/functions/trailing/index.html)

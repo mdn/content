@@ -1,6 +1,7 @@
 ---
 title: TrustedTypePolicy.createScriptURL()
 slug: Web/API/TrustedTypePolicy/createScriptURL
+page-type: web-api-instance-method
 tags:
   - API
   - Method
@@ -9,21 +10,23 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createScriptURL
 ---
+
 {{DefaultAPISidebar("Trusted Types API")}}
 
 The **`createScriptURL()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScriptURL")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
 
 ## Syntax
 
-```js
-var str = TrustedTypePolicy.createScriptURL(input[,args]);
+```js-nolint
+createScriptURL(input)
+createScriptURL(input, args)
 ```
 
 ### Parameters
 
 - `input`
-  - : A {{domxref("DOMString")}} containing the string to be sanitized by the policy.
-- `args`{{optional_inline}}
+  - : A string containing the string to be sanitized by the policy.
+- `args` {{optional_inline}}
   - : Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.
 
 ### Return value

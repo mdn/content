@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.columnNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 The **`columnNumber`** property contains the column number in the line of the file that raised this error.
@@ -17,9 +18,11 @@ The **`columnNumber`** property contains the column number in the line of the fi
 ### Using columnNumber
 
 ```js
-var e = new Error('Could not parse input');
-throw e;
-console.log(e.columnNumber) // 0
+ try {
+  throw new Error('Could not parse input');
+} catch (err) {
+  console.log(err.columnNumber) // 9
+}
 ```
 
 ## Specifications

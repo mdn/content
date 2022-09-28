@@ -1,14 +1,17 @@
 ---
 title: HIDDevice
 slug: Web/API/HIDDevice
+page-type: web-api-interface
 tags:
   - API
   - Interface
   - Reference
   - HIDDevice
+  - Experimental
 browser-compat: api.HIDDevice
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
+
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
 The **`HIDDevice`** interface of the {{domxref('WebHID API')}} represents a HID Device. It provides properties for accessing information about the device, methods for opening and closing the connection, and the sending and receiving of reports.
 
@@ -18,35 +21,35 @@ The **`HIDDevice`** interface of the {{domxref('WebHID API')}} represents a HID 
 
 This interface also inherits properties from {{domxref("EventTarget")}}.
 
-- {{domxref("HIDDevice.opened")}}{{ReadOnlyInline}}
+- {{domxref("HIDDevice.opened")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{jsxref("boolean")}}, true if the device has an open connection.
-- {{domxref("HIDDevice.vendorId")}}{{ReadOnlyInline}}
+- {{domxref("HIDDevice.vendorId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the vendorId of the HID device.
-- {{domxref("HIDDevice.productId")}}{{ReadOnlyInline}}
+- {{domxref("HIDDevice.productId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the productID of the HID device.
-- {{domxref("HIDDevice.productName")}}{{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMString","string")}} containing the product name of the HID device.
-- {{domxref("HIDDevice.collections")}}{{ReadOnlyInline}}
+- {{domxref("HIDDevice.productName")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a string containing the product name of the HID device.
+- {{domxref("HIDDevice.collections")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of report formats for the HID device.
 
-### Event handlers
+### Events
 
-- {{domxref("HIDDevice.oninputreport")}}
-  - : An event handler that fires when a report is sent from the device.
+- {{domxref("HIDDevice.inputreport_event", "inputreport")}} {{Experimental_Inline}}
+  - : Fires when a report is sent from the device.
 
 ## Methods
 
 This interface also inherits methods from {{domxref("EventTarget")}}.
 
-- {{domxref("HIDDevice.open()")}}
+- {{domxref("HIDDevice.open()")}} {{Experimental_Inline}}
   - : Opens a connection to this HID device, and returns a {{jsxref("Promise")}} which resolves once the connection has been successful.
-- {{domxref("HIDDevice.close()")}}
+- {{domxref("HIDDevice.close()")}} {{Experimental_Inline}}
   - : Closes the connection to this HID device, and returns a {{jsxref("Promise")}} which resolves once the connection has been closed.
-- {{domxref("HIDDevice.sendReport()")}}
+- {{domxref("HIDDevice.sendReport()")}} {{Experimental_Inline}}
   - : Sends an output report to this HID Device, and returns a {{jsxref("Promise")}} which resolves once the report has been sent.
-- {{domxref("HIDDevice.sendFeatureReport()")}}
+- {{domxref("HIDDevice.sendFeatureReport()")}} {{Experimental_Inline}}
   - : Sends a feature report to this HID device, and returns a {{jsxref("Promise")}} which resolves once the report has been sent.
-- {{domxref("HIDDevice.receiveFeatureReport()")}}
+- {{domxref("HIDDevice.receiveFeatureReport()")}} {{Experimental_Inline}}
   - : Receives a feature report from this HID device in the form of a {{jsxref("Promise")}} which resolves with a {{jsxref("DataView")}}. This allows typed access to the contents of this message.
 
 ## Examples
@@ -54,7 +57,7 @@ This interface also inherits methods from {{domxref("EventTarget")}}.
 The following example demonstrates listening for an `inputreport` event that will allow the application to detect which button is pressed on a Joy-Con Right device.
 
 ```js
-device.addEventListener("inputreport", event => {
+device.addEventListener("inputreport", (event) => {
   const { data, device, reportId } = event;
 
   // Handle only the Joy-Con Right device and a specific report ID.

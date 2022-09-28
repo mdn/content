@@ -10,6 +10,7 @@ tags:
   - Unicode
 browser-compat: javascript.builtins.String.fromCharCode
 ---
+
 {{JSRef}}
 
 The static **`String.fromCharCode()`** method returns a string
@@ -19,10 +20,10 @@ created from the specified sequence of UTF-16 code units.
 
 ## Syntax
 
-```js
+```js-nolint
 String.fromCharCode(num1)
 String.fromCharCode(num1, num2)
-String.fromCharCode(num1, num2, ..., numN)
+String.fromCharCode(num1, num2, /* …, */ numN)
 ```
 
 ### Parameters
@@ -65,10 +66,10 @@ code point `U+1F303` "Night with Stars".
 
 While there is a mathematical relationship between the supplementary code point value
 (e.g. `0x1F303`) and both surrogate values that represent it
-(e.g., `0xD83C` and `0xDF03`), it does require an extra step to
+(e.g., `0xD83C` and `0xDF03`), it does require an extra step to
 either calculate or look up the surrogate pair values every time a supplementary code
 point is to be used. For this reason, it's more convenient to use
-{{jsxref("String.fromCodePoint()")}} (part of the ES2015 standard), which allows for
+{{jsxref("String.fromCodePoint()")}}, which allows for
 returning supplementary characters based on their actual code point value. For example,
 `String.fromCodePoint(0x1F303)` returns code point `U+1F303`
 "Night with Stars".
@@ -90,7 +91,7 @@ Supplementary characters, in UTF-16, require two code units (i.e. a surrogate pa
 
 ```js
 String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
-String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
+String.fromCharCode(55356, 57091);   // Stars" === "\uD83C\uDF03"
 
 String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07); // "\uD834\uDF06a\uD834\uDF07"
 ```

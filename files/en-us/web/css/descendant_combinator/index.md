@@ -8,9 +8,10 @@ tags:
   - Selectors
 browser-compat: css.selectors.descendant
 ---
+
 {{CSSRef("Selectors")}}
 
-The **descendant combinator** — typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
+The **descendant combinator** — typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
 
 ```css
 /* List items that are descendants of the "my-things" list */
@@ -25,7 +26,7 @@ The descendant combinator is technically one or more {{Glossary("CSS")}} white s
 
 ```css
 selector1 selector2 {
-  /* property declarations */
+  /* property declarations */
 }
 ```
 

@@ -1,23 +1,26 @@
 ---
 title: NDEFRecord()
 slug: Web/API/NDEFRecord/NDEFRecord
+page-type: web-api-constructor
 tags:
   - NDEF
   - Reference
   - Web NFC
+  - Experimental
 browser-compat: api.NDEFRecord.NDEFRecord
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
 
 The **`NDEFRecord()`**
-constructor of the [Web NFC API](/en-US/docs/Web/API/WebNFC_API) returns a
+constructor of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) returns a
 newly constructed {{DOMxRef("NDEFRecord")}} object that represents data that can be
 read from, or written to, compatible NFC devices; e.g. NFC tags supporting NDEF.
 
 ## Syntax
 
-```js
-writer = new NDEFRecord(options);
+```js-nolint
+new NDEFRecord(options)
 ```
 
 ### Parameters
@@ -27,7 +30,7 @@ writer = new NDEFRecord(options);
   - : An object with the following properties:
 
     - `data` {{optional_inline}}
-      - : Contains the data to be transmitted; one of a string, a {{domxref("BufferSource")}}, or an array of nested records.
+      - : Contains the data to be transmitted. It can be a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
     - `encoding` {{optional_inline}}
       - : A string specifying the record's encoding.
     - `id` {{optional_inline}}

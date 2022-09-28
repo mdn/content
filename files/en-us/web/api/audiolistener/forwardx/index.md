@@ -1,6 +1,7 @@
 ---
 title: AudioListener.forwardX
 slug: Web/API/AudioListener/forwardX
+page-type: web-api-instance-property
 tags:
   - API
   - Audio
@@ -11,25 +12,18 @@ tags:
   - forwardX
 browser-compat: api.AudioListener.forwardX
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `forwardX` read-only property of the {{ domxref("AudioListener") }} interface is an {{domxref("AudioParam")}} representing the x value of the direction vector defining the forward direction the listener is pointing in.
 
 > **Note:** The parameter is _a-rate_ when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "panningModel")}} is set to equalpower, or _k-rate_ otherwise.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var myListener = audioCtx.listener;
-myListener.forwardX.value = 0;
-```
-
-### Value
+## Value
 
 An {{domxref("AudioParam")}}. Its default value is 0, and it can range between positive and negative infinity.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 

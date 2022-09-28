@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.404
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`404 Not Found`** response status code indicates that the server cannot find the requested resource.
@@ -30,7 +31,7 @@ You can display a custom 404 page to be more helpful to a user and provide guida
 ErrorDocument 404 /notfound.html
 ```
 
-For an example of a custom 404 page, see [MDN's 404 page](/en-US/404).
+For an example of a custom 404 page, see this [404 page](https://konmari.com/404).
 
 > **Note:** Custom design is a good thing, in moderation. Feel free to make your 404 page humorous and human, but don't confuse your users.
 
@@ -45,4 +46,4 @@ For an example of a custom 404 page, see [MDN's 404 page](/en-US/404).
 ## See also
 
 - {{HTTPStatus("410")}}
-- {{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}
+- [Wikipedia: HTTP 404](https://en.wikipedia.org/wiki/HTTP_404)

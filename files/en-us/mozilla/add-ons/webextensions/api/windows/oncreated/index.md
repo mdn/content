@@ -13,13 +13,14 @@ tags:
   - onCreated
 browser-compat: webextensions.api.windows.onCreated
 ---
+
 {{AddonSidebar()}}
 
 Fired when a window is created.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.windows.onCreated.addListener(listener)
 browser.windows.onCreated.removeListener(listener)
 browser.windows.onCreated.hasListener(listener)
@@ -55,17 +56,18 @@ Log the IDs of new windows as they are created:
 
 ```js
 browser.windows.onCreated.addListener((window) => {
-  console.log("New window: " + window.id);
+  console.log(`New window: ${window.id}`);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#event-onCreated) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#event-onCreated) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,4 +94,4 @@ browser.windows.onCreated.addListener((window) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

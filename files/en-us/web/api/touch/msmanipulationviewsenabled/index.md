@@ -1,9 +1,11 @@
 ---
 title: Touch.msManipulationViewsEnabled
 slug: Web/API/Touch/MsManipulationViewsEnabled
+page-type: web-api-instance-property
 tags:
   - msManipulationViesEnabled
 ---
+
 {{APIRef("DOM")}}
 
 {{Non-standard_header()}}

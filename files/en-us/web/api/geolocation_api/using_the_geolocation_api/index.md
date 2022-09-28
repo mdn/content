@@ -1,11 +1,13 @@
 ---
 title: Using the Geolocation API
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
+page-type: guide
 tags:
   - Geolocation API
   - Guide
   - Tutorial
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 The Geolocation API is used to retrieve the user's location, so that it can for example be used to display their position using a mapping API. This article explains the basics of how to use it.
@@ -17,7 +19,7 @@ The [Geolocation API](/en-US/docs/Web/API/Geolocation) is available through the 
 If the object exists, geolocation services are available. You can test for the presence of geolocation thusly:
 
 ```js
-if('geolocation' in navigator) {
+if ('geolocation' in navigator) {
   /* geolocation is available */
 } else {
   /* geolocation IS NOT available */
@@ -28,7 +30,7 @@ if('geolocation' in navigator) {
 
 To obtain the user's current location, you can call the {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} method. This initiates an asynchronous request to detect the user's position, and queries the positioning hardware to get up-to-date information. When the position is determined, the defined callback function is executed. You can optionally provide a second callback function to be executed if an error occurs. A third, optional, parameter is an options object where you can set the maximum age of the position returned, the time to wait for a request, and if you want high accuracy for the position.
 
-> **Note:** By default, {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} tries to answer as fast as possible with a low accuracy result. It is useful if you need a quick answer regardless of the accuracy. Devices with a GPS, for example, can take a minute or more to get a GPS fix, so less accurate data (IP location or wifi) may be returned to `getCurrentPosition()`.
+> **Note:** By default, {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} tries to answer as fast as possible with a low accuracy result. It is useful if you need a quick answer regardless of the accuracy. Devices with a GPS, for example, can take a minute or more to get a GPS fix, so less accurate data (IP location or Wi-Fi) may be returned to `getCurrentPosition()`.
 
 ```js
 navigator.geolocation.getCurrentPosition((position) => {
@@ -120,20 +122,20 @@ In the following example the Geolocation API is used to retrieve the user's lati
 ```css hidden
 body {
   padding: 20px;
-  background-color:#ffffc9
+  background-color: #ffffc9;
 }
 
 button {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
 ### HTML
 
 ```html
-<button id = "find-me">Show my location</button><br/>
-<p id = "status"></p>
-<a id = "map-link" target="_blank"></a>
+<button id="find-me">Show my location</button><br />
+<p id="status"></p>
+<a id="map-link" target="_blank"></a>
 ```
 
 ### JavaScript
@@ -160,7 +162,7 @@ function geoFindMe() {
     status.textContent = 'Unable to retrieve your location';
   }
 
-  if(!navigator.geolocation) {
+  if (!navigator.geolocation) {
     status.textContent = 'Geolocation is not supported by your browser';
   } else {
     status.textContent = 'Locating…';

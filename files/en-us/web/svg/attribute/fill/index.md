@@ -6,57 +6,65 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.fill
 ---
+
 {{SVGRef}}
 
-The **`fill`** attribute has two different meanings. For shapes and text it's a presentation attribute that defines the color (*or any SVG paint servers like gradients or patterns*) used to paint the element; for animation it defines the final state of the animation.
+The **`fill`** attribute has two different meanings. For shapes and text it's a presentation attribute that defines the color (_or any SVG paint servers like gradients or patterns_) used to paint the element; for animation it defines the final state of the animation.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('altGlyph')}}
-*   {{SVGElement('circle')}}
-*   {{SVGElement('ellipse')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('textPath')}}
-*   {{SVGElement('tref')}}
-*   {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 For animation, these elements are using this attribute: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.
 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Simple color fill -->
-  <circle cx="50" cy="50" r="40" fill="pink" />
+  <!-- Simple color fill -->
+  <circle cx="50" cy="50" r="40" fill="pink" />
 
-  <!-- Fill circle with a gradient -->
-  <defs>
-    <radialGradient id="myGradient">
-      <stop offset="0%"   stop-color="pink" />
-      <stop offset="100%" stop-color="black" />
-    </radialGradient>
-  </defs>
+  <!-- Fill circle with a gradient -->
+  <defs>
+    <radialGradient id="myGradient">
+      <stop offset="0%" stop-color="pink" />
+      <stop offset="100%" stop-color="black" />
+    </radialGradient>
+  </defs>
 
-  <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
+  <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
 
-  <!--
-  Keeping the final state of an animated circle
-  which is a circle with a radius of 40.
-  -->
-  <circle cx="250" cy="50" r="20">
-    <animate attributeType="XML"
-             attributeName="r"
-             from="0" to="40" dur="5s"
-             fill="freeze" />
-  </circle>
+  <!--
+  Keeping the final state of an animated circle
+  which is a circle with a radius of 40.
+  -->
+  <circle cx="250" cy="50" r="20">
+    <animate
+      attributeType="XML"
+      attributeName="r"
+      from="0"
+      to="40"
+      dur="5s"
+      fill="freeze" />
+  </circle>
 </svg>
 ```
 
@@ -253,7 +261,7 @@ For {{SVGElement('ellipse')}}, `fill` is a presentation attribute that defines t
 
 ## path
 
-For {{SVGElement('path')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (*Interior is define by the {{SVGAttr('fill-rule')}} attribute*)
+For {{SVGElement('path')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
 
 <table class="properties">
   <tbody>
@@ -280,7 +288,7 @@ For {{SVGElement('path')}}, `fill` is a presentation attribute that defines the 
 
 ## polygon
 
-For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (*Interior is define by the {{SVGAttr('fill-rule')}} attribute*)
+For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
 
 <table class="properties">
   <tbody>
@@ -307,7 +315,7 @@ For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines t
 
 ## polyline
 
-For {{SVGElement('polyline')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (*Interior is define by the {{SVGAttr('fill-rule')}} attribute*)
+For {{SVGElement('polyline')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
 
 <table class="properties">
   <tbody>
@@ -497,51 +505,8 @@ For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG Animations 2", "#FillAttribute", "transform")}}
-      </td>
-      <td>{{Spec2("SVG Animations 2")}}</td>
-      <td>Definition for animations</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#FillProperty", "fill")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>
-        Definition for shapes and texts.<br />Adds <code>context-fill</code> and
-        <code>context-stroke</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "animate.html#FillAttribute", "fill")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for animations</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#FillProperty", "fill")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for shapes and texts</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** For information on using the `context-fill` (and `context-stroke`) values from HTML documents, see the documentation for the non-standard {{cssxref("-moz-context-properties")}} property.

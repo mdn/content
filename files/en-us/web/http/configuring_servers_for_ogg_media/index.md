@@ -8,6 +8,7 @@ tags:
   - Ogg
   - Video
 ---
+
 {{HTTPSidebar}}
 
 HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install any plug-ins or other software to do so.
@@ -20,11 +21,11 @@ This information may also be useful if you encounter other media types your serv
 
 If you don't know whether the Ogg file contains audio or video, you can serve it with the MIME type `application/ogg`, and the browser will treat it as a video file.
 
-Most servers don't by default serve Ogg media with the correct MIME types, so you'll likely need to add the appropriate configuration for this.
+Most servers don't by default serve Ogg media with the correct MIME types, so you'll likely need to add the appropriate configuration for this.
 
 For Apache, you can add the following to your configuration:
 
-```
+```plain
 AddType audio/ogg .oga
 AddType video/ogg .ogv
 AddType application/ogg .ogg
@@ -34,9 +35,9 @@ You can find specific information about possible media file types and the codecs
 
 ## Handle HTTP 1.1 byte range requests correctly
 
-In order to support seeking and playing back regions of the media that aren't yet downloaded, Gecko uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position. In addition, Gecko uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
+In order to support seeking and playing back regions of the media that aren't yet downloaded, Gecko uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position. In addition, Gecko uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
 
-Your server should accept the {{HTTPHeader("Accept-Ranges")}}`: bytes` HTTP header if it can accept byte-range requests. It must return {{HTTPStatus("206")}}`: Partial content` to all byte range requests; otherwise, browsers can't be sure you actually support byte range requests.
+Your server should accept the {{HTTPHeader("Accept-Ranges")}}`: bytes` HTTP header if it can accept byte-range requests. It must return {{HTTPStatus("206")}}`: Partial content` to all byte range requests; otherwise, browsers can't be sure you actually support byte range requests.
 
 Your server must also return `206: Partial Content` for the request `Range: bytes=0-` as well.
 
@@ -44,7 +45,7 @@ Your server must also return `206: Partial Content` for the request `Range: byte
 
 When the browser seeks through Ogg media to a specified time, it has to seek to the nearest key frame before the seek target, then download and decode the video from there until the requested target time. The farther apart your key frames are, the longer this takes, so it's helpful to include key frames at regular intervals.
 
-By default, [`ffmpeg2theora`](https://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
+By default, [`ffmpeg2theora`](http://v2v.cc/~j/ffmpeg2theora/) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
 
 > **Note:** Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
 
@@ -52,7 +53,7 @@ By default, [`ffmpeg2theora`](https://v2v.cc/~j/ffmpeg2theora/) uses one key fra
 
 The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide the `preload` attribute, which tells the browser to attempt to download the entire media when the page loads. Without `preload`, the browser only downloads enough of the media to display the first video frame, and to determine the media's duration.
 
-`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements. using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
+`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements. Using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
 
 ## Configuration for older Firefox versions
 
@@ -66,11 +67,11 @@ There are two ways Gecko can do this. The best way is to offer an `X-Content-Dur
 
 For example, if the video is 1 minute and 32.6 seconds long, this header would be:
 
-```
+```http
 X-Content-Duration: 92.6
 ```
 
-If your server provides the `X-Content-Duration` header when serving Ogg media, Gecko doesn't have to do any extra HTTP requests to seek to the end of the file to calculate its duration. This makes the entire process much more efficient as well as more accurate.
+If your server provides the `X-Content-Duration` header when serving Ogg media, Gecko doesn't have to do any extra HTTP requests to seek to the end of the file to calculate its duration. This makes the entire process much more efficient as well as more accurate.
 
 As an inferior alternative, Gecko can estimate the video length based on the Content-Length. See next point.
 
@@ -107,9 +108,9 @@ Vorbis: serialno 0708996688
         Audio-Channels: 2
 ```
 
-Note that you can't serve up the reported Content-Duration line reported by `oggz-info`, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your `X-Content-Duration` value. Just parse out the HH, MM, and SS into numbers, then do (HH\*3600)+(MM\*60)+SS to get the value you should report.
+Note that you can't serve up the reported Content-Duration line reported by `oggz-info`, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your `X-Content-Duration` value. Just parse out the HH, MM, and SS into numbers, then do (HH\*3600)+(MM\*60)+SS to get the value you should report.
 
-It's important to note that it appears that `oggz-info` makes a read pass of the media in order to calculate its duration, so it's a good idea to store the duration value in order to avoid lengthy delays while the value is calculated for every HTTP request of your Ogg media.
+It's important to note that it appears that `oggz-info` makes a read pass of the media in order to calculate its duration, so it's a good idea to store the duration value in order to avoid lengthy delays while the value is calculated for every HTTP request of your Ogg media.
 
 ## See also
 

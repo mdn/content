@@ -1,6 +1,7 @@
 ---
 title: Screen.mozEnabled
 slug: Web/API/Screen/mozEnabled
+page-type: web-api-instance-property
 tags:
   - API
   - API:Mozilla Extensions
@@ -11,16 +12,15 @@ tags:
   - Reference
 browser-compat: api.Screen.mozEnabled
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 This Boolean attribute controls the device's screen. Setting it to `false`
 will turn off the screen.
 
-## Syntax
+## Value
 
-```js
-let screenEnabled = window.screen.mozEnabled
-```
+A boolean.
 
 ## Specifications
 

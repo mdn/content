@@ -1,45 +1,45 @@
 ---
 title: 'IDBTransaction: abort event'
 slug: Web/API/IDBTransaction/abort_event
+page-type: web-api-event
 tags:
   - Event
-  - IDBTransaction
   - Reference
-  - abort
 browser-compat: api.IDBTransaction.abort_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `abort` event is fired when an `IndexedDB` transaction is aborted.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{DOMxRef("IDBTransaction.onabort", "onabort")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 This can happen for any of the following reasons:
 
-- bad requests, (for example, trying to add the same key twice, or put the same index key when the key has a uniqueness constraint),
-- an explicit {{DOMxRef("IDBTransaction.abort", "abort()")}} call
-- an uncaught exception in the request's success/error handler,
-- an I/O error (an actual failure to write to disk, for example disk detached, or other OS/hardware failure)
-- quota exceeded.
+- Bad requests, (E.g., trying to add the same key twice, or put the same index key when the key has a uniqueness constraint).
+- An explicit {{DOMxRef("IDBTransaction.abort", "abort()")}} call.
+- An uncaught exception in the request's success/error handler.
+- An I/O error (an actual failure to write to disk, for example disk detached, or other OS/hardware failure).
+- Quota exceeded.
+
+This non-cancelable event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Events#bubbling_and_capturing_explained) to the associated {{domxref("IDBDatabase")}} object.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('abort', (event) => { });
+onabort = (event) => { };
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
+
+## Bubbling
+
+This event bubbles to {{domxref("IDBDatabase")}}. The `event.target` property refers to the {{domxref('IDBTransaction')}} object that bubbles up.
+
+For more information, see [Event bubbling and capture](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture).
 
 ## Examples
 
@@ -49,7 +49,7 @@ This example opens a database (creating the database if it does not exist), then
 // Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
@@ -57,7 +57,7 @@ DBOpenRequest.onupgradeneeded = event => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -67,7 +67,7 @@ DBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
@@ -89,7 +89,7 @@ The same example, but assigning the event handler to the {{DOMxRef("IDBTransacti
 // Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event => {
+DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
@@ -97,7 +97,7 @@ DBOpenRequest.onupgradeneeded = event => {
   };
 
   // Create an objectStore for this database
-  var objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 
   // define what data items the objectStore will contain
   objectStore.createIndex('hours', 'hours', { unique: false });
@@ -107,7 +107,7 @@ DBOpenRequest.onupgradeneeded = event => {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
@@ -130,4 +130,3 @@ DBOpenRequest.onsuccess = event => {
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- {{DOMxRef("IDBTransaction.onabort", "onabort")}} event handler property

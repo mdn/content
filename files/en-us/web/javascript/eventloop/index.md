@@ -11,6 +11,7 @@ tags:
   - JavaScript
   - events
 ---
+
 {{JsSidebar("Advanced")}}
 
 JavaScript has a runtime model based on an **event loop**, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
@@ -21,7 +22,7 @@ The following sections explain a theoretical model. Modern JavaScript engines im
 
 ### Visual representation
 
-![Stack, heap, queue](the_javascript_runtime_environment_example.svg)
+![A diagram showing how stacks are comprised of frames, heaps are comprised of objects, and queues are comprised of messages.](the_javascript_runtime_environment_example.svg)
 
 ### Stack
 
@@ -29,16 +30,16 @@ Function calls form a stack of _frames_.
 
 ```js
 function foo(b) {
-  let a = 10
-  return a + b + 11
+  const a = 10;
+  return a + b + 11;
 }
 
 function bar(x) {
-  let y = 3
-  return foo(x * y)
+  const y = 3;
+  return foo(x * y);
 }
 
-const baz = bar(7) // assigns 42 to baz
+const baz = bar(7); // assigns 42 to baz
 ```
 
 Order of operations:
@@ -48,7 +49,7 @@ Order of operations:
 3. When `foo` returns, the top frame element is popped out of the stack (leaving only `bar`'s call frame).
 4. When `bar` returns, the stack is empty.
 
-Note that the arguments and local variables may continue to exist, as they are stored outside the stack — so they can be accessed by any [nested functions](/en-US/docs/Web/JavaScript/Guide/Functions#nested_functions_and_closures) long after their outer function has returned.
+Note that the arguments and local variables may continue to exist, as they are stored outside the stack — so they can be accessed by any [nested functions](/en-US/docs/Web/JavaScript/Guide/Functions#nested_functions_and_closures) long after their outer function has returned.
 
 ### Heap
 
@@ -68,7 +69,7 @@ The **event loop** got its name because of how it's usually implemented, which u
 
 ```js
 while (queue.waitForMessage()) {
-  queue.processNextMessage()
+  queue.processNextMessage();
 }
 ```
 
@@ -84,23 +85,23 @@ A downside of this model is that if a message takes too long to complete, the we
 
 ### Adding messages
 
-In web browsers, messages are added anytime an event occurs and there is an event listener attached to it. If there is no listener, the event is lost. So a click on an element with a click event handler will add a message—likewise with any other event.
+In web browsers, messages are added anytime an event occurs and there is an event listener attached to it. If there is no listener, the event is lost. So a click on an element with a click event handler will add a message — likewise with any other event.
 
-The function [`setTimeout`](/en-US/docs/Web/API/setTimeout) is called with 2 arguments: a message to add to the queue, and a time value (optional; defaults to `0`). The _time value_ represents the (minimum) delay after which the message will be pushed into the queue. If there is no other message in the queue, and the stack is empty, the message is processed right after the delay. However, if there are messages, the `setTimeout` message will have to wait for other messages to be processed. For this reason, the second argument indicates a _minimum_ time—not a _guaranteed_ time.
+The function [`setTimeout`](/en-US/docs/Web/API/setTimeout) is called with 2 arguments: a message to add to the queue, and a time value (optional; defaults to `0`). The _time value_ represents the (minimum) delay after which the message will be pushed into the queue. If there is no other message in the queue, and the stack is empty, the message is processed right after the delay. However, if there are messages, the `setTimeout` message will have to wait for other messages to be processed. For this reason, the second argument indicates a _minimum_ time — not a _guaranteed_ time.
 
 Here is an example that demonstrates this concept (`setTimeout` does not run immediately after its timer expires):
 
 ```js
-const seconds = new Date().getSeconds();
+const seconds = new Date().getTime() / 1000;
 
-setTimeout(function() {
+setTimeout(() => {
   // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
-  console.log(`Ran after ${new Date().getSeconds() - seconds} seconds`);
+  console.log(`Ran after ${new Date().getTime() / 1000 - seconds} seconds`);
 }, 500)
 
 while (true) {
-  if (new Date().getSeconds() - seconds >= 2) {
-    console.log("Good, looped for 2 seconds")
+  if (new Date().getTime() / 1000 - seconds >= 2) {
+    console.log("Good, looped for 2 seconds");
     break;
   }
 }
@@ -115,17 +116,17 @@ The execution depends on the number of waiting tasks in the queue. In the exampl
 The `setTimeout` needs to wait for all the code for queued messages to complete even though you specified a particular time limit for your `setTimeout`.
 
 ```js
-(function() {
+(() => {
 
   console.log('this is the start');
 
-  setTimeout(function cb() {
+  setTimeout(() => {
     console.log('Callback 1: this is a msg from call back');
   }); // has a default time value of 0
 
   console.log('this is just a message');
 
-  setTimeout(function cb1() {
+  setTimeout(() => {
     console.log('Callback 2: this is a msg from call back');
   }, 0);
 

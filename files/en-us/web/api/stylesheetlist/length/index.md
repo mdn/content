@@ -1,6 +1,7 @@
 ---
 title: StyleSheetList.length
 slug: Web/API/StyleSheetList/length
+page-type: web-api-instance-property
 tags:
   - API
   - Property
@@ -9,17 +10,12 @@ tags:
   - StyleSheetList
 browser-compat: api.StyleSheetList.length
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`length`** read-only property of the {{domxref("StyleSheetList")}} interface returns the number of {{domxref("CSSStyleSheet")}} objects in the collection.
 
-## Syntax
-
-```js
-let length = StyleSheetList.length;
-```
-
-### Value
+## Value
 
 An integer indicating the number of items in the collection.
 

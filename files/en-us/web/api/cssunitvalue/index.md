@@ -1,6 +1,7 @@
 ---
 title: CSSUnitValue
 slug: Web/API/CSSUnitValue
+page-type: web-api-interface
 tags:
   - API
   - CSS Typed Object Model API
@@ -11,21 +12,24 @@ tags:
   - Reference
 browser-compat: api.CSSUnitValue
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSUnitValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents values that contain a single unit type. For example, "42px" would be represented by a `CSSNumericValue`.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("CSSUnitValue/CSSUnitValue", "CSSStyleValue.CSSUnitValue()")}}
+- {{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}} {{Experimental_Inline}}
   - : Creates a new `CSSUnitValue` object.
 
 ## Properties
 
-- {{domxref('CSSUnitValue.value')}}
+- {{domxref('CSSUnitValue.value')}} {{Experimental_Inline}}
   - : Returns a double indicating the number of units.
-- {{domxref('CSSUnitValue.unit')}}
-  - : Returns a {{jsxref('USVString')}} indicating the type of unit.
+- {{domxref('CSSUnitValue.unit')}} {{Experimental_Inline}}
+  - : Returns a string indicating the type of unit.
 
 ### Event handlers
 

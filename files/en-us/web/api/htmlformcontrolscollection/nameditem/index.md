@@ -1,6 +1,7 @@
 ---
 title: HTMLFormControlsCollection.namedItem()
 slug: Web/API/HTMLFormControlsCollection/namedItem
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormControlsCollection.namedItem
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormControlsCollection.namedItem()`** method returns
@@ -23,27 +25,27 @@ equivalent to `collection.namedItem("value")`.
 
 ## Syntax
 
-```js
-var item = collection.namedItem(str);
-var item = collection[str];
+```js-nolint
+namedItem(str)
+// or collection[str]
 ```
 
 ### Parameters
 
-- `str` is a {{domxref("DOMString")}}
+- `str` is a string
 
 ### Return value
 
-- `item` is a {{domxref("RadioNodeList")}} , {{domxref("Element")}}, or
-  {{jsxref("null")}}.
+- `item` is a {{domxref("RadioNodeList")}}, {{domxref("Element")}}, or
+  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
-## Example
+## Examples
 
 ### HTML
 
 ```html
 <form>
-  <input id="my-form-control" type="textarea">
+  <input id="my-form-control" type="textarea" />
 </form>
 ```
 

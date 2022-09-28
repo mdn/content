@@ -8,6 +8,7 @@ tags:
   - Capture
   - Constraint validation
   - HTML
+browser-compat: html.elements.input.capture
 ---
 
 {{HTMLSidebar}}
@@ -16,7 +17,7 @@ The **`capture`** attribute specifies that, optionally, a new file should be cap
 
 Values include `user` and `environment`. The capture attribute is supported on the {{HTMLElement("input/file", "file")}} input type.
 
-The `capture` attribute takes as it's value a string that specifies which camera to use for capture of image or video data, if the [accept](accept) attribute indicates that the input should be of one of those types.
+The `capture` attribute takes as its value a string that specifies which camera to use for capture of image or video data, if the [accept](accept) attribute indicates that the input should be of one of those types.
 
 | Value         | Description                                                |
 | ------------- | ---------------------------------------------------------- |
@@ -32,16 +33,16 @@ When set on a file input type, operating systems with microphones and cameras wi
 ```html
 <p>
   <label for="soundFile">What does your voice sound like?:</label>
-  <input type="file" id="soundFile" capture="user" accept="audio/*">
-  </p>
-  <p>
+  <input type="file" id="soundFile" capture="user" accept="audio/*" />
+</p>
+<p>
   <label for="videoFile">Upload a video:</label>
-  <input type="file" id="videoFile" capture="environment" accept="video/*">
-  </p>
-  <p>
+  <input type="file" id="videoFile" capture="environment" accept="video/*" />
+</p>
+<p>
   <label for="imageFile">Upload a photo of yourself:</label>
-  <input type="file" id="imageFile" capture="user" accept="image/*">
-  </p>
+  <input type="file" id="imageFile" capture="user" accept="image/*" />
+</p>
 ```
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
@@ -50,29 +51,14 @@ Note these work better on mobile devices; if your device is a desktop computer, 
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}}
-      </td>
-      <td>{{Spec2('HTML Media Capture')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attribute.capture")}}
+{{Compat}}
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - [File API](/en-US/docs/Web/API/File)
 - {{domxref('HTMLInputElement.files')}}

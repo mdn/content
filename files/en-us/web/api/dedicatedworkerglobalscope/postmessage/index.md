@@ -1,6 +1,7 @@
 ---
 title: DedicatedWorkerGlobalScope.postMessage()
 slug: Web/API/DedicatedWorkerGlobalScope/postMessage
+page-type: web-api-instance-method
 tags:
   - API
   - DedicatedWorkerGlobalScope
@@ -10,6 +11,7 @@ tags:
   - postMessage
 browser-compat: api.DedicatedWorkerGlobalScope.postMessage
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`postMessage()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface sends a message to the main thread that spawned it.
@@ -25,14 +27,14 @@ The main scope that spawned the worker can send back information to the thread t
 
 ## Syntax
 
-```js
+```js-nolint
 postMessage(aMessage, transferList)
 ```
 
 ### Parameters
 
 - `aMessage`
-  - : The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.onmessage")}} handler.
+  - : The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.message_event")}}.
     This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 - `transferList` {{optional_inline}}
 
@@ -41,19 +43,19 @@ postMessage(aMessage, transferList)
 
     Only {{Glossary("transferable objects")}} can be transferred.
 
-### Returns
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 The following code snippet shows `worker.js`, in which an `onmessage` handler is used to handle messages from the main script.
 Inside the handler a calculation is done from which a result message is created; this is then sent back to the main thread using `postMessage(workerResult);`
 
 ```js
-onmessage = function(e) {
+onmessage = (e) => {
   console.log('Message received from main script');
-  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  const workerResult = `Result: ${e.data[0] * e.data[1]}`;
   console.log('Posting message back to main script');
   postMessage(workerResult);
 }
@@ -61,7 +63,7 @@ onmessage = function(e) {
 
 In the main script, `onmessage` would have to be called on a `Worker object`, whereas inside the worker script you just need `onmessage` because the worker is effectively the global scope ({{domxref("DedicatedWorkerGlobalScope")}}).
 
-For a full example, see our [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
+For a full example, see our [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
 > **Note:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 

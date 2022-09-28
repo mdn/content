@@ -1,6 +1,7 @@
 ---
 title: Document.lastElementChild
 slug: Web/API/Document/lastElementChild
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
@@ -8,6 +9,7 @@ tags:
   - Property
 browser-compat: api.Document.lastElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Document.lastElementChild`** read-only property
@@ -18,16 +20,11 @@ For HTML documents, this is usually the only child, the root `<html>` element.
 
 See {{domxref("Element.lastElementChild")}} for the last child element of specific elements within a document.
 
-## Syntax
+## Value
 
-```js
-// Getter
-element = document.lastElementChild;
+The root `<html>` element.
 
-// No setter; read-only property
-```
-
-## Example
+## Examples
 
 ```js
 document.lastElementChild;

@@ -1,6 +1,7 @@
 ---
 title: HTMLAreaElement.relList
 slug: Web/API/HTMLAreaElement/relList
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.HTMLAreaElement.relList
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAreaElement.relList`** read-only property reflects
@@ -21,25 +23,21 @@ The property itself is read-only, meaning you can't substitute the
 {{domxref("DOMTokenList")}} by another one, but the content of the returned list can be
 changed.
 
-## Syntax
+## Value
+
+A live {{domxref("DOMTokenList")}} of strings.
+
+## Examples
 
 ```js
-var relstr = areaElt.relList;
-```
+const areas = document.getElementsByTagName("area");
+const length = areas.length;
 
-## Example
-
-```js
-var areas = document.getElementsByTagName("area");
-var length = areas.length;
-
-for (var i = 0; i < length; i++) {
-  var list = areas[i].relList;
-  var listLength = list.length;
+for (const area of areas) {
   console.log("New area found.");
-  for (var j = 0; j < listLength; j++) {
-    console.log(list[j]);
-  }
+  area.relList.forEach((relValue) => {
+    console.log(relValue);
+  });
 }
 ```
 
@@ -55,5 +53,5 @@ for (var i = 0; i < length; i++) {
 
 - The equivalent property on {{HTMLElement("a")}} and {{HTMLElement("link")}},
   {{domxref("HTMLAnchorElement.relList")}} and {{domxref("HTMLLinkElement.relList")}}.
-- The very same list but as a space-separated tokens in a {{domxref("DOMString")}}:
+- The very same list but as a space-separated tokens in a string:
   {{domxref("HTMLAreaElement.rel")}}
