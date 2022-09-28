@@ -1,6 +1,7 @@
 ---
 title: CSS Generated Content
 slug: Web/CSS/CSS_Generated_Content
+page-type: css-module
 tags:
   - CSS
   - CSS Generated Content
