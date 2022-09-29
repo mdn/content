@@ -1,6 +1,7 @@
 ---
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
+page-type: guide
 tags:
   - CSS
   - CSS Cookbook

@@ -1,6 +1,7 @@
 ---
 title: System color keywords
 slug: Web/CSS/color_value/system_color_keywords
+page-type: css-type
 tags:
   - Reference
   - color

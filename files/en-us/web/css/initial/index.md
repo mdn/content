@@ -1,6 +1,7 @@
 ---
 title: initial
 slug: Web/CSS/initial
+page-type: css-keyword
 tags:
   - CSS
   - CSS Cascade

@@ -1,6 +1,7 @@
 ---
 title: atan2()
 slug: Web/CSS/atan2
+page-type: css-function
 tags:
   - CSS
   - CSS Function
