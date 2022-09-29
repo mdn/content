@@ -76,27 +76,72 @@ The result types are described below.
 
 ## Examples
 
-This example presents a function, `read()`, which reads a file from a [file input](/en-US/docs/Web/HTML/Element/input/file). It works by creating a
-{{domxref("FileReader")}} object and creating a listener for
-{{domxref("FileReader/load_event", "load")}} events such that when then file is read,
-the `result` is obtained and passed to the callback function provided to
-`read()`.
+This basic example presents a function `reader()` which reads a file from a [file input](/en-US/docs/Web/HTML/Element/input/file).  
+It works by creating a {{domxref("FileReader")}} object and creating a listener for {{domxref("FileReader/load_event", "load")}}
+event such that when then file is read, the `result` is obtained and passed to the callback function provided to
+`reader(file, callback)`.
 
 The content is handled as raw text data.
 
 ```js
-const fileInput = document.querySelector('input[type="file"]');
+// Given this HTMLInputElement of type="file":
+// <input id="image" type="file" accept="image/*">
 
-function read(callback) {
-  const file = fileInput.files.item(0);
-  const reader = new FileReader();
+const reader = (file, callback) => {
+    const fr = new FileReader();
+    fr.onload = () => callback(fr.result);
+    fr.onerror = (err) => callback(err);
+    fr.readAsDataURL(file);
+};
 
-  reader.onload = () => {
-    callback(reader.result);
-  }
+document.querySelector('#image').addEventListener("change", (evt) => {
+    if (!evt.target.files) return; // No files, do nothing.
+    reader(evt.target.files[0], (data) => {
+        console.log(data);  // Base64 `data:image/...` String result.
+    });
+});
+```
 
-  reader.readAsText(file);
-}
+Given the anynchronous nature of {{domxref("FileReader")}}, you could use a Promise-based approach.  
+Here's an example for a [file input](/en-US/docs/Web/HTML/Element/input/file) with attribute `multiple` that returns a [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
+
+```js
+// Given this HTMLInputElement:
+// <input id="images" type="file" accept="image/*" multiple>
+
+const reader = (file) => new Promise((resolve, reject) => {
+    const fr = new FileReader();
+    fr.onload = () => resolve(fr);
+    fr.onerror = err => reject(err);
+    fr.readAsDataURL(file);
+});
+
+const logImagesData = async (fileList) => {
+    let fileResults = [];
+
+    try {
+        const frPromises = [...fileList].map(reader);
+        fileResults = await Promise.all(frPromises);
+    } catch (err) {
+        // In this specific case Promise.all() might be preferred over Promise.allSettled(), 
+        // since it isn't trivial to modify a FileList to a subset of files of what the
+        // user initially selected. Therefore, let's just stash the entire operation.
+        // @TODO: Notify the user about the unexpected error
+        console.error(err);
+        return;
+    }
+
+    fileResults.forEach((fr) => {
+        console.log(fr.result); // Base64 `data:image/...` String result.
+    });
+};
+
+// HTMLInputElement type="file" Event handler:
+document.querySelector('#images').addEventListener("change", (evt) => {
+    // If no files, do nothing.
+    if (!evt.target.files) return;
+    logImagesData([...evt.target.files]);
+});
 ```
 
 ## Specifications
