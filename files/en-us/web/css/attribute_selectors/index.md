@@ -1,6 +1,7 @@
 ---
 title: Attribute selectors
 slug: Web/CSS/Attribute_selectors
+page-type: css-selector
 tags:
   - Attribute selectors
   - CSS
