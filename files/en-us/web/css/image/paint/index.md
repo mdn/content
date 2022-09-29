@@ -1,6 +1,7 @@
 ---
 title: paint()
 slug: Web/CSS/image/paint
+page-type: css-function
 tags:
   - CSS
   - CSS Function

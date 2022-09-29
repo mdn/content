@@ -26,6 +26,10 @@ tags:
   - seizure disorders
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 When designing visual and readable content with the aim of accessibility for all sighted users, it is important to have an understanding of light, color, and perception. This page specifically discusses:
 
 - luminance, which is a linear measure of light,

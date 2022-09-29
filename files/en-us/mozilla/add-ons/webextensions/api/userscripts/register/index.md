@@ -39,7 +39,7 @@ await registeredUserScript.unregister();
     The `UserScriptOptions` object has the following properties:
 
     - `scriptMetadata` {{Optional_Inline}}
-      - : A `JSON` object containing arbitrary metadata properties associated with the registered user scripts. However, while arbitrary, the object must be serializable, so it is compatible with [the structured clone algorithm.](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) This metadata is used to pass details from the script to the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts)[](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). For example, providing details of a subset of the APIs that need to be injected by the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). The API does not use this metadata,
+      - : A `JSON` object containing arbitrary metadata properties associated with the registered user scripts. However, while arbitrary, the object must be serializable, so it is compatible with [the structured clone algorithm.](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) This metadata is used to pass details from the script to the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). For example, providing details of a subset of the APIs that need to be injected by the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). The API does not use this metadata,
     - `allFrames` {{Optional_Inline}}
       - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `cookieStoreId` {{optional_inline}}

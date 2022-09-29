@@ -1,6 +1,7 @@
 ---
 title: ":blank"
 slug: Web/CSS/:blank
+page-type: css-pseudo-class
 tags:
   - ":blank"
   - CSS

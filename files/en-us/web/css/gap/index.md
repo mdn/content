@@ -1,6 +1,7 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes

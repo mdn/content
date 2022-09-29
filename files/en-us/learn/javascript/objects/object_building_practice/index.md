@@ -63,11 +63,11 @@ To begin with, make local copies of our [`index.html`](https://github.com/mdn/le
 The first part of the script looks like so:
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
-const width = canvas.width = window.innerWidth;
-const height = canvas.height = window.innerHeight;
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
 ```
 
 This script gets a reference to the `<canvas>` element, then calls the [`getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) method on it to give us a context on which we can start to draw. The resulting constant (`ctx`) is the object that directly represents the drawing area of the canvas and allows us to draw 2D shapes on it.
@@ -148,16 +148,16 @@ You can start testing your object out already.
 3. Type in the following to create a new ball instance:
 
    ```js
-   const testBall = new Ball(50, 100, 4, 4, 'blue', 10);
+   const testBall = new Ball(50, 100, 4, 4, "blue", 10);
    ```
 
 4. Try calling its members:
 
    ```js
-   testBall.x
-   testBall.size
-   testBall.color
-   testBall.draw()
+   testBall.x;
+   testBall.size;
+   testBall.color;
+   testBall.draw();
    ```
 
 5. When you enter the last line, you should see the ball draw itself somewhere on the canvas.
@@ -214,7 +214,7 @@ First, we need to create somewhere to store all our balls and then populate it. 
 const balls = [];
 
 while (balls.length < 25) {
-  const size = random(10,20);
+  const size = random(10, 20);
   const ball = new Ball(
     // ball position always drawn at least one ball width
     // away from the edge of the canvas, to avoid drawing errors
@@ -236,7 +236,7 @@ Next, add the following to the bottom of your code:
 
 ```js
 function loop() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
@@ -295,7 +295,7 @@ You also need to call this method in each frame of the animation. Update your `l
 
 ```js
 function loop() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {

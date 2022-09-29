@@ -14,7 +14,7 @@ The **`d`** attribute defines a path to be drawn.
 A path definition is a list of [path commands](#path_commands) where each command is composed of a command letter and numbers that represent the command parameters.
 The commands are [detailed below](#path_commands).
 
-You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#path), [`<missing-glyph>`](#missing-glyph).
+You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#glyph), [`<missing-glyph>`](#missing-glyph).
 
 `d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can also be [used as a CSS property](#using_d_as_a_css_property).
 

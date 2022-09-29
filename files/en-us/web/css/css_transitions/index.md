@@ -1,6 +1,7 @@
 ---
 title: CSS Transitions
 slug: Web/CSS/CSS_Transitions
+page-type: css-module
 tags:
   - CSS
   - CSS Transitions

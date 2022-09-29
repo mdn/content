@@ -1,6 +1,7 @@
 ---
 title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
+page-type: css-at-rule-descriptor
 tags:
   - "@font-face"
   - At-rule descriptor

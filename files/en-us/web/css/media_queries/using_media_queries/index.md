@@ -1,6 +1,7 @@
 ---
 title: Using media queries
 slug: Web/CSS/Media_Queries/Using_media_queries
+page-type: guide
 tags:
   - Advanced
   - CSS

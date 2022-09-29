@@ -1,6 +1,7 @@
 ---
 title: "@color-profile"
 slug: Web/CSS/@color-profile
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS

@@ -1,6 +1,7 @@
 ---
 title: attr()
 slug: Web/CSS/attr
+page-type: css-function
 tags:
   - CSS
   - CSS Function

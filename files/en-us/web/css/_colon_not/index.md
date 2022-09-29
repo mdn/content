@@ -1,6 +1,7 @@
 ---
 title: ":not()"
 slug: Web/CSS/:not
+page-type: css-pseudo-class
 tags:
   - ":not()"
   - CSS

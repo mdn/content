@@ -54,9 +54,9 @@ This example shows a really simple `<fieldset>` example, with a `<legend>`, and 
 ```html
 <form action="#">
   <fieldset>
-    <legend>Simple fieldset</legend>
-    <input type="radio" id="radio" />
-    <label for="radio">Spirit of radio</label>
+    <legend>Do you agree?</legend>
+    <input type="checkbox" id="chbx" name="agree" value="Yes!" />
+    <label for="chbx">I agree</label>
   </fieldset>
 </form>
 ```
@@ -70,7 +70,7 @@ This example shows a disabled `<fieldset>` with two controls inside it. Note how
 ```html
 <form action="#">
   <fieldset disabled>
-    <legend>Disabled fieldset</legend>
+    <legend>Disabled login fieldset</legend>
     <div>
       <label for="name">Name: </label>
       <input type="text" id="name" value="Chris" />

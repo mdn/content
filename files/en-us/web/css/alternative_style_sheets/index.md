@@ -1,6 +1,7 @@
 ---
 title: Alternative style sheets
 slug: Web/CSS/Alternative_style_sheets
+page-type: guide
 tags:
   - CSS
   - Guide

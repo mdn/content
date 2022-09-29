@@ -1,6 +1,7 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
+page-type: css-property
 tags:
   - CSS
   - CSS Property

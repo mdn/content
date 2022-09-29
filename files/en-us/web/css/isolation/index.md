@@ -1,6 +1,7 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
+page-type: css-property
 tags:
   - CSS
   - CSS Property

@@ -1,6 +1,7 @@
 ---
 title: pad
 slug: Web/CSS/@counter-style/pad
+page-type: css-at-rule-descriptor
 tags:
   - "@counter-style"
   - At-rule descriptor

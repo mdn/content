@@ -1,6 +1,7 @@
 ---
 title: ":target"
 slug: Web/CSS/:target
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

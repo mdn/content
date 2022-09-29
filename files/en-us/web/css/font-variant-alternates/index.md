@@ -1,6 +1,7 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

@@ -1,6 +1,7 @@
 ---
 title: image-resolution
 slug: Web/CSS/image-resolution
+page-type: css-property
 tags:
   - CSS
   - CSS Images

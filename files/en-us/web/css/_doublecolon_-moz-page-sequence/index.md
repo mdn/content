@@ -1,6 +1,7 @@
 ---
 title: '::-moz-page-sequence'
 slug: Web/CSS/::-moz-page-sequence
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:Mozilla Extensions

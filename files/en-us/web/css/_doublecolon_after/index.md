@@ -1,6 +1,7 @@
 ---
 title: '::after (:after)'
 slug: Web/CSS/::after
+page-type: css-pseudo-element
 tags:
   - CSS
   - Layout

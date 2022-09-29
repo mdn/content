@@ -1,6 +1,7 @@
 ---
 title: Media queries
 slug: Web/CSS/Media_Queries
+page-type: css-module
 tags:
   - CSS
   - Guide

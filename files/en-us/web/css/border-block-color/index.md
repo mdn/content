@@ -1,6 +1,7 @@
 ---
 title: border-block-color
 slug: Web/CSS/border-block-color
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

@@ -1,6 +1,7 @@
 ---
 title: counter-reset
 slug: Web/CSS/counter-reset
+page-type: css-property
 tags:
   - CSS
   - CSS Counter

@@ -1,6 +1,7 @@
 ---
 title: Testing media queries programmatically
 slug: Web/CSS/Media_Queries/Testing_media_queries
+page-type: guide
 tags:
   - Advanced
   - CSS

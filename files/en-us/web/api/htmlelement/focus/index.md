@@ -180,5 +180,3 @@ Selecting the second button set's the focus, but scrolling is disabled.
 
 - {{domxref("HTMLElement.blur")}} to remove the focus from an element.
 - {{domxref("document.activeElement")}} to know which is the currently focused element.
-- {{domxref("Element/focusin_event", "focusin")}} event: fired when an element is about to gain focus.
-- {{domxref("Element/focusout_event", "focusout")}} event: fired when an element is about to lose focus.

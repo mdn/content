@@ -129,19 +129,19 @@ The ability to create nested layers also removes the worry of having conflicting
 >
 > —[Cascading and Inheritance specification](https://www.w3.org/TR/css-cascade-5/#layering).
 
-##  Creating cascade layers
+## Creating cascade layers
 
 Layers can be created using any one of the following methods:
 
 - The `@layer` statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
 - The `@layer` block at-rule, in which all styles within a block are added to a name or unnamed layer.
--  The [`@import`](/en-US/docs/Web/CSS/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
+- The [`@import`](/en-US/docs/Web/CSS/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
 
 All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.
 
 > **Note:** The order of precedence of layers is the order in which they are created. Styles not in a layer, or "unlayered styles", cascade together into a final implicit label.
 
-Let’s cover the three ways of creating a layer in a little more detail before discussing nested layers.
+Let's cover the three ways of creating a layer in a little more detail before discussing nested layers.
 
 ### The @layer statement at-rule for named layers
 
@@ -162,6 +162,7 @@ If the above statement is the first line of a site's CSS, the layer order will b
 Layers can be created using the block `@layer` at-rule. If an `@layer` at-rule is followed by an identifier and a block of styles, the identifier is used to name the layer and the styles in this at-rule are added to the layer's styles. If a layer with the specified name does not already exist, a new layer will be created. If a layer with the specified name already exists, the styles are added to the previously existing layer. If no name is specified while creating a block of styles using `@layer`, the styles in the at-rule will be added to a new anonymous layer.
 
 In the example below, we've used four block and one inline `@layer` at-rules. This CSS does the following in the order listed:
+
 1) Creates a named `layout` layer
 2) Creates an unnamed, anonymous layer
 3) Declares a list of three layers and creates only two new layers, `theme` and `utilities`, because `layout` already exists
@@ -190,7 +191,7 @@ body {
   }
 }
 
-/* creates the third and fourth layers: `theme` and `utitlities` */
+/* creates the third and fourth layers: `theme` and `utilities` */
 @layer theme, layout, utilities;
 
 /* adds styles to the already existing `layout` layer */
@@ -210,7 +211,7 @@ body {
 
 In the above CSS, we created five layers: `layout`, `<anonymous(01)>`, `theme`, `utilities`, and `<anonymous(02)>` – in that order - with a sixth, implicit layer of unlayered styles contained in the `body` style block. The layer order is the order in which the layers are created, with the implicit layer of unlayered styles always being last. There is no way to change the layer order once created.
 
-We assigned some styles to the layer named `layout`. If a named layer doesn’t already exist, then specifying the name in an `@layer` at-rule, with or without assigning styles to the layer, creates the layer; this adds the layer to the end of the series of existing layer names. If the named layer already exists, all styles within the named block get appended to styles in the previously existing layer – specifying styles in a block by reusing an existing layer name does not create a new layer.
+We assigned some styles to the layer named `layout`. If a named layer doesn't already exist, then specifying the name in an `@layer` at-rule, with or without assigning styles to the layer, creates the layer; this adds the layer to the end of the series of existing layer names. If the named layer already exists, all styles within the named block get appended to styles in the previously existing layer – specifying styles in a block by reusing an existing layer name does not create a new layer.
 
 Anonymous layers are created by assigning styles to a layer without naming the layer. Styles can be added to an unnamed layer only at the time of it's creation.
 
@@ -278,7 +279,6 @@ The ability to nest layers enables teams to create cascade layers without worryi
 
 Nested layers can be created using the same methods as described for regular layers. For example, they can be created using `@layer` at-rule followed by the names of one or more layers, using a dot notation. Multiple dots and layer names signify multiple nesting.
 
-
 If you nest a block `@layer` at-rule inside another block `@layer` at-rule, with or without a name, the nested block becomes a nested layer. Similarly, when a style sheet is imported with an `@import` declaration containing the `layer` keyword or `layer()` function, the styles get assigned to that named or anonymous layer. If the `@import` statement contains layers, those layers become nested layers within that anonymous or named layer.
 
 Let's look at the following example:
@@ -315,6 +315,7 @@ To add styles to a named nested layer, use the dot notation:
 The order of layers determines their order of precedence. Therefore, the order of layers is very important. In the same way as the cascade sorts by origin and importance, the cascade sorts each CSS declaration by origin layer and importance.
 
 ### Precedence order of regular cascade layers
+
 ```css
 @import url(A.css) layer(firstLayer);
 @import url(B.css) layer(secondLayer);

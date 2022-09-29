@@ -1,6 +1,7 @@
 ---
 title: counter()
 slug: Web/CSS/counter
+page-type: css-function
 tags:
   - CSS
   - CSS Counter

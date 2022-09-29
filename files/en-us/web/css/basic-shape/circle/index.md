@@ -1,6 +1,7 @@
 ---
 title: circle()
 slug: Web/CSS/basic-shape/circle
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type

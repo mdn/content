@@ -34,8 +34,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.contextMenuShowEvent.set({value: "mouseup"}).
-  then(logResult);
+browser.browserSettings.contextMenuShowEvent
+  .set({ value: "mouseup" })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

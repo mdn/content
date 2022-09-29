@@ -1,6 +1,7 @@
 ---
 title: Introducing the CSS Cascade
 slug: Web/CSS/Cascade
+page-type: guide
 tags:
   - CSS
   - Cascade

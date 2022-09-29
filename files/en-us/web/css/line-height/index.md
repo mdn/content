@@ -1,6 +1,7 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

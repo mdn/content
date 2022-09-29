@@ -1,6 +1,7 @@
 ---
 title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Property

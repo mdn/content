@@ -1,6 +1,7 @@
 ---
 title: ":defined"
 slug: Web/CSS/:defined
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

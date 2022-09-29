@@ -1,6 +1,7 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
+page-type: css-property
 tags:
   - CSS
   - CSS Box Alignment
