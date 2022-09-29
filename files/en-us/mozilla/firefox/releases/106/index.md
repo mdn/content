@@ -52,7 +52,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ## Changes for add-on developers
 
-- The `object-src` directive in the `"content-security-policy"` manifest key is now optional in Manifest V3. This is because the `object-src` directive is only required for browsers with obsolete [plugins](/en-US/docs/Glossary/Plugin), and browsers enabling Manifest V3 don't contain such plugins. See W3C Web Extensions issue [204](https://github.com/w3c/webextensions/issues/204), Remove object-src from the CSP (at least in MV3), for more information. ({{bug(1766881)}})
+- The `object-src` directive in the `"content-security-policy"` manifest key is now optional. The `object-src` directive was designed to restrict obsolete [plugins](/en-US/docs/Glossary/Plugin), and support for these plugins was dropped from Firefox some time ago. See W3C WebExtensions Community Group [issue 204](https://github.com/w3c/webextensions/issues/204), Remove object-src from the CSP (at least in MV3), for more information. ({{bug(1766881)}})
 
 ### Removals
 

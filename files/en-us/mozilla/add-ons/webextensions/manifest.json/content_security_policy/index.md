@@ -120,7 +120,7 @@ In Manifest V3, the `content_security_policy` key is an object that may have any
 > **Note:** Valid examples demonstrate the correct use of keys in CSP.
 > However, extensions with 'unsafe-eval', remote script, blob, or remote sources in their CSP are not allowed for Firefox extensions per the [add-on policies](https://extensionworkshop.com/documentation/publish/add-on-policies/) and due to significant security issues.
 
-> **Note:** The examples include the {{CSP("script-src")}} directive, which was required in older browser versions. This directive is optional in modern browsers without obsolete [plugins](/en-US/docs/Glossary/Plugin). See W3C Web Extensions issue [204](https://github.com/w3c/webextensions/issues/204), Remove object-src from the CSP (at least in MV3), for more information.
+> **Note:** The examples include the {{CSP("object-src")}} directive, which was required in older browser versions. This directive is optional in modern browsers without obsolete [plugins](/en-US/docs/Glossary/Plugin). See W3C WebExtensions Community Group [issue 204](https://github.com/w3c/webextensions/issues/204), Remove object-src from the CSP (at least in MV3), for more information.
 
 Require that all types of content should be packaged with the extension:
 
@@ -220,7 +220,7 @@ Policy that omits the `"object-src"` directive:
 "content_security_policy": "script-src 'self' https://*.jquery.com;"
 ```
 
-However, this is only invalid in browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin). See W3C Web Extensions issue [204](https://github.com/w3c/webextensions/issues/204), Remove object-src from the CSP (at least in MV3), for more information.
+However, this is only invalid in browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin). See W3C WebExtensions Community Group [issue 204](https://github.com/w3c/webextensions/issues/204), Remove object-src from the CSP (at least in MV3), for more information.
 
 Policy that omits the `"self"` keyword in the `"script-src"` directive:
 
