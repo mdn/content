@@ -92,7 +92,10 @@ function reader(file, callback) {
 }
 
 document.querySelector("#image").addEventListener("change", (evt) => {
-  if (!evt.target.files) return; // No files, do nothing.
+   // No files, do nothing.
+  if (!evt.target.files) {
+    return;
+  }
   reader(evt.target.files[0], (data) => {
     console.log(data); // Base64 `data:image/...` String result.
   });
