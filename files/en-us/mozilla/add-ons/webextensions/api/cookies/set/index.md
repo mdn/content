@@ -79,14 +79,14 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example sets a cookie for the document hosted by the currently active tab:
 
 ```js
-let getActive = browser.tabs.query({active: true, currentWindow: true});
+let getActive = browser.tabs.query({ active: true, currentWindow: true });
 getActive.then(setCookie);
 
 function setCookie(tabs) {
   browser.cookies.set({
     url: tabs[0].url,
     name: "favorite-color",
-    value: "red"
+    value: "red",
   });
 }
 ```

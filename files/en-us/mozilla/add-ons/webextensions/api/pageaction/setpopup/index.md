@@ -57,12 +57,12 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
     if (changeInfo.status === "loading") {
       browser.pageAction.setPopup({
         tabId,
-        popup: "/popup/loading.html"
+        popup: "/popup/loading.html",
       });
     } else {
       browser.pageAction.setPopup({
         tabId,
-        popup: "/popup/complete.html"
+        popup: "/popup/complete.html",
       });
     }
   }

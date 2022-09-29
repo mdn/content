@@ -54,11 +54,10 @@ This code adds a click handler that asks for various permissions, then logs the 
 ```js
 const permissionsToRequest = {
   permissions: ["bookmarks", "history"],
-  origins: ["https://developer.mozilla.org/"]
-}
+  origins: ["https://developer.mozilla.org/"],
+};
 
 function requestPermissions() {
-
   function onResponse(response) {
     if (response) {
       console.log("Permission was granted");
@@ -68,14 +67,17 @@ function requestPermissions() {
     return browser.permissions.getAll();
   }
 
-  browser.permissions.request(permissionsToRequest)
+  browser.permissions
+    .request(permissionsToRequest)
     .then(onResponse)
     .then((currentPermissions) => {
-    console.log(`Current permissions:`, currentPermissions);
-  });
+      console.log(`Current permissions:`, currentPermissions);
+    });
 }
 
-document.querySelector("#request").addEventListener("click", requestPermissions);
+document
+  .querySelector("#request")
+  .addEventListener("click", requestPermissions);
 ```
 
 {{WebExtExamples}}

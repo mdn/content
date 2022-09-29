@@ -65,8 +65,8 @@ let settingIcon = browser.action.setIcon(
 
         ```json
         {
-          16: "path/to/image16.jpg",
-          32: "path/to/image32.jpg"
+          "16": "path/to/image16.jpg",
+          "32": "path/to/image32.jpg"
         }
         ```
 
@@ -104,15 +104,15 @@ function logResponseHeaders(requestDetails) {
 function startListening() {
   browser.webRequest.onHeadersReceived.addListener(
     logResponseHeaders,
-    {urls: ["<all_urls>"]},
+    { urls: ["<all_urls>"] },
     ["responseHeaders"]
   );
-  browser.action.setIcon({path: "icons/listening-on.svg"});
+  browser.action.setIcon({ path: "icons/listening-on.svg" });
 }
 
 function stopListening() {
   browser.webRequest.onHeadersReceived.removeListener(logResponseHeaders);
-  browser.action.setIcon({path: "icons/listening-off.svg"});
+  browser.action.setIcon({ path: "icons/listening-off.svg" });
 }
 
 function toggleListener() {
@@ -140,7 +140,7 @@ function getImageData() {
 }
 
 browser.action.onClicked.addListener(() => {
-  browser.action.setIcon({imageData: getImageData()});
+  browser.action.setIcon({ imageData: getImageData() });
 });
 ```
 
@@ -149,7 +149,8 @@ The following snippet updates the icon when the user clicks it, but only for the
 ```js
 browser.action.onClicked.addListener((tab) => {
   browser.action.setIcon({
-    tabId: tab.id, path: "icons/updated-48.png"
+    tabId: tab.id,
+    path: "icons/updated-48.png",
   });
 });
 ```

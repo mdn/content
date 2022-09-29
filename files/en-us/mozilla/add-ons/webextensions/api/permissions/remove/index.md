@@ -47,8 +47,8 @@ This code adds a click handler that removes a given permission.
 
 ```js
 const permissionToRemove = {
-  permissions: ["history"]
-}
+  permissions: ["history"],
+};
 
 function remove() {
   console.log("removing");

@@ -56,7 +56,7 @@ function gotTitle(title) {
 
 browser.pageAction.onClicked.addListener((tab) => {
   let gettingTitle = browser.pageAction.getTitle({
-    tabId: tab.id
+    tabId: tab.id,
   });
   gettingTitle.then(gotTitle);
 });

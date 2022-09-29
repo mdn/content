@@ -69,11 +69,10 @@ let CATGIFS = "https://giphy.com/explore/cat";
 
 browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.hide(tab.id);
-  browser.tabs.update({url: CATGIFS});
+  browser.tabs.update({ url: CATGIFS });
 });
 
-browser.pageAction.onClicked.addListener(() => {
-});
+browser.pageAction.onClicked.addListener(() => {});
 ```
 
 {{WebExtExamples}}

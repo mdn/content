@@ -44,7 +44,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 browser.permissions.getAll().then((result) => {
   console.log(result.permissions); // [ "webRequest", "tabs" ]
-  console.log(result.origins)      // [ "*://*.mozilla.org/*" ]
+  console.log(result.origins); // [ "*://*.mozilla.org/*" ]
 });
 ```
 

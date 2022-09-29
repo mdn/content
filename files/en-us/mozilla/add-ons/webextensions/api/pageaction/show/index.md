@@ -52,14 +52,14 @@ This example shows the {{WebExtAPIRef("pageAction")}} for the active tab when th
 ```js
 browser.contextMenus.create({
   id: "show",
-  title: "Show page action"
-})
+  title: "Show page action",
+});
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "show") {
-    browser.pageAction.show(tab.id)
+    browser.pageAction.show(tab.id);
   }
-})
+});
 ```
 
 {{WebExtExamples}}

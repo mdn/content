@@ -60,7 +60,7 @@ function oneMinuteAgo() {
 
 browser.history.deleteRange({
   startTime: oneMinuteAgo(),
-  endTime: Date.now()
+  endTime: Date.now(),
 });
 ```
 

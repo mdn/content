@@ -61,8 +61,8 @@ let settingIcon = browser.pageAction.setIcon(
 
         ```json
         {
-          16: "path/to/image16.jpg",
-          32: "path/to/image32.jpg"
+          "16": "path/to/image16.jpg",
+          "32": "path/to/image32.jpg"
         }
         ```
 
@@ -92,7 +92,8 @@ Set the icon for the page action when the user clicks it:
 ```js
 browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.setIcon({
-    tabId: tab.id, path: "icons/icon-48.png"
+    tabId: tab.id,
+    path: "icons/icon-48.png",
   });
 });
 ```
