@@ -102,7 +102,7 @@ Third-party APIs come in a large variety; some of the more popular ones that you
 - The [YouTube API](https://developers.google.com/youtube/), which allows you to embed YouTube videos on your site, search YouTube, build playlists, and more.
 - The [Pinterest API](https://developers.pinterest.com/), which provides tools to manage Pinterest boards and pins to include them in your website.
 - The [Twilio API](https://www.twilio.com/), which provides a framework for building voice and video call functionality into your app, sending SMS/MMS from your apps, and more.
-- The [Mastodon API](https://docs.joinmastodon.org/api/), which enables you to manipulate features of the Mastodon social network programmatically.
+- The [Mastodon API](https://docs.joinmastodon.org/api/) enables you to manipulate features of the Mastodon social network programmatically.
 
 > **Note:** You can find information on a lot more 3rd party APIs in the [Programmable Web API directory](https://www.programmableweb.com/category/all/apis).
 
