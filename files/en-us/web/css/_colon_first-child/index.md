@@ -1,6 +1,7 @@
 ---
 title: ":first-child"
 slug: Web/CSS/:first-child
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

@@ -153,13 +153,13 @@ Users of assistive technology find this description helpful when trying to work 
   <fieldset>
     <legend>Choose your favorite monster</legend>
 
-    <input type="radio" id="kraken" name="monster" />
+    <input type="radio" id="kraken" name="monster" value="K" />
     <label for="kraken">Kraken</label><br />
 
-    <input type="radio" id="sasquatch" name="monster" />
+    <input type="radio" id="sasquatch" name="monster" value="S" />
     <label for="sasquatch">Sasquatch</label><br />
 
-    <input type="radio" id="mothman" name="monster" />
+    <input type="radio" id="mothman" name="monster" value="M" />
     <label for="mothman">Mothman</label>
   </fieldset>
 </form>

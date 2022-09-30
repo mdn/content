@@ -1,6 +1,7 @@
 ---
 title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

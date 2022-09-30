@@ -1,6 +1,7 @@
 ---
 title: translateX()
 slug: Web/CSS/transform-function/translateX
+page-type: css-function
 tags:
   - CSS
   - CSS Function

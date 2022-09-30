@@ -1,6 +1,7 @@
 ---
 title: scroll-margin-block-end
 slug: Web/CSS/scroll-margin-block-end
+page-type: css-property
 tags:
   - CSS
   - CSS Property

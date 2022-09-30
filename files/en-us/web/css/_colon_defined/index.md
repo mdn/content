@@ -1,6 +1,7 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -42,18 +43,19 @@ The following snippets are taken from our [defined-pseudo-class](https://github.
 In this demo we define a very simple trivial custom element:
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
   }
-})
+);
 ```
 
 Then insert a copy of this element into the document, along with a standard `<p>`:

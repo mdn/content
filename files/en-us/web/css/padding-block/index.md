@@ -1,6 +1,7 @@
 ---
 title: padding-block
 slug: Web/CSS/padding-block
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Property

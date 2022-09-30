@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: option role'
+title: "ARIA: option role"
 slug: Web/Accessibility/ARIA/Roles/option_role
 tags:
   - Accessibility

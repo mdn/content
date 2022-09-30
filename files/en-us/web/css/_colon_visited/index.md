@@ -1,6 +1,7 @@
 ---
-title: ':visited'
+title: ":visited"
 slug: Web/CSS/:visited
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

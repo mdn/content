@@ -1,6 +1,7 @@
 ---
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
+page-type: css-property
 tags:
   - CSS
   - CSS Property

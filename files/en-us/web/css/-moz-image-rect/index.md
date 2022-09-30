@@ -1,6 +1,7 @@
 ---
-title: '-moz-image-rect'
+title: "-moz-image-rect"
 slug: Web/CSS/-moz-image-rect
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -129,14 +130,18 @@ This code handles the click event when the container receives a mouse click.
 
 ```js
 function rotate() {
-  let prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
+  let prevStyle = window
+    .getComputedStyle(document.getElementById("box4"), null)
+    .getPropertyValue("background-image");
 
   // Now that we've saved the last one, start rotating
-  for (let i=1; i<=4; i++) {
+  for (let i = 1; i <= 4; i++) {
     const curId = `box${i}`;
 
     // Shift the background images
-    const curStyle = window.getComputedStyle(document.getElementById(curId), null).getPropertyValue("background-image");
+    const curStyle = window
+      .getComputedStyle(document.getElementById(curId), null)
+      .getPropertyValue("background-image");
     document.getElementById(curId).style.backgroundImage = prevStyle;
     prevStyle = curStyle;
   }

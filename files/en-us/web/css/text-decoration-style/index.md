@@ -1,6 +1,7 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
+page-type: css-property
 tags:
   - CSS
   - CSS Property

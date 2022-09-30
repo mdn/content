@@ -1,6 +1,7 @@
 ---
 title: <number>
 slug: Web/CSS/number
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

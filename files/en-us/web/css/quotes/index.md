@@ -1,6 +1,7 @@
 ---
 title: quotes
 slug: Web/CSS/quotes
+page-type: css-property
 tags:
   - CSS
   - CSS Property

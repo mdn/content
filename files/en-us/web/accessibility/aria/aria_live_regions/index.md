@@ -48,8 +48,10 @@ A website specializing in providing information about planets provides a dropdow
 </div>
 
 <p>
-  <small>Information from
-    <a href="https://en.wikipedia.org/wiki/Solar_System">Wikipedia</a></small>
+  <small>
+    Information from
+    <a href="https://en.wikipedia.org/wiki/Solar_System">Wikipedia</a>
+  </small>
 </p>
 ```
 

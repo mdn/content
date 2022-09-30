@@ -1,6 +1,7 @@
 ---
-title: ':link'
+title: ":link"
 slug: Web/CSS/:link
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

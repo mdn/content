@@ -410,7 +410,7 @@ First of all, create a new directory somewhere on your file system that is easy 
 
 Now save the following code in a new file called `index.js`, inside your test directory:
 
-```js
+```js-nolint
 const myObj = {
 a:1,b:{c:2}}
 function printMe(obj){console.log(obj.b.c)}

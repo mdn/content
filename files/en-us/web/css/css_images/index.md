@@ -1,6 +1,7 @@
 ---
 title: CSS Images
 slug: Web/CSS/CSS_Images
+page-type: css-module
 tags:
   - CSS
   - CSS Images

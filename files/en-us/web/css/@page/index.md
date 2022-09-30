@@ -1,8 +1,9 @@
 ---
-title: '@page'
+title: "@page"
 slug: Web/CSS/@page
+page-type: css-at-rule
 tags:
-  - '@page'
+  - "@page"
   - At-rule
   - CSS
   - Layout

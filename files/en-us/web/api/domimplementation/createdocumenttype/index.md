@@ -37,7 +37,7 @@ createDocumentType(qualifiedNameStr, publicId, systemId)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A [`DocumentType`](/en-US/docs/Web/API/DocumentType).
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: font-weight
 slug: Web/CSS/font-weight
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

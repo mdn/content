@@ -1,6 +1,7 @@
 ---
 title: scroll-padding
 slug: Web/CSS/scroll-padding
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Property

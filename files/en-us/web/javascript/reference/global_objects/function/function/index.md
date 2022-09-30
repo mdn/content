@@ -101,7 +101,7 @@ The arguments `a` and `b` are formal argument names that are used in the functio
 ### Creating a function object from a function declaration or function expression
 
 ```js
-// The function constructor can take in multiple statements separated by a semi-colon. Function expressions require a return statement with the function's name
+// The function constructor can take in multiple statements separated by a semicolon. Function expressions require a return statement with the function's name
 
 // Observe that new Function is called. This is so we can call the function we created directly afterwards
 const sumOfArray = new Function('const sumArray = (arr) => arr.reduce((previousValue, currentValue) => previousValue + currentValue); return sumArray')();

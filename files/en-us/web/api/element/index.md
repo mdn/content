@@ -347,9 +347,9 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/focus_event", "focus")}}
   - : Fired when an element has gained focus.
 - {{domxref("Element/focusin_event", "focusin")}}
-  - : Fired when an element is about to gain focus.
+  - : Fired when an element has gained focus, after {{domxref("Element/focus_event", "focus")}}.
 - {{domxref("Element/focusout_event", "focusout")}}
-  - : Fired when an element is about to lose focus.
+  - : Fired when an element has lost focus, after {{domxref("Element/blur_event", "blur")}}.
 
 ### Fullscreen events
 

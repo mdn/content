@@ -1,6 +1,7 @@
 ---
 title: ":enabled"
 slug: Web/CSS/:enabled
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

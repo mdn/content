@@ -1,6 +1,7 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
+page-type: css-function
 tags:
   - CSS
   - CSS Function

@@ -1,6 +1,7 @@
 ---
 title: border-end-end-radius
 slug: Web/CSS/border-end-end-radius
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

@@ -29,7 +29,7 @@ SyntaxError: Unexpected token '='. Expected a parameter pattern or a ')' in para
 A variable is missing a name. The cause is most likely a typo or a forgotten variable name.
 Make sure that you've provided the name of the variable before the `=` sign.
 
-When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead of a semi-colon.
+When declaring multiple variables at the same time, make sure that the previous lines/declaration does not end with a comma instead of a semicolon.
 
 ## Examples
 

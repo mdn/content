@@ -1,6 +1,7 @@
 ---
 title: Handling content breaks in multi-column layout
 slug: Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
+page-type: guide
 tags:
   - CSS
   - CSS Multi-column Layout

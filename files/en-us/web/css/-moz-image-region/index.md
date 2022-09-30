@@ -1,6 +1,7 @@
 ---
-title: '-moz-image-region'
+title: "-moz-image-region"
 slug: Web/CSS/-moz-image-region
+page-type: css-property
 tags:
   - CSS
   - CSS Property

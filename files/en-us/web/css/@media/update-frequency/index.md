@@ -1,8 +1,9 @@
 ---
 title: update
 slug: Web/CSS/@media/update-frequency
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

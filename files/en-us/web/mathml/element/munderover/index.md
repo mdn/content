@@ -28,19 +28,31 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Examples
 
-Sample rendering: ![integral-0-infinity](munderover.png)
-
-Rendering in your browser: <math><munderover><mo>∫</mo><mn>0</mn><mi>∞</mi></munderover></math>
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
 
 ```html
-<math displaystyle="true">
+<math display="block">
   <munderover>
-    <mo>&#x222B;<!--INTEGRAL--></mo>
-    <mn>0</mn>
-    <mi>&#x221E;<!--INFINITY--></mi>
+    <mo>∑</mo>
+    <mrow>
+      <mi>n</mi>
+      <mo>=</mo>
+      <mn>1</mn>
+    </mrow>
+    <mrow>
+      <mo>+</mo>
+      <mn>∞</mn>
+    </mrow>
   </munderover>
 </math>
 ```
+
+{{ EmbedLiveSample('munderover_example', 700, 200, "", "") }}
 
 ## Specifications
 
