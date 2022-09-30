@@ -727,9 +727,9 @@ Array methods are always generic — they don't access any internal data of the 
 
 ```js
 const arrayLike = {
-	0: "a",
-	1: "b",
-	length: 2,
+  0: "a",
+  1: "b",
+  length: 2,
 };
 console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 ```
