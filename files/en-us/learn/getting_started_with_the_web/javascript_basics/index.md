@@ -33,7 +33,7 @@ It's outside the scope of this articleâ€”as a light introduction to JavaScriptâ€
 
 The section below introduces some aspects of the core language and offers an opportunity to play with a few browser API features too. Have fun!
 
-## A _Hello world!_ example
+## A "Hello world!" example
 
 JavaScript is one of the most popular modern web technologies! As your JavaScript skills grow, your websites will enter a new dimension of power and creativity.
 
