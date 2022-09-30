@@ -15,7 +15,7 @@ In HTML, using a closing tag on a void element is invalid. For example, `<input 
 
 The [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/), and [MathML](https://www.w3.org/TR/MathML3/) specifications define very precisely what each element can contain. Many combinations have no semantic meaning, for example an {{HTMLElement("audio")}} element nested inside an {{HTMLElement("hr")}} element.
 
-The empty elements in HTML are as follows:
+The void elements in HTML are as follows:
 
 - {{HTMLElement("area")}}
 - {{HTMLElement("base")}}
