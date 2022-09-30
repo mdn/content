@@ -96,7 +96,7 @@ In particular, the most common categories of browser APIs you'll use (and which 
 Third-party APIs come in a large variety; some of the more popular ones that you are likely to make use of sooner or later are:
 
 - The [Twitter API](https://developer.twitter.com/en/docs), which allows you to do things like displaying your latest tweets on your website.
-- Map APIs like [Mapquest](https://developer.mapquest.com/) and the [Google Maps API](https://developers.google.com/maps/), which allows you to do all sorts of things with maps on your web pages.
+- Map APIs, like [Mapquest](https://developer.mapquest.com/) and the [Google Maps API](https://developers.google.com/maps/), allow you to do all sorts of things with maps on your web pages.
 - The [Facebook suite of APIs](https://developers.facebook.com/docs/), which enables you to use various parts of the Facebook ecosystem to benefit your app, for example by providing app login using Facebook login, accepting in-app payments, rolling out targeted ad campaigns, etc.
 - The [Telegram APIs](https://core.telegram.org/api), which allows you to embed content from Telegram channels on your website, in addition to providing support for bots.
 - The [YouTube API](https://developers.google.com/youtube/), which allows you to embed YouTube videos on your site, search YouTube, build playlists, and more.
