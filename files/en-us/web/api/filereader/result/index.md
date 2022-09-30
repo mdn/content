@@ -86,7 +86,7 @@ The content is handled as raw text data.
 
 function reader(file, callback) {
   const fr = new FileReader();
-  fr.onload = () => callback(fr.result);
+  fr.onload = () => callback(null, fr.result);
   fr.onerror = (err) => callback(err);
   fr.readAsDataURL(file);
 }
@@ -96,8 +96,8 @@ document.querySelector("#image").addEventListener("change", (evt) => {
   if (!evt.target.files) {
     return;
   }
-  reader(evt.target.files[0], (data) => {
-    console.log(data); // Base64 `data:image/...` String result.
+  reader(evt.target.files[0], (err, res) => {
+    console.log(res); // Base64 `data:image/...` String result.
   });
 });
 ```
