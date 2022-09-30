@@ -172,5 +172,6 @@ Here, the first [`:is()`](/en-US/docs/Web/CSS/:is) pseudo-class is used to selec
 
 - [`:is()`](/en-US/docs/Web/CSS/:is), [`:not()`](/en-US/docs/Web/CSS/:not)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
