@@ -20,7 +20,7 @@ The **`gap`** [CSS](/en-US/docs/Web/CSS) property sets the gaps ({{glossary("gut
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
 
-Note that `grid-row-gap` is an alias for this property.
+Note that `grid-gap` is an alias for this property.
 
 ## Syntax
 
