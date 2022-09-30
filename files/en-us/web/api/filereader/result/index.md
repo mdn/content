@@ -126,7 +126,6 @@ const logImagesData = async (fileList) => {
     // In this specific case Promise.all() might be preferred over Promise.allSettled(),
     // since it isn't trivial to modify a FileList to a subset of files of what the
     // user initially selected. Therefore, let's just stash the entire operation.
-    // @TODO: Notify the user about the unexpected error
     console.error(err);
     return;
   }
