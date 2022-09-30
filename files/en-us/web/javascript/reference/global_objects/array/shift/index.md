@@ -78,7 +78,7 @@ while (typeof (i = names.shift()) !== 'undefined') {
 
 ### Calling shift() on non-array objects
 
-The `shift()` method reads the `length` property of `this`. If the length is 0, `length` is set to `0` again (whereas it may be negative or `undefined` before). Otherwise, the property at `0` is returned, and the rest of the properties are shifted left by one. The `length` property is decremented by one.
+The `shift()` method reads the `length` property of `this`. If the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods) is 0, `length` is set to `0` again (whereas it may be negative or `undefined` before). Otherwise, the property at `0` is returned, and the rest of the properties are shifted left by one. The `length` property is decremented by one.
 
 ```js
 const arrayLike = {
