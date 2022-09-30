@@ -38,5 +38,4 @@ The void elements in HTML are as follows:
 _Self-closing tags (`<tag />`) do not exist in HTML._\
 However, foreign content is allowed to specify self-closing tags. In such case, if a start tag is marked as self-closing, then end tag must not be specified.
 
-If present, HTML parsers ignore the trailing `/` in start tags. Code formatters, like Prettier, take advantage of this fact and add a trailing `/` to the void tags to make them more readable.\
-For example, `<input type="text">` to `<input type="text" />`
+If present, HTML parsers ignore the trailing `/` in start tags. Code formatters, like Prettier, take advantage of this fact and add a trailing `/` to the void tags to make them more readable. For example, code-formatters will convert `<input type="text">` to `<input type="text" />`.
