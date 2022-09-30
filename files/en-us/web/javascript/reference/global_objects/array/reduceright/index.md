@@ -270,8 +270,8 @@ const arrayLike = {
   1: 3,
   2: 4,
 };
-console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x + y));
-// 9
+console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
+// -1, which is 4 - 3 - 2
 ```
 
 ## Specifications

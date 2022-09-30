@@ -137,15 +137,17 @@ The `slice()` method reads the `length` property of `this`. It then reads the in
 ```js
 const arrayLike = {
   length: 3,
+  0: 2,
+  1: 3,
   2: 4,
 };
-console.log(Array.prototype.slice.call(arrayLike));
-// [empty, empty, 4]
+console.log(Array.prototype.slice.call(arrayLike, 1, 3));
+// [ 3, 4 ]
 ```
 
 ### Using slice() to convert array-like objects to arrays
 
-The `slice()` method is often used with {{jsxref("Function.prototype.bind", "bind()")}} and {{jsxref("Function.prototype.call", "call()")}} to create a utility method that copies an array-like object to an array.
+The `slice()` method is often used with {{jsxref("Function.prototype.bind", "bind()")}} and {{jsxref("Function.prototype.call", "call()")}} to create a utility method that converts an array-like object into an array.
 
 ```js
 // slice() is called with `this` passed as the first argument
