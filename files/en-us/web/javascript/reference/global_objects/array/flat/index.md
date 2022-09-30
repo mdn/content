@@ -181,7 +181,7 @@ const arrayLike = {
   2: 5,
 };
 console.log(Array.prototype.flat.call(arrayLike));
-// [ [ 1, 2 ], { '0': 3, '1': 4, length: 2 }, 5 ]
+// [ 1, 2, { '0': 3, '1': 4, length: 2 }, 5 ]
 ```
 
 ## Specifications

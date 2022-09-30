@@ -91,7 +91,7 @@ const arrayLike = {
   unrelated: "foo",
   2: 4,
 };
-console.log(Array.prototype.pop.call(arrayLike));
+console.log(Array.prototype.reverse.call(arrayLike));
 // { '0': 4, length: 3, unrelated: 'foo' }
 // The '2' index is deleted because the '0' index was not present originally
 ```

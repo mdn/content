@@ -112,10 +112,10 @@ const arrayLike = {
   length: 3,
   0: 2,
   1: 3,
-  2: 4,
+  2: 2,
 };
 console.log(Array.prototype.lastIndexOf.call(arrayLike, 2));
-// 0
+// 2
 console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
 // -1
 ```

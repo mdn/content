@@ -213,7 +213,7 @@ const arrayLike = {
 };
 console.log(
   Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),
-); // 2
+); // 4
 ```
 
 ## Specifications

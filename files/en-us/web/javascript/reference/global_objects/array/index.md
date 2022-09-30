@@ -726,7 +726,12 @@ The following methods mutate the original array:
 Array methods are always generic — they don't access any internal data of the array object. They only access the array elements through the `length` property and the indexed elements. This means that they can be called on array-like objects as well.
 
 ```js
-Array.prototype.join.call({ 0: "a", 1: "b", length: 2 }, "+"); // 'a+b'
+const arrayLike = {
+	0: "a",
+	1: "b",
+	length: 2,
+};
+console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 ```
 
 The `length` property is [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), truncated to an integer, and then clamped to the range between 0 and 2<sup>53</sup> - 1. `NaN` becomes `0`, so even when `length` is not present or is `undefined`, it behaves as if it has value `0`.
