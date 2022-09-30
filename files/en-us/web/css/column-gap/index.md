@@ -1,5 +1,5 @@
 ---
-title: column-gap
+title: column-gap (grid-column-gap)
 slug: Web/CSS/column-gap
 page-type: css-property
 tags:
