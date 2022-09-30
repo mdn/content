@@ -9,7 +9,7 @@ tags:
 
 A **void element** is an {{Glossary("element")}} in HTML that **cannot** have any child nodes (i.e., nested elements or text nodes). Void elements only have a start tag; end tags must not be specified for void elements.
 
-In HTML, using a closing tag on a void element is invalid. For example, `<input type="text"></input>` is invalid HTML. Except for foreign elements (elements from SVG and MathML namespaces).
+In HTML, using a closing tag on a void element is invalid. For example, `<input type="text"></input>` is invalid HTML. In contrast, empty elements in SVG and MathML may use an end tag instead of the XML self-closing syntax.
 
 The [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/), and [MathML](https://www.w3.org/TR/MathML3/) specifications define very precisely what each element can contain. So, some combinations of tags have no semantic meaning.
 
@@ -38,6 +38,6 @@ The void elements in HTML are as follows:
 _Self-closing tags (`<tag />`) do not exist in HTML._\
 However, foreign content is allowed to specify self-closing tags. In such case, if a start tag is marked as self-closing, then end tag must not be specified.
 
-If present, HTML parsers ignore the trailing `/` in start tags. Some code formatters, use this fact and add a trailing `/` to the void tags to make them similar to XML style tags. For example, code-formatters will convert `<input type="text">` to `<input type="text" />`.
+If present, HTML parsers ignore the trailing `/` in start tags. Some code formatters, use this fact and add a trailing `/` to the void tags to make them similar to XML style tags. For example, some code-formatters will convert `<input type="text">` to `<input type="text" />`.
 
 > **Note:** Without a space between unquoted attribute value and `/>`, the `/` becomes a part of the value. For example, the code `<img src=http://www.example.com/logo.svg/>` results in `src` attribute getting value `http://www.example.com/logo.svg/`, which makes the URL wrong.
