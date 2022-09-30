@@ -13,7 +13,7 @@ A **void element** is an {{Glossary("element")}} from HTML, SVG, or MathML that 
 
 In HTML, using a closing tag on a void element is invalid. For example, `<input type="text"></input>` is invalid HTML. Except for foreign elements (elements from SVG and MathML namespaces).
 
-The [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/), and [MathML](https://www.w3.org/TR/MathML3/) specifications define very precisely what each element can contain. Many combinations have no semantic meaning, for example an {{HTMLElement("audio")}} element nested inside an {{HTMLElement("hr")}} element.
+The [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/), and [MathML](https://www.w3.org/TR/MathML3/) specifications define very precisely what each element can contain. So, some combinations of tags have no semantic meaning.
 
 The void elements in HTML are as follows:
 
