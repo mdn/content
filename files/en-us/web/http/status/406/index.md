@@ -33,6 +33,8 @@ among them.
 ## Status
 
 ```
+406 Not Acceptable. There should be step by step solutions to block this errors in the server.
+
 406 Not Acceptable
 ```
 
