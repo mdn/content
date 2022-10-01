@@ -65,7 +65,7 @@ svg {
 
 {{EmbedLiveSample("Example", '100%', 150)}}
 
-Since SVG2, the {{cssxref('mask')}} attribute is defined as a css property and is a shorthand for many other properties: {{cssxref('mask-image')}}, {{cssxref('mask-mode')}}, {{cssxref('mask-repeat')}}, {{cssxref('mask-position')}}, {{cssxref('mask-clip')}}, {{cssxref('mask-origin')}}, {{cssxref('mask-size')}}, and {{cssxref('mask-composite')}}.
+Since SVG2, the {{cssxref('mask')}} attribute is defined as a CSS property and is a shorthand for many other properties: {{cssxref('mask-image')}}, {{cssxref('mask-mode')}}, {{cssxref('mask-repeat')}}, {{cssxref('mask-position')}}, {{cssxref('mask-clip')}}, {{cssxref('mask-origin')}}, {{cssxref('mask-size')}}, and {{cssxref('mask-composite')}}.
 
 ## Usage notes
 

@@ -1,6 +1,7 @@
 ---
 title: CSS Basic User Interface
 slug: Web/CSS/CSS_Basic_User_Interface
+page-type: css-module
 tags:
   - CSS
   - CSS Basic User Interface

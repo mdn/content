@@ -1,6 +1,7 @@
 ---
 title: CSS Device Adaptation
 slug: Web/CSS/CSS_Device_Adaptation
+page-type: css-module
 tags:
   - CSS
   - CSS Device Adaptation

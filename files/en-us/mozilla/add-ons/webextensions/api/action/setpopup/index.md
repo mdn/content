@@ -70,27 +70,33 @@ function onCreated() {
   }
 }
 
-browser.contextMenus.create({
-  id: "popup-1",
-  type: "radio",
-  title: "Popup 1",
-  contexts: ["all"],
-  checked: true
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-1",
+    type: "radio",
+    title: "Popup 1",
+    contexts: ["all"],
+    checked: true,
+  },
+  onCreated
+);
 
-browser.contextMenus.create({
-  id: "popup-2",
-  type: "radio",
-  title: "Popup 2",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-2",
+    type: "radio",
+    title: "Popup 2",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated
+);
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "popup-1") {
-    browser.action.setPopup({popup: "/popup/popup1.html"})
+    browser.action.setPopup({ popup: "/popup/popup1.html" });
   } else if (info.menuItemId === "popup-2") {
-    browser.action.setPopup({popup: "/popup/popup2.html"})
+    browser.action.setPopup({ popup: "/popup/popup2.html" });
   }
 });
 ```

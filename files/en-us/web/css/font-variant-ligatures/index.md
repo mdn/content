@@ -1,6 +1,7 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

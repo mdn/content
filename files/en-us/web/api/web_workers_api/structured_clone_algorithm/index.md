@@ -93,6 +93,34 @@ It clones by recursing through the input object while maintaining a map of previ
       <td></td>
     </tr>
     <tr>
+      <td>{{domxref("DOMPoint")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{domxref("DOMPointReadOnly")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{domxref("DOMRect")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{domxref("DOMRectReadOnly")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{domxref("DOMQuad")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{domxref("DOMMatrix")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{domxref("DOMMatrixReadOnly")}}</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>{{jsxref("Array")}}</td>
       <td></td>
     </tr>

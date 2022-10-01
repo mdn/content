@@ -1,6 +1,7 @@
 ---
 title: ":paused"
 slug: Web/CSS/:paused
+page-type: css-pseudo-class
 tags:
   - CSS
   - Pseudo-class

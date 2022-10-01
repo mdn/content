@@ -26,12 +26,12 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ## Examples
 
 ```html
-<math>
-
-  <ms lquote="„" rquote=""">abc</ms>
-
+<math display="block">
+  <ms lquote="„" rquote="'">abc</ms>
 </math>
 ```
+
+{{ EmbedLiveSample('ms_example', 700, 200, "", "") }}
 
 ## Specifications
 

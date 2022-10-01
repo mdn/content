@@ -1,6 +1,7 @@
 ---
 title: display-mode
 slug: Web/CSS/@media/display-mode
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

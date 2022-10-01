@@ -1,6 +1,7 @@
 ---
 title: Center an element
 slug: Web/CSS/Layout_cookbook/Center_an_element
+page-type: guide
 tags:
   - CSS
   - Guide

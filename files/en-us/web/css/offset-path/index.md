@@ -1,6 +1,7 @@
 ---
 title: offset-path
 slug: Web/CSS/offset-path
+page-type: css-property
 tags:
   - CSS
   - CSS Motion Path

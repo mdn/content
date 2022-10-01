@@ -48,6 +48,48 @@ If the work is more significant, then you should consider a few factors when pri
 
 If you want to get a team together to work on an update, or you just want to report or discuss some content needing an update, feel free to [file a content issue](https://github.com/mdn/content/issues) or [ask us for help](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
+## The page-type front matter key
+
+We have defined a front matter key `page-type` to describe the type of MDN pages. This project is a work in progress: so far we have only defined `page-type` values for the [Web API pages](/en-US/docs/Web/API).
+
+### Generic page types
+
+These page types are not specific to a particular MDN technology area:
+
+- `guide`
+  - : A generic guide page with no specific structure. See [Conceptual page](#conceptual_page).
+- `landing-page`
+  - : A page that acts primarily as a navigation aid, listing links to other pages. See [Landing page](#landing_page).
+
+### Web API page types
+
+This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/API). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `web-api-overview`
+  - : A page giving an overview of a Web API, like the [Fetch API](/en-US/docs/Web/API/Fetch_API). See [API landing page](#api_landing_page).
+- `web-api-global-function`
+  - : A page documenting a Web API global function, like [`fetch()`](/en-US/docs/Web/API/fetch). See [API reference subpage](#api_reference_subpage).
+- `web-api-global-property`
+  - : A page documenting a Web API global property, like [`origin`](/en-US/docs/Web/API/origin). See [API reference subpage](#api_reference_subpage).
+- `web-api-interface`
+  - : A page documenting a Web API interface, like [`Request`](/en-US/docs/Web/API/Request). See [API reference page](#api_reference_page).
+- `web-api-constructor`
+  - : A page documenting a constructor for a Web API interface, like [`Request()`](/en-US/docs/Web/API/Request/Request). See [API reference subpage](#api_reference_subpage).
+- `web-api-instance-method`
+  - : A page documenting a method on a Web API interface instance, like [`geolocation.getCurrentPosition()`](/en-US/docs/Web/API/Geolocation/getCurrentPosition). See [API reference subpage](#api_reference_subpage).
+- `web-api-instance-property`
+  - : A page documenting a property of a Web API interface instance, like [`request.headers`](/en-US/docs/Web/API/Request/headers). See [API reference subpage](#api_reference_subpage).
+- `web-api-static-method`
+  - : A page documenting a static method on a Web API interface, like [`Response.error()`](/en-US/docs/Web/API/Response/error). See [API reference subpage](#api_reference_subpage).
+- `web-api-static-property`
+  - : A page documenting a static property of a Web API interface, like [`Notification.permission`](/en-US/docs/Web/API/Notification/permission). See [API reference subpage](#api_reference_subpage).
+- `web-api-event`
+  - : A page documenting a event fired on a Web API interface instance, like [`Notification.click`](/en-US/docs/Web/API/Notification/click_event). See [API reference subpage](#api_reference_subpage).
+- `webgl-extension`
+  - : A page documenting a WebGL extension, like [`WEBGL_draw_buffers`](/en-US/docs/Web/API/WEBGL_draw_buffers).
+- `webgl-extension-method`
+  - : A page documenting a method on WebGL extension, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES).
+
 ## API landing page
 
 An **{{Glossary("API")}} landing page** provides an overview of what a particular API does, as well as links to the documentation for each of the interfaces, globals, functions, etc. offered by the API.

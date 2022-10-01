@@ -1,6 +1,7 @@
 ---
 title: masonry-auto-flow
 slug: Web/CSS/masonry-auto-flow
+page-type: css-property
 tags:
   - CSS
   - Experimental

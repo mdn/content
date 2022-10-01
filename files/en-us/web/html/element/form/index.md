@@ -192,8 +192,9 @@ The following attributes control behavior during form submission.
 <!-- Form with fieldset, legend, and label -->
 <form method="post">
   <fieldset>
-    <legend>Title</legend>
-    <label><input type="radio" name="radio" /> Select me</label>
+    <legend>Do you agree to the terms?</legend>
+    <label><input type="radio" name="radio" value="yes" /> Yes</label>
+    <label><input type="radio" name="radio" value="no" /> No</label>
   </fieldset>
 </form>
 ```

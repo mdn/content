@@ -1,6 +1,7 @@
 ---
 title: The stacking context
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+page-type: guide
 tags:
   - Advanced
   - CSS

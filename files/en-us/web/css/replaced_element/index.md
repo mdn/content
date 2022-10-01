@@ -1,12 +1,13 @@
 ---
 title: Replaced elements
 slug: Web/CSS/Replaced_element
+page-type: guide
 tags:
   - CSS
   - Guide
   - Layout
   - Reference
-  - css layout
+  - CSS layout
   - rendering
   - replaced element
 ---

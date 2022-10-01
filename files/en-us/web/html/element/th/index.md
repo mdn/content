@@ -142,7 +142,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `fuchsia` = "#FF00FF"
     - `aqua` = "#00FFFF"
 
-    > **Note:** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: The {{HTMLElement("th")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To create a similar effect use the {{cssxref("background-color")}} property in [CSS](/en-US/docs/Web/CSS) instead.
+    > **Note:** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: The {{HTMLElement("th")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To create a similar effect use the {{cssxref("background-color")}} property in CSS instead.
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
 

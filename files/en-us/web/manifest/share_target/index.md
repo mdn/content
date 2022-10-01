@@ -5,10 +5,11 @@ tags:
   - Manifest
   - Web
   - share_target
+  - Experimental
 browser-compat: html.manifest.share_target
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>

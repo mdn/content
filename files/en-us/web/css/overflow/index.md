@@ -1,6 +1,7 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Box Model

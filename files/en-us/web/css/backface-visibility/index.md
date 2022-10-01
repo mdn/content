@@ -1,6 +1,7 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
+page-type: css-property
 tags:
   - CSS
   - CSS Property

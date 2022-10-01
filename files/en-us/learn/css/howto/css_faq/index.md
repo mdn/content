@@ -125,7 +125,7 @@ Style rules that are syntactically correct may not apply in certain situations. 
 
 ### HTML elements hierarchy
 
-The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendent overrides the style of the parent, in spite of any specificity or priority of CSS rules.
+The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendant overrides the style of the parent, in spite of any specificity or priority of CSS rules.
 
 ```css
 .news {

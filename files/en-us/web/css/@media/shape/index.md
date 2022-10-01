@@ -1,6 +1,7 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

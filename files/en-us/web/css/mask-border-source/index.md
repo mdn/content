@@ -1,6 +1,7 @@
 ---
 title: mask-border-source
 slug: Web/CSS/mask-border-source
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

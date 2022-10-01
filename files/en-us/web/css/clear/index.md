@@ -1,6 +1,7 @@
 ---
 title: clear
 slug: Web/CSS/clear
+page-type: css-property
 tags:
   - CSS
   - CSS Positioning

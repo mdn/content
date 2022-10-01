@@ -1,6 +1,7 @@
 ---
 title: <length>
 slug: Web/CSS/length
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

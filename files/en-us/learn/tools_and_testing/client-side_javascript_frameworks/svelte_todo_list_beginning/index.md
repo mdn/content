@@ -132,13 +132,13 @@ Let's create a `Todos.svelte` component. This will contain our list of to-dos.
 5. In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a `name` prop being specified when we instantiate the `App` component inside `src/main.js`, which isn't used inside `App`. The console should currently give you a message along the lines of "\<App> was created with unknown prop 'name'". To get rid of this, remove the `name` prop from `src/main.js`; it should now look like so:
 
    ```js
-   import App from './App.svelte'
+   import App from "./App.svelte";
 
    const app = new App({
-     target: document.body
-   })
+     target: document.body,
+   });
 
-   export default app
+   export default app;
    ```
 
 Now if you check your testing server URL you'll see our `Todos.svelte` component being rendered:
@@ -365,22 +365,24 @@ plugins: [
   svelte({
     dev: !production,
     css: (css) => {
-      css.write('public/build/bundle.css');
+      css.write("public/build/bundle.css");
     },
     // Warnings are normally passed straight to Rollup. You can
     // optionally handle them here, for example to squelch
     // warnings with a particular code
     onwarn: (warning, handler) => {
       // e.g. I don't care about screen readers -> please DON'T DO THIS!!!
-      if (warning.code === 'a11y-missing-attribute') return;
+      if (warning.code === "a11y-missing-attribute") {
+        return;
+      }
 
       // let Rollup handle all other warnings normally
       handler(warning);
-    }
+    },
   }),
 
   // …
-]
+];
 ```
 
 By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt out of specific warnings.

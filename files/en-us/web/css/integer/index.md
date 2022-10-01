@@ -1,6 +1,7 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

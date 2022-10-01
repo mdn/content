@@ -11,10 +11,10 @@ tags:
   - Web
   - abs
   - Experimental
-spec-urls: https://drafts.csswg.org/css-values/#sign-funcs
+browser-compat: css.types.abs
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns the absolute value of the argument, as the same type as the input.
 
@@ -69,6 +69,10 @@ div {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

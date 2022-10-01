@@ -1,6 +1,7 @@
 ---
 title: Flow layout and writing modes
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
+page-type: guide
 tags:
   - CSS
   - Flow Layout

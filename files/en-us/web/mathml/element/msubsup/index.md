@@ -21,12 +21,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Examples
 
-Sample rendering: ![x1](msubsup.png)
-
-Rendering in your browser: <math><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup></math>
-
 ```html
-<math displaystyle="true">
+<math display="block">
   <msubsup>
     <mo>&#x222B;<!--Integral --></mo>
     <mn>0</mn>
@@ -34,6 +30,8 @@ Rendering in your browser: <math><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msub
   </msubsup>
 </math>
 ```
+
+{{ EmbedLiveSample('msubsup_example', 700, 200, "", "") }}
 
 ## Specifications
 

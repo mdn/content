@@ -1,6 +1,7 @@
 ---
 title: grid-column-end
 slug: Web/CSS/grid-column-end
+page-type: css-property
 tags:
   - CSS
   - CSS Grid

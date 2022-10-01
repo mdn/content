@@ -1,6 +1,7 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

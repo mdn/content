@@ -1,6 +1,7 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

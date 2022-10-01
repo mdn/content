@@ -50,7 +50,7 @@ document.getElementById("open-search").addEventListener("click", async () => {
 
 Once the user clicks on the button, the async click handler is called. The function waits till the module is loaded, then calls the `loadAutoComplete()` function exported from that module. The `search.js` module is therefore only downloaded, parsed, and executed when the interaction happens.
 
-We can also split css files and add media types to them:
+We can also split CSS files and add media types to them:
 
 ```html
 <link rel="stylesheet" href="style.css" />

@@ -1,6 +1,7 @@
 ---
 title: user-modify
 slug: Web/CSS/user-modify
+page-type: css-property
 tags:
   - CSS
   - CSS Property
