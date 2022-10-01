@@ -30,7 +30,7 @@ Let's look at a trivial quick example:
 This won't appear in your page until you grab a reference to it with JavaScript and then append it to the DOM, using something like the following:
 
 ```js
-let template = document.getElementById('my-paragraph');
+let template = document.getElementById("my-paragraph");
 let templateContent = template.content;
 document.body.appendChild(templateContent);
 ```
@@ -44,14 +44,15 @@ Let's define a web component that uses our template as the content of its shadow
 We'll call it `<my-paragraph>` as well:
 
 ```js
-customElements.define('my-paragraph',
+customElements.define(
+  "my-paragraph",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('my-paragraph');
+      let template = document.getElementById("my-paragraph");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(templateContent.cloneNode(true));
     }
   }
@@ -215,14 +216,15 @@ Next, let's create a new custom element named **`<element-details>`** and use {{
 This uses exactly the same pattern as we saw in our earlier trivial example.
 
 ```js
-customElements.define('element-details',
+customElements.define(
+  "element-details",
   class extends HTMLElement {
     constructor() {
       super();
-      const template = document
-        .getElementById('element-details-template')
-        .content;
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const template = document.getElementById(
+        "element-details-template"
+      ).content;
+      const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(template.cloneNode(true));
     }
   }
