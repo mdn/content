@@ -103,10 +103,9 @@ info.textContent = this.getAttribute("data-text");
 
 // Create some CSS to apply to the shadow DOM
 const style = document.createElement("style");
-style.textContent =
-  ".wrapper {" +
-  // CSS truncated for brevity
-  "}";
+style.textContent = `.wrapper {
+  /* CSS truncated for brevity */
+}`;
 
 // attach the created elements to the shadow DOM
 this.shadowRoot.append(style, wrapper);
