@@ -106,9 +106,10 @@ const style = document.createElement("style");
 style.textContent =
   ".wrapper {" +
   // CSS truncated for brevity
+  "}";
 
-  // attach the created elements to the shadow DOM
-  this.shadowRoot.append(style, wrapper);
+// attach the created elements to the shadow DOM
+this.shadowRoot.append(style, wrapper);
 ```
 
 Finally, we register our custom element on the `CustomElementRegistry` using the `define()` method we mentioned earlier — in the parameters we specify the element name, and then the class name that defines its functionality:

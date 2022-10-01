@@ -269,8 +269,8 @@ We can, therefore, save the bandwidth for browsers that don't need it.
 
 Back to Modernizr! The reason why it is so useful is that it provides a mechanism to selectively serve both CSS and JavaScript. Modernizr stores the results of all its feature tests as classes on the HTML element. For example, the Modernizr in our example app is testing for multiple background image and rgba support. When they are not supported, the `<html>` tag looks like this:
 
-```html
-<html class="js no-rgba no-multiplebgs"></html>
+```html-nolint
+<html class="js no-rgba no-multiplebgs">
 ```
 
 When these are present, we can serve alternative styling rules to provide sensible fallbacks using descendant selectors — see the following in my code.
