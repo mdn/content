@@ -15,17 +15,17 @@ JavaScript can run XSLT transformations through the {{domxref('XSLTProcessor')}}
 ### Instantiating an {{domxref('XSLTProcessor')}}
 
 ```js
-  const xsltProcessor = new XSLTProcessor();
+const xsltProcessor = new XSLTProcessor();
 
-  // Load the xsl file using synchronous (third param is set to false) XMLHttpRequest
-  const myXMLHTTPRequest = new XMLHttpRequest();
-  myXMLHTTPRequest.open("GET", "example.xsl", false);
-  myXMLHTTPRequest.send(null);
+// Load the xsl file using synchronous (third param is set to false) XMLHttpRequest
+const myXMLHTTPRequest = new XMLHttpRequest();
+myXMLHTTPRequest.open("GET", "example.xsl", false);
+myXMLHTTPRequest.send(null);
 
-  const xslRef = myXMLHTTPRequest.responseXML;
+const xslRef = myXMLHTTPRequest.responseXML;
 
-  // Finally import the .xsl
-  xsltProcessor.importStylesheet(xslRef);
+// Finally import the .xsl
+xsltProcessor.importStylesheet(xslRef);
 ```
 
 For the actual transformation, {{domxref('XSLTProcessor')}} requires an XML document, which is used in conjunction with the imported XSL file to produce the final result. The XML document can be a separate XML file loaded as shown in figure 1, or it can be part of the existing page. To process part of a page's DOM, it is necessary to first create an XML document in memory. Assuming that the DOM to be processed is contained by an element with the id `example`, that DOM can be "cloned" using the in-memory XML document's {{domxref('Document.importNode()')}} method. {{domxref('Document.importNode()')}} allows transferring a DOM fragment between documents, in this case from an HTML document to an XML document. The first parameter references the DOM node to clone. By making the second parameter "true", it will clone all descendants as well (a deep clone). The cloned DOM can then be easily inserted into the XML document using {{domxref('Node.appendChild()')}}, as shown in figure 2.
@@ -33,16 +33,16 @@ For the actual transformation, {{domxref('XSLTProcessor')}} requires an XML docu
 ### Creating an XML document based on part of a document's DOM
 
 ```js
-  // Create a new XML document in memory
-  const xmlRef = document.implementation.createDocument("", "", null);
+// Create a new XML document in memory
+const xmlRef = document.implementation.createDocument("", "", null);
 
-  // We want to move a part of the DOM from an HTML document to an XML document.
-  // importNode is used to clone the nodes we want to process via XSLT - true makes it do a deep clone
-  const myNode = document.getElementById("example");
-  const clonedNode = xmlRef.importNode(myNode, true);
+// We want to move a part of the DOM from an HTML document to an XML document.
+// importNode is used to clone the nodes we want to process via XSLT - true makes it do a deep clone
+const myNode = document.getElementById("example");
+const clonedNode = xmlRef.importNode(myNode, true);
 
-  // Add the cloned DOM into the XML document
-  xmlRef.appendChild(clonedNode);
+// Add the cloned DOM into the XML document
+xmlRef.appendChild(clonedNode);
 ```
 
 Once the stylesheet has been imported, {{domxref('XSLTProcessor')}} has to perform two methods for the actual transformation, namely {{domxref('XSLTProcessor.transformToDocument()')}} and {{domxref('XSLTProcessor.transformToFragment()')}}. {{domxref('XSLTProcessor.transformToDocument()')}} returns a full XML document while {{domxref('XSLTProcessor.transformToFragment()')}} returns a document fragment that can be easily added to an existing document. Both take in the XML document as the first parameter that will be transformed. {{domxref('XSLTProcessor.transformToFragment()')}} requires a second parameter, namely the document object that will own the generated fragment. If the generated fragment will be inserted into the current HTML document, passing in document is enough.
@@ -59,5 +59,5 @@ const doc = parser.parseFromString(aStr, "text/xml");
 ### Performing the transformation
 
 ```js
-  const fragment = xsltProcessor.transformToFragment(xmlRef, document);
+const fragment = xsltProcessor.transformToFragment(xmlRef, document);
 ```

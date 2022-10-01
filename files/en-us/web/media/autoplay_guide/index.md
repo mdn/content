@@ -147,16 +147,18 @@ You might use code like this to accomplish the job:
 let startPlayPromise = videoElem.play();
 
 if (startPlayPromise !== undefined) {
-  startPlayPromise.then(() => {
-    // Start whatever you need to do only after playback
-    // has begun.
-  }).catch((error) => {
-    if (error.name === "NotAllowedError") {
-      showPlayButton(videoElem);
-    } else {
-      // Handle a load or playback error
-    }
-  });
+  startPlayPromise
+    .then(() => {
+      // Start whatever you need to do only after playback
+      // has begun.
+    })
+    .catch((error) => {
+      if (error.name === "NotAllowedError") {
+        showPlayButton(videoElem);
+      } else {
+        // Handle a load or playback error
+      }
+    });
 }
 ```
 
@@ -172,12 +174,13 @@ If you want to start playing the video after the first interaction with the page
 
 ```js
 let playAttempt = setInterval(() => {
-  videoElem.play()
+  videoElem
+    .play()
     .then(() => {
       clearInterval(playAttempt);
     })
     .catch((error) => {
-      console.log('Unable to play the video, User has not interacted yet.');
+      console.log("Unable to play the video, User has not interacted yet.");
     });
 }, 3000);
 ```

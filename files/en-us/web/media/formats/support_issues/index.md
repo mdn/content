@@ -16,7 +16,6 @@ tags:
   - sound
 ---
 
-
 One of the realities of working with audio and video presentation and manipulation on the web is that there are a number of media formats available, of varying degrees of popularity and with a variety of capabilities. The availability of choices is good for the user, in that they can choose the format that suits their needs best. There is a drawback, however: because there are so many to choose from, with so many different kinds of licenses and design principles involved, each web browser developer is left to its own devices when deciding which media file types and codecs to support.
 
 This places a small, but reasonably easily overcome, burden on the web developer: to properly handle the situation when the user's browser can't handle a particular type of media. This guide covers techniques you can use to develop web content that meets your media needs while providing the most broadly compatible experience possible. Topics we will examine fallbacks, baseline media formats, and error handling practices that will let your content work in as many situations as possible.
