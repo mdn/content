@@ -124,7 +124,7 @@ const kvArray = [
   { key: 3, value: 30 },
 ];
 
-const reformattedArray = kvArray.map(({ key, value}) => ({ [key]: value }));
+const reformattedArray = kvArray.map(({ key, value }) => ({ [key]: value }));
 
 // reformattedArray is now [{1: 10}, {2: 20}, {3: 30}],
 
@@ -172,7 +172,7 @@ This example shows how to iterate through a collection of objects collected by
 In this case, we return all the selected `option`s' values on the screen:
 
 ```js
-const elems = document.querySelectorAll('select option:checked');
+const elems = document.querySelectorAll("select option:checked");
 const values = Array.prototype.map.call(elems, ({ value }) => value);
 ```
 
@@ -183,13 +183,15 @@ An easier way would be the {{jsxref("Array.from()")}} method.
 A sparse array remains sparse after `map()`. The indices of empty slots are still empty in the returned array, and the callback function won't be called on them.
 
 ```js
-console.log([1, , 3].map((x, index) => {
-  console.log(`Visit ${index}`);
-  return x * 2;
-}));
+console.log(
+  [1, , 3].map((x, index) => {
+    console.log(`Visit ${index}`);
+    return x * 2;
+  })
+);
 // Visit 0
 // Visit 2
-// [2, empty, 6] 
+// [2, empty, 6]
 ```
 
 ### Using parseInt() with map()
@@ -203,7 +205,7 @@ additional optional arguments. These habits may lead to confusing behaviors.
 Consider:
 
 ```js
-['1', '2', '3'].map(parseInt);
+["1", "2", "3"].map(parseInt);
 ```
 
 While one might expect `[1, 2, 3]`, the actual result is
@@ -224,9 +226,9 @@ Here is a concise example of the iteration steps:
 
 ```js
 // parseInt(string, radix) -> map(parseInt(value, index))
-/* first iteration  (index is 0): */ parseInt("1", 0);  // 1
-/* second iteration (index is 1): */ parseInt("2", 1);  // NaN
-/* third iteration  (index is 2): */ parseInt("3", 2);  // NaN
+/* first iteration  (index is 0): */ parseInt("1", 0); // 1
+/* second iteration (index is 1): */ parseInt("2", 1); // NaN
+/* third iteration  (index is 2): */ parseInt("3", 2); // NaN
 ```
 
 Then let's talk about solutions.
@@ -234,27 +236,27 @@ Then let's talk about solutions.
 ```js
 const returnInt = (element) => parseInt(element, 10);
 
-['1', '2', '3'].map(returnInt); // [1, 2, 3]
+["1", "2", "3"].map(returnInt); // [1, 2, 3]
 // Actual result is an array of numbers (as expected)
 
 // Same as above, but using the concise arrow function syntax
-['1', '2', '3'].map((str) => parseInt(str)); // [1, 2, 3]
+["1", "2", "3"].map((str) => parseInt(str)); // [1, 2, 3]
 
 // A simpler way to achieve the above, while avoiding the "gotcha":
-['1', '2', '3'].map(Number); // [1, 2, 3]
+["1", "2", "3"].map(Number); // [1, 2, 3]
 
 // But unlike parseInt(), Number() will also return a float or (resolved) exponential notation:
-['1.1', '2.2e2', '3e300'].map(Number); // [1.1, 220, 3e+300]
+["1.1", "2.2e2", "3e300"].map(Number); // [1.1, 220, 3e+300]
 
 // For comparison, if we use parseInt() on the array above:
-['1.1', '2.2e2', '3e300'].map((str) => parseInt(str)); // [1, 2, 3]
+["1.1", "2.2e2", "3e300"].map((str) => parseInt(str)); // [1, 2, 3]
 ```
 
 One alternative output of the map method being called with {{jsxref("parseInt")}} as a
 parameter runs as follows:
 
 ```js
-const strings = ['10', '10', '10'];
+const strings = ["10", "10", "10"];
 const numbers = strings.map(parseInt);
 
 console.log(numbers);

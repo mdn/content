@@ -34,26 +34,32 @@ In addition to the basic MathML global attributes, the following global attribut
     - `rtl`, which means _right to left_ and is used to render mathematical expressions from the right to the left (e.g. Maghreb or Machrek style);
 
 - [`displaystyle`](/en-US/docs/Web/MathML/Global_attributes/displaystyle):
+
   - : a boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) for the element.
     - `true`, which means `normal`.
     - `false`, which means `compact`.
 
 - [`id`](/en-US/docs/Web/HTML/Global_attributes/id)
+
   - : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
 
 - [`mathbackground`](/en-US/docs/Web/MathML/Global_attributes/mathbackground)
+
   - : A [background-color](/en-US/docs/Web/CSS/background-color) for the element.
 
 - [`mathcolor`](/en-US/docs/Web/MathML/Global_attributes/mathcolor)
+
   - : A [color](/en-US/docs/Web/CSS/color) for the element.
 
 - [`mathsize`](/en-US/docs/Web/MathML/Global_attributes/mathsize)
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) used as a [font-size](/en-US/docs/Web/CSS/font-size) for the element.
 
 - [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant)
+
   - A logical classes of token elements.
 
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
+
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
 
 - [`scriptlevel`](/en-US/docs/Web/MathML/Global_attributes/scriptlevel)

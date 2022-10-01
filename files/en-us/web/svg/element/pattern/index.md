@@ -54,6 +54,7 @@ svg {
   - : This attribute reference a template pattern that provides default values for the `<pattern>` attributes.
     _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Content_type#url); _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("patternContentUnits")}}
+
   - : This attribute defines the coordinate system for the contents of the {{SVGElement("pattern")}}.
     _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 

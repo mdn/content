@@ -54,34 +54,33 @@ Initially in the test seen below, a total of 1000 {{htmlelement("div")}} element
 
 ```js
 const boxes = [];
-const button = document.getElementById('toggle-button');
-const boxContainer = document.getElementById('box-container');
-const animationType = document.getElementById('type');
+const button = document.getElementById("toggle-button");
+const boxContainer = document.getElementById("box-container");
+const animationType = document.getElementById("type");
 
 // create boxes
 for (let i = 0; i < 1000; i++) {
-  const div = document.createElement('div');
-  div.classList.add('css-animation');
-  div.classList.add('box');
+  const div = document.createElement("div");
+  div.classList.add("css-animation");
+  div.classList.add("box");
   boxContainer.appendChild(div);
   boxes.push(div.style);
 }
 
 let toggleStatus = true;
 let rafId;
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   if (toggleStatus) {
-    animationType.textContent = ' requestAnimationFrame';
+    animationType.textContent = " requestAnimationFrame";
     for (const child of boxContainer.children) {
-      child.classList.remove('css-animation');
+      child.classList.remove("css-animation");
     }
     rafId = window.requestAnimationFrame(animate);
-
   } else {
     window.cancelAnimationFrame(rafId);
-    animationType.textContent = ' CSS animation';
+    animationType.textContent = " CSS animation";
     for (const child of boxContainer.children) {
-      child.classList.add('css-animation');
+      child.classList.add("css-animation");
     }
   }
   toggleStatus = !toggleStatus;
@@ -105,9 +104,13 @@ function animate(time) {
     let transform;
     if (progress >= 1) {
       x = (2 - progress) * translateX;
-      transform = `translateX(${ x }px) rotate(${ (2 - progress) * rotate }deg) scale(${ (0.6 + (2 - progress) * scale ) })`;
+      transform = `translateX(${x}px) rotate(${
+        (2 - progress) * rotate
+      }deg) scale(${0.6 + (2 - progress) * scale})`;
     } else {
-      transform = `translateX(${ x }px) rotate(${ progress * rotate }deg) scale(${ (0.6 + progress * scale ) })`;
+      transform = `translateX(${x}px) rotate(${progress * rotate}deg) scale(${
+        0.6 + progress * scale
+      })`;
     }
 
     for (const box of boxes) {
