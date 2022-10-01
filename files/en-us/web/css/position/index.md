@@ -33,6 +33,7 @@ position: revert;
 position: revert-layer;
 position: unset;
 ```
+
 ## Description
 
 ### Types of positioning
@@ -76,8 +77,6 @@ Except for the case just described (of absolutely positioned elements filling th
   - : The element is positioned according to the normal flow of the document, and then offset relative to its _nearest scrolling ancestor_ and [containing block](/en-US/docs/Web/CSS/Containing_block) (nearest block-level ancestor), including table-related elements, based on the values of `top`, `right`, `bottom`, and `left`. The offset does not affect the position of any other elements.
 
     This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when `overflow` is `hidden`, `scroll`, `auto`, or `overlay`), even if that ancestor isn't the nearest actually scrolling ancestor.
-
-
 
 ## Accessibility concerns
 
