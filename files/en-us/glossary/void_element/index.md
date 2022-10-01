@@ -13,7 +13,7 @@ In HTML, using a closing tag on a void element is invalid. For example, `<input 
 
 The [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/), and [MathML](https://www.w3.org/TR/MathML3/) specifications define very precisely what each element can contain. So, some combinations of tags have no semantic meaning.
 
-Although, a void element cannot have children in text serialized form (that is source code), child nodes can be added to the element in DOM using JavaScript. This is not a good practice as the outcome will not be reliable.
+Although a void element cannot have children in text serialized form (that is source code), child nodes can be added to the element in DOM using JavaScript. This is not a good practice as the outcome will not be reliable.
 
 The void elements in HTML are as follows:
 
