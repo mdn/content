@@ -154,7 +154,7 @@ parseInt(15.99, 10); // 15
 parseInt(-15.1, 10); // -15
 ```
 
-However, it only happens to work because the string representation of these numbers uses basic fractional notation (`"15.99"`, `"-15.1"`), where `parseInt()` stops at the decimal point. Numbers greater than 1e+21 (including) or less than 1e-7 (including) use exponential notation (`"1.5e+22"`, `"1.51e-8"`) in their string representation, and `parseInt()` will stop at the `e` character or decimal point, which always comes after the first digit. This means for large and small numbers, `parseInt()` will return a one-digit integer:
+However, it only happens to work because the string representation of these numbers uses basic fractional notation (`"15.99"`, `"-15.1"`), where `parseInt()` stops at the decimal point. Numbers greater than 1e+21 (inclusive) or less than 1e-7 (inclusive) use exponential notation (`"1.5e+22"`, `"1.51e-8"`) in their string representation, and `parseInt()` will stop at the `e` character or decimal point, which always comes after the first digit. This means for large and small numbers, `parseInt()` will return a one-digit integer:
 
 ```js example-bad
 parseInt(4.7 * 1e22, 10); // Very large number becomes 4
