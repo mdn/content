@@ -57,7 +57,6 @@ There are restrictions on the policy you can specify with this manifest key:
 
 - The {{CSP("script-src")}} directive must include at least the `'self'` keyword and may only contain secure sources. The set of permitted secure sources differs between Manifest V2 and Manifest V3.
 - The policy may include {{CSP("default-src")}} alone (without {{CSP("script-src")}}) if its sources meet the requirement for the {{CSP("script-src")}} directive.
-- The {{CSP("object-src")}} keyword may be required in some browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin) and should be set to a secure source such as `'none'` if needed. This may be necessary for browsers up until 2022 ([more information](https://github.com/w3c/webextensions/issues/204)).
 - Directives that reference code – {{CSP("script-src")}}, {{CSP("script-src-elem")}}, {{CSP("worker-src")}}, and {{CSP("default-src")}} (if used as a fallback) – share the same secure source requirement. There are no restrictions on CSP directives that cover non-script content, such as {{CSP("img-src")}}.
 
 In Manifest V3, all CSP sources that refer to external or non-static content are forbidden. The only permitted values are `'none'`, `'self'`, and `'wasm-unsafe-eval'`.
@@ -69,6 +68,16 @@ In Manifest V2, a source for a script directive is considered secure if it meets
 - All sources must specify a host.
 - The only permitted schemes for sources are `blob:`, `filesystem:`, `moz-extension:`, `https:`, and `wss:`.
 - The only permitted [keywords](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src#sources) are: `'none'`, `'self'`, `'unsafe-eval'`, and `'wasm-unsafe-eval'`.
+
+## object-src directive
+
+The `{{CSP("object-src")}}` directive may be required in some browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin) and should be set to a secure source such as `'none'` if needed. This may be necessary for browsers up until 2022.
+
+- In Firefox, `"object-src"` it optional from Firefox 106. In earlier versions, if `"object-src"` isn't specified, `"content_security_policy"` is ignored and the default CSP used.
+- In Chrome, `"object-src"` is required. If it's missing or deemed insecure, the  default (`"object-src 'self'"`) is used and a warning message logged.
+- In Safari, there is no requirement for `"object-src"`.
+
+See W3C WebExtensions Community Group [issue 204](https://github.com/w3c/webextensions/issues/204), Remove object-src from the CSP, for more information.
 
 ## Manifest V2 syntax
 
@@ -120,7 +129,7 @@ In Manifest V3, the `content_security_policy` key is an object that may have any
 > **Note:** Valid examples demonstrate the correct use of keys in CSP.
 > However, extensions with 'unsafe-eval', remote script, blob, or remote sources in their CSP are not allowed for Firefox extensions per the [add-on policies](https://extensionworkshop.com/documentation/publish/add-on-policies/) and due to significant security issues.
 
-> **Note:** The examples include the {{CSP("object-src")}} directive, which was required in older browser versions. This directive is optional in modern browsers without obsolete [plugins](/en-US/docs/Glossary/Plugin). See W3C WebExtensions Community Group [issue 204](https://github.com/w3c/webextensions/issues/204), Remove object-src from the CSP (at least in MV3), for more information.
+> **Note:** Some examples include the `{{CSP("object-src")}}` directive, which provides backward compatibility for older browser versions. See [object-src directive](#object-src_directive) for more details.
 
 Require that all types of content should be packaged with the extension:
 
@@ -220,7 +229,7 @@ Policy that omits the `"object-src"` directive:
 "content_security_policy": "script-src 'self' https://*.jquery.com;"
 ```
 
-However, this is only invalid in browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin). See W3C WebExtensions Community Group [issue 204](https://github.com/w3c/webextensions/issues/204), Remove object-src from the CSP (at least in MV3), for more information.
+However, this is only invalid in browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin). See [object-src directive](#object-src_directive) for more details..
 
 Policy that omits the `"self"` keyword in the `"script-src"` directive:
 
