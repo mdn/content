@@ -20,9 +20,10 @@ The [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThi
 
 The properties of the global object are automatically added to the {{glossary("global scope")}}.
 
-In JavaScript, the global object will always hold a reference to itself:
+In JavaScript, the global object always holds a reference to itself:
 
 ```js
+console.log(globalThis === globalThis.globalThis); // true (everywhere)
 console.log(window === window.window); // true (in a browser)
 console.log(self === self.self); // true (in a browser or a Web Worker)
 console.log(frames === frames.frames); // true (in a browser)
