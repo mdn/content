@@ -44,7 +44,7 @@ The `parseFloat` function converts its first argument to a string, parses that s
 
 Syntax-wise, `parseFloat()` parses a subset of the syntax that the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) function accepts. Namely, `parseFloat()` does not support non-decimal literals with `0x`, `0b`, or `0o` prefixes but supports everything else. However, `parseFloat()` is more lenient than `Number()` because it ignores trailing invalid characters, which would cause `Number()` to return `NaN`.
 
-Similar to number literals and `Number()`, the number returned from `parseFloat()` may not be exactly equal to the number represented by the string due to floating point range and inaccuracy. For numbers outside the `-1.7976931348623158e+308`–`1.7976931348623158e+308` range (see {{jsxref("Number.MAX_VALUE")}}), `-Infinity` or `Infinity` is returned.
+Similar to number literals and `Number()`, the number returned from `parseFloat()` may not be exactly equal to the number represented by the string, due to floating point range and inaccuracy. For numbers outside the `-1.7976931348623158e+308`–`1.7976931348623158e+308` range (see {{jsxref("Number.MAX_VALUE")}}), `-Infinity` or `Infinity` is returned.
 
 ## Examples
 
