@@ -65,6 +65,10 @@ If you wish to become a member of a team, you should start by [filing an issue i
 
 After you have filed your issue, someone from our team will review it and give you the necessary privileges, provided our requirements are satisfied.
 
+## Spotlight contributor
+
+Once a month, we [feature a contributor](https://github.com/mdn/mdn-contributor-spotlight) who has gone above and beyond with their contributions to the MDN Web Docs project. This can be through pull requests, assisting other community members in our discussions or learn forums, or actively providing feedback on issues and pull requests. To nominate someone to be featured, we have an [issue template set up](https://github.com/mdn/mdn/issues/new/choose) for this purpose.
+
 ## Invited experts program
 
 On MDN Web Docs, we have a commitment to document the open web. Not only does this mean that there is a large base of constantly evolving documentation to write and maintain, but we cannot possibly have intimate knowledge of all areas of the open web. To help fill in the gaps, we started the _Invited Experts_ program.
