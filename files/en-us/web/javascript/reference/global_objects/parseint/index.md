@@ -140,7 +140,7 @@ parseInt("123_456"); // 123
 
 ### Using parseInt() on non-strings
 
-`parseInt()` can have interesting results when working on non-strings combined with a high radix, for example, `36` (which makes all alphanumeric characters valid numeric digits).
+`parseInt()` can have interesting results when working on non-strings combined with a high radix; for example, `36` (which makes all alphanumeric characters valid numeric digits).
 
 ```js
 parseInt(null, 36); // 1112745: The string "null" is 1112745 in base 36
