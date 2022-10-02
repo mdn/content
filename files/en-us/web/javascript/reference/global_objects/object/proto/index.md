@@ -62,20 +62,26 @@ shape.__proto__ = circle;
 
 // Get the object prototype
 console.log(shape.__proto__ === Circle);  // false
+```
 
+```js
 const ShapeA = function () {};
 const ShapeB = {
   a() {
     console.log('aaa');
   },
 };
-console.log(ShapeA.prototype.__proto__ = ShapeB);
 
-const shapea = new ShapeA();
-shapea.a(); // aaa
-console.log(ShapeA.prototype === shapea.__proto__); // true
+// Set the object prototype.
+ShapeA.prototype.__proto__ = ShapeB;
+console.log(ShapeA.prototype.__proto__);
 
-// or
+const shapeA = new ShapeA();
+shapeA.a(); // aaa
+console.log(ShapeA.prototype === shapeA.__proto__); // true
+```
+
+```js
 const ShapeC = function () {};
 const ShapeD = {
   a() {
@@ -87,26 +93,29 @@ const shapeC = new ShapeC();
 shapeC.__proto__ = ShapeD;
 shapeC.a(); // a
 console.log(ShapeC.prototype === shapeC.__proto__); // false
+```
 
-// or
+```js
 function Test() {}
-Test.prototype.myname = function () {
-  console.log('myname');
+Test.prototype.myName = function () {
+  console.log('myName');
 };
 
-const a = new Test();
-console.log(a.__proto__ === Test.prototype); // true
-a.myname(); // myname
+const testChild = new Test();
+console.log(testChild.__proto__ === Test.prototype); // true
+testChild.myName(); // myName
+```
 
-// or
+```js
 const fn = function () {};
-fn.prototype.myname = function () {
-  console.log('myname');
+fn.prototype.myName = function () {
+  console.log('myName');
 };
 
 const obj = {};
-obj.__proto__ = fn.prototype;
-obj.myname(); // myname
+// obj.__proto__ = fn.prototype
+Object.setPrototypeOf(obj, fn.prototype);
+obj.myName(); // myName
 ```
 
 ## Specifications
