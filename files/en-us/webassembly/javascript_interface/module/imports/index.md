@@ -48,8 +48,7 @@ See imports.html [source code](https://github.com/mdn/webassembly-examples/blob/
 [live version](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html).
 
 ```js
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(function(mod) {
+WebAssembly.compileStreaming(fetch("simple.wasm")).then(function (mod) {
   const imports = WebAssembly.Module.imports(mod);
   console.log(imports[0]);
 });
