@@ -105,7 +105,7 @@ parseFloat(900719925474099267n); // 900719925474099300
 parseFloat("900719925474099267n"); // 900719925474099300
 ```
 
-You should pass the string to the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) function instead without the trailing `n` character.
+You should pass the string to the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) function instead, without the trailing `n` character.
 
 ```js example-good
 BigInt("900719925474099267");
