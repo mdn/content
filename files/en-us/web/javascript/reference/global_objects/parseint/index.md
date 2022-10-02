@@ -70,7 +70,7 @@ Because large numbers use the `e` character in their string representation (e.g.
 
 To convert a number to its string literal in a particular radix, use [`thatNumber.toString(radix)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 
-Because `parseInt()` returns a number, it may suffer from loss of precision if the integer represented by the string is [outside the safe range](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). The [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) function supports parsing integers of arbitrary length accurately by returning a {{jsxref("BigInt")}}.
+Because `parseInt()` returns a number, it may suffer from loss of precision if the integer represented by the string is [outside the safe range](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). The [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) function supports parsing integers of arbitrary length accurately, by returning a {{jsxref("BigInt")}}.
 
 ## Examples
 
