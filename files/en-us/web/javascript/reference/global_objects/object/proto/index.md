@@ -72,7 +72,6 @@ const ShapeB = {
   },
 };
 
-// Set the object prototype.
 ShapeA.prototype.__proto__ = ShapeB;
 console.log(ShapeA.prototype.__proto__);
 
