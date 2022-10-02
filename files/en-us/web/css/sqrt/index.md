@@ -18,7 +18,7 @@ browser-compat: css.types.sqrt
 
 The **`sqrt()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is an exponential function that returns the [square root](https://en.wikipedia.org/wiki/Square_root) of a number.
 
-Both `sqrt(x)` and `pow(x, 0.5)` are basically equivalent, differing only in some error-handling.
+The function `pow(x, 0.5)` is equivalent to `sqrt(x)`.
 
 ## Syntax
 
