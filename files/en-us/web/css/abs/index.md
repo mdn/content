@@ -66,6 +66,18 @@ div {
 }
 ```
 
+### Backwards compatible fallback
+
+If you need to support older browsers that lack the support of CSS `abs()` function, you can use the CSS {{CSSxRef("max")}} functions to achieve the same result:
+
+```css
+p {
+  line-height: max(var(--lh), -1*var(--lh));
+}
+```
+
+We use the {{CSSxRef("max")}} function to return the largest (most positive) value from a list of two values, either the `var(--lh)` or `-1 * var(--lh)`. Whether `--lh` is positive or negative, the calculated return value will always be positive, i.e. the absolute number.
+
 ## Specifications
 
 {{Specifications}}
