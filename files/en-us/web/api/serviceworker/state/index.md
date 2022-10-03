@@ -11,6 +11,7 @@ tags:
   - state
 browser-compat: api.ServiceWorker.state
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`state`** read-only property of the

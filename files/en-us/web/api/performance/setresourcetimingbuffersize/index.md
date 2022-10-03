@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.setResourceTimingBufferSize
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`setResourceTimingBufferSize()`** method sets the
@@ -23,7 +24,7 @@ A browser's recommended resource timing buffer size is at least 150
 
 ## Syntax
 
-```js
+```js-nolint
 setResourceTimingBufferSize(maxSize)
 ```
 

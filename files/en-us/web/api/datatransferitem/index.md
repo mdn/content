@@ -12,6 +12,7 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItem
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItem`** object represents one drag data item. During a _drag operation_, each {{domxref("DragEvent","drag event")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property which contains a {{domxref("DataTransferItemList","list")}} of drag data items. Each item in the list is a `DataTransferItem` object.

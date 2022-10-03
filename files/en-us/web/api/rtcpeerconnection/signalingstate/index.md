@@ -18,6 +18,7 @@ tags:
   - state
 browser-compat: api.RTCPeerConnection.signalingState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`signalingState`** property on the

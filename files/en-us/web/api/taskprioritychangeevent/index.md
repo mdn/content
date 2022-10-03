@@ -11,6 +11,7 @@ tags:
 
 browser-compat: api.TaskPriorityChangeEvent
 ---
+
 {{APIRef("Prioritized Task Scheduling API")}}
 
 The **`TaskPriorityChangeEvent`** is the interface for the [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event.

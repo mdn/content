@@ -1,17 +1,18 @@
 ---
 title: "@scroll-timeline"
 slug: Web/CSS/@scroll-timeline
+page-type: css-at-rule
 tags:
   - Animations
   - Scroll
   - At-rule
   - CSS
   - Reference
-  - Experimental
+  - Deprecated
 browser-compat: css.at-rules.scroll-timeline
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{Non-standard_header}}{{Deprecated_header}}
 
 The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an [`AnimationTimeline`](/en-US/docs/Web/API/AnimationTimeline) whose time values are determined by scrolling progress within a scroll container and not by minutes or seconds. Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
 
@@ -31,7 +32,7 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 
   - : A name identifying the scroll timeline. This name is used when specifying the scroll timeline with the [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property.
 
-- `source`
+- `source` {{Experimental_Inline}}
 
   - : The scrollable element whose scrolling position drives the progress of the timeline. Can be:
 
@@ -46,7 +47,7 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
     - `none`
       - : No scroll container specified.
 
-- `orientation`
+- `orientation` {{Experimental_Inline}}
 
   - : The scroll timeline's orientation:
 
@@ -69,7 +70,7 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
     - `vertical`
       - : Uses the vertical scroll position, regardless of writing mode or directionality.
 
-- `scroll-offsets`
+- `scroll-offsets` {{Experimental_Inline}}
 
   - : Determines the scroll timeline's scroll offsets:
 
@@ -166,9 +167,13 @@ We create an `@scroll-timeline` called `squareTimeline`, setting the `source` as
 
 {{EmbedLiveSample("Simple_example")}}
 
+## Specifications
+
+This feature was in a draft specification and has been removed from it. It is no longer on track to become a standard.
+
 ## Browser compatibility
 
-{{Compat}}
+No released browser ever implemented this feature.
 
 ## See also
 

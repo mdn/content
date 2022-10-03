@@ -1,15 +1,18 @@
 ---
 title: CSS Device Adaptation
 slug: Web/CSS/CSS_Device_Adaptation
+page-type: css-module
 tags:
   - CSS
   - CSS Device Adaptation
   - Guide
   - Overview
   - Reference
+  - Deprecated
 browser-compat: css.at-rules.viewport
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{Deprecated_Header}}
 
 **CSS Device Adaptation** is a module of CSS that lets you define the size, zoom factor, and orientation of the viewport.
 

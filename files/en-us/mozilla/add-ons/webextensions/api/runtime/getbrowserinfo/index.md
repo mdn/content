@@ -12,6 +12,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.getBrowserInfo
 ---
+
 {{AddonSidebar}}
 
 Returns information about the browser in which the extension is installed.
@@ -20,7 +21,7 @@ This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingInfo = browser.runtime.getBrowserInfo()
 ```
 
@@ -53,6 +54,8 @@ function gotBrowserInfo(info) {
 let gettingInfo = browser.runtime.getBrowserInfo();
 gettingInfo.then(gotBrowserInfo);
 ```
+
+{{WebExtExamples}}
 
 ## Browser compatibility
 

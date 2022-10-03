@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.hashchange_event
 ---
+
 {{APIRef}}
 
 The **`hashchange`** event is fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).

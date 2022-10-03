@@ -8,6 +8,7 @@ tags:
   - resources
   - urls
 ---
+
 This article discusses Uniform Resource Locators (URLs), explaining what they are and how they're structured.
 
 <table>
@@ -174,7 +175,7 @@ To better understand the following examples, let's assume that the URLs are call
         <pre>Skills/Infrastructure/Understanding_URLs</pre>
         <p>
           Because that URL does not start with <code>/</code>, the browser will
-          attempt to find the document in a sub-directory of the one containing
+          attempt to find the document in a subdirectory of the one containing
           the current resource. So in this example, we really want to reach
           this URL:
           https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs.
@@ -210,4 +211,4 @@ Linguistic semantics are of course irrelevant to computers. You've probably ofte
 
 ## See also
 
-[Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) — Data URLs, URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.
+[Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs): URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.

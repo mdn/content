@@ -8,6 +8,7 @@ tags:
   - header
 browser-compat: http.headers.Access-Control-Request-Method
 ---
+
 {{HTTPSidebar}}
 
 The **`Access-Control-Request-Method`** request header is used

@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStopElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGStopElement`** interface corresponds to the {{SVGElement("stop")}} element.

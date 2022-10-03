@@ -11,9 +11,11 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
+  - Experimental
 browser-compat: api.XRCompositionLayer.chromaticAberrationCorrection
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`chromaticAberrationCorrection`** property of the {{domxref("XRCompositionLayer")}} interface is a boolean enabling the layer's optical chromatic aberration correction.
 

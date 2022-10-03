@@ -8,6 +8,7 @@ tags:
   - Numeric
   - Bitwise
 ---
+
 {{WebAssemblySidebar}}
 
 The **`and`** instructions, are used for performing a bitwise AND, similar to the **`&`** operator in other languages.

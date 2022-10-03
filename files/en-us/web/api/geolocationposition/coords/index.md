@@ -11,6 +11,7 @@ tags:
   - coords
 browser-compat: api.GeolocationPosition.coords
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationPosition.coords`** read-only property returns

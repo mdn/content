@@ -11,7 +11,7 @@ tags:
 
 In this article, we'll examine HTML block-level elements and how they differ from [inline-level elements](/en-US/docs/Web/HTML/Inline_elements).
 
-HTML (**Hypertext Markup Language**) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS in the [Flow Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout). A Block-level element occupies the entire horizontal space of its parent element (container), and vertical space equal to the height of its contents, thereby creating a "block".
+HTML (**HyperText Markup Language**) elements historically were categorized as either "block-level" elements or "inline-level" elements. Since this is a presentational characteristic it is nowadays specified by CSS in the [Flow Layout](/en-US/docs/Web/CSS/CSS_Flow_Layout). A Block-level element occupies the entire horizontal space of its parent element (container), and vertical space equal to the height of its contents, thereby creating a "block".
 
 Browsers typically display the block-level element with a newline both before and after the element. You can visualize them as a stack of boxes.
 
@@ -24,13 +24,18 @@ The following example demonstrates the block-level element's influence:
 ### HTML
 
 ```html
-<p>This paragraph is a block-level element; its background has been colored to display the paragraph's parent element.</p>
+<p>
+  This paragraph is a block-level element; its background has been colored to
+  display the paragraph's parent element.
+</p>
 ```
 
 ### CSS
 
 ```css
-p { background-color: #8ABB55; }
+p {
+  background-color: #8abb55;
+}
 ```
 
 {{ EmbedLiveSample('Block-level_elements') }}

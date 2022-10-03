@@ -11,6 +11,7 @@ tags:
   - SVGAltGlyphElement
 browser-compat: api.SVGAltGlyphElement
 ---
+
 {{APIRef("SVG")}}{{Deprecated_Header}}
 
 The **`SVGAltGlyphElement`** interface represents an {{ SVGElement("altglyph") }} element. This interface makes it possible to implement more sophisticated and particular glyph characters. For some textual representations as: ligatures (e.g. æ, ß, etc.), special-purpose fonts (e.g. musical symbols) or even alternate glyphs such as Asian text strings it is required that a different set of glyphs be used than the normal given character data.

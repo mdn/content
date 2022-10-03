@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Array.reverse
 ---
+
 {{JSRef}}
 
 The **`reverse()`** method reverses an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first. In other words, elements order in the array will be turned towards the direction opposite to that previously stated.
@@ -16,7 +17,7 @@ The **`reverse()`** method reverses an array _[in place](https://en.wikipedia.or
 
 ## Syntax
 
-```js
+```js-nolint
 reverse()
 ```
 
@@ -26,12 +27,12 @@ The reference to the original array, now reversed. Note that the array is revers
 
 ## Description
 
-The `reverse` method transposes the elements of the calling array object in
+The `reverse()` method transposes the elements of the calling array object in
 place, mutating the array, and returning a reference to the array.
 
-`reverse` is intentionally generic; this method can be
-{{jsxref("Function.call", "called", "", 1)}} or {{jsxref("Function.apply", "applied",
-  "", 1)}} to objects resembling arrays. Objects which do not contain a
+The `reverse()` method preserves empty slots. If the source array is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the empty slots' corresponding new indices are [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) and also become empty slots.
+
+`reverse` is intentionally generic; this method can be called on objects resembling arrays. Objects which do not contain a
 `length` property reflecting the last in a series of consecutive, zero-based
 numerical properties may not behave in any meaningful manner.
 
@@ -86,6 +87,15 @@ const numbers = [3, 2, 4, 1, 5];
 const reverted = [...numbers].reverse();
 reverted[0] = 5;
 console.log(numbers[0]); // 3
+```
+
+### Using reverse() on sparse arrays
+
+Sparse arrays remain sparse after calling `reverse()`. Empty slots are copied over to their respective new indices as empty slots.
+
+```js
+console.log([1, , 3].reverse()); // [3, empty, 1]
+console.log([1, , 3, 4].reverse()); // [4, 3, empty, 1]
 ```
 
 ## Specifications

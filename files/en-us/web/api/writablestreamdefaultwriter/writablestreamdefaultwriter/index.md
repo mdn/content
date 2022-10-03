@@ -10,6 +10,7 @@ tags:
   - WritableStreamDefaultWriter
 browser-compat: api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
 ---
+
 {{APIRef("Streams")}}
 
 The **`WritableStreamDefaultWriter()`**
@@ -20,7 +21,7 @@ constructor creates a new {{domxref("WritableStreamDefaultWriter")}} object inst
 
 ## Syntax
 
-```js
+```js-nolint
 new WritableStreamDefaultWriter(stream)
 ```
 

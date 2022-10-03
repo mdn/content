@@ -12,6 +12,7 @@ tags:
   - events
 browser-compat: api.UIEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`UIEvent`** interface represents simple user interface events.
@@ -45,7 +46,7 @@ _This interface also inherits properties of its parent, {{domxref("Event")}}._
 _This interface also inherits methods of its parent, {{domxref("Event")}}._
 
 - {{domxref("UIEvent.initUIEvent()")}} {{Deprecated_Inline}}
-  - : Initializes a `UIEvent` object. If the event has already being dispatched, this method does nothing.
+  - : Initializes a `UIEvent` object. If the event has already been dispatched, this method does nothing.
 
 ## Specifications
 

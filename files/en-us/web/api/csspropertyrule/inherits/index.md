@@ -13,6 +13,7 @@ tags:
   - Read-only
 browser-compat: api.CSSPropertyRule.inherits
 ---
+
 {{APIRef("CSS Properties and Values API")}}
 
 The read-only **`inherits`** property of the {{domxref("CSSPropertyRule")}} interface returns the inherit flag of the custom property registration represented by the {{cssxref("@property")}} rule, a boolean describing whether or not the property inherits by default.

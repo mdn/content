@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: menu role'
+title: "ARIA: menu role"
 slug: Web/Accessibility/ARIA/Roles/menu_role
 tags:
   - Accessibility
@@ -34,7 +34,7 @@ Menu items can be grouped in elements with the [`group`](/en-US/docs/Web/Accessi
 
 If a `menu` is opened as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. If focus was on the menu button, <kbd>Enter</kbd> opens the menu, giving focus to the first menu item. If focus is on the menu itself, <kbd>Escape</kbd> closes the menu and returns focus to the menu button or parent menubar item (or the context action that opened the menu).
 
-Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`. Include `aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation).
+Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`. For horizontally oriented menu, use [`aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation).
 
 If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role instead.
 
@@ -43,8 +43,9 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) roles
   - : Roles of items contained in a containing `menu` or `menubar`, known collectively as "menu items". These must be able to receive focus.
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
-  - :  Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+  - : Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) role
+
   - : A divider that separates and distinguishes sections of content or groups of menu items within the menu
 
 - {{HTMLAttrXref('tabindex')}} attribute
@@ -54,7 +55,7 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
   - : indicates whether the menu orientation is horizontal or vertical; defaults to `vertical` if omitted.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-  - : The `menu` is required to have an accessible name.  Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`. Either include the `aria-labelledby` set to a the `id` to the `menuitem` or `button` that controls its display or use `aria-label` to define the label.
+  - : The `menu` is required to have an accessible name. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`. Either include the `aria-labelledby` set to a the `id` to the `menuitem` or `button` that controls its display or use `aria-label` to define the label.
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
   - : Only set on the menu container to include elements that are not DOM children of the container. If set, those elements will appear in the reading order in the sequence they are referenced and after any items that are DOM children. When managing focus, ensure the visual focus order matches this assistive technology reading order.
 
@@ -88,16 +89,16 @@ Below are two example menu implementations.
 ```html
 <div>
   <button id="menubutton" aria-haspopup="true" aria-controls="menu">
-    <img src="hamburger.svg" alt="Page Sections">
+    <img src="hamburger.svg" alt="Page Sections" />
   </button>
   <ul id="menu" role="menu" aria-labelledby="menubutton">
     <li role="presentation">
-      <a role="menuitem" href="#description">
-        Description
-      </a>
+      <a role="menuitem" href="#description"> Description </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#associated_wai-aria_roles_states_and_properties">
+      <a
+        role="menuitem"
+        href="#associated_wai-aria_roles_states_and_properties">
         Associated WAI-ARIA roles, states, and properties
       </a>
     </li>
@@ -107,19 +108,13 @@ Below are two example menu implementations.
       </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#examples">
-        Examples
-      </a>
+      <a role="menuitem" href="#examples"> Examples </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#specifications">
-        Specifications
-      </a>
+      <a role="menuitem" href="#specifications"> Specifications </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#see_also">
-        See Also
-      </a>
+      <a role="menuitem" href="#see_also"> See Also </a>
     </li>
   </ul>
 </div>
@@ -135,14 +130,37 @@ The following snippet of code is a popup menu nested in a menubar. It is display
 
 ```html
 <div>
-  <button type="button" aria-haspopup="menu" aria-controls="colormenu" tabindex="0" aria-label="Text Color: purple">
+  <button
+    type="button"
+    aria-haspopup="menu"
+    aria-controls="colormenu"
+    tabindex="0"
+    aria-label="Text Color: purple">
     Purple
     <span></span>
   </button>
   <ul role="menu" id="colormenu" aria-label="Color Options" tabindex="-1">
-    <li role="menuitemradio" aria-checked="true" style="color: purple" tabindex="-1">Purple</li>
-    <li role="menuitemradio" aria-checked="false" style="color: magenta" tabindex="-1">Magenta</li>
-    <li role="menuitemradio" aria-checked="false" style="color: black;" tabindex="-1">Black</li>
+    <li
+      role="menuitemradio"
+      aria-checked="true"
+      style="color: purple"
+      tabindex="-1">
+      Purple
+    </li>
+    <li
+      role="menuitemradio"
+      aria-checked="false"
+      style="color: magenta"
+      tabindex="-1">
+      Magenta
+    </li>
+    <li
+      role="menuitemradio"
+      aria-checked="false"
+      style="color: black;"
+      tabindex="-1">
+      Black
+    </li>
   </ul>
 </div>
 ```
@@ -186,6 +204,6 @@ The navigation example has a static button. In submenu example has a button that
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -15,15 +15,12 @@ tags:
   - Non-standard
 browser-compat: api.PaymentAddress.toJSON
 ---
+
 {{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`toJSON()`** property of the
 {{domxref("PaymentAddress")}} interface is a standard serializer that returns a JSON
 representation of the PaymentAddress object's properties.
-
-## Value
-
-None.
 
 ## Value
 

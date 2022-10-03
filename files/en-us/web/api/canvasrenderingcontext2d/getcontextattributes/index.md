@@ -10,6 +10,7 @@ tags:
   - CanvasRenderingContext2D
 browser-compat: api.CanvasRenderingContext2D.getContextAttributes
 ---
+
 {{APIRef("WebGL")}}
 
 The **`CanvasRenderingContext2D.getContextAttributes()`**
@@ -21,7 +22,7 @@ on context creation.
 
 ## Syntax
 
-```js
+```js-nolint
 getContextAttributes()
 ```
 
@@ -49,8 +50,8 @@ Given context attributes were provided on context creation using
 [`HTMLCanvasElement.getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext)
 
 ```js
-let canvas = document.createElement('canvas');
-let ctx = canvas.getContext('2d', {alpha: false});
+let canvas = document.createElement("canvas");
+let ctx = canvas.getContext("2d", { alpha: false });
 ```
 
 the `getContextAttributes()` method lets you read back actual attributes

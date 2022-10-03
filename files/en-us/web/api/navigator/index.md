@@ -12,6 +12,7 @@ tags:
   - Web Performance
 browser-compat: api.Navigator
 ---
+
 {{APIRef("DOM")}}
 
 The **`Navigator`** interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.
@@ -76,7 +77,7 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
 - {{domxref("Navigator.webdriver")}} {{ReadOnlyInline}}
   - : Indicates whether the user agent is controlled by automation.
-- {{domxref("Navigator.windowControlsOverlay")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigator.windowControlsOverlay")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WindowControlsOverlay")}} interface which exposes information about the geometry of the title bar in desktop Progressive Web Apps, and an event to know whenever it changes.
 - {{domxref("Navigator.xr")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns {{domxref("XRSystem")}} object, which represents the entry point into the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API).
@@ -87,6 +88,8 @@ _Doesn't inherit any properties._
   - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. `20181001000000` in Firefox 64 onwards.
 - {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref('ContactsManager')}} interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
+- {{domxref("Navigator.globalPrivacyControl")}} {{Non-standard_Inline}} {{Experimental_Inline}}
+  - : Returns a boolean indicating a user's consent to their information being shared or sold.
 - {{domxref("Navigator.securitypolicy")}} {{Non-standard_Inline}}
   - : Returns an empty string. In Netscape 4.7x, returns "US & CA domestic policy" or "Export policy".
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}

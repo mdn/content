@@ -5,6 +5,7 @@ tags:
   - Firefox
   - Firefox 24
 ---
+
 {{FirefoxSidebar}}
 
 ## Changes for Web developers

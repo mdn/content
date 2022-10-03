@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Screen.pixelDepth
 ---
+
 {{APIRef("CSSOM")}}
 
 Returns the bit depth of the screen. Per the CSSOM, some implementations

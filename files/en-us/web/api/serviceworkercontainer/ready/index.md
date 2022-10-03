@@ -11,6 +11,7 @@ tags:
   - ServiceWorkerContainer
 browser-compat: api.ServiceWorkerContainer.ready
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ready`** read-only property of

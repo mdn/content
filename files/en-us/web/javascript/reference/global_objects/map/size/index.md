@@ -8,6 +8,7 @@ tags:
   - Property
 browser-compat: javascript.builtins.Map.size
 ---
+
 {{JSRef}}
 
 The **`size`** accessor property returns the number of elements in a

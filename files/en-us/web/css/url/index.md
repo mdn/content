@@ -1,6 +1,7 @@
 ---
 title: url()
 slug: Web/CSS/url
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -11,6 +12,7 @@ tags:
   - url()
 browser-compat: css.types.url
 ---
+
 {{CSSRef}}
 
 The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to include a file. The parameter is an absolute URL, a relative URL, a blob URL, or a data URL. The **`url()`** function can be passed as a parameter of another CSS functions, like the {{cssxref("attr")}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The `url()` functional notation is the value for the `<url>` data type.
@@ -100,7 +102,7 @@ url( <string> <url-modifier>* )
 
 ```css
 .topbanner {
-  background: url("topbanner.png") #00D no-repeat fixed;
+  background: url("topbanner.png") #00d no-repeat fixed;
 }
 ```
 
@@ -128,7 +130,7 @@ ul {
 
 ```css
 li::after {
-  content: ' - ' url(star.gif);
+  content: " - " url(star.gif);
 }
 ```
 

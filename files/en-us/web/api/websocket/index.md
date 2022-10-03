@@ -10,6 +10,7 @@ tags:
   - WebSockets
 browser-compat: api.WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The `WebSocket` object provides the API for creating and managing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection to a server, as well as for sending and receiving data on the connection.

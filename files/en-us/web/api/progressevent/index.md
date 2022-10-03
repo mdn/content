@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.ProgressEvent
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`ProgressEvent`** interface represents events measuring progress of an underlying process, like an HTTP request (for an `XMLHttpRequest`, or the loading of the underlying resource of an {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("style")}} or {{HTMLElement("link")}}).

@@ -26,6 +26,7 @@ tags:
   - Experimental
 browser-compat: api.XRInputSourceArray.keys
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`keys()`** method in the
@@ -36,7 +37,7 @@ of input sources.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

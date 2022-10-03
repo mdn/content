@@ -4,12 +4,12 @@ slug: Glossary/CRLF
 tags:
   - CR
   - CRLF
-  - Glossary
   - Infrastructure
   - LF
   - carriage return
   - line feed
 ---
+
 CR and LF are [control characters](https://en.wikipedia.org/wiki/Control_character) or [bytecode](https://en.wikipedia.org/wiki/Bytecode) that can be used to mark a line break in a text file.
 
 - CR = **Carriage Return** (`\r`, `0x0D` in hexadecimal, 13 in decimal) — moves the cursor to the beginning of the line without advancing to the next line.

@@ -38,7 +38,7 @@ With service workers, the following steps are generally observed for basic set u
 4. Installation of the worker is attempted when service worker-controlled pages are accessed subsequently. An Install event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). This is really the same kind of procedure as installing a native or Firefox OS app — making everything available for use offline.
 5. When the `oninstall` handler completes, the service worker is considered installed.
 6. Next is activation. When the service worker is installed, it then receives an activate event. The primary use of `onactivate` is for cleanup of resources used in previous versions of a Service worker script.
-7. The Service worker will now control pages, but only those opened after the `register()` is successful. i.e. a document starts life with or without a Service worker and maintains that for its lifetime. So documents will have to be reloaded to actually be controlled.
+7. The Service worker will now control pages, but only those opened after the `register()` is successful. In other words, documents will have to be reloaded to actually be controlled, because a document starts life with or without a Service worker and maintains that for its lifetime.
 
 ![](sw-lifecycle.png)
 
@@ -48,11 +48,11 @@ The below graphic shows a summary of the available service worker events:
 
 ## Service workers demo
 
-To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [simple service worker](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
+To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [simple service worker](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We've kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
 
 ![The words Star Wars followed by an image of a Lego version of the Darth Vader character](demo-screenshot.png)
 
-You can see the [source code on GitHub](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker), and the [simple service worker running live](https://bncb2v.csb.app/).
+You can see the [source code on GitHub](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker), and the [simple service worker running live](https://bncb2v.csb.app/).
 
 ### Registering your worker
 

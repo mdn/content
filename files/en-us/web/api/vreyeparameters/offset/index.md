@@ -15,6 +15,7 @@ tags:
   - Non-standard
 browser-compat: api.VREyeParameters.offset
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`offset`** read-only property of the {{domxref("VREyeParameters")}} interface represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.

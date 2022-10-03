@@ -21,6 +21,7 @@ tags:
   - transform
 browser-compat: api.XRRigidTransform.inverse
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only **`inverse`** property

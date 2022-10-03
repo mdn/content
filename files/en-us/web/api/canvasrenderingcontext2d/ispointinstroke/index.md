@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.isPointInStroke
 ---
+
 {{APIRef}}
 
 The
@@ -19,7 +20,7 @@ area contained by the stroking of a path.
 
 ## Syntax
 
-```js
+```js-nolint
 isPointInStroke(x, y)
 isPointInStroke(path, x, y)
 ```

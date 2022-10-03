@@ -9,6 +9,7 @@ tags:
   - mouse lock
 browser-compat: api.Document.exitPointerLock
 ---
+
 {{APIRef("DOM")}}
 
 The **`exitPointerLock()`** method asynchronously releases a
@@ -19,7 +20,7 @@ To track the success or failure of the request, it is necessary to listen for th
 
 ## Syntax
 
-```js
+```js-nolint
 exitPointerLock()
 ```
 

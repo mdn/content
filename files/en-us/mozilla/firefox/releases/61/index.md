@@ -2,10 +2,11 @@
 title: Firefox 61 for developers
 slug: Mozilla/Firefox/Releases/61
 tags:
-  - '61'
+  - "61"
   - Firefox
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 61 that will affect developers. Firefox 61 was released on June 26, 2018.

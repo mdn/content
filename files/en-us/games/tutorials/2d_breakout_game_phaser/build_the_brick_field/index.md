@@ -10,6 +10,7 @@ tags:
   - Phaser
   - Tutorial
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}
@@ -37,7 +38,7 @@ Next, let's load the image of the brick — add the following `load.image()` cal
 ```js
 function preload() {
   // …
-  game.load.image('brick', 'img/brick.png');
+  game.load.image("brick", "img/brick.png");
 }
 ```
 
@@ -54,7 +55,7 @@ function create() {
 }
 ```
 
-Now onto the function itself. Add the `initBricks()` function at the end of our games code, just before the closing \</script> tag, as shown below. To begin with we've included the  `brickInfo` object, as this will come in handy very soon:
+Now onto the function itself. Add the `initBricks()` function at the end of our games code, just before the closing \</script> tag, as shown below. To begin with we've included the `brickInfo` object, as this will come in handy very soon:
 
 ```js
 function initBricks() {
@@ -63,13 +64,13 @@ function initBricks() {
     height: 20,
     count: {
       row: 3,
-      col: 7
+      col: 7,
     },
     offset: {
       top: 50,
-      left: 60
+      left: 60,
     },
-    padding: 10
+    padding: 10,
   };
 }
 ```
@@ -99,7 +100,7 @@ for (let c = 0; c < brickInfo.count.col; c++) {
   for (let r = 0; r < brickInfo.count.row; r++) {
     let brickX = 0;
     let brickY = 0;
-    newBrick = game.add.sprite(brickX, brickY, 'brick');
+    newBrick = game.add.sprite(brickX, brickY, "brick");
     game.physics.enable(newBrick, Phaser.Physics.ARCADE);
     newBrick.body.immovable = true;
     newBrick.anchor.set(0.5);
@@ -113,8 +114,10 @@ Here we're looping through the rows and columns to create the new bricks and pla
 The problem currently is that we're painting all the bricks in one place, at coordinates (0,0). What we need to do is draw each brick at its own x and y position. Update the `brickX` and `brickY` lines as follows:
 
 ```js
-const brickX = c * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
-const brickY = r * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
+const brickX =
+  c * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
+const brickY =
+  r * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
 ```
 
 Each `brickX` position is worked out as `brickInfo.width` plus `brickInfo.padding`, multiplied by the column number, `c`, plus the `brickInfo.offset.left`; the logic for the `brickY` is identical except that it uses the values for row number, `r`, `brickInfo.height`, and `brickInfo.offset.top`. Now every single brick can be placed in its correct place, with padding between each brick, and drawn at an offset from the left and top Canvas edges.
@@ -130,20 +133,22 @@ function initBricks() {
     height: 20,
     count: {
       row: 3,
-      col: 7
+      col: 7,
     },
     offset: {
       top: 50,
-      left: 60
+      left: 60,
     },
-    padding: 10
-  }
+    padding: 10,
+  };
   bricks = game.add.group();
   for (let c = 0; c < brickInfo.count.col; c++) {
     for (let r = 0; r < brickInfo.count.row; r++) {
-      const brickX = c * (brickInfo.width+brickInfo.padding) + brickInfo.offset.left;
-      const brickY = r * (brickInfo.height+brickInfo.padding) + brickInfo.offset.top;
-      newBrick = game.add.sprite(brickX, brickY, 'brick');
+      const brickX =
+        c * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
+      const brickY =
+        r * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
+      newBrick = game.add.sprite(brickX, brickY, "brick");
       game.physics.enable(newBrick, Phaser.Physics.ARCADE);
       newBrick.body.immovable = true;
       newBrick.anchor.set(0.5);

@@ -9,6 +9,7 @@ tags:
   - Literal
 browser-compat: javascript.grammar
 ---
+
 {{JsSidebar("More")}}
 
 This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include control characters, line terminators, [white space](/en-US/docs/Glossary/Whitespace), and comments. The others, such as identifiers and punctuators, will be used for further syntax analysis. ECMAScript also defines certain keywords and literals and has rules for automatic insertion of semicolons to make certain invalid token sequences become valid.
@@ -316,7 +317,7 @@ Note that decimal literals can start with a zero (`0`) followed by another decim
 
 ##### Exponential
 
-The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is *exponent* or *power* number – a signed integer.
+The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by an `E` or `e` character (which serves as separator or _exponent indicator_) and `N`, which is _exponent_ or _power_ number – a signed integer.
 
 ```js
 0e-5   // => 0
@@ -526,7 +527,7 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) mu
 - `continue`, `break`, `throw`
 - `return`
 
-There are three cases when semicolon are automatically inserted:
+There are three cases when semicolons are automatically inserted:
 
 1\. When a token not allowed by the grammar is encountered, and it's separated from the previous token by at least one [line terminator](#line_terminators), or the token is "}", then a semicolon is inserted before the token.
 
@@ -643,7 +644,7 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
 - The `=>` of an arrow function should be on the same line as the end of its parameters.
 - The `async` of async functions, methods, etc. cannot be directly followed by a line terminator.
 - If a line starts with one of `(`, `[`, `` ` ``, `+`, `-`, `/` (as in regex literals), prefix it with a semicolon, or end the previous line with a semicolon.
-- Class fields should preferably be ended with semicolons — semicolons are required between a field declaration and a generator method.
+- Class fields should preferably always be ended with semicolons — in addition to the previous rule (which includes a field declaration followed by a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), since the latter starts with `[`), semicolons are also required between a field declaration and a generator method.
 
 ## Browser compatibility
 

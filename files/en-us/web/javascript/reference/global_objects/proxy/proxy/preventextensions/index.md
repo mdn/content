@@ -8,6 +8,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.preventExtensions
 ---
+
 {{JSRef}}
 
 The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.preventExtensions()")}}.
@@ -16,7 +17,7 @@ The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.prev
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   preventExtensions(target) {
   }

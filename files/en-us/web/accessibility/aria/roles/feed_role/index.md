@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: feed role'
+title: "ARIA: feed role"
 slug: Web/Accessibility/ARIA/Roles/feed_role
 tags:
   - ARIA
@@ -9,6 +9,7 @@ tags:
   - document structure role
 spec-urls: https://w3c.github.io/aria/#feed
 ---
+
 A `feed` is a dynamic scrollable `list` of `articles` in which articles are added to or removed from either end of the list as the user scrolls. A `feed` enables screen readers to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads.
 
 ```html
@@ -47,17 +48,20 @@ Supporting the following, or a similar, interface is recommended when focus is i
 - <kbd>Control + End</kbd>: Move focus to the first focusable element after the feed.
 - <kbd>Control + Home</kbd>: Move focus to the first focusable element before the feed.
 
-If a feed is nested within a feed, such as a comments feed within a feed of blog posts, the convention is to tab into the nested feed with the <kbd>Tab</kbd> key and to provide another key, such as  <kbd>Alt + Page Down</kbd>, to navigate from an 'outer' article to the first item in that article's nested feed. Navigate between the nested feed and main feed with <kbd>Control + End</kbd> , moving focus from the inner feed to the next article in the outer feed.
+If a feed is nested within a feed, such as a comments feed within a feed of blog posts, the convention is to tab into the nested feed with the <kbd>Tab</kbd> key and to provide another key, such as <kbd>Alt + Page Down</kbd>, to navigate from an 'outer' article to the first item in that article's nested feed. Navigate between the nested feed and main feed with <kbd>Control + End</kbd>, moving focus from the inner feed to the next article in the outer feed.
 
 ### <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+
   - : If the feed has no visible title, the `feed` element has a label specified with `aria-label`. If it does, see `aria-labelledby`.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+
   - : If the feed has a visible title, the `feed` element has `aria-labelledby` referring to the element containing the title. If not, add an `aria-label`.
 
 - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
+
   - : When busy, such as when articles are being added or removed from the `feed`, set `aria-busy="true"` during the update operation. Make sure it's reset to `false` when the operation is complete or the changes may not become visible.
 
 - article
@@ -92,6 +96,6 @@ To ensure good user experience, avoid inserting or removing articles in the midd
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

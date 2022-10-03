@@ -16,6 +16,7 @@ tags:
   - latency
 browser-compat: api.MediaTrackSettings.latency
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's

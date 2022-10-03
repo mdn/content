@@ -11,9 +11,11 @@ tags:
   - Sensor
   - Sensor APIs
   - Sensors
+  - Experimental
 browser-compat: api.Magnetometer
 ---
-{{APIRef("Sensor API")}}
+
+{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`Magnetometer`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides information about the magnetic field as detected by the device's primary magnetometer sensor.
 
@@ -25,16 +27,16 @@ If a feature policy blocks use of a feature, it's because your code is inconsist
 
 ## Constructor
 
-- {{domxref("Magnetometer.Magnetometer", "Magnetometer()")}}
+- {{domxref("Magnetometer.Magnetometer", "Magnetometer()")}} {{Experimental_Inline}}
   - : Creates a new `Magnetometer` object.
 
 ## Properties
 
-- {{domxref('Magnetometer.x')}} {{ReadOnlyInline}}
+- {{domxref('Magnetometer.x')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the magnetic field around the device's x axis.
-- {{domxref('Magnetometer.y')}} {{ReadOnlyInline}}
+- {{domxref('Magnetometer.y')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the magnetic field around the device's y axis.
-- {{domxref('Magnetometer.z')}} {{ReadOnlyInline}}
+- {{domxref('Magnetometer.z')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a double containing the magnetic field around the device's z axis.
 
 ## Methods

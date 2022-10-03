@@ -1,6 +1,7 @@
 ---
 title: Backwards compatibility of flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+page-type: guide
 tags:
   - '@supports'
   - CSS
@@ -13,6 +14,7 @@ tags:
   - flexbox
   - inline-block
 ---
+
 {{CSSRef}}
 
 Flexbox is very well supported across modern browsers, however there are a few issues that you might run into. In this guide we will look at how well flexbox is supported in browsers, and look at some potential issues, resources and methods for creating workarounds and fallbacks.

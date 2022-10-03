@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.RangeError.RangeError
 ---
+
 {{JSRef}}
 
 The **`RangeError()`** constructor creates an error
@@ -14,7 +15,7 @@ when a value is not in the set or range of allowed values.
 
 ## Syntax
 
-```js
+```js-nolint
 new RangeError()
 new RangeError(message)
 new RangeError(message, options)
@@ -38,7 +39,7 @@ RangeError(message, fileName, lineNumber)
   - : An object that has the following properties:
     - `cause` {{optional_inline}}
       - : A property indicating the specific cause of the error.
-          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+        When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - : The name of the file containing the code that caused the exception
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}
@@ -94,7 +95,7 @@ try {
 
 - {{jsxref("Error")}}
 - {{jsxref("Array")}}
-- {{jsxref("Number.toExponential()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("String.prototype.normalize()")}}

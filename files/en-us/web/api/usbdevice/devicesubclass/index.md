@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.deviceSubclass
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`deviceSubclass`** read only property of the

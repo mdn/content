@@ -9,6 +9,7 @@ tags:
   - spatialization
   - syncing tracks
 ---
+
 {{GamesSidebar}}
 
 Audio is an important part of any game; it adds feedback and atmosphere. Web-based audio is maturing fast, but there are still many browser differences to navigate. We often need to decide which audio parts are essential to our games' experience and which are nice to have but not essential, and devise a strategy accordingly. This article provides a detailed guide to implementing audio for web games, looking at what works currently across as wide a range of platforms as possible.
@@ -28,7 +29,7 @@ It is worth noting that autoplay with sound is allowed if:
 
 Many browsers will ignore any requests made by your game to automatically play audio; instead playback for audio needs to be started by a user-initiated event, such as a click or tap. This means you will have to structure your audio playback to take account of that. This is usually mitigated against by loading the audio in advance and priming it on a user-initiated event.
 
-For more passive audio auto play, for example background music that starts as soon as a game loads, one trick is to detect _any_ user initiated event and start playback then. For other more active sounds that are to be used during the game we could consider priming them as soon as something like a _Start_ button is pressed.
+For more passive audio autoplay, for example background music that starts as soon as a game loads, one trick is to detect _any_ user initiated event and start playback then. For other more active sounds that are to be used during the game we could consider priming them as soon as something like a _Start_ button is pressed.
 
 To prime audio like this we want to play a part of it; for this reason it is useful to include a moment of silence at the end of your audio sample. Jumping to, playing, and then pausing that silence will mean we can now use JavaScript to play that file at arbitrary points. You can find out more about [best practices with the autoplay policy here](/en-US/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy).
 
@@ -158,11 +159,11 @@ Here's an example of an audio sprite player — first let's set up the user inte
 <button data-start="14" data-stop="15">2</button>
 <button data-start="12" data-stop="13">3</button>
 <button data-start="10" data-stop="11">4</button>
-<button data-start="8"  data-stop="9">5</button>
-<button data-start="6"  data-stop="7">6</button>
-<button data-start="4"  data-stop="5">7</button>
-<button data-start="2"  data-stop="3">8</button>
-<button data-start="0"  data-stop="1">9</button>
+<button data-start="8" data-stop="9">5</button>
+<button data-start="6" data-stop="7">6</button>
+<button data-start="4" data-stop="5">7</button>
+<button data-start="2" data-stop="3">8</button>
+<button data-start="0" data-stop="1">9</button>
 ```
 
 Now we have buttons with start and stop times in seconds. The "countdown.mp3" MP3 file consists of a number being spoken every 2 seconds, the idea being that we play back that number when the corresponding button is pressed.
@@ -170,23 +171,31 @@ Now we have buttons with start and stop times in seconds. The "countdown.mp3" MP
 Let's add some JavaScript to make this work:
 
 ```js
-const myAudio = document.getElementById('myAudio');
-const buttons = document.getElementsByTagName('button');
+const myAudio = document.getElementById("myAudio");
+const buttons = document.getElementsByTagName("button");
 let stopTime = 0;
 
 for (const button of buttons) {
-  button.addEventListener('click', () => {
-    myAudio.currentTime = button.getAttribute("data-start");
-    stopTime = button.getAttribute("data-stop");
-    myAudio.play();
-  }, false);
+  button.addEventListener(
+    "click",
+    () => {
+      myAudio.currentTime = button.getAttribute("data-start");
+      stopTime = button.getAttribute("data-stop");
+      myAudio.play();
+    },
+    false
+  );
 }
 
-myAudio.addEventListener('timeupdate', () => {
-  if (myAudio.currentTime > stopTime) {
-    myAudio.pause();
-  }
-}, false);
+myAudio.addEventListener(
+  "timeupdate",
+  () => {
+    if (myAudio.currentTime > stopTime) {
+      myAudio.pause();
+    }
+  },
+  false
+);
 ```
 
 > **Note:** You can [try out our audio sprite player live](https://jsfiddle.net/59vwaame/) on JSFiddle.
@@ -203,7 +212,7 @@ All this is possible using the standard {{htmlelement("audio")}} element and ass
 
 ### Web Audio API for games
 
-The Web Audio API is supported across all modern desktop and mobile browsers, with the exception of Opera Mini. With that in mind, it's an acceptable approach for many situations to use the Web Audio API (see the [Can I use Web Audio API page](https://caniuse.com/#feat=audio-api) for more on browser compatibility). The Web Audio API is an advanced audio JavaScript API that is ideal for game audio. Developers can generate audio and manipulate audio samples as well as positioning sound in 3D game space.
+The Web Audio API is supported across all modern desktop and mobile browsers, except for Opera Mini. With that in mind, it's an acceptable approach for many situations to use the Web Audio API (see the [Can I use Web Audio API page](https://caniuse.com/#feat=audio-api) for more on browser compatibility). The Web Audio API is an advanced audio JavaScript API that is ideal for game audio. Developers can generate audio and manipulate audio samples as well as positioning sound in 3D game space.
 
 A feasible cross-browser strategy would be to provide basic audio using the standard `<audio>` element and, where supported, enhance the experience using the Web Audio API.
 
@@ -268,7 +277,9 @@ To see this in action, let's lay out some separate tracks:
       </button>
     </li>
   </ul>
-  <p class="sourced">All tracks sourced from <a href="https://jplayer.org/">jplayer.org</a></p>
+  <p class="sourced">
+    All tracks sourced from <a href="https://jplayer.org/">jplayer.org</a>
+  </p>
 </section>
 ```
 
@@ -285,7 +296,7 @@ const audioCtx = new AudioContext();
 Now let's select all the {{htmlelement("li")}} elements; later we can harness these elements to give us access to the track file path and each individual play button.
 
 ```js
-const trackEls = document.querySelectorAll('li');
+const trackEls = document.querySelectorAll("li");
 ```
 
 We want to make sure each file has loaded and been decoded into a buffer before we use it, so let's create an `async` function to allow us to do this:
@@ -320,7 +331,7 @@ let offset = 0;
 function playTrack(audioBuffer) {
   const trackSource = audioCtx.createBufferSource();
   trackSource.buffer = audioBuffer;
-  trackSource.connect(audioCtx.destination)
+  trackSource.connect(audioCtx.destination);
 
   if (offset === 0) {
     trackSource.start();
@@ -337,37 +348,34 @@ Finally, let's loop over our `<li>` elements, grab the correct file for each one
 
 ```js
 trackEls.forEach((el, i) => {
-
   // Get children
-  const anchor = el.querySelector('a');
-  const loadText = el.querySelector('p');
-  const playButton = el.querySelector('button');
+  const anchor = el.querySelector("a");
+  const loadText = el.querySelector("p");
+  const playButton = el.querySelector("button");
 
   // Load file
   loadFile(anchor.href).then((track) => {
     // Set loading to false
-    el.dataset.loading = 'false';
+    el.dataset.loading = "false";
 
     // Hide loading text
-    loadText.style.display = 'none';
+    loadText.style.display = "none";
 
     // Show button
-    playButton.style.display = 'inline-block';
+    playButton.style.display = "inline-block";
 
     // Allow play on click
-    playButton.addEventListener('click', () => {
-
+    playButton.addEventListener("click", () => {
       // Check if context is in suspended state (autoplay policy)
-      if (audioCtx.state === 'suspended') {
+      if (audioCtx.state === "suspended") {
         audioCtx.resume();
       }
 
       playTrack(track);
       playButton.dataset.playing = true;
-    })
-  })
-
-})
+    });
+  });
+});
 ```
 
 > **Note:** You can [see this demo in action here](https://mdn.github.io/webaudio-examples/multi-track/) and [view the source code here](https://github.com/mdn/webaudio-examples/tree/master/multi-track).

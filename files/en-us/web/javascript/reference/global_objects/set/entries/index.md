@@ -10,6 +10,7 @@ tags:
   - set
 browser-compat: javascript.builtins.Set.entries
 ---
+
 {{JSRef}}
 
 The **`entries()`** method returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object
@@ -24,7 +25,7 @@ returned.
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 

@@ -13,6 +13,7 @@ tags:
   - messaging
 browser-compat: api.EventSource
 ---
+
 {{APIRef("Server Sent Events")}}
 
 The **`EventSource`** interface is web content's interface to [server-sent events](/en-US/docs/Web/API/Server-sent_events).
@@ -59,7 +60,7 @@ _This interface also inherits methods from its parent, {{domxref("EventTarget")}
 - {{domxref("EventSource/open_event", "open")}}
   - : Fired when a connection to an event source has opened.
 
-Additionally, the event source itself may send messages with an event field, which will create ad-hoc events keyed to that value.
+Additionally, the event source itself may send messages with an event field, which will create ad hoc events keyed to that value.
 
 ## Examples
 
@@ -79,7 +80,7 @@ evtSource.onmessage = (e) => {
 
 Each received event causes our `EventSource` object's `onmessage` event handler to be run. It, in turn, creates a new {{HTMLElement("li")}} element and writes the message's data into it, then appends the new element to the list element already in the document.
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 To listen to named events, you'll require a listener for each type of event sent.
 

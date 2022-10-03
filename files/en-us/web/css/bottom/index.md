@@ -1,6 +1,7 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
+page-type: css-property
 tags:
   - CSS
   - CSS Positioning
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.bottom
 ---
+
 {{CSSRef}}
 
 The **`bottom`** [CSS](/en-US/docs/Web/CSS) property participates in setting the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.
@@ -83,7 +85,9 @@ This example demonstrates the difference in behavior of the `bottom` property, w
 #### HTML
 
 ```html
-<p>This<br>is<br>some<br>tall,<br>tall,<br>tall,<br>tall,<br>tall<br>content.</p>
+<p>
+  This<br />is<br />some<br />tall,<br />tall,<br />tall,<br />tall,<br />tall<br />content.
+</p>
 <div class="fixed"><p>Fixed</p></div>
 <div class="absolute"><p>Absolute</p></div>
 ```
@@ -99,7 +103,7 @@ p {
 div {
   width: 48%;
   text-align: center;
-  background: rgba(55,55,55,.2);
+  background: rgba(55, 55, 55, 0.2);
   border: 1px solid blue;
 }
 

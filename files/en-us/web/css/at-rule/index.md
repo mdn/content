@@ -1,6 +1,7 @@
 ---
 title: At-rules
 slug: Web/CSS/At-rule
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -9,6 +10,7 @@ spec-urls:
   - https://drafts.csswg.org/css-conditional-3/
   - https://compat.spec.whatwg.org/#css-at-rules
 ---
+
 {{CSSRef}}
 
 **At-rules** are [CSS statements](/en-US/docs/Web/CSS/Syntax#css_statements) that instruct CSS how to behave. They begin with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier and includes everything up to the next semicolon, '`;`' (`U+003B SEMICOLON`), or the next [CSS block](/en-US/docs/Web/CSS/Syntax#css_declarations_blocks), whichever comes first.
@@ -19,7 +21,7 @@ spec-urls:
 
 ```css
 /* General structure */
-@IDENTIFIER (RULE);
+@identifier (RULE);
 
 /* Example: tells browser to use UTF-8 character set */
 @charset "utf-8";
@@ -34,8 +36,7 @@ There are several regular at-rules, designated by their identifiers, each with a
 ### Nested
 
 ```css
-@IDENTIFIER (RULE) {
-
+@identifier (RULE) {
 }
 ```
 

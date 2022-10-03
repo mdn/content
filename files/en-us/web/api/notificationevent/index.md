@@ -12,6 +12,7 @@ tags:
   - ServiceWorker
 browser-compat: api.NotificationEvent
 ---
+
 {{APIRef("Web Notifications")}}
 
 The parameter passed into the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} handler, the `NotificationEvent` interface represents a notification click event that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.

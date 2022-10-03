@@ -9,6 +9,7 @@ tags:
   - arguments
 browser-compat: javascript.functions.arguments
 ---
+
 {{JSSidebar("Functions")}}
 
 **`arguments`** is an `Array`-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.
@@ -17,9 +18,7 @@ browser-compat: javascript.functions.arguments
 
 ## Description
 
-> **Note:** If you're writing ES6 compatible code, then [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) should be preferred.
-
-> **Note:** "Array-like" means that `arguments` has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array.forEach", "forEach()")}} or {{jsxref("Array.map", "map()")}}. See [§Description](#description) for details.
+> **Note:** In modern code, [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) should be preferred.
 
 The `arguments` object is a local variable available within all non-[arrow](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) functions. You can refer to a function's arguments inside that function by using its `arguments` object. It has entries for each argument the function was called with, with the first entry's index at `0`.
 
@@ -31,35 +30,7 @@ arguments[1] // second argument
 arguments[2] // third argument
 ```
 
-Each argument can also be set or reassigned:
-
-```js
-arguments[1] = 'new value';
-```
-
-The `arguments` object is not an {{jsxref("Array")}}. It is similar, but lacks all `Array` properties except {{jsxref("Array.length", "length")}}. For example, it does not have the {{jsxref("Array.pop", "pop()")}} method.
-
-However, it can be converted to a real `Array`:
-
-```js
-const args = Array.prototype.slice.call(arguments);
-```
-
-It can also be converted with using an array literal. This method is shorter than above but allocates an empty array.
-
-```js
-const args2 = [].slice.call(arguments);
-```
-
-As you can do with any Array-like object, you can use {{jsxref("Array.from()")}} method or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to convert `arguments` to a real Array:
-
-```js
-const args = Array.from(arguments);
-// or
-const args = [...arguments];
-```
-
-The `arguments` object is useful for functions called with more arguments than they are formally declared to accept. This technique is useful for functions that can be passed a variable number of arguments, such as {{jsxref("Math.min()")}}. This example function accepts any number of string arguments and returns the longest one:
+The `arguments` object is useful for functions called with more arguments than they are formally declared to accept, called [_variadic functions_](https://en.wikipedia.org/wiki/Variadic_function), such as {{jsxref("Math.min()")}}. This example function accepts any number of string arguments and returns the longest one:
 
 ```js
 function longestString() {
@@ -73,20 +44,79 @@ function longestString() {
 }
 ```
 
-You can use {{jsxref("Functions/arguments/length", "arguments.length")}} to count how many arguments the function was called with. If you instead want to count how many parameters a function is declared to accept, inspect that function's {{jsxref("Function.length", "length")}} property.
+You can use {{jsxref("Functions/arguments/length", "arguments.length")}} to count how many arguments the function was called with. If you instead want to count how many parameters a function is declared to accept, inspect that function's {{jsxref("Function/length", "length")}} property.
 
-### Using typeof with arguments
+### Assigning to indices
 
-The {{jsxref("Operators/typeof", "typeof")}} operator returns `'object'` when used with `arguments`
+Each argument index can also be set or reassigned:
 
 ```js
-console.log(typeof arguments); // 'object'
+arguments[1] = 'new value';
 ```
 
-The type of individual arguments can be determined by indexing `arguments`:
+Non-strict functions that only has simple parameters (that is, no rest, default, or destructured parameters) will sync the new value of parameters with the `arguments` object, and vice versa:
 
 ```js
-console.log(typeof arguments[0]); // returns the type of the first argument
+function func(a) {
+  arguments[0] = 99; // updating arguments[0] also updates a
+  console.log(a);
+}
+func(10); // 99
+
+function func2(a) {
+  a = 99; // updating a also updates arguments[0]
+  console.log(arguments[0]);
+}
+func2(10); // 99
+```
+
+Non-strict functions that _are_ passed [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters will not sync new values assigned to parameters in the function body with the `arguments` object. Instead, the `arguments` object in non-strict functions with complex parameters will always reflect the values passed to the function when the function was called.
+
+```js
+function funcWithDefault(a = 55) {
+  arguments[0] = 99; // updating arguments[0] does not also update a
+  console.log(a);
+}
+funcWithDefault(10); // 10
+
+function funcWithDefault2(a = 55) {
+  a = 99; // updating a does not also update arguments[0]
+  console.log(arguments[0]);
+}
+funcWithDefault2(10); // 10
+
+// An untracked default parameter
+function funcWithDefault3(a = 55) {
+  console.log(arguments[0]);
+  console.log(arguments.length);
+}
+funcWithDefault3(); // undefined; 0
+```
+
+This is the same behavior exhibited by all [strict-mode functions](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), regardless of the type of parameters they are passed. That is, assigning new values to parameters in the body of the function never affects the `arguments` object, nor will assigning new values to the `arguments` indices affect the value of parameters, even when the function only has simple parameters.
+
+> **Note:** You cannot write a `"use strict";` directive in the body of a function definition that accepts rest, default, or destructured parameters. Doing so will throw [a syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params).
+
+### arguments is an array-like object
+
+`arguments` is an array-like object, which means that `arguments` has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/map", "map()")}}. However, it can be converted to a real `Array`, using one of [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), {{jsxref("Array.from()")}}, or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+
+```js
+const args = Array.prototype.slice.call(arguments);
+// or
+const args = Array.from(arguments);
+// or
+const args = [...arguments];
+```
+
+For common use cases, using it as an array-like object is sufficient, since it both [is iterable](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator) and has `length` and number indices. For example, [`Function.prototype.apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) accepts array-like objects.
+
+```js
+function midpoint() {
+  return (Math.min.apply(null, arguments) + Math.max.apply(null, arguments)) / 2;
+}
+
+console.log(midpoint(3, 1, 4, 1, 5)); // 3
 ```
 
 ## Properties
@@ -148,71 +178,18 @@ const listHTML = list('u', 'One', 'Two', 'Three');
 */
 ```
 
-### Rest, default, and destructured parameters
+### Using typeof with arguments
 
-The `arguments` object can be used in conjunction with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), and [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters.
+The {{jsxref("Operators/typeof", "typeof")}} operator returns `'object'` when used with `arguments`
 
 ```js
-function foo(...args) {
-  return args;
-}
-foo(1, 2, 3); // [1, 2, 3]
+console.log(typeof arguments); // 'object'
 ```
 
-While the presence of rest, default, or destructured parameters does not alter [the behavior of the `arguments` object in strict mode code](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), there are subtle differences for non-strict code.
-
-In strict-mode code, the `arguments` object behaves the same whether or not a function is passed rest, default, or destructured parameters. That is, assigning new values to variables in the body of the function will not affect the `arguments` object. Nor will assigning new variables to the `arguments` object affect the value of variables.
-
-> **Note:** You cannot write a `"use strict";` directive in the body of a function definition that accepts rest, default, or destructured parameters. Doing so will throw [a syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params).
-
-Non-strict functions that are passed only simple parameters (that is, not rest, default, or restructured parameters) will sync the value of variables new values in the body of the function with the `arguments` object, and vice versa:
+The type of individual arguments can be determined by indexing `arguments`:
 
 ```js
-function func(a) {
-  arguments[0] = 99; // updating arguments[0] also updates a
-  console.log(a);
-}
-func(10); // 99
-```
-
-And also:
-
-```js
-function func(a) {
-  a = 99; // updating a also updates arguments[0]
-  console.log(arguments[0]);
-}
-func(10); // 99
-```
-
-Conversely, non-strict functions that **are** passed rest, default, or destructured parameters **will not** sync new values assigned to argument variables in the function body with the `arguments` object. Instead, the `arguments` object in non-strict functions with complex parameters **will always** reflect the values passed to the function when the function was called (this is the same behavior as exhibited by all strict-mode functions, regardless of the type of variables they are passed):
-
-```js
-function func(a = 55) {
-  arguments[0] = 99; // updating arguments[0] does not also update a
-  console.log(a);
-}
-func(10); // 10
-```
-
-And also:
-
-```js
-function func(a = 55) {
-  a = 99; // updating a does not also update arguments[0]
-  console.log(arguments[0]);
-}
-func(10); // 10
-```
-
-And also:
-
-```js
-// An untracked default parameter
-function func(a = 55) {
-  console.log(arguments[0]);
-}
-func(); // undefined
+console.log(typeof arguments[0]); // returns the type of the first argument
 ```
 
 ## Specifications

@@ -10,6 +10,7 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
 ---
+
 {{APIRef("Streams")}}
 
 The **`ReadableStreamBYOBReader()`** constructor creates and returns a `ReadableStreamBYOBReader` object instance.
@@ -19,7 +20,7 @@ The **`ReadableStreamBYOBReader()`** constructor creates and returns a `Readable
 
 ## Syntax
 
-```js
+```js-nolint
 new ReadableStreamBYOBReader(stream)
 ```
 

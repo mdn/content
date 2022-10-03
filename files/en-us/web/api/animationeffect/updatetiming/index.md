@@ -12,13 +12,14 @@ tags:
   - web animations api
 browser-compat: api.AnimationEffect.updateTiming
 ---
+
 {{ APIRef("Web Animations API") }}
 
 The `updateTiming()` method of the {{domxref("AnimationEffect")}} interface updates the specified timing properties for an animation effect.
 
 ## Syntax
 
-```js
+```js-nolint
 updateTiming(timing)
 ```
 

@@ -8,6 +8,7 @@ tags:
   - ReferenceError
   - Strict Mode
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "reference to undefined property" occurs when a script attempted

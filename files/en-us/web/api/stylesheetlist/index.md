@@ -8,6 +8,7 @@ tags:
   - StyleSheetList
 browser-compat: api.StyleSheetList
 ---
+
 {{APIRef("CSSOM")}}
 
 The `StyleSheetList` interface represents a list of {{domxref("CSSStyleSheet")}} objects. An instance of this object can be returned by {{domxref("Document.styleSheets")}}.

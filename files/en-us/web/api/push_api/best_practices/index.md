@@ -12,6 +12,7 @@ tags:
   - Push API
   - Usability
 ---
+
 {{DefaultAPISidebar("Push API") }}
 
 This article provides a useful summary of best practices to keep in mind when developing web sites and applications that use Push Notifications for user engagement.

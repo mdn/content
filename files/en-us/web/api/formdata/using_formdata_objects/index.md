@@ -11,6 +11,7 @@ tags:
   - XHR
   - XMLHttpRequest
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest). It is primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's {{domxref("HTMLFormElement.submit","submit()")}} method would use to send the data if the form's encoding type were set to `multipart/form-data`.
@@ -82,17 +83,27 @@ You can also send files using `FormData`. Include an {{ HTMLElement("input") }} 
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
   <p>
-    <label>Your email address:
-      <input type="email" autocomplete="on" name="userid" placeholder="email" required size="32" maxlength="64" />
+    <label
+      >Your email address:
+      <input
+        type="email"
+        autocomplete="on"
+        name="userid"
+        placeholder="email"
+        required
+        size="32"
+        maxlength="64" />
     </label>
   </p>
   <p>
-    <label>Custom file label:
+    <label
+      >Custom file label:
       <input type="text" name="filelabel" size="12" maxlength="32" />
     </label>
   </p>
   <p>
-    <label>File to stash:
+    <label
+      >File to stash:
       <input type="file" name="file" required />
     </label>
   </p>
@@ -188,7 +199,7 @@ formElem.addEventListener('formdata', (e) => {
 
 > **Note:** The `formdata` event and {{domxref("FormDataEvent")}} object are available in Chrome from version 77 (and other equivalent Chromiums), and Firefox 72 (first available behind the `dom.formdata.event.enabled` pref in Firefox 71).
 
-## Submitting forms and uploading files via AJAX _without_ `FormData` objects
+## Submitting forms and uploading files via AJAX without `FormData` objects
 
 If you want to know how to serialize and submit a form via [AJAX](/en-US/docs/Web/Guide/AJAX) _without_ using FormData objects, please read [this paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
 

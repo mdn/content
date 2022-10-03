@@ -9,6 +9,7 @@ tags:
   - TextMetrics
 browser-compat: api.TextMetrics
 ---
+
 {{APIRef("Canvas API")}}
 
 The **`TextMetrics`** interface represents the dimensions of a piece of text in the canvas; a `TextMetrics` instance can be retrieved using the {{domxref("CanvasRenderingContext2D.measureText()")}} method.
@@ -29,15 +30,15 @@ The **`TextMetrics`** interface represents the dimensions of a piece of text in 
   - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} attribute to the top of the bounding rectangle used to render the text, in CSS pixels.
 - {{domxref("TextMetrics.actualBoundingBoxDescent")}} {{ReadOnlyInline}}
   - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} attribute to the bottom of the bounding rectangle used to render the text, in CSS pixels.
-- {{domxref("TextMetrics.emHeightAscent")}} {{ReadOnlyInline}}
+- {{domxref("TextMetrics.emHeightAscent")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the top of the _em_ square in the line box, in CSS pixels.
-- {{domxref("TextMetrics.emHeightDescent")}} {{ReadOnlyInline}}
+- {{domxref("TextMetrics.emHeightDescent")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the bottom of the _em_ square in the line box, in CSS pixels.
-- {{domxref("TextMetrics.hangingBaseline")}} {{ReadOnlyInline}}
+- {{domxref("TextMetrics.hangingBaseline")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the hanging baseline of the line box, in CSS pixels.
-- {{domxref("TextMetrics.alphabeticBaseline")}} {{ReadOnlyInline}}
+- {{domxref("TextMetrics.alphabeticBaseline")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the alphabetic baseline of the line box, in CSS pixels.
-- {{domxref("TextMetrics.ideographicBaseline")}} {{ReadOnlyInline}}
+- {{domxref("TextMetrics.ideographicBaseline")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A `double` giving the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the ideographic baseline of the line box, in CSS pixels.
 
 ## Examples
@@ -85,7 +86,7 @@ baselines.forEach((baseline, index) => {
 
 #### Result
 
-{{ EmbedLiveSample('Baselines_illustrated', 700, 550) }}
+{{EmbedLiveSample('Baselines_illustrated', 700, 550)}}
 
 ### Measuring text width
 

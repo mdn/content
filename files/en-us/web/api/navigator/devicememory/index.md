@@ -13,6 +13,7 @@ tags:
   - Experimental
 browser-compat: api.Navigator.deviceMemory
 ---
+
 {{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`deviceMemory`** read-only

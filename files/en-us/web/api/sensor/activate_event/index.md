@@ -12,6 +12,7 @@ tags:
   - Event
 browser-compat: api.Sensor.activate_event
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`activate`** event is fired when a sensor becomes activated. It means that it will start obtaining readings.

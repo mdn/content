@@ -2,11 +2,12 @@
 title: Firefox 74 for developers
 slug: Mozilla/Firefox/Releases/74
 tags:
-  - '74'
+  - "74"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 74 that will affect developers. Firefox 74 was released on March 10, 2020.
@@ -76,14 +77,11 @@ _No changes._
 ### Security
 
 - TLS 1.0 and 1.1 support has been removed from Firefox; you'll need to make sure your web server supports TLS 1.2 or 1.3 going forward. From now on, Firefox will return a [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) error when connecting to servers using the older TLS versions ({{bug(1606734)}}).
+- Starting in Firefox 74, when a site delegates permission to access a resource to embedded content in an {{HTMLElement("iframe")}} using the {{htmlattrxref("allow", "iframe")}} attribute, and the embedded page requests permission to use that resource, the parent page prompts the user for permission to use the resource and share it with the embedded domain, rather than both the outer and inner pages prompting the user for permission. If the outer page doesn't have the permission requested by the `allow` attribute, the `<iframe>` is immediately denied access without prompting the user {{bug(1483631)}}.
 
 ### Plugins
 
 _No changes._
-
-### Security
-
-- Starting in Firefox 74, when a site delegates permission to access a resource to embedded content in an {{HTMLElement("iframe")}} using the {{htmlattrxref("allow", "iframe")}} attribute, and the embedded page requests permission to use that resource, the parent page prompts the user for permission to use the resource and share it with the embedded domain, rather than both the outer and inner pages prompting the user for permission. If the outer page doesn't have the permission requested by the `allow` attribute, the `<iframe>` is immediately denied access without prompting the user {{bug(1483631)}}.
 
 ### WebDriver conformance (Marionette)
 

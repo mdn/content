@@ -1,6 +1,7 @@
 ---
 title: 'Recipe: Media objects'
 slug: Web/CSS/Layout_cookbook/Media_objects
+page-type: guide
 tags:
   - CSS
   - Guide
@@ -14,6 +15,7 @@ browser-compat:
   - css.properties.grid-template-areas
   - css.properties.float
 ---
+
 {{CSSRef}}
 
 The _Media Object_ is a pattern we see all over the web. [Named by Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) it refers to a two-column box with an image on one side and descriptive text on the other, e.g. a facebook post or tweet.

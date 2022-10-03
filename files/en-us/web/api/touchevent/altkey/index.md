@@ -11,6 +11,7 @@ tags:
   - touch
 browser-compat: api.TouchEvent.altKey
 ---
+
 {{APIRef("Touch Events") }}
 
 ## Summary

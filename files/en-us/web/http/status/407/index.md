@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.407
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`407 Proxy Authentication Required`** client error

@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.SVGStyleElement.type
 ---
+
 {{APIRef("SVG")}} {{Deprecated_Header}}
 
 The **`SVGStyleElement.type`** property returns the type of the current style.

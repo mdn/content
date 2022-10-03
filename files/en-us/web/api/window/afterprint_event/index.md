@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Window.afterprint_event
 ---
+
 {{APIRef}}
 
 The **`afterprint`** event is fired after the associated document has started printing or the print preview has been closed.

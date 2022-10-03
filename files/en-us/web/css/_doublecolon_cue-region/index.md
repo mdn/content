@@ -1,6 +1,7 @@
 ---
 title: '::cue-region'
 slug: Web/CSS/::cue-region
+page-type: css-pseudo-element
 tags:
   - '::cue-region'
   - CSS
@@ -12,6 +13,7 @@ tags:
   - WebVTT
 browser-compat: css.selectors.cue-region
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`::cue-region`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_cues) in media with VTT tracks.

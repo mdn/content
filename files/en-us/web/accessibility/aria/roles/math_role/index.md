@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: math role'
+title: "ARIA: math role"
 slug: Web/Accessibility/ARIA/Roles/math_role
 tags:
   - Accessibility
@@ -34,14 +34,14 @@ The above pythagorean theorem is written accessibly as:
 
 ```html
 <div role="math" aria-label="a^{2} + b^{2} = c^{2}">
-   a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+  a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
 </div>
 ```
 
 Had an image been used, the `alt` attribute would be used along with the `math` role:
 
 ```html
-<img src="pythagorean_theorem.gif" alt="a^{2} + b^{2} = c^{2}" role="math">
+<img src="pythagorean_theorem.gif" alt="a^{2} + b^{2} = c^{2}" role="math" />
 ```
 
 ## Specifications
@@ -57,6 +57,6 @@ Had an image been used, the `alt` attribute would be used along with the `math` 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

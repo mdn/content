@@ -15,9 +15,10 @@ tags:
   - paintWorklet
 browser-compat: api.CSS.paintWorklet
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The static, read-only **`paintWorklet`**  property of the {{DOMxRef("CSS")}} interface provides access to the
+The static, read-only **`paintWorklet`** property of the {{DOMxRef("CSS")}} interface provides access to the
 {{DOMxRef("PaintWorklet")}}, which programmatically generates an image where a CSS
 property expects a file.
 
@@ -31,8 +32,8 @@ The following example demonstrates loading a {{DOMxRef('PaintWorklet')}} from it
 file and does so by feature detection.
 
 ```js
-if ('paintWorklet' in CSS) {
-  CSS.paintWorklet.addModule('checkerboard.js');
+if ("paintWorklet" in CSS) {
+  CSS.paintWorklet.addModule("checkerboard.js");
 }
 ```
 

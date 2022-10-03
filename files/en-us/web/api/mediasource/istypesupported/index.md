@@ -16,6 +16,7 @@ tags:
   - isTypeSupported
 browser-compat: api.MediaSource.isTypeSupported
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`MediaSource.isTypeSupported()`** static method returns a boolean value which is `true` if the given MIME type and (optional) codec are _likely_ to be supported by the current {{Glossary("user agent")}}.
@@ -25,7 +26,7 @@ If the returned value is `false`, then the user agent is certain that it _cannot
 
 ## Syntax
 
-```js
+```js-nolint
 isTypeSupported(type)
 ```
 
@@ -46,7 +47,7 @@ This is because media files are complex, intricate constructs with far too many 
 
 ## Examples
 
-The following snippet is from an example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation).  The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
+The following snippet is from an example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
 const assetURL = 'frag_bunny.mp4';

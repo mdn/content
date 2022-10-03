@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.createAttribute
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.createAttribute()`** method creates a new
@@ -20,7 +21,7 @@ added to a particular element in this manner.
 
 ## Syntax
 
-```js
+```js-nolint
 createAttribute(name)
 ```
 

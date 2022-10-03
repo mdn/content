@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: api.HTMLMediaElement.muted
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.muted`** indicates whether the media

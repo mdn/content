@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.isPrimary
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`isPrimary`** read-only property of the

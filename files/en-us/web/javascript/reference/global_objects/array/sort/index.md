@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.sort
 ---
+
 {{JSRef}}
 
 The **`sort()`** method sorts the elements of an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
@@ -22,7 +23,7 @@ implementation.
 
 ## Syntax
 
-```js
+```js-nolint
 // Functionless
 sort()
 
@@ -59,6 +60,8 @@ units order. For example, "banana" comes before "cherry". In a numeric sort, 9 c
 before 80, but because numbers are converted to strings, "80" comes before "9" in the
 Unicode order. All `undefined` elements are sorted to the end of the array.
 
+The `sort()` method preserves empty slots. If the source array is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the empty slots are moved to the end of the array, and always come after all the `undefined`.
+
 > **Note:** In UTF-16, Unicode characters above `\uFFFF` are
 > encoded as two surrogate code units, of the range
 > `\uD800`-`\uDFFF`. The value of each code unit is taken
@@ -71,11 +74,11 @@ elements are sorted according to the return value of the compare function (all
 `undefined` elements are sorted to the end of the array, with no call to
 `compareFn`).
 
-| `compareFn(a, b)` return value       | sort order                         |
-|--------------------------------------|------------------------------------|
-| > 0                                  | sort `a` after `b`                 |
-| < 0                                  | sort `a` before `b`                |
-| === 0                                | keep original order of `a` and `b` |
+| `compareFn(a, b)` return value | sort order                         |
+| ------------------------------ | ---------------------------------- |
+| > 0                            | sort `a` after `b`                 |
+| < 0                            | sort `a` before `b`                |
+| === 0                          | keep original order of `a` and `b` |
 
 So, the compare function has the following form:
 
@@ -114,55 +117,6 @@ function compareNumbers(a, b) {
 }
 ```
 
-The `sort` method can be conveniently used with [function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function) or [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
-
-```js
-const numbers = [4, 2, 5, 1, 3];
-numbers.sort(function (a, b) {
-  return a - b;
-});
-console.log(numbers);
-// [1, 2, 3, 4, 5]
-
-// OR
-
-const numbers2 = [4, 2, 5, 1, 3];
-numbers2.sort((a, b) => a - b);
-console.log(numbers2);
-// [1, 2, 3, 4, 5]
-```
-
-Arrays of objects can be sorted by comparing the value of one of their properties.
-
-```js
-const items = [
-  { name: 'Edward', value: 21 },
-  { name: 'Sharpe', value: 37 },
-  { name: 'And', value: 45 },
-  { name: 'The', value: -12 },
-  { name: 'Magnetic', value: 13 },
-  { name: 'Zeros', value: 37 }
-];
-
-// sort by value
-items.sort((a, b) => a.value - b.value);
-
-// sort by name
-items.sort((a, b) => {
-  const nameA = a.name.toUpperCase(); // ignore upper and lowercase
-  const nameB = b.name.toUpperCase(); // ignore upper and lowercase
-  if (nameA < nameB) {
-    return -1;
-  }
-  if (nameA > nameB) {
-    return 1;
-  }
-
-  // names must be equal
-  return 0;
-});
-```
-
 ## Examples
 
 ### Creating, displaying, and sorting an array
@@ -197,11 +151,44 @@ mixedNumericArray.sort(); // [1, 200, 40, 5, '700', '80', '9']
 mixedNumericArray.sort(compareNumbers); // [1, 5, '9', 40, '80', 200, '700']
 ```
 
+### Sorting array of objects
+
+Arrays of objects can be sorted by comparing the value of one of their properties.
+
+```js
+const items = [
+  { name: 'Edward', value: 21 },
+  { name: 'Sharpe', value: 37 },
+  { name: 'And', value: 45 },
+  { name: 'The', value: -12 },
+  { name: 'Magnetic', value: 13 },
+  { name: 'Zeros', value: 37 }
+];
+
+// sort by value
+items.sort((a, b) => a.value - b.value);
+
+// sort by name
+items.sort((a, b) => {
+  const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+  const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+
+  // names must be equal
+  return 0;
+});
+```
+
 ### Sorting non-ASCII characters
 
 For sorting strings with non-ASCII characters, i.e. strings with accented characters
 (e, é, è, a, ä, etc.), strings from languages other than English, use
-{{jsxref("String.localeCompare")}}. This function can compare those characters so they
+{{jsxref("String.prototype.localeCompare()")}}. This function can compare those characters so they
 appear in the right order.
 
 ```js
@@ -270,7 +257,7 @@ console.log(numbers[0]); // 3
 
 ### Sort stability
 
-Since version 10 (or EcmaScript 2019), the [specification](https://tc39.es/ecma262/#sec-array.prototype.sort) dictates that `Array.prototype.sort` is stable.
+Since version 10 (or ECMAScript 2019), the [specification](https://tc39.es/ecma262/#sec-array.prototype.sort) dictates that `Array.prototype.sort` is stable.
 
 For example, say you had a list of students alongside their grades. Note that the list of students is already pre-sorted by name in alphabetical order:
 
@@ -302,7 +289,7 @@ The `students` variable will then have the following value:
 
 It's important to note that students that have the same grade (for example, Alex and Devlin), will remain in the same order as before calling the sort. This is what a stable sorting algorithm guarantees.
 
-Before version 10 (or EcmaScript 2019), sort stability was not guaranteed, meaning that you could end up with the following:
+Before version 10 (or ECMAScript 2019), sort stability was not guaranteed, meaning that you could end up with the following:
 
 ```js
 [
@@ -338,6 +325,15 @@ arr.sort(compareFn);
 Then V8 and JavaScriptCore sorts it descendingly, as `[9, 5, 4, 3, 1, 1]`, while SpiderMonkey returns it as-is: `[3, 1, 4, 1, 5, 9]`.
 
 Due to this implementation inconsistency, you are always advised to make your comparator well-formed by following the five constraints.
+
+### Using sort() on sparse arrays
+
+Empty slots are moved to the end of the array.
+
+```js
+console.log(["a", "c", , "b"].sort()); // ['a', 'b', 'c', empty]
+console.log([, undefined, "a", "b"].sort()); // ["a", "b", undefined, empty]
+```
 
 ## Specifications
 

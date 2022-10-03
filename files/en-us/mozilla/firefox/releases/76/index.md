@@ -2,11 +2,12 @@
 title: Firefox 76 for developers
 slug: Mozilla/Firefox/Releases/76
 tags:
-  - '76'
+  - "76"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 76 that will affect developers. Firefox 76 was released on [May 5, 2020](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/).
@@ -26,7 +27,7 @@ This article provides information about the changes in Firefox 76 that will affe
 
 - In the network request list, you can now double-click a column divider to resize the column to the left of it to fit its contents ({{bug(1615102)}}).
 - The network request _Copy > [Copy as cURL](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#copy-as-curl)_ context menu option has a new option available, `--globoff`, which suppresses cURL's globbing (wildcard matching) feature if the copied URL includes square bracket characters ({{bug(1549773)}}).
-- The _Messages_ tab of the details pane for [web socket requests](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_web_sockets/index.html) has a new filter — _Control_ — for showing control frames, and the filters are now grouped together into a selection lst ({{bug(1566780)}}).
+- The _Messages_ tab of the details pane for [web socket requests](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_web_sockets/index.html) has a new filter — _Control_ — for showing control frames, and the filters are now grouped together into a selection list ({{bug(1566780)}}).
 
 #### Web console
 

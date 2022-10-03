@@ -10,9 +10,11 @@ tags:
   - Reference
   - Security
   - referrer
+  - Non-standard
 browser-compat: http.headers.Content-Security-Policy.referrer
 ---
-{{HTTPSidebar}} {{deprecated_header}}
+
+{{HTTPSidebar}} {{deprecated_header}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`referrer`** directive used to specify information in the

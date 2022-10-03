@@ -1,6 +1,7 @@
 ---
 title: Shapes from box values
 slug: Web/CSS/CSS_Shapes/From_box_values
+page-type: guide
 tags:
   - Boundaries
   - Boxes
@@ -17,6 +18,7 @@ tags:
   - padding-box
   - shapes
 ---
+
 {{CSSRef}}
 
 A straightforward way to create a shape is to use a value from the CSS Box Model. This article explains how to do this.

@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.stop.stop-opacity
 ---
+
 {{SVGRef}}
 
 The **`stop-opacity`** attribute defines the opacity of a given color gradient stop.

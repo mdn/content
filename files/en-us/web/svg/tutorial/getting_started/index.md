@@ -7,6 +7,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
 ### A simple example
@@ -44,7 +45,7 @@ The rendering process involves the following:
 
 ### Basic properties of SVG files
 
-- The first important thing to notice is the order of rendering elements. The globally valid rule for SVG files is, that *later* elements are rendered *atop previous* elements. The further down an element is the more it will be visible.
+- The first important thing to notice is the order of rendering elements. The globally valid rule for SVG files is, that _later_ elements are rendered _atop previous_ elements. The further down an element is the more it will be visible.
 - SVG files on the web can be displayed directly in the browser or embedded in HTML files via several methods:
 
   - If the HTML is XHTML and is delivered as type `application/xhtml+xml`, the SVG can be directly embedded in the XML source.

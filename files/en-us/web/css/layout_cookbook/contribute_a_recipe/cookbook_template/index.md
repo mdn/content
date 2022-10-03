@@ -1,6 +1,7 @@
 ---
 title: Cookbook template
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
+page-type: guide
 tags:
   - CSS
   - Contribute
@@ -10,6 +11,7 @@ tags:
   - cookbook
   - recipes
 ---
+
 {{CSSRef}}
 
 > **Note:** This is a template page for a CSS Cookbook page. Please use this as a raw template when you create a new cookbook page.

@@ -6,6 +6,7 @@ tags:
   - Guide
   - WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Some WebExtension APIs perform functions that are generally performed as a result of a user action. For example:

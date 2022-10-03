@@ -8,6 +8,7 @@ tags:
   - SVG Container
 browser-compat: svg.elements.g
 ---
+
 {{SVGRef}}
 
 The **`<g>`** [SVG](/en-US/docs/Web/SVG) element is a container used to group other SVG elements.
@@ -17,7 +18,11 @@ Transformations applied to the `<g>` element are performed on its child elements
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

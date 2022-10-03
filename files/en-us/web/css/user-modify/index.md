@@ -1,6 +1,7 @@
 ---
 title: user-modify
 slug: Web/CSS/user-modify
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -12,6 +13,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.user-modify
 ---
+
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`user-modify`** property has no effect in Firefox. It was originally planned to determine whether or not the content of an element can be edited by a user.
@@ -41,7 +43,7 @@ The `-moz-user-modify` property is specified as one of the keyword values from t
   - : Default value. Contents are read-only.
 - `read-write`
   - : The user is able to read and write contents.
-- `read-write-plaintext-only` {{Non-standard_Inline}}
+- `read-write-plaintext-only` {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Same as `read-write`, but rich text formatting will be lost.
 - `write-only`
   - : The user is able to edit the content, but not to read it.

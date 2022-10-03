@@ -10,6 +10,7 @@ tags:
   - message
 browser-compat: api.EventSource.message_event
 ---
+
 {{APIRef}}
 
 The `message` event of the {{domxref("EventSource")}} API is fired when data is received through an event source.

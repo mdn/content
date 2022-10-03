@@ -12,6 +12,7 @@ tags:
   - Styling
   - Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
 In the previous articles, we covered the styling of various form controls, in a general manner. This included some usage of pseudo-classes, for example using `:checked` to target a checkbox only when it is selected. In this article, we will explore in detail the different UI pseudo-classes available to us in modern browsers for styling forms in different states.
@@ -80,15 +81,17 @@ One of the most basic concepts with regards to client-side form validation is wh
     <legend>Feedback form</legend>
     <div>
       <label for="fname">First name: </label>
-      <input id="fname" name="fname" type="text" required>
+      <input id="fname" name="fname" type="text" required />
     </div>
     <div>
       <label for="lname">Last name: </label>
-      <input id="lname" name="lname" type="text" required>
+      <input id="lname" name="lname" type="text" required />
     </div>
     <div>
-      <label for="email">Email address (include if you want a response): </label>
-      <input id="email" name="email" type="email">
+      <label for="email">
+        Email address (include if you want a response):
+      </label>
+      <input id="email" name="email" type="email" />
     </div>
     <div><button>Submit</button></div>
   </fieldset>
@@ -121,7 +124,7 @@ In the next section, we'll look at a better example of indicating required field
 
 > **Note:** You'll probably not find yourself using the `:optional` pseudo-class very often. Form controls are optional by default, so you could just do your optional styling by default, and add styles on top for required controls.
 
-> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}**.**
+> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}.
 
 ## Using generated content with pseudo-classes
 
@@ -170,7 +173,7 @@ Since form inputs don't directly support having generated content put on them (t
 ```html
 <div>
   <label for="fname">First name: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -233,7 +236,7 @@ As in the previous example, we've got extra `<span>`s to generate content on, wh
 ```html
 <div>
   <label for="fname">First name *: </label>
-  <input id="fname" name="fname" type="text" required>
+  <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
 ```
@@ -256,12 +259,12 @@ input:invalid {
 }
 
 input:invalid + span::before {
-  content: '✖';
+  content: "✖";
   color: red;
 }
 
 input:valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```
@@ -291,7 +294,7 @@ The numeric input looks like this:
 ```html
 <div>
   <label for="age">Age (must be 12+): </label>
-  <input id="age" name="age" type="number" min="12" max="120" required>
+  <input id="age" name="age" type="number" min="12" max="120" required />
   <span></span>
 </div>
 ```
@@ -350,34 +353,38 @@ Let's have a look at an example that does just this. First of all, the HTML is a
     <legend>Shipping address</legend>
     <div>
       <label for="name1">Name: </label>
-      <input id="name1" name="name1" type="text" required>
+      <input id="name1" name="name1" type="text" required />
     </div>
     <div>
       <label for="address1">Address: </label>
-      <input id="address1" name="address1" type="text" required>
+      <input id="address1" name="address1" type="text" required />
     </div>
     <div>
       <label for="pcode1">Zip/postal code: </label>
-      <input id="pcode1" name="pcode1" type="text" required>
+      <input id="pcode1" name="pcode1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
     <legend>Billing address</legend>
     <div>
       <label for="billing-checkbox">Same as shipping address:</label>
-      <input type="checkbox" id="billing-checkbox" checked>
+      <input type="checkbox" id="billing-checkbox" checked />
     </div>
     <div>
       <label for="name" class="billing-label disabled-label">Name: </label>
-      <input id="name" name="name" type="text" disabled required>
+      <input id="name" name="name" type="text" disabled required />
     </div>
     <div>
-      <label for="address2" class="billing-label disabled-label">Address: </label>
-      <input id="address2" name="address2" type="text" disabled required>
+      <label for="address2" class="billing-label disabled-label">
+        Address:
+      </label>
+      <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
-      <label for="pcode2" class="billing-label disabled-label">Zip/postal code: </label>
-      <input id="pcode2" name="pcode2" type="text" disabled required>
+      <label for="pcode2" class="billing-label disabled-label">
+        Zip/postal code:
+      </label>
+      <input id="pcode2" name="pcode2" type="text" disabled required />
     </div>
   </fieldset>
 
@@ -389,8 +396,8 @@ Now onto the CSS. The most relevant parts of this example are as follows:
 
 ```css
 input[type="text"]:disabled {
-    background: #eee;
-    border: 1px solid #ccc;
+  background: #eee;
+  border: 1px solid #ccc;
 }
 
 .disabled-label {
@@ -404,25 +411,33 @@ Now finally, we've used some JavaScript to toggle the disabling of the billing a
 
 ```js
 // Wait for the page to finish loading
-document.addEventListener('DOMContentLoaded', () => {
-  // Attach `change` event listener to checkbox
-  document.getElementById('billing-checkbox').addEventListener('change', toggleBilling);
-}, false);
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    // Attach `change` event listener to checkbox
+    document
+      .getElementById("billing-checkbox")
+      .addEventListener("change", toggleBilling);
+  },
+  false
+);
 
 function toggleBilling() {
   // Select the billing text fields
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
   // Select the billing text labels
-  const billingLabels = document.querySelectorAll('.billing-label');
+  const billingLabels = document.querySelectorAll(".billing-label");
 
   // Toggle the billing text fields and labels
   for (let i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
 
-    if (billingLabels[i].getAttribute('class') === 'billing-label disabled-label') {
-      billingLabels[i].setAttribute('class', 'billing-label');
+    if (
+      billingLabels[i].getAttribute("class") === "billing-label disabled-label"
+    ) {
+      billingLabels[i].setAttribute("class", "billing-label");
     } else {
-      billingLabels[i].setAttribute('class', 'billing-label disabled-label');
+      billingLabels[i].setAttribute("class", "billing-label disabled-label");
     }
   }
 }
@@ -447,8 +462,7 @@ A fragment of the HTML is as follows — note the readonly attribute:
 ```html
 <div>
   <label for="name">Name: </label>
-  <input id="name" name="name" type="text"
-         value="Mr Soft" readonly>
+  <input id="name" name="name" type="text" value="Mr Soft" readonly />
 </div>
 ```
 
@@ -530,7 +544,7 @@ Let's look at a couple of modified versions of the previous example that remind 
 
 ```html
 <p>
-  <input type="radio" name="fruit" value="cherry" id="cherry">
+  <input type="radio" name="fruit" value="cherry" id="cherry" />
   <label for="cherry">Cherry</label>
   <span></span>
 </p>

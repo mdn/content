@@ -8,6 +8,7 @@ tags:
   - JavaScript
   - OOP
 ---
+
 {{jsSidebar("Advanced")}}
 
 JavaScript is a bit confusing for developers experienced in class-based languages (like Java or C++), as it is dynamic and does not have static types.
@@ -318,7 +319,7 @@ const obj = new Derived();
 // obj ---> Derived.prototype ---> Base.prototype ---> Object.prototype ---> null
 ```
 
-You may also see some legacy code using [`Object.create`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create). However, because this re-assigns the `prototype` property, it's a bad practice, for the reasons previously described here.
+You may also see some legacy code using {{jsxref("Object.create()")}} to build the inheritance chain. However, because this reassigns the `prototype` property and removes the [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) property, it can be more error-prone, while performance gains may not be apparent if the constructors haven't created any instances yet.
 
 ```js example-bad
 function Base() {}
@@ -333,7 +334,7 @@ Derived.prototype = Object.create(Base.prototype);
 
 Let's look at what happens behind the scenes in a bit more detail.
 
-In JavaScript, as mentioned above, functions are able to have properties. All functions have a special property named `prototype`. Please note that the code below is free-standing (it is safe to assume there is no other JavaScript on the webpage other than the below code). For the best learning experience, it is highly recommended that you open a console, navigate to the "console" tab, copy-and-paste in the below JavaScript code, and run it by pressing the Enter/Return key. (The console is included in most web browser's Developer Tools. More information is available for [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html), [Chrome DevTools](https://developer.chrome.com/docs/devtools/), and [Edge DevTools](https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/).)
+In JavaScript, as mentioned above, functions are able to have properties. All functions have a special property named `prototype`. Please note that the code below is free-standing (it is safe to assume there is no other JavaScript on the webpage other than the below code). For the best learning experience, it is highly recommended that you open a console, navigate to the "console" tab, copy-and-paste in the below JavaScript code, and run it by pressing the Enter/Return key. (The console is included in most web browser's Developer Tools. More information is available for [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html), [Chrome DevTools](https://developer.chrome.com/docs/devtools/), and [Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/).)
 
 ```js
 function doSomething() {}
@@ -711,9 +712,9 @@ Object.setPrototypeOf(obj, anotherObj);
   </tbody>
 </table>
 
-### With the \_\_proto__ accessor
+### With the \_\_proto\_\_ accessor
 
-All objects inherit the {{jsxref("Object/proto","Object.prototype.__proto__")}} setter, which can be used to set the `[[Prototype]]` of an existing object (if the `__proto__` key is not overridden on the object).
+All objects inherit the [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) setter, which can be used to set the `[[Prototype]]` of an existing object (if the `__proto__` key is not overridden on the object).
 
 > **Warning:** `Object.prototype.__proto__` accessors are **non-standard** and deprecated. You should almost always use `Object.setPrototypeOf` instead.
 

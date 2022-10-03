@@ -39,7 +39,7 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 
 - {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}}
   - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
-- {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}}
+- {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
   - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
 - `fetch`
   - : Occurs when a {{domxref("fetch()")}} is called.
@@ -53,7 +53,7 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
   - : Occurs when a user closes a displayed notification.
 - {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}}
   - : Triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.
-- {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}}
+- {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}} {{Experimental_Inline}}
   - : Occurs at periodic intervals, which were specified when registering a {{domxref("PeriodicSyncManager")}}.
 - {{domxref("ServiceWorkerGlobalScope/push_event", "push")}}
   - : Occurs when a server push notification is received.
@@ -117,6 +117,6 @@ self.addEventListener("fetch", (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/master/service-worker/simple-service-worker)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}

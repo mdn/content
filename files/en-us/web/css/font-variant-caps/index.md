@@ -1,6 +1,7 @@
 ---
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -9,6 +10,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-variant-caps
 ---
+
 {{CSSRef}}
 
 The **`font-variant-caps`** [CSS](/en-US/docs/Web/CSS) property controls the use of alternate glyphs for capital letters.

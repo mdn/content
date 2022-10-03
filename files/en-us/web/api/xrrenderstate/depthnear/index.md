@@ -17,6 +17,7 @@ tags:
   - depthNear
 browser-compat: api.XRRenderState.depthNear
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`depthNear`** read-only property of the

@@ -1,6 +1,7 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -11,6 +12,7 @@ tags:
   - user-select
 browser-compat: css.properties.user-select
 ---
+
 {{CSSRef}}
 
 The **`user-select`** [CSS](/en-US/docs/Web/CSS) property controls whether the user can select text. This doesn't have any effect on content loaded as part of a browser's user interface (its {{Glossary("Chrome", "chrome")}}), except in textboxes.
@@ -54,7 +56,7 @@ user-select: unset;
 - `text`
   - : The text can be selected by the user.
 - `all`
-  - : The content of the element shall be selected atomically: If a selection would contain part of the element, then the selection must contain the entire element including all its descendants.  If a double-click or context-click occurred in sub-elements, the highest ancestor with this value will be selected.
+  - : The content of the element shall be selected atomically: If a selection would contain part of the element, then the selection must contain the entire element including all its descendants. If a double-click or context-click occurred in sub-elements, the highest ancestor with this value will be selected.
 - `contain`
   - : Enables selection to start within the element; however, the selection will be contained by the bounds of that element.
 - `element` {{non-standard_inline}} (IE-specific alias)

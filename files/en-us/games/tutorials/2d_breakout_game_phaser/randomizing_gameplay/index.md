@@ -10,6 +10,7 @@ tags:
   - Phaser
   - Tutorial
 ---
+
 {{GamesSidebar}}
 
 {{Previous("Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
@@ -24,7 +25,7 @@ We can change the ball's velocity depending on the exact spot it hits the paddle
 
 ```js
 function ballHitPaddle(ball, paddle) {
-  ball.animations.play('wobble');
+  ball.animations.play("wobble");
   ball.body.velocity.x = -5 * (paddle.x - ball.x);
 }
 ```

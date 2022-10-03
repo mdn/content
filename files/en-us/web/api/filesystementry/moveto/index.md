@@ -14,6 +14,7 @@ tags:
   - Deprecated
 browser-compat: api.FileSystemEntry.moveTo
 ---
+
 {{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
@@ -36,7 +37,7 @@ restrictions on what you can do:
 
 ## Syntax
 
-```js
+```js-nolint
 moveTo(newParent, newName)
 moveTo(newParent, newName, successCallback)
 moveTo(newParent, newName, successCallback, errorCallback)

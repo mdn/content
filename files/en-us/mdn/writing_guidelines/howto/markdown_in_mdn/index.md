@@ -84,7 +84,7 @@ In MDN, writers will use code fences for example code blocks. They must specify 
 - Command Prompts
   - `sh` - Bash/Shell
   - `batch` - Batch (Windows Shell)
-  - `ps` - PowerShell
+  - `powershell` - PowerShell
 - Configuration/Data Files
   - `json` - JSON
   - `ini` - INI
@@ -160,9 +160,9 @@ The blockquote can contain code blocks or other block elements.
 
 Because the text "Note:" or "Warning:" also appears in the rendered output, it has to be sensitive to translations. In practice this means that every locale supported by MDN must supply its own translation of these strings, and the platform must recognize them as indicating that the construct needs special treatment.
 
-#### Examples
+### Examples
 
-##### Note
+#### Note
 
 ```plain
 > **Note:** This is how you write a note.
@@ -185,7 +185,7 @@ This HTML will be rendered as a highlighted box, like:
 >
 > It can have multiple lines.
 
-##### Warnings
+#### Warnings
 
 ```plain
 > **Warning:** This is how you write a warning.
@@ -208,7 +208,7 @@ This HTML will be rendered as a highlighted box, like:
 >
 > It can have multiple paragraphs.
 
-##### Callouts
+#### Callouts
 
 ```plain
 > **Callout:** **This is how you write a callout.**
@@ -233,7 +233,7 @@ This HTML will be rendered as a highlighted box, like:
 >
 > It can have multiple paragraphs.
 
-##### Translated warning
+#### Translated warning
 
 For example, if we want to use "Warnung" for "Warning" in German, then in German pages we would write:
 
@@ -249,7 +249,7 @@ And this will produce:
 </div>
 ```
 
-##### Note containing a code block
+#### Note containing a code block
 
 This example contains a code block.
 
@@ -438,23 +438,31 @@ Note that we don't recommend the general use of `<caption>` elements on tables, 
 Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long. For example, consider this table:
 
 ```html
-  <table>
-    <tr>
-      <th>A heading 1</th>
-      <th>A heading 2</th>
-      <th>A heading 3</th>
-      <th>A heading 4</th>
-      <th>A heading 5</th>
-      <th>A heading 6</th>
-    </tr>
-    <tr>
-      <td>Something shortish</td>
-      <td>Something much longer that really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
-      <td>Something shortish</td>
-      <td>Another cell with lots of text in it, that also really goes into a lot of detail about something, so much so that the table formatting starts to look bad in GFM format.</td>
-      <td>Something shortish</td>
-      <td>Something shortish</td>
-    </tr>
+<table>
+  <tr>
+    <th>A heading 1</th>
+    <th>A heading 2</th>
+    <th>A heading 3</th>
+    <th>A heading 4</th>
+    <th>A heading 5</th>
+    <th>A heading 6</th>
+  </tr>
+  <tr>
+    <td>Something shortish</td>
+    <td>
+      Something much longer that really goes into a lot of detail about
+      something, so much so that the table formatting starts to look bad in GFM
+      format.
+    </td>
+    <td>Something shortish</td>
+    <td>
+      Another cell with lots of text in it, that also really goes into a lot of
+      detail about something, so much so that the table formatting starts to
+      look bad in GFM format.
+    </td>
+    <td>Something shortish</td>
+    <td>Something shortish</td>
+  </tr>
 </table>
 ```
 

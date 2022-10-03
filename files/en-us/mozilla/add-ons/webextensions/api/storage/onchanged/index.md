@@ -13,6 +13,7 @@ tags:
   - onChanged
 browser-compat: webextensions.api.storage.onChanged
 ---
+
 {{AddonSidebar()}}
 
 Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area.
@@ -21,7 +22,7 @@ When this event is triggered by {{WebExtAPIRef('storage.StorageArea.set','storag
 
 ## Syntax
 
-```js
+```js-nolint
 browser.storage.onChanged.addListener(callback)
 browser.storage.onChanged.removeListener(listener)
 browser.storage.onChanged.hasListener(listener)
@@ -82,7 +83,8 @@ browser.storage.onChanged.addListener(logStorageChange);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,4 +111,4 @@ browser.storage.onChanged.addListener(logStorageChange);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

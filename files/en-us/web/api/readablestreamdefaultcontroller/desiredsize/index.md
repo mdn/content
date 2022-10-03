@@ -11,6 +11,7 @@ tags:
   - desiredSize
 browser-compat: api.ReadableStreamDefaultController.desiredSize
 ---
+
 {{APIRef("Streams")}}
 
 The **`desiredSize`** read-only property of the

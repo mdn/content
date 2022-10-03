@@ -11,11 +11,17 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
-The **`CanvasRenderingContext2D`** interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), provides the 2D rendering context for the drawing surface of a {{HTMLElement("canvas")}} element. It is used for drawing shapes, text, images, and other objects.
+The **`CanvasRenderingContext2D`** interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), provides the 2D rendering context for the drawing surface of a {{HTMLElement("canvas")}} element.
+It is used for drawing shapes, text, images, and other objects.
 
-See the interface's properties and methods in the sidebar and below. The [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) has more explanation, examples, and resources, as well.
+The interface's properties and methods are described in the reference section of this page.
+The [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) has more explanation, examples, and resources, as well.
+
+For [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas), there is an equivalent interface that provides the rendering context.
+The offscreen rendering context inherits most of the same properties and methods as the `CanvasRenderingContext2D` and is described in more detail in the {{domxref("OffscreenCanvasRenderingContext2D")}} reference page.
 
 ## Basic example
 
@@ -28,8 +34,8 @@ To get a `CanvasRenderingContext2D` instance, you must first have an HTML `<canv
 To get the canvas' 2D rendering context, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on the `<canvas>` element, supplying `'2d'` as the argument:
 
 ```js
-const canvas = document.getElementById('my-house');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("my-house");
+const ctx = canvas.getContext("2d");
 ```
 
 With the context in hand, you can draw anything you like. This code draws a house:
@@ -58,6 +64,11 @@ The resulting drawing looks like this:
 {{EmbedLiveSample("Basic_example", 700, 330)}}
 
 ## Reference
+
+### Context
+
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
+  - : Returns `true` if the rendering context was lost.
 
 ### Drawing rectangles
 
@@ -105,13 +116,25 @@ The following methods and properties control how lines are drawn.
 The following properties control how text is laid out.
 
 - {{domxref("CanvasRenderingContext2D.font")}}
-  - : Font setting. Default value `10px sans-serif`.
+  - : Font setting. Default value `"10px sans-serif"`.
 - {{domxref("CanvasRenderingContext2D.textAlign")}}
   - : Text alignment setting. Possible values: `start` (default), `end`, `left`, `right`, `center`.
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
   - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
+- {{domxref("CanvasRenderingContext2D.letterSpacing")}} {{Experimental_Inline}}
+  - : Letter spacing. Default: `0px`.
+- {{domxref("CanvasRenderingContext2D.fontKerning")}}
+  - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
+- {{domxref("CanvasRenderingContext2D.fontStretch")}} {{experimental_inline}}
+  - : Font stretch. Possible values: `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `normal` (default), `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`.
+- {{domxref("CanvasRenderingContext2D.fontVariantCaps")}} {{experimental_inline}}
+  - : Font variant caps. Possible values: `normal` (default), `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`.
+- {{domxref("CanvasRenderingContext2D.textRendering")}} {{experimental_inline}}
+  - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
+- {{domxref("CanvasRenderingContext2D.wordSpacing")}} {{experimental_inline}}
+  - : Word spacing. Default value: `0px`
 
 ### Fill and stroke styles
 
@@ -168,6 +191,8 @@ The following methods can be used to manipulate paths of objects.
   - : Adds an elliptical arc to the current path.
 - {{domxref("CanvasRenderingContext2D.rect()")}}
   - : Creates a path for a rectangle at position (x, y) with a size that is determined by _width_ and _height_.
+- {{domxref("CanvasRenderingContext2D.roundRect()")}}
+  - : Creates a path for a rounded rectangle with a specified position, width, height, and corner radii.
 
 ### Drawing paths
 
@@ -247,6 +272,10 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
   - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : Returns an object containing the actual context attributes. Context attributes can be requested with {{domxref("HTMLCanvasElement.getContext()")}}.
+- {{domxref("CanvasRenderingContext2D.reset()")}} {{Experimental_Inline}}
+  - : Resets the rendering context, including the backing buffer, the drawing state stack, path, and styles.
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
+  - : Returns `true` if the rendering context was lost.
 
 ### Filters
 
@@ -265,3 +294,4 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 - {{domxref("HTMLCanvasElement")}}
 - {{HTMLElement("canvas")}}
+- {{domxref("OffscreenCanvas")}}

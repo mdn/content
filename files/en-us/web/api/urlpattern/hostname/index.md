@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.URLPattern.hostname
 ---
+
 {{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`hostname`** property of the {{domxref("URLPattern")}} interface is a

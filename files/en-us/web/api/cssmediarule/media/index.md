@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSMediaRule.media
 ---
+
 {{ APIRef("CSSOM") }}
 
 The read-only **`media`** property of the

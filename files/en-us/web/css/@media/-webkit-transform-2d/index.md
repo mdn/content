@@ -1,8 +1,9 @@
 ---
-title: '-webkit-transform-2d'
+title: "-webkit-transform-2d"
 slug: Web/CSS/@media/-webkit-transform-2d
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Non-standard
   - Reference
@@ -10,6 +11,7 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.-webkit-transform-2d
 ---
+
 {{ Non-standard_header }}
 
 > **Note:** All browsers support the [`transition`](/en-US/docs/Web/CSS/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-transition-2d` media feature. No browsers support `transition`, without the prefix or `2d` extension, as a media query. Use the [`@supports (transition)`](/en-US/docs/Web/CSS/@supports) feature query instead.

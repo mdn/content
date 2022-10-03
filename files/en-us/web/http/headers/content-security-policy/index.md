@@ -10,6 +10,7 @@ tags:
   - header
 browser-compat: http.headers.Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Content-Security-Policy`** response header allows
@@ -89,19 +90,19 @@ where `<policy-directive>` consists of:
 - {{CSP("prefetch-src")}} {{experimental_inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
-  - : Specifies valid sources for JavaScript.
-- {{CSP("script-src-elem")}} {{experimental_inline}}
+  - : Specifies valid sources for JavaScript and WebAssembly resources.
+- {{CSP("script-src-elem")}}
   - : Specifies valid sources for JavaScript {{HTMLElement("script")}} elements.
-- {{CSP("script-src-attr")}} {{experimental_inline}}
+- {{CSP("script-src-attr")}}
   - : Specifies valid sources for JavaScript inline event handlers.
 - {{CSP("style-src")}}
   - : Specifies valid sources for stylesheets.
-- {{CSP("style-src-elem")}} {{experimental_inline}}
+- {{CSP("style-src-elem")}}
   - : Specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
     {{HTMLElement("link")}} elements with `rel="stylesheet"`.
-- {{CSP("style-src-attr")}} {{experimental_inline}}
+- {{CSP("style-src-attr")}}
   - : Specifies valid sources for inline styles applied to individual DOM elements.
-- {{CSP("worker-src")}} {{experimental_inline}}
+- {{CSP("worker-src")}}
   - : Specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or
     {{domxref("ServiceWorker")}} scripts.
 
@@ -159,12 +160,12 @@ Reporting directives control the reporting process of CSP violations. See also t
     > In browsers that support {{CSP("report-to")}},
     > the **`report-uri`** directive will be ignored.
 
-- {{CSP("report-to")}} {{experimental_inline}}
+- {{CSP("report-to")}}
   - : Fires a `SecurityPolicyViolationEvent`.
 
 ### Other directives
 
-- {{CSP("require-sri-for")}} {{experimental_inline}}
+- {{CSP("require-sri-for")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.
 - {{CSP("require-trusted-types-for")}} {{experimental_inline}}
   - : Enforces [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) at the DOM XSS injection sinks.
@@ -182,7 +183,7 @@ Reporting directives control the reporting process of CSP violations. See also t
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
-- {{CSP("plugin-types")}} {{deprecated_inline}}
+- {{CSP("plugin-types")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Restricts the set of plugins that can be embedded into a document by limiting the
     types of resources which can be loaded.
 - {{CSP("referrer")}} {{deprecated_inline}} {{non-standard_inline}}
@@ -200,9 +201,9 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
   - : Won't allow loading of any resources.
 - `self`
   - : Only allow resources from the current origin.
-- `strict-dynamic` {{experimental_inline}}
+- `strict-dynamic`
   - : The trust granted to a script in the page due to an accompanying nonce or hash is extended to the scripts it loads.
-- `report-sample` {{experimental_inline}}
+- `report-sample`
   - : Require a sample of the violating code to be included in the violation report.
 
 ### Unsafe keyword values
@@ -211,7 +212,7 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
   - : Allow use of inline resources.
 - `unsafe-eval`
   - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}} {{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
-- `unsafe-hashes` {{experimental_inline}}
+- `unsafe-hashes`
   - : Allows enabling specific inline event handlers.
 - `unsafe-allow-redirects` {{experimental_inline}}
   - : TBD
@@ -219,6 +220,7 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
 ### Hosts values
 
 - Host
+
   - Only allow loading of resources from a specific host, with optional scheme, port, and path. e.g. `example.com`, `*.example.com`, `https://*.example.com:12/path/to/file.js`
   - Path parts in the CSP that end in `/` match any path they are a prefix of. e.g. `example.com/api/` will match URLs like `example.com/api/users/new`.
   - Other path parts in the CSP are matched exactly e.g. `example.com/file.js` will match `http://example.com/file.js` and `https://example.com/file.js`, but not `https://example.com/file.js/file2.js`
@@ -281,7 +283,7 @@ Content-Security-Policy: default-src https:
 ### Using the HTML meta element
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="default-src https:">
+<meta http-equiv="Content-Security-Policy" content="default-src https:" />
 ```
 
 Example: Pre-existing site that uses too much inline code to fix but wants to ensure

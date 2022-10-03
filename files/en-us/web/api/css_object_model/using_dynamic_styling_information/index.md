@@ -9,6 +9,7 @@ tags:
   - Guide
   - NeedsBeginnerUpdate
 ---
+
 {{DefaultAPISidebar("CSSOM")}}
 
 The CSS Object Model (CSSOM), part of the DOM, exposes specific interfaces allowing manipulation of a wide amount of information regarding CSS. Initially defined in the _DOM Level 2 Style_ recommendation, these interfaces forms now a specification, _CSS Object Model (CSSOM)_ which aims at superseding it.
@@ -38,7 +39,8 @@ In this example the background of the page is set to red using CSS. The JavaScri
     </script>
   </head>
   <body>
-    The stylesheet declaration for the body's background color is modified via JavaScript.
+    The stylesheet declaration for the body's background color is modified via
+    JavaScript.
   </body>
 </html>
 ```
@@ -53,7 +55,7 @@ To modify styles to a document using CSS syntax, one can insert rules or insert 
 
 ## Modify an element's style
 
-The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set _in-line_ (e.g, `<td style="background-color: lightblue">` returns the string "`background-color:lightblue`", or directly for that element using `element.style.propertyName`, even though there may be other styles on the element from a stylesheet).
+The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set _in-line_ (e.g., `<td style="background-color: lightblue">` returns the string "`background-color:lightblue`", or directly for that element using `element.style.propertyName`, even though there may be other styles on the element from a stylesheet).
 
 Also, when you set this property on an element, you override any styles that have been set elsewhere for that element's particular property you are setting. Setting the `border` property, for example, will override settings made elsewhere for that element's `border` property in the head section, or external style sheets. However, this will not affect any other property declarations for that element's styles, such as padding or margin or font, for example.
 
@@ -63,18 +65,18 @@ To change a particular element's style, you can adapt the following example for 
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>simple style example</title>
 
     <script>
       function alterStyle(elem) {
-        elem.style.background = 'green';
+        elem.style.background = "green";
       }
 
       function resetStyle(elemId) {
-        elem = document.getElementById(elemId);
-        elem.style.background = 'white';
+        const elem = document.getElementById(elemId);
+        elem.style.background = "white";
       }
     </script>
     <style>
@@ -112,16 +114,16 @@ More important than the two properties noted here is the use of the `style` obje
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Style Property Example</title>
-    <link rel="StyleSheet" href="example.css">
+    <link rel="StyleSheet" href="example.css" />
     <script>
       function setStyle() {
-        document.getElementById('d').style.color = 'orange';
+        document.getElementById("d").style.color = "orange";
       }
       function resetStyle() {
-        document.getElementById('d').style.color = 'black';
+        document.getElementById("d").style.color = "black";
       }
     </script>
   </head>

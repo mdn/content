@@ -13,6 +13,7 @@ tags:
   - messaging
 browser-compat: api.EventSource
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 Developing a web application that uses [server-sent events](/en-US/docs/Web/API/Server-sent_events) is straightforward. You'll need a bit of code on the server to stream events to the front-end, but the client side code works almost identically to [websockets](/en-US/docs/Web/API/WebSockets_API) in part of handling incoming events. This is a one-way connection, so you can't send events from a client to a server.
@@ -105,7 +106,7 @@ The code above generates an event every second, with the event type "ping". Each
 The loop will keep running independent of the connection status, so a check is included
 to break the loop if the connection has been closed (e.g. client closes the page).
 
-> **Note:** You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events).
+> **Note:** You can find a full example that uses the code shown in this article on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Error handling
 

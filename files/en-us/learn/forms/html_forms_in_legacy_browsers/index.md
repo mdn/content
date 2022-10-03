@@ -9,6 +9,7 @@ tags:
   - Intermediate
   - Web
 ---
+
 {{LearnSidebar}}
 
 All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind Safari and Internet Explorer, but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
@@ -34,7 +35,7 @@ All HTML input types are useable in all browsers, even ancient ones, because the
 ```html
 <label for="myColor">
   Pick a color
-  <input type="color" id="myColor" name="color">
+  <input type="color" id="myColor" name="color" />
 </label>
 ```
 
@@ -75,7 +76,7 @@ There are two ways to define buttons within HTML forms:
 The {{HTMLElement("input")}} element can make things a little difficult if you want to apply some CSS by using the element selector:
 
 ```html
-<input type="button" value="click me">
+<input type="button" value="click me" />
 ```
 
 If we remove the border on all inputs, can we restore the default appearance on input buttons only?
@@ -84,7 +85,7 @@ If we remove the border on all inputs, can we restore the default appearance on 
 input {
   /* This rule turns off the default rendering for the input types that have a border,
      including buttons defined with an input element */
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 input[type="button"] {
   /* This does NOT restore the default rendering */
@@ -137,10 +138,11 @@ Before styling a replaced form control widget, you can check to see if the brows
 
 ```css
 @supports (appearance: none) {
- input[type="search"] {
-   appearance: none;
-   /* restyle the search input */
- }
+  input[type="search"] {
+    appearance: none;
+    /* restyle the search input */
+  }
+}
 ```
 
 The {{cssxref('appearance')}} property can be used to display an element using platform-native styling, or, as is done with the value of `none`, remove default platform-native based styling.
@@ -165,18 +167,18 @@ Here is an example:
 ```js
 Modernizr.load({
   // This tests if your browser supports the Form validation API
-  test : Modernizr.formvalidation,
+  test: Modernizr.formvalidation,
 
   // If the browser does not support it, the following polyfill is loaded
-  nope : form-validation-API-polyfill.js,
+  nope: "form-validation-API-polyfill.js",
 
   // In any case, your core App file that depends on that API is loaded
-  both : app.js,
+  both: "app.js",
 
   // Once both files are loaded, this function is called in order to initialize the App.
   complete() {
     app.init();
-  }
+  },
 });
 ```
 

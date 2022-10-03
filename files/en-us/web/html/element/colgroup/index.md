@@ -31,7 +31,7 @@ The **`<colgroup>`** [HTML](/en-US/docs/Web/HTML) element defines a group of col
       <th scope="row">Permitted content</th>
       <td>
         If the {{htmlattrxref("span", "colgroup")}} attribute is
-        present: none, it is an {{Glossary("empty element")}}.<br />If
+        present: none.<br />If
         the attribute is not present: zero or more {{HTMLElement("col")}}
         element
       </td>

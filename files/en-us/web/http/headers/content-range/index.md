@@ -10,6 +10,7 @@ tags:
   - Payload header
 browser-compat: http.headers.Content-Range
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Range`** response HTTP header indicates where in

@@ -9,6 +9,7 @@ tags:
   - UI Events
 spec-urls: https://w3c.github.io/uievents/
 ---
+
 {{DefaultAPISidebar("UI Events")}}
 
 ## Concepts and Usage
@@ -144,7 +145,7 @@ body {
   height: 150px;
   width: 250px;
   border: 1px solid black;
-  padding: .5rem;
+  padding: 0.5rem;
   overflow: scroll;
 }
 ```
@@ -223,14 +224,14 @@ body {
 }
 
 #story {
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 #contents {
   height: 150px;
   width: 250px;
   border: 1px solid black;
-  padding: .5rem;
+  padding: 0.5rem;
   overflow: scroll;
 }
 ```

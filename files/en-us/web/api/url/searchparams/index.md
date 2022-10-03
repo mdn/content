@@ -11,6 +11,7 @@ tags:
   - URLSearchParams
 browser-compat: api.URL.searchParams
 ---
+
 {{APIRef("URL API")}}
 
 The **`searchParams`** readonly property of the

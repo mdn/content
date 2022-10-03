@@ -12,6 +12,7 @@ tags:
   - Web API
 browser-compat: api.Element
 ---
+
 {{APIRef("DOM")}}
 
 **`Element`** is the most general base class from which all element objects (i.e. objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from `Element`.
@@ -308,6 +309,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}} {{Deprecated_Inline}}
+
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 
 - {{domxref("Element/select_event", "select")}}
@@ -345,9 +347,9 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/focus_event", "focus")}}
   - : Fired when an element has gained focus.
 - {{domxref("Element/focusin_event", "focusin")}}
-  - : Fired when an element is about to gain focus.
+  - : Fired when an element has gained focus, after {{domxref("Element/focus_event", "focus")}}.
 - {{domxref("Element/focusout_event", "focusout")}}
-  - : Fired when an element is about to lose focus.
+  - : Fired when an element has lost focus, after {{domxref("Element/blur_event", "blur")}}.
 
 ### Fullscreen events
 
@@ -360,7 +362,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/keydown_event", "keydown")}}
   - : Fired when a key is pressed.
-- {{domxref("Element/keypress_event", "keypress")}}  {{Deprecated_Inline}}
+- {{domxref("Element/keypress_event", "keypress")}} {{Deprecated_Inline}}
   - : Fired when a key that produces a character value is pressed down.
 - {{domxref("Element/keyup_event", "keyup")}}
   - : Fired when a key is released.

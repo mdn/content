@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.URLPattern.hash
 ---
+
 {{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
 The **`hash`** property of the {{domxref("URLPattern")}} interface is a

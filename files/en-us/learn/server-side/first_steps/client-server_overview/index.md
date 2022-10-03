@@ -10,6 +10,7 @@ tags:
   - Server
   - Server-side programming
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 Now that you know the purpose and potential benefits of server-side programming we're going to examine in detail what happens when a server receives a "dynamic request" from a browser. As most website server-side code handles requests and responses in similar ways, this will help you understand what you need to do when writing most of your own code.
@@ -64,9 +65,9 @@ Both static and dynamic websites (discussed in the following sections) use exact
 
 ### GET request/response example
 
-You can make a simple `GET` request by clicking on a link or searching on a site (like a search engine homepage). For example, the HTTP request that is sent when you perform a search on MDN for the term "client server overview" will look a lot like the text shown below (it will not be identical because parts of the message depend on your browser/setup).
+You can make a simple `GET` request by clicking on a link or searching on a site (like a search engine homepage). For example, the HTTP request that is sent when you perform a search on MDN for the term "client-server overview" will look a lot like the text shown below (it will not be identical because parts of the message depend on your browser/setup).
 
-> **Note:** The format of HTTP messages is defined in a "web standard" ([RFC7230](https://www.rfc-editor.org/rfc/rfc7230.txt)). You don't need to know this level of detail, but at least now you know where this all came from!
+> **Note:** The format of HTTP messages is defined in a "web standard" ([RFC9110](https://httpwg.org/specs/rfc9110.html#messages)). You don't need to know this level of detail, but at least now you know where this all came from!
 
 #### The request
 
@@ -123,7 +124,7 @@ At the end of the message we see the **body** content — which contains the act
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
-Vary: Accept,Cookie, Accept-Encoding
+Vary: Accept, Cookie, Accept-Encoding
 Content-Type: text/html; charset=utf-8
 Date: Wed, 07 Sep 2016 00:11:31 GMT
 Keep-Alive: timeout=5, max=999
@@ -224,15 +225,15 @@ Using HTML templates makes it very easy to change the HTML structure, because th
 
 This section provides a step-by-step overview of the "dynamic" HTTP request and response cycle, building on what we looked at in the last article with much more detail. In order to "keep things real" we'll use the context of a sports-team manager website where a coach can select their team name and team size in an HTML form and get back a suggested "best lineup" for their next game.
 
-The diagram below shows the main elements of the "team coach" website, along with numbered labels for the sequence of operations when the coach accesses their "best team" list. The parts of the site that make it dynamic are the *Web Application* (this is how we will refer to the server-side code that processes HTTP requests and returns HTTP responses), the _Database_, which contains information about players, teams, coaches and their relationships, and the _HTML Templates_.
+The diagram below shows the main elements of the "team coach" website, along with numbered labels for the sequence of operations when the coach accesses their "best team" list. The parts of the site that make it dynamic are the _Web Application_ (this is how we will refer to the server-side code that processes HTTP requests and returns HTTP responses), the _Database_, which contains information about players, teams, coaches and their relationships, and the _HTML Templates_.
 
 ![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](web_application_with_html_and_steps.png)
 
 After the coach submits the form with the team name and number of players, the sequence of operations is:
 
 1. The web browser creates an HTTP `GET` request to the server using the base URL for the resource (`/best`) and encoding the team and player number either as URL parameters (e.g. `/best?team=my_team_name&show=11`) or as part of the URL pattern (e.g. `/best/my_team_name/11/`). A `GET` request is used because the request is only fetching data (not modifying data).
-2. The *Web Server* detects that the request is "dynamic" and forwards it to the *Web Application* for processing (the web server determines how to handle different URLs based on pattern matching rules defined in its configuration).
-3. The *Web Application* identifies that the _intention_ of the request is to get the "best team list" based on the URL (`/best/`) and finds out the required team name and number of players from the URL. The *Web Application* then gets the required information from the database (using additional "internal" parameters to define which players are "best", and possibly also getting the identity of the logged in coach from a client-side cookie).
+2. The _Web Server_ detects that the request is "dynamic" and forwards it to the _Web Application_ for processing (the web server determines how to handle different URLs based on pattern matching rules defined in its configuration).
+3. The _Web Application_ identifies that the _intention_ of the request is to get the "best team list" based on the URL (`/best/`) and finds out the required team name and number of players from the URL. The _Web Application_ then gets the required information from the database (using additional "internal" parameters to define which players are "best", and possibly also getting the identity of the logged in coach from a client-side cookie).
 4. The _Web Application_ dynamically creates an HTML page by putting the data (from the _Database_) into placeholders inside an HTML template.
 5. The _Web Application_ returns the generated HTML to the web browser (via the _Web Server_), along with an HTTP status code of 200 ("success"). If anything prevents the HTML from being returned then the _Web Application_ will return another code — for example "404" to indicate that the team does not exist.
 6. The Web Browser will then start to process the returned HTML, sending separate requests to get any other CSS or JavaScript files that it references (see step 7).
@@ -295,7 +296,7 @@ def junior(request):
     return render(request, 'best/index.html', context)
 ```
 
-After the `junior()` function gets the list of junior teams, it calls the `render()` function, passing the original `HttpRequest`, an HTML template, and a "context" object defining the information to be included in the template. The  `render()` function is a convenience function that generates HTML using a context and an HTML template, and returns it in an `HttpResponse` object.
+After the `junior()` function gets the list of junior teams, it calls the `render()` function, passing the original `HttpRequest`, an HTML template, and a "context" object defining the information to be included in the template. The `render()` function is a convenience function that generates HTML using a context and an HTML template, and returns it in an `HttpResponse` object.
 
 Obviously web frameworks can help you with a lot of other tasks. We discuss a lot more benefits and some popular web framework choices in the next article.
 

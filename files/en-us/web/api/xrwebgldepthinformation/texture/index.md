@@ -14,6 +14,7 @@ tags:
   - WebXR Device API
 browser-compat: api.XRWebGLDepthInformation.texture
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The _read-only_ **`texture`** property of the {{DOMxRef("XRWebGLDepthInformation")}} interface is a {{domxref("WebGLTexture")}} containing depth buffer information as an opaque texture.

@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: http.headers.downlink
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 The **`Downlink`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header field provides the approximate bandwidth of the client's connection to the server, in Mbps.

@@ -11,6 +11,7 @@ tags:
   - Service Workers
 browser-compat: api.PushManager
 ---
+
 {{ApiRef("Push API")}}
 
 The **`PushManager`** interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a way to receive notifications from third-party servers as well as request URLs for push notifications.

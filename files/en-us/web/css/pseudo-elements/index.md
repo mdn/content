@@ -1,6 +1,7 @@
 ---
 title: Pseudo-elements
 slug: Web/CSS/Pseudo-elements
+page-type: landing-page
 tags:
   - CSS
   - Guide
@@ -10,6 +11,7 @@ tags:
   - Selectors
 spec-urls: https://www.w3.org/TR/CSS22/selector.html#pseudo-element-selectors
 ---
+
 {{CSSRef}}
 
 A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s). For example, {{CSSxRef("::first-line")}} can be used to change the font of the first line of a paragraph.

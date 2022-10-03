@@ -9,6 +9,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGL2RenderingContext** interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.

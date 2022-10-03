@@ -13,6 +13,7 @@ tags:
   - variant
 browser-compat: api.FontFace.variant
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`variant`** property of the

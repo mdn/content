@@ -15,6 +15,7 @@ tags:
   - ended
 browser-compat: api.HTMLMediaElement.ended_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `ended` event is fired when playback or streaming has stopped because the end of the media was reached or because no further data is available.

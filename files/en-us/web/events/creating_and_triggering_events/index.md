@@ -9,6 +9,7 @@ tags:
   - NeedsContent
   - events
 ---
+
 This article demonstrates how to create and dispatch DOM events. Such events are commonly called **synthetic events**, as opposed to the events fired by the browser itself.
 
 ## Creating custom events

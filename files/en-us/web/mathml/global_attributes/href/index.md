@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: mathml.global_attributes.href
 ---
+
 {{MathMLRef("Global_attributes")}}
 
 The **`href`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) creates a hyperlink on the MathML element pointing to the specified URL.

@@ -1,6 +1,7 @@
 ---
 title: Stacking with floated blocks
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
+page-type: guide
 tags:
   - Advanced
   - CSS
@@ -9,6 +10,7 @@ tags:
   - Understanding_CSS_z-index
   - z-index
 ---
+
 {{CSSRef}}
 
 For floated blocks, the stacking order is a bit different. Floating blocks are placed between non-positioned blocks and positioned blocks:
@@ -37,25 +39,19 @@ Actually, as you can see in the example below, the background and border of the 
 ### HTML
 
 ```html
-<div id="abs1">
-  <strong>DIV #1</strong><br />position: absolute;</div>
+<div id="abs1"><strong>DIV #1</strong><br />position: absolute;</div>
 
-<div id="flo1">
-  <strong>DIV #2</strong><br />float: left;</div>
+<div id="flo1"><strong>DIV #2</strong><br />float: left;</div>
 
-<div id="flo2">
-  <strong>DIV #3</strong><br />float: right;</div>
+<div id="flo2"><strong>DIV #3</strong><br />float: right;</div>
 
 <br />
 
-<div id="sta1">
-  <strong>DIV #4</strong><br />no positioning</div>
+<div id="sta1"><strong>DIV #4</strong><br />no positioning</div>
 
-<div id="abs2">
-  <strong>DIV #5</strong><br />position: absolute;</div>
+<div id="abs2"><strong>DIV #5</strong><br />position: absolute;</div>
 
-<div id="rel1">
-  <strong>DIV #6</strong><br />position: relative;</div>
+<div id="rel1"><strong>DIV #6</strong><br />position: relative;</div>
 ```
 
 ### CSS

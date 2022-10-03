@@ -19,9 +19,10 @@ tags:
   - Experimental
 browser-compat: api.XRSession.interactionMode
 ---
+
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
-The {{domxref("XRSession")}} interface's *read-only* **`interactionMode`** property
+The {{domxref("XRSession")}} interface's _read-only_ **`interactionMode`** property
 describes the best space (according to the user agent) for the application to draw an interactive UI for the current session.
 
 ## Value

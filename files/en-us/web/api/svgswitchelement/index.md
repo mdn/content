@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGSwitchElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGSwitchElement`** interface corresponds to the {{SVGElement("switch")}} element.

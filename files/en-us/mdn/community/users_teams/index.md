@@ -7,9 +7,10 @@ tags:
   - community-guidelines
   - governance
 ---
+
 {{MDNSidebar}}
 
-The success and growth of MDN Web Docs is thanks, in large part, to our community of contributors. There are also employees, contractors, and a network of partners who are dedicated to the health, growth, and maintenance of the project as a whole. There are also some individuals who have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. These people are part of our [_Invited experts program_](#invited_experts). To manage all these different groups, we rely heavily on roles and teams within our GitHub organization.
+The success and growth of MDN Web Docs is, in large part, due to our community of contributors. There are also employees, contractors, and a network of partners who are dedicated to the health, growth, and maintenance of the project as a whole. There are also some individuals who have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. These people are part of our [_Invited experts program_](#invited_experts). To manage all these different groups, we rely heavily on roles and teams within our GitHub organization.
 
 A list of the members of the organization can be [found here](https://github.com/orgs/mdn/people).
 
@@ -22,6 +23,7 @@ A list of the members of the organization can be [found here](https://github.com
 - **OWD**: Contributors from the Open Web Docs non-profit organization
 - **SRE**: Site reliability engineers who support MDN Web Docs
 - **Yari content**: The umbrella team for all MDN Web Docs content reviewers
+
   - **Yari content MDN**: Responsible for reviewing docs under `/en-US/docs`
   - **Yari content Mozilla add-ons**: Responsible for reviewing docs under `/en-US/docs/Mozilla/Add-ons`
   - **Yari content JavaScript**: Responsible for reviewing docs under `/en-US/docs/Web/JavaScript`
@@ -34,6 +36,7 @@ A list of the members of the organization can be [found here](https://github.com
   - **Yari content Web Assembly**: Responsible for reviewing docs related to WebAssembly
 
   The following teams are specific to respective localization teams:
+
   - **Yari content ES**: Responsible for reviewing MDN docs in Spanish
   - **Yari content FR**: Responsible for reviewing MDN docs in French
   - **Yari content JA**: Responsible for reviewing MDN docs in Japanese

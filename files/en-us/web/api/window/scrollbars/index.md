@@ -11,6 +11,7 @@ tags:
   - Window
 browser-compat: api.Window.scrollbars
 ---
+
 {{APIRef()}}
 
 The **`Window.scrollbars`** property returns the
@@ -28,16 +29,16 @@ scrollbars object is used.
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>Various DOM Tests</title>
-  <script>
-    let visibleScrollbars = window.scrollbars.visible;
-  </script>
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Various DOM Tests</title>
+    <script>
+      let visibleScrollbars = window.scrollbars.visible;
+    </script>
+  </head>
+  <body>
+    <p>Various DOM Tests</p>
+  </body>
 </html>
 ```
 

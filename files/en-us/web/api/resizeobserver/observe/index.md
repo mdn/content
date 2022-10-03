@@ -12,6 +12,7 @@ tags:
   - observers
 browser-compat: api.ResizeObserver.observe
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`observe()`** method of the
@@ -20,7 +21,7 @@ The **`observe()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 observe(target)
 observe(target, options)
 ```
@@ -57,7 +58,7 @@ None.
 ## Examples
 
 The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)
-([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
+([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) example:
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {

@@ -99,16 +99,12 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ```html
 <!-- Just an image -->
 <figure>
-  <img
-  src="favicon-192x192.png"
-  alt="The beautiful MDN logo.">
+  <img src="favicon-192x192.png" alt="The beautiful MDN logo." />
 </figure>
 
 <!-- Image with a caption -->
 <figure>
-  <img
-  src="favicon-192x192.png"
-  alt="The beautiful MDN logo.">
+  <img src="favicon-192x192.png" alt="The beautiful MDN logo." />
   <figcaption>MDN Logo</figcaption>
 </figure>
 ```
@@ -141,9 +137,11 @@ function NavigatorExample() {
 
 ```html
 <figure>
-  <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
-  <blockquote>If debugging is the process of removing software bugs,
-  then programming must be the process of putting them in.</blockquote>
+  <figcaption><b>Edsger Dijkstra:</b></figcaption>
+  <blockquote>
+    If debugging is the process of removing software bugs, then programming must
+    be the process of putting them in.
+  </blockquote>
 </figure>
 ```
 
@@ -154,14 +152,12 @@ function NavigatorExample() {
 ```html
 <figure>
   <p style="white-space:pre">
-Bid me discourse, I will enchant thine ear,
-  Or like a fairy trip upon the green,
-Or, like a nymph, with long dishevelled hair,
-  Dance on the sands, and yet no footing seen:
-Love is a spirit all compact of fire,
-  Not gross to sink, but light, and will aspire.</p>
-  <figcaption><cite>Venus and Adonis</cite>,
-    by William Shakespeare</figcaption>
+    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
+    green, Or, like a nymph, with long dishevelled hair, Dance on the sands, and
+    yet no footing seen: Love is a spirit all compact of fire, Not gross to
+    sink, but light, and will aspire.
+  </p>
+  <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
 </figure>
 ```
 

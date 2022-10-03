@@ -11,6 +11,7 @@ tags:
   - desiredSize
 browser-compat: api.ReadableByteStreamController.desiredSize
 ---
+
 {{APIRef("Streams")}}
 
 The **`desiredSize`** read-only property of the {{domxref("ReadableByteStreamController")}} interface returns the number of bytes required to fill the stream's internal queue to its "desired size".

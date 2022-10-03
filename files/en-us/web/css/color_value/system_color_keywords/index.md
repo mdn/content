@@ -1,10 +1,12 @@
 ---
 title: System color keywords
 slug: Web/CSS/color_value/system_color_keywords
+page-type: css-type
 tags:
   - Reference
   - color
 ---
+
 {{CSSRef}}
 
 In _forced colors mode_ (detectable with the [forced-colors](/en-US/docs/Web/CSS/@media/forced-colors) media query), most colors are restricted into a user- and browser-defined palette. These **system colors** are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers.
@@ -135,7 +137,7 @@ Firefox also supports some non-standard extensions to the system color keyword s
   - : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color.
 - `-moz-MenuBarText` {{non-standard_inline}}
   - : Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
-- `-moz-MenuBarHoverText`  {{non-standard_inline}}
+- `-moz-MenuBarHoverText` {{non-standard_inline}}
   - : Color for hovered text in menu bars. Often similar to `-moz-MenuHoverText`. Should be used on top of `-moz-MenuHover` background.
 - `-moz-nativehyperlinktext` {{non-standard_inline}}
   - : Default platform hyperlink color.

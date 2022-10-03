@@ -16,6 +16,7 @@ tags:
   - track
 browser-compat: api.RTCPeerConnection.track_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`track`** event is sent to the `ontrack` event handler on {{domxref("RTCPeerConnection")}}s after a new track has been added to an {{domxref("RTCRtpReceiver")}} which is part of the connection.

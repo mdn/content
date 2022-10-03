@@ -13,6 +13,7 @@ tags:
   - web animations api
 browser-compat: api.AnimationPlaybackEvent
 ---
+
 {{ APIRef("Web Animations") }}
 
 The AnimationPlaybackEvent interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) represents animation events.
