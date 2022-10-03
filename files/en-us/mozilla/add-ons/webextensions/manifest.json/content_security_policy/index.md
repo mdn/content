@@ -57,6 +57,7 @@ There are restrictions on the policy you can specify with this manifest key:
 
 - The {{CSP("script-src")}} directive must include at least the `'self'` keyword and may only contain secure sources. The set of permitted secure sources differs between Manifest V2 and Manifest V3.
 - The policy may include {{CSP("default-src")}} alone (without {{CSP("script-src")}}) if its sources meet the requirement for the {{CSP("script-src")}} directive.
+- The {{CSP("object-src")}} keyword may be required, see [object-src directive](#object-src_directive) for details.
 - Directives that reference code – {{CSP("script-src")}}, {{CSP("script-src-elem")}}, {{CSP("worker-src")}}, and {{CSP("default-src")}} (if used as a fallback) – share the same secure source requirement. There are no restrictions on CSP directives that cover non-script content, such as {{CSP("img-src")}}.
 
 In Manifest V3, all CSP sources that refer to external or non-static content are forbidden. The only permitted values are `'none'`, `'self'`, and `'wasm-unsafe-eval'`.
