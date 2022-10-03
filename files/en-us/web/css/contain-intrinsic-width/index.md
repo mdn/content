@@ -32,6 +32,7 @@ contain-intrinsic-width: auto 300px;
 contain-intrinsic-width: inherit;
 contain-intrinsic-width: initial;
 contain-intrinsic-width: revert;
+contain-intrinsic-width: revert-layer;
 contain-intrinsic-width: unset;
 ```
 
