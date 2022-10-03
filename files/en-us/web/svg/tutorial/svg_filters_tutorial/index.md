@@ -27,9 +27,9 @@ This element has different attributes that help us create the clipping region. B
 </g>
 ```
 
-This above example will not produced the desired output. Instead we need to add more filter primitives which will produce the desire rendering. By adding `feoffset` and `result`, the effect layer is defined
+The above example will not produce the desired output. Instead we need to add more filter primitives which will produce the desired rendering. By adding `feoffset` and `result`, the effect layer is defined.
 
-`<result>` attribute is a reference that can be use later. It is quite different to an XML id and only can be referenced within the actual `filter`.**<`feoffset`>** primitive has the blur result from the Gaussian blur. **<`feMerge`>** primitive contains the nodes **<`feMergeNode`>** taking as input the result offsetBlur , this will allow it to appear below the `sourceGraphic`
+`<result>` attribute is a reference that can be used later. It is quite different to an XML id and only can be referenced within the actual `filter`. **<`feoffset`>** primitive has the blur result from the Gaussian blur. **<`feMerge`>** primitive contains the nodes **<`feMergeNode`>** taking as input the result offsetBlur, this will allow it to appear below the `sourceGraphic`.
 
 ### Implementation of more primitives
 

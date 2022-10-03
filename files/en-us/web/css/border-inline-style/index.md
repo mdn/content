@@ -1,6 +1,7 @@
 ---
 title: border-inline-style
 slug: Web/CSS/border-inline-style
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
@@ -85,5 +86,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - This property maps to one of the physical border properties: {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -3,7 +3,6 @@ title: Local variable
 slug: Glossary/Local_variable
 tags:
   - CodingScripting
-  - Glossary
   - NeedsContent
 ---
 

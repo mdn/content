@@ -1,6 +1,7 @@
 ---
 title: column-rule-style
 slug: Web/CSS/column-rule-style
+page-type: css-property
 tags:
   - CSS
   - CSS Multi-column Layout

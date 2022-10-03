@@ -1,6 +1,7 @@
 ---
 title: print-color-adjust
 slug: Web/CSS/print-color-adjust
+page-type: css-property
 tags:
   - Adjusting Colors
   - CSS

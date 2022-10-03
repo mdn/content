@@ -1,6 +1,7 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -129,8 +130,8 @@ This example shows why it is better to use {{cssxref("&lt;number&gt;")}} values 
   Length and percentage line-heights have poor inheritance behavior
 </div>
 
-<!-- The first <h1> line-height is calculated from its own font-size   (30px × 1.1) = 33px  -->
-<!-- The second <h1> line-height results from the red div's font-size  (15px × 1.1) = 16.5px,  probably not what you want -->
+<!-- The first <h1> line-height is calculated from its own font-size   (30px × 1.1) = 33px -->
+<!-- The second <h1> line-height results from the red div's font-size  (15px × 1.1) = 16.5px, probably not what you want -->
 ```
 
 #### CSS

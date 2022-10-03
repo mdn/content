@@ -7,6 +7,10 @@ tags:
   - NeedsUpdate
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 ### Overview
 
 Web applications often use JavaScript to mimic desktop widgets such as menus, tree views, rich text fields, and tab panels. These widgets are typically composed of {{ HTMLElement("div") }} and {{ HTMLElement("span") }} elements that do not, by nature, offer the same keyboard functionality that their desktop counterparts do. This document describes techniques to make JavaScript widgets accessible with the keyboard.
@@ -32,13 +36,13 @@ The following table describes `tabindex` behavior in modern browsers:
   <tbody>
     <tr>
       <td>not present</td>
-      <td>Follows the platform convention of the element (yes for form controls,links, etc.).</td>
+      <td>Follows the platform convention of the element (yes for form controls, links, etc.).</td>
       <td>Follows the platform convention of the element.</td>
     </tr>
     <tr>
       <td>Negative (i.e. <code>tabindex="-1"</code>)</td>
       <td>Yes</td>
-      <td>No; author must focus the element with <a href="/en-US/docs/Web/API/Element/focus_event"><code>focus()</code></a> in response to arrow or other key presses.</td>
+      <td>No; author must focus the element with <a href="/en-US/docs/Web/API/HTMLElement/focus"><code>focus()</code></a> in response to arrow or other key presses.</td>
     </tr>
     <tr>
       <td>Zero (i.e. <code>tabindex="0"</code>)</td>
@@ -61,7 +65,7 @@ Authors can also make a {{ HTMLElement("div") }} or {{ HTMLElement("span") }} ke
 
 #### Grouping controls
 
-For grouping widgets such as menus, tablists, grids, or tree views, the parent element should be in the tab order (`tabindex="0"`), and each descendent choice/tab/cell/row should be removed from the tab order (`tabindex="-1"`). Users should be able to navigate the descendent elements using arrow keys. (For a full description of the keyboard support that is normally expected for typical widgets, see the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/).)
+For grouping widgets such as menus, tablists, grids, or tree views, the parent element should be in the tab order (`tabindex="0"`), and each descendant choice/tab/cell/row should be removed from the tab order (`tabindex="-1"`). Users should be able to navigate the descendant elements using arrow keys. (For a full description of the keyboard support that is normally expected for typical widgets, see the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/).)
 
 The example below shows this technique used with a nested menu control. Once keyboard focus lands on the containing {{ HTMLElement("ul") }} element, the JavaScript developer must programmatically manage focus and respond to arrow keys. For techniques for managing focus within widgets, see "Managing focus inside groups" below.
 
@@ -135,7 +139,7 @@ Don't assume that all focus changes will come via key and mouse events: assistiv
 
 This technique involves binding a single event handler to the container widget and using the `aria-activedescendant` to track a "virtual" focus. (For more information about ARIA, see this [overview of accessible web applications and widgets](/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets).)
 
-The `aria-activedescendant` property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of `aria-activedescendant` and ensuring that the current item is styled appropriately (for example, with a border or background color).
+The `aria-activedescendant` property identifies the ID of the descendant element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of `aria-activedescendant` and ensuring that the current item is styled appropriately (for example, with a border or background color).
 
 ### General Guidelines
 

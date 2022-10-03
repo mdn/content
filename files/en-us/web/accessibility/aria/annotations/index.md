@@ -11,6 +11,28 @@ tags:
   - suggestions
 ---
 
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Annotations">ARIA annotations</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA guides</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Web forms</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
+    <li class="toggle">
+      <details><summary>ARIA states and properties</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
+      </details>
+    </li>
+    <li class="toggle">
+      <details><summary>WAI-ARIA Roles</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
+      </details>
+    </li>
+  </ol>
+</section>
+
 WAI-ARIA version 1.3 sees the addition of a set of new features, collectively known as ARIA annotations, which allow the creation of accessible annotations inside web documents. Typical use cases include edit suggestions (i.e. an addition and/or deletion in an editable document), and comments (e.g. an editorial comment related to a part of a document under review).
 
 Below we'll introduce the new features associated with ARIA annotations, and have a look at some code examples that show them in action.
@@ -56,7 +78,7 @@ We have already alluded to the difference between these two above — `aria-desc
 <p id="description-id">An extended text description of some kind.</p>
 
 <div aria-describedby="description-id">
-  <!-- Some kind of UI feature that needs an accessible description  -->
+  <!-- Some kind of UI feature that needs an accessible description -->
 </div>
 ```
 
@@ -70,7 +92,7 @@ We have already alluded to the difference between these two above — `aria-desc
 </div>
 
 <div aria-details="detail-id">
-  <!-- Some kind of UI feature where additional details might be useful  -->
+  <!-- Some kind of UI feature where additional details might be useful -->
 </div>
 ```
 
@@ -170,7 +192,10 @@ We could even provide an information box saying who made the suggestion and when
 ```html
 <p>
   Freida's pet is a
-  <span role="suggestion" aria-details="comment-source"><span role="deletion">black Cat called Luna</span><span role="insertion">purple Tyrannosaurus Rex called Tiny</span></span>.
+  <span role="suggestion" aria-details="comment-source">
+    <span role="deletion">black Cat called Luna</span>
+    <span role="insertion">purple Tyrannosaurus Rex called Tiny</span></span
+  >.
 </p>
 
 <div id="comment-source">

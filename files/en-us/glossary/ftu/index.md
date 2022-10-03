@@ -6,7 +6,6 @@ tags:
   - Firefox OS
   - First time use
   - Gaia
-  - Glossary
   - Infrastructure
   - Intro
 ---

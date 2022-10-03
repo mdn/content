@@ -2,7 +2,6 @@
 title: World Wide Web
 slug: Glossary/World_Wide_Web
 tags:
-  - Glossary
   - Infrastructure
   - WWW
   - World Wide Web

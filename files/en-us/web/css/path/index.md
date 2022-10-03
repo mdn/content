@@ -1,6 +1,7 @@
 ---
 title: path()
 slug: Web/CSS/path
+page-type: css-function
 tags:
   - CSS
   - CSS Function

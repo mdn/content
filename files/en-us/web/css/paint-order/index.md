@@ -1,6 +1,7 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
+page-type: css-property
 tags:
   - CSS
   - CSS Property

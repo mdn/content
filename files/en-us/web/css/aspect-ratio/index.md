@@ -1,6 +1,7 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
+page-type: css-property
 tags:
   - CSS
   - CSS Property

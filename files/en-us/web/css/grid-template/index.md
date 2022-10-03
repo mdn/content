@@ -1,6 +1,7 @@
 ---
 title: grid-template
 slug: Web/CSS/grid-template
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Grid
@@ -12,7 +13,7 @@ browser-compat: css.properties.grid-template
 
 {{CSSRef}}
 
-The **`grid-template`** CSS property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for defining {{glossary("grid column", "grid columns")}}, {{glossary("grid rows", "rows")}}, and {{glossary("grid areas", "areas")}}.
+The **`grid-template`** CSS property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for defining {{glossary("grid column", "grid columns")}}, {{glossary("grid rows", "grid rows")}}, and {{glossary("grid areas", "grid areas")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-template.html")}}
 

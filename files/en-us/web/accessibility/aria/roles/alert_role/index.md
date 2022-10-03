@@ -115,7 +115,7 @@ If an element already has `role="alert"` and is initially hidden using CSS, maki
 
 ```css
 .hidden {
-  display:none;
+  display: none;
 }
 ```
 

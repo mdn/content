@@ -1,6 +1,7 @@
 ---
 title: Shapes from box values
 slug: Web/CSS/CSS_Shapes/From_box_values
+page-type: guide
 tags:
   - Boundaries
   - Boxes

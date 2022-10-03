@@ -2,7 +2,6 @@
 title: Payload header
 slug: Glossary/Payload_header
 tags:
-  - Glossary
   - Payload header
   - Headers
   - WebMechanics

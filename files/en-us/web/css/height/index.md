@@ -1,6 +1,7 @@
 ---
 title: height
 slug: Web/CSS/height
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -28,6 +29,7 @@ The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override 
 /* <length> values */
 height: 120px;
 height: 10em;
+height: 100vh;
 
 /* <percentage> value */
 height: 75%;

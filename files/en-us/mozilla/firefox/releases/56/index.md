@@ -2,7 +2,7 @@
 title: Firefox 56 for developers
 slug: Mozilla/Firefox/Releases/56
 tags:
-  - '56'
+  - "56"
   - Firefox
   - Release Notes
 ---

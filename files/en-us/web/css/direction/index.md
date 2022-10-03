@@ -1,6 +1,7 @@
 ---
 title: direction
 slug: Web/CSS/direction
+page-type: css-property
 tags:
   - BiDi
   - CSS

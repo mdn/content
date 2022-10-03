@@ -1,5 +1,5 @@
 ---
-title: 'aria-activedescendant'
+title: "aria-activedescendant"
 slug: Web/Accessibility/ARIA/Attributes/aria-activedescendant
 tags:
   - Accessibility

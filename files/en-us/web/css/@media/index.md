@@ -1,8 +1,9 @@
 ---
-title: '@media'
+title: "@media"
 slug: Web/CSS/@media
+page-type: css-at-rule
 tags:
-  - '@media'
+  - "@media"
   - At-rule
   - CSS
   - Conditional

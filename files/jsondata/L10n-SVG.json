@@ -10,7 +10,8 @@
   },
   "info_in_preview_not_available": {
     "en-US": "SVG info in preview not available",
-    "ja": "SVG info はプレビューでは利用できません"
+    "ja": "SVG info はプレビューでは利用できません",
+    "zh-CN": "SVG 信息在预览中不可用"
   },
   "permittedContent": {
     "en-US": "Permitted content",
@@ -18,7 +19,7 @@
     "ja": "許可されている内容",
     "pt-BR": "Conteúdo permitido",
     "fr": "Contenu autorisé",
-    "zh-CN": "允许的内容物",
+    "zh-CN": "允许的内容",
     "ru": "Разрешённый контент"
   },
   "anyNumberOfElementsAnyOrder": {
@@ -27,7 +28,7 @@
     "fr": "Tout \u00e9l\u00e9ment de cette liste, quel qu'en soit l'ordre:",
     "ja": "任意の数、任意の順序の以下の要素。",
     "pt-BR": "Qualquer n\u00famero dos seguintes elementos, em qualquer ordem:",
-    "zh-CN": "\u4efb\u610f\u6570\u91cf\u3001\u4efb\u610f\u6392\u5e8f\u7684\u4e0b\u5217\u5143\u7d20\uff1a",
+    "zh-CN": "任意数量、任意顺序的下列元素：",
     "ru": "Любое количество следующих элементов, в любом порядке:"
   },
   "anyElementsOrCharacterData": {
@@ -36,7 +37,7 @@
     "fr": "Tout \u00e9l\u00e9ment ou caract\u00e8re de donn\u00e9e",
     "ja": "あらゆる要素や文字データ",
     "pt-BR": "Quaisquer elementos ou dados de caracteres",
-    "zh-CN": "\u4efb\u4f55\u5143\u7d20\u6216\u5b57\u7b26\u6570\u636e",
+    "zh-CN": "任意元素或字符数据",
     "ru": "Любые элементы и символы"
   },
   "characterDataElementsInAnyOrder": {
@@ -45,7 +46,7 @@
     "fr": "Des caract\u00e8res et n'importe quel nombre des \u00e9l\u00e9ments suivants, dans n'importe quel ordre:",
     "ja": "任意の順で文字データと任意の数の以下の要素。",
     "pt-BR": "Dados de caracteres e qualquer n\u00famero dos seguintes elementos, em qualquer ordem:",
-    "zh-CN": "\u5b57\u7b26\u6570\u636e\u4ee5\u53ca\u4efb\u610f\u6570\u91cf\u3001\u4efb\u610f\u6392\u5e8f\u7684\u4e0b\u5217\u5143\u7d20\uff1a",
+    "zh-CN": "字符数据和任意数量、任意顺序的下列元素：",
     "ru": "Символы и любое количество следующих элементов, в любом порядке:"
   },
   "empty": {
@@ -54,16 +55,18 @@
     "fr": "Vide",
     "ja": "空",
     "pt-BR": "Vazio",
-    "zh-CN": "空洞",
+    "zh-CN": "空",
     "ru": "Такого нет"
   },
   "anyNumberOfElementsWithMeshgradientElement": {
     "en-US": "Any number of animation elements, descriptive elements, {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, and {{SVGElement(\"style\")}} elements, along with zero or one {{SVGElement(\"meshgradient\")}} element.",
-    "ja": "任意の数のアニメーション要素、説明的要素、 {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, {{SVGElement(\"style\")}} の各要素と 0 個または 1 個の {{SVGElement(\"meshgradient\")}} 要素。"
+    "ja": "任意の数のアニメーション要素、説明的要素、 {{SVGElement(\"mask\")}}, {{SVGElement(\"clipPath\")}}, {{SVGElement(\"marker\")}}, {{SVGElement(\"script\")}}, {{SVGElement(\"style\")}} の各要素と 0 個または 1 個の {{SVGElement(\"meshgradient\")}} 要素。",
+    "zh-CN": "任意数量的动画元素、描述性元素、{{SVGElement(\"mask\")}}、{{SVGElement(\"clipPath\")}}、{{SVGElement(\"marker\")}}、{{SVGElement(\"script\")}}、{{SVGElement(\"style\")}} 元素，以及 0 到 1 个 {{SVGElement(\"meshgradient\")}} 元素。"
   },
   "anyNumberOfElementsDescriptiveElementsScriptAndTwoToFourStopElements": {
     "en-US": "Any number of descriptive elements, {{SVGElement(\"script\")}} and from two to four {{SVGElement(\"stop\")}} elements.",
-    "ja": "任意の数の説明的要素、 {{SVGElement(\"script\")}} および 2 から 4 個の {{SVGElement(\"stop\")}} 要素。"
+    "ja": "任意の数の説明的要素、 {{SVGElement(\"script\")}} および 2 から 4 個の {{SVGElement(\"stop\")}} 要素。",
+    "zh-CN": "任意数量的描述性元素、{{SVGElement(\"script\")}} 和 2 到 4 个 {{SVGElement(\"stop\")}} 元素。"
   },
   "animationElement": {
     "en-US": "Animation element",
@@ -150,15 +153,18 @@
   },
   "neverRenderedElement": {
     "en-US": "Never-rendered element",
-    "ja": "非描画要素"
+    "ja": "非描画要素",
+    "zh-CN": "非渲染元素"
   },
   "paintServerElement": {
     "en-US": "Paint server element",
-    "ja": "ペイントサーバー要素"
+    "ja": "ペイントサーバー要素",
+    "zh-CN": "绘制服务器元素"
   },
   "renderableElement": {
     "en-US": "Renderable element",
-    "ja": "描画可能要素"
+    "ja": "描画可能要素",
+    "zh-CN": "可渲染元素"
   },
   "shapeElement": {
     "en-US": "Shape element",
@@ -256,13 +262,14 @@
     "ru": "Структурные элементы"
   },
   "textContentChildElements": {
-    "en-US": "Text content child elements"
+    "en-US": "Text content child elements",
+    "ja": "テキストコンテンツの子要素"
   },
   "textContentElements": {
     "en-US": "Text content elements",
     "fr": "Éléments avec du contenu texte",
     "es": "Elementos de contenido de texto",
-    "ja": "テキストコンテンツの子要素",
+    "ja": "テキストコンテンツの要素",
     "pt-BR": "Elementos de conteúdo textual",
     "zh-CN": "文字内容子元素",
     "ru": "Текстосодержащие элементы"
@@ -309,7 +316,8 @@
   },
   "ariaAttributes": {
     "en-US": "ARIA attributes",
-    "ja": "ARIA 属性"
+    "ja": "ARIA 属性",
+    "zh-CN": "ARIA 属性"
   },
   "conditionalProcessingAttributes": {
     "en-US": "Conditional processing attributes",
@@ -339,7 +347,7 @@
     "en-US": "Filter attributes",
     "fr": "Attributs de filtre",
     "ja": "フィルター属性",
-    "zh-CN": "滤镜属性属性",
+    "zh-CN": "滤镜属性",
     "ru": "Атрибуты фильтров"
   },
   "globalEventAttributes": {
@@ -364,7 +372,8 @@
   },
   "styleAttributes": {
     "en-US": "Style attributes",
-    "ja": "スタイル属性"
+    "ja": "スタイル属性",
+    "zh-CN": "样式属性"
   },
   "transferFunctionAttributes": {
     "en-US": "Transfer function attributes",
@@ -378,7 +387,7 @@
     "fr": "Attribut XLink",
     "ja": "XLink 属性",
     "pt-BR": "Atributos Xlink",
-    "zh-CN": "Xlink属性",
+    "zh-CN": "XLink 属性",
     "ru": "XLink атрибуты"
   }
 }

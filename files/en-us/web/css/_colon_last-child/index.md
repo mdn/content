@@ -1,6 +1,7 @@
 ---
-title: ':last-child'
+title: ":last-child"
 slug: Web/CSS/:last-child
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout

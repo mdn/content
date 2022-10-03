@@ -84,7 +84,7 @@ function myCoolPromiseAPI(/* … ,*/ { signal }) {
     // Watch for 'abort' signals
     signal.addEventListener("abort", () => {
       // Stop the main operation
-      // Reject the promise wth the abort reason.
+      // Reject the promise with the abort reason.
       reject(signal.reason);
     });
   });

@@ -1,6 +1,7 @@
 ---
 title: border-block-start-width
 slug: Web/CSS/border-block-start-width
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
@@ -94,5 +95,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - This property maps to one of the physical border properties: {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

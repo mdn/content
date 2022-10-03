@@ -4,7 +4,6 @@ slug: Glossary/Deserialization
 tags:
   - Deserialization
   - Deserialize
-  - Glossary
   - JavaScript
 ---
 

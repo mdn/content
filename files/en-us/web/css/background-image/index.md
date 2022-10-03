@@ -1,6 +1,7 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
+page-type: css-property
 tags:
   - CSS
   - CSS Background

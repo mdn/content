@@ -1,6 +1,7 @@
 ---
 title: text-overflow
 slug: Web/CSS/text-overflow
+page-type: css-property
 tags:
   - CSS
   - CSS Property

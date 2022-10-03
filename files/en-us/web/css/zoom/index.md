@@ -1,6 +1,7 @@
 ---
 title: zoom
 slug: Web/CSS/zoom
+page-type: css-property
 tags:
   - CSS
   - CSS Property

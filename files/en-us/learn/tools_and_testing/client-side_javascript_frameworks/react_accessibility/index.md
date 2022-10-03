@@ -71,13 +71,13 @@ In order to focus on an element in our DOM, we need to tell React which element 
 
 Change the `import` statement at the top of `Todo.js` so that it includes `useRef`:
 
-```js
+```jsx
 import React, { useRef, useState } from "react";
 ```
 
 Then, create two new constants beneath the hooks in your `Todo()` function. Each should be a ref – one for the "Edit" button in the view template and one for the edit field in the editing template.
 
-```js
+```jsx
 const editFieldRef = useRef(null);
 const editButtonRef = useRef(null);
 ```
@@ -86,7 +86,7 @@ These refs have a default value of `null` because they will not have value until
 
 The textbox `<input>` in your editing template should be updated like this:
 
-```js
+```jsx
 <input
   id={props.id}
   className="todo-text"
@@ -99,13 +99,12 @@ The textbox `<input>` in your editing template should be updated like this:
 
 The "Edit" button in your view template should read like this:
 
-```js
+```jsx
 <button
   type="button"
   className="btn"
   onClick={() => setEditing(true)}
-  ref={editButtonRef}
->
+  ref={editButtonRef}>
   Edit <span className="visually-hidden">{props.name}</span>
 </button>
 ```
@@ -116,13 +115,13 @@ To use our refs for their intended purpose, we need to import another React hook
 
 Change the import statement of `Todo.js` again to add `useEffect`:
 
-```js
+```jsx
 import React, { useEffect, useRef, useState } from "react";
 ```
 
 `useEffect()` takes a function as an argument; this function is executed after the component renders. Let's see this in action; put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass into it a function that logs the words "side effect" to your console:
 
-```js
+```jsx
 useEffect(() => {
   console.log("side effect");
 });
@@ -130,7 +129,7 @@ useEffect(() => {
 
 To illustrate the difference between the main render process and code run inside `useEffect()`, add another log – put this one below the previous addition:
 
-```js
+```jsx
 console.log("main render");
 ```
 
@@ -149,7 +148,7 @@ Now that we know our `useEffect()` hook works, we can manage focus with it. As a
 
 Update your existing `useEffect()` hook so that it reads like this:
 
-```js
+```jsx
 useEffect(() => {
   if (isEditing) {
     editFieldRef.current.focus();
@@ -165,7 +164,7 @@ Try it now, and you'll see that when you click an "Edit" button, focus moves to 
 
 At first glance, getting React to move focus back to our "Edit" button when the edit is saved or cancelled appears deceptively easy. Surely we could add a condition to our `useEffect` to focus on the edit button if `isEditing` is `false`? Let's try it now — update your `useEffect()` call like so:
 
-```js
+```jsx
 useEffect(() => {
   if (isEditing) {
     editFieldRef.current.focus();
@@ -185,12 +184,12 @@ We need to refactor our approach so that focus changes only when `isEditing` cha
 
 In order to meet our refined criteria, we need to know not just the value of `isEditing`, but also _when that value has changed_. In order to do that, we need to be able to read the previous value of the `isEditing` constant. Using pseudocode, our logic should be something like this:
 
-```
+```jsx
 if (wasNotEditingBefore && isEditingNow) {
-  focusOnEditField()
+  focusOnEditField();
 }
 if (wasEditingBefore && isNotEditingNow) {
-  focusOnEditButton()
+  focusOnEditButton();
 }
 ```
 
@@ -198,7 +197,7 @@ The React team had discussed [ways to get a component's previous state](https://
 
 Paste the following code near the top of `Todo.js`, above your `Todo()` function.
 
-```js
+```jsx
 function usePrevious(value) {
   const ref = useRef();
   useEffect(() => {
@@ -210,13 +209,13 @@ function usePrevious(value) {
 
 Now we'll define a `wasEditing` constant beneath the hooks at the top of `Todo()`. We want this constant to track the previous value of `isEditing`, so we call `usePrevious` with `isEditing` as an argument:
 
-```js
+```jsx
 const wasEditing = usePrevious(isEditing);
 ```
 
 With this constant, we can update our `useEffect()` hook to implement the pseudocode we discussed before — update it as follows:
 
-```js
+```jsx
 useEffect(() => {
   if (!wasEditing && isEditing) {
     editFieldRef.current.focus();
@@ -243,13 +242,13 @@ Sometimes, the place we want to send our focus to is obvious: when we toggled ou
 
 Import the `useRef()` and `useEffect()` hooks into `App.js` — you'll need them both below:
 
-```js
+```jsx
 import React, { useState, useRef, useEffect } from "react";
 ```
 
 Then declare a new ref inside the `App()` function. Just above the `return` statement is a good place:
 
-```js
+```jsx
 const listHeadingRef = useRef(null);
 ```
 
@@ -259,7 +258,7 @@ Heading elements like our `<h2>` are not usually focusable. This isn't a problem
 
 Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the heading above our list of tasks, along with our `headingRef`:
 
-```js
+```jsx
 <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
   {headingText}
 </h2>
@@ -271,7 +270,7 @@ Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the h
 
 We want to focus on the element associated with our ref (via the `ref` attribute) only when our user deletes a task from their list. That's going to require the `usePrevious()` hook we already used earlier on. Add it to the top of your `App.js` file, just below the imports:
 
-```js
+```jsx
 function usePrevious(value) {
   const ref = useRef();
   useEffect(() => {
@@ -283,7 +282,7 @@ function usePrevious(value) {
 
 Now add the following, above the `return` statement inside the `App()` function:
 
-```js
+```jsx
 const prevTaskLength = usePrevious(tasks.length);
 ```
 
@@ -297,7 +296,7 @@ Now that we've stored how many tasks we previously had, we can set up a `useEffe
 
 Add the following into the body of your `App()` function, just below your previous additions:
 
-```js
+```jsx
 useEffect(() => {
   if (tasks.length - prevTaskLength === -1) {
     listHeadingRef.current.focus();

@@ -1,6 +1,7 @@
 ---
-title: ':optional'
+title: ":optional"
 slug: Web/CSS/:optional
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -15,12 +16,7 @@ browser-compat: css.selectors.optional
 
 The **`:optional`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that does not have the {{ htmlattrxref("required", "input") }} attribute set on it.
 
-```css
-/* Selects any optional <input> */
-input:optional {
-  border: 1px dashed black;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-optional.html", "tabbed-standard")}}
 
 This pseudo-class is useful for styling fields that are not required to submit a form.
 

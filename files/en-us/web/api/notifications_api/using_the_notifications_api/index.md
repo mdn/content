@@ -19,7 +19,7 @@ The [Notifications API](/en-US/docs/Web/API/Notifications_API) lets a web page o
 
 Typically, system notifications refer to the operating system's standard notification mechanism: think for example of how a typical desktop system or mobile device broadcasts notifications.
 
-![](android-notification.png)
+![Android device notifications feed containing a list of several alerts from multiple sources.](android-notification.png)
 
 The system notification system will vary of course by platform and browser, but this is OK, and the Notifications API is written to be general enough for compatibility with most system notification systems.
 
@@ -27,7 +27,7 @@ The system notification system will vary of course by platform and browser, but 
 
 One of the most obvious use cases for web notifications is a web-based mail or IRC application that needs to notify the user when a new message is received, even if the user is doing something else with another application. Many examples of this now exist, such as [Slack](https://slack.com/).
 
-We've written a real world example — a to-do list app — to give more of an idea of how web notifications can be used. It stores data locally using [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and notifies users when tasks are due using system notifications. [Download the To-do list code](https://github.com/mdn/to-do-notifications/tree/gh-pages), or [view the app running live](https://mdn.github.io/to-do-notifications/).
+We've written a real world example — a to-do list app — to give more of an idea of how web notifications can be used. It stores data locally using [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) and notifies users when tasks are due using system notifications. [Download the To-do list code](https://github.com/mdn/dom-examples/tree/main/to-do-notifications), or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## Requesting permission
 

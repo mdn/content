@@ -2,7 +2,6 @@
 title: Synchronous
 slug: Glossary/Synchronous
 tags:
-  - Glossary
   - Web
   - WebMechanics
 ---

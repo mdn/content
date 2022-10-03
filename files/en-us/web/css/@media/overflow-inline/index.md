@@ -1,6 +1,7 @@
 ---
 title: overflow-inline
 slug: Web/CSS/@media/overflow-inline
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

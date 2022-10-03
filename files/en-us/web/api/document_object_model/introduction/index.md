@@ -216,7 +216,7 @@ But the relationship between objects and the interfaces that they implement in t
 
 ### Interfaces and objects
 
-Many objects borrow from several different interfaces. The table object, for example, implements a specialized {{domxref("HTMLTableElement")}} interface, which includes such methods as `createCaption` and `insertRow`. But since it's also an HTML element, `table` implements the `Element` interface described in the DOM {{domxref("Element")}} Reference chapter. And finally, since an HTML element is also, as far as the DOM is concerned, a node in the tree of nodes that make up the object model for an HTML or XML page, the table object also implements the more basic `Node` interface, from which `Element` derives.
+Many objects implement several different interfaces. The table object, for example, implements a specialized {{domxref("HTMLTableElement")}} interface, which includes such methods as `createCaption` and `insertRow`. But since it's also an HTML element, `table` implements the `Element` interface described in the DOM {{domxref("Element")}} Reference chapter. And finally, since an HTML element is also, as far as the DOM is concerned, a node in the tree of nodes that make up the object model for an HTML or XML page, the table object also implements the more basic `Node` interface, from which `Element` derives.
 
 When you get a reference to a `table` object, as in the following example, you routinely use all three of these interfaces interchangeably on the object, perhaps without knowing it.
 
@@ -254,63 +254,138 @@ The following is a brief list of common APIs in web and XML page scripting using
 - `{{domxref("Window.load_event", "Window.onload", "", "1")}}`
 - `{{domxref("window.scrollTo", "", "", "1")}}()`
 
-## Example
+## Examples
 
-The following simple example illustrates using the DOM {{domxref("Document")}} API — specifically, it illustrates using the {{domxref("Document.body", "body")}} property of the {{domxref("Document")}} API to change:
+### Setting text content
 
-- the document's text color
-- the document's background color
-- the documents's link color (that is, the color of any hypertext links anywhere in the document)
+This example uses a {{HTMLElement("div")}} element containing a {{HTMLElement("textarea")}} and two {{HTMLElement("button")}} elements. When the user clicks the first button we set some text in the `<textarea>`. When the user clicks the second button we clear the text. We use:
+
+- {{domxref("Document.querySelector()")}} to access the `<textarea>` and the button
+- {{domxref("EventTarget.addEventListener()")}} to listen for button clicks
+- {{domxref("Node.textContent")}} to set and clear the text.
+
+#### HTML
 
 ```html
-<html lang="en">
-<head>
-  <title>Simple Document API example</title>
-  <script>
-    function setBodyAttr(attr, value) {
-      if (document.body) {
-        document.body[attr] = value;
-      } else {
-        throw new Error("no support");
-      }
-    }
-  </script>
-</head>
-<body>
-  <div>
-    <form>
-      <p><label for="text">Text color</label></p>
-      <select onChange="setBodyAttr('text',
-        this.options[this.selectedIndex].value);" id="text">
-        <option value="black">black</option>
-        <option value="red">red</option>
-      </select>
-      <p><label for="bgcolor">Background color</label></p>
-      <select onChange="setBodyAttr('bgColor',
-        this.options[this.selectedIndex].value);" id="bgcolor">
-        <option value="white">white</option>
-        <option value="lightgrey">gray</option>
-      </select>
-      <p><label for="linkcolor">Link Color</label></b></p>
-      <select onChange="setBodyAttr('link',
-        this.options[this.selectedIndex].value);" id="linkcolor">
-        <option value="blue">blue</option>
-        <option value="green">green</option>
-      </select>
-      <small>
-        <a href="http://some.website.tld/page.html" id="sample">
-          (sample link)
-        </a>
-      </small>
-    </form>
-  </div>
-</body>
-</html>
+<div class="container">
+  <textarea class="story"></textarea>
+  <button id="set-text" type="button">Set text content</button>
+  <button id="clear-text" type="button">Clear text content</button>
+</div>
 ```
 
-### Result
+#### CSS
 
-{{EmbedLiveSample("Example", "85ch", "263px")}}
+```css
+.container {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+button {
+  width: 200px;
+}
+```
+
+#### JavaScript
+
+```js
+const story = document.body.querySelector(".story");
+
+const setText = document.body.querySelector("#set-text");
+setText.addEventListener("click", () => {
+  story.textContent = "It was a dark and stormy night...";
+});
+
+const clearText = document.body.querySelector("#clear-text");
+clearText.addEventListener("click", () => {
+  story.textContent = "";
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Setting text content", "", "150px")}}
+
+### Adding a child element
+
+This example uses a {{HTMLElement("div")}} element containing a {{HTMLElement("div")}} and two {{HTMLElement("button")}} elements. When the user clicks the first button we create a new element and add it as a child of the `<div>`. When the user clicks the second button we remove the child element. We use:
+
+- {{domxref("Document.querySelector()")}} to access the `<div>` and the buttons
+- {{domxref("EventTarget.addEventListener()")}} to listen for button clicks
+- {{domxref("Document.createElement")}} to create the element
+- {{domxref("Node.appendChild()")}} to add the child
+- {{domxref("Node.removeChild()")}} to remove the child.
+
+#### HTML
+
+```html
+<div class="container">
+  <div class="parent">parent</div>
+  <button id="add-child" type="button">Add a child</button>
+  <button id="remove-child" type="button">Remove child</button>
+</div>
+```
+
+#### CSS
+
+```css
+.container {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+button {
+  width: 100px;
+}
+
+div.parent {
+  border: 1px solid black;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+}
+
+div.child {
+  border: 1px solid red;
+  margin: 10px;
+  padding: 5px;
+  width: 80px;
+  height: 60px;
+  box-sizing: border-box;
+}
+```
+
+#### JavaScript
+
+```js
+const parent = document.body.querySelector(".parent");
+
+const addChild = document.body.querySelector("#add-child");
+addChild.addEventListener("click", () => {
+  // Only add a child if we don't already have one
+  // in addition to the text node "parent"
+  if (parent.childNodes.length > 1) {
+    return;
+  }
+  const child = document.createElement("div");
+  child.classList.add("child");
+  child.textContent = "child";
+  parent.appendChild(child);
+});
+
+const removeChild = document.body.querySelector("#remove-child");
+removeChild.addEventListener("click", () => {
+  const child = document.body.querySelector(".child");
+  parent.removeChild(child);
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Adding a child element", "", "180px")}}
 
 ## Specifications
 

@@ -23,6 +23,7 @@ browser-compat: css.properties.NameOfTheProperty
 > ---
 > title: NameOfTheProperty
 > slug: Web/CSS/NameOfTheProperty
+> page-type: css-property OR css-shorthand-property
 > tags:
 >   - CSS
 >   - Reference
@@ -40,6 +41,8 @@ browser-compat: css.properties.NameOfTheProperty
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/NameOfTheProperty`.
 >     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property slug is `Web/CSS/background-color`.
+> - **page-type**
+>   - : The `page-type` key for CSS properties is `css-shorthand-property` for shorthand properties, otherwise `css-property`.
 > - **tags**
 >
 >   - : Always include the following tags: **CSS**, **Reference**, **CSS Property**, _NameOfTheProperty_ (e.g. **background-color**).
@@ -113,6 +116,8 @@ Include a description of the property and what component subvalues make up a com
 {{CSSSyntax}}
 
 ## Examples
+
+Note that we use the plural "Examples" even if the page only contains one example.
 
 ### A descriptive heading
 

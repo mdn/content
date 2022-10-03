@@ -17,7 +17,7 @@ tags:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-In this article we drill down into carrying out testing, looking at identifying a target audience (e.g. what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad-hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.
+In this article we drill down into carrying out testing, looking at identifying a target audience (e.g. what browsers, devices, and other segments should you make sure are tested), lo-fi testing strategies (get yourself a range of devices and some virtual machines and do ad hoc tests when needed), higher tech strategies (automation, using dedicated testing apps), and testing with user groups.
 
 <table>
   <tbody>
@@ -122,7 +122,7 @@ Now you should be able to go back to the [Analytics Web](https://analytics.googl
 
 By default, you should see the reporting tab, like so:
 
-![](analytics-reporting.png)
+![How google analytics collects data in its main reporting dashboard](analytics-reporting.png)
 
 There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all.
 [Getting started with Analytics](https://support.google.com/analytics/answer/9306384?visit_id=637855964517698041-2103767437&rd=1) provides some useful guidance on reporting (and more) for beginners.
@@ -151,7 +151,7 @@ When you've got a new addition to your codebase that needs testing, before you s
 
 Consider the following example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html), and also the [example running live](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)):
 
-![](sliding-box-demo.png)
+![How to prepare a testing scenario featuring the design and user requirements](sliding-box-demo.png)
 
 Test criteria for this feature could be written like so:
 
@@ -245,13 +245,13 @@ To use a Virtual Box, you need to:
 
 Now the new virtual box should appear in the left-hand menu of the main Virtual Box UI window. At this point, you can double-click to open it — it will start to boot up the virtual machine, but it won't yet have the operating system (OS) installed. At this point you need to point the dialog box at the installer image/disk, and it will run through the steps to install the OS just like on a physical machine.
 
-![](virtualbox-installer.png)
+![How to install the virtual Box for a specific operating system](virtualbox-installer.png)
 
 > **Warning:** You need to make sure you have the operating system image you want to install on the virtual machine available at this point, and install it right away. If you cancel the process at this point, it can render the virtual machine unusable, and make it so you need to delete it and create it again. This is not fatal, but it is annoying.
 
 After the process has completed, you should have a virtual machine running an operating system inside a window on your host computer.
 
-![](virtualbox-running.png)
+![Virtual box machine running on an windows operating system](virtualbox-running.png)
 
 You need to treat this virtual operating system installation just like you would any real installation — for example, as well as installing the browsers you want to test, install an anti-virus program to protect it from viruses.
 

@@ -146,7 +146,7 @@ body {
 Next, in your `src/main.js` file, import the `reset.css` file like so:
 
 ```js
-import './assets/reset.css';
+import "./assets/reset.css";
 ```
 
 This will cause the file to get picked up during the build step and automatically added to our site.
@@ -169,7 +169,7 @@ There are already some styles present in the file. Let's remove those and replac
 
 Update your `App.vue` file's `<style>` element so it looks like so:
 
-```css
+```html
 <style>
 /* Global styles */
 .btn {

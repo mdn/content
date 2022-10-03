@@ -12,7 +12,9 @@ tags:
 browser-compat: webextensions.api.management.getPermissionWarningsByManifest
 ---
 
-{{AddonSidebar()}}When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardized across browsers.
+{{AddonSidebar()}}
+
+When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardized across browsers.
 
 Given the text of a [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, this function returns the permission warnings that would be given for the resulting add-on, as an array of strings.
 

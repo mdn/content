@@ -1,6 +1,7 @@
 ---
-title: '-moz-outline-radius'
+title: "-moz-outline-radius"
 slug: Web/CSS/-moz-outline-radius
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Property

@@ -2,7 +2,6 @@
 title: TCP handshake
 slug: Glossary/TCP_handshake
 tags:
-  - Glossary
   - Networking
   - SSL
   - Security

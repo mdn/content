@@ -1,6 +1,7 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes

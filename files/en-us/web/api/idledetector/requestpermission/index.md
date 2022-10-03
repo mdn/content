@@ -33,6 +33,10 @@ None.
 
 A `Promise` that resolves with `"granted"` or `"denied"`.
 
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 The following example uses a `click` event on a button to trigger requesting the user for permission to detect when user is idle.

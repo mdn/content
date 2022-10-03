@@ -1,6 +1,7 @@
 ---
 title: animation-composition
 slug: Web/CSS/animation-composition
+page-type: css-property
 tags:
   - CSS
   - CSS Animations
@@ -158,9 +159,9 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 {{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
-- With `replace`, the final effect value for the `transform` property in the `20%, 40%` keyframe is `translateX(100px)` (completely replacing the underlying value `translateX(50px) rotate(45deg)`). In this case, the element rotates from 45deg to 0deg as it animates from the default value set on the element itself to the non-rotated value set at the 20% mark. This is the default behavior.
-- With `add`, the final effect value for the `transform` property in the `20%, 40%` keyframe is `translateX(50px) rotate(45deg)` followed by `translateX(100px)`. So the element is moved `50px` to the right, rotated `45deg`, then translated `100px` more along the redirected X axis.
-- With `accumulate`, the final effect value in the `20%, 40%` keyframe is `translateX(150px) rotate(45deg)`. This means that the two X-axis translation values of `50px` and `100px` are combined or "accumulated".
+- With `replace`, the final effect value for the `transform` property in the `0%, 20%` keyframe is `translateX(100px)` (completely replacing the underlying value `translateX(50px) rotate(45deg)`). In this case, the element rotates from 45deg to 0deg as it animates from the default value set on the element itself to the non-rotated value set at the 0% mark. This is the default behavior.
+- With `add`, the final effect value for the `transform` property in the `0%, 20%` keyframe is `translateX(50px) rotate(45deg)` followed by `translateX(100px)`. So the element is moved `50px` to the right, rotated `45deg`, then translated `100px` more along the redirected X axis.
+- With `accumulate`, the final effect value in the `0%, 20%` keyframe is `translateX(150px) rotate(45deg)`. This means that the two X-axis translation values of `50px` and `100px` are combined or "accumulated".
 
 ## Specifications
 
@@ -174,3 +175,4 @@ Here the underlying value is `translateX(50px) rotate(45deg)`.
 
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - [Composite property of KeyFrameEffect](/en-US/docs/Web/API/KeyframeEffect/composite)
+- Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

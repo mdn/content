@@ -1,6 +1,7 @@
 ---
 title: <time>
 slug: Web/CSS/time
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

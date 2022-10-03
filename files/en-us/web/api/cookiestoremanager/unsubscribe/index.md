@@ -47,7 +47,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the subs
 In this example the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is unsubscribing from change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
 ```js
-const subscriptions = [{ name: 'cookie1', url: `/path1` }];
+const subscriptions = [{ name: "cookie1", url: `/path1` }];
 await registration.cookies.unsubscribe(subscriptions);
 ```
 

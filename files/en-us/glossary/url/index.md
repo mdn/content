@@ -2,7 +2,6 @@
 title: URL
 slug: Glossary/URL
 tags:
-  - Glossary
   - Infrastructure
   - "l10n:priority"
 ---

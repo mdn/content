@@ -1,6 +1,7 @@
 ---
 title: Guide to scroll anchoring
 slug: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
+page-type: guide
 tags:
   - CSS
   - Guide

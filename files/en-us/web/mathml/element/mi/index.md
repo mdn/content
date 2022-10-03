@@ -20,17 +20,23 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 ## Examples
 
 ```html
-<math>
+<math display="block">
   <!-- Multiple characters, default mathvariant is "normal". -->
   <mi>sin</mi>
+</math>
 
+<math display="block">
   <!-- Single character, default mathvariant is "italic". -->
   <mi>y</mi>
+</math>
 
+<math display="block">
   <!-- Overriding default mathvariant. -->
   <mi mathvariant="normal">F</mi>
 </math>
 ```
+
+{{ EmbedLiveSample('mi_example', 700, 200, "", "") }}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: CSS Animations
 slug: Web/CSS/CSS_Animations
+page-type: css-module
 tags:
   - CSS
   - CSS Animations
@@ -27,6 +28,7 @@ browser-compat: css.properties.animation
 - {{cssxref("animation-iteration-count")}}
 - {{cssxref("animation-name")}}
 - {{cssxref("animation-play-state")}}
+- {{cssxref("animation-timeline")}}
 - {{cssxref("animation-timing-function")}}
 
 ### At-rules

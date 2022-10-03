@@ -1,6 +1,7 @@
 ---
 title: Split Navigation
 slug: Web/CSS/Layout_cookbook/Split_Navigation
+page-type: guide
 tags:
   - CSS
   - Guide

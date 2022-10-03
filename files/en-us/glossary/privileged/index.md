@@ -2,7 +2,6 @@
 title: Privileged
 slug: Glossary/Privileged
 tags:
-  - Glossary
   - Security
 ---
 

@@ -2,7 +2,6 @@
 title: Interpolation
 slug: Glossary/Interpolation
 tags:
-  - Glossary
   - Animation
   - Gradient
   - JavaScript

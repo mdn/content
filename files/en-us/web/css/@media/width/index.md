@@ -1,8 +1,9 @@
 ---
 title: width
 slug: Web/CSS/@media/width
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference

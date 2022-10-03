@@ -1,6 +1,7 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

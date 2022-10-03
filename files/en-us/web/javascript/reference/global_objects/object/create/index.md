@@ -5,7 +5,7 @@ tags:
   - ECMAScript 5
   - JavaScript
   - Method
-  - 'Null'
+  - "Null"
   - Object
   - Reference
   - Polyfill
@@ -14,8 +14,7 @@ browser-compat: javascript.builtins.Object.create
 
 {{JSRef}}
 
-The **`Object.create()`** method creates a new object, using an
-existing object as the prototype of the newly created object.
+The **`Object.create()`** method creates a new object, using an existing object as the prototype of the newly created object.
 
 {{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}
 
@@ -31,11 +30,7 @@ Object.create(proto, propertiesObject)
 - `proto`
   - : The object which should be the prototype of the newly-created object.
 - `propertiesObject` {{Optional_inline}}
-  - : If specified and not {{jsxref("undefined")}}, an object whose enumerable own
-    properties (that is, those properties defined upon itself and _not_ enumerable
-    properties along its prototype chain) specify property descriptors to be added to the
-    newly-created object, with the corresponding property names. These properties
-    correspond to the second argument of {{jsxref("Object.defineProperties()")}}.
+  - : If specified and not {{jsxref("undefined")}}, an object whose [enumerable own properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of {{jsxref("Object.defineProperties()")}}.
 
 ### Return value
 
@@ -43,21 +38,19 @@ A new object with the specified prototype object and properties.
 
 ### Exceptions
 
-The `proto` parameter has to be either
+- {{jsxref("TypeError")}}
+  - : Thrown if `proto` is neither [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) nor an {{jsxref("Object")}}.
 
-- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or
-- an {{jsxref("Object")}} excluding [primitive wrapper objects](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript).
+## Examples
 
-If `proto` is neither of these a {{jsxref("TypeError")}} is thrown.
-
-## Object with `null` prototype
+### Object with null prototype
 
 A new object with `null` prototype can behave in unexpected ways, because it doesn't inherit any object methods from `Object.prototype`. This is especially true when debugging, since common object-property converting/detecting utility functions may generate errors, or lose information (especially if using silent error-traps that ignore errors).
 
 For example, the lack of [`Object.prototype.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) often makes debugging intractable:
 
 ```js
-const normalObj = {};   // create a normal object
+const normalObj = {}; // create a normal object
 const nullProtoObj = Object.create(null); // create an object with "null" prototype
 
 console.log(`normalObj is: ${normalObj}`); // shows "normalObj is: [object Object]"
@@ -70,14 +63,14 @@ alert(nullProtoObj); // throws error: Cannot convert object to primitive value
 Other methods will fail as well.
 
 ```js
-normalObj.valueOf() // shows {}
-nullProtoObj.valueOf() // throws error: nullProtoObj.valueOf is not a function
+normalObj.valueOf(); // shows {}
+nullProtoObj.valueOf(); // throws error: nullProtoObj.valueOf is not a function
 
-normalObj.hasOwnProperty("p") // shows "true"
-nullProtoObj.hasOwnProperty("p") // throws error: nullProtoObj.hasOwnProperty is not a function
+normalObj.hasOwnProperty("p"); // shows "true"
+nullProtoObj.hasOwnProperty("p"); // throws error: nullProtoObj.hasOwnProperty is not a function
 
-normalObj.constructor // shows "Object() { [native code] }"
-nullProtoObj.constructor // shows "undefined"
+normalObj.constructor; // shows "Object() { [native code] }"
+nullProtoObj.constructor; // shows "undefined"
 ```
 
 We can add the `toString` method back to the null-prototype object by simply assigning it one:
@@ -104,8 +97,8 @@ function getAge(name) {
   return ages[name];
 }
 
-hasPerson("hasOwnProperty") // true
-getAge("toString") // [Function: toString]
+hasPerson("hasOwnProperty"); // true
+getAge("toString"); // [Function: toString]
 ```
 
 Using a null-prototype object removes this hazard without introducing too much complexity to the `hasPerson` and `getAge` functions:
@@ -116,8 +109,8 @@ const ages = Object.create(null, {
   bob: { value: 27, enumerable: true },
 });
 
-hasPerson("hasOwnProperty") // false
-getAge("toString") // undefined
+hasPerson("hasOwnProperty"); // false
+getAge("toString"); // undefined
 ```
 
 In such case, the addition of any method should be done cautiously, as they can be confused with the other key-value pairs stored as data.
@@ -136,12 +129,9 @@ if (user.authenticated) {
 }
 ```
 
-## Examples
+### Classical inheritance with Object.create()
 
-### Classical inheritance with `Object.create()`
-
-Below is an example of how to use `Object.create()` to achieve classical
-inheritance. This is for a single inheritance, which is all that JavaScript supports.
+Below is an example of how to use `Object.create()` to achieve classical inheritance. This is for a single inheritance, which is all that JavaScript supports.
 
 ```js
 // Shape - superclass
@@ -151,10 +141,10 @@ function Shape() {
 }
 
 // superclass method
-Shape.prototype.move = function(x, y) {
+Shape.prototype.move = function (x, y) {
   this.x += x;
   this.y += y;
-  console.info('Shape moved.');
+  console.info("Shape moved.");
 };
 
 // Rectangle - subclass
@@ -163,19 +153,26 @@ function Rectangle() {
 }
 
 // subclass extends superclass
-Rectangle.prototype = Object.create(Shape.prototype);
-
-//If you don't set Rectangle.prototype.constructor to Rectangle,
-//it will take the prototype.constructor of Shape (parent).
-//To avoid that, we set the prototype.constructor to Rectangle (child).
-Rectangle.prototype.constructor = Rectangle;
+Rectangle.prototype = Object.create(Shape.prototype, {
+  // If you don't set Rectangle.prototype.constructor to Rectangle,
+  // it will take the prototype.constructor of Shape (parent).
+  // To avoid that, we set the prototype.constructor to Rectangle (child).
+  constructor: {
+    value: Rectangle,
+    enumerable: false,
+    writable: true,
+    configurable: true,
+  },
+});
 
 const rect = new Rectangle();
 
-console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // true
-console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
+console.log("Is rect an instance of Rectangle?", rect instanceof Rectangle); // true
+console.log("Is rect an instance of Shape?", rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
+
+Note that there are caveats to watch out for using `create()`, such as re-adding the [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) property to ensure proper semantics. Although `Object.create()` is believed to have better performance than mutating the prototype with {{jsxref("Object.setPrototypeOf()")}}, the difference is in fact negligible if no instances have been created and property accesses haven't been optimized yet. In modern code, the [class](/en-US/docs/Web/JavaScript/Reference/Classes) syntax should be preferred in any case.
 
 ### Using propertiesObject argument with Object.create()
 
@@ -197,16 +194,18 @@ o = Object.create(Object.prototype, {
   foo: {
     writable: true,
     configurable: true,
-    value: 'hello'
+    value: "hello",
   },
   // bar is a getter-and-setter (accessor) property
   bar: {
     configurable: false,
-    get() { return 10; },
+    get() {
+      return 10;
+    },
     set(value) {
-      console.log('Setting `o.bar` to', value);
-    }
-  }
+      console.log("Setting `o.bar` to", value);
+    },
+  },
 });
 
 function Constructor() {}
@@ -237,14 +236,17 @@ delete o.p;
 // false
 
 // to specify a property with the same attributes as in an initializer
-o2 = Object.create({}, {
-  p: {
-    value: 42,
-    writable: true,
-    enumerable: true,
-    configurable: true
-  }
-});
+o2 = Object.create(
+  {},
+  {
+    p: {
+      value: 42,
+      writable: true,
+      enumerable: true,
+      configurable: true,
+    },
+  },
+);
 // This is not equivalent to:
 // o2 = Object.create({ p: 42 })
 // which will create an object with prototype { p: 42 }

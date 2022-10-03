@@ -32,7 +32,7 @@ IMSC is always specified as a complete XML document. As a file it should have th
 
 Let's look at a minimal IMSC document and how it is rendered:
 
-{{EmbedGHLiveSample("imsc/minimal_ttml/minimal.html", '100%', 560)}}
+{{EmbedGHLiveSample("imsc-examples/minimal_ttml/minimal.html", '100%', 560)}}
 
 The most important features are as follows:
 
@@ -48,7 +48,7 @@ The minimal IMSC document from the previous example had no timing. That means th
 
 Consider the following editable example:
 
-{{EmbedGHLiveSample("imsc/minimal-timing/minimal-timing-player.html", '100%', 590)}}
+{{EmbedGHLiveSample("imsc-examples/minimal-timing/minimal-timing-player.html", '100%', 590)}}
 
 This includes the following new attributes:
 
@@ -61,7 +61,7 @@ Play around with the second values in the code sample and push the reload button
 
 You can also use the `dur` attribute for timing:
 
-{{EmbedGHLiveSample("imsc/minimal-timing/minimal-timing-player-dur.html", '100%', 590)}}
+{{EmbedGHLiveSample("imsc-examples/minimal-timing/minimal-timing-player-dur.html", '100%', 590)}}
 
 This attribute can be used as an alternative to the `end` attribute. It defines "how long" the subtitle is shown after the `begin` time has elapsed. In the example the second paragraph shall be displayed for 2s. As it starts at second 2 it shall disappear at second 4.
 
@@ -71,7 +71,7 @@ Note what has changed at second 2 compared to the previous example.
 
 Often subtitles are shown on an opaque or semi-opaque background to improve readability. You can use the `backgroundColor` and `color` attributes to change the colors, as demonstrated in this editable example:
 
-{{EmbedGHLiveSample("imsc/minimal-colors/minimal-colors.html", '100%', 620)}}
+{{EmbedGHLiveSample("imsc-examples/minimal-colors/minimal-colors.html", '100%', 620)}}
 
 Here we've introduced the following:
 
@@ -155,13 +155,13 @@ This includes the following new features:
 
 This sample will be rendered as shown below. Give it a try and play around with the code in the two boxes. You could for example set the `tts:origin` attribute to "_0% 0%_". Or see what happens when you change the value of the `region` attribute of the `<p>` element to "_top_".
 
-{{EmbedGHLiveSample("imsc/minimal-region/minimal-region.html", '100%', 650)}}
+{{EmbedGHLiveSample("imsc-examples/minimal-region/minimal-region.html", '100%', 650)}}
 
 ## Expanded example
 
 The more expanded example below gives you an idea what you can do with IMSC after you worked through our tutorials.
 
-{{EmbedGHLiveSample("imsc/basic-expanded/basics-expanded.html", '100%', 300)}}
+{{EmbedGHLiveSample("imsc-examples/basic-expanded/basics-expanded.html", '100%', 300)}}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

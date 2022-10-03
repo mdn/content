@@ -1,6 +1,7 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
+page-type: css-property
 tags:
   - CSS
   - CSS Property

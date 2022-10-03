@@ -3,7 +3,6 @@ title: Domain name
 slug: Glossary/Domain_name
 tags:
   - Domain Name
-  - Glossary
   - Protocol
   - WebMechanics
 ---

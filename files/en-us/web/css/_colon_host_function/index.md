@@ -1,8 +1,9 @@
 ---
-title: ':host()'
+title: ":host()"
 slug: Web/CSS/:host_function
+page-type: css-pseudo-class
 tags:
-  - ':host()'
+  - ":host()"
   - CSS
   - Layout
   - Pseudo-class

@@ -3,7 +3,6 @@ title: Head
 slug: Glossary/Head
 tags:
   - CodingScripting
-  - Glossary
   - HTML
   - head
   - metadata

@@ -3,7 +3,6 @@ title: Type
 slug: Glossary/Type
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

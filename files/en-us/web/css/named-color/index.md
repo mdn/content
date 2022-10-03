@@ -1,6 +1,7 @@
 ---
 title: <named-color>
 slug: Web/CSS/named-color
+page-type: css-type
 tags:
   - Reference
   - CSS Data Type

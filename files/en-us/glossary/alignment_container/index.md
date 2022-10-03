@@ -4,7 +4,6 @@ slug: Glossary/Alignment_Container
 tags:
   - Alignment container
   - CSS
-  - Glossary
   - alignment
 ---
 

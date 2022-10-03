@@ -2,7 +2,6 @@
 title: ICANN
 slug: Glossary/ICANN
 tags:
-  - Glossary
   - Infrastructure
 ---
 

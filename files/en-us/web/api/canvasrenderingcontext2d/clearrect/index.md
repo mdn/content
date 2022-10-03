@@ -59,8 +59,8 @@ each frame in an animation. The dimensions of the cleared area are set to equal 
 attributes.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -81,17 +81,17 @@ The cleared area is rectangular in shape, with its top-left corner at (10, 10). 
 cleared area has a width of 120 and a height of 100.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Draw yellow background
 ctx.beginPath();
-ctx.fillStyle = '#ff6';
+ctx.fillStyle = "#ff6";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 // Draw blue triangle
 ctx.beginPath();
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.moveTo(20, 20);
 ctx.lineTo(180, 20);
 ctx.lineTo(130, 130);

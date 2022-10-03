@@ -2,7 +2,6 @@
 title: HTTPS RR
 slug: Glossary/https_rr
 tags:
-  - Glossary
   - HTTPS
   - HTTPS RR
   - Infrastructure
