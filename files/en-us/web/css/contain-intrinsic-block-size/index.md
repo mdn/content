@@ -35,6 +35,7 @@ contain-intrinsic-block-size: auto 300px;
 contain-intrinsic-block-size: inherit;
 contain-intrinsic-block-size: initial;
 contain-intrinsic-block-size: revert;
+contain-intrinsic-block-size: revert-layer;
 contain-intrinsic-block-size: unset;
 ```
 

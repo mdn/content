@@ -36,6 +36,7 @@ contain-intrinsic-inline-size: auto 300px;
 contain-intrinsic-inline-size: inherit;
 contain-intrinsic-inline-size: initial;
 contain-intrinsic-inline-size: revert;
+contain-intrinsic-inline-size: revert-layer;
 contain-intrinsic-inline-size: unset;
 ```
 
