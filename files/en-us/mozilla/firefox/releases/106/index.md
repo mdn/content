@@ -52,7 +52,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ## Changes for add-on developers
 
-- The `object-src` directive in the `"content-security-policy"` manifest key is now optional ({{bug(1766881)}}). See [object-src directive](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive), on the `"content-security-policy"` manifest key page, for more details. 
+- The `object-src` directive in the `"content-security-policy"` manifest key is now optional ({{bug(1766881)}}). See [object-src directive](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive), on the `"content-security-policy"` manifest key page, for more details.
 
 ### Removals
 
