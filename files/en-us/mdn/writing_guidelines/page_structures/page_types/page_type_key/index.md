@@ -10,6 +10,7 @@ tags:
 {{MDNSidebar}}
 
 The `page-type` front matter key describes the type of an MDN page.
+This allows MDN content tools to better automate content checking and sidebar organization.
 
 Like any other front matter key, the `page-type` key is specified in the YAML at the start of "index.md":
 
