@@ -31,8 +31,8 @@ This project is a work in progress: so far we have only defined `page-type` valu
 
 These page types are not specific to a particular MDN technology area:
 
-- `guide`: A generic guide page with no specific structure. See [Conceptual page](#conceptual_page).
-- `landing-page`: A page that acts primarily as a navigation aid, listing links to other pages. See [Landing page](#landing_page).
+- `guide`: a generic guide page with no specific structure. See [Conceptual page](#conceptual_page).
+- `landing-page`: a page that acts primarily as a navigation aid, listing links to other pages. See [Landing page](#landing_page).
 
 ## Web API page types
 
