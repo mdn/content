@@ -68,12 +68,12 @@ console.log(shape.__proto__ === Circle);  // false
 const ShapeA = function () {};
 const ShapeB = {
   a() {
-    console.log('aaa');
+    console.log("aaa");
   },
 };
 
 ShapeA.prototype.__proto__ = ShapeB;
-console.log(ShapeA.prototype.__proto__);
+console.log(ShapeA.prototype.__proto__); // { a: [Function: a] }
 
 const shapeA = new ShapeA();
 shapeA.a(); // aaa
@@ -84,7 +84,7 @@ console.log(ShapeA.prototype === shapeA.__proto__); // true
 const ShapeC = function () {};
 const ShapeD = {
   a() {
-    console.log('a');
+    console.log("a");
   },
 };
 
@@ -97,22 +97,15 @@ console.log(ShapeC.prototype === shapeC.__proto__); // false
 ```js
 function Test() {}
 Test.prototype.myName = function () {
-  console.log('myName');
+  console.log("myName");
 };
 
 const testInstance = new Test();
 console.log(testInstance.__proto__ === Test.prototype); // true
 testChild.myName(); // myName
-```
-
-```js
-const fn = function () {};
-fn.prototype.myName = function () {
-  console.log('myName');
-};
 
 const obj = {};
-obj.__proto__ = fn.prototype
+obj.__proto__ = Test.prototype;
 obj.myName(); // myName
 ```
 
