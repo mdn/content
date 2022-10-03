@@ -32,6 +32,7 @@ contain-intrinsic-height: auto 300px;
 contain-intrinsic-height: inherit;
 contain-intrinsic-height: initial;
 contain-intrinsic-height: revert;
+contain-intrinsic-height: revert-layer;
 contain-intrinsic-height: unset;
 ```
 
