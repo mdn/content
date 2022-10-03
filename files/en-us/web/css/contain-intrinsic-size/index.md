@@ -82,6 +82,77 @@ The remembered value is not used if the child elements are being rendered (if si
 
 {{csssyntax}}
 
+## Examples
+
+### Setting the intrinsic size
+
+This example ...
+
+```css
+.toggle_intrinsic_size {
+  contain-intrinsic-size: auto 50px auto 100px;
+}
+.set_hidden {
+  content-visibility: hidden;
+}
+.set_visible {
+  content-visibility: visible;
+}
+.set_auto {
+  content-visibility: auto;
+}
+#contained_element {
+  border: 2px solid green;
+}
+.child_element {
+  border: 1px solid blue;
+  height: 100px;
+  width: 150px;
+}
+```
+
+```js
+const containedElement = document.querySelector("#contained_element");
+const buttonIntrinsic = document.getElementById("intrinsic_size");
+const buttonVisibility = document.getElementById("visibility");
+
+buttonIntrinsic.addEventListener("click", () => {
+  containedElement.classList.toggle("toggle_intrinsic_size");
+  if (containedElement.classList.contains("toggle_intrinsic_size")) {
+    buttonIntrinsic.innerText = "Intrinsic Size: On"
+  } else {
+    buttonIntrinsic.innerText = "Intrinsic Size: Off"
+  }
+});
+
+buttonVisibility.addEventListener("click", () => {
+  if (containedElement.classList.contains("set_hidden")) {
+    buttonVisibility.innerText = "Visible"
+    containedElement.classList.add("set_visible");
+    containedElement.classList.remove("set_hidden");
+    containedElement.classList.remove("set_auto");
+  } else if (containedElement.classList.contains("set_visible")) {
+    buttonVisibility.innerText = "Auto"
+    containedElement.classList.add("set_auto");
+    containedElement.classList.remove("set_visible");
+    containedElement.classList.remove("set_hidden");
+  } else {
+    buttonVisibility.innerText = "Hidden"
+    containedElement.classList.add("set_hidden");
+    containedElement.classList.remove("set_visible");
+    containedElement.classList.remove("set_auto");
+  }
+});
+```
+
+```html
+<button id="intrinsic_size">Intrinsic size</button>
+<button id="visibility">Visibility</button>
+<div id="contained_element" class=""><div class="child_element"></div></div>
+```
+
+{{EmbedLiveSample('Setting the intrinsic size', '100%', 150)}}
+
 ## Specifications
 
 {{Specifications}}
