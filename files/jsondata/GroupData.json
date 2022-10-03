@@ -750,7 +750,7 @@
       ],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": ["indexedDB"],
+      "properties": [],
       "events": []
     },
     "Largest Contentful Paint API": {
