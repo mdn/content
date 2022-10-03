@@ -50,7 +50,7 @@ If you want to get a team together to work on an update, or you just want to rep
 
 ## The page-type front matter key
 
-We have defined a front matter key `page-type` to describe the type of MDN pages. This project is a work in progress: so far we have only defined `page-type` values for the [Web API pages](/en-US/docs/Web/API).
+We have defined a front matter key `page-type` to describe the type of MDN pages. This project is a work in progress: so far we have only defined `page-type` values for the [CSS pages](/en-US/docs/Web/CSS) and the [Web API pages](/en-US/docs/Web/API).
 
 ### Generic page types
 
@@ -89,6 +89,37 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
   - : A page documenting a WebGL extension, like [`WEBGL_draw_buffers`](/en-US/docs/Web/API/WEBGL_draw_buffers).
 - `webgl-extension-method`
   - : A page documenting a method on WebGL extension, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES).
+
+### CSS page types
+
+This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/CSS). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `css-at-rule`
+  - : A page documenting a CSS [at-rule](/en-US/docs/Web/CSS/At-rule), like {{cssxref("@charset")}}.
+- `css-at-rule-descriptor`
+  - : A page documenting a CSS at-rule descriptor, like [`@counter-style/prefix`](/en-US/docs/web/css/@counter-style/prefix).
+- `css-combinator`
+  - : A page documenting a CSS combinator, like the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
+- `css-function`
+  - : A page documenting a CSS [function](/en-US/docs/Web/CSS/CSS_Functions), like {{cssxref("max")}}.
+- `css-keyword`
+  - : A page documenting a CSS keyword, like {{cssxref("inherit")}}.
+- `css-media-feature`
+  - : A page documenting a CSS [media feature](/en-US/docs/Web/CSS/@media#media_features), like [`hover`](/en-US/docs/Web/CSS/@media/hover).
+- `css-module`
+  - : An overview page for a CSS module, like [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations).
+- `css-property`
+  - : A page documenting a CSS property, like {{cssxref("background-color")}}.
+- `css-pseudo-class`
+  - : A page documenting a CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), like {{cssxref(":enabled")}}.
+- `css-pseudo-element`
+  - : A page documenting a CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), like {{cssxref("::before")}}.
+- `css-selector`
+  - : A page documenting a CSS [basic selector](/en-US/docs/Web/CSS/CSS_Selectors#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Class_selectors).
+- `css-shorthand-property`
+  - : A page documenting a CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties), like {{cssxref("background")}}.
+- `css-type`
+  - : A page documenting a CSS [data type](/en-US/docs/Web/CSS/CSS_Types), like [`<color>`](/en-US/docs/Web/CSS/color_value).
 
 ## API landing page
 
