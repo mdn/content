@@ -666,11 +666,11 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 <div class="output" style="height: 300px;">
   <label for="theme">Select theme: </label>
   <select id="theme">
-    <option value="white">White</option>
-    <option value="black">Black</option>
-    <option value="purple">Purple</option>
-    <option value="yellow">Yellow</option>
-    <option value="psychedelic">Psychedelic</option>
+    <option value="White">White</option>
+    <option value="Black">Black</option>
+    <option value="Purple">Purple</option>
+    <option value="Yellow">Yellow</option>
+    <option value="Psychedelic">Psychedelic</option>
   </select>
 
   <h1>This is my website</h1>
