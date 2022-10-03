@@ -107,8 +107,8 @@ function isPrime(element) {
   return true;
 }
 
-console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
-console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
+console.log([4, 6, 8, 12].findLastIndex(isPrime)); // -1, not found
+console.log([4, 5, 7, 8, 9, 11, 12].findLastIndex(isPrime)); // 5
 ```
 
 ### Using findLastIndex() on sparse arrays

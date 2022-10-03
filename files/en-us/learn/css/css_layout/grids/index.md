@@ -115,7 +115,7 @@ body {
 
 {{ EmbedLiveSample('Defining_a_grid', '100%', 400) }}
 
-### Flexible grids with the **fr** unit
+### Flexible grids with the fr unit
 
 In addition to creating grids using lengths and percentages, we can use the `fr` unit to flexibly size grid rows and columns. This unit represents one fraction of the available space in the grid container.
 

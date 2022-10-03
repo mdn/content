@@ -1,6 +1,7 @@
 ---
 title: pow()
 slug: Web/CSS/pow
+page-type: css-function
 tags:
   - CSS
   - CSS Function

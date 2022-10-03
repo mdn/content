@@ -199,7 +199,7 @@ formElem.addEventListener('formdata', (e) => {
 
 > **Note:** The `formdata` event and {{domxref("FormDataEvent")}} object are available in Chrome from version 77 (and other equivalent Chromiums), and Firefox 72 (first available behind the `dom.formdata.event.enabled` pref in Firefox 71).
 
-## Submitting forms and uploading files via AJAX _without_ `FormData` objects
+## Submitting forms and uploading files via AJAX without `FormData` objects
 
 If you want to know how to serialize and submit a form via [AJAX](/en-US/docs/Web/Guide/AJAX) _without_ using FormData objects, please read [this paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
 

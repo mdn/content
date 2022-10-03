@@ -1,6 +1,7 @@
 ---
 title: sign()
 slug: Web/CSS/sign
+page-type: css-function
 tags:
   - CSS
   - CSS Function

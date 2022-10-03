@@ -1,6 +1,7 @@
 ---
 title: "Custom properties (--*): CSS variables"
 slug: Web/CSS/--*
+page-type: guide
 tags:
   - CSS
   - CSS Custom Properties
@@ -29,10 +30,6 @@ Custom properties are scoped to the element(s) they are declared on, and partici
   - : This value matches any sequence of one or more tokens, so long as the sequence does not contain an disallowed token. It represents the entirety of what a valid declaration can have as its value.
 
 > **Note:** Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
-
-### Formal syntax
-
-{{CSSSyntax}}
 
 ## Example
 
