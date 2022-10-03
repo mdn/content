@@ -39,13 +39,6 @@ A string.
 
 {{Compat}}
 
-In Internet Explorer, `contenteditable` cannot be applied to the
-{{htmlelement("table")}}, {{htmlelement("col")}}, {{htmlelement("colgroup")}},
-{{htmlelement("tbody")}}, {{htmlelement("td")}}, {{htmlelement("tfoot")}},
-{{htmlelement("th")}}, {{htmlelement("thead")}}, and {{htmlelement("tr")}} elements
-directly. A content editable {{htmlelement("span")}} or {{htmlelement("div")}} element
-can be placed inside the individual table cells.
-
 ## See also
 
 - [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
