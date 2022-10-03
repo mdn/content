@@ -100,8 +100,8 @@ Test.prototype.myName = function () {
   console.log('myName');
 };
 
-const testChild = new Test();
-console.log(testChild.__proto__ === Test.prototype); // true
+const testInstance = new Test();
+console.log(testInstance.__proto__ === Test.prototype); // true
 testChild.myName(); // myName
 ```
 
@@ -112,8 +112,7 @@ fn.prototype.myName = function () {
 };
 
 const obj = {};
-// obj.__proto__ = fn.prototype
-Object.setPrototypeOf(obj, fn.prototype);
+obj.__proto__ = fn.prototype
 obj.myName(); // myName
 ```
 
