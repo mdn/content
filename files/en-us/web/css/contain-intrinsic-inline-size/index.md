@@ -14,10 +14,10 @@ browser-compat: css.properties.contain-intrinsic-inline-size
 
 {{CSSRef}} {{SeeCompatTable}}
 
-The **`contain-intrinsic-inline-size`** [CSS](/en-US/docs/Web/CSS) [logical property](/en-US/docs/Web/CSS/CSS_Logical_Properties) defines the inline-size of an element that will be used for layout when it is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+The **`contain-intrinsic-inline-size`** [CSS](/en-US/docs/Web/CSS) [logical property](/en-US/docs/Web/CSS/CSS_Logical_Properties) defines the inline-size of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
-The inline-size is the size of the element in the dimension parallel to the flow of text within a line.
-In a horizontal [writing mode](/en-US/docs/Web/CSS/writing-mode) like standard English this is the horizontal dimension (width); for a vertical writing mode it is the vertical dimension.
+Inline-size is the size of the element in the dimension parallel to the flow of text within a line.
+In a horizontal [writing mode](/en-US/docs/Web/CSS/writing-mode) like standard English, inline size is the horizontal dimension (width); for a vertical writing mode, inline size is the vertical dimension.
 
 ## Syntax
 
@@ -41,20 +41,21 @@ contain-intrinsic-inline-size: unset;
 
 ### Values
 
-The following values may be specified for an element.
+The following values can be specified for the intrinsic inline size of an element:
 
 - `none`
   - : The element has no intrinsic inline-size.
 - `<length>`
   - : The element has the specified inline-size ({{cssxref("&lt;length&gt;")}}).
 - `auto <length>`
-  - : A remembered value of the "normally rendered" element inline-size if one exists and the element is skipping its contents (for example, when it is offscreen); otherwise the specified `<length>`.
+  - : When the element is in size containment and skipping its contents (for example, when it is offscreen and `content-visibility: auto` is set) the inline size is remembered from the actual size of the element when it was last able to render its child elements.
+    If the element has never rendered its child elements and hence has no remembered value for the normally rendered element size, or if it is not skipping its contents, the inline size is the specified `<length>`.
 
 ## Description
 
 The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/contain) and [`content-visibility`](/en-US/docs/Web/CSS/content-visibility).
 
-Size containment allows a user agent to layout an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
+Size containment allows a user agent to lay out an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
 By default, size containment treats elements as though they had no contents, and may collapse the layout in the same way as if the contents had no width or height.
 The `contain-intrinsic-inline-size` property allows authors to specify an appropriate value to be used as the inline-size for layout.
 

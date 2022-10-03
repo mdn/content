@@ -13,7 +13,7 @@ browser-compat: css.properties.contain-intrinsic-height
 
 {{CSSRef}} {{SeeCompatTable}}
 
-The **`contain-intrinsic-length`** [CSS](/en-US/docs/Web/CSS) property sets the height of an element that will be used for layout when it is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+The **`contain-intrinsic-length`** [CSS](/en-US/docs/Web/CSS) property sets the height of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
 ## Syntax
 
