@@ -36,7 +36,7 @@ The void elements in HTML are as follows:
 ## The curious case of self-closing tags
 
 _Self-closing tags (`<tag />`) do not exist in HTML._\
-However, foreign content is allowed to specify self-closing tags. In such case, if a start tag is marked as self-closing, then end tag must not be specified.
+However, the start tags of SVG and MathML elements that cannot have any child nodes are allowed to be marked as self-closing. In such cases, if an element's start tag is marked as self-closing, the element must not have an end tag.
 
 If present, HTML parsers ignore the trailing `/` in start tags. Some code formatters, use this fact and add a trailing `/` to the void tags to make them similar to XML style tags. For example, some code-formatters will convert `<input type="text">` to `<input type="text" />`.
 
