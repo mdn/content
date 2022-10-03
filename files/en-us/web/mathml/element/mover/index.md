@@ -15,11 +15,10 @@ The MathML `<mover>` element is used to attach an accent or a limit over an expr
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attribute:
 
 - `accent`
-  - : If `true` the over-script is an _accent_, which is drawn closer to the base expression.
-    If `false` (default value) the over-script is a _limit_ over the base expression.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether the over script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
 
 ## Examples
 
