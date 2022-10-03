@@ -50,7 +50,7 @@ The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate gen
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None, it is an {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>

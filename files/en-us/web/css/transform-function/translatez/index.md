@@ -128,6 +128,8 @@ Note if the `perspective()` value is less than the `translateZ()` value, such as
 further than the user's viewport. The smaller the difference between the perspective and translateZ values, the closer
 the user is to the element and the larger the translated element will seem.
 
+> **Note:** As the composition of transforms isn't commutative, the order you write the different functions is significant. In particular, in general, you want `perspective()` to be placed before `translateZ()`.
+
 ### Result
 
 {{EmbedLiveSample("Examples", 250, 250)}}
