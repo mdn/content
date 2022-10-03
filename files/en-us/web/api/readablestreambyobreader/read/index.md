@@ -109,7 +109,7 @@ function readStream(reader) {
       .then(function processBytes({ done, value }) {
         // Result objects contain two properties:
         // done  - true if the stream has already given all its data.
-        // value - some data. Always undefined when done is true.
+        // value - some data. Always defined, even when done is true.
 
         if (done) {
           // There is no more data in the stream
