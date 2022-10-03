@@ -1,5 +1,8 @@
 blank_issues_enabled: true
 contact_links:
+  - name: New content suggestion or feature request
+    url: https://github.com/mdn/mdn/issues/new/choose
+    about: If you want to propose new content to be added to MDN Web Docs or have a feature request, please use this link.
   - name: MDN GitHub Discussions
     url: https://github.com/orgs/mdn/discussions
     about: Does the issue involve a lot of pages, or are you not sure how it can be split into actionable tasks? Consider starting a discussion first.
