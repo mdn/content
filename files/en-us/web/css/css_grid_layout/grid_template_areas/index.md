@@ -1,6 +1,7 @@
 ---
 title: Grid template areas
 slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+page-type: guide
 tags:
   - CSS
   - CSS Grids

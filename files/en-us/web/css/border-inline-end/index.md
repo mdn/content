@@ -1,6 +1,7 @@
 ---
 title: border-inline-end
 slug: Web/CSS/border-inline-end
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Logical Property

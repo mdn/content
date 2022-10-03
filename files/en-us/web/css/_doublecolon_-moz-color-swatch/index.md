@@ -1,6 +1,7 @@
 ---
 title: '::-moz-color-swatch'
 slug: Web/CSS/::-moz-color-swatch
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:Mozilla Extensions

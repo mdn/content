@@ -48,7 +48,7 @@ For example, you can use this key to:
 
 - Restrict permitted sources for other types of content, such as images and stylesheets, using the appropriate [policy directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy).
 - Allow the extension to take advantage of [WebAssembly](/en-US/docs/WebAssembly) by including the `'wasm-unsafe-eval'` source in the `script-src` directive.
-- Loosen the default default {{CSP("script-src")}} policies (Manifest V2 only):
+- Loosen the default {{CSP("script-src")}} policies (Manifest V2 only):
   - Allow the extension to load scripts from outside its package, by supplying their URL in the {{CSP("script-src")}} directive.
   - Allow the extension to execute inline scripts, by [supplying the hash of the script in the `script-src` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script).
   - Allow the extension to use `eval()` and similar features, by including `'unsafe-eval'` in the {{CSP("script-src")}} directive.

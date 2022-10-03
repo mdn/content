@@ -1,6 +1,7 @@
 ---
 title: ":default"
 slug: Web/CSS/:default
+page-type: css-pseudo-class
 tags:
   - ":default"
   - CSS

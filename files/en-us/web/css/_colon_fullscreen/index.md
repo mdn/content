@@ -1,6 +1,7 @@
 ---
 title: ":fullscreen"
 slug: Web/CSS/:fullscreen
+page-type: css-pseudo-class
 tags:
   - CSS
   - Fullscreen

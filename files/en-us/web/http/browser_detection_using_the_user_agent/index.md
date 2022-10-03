@@ -181,7 +181,7 @@ addEventListener(
   () => {
     orientationChanged = true;
   },
-  PASSIVE_LISTENER_OPTION,
+  PASSIVE_LISTENER_OPTION
 );
 
 addEventListener("resize", () =>

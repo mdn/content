@@ -58,16 +58,17 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ## Examples
 
 ```html
-<math>
+<math display="block">
   <mrow>
     <mn>5</mn>
     <mo>+</mo>
     <mn>5</mn>
   </mrow>
+</math>
 
+<math display="block">
   <mrow>
     <mo>[</mo> <!-- default form value: prefix -->
-
     <mrow>
       <mn>0</mn>
       <mo>;</mo> <!-- default form value: infix -->
@@ -77,6 +78,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
   </mrow>
 </math>
 ```
+
+{{ EmbedLiveSample('mo_example', 700, 200, "", "") }}
 
 ## Specifications
 

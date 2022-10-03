@@ -31,7 +31,7 @@ In web pages, the window object is also a _global object_. This means:
 1. Global variables of your script are, in fact, properties of `window`:
 
    ```js
-   const global = { data: 0 };
+   var global = { data: 0 };
    alert(global === window.global); // displays "true"
    ```
 

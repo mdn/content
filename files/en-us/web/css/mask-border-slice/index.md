@@ -1,6 +1,7 @@
 ---
 title: mask-border-slice
 slug: Web/CSS/mask-border-slice
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

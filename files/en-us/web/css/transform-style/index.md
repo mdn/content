@@ -1,6 +1,7 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
+page-type: css-property
 tags:
   - CSS
   - CSS Property

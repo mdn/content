@@ -1,6 +1,7 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/margin-inline-end
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

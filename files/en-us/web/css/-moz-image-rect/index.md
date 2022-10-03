@@ -1,6 +1,7 @@
 ---
 title: "-moz-image-rect"
 slug: Web/CSS/-moz-image-rect
+page-type: css-function
 tags:
   - CSS
   - CSS Function

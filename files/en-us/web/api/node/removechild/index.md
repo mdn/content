@@ -72,7 +72,7 @@ if (node.parentNode) {
 To remove all children from an element:
 
 ```js
-let element = document.getElementById("top");
+let element = document.getElementById("idOfParent");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }

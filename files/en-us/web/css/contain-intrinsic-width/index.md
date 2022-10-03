@@ -1,6 +1,7 @@
 ---
 title: contain-intrinsic-width
 slug: Web/CSS/contain-intrinsic-width
+page-type: css-property
 tags:
   - CSS
   - CSS Property

@@ -1,6 +1,7 @@
 ---
 title: CSS Flow Layout
 slug: Web/CSS/CSS_Flow_Layout
+page-type: guide
 tags:
   - CSS
   - CSS Flow Layout

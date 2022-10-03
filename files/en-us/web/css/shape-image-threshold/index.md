@@ -1,6 +1,7 @@
 ---
 title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
+page-type: css-property
 tags:
   - Boundaries
   - CSS

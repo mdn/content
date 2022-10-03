@@ -8,10 +8,11 @@ tags:
   - OffscreenCanvas
   - Property
   - Reference
+  - Experimental
 browser-compat: api.OffscreenCanvas.height
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{SeeCompatTable}}
 
 The **`height`** property returns and sets the height of an {{domxref("OffscreenCanvas")}} object.
 

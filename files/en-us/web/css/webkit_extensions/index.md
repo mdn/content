@@ -1,6 +1,7 @@
 ---
 title: WebKit CSS extensions
 slug: Web/CSS/WebKit_Extensions
+page-type: css-property
 tags:
   - CSS
   - CSS:WebKit Extensions

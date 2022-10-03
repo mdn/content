@@ -1,6 +1,7 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

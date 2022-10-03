@@ -1,6 +1,7 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
+page-type: css-property
 tags:
   - CSS
   - CSS Property

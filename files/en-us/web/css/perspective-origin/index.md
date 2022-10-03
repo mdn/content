@@ -1,6 +1,7 @@
 ---
 title: perspective-origin
 slug: Web/CSS/perspective-origin
+page-type: css-property
 tags:
   - 3D
   - CSS

@@ -1,6 +1,7 @@
 ---
 title: Class selectors
 slug: Web/CSS/Class_selectors
+page-type: css-selector
 tags:
   - CSS
   - Reference

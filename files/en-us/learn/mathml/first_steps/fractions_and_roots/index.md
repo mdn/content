@@ -216,7 +216,7 @@ function verifyOption(checkbox) {
     }
   }
   const finished = checkboxes.every(
-    (checkbox) => !!checkbox.checked === !!checkbox.dataset.highlight,
+    (checkbox) => !!checkbox.checked === !!checkbox.dataset.highlight
   );
   status.textContent = finished
     ? "Congratulations, you checked all the correct answers!"

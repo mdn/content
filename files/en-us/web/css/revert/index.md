@@ -1,6 +1,7 @@
 ---
 title: revert
 slug: Web/CSS/revert
+page-type: css-keyword
 tags:
   - CSS
   - CSS Cascade

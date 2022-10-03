@@ -1,6 +1,7 @@
 ---
 title: grid-area
 slug: Web/CSS/grid-area
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Grid

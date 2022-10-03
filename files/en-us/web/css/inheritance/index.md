@@ -1,6 +1,7 @@
 ---
 title: Inheritance
 slug: Web/CSS/inheritance
+page-type: guide
 tags:
   - CSS
   - Guide

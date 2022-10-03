@@ -8,6 +8,10 @@ tags:
   - photosensitive seizure
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 ### Spatial Localization
 
 NASA conducted research on the perception of color, and found that luminance contrast mattered greatly as to how colors are perceived. The two images below are from NASA research, specifically, from the article, "[Designing With Blue](https://colorusage.arc.nasa.gov/blue_2.php)"
@@ -60,7 +64,7 @@ The nature of space can change depending upon what MIME type is being used, and 
 
 ## See Also
 
-### **MDN**
+### MDN
 
 - [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)

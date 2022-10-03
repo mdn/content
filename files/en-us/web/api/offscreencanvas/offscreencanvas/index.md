@@ -9,10 +9,11 @@ tags:
   - OffscreenCanvas
   - Reference
   - WebGL
+  - Experimental
 browser-compat: api.OffscreenCanvas.OffscreenCanvas
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{SeeCompatTable}}
 
 The **`OffscreenCanvas()`** constructor returns a newly instantiated {{domxref("OffscreenCanvas")}} object.
 

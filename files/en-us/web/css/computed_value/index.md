@@ -1,6 +1,7 @@
 ---
 title: Computed value
 slug: Web/CSS/computed_value
+page-type: guide
 tags:
   - CSS
   - Guide

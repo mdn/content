@@ -24,17 +24,14 @@ and [Legendre symbols](https://en.wikipedia.org/wiki/Legendre_symbol).
 
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
 - `denomalign` {{deprecated_inline}}
   - : The alignment of the denominator under the fraction. Possible values are: `left`, `center` (default), and `right`.
-    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
 - `linethickness`
-  - : The thickness of the horizontal fraction line. This attributes accepts any [length values](/en-US/docs/Web/CSS/length).
-    The values `medium`, `thin`, and `thick` are deprecated and will be removed in the future.
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the thickness of the horizontal fraction line. Some browsers may also accept deprecated values `medium`, `thin` and `thick` but their exact interpretation is left to implementers.
 - `numalign` {{deprecated_inline}}
   - : The alignment of the numerator over the fraction. Possible values are: `left`, `center` (default), and `right`.
-    This attribute is deprecated and will be removed in the future. Use CSS [`text-align`](/en-US/docs/Web/CSS/text-align) instead.
 
 ## Examples
 

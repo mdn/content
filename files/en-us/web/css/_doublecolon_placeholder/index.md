@@ -1,6 +1,7 @@
 ---
 title: '::placeholder'
 slug: Web/CSS/::placeholder
+page-type: css-pseudo-element
 tags:
   - '::placeholder'
   - CSS
