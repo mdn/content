@@ -13,7 +13,7 @@ In HTML, a void element must not have an end tag. For example, `<input type="tex
 
 The [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/), and [MathML](https://www.w3.org/TR/MathML3/) specifications define very precisely what each element can contain. So, some combinations of tags have no semantic meaning.
 
-Although a void element cannot have children in text serialized form (that is source code), child nodes can be added to the element in DOM using JavaScript. This is not a good practice as the outcome will not be reliable.
+Although there is no way to mark up a void element as having any children, child nodes can be added programmatically to the element in the DOM using JavaScript. But that is not a good practice, as the outcome will not be reliable.
 
 The void elements in HTML are as follows:
 
@@ -38,6 +38,6 @@ The void elements in HTML are as follows:
 _Self-closing tags (`<tag />`) do not exist in HTML._\
 However, the start tags of SVG and MathML elements that cannot have any child nodes are allowed to be marked as self-closing. In such cases, if an element's start tag is marked as self-closing, the element must not have an end tag.
 
-If present, HTML parsers ignore the trailing `/` in start tags. Some code formatters, use this fact and add a trailing `/` to the void tags to make them similar to XML style tags. For example, some code-formatters will convert `<input type="text">` to `<input type="text" />`.
+If a trailing `/` (slash) character is present in the start tag of an HTML element, HTML parsers ignore that slash character. However, some code formatters add a trailing slash character to the start tags of void elements to make them XHTML compatible and more readable. For example, some code formatters will convert `<input type="text">` to `<input type="text" />`.
 
-> **Note:** Without a space between unquoted attribute value and `/>`, the `/` becomes a part of the value. For example, the code `<img src=http://www.example.com/logo.svg/>` results in `src` attribute getting value `http://www.example.com/logo.svg/`, which makes the URL wrong.
+> **Note:** If a trailing `/` (slash) character in a start tag is directly preceded by an unquoted attribute value — with no space between — the slash becomes a part of the attribute value rather than being discarded by the parser. For example, the markup `<img src=http://www.example.com/logo.svg/>` results in the `src` attribute having the value `http://www.example.com/logo.svg/` — which makes the URL wrong.
