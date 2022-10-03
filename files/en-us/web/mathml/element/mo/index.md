@@ -35,7 +35,7 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attr
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum size of the operator when it is stretchy.
 
 - `movablelimits`
-  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether attached under- and overscripts move to sub- and superscript positions when [`math-style`](/en-US/docs/Web/CSS/math-style) set to `compact`.
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) indicating whether attached under- and overscripts move to sub- and superscript positions when [`math-style`](/en-US/docs/Web/CSS/math-style) is set to `compact`.
 
 - `rspace`
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the amount of space after the operator.
