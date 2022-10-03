@@ -35,8 +35,8 @@ For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some brow
 1. An optional `+` or `-` sign as a prefix, specifying an increment or decrement to the corresponding dimension (if absent, the corresponding dimension is set directly to specified value).
 2. Followed by an [`<unsigned-number>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) (let's call it α below).
 3. Optionally followed by a value (if absent, the specified value is interpreted as "100 times α percent").
-   - A [unit](https://developer.mozilla.org/en-US/docs/Web/MathML/Attribute/Values#units). The specified value is interpreted the same as [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
-   - A [namedspace constant](https://developer.mozilla.org/en-US/docs/Web/MathML/Attribute/Values#constants). The specified value is interpreted as α times the constant.
+   - A [unit](/en-US/docs/Web/MathML/Attribute/Values#units). The specified value is interpreted the same as [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
+   - A [namedspace constant](/en-US/docs/Web/MathML/Attribute/Values#constants). The specified value is interpreted as α times the constant.
    - A pseudo-unit `width`, `height` or `depth`. The specified value is interpreted as α times the corresponding dimension of the content.
    - A percent sign followed by a pseudo-unit `width`, `height` or `depth`. The specified value is interpreted as α% the corresponding dimension of the content.
 
