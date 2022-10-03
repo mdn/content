@@ -250,8 +250,8 @@ I put Modernizr inside my `js/lib` directory, then included it by putting the fo
 With Modernizr in place, we can now use the following JS block to test whether media queries are supported, and if not, to load in [respond.js](https://github.com/scottjehl/Respond), Scott Jehl's `matchMedia` and media query polyfill.
 
 ```js
-if (!Modernizr.mq('only all')) {
-  require('respond');
+if (!Modernizr.mq("only all")) {
+  require("respond");
 }
 ```
 
@@ -259,7 +259,7 @@ if (!Modernizr.mq('only all')) {
 
 ```js
 if (window.matchMedia("(min-width: 481px)").matches) {
-  require('three');
+  require("three");
 }
 ```
 
@@ -269,7 +269,7 @@ We can, therefore, save the bandwidth for browsers that don't need it.
 
 Back to Modernizr! The reason why it is so useful is that it provides a mechanism to selectively serve both CSS and JavaScript. Modernizr stores the results of all its feature tests as classes on the HTML element. For example, the Modernizr in our example app is testing for multiple background image and rgba support. When they are not supported, the `<html>` tag looks like this:
 
-```html
+```html-nolint
 <html class="js no-rgba no-multiplebgs">
 ```
 

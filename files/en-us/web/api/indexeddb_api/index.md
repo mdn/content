@@ -80,7 +80,7 @@ This specification fires events with the following custom interface:
 
 ## Examples
 
-- [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/)): The reference application for the examples in the reference docs.
+- [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)): The reference application for the examples in the reference docs.
 
 ## Specifications
 

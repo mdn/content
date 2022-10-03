@@ -1,6 +1,7 @@
 ---
 title: min-content
 slug: Web/CSS/min-content
+page-type: css-keyword
 tags:
   - CSS
   - Keyword

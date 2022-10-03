@@ -91,7 +91,7 @@ This section defines the terms used in this document, some of which are from the
 - `Stale response`
   - : Indicates that the response is a [stale response](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). This usually means the response can't be reused as-is. Cache storage isn't required to remove stale responses immediately because revalidation could change the response from being stale to being [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) again.
 - `Age`
-  - : The time since a response was generated. It is a criterion for whether a response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) or [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
+  - : The time since a response was generated. It is a criterion for whether a response is [fresh or stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
 
 ## Directives
 

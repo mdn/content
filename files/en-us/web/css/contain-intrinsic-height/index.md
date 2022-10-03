@@ -1,6 +1,7 @@
 ---
 title: contain-intrinsic-height
 slug: Web/CSS/contain-intrinsic-height
+page-type: css-property
 browser-compat: css.properties.contain-intrinsic-height
 ---
 

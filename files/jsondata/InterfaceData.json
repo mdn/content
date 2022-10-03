@@ -736,10 +736,6 @@
       "inh": "",
       "impl": []
     },
-    "CSSViewportRule": {
-      "inh": "CSSRule",
-      "impl": []
-    },
     "CustomElementRegistry": {
       "inh": "",
       "impl": []
@@ -1730,6 +1726,10 @@
     },
     "IdentityCredential": {
       "inh": "Credential",
+      "impl": []
+    },
+    "IdentityProvider": {
+      "inh": "",
       "impl": []
     },
     "IdleDeadline": {
