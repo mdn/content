@@ -22,7 +22,7 @@ One common application of Base64 encoding on the web is to encode binary data so
 In JavaScript there are two functions respectively for decoding and encoding Base64 strings:
 
 - [`btoa()`](/en-US/docs/Web/API/btoa): creates a Base64-encoded ASCII string from a "string" of binary data ("btoa" should be read as "binary to ASCII").
-- [`atob()`](/en-US/docs/Web/API/atob): decodes a Base64-encoded string("atob" should be read as "ASCII to binary").
+- [`atob()`](/en-US/docs/Web/API/atob): decodes a Base64-encoded string ("atob" should be read as "ASCII to binary").
 
 The algorithm used by `atob()` and `btoa()` is specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648), section 4.
 
