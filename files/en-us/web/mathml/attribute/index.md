@@ -358,7 +358,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>scriptlevel</code></td>
       <td><a href="/en-US/docs/Web/MathML/Global_attributes">All MathML elements</a></td>
       <td>
-        Specifies a <a href="(en-US/docs/Web/CSS/math-depth">math-depth</a> for the element. See the <a href="/en-US/docs/Web/MathML/Global_attributes/scriptlevel#values">scriptlevel page</a> for accepted values and mapping.
+        Specifies a <a href="/en-US/docs/Web/CSS/math-depth">math-depth</a> for the element. See the <a href="/en-US/docs/Web/MathML/Global_attributes/scriptlevel#values">scriptlevel page</a> for accepted values and mapping.
       </td>
     </tr>
     <tr>
