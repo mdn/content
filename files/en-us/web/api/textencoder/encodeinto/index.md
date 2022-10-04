@@ -16,7 +16,7 @@ browser-compat: api.TextEncoder.encodeInto
 The **`TextEncoder.encodeInto()`** method takes a
 string to encode and a destination {{jsxref("Uint8Array")}} to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the
 progress of the encoding.
-This is potentially more performant than the older `encode()` method especially when the target buffer is a view into a WASM heap.
+This is potentially more performant than the older `encode()` method — especially when the target buffer is a view into a WASM heap.
 
 ## Syntax
 
