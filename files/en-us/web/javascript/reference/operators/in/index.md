@@ -108,6 +108,7 @@ Symbol.iterator in trees; // returns true
 const mycar = { make: "Honda", model: "Accord", year: 1998 };
 "make" in mycar; // returns true
 "model" in mycar; // returns true
+("make", "model") in mycar; // returns true
 ```
 
 You must specify an object on the right side of the `in` operator. For example, you can specify a string created with the `String` constructor, but you cannot specify a string literal.
