@@ -29,7 +29,11 @@ h1:has(+ p) { margin-bottom: 0; }
 :has( <forgiving-relative-selector-list> )
 ```
 
-> **Note:** The `:has()` pseudo-class cannot be nested within another `:has()`. Also, pseudo-elements are not valid selectors within `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying.
+The `:has()` pseudo-class cannot be nested within another `:has()`. Also, pseudo-elements are not valid selectors within `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying.
+
+The relative selector list is [forgiving](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list). Normally in CSS, when a selector in a selector list is invalid, then the whole list is deemed invalid. When a selector in a `:has()` selector list fails to parse, the incorrect or unsupported selector will be ignored and the others will be used. Note that if the `:has()` pseudo-class itself is not supported in a browser, the entire selector block will fail (unless `:has()` itself is in a forgiving selector list, such as in [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where)).
+
+While `:has()` cannot be nested in another `:has()`, as the selector list is forgiving, it will just be ignored. The selector will not fail. The same holds true for pseudo-elements.
 
 ## Examples
 
