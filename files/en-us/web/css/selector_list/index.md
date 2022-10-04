@@ -34,7 +34,7 @@ When applying styles to elements matching different criteria, group the selector
 
 ### Invalid selector list
 
-A downside to using a selector list is that a single unsupported selector in the selector list invalidates the entire rule.
+A downside to using a selector list is that a single invalid selector in the selector list invalidates the entire rule.
 
 Consider the following two CSS rule sets:
 
@@ -42,7 +42,7 @@ Consider the following two CSS rule sets:
 h1 {
   font-family: sans-serif;
 }
-h2:maybe-unsupported {
+h2:maybe-invalid {
   font-family: sans-serif;
 }
 h3 {
@@ -51,7 +51,7 @@ h3 {
 ```
 
 ```css
-h1, h2:maybe-unsupported, h3 {
+h1, h2:maybe-invalid, h3 {
   font-family: sans-serif;
 }
 ```
@@ -68,7 +68,7 @@ Carrying on from the previous example, the following two CSS rule sets are now e
 h1 {
   font-family: sans-serif;
 }
-h2:maybe-unsupported {
+h2:maybe-invalid {
   font-family: sans-serif;
 }
 h3 {
@@ -77,7 +77,7 @@ h3 {
 ```
 
 ```css
-:is(h1, h2:maybe-unsupported, h3) {
+:is(h1, h2:maybe-invalid, h3) {
   font-family: sans-serif;
 }
 ```
