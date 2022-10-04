@@ -48,7 +48,7 @@ In addition to the basic MathML global attributes, the following global attribut
   - : A [color](/en-US/docs/Web/CSS/color) for the element.
 
 - [`mathsize`](/en-US/docs/Web/MathML/Global_attributes/mathsize)
-  - : A [font-size](/en-US/docs/Web/CSS/font-size) for the element.
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) used as a [font-size](/en-US/docs/Web/CSS/font-size) for the element.
 
 - [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant)
   - A logical classes of token elements.
@@ -57,7 +57,7 @@ In addition to the basic MathML global attributes, the following global attribut
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
 
 - [`scriptlevel`](/en-US/docs/Web/MathML/Global_attributes/scriptlevel)
-  - : A [math-depth](/en-US/docs/Web/CSS/math-depth) for the element.
+  - : Specifies a [math-depth](/en-US/docs/Web/CSS/math-depth) for the element. See the [scriptlevel page](/en-US/docs/Web/MathML/Global_attributes/scriptlevel#values) for accepted values and mapping.
 
 - [`style`](/en-US/docs/Web/HTML/Global_attributes/style)
   - : Contains [CSS](/en-US/docs/Web/CSS) styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the {{MathMLElement("style")}} element have mainly the purpose of allowing for quick styling, for example for testing purposes.

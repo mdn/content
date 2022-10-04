@@ -3596,6 +3596,7 @@
 /en-US/docs/Glossary/Content_type	/en-US/docs/Glossary/MIME_type
 /en-US/docs/Glossary/DTD	/en-US/docs/Glossary/Doctype
 /en-US/docs/Glossary/Distributed_DenialofService	/en-US/docs/Glossary/Distributed_Denial_of_Service
+/en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function

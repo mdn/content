@@ -172,6 +172,19 @@ These pseudo-classes require some interaction by the user in order for them to a
 - {{CSSxRef(":focus-within")}}
   - : Matches an element to which {{CSSxRef(":focus")}} applies, plus any element that has a descendant to which {{CSSxRef(":focus")}} applies.
 
+## Functional pseudo-classes
+
+These pseudo-classes accept a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list) as a parameter.
+
+- [`:is()`](/en-US/docs/Web/CSS/:is)
+  - : The matches-any pseudo-class matches any element that matches any of the selectors in the list provided.
+- [`:not()`](/en-US/docs/Web/CSS/:not)
+  - : The negation, or matches-none, pseudo-class represents any element that is not represented by its argument.
+- [`:where()`](/en-US/docs/Web/CSS/:where)
+  - : The specificity-adjustment pseudo-class matches any element that matches any of the selectors in the list provided without adding any specificity weight.
+- [`:has()`](/en-US/docs/Web/CSS/:has)
+  - : The relational pseudo-class represents an element if any of the relative selectors match when anchored against the attached element.
+
 ## Syntax
 
 ```css
