@@ -399,11 +399,11 @@ Finally, we need to include the images of the beasts.
 
 Create a new directory called "beasts", and add the three images in that directory, with the appropriate names. You can get the images from [the GitHub repository](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), or from here:
 
-![](frog.jpg)
+![A brown frog.](frog.jpg)
 
-![](snake.jpg)
+![An emerald tree boa with white stripes.](snake.jpg)
 
-![](turtle.jpg)
+![A red-eared slider turtle.](turtle.jpg)
 
 ## Testing it out
 
