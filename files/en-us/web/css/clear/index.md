@@ -27,7 +27,7 @@ The floats that are relevant to be cleared are the earlier floats within the sam
 >
 > ```css
 > #container {
->   display:flow-root;
+>   display: flow-root;
 > }
 > ```
 
