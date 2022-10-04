@@ -69,7 +69,8 @@ A lower-cased ASCII string, which can be one of the following values:
   ['utf-16le'](https://en.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes),
   and `'x-user-defined'`.
 - A special encoding, `'replacement'`, which only emits an error and an `EOF` code point.
-  It is used to prevent attacks that mismatch encodings between the client and server. It can happen with `ISO-2022-CN` and `ISO-2022-CN-ext`.
+  It is used to prevent attacks that mismatch encodings between the client and server.
+  It can happen with `ISO-2022-CN` and `ISO-2022-CN-ext`.
 
 ## Specifications
 
