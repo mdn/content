@@ -100,9 +100,9 @@ Test.prototype.myName = function () {
   console.log("myName");
 };
 
-const testInstance = new Test();
-console.log(testInstance.__proto__ === Test.prototype); // true
-testChild.myName(); // myName
+const test = new Test();
+console.log(test.__proto__ === Test.prototype); // true
+test.myName(); // myName
 
 const obj = {};
 obj.__proto__ = Test.prototype;
