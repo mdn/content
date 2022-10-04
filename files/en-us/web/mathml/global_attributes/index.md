@@ -48,7 +48,7 @@ In addition to the basic MathML global attributes, the following global attribut
   - : A [color](/en-US/docs/Web/CSS/color) for the element.
 
 - [`mathsize`](/en-US/docs/Web/MathML/Global_attributes/mathsize)
-  - : A [font-size](/en-US/docs/Web/CSS/font-size) for the element.
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) used as a [font-size](/en-US/docs/Web/CSS/font-size) for the element.
 
 - [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant)
   - A logical classes of token elements.
