@@ -12,7 +12,7 @@ browser-compat: css.selectors.list
 
 {{CSSRef}}
 
-The CSS **selector list** (`,`) selects all the matching nodes. A selector list is a comma-separated list of selectors. 
+The CSS **selector list** (`,`) selects all the matching nodes. A selector list is a comma-separated list of selectors.
 
 ## Description
 
