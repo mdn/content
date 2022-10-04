@@ -37,7 +37,7 @@ The **`<source>`** [HTML](/en-US/docs/Web/HTML) element specifies multiple media
       <td>It must have a start tag, but must not have an end tag.</td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Permitted parents</dfn></th>
+      <th scope="row">Permitted parents</th>
       <td>
         <div>
           A media element—{{HTMLElement("audio")}} or
