@@ -1,6 +1,7 @@
 ---
 title: box-shadow
 slug: Web/CSS/box-shadow
+page-type: css-property
 tags:
   - CSS
   - CSS Backgrounds and Borders

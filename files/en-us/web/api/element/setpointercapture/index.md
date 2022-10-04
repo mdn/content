@@ -21,13 +21,8 @@ be targeted at the capture element until capture is released (via
 {{domxref("Element.releasePointerCapture()")}} or the
 {{domxref("HTMLElement/pointerup_event", "pointerup")}} event is fired).
 
-> **Note:** When pointer capture is set,
-> {{domxref("HTMLElement/pointerover_event", "pointerover")}},
-> {{domxref("HTMLElement/pointerout_event", "pointerout")}},
-> {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}, and
-> {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} events are only generated
-> when crossing the boundary of the capture target. This has the effect of suppressing
-> these events on all other elements.
+> **Note:** Pointer capture will cause the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, `pointerover`, `pointerenter`, `pointerleave`, and `pointerout` **will not fire** as long as this capture is set.
+> For touchscreen browsers that allow [direct manipulation](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), an [implicit pointer capture](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture) will be called on the element when a `pointerdown` event triggers. The capture can be released manually by calling {{domxref('element.releasePointerCapture')}} on the target element, or it will be implicitly released after a `pointerup` or `pointercancel` event.
 
 ### Overview of pointer capture
 

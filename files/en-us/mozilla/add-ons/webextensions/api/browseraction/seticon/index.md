@@ -106,15 +106,15 @@ function logResponseHeaders(requestDetails) {
 function startListening() {
   browser.webRequest.onHeadersReceived.addListener(
     logResponseHeaders,
-    {urls: ["<all_urls>"]},
+    { urls: ["<all_urls>"] },
     ["responseHeaders"]
   );
-  browser.browserAction.setIcon({path: "icons/listening-on.svg"});
+  browser.browserAction.setIcon({ path: "icons/listening-on.svg" });
 }
 
 function stopListening() {
   browser.webRequest.onHeadersReceived.removeListener(logResponseHeaders);
-  browser.browserAction.setIcon({path: "icons/listening-off.svg"});
+  browser.browserAction.setIcon({ path: "icons/listening-off.svg" });
 }
 
 function toggleListener() {
@@ -142,7 +142,7 @@ function getImageData() {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  browser.browserAction.setIcon({imageData: getImageData()});
+  browser.browserAction.setIcon({ imageData: getImageData() });
 });
 ```
 
@@ -151,7 +151,8 @@ The following snippet updates the icon when the user clicks it, but only for the
 ```js
 browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.setIcon({
-    tabId: tab.id, path: "icons/updated-48.png"
+    tabId: tab.id,
+    path: "icons/updated-48.png",
   });
 });
 ```

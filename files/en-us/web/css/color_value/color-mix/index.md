@@ -1,6 +1,7 @@
 ---
 title: color-mix()
 slug: Web/CSS/color_value/color-mix
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type

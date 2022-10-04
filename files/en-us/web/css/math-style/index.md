@@ -1,10 +1,11 @@
 ---
 title: math-style
 slug: Web/CSS/math-style
+page-type: css-property
 tags:
   - CSS
   - MathML
-  - Property
+  - CSS Property
   - Reference
   - math-style
   - Experimental

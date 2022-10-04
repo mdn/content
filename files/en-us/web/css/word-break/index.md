@@ -1,6 +1,7 @@
 ---
 title: word-break
 slug: Web/CSS/word-break
+page-type: css-property
 tags:
   - CSS
   - CSS Property

@@ -1,6 +1,7 @@
 ---
 title: border-top-width
 slug: Web/CSS/border-top-width
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

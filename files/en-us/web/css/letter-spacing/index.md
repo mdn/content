@@ -1,6 +1,7 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
+page-type: css-property
 tags:
   - CSS
   - CSS Property

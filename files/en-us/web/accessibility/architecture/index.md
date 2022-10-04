@@ -6,6 +6,10 @@ tags:
   - Developing Mozilla
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 The implementation of text and embedded objects in Mozilla is clever but confusing. Here is a bit of history and an explanation.
 
 Mozilla exposes a document containment hierarchy with text and embedded objects. Sometimes the embedded object is really just another text container with more embedded objects.

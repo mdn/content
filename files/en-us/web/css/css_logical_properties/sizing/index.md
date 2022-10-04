@@ -1,6 +1,7 @@
 ---
 title: Logical properties for sizing
 slug: Web/CSS/CSS_Logical_Properties/Sizing
+page-type: guide
 tags:
   - CSS
   - CSS Logical Properties

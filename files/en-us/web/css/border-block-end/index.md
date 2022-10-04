@@ -1,6 +1,7 @@
 ---
 title: border-block-end
 slug: Web/CSS/border-block-end
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Logical Property

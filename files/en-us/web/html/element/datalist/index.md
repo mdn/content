@@ -129,7 +129,8 @@ Predefined values can be shown there, allowing the user to quickly fill the cont
 The recommended values in the {{HTMLElement("input/range", "range")}} type will be shown as series of hash marks that the user can easily select.
 
 ```html
-<input type="range" list="tickmarks" />
+<label for="tick">Tip amount:</label>
+<input type="range" list="tickmarks" min="0" max="100" id="tick" name="tick" />
 <datalist id="tickmarks">
   <option value="0"></option>
   <option value="10"></option>
@@ -145,7 +146,8 @@ The recommended values in the {{HTMLElement("input/range", "range")}} type will 
 The {{HTMLElement("input/color", "color")}} type can show predefined colors in a browser-provided interface.
 
 ```html
-<input type="color" list="redColors" />
+<label id="colors">Pick a color (preferably a red tone):</label>
+<input type="color" list="redColors" id="colors" />
 <datalist id="redColors">
   <option value="#800000"></option>
   <option value="#8B0000"></option>
@@ -161,7 +163,8 @@ The {{HTMLElement("input/color", "color")}} type can show predefined colors in a
 The specification allows linking `<datalist>` with a {{HTMLElement("input/password", "password")}} type, but no browser supports it for security reasons.
 
 ```html
-<input type="password" list="randomPassword" />
+<label for="pwd">Enter a password:</label>
+<input type="password" list="randomPassword" id="pwd" />
 <datalist id="randomPassword">
   <option value="5Mg[_3DnkgSu@!q#"></option>
 </datalist>

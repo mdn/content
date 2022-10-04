@@ -1,6 +1,7 @@
 ---
 title: "@viewport"
 slug: Web/CSS/@viewport
+page-type: css-at-rule
 tags:
   - "@viewport"
   - At-rule

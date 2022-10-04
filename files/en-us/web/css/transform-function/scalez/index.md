@@ -1,6 +1,7 @@
 ---
 title: scaleZ()
 slug: Web/CSS/transform-function/scaleZ
+page-type: css-function
 tags:
   - CSS
   - CSS Function

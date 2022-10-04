@@ -1,6 +1,7 @@
 ---
 title: "-moz-orient"
 slug: Web/CSS/-moz-orient
+page-type: css-property
 tags:
   - CSS
   - CSS Property

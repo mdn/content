@@ -1,6 +1,7 @@
 ---
 title: opacity
 slug: Web/CSS/opacity
+page-type: css-property
 tags:
   - CSS
   - CSS Property

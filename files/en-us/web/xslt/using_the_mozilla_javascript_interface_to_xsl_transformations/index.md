@@ -62,7 +62,10 @@ You can also use {{domxref("XSLTProcessor.transformToFragment()")}} which will r
 
 ```js
 const ownerDocument = document.implementation.createDocument("", "test", null);
-const newFragment = processor.transformToFragment(domToBeTransformed, ownerDocument);
+const newFragment = processor.transformToFragment(
+  domToBeTransformed,
+  ownerDocument
+);
 ```
 
 {{domxref("XSLTProcessor.transformToFragment()")}} will only produce HTML DOM objects if the owner document is itself an {{domxref("HTMLDocument")}}, or if the output method of the stylesheet is HTML. It will **not** produce an HTML DOM objects if only the toplevel element of the result is {{HTMLElement("html")}} as {{domxref("XSLTProcessor.transformToFragment()")}} is rarely used to create this element. If you want to override this, you can set the output method normally in the standard way.

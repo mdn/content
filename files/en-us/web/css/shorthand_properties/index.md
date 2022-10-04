@@ -1,6 +1,7 @@
 ---
 title: Shorthand properties
 slug: Web/CSS/Shorthand_properties
+page-type: guide
 tags:
   - CSS
   - Guide

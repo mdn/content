@@ -1,6 +1,7 @@
 ---
 title: all
 slug: Web/CSS/all
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Cascade

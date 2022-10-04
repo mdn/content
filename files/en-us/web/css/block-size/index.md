@@ -1,6 +1,7 @@
 ---
 title: block-size
 slug: Web/CSS/block-size
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

@@ -1,6 +1,7 @@
 ---
 title: CSS Paged Media
 slug: Web/CSS/CSS_Pages
+page-type: css-module
 tags:
   - CSS
   - CSS Paged Media

@@ -1,6 +1,7 @@
 ---
 title: border-inline-start-style
 slug: Web/CSS/border-inline-start-style
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

@@ -112,7 +112,7 @@ You can set a default value for the input by including a valid time in the {{htm
 
 ### Setting the value using JavaScript
 
-You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement")}} `value` property, for example:
+You can also get and set the time value in JavaScript using the {{domxref("HTMLInputElement")}} `value` property, for example:
 
 ```js
 const timeControl = document.querySelector('input[type="time"]');
@@ -498,7 +498,7 @@ const minuteSelect = document.querySelector('#minute');
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
-// Test whether a new date input falls back to a text input or not
+// Test whether a new time input falls back to a text input or not
 const test = document.createElement('input');
 
 try {

@@ -1,6 +1,7 @@
 ---
 title: border-inline-end-color
 slug: Web/CSS/border-inline-end-color
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

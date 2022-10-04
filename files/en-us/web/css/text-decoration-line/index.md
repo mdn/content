@@ -1,6 +1,7 @@
 ---
 title: text-decoration-line
 slug: Web/CSS/text-decoration-line
+page-type: css-property
 tags:
   - CSS
   - CSS Property

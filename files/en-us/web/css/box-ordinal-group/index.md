@@ -1,6 +1,7 @@
 ---
 title: box-ordinal-group
 slug: Web/CSS/box-ordinal-group
+page-type: css-property
 tags:
   - CSS
   - CSS Property

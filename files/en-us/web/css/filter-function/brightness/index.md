@@ -1,6 +1,7 @@
 ---
 title: brightness()
 slug: Web/CSS/filter-function/brightness
+page-type: css-function
 tags:
   - CSS
   - CSS Function

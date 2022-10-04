@@ -54,7 +54,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
 - {{domxref("MSGestureEvent.initGestureEvent()")}} {{deprecated_inline}}
-  - : Initializes the value of an `MSGestureEvent`. If the event has already being dispatched, this method does nothing. This method is deprecated as of Microsoft Edge.
+  - : Initializes the value of an `MSGestureEvent`. If the event has already been dispatched, this method does nothing. This method is deprecated as of Microsoft Edge.
 
 ## Gesture event types
 

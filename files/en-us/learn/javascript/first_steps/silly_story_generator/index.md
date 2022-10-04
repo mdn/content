@@ -112,7 +112,7 @@ Completing the `result()` function:
 - If you are unsure whether the JavaScript is applied to your HTML properly, try removing everything else from the JavaScript file temporarily, adding in a simple bit of JavaScript that you know will create an obvious effect, then saving and refreshing. The following for example turns the background of the {{htmlelement("html")}} element red — so the entire browser window should go red if the JavaScript is applied properly:
 
   ```js
-  document.querySelector('html').style.backgroundColor = 'red';
+  document.querySelector("html").style.backgroundColor = "red";
   ```
 
 - [`Math.round()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round) is a built-in JavaScript method that rounds the result of a calculation to the nearest whole number.

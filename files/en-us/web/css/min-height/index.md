@@ -1,6 +1,7 @@
 ---
 title: min-height
 slug: Web/CSS/min-height
+page-type: css-property
 tags:
   - CSS
   - CSS Property

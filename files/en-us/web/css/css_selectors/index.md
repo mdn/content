@@ -1,6 +1,7 @@
 ---
 title: CSS selectors
 slug: Web/CSS/CSS_Selectors
+page-type: landing-page
 tags:
   - CSS
   - Guide

@@ -1,6 +1,7 @@
 ---
 title: any-hover
 slug: Web/CSS/@media/any-hover
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

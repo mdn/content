@@ -44,7 +44,7 @@ By default, only the first child of the `<semantics>` element is rendered while 
 ## Example
 
 ```html
-<math>
+<math display="block">
   <semantics>
     <!-- The first child is the MathML expression rendered by default. -->
     <mrow>
@@ -79,6 +79,8 @@ By default, only the first child of the `<semantics>` element is rendered while 
   </semantics>
 </math>
 ```
+
+{{ EmbedLiveSample('semantics_example', 700, 200, "", "") }}
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow
+page-type: css-function
 tags:
   - CSS
   - CSS Function

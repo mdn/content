@@ -1,6 +1,7 @@
 ---
 title: appearance
 slug: Web/CSS/appearance
+page-type: css-property
 tags:
   - '-moz-appearance'
   - '-webkit-appearance'

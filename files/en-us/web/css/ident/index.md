@@ -1,6 +1,7 @@
 ---
 title: <ident>
 slug: Web/CSS/ident
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

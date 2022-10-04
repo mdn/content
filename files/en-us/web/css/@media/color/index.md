@@ -1,6 +1,7 @@
 ---
 title: color
 slug: Web/CSS/@media/color
+page-type: css-media-feature
 tags:
   - "@media"
   - CSS

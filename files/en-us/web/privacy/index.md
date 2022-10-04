@@ -16,7 +16,6 @@ tags:
   - personal
 ---
 
-
 As users use the web for more and more of their daily tasks, more of their private or personally-identifying information they share, ideally only with sites they trust. Cooperation among web content, the web browser, and the web server is needed to achieve as much privacy and information security as possible. In this article, we examine how to create web content that minimizes the risk of users' personal information or imagery being obtained unexpectedly by third parties.
 
 ## Security and privacy defined

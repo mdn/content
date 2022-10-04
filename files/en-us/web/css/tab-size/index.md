@@ -1,6 +1,7 @@
 ---
 title: tab-size
 slug: Web/CSS/tab-size
+page-type: css-property
 tags:
   - CSS
   - CSS Property

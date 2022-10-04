@@ -1,6 +1,7 @@
 ---
 title: scroll-padding-block-end
 slug: Web/CSS/scroll-padding-block-end
+page-type: css-property
 tags:
   - CSS
   - CSS Property

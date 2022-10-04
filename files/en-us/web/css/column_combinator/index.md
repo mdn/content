@@ -1,6 +1,7 @@
 ---
 title: Column combinator
 slug: Web/CSS/Column_combinator
+page-type: css-combinator
 tags:
   - CSS
   - Experimental

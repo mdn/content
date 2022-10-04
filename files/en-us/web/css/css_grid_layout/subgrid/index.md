@@ -1,6 +1,7 @@
 ---
 title: Subgrid
 slug: Web/CSS/CSS_Grid_Layout/Subgrid
+page-type: guide
 tags:
   - CSS
   - CSS Display

@@ -1,6 +1,7 @@
 ---
 title: caption-side
 slug: Web/CSS/caption-side
+page-type: css-property
 tags:
   - CSS
   - CSS Property
