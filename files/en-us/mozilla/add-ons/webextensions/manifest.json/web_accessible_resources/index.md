@@ -39,7 +39,7 @@ browser-compat: webextensions.manifest.web_accessible_resources
 
 ## Description
 
-Sometimes you want to package resources—for example, images, HTML, CSS, or JavaScript—with your extension and make them available to web pages.
+Sometimes you want to package resources—for example, images, HTML, CSS, or JavaScript—with your extension and make them available to web pages and other extensions.
 
 > **Note:** Until Firefox 105, extensions could access resources packaged in other extensions by default. From Firefox 105 onwards, to enable other extensions to access an extension's resources they must be included in this key.
 
