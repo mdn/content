@@ -2,12 +2,18 @@
 title: contain-intrinsic-width
 slug: Web/CSS/contain-intrinsic-width
 page-type: css-property
+tags:
+  - CSS
+  - CSS Property
+  - Reference
+  - experimental
+  - contain-intrinsic-width
 browser-compat: css.properties.contain-intrinsic-width
 ---
 
-{{CSSRef}}
+{{CSSRef}} {{SeeCompatTable}}
 
-The **`contain-intrinsic-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element that will be used for layout when it is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+The **`contain-intrinsic-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
 ## Syntax
 
@@ -26,6 +32,7 @@ contain-intrinsic-width: auto 300px;
 contain-intrinsic-width: inherit;
 contain-intrinsic-width: initial;
 contain-intrinsic-width: revert;
+contain-intrinsic-width: revert-layer;
 contain-intrinsic-width: unset;
 ```
 
@@ -67,3 +74,11 @@ The remembered value is not used if the child elements are being rendered (if si
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
+- {{CSSxRef("contain-intrinsic-size")}}
+- {{CSSxRef("contain-intrinsic-height")}}
+- {{CSSxRef("contain-intrinsic-block-size")}}
+- {{CSSxRef("contain-intrinsic-inline-size")}}
