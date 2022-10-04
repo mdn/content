@@ -67,7 +67,9 @@ After you have filed your issue, someone from our team will review it and give y
 
 ## Spotlight contributor
 
-Once a month, we [feature a contributor](https://github.com/mdn/mdn-contributor-spotlight) who has gone above and beyond with their contributions to the MDN Web Docs project. This can be through pull requests, assisting other community members in our discussions or learn forums, or actively providing feedback on issues and pull requests. To nominate someone to be featured, we have an [issue template set up](https://github.com/mdn/mdn/issues/new/choose) for this purpose.
+Once a month, we feature a [spotlight contributor](https://github.com/mdn/mdn-contributor-spotlight) who has gone above and beyond with their contributions to MDN Web Docs.
+Their contributions can be through pull requests, helping community members in GitHub discussions or learn forums, or providing feedback on GitHub issues and pull requests.
+To nominate someone, open a GitHub issue using the [spotlight contributor template](https://github.com/mdn/mdn/issues/new/choose) with details on their contributions.
 
 ## Invited experts program
 
