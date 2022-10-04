@@ -31,7 +31,7 @@ To get started, you need:
 - A computer powerful enough to handle rendering/displaying of VR scenes using your dedicated VR Hardware, if required. To give you an idea of what you need, look at the relevant guide for the VR you are purchasing (e.g. [VIVE READY Computers](https://www.vive.com/us/ready/)).
 - A supporting browser installed — the latest [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) or [Chrome](https://www.google.com/chrome/index.html) are your best options right now, on desktop or mobile.
 
-Once you have everything assembled, you can test to see whether your setup works with WebVR by going to our [simple A-Frame demo](https://mdn.github.io/webvr-tests/aframe-demo/), and seeing whether the scene renders and whether you can enter VR display mode by pressing the button at the bottom right.
+Once you have everything assembled, you can test to see whether your setup works with WebVR by going to our [simple A-Frame demo](https://mdn.github.io/webvr-tests/webvr/aframe-demo/), and seeing whether the scene renders and whether you can enter VR display mode by pressing the button at the bottom right.
 
 [A-Frame](https://aframe.io/) is by far the best option if you want to create a WebVR-compatible 3D scene quickly, without needing to understand a bunch of new JavaScript code. It doesn't however teach you how the raw WebVR API works, and this is what we'll get on to next.
 
@@ -41,7 +41,7 @@ To illustrate how the WebVR API works, we'll study our raw-webgl-example, which 
 
 ![](capture1.png)
 
-> **Note:** You can find the [source code of our demo](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) on GitHub, and [view it live](https://mdn.github.io/webvr-tests/raw-webgl-example/) also.
+> **Note:** You can find the [source code of our demo](https://github.com/mdn/webvr-tests/tree/main/webvr/raw-webgl-example) on GitHub, and [view it live](https://mdn.github.io/webvr-tests/webvr/raw-webgl-example/) also.
 
 > **Note:** If WebVR isn't working in your browser, you might need to make sure it is running through your graphics card. For example for NVIDIA cards, if you've got the NVIDIA control panel set up successfully, there will be a context menu option available — right click on Firefox, then choose _Run with graphics processor > High-performance NVIDIA processor_.
 
@@ -52,7 +52,7 @@ Our demo also features:
 - A button to start (and stop) our scene from being presented in the VR display.
 - A button to show (and hide) VR pose data, i.e. the position and orientation of the headset, updated in real time.
 
-When you look through the source code of [our demo's main JavaScript file](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js), you can easily find the WebVR-specific parts by searching for the string "WebVR" in preceding comments.
+When you look through the source code of [our demo's main JavaScript file](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js), you can easily find the WebVR-specific parts by searching for the string "WebVR" in preceding comments.
 
 > **Note:** To find out more about basic JavaScript and WebGL, consult our [JavaScript learning material](/en-US/docs/Learn/JavaScript), and our [WebGL Tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
@@ -115,7 +115,7 @@ One of the major functions inside our code is `start()` — we run this function
 document.body.onload = start;
 ```
 
-To begin with, `start()` retrieves a WebGL context to use to render 3D graphics into the {{htmlelement("canvas")}} element in [our HTML](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/index.html). We then check whether the `gl` context is available — if so, we run a number of functions to set up the scene for display.
+To begin with, `start()` retrieves a WebGL context to use to render 3D graphics into the {{htmlelement("canvas")}} element in [our HTML](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/index.html). We then check whether the `gl` context is available — if so, we run a number of functions to set up the scene for display.
 
 ```js
 function start() {
