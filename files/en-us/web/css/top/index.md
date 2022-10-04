@@ -1,6 +1,7 @@
 ---
 title: top
 slug: Web/CSS/top
+page-type: css-property
 tags:
   - CSS
   - CSS Positioning

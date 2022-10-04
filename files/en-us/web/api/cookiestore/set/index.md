@@ -79,7 +79,7 @@ cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + day,
-  domain: "example.com"
+  domain: "example.com",
 });
 ```
 

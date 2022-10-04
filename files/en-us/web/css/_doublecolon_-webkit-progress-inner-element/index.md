@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-progress-inner-element'
 slug: Web/CSS/::-webkit-progress-inner-element
+page-type: css-pseudo-element
 tags:
   - CSS
   - Non-standard

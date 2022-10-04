@@ -1,6 +1,7 @@
 ---
 title: image-set()
 slug: Web/CSS/image/image-set
+page-type: css-function
 tags:
   - CSS
   - CSS Function

@@ -69,7 +69,7 @@ Mozilla and Firefox support some features not in the standard drag-and-drop mode
 
 This section is a summary of the basic steps to add drag-and-drop functionality to an application.
 
-### Identify what is _draggable_
+### Identify what is draggable
 
 Making an element _draggable_ requires adding the {{htmlattrxref("draggable")}} attribute and the {{domxref("HTMLElement.dragstart_event","ondragstart")}} event handler, as shown in the following code sample:
 
@@ -133,7 +133,7 @@ Learn more about drag feedback images in:
 
 - [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image)
 
-### Define the drag _effect_
+### Define the drag effect
 
 The {{domxref("DataTransfer.dropEffect","dropEffect")}} property is used to control the feedback the user is given during a drag-and-drop operation. It typically affects which cursor the browser displays while dragging. For example, when the user hovers over a drop target, the browser's cursor may indicate the type of operation that will occur.
 
@@ -157,7 +157,7 @@ For more details, see:
 
 - [Drag Effects](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drag_effects)
 
-### Define a _drop zone_
+### Define a drop zone
 
 By default, the browser prevents anything from happening when dropping something onto most HTML elements. To change that behavior so that an element becomes a _drop zone_ or is _droppable_, the element must have both {{domxref("HTMLElement.dragover_event","ondragover")}} and {{domxref("HTMLElement.drop_event","ondrop")}} event handler attributes.
 
@@ -191,7 +191,7 @@ For more information, see:
 
 - [Specifying Drop Targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets)
 
-### Handle the drop _effect_
+### Handle the drop effect
 
 The handler for the {{domxref("Document/drop_event", "drop")}} event is free to process the drag data in an application-specific way.
 

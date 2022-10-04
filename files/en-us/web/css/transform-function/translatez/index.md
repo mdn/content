@@ -1,6 +1,7 @@
 ---
 title: translateZ()
 slug: Web/CSS/transform-function/translateZ
+page-type: css-function
 tags:
   - 3D
   - CSS
@@ -126,6 +127,8 @@ Note if the `perspective()` value is less than the `translateZ()` value, such as
 `transform: perspective(200px) translateZ(300px);` the transformed element will not be visible as it is
 further than the user's viewport. The smaller the difference between the perspective and translateZ values, the closer
 the user is to the element and the larger the translated element will seem.
+
+> **Note:** As the composition of transforms isn't commutative, the order you write the different functions is significant. In particular, in general, you want `perspective()` to be placed before `translateZ()`.
 
 ### Result
 

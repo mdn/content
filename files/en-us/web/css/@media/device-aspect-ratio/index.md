@@ -1,8 +1,9 @@
 ---
 title: device-aspect-ratio
 slug: Web/CSS/@media/device-aspect-ratio
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Deprecated
   - Media Queries

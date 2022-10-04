@@ -1,6 +1,7 @@
 ---
 title: overflow-clip-margin
 slug: Web/CSS/overflow-clip-margin
+page-type: css-property
 tags:
   - CSS
   - CSS Overflow

@@ -20,7 +20,9 @@
     "MD025": {
       "front_matter_title": "^\\s*title\\s*[:=]"
     },
-    "MD026": false,
+    "MD026": {
+      "punctuation": ".,;:"
+    },
     // Consectutive Notes/Callouts currently don't conform with this rule
     "MD028": false,
     // Force orderd numbering to catch accidental list ending from indenting

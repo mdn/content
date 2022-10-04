@@ -40,8 +40,8 @@ The equality operators (`==` and `!=`) provide the [IsLooselyEqual](/en-US/docs/
 4. At this step, both operands are converted to primitives (one of String, Number, Boolean, Symbol, and BigInt). The rest of the conversion is done case-by-case.
    - If they are of the same type, compare them using step 1.
    - If one of the operands is a Symbol but the other is not, return `false`.
-   - If one of the operands is a Boolean but the other is not, convert the boolean to a number: `true` is converted to 1, and `false` is converted to 0. Then compare the two operands loosely again.
-   - Number to String: convert the string to a Number using the same algorithm as the [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) constructor. Conversion failure would result in `NaN`, which will guarantee the equality to be `false`.
+   - If one of the operands is a Boolean but the other is not, [convert the boolean to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion): `true` is converted to 1, and `false` is converted to 0. Then compare the two operands loosely again.
+   - Number to String: [convert the string to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). Conversion failure results in `NaN`, which will guarantee the equality to be `false`.
    - Number to BigInt: compare by their numeric value. If the number is ±Infinity or `NaN`, return `false`.
    - String to BigInt: convert the string to a BigInt using the same algorithm as the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) constructor. If conversion fails, return `false`.
 
@@ -56,36 +56,41 @@ There's a "willful violation" of the above algorithm: if one of the operands is 
 ### Comparison with no type conversion
 
 ```js
-1 == 1;              // true
-"hello" == "hello";  // true
+1 == 1; // true
+"hello" == "hello"; // true
 ```
 
 ### Comparison with type conversion
 
 ```js
-"1" == 1;             // true
-1 == "1";             // true
-0 == false;           // true
-0 == null;            // false
-0 == undefined;       // false
-0 == !!null;          // true, look at Logical NOT operator
-0 == !!undefined;     // true, look at Logical NOT operator
-null == undefined;    // true
+"1" == 1; // true
+1 == "1"; // true
+0 == false; // true
+0 == null; // false
+0 == undefined; // false
+0 == !!null; // true, look at Logical NOT operator
+0 == !!undefined; // true, look at Logical NOT operator
+null == undefined; // true
 
 const number1 = new Number(3);
 const number2 = new Number(3);
-number1 == 3;         // true
-number1 == number2;   // false
+number1 == 3; // true
+number1 == number2; // false
 ```
 
 ### Comparison of objects
 
 ```js
-const object1 = {"key": "value"}
-const object2 = {"key": "value"};
+const object1 = {
+  key: "value",
+};
 
-object1 == object2 // false
-object2 == object2 // true
+const object2 = {
+  key: "value",
+};
+
+console.log(object1 == object2); // false
+console.log(object1 == object1); // true
 ```
 
 ### Comparing strings and String objects
@@ -112,9 +117,9 @@ console.log(string4 == string4); // true
 ### Comparing Dates and strings
 
 ```js
-const d = new Date('December 17, 1995 03:24:00');
+const d = new Date("December 17, 1995 03:24:00");
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
-console.log(d == s);    //true
+console.log(d == s); //true
 ```
 
 ### Comparing arrays and strings

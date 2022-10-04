@@ -1,6 +1,7 @@
 ---
 title: asin()
 slug: Web/CSS/asin
+page-type: css-function
 tags:
   - CSS
   - CSS Function

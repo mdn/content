@@ -1,8 +1,9 @@
 ---
-title: '-ms-high-contrast'
+title: "-ms-high-contrast"
 slug: Web/CSS/@media/-ms-high-contrast
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Non-standard
   - Reference

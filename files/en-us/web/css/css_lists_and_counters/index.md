@@ -1,6 +1,7 @@
 ---
 title: CSS Lists
 slug: Web/CSS/CSS_Lists_and_Counters
+page-type: css-module
 tags:
   - CSS
   - CSS Lists

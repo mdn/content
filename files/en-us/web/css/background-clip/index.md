@@ -1,6 +1,7 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
+page-type: css-property
 tags:
   - CSS
   - CSS Background

@@ -1,6 +1,7 @@
 ---
 title: '!important'
 slug: Web/CSS/important
+page-type: css-keyword
 tags:
   - CSS
   - Reference

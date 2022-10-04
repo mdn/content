@@ -1,6 +1,7 @@
 ---
 title: <display-listitem>
 slug: Web/CSS/display-listitem
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

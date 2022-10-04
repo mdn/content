@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: window role'
+title: "ARIA: window role"
 slug: Web/Accessibility/ARIA/Roles/window_role
 tags:
   - Accessibility

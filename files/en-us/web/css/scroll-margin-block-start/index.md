@@ -1,6 +1,7 @@
 ---
 title: scroll-margin-block-start
 slug: Web/CSS/scroll-margin-block-start
+page-type: css-property
 tags:
   - CSS
   - CSS Property

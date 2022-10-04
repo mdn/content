@@ -1,6 +1,7 @@
 ---
 title: unicode-bidi
 slug: Web/CSS/unicode-bidi
+page-type: css-property
 tags:
   - BiDi
   - CSS

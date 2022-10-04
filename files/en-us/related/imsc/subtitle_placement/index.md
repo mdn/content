@@ -23,7 +23,7 @@ The `<region>` element essentially creates a box on the screen for the text to a
 
 In the example below, we have defined two regions. Both region boxes are the same size, which is 80% of the image width and 80% of the image height. This box is centered on the screen.
 
-{{EmbedGHLiveSample("imsc/layout-top-bottom/layout-top-bottom.html", '100%', 1000)}}
+{{EmbedGHLiveSample("imsc-examples/layout-top-bottom/layout-top-bottom.html", '100%', 1000)}}
 
 The important items to consider here are:
 

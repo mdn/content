@@ -1,6 +1,7 @@
 ---
 title: element()
 slug: Web/CSS/element
+page-type: css-function
 tags:
   - CSS
   - CSS Function

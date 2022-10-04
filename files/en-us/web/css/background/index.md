@@ -1,6 +1,7 @@
 ---
 title: background
 slug: Web/CSS/background
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Background

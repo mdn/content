@@ -1,6 +1,7 @@
 ---
 title: break-inside
 slug: Web/CSS/break-inside
+page-type: css-property
 tags:
   - CSS
   - CSS Fragmentation

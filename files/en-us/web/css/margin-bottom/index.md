@@ -1,6 +1,7 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
+page-type: css-property
 tags:
   - CSS
   - CSS Property

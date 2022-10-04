@@ -1,6 +1,7 @@
 ---
 title: Backwards compatibility of flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+page-type: guide
 tags:
   - '@supports'
   - CSS

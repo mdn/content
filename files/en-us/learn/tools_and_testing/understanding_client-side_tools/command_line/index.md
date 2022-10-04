@@ -104,7 +104,7 @@ In terms of what option to choose on Windows, we'd strongly recommend trying to 
 
 Generally you'll find these two terms used interchangeably. Technically, a terminal is software that starts and connects to a shell. A shell is your session and session environment (where things like the prompt and shortcuts might be customized). The command line is the literal line where you enter commands and the cursor blinks.
 
-### Do you _have_ to use the terminal?
+### Do you have to use the terminal?
 
 Although there's a great wealth of tools available from the command line, if you're using tools like [Visual Studio Code](https://code.visualstudio.com/) there's also a mass of extensions that can be used as a proxy to using terminal commands without needing to use the terminal directly. However, you won't find a code editor extension for everything you want to do — you'll have to get some experience with the terminal eventually.
 
@@ -410,7 +410,7 @@ First of all, create a new directory somewhere on your file system that is easy 
 
 Now save the following code in a new file called `index.js`, inside your test directory:
 
-```js
+```js-nolint
 const myObj = {
 a:1,b:{c:2}}
 function printMe(obj){console.log(obj.b.c)}

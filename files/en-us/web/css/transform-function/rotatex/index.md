@@ -1,6 +1,7 @@
 ---
 title: rotateX()
 slug: Web/CSS/transform-function/rotateX
+page-type: css-function
 tags:
   - CSS
   - CSS Function

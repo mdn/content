@@ -1,6 +1,7 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
+page-type: css-property
 tags:
   - CSS
   - CSS Animations

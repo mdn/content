@@ -1,6 +1,7 @@
 ---
 title: CSS Text Decoration
 slug: Web/CSS/CSS_Text_Decoration
+page-type: css-module
 tags:
   - CSS
   - CSS Text Decoration

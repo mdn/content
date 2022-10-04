@@ -1,6 +1,7 @@
 ---
 title: ruby-position
 slug: Web/CSS/ruby-position
+page-type: css-property
 tags:
   - CSS
   - CSS Property

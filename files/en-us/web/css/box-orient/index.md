@@ -1,6 +1,7 @@
 ---
 title: box-orient
 slug: Web/CSS/box-orient
+page-type: css-property
 tags:
   - CSS
   - Non-standard
