@@ -82,9 +82,11 @@ statement = "SELECT * FROM users WHERE name = '" + userName + "';"
 
 If the user specifies a real name, the statement will work as intended. However, a malicious user could completely change the behavior of this SQL statement to the new statement in the following example, by specifying the text in bold for the `userName`.
 
-```sql
-SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';
-```
+<pre>
+<code>
+SELECT * FROM users WHERE name = '<b>a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';</b>
+</code>
+</pre>
 
 The modified statement creates a valid SQL statement that deletes the `users` table and selects all data from the `userinfo` table (which reveals the information of every user). This works because the first part of the injected text (`a';`) completes the original statement.
 
