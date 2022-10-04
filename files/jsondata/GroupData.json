@@ -358,6 +358,7 @@
     },
     "Encoding API": {
       "overview": ["Encoding API"],
+      "guides": ["/docs/Web/API/Encoding_API/Encodings"],
       "interfaces": [
         "TextDecoder",
         "TextEncoder",
