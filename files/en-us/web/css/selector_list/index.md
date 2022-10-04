@@ -136,6 +136,7 @@ h2:has(+ p, > ul::after, + ul.red) {
 ```
 
 In the above, and `h2` that is immediately followed by a `<p>` or a `<ul class="red">`, will be italic. While pseudo-elements are not valid in the [`:has()`](/en-US/docs/Web/CSS/:has) forgiving relative selector list parameter, because the list is forgiving, it doesn't "break" the selector.
+
 ## Specifications
 
 {{Specifications}}
