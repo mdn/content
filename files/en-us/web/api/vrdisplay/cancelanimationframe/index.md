@@ -99,7 +99,7 @@ function drawVRScene() {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

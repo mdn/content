@@ -49,7 +49,9 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - {{ unimplemented_inline() }} rowspacing
   - : Specifies the space between table rows.
 - `width`
-  - : Specifies the width of the entire table. Accepts [length values](/en-US/docs/Web/MathML/Attribute/Values#lengths).
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the width of the entire table.
+
+> **Note:** For the `width` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
 
 ## Examples
 

@@ -349,7 +349,6 @@ For example, load up our [`modernizr-css.html`](https://github.com/mdn/learning-
 
 ```
 Modernizr.flexbox
-Modernizr.websqldatabase
 Modernizr.xhr2
 Modernizr.fetch
 ```

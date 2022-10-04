@@ -58,7 +58,7 @@ Clear-Site-Data: "*"
     - sessionStorage (executes `sessionStorage.clear`),
     - IndexedDB (for each database execute {{domxref("IDBFactory.deleteDatabase")}}),
     - Service worker registrations (for each service worker registration, execute {{domxref("ServiceWorkerRegistration.unregister")}}),
-    - WebSQL databases,
+    - Web SQL databases (deprecated),
     - [FileSystem API data](/en-US/docs/Web/API/File_and_Directory_Entries_API),
     - Plugin data (Flash via [`NPP_ClearSiteData`](https://wiki.mozilla.org/NPAPI:ClearSiteData)).
 
