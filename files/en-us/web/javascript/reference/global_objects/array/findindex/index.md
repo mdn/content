@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.findIndex
 ---
+
 {{JSRef}}
 
 The **`findIndex()`** method returns the index of the first element in an array that satisfies the provided testing function.
@@ -17,25 +18,25 @@ If no elements satisfy the testing function, -1 is returned.
 
 {{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
 
-See also the {{jsxref("Array.find", "find()")}} method, which returns the first element that satisfies the testing function (rather than its index).
+See also the {{jsxref("Array/find", "find()")}} method, which returns the first element that satisfies the testing function (rather than its index).
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-findIndex((element) => { /* ... */ } )
-findIndex((element, index) => { /* ... */ } )
-findIndex((element, index, array) => { /* ... */ } )
+findIndex((element) => { /* … */ } )
+findIndex((element, index) => { /* … */ } )
+findIndex((element, index, array) => { /* … */ } )
 
 // Callback function
 findIndex(callbackFn)
 findIndex(callbackFn, thisArg)
 
 // Inline callback function
-findIndex(function(element) { /* ... */ })
-findIndex(function(element, index) { /* ... */ })
-findIndex(function(element, index, array){ /* ... */ })
-findIndex(function(element, index, array) { /* ... */ }, thisArg)
+findIndex(function(element) { /* … */ })
+findIndex(function(element, index) { /* … */ })
+findIndex(function(element, index, array){ /* … */ })
+findIndex(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -70,7 +71,7 @@ The `findIndex()` method executes the `callbackFn` function once for every index
 If such an element is found, `findIndex()` immediately returns the element's index.
 If `callbackFn` never returns a truthy value (or the array's `length` is `0`), `findIndex()` returns `-1`.
 
-> **Note:** Unlike other array methods such as {{jsxref("Array.some()")}}, `callbackFn` is run even for indexes with unassigned values.
+`callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
 
 `callbackFn` is invoked with three arguments:
 
@@ -113,17 +114,12 @@ console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, not found
 console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2 (array[2] is 7)
 ```
 
-### Find index using arrow function
+### Using findIndex() on sparse arrays
 
-The following example finds the index of a fruit using an arrow function:
+You can search for `undefined` in a sparse array and get the index of an empty slot.
 
 ```js
-const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
-
-const index = fruits.findIndex(fruit => fruit === "blueberries");
-
-console.log(index); // 3
-console.log(fruits[index]); // blueberries
+console.log([1, , 3].findIndex((x) => x === undefined)); // 1
 ```
 
 ## Specifications

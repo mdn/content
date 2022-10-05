@@ -11,6 +11,7 @@ tags:
   - cancel
 browser-compat: api.ReadableStream.cancel
 ---
+
 {{APIRef("Streams")}}
 
 The **`cancel()`** method of the
@@ -25,7 +26,7 @@ still and not completely get rid of the stream, you'd use
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 cancel(reason)
 ```
@@ -59,7 +60,7 @@ const url = 'https://html.spec.whatwg.org/';
 
 console.log(`Searching '${url}' for '${searchTerm}'`);
 
-fetch(url).then(response => {
+fetch(url).then((response) => {
   console.log('Received headers');
 
   const decoder = new TextDecoder();
@@ -89,8 +90,7 @@ fetch(url).then(response => {
 
     if (matchFoundAt === -1) {
       buffer = buffer.slice(-bufferSize);
-    }
-    else if (buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter) {
+    } else if (buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter) {
       console.log("Here's the match:")
       console.log(buffer.slice(
         Math.max(0, matchFoundAt - contextBefore),
@@ -99,16 +99,15 @@ fetch(url).then(response => {
       console.log("Cancelling fetch");
       reader.cancel();
       return;
-    }
-    else {
+    } else {
       console.log('Found match, but need more context…');
     }
 
     // keep reading
     return reader.read().then(process);
   });
-}).catch(err => {
-  console.log("Something went wrong. See devtools for details. Does the response lack CORS headers?");
+}).catch((err) => {
+  console.error("Something went wrong. See devtools for details. Does the response lack CORS headers?");
   throw err;
 });
 ```

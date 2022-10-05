@@ -9,9 +9,12 @@ tags:
   - Web
 browser-compat: html.elements.menu
 ---
+
 {{HTMLRef}}
 
 The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is described in the HTML specification as a semantic alternative to {{HTMLElement("ul")}}, but treated by browsers (and exposed through the accessibility tree) as no different than {{HTMLElement("ul")}}. It represents an unordered list of items (which are represented by {{HTMLElement("li")}} elements).
+
+{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
 
 ## Attributes
 
@@ -38,7 +41,7 @@ In this example, a `<menu>` is used to create a toolbar for an editing applicati
   <li><button onclick="paste()">Paste</button></li>
 </menu>
 ```
-  
+
 Note that this is functionally no different than:
 
 ```html
@@ -52,7 +55,8 @@ Note that this is functionally no different than:
 #### CSS
 
 ```css
-menu, ul {
+menu,
+ul {
   display: flex;
   list-style: none;
   padding: 0;

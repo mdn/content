@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.NetworkInformation.downlinkMax
 ---
+
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation.downlinkMax`** read-only property
@@ -42,8 +43,7 @@ function logConnectionType() {
     }
   }
 
-  console.log('Current connection type: ' + connectionType +
-    ' (downlink max: ' + downlinkMax + ')');
+  console.log(`Current connection type: ${connectionType} (downlink max: ${downlinkMax})`);
 }
 
 logConnectionType();

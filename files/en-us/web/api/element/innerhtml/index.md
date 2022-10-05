@@ -13,6 +13,7 @@ tags:
   - innerHTML
 browser-compat: api.Element.innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} property
@@ -74,9 +75,7 @@ Then the value of `innerHTML` is changed to this new string.
 As a result, the document contents are replaced with a display of the page's entire source code.
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(/</g,"&lt;")}</pre>`;
 ```
 
 #### Operational details
@@ -114,7 +113,7 @@ const list = document.getElementById("list");
 list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
 ```
 
-Please note that using `innerHTML` to append HTML elements (e.g. `el.innerHTML += "<a href='...'>link</a>"`) will result in the removal of any previously set event listeners.
+Please note that using `innerHTML` to append HTML elements (e.g. `el.innerHTML += "<a href='…'>link</a>"`) will result in the removal of any previously set event listeners.
 That is, after you append any HTML element that way you won't be able to listen to the previously set event listeners.
 
 ### Security considerations
@@ -123,7 +122,7 @@ It is not uncommon to see `innerHTML` used to insert text into a web page.
 There is potential for this to become an attack vector on a site, creating a potential security risk.
 
 ```js
-const name = "John";
+let name = "John";
 // assuming 'el' is an HTML DOM element
 el.innerHTML = name; // harmless in this case
 
@@ -133,8 +132,8 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // harmless in this case
 ```
 
-Although this may look like a {{interwiki("wikipedia", "cross-site scripting")}}
-attack, the result is harmless. HTML5 specifies that a {{HTMLElement("script")}} tag
+Although this may look like a [cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting)
+attack, the result is harmless. HTML specifies that a {{HTMLElement("script")}} tag
 inserted with `innerHTML` [should not execute](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
 However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements,
@@ -168,10 +167,10 @@ function log(msg) {
 
   const time = new Date();
   const timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += timeStr + ": " + msg + "<br/>";
+  logElem.innerHTML += `${timeStr}: ${msg}<br/>`;
 }
 
-log("Logging mouse events inside this container...");
+log("Logging mouse events inside this container…");
 ```
 
 The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using
@@ -183,8 +182,7 @@ We add a second method that logs information about {{domxref("MouseEvent")}} bas
 
 ```js
 function logEvent(event) {
-  const msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  const msg = `Event <strong>${event.type}</strong> at <em>${event.clientX}, ${event.clientY}</em>`;
   log(msg);
 }
 ```

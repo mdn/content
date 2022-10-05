@@ -11,6 +11,7 @@ tags:
   - Selection
 browser-compat: api.Selection.anchorNode
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.anchorNode`** read-only property returns the

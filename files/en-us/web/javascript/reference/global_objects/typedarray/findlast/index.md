@@ -12,9 +12,10 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.findLast
 ---
+
 {{JSRef}}
 
-The **`findLast()`** method returns the value of the last element in a [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) that satisfies the provided testing function.
+The **`findLast()`** method iterates a [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) in reverse order and returns the value of the first element that satisfies the provided testing function.
 If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 See also the {{jsxref("TypedArray.findLastIndex()", "findLastIndex()")}} method, which returns the index of the found element instead of its value.
@@ -23,7 +24,7 @@ See also the {{jsxref("TypedArray.findLastIndex()", "findLastIndex()")}} method,
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 findLast((element) => { /* ... */ } )
 findLast((element, index) => { /* ... */ } )
@@ -120,12 +121,12 @@ const uint8 = new Uint8Array([0,1,,,,5,6]);
 
 // Iterate through the elements in reverse order.
 // Note that all elements are visited.
-uint8.findLast(function(value, index) {
+uint8.findLast((value, index) => {
   console.log(`Visited index ${index} with value ${value}`);
 });
 
 // Shows all indexes, including deleted
-uint8.findLast(function(value, index) {
+uint8.findLast((value, index) => {
   // Modify element 3 on first iteration
   if (index === 6) {
     console.log("Set uint8[3] to 44");

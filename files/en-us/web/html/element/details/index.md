@@ -99,7 +99,7 @@ In addition to the usual events supported by HTML elements, the `<details>` elem
 You can use an event listener for the `toggle` event to detect when the widget changes state:
 
 ```js
-details.addEventListener("toggle", event => {
+details.addEventListener("toggle", (event) => {
   if (details.open) {
     /* the element was toggled open */
   } else {
@@ -117,10 +117,11 @@ This example shows a simple `<details>` element with a `<summary>`.
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -135,10 +136,11 @@ To start the `<details>` box in its open state, add the Boolean `open` attribute
 ```html
 <details open>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -189,10 +191,11 @@ The selector `details[open]` can be used to style the element which is open.
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 
@@ -240,10 +243,11 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
 ```html
 <details>
   <summary>System Requirements</summary>
-  <p>Requires a computer running an operating system. The computer
-  must have some memory and ideally some kind of long-term storage.
-  An input device as well as some form of output device is
-  recommended.</p>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
 </details>
 ```
 

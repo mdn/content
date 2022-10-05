@@ -10,6 +10,7 @@ tags:
   - Tutorial
   - WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}
 
 This example demonstrates how to combine user interaction with WebGL graphics operations by clearing the rendering context with a random color when the user clicks.
@@ -23,33 +24,36 @@ This example provides a simple illustration of how to combine {{Glossary("WebGL"
 Note how we embed the {{Glossary("WebGL")}} function calls inside the event handler function.
 
 ```html
-<p>A very simple WebGL program that still shows some color and
-    user interaction.</p>
-<p>You can repeatedly click the empty canvas or the button below
-    to change color.</p>
-<canvas id="canvas-view">Your browser does not seem to support
-    HTML5 canvas.</canvas>
+<p>
+  A very simple WebGL program that still shows some color and user interaction.
+</p>
+<p>
+  You can repeatedly click the empty canvas or the button below to change color.
+</p>
+<canvas id="canvas-view">
+  Your browser does not seem to support HTML canvas.
+</canvas>
 <button id="color-switcher">Press here to switch color</button>
 ```
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 canvas {
-  display : block;
-  width : 280px;
-  height : 210px;
-  margin : auto;
-  padding : 0;
-  border : none;
-  background-color : black;
+  display: block;
+  width: 280px;
+  height: 210px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: black;
 }
 button {
-  display : inline-block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: inline-block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
@@ -63,13 +67,13 @@ window.addEventListener("load", function setupWebGL (evt) {
 
   // Adding the same click event handler to both canvas and
   // button.
-  var canvas = document.querySelector("#canvas-view");
-  var button = document.querySelector("#color-switcher");
+  const canvas = document.querySelector("#canvas-view");
+  const button = document.querySelector("#color-switcher");
   canvas.addEventListener("click", switchColor, false);
   button.addEventListener("click", switchColor, false);
 
   // A variable to hold the WebGLRenderingContext.
-  var gl;
+  let gl;
 
   // The click event handler.
   function switchColor () {
@@ -89,7 +93,7 @@ window.addEventListener("load", function setupWebGL (evt) {
         gl.drawingBufferWidth, gl.drawingBufferHeight);
     }
     // Get a random color value using a helper function.
-    var color = getRandomColor();
+    const color = getRandomColor();
     // Set the clear color to the random color.
     gl.clearColor(color[0], color[1], color[2], 1.0);
     // Clear the context with the newly set color. This is

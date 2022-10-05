@@ -11,6 +11,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserver.observe
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`observe()`** method of the
@@ -28,7 +29,7 @@ function—set when creating the {{domxref("PerformanceObserver")}}—is invoked
 
 ## Syntax
 
-```js
+```js-nolint
 observe(options)
 ```
 
@@ -68,19 +69,19 @@ for `"mark"` and `"frame"` events, and the other watches for
 `"measure"` events.
 
 ```js
-const observer = new PerformanceObserver(function(list, obj) {
-  const entries = list.getEntries();
-  for (let i=0; i < entries.length; i++) {
-    // Process "mark" and "frame" events
-  }
+const observer = new PerformanceObserver((list, obj) => {
+  list.getEntries()
+    .forEach((entry) => {
+      // Process "mark" and "frame" events
+    });
 });
-observer.observe({entryTypes: ["mark", "frame"]});
+observer.observe({ entryTypes: ["mark", "frame"] });
 
-function perf_observer(list, observer) {
+function perfObserver(list, observer) {
   // Process the "measure" event
 }
-const observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});
+const observer2 = new PerformanceObserver(perfObserver);
+observer2.observe({ entryTypes: ["measure"] });
 ```
 
 ## Specifications

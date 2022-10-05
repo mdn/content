@@ -13,6 +13,7 @@ tags:
   - transaction
 browser-compat: api.IDBRequest.transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`transaction`** read-only property of the IDBRequest
@@ -44,8 +45,8 @@ as `objectStoreTitleRequest.result`), updates
 one property of the record, and then puts the updated record back into the object
 store in another request. The source of the requests is logged to the developer
 console — both originate from the same transaction. For a full working example, see
-our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
-([View the example live](https://mdn.github.io/to-do-notifications/)).
+our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
+([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const title = "Walk dog";
@@ -56,7 +57,7 @@ const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoL
 // Get the to-do list object that has this title as it's title
 const objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = () => {
   // Grab the data object returned as the result
   const data = objectStoreTitleRequest.result;
 
@@ -68,11 +69,11 @@ objectStoreTitleRequest.onsuccess = function() {
   const updateTitleRequest = objectStore.put(data);
 
   // Log the transaction that originated this request
-  console.log("The transaction that originated this request is " + updateTitleRequest.transaction);
+  console.log(`The transaction that originated this request is ${updateTitleRequest.transaction}`);
 
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = () => {
     displayData();
   };
 };
@@ -85,7 +86,7 @@ used during a version upgrade to access existing object stores:
 const openRequest = indexedDB.open('db', 2);
 console.log(openRequest.transaction); // Will log "null".
 
-openRequest.onupgradeneeded = function(event) {
+openRequest.onupgradeneeded = (event) => {
   console.log(openRequest.transaction.mode); // Will log "versionchange".
   const db = openRequest.result;
   if (event.oldVersion < 1) {
@@ -99,7 +100,7 @@ openRequest.onupgradeneeded = function(event) {
   }
 };
 
-openRequest.onsuccess = function() {
+openRequest.onsuccess = () => {
   console.log(openRequest.transaction); // Will log "null".
 };
 ```
@@ -120,4 +121,4 @@ openRequest.onsuccess = function() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

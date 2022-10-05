@@ -11,30 +11,27 @@ tags:
   - let
 browser-compat: javascript.statements.let
 ---
+
 {{jsSidebar("Statements")}}
 
-The **`let`** declaration declares a block-scoped local variable,
-optionally initializing it to a value.
+The **`let`** declaration declares a block-scoped local variable, optionally initializing it to a value.
 
 {{EmbedInteractiveExample("pages/js/statement-let.html")}}
 
 ## Syntax
 
-```js
-let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN];
+```js-nolint
+let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN]
 ```
 
 ### Parameters
 
 - `nameN`
-  - : The names of the variable or variables to declare. Each must be a legal JavaScript
-    identifier.
+  - : The names of the variable or variables to declare. Each must be a legal JavaScript identifier.
 - `valueN` {{optional_inline}}
-  - : For each variable declared, you may optionally specify its initial value to any
-    legal JavaScript expression.
+  - : For each variable declared, you may optionally specify its initial value to any legal JavaScript expression.
 
-Alternatively, the [Destructuring Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-syntax can also be used to declare variables.
+Alternatively, the [Destructuring Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax can also be used to declare variables.
 
 ```js
 let { bar } = foo; // where foo = { bar:10, baz:12 };
@@ -43,24 +40,19 @@ let { bar } = foo; // where foo = { bar:10, baz:12 };
 
 ## Description
 
-**`let`** allows you to declare variables that are limited to
-the scope of a {{jsxref("statements/block", "block", "", 1)}} statement, or expression
-on which it is used, unlike the {{jsxref("statements/var", "var")}} keyword, which
-declares a variable globally, or locally to an entire function regardless of block
-scope. The other difference between {{jsxref("statements/var", "var")}} and
+**`let`** allows you to declare variables that are limited to the scope of a {{jsxref("statements/block", "block", "", 1)}} statement, or expression on which it is used, unlike the {{jsxref("statements/var", "var")}} keyword, which declares a variable globally, or locally to an entire function regardless of block scope.
+The other difference between {{jsxref("statements/var", "var")}} and
 `let` is that the latter is initialized to a value only when a [parser evaluates it (see below)](#temporal_dead_zone_tdz).
 
-Just like {{jsxref("statements/const", "const", "Description")}} the `let`
-does _not_ create properties of the {{domxref("window")}} object when declared
-globally (in the top-most scope).
+Just like {{jsxref("statements/const", "const", "Description")}} the `let` does _not_ create properties of the {{domxref("window")}} object when declared globally (in the top-most scope).
 
 An explanation of why the name "**let**" was chosen can be found [here](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri).
 
 Many issues with `let` variables can be avoided by declaring them at the top of the scope in which they are used (doing so may impact readability).
 
-Unlike `var`, `let` begins _Declarations_, not _Statements_. That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
+Unlike `var`, `let` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
-```js
+```js example-bad
 if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
@@ -68,11 +60,9 @@ if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a sing
 
 ### Scoping rules
 
-Variables declared by **`let`** have their scope in the block
-for which they are declared, as well as in any contained sub-blocks. In this way,
-**`let`** works very much like
-**`var`**. The main difference is that the scope of a
-**`var`** variable is the entire enclosing function:
+Variables declared by **`let`** have their scope in the block for which they are declared, as well as in any contained sub-blocks.
+In this way, **`let`** works very much like **`var`**.
+The main difference is that the scope of a **`var`** variable is the entire enclosing function:
 
 ```js
 function varTest() {
@@ -94,9 +84,8 @@ function letTest() {
 }
 ```
 
-At the top level of programs and functions,
-**`let`**, unlike **`var`**, does not
-create a property on the global object. For example:
+At the top level of programs and functions, **`let`**, unlike **`var`**, does not create a property on the global object.
+For example:
 
 ```js
 var x = 'global';
@@ -107,8 +96,7 @@ console.log(this.y); // undefined
 
 ### Redeclarations
 
-Redeclaring the same variable within the same function or block scope raises a
-{{jsxref("SyntaxError")}}.
+Redeclaring the same variable within the same function or block scope raises a {{jsxref("SyntaxError")}}.
 
 ```js example-bad
 if (x) {
@@ -117,8 +105,7 @@ if (x) {
 }
 ```
 
-You may encounter errors in {{jsxref("Statements/switch", "switch")}} statements
-because there is only one block.
+You may encounter errors in {{jsxref("Statements/switch", "switch")}} statements because there is only one block.
 
 ```js example-bad
 let x = 1;
@@ -133,9 +120,7 @@ switch(x) {
 }
 ```
 
-However, it's important to point out that a block nested inside a case clause will
-create a new block scoped lexical environment, which will not produce the redeclaration
-errors shown above.
+However, it's important to point out that a block nested inside a case clause will create a new block scoped lexical environment, which will not produce the redeclaration errors shown above.
 
 ```js
 let x = 1;
@@ -154,7 +139,7 @@ switch(x) {
 
 ### Temporal dead zone (TDZ)
 
-A `let` or `const` variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared.
+A `let` or `const` variable is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared and initialized.
 
 While inside the TDZ, the variable has not been initialized with a value, and any attempt to access it will result in a {{jsxref("ReferenceError")}}.
 The variable is initialized with a value when execution reaches the line of code where it was declared.
@@ -177,20 +162,19 @@ For example, the code below works because, even though the function that uses th
 
 ```js
 {
-    // TDZ starts at beginning of scope
-    const func = () => console.log(letVar); // OK
+  // TDZ starts at beginning of scope
+  const func = () => console.log(letVar); // OK
 
-    // Within the TDZ letVar access throws `ReferenceError`
+  // Within the TDZ letVar access throws `ReferenceError`
 
-    let letVar = 3; // End of TDZ (for letVar)
-    func(); // Called outside TDZ!
+  let letVar = 3; // End of TDZ (for letVar)
+  func(); // Called outside TDZ!
 }
 ```
 
 #### The TDZ and `typeof`
 
-Using the `typeof` operator for a `let` variable in its TDZ will
-throw a {{jsxref("ReferenceError")}}:
+Using the `typeof` operator for a `let` variable in its TDZ will throw a {{jsxref("ReferenceError")}}:
 
 ```js example-bad
 // results in a 'ReferenceError'
@@ -198,8 +182,7 @@ console.log(typeof i);
 let i = 10;
 ```
 
-This differs from using `typeof` for undeclared variables, and variables
-that hold a value of `undefined`:
+This differs from using `typeof` for undeclared variables, and variables that hold a value of `undefined`:
 
 ```js
 // prints out 'undefined'
@@ -211,37 +194,31 @@ console.log(typeof undeclaredVariable);
 The following code results in a `ReferenceError` at the line shown:
 
 ```js example-bad
-function test(){
-   var foo = 33;
-   if(foo) {
-      let foo = (foo + 55); // ReferenceError
-   }
+function test() {
+  var foo = 33;
+  if (foo) {
+    let foo = foo + 55; // ReferenceError
+  }
 }
 test();
 ```
 
-The `if` block is evaluated because the outer `var foo` has a
-value. However due to lexical scoping this value is not available inside the block: the
-identifier `foo` _inside_ the `if` block is the
-`let foo`. The expression `(foo + 55)` throws
-a `ReferenceError` because initialization of `let foo` has not
-completed — it is still in the temporal dead zone.
+The `if` block is evaluated because the outer `var foo` has a value.
+However due to lexical scoping this value is not available inside the block: the identifier `foo` _inside_ the `if` block is the `let foo`.
+The expression `(foo + 55)` throws a `ReferenceError` because initialization of `let foo` has not completed — it is still in the temporal dead zone.
 
-This phenomenon can be confusing in a situation like the following. The instruction
-`let n of n.a` is already inside the private scope of the for loop's block.
-So, the identifier `n.a` is resolved to the property '`a`' of the
-'`n`' object located in the first part of the instruction itself
-(`let n`).
+This phenomenon can be confusing in a situation like the following.
+The instruction `let n of n.a` is already inside the private scope of the for loop's block.
+So, the identifier `n.a` is resolved to the property '`a`' of the '`n`' object located in the first part of the instruction itself (`let n`).
 
-This is still in the temporal dead zone as its declaration statement has not been
-reached and terminated.
+This is still in the temporal dead zone as its declaration statement has not been reached and terminated.
 
 ```js example-bad
 function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
-  for (const n of n.a) { // ReferenceError
+  for (let n of n.a) { // ReferenceError
     console.log(n);
   }
 }
@@ -251,9 +228,8 @@ go({a: [1, 2, 3]});
 
 ### Other situations
 
-When used inside a block, **`let`** limits the variable's scope
-to that block. Note the difference between **`var`**, whose
-scope is inside the function where it is declared.
+When used inside a block, **`let`** limits the variable's scope to that block.
+Note the difference between **`var`**, whose scope is inside the function where it is declared.
 
 ```js
 var a = 1;
@@ -271,10 +247,8 @@ console.log(a); // 11
 console.log(b); // 2
 ```
 
-However, this combination of **`var`** and
-**`let`** declaration below is a {{jsxref("SyntaxError")}} due
-to **`var`** being hoisted to the top of the block. This results
-in an implicit re-declaration of the variable.
+However, this combination of **`var`** and **`let`** declaration below is a {{jsxref("SyntaxError")}} due to **`var`** being hoisted to the top of the block.
+This results in an implicit re-declaration of the variable.
 
 ```js example-bad
 let x = 1;

@@ -10,9 +10,11 @@ tags:
   - Read-only
   - Reference
   - receiver
+  - Experimental
 browser-compat: api.Presentation.receiver
 ---
-{{APIRef("Presentation")}}
+
+{{APIRef("Presentation")}}{{SeeCompatTable}}
 
 The **read-only** {{domxref("Presentation")}} attribute
 `receiver`, which is only available in browser contexts which are
@@ -41,11 +43,7 @@ the context is indeed receiving a presentation. If it's `null`, there's no
 incoming presentation.
 
 ```js
-if (navigator.receiver) {
-  footer.innerHTML = "Receiving presentation";
-}  else {
-  footer.innerHTML = "(idle)";
-}
+footer.textContent = navigator.receiver ? "Receiving presentation" : "(idle)";
 ```
 
 ### Accessing the connection list
@@ -56,12 +54,10 @@ to build and display a list of those connections' ID strings.
 ```js
 let listElem = document.getElementById("connectionview");
 
-navigator.presentation.receiver.connectionList
-          .then(function(connections) {
-    connections.forEach(function(aConnection)) {
-      listElem.innerHTML += "<li>" + aConnection.id
-            + "</li>";
-    });
+navigator.presentation.receiver.connectionList.then((connections) => {
+  connections.forEach((aConnection) => {
+    listElem.innerHTML += `<li>${aConnection.id}</li>`;
+  });
 });
 ```
 

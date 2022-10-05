@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.reset
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.reset()`** method restores a form
@@ -29,7 +30,7 @@ whatever value the {{domxref("Element.setAttribute", "setAttribute()")}} call se
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 

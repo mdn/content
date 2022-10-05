@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.getAll
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`getAll()`** method of the {{domxref("FormData")}} interface returns all the values associated with a given key from within a `FormData` object.
@@ -18,7 +19,7 @@ The **`getAll()`** method of the {{domxref("FormData")}} interface returns all t
 
 ## Syntax
 
-```js
+```js-nolint
 getAll(name)
 ```
 

@@ -8,6 +8,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.defineProperties
 ---
+
 {{JSRef}}
 
 The **`Object.defineProperties()`** method defines new or
@@ -17,7 +18,7 @@ modifies existing properties directly on an object, returning the object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.defineProperties(obj, props)
 ```
 
@@ -47,7 +48,7 @@ Object.defineProperties(obj, props)
 
     - `value`
       - : The value associated with the property. Can be any valid JavaScript value
-        (number, object, function, etc).
+        (number, object, function, etc.).
         **Defaults to {{jsxref("undefined")}}.**
     - `writable`
       - : `true` if and only if the value associated with the property may be

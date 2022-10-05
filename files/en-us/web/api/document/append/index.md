@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: api.Document.append
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.append()`** method
@@ -22,10 +23,10 @@ This method appends a child to a `Document`. To append to an arbitrary element i
 
 ## Syntax
 
-```js
+```js-nolint
 append(param1)
 append(param1, param2)
-append(param1, param2, /* ... ,*/ paramN)
+append(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

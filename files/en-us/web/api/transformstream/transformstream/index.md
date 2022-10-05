@@ -9,13 +9,14 @@ tags:
   - TransformStream
 browser-compat: api.TransformStream.TransformStream
 ---
+
 {{APIRef("Streams")}}
 
 The **`TransformStream()`** constructor creates a new {{domxref("TransformStream")}} object which represents a pair of streams: a {{domxref("WritableStream")}} representing the writable side, and a {{domxref("ReadableStream")}} representing the readable side.
 
 ## Syntax
 
-```js
+```js-nolint
 new TransformStream()
 new TransformStream(transformer)
 new TransformStream(transformer, writableStrategy)

@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.insertCSS
 ---
+
 {{AddonSidebar()}}
 
 Injects CSS into a page.
@@ -30,7 +31,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 await browser.scripting.insertCSS(
   details     // object
 )
@@ -60,7 +61,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example inserts CSS taken from a string into the active tab.
 
 ```js
-browser.action.onClicked.addListener(async tab => {
+browser.action.onClicked.addListener(async (tab) => {
   try {
     await browser.scripting.insertCSS({
       target: {
@@ -77,7 +78,7 @@ browser.action.onClicked.addListener(async tab => {
 This example inserts CSS loaded from a file (packaged with the extension) called `"content-style.css"`:
 
 ```js
-browser.action.onClicked.addListener(async tab => {
+browser.action.onClicked.addListener(async (tab) => {
   try {
     await browser.scripting.insertCSS({
       target: {

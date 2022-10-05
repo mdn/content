@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.axes
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.axes`** property of the {{domxref("Gamepad") }}
@@ -23,40 +24,32 @@ the axis position from the lowest value (-1.0) to the highest value (1.0).
 
 ## Value
 
-An array.
+An array of numbers.
 
 ## Examples
 
 ```js
 function gameLoop() {
-  let gp;
-  if(navigator.webkitGetGamepads) {
-      gp = navigator.webkitGetGamepads()[0];
-  } else {
-      gp = navigator.getGamepads()[0];
-  }
+  const [gp] = navigator.getGamepads();
+
   let a = 0;
   let b = 0;
-  if(gp.axes[0] != 0) {
+  if (gp.axes[0] !== 0) {
     b -= gp.axes[0];
-  } else if(gp.axes[1] != 0) {
+  } else if (gp.axes[1] !== 0) {
     a += gp.axes[1];
-  } else if(gp.axes[2] != 0) {
+  } else if (gp.axes[2] !== 0) {
     b += gp.axes[2];
-  } else if(gp.axes[3] != 0) {
+  } else if (gp.axes[3] !== 0) {
     a -= gp.axes[3];
   }
 
-  ball.style.left = a*2 + "px";
-  ball.style.top = b*2 + "px";
+  ball.style.left = `${a * 2}px`;
+  ball.style.top = `${b * 2}px`;
 
-  const start = rAF(gameLoop);
+  const start = requestAnimationFrame(gameLoop);
 };
 ```
-
-## Value
-
-An array of {{domxref("double") }} values.
 
 ## Specifications
 

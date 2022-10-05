@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.bubbles
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`bubbles`** read-only property of the {{domxref("Event")}} interface indicates whether the event bubbles up through the DOM tree or not.
@@ -22,9 +23,8 @@ A boolean value, which is `true` if the event bubbles up through the DOM tree.
 
 ```js
 function handleInput(e) {
-  // Checks whether the event bubbles and…
+  // Check whether the event bubbles passes the event along
   if (!e.bubbles) {
-    // ... passes the event along if does not
     passItOn(e);
   }
 

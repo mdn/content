@@ -7,6 +7,7 @@ tags:
   - Strict Mode
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "0-prefixed octal literals and octal escape sequences are
@@ -15,11 +16,14 @@ literals and octal escape sequences are used.
 
 ## Message
 
-```js
-SyntaxError: Octal numeric literals and escape characters not allowed in strict mode (Edge)
-SyntaxError:
-"0"-prefixed octal literals and octal escape sequences are deprecated;
-for octal literals use the "0o" prefix instead
+```
+SyntaxError: Octal literals are not allowed in strict mode. (V8-based)
+SyntaxError: "0"-prefixed octal literals are deprecated; use the "0o" prefix instead (Firefox)
+SyntaxError: Decimal integer literals with a leading zero are forbidden in strict mode (Safari)
+
+SyntaxError: Octal escape sequences are not allowed in strict mode. (V8-based)
+SyntaxError: octal escape sequences can't be used in untagged template literals or in strict mode code (Firefox)
+SyntaxError: The only valid numeric escape in strict mode is '\0' (Safari)
 ```
 
 ## Error type
@@ -29,7 +33,7 @@ for octal literals use the "0o" prefix instead
 ## What went wrong?
 
 Octal literals and octal escape sequences are deprecated and will throw a
-{{jsxref("SyntaxError")}} in strict mode. With ECMAScript 2015 and later, the
+{{jsxref("SyntaxError")}} in strict mode. The
 standardized syntax uses a leading zero followed by a lowercase or uppercase Latin
 letter "O" (`0o` or `0O`).
 
@@ -42,8 +46,7 @@ letter "O" (`0o` or `0O`).
 
 03;
 
-// SyntaxError: "0"-prefixed octal literals and octal escape sequences
-// are deprecated
+// SyntaxError: "0"-prefixed octal literals are deprecated; use the "0o" prefix instead
 ```
 
 ### Octal escape sequences
@@ -53,8 +56,7 @@ letter "O" (`0o` or `0O`).
 
 "\251";
 
-// SyntaxError: "0"-prefixed octal literals and octal escape sequences
-// are deprecated
+// SyntaxError: octal escape sequences can't be used in untagged template literals or in strict mode code
 ```
 
 ### Valid octal numbers

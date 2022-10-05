@@ -27,9 +27,9 @@ and codec configuration(s) to use by specifying [the `codecs` parameter](/en-US/
 
 ## Syntax
 
-```js
-new MediaRecorder(stream);
-new MediaRecorder(stream, options);
+```js-nolint
+new MediaRecorder(stream)
+new MediaRecorder(stream, options)
 ```
 
 ### Parameters
@@ -84,21 +84,20 @@ recorded media data will be stored in an MP4 wrapper (so if you gather the chunk
 media data and save them to disk, they will be in an MP4 file).
 
 ```js
-...
 if (navigator.mediaDevices.getUserMedia) {
   const constraints = { audio: true, video: true };
   const chunks = [];
 
-  const onSuccess = function(stream) {
+  const onSuccess = (stream) => {
     const options = {
       audioBitsPerSecond : 128000,
       videoBitsPerSecond : 2500000,
       mimeType : 'video/mp4'
     }
-    const mediaRecorder = new MediaRecorder(stream,options);
+    const mediaRecorder = new MediaRecorder(stream, options);
     m = mediaRecorder;
 
-...
+    // …
   }
 }
 ```
@@ -115,6 +114,6 @@ if (navigator.mediaDevices.getUserMedia) {
 
 - [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
-  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/media/web-dictaphone/).)
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia")}}

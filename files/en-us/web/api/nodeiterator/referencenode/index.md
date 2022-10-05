@@ -5,12 +5,12 @@ page-type: web-api-instance-property
 tags:
   - API
   - DOM
-  - Experimental
   - NodeIterator
   - Property
 browser-compat: api.NodeIterator.referenceNode
 ---
-{{APIRef("DOM")}}{{ SeeCompatTable }}
+
+{{APIRef("DOM")}}
 
 The **`NodeIterator.referenceNode`** read-only returns the
 {{domxref("Node")}} to which the iterator is anchored; as new nodes are inserted, the
@@ -26,7 +26,7 @@ A {{domxref("Node")}}.
 const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 node = nodeIterator.referenceNode;
 ```

@@ -5,15 +5,17 @@ tags:
   - CSP
   - Content-Security-Policy
   - Directive
-  - Flash
   - HTTP
   - Java
   - Plugin
   - Plugins
   - Security
-browser-compat: http.headers.csp.Content-Security-Policy.plugin-types
+  - Deprecated
+  - Non-standard
+browser-compat: http.headers.Content-Security-Policy.plugin-types
 ---
-{{HTTPSidebar}}{{deprecated_header}}
+
+{{HTTPSidebar}}{{deprecated_header}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`plugin-types`** directive restricts the set of plugins that
@@ -49,7 +51,7 @@ Instantiation of an {{HTMLElement("embed")}}, {{HTMLElement("object")}} or
 One or more [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) can
 be set for the `plugin-types` policy:
 
-```
+```http
 Content-Security-Policy: plugin-types <type>/<subtype>;
 Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
 ```
@@ -66,21 +68,7 @@ To disallow all plugins, the {{CSP("object-src")}} directive should be set to
 is only used if you are allowing plugins with `object-src` at all.
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="object-src 'none'">
-```
-
-### Allowing Flash content
-
-The content security policy
-
-```
-Content-Security-Policy: plugin-types application/x-shockwave-flash
-```
-
-will allow to load flash objects:
-
-```html
-<object data="https://example.com/flash" type="application/x-shockwave-flash"></object>
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'" />
 ```
 
 ### Allowing Java applets
@@ -88,7 +76,7 @@ will allow to load flash objects:
 To load an {{HTMLElement("applet")}} you must specify
 `application/x-java-applet`:
 
-```
+```http
 Content-Security-Policy: plugin-types application/x-java-applet
 ```
 

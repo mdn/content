@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't convert BigInt to number" occurs when an arithmetic operation involves a mix of {{jsxref("BigInt")}} and {{jsxref("Number")}} values.
@@ -14,8 +15,8 @@ The JavaScript exception "can't convert BigInt to number" occurs when an arithme
 ## Message
 
 ```
-TypeError: Cannot mix BigInt and other types, use explicit conversions (Chromium-based)
-TypeError: BigInts have no unsigned right shift, use >> instead (Chromium-based)
+TypeError: Cannot mix BigInt and other types, use explicit conversions (V8-based)
+TypeError: BigInts have no unsigned right shift, use >> instead (V8-based)
 TypeError: can't convert BigInt to number (Firefox)
 TypeError: Invalid mix of BigInt and other type in addition/multiplication/…. (Safari)
 TypeError: BigInt does not support >>> operator (Safari)

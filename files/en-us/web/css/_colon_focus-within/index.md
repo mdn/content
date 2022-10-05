@@ -1,9 +1,10 @@
 ---
-title: ':focus-within'
+title: ":focus-within"
 slug: Web/CSS/:focus-within
+page-type: css-pseudo-class
 tags:
-  - ':focus'
-  - ':focus-within'
+  - ":focus"
+  - ":focus-within"
   - CSS
   - Layout
   - Pseudo-class
@@ -12,6 +13,7 @@ tags:
   - Web
 browser-compat: css.selectors.focus-within
 ---
+
 {{CSSRef}}
 
 The **`:focus-within`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches an element if the element or any of its descendants are focused. In other words, it represents an element that is itself matched by the {{CSSxRef(":focus")}} pseudo-class or has a descendant that is matched by `:focus`. (This includes descendants in [shadow trees](/en-US/docs/Web/Web_Components/Using_shadow_DOM).)
@@ -37,10 +39,10 @@ In this example, the form will receive special coloring styles when either text 
 
 <form>
   <label for="given_name">Given Name:</label>
-  <input id="given_name" type="text">
-  <br>
+  <input id="given_name" type="text" />
+  <br />
   <label for="family_name">Family Name:</label>
-  <input id="family_name" type="text">
+  <input id="family_name" type="text" />
 </form>
 ```
 

@@ -23,6 +23,7 @@ tags:
   - rtc
 browser-compat: api.RTCRtpStreamStats.qpSum
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`qpSum`** property of the
@@ -46,7 +47,7 @@ the stream generally has been.
 
 ## Usage notes
 
-{{interwiki("wikipedia", "Quantization")}} is the process of applying lossy compression
+[Quantization](https://en.wikipedia.org/wiki/Quantization) is the process of applying lossy compression
 to a range of values, resulting in a single **quantum value**. This value
 takes the place of the range of values, thereby reducing the number of different values
 that appear in the overall data set, making the data more compressible. The quantization

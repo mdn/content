@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
 In this final article in our "Asynchronous JavaScript" module, we'll introduce _workers_, which enable you to run some tasks in a separate {{Glossary("Thread", "thread")}} of execution.
@@ -31,7 +32,7 @@ Workers give you the ability to run some tasks in a different thread, so you can
 
 But there's a price to pay for this. With multithreaded code, you never know when your thread will be suspended and the other thread will get a chance to run. So if both threads have access to the same variables, it's possible for a variable to change unexpectedly at any time, and this causes bugs that are hard to find.
 
-To avoid these problems in the web, your main code and your worker code never get direct access to each others' variables. Workers and the main code run in completely separate worlds, and only interact by sending each other messages. In particular, this means that workers can't access the DOM (the window, document, page elements, and so on).
+To avoid these problems on the web, your main code and your worker code never get direct access to each other's variables. Workers and the main code run in completely separate worlds, and only interact by sending each other messages. In particular, this means that workers can't access the DOM (the window, document, page elements, and so on).
 
 There are three different sorts of workers:
 
@@ -39,7 +40,7 @@ There are three different sorts of workers:
 - shared workers
 - service workers
 
-In this article we'll walk through an example of the first sort of worker, then briefly discuss the other two.
+In this article, we'll walk through an example of the first sort of worker, then briefly discuss the other two.
 
 ## Using web workers
 
@@ -101,29 +102,29 @@ The "index.html" file and the "style.css" files are already complete:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <script type="text/javascript" src="main.js" defer></script>
-    <link href="style.css"rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Prime numbers</title>
+    <script src="main.js" defer></script>
+    <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
-
     <label for="quota">Number of primes:</label>
-    <input type="text" id="quota" name="quota" value="1000000">
+    <input type="text" id="quota" name="quota" value="1000000" />
 
     <button id="generate">Generate primes</button>
     <button id="reload">Reload</button>
 
-    <textarea id="user-input" rows="5" cols="62">Try typing in here immediately after pressing "Generate primes"</textarea>
+    <textarea id="user-input" rows="5" cols="62">
+Try typing in here immediately after pressing "Generate primes"
+</textarea>
 
     <div id="output"></div>
-
   </body>
-
 </html>
-
 ```
 
 ```css
@@ -150,14 +151,14 @@ document.querySelector('#generate').addEventListener('click', () => {
   const quota = document.querySelector('#quota').value;
   worker.postMessage({
     command: 'generate',
-    quota: quota
+    quota,
   });
 });
 
 // When the worker sends a message back to the main thread,
 // update the output box with a message for the user, including the number of
 // primes that were generated, taken from the message data.
-worker.addEventListener('message', message => {
+worker.addEventListener('message', (message) => {
   document.querySelector('#output').textContent = `Finished generating ${message.data} primes!`;
 });
 
@@ -169,7 +170,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 - First, we're creating the worker using the {{domxref("Worker/Worker", "Worker()")}} constructor. We pass it a URL pointing to the worker script. As soon as the worker is created, the worker script is executed.
 
-- Next, as in the synchronous version, we add a `click` event handler to the "Generate primes" button. But now, rather than calling a `generatePrimes()` function, we send a message to the worker using {{domxref("Worker/postMessage", "worker.postMessage()")}}. This message can take an argument, and in this case we're passing a JSON object containing two properties:
+- Next, as in the synchronous version, we add a `click` event handler to the "Generate primes" button. But now, rather than calling a `generatePrimes()` function, we send a message to the worker using {{domxref("Worker/postMessage", "worker.postMessage()")}}. This message can take an argument, and in this case, we're passing a JSON object containing two properties:
 
   - `command`: a string identifying the thing we want the worker to do (in case our worker could do more than one thing)
   - `quota`: the number of primes to generate.
@@ -183,7 +184,7 @@ Now for the worker code. Copy the following code into "generate.js":
 ```js
 // Listen for messages from the main thread.
 // If the message command is "generate", call `generatePrimes()`
-addEventListener("message", message => {
+addEventListener("message", (message) => {
   if (message.data.command === 'generate') {
     generatePrimes(message.data.quota);
   }
@@ -225,13 +226,13 @@ The `generatePrimes()` function is just like the synchronous version, except ins
 
 > **Note:** To run this site, you'll have to run a local web server, because file:// URLs are not allowed to load workers. See our guide to [setting up a local testing server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server). With that done, you should be able to click "Generate primes" and have your main page stay responsive.
 >
-> If you have any problems creating or running the example, you can see the finished version at https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished and try it live at https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished.
+> If you have any problems creating or running the example, you can review the [finished version](https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished) and try it [live](https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished).
 
-## Other types of worker
+## Other types of workers
 
 The worker we just created was what's called a _dedicated worker_. This means it's used by a single script instance.
 
-There are other types of worker, though:
+There are other types of workers, though:
 
 - [_Shared workers_](/en-US/docs/Web/API/SharedWorker) can be shared by several different scripts running in different windows.
 - [_Service workers_](/en-US/docs/Web/API/Service_Worker_API) act like proxy servers, caching resources so that web applications can work when the user is offline. They're a key component of [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps).

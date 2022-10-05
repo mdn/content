@@ -4,12 +4,13 @@ slug: Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sou
 tags:
   - Audio
   - HLS
-  - HTML5
+  - HTML
   - HTTP Live Streaming
   - MPEG-DASH
   - Video
   - adaptive streaming
 ---
+
 Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)
 
 ## Choosing formats
@@ -101,10 +102,10 @@ it might be wise to provide a fallback for browsers that don't yet support MPEG-
 
 ```html
 <video>
-  <source src="my.mpd" type="application/dash+xml">
+  <source src="my.mpd" type="application/dash+xml" />
   <!-- fallback -->
-  <source src="my.mp4" type="video/mp4">
-  <source src="my.webm" type="video/webm">
+  <source src="my.mp4" type="video/mp4" />
+  <source src="my.webm" type="video/webm" />
 </video>
 ```
 
@@ -125,20 +126,20 @@ play list ->                /segments/news.mp4.mpd
 
 main segment folder ->      /segments/main/
 
-100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
+100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s … )
 
-200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
+200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s … )
 
-300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
+300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s … )
 
-400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )
+400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s … )
 ```
 
 The playlist or `.mpd` file contains XML that explicitly lists where all the various bitrate files reside.
 
 ```xml
 <?xml version="1.0"?>
-  <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011"  xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S">
+  <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S">
     <BaseURL>
       http://example.com/segments
     </BaseURL>
@@ -178,7 +179,7 @@ The playlist or `.mpd` file contains XML that explicitly lists where all the var
           </SegmentList>
         </Representation>
 
-        ...
+        …
 
       </AdaptationSet>
     </Period>
@@ -199,10 +200,10 @@ it might be wise to provide a fallback:
 
 ```html
 <video>
-  <source src="my.mpd" type="application/dash+xml">
+  <source src="my.mpd" type="application/dash+xml" />
   <!-- fallback -->
-  <source src="my.mp4" type="video/mp4">
-  <source src="my.webm" type="video/webm">
+  <source src="my.mp4" type="video/mp4" />
+  <source src="my.webm" type="video/webm" />
 </video>
 ```
 

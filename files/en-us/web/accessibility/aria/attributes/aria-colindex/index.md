@@ -1,5 +1,5 @@
 ---
-title: 'aria-colindex'
+title: "aria-colindex"
 slug: Web/Accessibility/ARIA/Attributes/aria-colindex
 tags:
   - Accessibility
@@ -74,7 +74,7 @@ When using semantic table header elements and not all columns are in the DOM, th
       <td>New York</td>
       <td>14127</td>
     </tr>
-    ...
+    …
   </tbody>
 </table>
 ```

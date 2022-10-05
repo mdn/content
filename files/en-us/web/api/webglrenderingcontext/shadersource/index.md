@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.shaderSource
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.shaderSource()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the source code of a
@@ -17,7 +18,7 @@ The **`WebGLRenderingContext.shaderSource()`** method of the [WebGL API](/en-US/
 
 ## Syntax
 
-```js
+```js-nolint
 shaderSource(shader, source)
 ```
 
@@ -35,10 +36,10 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var shader = gl.createShader(gl.VERTEX_SHADER);
+const shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, originalSource);
 
-var source = gl.getShaderSource(shader);
+const source = gl.getShaderSource(shader);
 ```
 
 ## Specifications

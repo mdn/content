@@ -7,6 +7,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.message
 ---
+
 {{JSRef}}
 
 The **`message`** property is a human-readable description of the error.

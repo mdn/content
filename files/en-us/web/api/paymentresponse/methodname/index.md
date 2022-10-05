@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - API
   - Commerce
-  - Experimental
   - Payment Request
   - Payment Request API
   - PaymentResponse
@@ -15,6 +14,7 @@ tags:
   - methodName
 browser-compat: api.PaymentResponse.methodName
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`methodName`** read-only
@@ -40,7 +40,7 @@ object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a
 real-world implementation this data would then be sent to a payment server.
 
 ```js
-payment.show().then(paymentResponse => {
+payment.show().then((paymentResponse) => {
   const paymentData = {
     // payment method string
     method: paymentResponse.methodName,

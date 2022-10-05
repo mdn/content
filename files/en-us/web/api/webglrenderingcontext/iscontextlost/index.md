@@ -13,6 +13,7 @@ tags:
   - isContextLost
 browser-compat: api.WebGLRenderingContext.isContextLost
 ---
+
 {{APIRef("WebGL")}}
 
 The
@@ -22,7 +23,7 @@ must be re-established before rendering can resume.
 
 ## Syntax
 
-```js
+```js-nolint
 isContextLost()
 ```
 
@@ -62,8 +63,8 @@ context is not lost:
 gl.linkProgram(program);
 
 if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
-  var info = gl.getProgramInfoLog(program);
-  console.log('Error linking program:\n' + info);
+  const info = gl.getProgramInfoLog(program);
+  console.log(`Error linking program:\n${info}`);
 }
 ```
 

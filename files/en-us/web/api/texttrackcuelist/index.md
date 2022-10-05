@@ -11,6 +11,7 @@ tags:
   - Media
 browser-compat: api.TextTrackCueList
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`TextTrackCueList`** array-like object represents a dynamically updating list of {{domxref("TextTrackCue")}} objects.
@@ -32,8 +33,8 @@ This interface has no constructor. Retrieve an instance of this object with {{do
 The {{domxref("HTMLMediaElement.textTracks")}} property returns a {{domxref("TextTrackList")}} object listing all of the {{domxref("TextTrack")}} objects, one for each text track linked to the media. The {{domxref("TextTrack.cues")}} property then returns a `TextTrackCueList` containing the cues for that particular track.
 
 ```js
-let video = document.getElementById("video");
-video.onplay = function () {
+const video = document.getElementById("video");
+video.onplay = () => {
   console.log(video.textTracks[0].cues);
 }
 ```

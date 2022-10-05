@@ -13,6 +13,7 @@ tags:
   - getFrequencyResponse
 browser-compat: api.IIRFilterNode.getFrequencyResponse
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `getFrequencyResponse()` method of the {{ domxref("IIRFilterNode") }}
@@ -26,7 +27,7 @@ must be the same size as the array of input frequency values
 
 ## Syntax
 
-```js
+```js-nolint
 getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput)
 ```
 
@@ -76,9 +77,8 @@ Next we create a {{ htmlelement("ul") }} element in our HTML to contain our resu
 and grab a reference to it in our JavaScript:
 
 ```html
-<p>IIR filter frequency response for: </p>
-<ul class="freq-response-output">
-</ul>
+<p>IIR filter frequency response for:</p>
+<ul class="freq-response-output"></ul>
 ```
 
 ```js
@@ -95,14 +95,14 @@ const feedbackCoefficients = [0.5, 0.4, 0.3, 0.2, 0.1];
 
 const iirFilter = audioCtx.createIIRFilter(feedforwardCoefficients, feedbackCoefficients);
 
-  ...
+// …
 
 function calcFrequencyResponse() {
   iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
 
-  for(i = 0; i <= myFrequencyArray.length-1;i++){
+  for (let i = 0; i < myFrequencyArray.length; i++) {
     const listItem = document.createElement('li');
-    listItem.innerHTML = '<strong>' + myFrequencyArray[i] + 'Hz</strong>: Magnitude ' + magResponseOutput[i] + ', Phase ' + phaseResponseOutput[i] + ' radians.';
+    listItem.textContent = `${myFrequencyArray[i]}Hz: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
     freqResponseOutput.appendChild(listItem);
   }
 }

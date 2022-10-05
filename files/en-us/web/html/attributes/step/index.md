@@ -8,7 +8,7 @@ tags:
   - HTML
   - Reference
   - step
-browser-compat: html.elements.input.attributes.step
+browser-compat: html.elements.input.step
 ---
 
 {{HTMLSidebar}}
@@ -97,7 +97,7 @@ input:invalid {
 Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.
 
 ```html
-<input id="myNumber" name="myNumber" type="number" step="2" min="1.2">
+<input id="myNumber" name="myNumber" type="number" step="2" min="1.2" />
 ```
 
 Valid values include `1.2`, `3.2`, `5.2`, `7.2`, `9.2`, `11.2`, and so on. Integers and even numbers followed by .2 are not valid. As we included an invalid value, supporting browsers will show the value as invalid. The number spinner, if present, will only show valid float values of `1.2` and greater

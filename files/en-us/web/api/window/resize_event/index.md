@@ -11,6 +11,7 @@ tags:
   - resize
 browser-compat: api.Window.resize_event
 ---
+
 {{APIRef}}
 
 The **`resize`** event fires when the document view (window) has been resized.
@@ -21,7 +22,7 @@ In some earlier browsers it was possible to register `resize` event handlers on 
 
 While the `resize` event fires only for the window nowadays, you can get resize notifications for other elements using the [ResizeObserver](/en-US/docs/Web/API/ResizeObserver) API.
 
-If the resize event is triggered too many times for your application, see [Optimizing window.onresize](https://bencentra.com/code/2015/02/27/optimizing-window-resize.html) to control the time after which the event fires.
+If the resize event is triggered too many times for your application, see [Optimizing window.onresize](https://web.archive.org/web/20220714020647/https://bencentra.com/code/2015/02/27/optimizing-window-resize.html) to control the time after which the event fires.
 
 ## Syntax
 
@@ -35,7 +36,7 @@ onresize = (event) => {};
 
 ## Event type
 
-An {{domxref("UIEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("UIEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("UIEvent")}}
 
@@ -43,13 +44,13 @@ An {{domxref("UIEvent")}}. Inherits from {{domxref("Event")}}.
 
 _This interface also inherits properties of its parent, {{domxref("Event")}}._
 
-- {{domxref("UIEvent.detail")}} {{readonlyinline}}
+- {{domxref("UIEvent.detail")}} {{ReadOnlyInline}}
   - : Returns a `long` with details about the event, depending on the event type.
-- {{domxref("UIEvent.sourceCapabilities")}} {{experimental_inline}} {{readonlyinline}}
+- {{domxref("UIEvent.sourceCapabilities")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : Returns an instance of the `InputDeviceCapabilities` interface, which provides information about the physical device responsible for generating a touch event.
-- {{domxref("UIEvent.view")}} {{readonlyinline}}
+- {{domxref("UIEvent.view")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WindowProxy")}} that contains the view that generated the event.
-- {{domxref("UIEvent.which")}} {{deprecated_inline}} {{Non-standard_inline}} {{readonlyinline}}
+- {{domxref("UIEvent.which")}} {{deprecated_inline}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Returns the numeric `keyCode` of the key pressed, or the character code (`charCode`) for an alphanumeric key pressed.
 
 ## Examples

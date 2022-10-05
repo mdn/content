@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.Performance.clearMeasures
 ---
+
 {{APIRef("User Timing API")}}
 
 The **`clearMeasures()`** method removes the _named
@@ -21,7 +22,7 @@ removed from the performance entry buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 clearMeasures()
 clearMeasures(name)
 ```
@@ -46,7 +47,7 @@ The following example shows both uses of the `clearMeasures()` method.
 // Create a small helper to show how many PerformanceMeasure entries there are.
 function logMeasureCount() {
   console.log(
-    "Found this many entries: " + performance.getEntriesByType("measure").length
+    `Found this many entries: ${performance.getEntriesByType("measure").length}`
   );
 }
 

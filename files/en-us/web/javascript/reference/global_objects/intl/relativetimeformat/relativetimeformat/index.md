@@ -12,42 +12,45 @@ tags:
   - RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
 ---
+
 {{JSRef}}
 
 The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.RelativeTimeFormat()
 new Intl.RelativeTimeFormat(locales)
 new Intl.RelativeTimeFormat(locales, options)
 ```
 
+> **Note:** `Intl.RelativeTimeFormat()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `options` {{optional_inline}}
 
   - : An object with some or all of the following properties:
 
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are "`lookup`" and "`best fit`"; the default is "`best fit`". For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
     - `numeric`
 
       - : The format of output message. Possible values are:
 
-        - "`always`" (default, e.g., `1 day ago`),
-        - or "`auto`" (e.g., `yesterday`). The "`auto`" value allows to not always have to use numeric values in the output.
+        - `"always"` (default, e.g., `1 day ago`),
+        - or `"auto"` (e.g., `yesterday`). The `"auto"` value allows to not always have to use numeric values in the output.
 
     - `style`
 
       - : The length of the internationalized message. Possible values are:
 
-        - "`long`" (default, e.g., `in 1 month`)
-        - "`short`" (e.g., `in 1 mo.`),
-        - or "`narrow`" (e.g., `in 1 mo.`). The narrow style could be similar to the short style for some locales.
+        - `"long"` (default, e.g., `in 1 month`)
+        - `"short"` (e.g., `in 1 mo.`),
+        - or `"narrow"` (e.g., `in 1 mo.`). The narrow style could be similar to the short style for some locales.
 
 ## Examples
 
@@ -59,9 +62,9 @@ The following example shows how to create a relative time formatter using the En
 // Create a relative time formatter in your locale
 // with default values explicitly passed in.
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // other values: "lookup"
-    numeric: "always", // other values: "auto"
-    style: "long", // other values: "short" or "narrow"
+  localeMatcher: "best fit", // other values: "lookup"
+  numeric: "always", // other values: "auto"
+  style: "long", // other values: "short" or "narrow"
 });
 
 // Format relative time using negative value (-1).

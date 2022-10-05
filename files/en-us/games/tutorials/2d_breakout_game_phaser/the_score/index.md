@@ -11,6 +11,7 @@ tags:
   - Tutorial
   - scoring
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
@@ -26,9 +27,9 @@ We will use a separate variable for storing the score and Phaser's `text()` meth
 Add two new variables right after the previously defined ones:
 
 ```js
-// ...
-var scoreText;
-var score = 0;
+// …
+let scoreText;
+let score = 0;
 ```
 
 ## Adding score text to the game display
@@ -36,7 +37,10 @@ var score = 0;
 Now add this line at the end of the `create()` function:
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
+scoreText = game.add.text(5, 5, "Points: 0", {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
 ```
 
 The `text()` method can take four parameters:
@@ -53,9 +57,9 @@ We will increase the number of points every time the ball hits a brick and updat
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText(`Points: ${score}`);
 }
 ```
 

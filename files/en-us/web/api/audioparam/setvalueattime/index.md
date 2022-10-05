@@ -11,6 +11,7 @@ tags:
   - setValueAtTime
 browser-compat: api.AudioParam.setValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `setValueAtTime()` method of the
@@ -20,7 +21,7 @@ The `setValueAtTime()` method of the
 
 ## Syntax
 
-```js
+```js-nolint
 setValueAtTime(value, startTime)
 ```
 
@@ -48,27 +49,27 @@ to set the gain value equal to `currGain`, one second from now
 
 ```js
 // create audio context
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
 // set basic variables for example
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+const myAudio = document.querySelector("audio");
+const pre = document.querySelector("pre");
+const myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
-var targetAtTimePlus = document.querySelector('.set-target-at-time-plus');
-var targetAtTimeMinus = document.querySelector('.set-target-at-time-minus');
+const targetAtTimePlus = document.querySelector(".set-target-at-time-plus");
+const targetAtTimeMinus = document.querySelector(".set-target-at-time-minus");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
-var source = audioCtx.createMediaElementSource(myAudio);
+const source = audioCtx.createMediaElementSource(myAudio);
 
 // Create a gain node and set it's gain value to 0.5
-var gainNode = audioCtx.createGain();
+const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.5;
-var currGain = gainNode.gain.value;
+let currGain = gainNode.gain.value;
 
 // connect the AudioBufferSourceNode to the gainNode
 // and the gainNode to the destination
@@ -76,15 +77,15 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
-targetAtTimePlus.onclick = function() {
+targetAtTimePlus.onclick = () => {
   currGain += 0.25;
   gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
-}
+};
 
-targetAtTimeMinus.onclick = function() {
+targetAtTimeMinus.onclick = () => {
   currGain -= 0.25;
   gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
-}
+};
 ```
 
 ## Specifications

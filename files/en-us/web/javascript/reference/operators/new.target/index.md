@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.new_target
 ---
+
 {{JSSidebar("Operators")}}
 
 The **`new.target`** pseudo-property lets you detect whether a
@@ -21,7 +22,7 @@ function calls, `new.target` is {{jsxref("undefined")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new.target
 ```
 
@@ -70,20 +71,32 @@ parent class and was delegated from a child constructor.
 ```js
 class A {
   constructor() {
-    console.log(new.target.name)
+    console.log(new.target.name);
   }
 }
 
-class B extends A { constructor() { super() } }
+class B extends A {
+  constructor() {
+    super();
+  }
+}
 
-let a = new A()  // logs "A"
-let b = new B()  // logs "B"
+const a = new A(); // logs "A"
+const b = new B(); // logs "B"
 
-class C { constructor() { console.log(new.target)  } }
-class D extends C { constructor() { super()  } }
+class C {
+  constructor() {
+    console.log(new.target);
+  }
+}
+class D extends C {
+  constructor() {
+    super();
+  }
+}
 
-let c = new C()  // logs class C{constructor(){console.log(new.target);}}
-let d = new D()  // logs class D extends C{constructor(){super();}}
+const c = new C(); // logs class C{constructor(){console.log(new.target);}}
+const d = new D(); // logs class D extends C{constructor(){super();}}
 ```
 
 Thus from the above example of class `C` and `D`,

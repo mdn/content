@@ -10,6 +10,7 @@ tags:
   - Selection
 browser-compat: api.Selection.collapse
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Selection.collapse()`** method collapses the current
@@ -18,7 +19,7 @@ editable, the caret will blink there.
 
 ## Syntax
 
-```js
+```js-nolint
 collapse(node)
 collapse(node, offset)
 ```
@@ -42,7 +43,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 /* Place the caret at the beginning of an HTML document's body. */
-var body = document.getElementsByTagName("body")[0];
+const body = document.querySelector("body");
 window.getSelection().collapse(body,0);
 ```
 

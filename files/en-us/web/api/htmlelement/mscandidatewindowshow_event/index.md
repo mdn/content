@@ -6,6 +6,7 @@ tags:
   - Non-standard
   - Event
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -25,9 +26,9 @@ Web applications need only register for this event once per element (the handler
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mscandidatewindowshow', event => { })
+addEventListener('mscandidatewindowshow', (event) => { })
 
-onmscandidatewindowshow = event => { }
+onmscandidatewindowshow = (event) => { }
 ```
 
 ## Event type
@@ -49,7 +50,7 @@ function candidateWindowShowHandler(e) {
 }
 ```
 
-When the IME candidate window changes position or closes, it fires  {{domxref("HTMLElement/mscandidatewindowupdate_event", "mscandidatewindowupdate")}} or {{domxref("HTMLElement/mscandidatewindowhide_event", "mscandidatewindowhide")}} events. Developers could listen to them and shift the suggestion UI accordingly.
+When the IME candidate window changes position or closes, it fires {{domxref("HTMLElement/mscandidatewindowupdate_event", "mscandidatewindowupdate")}} or {{domxref("HTMLElement/mscandidatewindowhide_event", "mscandidatewindowhide")}} events. Developers could listen to them and shift the suggestion UI accordingly.
 
 ## See also
 

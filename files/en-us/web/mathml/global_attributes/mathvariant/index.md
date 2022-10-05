@@ -7,9 +7,10 @@ tags:
   - Reference
 browser-compat: mathml.global_attributes.mathvariant
 ---
+
 {{MathMLRef("Global_attributes")}}
 
-The **`mathvariant`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)  attribute sets a logical class for textual elements, which is visually
+The **`mathvariant`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) attribute sets a logical class for textual elements, which is visually
 distinguished by using special [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
 With the exception of [`mi`](/en-US/docs/Web/MathML/Element/mi) elements with a single character,
 which are by convention italic, no special classes are used by default.
@@ -56,47 +57,41 @@ which are by convention italic, no special classes are used by default.
 ### Values
 
 - `normal`
-   -: Use default rendering (no transformations applied).
+  - : Use default rendering (no transformations applied).
 - `bold`
-   -: Try and use bold characters e.g. "𝐀".
+  - : Try and use bold characters e.g. "𝐀".
 - `italic`
-   -: Try and use italic characters e.g. "𝐴".
+  - : Try and use italic characters e.g. "𝐴".
 - `bold-italic`
-   -: Try and use bold-italic characters e.g. "𝑨".
+  - : Try and use bold-italic characters e.g. "𝑨".
 - `double-struck`
-   -: Try and use double-struck characters e.g. "𝔸".
+  - : Try and use double-struck characters e.g. "𝔸".
 - `bold-fraktur`
-   -: Try and use bold-fraktur characters e.g. "𝕬".
+  - : Try and use bold-fraktur characters e.g. "𝕬".
 - `script`
-   -: Try and use script characters e.g. "𝒜".
+  - : Try and use script characters e.g. "𝒜".
 - `bold-script`
-   -: Try and use bold-script characters e.g. "𝓐".
+  - : Try and use bold-script characters e.g. "𝓐".
 - `fraktur`
-   -: Try and use fraktur characters e.g. "𝔄".
+  - : Try and use fraktur characters e.g. "𝔄".
 - `sans-serif`
-   -: Try and use sans-serif characters e.g. "𝖠".
+  - : Try and use sans-serif characters e.g. "𝖠".
 - `bold-sans-serif`
-   -: Try and use bold-sans-serif characters e.g. "𝗔".
+  - : Try and use bold-sans-serif characters e.g. "𝗔".
 - `sans-serif-italic`
-   -: Try and use sans-serif-italic characters e.g. "𝘈".
+  - : Try and use sans-serif-italic characters e.g. "𝘈".
 - `sans-serif-bold-italic`
-   -: Try and use sans-serif-bold-italic characters e.g. "𝘼".
+  - : Try and use sans-serif-bold-italic characters e.g. "𝘼".
 - `monospace`
-   -: Try and use monospace characters e.g. "𝙰".
+  - : Try and use monospace characters e.g. "𝙰".
 - `initial`
-   -: Try and use initial characters e.g. "𞸢".
+  - : Try and use initial characters e.g. "𞸢".
 - `tailed`
-   -: Try and use tailed characters e.g. "𞹂".
+  - : Try and use tailed characters e.g. "𞹂".
 - `looped`
-   -: Try and use looped characters e.g. "𞺂".
+  - : Try and use looped characters e.g. "𞺂".
 - `stretched`
-   -: Try and use stretched characters e.g. "𞹢".
-
-## Notes on MathML versions
-
-- `mathvariant` values other than `normal` were designed for backward compatibility. Authors are encouraged to instead directly use the corresponding Unicode characters from the [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
-
-- MathML Core relies on `text-transform` to implement the `mathvariant` attribute, but implementations of older MathML versions may follow a different approach to implement similar behavior.
+  - : Try and use stretched characters e.g. "𞹢".
 
 ## Specifications
 
@@ -105,7 +100,6 @@ which are by convention italic, no special classes are used by default.
 ## Browser compatibility
 
 {{Compat}}
-On Firefox, some `mathvariant` values are only implemented starting with Firefox 28 and require appropriate [math fonts](/en-US/docs/Web/MathML/Fonts).
 
 ## See also
 

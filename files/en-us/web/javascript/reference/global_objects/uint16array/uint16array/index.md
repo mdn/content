@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Uint16Array.Uint16Array
 ---
+
 {{JSRef}}
 
 The **`Uint16Array()`** typed array constructor creates an
@@ -16,16 +17,18 @@ array of 16-bit unsigned integers in the platform byte order.
 
 ## Syntax
 
-```js
-new Uint16Array(); // new in ES2017
-new Uint16Array(length);
-new Uint16Array(typedArray);
-new Uint16Array(object);
+```js-nolint
+new Uint16Array()
+new Uint16Array(length)
+new Uint16Array(typedArray)
+new Uint16Array(object)
 
-new Uint16Array(buffer);
-new Uint16Array(buffer, byteOffset);
-new Uint16Array(buffer, byteOffset, length);
+new Uint16Array(buffer)
+new Uint16Array(buffer, byteOffset)
+new Uint16Array(buffer, byteOffset, length)
 ```
+
+> **Note:** `Uint16Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -93,23 +96,6 @@ console.log(uint16FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Uint16Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Uint16Array` constructor as a function without `new`, will throw a
-{{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Uint16Array([1, 2, 3]);
-// TypeError: calling a builtin Uint8ClampedArray constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Uint16Array([1, 2, 3]);
-```
 
 ## See also
 

@@ -12,6 +12,7 @@ tags:
   - resize
 browser-compat: api.PictureInPictureWindow.resize_event
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 The **`resize`** event fires when the floating video window has been resized.
@@ -23,14 +24,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('resize', event => { });
+addEventListener('resize', (event) => { });
 
-onresize = event => { };
+onresize = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("PictureInPictureWindow")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PictureInPictureWindow")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureWindow")}}
 
@@ -63,7 +64,7 @@ function resize(evt) {
 }
 
 video.requestPictureInPicture()
-  .then(pictureInPictureWindow => {
+  .then((pictureInPictureWindow) => {
     pictureInPictureWindow.onresize = resize;
     // or
     pictureInPictureWindow.addEventListener('resize', resize);

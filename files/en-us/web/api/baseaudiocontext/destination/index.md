@@ -12,6 +12,7 @@ tags:
   - destination
 browser-compat: api.BaseAudioContext.destination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `destination` property of the {{ domxref("BaseAudioContext") }}
@@ -29,12 +30,11 @@ An {{ domxref("AudioDestinationNode") }}.
 > Demos on the [MDN GitHub repo](https://github.com/mdn/), like [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic).
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
-var oscillatorNode = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+const oscillatorNode = audioCtx.createOscillator();
+const gainNode = audioCtx.createGain();
 
 oscillatorNode.connect(gainNode);
 gainNode.connect(audioCtx.destination);

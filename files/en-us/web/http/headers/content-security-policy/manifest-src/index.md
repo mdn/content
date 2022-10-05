@@ -11,8 +11,9 @@ tags:
   - Security
   - manifest-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.manifest-src
+browser-compat: http.headers.Content-Security-Policy.manifest-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP
@@ -68,7 +69,7 @@ Content-Security-Policy: manifest-src https://example.com/
 The following {{HTMLElement("link")}} is blocked and won't load:
 
 ```html
-<link rel="manifest" href="https://not-example.com/manifest">
+<link rel="manifest" href="https://not-example.com/manifest" />
 ```
 
 ## Specifications

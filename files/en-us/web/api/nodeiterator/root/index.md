@@ -9,6 +9,7 @@ tags:
   - Property
 browser-compat: api.NodeIterator.root
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.root`** read-only property represents the
@@ -25,7 +26,7 @@ A {{DOMxref("Node")}}.
 const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 root = nodeIterator.root; // document.body in this case
 ```

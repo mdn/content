@@ -12,6 +12,7 @@ tags:
   - close
 browser-compat: api.Notification.close_event
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`close`** event of the {{domxref("Notification")}} interface fires when a {{domxref("Notification")}} is closed.
@@ -21,9 +22,9 @@ The **`close`** event of the {{domxref("Notification")}} interface fires when a 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('close', event => { });
+addEventListener('close', (event) => { });
 
-onclose = event => { };
+onclose = (event) => { };
 ```
 
 ## Event type

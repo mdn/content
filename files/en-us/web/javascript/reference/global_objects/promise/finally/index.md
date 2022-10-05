@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise.finally
 ---
+
 {{JSRef}}
 
 The **`finally()`** method of a {{jsxref("Promise")}} schedules a function,
@@ -18,19 +19,19 @@ the _callback function_, to be called when the promise is settled.
 Like `then()` and `catch()`, it immediately returns an equivalent {{jsxref("Promise")}} object,
 allowing you to chain calls to another promise method, an operation called _composition_.
 
-This lets you avoid duplicating code in both the promise's {{jsxref("Promise.then",
-  "then()")}} and {{jsxref("Promise.catch", "catch()")}} handlers.
+This lets you avoid duplicating code in both the promise's {{jsxref("Promise/then",
+  "then()")}} and {{jsxref("Promise/catch", "catch()")}} handlers.
 
 {{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
 
 ## Syntax
 
-```js
-promise.finally(onFinally);
+```js-nolint
+promise.finally(onFinally)
 
 promise.finally(() => {
   // Code that will run after promise is settled (fulfilled or rejected)
-});
+})
 ```
 
 ### Parameters
@@ -56,7 +57,7 @@ The `finally()` method is very similar to calling
 - A `finally` callback will not receive any argument. This use case
   is for precisely when you _do not care_ about the rejection reason, or the
   fulfillment value, and so there's no need to provide it.
-- A `finally` call will usually chain through an equivalent to the original promise.  
+- A `finally` call will usually chain through an equivalent to the original promise.
   So for example:
   - Unlike `Promise.resolve(2).then(() => 77, () => {})` (which
     will return a resolved promise with the result `77`),
@@ -76,21 +77,28 @@ The `finally()` method is very similar to calling
 
 ## Examples
 
-### Using finally
+### Using finally()
 
 ```js
 let isLoading = true;
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest)
+  .then((response) => {
     const contentType = response.headers.get("content-type");
-    if(contentType && contentType.includes("application/json")) {
+    if (contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
   })
-  .then(function(json) { /* process your JSON further */ })
-  .catch(function(error) { console.error(error); /* this line can also throw, e.g. when console = {} */ })
-  .finally(function() { isLoading = false; });
+  .then((json) => {
+    /* process your JSON further */
+  })
+  .catch((error) => {
+    console.error(error); // this line can also throw, e.g. when console = {}
+  })
+  .finally(() => {
+    isLoading = false;
+  });
 ```
 
 ## Specifications

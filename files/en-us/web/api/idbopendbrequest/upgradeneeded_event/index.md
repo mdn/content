@@ -9,6 +9,7 @@ tags:
   - upgradeneeded
 browser-compat: api.IDBOpenDBRequest.upgradeneeded_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `upgradeneeded` event is fired when an attempt was made to open a database with a version number higher than its current version.
@@ -20,9 +21,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('upgradeneeded', event => { });
+addEventListener('upgradeneeded', (event) => { });
 
-onupgradeneeded = event => { };
+onupgradeneeded = (event) => { };
 ```
 
 ## Event type
@@ -35,9 +36,9 @@ An {{domxref("IDBVersionChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent, {{domxref("Event")}} interface._
 
-- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{readonlyInline}}
+- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{ReadOnlyInline}}
   - : Returns the old version of the database.
-- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{readonlyInline}}
+- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{ReadOnlyInline}}
   - : Returns the new version of the database.
 
 ## Examples
@@ -48,7 +49,7 @@ This example opens a database and handles the `upgradeneeded` event by making an
 // Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-dBOpenRequest.addEventListener('upgradeneeded', event => {
+dBOpenRequest.addEventListener('upgradeneeded', (event) => {
   const db = event.target.result;
   console.log(`Upgrading to version ${db.version}`);
 
@@ -70,7 +71,7 @@ This is the same example, but uses the onupgradeneeded event handler property.
 // Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-dBOpenRequest.onupgradeneeded = event => {
+dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
   console.log(`Upgrading to version ${db.version}`);
 

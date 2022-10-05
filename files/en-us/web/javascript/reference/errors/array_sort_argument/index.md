@@ -7,15 +7,17 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid Array.prototype.sort argument" occurs when the argument of {{jsxref("Array.prototype.sort()")}} isn't either {{jsxref("undefined")}} or a function which compares its operands.
 
 ## Message
 
-```html
-TypeError: argument is not a function object (Edge)
+```
+TypeError: The comparison function must be either a function or undefined (V8-based)
 TypeError: invalid Array.prototype.sort argument (Firefox)
+TypeError: Array.prototype.sort requires the comparator argument to be a function or undefined (Safari)
 ```
 
 ## Error type

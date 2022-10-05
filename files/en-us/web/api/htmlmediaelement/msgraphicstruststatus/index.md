@@ -5,6 +5,7 @@ page-type: web-api-instance-property
 tags:
   - msGraphicsTrustStatus
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}

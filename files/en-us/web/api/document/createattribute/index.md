@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Document.createAttribute
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.createAttribute()`** method creates a new
@@ -20,7 +21,7 @@ added to a particular element in this manner.
 
 ## Syntax
 
-```js
+```js-nolint
 createAttribute(name)
 ```
 
@@ -40,8 +41,8 @@ A {{domxref("Attr")}} node.
 ## Examples
 
 ```js
-var node = document.getElementById("div1");
-var a = document.createAttribute("my_attrib");
+const node = document.getElementById("div1");
+const a = document.createAttribute("my_attrib");
 a.value = "newVal";
 node.setAttributeNode(a);
 console.log(node.getAttribute("my_attrib")); // "newVal"

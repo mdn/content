@@ -15,6 +15,7 @@ tags:
   - sound
 browser-compat: api.BaseAudioContext.createGain
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createGain()` method of the {{ domxref("BaseAudioContext") }}
@@ -27,7 +28,7 @@ overall gain (or volume) of the audio graph.
 
 ## Syntax
 
-```js
+```js-nolint
 createGain()
 ```
 
@@ -58,42 +59,39 @@ The below snippet wouldn't work as is — for a complete working example, check 
 ```
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var gainNode = audioCtx.createGain();
-var mute = document.querySelector('.mute');
-var source;
+const audioCtx = new AudioContext();
+const gainNode = audioCtx.createGain();
+const mute = document.querySelector(".mute");
+let source;
 
 if (navigator.mediaDevices.getUserMedia) {
- navigator.mediaDevices.getUserMedia (
-   // constraints - only audio needed for this app
-   {
-     audio: true
-   },
+  navigator.mediaDevices.getUserMedia(
+    // constraints - only audio needed for this app
+    {
+      audio: true,
+    },
 
-   // Success callback
-   function(stream) {
-     source = audioCtx.createMediaStreamSource(stream);
+    // Success callback
+    (stream) => {
+      source = audioCtx.createMediaStreamSource(stream);
+    },
 
-   },
-
-   // Error callback
-   function(err) {
-     console.log('The following gUM error occurred: ' + err);
-   }
+    // Error callback
+    (err) => {
+      console.error(`The following gUM error occurred: ${err}`);
+    }
   );
 } else {
-   console.log('getUserMedia not supported on your browser!');
+  console.error("getUserMedia not supported on your browser!");
 }
 
 source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
-  ...
+// …
 
-mute.onclick = voiceMute;
-
-function voiceMute() {
-  if(mute.id == "") {
+mute.onclick = () => {
+  if (mute.id === "") {
     // 0 means mute. If you still hear something, make sure you haven't
     // connected your source into the output in addition to using the GainNode.
     gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
@@ -104,7 +102,7 @@ function voiceMute() {
     mute.id = "";
     mute.textContent = "Mute";
   }
-}
+};
 ```
 
 ## Specifications

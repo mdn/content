@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript error "unterminated string literal" occurs when there is an unterminated
@@ -15,7 +16,7 @@ The JavaScript error "unterminated string literal" occurs when there is an unter
 
 ## Message
 
-```js
+```
 SyntaxError: Unterminated string constant (Edge)
 SyntaxError: unterminated string literal (Firefox)
 ```

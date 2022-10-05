@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - getFrameData
+  - Non-standard
 browser-compat: api.VRDisplay.getFrameData
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`getFrameData()`** method of the {{domxref("VRDisplay")}} interface accepts a {{domxref("VRFrameData")}} object and populates it with the information required to render the current frame.
 
@@ -24,7 +26,7 @@ This includes the {{domxref("VRPose")}} and view and projection matrices for the
 
 ## Syntax
 
-```js
+```js-nolint
 getFrameData(frameData)
 ```
 
@@ -43,12 +45,12 @@ A boolean value — a value of `true` is returned if the {{domxref("VRFrameData"
 const frameData = new VRFrameData();
 let vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
   console.log('Display found');
   // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-  btn.addEventListener('click', function() {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+  btn.addEventListener('click', () => {
+    vrDisplay.requestPresent([{ source: canvas }]).then(() => {
       drawVRScene();
     });
   });
@@ -94,14 +96,14 @@ function drawVRScene() {
     // draw the view for each eye
   }
 
-    ...
+  // …
 
   // WebVR: Indicate that we are ready to present the rendered frame to the VR display
   vrDisplay.submitFrame();
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

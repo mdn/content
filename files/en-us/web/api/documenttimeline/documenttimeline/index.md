@@ -13,13 +13,14 @@ tags:
   - web animations api
 browser-compat: api.DocumentTimeline.DocumentTimeline
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+
+{{ APIRef("Web Animations API") }}
 
 The **`DocumentTimeline()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) creates a new instance of the {{domxref("DocumentTimeline")}} object associated with the active document of the current browsing context.
 
 ## Syntax
 
-```js
+```js-nolint
 new DocumentTimeline(options)
 ```
 
@@ -42,7 +43,7 @@ cats = Array.prototype.slice.call(cats);
 
 const sharedTimeline = new DocumentTimeline({ originTime: 500 });
 
-cats.forEach(function(cat) {
+cats.forEach((cat) => {
   const catKeyframes = new KeyframeEffect(cat, keyframes, timing);
   const catAnimation = new Animation(catKeyframes, sharedTimeline);
   catAnimation.play();

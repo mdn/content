@@ -15,6 +15,7 @@ tags:
   - rtc
 browser-compat: api.RTCPeerConnectionIceEvent.candidate
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`candidate`** property
@@ -30,10 +31,8 @@ negotiation session.
 ## Example
 
 ```js
-pc.onicecandidate = function( ev ) {
-  alert("The ICE candidate (transport address: '" +
-    ev.candidate.candidate +
-    "') has been added to this connection.");
+pc.onicecandidate = (ev) => {
+  alert(`The ICE candidate (transport address: '${ev.candidate.candidate}') has been added to this connection.`);
 }
 ```
 

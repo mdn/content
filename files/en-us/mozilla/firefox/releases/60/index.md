@@ -2,10 +2,11 @@
 title: Firefox 60 for developers
 slug: Mozilla/Firefox/Releases/60
 tags:
-  - '60'
+  - "60"
   - Firefox
   - Release Notes
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 60 that will affect developers. Firefox 60 was released on May 9, 2018.

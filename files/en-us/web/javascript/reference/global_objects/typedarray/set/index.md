@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.set
 ---
+
 {{JSRef}}
 
 The **`set()`** method stores multiple values in the typed
@@ -19,7 +20,7 @@ array, reading input values from a specified array.
 
 ## Syntax
 
-```js
+```js-nolint
 set(array)
 set(array, targetOffset)
 

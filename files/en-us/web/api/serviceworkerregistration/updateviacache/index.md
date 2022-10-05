@@ -11,6 +11,7 @@ tags:
   - updateViaCache
 browser-compat: api.ServiceWorkerRegistration.updateViaCache
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`updateViaCache`** read-only property of the
@@ -32,19 +33,21 @@ Returns one of the following values:
 The following example shows the use of updateViaCache.
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js', {
-    updateViaCache: 'none'
-  }).then(function(registration) {
-    registration.addEventListener('updatefound', function() {
-      // If updatefound is fired, it means that there's
-      // a new service worker being installed.
-      console.log('Value of updateViaCache:', registration.updateViaCache);
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js", {
+      updateViaCache: "none",
+    })
+    .then((registration) => {
+      registration.addEventListener("updatefound", () => {
+        // If updatefound is fired, it means that there's
+        // a new service worker being installed.
+        console.log(`Value of updateViaCache: ${registration.updateViaCache}`);
+      });
+    })
+    .catch((error) => {
+      console.error(`Service worker registration failed: ${error}`);
     });
-  })
-  .catch(function(error) {
-    console.log('Service worker registration failed:', error);
-  });
 }
 ```
 
@@ -59,7 +62,7 @@ if ('serviceWorker' in navigator) {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

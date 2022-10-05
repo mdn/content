@@ -13,6 +13,7 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The W3C {{domxref("XMLHttpRequest")}} specification adds [HTML](/en-US/docs/Web/HTML) parsing support to {{domxref("XMLHttpRequest")}}, which originally supported only {{Glossary("XML")}} parsing. This feature allows Web apps to obtain an HTML resource as a parsed {{Glossary("DOM")}} using `XMLHttpRequest`.
@@ -28,9 +29,9 @@ To discourage the synchronous use of `XMLHttpRequest`, HTML support is not avail
 Retrieving an HTML resource as a DOM using {{domxref("XMLHttpRequest")}} works just like retrieving an XML resource as a DOM using `XMLHttpRequest`, except you can't use the synchronous mode and you have to explicitly request a document by assigning the string `"document"` to the {{domxref("XMLHttpRequest.responseType", "responseType")}} property of the `XMLHttpRequest` object after calling {{domxref("XMLHttpRequest.open", "open()")}} but before calling {{domxref("XMLHttpRequest.send", "send()")}}.
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.onload = function() {
-  console.log(this.responseXML.title);
+const xhr = new XMLHttpRequest();
+xhr.onload = () => {
+  console.log(xhr.responseXML.title);
 }
 xhr.open("GET", "file.html");
 xhr.responseType = "document";
@@ -45,13 +46,14 @@ This method relies on the "force async" nature of the feature. When you try to s
 
 ```js
 function HTMLinXHR() {
-  if (!window.XMLHttpRequest)
+  if (!window.XMLHttpRequest) {
     return false;
-  var req = new window.XMLHttpRequest();
+  }
+  const req = new window.XMLHttpRequest();
   req.open('GET', window.location.href, false);
   try {
     req.responseType = 'document';
-  } catch(e) {
+  } catch (e) {
     return true;
   }
   return false;
@@ -77,18 +79,19 @@ If the file is named `detect.html`, the following function can be used for detec
 ```js
 function detectHtmlInXhr(callback) {
   if (!window.XMLHttpRequest) {
-    window.setTimeout(function() { callback(false); }, 0);
+    setTimeout(function() { callback(false); }, 0);
+
     return;
   }
-  var done = false;
-  var xhr = new window.XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && !done) {
+  let done = false;
+  const xhr = new window.XMLHttpRequest();
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4 && !done) {
       done = true;
-      callback(!!(this.responseXML && this.responseXML.title && this.responseXML.title == "&&<"));
+      callback(!!(xhr.responseXML && xhr.responseXML.title && xhr.responseXML.title === "&&<"));
     }
   }
-  xhr.onabort = xhr.onerror = function() {
+  xhr.onabort = xhr.onerror = () => {
     if (!done) {
       done = true;
       callback(false);
@@ -99,7 +102,7 @@ function detectHtmlInXhr(callback) {
     xhr.responseType = "document";
     xhr.send();
   } catch (e) {
-    window.setTimeout(function() {
+    setTimeout(function() {
       if (!done) {
         done = true;
         callback(false);
@@ -116,26 +119,6 @@ The argument `callback` is a function that will be called asynchronously with `t
 ## Character encoding
 
 If the character encoding is declared in the HTTP {{HTTPHeader("Content-Type")}} header, that character encoding is used. Failing that, if there is a byte order mark, the encoding indicated by the byte order mark is used. Failing that, if there is a {{HTMLElement("meta")}} element that declares the encoding within the first 1024 bytes of the file, that encoding is used. Otherwise, the file is decoded as UTF-8.
-
-## Handling HTML on older browsers
-
-`XMLHttpRequest` originally supported only XML parsing. HTML parsing support is a recent addition. For older browsers, you can even use the {{domxref("XMLHttpRequest.responseText")}} property in association with [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) in order to get, for example, the source code of an HTML element given its ID:
-
-```js
-function getHTML (oXHR, sTargetId) {
-  var rOpen = new RegExp("<(?!\!)\\s*([^\\s>]+)[^>]*\\s+id\\=[\"\']" + sTargetId + "[\"\'][^>]*>" ,"i"),
-       sSrc = oXHR.responseText, aExec = rOpen.exec(sSrc);
-
-  return aExec ? (new RegExp("(?:(?:.(?!<\\s*" + aExec[1] + "[^>]*[>]))*.?<\\s*" + aExec[1] + "[^>]*[>](?:.(?!<\\s*\/\\s*" + aExec[1] + "\\s*>))*.?<\\s*\/\\s*" + aExec[1] + "\\s*>)*(?:.(?!<\\s*\/\\s*" + aExec[1] + "\\s*>))*.?", "i")).exec(sSrc.slice(sSrc.indexOf(aExec[0]) + aExec[0].length)) || "" : "";
-}
-
-var oReq = new XMLHttpRequest();
-oReq.open("GET", "yourPage.html", true);
-oReq.onload = function () { console.log(getHTML(this, "intro")); };
-oReq.send(null);
-```
-
-> **Note:** This solution is very expensive for the interpreter. **Use it only when it is really necessary**.
 
 ## Specifications
 

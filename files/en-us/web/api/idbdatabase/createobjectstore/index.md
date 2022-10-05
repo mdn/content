@@ -12,6 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBDatabase.createObjectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`createObjectStore()`** method of the
@@ -29,7 +30,7 @@ transaction.
 
 ## Syntax
 
-```js
+```js-nolint
 createObjectStore(name)
 createObjectStore(name, options)
 ```
@@ -64,18 +65,18 @@ one of the following types:
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the method was not called from a
-        `versionchange` transaction callback.
+    `versionchange` transaction callback.
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if a request is made on a source database that does not exist
-        (for example, when the database has been deleted or removed). In Firefox previous to version 41,
-        an `InvalidStateError` was raised in this case as well, which
-        was misleading; this has now been fixed (see {{Bug("1176165")}}).
+    (for example, when the database has been deleted or removed). In Firefox previous to version 41,
+    an `InvalidStateError` was raised in this case as well, which
+    was misleading; this has now been fixed (see {{Bug("1176165")}}).
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an object store with the given name (based on a case-sensitive comparison)
-        already exists in the connected database.
+    already exists in the connected database.
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if `autoIncrement` is set to true and `keyPath` is
-        either an empty string or an array containing an empty string.
+    either an empty string or an array containing an empty string.
 
 ## Examples
 
@@ -88,10 +89,10 @@ const request = window.indexedDB.open("toDoList", 4);
 // or when a new version number is submitted by calling
 // window.indexedDB.open().
 // This handler is only supported in recent browsers.
-request.onupgradeneeded = event => {
+request.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = event => {
+  db.onerror = (event) => {
     note.innerHTML += "<li>Error loading database.</li>";
   };
 
@@ -129,4 +130,4 @@ request.onupgradeneeded = event => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

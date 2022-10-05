@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing } after property list" occurs when there is a mistake
@@ -15,9 +16,9 @@ Might be in fact a missing curly bracket, but could also be a missing comma.
 
 ## Message
 
-```js
-SyntaxError: Expected '}' (Edge)
+```
 SyntaxError: missing } after property list (Firefox)
+SyntaxError: Unexpected identifier 'c'. Expected '}' to end an object literal. (Safari)
 ```
 
 ## Error type

@@ -5,11 +5,12 @@ tags:
   - HTTP
   - HTTP Header
 ---
-The HTTP message *payload body* is the *information* ("payload") part of the data that is sent in the HTTP Message Body (if any), prior to {{HTTPHeader("Transfer-Encoding","transfer encoding")}} being applied. If transfer encoding is not used, the _payload body_ and _message body_ are the same thing!
+
+The HTTP message **payload body** is the _information_ ("payload") part of the data that is sent in the HTTP Message Body (if any), prior to {{HTTPHeader("Transfer-Encoding","transfer encoding")}} being applied. If transfer encoding is not used, the _payload body_ and _message body_ are the same!
 
 For example, in this response the message body contains only the payload body: "Mozilla Developer Network":
 
-```plain
+```http
 HTTP/1.1 200 OK
 Content-Type: text/plain
 
@@ -18,7 +19,7 @@ Mozilla Developer Network
 
 By contrast, the below response uses _transfer encoding_ to encode the payload body into chunks. The payload body (information) sent is still "Mozilla Developer Network", but the message body includes additional data to separate the chunks:
 
-```plain
+```http
 HTTP/1.1 200 OK
 Content-Type: text/plain
 Transfer-Encoding: chunked

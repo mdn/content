@@ -27,13 +27,12 @@ class WordCount extends HTMLParagraphElement {
     super();
 
     // Constructor contents omitted for brevity
-    ...
-
+    // …
   }
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 ```html

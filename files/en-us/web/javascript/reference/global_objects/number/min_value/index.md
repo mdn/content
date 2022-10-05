@@ -7,6 +7,7 @@ tags:
   - Property
 browser-compat: javascript.builtins.Number.MIN_VALUE
 ---
+
 {{JSRef}}
 
 The **`Number.MIN_VALUE`** property represents the smallest positive numeric value representable in JavaScript.
@@ -15,9 +16,11 @@ The **`Number.MIN_VALUE`** property represents the smallest positive numeric val
 
 ## Description
 
-`Number.MIN_VALUE` is the smallest positive number (not the most negative number) that can be represented within float precision — in other words, the number closest to 0. That's approximately `5E-324`. The ECMAScript spec doesn't define a precise value that implementations are required to support — instead the spec says, _"must be the smallest non-zero positive value that can actually be represented by the implementation"_. But in practice, its precise value in browsers and in Node.js is `2^-1074`.
+`Number.MIN_VALUE` is the smallest positive number (not the most negative number) that can be represented within float precision — in other words, the number closest to 0. The ECMAScript spec doesn't define a precise value that implementations are required to support — instead the spec says, _"must be the smallest non-zero positive value that can actually be represented by the implementation"_. This is because small IEEE-754 floating point numbers are [denormalized](https://en.wikipedia.org/wiki/Subnormal_number), but implementations are not required to support this representation, in which case `Number.MIN_VALUE` may be larger.
 
-Because `MIN_VALUE` is a static property of {{jsxref("Number")}}, you always use it as `Number.MIN_VALUE`, rather than as a property of a {{jsxref("Number")}} object you created.
+In practice, its precise value in mainstream engines like V8 (used by Chrome, Edge, Node.js), SpiderMonkey (used by Firefox), and JavaScriptCore (used by Safari) is 2<sup>-1074</sup>, or `5E-324`.
+
+Because `MIN_VALUE` is a static property of {{jsxref("Number")}}, you always use it as `Number.MIN_VALUE`, rather than as a property of a number value.
 
 ## Examples
 

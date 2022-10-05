@@ -4,6 +4,7 @@ slug: Mozilla/Firefox/Releases/3/Updating_web_applications
 tags:
   - Firefox 3
 ---
+
 {{FirefoxSidebar}}
 
 There are a number of changes in the upcoming Firefox 3 that may affect your web site or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.
@@ -26,13 +27,13 @@ Firefox 3 closes a security bug in frames and iframes that allowed them to inher
 The `<script>` element in `text/html` documents now requires a closing `</script>` in HTML 4 documents, even if you're not including any content in between. While in previous versions of Firefox, you could do:
 
 ```html
-<script ... />
+<script … />
 ```
 
 Now the markup must comply with the HTML specifications (if it's actually HTML), and hence you must actually close it, like this:
 
 ```html
-<script ...></script>
+<script …></script>
 ```
 
 This improves both compatibility and security.

@@ -1,6 +1,7 @@
 ---
 title: CSS Logical Properties and Values
 slug: Web/CSS/CSS_Logical_Properties
+page-type: css-module
 tags:
   - CSS
   - CSS Logical Properties
@@ -10,6 +11,7 @@ tags:
   - Reference
 spec-urls: https://drafts.csswg.org/css-logical/
 ---
+
 {{CSSRef}}
 
 **CSS Logical Properties and Values** is a module of [CSS](/en-US/docs/Web/CSS) introducing logical properties and values that provide the ability to control layout through logical, rather than physical, direction and dimension mappings.
@@ -36,7 +38,7 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - {{CSSxRef("min-block-size")}}
 - {{CSSxRef("min-inline-size")}}
 
-### Properties for margins, borders and padding
+### Properties for margins, borders, and padding
 
 - {{CSSxRef("border-block")}}
 - {{CSSxRef("border-block-color")}}
@@ -96,6 +98,11 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - {{CSSxRef("inset-inline-end")}}
 - {{CSSxRef("inset-inline-start")}}
 
+### Properties for size containment
+
+- {{CSSxRef("contain-intrinsic-block-size")}}
+- {{CSSxRef("contain-intrinsic-inline-size")}}
+
 ### Other properties
 
 - {{CSSxRef("caption-side")}} (`inline-end` and `inline-start` keywords)
@@ -116,9 +123,9 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 ## Guides
 
 - [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts)
-- [Logical Properties for sizing](/en-US/docs/Web/CSS/CSS_Logical_Properties/Sizing)
-- [Logical Properties for margins, borders and padding](/en-US/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
-- [Logical Properties for floating and positioning](/en-US/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning)
+- [Logical properties for sizing](/en-US/docs/Web/CSS/CSS_Logical_Properties/Sizing)
+- [Logical properties for margins, borders, and padding](/en-US/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
+- [Logical properties for floating and positioning](/en-US/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning)
 
 ## Specifications
 

@@ -10,6 +10,7 @@ tags:
   - Interface
 browser-compat: api.ValidityState
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`ValidityState`** interface represents the _validity states_ that an element can be in, with respect to constraint validation. Together, they help explain why an element's value fails to validate, if it's not valid.

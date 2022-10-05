@@ -18,6 +18,7 @@ tags:
   - gatheringstatechange
 browser-compat: api.RTCIceTransport.gatheringstatechange_event
 ---
+
 {{APIRef("WebRTC")}}
 
 A **`gatheringstatechange`** event is sent to an {{domxref("RTCIceTransport")}} when its {{Glossary("ICE")}} candidate gathering state changes.
@@ -33,9 +34,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('gatheringstatechange', event => { });
+addEventListener('gatheringstatechange', (event) => { });
 
-ongatheringstatechange = event => { };
+ongatheringstatechange = (event) => { };
 ```
 
 ## Event type
@@ -47,22 +48,23 @@ A generic {{domxref("Event")}}.
 This example creates a handler for `gatheringstatechange` events on each {{domxref("RTCRtpSender")}} associated with a given {{domxref("RTCPeerConnection")}}. Here, the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method is called to add a listener for `gatheringstatechange` events:
 
 ```js
-pc.getSenders().forEach(sender => {
-  sender.transport.iceTransport.addEventListener("gatheringstatechange", ev => {
-  let transport = ev.target;
+pc.getSenders().forEach((sender) => {
+  sender.transport.iceTransport.addEventListener("gatheringstatechange", (ev) => {
+    let transport = ev.target;
 
-  if (transport.gatheringState === "complete") {
-    /* this transport has finished gathering candidates,
-       but others may still be working on it */
-  }
-}, false);
+    if (transport.gatheringState === "complete") {
+      /* this transport has finished gathering candidates,
+        but others may still be working on it */
+    }
+  }, false);
+});
 ```
 
 Likewise, you can use the `ongatheringstatechange` event handler property:
 
 ```js
-pc.getSenders().forEach(sender => {
-  sender.transport.iceTransport.ongatheringstatechange = ev => {
+pc.getSenders().forEach((sender) => {
+  sender.transport.iceTransport.ongatheringstatechange = (ev) => {
     let transport = ev.target;
 
     if (transport.gatheringState === "complete") {

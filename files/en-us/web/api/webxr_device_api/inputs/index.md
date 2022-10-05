@@ -19,6 +19,7 @@ tags:
   - XR
   - controllers
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 A full WebXR experience isn't just about showing the user a wholly virtual scene or augmenting reality by adding to or altering the world around them. In order to make an experience that's fulfilling and engaging, the user needs to be able to interact with it. To that end, WebXR provides support for a variety of kinds of input devices.
@@ -41,7 +42,7 @@ WebXR supports a variety of different types of devices to handle targeting and a
 - Motion-sensing controllers, which use accelerometers, magnetometers, and other sensors for motion tracking and targeting and may additionally include any number of buttons, joysticks, thumbpads, touchpads, force sensors, and so on to provide additional input sources for both targeting and selection.
 - Squeezable triggers or glove grip pads to provide squeeze actions.
 - Voice commands using speech recognition.
-- Spatially-tracked articulated hands, such as {{interwiki("wikipedia", "haptic gloves")}} can provide both targeting and squeeze actions, as well as selection if outfitted with buttons or other sources of selection actions.
+- Spatially-tracked articulated hands, such as [wired gloves](https://en.wikipedia.org/wiki/Wired_glove) can provide both targeting and squeeze actions, as well as selection if outfitted with buttons or other sources of selection actions.
 - Single-button click devices.
 - Gaze tracking (following the movements of the eye to choose targets).
 
@@ -104,18 +105,18 @@ The input source's {{domxref("XRInputSource.gripSpace", "gripSpace")}} property 
 **Figure: The coordinate system for the right hand's grip space.**
 ![A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world.](dark_right.svg)
 
-The grip space's native origin, located around the center of the player's fist, is (0, 0, 0) within the input source's local coordinate system, while the {{domxref("XRSpace")}} specified by `gripSpace` can be used at any time to convert coordinates or vectors from the input source's space into world coordinates (or vice-versa).
+The grip space's native origin, located around the center of the player's fist, is (0, 0, 0) within the input source's local coordinate system, while the {{domxref("XRSpace")}} specified by `gripSpace` can be used at any time to convert coordinates or vectors from the input source's space into world coordinates (or vice versa).
 
 This means that if you use a 3D model to represent your controller, your player's avatar's hands, or anything else representative of the controller's position in space, the `gripSpace` can be used as the transform matrix that correctly positions and orients the object's model for rendering. To do this, it's necessary to use the transform to convert the grip space to the world coordinate system used by WebGL for rendering purposes.
 
 **Figure: Mapping the grip space to the world coordinate system. The distances _x_, _y_, and _z_ together make up the world coordinates (_x_, _y_, z) corresponding to the origin of the grip space _G_.**
 ![A diagram showing the relationship between the grip space and the world space](gripspace-on-worldspace.svg)
 
-In the diagram above, we see the grip space, whose origin is located at *G*, at the midpoint of the user's grip on the controller, which is pointing directly away from the user, parallel to the *z* axis. Relative to the origin of the world space, *W*, the grip space's origin is located _x_ units to the right, _y_ units above, and _z_ units farther away. Given the directionality of the axes, the coordinates of the grip space can be expressed in world coordinates as (_x_, _y_, -_z_); _z_ is negative since the grip space is farther away along the _z_ axis, and is thus in the negative direction.
+In the diagram above, we see the grip space, whose origin is located at _G_, at the midpoint of the user's grip on the controller, which is pointing directly away from the user, parallel to the _z_ axis. Relative to the origin of the world space, _W_, the grip space's origin is located _x_ units to the right, _y_ units above, and _z_ units farther away. Given the directionality of the axes, the coordinates of the grip space can be expressed in world coordinates as (_x_, _y_, -_z_); _z_ is negative since the grip space is farther away along the _z_ axis, and is thus in the negative direction.
 
 If the controller were instead positioned to the left of and closer to the user than the world space origin (or possibly behind the user, if the user is located at the origin, although that's an uncomfortable way to hold a controller), the coordinates would have a negative value for _x_, but a positive value for _z_. The value of _y_ would still be positive unless the controller was moved below the world space origin.
 
-This is shown in the diagram below, in which the controller is located down and to the left of the world space's origin, with the controller also moved to be closer to us than the origin. As a result, the values of *x* and *y* are both negative, while *z* is positive.
+This is shown in the diagram below, in which the controller is located down and to the left of the world space's origin, with the controller also moved to be closer to us than the origin. As a result, the values of _x_ and _y_ are both negative, while _z_ is positive.
 
 **Figure Mapping a grip space to the world origin when the controller is positioned below and to the left of the world origin, and closer to us than the world origin is.**
 ![The relationship between another grip space and the world space](gripspace-on-worldspace-diag.svg)
@@ -159,10 +160,10 @@ let inputSourceList = NULL;
 let leftHandSource = NULL;
 let rightHandSource = NULL;
 
-xrSession.addEventListener("inputsourceschange", event => {
+xrSession.addEventListener("inputsourceschange", (event) => {
   inputSourceList = event.session.inputSources;
 
-  inputSourceList.forEach(source => {
+  inputSourceList.forEach((source) => {
     switch(source) {
       case "left":
         leftHandSource = source;
@@ -196,7 +197,7 @@ See [Input profiles](#input_profiles) for more specific details on working with 
 
 In order to avoid having problems introduced by multiple controllers trying to inadvertently manipulate the UI at the same time, your app may need to have a "primary" controller. Not only would this controller then take the responsibility of clicking through the user interface of your app, but it would also be considered the "main hand," while other controllers would then be off-hand or additional controllers.
 
-> **Note:** This doesn't mean your app *needs* to decide upon a primary controller. But if it does, these strategies may help.
+> **Note:** This doesn't mean your app _needs_ to decide upon a primary controller. But if it does, these strategies may help.
 
 There are a few ways you can decide upon a primary controller. We'll look at three.
 
@@ -205,14 +206,9 @@ There are a few ways you can decide upon a primary controller. We'll look at thr
 The most direct way to decide which controller is primary is to have a user-definable "Handedness" preference that the user sets to indicate which of their hands is dominant. You would then look at each input source and find one matching this, if available, falling back to another controller if no controller is in that hand.
 
 ```js
-let primaryInputSource = xrSession.inputSources[0];
-
-for (let i=0; i < xrSession.inputSources.length; i++) {
-  if (xrSession.inputSources[i].handedness === user.handedness) {
-    primaryInputSource = inputSources[i];
-    break;
-  }
-}
+const primaryInputSource =
+  xrSession.inputSources.find((src) => src.handedness === user.handedness) ??
+  xrSession.inputSources[0];
 ```
 
 This snippet of code starts by assuming that the first input source is the primary, but then looks for one whose {{domxref("XRInputSource.handedness", "handedness")}} matches the one specified in the `user` object. If it matches, that input source is selected as the primary.
@@ -224,7 +220,7 @@ Another option is to use the first input the user triggers the select action on.
 ```js
 let primaryInputSource = xrSession.inputSources[0];
 
-xrSession.onselect = function(event) {
+xrSession.onselect = (event) => {
   primaryInputSource = event.inputSource;
   xrSession.onselect = realSelectHandler;
   return realSelectHandler(event);
@@ -314,7 +310,7 @@ The `select` event, on the other hand, is the event that tells your code that th
 If your primary action is a simple trigger action and you don't need to animate anything while the trigger is engaged, you can ignore the `selectstart` and `selectend` events and act on the `select` event.
 
 ```js
-xrSession.addEventListener("select", event => {
+xrSession.addEventListener("select", (event) => {
   let inputSource = event.inputSource;
   let frame = event.frame;
 
@@ -347,7 +343,7 @@ This sample code shows a set of squeeze event handlers that implement these even
 ##### Picking up an object: handling squeezestart events
 
 ```js
-xrSession.addEventListener("squeezestart", event => {
+xrSession.addEventListener("squeezestart", (event) => {
   const targetRaySpace = event.inputSource.targetRaySpace;
   const hand = event.inputSource.handedness;
 
@@ -381,7 +377,7 @@ The {{domxref("XRSession.squeeze_event", "squeeze")}} event is received when the
 This code presumes the existence of additional functions `findTargetPosition()`, which follows the target ray until it collides with something, then returns the coordinates at which the collision occurred, and `putObject()`, which places the object held in the specified `hand` at the given position, removing it from the hand.
 
 ```js
-xrSession.addEventListener("squeeze", event => {
+xrSession.addEventListener("squeeze", (event) => {
   const targetRaySpace = event.inputSource.targetRaySpace;
   const hand = event.inputSource.handedness;
 
@@ -411,7 +407,7 @@ With the position in hand, we can then drop the object by calling the `putObject
 The {{domxref("XRSession.squeezeend_event", "squeezeend")}} event is received after the squeeze is complete, even if it fails. We handle it by returning the currently-held object to where it was when it was picked up.
 
 ```js
-xrSession.addEventListener("squeezeend", event => {
+xrSession.addEventListener("squeezeend", (event) => {
   const targetRaySpace = event.inputSource.targetRaySpace;
   const hand = event.inputSource.handedness;
 
@@ -457,7 +453,7 @@ The targeting ray, which is a ray whose origin is located at the origin of the t
 This space is found in the input source's {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}} property. It can be used to determine the direction the controller is pointing and to determine the origin and orientation of the target ray. That can be accomplished by doing something like the following example, which implements a {{domxref("XRSession.select_event", "select")}} event handler that needs this information. As usual, this code is assuming the use of [glMatrix](https://glmatrix.net/) to perform the matrix and vector math:
 
 ```js
-xrSession.addEventListener("select", event => {
+xrSession.addEventListener("select", (event) => {
   const targetRaySpace = event.inputSource.targetRaySpace;
 
   let targetRayPose = event.frame.getPose(targetRaySpace, viewerRefSpace);
@@ -515,7 +511,7 @@ Because this use of the `Gamepad` interface is a convenience rather than a true 
 
 ## Incorporating input from non-WebXR sources
 
-Sometimes, you need to have a way to let the user provide input using controllers which are external to WebXR.  Most commonly, these inputs are from keyboards and mice, but you could also use non-XR gamepad devices, network inputs, or other sources of data to simulate user controls. While WebXR offers no support for directly interfacing these input devices with the XR scene, you can collect the input data yourself and apply it yourself.
+Sometimes, you need to have a way to let the user provide input using controllers which are external to WebXR. Most commonly, these inputs are from keyboards and mice, but you could also use non-XR gamepad devices, network inputs, or other sources of data to simulate user controls. While WebXR offers no support for directly interfacing these input devices with the XR scene, you can collect the input data yourself and apply it yourself.
 
 Assuming inputs are used to control an avatar within the simulation, which is the most common use case, WebXR inputs are used to affect the avatar in the following ways, using data collected from the non-XR input device:
 
@@ -539,10 +535,10 @@ To accomplish that, we include in the `avatar` object a `posDelta` property, of 
 The corresponding code for keyboard input might look something like this:
 
 ```js
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", (event) => {
   switch(event.key) {
-    case: "a":
-    case: "A":
+    case "a":
+    case "A":
       avatar.posDelta.x -= ACCEL_X;
       break;
     case "d":

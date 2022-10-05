@@ -11,6 +11,7 @@ tags:
   - tee
 browser-compat: api.ReadableStream.tee
 ---
+
 {{APIRef("Streams")}}
 
 The **`tee()`** method of the
@@ -46,7 +47,7 @@ will generally lock it for the duration, preventing other readers from locking i
 
 ## Syntax
 
-```js
+```js-nolint
 tee()
 ```
 
@@ -96,7 +97,7 @@ function fetchStream(stream, list) {
     charsReceived += value.length;
     const chunk = value;
     let listItem = document.createElement('li');
-    listItem.textContent = 'Read ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list.appendChild(listItem);
 
     // Read some more, and call this function again

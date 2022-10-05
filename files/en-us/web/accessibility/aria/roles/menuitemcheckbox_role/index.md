@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: menuitemcheckbox role'
+title: "ARIA: menuitemcheckbox role"
 slug: Web/Accessibility/ARIA/Roles/menuitemcheckbox_role
 tags:
   - Accessibility
@@ -12,6 +12,7 @@ spec-urls:
   - https://w3c.github.io/aria/#menuitemcheckbox
   - https://w3c.github.io/aria-practices/#menu
 ---
+
 A `menuitemcheckbox` is a `menuitem` with a checkable state whose possible values are `true`, `false`, or `mixed`.
 
 ## Description
@@ -26,7 +27,7 @@ Menu items containing the role of `menuitemcheckbox` must include the [`aria-che
 
 Similar to the 'checked' attribute of {{HTMLElement('input')}}s of type `checkbox`, the `aria-checked` attribute of a `menuitemcheckbox` indicates whether the menu item is checked (`true`), unchecked (`false`), or represents a sub-level menu of other menu items that have a mixture of checked and unchecked values (`mixed`). The `mixed` value is similar to the checkbox's [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#attr-indeterminate) attribute, which gives the appearance of a third, neither checked nor unchecked, state. If missing, the value defaults to `false`.
 
-An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using  `<input type="checkbox">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
+An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using `<input type="checkbox">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
 
 If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemcheckbox`, set the value with respect to the total number of items in the menu, excluding any separators.
 
@@ -72,15 +73,15 @@ When a `menu` opens, or when a `menubar` receives focus, keyboard focus is place
 If the `menuitemcheckbox` is in a submenu in a `menubar` or a menu opened with a menu button, the following keyboard interactions must be programmed in. :
 
 - <kbd>Enter</kbd>
-  - : Toggles the `aria-checked` state of the `menuitemcheckbox`  and closes the menu.
+  - : Toggles the `aria-checked` state of the `menuitemcheckbox` and closes the menu.
 - <kbd>Space</kbd>
   - : Toggles the `aria-checked` state of the `menuitemcheckbox`. Does not close the menu.
 - <kbd>Escape</kbd>
   - : Closes menu. In menubar, moves focus to parent menubar item.
 - <kbd>Right Arrow</kbd>
-  - : Closes submenu.  In menubar, moves focus to next item in the menubar, opening any submenu if there is one.
+  - : Closes submenu. In menubar, moves focus to next item in the menubar, opening any submenu if there is one.
 - <kbd>Left Arrow</kbd>
-  - : Closes menu.  In menubar, moves focus to previous item in the menubar, opening any submenu if there is one.
+  - : Closes menu. In menubar, moves focus to previous item in the menubar, opening any submenu if there is one.
 - <kbd>Down Arrow</kbd>
   - : Moves focus to the next item in the menu. If focus is on the last item, moves focus to the first item.
 - <kbd>Up Arrow</kbd>
@@ -112,9 +113,9 @@ The [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) makes the
 The visual appearance of the selected state is a checked checkbox which we can create using [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and [inheriting](/en-US/docs/Web/CSS/inherit) the color.
 
 ```css
-[role='menuitemcheckbox']::before {
+[role="menuitemcheckbox"]::before {
   display: inline-block;
-  content: '';
+  content: "";
   color: transparent;
   width: 1em;
   text-align: center;
@@ -122,9 +123,9 @@ The visual appearance of the selected state is a checked checkbox which we can c
   margin-inline-end: 2px;
   font-family: sans-serif;
 }
-[role='menuitemcheckbox'][aria-checked='true']::before {
+[role="menuitemcheckbox"][aria-checked="true"]::before {
   color: inherit;
-  content: 'X';
+  content: "X";
 }
 ```
 
@@ -146,6 +147,6 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Part 7: Deploying to production'
+title: "Express Tutorial Part 7: Deploying to production"
 slug: Learn/Server-side/Express_Nodejs/deployment
 tags:
   - Beginner
@@ -11,6 +11,7 @@ tags:
   - heroku
   - server-side
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 Now you've created (and tested) an awesome [LocalLibrary](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
@@ -42,7 +43,7 @@ Up to now, you've been working in a [development environment](/en-US/docs/Learn/
 - Make a few changes to your project settings.
 - Set up a production-level infrastructure for serving your website.
 
-This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Express app ready for production, and a worked example of how to install the LocalLibrary website onto the [Heroku](https://www.heroku.com/) cloud hosting service.
+This tutorial provides some guidance on your options for choosing a hosting site, a brief overview of what you need to do in order to get your Express app ready for production, and a working example of how to install the LocalLibrary website onto the [Heroku](https://www.heroku.com/) cloud hosting service.
 
 ## What is a production environment?
 
@@ -84,7 +85,7 @@ Some of the things to consider when choosing a host:
 - Additional benefits. Some providers will offer free domain names and support for SSL certificates that you would otherwise have to pay for.
 - Whether the "free" tier you're relying on expires over time, and whether the cost of migrating to a more expensive tier means you would have been better off using some other service in the first place!
 
-The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, [Heroku](https://www.heroku.com/) provides a free but resource-limited _PaaS_ environment "forever", while [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Google Cloud](https://cloud.google.com/free/docs/gcp-free-tier), and [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/windows/) provide free credit when you first join.
+The good news when you're starting out is that there are quite a few sites that provide computing environments for "free", albeit with some conditions. For example, [Heroku](https://www.heroku.com/) provides a free but resource-limited _PaaS_ environment, while [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Google Cloud](https://cloud.google.com/free/docs/gcp-free-tier), and [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/windows/) provide free credit when you first join.
 
 Many providers also have a "basic" tier that provides more useful levels of computing power and fewer limitations. [Digital Ocean](https://www.digitalocean.com/) is an example of a popular hosting provider that offers a relatively inexpensive basic computing tier (in the $5 per month lower range at time of writing).
 
@@ -100,7 +101,7 @@ In the following subsections, we outline the most important changes that you sho
 
 ### Set NODE_ENV to 'production'
 
-We can remove stack traces in error pages by setting the `NODE_ENV` environment variable to *production* (it is set to '_development_' by default). In addition to generating less-verbose error messages, setting the variable to *production* caches view templates and CSS files generated from CSS extensions. Tests indicate that setting `NODE_ENV` to _production_ can improve app performance by a factor of three!
+We can remove stack traces in error pages by setting the `NODE_ENV` environment variable to _production_ (it is set to '_development_' by default). In addition to generating less-verbose error messages, setting the variable to _production_ caches view templates and CSS files generated from CSS extensions. Tests indicate that setting `NODE_ENV` to _production_ can improve app performance by a factor of three!
 
 This change can be made either by using `export`, an environment file, or the OS initialization system.
 
@@ -115,21 +116,19 @@ For example, the code fragment below shows how you might set up "author" logging
 The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.
 
 ```js
-var debug = require('debug')('author');
+const debug = require("debug")("author");
 
 // Display Author update form on GET
-exports.author_update_get = function(req, res, next) {
-
-    req.sanitize('id').escape().trim();
-    Author.findById(req.params.id, function(err, author) {
-        if (err) {
-            debug('update error:' + err);
-            return next(err);
-        }
-        //On success
-        res.render('author_form', { title: 'Update Author', author: author });
-    });
-
+exports.author_update_get = (req, res, next) => {
+  req.sanitize("id").escape().trim();
+  Author.findById(req.params.id, (err, author) => {
+    if (err) {
+      debug(`update error: ${err}`);
+      return next(err);
+    }
+    // On success
+    res.render("author_form", { title: "Update Author", author });
+  });
 };
 ```
 
@@ -160,23 +159,23 @@ npm install compression
 Open **./app.js** and require the compression library as shown. Add the compression library to the middleware chain with the `use()` method (this should appear before any routes you want compressed — in this case, all of them!)
 
 ```js
-var catalogRouter = require('./routes/catalog'); //Import routes for "catalog" area of site
-var compression = require('compression');
+const catalogRouter = require("./routes/catalog"); // Import routes for "catalog" area of site
+const compression = require("compression");
 
 // Create the Express application object
-var app = express();
+const app = express();
 
-...
+// …
 
-app.use(compression()); //Compress all routes
+app.use(compression()); // Compress all routes
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 
-...
+// …
 ```
 
 > **Note:** For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like [Nginx](https://nginx.org/).
@@ -195,14 +194,14 @@ Open **./app.js** and require the _helmet_ library as shown.
 Then add the module to the middleware chain with the `use()` method.
 
 ```js
-var compression = require('compression');
-var helmet = require('helmet');
+const compression = require("compression");
+const helmet = require("helmet");
 
 // Create the Express application object
-var app = express();
+const app = express();
 
 app.use(helmet());
-...
+// …
 ```
 
 > **Note:** The command above adds a _subset_ of the available headers (these make sense for most sites). You can add/disable specific headers as needed by following the [instructions for using helmet here](https://www.npmjs.com/package/helmet).
@@ -246,7 +245,7 @@ That's all the overview you need in order to get started (see [Getting Started o
 
 ### Creating an application repository in GitHub
 
-Heroku is integrated with **git,** the source code version control system. The Heroku client you install will use git to synchronize changes you upload. The Heroku client creates a new "remote" repository named *heroku.* It connects to a repository of your code on the Heroku cloud. During development, you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.
+Heroku is integrated with _git_, the source code version control system. The Heroku client you install will use git to synchronize changes you upload. The Heroku client creates a new "remote" repository named _heroku._ It connects to a repository of your code on the Heroku cloud. During development, you use git to store changes on your repository. When you want to deploy your site, you sync your changes to the Heroku repository.
 
 > **Note:** If you're accustomed to following good software development practices you may already be using git or some other SCM system. If you already have a git repository, skip this step.
 
@@ -256,68 +255,68 @@ There are a lot of ways to work with git. One easy workflow is to first set up a
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
-    - Enter a new repository name (e.g. _express-locallibrary-tutorial_), and description (e.g. "Local Library website written in Express (Node)".
-    - Choose **Node** in the _Add .gitignore_ selection list.
-    - Choose your preferred license in the _Add license_ selection list.
-    - Check **Initialize this repository with a README**.
+   - Enter a new repository name (e.g. _express-locallibrary-tutorial_), and description (e.g. "Local Library website written in Express (Node)".
+   - Choose **Node** in the _Add .gitignore_ selection list.
+   - Choose your preferred license in the _Add license_ selection list.
+   - Check **Initialize this repository with a README**.
 
-    > **Warning:** The default "Public" access will make _all_ source code — including your database username and password — visible to anyone on the internet! Make sure the source code reads credentials _only_ from environment variables and does not have any credentials hard-coded.
-    >
-    > Otherwise, select the "Private" option to allow only selected people to see the source code.
+   > **Warning:** The default "Public" access will make _all_ source code — including your database username and password — visible to anyone on the internet! Make sure the source code reads credentials _only_ from environment variables and does not have any credentials hard-coded.
+   >
+   > Otherwise, select the "Private" option to allow only selected people to see the source code.
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
-6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/express-locallibrary-tutorial.git**).
+6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: `https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git`).
 
 Now that the repository ("repo") is created we are going to want to clone it on our local computer:
 
 1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
 2. Open a command prompt/terminal and clone your repository using the URL you copied above:
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
+   ```
 
-    This will create the repository below the current point.
+   This will create the repository below the current point.
 
 3. Navigate into the new repo.
 
-    ```bash
-    cd express-locallibrary-tutorial
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   ```
 
 The final step is to copy in your application and then add the files to your repo using git:
 
-1. Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from NPM as needed).
+1. Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from npm as needed).
 2. Open a command prompt/terminal and use the `add` command to add all files to git.
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 3. Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
 
-    ```bash
-    > git status
-    On branch main
-    Your branch is up-to-date with 'origin/main'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```bash
+   > git status
+   On branch main
+   Your branch is up-to-date with 'origin/main'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            new file:   ...
-    ```
+           new file:   ...
+   ```
 
 4. When you're satisfied, commit the files to your local repository:
 
-    ```bash
-    git commit -m "First version of application moved into GitHub"
-    ```
+   ```bash
+   git commit -m "First version of application moved into GitHub"
+   ```
 
 5. Then synchronize your local repository to the GitHub website, using the following:
 
-    ```bash
-    git push origin main
-    ```
+   ```bash
+   git push origin main
+   ```
 
 > **Warning:** In 2020 GitHub changed the default repo branch name to "main" (from "master"). If using an older/existing repository you might need to call `git push origin master` instead.
 
@@ -354,7 +353,7 @@ Open **package.json**, and add this information as an **engines > node** section
     "node": "12.18.4"
   },
   "private": true,
-  ...
+  // …
 ```
 
 #### Database configuration
@@ -364,15 +363,17 @@ So far in this tutorial, we've used a single database that is hard-coded into **
 Open **app.js** and find the line that sets the MongoDB connection variable. It will look something like this:
 
 ```js
-var mongoDB = 'mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true';
+const mongoDB =
+  "mongodb+srv://your_user:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true";
 ```
 
 Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below.)
 
 ```js
 // Set up mongoose connection
-var dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
-var mongoDB = process.env.MONGODB_URI || dev_db_url;
+const dev_db_url =
+  "mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true";
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
 ```
 
 #### Get dependencies and re-test

@@ -1,5 +1,5 @@
 ---
-title: 'AudioTrackList: change event'
+title: "AudioTrackList: change event"
 slug: Web/API/AudioTrackList/change_event
 page-type: web-api-event
 tags:
@@ -25,10 +25,10 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('change', event => { })
+```js-nolint
+addEventListener("change", (event) => { })
 
-onchange = event => { }
+onchange = (event) => { }
 ```
 
 ## Event type
@@ -40,14 +40,14 @@ A generic {{domxref("Event")}}.
 Using `addEventListener()`:
 
 ```js
-const videoElement = document.querySelector('video');
-videoElement.audioTracks.addEventListener('change', (event) => {
-    console.log(`'${event.type}' event fired`);
+const videoElement = document.querySelector("video");
+videoElement.audioTracks.addEventListener("change", (event) => {
+  console.log(`'${event.type}' event fired`);
 });
 
 // changing the value of `enabled` will trigger the `change` event
-const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () => {
+const toggleTrackButton = document.querySelector(".toggle-track");
+toggleTrackButton.addEventListener("click", () => {
   const track = videoElement.audioTracks[0];
   track.enabled = !track.enabled;
 });
@@ -56,14 +56,14 @@ toggleTrackButton.addEventListener('click', () => {
 Using the `onchange` event handler property:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 videoElement.audioTracks.onchange = (event) => {
-    console.log(`'${event.type}' event fired`);
+  console.log(`'${event.type}' event fired`);
 };
 
 // changing the value of `enabled` will trigger the `change` event
-const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () => {
+const toggleTrackButton = document.querySelector(".toggle-track");
+toggleTrackButton.addEventListener("click", () => {
   const track = videoElement.audioTracks[0];
   track.enabled = !track.enabled;
 });

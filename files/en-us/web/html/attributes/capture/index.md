@@ -8,7 +8,7 @@ tags:
   - Capture
   - Constraint validation
   - HTML
-browser-compat: html.elements.input.attributes.capture
+browser-compat: html.elements.input.capture
 ---
 
 {{HTMLSidebar}}
@@ -33,16 +33,16 @@ When set on a file input type, operating systems with microphones and cameras wi
 ```html
 <p>
   <label for="soundFile">What does your voice sound like?:</label>
-  <input type="file" id="soundFile" capture="user" accept="audio/*">
-  </p>
-  <p>
+  <input type="file" id="soundFile" capture="user" accept="audio/*" />
+</p>
+<p>
   <label for="videoFile">Upload a video:</label>
-  <input type="file" id="videoFile" capture="environment" accept="video/*">
-  </p>
-  <p>
+  <input type="file" id="videoFile" capture="environment" accept="video/*" />
+</p>
+<p>
   <label for="imageFile">Upload a photo of yourself:</label>
-  <input type="file" id="imageFile" capture="user" accept="image/*">
-  </p>
+  <input type="file" id="imageFile" capture="user" accept="image/*" />
+</p>
 ```
 
 {{EmbedLiveSample('Examples', '100%', 200)}}

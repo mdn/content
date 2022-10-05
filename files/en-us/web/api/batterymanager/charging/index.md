@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.BatteryManager.charging
 ---
+
 {{APIRef("Battery API")}}
 
 The **`BatteryManager.charging`** property is a Boolean value indicating whether or not the device's battery is currently being charged. When its value changes, the [`chargingchange`](/en-US/docs/Web/API/BatteryManager/chargingchange_event) event is fired.
@@ -29,10 +30,10 @@ A boolean.
 ### JavaScript Content
 
 ```js
-navigator.getBattery().then(battery => {
-    const charging = battery.charging;
+navigator.getBattery().then((battery) => {
+  const charging = battery.charging;
 
-    document.querySelector('#charging').textContent = charging ;
+  document.querySelector("#charging").textContent = charging;
 });
 ```
 

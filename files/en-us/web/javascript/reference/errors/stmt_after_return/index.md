@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "unreachable code after return statement" occurs when using an
@@ -14,7 +15,7 @@ semicolon-less return statement but including an expression directly after.
 
 ## Message
 
-```js
+```
 Warning: unreachable code after return statement (Firefox)
 ```
 
@@ -60,7 +61,7 @@ function f() {
   x -= 3;     // so this line will never run; it is unreachable
 }
 
-function f() {
+function g() {
   return     // this is treated like `return;`
     3 + 4;   // so the function returns, and this line is never reached
 }
@@ -76,7 +77,7 @@ function f() {
   return x;  // OK: return after all other statements
 }
 
-function f() {
+function g() {
   return 3 + 4  // OK: semicolon-less return with expression on the same line
 }
 ```

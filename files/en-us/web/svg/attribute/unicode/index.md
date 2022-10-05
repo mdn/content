@@ -7,6 +7,7 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.glyph.unicode
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`unicode`** attribute specifies one or more {{Glossary("Unicode")}} characters indicating the sequence of Unicode characters which corresponds to a {{Glossary("glyph")}}.

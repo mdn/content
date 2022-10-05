@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: list role'
+title: "ARIA: list role"
 slug: Web/Accessibility/ARIA/Roles/list_role
 tags:
   - ARIA
@@ -12,6 +12,7 @@ tags:
   - list role
 spec-urls: https://w3c.github.io/aria/#list
 ---
+
 The ARIA `list` role can be used to identify a list of items. It is normally used in conjunction with the `listitem` role, which is used to identify a list item contained inside the list.
 
 ```html
@@ -86,6 +87,6 @@ As an aside, note that if you are using the semantic HTML elements of `<ol>` or 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

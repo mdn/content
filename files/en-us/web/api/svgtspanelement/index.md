@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTSpanElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGTSpanElement`** interface represents a {{SVGElement("tspan")}} element.

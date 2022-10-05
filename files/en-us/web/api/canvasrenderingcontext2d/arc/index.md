@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.arc
 ---
+
 {{APIRef}}
 
 The
@@ -18,7 +19,7 @@ method of the [Canvas 2D API](/en-US/docs/Web/API/CanvasRenderingContext2D) adds
 
 ## Syntax
 
-```js
+```js-nolint
 arc(x, y, radius, startAngle, endAngle)
 arc(x, y, radius, startAngle, endAngle, counterclockwise)
 ```
@@ -101,7 +102,7 @@ for (let i = 0; i <= 3; i++) {
     let radius        = 20;                          // Arc radius
     let startAngle    = 0;                           // Starting point on circle
     let endAngle      = Math.PI + (Math.PI * j) / 2; // End point on circle
-    let counterclockwise = i % 2 == 1;                  // Draw counterclockwise
+    let counterclockwise = i % 2 === 1;                  // Draw counterclockwise
 
     ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 

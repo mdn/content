@@ -10,13 +10,14 @@ tags:
   - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawArrays
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.drawArrays()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data.
 
 ## Syntax
 
-```js
+```js-nolint
 drawArrays(mode, first, count)
 ```
 
@@ -51,7 +52,7 @@ None ({{jsxref("undefined")}}).
   `gl.INVALID_ENUM` error is thrown.
 - If `first` or `count` are negative, a
   `gl.INVALID_VALUE` error is thrown.
-- if `gl.CURRENT_PROGRAM` is {{jsxref("null")}}, a
+- if `gl.CURRENT_PROGRAM` is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), a
   `gl.INVALID_OPERATION` error is thrown.
 
 ## Examples

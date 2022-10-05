@@ -12,7 +12,8 @@ tags:
   - escape()
 browser-compat: api.CSS.escape
 ---
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+
+{{APIRef("CSSOM")}}
 
 The **`CSS.escape()`** static method returns a
 string containing the escaped string passed as parameter, mostly for
@@ -20,7 +21,7 @@ use as part of a CSS selector.
 
 ## Syntax
 
-```js
+```js-nolint
 escape(str)
 ```
 
@@ -31,7 +32,7 @@ escape(str)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+The escaped string.
 
 ## Examples
 
@@ -51,14 +52,14 @@ To escape a string for use as part of a selector, the `escape()` method can
 be used:
 
 ```js
-var element = document.querySelector('#' + CSS.escape(id) + ' > img');
+const element = document.querySelector(`#${CSS.escape(id)} > img`);
 ```
 
 The `escape()` method can also be used for escaping strings, although it
 escapes characters that don't strictly need to be escaped:
 
 ```js
-var element = document.querySelector('a[href="#' + CSS.escape(fragment) + '"]');
+const element = document.querySelector(`a[href="#${CSS.escape(fragment)}"]`);
 ```
 
 ## Specifications

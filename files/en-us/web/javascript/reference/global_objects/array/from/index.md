@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Array.from
 ---
+
 {{JSRef}}
 
 The **`Array.from()`** static method creates a new, shallow-copied `Array` instance from an iterable or array-like object.
@@ -18,20 +19,20 @@ The **`Array.from()`** static method creates a new, shallow-copied `Array` insta
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-Array.from(arrayLike, (element) => { /* ... */ } )
-Array.from(arrayLike, (element, index) => { /* ... */ } )
+Array.from(arrayLike, (element) => { /* … */ } )
+Array.from(arrayLike, (element, index) => { /* … */ } )
 
 // Mapping function
 Array.from(arrayLike, mapFn)
 Array.from(arrayLike, mapFn, thisArg)
 
 // Inline mapping function
-Array.from(arrayLike, function mapFn(element) { /* ... */ })
-Array.from(arrayLike, function mapFn(element, index) { /* ... */ })
-Array.from(arrayLike, function mapFn(element) { /* ... */ }, thisArg)
-Array.from(arrayLike, function mapFn(element, index) { /* ... */ }, thisArg)
+Array.from(arrayLike, function mapFn(element) { /* … */ })
+Array.from(arrayLike, function mapFn(element, index) { /* … */ })
+Array.from(arrayLike, function mapFn(element) { /* … */ }, thisArg)
+Array.from(arrayLike, function mapFn(element, index) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -54,6 +55,8 @@ A new {{jsxref("Array")}} instance.
 - [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (objects such as {{jsxref("Map")}} and {{jsxref("Set")}}); or, if the object is not iterable,
 - array-like objects (objects with a `length` property and indexed elements).
 
+`Array.from()` never creates a sparse array. If the `arrayLike` object is missing some index properties, they become `undefined` in the new array.
+
 `Array.from()` has an optional parameter `mapFn`, which allows you to execute a {{jsxref("Array.prototype.map()", "map()")}} function on each element of the array being created.
 
 More clearly, `Array.from(obj, mapFn, thisArg)` has the same result as `Array.from(obj).map(mapFn, thisArg)`, except that it does not create an intermediate array, and _mapFn_ only receives two arguments (_element_, _index_) without the whole array, because the array is still under construction.
@@ -62,7 +65,7 @@ More clearly, `Array.from(obj, mapFn, thisArg)` has the same result as `Array.fr
 
 The `length` property of the `from()` method is `1`.
 
-In ES2015, the class syntax allows sub-classing of both built-in and user-defined classes. As a result, static methods such as `Array.from()` are "inherited" by subclasses of `Array`, and create new instances _of the subclass_, not `Array`. The `Array.from()` method is also defined generically and can be defined on any constructor that accepts a single number argument.
+The [class](/en-US/docs/Web/JavaScript/Reference/Classes) syntax allows sub-classing of both built-in and user-defined classes. As a result, static methods such as `Array.from()` are "inherited" by subclasses of `Array`, and create new instances _of the subclass_, not `Array`. The `Array.from()` method is also defined generically and can be defined on any constructor that accepts a single number argument.
 
 ## Examples
 
@@ -100,9 +103,9 @@ Array.from(mapper.keys());
 
 ```js
 // Create an array based on a property of DOM Elements
-const images = document.getElementsByTagName('img');
-const sources = Array.from(images, image => image.src);
-const insecureSources = sources.filter(link => link.startsWith('http://'));
+const images = document.querySelectorAll('img');
+const sources = Array.from(images, (image) => image.src);
+const insecureSources = sources.filter((link) => link.startsWith('http://'));
 ```
 
 ### Array from an Array-like object (arguments)
@@ -122,7 +125,7 @@ f(1, 2, 3);
 ```js
 // Using an arrow function as the map function to
 // manipulate the elements
-Array.from([1, 2, 3], x => x + x);
+Array.from([1, 2, 3], (x) => x + x);
 // [2, 4, 6]
 
 // Generate a sequence of numbers
@@ -135,7 +138,7 @@ Array.from({length: 5}, (v, i) => i);
 ### Sequence generator (range)
 
 ```js
-// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
+// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP, etc.)
 const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
 
 // Generate numbers range 0..4
@@ -147,7 +150,7 @@ range(1, 10, 2);
 // [1, 3, 5, 7, 9]
 
 // Generate the alphabet using Array.from making use of it being ordered as a sequence
-range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x => String.fromCharCode(x));
+range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map((x) => String.fromCharCode(x));
 // ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 ```
 

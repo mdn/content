@@ -11,6 +11,7 @@ browser-compat:
   - javascript.statements.import
   - javascript.statements.export
 ---
+
 {{JSSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 This guide gives you all you need to get started with JavaScript module syntax.
@@ -98,12 +99,7 @@ export function draw(ctx, length, x, y, color) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, length, length);
 
-  return {
-    length: length,
-    x: x,
-    y: y,
-    color: color
-  };
+  return { length, x, y, color };
 }
 ```
 
@@ -146,10 +142,10 @@ You can see such lines in action in [`main.js`](https://github.com/mdn/js-exampl
 Once you've imported the features into your script, you can use them just like they were defined inside the same file. The following is found in `main.js`, below the import lines:
 
 ```js
-let myCanvas = create('myCanvas', document.body, 480, 320);
-let reportList = createReportList(myCanvas.id);
+const myCanvas = create('myCanvas', document.body, 480, 320);
+const reportList = createReportList(myCanvas.id);
 
-let square1 = draw(myCanvas.ctx, 50, 50, 100, 'blue');
+const square1 = draw(myCanvas.ctx, 50, 50, 100, 'blue');
 reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 ```
@@ -168,7 +164,7 @@ First of all, you need to include `type="module"` in the [`<script>`](/en-US/doc
 
 You can also embed the module's script directly into the HTML file by placing the JavaScript code within the body of the `<script>` element:
 
-```js
+```html
 <script type="module">
   /* JavaScript module code here */
 </script>
@@ -190,20 +186,20 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="">
-</head>
-<body>
-  <div id="main"></div>
-  <script>
-    // A var statement creates a global variable.
-    var text = "Hello";
-  </script>
-  <script type="module" src="./render.js"></script>
-</body>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div id="main"></div>
+    <script>
+      // A var statement creates a global variable.
+      var text = "Hello";
+    </script>
+    <script type="module" src="./render.js"></script>
+  </body>
 </html>
 ```
 
@@ -231,8 +227,8 @@ Note the lack of curly braces.
 We could instead prepend `export default` onto the function and define it as an anonymous function, like this:
 
 ```js
-export default function(ctx) {
-  ...
+export default function (ctx) {
+  // …
 }
 ```
 
@@ -278,8 +274,10 @@ import { newFunctionName, anotherNewFunctionName } from './modules/module.js';
 export { function1, function2 };
 
 // inside main.js
-import { function1 as newFunctionName,
-         function2 as anotherNewFunctionName } from './modules/module.js';
+import {
+  function1 as newFunctionName,
+  function2 as anotherNewFunctionName,
+} from './modules/module.js';
 ```
 
 Let's look at a real example. In our [renaming](https://github.com/mdn/js-examples/tree/master/module-examples/renaming) directory you'll see the same module system as in the previous example, except that we've added `circle.js` and `triangle.js` modules to draw and report on circles and triangles.
@@ -303,30 +301,38 @@ The browser would throw an error such as "SyntaxError: redeclaration of import n
 Instead we need to rename the imports so that they are unique:
 
 ```js
-import { name as squareName,
-         draw as drawSquare,
-         reportArea as reportSquareArea,
-         reportPerimeter as reportSquarePerimeter } from './modules/square.js';
+import {
+  name as squareName,
+  draw as drawSquare,
+  reportArea as reportSquareArea,
+  reportPerimeter as reportSquarePerimeter,
+} from './modules/square.js';
 
-import { name as circleName,
-         draw as drawCircle,
-         reportArea as reportCircleArea,
-         reportPerimeter as reportCirclePerimeter } from './modules/circle.js';
+import {
+  name as circleName,
+  draw as drawCircle,
+  reportArea as reportCircleArea,
+  reportPerimeter as reportCirclePerimeter,
+} from './modules/circle.js';
 
-import { name as triangleName,
-        draw as drawTriangle,
-        reportArea as reportTriangleArea,
-        reportPerimeter as reportTrianglePerimeter } from './modules/triangle.js';
+import {
+  name as triangleName,
+  draw as drawTriangle,
+  reportArea as reportTriangleArea,
+  reportPerimeter as reportTrianglePerimeter,
+} from './modules/triangle.js';
 ```
 
 Note that you could solve the problem in the module files instead, e.g.
 
 ```js
 // in square.js
-export { name as squareName,
-         draw as drawSquare,
-         reportArea as reportSquareArea,
-         reportPerimeter as reportSquarePerimeter };
+export {
+  name as squareName,
+  draw as drawSquare,
+  reportArea as reportSquareArea,
+  reportPerimeter as reportSquarePerimeter,
+};
 ```
 
 ```js
@@ -347,9 +353,8 @@ import * as Module from './modules/module.js';
 This grabs all the exports available inside `module.js`, and makes them available as members of an object `Module`, effectively giving it its own namespace. So for example:
 
 ```js
-Module.function1()
-Module.function2()
-etc.
+Module.function1();
+Module.function2();
 ```
 
 Again, let's look at a real example. If you go to our [module-objects](https://github.com/mdn/js-examples/tree/master/module-examples/module-objects) directory, you'll see the same example again, but rewritten to take advantage of this new syntax. In the modules, the exports are all in the following simple form:
@@ -371,7 +376,7 @@ import * as Triangle from './modules/triangle.js';
 In each case, you can now access the module's imports underneath the specified object name, for example:
 
 ```js
-let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
+const square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
 Square.reportArea(square1.length, reportList);
 Square.reportPerimeter(square1.length, reportList);
 ```
@@ -387,14 +392,14 @@ You can see an example of our shape drawing module rewritten with ES classes in 
 ```js
 class Square {
   constructor(ctx, listId, length, x, y, color) {
-    ...
+    // …
   }
 
   draw() {
-    ...
+    // …
   }
 
-  ...
+  // …
 }
 ```
 
@@ -413,7 +418,7 @@ import { Square } from './modules/square.js';
 And then use the class to draw our square:
 
 ```js
-let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+const square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
 square1.draw();
 square1.reportArea();
 square1.reportPerimeter();
@@ -489,10 +494,10 @@ Let's look at an example. In the [dynamic-module-imports](https://github.com/mdn
 
 In this example we've only made changes to our [`index.html`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) and [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) files — the module exports remain the same as before.
 
-Over in `main.js` we've grabbed a reference to each button using a [`Document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) call, for example:
+Over in `main.js` we've grabbed a reference to each button using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) call, for example:
 
 ```js
-let squareBtn = document.querySelector('.square');
+const squareBtn = document.querySelector('.square');
 ```
 
 We then attach an event listener to each button so that when pressed, the relevant module is dynamically loaded and used to draw the shape:
@@ -500,7 +505,7 @@ We then attach an event listener to each button so that when pressed, the releva
 ```js
 squareBtn.addEventListener('click', () => {
   import('./modules/square.js').then((Module) => {
-    let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+    const square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
     square1.draw();
     square1.reportArea();
     square1.reportPerimeter();
@@ -508,19 +513,18 @@ squareBtn.addEventListener('click', () => {
 });
 ```
 
-Note that, because the promise fulfillment returns a module object, the class is then made a subfeature of the object, hence we now need to access the constructor with `Module.` prepended to it, e.g. `Module.Square( ... )`.
+Note that, because the promise fulfillment returns a module object, the class is then made a subfeature of the object, hence we now need to access the constructor with `Module.` prepended to it, e.g. `Module.Square( /* … */ )`.
 
 Another advantage of dynamic imports is that they are always available, even in script environments. Therefore, if you have an existing `<script>` tag in your HTML that doesn't have `type="module"`, you can still reuse code distributed as modules by dynamically importing it.
 
 ```html
 <script>
-  import('./modules/square.js')
-    .then((module) => {
-      // Do something with the module.
-    });
+  import("./modules/square.js").then((module) => {
+    // Do something with the module.
+  });
   // Other code that operates on the global scope and is not
   // ready to be refactored into modules yet.
-  var btn = document.querySelector('.square');
+  var btn = document.querySelector(".square");
 </script>
 ```
 
@@ -532,7 +536,7 @@ Let's take a look at an example. You can find all the files and code described i
 
 Firstly we'll declare our color palette in a separate [`colors.json`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/data/colors.json) file:
 
-```js
+```json
 {
   "yellow": "#F4D03F",
   "green": "#52BE80",
@@ -547,7 +551,7 @@ Then we'll create a module called [`getColors.js`](https://github.com/mdn/js-exa
 ```js
 // fetch request
 const colors = fetch('../data/colors.json')
-  .then(response => response.json());
+  .then((response) => response.json());
 
 export default await colors;
 ```
@@ -562,27 +566,19 @@ Let's include this module in our [`main.js`](https://github.com/mdn/js-examples/
 import colors from './modules/getColors.js';
 import { Canvas } from './modules/canvas.js';
 
-let circleBtn = document.querySelector('.circle');
+const circleBtn = document.querySelector('.circle');
 
-...
+// …
 ```
 
 We'll use `colors` instead of the previously used strings when calling our shape functions:
 
 ```js
-...
+const square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, colors.blue);
 
-let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, colors.blue);
+const circle1 = new Module.Circle(myCanvas.ctx, myCanvas.listId, 75, 200, 100, colors.green);
 
-...
-
-let circle1 = new Module.Circle(myCanvas.ctx, myCanvas.listId, 75, 200, 100, colors.green);
-
-...
-
-let triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190, colors.yellow);
-
-...
+const triangle1 = new Module.Triangle(myCanvas.ctx, myCanvas.listId, 100, 75, 190, colors.yellow);
 ```
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
@@ -620,7 +616,7 @@ In order to maximize the reusability of a module, it is often advised to make th
     // We are running in Node.js; use node-fetch
     globalThis.fetch = (await import("node-fetch")).default;
   }
-  // ...
+  // …
   ```
 
   The [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) variable is a global object that is available in every environment and is useful if you want to read or create global variables within modules.

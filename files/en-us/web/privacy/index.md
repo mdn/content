@@ -16,7 +16,6 @@ tags:
   - personal
 ---
 
-
 As users use the web for more and more of their daily tasks, more of their private or personally-identifying information they share, ideally only with sites they trust. Cooperation among web content, the web browser, and the web server is needed to achieve as much privacy and information security as possible. In this article, we examine how to create web content that minimizes the risk of users' personal information or imagery being obtained unexpectedly by third parties.
 
 ## Security and privacy defined
@@ -33,7 +32,7 @@ Before we go into any depth about the various security and privacy features avai
 
   - : The concept of privacy is somewhat hard to define. Everyone has some idea what it means to keep something private, but when talking about the privacy of data, it becomes murky. Fundamentally, privacy of your data on the internet is about ensuring that information that has personal implications is kept out of the hands of unauthorized persons or organizations, regardless of how it's obtained.
 
-    Privacy exceptions may be granted to specific sites or applications, but it may also be granted *conditionally*, such as by permitting only a select group of people to access it, or only allowing the information to be accessed and used for a limited period of time.
+    Privacy exceptions may be granted to specific sites or applications, but it may also be granted _conditionally_, such as by permitting only a select group of people to access it, or only allowing the information to be accessed and used for a limited period of time.
 
 - Security
   - : Security is about the active protection of data or a system against being accessed, downloaded, or operated by people or organizations that don't have permission to do so. Good security practices aim to prevent unauthorized access to systems or data, regardless of what the target is.
@@ -62,7 +61,7 @@ Web browsers are actively working on improving the privacy space through new fea
 
 ## Privacy and security controls
 
-There are multiple layers of controls for helping to protect users against security and privacy breaches. These start at the web server, include the very communication layer used over the network,  and then extend through the web browser's security offerings before reaching your web app code and the efforts it takes to secure itself and the data the user entrusts to it.
+There are multiple layers of controls for helping to protect users against security and privacy breaches. These start at the web server, include the very communication layer used over the network, and then extend through the web browser's security offerings before reaching your web app code and the efforts it takes to secure itself and the data the user entrusts to it.
 
 There are several web technologies and features at play to manage privacy and security. The following list includes features affecting both, since many of these features are used for both.
 
@@ -116,16 +115,6 @@ There are several web technologies and features at play to manage privacy and se
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">HTTP Public Key Pinning</a> (HPKP)
-      </td>
-      <td>
-        HPKP is used by servers to instruct a client to associate a specific
-        public key with the server going forward in order to decrease the
-        likelihood of man-in-the-middle attacks
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> (HSTS)
       </td>
       <td>
@@ -172,7 +161,7 @@ Not all of these are generally directly used within code; notably, the [Permissi
 
 ## Bringing it all together
 
-<!--using Feature Policy with permissions and so forth; how to use them together, how they interact, etc-->
+<!--using Feature Policy with permissions and so forth; how to use them together, how they interact, etc.-->
 
 ### Permission requests in \<iframe> elements
 

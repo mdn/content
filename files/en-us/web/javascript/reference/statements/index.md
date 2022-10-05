@@ -8,6 +8,7 @@ tags:
   - statements
 browser-compat: javascript.statements
 ---
+
 {{jsSidebar("Statements")}}
 
 JavaScript applications consist of statements with an appropriate syntax. A single statement may span multiple lines. Multiple statements may occur on a single line if each statement is separated by a semicolon. This isn't a keyword, but a group of keywords.
@@ -18,24 +19,22 @@ For an alphabetical listing see the sidebar on the left.
 
 ### Control flow
 
-- {{jsxref("Statements/block", "Block","",1)}}
-  - : A block statement is used to group zero or more statements. The block is delimited by a pair of curly brackets.
+- {{jsxref("Statements/return", "return")}}
+  - : Specifies the value to be returned by a function.
 - {{jsxref("Statements/break", "break")}}
   - : Terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.
 - {{jsxref("Statements/continue", "continue")}}
   - : Terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
-- {{jsxref("Statements/Empty", "Empty","",1)}}
-  - : An empty statement is used to provide no statement, although the JavaScript syntax would expect one.
+- {{jsxref("Statements/throw", "throw")}}
+  - : Throws a user-defined exception.
 - {{jsxref("Statements/if...else", "if...else")}}
   - : Executes a statement if a specified condition is true. If the condition is false, another statement can be executed.
 - {{jsxref("Statements/switch", "switch")}}
   - : Evaluates an expression, matching the expression's value to a case clause, and executes statements associated with that case.
-- {{jsxref("Statements/throw", "throw")}}
-  - : Throws a user-defined exception.
 - {{jsxref("Statements/try...catch", "try...catch")}}
   - : Marks a block of statements to try, and specifies a response, should an exception be thrown.
 
-### Declarations
+### Declaring variables
 
 - {{jsxref("Statements/var", "var")}}
   - : Declares a variable, optionally initializing it to a value.
@@ -52,8 +51,8 @@ For an alphabetical listing see the sidebar on the left.
   - : Generator Functions enable writing [iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) more easily.
 - {{jsxref("Statements/async_function", "async function")}}
   - : Declares an async function with the specified parameters.
-- {{jsxref("Statements/return", "return")}}
-  - : Specifies the value to be returned by a function.
+- {{jsxref("Statements/async_function*", "async function*")}}
+  - : Asynchronous Generator Functions enable writing async [iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) more easily.
 - {{jsxref("Statements/class", "class")}}
   - : Declares a class.
 
@@ -74,6 +73,10 @@ For an alphabetical listing see the sidebar on the left.
 
 ### Others
 
+- {{jsxref("Statements/Empty", "Empty","",1)}}
+  - : An empty statement is used to provide no statement, although the JavaScript syntax would expect one.
+- {{jsxref("Statements/block", "Block","",1)}}
+  - : A block statement is used to group zero or more statements. The block is delimited by a pair of curly brackets.
 - {{jsxref("Statements/debugger", "debugger")}}
   - : Invokes any available debugging functionality. If no debugging functionality is available, this statement has no effect.
 - {{jsxref("Statements/export", "export")}}
@@ -84,6 +87,67 @@ For an alphabetical listing see the sidebar on the left.
   - : Provides a statement with an identifier that you can refer to using a `break` or `continue` statement.
 - {{jsxref("Statements/with", "with")}}
   - : Extends the scope chain for a statement.
+
+## Difference between statements and declarations
+
+In this section, we will be mixing two kinds of constructs: [_statements_](https://tc39.es/ecma262/#prod-Statement) and [_declarations_](https://tc39.es/ecma262/#prod-Declaration). They are two disjoint sets of grammars. The following are declarations:
+
+- {{jsxref("Statements/let", "let")}}
+- {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/async_function*", "async function*")}}
+- {{jsxref("Statements/class", "class")}}
+- {{jsxref("Statements/export", "export")}} (Note: it can only appear at the top-level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules))
+- {{jsxref("Statements/import", "import")}} (Note: it can only appear at the top-level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules))
+
+Everything else in the [list above](#statements_and_declarations_by_category) is a statement.
+
+The terms "statement" and "declaration" have a precise meaning in the formal syntax of JavaScript that affects where they may be placed in code. For example, in most control-flow structures, the body only accepts statements — such as the two arms of an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else):
+
+```js
+if (condition)
+  statement1;
+else
+  statement2;
+```
+
+If you use a declaration instead of a statement, it would be a {{jsxref("SyntaxError")}}. For example, a [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declaration is not a statement, so you can't use it in its bare form as the body of an `if` statement.
+
+```js example-bad
+if (condition)
+  let i = 0; // SyntaxError: Lexical declaration cannot appear in a single-statement context
+```
+
+On the other hand, [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) is a statement, so you can use it on its own as the `if` body.
+
+```js example-good
+if (condition)
+  var i = 0;
+```
+
+You can see declarations as "binding identifiers to values", and statements as "carrying out actions". The fact that `var` is a statement instead of a declaration is a special case, because it doesn't follow normal lexical scoping rules and may create side effects — in the form of creating global variables, mutating existing `var`-defined variables, and defining variables that are visible outside of its block (because `var`-defined variables aren't block-scoped).
+
+As another example, [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label) can only be attached to statements.
+
+```js example-bad
+label: const a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
+```
+
+> **Note:** there's a legacy grammar that allows [function declarations to have labels](/en-US/docs/Web/JavaScript/Reference/Statements/label#labeled_function_declarations), but it's only standardized for compatibility with web reality.
+
+To get around this, you can wrap the declaration in braces — this makes it part of a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block).
+
+```js example-good
+label: {
+  const a = 1;
+}
+
+if (condition) {
+  let i = 0;
+}
+```
 
 ## Browser compatibility
 

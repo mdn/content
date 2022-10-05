@@ -13,6 +13,7 @@ tags:
   - responseText
 browser-compat: api.XMLHttpRequest.responseText
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The read-only {{domxref("XMLHttpRequest")}} property
@@ -45,19 +46,19 @@ You know the entire content has been received when the value of
 ## Examples
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 // If specified, responseType must be empty string or "text"
 xhr.responseType = 'text';
 
-xhr.onload = function () {
-    if (xhr.readyState === xhr.DONE) {
-        if (xhr.status === 200) {
-            console.log(xhr.response);
-            console.log(xhr.responseText);
-        }
+xhr.onload = () => {
+  if (xhr.readyState === xhr.DONE) {
+    if (xhr.status === 200) {
+      console.log(xhr.response);
+      console.log(xhr.responseText);
     }
+  }
 };
 
 xhr.send(null);

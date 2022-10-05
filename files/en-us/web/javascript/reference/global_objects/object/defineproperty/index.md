@@ -9,6 +9,7 @@ tags:
   - Object
 browser-compat: javascript.builtins.Object.defineProperty
 ---
+
 {{JSRef}}
 
 The static method **`Object.defineProperty()`** defines a new
@@ -19,7 +20,7 @@ returns the object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.defineProperty(obj, prop, descriptor)
 ```
 
@@ -43,8 +44,8 @@ Normal property addition through assignment creates properties which show up dur
 property enumeration ({{jsxref("Statements/for...in", "for...in")}} loop or
 {{jsxref("Object.keys")}} method), whose values may be changed, and which may be
 {{jsxref("Operators/delete", "deleted", "", 1)}}. This method allows these extra details
-to be changed from their defaults. By default, values added using
-`Object.defineProperty()` are immutable and not enumerable.
+to be changed from their defaults. By default, properties added using
+`Object.defineProperty()` are not writable, not enumerable, and not configurable.
 
 Property descriptors present in objects come in two main flavors: data descriptors and
 accessor descriptors. A **data descriptor** is a property that has a
@@ -57,11 +58,15 @@ Both data and accessor descriptors are objects. They share the following optiona
 properties using `Object.defineProperty()`):
 
 - `configurable`
+
   - : when this is set to `false`,
+
     - the type of this property cannot be changed between data property and accessor property, and
     - the property may not be deleted, and
     - other attributes of its descriptor cannot be changed (however, if it's a data descriptor with `writable: true`, the `value` can be changed, and `writable` can be changed to `false`).
+
     **Defaults to `false`.**
+
 - `enumerable`
   - : `true` if and only if this property shows up during enumeration of the
     properties on the corresponding object.
@@ -71,7 +76,7 @@ A **data descriptor** also has the following optional keys:
 
 - `value`
   - : The value associated with the property. Can be any valid JavaScript value (number,
-    object, function, etc).
+    object, function, etc.).
     **Defaults to {{jsxref("undefined")}}.**
 - `writable`
   - : `true` if the value associated with the property may be changed with an
@@ -100,8 +105,8 @@ descriptor has both \[`value` or `writable`] and \[`get` or `set`] keys, an exce
 
 Bear in mind that these attributes are not necessarily the descriptor's own properties.
 Inherited properties will be considered as well. In order to ensure these defaults are
-preserved, you might freeze the {{jsxref("Object")}} upfront, specify all
-options explicitly, or point to {{jsxref("null")}} with {{jsxref("Object.create",
+preserved, you might freeze existing objects in the descriptor object's prototype chain upfront, specify all
+options explicitly, or point to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) with {{jsxref("Object.create",
   "Object.create(null)")}}.
 
 ```js
@@ -128,7 +133,7 @@ function withValue(value) {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: value
+      value,
     }
   );
 
@@ -137,7 +142,7 @@ function withValue(value) {
 
   return d;
 }
-// ... and ...
+// and
 Object.defineProperty(obj, 'key', withValue('static'));
 
 // if freeze is available, prevents adding or
@@ -175,12 +180,8 @@ Object.defineProperty(o, 'a', {
 
 // Example of an object property added
 // with defineProperty with an accessor property descriptor
-const bValue = 38;
+let bValue = 38;
 Object.defineProperty(o, 'b', {
-  // Using shorthand method names (ES2015 feature).
-  // This is equivalent to:
-  // get: function() { return bValue; },
-  // set: function(newValue) { bValue = newValue; },
   get() { return bValue; },
   set(newValue) { bValue = newValue; },
   enumerable: true,
@@ -225,16 +226,16 @@ o.a = 25; // No error thrown
 console.log(o.a); // logs 37. The assignment didn't work.
 
 // strict mode
-(function() {
+(() => {
   'use strict';
   const o = {};
   Object.defineProperty(o, 'b', {
     value: 2,
-    writable: false
+    writable: false,
   });
   o.b = 3; // throws TypeError: "b" is read-only
   return o.b; // returns 2 without the line above
-}());
+})();
 ```
 
 As seen in the example, trying to write into the non-writable property doesn't change
@@ -403,7 +404,7 @@ function Archiver() {
     }
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = () => archive;
 }
 
 const arc = new Archiver();
@@ -417,17 +418,16 @@ In this example, a getter always returns the same value.
 
 ```js
 const pattern = {
-    get() {
-        return 'I always return this string, ' +
-               'whatever you have assigned';
-    },
-    set() {
-        this.myname = 'this is my name string';
-    }
+  get() {
+    return 'I always return this string, whatever you have assigned';
+  },
+  set() {
+    this.myname = 'this is my name string';
+  },
 };
 
 function TestDefineSetAndGet() {
-    Object.defineProperty(this, 'myproperty', pattern);
+  Object.defineProperty(this, 'myproperty', pattern);
 }
 
 const instance = new TestDefineSetAndGet();
@@ -475,10 +475,10 @@ function MyClass() {
 
 Object.defineProperty(MyClass.prototype, "x", {
   get() {
-    return this.stored_x;
+    return this.storedX;
   },
   set(x) {
-    this.stored_x = x;
+    this.storedX = x;
   }
 });
 
@@ -523,7 +523,7 @@ console.log(MyClass.prototype.y); // 1
 
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
-- {{jsxref("Object.propertyIsEnumerable()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Functions/set", "set")}}

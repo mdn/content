@@ -11,6 +11,7 @@ tags:
   - setTargetAtTime
 browser-compat: api.AudioParam.setTargetAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `setTargetAtTime()` method of the
@@ -20,7 +21,7 @@ envelopes.
 
 ## Syntax
 
-```js
+```js-nolint
 setTargetAtTime(target, startTime, timeConstant)
 ```
 
@@ -107,27 +108,22 @@ timeConstant.
 
 ```js
 // create audio context
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
 // set basic variables for example
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+const myAudio = document.querySelector("audio");
 
-pre.innerHTML = myScript.innerHTML;
-
-var atTimePlus = document.querySelector('.at-time-plus');
-var atTimeMinus = document.querySelector('.at-time-minus');
+const atTimePlus = document.querySelector(".at-time-plus");
+const atTimeMinus = document.querySelector(".at-time-minus");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
-var source = audioCtx.createMediaElementSource(myAudio);
+const source = audioCtx.createMediaElementSource(myAudio);
 
 // Create a gain node and set it's gain value to 0.5
-var gainNode = audioCtx.createGain();
+const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.5;
-var currGain = gainNode.gain.value;
+let currGain = gainNode.gain.value;
 
 // connect the AudioBufferSourceNode to the gainNode
 // and the gainNode to the destination
@@ -135,15 +131,15 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
-atTimePlus.onclick = function() {
+atTimePlus.onclick = () => {
   currGain = 1.0;
   gainNode.gain.setTargetAtTime(1.0, audioCtx.currentTime + 1, 0.5);
-}
+};
 
-atTimeMinus.onclick = function() {
+atTimeMinus.onclick = () => {
   currGain = 0;
   gainNode.gain.setTargetAtTime(0, audioCtx.currentTime + 1, 0.5);
-}
+};
 ```
 
 ## Specifications

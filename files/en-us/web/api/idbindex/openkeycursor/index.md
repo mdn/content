@@ -13,6 +13,7 @@ tags:
   - openKeyCursor
 browser-compat: api.IDBIndex.openKeyCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openKeyCursor()`** method of the
@@ -33,7 +34,7 @@ If the key range is not specified or is null, then the range includes all the ke
 
 ## Syntax
 
-```js
+```js-nolint
 openKeyCursor()
 openKeyCursor(range)
 openKeyCursor(range, direction)
@@ -87,12 +88,12 @@ function displayDataByIndex() {
 
   const myIndex = objectStore.index('lName');
 
-  myIndex.openKeyCursor().onsuccess = function(event) {
+  myIndex.openKeyCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.key + '</td>'
-                           + '<td>' + cursor.primaryKey + '</td>';
+      tableRow.innerHTML = `<td>${cursor.key}</td>`
+                         + `<td>${cursor.primaryKey}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
@@ -119,4 +120,4 @@ function displayDataByIndex() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

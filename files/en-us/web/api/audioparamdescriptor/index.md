@@ -13,6 +13,7 @@ tags:
   - parameterDescriptors
 browser-compat: api.AudioParamDescriptor
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioParamDescriptor`** dictionary of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) specifies properties for {{domxref("AudioParam")}} objects.
@@ -39,17 +40,19 @@ The code fragment below shows a descriptor of this type being returned by a stat
 ```js
 // white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  static get parameterDescriptors () {
-    return [{
-      name: 'customGain',
-      defaultValue: 1,
-      minValue: 0,
-      maxValue: 1,
-      automationRate: 'a-rate'
-    }]
+  static get parameterDescriptors() {
+    return [
+      {
+        name: "customGain",
+        defaultValue: 1,
+        minValue: 0,
+        maxValue: 1,
+        automationRate: "a-rate",
+      },
+    ];
   }
 
-...
+  // …
 }
 ```
 

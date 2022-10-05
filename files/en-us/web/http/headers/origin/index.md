@@ -9,6 +9,7 @@ tags:
   - origin
 browser-compat: http.headers.Origin
 ---
+
 {{HTTPSidebar}}
 
 The **`Origin`** request header indicates the {{glossary("origin")}} (scheme, hostname, and port) that _caused_ the request.
@@ -29,7 +30,7 @@ For example, if a user agent needs to request resources included in a page, or f
 
 ## Syntax
 
-```
+```http
 Origin: null
 Origin: <scheme>://<hostname>
 Origin: <scheme>://<hostname>:<port>
@@ -38,6 +39,7 @@ Origin: <scheme>://<hostname>:<port>
 ## Directives
 
 - `null`
+
   - : The origin is "privacy sensitive", or is an _opaque origin_ as defined by the HTML specification (specific cases are listed in the [description](#description) section).
 
 - `<scheme>`

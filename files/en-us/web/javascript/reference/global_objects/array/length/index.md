@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Array.length
 ---
+
 {{JSRef}}
 
 The **`length`** property of an object which is an instance of type `Array` sets or returns the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
@@ -46,12 +47,12 @@ arr.length = 5; // set array length to 5 while currently 2.
 console.log(arr);
 // [ 1, 2, <3 empty items> ]
 
-arr.forEach(element => console.log(element));
+arr.forEach((element) => console.log(element));
 // 1
 // 2
 ```
 
-As you can see, the `length` property does not necessarily indicate the number of defined values in the array. See also [Relationship between `length` and numerical properties](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#relationship_between_length_and_numerical_properties "Relationship between length and numerical properties").
+As you can see, the `length` property does not necessarily indicate the number of defined values in the array. See also [Relationship between `length` and numerical properties](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#relationship_between_length_and_numerical_properties).
 
 {{js_property_attributes(1, 0, 0)}}
 

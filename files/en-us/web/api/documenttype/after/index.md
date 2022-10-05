@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.DocumentType.after
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType.after()`** method inserts a set of
@@ -19,10 +20,10 @@ Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 after(param1)
 after(param1, param2)
-after(param1, param2, /* ... ,*/ paramN)
+after(param1, param2, /* … ,*/ paramN)
 ```
 
 ### Parameters

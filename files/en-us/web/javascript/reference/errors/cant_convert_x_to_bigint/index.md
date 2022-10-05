@@ -7,14 +7,15 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "x can't be converted to BigInt" occurs when attempting to convert a {{jsxref("Symbol")}}, {{jsxref("null")}}, or {{jsxref("undefined")}} value to a {{jsxref("BigInt")}}, or if an operation expecting a BigInt parameter receives a number.
+The JavaScript exception "x can't be converted to BigInt" occurs when attempting to convert a {{jsxref("Symbol")}}, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), or {{jsxref("undefined")}} value to a {{jsxref("BigInt")}}, or if an operation expecting a BigInt parameter receives a number.
 
 ## Message
 
 ```
-TypeError: Cannot convert null to a BigInt (Chromium-based)
+TypeError: Cannot convert null to a BigInt (V8-based)
 TypeError: can't convert null to BigInt (Firefox)
 TypeError: Invalid argument type in ToBigInt operation (Safari)
 ```

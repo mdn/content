@@ -6,6 +6,7 @@ tags:
   - Guide
   - Web Performance
 ---
+
 {{DefaultAPISidebar("User Timing API")}}
 
 The **`User Timing`** interface allows the developer to create application specific {{domxref("DOMHighResTimeStamp","timestamps")}} that are part of the browser's _performance timeline_. There are two types of _user_ defined timing entry types: the "`mark`" {{domxref("PerformanceEntry.entryType","entry type")}} and the "`measure`" {{domxref("PerformanceEntry.entryType","entry type")}}.
@@ -14,7 +15,7 @@ The **`User Timing`** interface allows the developer to create application speci
 
 This document shows how to create `mark` and `measure` {{domxref("PerformanceEntry.entryType","performance entry types")}} and how to use `User Timing` methods (which are extensions of the {{domxref("Performance")}} interface) to retrieve and remove entries from the browser's _performance timeline_.
 
-A _live_ version of the examples is available on [GitHub](https://mdn.github.io/dom-examples/performance-apis/Using_the_User_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_User_Timing_API.html). Pull requests, enhancement requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of the examples is available on [GitHub](https://mdn.github.io/dom-examples/performance-apis/Using_the_User_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/main/performance-apis/Using_the_User_Timing_API.html). Pull requests, enhancement requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Performance `marks`
 
@@ -30,16 +31,18 @@ function create_marks(ev) {
     log("Create Marks: performance.mark Not supported", 0);
     return;
   } else {
-  log("Create marks", 0);
-  // Create several performance marks including two with the same name
-  performance.mark("mark-1");
-  do_work(50000);
-  performance.mark("mark-2");
-  do_work(50000);
-  performance.mark("mark-2");
-  const marks = ["mark-1", "mark-2", "mark-2"];
-  for (let i = 0; i < marks.length; i++)
-    log("... Created mark = " + marks[i], 0);
+    log("Create marks", 0);
+    // Create several performance marks including two with the same name
+    performance.mark("mark-1");
+    do_work(50000);
+    performance.mark("mark-2");
+    do_work(50000);
+    performance.mark("mark-2");
+    const marks = ["mark-1", "mark-2", "mark-2"];
+    marks.forEach((mark) => {
+      log(`... Created mark = ${mark}`, 0);
+    });
+  }
 }
 ```
 
@@ -58,31 +61,31 @@ function display_marks(ev) {
   // Display each mark using getEntries()
   let entries = performance.getEntries();
   let j=0;
-  for (let i = 0; i < entries.length; i++) {
-    if (entries[i].entryType == "mark") {
-      if (j == 0) { log("= getEntries()", 0); j++ }
-      log("... [" + i + "] = " + entries[i].name, 0);
-    }
-  }
+  entries.forEach((entry, i) => {
+    if (entry.entryType === "mark") {
+      if (j === 0) { log("= getEntries()", 0); j++ }
+      log(`... [${i}] = ${entry.name}`, 0);
+    };
+  });
 
   // Display each mark using getEntriesByType()
   entries = performance.getEntriesByType("mark");
-  for (let i = 0; i < entries.length; i++) {
-    if (i == 0) log("= getEntriesByType('mark')", 0);
-    log("... [" + i + "] = " + entries[i].name, 0);
-  }
+  entries.forEach((entry, i) => {
+    if (i === 0) log("= getEntriesByType('mark')", 0);
+    log(`... [${i}] = ${entry.name}`, 0);
+  });
 
   // Display each mark using getEntriesName(); must look for each mark separately
   entries = performance.getEntriesByName("mark-1","mark");
-  for (let i = 0; i < entries.length; i++) {
-    if (i == 0) log("= getEntriesByName('mark-1', 'mark')", 0);
-    log("... " + entries[i].name, 0);
-  }
+  entries.forEach((entry, i) => {
+    if (i === 0) log("= getEntriesByName('mark-1', 'mark')", 0);
+    log(`... ${entry.name}`, 0);
+  });
   entries = performance.getEntriesByName("mark-2","mark");
-  for (let i = 0; i < entries.length; i++) {
-    if (i == 0) log("= getEntriesByName('mark-2', 'mark')", 0);
-    log("... " + entries[i].name, 0);
-  }
+  entries.forEach((entry, i) => {
+    if (i === 0) log("= getEntriesByName('mark-2', 'mark')", 0);
+    log(`... ${entry.name}`, 0);
+  });
 }
 ```
 
@@ -98,8 +101,8 @@ function clear_marks(obj) {
   }
   log("Clear marks", 0);
 
-  if (typeof obj == "string") {
-    log("... cleared '" + obj + "' mark(s)", 0);
+  if (typeof obj === "string") {
+    log(`... cleared '${obj}' mark(s)`, 0);
     performance.clearMarks(obj);
   } else {
     // No argument specified so clear all marks
@@ -140,12 +143,13 @@ function create_measures(ev) {
 
   // Log the marks and measures
   const marks = ["mark-A", "mark-B", "mark-C", "mark-D"];
-  for (let i = 0; i < marks.length; i++)
-    log("... Created mark = " + marks[i], 1);
+  marks.forEach((mark) => {
+    log(`... Created mark = ${mark}`, 1);
+  });
   const measures = ["measures-1", "measures-2"];
-  for (let i = 0; i < measures.length; i++)
-    log("... Created measure = " + measures[i], 1);
-
+  measures.forEach((measure) => {
+    log(`... Created measure = ${measure}`, 1);
+  });
 }
 ```
 
@@ -164,31 +168,31 @@ function display_measures(ev) {
   // Display each measure using getEntries()
   let entries = performance.getEntries();
   let j=0;
-  for (let i = 0; i < entries.length; i++) {
-    if (entries[i].entryType == "measure") {
-      if (j == 0) { log("= getEntries()", 1); j++ }
-      log("... [" + i + "] = " + entries[i].name, 1);
+  entries.forEach((entry, i) => {
+    if (entry.entryType === "measure") {
+      if (j === 0) { log("= getEntries()", 1); j++ }
+      log(`... [${i}] = ${entry.name}`, 1);
     }
-  }
+  });
 
   // Display each measure using getEntriesByType
   entries = performance.getEntriesByType("measure");
-  for (let i = 0; i < entries.length; i++) {
-    if (i == 0) log("= getEntriesByType('measure')", 1);
-    log("... [" + i + "] = " + entries[i].name, 1);
-  }
+  entries.forEach((entry, i) => {
+    if (i === 0) log("= getEntriesByType('measure')", 1);
+    log(`... [${i}] = ${entry.name}`, 1);
+  });
 
   // Display each measure using getEntriesName() - have to look for each measure separately
   entries = performance.getEntriesByName("measure-1","measure");
-  for (let i = 0; i < entries.length; i++) {
-    if (i == 0) log("= getEntriesByName('measure-1', 'measure')", 1);
-    log("... " + entries[i].name, 1);
-  }
+  entries.forEach((entry, i) => {
+    if (i === 0) log("= getEntriesByName('measure-1', 'measure')", 1);
+    log(`... ${entry.name}`, 1);
+  });
   entries = performance.getEntriesByName("measure-2","measure");
-  for (let i = 0; i < entries.length; i++) {
-    if (i == 0) log("= getEntriesByName('measure-2', 'measure')", 1);
-    log("... " + entries[i].name, 1);
-  }
+  entries.forEach((entry, i) => {
+    if (i === 0) log("= getEntriesByName('measure-2', 'measure')", 1);
+    log(`... ${entry.name}`, 1);
+  });
 }
 ```
 
@@ -204,8 +208,8 @@ function clear_measures(obj) {
   }
   log("Clear measures", 1);
 
-  if (typeof obj == "string") {
-    log("... cleared '" + obj + "' measure(s)", 1);
+  if (typeof obj === "string") {
+    log(`... cleared '${obj}' measure(s)`, 1);
     performance.clearMeasures(obj);
   } else {
     // No argument specified so clear all measures

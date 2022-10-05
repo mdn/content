@@ -14,6 +14,7 @@ tags:
   - Video
   - WebRTC
 ---
+
 {{WebRTCSidebar}}
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) allows real-time, peer-to-peer, media exchange between two devices. A connection is established through a discovery and negotiation process called **signaling**. This tutorial will guide you through building a two-way video-call.
@@ -44,15 +45,7 @@ First up is the addition of the function `sendToOneUser()`. As the name suggests
 
 ```js
 function sendToOneUser(target, msgString) {
-  var isUnique = true;
-  var i;
-
-  for (i=0; i < connectionArray.length; i++) {
-    if (connectionArray[i].username === target) {
-      connectionArray[i].send(msgString);
-      break;
-    }
-  }
+  connectionArray.find((conn) => conn.username === target).send(msgString);
 }
 ```
 
@@ -62,14 +55,13 @@ Our original chat demo didn't support sending messages to a specific user. The n
 
 ```js
 if (sendToClients) {
-  var msgString = JSON.stringify(msg);
-  var i;
+  const msgString = JSON.stringify(msg);
 
   if (msg.target && msg.target.length !== 0) {
     sendToOneUser(msg.target, msgString);
   } else {
-    for (i=0; i < connectionArray.length; i++) {
-      connectionArray[i].send(msgString);
+    for (const connection of connectionArray) {
+      connection.send(msgString);
     }
   }
 }
@@ -96,7 +88,7 @@ When starting the signaling process, an **offer** is created by the user initiat
 - `name`
   - : The sender's username.
 - `target`
-  - : The username of the person to receive the description (if the caller is sending the message, this specifies the callee, and vice-versa).
+  - : The username of the person to receive the description (if the caller is sending the message, this specifies the callee, and vice versa).
 - `sdp`
   - : The SDP (Session Description Protocol) string describing the local end of the connection from the perspective of the sender (or the remote end of the connection from the receiver's point of view).
 
@@ -175,9 +167,7 @@ The HTML for our client needs a location for video to be presented. This require
   <div class="camera-box">
     <video id="received_video" autoplay></video>
     <video id="local_video" autoplay muted></video>
-    <button id="hangup-button" onclick="hangUpCall();" disabled>
-      Hang Up
-    </button>
+    <button id="hangup-button" onclick="hangUpCall();" disabled>Hang Up</button>
   </div>
 </div>
 ```
@@ -198,7 +188,7 @@ Throughout our code, we call `sendToServer()` in order to send messages to the s
 
 ```js
 function sendToServer(msg) {
-  var msgJSON = JSON.stringify(msg);
+  const msgJSON = JSON.stringify(msg);
 
   connection.send(msgJSON);
 }
@@ -212,15 +202,14 @@ The code which handles the `"userlist"` message calls `handleUserlistMsg()`. Her
 
 ```js
 function handleUserlistMsg(msg) {
-  var i;
-  var listElem = document.querySelector(".userlistbox");
+  const listElem = document.querySelector(".userlistbox");
 
   while (listElem.firstChild) {
     listElem.removeChild(listElem.firstChild);
   }
 
-  msg.users.forEach(function(username) {
-    var item = document.createElement("li");
+  msg.users.forEach((username) => {
+    const item = document.createElement("li");
     item.appendChild(document.createTextNode(username));
     item.addEventListener("click", invite, false);
 
@@ -242,16 +231,16 @@ Finally, we append the new item to the `<ul>` that contains all of the user name
 When the user clicks on a username they want to call, the `invite()` function is invoked as the event handler for that {{domxref("Element/click_event", "click")}} event:
 
 ```js
-var mediaConstraints = {
+const mediaConstraints = {
   audio: true, // We want an audio track
-  video: true // ...and we want a video track
+  video: true // And we want a video track
 };
 
 function invite(evt) {
   if (myPeerConnection) {
     alert("You can't start a call because you already have one open!");
   } else {
-    var clickedUsername = evt.target.textContent;
+    const clickedUsername = evt.target.textContent;
 
     if (clickedUsername === myUsername) {
       alert("I'm afraid I can't let you talk to yourself. That would be weird.");
@@ -262,11 +251,11 @@ function invite(evt) {
     createPeerConnection();
 
     navigator.mediaDevices.getUserMedia(mediaConstraints)
-    .then(function(localStream) {
-      document.getElementById("local_video").srcObject = localStream;
-      localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
-    })
-    .catch(handleGetUserMediaError);
+      .then((localStream) => {
+        document.getElementById("local_video").srcObject = localStream;
+        localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
+      })
+      .catch(handleGetUserMediaError);
   }
 }
 ```
@@ -305,7 +294,7 @@ function handleGetUserMediaError(e) {
       // Do nothing; this is the same as the user canceling the call.
       break;
     default:
-      alert("Error opening your camera and/or microphone: " + e.message);
+      alert(`Error opening your camera and/or microphone: ${e.message}`);
       break;
   }
 
@@ -372,18 +361,17 @@ Once the caller has created its {{domxref("RTCPeerConnection")}}, created a medi
 
 ```js
 function handleNegotiationNeededEvent() {
-  myPeerConnection.createOffer().then(function(offer) {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(function() {
-    sendToServer({
-      name: myUsername,
-      target: targetUsername,
-      type: "video-offer",
-      sdp: myPeerConnection.localDescription
-    });
-  })
-  .catch(reportError);
+  myPeerConnection.createOffer()
+    .then((offer) => myPeerConnection.setLocalDescription(offer))
+    .then(() => {
+      sendToServer({
+        name: myUsername,
+        target: targetUsername,
+        type: "video-offer",
+        sdp: myPeerConnection.localDescription
+      });
+    })
+    .catch(reportError);
 }
 ```
 
@@ -418,39 +406,34 @@ When the offer arrives, the callee's `handleVideoOfferMsg()` function is called 
 
 ```js
 function handleVideoOfferMsg(msg) {
-  var localStream = null;
+  let localStream = null;
 
   targetUsername = msg.name;
   createPeerConnection();
 
-  var desc = new RTCSessionDescription(msg.sdp);
+  const desc = new RTCSessionDescription(msg.sdp);
 
-  myPeerConnection.setRemoteDescription(desc).then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function(stream) {
-    localStream = stream;
-    document.getElementById("local_video").srcObject = localStream;
+  myPeerConnection.setRemoteDescription(desc)
+    .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
+    .then((stream) => {
+      localStream = stream;
+      document.getElementById("local_video").srcObject = localStream;
 
-    localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
-  })
-  .then(function() {
-    return myPeerConnection.createAnswer();
-  })
-  .then(function(answer) {
-    return myPeerConnection.setLocalDescription(answer);
-  })
-  .then(function() {
-    var msg = {
-      name: myUsername,
-      target: targetUsername,
-      type: "video-answer",
-      sdp: myPeerConnection.localDescription
-    };
+      localStream.getTracks().forEach((track) => myPeerConnection.addTrack(track, localStream));
+    })
+    .then(() => myPeerConnection.createAnswer())
+    .then((answer) => myPeerConnection.setLocalDescription(answer))
+    .then(() => {
+      const msg = {
+        name: myUsername,
+        target: targetUsername,
+        type: "video-answer",
+        sdp: myPeerConnection.localDescription
+      };
 
-    sendToServer(msg);
-  })
-  .catch(handleGetUserMediaError);
+      sendToServer(msg);
+    })
+    .catch(handleGetUserMediaError);
 }
 ```
 
@@ -501,7 +484,7 @@ The signaling server delivers each ICE candidate to the destination peer using w
 
 ```js
 function handleNewICECandidateMsg(msg) {
-  var candidate = new RTCIceCandidate(msg.candidate);
+  const candidate = new RTCIceCandidate(msg.candidate);
 
   myPeerConnection.addIceCandidate(candidate)
     .catch(reportError);
@@ -539,10 +522,10 @@ Your code receives a {{domxref("MediaStream/removetrack_event", "removetrack")}}
 
 ```js
 function handleRemoveTrackEvent(event) {
-  var stream = document.getElementById("received_video").srcObject;
-  var trackList = stream.getTracks();
+  const stream = document.getElementById("received_video").srcObject;
+  const trackList = stream.getTracks();
 
-  if (trackList.length == 0) {
+  if (trackList.length === 0) {
     closeVideoCall();
   }
 }
@@ -579,8 +562,8 @@ The `closeVideoCall()` function, shown below, is responsible for stopping the st
 
 ```js
 function closeVideoCall() {
-  var remoteVideo = document.getElementById("received_video");
-  var localVideo = document.getElementById("local_video");
+  const remoteVideo = document.getElementById("received_video");
+  const localVideo = document.getElementById("local_video");
 
   if (myPeerConnection) {
     myPeerConnection.ontrack = null;
@@ -593,11 +576,11 @@ function closeVideoCall() {
     myPeerConnection.onnegotiationneeded = null;
 
     if (remoteVideo.srcObject) {
-      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
+      remoteVideo.srcObject.getTracks().forEach((track) => track.stop());
     }
 
     if (localVideo.srcObject) {
-      localVideo.srcObject.getTracks().forEach(track => track.stop());
+      localVideo.srcObject.getTracks().forEach((track) => track.stop());
     }
 
     myPeerConnection.close();

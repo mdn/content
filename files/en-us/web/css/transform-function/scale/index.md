@@ -1,6 +1,7 @@
 ---
 title: scale()
 slug: Web/CSS/transform-function/scale
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.scale
 ---
+
 {{CSSRef}}
 
 The **`scale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element on the 2D

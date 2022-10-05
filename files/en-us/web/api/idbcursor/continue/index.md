@@ -13,6 +13,7 @@ tags:
   - continue
 browser-compat: api.IDBCursor.continue
 ---
+
 {{APIRef("IndexedDB")}}
 
 The **`continue()`** method of the {{domxref("IDBCursor")}}
@@ -24,7 +25,7 @@ advances to the immediate next position, based on its direction.
 
 ## Syntax
 
-```js
+```js-nolint
 continue()
 continue(key)
 ```
@@ -59,18 +60,18 @@ cursor to iterate through all the records in the object store. The cursor does n
 require us to select the data based on a key; we can just grab all of it. Also note that
 in each iteration of the loop, you can grab data from the current record under the
 cursor object using `cursor.value.foo`. For a complete working example, see
-our [IDBCursor example](https://github.com/mdn/dom-examples/indexeddb-examples/tree/master/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
+our [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function displayData() {
   const transaction = db.transaction(['rushAlbumList'], "readonly");
   const objectStore = transaction.objectStore('rushAlbumList');
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
+    if (cursor) {
       const listItem = document.createElement('li');
-      listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       cursor.continue();
@@ -97,4 +98,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

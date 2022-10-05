@@ -11,6 +11,7 @@ tags:
   - request
 browser-compat: api.Request.headers
 ---
+
 {{APIRef("Fetch")}}
 
 The **`headers`** read-only property of the
@@ -47,9 +48,9 @@ const myInit = {
   cache: 'default'
 };
 
-var myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request('flowers.jpg', myInit);
 
-var myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
+const myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
 ```
 
 ## Specifications

@@ -12,6 +12,7 @@ tags:
   - Reference
 browser-compat: api.Gamepad.timestamp
 ---
+
 {{APIRef("Gamepad API")}}
 
 The **`Gamepad.timestamp`** property of the
@@ -34,13 +35,9 @@ A {{domxref("DOMHighResTimeStamp")}} object.
 ## Examples
 
 ```js
-var gp = navigator.getGamepads()[0];
+const gp = navigator.getGamepads()[0];
 console.log(gp.timestamp);
 ```
-
-## Value
-
-A {{domxref("DOMHighResTimeStamp")}}.
 
 ## Specifications
 

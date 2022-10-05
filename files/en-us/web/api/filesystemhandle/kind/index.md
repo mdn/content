@@ -12,6 +12,7 @@ tags:
   - handle
 browser-compat: api.FileSystemHandle.kind
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`kind`** read-only property of the
@@ -42,7 +43,7 @@ async function getFile() {
 
   if (fileHandle.kind === 'file') {
     // run file code
-  } else if (fileHandle.kind === 'directory')
+  } else if (fileHandle.kind === 'directory') {
     // run directory code
   }
 

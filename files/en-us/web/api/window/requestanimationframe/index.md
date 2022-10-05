@@ -20,6 +20,7 @@ tags:
   - Polyfill
 browser-compat: api.Window.requestAnimationFrame
 ---
+
 {{APIRef}}
 
 The **`window.requestAnimationFrame()`** method tells the
@@ -55,7 +56,7 @@ timestamp is a decimal number, in milliseconds, but with a minimal precision of 
 
 ## Syntax
 
-```js
+```js-nolint
 requestAnimationFrame(callback)
 ```
 
@@ -97,7 +98,7 @@ function step(timestamp) {
   if (previousTimeStamp !== timestamp) {
     // Math.min() is used here to make sure the element stops at exactly 200px
     const count = Math.min(0.1 * elapsed, 200);
-    element.style.transform = 'translateX(' + count + 'px)';
+    element.style.transform = `translateX(${count}px)`;
     if (count === 200) done = true;
   }
 
@@ -112,11 +113,6 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-## Notes
-
-Edge versions below 17 and Internet Explorer do not reliably fire
-`requestAnimationFrame` before the paint cycle.
-
 ## Specifications
 
 {{Specifications}}
@@ -128,7 +124,7 @@ Edge versions below 17 and Internet Explorer do not reliably fire
 ## See also
 
 - {{domxref("Window.cancelAnimationFrame()")}}
-- [mozRequestAnimationFrame](http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html) – Blog post
+- [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html) – Blog post
 - [requestAnimationFrame for smart animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)

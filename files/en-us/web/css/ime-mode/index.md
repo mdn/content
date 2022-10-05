@@ -1,6 +1,7 @@
 ---
 title: ime-mode
 slug: Web/CSS/ime-mode
+page-type: css-property
 tags:
   - CSS
   - CSS Property
@@ -8,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.ime-mode
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 The **`ime-mode`** [CSS](/en-US/docs/Web/CSS) property controls the state of the input method editor (IME) for text fields. This property is obsolete.
@@ -54,7 +56,7 @@ The `ime-mode` property is specified using one of the keyword values listed belo
 Unlike Internet Explorer, Firefox's implementation of `ime-mode` allows this property on `<input type="password">`. However, this makes for a bad user experience, and password fields _should not_ enable the IME. Users may correct the inappropriate behavior of sites that don't follow this recommendation by placing the following CSS into their user stylesheet:
 
 ```css
-input[type=password] {
+input[type="password"] {
   ime-mode: auto !important;
 }
 ```
@@ -67,7 +69,10 @@ The Mac version of Gecko 1.9 (Firefox 3) can't recover the previous state of the
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+ime-mode =
+  auto | normal | active | inactive | disabled
+```
 
 ## Examples
 
@@ -76,7 +81,11 @@ The Mac version of Gecko 1.9 (Firefox 3) can't recover the previous state of the
 This example disables input method support for a form field. In the past, this was commonly used on fields that entered data into databases which didn't support extended character sets.
 
 ```html
-<input type="text" name="name" value="initial value" style="ime-mode: disabled">
+<input
+  type="text"
+  name="name"
+  value="initial value"
+  style="ime-mode: disabled" />
 ```
 
 > **Note:** You shouldn't rely on disabling IME to prevent extended characters from passing through your form. Even with IME disabled, users can still paste extended characters into your form's fields.

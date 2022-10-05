@@ -6,6 +6,7 @@ tags:
   - Event
 browser-compat: api.MediaRecorder.error_event
 ---
+
 {{APIRef}}
 
 The {{domxref("MediaRecorder")}} interface's **`error`** event is fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.
@@ -17,14 +18,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('event', event => { });
+addEventListener('event', (event) => { });
 
-onevent = event => { };
+onevent = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("MediaRecorderErrorEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MediaRecorderErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaRecorderErrorEvent")}}
 

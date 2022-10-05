@@ -11,7 +11,8 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.getCoalescedEvents
 ---
-{{APIRef("Pointer Events")}}{{SeeCompatTable}}
+
+{{APIRef("Pointer Events")}}
 
 The **`getCoalescedEvents()`** method of the
 {{domxref("PointerEvent")}} interface returns a sequence of all
@@ -20,7 +21,7 @@ The **`getCoalescedEvents()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 getCoalescedEvents()
 ```
 

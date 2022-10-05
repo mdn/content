@@ -77,7 +77,7 @@ The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element is used to indicate the ter
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-In HTML5, the {{htmlattrxref("title")}} attribute has special meaning, as noted below.
+The {{htmlattrxref("title")}} attribute has special meaning, as noted below.
 
 ## Usage notes
 
@@ -136,17 +136,22 @@ To add links to the definitions, you create the link the same way you always do,
 used to indicate the term being defined within the context of a
 definition phrase or sentence.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece
-donan, Latine voluptatem vocant. Confecta res esset. Duo Reges:
-constructio interrete. Scrupulum, inquam, abeunti; </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine
+  voluptatem vocant. Confecta res esset. Duo Reges: constructio interrete.
+  Scrupulum, inquam, abeunti;
+</p>
 
-<p>Negare non possum. Dat enim intervalla et relaxat. Quonam modo?
-Equidem e Cn. Quid de Pythagora? In schola desinis. </p>
+<p>
+  Negare non possum. Dat enim intervalla et relaxat. Quonam modo? Equidem e Cn.
+  Quid de Pythagora? In schola desinis.
+</p>
 
-<p>Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum
-est igitur, quid sit voluptas; Quid enim? Non est igitur voluptas
-bonum. Urgent tamen et nihil remittunt. Quid enim possumus hoc
-agere divinius? </p>
+<p>
+  Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum est igitur,
+  quid sit voluptas; Quid enim? Non est igitur voluptas bonum. Urgent tamen et
+  nihil remittunt. Quid enim possumus hoc agere divinius?
+</p>
 
 <p>Because of all of that, we decided to use the
 <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> element for
@@ -168,14 +173,17 @@ In some cases, you may wish to use an abbreviation for a term when defining it. 
 #### HTML
 
 ```html
-<p>The <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn>
-is among the most productive scientific instruments ever constructed.
-It has been in orbit for over 20 years, scanning the sky and
-returning data and photographs of unprecedented quality and
-detail.</p>
+<p>
+  The <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn> is among the
+  most productive scientific instruments ever constructed. It has been in orbit
+  for over 20 years, scanning the sky and returning data and photographs of
+  unprecedented quality and detail.
+</p>
 
-<p>Indeed, the <abbr title="Hubble Space Telescope">HST</abbr> has
-arguably done more to advance science than any device ever built.</p>
+<p>
+  Indeed, the <abbr title="Hubble Space Telescope">HST</abbr> has arguably done
+  more to advance science than any device ever built.
+</p>
 ```
 
 Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that the term is an abbreviation ("HST") and specifies the full term ("Hubble Space Telescope") in its `title` attribute. The latter indicates that the abbreviated term represents a term being defined.

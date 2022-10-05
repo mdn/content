@@ -12,6 +12,7 @@ tags:
   - scripting
 browser-compat: webextensions.api.scripting.removeCSS
 ---
+
 {{AddonSidebar()}}
 
 Removes a CSS stylesheet injected by a call to {{WebExtAPIRef("scripting.insertCSS()")}}.
@@ -24,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 await browser.scripting.removeCSS(
   details       // object
 )
@@ -64,7 +65,7 @@ This example adds some CSS using {{WebExtAPIRef("scripting.insertCSS")}}, then r
 // });
 //
 // We can remove it when a user clicked an extension button like this:
-browser.action.onClicked.addListener(async tab => {
+browser.action.onClicked.addListener(async (tab) => {
   try {
     await browser.scripting.removeCSS({
       target: {

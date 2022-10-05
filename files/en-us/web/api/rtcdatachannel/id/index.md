@@ -11,6 +11,7 @@ tags:
   - id
 browser-compat: api.RTCDataChannel.id
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property
@@ -23,10 +24,6 @@ script (if `negotiated` is `true`).
 Each {{domxref("RTCPeerConnection")}} can therefore have up to a theoretical maximum of
 65,534 data channels on it, although the actual maximum may vary from browser to
 browser.
-
-> **Note:** In early versions of the WebRTC specification, this property's name was
-> {{domxref("RTCDataChannel.stream", "stream")}}. Code that uses that property needs to
-> be updated.
 
 ## Value
 
@@ -46,7 +43,7 @@ This can be also useful for logging and debugging purposes.
 const pc = new RTCPeerConnection();
 const dc = pc.createDataChannel("my channel");
 
-console.log("Channel id: " + dc.id);
+console.log(`Channel id: ${dc.id}`);
 ```
 
 ## Specifications

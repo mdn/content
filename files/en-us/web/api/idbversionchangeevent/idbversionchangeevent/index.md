@@ -12,6 +12,7 @@ tags:
   - Database
 browser-compat: api.IDBVersionChangeEvent.IDBVersionChangeEvent
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
 
 The **`IDBVersionChangeEvent()`** constructor
@@ -21,7 +22,7 @@ when a version of the database has changed, as a result of the
 
 ## Syntax
 
-```js
+```js-nolint
 new IDBVersionChangeEvent(type)
 new IDBVersionChangeEvent(type, options)
 ```
@@ -45,7 +46,7 @@ A new {{domxref("IDBVersionChangeEvent")}} object.
 
 ## Examples
 
-For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Specifications
 

@@ -8,6 +8,7 @@ tags:
   - WebGL
 browser-compat: api.WebGLActiveInfo
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLActiveInfo** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents the information returned by calling the {{domxref("WebGLRenderingContext.getActiveAttrib()")}} and {{domxref("WebGLRenderingContext.getActiveUniform()")}} methods.
@@ -28,12 +29,6 @@ A `WebGLActiveInfo` object is returned by:
 - {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
 - {{domxref("WebGLRenderingContext.getActiveUniform()")}} or
 - {{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}
-
-```js
-WebGLActiveInfo? getActiveAttrib(WebGLProgram? program, GLuint index);
-WebGLActiveInfo? getActiveUniform(WebGLProgram? program, GLuint index);
-WebGLActiveInfo? getTransformFeedbackVarying(WebGLProgram? program, GLuint index)
-```
 
 ## Specifications
 

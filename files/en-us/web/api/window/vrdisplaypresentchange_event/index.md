@@ -8,9 +8,11 @@ tags:
   - WebVR
   - Deprecated
   - vrdisplaypresentchange
+  - Non-standard
 browser-compat: api.Window.vrdisplaypresentchange_event
 ---
-{{APIRef("Window")}}{{Deprecated_Header}}
+
+{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`vrdisplaypresentchange`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
 
@@ -23,14 +25,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('vrdisplaypresentchange', event => { });
+addEventListener('vrdisplaypresentchange', (event) => { });
 
-onvrdisplaypresentchange = event => { };
+onvrdisplaypresentchange = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("VRDisplayEvent")}}
 
@@ -38,9 +40,9 @@ An {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
 
-- {{domxref("VRDisplayEvent.display")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.display")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{deprecated_inline}} {{readonlyInline}}
+- {{domxref("VRDisplayEvent.reason")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : A human-readable reason why the event was fired.
 
 ## Examples
@@ -48,12 +50,8 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 You can use the `vrdisplaypresentchange` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('vrdisplaypresentchange', function() {
-  if(vrDisplay.isPresenting) {
-    info.textContent = 'Display has started presenting.';
-  } else {
-    info.textContent = 'Display has stopped presenting.';
-  }
+window.addEventListener('vrdisplaypresentchange', () => {
+  info.textContent = vrDisplay.isPresenting ? 'Display has started presenting.' : 'Display has stopped presenting.';
   reportDisplays();
 });
 ```
@@ -61,12 +59,8 @@ window.addEventListener('vrdisplaypresentchange', function() {
 Or use the `onvrdisplaypresentchange` event handler property:
 
 ```js
-window.onvrdisplaypresentchange = function() {
-  if(vrDisplay.isPresenting) {
-    info.textContent = 'Display has started presenting.';
-  } else {
-    info.textContent = 'Display has stopped presenting.';
-  }
+window.onvrdisplaypresentchange = () => {
+  info.textContent = vrDisplay.isPresenting ? 'Display has started presenting.' : 'Display has stopped presenting.';
   reportDisplays();
 };
 ```

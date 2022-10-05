@@ -12,6 +12,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement.pathLength
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGeometryElement.pathLength`** property reflects the

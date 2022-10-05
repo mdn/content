@@ -15,9 +15,10 @@ tags:
   - comments
   - external
   - inline
-  - l10n:priority
+  - "l10n:priority"
   - what
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 Welcome to the MDN beginner's JavaScript course!
@@ -44,7 +45,7 @@ In this article we will look at JavaScript from a high level, answering question
 JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved.
 It is the third layer of the layer cake of standard web technologies, two of which ([HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn/CSS)) we have covered in much more detail in other parts of the Learning Area.
 
-![](cake.png)
+![The three layers of standard web technologies; HTML, CSS and JavaScript](cake.png)
 
 - {{glossary("HTML")}} is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.
 - {{glossary("CSS")}} is a language of style rules that we use to apply styling to our HTML content, for example setting background colors and fonts, and laying out our content in multiple columns.
@@ -56,20 +57,20 @@ The three layers build on top of one another nicely. Let's take a simple text la
 <p>Player 1: Chris</p>
 ```
 
-![](just-html.png)
+![Paragraph of Player 1: Chris as plain text](just-html.png)
 
 Then we can add some CSS into the mix to get it looking nice:
 
 ```css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0,0,200,0.6);
-  background: rgba(0,0,200,0.3);
-  color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 200, 0.3);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
@@ -77,7 +78,7 @@ p {
 }
 ```
 
-![](html-and-css.png)
+![Styled paragraph of Player 1: Chris](html-and-css.png)
 
 And finally, we can add some JavaScript to implement dynamic behavior:
 
@@ -114,7 +115,7 @@ They do the same thing for programming that ready-made furniture kits do for hom
 
 They generally fall into two categories.
 
-![](browser.png)
+![Two categories of API; 3rd party APIs are shown to the side of the browser and browser APIs are in the browser](browser.png)
 
 **Browser APIs** are built into your web browser, and are able to expose data from the surrounding computer environment, or do useful complex things. For example:
 
@@ -144,7 +145,7 @@ Here we'll actually start looking at some code, and while doing so, explore what
 
 Let's briefly recap the story of what happens when you load a web page in a browser (first talked about in our [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work) article). When you load a web page in your browser, you are running your code (the HTML, CSS, and JavaScript) inside an execution environment (the browser tab). This is like a factory that takes in raw materials (the code) and outputs a product (the web page).
 
-![](execution.png)
+![HTML, CSS and JavaScript code come together to create the content in the browser tab when the page is loaded](execution.png)
 
 A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above).
 Note that the code in your web documents is generally loaded and executed in the order it appears on the page.
@@ -231,9 +232,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
    ```html
    <script>
-
      // JavaScript goes here
-
    </script>
    ```
 
@@ -358,7 +357,7 @@ In the internal example, you can see this structure around the code:
 
 ```js
 document.addEventListener('DOMContentLoaded', () => {
-  ...
+  // …
 });
 ```
 
@@ -367,7 +366,7 @@ The JavaScript inside this block will not run until after that event is fired, t
 
 In the external example, we use a more modern JavaScript feature to solve the problem, the `defer` attribute, which tells the browser to continue downloading the HTML content once the `<script>` tag element has been reached.
 
-```js
+```html
 <script src="script.js" defer></script>
 ```
 
@@ -395,7 +394,7 @@ They won't run until the page content has all loaded, which is useful if your sc
 
 Here is a visual representation of the different script loading methods and what that means for your page:
 
-![](async-defer.jpg)
+![How the three script loading method work: default has parsing blocked while JavaScript is fetched and executed. With async, the parsing pauses for execution only. With defer, parsing isn't paused, but execution on happens after everything is else is parsed.](async-defer.jpg)
 
 _This image is from the [HTML spec](https://html.spec.whatwg.org/images/asyncdefer.svg), copied and cropped to a reduced version, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license terms._
 

@@ -12,6 +12,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.id
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`id`** read-only property of the
@@ -51,14 +52,14 @@ const publicKey = {
 };
 
 navigator.credentials.create({ publicKey })
-  .then(function (newCredentialInfo) {
+  .then((newCredentialInfo) => {
     const id = newCredentialInfo.id;
     // Do something with the id
 
     // send attestation response and client extensions
     // to the server to proceed with the registration
     // of the credential
-  }).catch(function (err) {
+  }).catch((err) => {
      console.error(err);
   });
 ```

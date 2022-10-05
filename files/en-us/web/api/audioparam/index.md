@@ -13,6 +13,7 @@ tags:
   - sound
 browser-compat: api.AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 The Web Audio API's `AudioParam` interface represents an audio-related parameter, usually a parameter of an {{domxref("AudioNode")}} (such as {{ domxref("GainNode.gain") }}).
@@ -35,11 +36,11 @@ A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whol
 
 ## Properties
 
-- {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
+- {{domxref("AudioParam.defaultValue")}} {{ReadOnlyInline}}
   - : Represents the initial value of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
-- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
+- {{domxref("AudioParam.maxValue")}} {{ReadOnlyInline}}
   - : Represents the maximum possible value for the parameter's nominal (effective) range.
-- {{domxref("AudioParam.minValue")}} {{readonlyinline}}
+- {{domxref("AudioParam.minValue")}} {{ReadOnlyInline}}
   - : Represents the minimum possible value for the parameter's nominal (effective) range.
 - {{domxref("AudioParam.value")}}
   - : Represents the parameter's current value as of the current time; initially set to the value of {{domxref("AudioParam.defaultValue", "defaultValue")}}.
@@ -66,17 +67,16 @@ A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whol
 First, a basic example showing a {{domxref("GainNode")}} having its `gain` value set. `gain` is an example of an _a-rate_ `AudioParam`, as the value can potentially be set differently for each sample frame of the audio.
 
 ```js
-const AudioContext = (window.AudioContext || window.webkitAudioContext);
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
-var gainNode = audioCtx.createGain();
+const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0;
 ```
 
 Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values manipulated. These are examples of _k-rate_ `AudioParam` types, as the values are set for the entire audio block at once.
 
 ```js
-var compressor = audioCtx.createDynamicsCompressor();
+const compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.setValueAtTime(-50, audioCtx.currentTime);
 compressor.knee.setValueAtTime(40, audioCtx.currentTime);
 compressor.ratio.setValueAtTime(12, audioCtx.currentTime);

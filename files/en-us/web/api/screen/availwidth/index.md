@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.Screen.availWidth
 ---
+
 {{APIRef("CSSOM View")}}
 
 The **`Screen.availWidth`** property returns the amount of
@@ -21,7 +22,7 @@ A number.
 ## Examples
 
 ```js
-var screenAvailWidth = window.screen.availWidth;
+const screenAvailWidth = window.screen.availWidth;
 
 console.log(screenAvailWidth);
 ```

@@ -9,6 +9,7 @@ tags:
   - NodeIterator
 browser-compat: api.NodeIterator.previousNode
 ---
+
 {{APIRef("DOM")}}
 
 The **`NodeIterator.previousNode()`** method returns the
@@ -25,7 +26,7 @@ throw.
 
 ## Syntax
 
-```js
+```js-nolint
 previousNode()
 ```
 
@@ -43,7 +44,7 @@ None ({{jsxref("undefined")}}).
 const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
 currentNode = nodeIterator.nextNode(); // returns the next node
 previousNode = nodeIterator.previousNode(); // same result, since we backtracked to the previous node

@@ -3,7 +3,6 @@ title: WebRTC
 slug: Glossary/WebRTC
 tags:
   - CodingScripting
-  - Glossary
   - Infrastructure
   - JavaScript
   - P2P
@@ -11,6 +10,7 @@ tags:
   - Web
   - WebRTC
 ---
+
 **WebRTC** (_Web Real-Time Communication_) is an {{Glossary("API")}} that can be used by video-chat, voice-calling, and P2P-file-sharing Web apps.
 
 WebRTC consists mainly of these parts:
@@ -24,6 +24,6 @@ WebRTC consists mainly of these parts:
 
 ## See also
 
-- {{Interwiki("wikipedia", "WebRTC")}} on Wikipedia
+- [WebRTC](https://en.wikipedia.org/wiki/WebRTC) on Wikipedia
 - [WebRTC API on MDN](/en-US/docs/Web/API/WebRTC_API)
 - [Browser support for WebRTC](https://caniuse.com/rtcpeerconnection)

@@ -7,9 +7,11 @@ tags:
   - Read-only
   - Screen Wake Lock API
   - WakeLockSentinel
+  - Experimental
 browser-compat: api.WakeLockSentinel.released
 ---
-{{DefaultAPISidebar("Screen Wake Lock API")}}
+
+{{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}
 
 The read-only **`released`** property of the
 {{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether
@@ -17,8 +19,8 @@ a {{domxref("WakeLockSentinel")}} has been released yet.
 
 ## Syntax
 
-```js
-var released = sentinel.released;
+```js-nolint
+const released = sentinel.released
 ```
 
 ### Value

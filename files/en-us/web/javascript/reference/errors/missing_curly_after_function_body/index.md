@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing } after function body" occurs when there is a syntax
@@ -15,8 +16,7 @@ parenthesis are in the correct order.
 
 ## Message
 
-```js
-SyntaxError: Expected '}' (Edge)
+```
 SyntaxError: missing } after function body (Firefox)
 ```
 

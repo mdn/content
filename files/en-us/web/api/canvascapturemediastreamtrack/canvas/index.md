@@ -5,7 +5,6 @@ page-type: web-api-instance-property
 tags:
   - Canvas
   - CanvasCaptureMediaStreamTrack
-  - Experimental
   - Frame Capture
   - Media Capture
   - Property
@@ -14,6 +13,7 @@ tags:
   - Web
 browser-compat: api.CanvasCaptureMediaStreamTrack.canvas
 ---
+
 {{APIRef}}
 
 The {{domxref("CanvasCaptureMediaStreamTrack")}} **`canvas`**
@@ -29,16 +29,16 @@ frames being captured.
 
 ```js
 // Find the canvas element to capture
-var canvasElt = document.getElementsByTagName("canvas")[0];
+const canvasElt = document.querySelector("canvas");
 
 // Get the stream
-var stream = canvasElt.captureStream(25); // 25 FPS
+const stream = canvasElt.captureStream(25); // 25 FPS
 
 // Do things to the stream
-...
+// …
 
 // Obtain the canvas associated with the stream
-var canvas = stream.canvas;
+const canvas = stream.canvas;
 ```
 
 ## Specifications

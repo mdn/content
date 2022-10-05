@@ -13,6 +13,7 @@ tags:
   - mode
 browser-compat: api.IDBTransaction.mode
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`mode`** read-only property of the
@@ -48,7 +49,7 @@ In the following code snippet, we open a read/write transaction on our database 
 some data to an object store. Note also the functions attached to transaction event
 handlers to report on the outcome of the transaction opening in the event of success or
 failure. At the end, we log the mode of the current transaction using `mode`.
-For a full working example, see our [To-do Notifications app](https://github.com/mdn/to-do-notifications/) ([view example live](https://mdn.github.io/to-do-notifications/).)
+For a full working example, see our [To-do Notifications app](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const note = document.getElementById('notifications');
@@ -59,7 +60,7 @@ let db;
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = event => {
+DBOpenRequest.onsuccess = (event) => {
   note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
@@ -78,11 +79,11 @@ function addData() {
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of opening the transaction
-  transaction.oncomplete = event => {
+  transaction.oncomplete = (event) => {
     note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
-  transaction.onerror = event => {
+  transaction.onerror = (event) => {
     note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
@@ -92,7 +93,7 @@ function addData() {
   // add our newItem object to the object store
   const objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = event => {
+  objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
     note.innerHTML += '<li>Request successful.</li>';
@@ -119,4 +120,4 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

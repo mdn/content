@@ -13,6 +13,7 @@ tags:
   - Video
 browser-compat: api.TrackEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`TrackEvent`** interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are `addtrack` and `removetrack`.
@@ -58,7 +59,7 @@ videoElem.textTracks.addEventListener("addtrack", handleTrackEvent, false);
 videoElem.textTracks.addEventListener("removetrack", handleTrackEvent, false);
 
 function handleTrackEvent(event) {
-  const trackKind;
+  let trackKind;
 
   if (event.target instanceof VideoTrackList) {
     trackKind = "video";
@@ -72,10 +73,10 @@ function handleTrackEvent(event) {
 
   switch(event.type) {
     case "addtrack":
-      console.log("Added a " + trackKind + " track");
+      console.log(`Added a ${trackKind} track`);
       break;
     case "removetrack":
-      console.log("Removed a " + trackKind + " track");
+      console.log(`Removed a ${trackKind} track`);
       break;
   }
 }

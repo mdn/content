@@ -1,5 +1,5 @@
 ---
-title: 'Example and tutorial: Simple synth keyboard'
+title: "Example and tutorial: Simple synth keyboard"
 slug: Web/API/Web_Audio_API/Simple_synth
 page-type: guide
 tags:
@@ -13,6 +13,7 @@ tags:
   - Tutorial
   - Web Audio API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 This article presents the code and working demo of a video keyboard you can play using the mouse. The keyboard allows you to switch among the standard waveforms as well as one custom waveform, and you can control the main gain using a volume slider beneath the keyboard. This example makes use of the following Web API interfaces: {{domxref("AudioContext")}}, {{domxref("OscillatorNode")}}, {{domxref("PeriodicWave")}}, and {{domxref("GainNode")}}.
@@ -49,13 +50,20 @@ First we create the `<div>` to contain the settings bar, so it can be styled as 
 <div class="settingsBar">
   <div class="left">
     <span>Volume: </span>
-    <input type="range" min="0.0" max="1.0" step="0.01"
-        value="0.5" list="volumes" name="volume">
+    <input
+      type="range"
+      min="0.0"
+      max="1.0"
+      step="0.01"
+      value="0.5"
+      list="volumes"
+      name="volume" />
     <datalist id="volumes">
-      <option value="0.0" label="Mute">
-      <option value="1.0" label="100%">
+      <option value="0.0" label="Mute"></option>
+      <option value="1.0" label="100%"></option>
     </datalist>
   </div>
+</div>
 ```
 
 We specify a default value of 0.5, and we provide a {{HTMLElement("datalist")}} element which is connected to the range using the {{htmlattrxref("name")}} attribute to find an option list whose ID matches; in this case, the data set is named `"volume"`. This lets us provide a set of common values and special strings which the browser may optionally choose to display in some fashion; we provide names for the values 0.0 ("Mute") and 1.0 ("100%").
@@ -158,7 +166,8 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
   vertical-align: middle;
 }
 
-.left span, .left input {
+.left span,
+.left input {
   vertical-align: middle;
 }
 
@@ -184,8 +193,8 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
 The JavaScript code begins by initializing a number of variables.
 
 ```js
-let audioContext = new (window.AudioContext || window.webkitAudioContext)();
-let oscList = [];
+const audioContext = new AudioContext();
+const oscList = [];
 let mainGainNode = null;
 ```
 
@@ -194,9 +203,9 @@ let mainGainNode = null;
 3. `mainGainNode` is set to null; during the setup process, it will be configured to contain a {{domxref("GainNode")}} which all playing oscillators will connect to and play through to allow the overall volume to be controlled using a single slider control.
 
 ```js
-let keyboard = document.querySelector(".keyboard");
-let wavePicker = document.querySelector("select[name='waveform']");
-let volumeControl = document.querySelector("input[name='volume']");
+const keyboard = document.querySelector(".keyboard");
+const wavePicker = document.querySelector("select[name='waveform']");
+const volumeControl = document.querySelector("input[name='volume']");
 ```
 
 References to elements we'll need access to are obtained:
@@ -224,7 +233,7 @@ The `createNoteTable()` function builds the array `noteFreq` to contain an array
 
 ```js
 function createNoteTable() {
-  let noteFreq = [];
+  const noteFreq = [];
   for (let i=0; i< 9; i++) {
     noteFreq[i] = [];
   }
@@ -391,9 +400,9 @@ With this table in place, we can find out the frequency for a given note in a pa
 
 ```js hidden
 if (!Object.entries) {
-    Object.entries = function entries(O) {
-        return reduce(keys(O), (e, k) => concat(e, typeof k === 'string' && isEnumerable(O, k) ? [[k, O[k]]] : []), []);
-    };
+  Object.entries = function entries(O) {
+    return reduce(keys(O), (e, k) => concat(e, typeof k === 'string' && isEnumerable(O, k) ? [[k, O[k]]] : []), []);
+  };
 }
 ```
 
@@ -415,13 +424,13 @@ function setup() {
   // our purposes we don't need them. Each octave is inserted
   // into a <div> of class "octave".
 
-  noteFreq.forEach(function(keys, idx) {
-    let keyList = Object.entries(keys);
-    let octaveElem = document.createElement("div");
+  noteFreq.forEach((keys, idx) => {
+    const keyList = Object.entries(keys);
+    const octaveElem = document.createElement("div");
     octaveElem.className = "octave";
 
-    keyList.forEach(function(key) {
-      if (key[0].length == 1) {
+    keyList.forEach((key) => {
+      if (key[0].length === 1) {
         octaveElem.appendChild(createKey(key[0], idx, key[1]));
       }
     });
@@ -435,8 +444,8 @@ function setup() {
   cosineTerms = new Float32Array(sineTerms.length);
   customWaveform = audioContext.createPeriodicWave(cosineTerms, sineTerms);
 
-  for (i=0; i<9; i++) {
-      oscList[i] = {};
+  for (let i = 0; i < 9; i++) {
+    oscList[i] = {};
   }
 }
 
@@ -459,15 +468,15 @@ The `createKey()` function is called once for each key that we want to present i
 
 ```js
 function createKey(note, octave, freq) {
-  let keyElement = document.createElement("div");
-  let labelElement = document.createElement("div");
+  const keyElement = document.createElement("div");
+  const labelElement = document.createElement("div");
 
   keyElement.className = "key";
   keyElement.dataset["octave"] = octave;
   keyElement.dataset["note"] = note;
   keyElement.dataset["frequency"] = freq;
 
-  labelElement.innerHTML = note + "<sub>" + octave + "</sub>";
+  labelElement.innerHTML = `${note}<sub>${octave}</sub>`;
   keyElement.appendChild(labelElement);
 
   keyElement.addEventListener("mousedown", notePressed, false);
@@ -489,12 +498,12 @@ The `playTone()` function's job is to play a tone at the given frequency. This w
 
 ```js
 function playTone(freq) {
-  let osc = audioContext.createOscillator();
+  const osc = audioContext.createOscillator();
   osc.connect(mainGainNode);
 
-  let type = wavePicker.options[wavePicker.selectedIndex].value;
+  const type = wavePicker.options[wavePicker.selectedIndex].value;
 
-  if (type == "custom") {
+  if (type === "custom") {
     osc.setPeriodicWave(customWaveform);
   } else {
     osc.type = type;
@@ -513,17 +522,17 @@ Then we get the type of waveform to use by checking the value of the waveform pi
 
 The oscillator's frequency is set to the value specified in the `freq` parameter by setting the value of the {{domxref("Oscillator.frequency")}} {{domxref("AudioParam")}} object. Then, at last, the oscillator is started up so that it begins to produce sound by calling the oscillator's inherited {{domxref("AudioScheduledSourceNode.start()")}} method.
 
-#### Playing a tone
+#### Playing a note
 
 When the {{domxref("Element/mousedown_event", "mousedown")}} or {{domxref("Element/mouseover_event", "mouseover")}} event occurs on a key, we want to start playing the corresponding note. The `notePressed()` function is used as the event handler for these events.
 
 ```js
 function notePressed(event) {
   if (event.buttons & 1) {
-    let dataset = event.target.dataset;
+    const dataset = event.target.dataset;
 
     if (!dataset["pressed"]) {
-      let octave = +dataset["octave"];
+      const octave = Number(dataset["octave"]);
       oscList[octave][dataset["note"]] = playTone(dataset["frequency"]);
       dataset["pressed"] = "yes";
     }
@@ -541,10 +550,10 @@ The `noteReleased()` function is the event handler called when the user releases
 
 ```js
 function noteReleased(event) {
-  let dataset = event.target.dataset;
+  const dataset = event.target.dataset;
 
   if (dataset && dataset["pressed"]) {
-    let octave = +dataset["octave"];
+    const octave = Number(dataset["octave"]);
     oscList[octave][dataset["note"]].stop();
     delete oscList[octave][dataset["note"]];
     delete dataset["pressed"];

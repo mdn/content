@@ -13,6 +13,7 @@ tags:
   - source
 browser-compat: api.IDBRequest.source
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`source`** read-only property of the
@@ -34,7 +35,7 @@ associated record from the {{domxref("IDBObjectStore")}} (made available
 as `objectStoreTitleRequest.result`), updates
 one property of the record, and then puts the updated record back into the object
 store in another request. The source of the 2nd request is logged to the developer
-console. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([View the example live](https://mdn.github.io/to-do-notifications/)).
+console. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const title = "Walk dog";
@@ -45,7 +46,7 @@ const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoL
 // Get the to-do list object that has this title as its title
 const objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = () => {
   // Grab the data object returned as the result
   const data = objectStoreTitleRequest.result;
 
@@ -57,10 +58,10 @@ objectStoreTitleRequest.onsuccess = function() {
   const updateTitleRequest = objectStore.put(data);
 
   // Log the source of this request
-  console.log("The source of this request is " + updateTitleRequest.source);
+  console.log(`The source of this request is ${updateTitleRequest.source}`);
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  updateTitleRequest.onsuccess = function() { displayData(); };
+  updateTitleRequest.onsuccess = () => { displayData(); };
 };
 ```
 
@@ -80,4 +81,4 @@ objectStoreTitleRequest.onsuccess = function() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

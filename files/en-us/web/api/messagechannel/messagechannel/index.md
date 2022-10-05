@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.MessageChannel.MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 The `MessageChannel()` constructor of the {{domxref("MessageChannel")}}
@@ -20,7 +21,7 @@ interface returns a new {{domxref("MessageChannel")}} object with two new
 
 ## Syntax
 
-```js
+```js-nolint
 new MessageChannel()
 ```
 
@@ -43,11 +44,11 @@ The `handleMessage` handler then responds to a message being sent back from the
 The {{domxref("MessageChannel.port1", "port1")}} is listened to, to check when the message arrives.
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector('p');
+const channel = new MessageChannel();
+const para = document.querySelector('p');
 
-var ifr = document.querySelector('iframe');
-var otherWindow = ifr.contentWindow;
+const ifr = document.querySelector('iframe');
+const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
@@ -62,7 +63,7 @@ function handleMessage(e) {
 ```
 
 For a full working example,
-see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic)
+see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)
 on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications

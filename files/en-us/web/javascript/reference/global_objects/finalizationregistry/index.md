@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.FinalizationRegistry
 ---
+
 {{JSRef}}
 
 A **`FinalizationRegistry`** object lets you request a callback when an object is garbage-collected.
@@ -21,8 +22,8 @@ A **`FinalizationRegistry`** object lets you request a callback when an object i
 You create the registry passing in the callback:
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
-  // ....
+const registry = new FinalizationRegistry((heldValue) => {
+  // …
 });
 ```
 
@@ -42,7 +43,9 @@ It's common to use the object itself as the unregister token, which is just fine
 
 ```js
 registry.register(theObject, "some value", theObject);
-// ...some time later, if you don't care about `theObject` anymore...
+// …
+
+// some time later, if you don't care about `theObject` anymore unregister it
 registry.unregister(theObject);
 ```
 
@@ -50,7 +53,9 @@ It doesn't have to be the same object, though; it can be a different one:
 
 ```js
 registry.register(theObject, "some value", tokenObject);
-// ...some time later, if you don't care about `theObject` anymore...
+// …
+
+// some time later
 registry.unregister(tokenObject);
 ```
 
@@ -61,9 +66,9 @@ registry.unregister(tokenObject);
 
 ## Instance methods
 
-- {{jsxref("FinalizationRegistry.register", "FinalizationRegistry.prototype.register()")}}
+- {{jsxref("FinalizationRegistry.prototype.register()")}}
   - : Registers an object with the registry in order to get a cleanup callback when/if the object is garbage-collected.
-- {{jsxref("FinalizationRegistry.unregister", "FinalizationRegistry.prototype.unregister()")}}
+- {{jsxref("FinalizationRegistry.prototype.unregister()")}}
   - : Unregisters an object from the registry.
 
 ## Avoid where possible
@@ -100,8 +105,8 @@ Some notes on cleanup callbacks:
 You create the registry passing in the callback:
 
 ```js
-const registry = new FinalizationRegistry(heldValue => {
-  // ....
+const registry = new FinalizationRegistry((heldValue) => {
+  // …
 });
 ```
 

@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - depthNear
+  - Non-standard
 browser-compat: api.VRDisplay.depthNear
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`depthNear`** property of the {{domxref("VRDisplay")}} interface gets and sets the z-depth defining the near plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e. the nearest viewable boundary of the scene.
 
@@ -29,9 +31,9 @@ A double, representing the z-depth in meters; its initial value is `0.01`.
 ## Examples
 
 ```js
-var vrDisplay;
+let vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
   vrDisplay.depthNear = 1.0;
   vrDisplay.depthFar = 7500.0;

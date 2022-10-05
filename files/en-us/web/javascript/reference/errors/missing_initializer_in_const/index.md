@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing = in const declaration" occurs when a const
@@ -15,10 +16,10 @@ declaration was not given a value in the same statement (like
 
 ## Message
 
-```js
-SyntaxError: Const must be initialized (Edge)
+```
+SyntaxError: Missing initializer in const declaration (V8-based)
 SyntaxError: missing = in const declaration (Firefox)
-SyntaxError: Missing initializer in const declaration (Chrome)
+SyntaxError: Unexpected token ';'. const declared variable 'x' must have an initializer. (Safari)
 ```
 
 ## Error type

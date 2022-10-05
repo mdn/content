@@ -9,6 +9,7 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_draw_buffers
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_draw_buffers`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables a fragment shader to write to several textures, which is useful for [deferred shading](https://hacks.mozilla.org/2014/01/webgl-deferred-shading/), for example.
@@ -42,13 +43,13 @@ This extension exposes one new method.
 Enabling the extension:
 
 ```js
-var ext = gl.getExtension('WEBGL_draw_buffers');
+const ext = gl.getExtension('WEBGL_draw_buffers');
 ```
 
 Binding multiple textures (to a `tx[]` array) to different framebuffer color attachments:
 
 ```js
-var fb = gl.createFramebuffer();
+const fb = gl.createFramebuffer();
 gl.bindFramebuffer(gl.FRAMEBUFFER, fb);
 gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT0_WEBGL, gl.TEXTURE_2D, tx[0], 0);
 gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT1_WEBGL, gl.TEXTURE_2D, tx[1], 0);
@@ -71,16 +72,16 @@ Shader code that writes to multiple textures:
 
 ```html
 <script type="x-shader/x-fragment">
-#extension GL_EXT_draw_buffers : require
+  #extension GL_EXT_draw_buffers : require
 
-precision highp float;
+  precision highp float;
 
-void main(void) {
-  gl_FragData[0] = vec4(0.25);
-  gl_FragData[1] = vec4(0.5);
-  gl_FragData[2] = vec4(0.75);
-  gl_FragData[3] = vec4(1.0);
-}
+  void main(void) {
+    gl_FragData[0] = vec4(0.25);
+    gl_FragData[1] = vec4(0.5);
+    gl_FragData[2] = vec4(0.75);
+    gl_FragData[3] = vec4(1.0);
+  }
 </script>
 ```
 

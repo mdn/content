@@ -6,6 +6,7 @@ tags:
   - Games
   - Performance
 ---
+
 An often overlooked aspect of app software development—even among those focusing on performance optimization—is startup performance. How long does your app take to start up? Does it seem to lock up the device or the user's browser while the app loads? That makes users worry that your app is crashed, or that something else is wrong. It's always a good idea to take the time to ensure that your app starts up nicely. This article offers tips and suggestions to help you achieve that goal, both when writing a new app and when porting an app from another platform to the Web.
 
 ## Starting up nicely

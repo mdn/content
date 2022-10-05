@@ -14,6 +14,7 @@ tags:
   - play
 browser-compat: api.HTMLMediaElement.play
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}}
@@ -26,7 +27,7 @@ permission issues, result in the promise being rejected.
 
 ## Syntax
 
-```js
+```js-nolint
 play()
 ```
 
@@ -97,7 +98,7 @@ async function playVideo() {
   try {
     await videoElem.play();
     playButton.classList.add("playing");
-  } catch(err) {
+  } catch (err) {
     playButton.classList.remove("playing");
   }
 }

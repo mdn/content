@@ -1,5 +1,5 @@
 ---
-title: 'AudioTrackList: removetrack event'
+title: "AudioTrackList: removetrack event"
 slug: Web/API/AudioTrackList/removetrack_event
 page-type: web-api-event
 tags:
@@ -27,15 +27,15 @@ The `removetrack` event is fired when a track is removed from an [`AudioTrackLis
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('removetrack', event => { })
+```js-nolint
+addEventListener("removetrack", (event) => { })
 
-onremovetrack = event => { }
+onremovetrack = (event) => { }
 ```
 
 ## Event type
 
-An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TrackEvent")}}
 

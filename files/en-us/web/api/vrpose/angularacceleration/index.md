@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - angularAcceleration
+  - Non-standard
 browser-compat: api.VRPose.angularAcceleration
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`angularAcceleration`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the angular acceleration vector of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
 
@@ -39,14 +41,14 @@ function drawVRScene() {
 
   // Retrieve the angular acceleration values for use in rendering
   // curFramePose is a VRPose object
-  var curFramePose = frameData.pose;
-  var angAcc = curFramePose.angularAcceleration;
-  var aax = angAcc[0];
-  var aay = angAcc[1];
-  var aaz = angAcc[2];
+  const curFramePose = frameData.pose;
+  const angAcc = curFramePose.angularAcceleration;
+  const aax = angAcc[0];
+  const aay = angAcc[1];
+  const aaz = angAcc[2];
 
   // render the scene
-  ...
+  // …
 
   // WebVR: submit the rendered frame to the VR display
   vrDisplay.submitFrame();

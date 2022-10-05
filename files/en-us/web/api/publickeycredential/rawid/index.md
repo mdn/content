@@ -11,6 +11,7 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential.rawId
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`rawId`** read-only property of the
@@ -52,10 +53,10 @@ const options = {
 };
 
 navigator.credentials.create({  publicKey: options })
-  .then(function (pubKeyCredential) {
+  .then((pubKeyCredential) => {
     const rawId = pubKeyCredential.rawId;
     // Do something with rawId
-}).catch(function (err) {
+}).catch((err) => {
   // Deal with any error
 });
 ```

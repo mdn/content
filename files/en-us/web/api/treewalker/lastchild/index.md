@@ -10,6 +10,7 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.lastChild
 ---
+
 {{ APIRef("DOM") }}
 
 The **`TreeWalker.lastChild()`** method moves the current
@@ -19,7 +20,7 @@ returns `null` and the current node is not changed.
 
 ## Syntax
 
-```js
+```js-nolint
 lastChild()
 ```
 
@@ -34,12 +35,12 @@ A {{domxref("Node")}} object or `null`.
 ## Examples
 
 ```js
-var treeWalker = document.createTreeWalker(
+const treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } }
+    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } }
 );
-var node = treeWalker.lastChild(); // returns the last visible child of the root element
+const node = treeWalker.lastChild(); // returns the last visible child of the root element
 ```
 
 ## Specifications

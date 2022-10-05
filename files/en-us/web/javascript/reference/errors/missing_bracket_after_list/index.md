@@ -7,16 +7,18 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing ] after element list" occurs when there is an error
 with the array initializer syntax somewhere. Likely there is a closing bracket
-("`]`") or a comma ("`,`") missing.
+(`]`) or a comma (`,`) missing.
 
 ## Message
 
-```js
-SyntaxError: missing ] after element list
+```
+SyntaxError: missing ] after element list (Firefox)
+SyntaxError: Unexpected token ';'. Expected either a closing ']' or a ',' following an array element. (Safari)
 ```
 
 ## Error type
@@ -26,7 +28,7 @@ SyntaxError: missing ] after element list
 ## What went wrong?
 
 There is an error with the array initializer syntax somewhere. Likely there is a
-closing bracket ("`]`") or a comma ("`,`") missing.
+closing bracket (`]`) or a comma (`,`) missing.
 
 ## Examples
 

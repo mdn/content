@@ -12,20 +12,21 @@ tags:
   - image-rendering
   - pixel
 ---
+
 {{GamesSidebar}}
 
 This article discusses a useful technique for giving your canvas/WebGL games a crisp pixel art look, even on high definition monitors.
 
 ## The concept
 
-Retro [pixel art](https://wikipedia.org/wiki/Pixel_art) aesthetics are getting popular, especially in [indie games](https://wikipedia.org/wiki/Indie_game) or [game jam](https://wikipedia.org/wiki/Game_jam) entries. But since today's screens render content at high resolutions, there is a problem with making sure the pixel art does not look blurry. Developers have been manually scaling up graphics so they are shown with blocks that represent pixels. Two downsides to this method are larger file sizes and [compression artifacts](https://wikipedia.org/wiki/Compression_artifact).
+Retro [pixel art](https://en.wikipedia.org/wiki/Pixel_art) aesthetics are getting popular, especially in [indie games](https://en.wikipedia.org/wiki/Indie_game) or [game jam](https://en.wikipedia.org/wiki/Game_jam) entries. But since today's screens render content at high resolutions, there is a problem with making sure the pixel art does not look blurry. Developers have been manually scaling up graphics so they are shown with blocks that represent pixels. Two downsides to this method are larger file sizes and [compression artifacts](https://en.wikipedia.org/wiki/Compression_artifact).
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <td><img alt="" src="technique_original.png" /></td>
-      <td><img alt="" src="technique_original.png" /></td>
-      <td><img alt="" src="technique_4x.png" /></td>
+      <td><img alt="small pixelated man" src="technique_original.png" /></td>
+      <td><img alt="small pixelated man" src="technique_original.png" /></td>
+      <td><img alt="larger pixelated man" src="technique_4x.png" /></td>
     </tr>
     <tr>
       <td>original size</td>
@@ -36,7 +37,7 @@ Retro [pixel art](https://wikipedia.org/wiki/Pixel_art) aesthetics are getting p
       <td>none</td>
       <td>vendor's algorithm</td>
       <td>
-        <a href="https://wikipedia.org/wiki/Nearest-neighbor_interpolation"
+        <a href="https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation"
           >nearest-neighbor algorithm</a
         >
       </td>
@@ -58,7 +59,7 @@ The CSS property to achieve this scaling is {{cssxref("image-rendering")}}. It i
 
 Let's have a look at an example. The original image we want to upscale looks like this:
 
-![](cat.png)
+![Pixelated night scenery of a cat on the edge off a cliff with little hearts above his head, behind him a big full moon. With a black background, white text is displayed at the bottom of the image saying: in love with the moon.](cat.png)
 
 Here's some HTML to create a simple canvas:
 
@@ -82,15 +83,16 @@ canvas {
 And some JavaScript to set up the canvas and load the image:
 
 ```js
-// get canvas context
-var ctx = document.getElementById('game').getContext('2d');
-// load image
-var image = new Image();
-image.onload = function () {
-    // draw the image into the canvas
-    ctx.drawImage(image, 0, 0);
-}
-image.src = 'cat.png';
+// Get canvas context
+const ctx = document.getElementById("game").getContext("2d");
+
+// Load image
+const image = new Image();
+image.onload = () => {
+  // Draw the image into the canvas
+  ctx.drawImage(image, 0, 0);
+};
+image.src = "cat.png";
 ```
 
 This code used together produces the following result:

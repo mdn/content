@@ -11,6 +11,7 @@ tags:
   - maxPacketLifeTime
 browser-compat: api.RTCDataChannel.maxPacketLifeTime
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property

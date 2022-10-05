@@ -5,21 +5,19 @@ page-type: web-api-instance-method
 tags:
   - API
   - Canvas
-  - Experimental
   - Method
   - OffscreenCanvas
   - Reference
 browser-compat: api.OffscreenCanvas.transferToImageBitmap
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-The **`OffscreenCanvas.transferToImageBitmap()`** method
-creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of
-the `OffscreenCanvas`.
+{{APIRef("Canvas API")}}
+
+The **`OffscreenCanvas.transferToImageBitmap()`** method creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`.
 
 ## Syntax
 
-```js
+```js-nolint
 transferToImageBitmap()
 ```
 
@@ -37,7 +35,7 @@ An {{domxref("ImageBitmap")}}.
 const offscreen = new OffscreenCanvas(256, 256);
 const gl = offscreen.getContext("webgl");
 
-// ... some drawing using the gl context ...
+// Perform some drawing using the gl context
 
 offscreen.transferToImageBitmap();
 // ImageBitmap { width: 256, height: 256 }

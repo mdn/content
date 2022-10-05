@@ -13,6 +13,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.paused
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`paused`** read-only property of the
@@ -32,11 +33,11 @@ A boolean value.
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
 synth.pause();
 
-var amIPaused = synth.paused; // will return true
+const amIPaused = synth.paused; // will return true
 ```
 
 ## Specifications

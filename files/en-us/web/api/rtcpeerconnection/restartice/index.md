@@ -17,6 +17,7 @@ tags:
   - restartIce
 browser-compat: api.RTCPeerConnection.restartIce
 ---
+
 {{APIRef("WebRTC")}}
 
 The [WebRTC](/en-US/docs/Web/API/WebRTC_API) API's
@@ -48,7 +49,7 @@ This process continues until an ICE restart has been successfully completed.
 
 ## Syntax
 
-```js
+```js-nolint
 restartIce()
 ```
 
@@ -80,7 +81,7 @@ This example creates a handler for the
 state by restarting ICE in order to try again.
 
 ```js
-pc.addEventListener("iceconnectionstatechange", event => {
+pc.addEventListener("iceconnectionstatechange", (event) => {
   if (pc.iceConnectionState === "failed") {
     /* possibly reconfigure the connection in some way here */
     /* then request ICE restart */

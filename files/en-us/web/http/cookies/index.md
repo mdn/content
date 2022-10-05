@@ -19,6 +19,7 @@ tags:
   - request
   - tracking
 ---
+
 {{HTTPSidebar}}
 
 An **HTTP cookie** (web cookie, browser cookie) is a small piece of data that a server sends to a user's web browser.
@@ -46,7 +47,7 @@ After receiving an HTTP request, a server can send one or more {{HTTPHeader("Set
 
 The {{HTTPHeader("Set-Cookie")}} HTTP response header sends cookies from the server to the user agent. A simple cookie is set like this:
 
-```html
+```http
 Set-Cookie: <cookie-name>=<cookie-value>
 ```
 
@@ -85,7 +86,7 @@ The lifetime of a cookie can be defined in two ways:
 
 For example:
 
-```
+```http
 Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;
 ```
 
@@ -103,7 +104,7 @@ A cookie with the `HttpOnly` attribute is inaccessible to the JavaScript {{domxr
 
 Here's an example:
 
-```
+```http
 Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 ```
 
@@ -143,12 +144,12 @@ It takes three possible values: `Strict`, `Lax`, and `None`.
 
 With `Strict`, the cookie is only sent to the site where it originated.
 `Lax` is similar, except that cookies are sent when the user _navigates_ to the cookie's origin site.
-For example, by following a link from an external site. `None` specifies that cookies are sent on both originating and cross-site requests, but *only in secure contexts* (i.e., if `SameSite=None` then the `Secure` attribute must also be set).
+For example, by following a link from an external site. `None` specifies that cookies are sent on both originating and cross-site requests, but _only in secure contexts_ (i.e., if `SameSite=None` then the `Secure` attribute must also be set).
 If no `SameSite` attribute is set, the cookie is treated as `Lax`.
 
 Here's an example:
 
-```
+```http
 Set-Cookie: mykey=myvalue; SameSite=Strict
 ```
 

@@ -13,6 +13,7 @@ tags:
   - setPopup
 browser-compat: webextensions.api.action.setPopup
 ---
+
 {{AddonSidebar()}}
 
 Sets the HTML document that is opened as a popup when the user clicks on the browser action's icon. Tabs without a specific popup will inherit the global popup, which defaults to the [`default_popup`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) specified in the manifest.
@@ -21,7 +22,7 @@ Sets the HTML document that is opened as a popup when the user clicks on the bro
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.setPopup(
   details // object
 )
@@ -63,33 +64,39 @@ This code adds a pair of context menu items that you can use to switch between t
 ```js
 function onCreated() {
   if (browser.runtime.lastError) {
-    console.log("error creating item:" + browser.runtime.lastError);
+    console.log("error creating item:", browser.runtime.lastError);
   } else {
     console.log("item created successfully");
   }
 }
 
-browser.contextMenus.create({
-  id: "popup-1",
-  type: "radio",
-  title: "Popup 1",
-  contexts: ["all"],
-  checked: true
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-1",
+    type: "radio",
+    title: "Popup 1",
+    contexts: ["all"],
+    checked: true,
+  },
+  onCreated
+);
 
-browser.contextMenus.create({
-  id: "popup-2",
-  type: "radio",
-  title: "Popup 2",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-2",
+    type: "radio",
+    title: "Popup 2",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated
+);
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "popup-1") {
-    browser.action.setPopup({popup: "/popup/popup1.html"})
-  } else if (info.menuItemId == "popup-2") {
-    browser.action.setPopup({popup: "/popup/popup2.html"})
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "popup-1") {
+    browser.action.setPopup({ popup: "/popup/popup1.html" });
+  } else if (info.menuItemId === "popup-2") {
+    browser.action.setPopup({ popup: "/popup/popup2.html" });
   }
 });
 ```
@@ -104,7 +111,8 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -131,4 +139,4 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

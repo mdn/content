@@ -6,6 +6,7 @@ tags:
   - Non-standard
   - Event
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{Non-standard_header()}}
@@ -27,9 +28,9 @@ Web applications need only register for this event once per element (the handler
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mscandidatewindowupdate', event => { })
+addEventListener('mscandidatewindowupdate', (event) => { })
 
-onmscandidatewindowupdate = event => { }
+onmscandidatewindowupdate = (event) => { }
 ```
 
 ## Event type

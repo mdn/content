@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.Locale
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale`** constructor is a
@@ -22,10 +23,12 @@ identifier.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Locale(tag)
 new Intl.Locale(tag, options)
 ```
+
+> **Note:** `Intl.Locale()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -43,7 +46,7 @@ At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} cons
 a locale identifier string as its argument:
 
 ```js
-let us = new Intl.Locale('en-US');
+const us = new Intl.Locale('en-US');
 ```
 
 ### Using the Locale constructor with an options object
@@ -55,7 +58,7 @@ property of the configuration object to your desired hour cycle type, and then p
 into the constructor:
 
 ```js
-let locale = new Intl.Locale("en-US", { hourCycle: "h12" });
+const locale = new Intl.Locale("en-US", { hourCycle: "h12" });
 console.log(locale.hourCycle); // Prints "h12"
 ```
 

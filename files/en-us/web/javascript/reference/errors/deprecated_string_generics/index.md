@@ -6,14 +6,15 @@ tags:
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning about string generics occurs in Firefox versions prior to 68.
-String generics have been removed starting with Firefox 68.
+String generics have been removed starting with Firefox 68, and these warning messages are obsolete.
 
 ## Message
 
-```js
+```
 Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
 Warning: String.charCodeAt        is deprecated; use String.prototype.charCodeAt        instead
 Warning: String.concat            is deprecated; use String.prototype.concat            instead

@@ -12,6 +12,7 @@ tags:
   - openKeyCursor
 browser-compat: api.IDBObjectStore.openKeyCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openKeyCursor()`** method of the
@@ -25,7 +26,7 @@ results's `success` event.
 
 ## Syntax
 
-```js
+```js-nolint
 openKeyCursor()
 openKeyCursor(query)
 openKeyCursor(query, direction)
@@ -33,11 +34,11 @@ openKeyCursor(query, direction)
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- `query` {{optional_inline}}
   - : The key range to be queried. If a single valid key is passed, this will default to a
     range containing only that key. If nothing is passed, this will default to a key range
     that selects all the records in this object store.
-- *direction* {{optional_inline}}
+- `direction` {{optional_inline}}
   - : An [`IDBCursorDirection`](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection) telling the cursor what direction to travel.
     Valid values are `"next"`, `"nextunique"`, `"prev"`,
     and `"prevunique"`. The default is `"next"`.
@@ -67,9 +68,9 @@ cursor to iterate through all the records in the object store:
 const transaction = db.transaction("name", "readonly");
 const objectStore = transaction.objectStore("name");
 const request = objectStore.openKeyCursor();
-request.onsuccess = function(event) {
+request.onsuccess = (event) => {
   const cursor = event.target.result;
-  if(cursor) {
+  if (cursor) {
     // cursor.key contains the key of the current record being iterated through
     // note that there is no cursor.value, unlike for openCursor
     // this is where you'd do something with the result
@@ -96,4 +97,4 @@ request.onsuccess = function(event) {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

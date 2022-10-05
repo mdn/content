@@ -11,6 +11,7 @@ tags:
   - events
 browser-compat: api.MutationEvent
 ---
+
 {{APIRef("UI Events")}}{{Deprecated_Header}}
 
 > **Note:** [Mutation Events](https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents) (W3C DOM Level 3 Events) have been deprecated in favor of [Mutation Observers](/en-US/docs/Web/API/MutationObserver) (W3C DOM4).
@@ -62,8 +63,8 @@ The following is a list of all mutation events, as defined in [DOM Level 3 Event
 You can register a listener for mutation events using {{DOMxRef("EventTarget.addEventListener()")}} as follows:
 
 ```js
-element.addEventListener("DOMNodeInserted", function (event) {
-  // ...
+element.addEventListener("DOMNodeInserted", (event) => {
+  // …
 }, false);
 ```
 

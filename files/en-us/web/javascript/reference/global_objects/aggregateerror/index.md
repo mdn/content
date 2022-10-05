@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.AggregateError
 ---
+
 {{JSRef}}
 
 The **`AggregateError`** object represents an error when several errors need to be wrapped in a single error. It is thrown when multiple errors need to be reported by an operation, for example by {{JSxRef("Promise.any()")}}, when all promises passed to it reject.
@@ -36,7 +37,7 @@ The **`AggregateError`** object represents an error when several errors need to 
 ```js
 Promise.any([
   Promise.reject(new Error("some error")),
-]).catch(e => {
+]).catch((e) => {
   console.log(e instanceof AggregateError); // true
   console.log(e.message);                   // "All Promises rejected"
   console.log(e.name);                      // "AggregateError"

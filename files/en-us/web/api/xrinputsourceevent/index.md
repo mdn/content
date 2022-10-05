@@ -25,6 +25,7 @@ tags:
   - events
 browser-compat: api.XRInputSourceEvent
 ---
+
 {{APIRef("WebXR Device API")}} {{SecureContext_Header}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRInputSourceEvent`** interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system. More specifically, they represent a change in the state of an {{domxref("XRInputSource")}}.
@@ -69,7 +70,7 @@ _The `XRInputSourceEvent` interface doesn't define any methods; however, several
 The code below sets up handlers for primary action events in order to determine when the user clicks on (shoots at/pokes at/whatever) objects in the scene.
 
 ```js
-xrSession.addEventListener("select", event => {
+xrSession.addEventListener("select", (event) => {
   let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace, myRefSpace);
 
   if (targetRayPose) {

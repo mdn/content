@@ -6,6 +6,9 @@ tags:
   - MathML
   - MathML Project
 ---
+
+{{MathMLRef}}
+
 This page explains how to write mathematics using the MathML language, which is described with tags and attributes in text format. Just like for HTML or SVG, this text can become very verbose for complex content and so requires [proper authoring tools](https://www.w3.org/wiki/Math_Tools#Authoring_tools) such as converters from a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) equation editors. Many such tools are available and it is impossible to provide an exhaustive list. Instead, this article focuses on common approaches and examples.
 
 ## Using MathML
@@ -18,39 +21,38 @@ Each MathML equation is represented by a root [`math`](/en-US/docs/Web/MathML/El
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
- <title>MathML in HTML5</title>
-</head>
-<body>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MathML in HTML5</title>
+  </head>
+  <body>
+    <h1>MathML in HTML5</h1>
 
-  <h1>MathML in HTML5</h1>
+    <p>
+      One over square root of two (inline style):
+      <math>
+        <mfrac>
+          <mn>1</mn>
+          <msqrt>
+            <mn>2</mn>
+          </msqrt>
+        </mfrac>
+      </math>
+    </p>
 
-  <p>
-    One over square root of two (inline style):
-    <math>
-      <mfrac>
-        <mn>1</mn>
-        <msqrt>
-          <mn>2</mn>
-        </msqrt>
-      </mfrac>
-    </math>
-  </p>
-
-  <p>
-    One over square root of two (display style):
-    <math display="block">
-      <mfrac>
-        <mn>1</mn>
-        <msqrt>
-          <mn>2</mn>
-        </msqrt>
-      </mfrac>
-    </math>
-  </p>
-
-</body>
+    <p>
+      One over square root of two (display style):
+      <math display="block">
+        <mfrac>
+          <mn>1</mn>
+          <msqrt>
+            <mn>2</mn>
+          </msqrt>
+        </mfrac>
+      </math>
+    </p>
+  </body>
 </html>
 ```
 
@@ -87,13 +89,17 @@ As explained on the [MathML Fonts](/en-US/docs/Web/MathML/Fonts) article, mathem
 The [MathFonts page](https://fred-wang.github.io/MathFonts/) provides such Web fonts together with proper style sheets. For example, just insert the following line in your document header in order to select the Latin Modern fonts with fallback Web fonts:
 
 ```html
- <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
 ```
 
 Several fonts are proposed and you can just select a different style, for example STIX:
 
 ```html
- <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css">
+<link
+  rel="stylesheet"
+  href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css" />
 ```
 
 > **Note:** The fonts and stylesheets from that MathFonts page are distributed under open source licenses, so feel free to copy them on your own server and adapt them to your need.
@@ -110,8 +116,9 @@ A [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) can be 
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
     <title>MathML in HTML5</title>
     <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
     <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
@@ -136,31 +143,30 @@ For authors not familiar with LaTeX, alternative input methods are available suc
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
-...
-<!-- ASCIIMathML.js -->
-<script type="text/javascript" src="/path/to/ASCIIMathML.js"></script>
-...
-<!-- jqMath -->
-<script src="https://mathscribe.com/mathscribe/jquery-1.4.3.min.js"></script>
-<script src="https://mathscribe.com/mathscribe/jqmath-etc-0.4.6.min.js"></script>
-...
-</head>
-<body>
-...
-    <p>
-      One over square root of two (inline style, ASCIIMath): `1/(sqrt 2)`
-    </p>
-...
-    <p>
-      One over square root of two (inline style, jqMath): $1/√2$
-    </p>
-...
-    <p>
-      One over square root of two (display style, jqMath): $$1/√2$$
-    </p>
-...
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ASCII MathML</title>
+    …
+    <!-- ASCIIMathML.js -->
+    <script src="/path/to/ASCIIMathML.js"></script>
+    …
+    <!-- jqMath -->
+    <script src="https://mathscribe.com/mathscribe/jquery-1.4.3.min.js"></script>
+    <script src="https://mathscribe.com/mathscribe/jqmath-etc-0.4.6.min.js"></script>
+    …
+  </head>
+  <body>
+    …
+    <p>One over square root of two (inline style, ASCIIMath): `1/(sqrt 2)`</p>
+    …
+    <p>One over square root of two (inline style, jqMath): $1/√2$</p>
+    …
+    <p>One over square root of two (display style, jqMath): $$1/√2$$</p>
+    …
+  </body>
+</html>
 ```
 
 ### Command-line programs
@@ -169,8 +175,9 @@ Instead of generating MathML expression at page load, you can instead rely on co
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
     <title>MathML in HTML5</title>
   </head>
   <body>
@@ -192,15 +199,16 @@ Instead of generating MathML expression at page load, you can instead rely on co
 That page does contain any [`script`](/en-US/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
 
 ```bash
-$ cat input.html | node TeXZilla.js streamfilter > output.html
+cat input.html | node TeXZilla.js streamfilter > output.html
 ```
 
 After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
     <title>MathML in HTML5</title>
   </head>
   <body>
@@ -222,7 +230,7 @@ After running that command, a file `output.html` containing the following HTML o
 There are more sophisticated tools that aim at converting an arbitrary LaTeX document into a document with MathML content. For example, using [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) the following commands will convert `foo.tex` into a HTML or EPUB document:
 
 ```bash
-latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
+latexmlc --dest foo.html foo.tex # Generate a HTML document foo.html
 latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub
 ```
 
@@ -237,34 +245,34 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 
 ## Graphical interfaces
 
+In this section, we review a few editing tools providing graphical interfaces.
+
 ### Input box
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla) has several interfaces, including a [CKEditor plugin](https://ckeditor.com/cke4/addon/texzilla) used on MDN, an [online demo](https://fred-wang.github.io/TeXZilla/), a [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) or a [FirefoxOS Webapp](https://marketplace.firefox.com/app/texzilla-1/). It has also been integrated into [SeaMonkey](https://www.seamonkey-project.org/) since version 2.28 and into [Thunderbird](https://www.thunderbird.net/en-US/) since version 31.[Abiword](http://abisource.org/) contains a small equation editor, based on itex2MML. Finally, [Bluegriffon](http://www.bluegriffon.com/) has an add-on to insert MathML formulas in your document, using ASCII/LaTeX-like syntax.
+A simple approach is to integrate [converters from a simple syntax](#conversion_from_a_simple_syntax) as simple input boxes for mathematics. For example, [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/) provide an **Insert > Math** command that will open a popup window, with a LaTeX-to-MathML input field and a live MathML preview:
 
-![BlueGriffon](mathml-shot1.png)
+![LaTeX input box in Thunderbird](thunderbird.png)
+
+> **Note:** You can also use the **Insert > HTML** command to paste any MathML content.
+
+[LibreOffice](https://www.libreoffice.org/)'s equation editor (File → New → Formula) shows a possible enhancement: its input box for the _StartMath_ syntax provides extra equation panels to insert pre-defined mathematical constructions.
+
+![StarMath input box in Libre Office](libreoffice.png)
+
+> **Note:** To obtain libreoffice's MathML code, save the document as `mml` and open it with your favorite text editor.
 
 ### WYSIYWG editors
 
-[Firemath](https://www.firemath.info/) is an extension for Firefox that provides a WYSIWYG MathML editor. A preview of the formula is displayed using the rendering engine of Mozilla. The generated MathML code is available at the bottom. Use the text field for token elements and buttons to build advanced constructions. Once you are done, you can save your document as a XHTML page.
+Other editors provide math editing features that are directly integrated into their WYSIYWG interface. The following screenshots are taken from [LyX](https://www.lyx.org/) and [TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html), both of them supporting HTML export:
 
-[LyX](https://www.lyx.org/) is a graphical LaTeX editor, which has built-in support for XHTML+MathML export and can be configured to use similar LaTeX-to-(X)HTML converters. You can for example, you can configure it to [use LaTeXML HTML5/EPUB export](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx).
+![Lyx example](lyx.png)
 
-[TeXmacs](https://www.texmacs.org/tmweb/home/welcome.en.html) is a free structured editor with special facilities for mathematics, graphics and interactive sessions. TeXmacs documents can be exported in XHTML+MathML.
+![TeXmacs example](texmacs.png)
 
-![TeXmacs MathML example](tm-mathml-collage.png)
-
-[OpenOffice](https://www.openoffice.org/) and [LibreOffice](https://www.libreoffice.org/) have an equation editor (File → New → Formula). It is semi-WYSIWYG: you enter the source of the formula using the equation panel/keyboard and a preview of the formula is regularly refreshed. The editor uses its own syntax "StarMath" for the source but MathML is also generated when the document is saved. To get the MathML code, save the document as mml and open it with any text editor. Alternatively, you can extract the odf file (which is actually a zip archive) and open an XML file called `content.xml`.
-
-![Open Office Math](openoffice.png)
-
-[Amaya](https://www.w3.org/Amaya/) is the W3C's web editor, which is able to handle MathML inside XHTML documents. Use the Elements and the Special Chars panels to create various advanced mathematical constructs. Simple text such as `a+2` is automatically parsed and the appropriate MathML markup is generated. Once you are done, you can directly save your XHTML page and open it in Mozilla.
-
-## Miscellaneous tools
-
-### Mail clients
-
-In [Thunderbird](https://www.thunderbird.net/en-US/) and [SeaMonkey](https://www.seamonkey-project.org/), you can use the **Insert HTML** command to paste any MathML content, or the **Insert Math** command to use a LaTeX-to-MathML input box. Alternatively, [MathBird](http://disruptive-innovations.com/zoo/MathBird/) provides a similar input box via AsciiMath instead.
+> **Note:** By default Lyx and TeXmacs will use images of formulas in their HTML output. To choose MathML instead, [follow these instructions](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx) for the former and select `User preference > Convert > Export mathematical formulas as MathML` for the latter.
 
 ### Optical character and handwriting recognitions
 
-[Inftyreader](https://www.inftyreader.org/) is able to perform some optical character recognition, including translation of mathematical equations into MathML. Other tools can do handwriting recognition such as the [Windows Math Input Panel](https://msdn.microsoft.com/library/windows/desktop/dd371698(v=vs.85).aspx) or the online converter [Web Equation](https://webdemo.myscript.com/views/math.html).
+A final option to enter mathematics is to rely on user interface for [Optical character recognition](https://en.wikipedia.org/wiki/Optical_character_recognition) or [Handwriting recognition](https://en.wikipedia.org/wiki/Handwriting_recognition). Some of these tools support mathematical formulas and can export them as MathML. The following screenshot shows a [demo from MyScript](https://webdemo.myscript.com/views/math/index.html):
+
+![MyScript](myscript.png)

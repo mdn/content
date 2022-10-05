@@ -12,6 +12,7 @@ tags:
   - Workers
 browser-compat: api.WorkerNavigator
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`WorkerNavigator`** interface represents a subset of the {{DOMxRef("Navigator")}} interface allowed to be accessed from a {{DOMxRef("Worker")}}. Such an object is initialized for each worker and is available via the {{DOMxRef("WorkerGlobalScope.navigator", "self.navigator")}} property.
@@ -30,11 +31,11 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Provides a {{DOMxRef("NetworkInformation")}} object containing information about the network connection of a device.
 - {{DOMxRef("WorkerNavigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
-- {{DOMxRef("WorkerNavigator.language")}} {{readonlyInline}}
+- {{DOMxRef("WorkerNavigator.language")}} {{ReadOnlyInline}}
   - : Returns a string representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
-- {{DOMxRef("WorkerNavigator.languages")}} {{readonlyInline}} {{experimental_inline}}
+- {{DOMxRef("WorkerNavigator.languages")}} {{ReadOnlyInline}}
   - : Returns an array of strings representing the languages known to the user, by order of preference.
-- {{DOMxRef("WorkerNavigator.locks")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{DOMxRef("WorkerNavigator.locks")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing `Lock` object.
 - {{DOMxRef("WorkerNavigator.onLine")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the browser is online.
@@ -44,13 +45,13 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns a string representing the platform of the browser. Do not rely on this property to return the correct value.
 - {{DOMxRef("WorkerNavigator.product")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Always returns `'Gecko'`, on any browser. This property is kept only for compatibility purposes.
-- {{domxref("WorkerNavigator.serial")}} {{readonlyInline}}
+- {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
-- {{DOMxRef("WorkerNavigator.storage")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{DOMxRef("WorkerNavigator.storage")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef('StorageManager')}} interface for managing persistence permissions and estimating available storage.
 - {{DOMxRef("WorkerNavigator.userAgent")}} {{ReadOnlyInline}}
   - : Returns the user agent string for the current browser.
-- {{domxref("WorkerNavigator.userAgentData")}} {{readonlyInline}}
+- {{domxref("WorkerNavigator.userAgentData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
 
 ## Methods
@@ -67,5 +68,5 @@ _The `WorkerNavigator` interface neither inherits nor implements any method._
 
 ## See also
 
-- Other Worker-related interfaces: {{DOMxRef("Worker")}}, {{DOMxRef("WorkerLocation")}}, and {{DOMxRef("WorkerGlobalScope")}}.
-- [Using web workers.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- Other Worker-related interfaces: {{DOMxRef("Worker")}}, {{DOMxRef("WorkerLocation")}}, and {{DOMxRef("WorkerGlobalScope")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - RangeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "repeat count must be non-negative" occurs when the
@@ -15,10 +16,10 @@ argument that is a negative number.
 
 ## Message
 
-```js
-RangeError: argument out of range
+```
+RangeError: Invalid count value: -1 (V8-based)
 RangeError: repeat count must be non-negative (Firefox)
-RangeError: Invalid count value (Chrome)
+RangeError: String.prototype.repeat argument must be greater than or equal to 0 and not be Infinity (Safari)
 ```
 
 ## Error type

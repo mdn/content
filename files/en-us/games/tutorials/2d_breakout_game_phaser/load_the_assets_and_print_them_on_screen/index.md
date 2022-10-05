@@ -12,6 +12,7 @@ tags:
   - Sprites
   - Tutorial
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Scaling", "Games/Workflows/2D_Breakout_game_Phaser/Move the ball")}}
@@ -22,10 +23,10 @@ Our game will feature a ball rolling around the screen, bouncing off a paddle, a
 
 ## Having a ball
 
-Let's start by creating a JavaScript variable to represent our ball. Add the following line between the game initialization code (our `var game...` block) and the `preload()` function:
+Let's start by creating a JavaScript variable to represent our ball. Add the following line between the game initialization code (our `const game` block) and the `preload()` function:
 
 ```js
-var ball;
+let ball;
 ```
 
 > **Note:** For the sake of this tutorial, we will use global variables. The purpose of the tutorial is to teach Phaser-specific approaches to game development rather than dwelling on subjective best approaches.
@@ -36,8 +37,8 @@ Loading images and printing them on our canvas is a lot easier using Phaser than
 
 ```js
 function preload() {
-    // ...
-    game.load.image('ball', 'img/ball.png');
+  // …
+  game.load.image("ball", "img/ball.png");
 }
 ```
 
@@ -45,11 +46,11 @@ The first parameter we want to give the asset is the name that will be used acro
 
 Of course, to load the image, it must be available in our code directory. [Grab the ball image from GitHub](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/ball.png), and save it inside an `/img` directory in the same place as your `index.html` file.
 
-Now, to show it on the screen we will use another Phaser method called `add.sprite()`;  add the following new code line inside the `create()` function as shown:
+Now, to show it on the screen we will use another Phaser method called `add.sprite()`; add the following new code line inside the `create()` function as shown:
 
 ```js
 function create() {
-    ball = game.add.sprite(50, 50, 'ball');
+  ball = game.add.sprite(50, 50, "ball");
 }
 ```
 

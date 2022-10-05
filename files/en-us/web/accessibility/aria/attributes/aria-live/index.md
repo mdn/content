@@ -1,5 +1,5 @@
 ---
-title: 'aria-live'
+title: "aria-live"
 slug: Web/Accessibility/ARIA/Attributes/aria-live
 tags:
   - Accessibility

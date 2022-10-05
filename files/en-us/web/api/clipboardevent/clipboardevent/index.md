@@ -14,6 +14,7 @@ tags:
   - paste
 browser-compat: api.ClipboardEvent.ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}}
 
 The **`ClipboardEvent()`** constructor returns a new {{domxref("ClipboardEvent")}},
@@ -23,7 +24,7 @@ that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event",
 
 ## Syntax
 
-```js
+```js-nolint
 new ClipboardEvent(type)
 new ClipboardEvent(type, options)
 ```

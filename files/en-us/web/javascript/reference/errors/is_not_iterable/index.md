@@ -7,6 +7,7 @@ tags:
   - Reference
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not iterable" occurs when the value which is given as the
@@ -17,9 +18,10 @@ is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_proto
 
 ## Message
 
-```js
-TypeError: 'x' is not iterable (Firefox, Chrome)
-TypeError: 'x' is not a function or its return value is not iterable (Chrome)
+```
+TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator)) (V8-based)
+TypeError: x is not iterable (Firefox)
+TypeError: undefined is not a function (near '...[x]...') (Safari)
 ```
 
 ## Error type

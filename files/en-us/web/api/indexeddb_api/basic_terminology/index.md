@@ -7,6 +7,7 @@ tags:
   - IndexedDB
   - terminology
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 This article describes the key characteristics of IndexedDB, and introduces some essential terminology relevant to understanding the IndexedDB API.
@@ -40,7 +41,7 @@ If you have assumptions from working with other types of databases, you might ge
 - **IndexedDB does not use Structured Query Language (SQL).** It uses queries on an index that produces a cursor, which you use to iterate across the result set. If you are not familiar with NoSQL systems, read the [Wikipedia article on NoSQL](https://en.wikipedia.org/wiki/NoSQL).
 - **IndexedDB adheres to a same-origin policy**. An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of databases. Every database has a name that identifies it within an origin.
 
-  The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in [http://www.example.com/app/](https://www.example.com/app/) can retrieve data from [http://www.example.com/dir/](https://www.example.com/dir/), because they have the same origin, it cannot retrieve data from [http://www.example.com:8080/dir/](https://www.example.com:8080/dir/) (different port) or <https://www.example.com/dir/> (different protocol), because they have different origins.
+  The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in `http://www.example.com/app/` can retrieve data from `http://www.example.com/dir/`, because they have the same origin, it cannot retrieve data from `http://www.example.com:8080/dir/` (different port) or `https://www.example.com/dir/` (different protocol), because they have different origins.
 
   > **Note:** Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (see {{bug("1147821")}}.)
 
@@ -91,7 +92,7 @@ As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to i
 
 An index is a specialized object store for looking up records in another object store, called the _referenced object store_. The index is a persistent key-value storage where the value part of its records is the key part of a record in the referenced object store. The records in an index are automatically populated whenever records in the referenced object store are inserted, updated, or deleted. Each record in an index can point to only one record in its referenced object store, but several indexes can reference the same object store. When the object store changes, all indexes that refer to the object store are automatically updated.
 
-Alternatively, you can also look up records in an object store using the [key](#key)_._
+Alternatively, you can also look up records in an object store using the [key](#key).
 
 To learn more on using indexes, see [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#using_an_index). For the reference documentation on index, see [IDBKeyRange](/en-US/docs/Web/API/IDBKeyRange).
 
@@ -182,4 +183,4 @@ With an understanding of IndexedDB's key characteristics and core terminology un
 - [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [IndexedDB API Reference](/en-US/docs/Web/API/IndexedDB_API)
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [IndexedDB — The Store in Your Browser](https://docs.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10))
+- [IndexedDB — The Store in Your Browser](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)

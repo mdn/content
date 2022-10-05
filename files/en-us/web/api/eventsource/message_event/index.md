@@ -10,6 +10,7 @@ tags:
   - message
 browser-compat: api.EventSource.message_event
 ---
+
 {{APIRef}}
 
 The `message` event of the {{domxref("EventSource")}} API is fired when data is received through an event source.
@@ -21,14 +22,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('message', event => { });
+addEventListener('message', (event) => { });
 
-onmessage = event => { };
+onmessage = (event) => { };
 ```
 
 ## Event type
 
-An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MessageEvent")}}
 
@@ -36,15 +37,15 @@ An {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("MessageEvent.data")}} {{readonlyInline}}
+- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
   - : The data sent by the message emitter.
-- {{domxref("MessageEvent.origin")}} {{readonlyInline}}
+- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
   - : A string representing the origin of the message emitter.
-- {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
+- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : A string representing a unique ID for the event.
-- {{domxref("MessageEvent.source")}} {{readonlyInline}}
+- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
   - : A `MessageEventSource` (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
-- {{domxref("MessageEvent.ports")}} {{readonlyInline}}
+- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
 ## Examples
@@ -58,7 +59,7 @@ const eventList = document.querySelector('ul');
 evtSource.addEventListener('message', (e) => {
   const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 });
 ```
@@ -69,7 +70,7 @@ evtSource.addEventListener('message', (e) => {
 evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
-  newElement.textContent = "message: " + e.data;
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
 };
 ```

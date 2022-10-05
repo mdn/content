@@ -11,6 +11,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.SecurityInfo
 ---
+
 {{AddonSidebar()}}
 
 An object describing the security properties of a particular web request. An object of this type is returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API.
@@ -44,8 +45,6 @@ Values of this type are objects. They contain the following properties:
 
     Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set.
 
-- `hpkp` {{optional_inline}}
-  - : `Boolean`. `true` if the host uses [Public Key Pinning](/en-US/docs/Web/HTTP/Public_Key_Pinning), `false` otherwise.
 - `hsts` {{optional_inline}}
   - : `Boolean`. `true` if the host uses [Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security), `false` otherwise.
 - `isDomainMismatch` {{optional_inline}}

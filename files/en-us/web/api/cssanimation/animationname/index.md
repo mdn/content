@@ -10,7 +10,8 @@ tags:
   - Reference
 browser-compat: api.CSSAnimation.animationName
 ---
-{{APIRef("Web Animations API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Animations API")}}
 
 The **`animationName`** property of the
 {{domxref("CSSAnimation")}} interface returns the {{CSSXref("animation-name")}}. This

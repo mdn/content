@@ -8,6 +8,7 @@ tags:
   - Read-only
 browser-compat: api.Text.assignedSlot
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`assignedSlot`** property of the {{domxref("Text")}} interface

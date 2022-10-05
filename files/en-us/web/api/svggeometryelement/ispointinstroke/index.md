@@ -11,6 +11,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement.isPointInStroke
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGeometryElement.isPointInStroke()`** method
@@ -22,7 +23,7 @@ the element.
 
 ## Syntax
 
-```js
+```js-nolint
 isPointInStroke(point)
 ```
 
@@ -41,14 +42,23 @@ A boolean indicating whether the given point is within the stroke or not.
 ### SVG
 
 ```html
-<svg viewBox="0 0 100 100" width="150" height="150"
-    xmlns="http://www.w3.org/2000/svg">
-  <circle id="circle" cx="50" cy="50" r="45"
-      fill="white" stroke="black" stroke-width="10"/>
+<svg
+  viewBox="0 0 100 100"
+  width="150"
+  height="150"
+  xmlns="http://www.w3.org/2000/svg">
+  <circle
+    id="circle"
+    cx="50"
+    cy="50"
+    r="45"
+    fill="white"
+    stroke="black"
+    stroke-width="10" />
 
-  <circle cx="10" cy="10" r="5" fill="seagreen"/>
-  <circle cx="40" cy="30" r="5" fill="seagreen"/>
-  <circle cx="83" cy="17" r="5" fill="seagreen"/>
+  <circle cx="10" cy="10" r="5" fill="seagreen" />
+  <circle cx="40" cy="30" r="5" fill="seagreen" />
+  <circle cx="83" cy="17" r="5" fill="seagreen" />
 </svg>
 ```
 
@@ -66,8 +76,7 @@ try {
 
   // Point in circle stroke
   console.log('Point at 83,17:', circle.isPointInStroke(new DOMPoint(83, 17)));
-  
-} catch(e) {
+} catch (e) {
   // for the browsers that still support the deprecated interface SVGPoint
   const svg = document.getElementsByTagName('svg')[0];
   const point = svg.createSVGPoint();

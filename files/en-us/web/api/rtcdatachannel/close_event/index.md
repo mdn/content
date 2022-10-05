@@ -18,6 +18,7 @@ tags:
   - Event
 browser-compat: api.RTCDataChannel.close_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`close`** event is sent to the {{domxref("RTCDataChannel.close_event", "onclose")}} event handler on an {{domxref("RTCDataChannel")}} instance when the data transport for the data channel has closed. Before any further data can be transferred using `RTCDataChannel`, a new 'RTCDataChannel' instance must be created.
@@ -29,9 +30,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('close', event => { });
+addEventListener('close', (event) => { });
 
-onclose = event => { };
+onclose = (event) => { };
 ```
 
 ## Event type
@@ -43,7 +44,7 @@ A generic {{domxref("Event")}}.
 This example sets up a handler for the `close` event for the {{domxref("RTCDataChannel")}} named `dc`; its responsibility in this example is to update user interface elements to reflect that there is no longer an ongoing call, and to allow a new call to be started.
 
 ```js
-dc.addEventListener("close", ev => {
+dc.addEventListener("close", (ev) => {
   messageInputBox.disabled = true;
   sendButton.disabled = true;
   connectButton.disabled = false;
@@ -56,7 +57,7 @@ All this code does in response to receiving the `close` event is to disable an i
 You can also use the {{domxref("RTCDataChannel.close_event", "onclose")}} event handler property to set a handler for `close` events:
 
 ```js
-dc.onclose = ev => {
+dc.onclose = (ev) => {
   messageInputBox.disabled = true;
   sendButton.disabled = true;
   connectButton.disabled = false;

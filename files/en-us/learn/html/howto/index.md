@@ -5,6 +5,7 @@ tags:
   - CodingScripting
   - HTML
 ---
+
 {{LearnSidebar}}
 
 The following links point to solutions to common everyday problems you'll need to solve with HTML.

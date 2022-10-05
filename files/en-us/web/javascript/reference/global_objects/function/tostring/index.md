@@ -8,16 +8,16 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Function.toString
 ---
+
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the
-source code of the function.
+The **`toString()`** method returns a string representing the source code of the specified {{jsxref("Function")}}.
 
 {{EmbedInteractiveExample("pages/js/function-tostring.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -27,14 +27,14 @@ A string representing the source code of the function.
 
 ## Description
 
-The {{jsxref("Function")}} object overrides the {{jsxref("Object.prototype.toString",
-    "toString")}} method inherited from {{jsxref("Object")}}; it does not inherit
-{{jsxref("Object.prototype.toString")}}. For user-defined {{jsxref("Function")}}
+The {{jsxref("Function")}} object overrides the `toString()` method
+inherited from {{jsxref("Object")}}; it does not inherit
+{{jsxref("Object.prototype.toString")}}. For user-defined `Function`
 objects, the `toString` method returns a string containing the source text
 segment which was used to define the function.
 
 JavaScript calls the `toString` method automatically when a
-{{jsxref("Function")}} is to be represented as a text value, e.g. when a function is
+`Function` is to be represented as a text value, e.g. when a function is
 concatenated with a string.
 
 The `toString()` method will throw a {{jsxref("TypeError")}} exception
@@ -42,12 +42,13 @@ The `toString()` method will throw a {{jsxref("TypeError")}} exception
 `this` value object is not a `Function` object.
 
 ```js example-bad
-Function.prototype.toString.call('foo'); // TypeError
+Function.prototype.toString.call('foo'); // throws TypeError
 ```
 
-If the `toString()` method is called on built-in function objects or a
-function created by `Function.prototype.bind`, `toString()`
-returns a _native function string_ which looks like
+If the `toString()` method is called on built-in function objects, a
+function created by {{jsxref("Function.prototype.bind()")}}, or
+other non-JavaScript functions, then `toString()` returns a
+_native function string_ which looks like
 
 ```js
 "function someName() { [native code] }"
@@ -69,86 +70,42 @@ Since ES2018, the spec requires the return value of `toString()` to be the exact
 
 ### Comparing actual source code and toString results
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Function</th>
-      <th scope="col">Function.prototype.toString result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><pre class="brush: js">function f(){}</pre></td>
-      <td><pre class="brush: js">"function f(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">class A { a(){} }</pre></td>
-      <td><pre class="brush: js">"class A { a(){} }"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">function* g(){}</pre></td>
-      <td><pre class="brush: js">"function* g(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">a => a</pre></td>
-      <td><pre class="brush: js">"a => a"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">({ a(){} }.a)</pre></td>
-      <td><pre class="brush: js">"a(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">({ *a(){} }.a)</pre></td>
-      <td><pre class="brush: js">"*a(){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">({ [0](){} }[0])</pre></td>
-      <td><pre class="brush: js">"[0](){}"</pre></td>
-    </tr>
-    <tr>
-      <td>
-        <pre class="brush: js">
-Object.getOwnPropertyDescriptor({
-    get a(){}
-}, "a").get</pre
-        >
-      </td>
-      <td><pre class="brush: js">"get a(){}"</pre></td>
-    </tr>
-    <tr>
-      <td>
-        <pre class="brush: js">
-Object.getOwnPropertyDescriptor({
-    set a(x){}
-}, "a").set</pre
-        >
-      </td>
-      <td><pre class="brush: js">"set a(x){}"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">Function.prototype.toString</pre></td>
-      <td>
-        <pre class="brush: js">"function toString() { [native code] }"</pre>
-      </td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">(function f(){}.bind(0))</pre></td>
-      <td><pre class="brush: js">"function () { [native code] }"</pre></td>
-    </tr>
-    <tr>
-      <td><pre class="brush: js">Function("a", "b")</pre></td>
-      <td><pre class="brush: js">"function anonymous(a\n) {\nb\n}"</pre></td>
-    </tr>
-  </tbody>
-</table>
+```js
+function test(fn) {
+  console.log(fn.toString());
+}
+
+function f() {}
+class A { a() {} }
+function* g() {}
+
+test(f); // "function f() {}"
+test(A); // "class A { a() {} }"
+test(g); // "function* g() {}"
+test((a) => a); // "(a) => a"
+test({ a() {} }.a); // "a() {}"
+test({ *a() {} }.a); // "*a() {}"
+test({ [0](){} }[0]); // "[0]() {}"
+test(Object.getOwnPropertyDescriptor({
+  get a() {},
+}, "a").get); // "get a() {}"
+test(Object.getOwnPropertyDescriptor({
+  set a(x) {},
+}, "a").set); // "set a(x) {}"
+test(Function.prototype.toString); // "function toString() { [native code] }"
+test(function f() {}.bind(0)); // "function () { [native code] }"
+test(Function("a", "b")); // function anonymous(a\n) {\nb\n}
+```
+
+Note that after the `Function.prototype.toString()` revision, when `toString()` is called, implementations are never allowed to synthesize a function's source that is not a native function string. The method always returns the exact source code used to create the function — including the [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) examples above. The [`Function`](/en-US/docs/Web/JavaScript/Reference/Functions) constructor itself has the capability of synthesizing the source code for the function (and is therefore a form of implicit [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
 
 ### Getting source text of a function
 
-It is possible to get the source text of a function using the `+` operator to concatenate it with a string:
+It is possible to get the source text of a function by coercing it to a string — for example, by wrapping it in a template literal:
 
 ```js
 function foo() { return 'bar' }
-console.log(foo + ''); // "function foo() { return 'bar' }"
+console.log(`${foo}`); // "function foo() { return 'bar' }"
 ```
 
 This source text is _exact_, including any interspersed comments (which won't be stored by the engine's internal representation otherwise).

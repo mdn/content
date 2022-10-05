@@ -10,6 +10,7 @@ tags:
   - Experimental
 browser-compat: javascript.builtins.Array.group
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 The **`group()`** method groups the elements of the calling array according to the string values returned by a provided testing function.
@@ -22,21 +23,21 @@ If you need to group elements using a key that is some arbitrary value, use {{js
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
-group((element) => { /* ... */ } )
-group((element, index) => { /* ... */ } )
-group((element, index, array) => { /* ... */ } )
+group((element) => { /* … */ } )
+group((element, index) => { /* … */ } )
+group((element, index, array) => { /* … */ } )
 
 // Callback function
 group(callbackFn)
 group(callbackFn, thisArg)
 
 // Inline callback function
-group(function(element) { /* ... */ })
-group(function(element, index) { /* ... */ })
-group(function(element, index, array){ /* ... */ })
-group(function(element, index, array) { /* ... */ }, thisArg)
+group(function(element) { /* … */ })
+group(function(element, index) { /* … */ })
+group(function(element, index, array){ /* … */ })
+group(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
@@ -58,10 +59,11 @@ group(function(element, index, array) { /* ... */ }, thisArg)
     It must be possible to coerce this returned callback value into a string (which will then be used as a property name in the final returned object).
 
 - `thisArg` {{optional_inline}}
+
   - : Object to use as {{jsxref("Operators/this", "this")}} inside `callbackFn`.
 
-     The argument is ignored in arrow functions, as they have their own lexical scope that will be used instead.
-     Otherwise, if `thisArg` not specified, then either the `this` of the executing scope is used, or `undefined` if the function is called in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+    The argument is ignored in arrow functions, as they have their own lexical scope that will be used instead.
+    Otherwise, if `thisArg` not specified, then either the `this` of the executing scope is used, or `undefined` if the function is called in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
 ### Return value
 
@@ -79,17 +81,15 @@ The `group()` method executes the `callbackFn` function once for each index of t
 A new property and array is created in the result object for each unique group name that is returned by the callback.
 Each element is added to the array in the property that corresponds to its group.
 
-Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
-Changing the internal structure of these elements will be reflected in both the original array and the returned object.
+`callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
 
 `callbackFn` is called with the value of the current element, the current index, and the array itself.
 While groups often depend only on the current element, it is possible to implement grouping strategies based on the values of other elements in the array.
 
-`callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
-This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
-
 If a `thisArg` parameter is provided to `group()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
 If it is not provided, then {{jsxref("undefined")}} is used.
+
+The `group()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns an object of arrays that contains the same elements as the ones from the original array. Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}). Changing the internal structure of these elements will be reflected in both the original array and the returned object.
 
 ### Mutating the array in the callback
 
@@ -106,13 +106,15 @@ Therefore:
 
 ## Examples
 
+### Using group()
+
 First we define an array containing objects representing an inventory of different foodstuffs.
 Each food has a `type` and a `quantity`.
 
 ```js
 const inventory = [
   { name: 'asparagus', type: 'vegetables', quantity: 5 },
-  { name: 'bananas',  type: 'fruit', quantity: 0 },
+  { name: 'bananas', type: 'fruit', quantity: 0 },
   { name: 'goat', type: 'meat', quantity: 23 },
   { name: 'cherries', type: 'fruit', quantity: 5 },
   { name: 'fish', type: 'meat', quantity: 22 }
@@ -122,7 +124,7 @@ const inventory = [
 The code below groups the elements by the value of their `type` property.
 
 ```js
-let result = inventory.group( ({ type }) => type );
+const result = inventory.group(({ type }) => type);
 
 /* Result is:
 {
@@ -150,11 +152,11 @@ We can also create groups inferred from values in one or more properties of the 
 Below is a very similar example that puts the items into `ok` or `restock` groups based on the value of the `quantity` field.
 
 ```js
-function myCallback( { quantity } ) {
+function myCallback({ quantity }) {
   return quantity > 5 ? 'ok' : 'restock';
 }
 
-result = inventory.group( myCallback );
+const result2 = inventory.group(myCallback);
 
 /* Result is:
 {
@@ -169,6 +171,14 @@ result = inventory.group( myCallback );
   ]
 }
 */
+```
+
+### Using group() on sparse arrays
+
+When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `group()` method iterates empty slots as if they have the value `undefined`.
+
+```js
+console.log([1, , 3].group((x) => x)); // { 1: [1], undefined: [undefined], 3: [3] }
 ```
 
 ## Specifications

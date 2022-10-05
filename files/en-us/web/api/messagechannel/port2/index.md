@@ -5,13 +5,14 @@ page-type: web-api-instance-property
 tags:
   - API
   - Channel messaging
-  - HTML5
+  - HTML
   - MessageChannel
   - Property
   - Reference
   - port2
 browser-compat: api.MessageChannel.port2
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`port2`** read-only property of the
@@ -37,11 +38,11 @@ IFrame (using {{domxref("MessagePort.message_event", "onmessage")}}), putting it
 {{domxref("MessageChannel.port1")}} is listened to, to check when the message arrives.
 
 ```js
-var channel = new MessageChannel();
-var para = document.querySelector('p');
+const channel = new MessageChannel();
+const para = document.querySelector('p');
 
-var ifr = document.querySelector('iframe');
-var otherWindow = ifr.contentWindow;
+const ifr = document.querySelector('iframe');
+const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
@@ -55,7 +56,7 @@ function handleMessage(e) {
 }
 ```
 
-For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) on GitHub ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
 ## Specifications
 

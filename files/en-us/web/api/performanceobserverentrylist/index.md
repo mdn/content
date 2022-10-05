@@ -9,6 +9,7 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserverEntryList
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 The **`PerformanceObserverEntryList`** interface is a list of {{domxref("PerformanceEntry","performance events", '', 'true')}} that were explicitly _observed_ via the {{domxref("PerformanceObserver.observe","observe()")}} method.
@@ -29,12 +30,9 @@ Note: this interface is exposed to {{domxref("Window")}} and {{domxref("Worker")
 ```js
 // Create observer for all performance event types
 // list is of type PerformanceObserveEntryList
-const observe_all = new PerformanceObserver(function(list, obs) {
-   const perfEntries = list.getEntries();
-   for (let i = 0; i < perfEntries.length; i++) {
-      print_perf_entry(perfEntries[i]);
-      // do something with it
-   }
+const observe_all = new PerformanceObserver((list, obs) => {
+  const perfEntries = list.getEntries();
+  perfEntries.forEach((entry) => print_perf_entry(entry));
 })
 ```
 

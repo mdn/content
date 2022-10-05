@@ -8,6 +8,7 @@ tags:
   - Statement
 browser-compat: javascript.statements.var
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`var` statement** declares a function-scoped or
@@ -17,8 +18,8 @@ globally-scoped variable, optionally initializing it to a value.
 
 ## Syntax
 
-```js
-var varname1 [= value1] [, varname2 [= value2] ... [, varnameN [= valueN]]];
+```js-nolint
+var varname1 [= value1] [, varname2 [= value2] ... [, varnameN [= valueN]]]
 ```
 
 - `varnameN`
@@ -92,10 +93,10 @@ straightforward property of the global object. JavaScript has automatic memory
 management, and it would make no sense to be able to use the `delete`
 operator on a global variable.
 
-```js
+```js example-bad
 'use strict';
 var x = 1;
-globalThis.hasOwnProperty('x'); // true
+Object.hasOwn(globalThis, 'x'); // true
 delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
 delete x;  // SyntaxError in strict mode. Fails silently otherwise.
 ```
@@ -112,14 +113,12 @@ to a value, the scope chain is searched. This means that properties on the globa
 are conveniently visible from every scope, without having to qualify the names with
 `globalThis.` or `window.` or `global.`.
 
-Because the global object has a `String` property (`globalThis.hasOwnProperty('String')`), you can use the following code:
+Because the global object has a `String` property (`Object.hasOwn(globalThis, 'String')`), you can use the following code:
 
 ```js
 function foo() {
   String('s') // Note the function `String` is implicitly visible
 }
-```
-
 ```
 
 So the global object will ultimately be searched for unqualified identifiers. You don't
@@ -130,13 +129,10 @@ scope chain, assume you want to create a property with that name on the global o
 
 ```js
 foo = 'f' // In non-strict mode, assumes you want to create a property named `foo` on the global object
-globalThis.hasOwnProperty('foo') // true
+Object.hasOwn(globalThis, 'foo') // true
 ```
 
-In ECMAScript 5, this behavior was changed for [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
-Assignment to an unqualified identifier in strict mode will result in a
-`ReferenceError`, to avoid the accidental creation of properties on the
-global object.
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), assignment to an unqualified identifier in strict mode will result in a `ReferenceError`, to avoid the accidental creation of properties on the global object.
 
 Note that the implication of the above, is that, contrary to popular misinformation,
 JavaScript does not have implicit or undeclared variables, it merely has a syntax that
@@ -153,9 +149,11 @@ declaration is moved to the top of the function or global code.
 ```js
 bla = 2;
 var bla;
+```
 
-// ...is implicitly understood as:
+This is implicitly understood as:
 
+```js
 var bla;
 bla = 2;
 ```
@@ -174,9 +172,11 @@ function do_something() {
   var bar = 111;
   console.log(bar); // 111
 }
+```
 
-// ...is implicitly understood as:
+This is implicitly understood as:
 
+```js
 function do_something() {
   var bar;
   console.log(bar); // undefined
@@ -198,9 +198,11 @@ var a = 0, b = 0;
 ```js
 var a = 'A';
 var b = a;
+```
 
-// ...is equivalent to:
+This is equivalent to:
 
+```js
 var a, b = a = 'A';
 ```
 
@@ -212,7 +214,7 @@ console.log(x + y); // undefinedA
 ```
 
 Here, `x` and `y` are declared before any code is executed, but
-the assignments occur later. At the time "`x = y`" is evaluated,
+the assignments occur later. At the time `x = y` is evaluated,
 `y` exists so no `ReferenceError` is thrown and its value is
 `undefined`. So, `x` is assigned the undefined value. Then,
 `y` is assigned the value `'A'`. Consequently, after the first

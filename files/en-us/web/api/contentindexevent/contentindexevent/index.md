@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.ContentIndexEvent.ContentIndexEvent
 ---
+
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
 The **`ContentIndexEvent()`** constructor creates a new {{domxref("ContentIndexEvent")}} object
@@ -21,7 +22,7 @@ whose type and other options are configured as specified.
 
 ## Syntax
 
-```js
+```js-nolint
 new ContentIndexEvent(type, options)
 ```
 
@@ -44,11 +45,11 @@ A new {{domxref("ContentIndexEvent")}} object configured using the given options
 This examples constructs a new {{domxref('ContentIndexEvent')}} with the relevant id.
 
 ```js
-var removeData = {
-  id : 'unique-content-id'
-}
+const removeData = {
+  id: "unique-content-id",
+};
 
-var ciEvent = new ContentIndexEvent('contentdelete', removeData);
+const ciEvent = new ContentIndexEvent("contentdelete", removeData);
 
 ciEvent.id; // should return 'unique-content-id'
 ```

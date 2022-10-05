@@ -16,6 +16,7 @@ tags:
   - audiotracks
 browser-compat: api.HTMLMediaElement.audioTracks
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`audioTracks`**
@@ -34,11 +35,11 @@ existing ones removed. See {{SectionOnPage("/en-US/docs/Web/API/AudioTrackList",
 
 ## Value
 
-A {{domxref("AudioTrackList")}} object representing the list of audio tracks included
+An {{domxref("AudioTrackList")}} object representing the list of audio tracks included
 in the media element. The list of tracks can be accessed using array notation, or using
 the object's {{domxref("AudioTrackList.getTrackById", "getTrackById()")}} method.
 
-Each track is represented by a {{domxref("AudioTrack")}} object which provides
+Each track is represented by an {{domxref("AudioTrack")}} object which provides
 information about the track.
 
 ## Examples

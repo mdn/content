@@ -9,6 +9,7 @@ tags:
   - String
 browser-compat: javascript.builtins.String.concat
 ---
+
 {{JSRef}}
 
 The **`concat()`** method concatenates
@@ -18,10 +19,10 @@ the string arguments to the calling string and returns a new string.
 
 ## Syntax
 
-```js
+```js-nolint
 concat(str1)
 concat(str1, str2)
-concat(str1, str2, ... , strN)
+concat(str1, str2, /* …, */ strN)
 ```
 
 ### Parameters
@@ -42,11 +43,7 @@ don't affect the other.
 If the arguments are not of the type string, they are converted to string values before
 concatenating.
 
-## Performance
-
-It is strongly recommended to use the {{jsxref("Operators/Assignment_Operators",
-  "assignment operators", "", 1)}} (`+`, `+=`) instead of
-the `concat()` method.
+The `concat()` method is very similar to the [addition/string concatenation operators](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) (`+`, `+=`), except that `concat()` [coerces its arguments directly to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), while addition coerces its operands to primitives first. For more information, see the reference page for the [`+` operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition).
 
 ## Examples
 
@@ -55,11 +52,11 @@ the `concat()` method.
 The following example combines strings into a new string.
 
 ```js
-let hello = 'Hello, '
-console.log(hello.concat('Kevin', '. Have a nice day.'))
+const hello = 'Hello, ';
+console.log(hello.concat('Kevin', '. Have a nice day.'));
 // Hello, Kevin. Have a nice day.
 
-let greetList = ['Hello', ' ', 'Venkat', '!']
+const greetList = ['Hello', ' ', 'Venkat', '!'];
 "".concat(...greetList)  // "Hello Venkat!"
 
 "".concat({})    // [object Object]
@@ -80,4 +77,4 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 ## See also
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}
+- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

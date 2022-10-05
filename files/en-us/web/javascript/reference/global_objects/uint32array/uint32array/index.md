@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Uint32Array.Uint32Array
 ---
+
 {{JSRef}}
 
 The **`Uint32Array()`** typed array constructor creates an
@@ -20,16 +21,18 @@ notation).
 
 ## Syntax
 
-```js
-new Uint32Array(); // new in ES2017
-new Uint32Array(length);
-new Uint32Array(typedArray);
-new Uint32Array(object);
+```js-nolint
+new Uint32Array()
+new Uint32Array(length)
+new Uint32Array(typedArray)
+new Uint32Array(object)
 
-new Uint32Array(buffer);
-new Uint32Array(buffer, byteOffset);
-new Uint32Array(buffer, byteOffset, length);
+new Uint32Array(buffer)
+new Uint32Array(buffer, byteOffset)
+new Uint32Array(buffer, byteOffset, length)
 ```
+
+> **Note:** `Uint32Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -97,23 +100,6 @@ console.log(uint32FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Uint32Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Uint32Array` constructor as a function without `new`, will throw
-a {{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Uint32Array([1, 2, 3]);
-// TypeError: calling a builtin Uint32Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Uint32Array([1, 2, 3]);
-```
 
 ## See also
 

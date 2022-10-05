@@ -12,6 +12,7 @@ tags:
   - web console
 browser-compat: api.console.timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.timeEnd()`** stops a timer that was previously started by calling {{domxref("console.time()")}}.
@@ -23,7 +24,7 @@ details and examples.
 
 ## Syntax
 
-```js
+```js-nolint
 timeEnd(label)
 ```
 
@@ -44,7 +45,7 @@ None ({{jsxref("undefined")}}).
 console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
-alert("Do a bunch of other stuff...");
+alert("Do a bunch of other stuff…");
 console.timeEnd("answer time");
 ```
 

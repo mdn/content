@@ -7,10 +7,13 @@ tags:
   - Experimental
   - Network Information API
   - NetworkInformation
+  - Property
+  - Read-only
   - Reference
   - effectiveType
 browser-compat: api.NetworkInformation.effectiveType
 ---
+
 {{SeeCompatTable}}{{APIRef("Network Information API")}}
 
 The **`effectiveType`** read-only property of the

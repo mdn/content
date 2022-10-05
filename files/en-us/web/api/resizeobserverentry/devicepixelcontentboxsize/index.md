@@ -11,6 +11,7 @@ tags:
   - devicePixelContentBoxSize
 browser-compat: api.ResizeObserverEntry.devicePixelContentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`devicePixelContentBoxSize`** read-only property of
@@ -49,7 +50,7 @@ const observer = new ResizeObserver((entries) => {
 
   /* … render to canvas … */
 });
-observer.observe(canvas, {box: ['device-pixel-content-box']});
+observer.observe(canvas, {box: 'device-pixel-content-box'});
 ```
 
 ## Specifications

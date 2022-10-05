@@ -8,15 +8,16 @@ tags:
   - JavaScript
   - Legacy Iterator
 ---
+
 {{jsSidebar("More")}}
 
-> **Warning:** The legacy iterator protocol was a SpiderMonkey-specific feature, which is removed in Firefox 58+. For future-facing usages, consider using [for..of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
+> **Warning:** The legacy iterator protocol was a SpiderMonkey-specific feature, which is removed in Firefox 58+. For future-facing usages, consider using [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ## The deprecated Firefox-only iterator protocol
 
 Firefox, prior to version 26 implemented another iterator protocol that is similar to the standard [ES2015 Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
-An object is an legacy iterator when it implements a `next()` method with the following semantics, and throws {{jsxref("Global_Objects/StopIteration", "StopIteration")}} at the end of iteration.
+An object is an legacy iterator when it implements a `next()` method with the following semantics, and throws `StopIteration` at the end of iteration.
 
 | Property | Value                                            |
 | -------- | ------------------------------------------------ |
@@ -25,7 +26,7 @@ An object is an legacy iterator when it implements a `next()` method with the fo
 ### Difference between legacy and ES2015 iterator protocols
 
 - The value was returned directly as a return value of calls to `next`, instead of the `value` property of a placeholder object
-- Iteration termination was expressed by throwing a {{jsxref("Global_Objects/StopIteration", "StopIteration")}} object.
+- Iteration termination was expressed by throwing a `StopIteration` object.
 
 ### Simple example with the old protocol
 
@@ -37,8 +38,9 @@ function makeIterator(array) {
     next() {
       if (nextIndex < array.length) {
         return array[nextIndex++];
-      else
+      } else {
         throw new StopIteration();
+      }
     }
   }
 }

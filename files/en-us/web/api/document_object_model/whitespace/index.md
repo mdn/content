@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - whitespace
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The presence of whitespace in the [DOM](/en-US/docs/Web/API/Document_Object_Model) can cause layout problems and make manipulation of the content tree difficult in unexpected ways, depending on where it is located. This article explores when difficulties can occur, and looks at what can be done to mitigate resulting problems.
@@ -33,7 +34,7 @@ This source code contains a couple of line feeds after the `DOCTYPE` and a bunch
 
 This is so that whitespace characters don't impact the layout of your page. Creating space around and inside elements is the job of CSS.
 
-### What _does_ happen to whitespace?
+### What does happen to whitespace?
 
 They don't just disappear, however.
 
@@ -46,8 +47,9 @@ Take the following document, for example:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+  <meta charset="UTF-8">
   <title>My Document</title>
 </head>
 <body>
@@ -61,7 +63,7 @@ Take the following document, for example:
 
 The DOM tree for this looks like so:
 
-![dom tree equivalent of the above HTML example](dom-string.png)
+![The DOM tree representing a simple HTML document](dom-string.png)
 
 Conserving whitespace characters in the DOM is useful in many ways, but there are certain places where this makes certain layouts more difficult to implement, and causes problems for developers who want to iterate through nodes in the DOM. We'll look at these, and some solutions, later on.
 
@@ -71,7 +73,7 @@ Most whitespace characters are ignored, not all of them are. In the earlier exam
 
 #### Example
 
-Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:
+Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥, and all line breaks with ⏎:
 
 This example:
 
@@ -103,35 +105,35 @@ Inside this context, whitespace character processing can be summarized as follow
 
 1. First, all spaces and tabs immediately before and after a line break are ignored so, if we take our example markup from before and apply this first rule, we get:
 
-    ```html
-    <h1>◦◦◦Hello⏎
-    <span>◦World!</span>⇥◦◦</h1>
-    ```
+   ```html
+   <h1>◦◦◦Hello⏎
+   <span>◦World!</span>⇥◦◦</h1>
+   ```
 
 2. Next, all tab characters are handled as space characters, so the example becomes:
 
-    ```html
-    <h1>◦◦◦Hello⏎
-    <span>◦World!</span>◦◦◦</h1>
-    ```
+   ```html
+   <h1>◦◦◦Hello⏎
+   <span>◦World!</span>◦◦◦</h1>
+   ```
 
 3. Next, line breaks are converted to spaces:
 
-    ```html
-    <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
-    ```
+   ```html
+   <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
+   ```
 
 4. After that, any space immediately following another space (even across two separate inline elements) is ignored, so we end up with:
 
-    ```html
-    <h1>◦Hello◦<span>World!</span>◦</h1>
-    ```
+   ```html
+   <h1>◦Hello◦<span>World!</span>◦</h1>
+   ```
 
 5. And finally, sequences of spaces at the beginning and end of an element are removed, so we finally get this:
 
-    ```html
-    <h1>Hello◦<span>World!</span></h1>
-    ```
+   ```html
+   <h1>Hello◦<span>World!</span></h1>
+   ```
 
 This is why people visiting the web page will see the phrase "Hello World!" nicely written at the top of the page, rather than a weirdly indented "Hello" followed but an even more weirdly indented "World!" on the line below that.
 
@@ -175,23 +177,23 @@ We can summarize how the whitespace here is handled as follows (the may be some 
 
 1. Because we're inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 `<div>`s. Blocks occupy the full width available and are stacked on top of each other, which means that we end up with a layout composed of this list of blocks:
 
-    ```html
-    <block>⏎⇥</block>
-    <block>◦◦Hello◦◦</block>
-    <block>⏎◦◦◦</block>
-    <block>◦◦World!◦◦</block>
-    <block>◦◦⏎</block>
-    ```
+   ```html
+   <block>⏎⇥</block>
+   <block>◦◦Hello◦◦</block>
+   <block>⏎◦◦◦</block>
+   <block>◦◦World!◦◦</block>
+   <block>◦◦⏎</block>
+   ```
 
 2. This is then simplified further by applying the processing rules for whitespace in inline formatting contexts to these blocks:
 
-    ```html
-    <block></block>
-    <block>Hello</block>
-    <block></block>
-    <block>World!</block>
-    <block></block>
-    ```
+   ```html
+   <block></block>
+   <block>Hello</block>
+   <block></block>
+   <block>World!</block>
+   <block></block>
+   ```
 
 3. The 3 empty blocks we now have are not going to occupy any space in the final layout, because they don't contain anything, so we'll end up with only 2 blocks taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you'd expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
 
@@ -287,14 +289,14 @@ If you need to rely on `inline-block`, you could set the [`font-size`](/en-US/do
 ```css
 ul {
   font-size: 0;
-  ...
+  /* … */
 }
 
 li {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  ...
+  /* … */
 }
 ```
 
@@ -333,7 +335,7 @@ The JavaScript code below defines several functions that make it easier to deal 
  *  "\r" CR  \u000D
  *  " "  SPC \u0020
  *
- * This does not use Javascript's "\s" because that includes non-breaking
+ * This does not use JavaScript's "\s" because that includes non-breaking
  * spaces (and also some other characters).
  */
 
@@ -345,9 +347,7 @@ The JavaScript code below defines several functions that make it easier to deal 
  * @return     True if all of the text content of |nod| is whitespace,
  *             otherwise false.
  */
-function is_all_ws( nod )
-{
-  // Use ECMA-262 Edition 3 String and RegExp features
+function is_all_ws(nod) {
   return !(/[^\t\n\r ]/.test(nod.textContent));
 }
 
@@ -361,15 +361,14 @@ function is_all_ws( nod )
  *             and otherwise false.
  */
 
-function is_ignorable( nod )
-{
-  return ( nod.nodeType == 8) || // A comment node
-         ( (nod.nodeType == 3) && is_all_ws(nod) ); // a text node, all ws
+function is_ignorable(nod) {
+  return (nod.nodeType === 8) || // A comment node
+         (nod.nodeType === 3 && is_all_ws(nod)); // a text node, all ws
 }
 
 /**
  * Version of |previousSibling| that skips nodes that are entirely
- * whitespace or comments.  (Normally |previousSibling| is a property
+ * whitespace or comments. (Normally |previousSibling| is a property
  * of all DOM nodes that gives the sibling node, the node that is
  * a child of the same parent, that occurs immediately before the
  * reference node.)
@@ -380,10 +379,11 @@ function is_ignorable( nod )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function node_before( sib )
-{
+function node_before(sib) {
   while ((sib = sib.previousSibling)) {
-    if (!is_ignorable(sib)) return sib;
+    if (!is_ignorable(sib)) {
+      return sib;
+    }
   }
   return null;
 }
@@ -398,17 +398,18 @@ function node_before( sib )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function node_after( sib )
-{
+function node_after(sib) {
   while ((sib = sib.nextSibling)) {
-    if (!is_ignorable(sib)) return sib;
+    if (!is_ignorable(sib)) {
+      return sib;
+    }
   }
   return null;
 }
 
 /**
  * Version of |lastChild| that skips nodes that are entirely
- * whitespace or comments.  (Normally |lastChild| is a property
+ * whitespace or comments. (Normally |lastChild| is a property
  * of all DOM nodes that gives the last of the nodes contained
  * directly in the reference node.)
  *
@@ -418,11 +419,12 @@ function node_after( sib )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function last_child( par )
-{
-  let res=par.lastChild;
+function last_child(par) {
+  let res = par.lastChild;
   while (res) {
-    if (!is_ignorable(res)) return res;
+    if (!is_ignorable(res)) {
+      return res;
+    }
     res = res.previousSibling;
   }
   return null;
@@ -438,11 +440,12 @@ function last_child( par )
  *                  ignorable according to |is_ignorable|, or
  *               2) null if no such node exists.
  */
-function first_child( par )
-{
-  let res=par.firstChild;
+function first_child(par) {
+  let res = par.firstChild;
   while (res) {
-    if (!is_ignorable(res)) return res;
+    if (!is_ignorable(res)) {
+      return res;
+    }
     res = res.nextSibling;
   }
   return null;
@@ -450,22 +453,22 @@ function first_child( par )
 
 /**
  * Version of |data| that doesn't include whitespace at the beginning
- * and end and normalizes all whitespace to a single space.  (Normally
+ * and end and normalizes all whitespace to a single space. (Normally
  * |data| is a property of text nodes that gives the text of the node.)
  *
  * @param txt  The text node whose data should be returned
  * @return     A string giving the contents of the text node with
  *             whitespace collapsed.
  */
-function data_of( txt )
-{
+function data_of(txt) {
   let data = txt.textContent;
-  // Use ECMA-262 Edition 3 String and RegExp features
   data = data.replace(/[\t\n\r ]+/g, " ");
-  if (data.charAt(0) == " ")
+  if (data[0] === " ") {
     data = data.substring(1, data.length);
-  if (data.charAt(data.length - 1) == " ")
+  }
+  if (data[data.length - 1] === " ") {
     data = data.substring(0, data.length - 1);
+  }
   return data;
 }
 ```
@@ -475,11 +478,9 @@ function data_of( txt )
 The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is `"This is the third paragraph"`, and then changes the class attribute and the contents of that paragraph.
 
 ```js
-const cur = first_child(document.getElementById("test"));
-while (cur)
-{
-  if (data_of(cur.firstChild) == "This is the third paragraph.")
-  {
+let cur = first_child(document.getElementById("test"));
+while (cur) {
+  if (data_of(cur.firstChild) === "This is the third paragraph.") {
     cur.className = "magic";
     cur.firstChild.textContent = "This is the magic paragraph.";
   }

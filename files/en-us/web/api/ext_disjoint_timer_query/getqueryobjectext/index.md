@@ -10,6 +10,7 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.getQueryObjectEXT
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_disjoint_timer_query.getQueryObjectEXT()`** method
@@ -18,7 +19,7 @@ query object.
 
 ## Syntax
 
-```js
+```js-nolint
 getQueryObjectEXT(query, pname)
 ```
 
@@ -46,8 +47,7 @@ const ext = gl.getExtension('EXT_disjoint_timer_query');
 const query = ext.createQueryEXT();
 ext.beginQueryEXT(ext.TIME_ELAPSED_EXT, query);
 
-// ... drawing ...
-
+// Draw
 ext.endQueryEXT(ext.TIME_ELAPSED_EXT);
 
 // At some point in the future, after returning control to the browser

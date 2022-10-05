@@ -16,6 +16,7 @@ tags:
   - pip
 browser-compat: api.PictureInPictureWindow
 ---
+
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
 The **Picture-in-Picture API** allow websites to create a floating video window always on top of other windows so that users may continue consuming media while they interact with other content sites, or applications on their device.
@@ -41,7 +42,7 @@ The Picture-in-Picture API adds methods to the {{DOMxRef("HTMLVideoElement")}} a
 
 ## Properties
 
-*The Picture-in-Picture API augments the* {{DOMxRef("HTMLVideoElement")}}, {{DOMxRef("Document")}}, and {{DOMxRef("ShadowRoot")}} _interfaces with properties that can be used to determine if the floating video window mode is supported and available, if picture-in-picture mode is currently active, and which video is floating._
+The Picture-in-Picture API augments the {{DOMxRef("HTMLVideoElement")}}, {{DOMxRef("Document")}}, and {{DOMxRef("ShadowRoot")}} interfaces with properties that can be used to determine if the floating video window mode is supported and available, if picture-in-picture mode is currently active, and which video is floating.
 
 ### Properties on the HTMLVideoElement interface
 
@@ -71,6 +72,10 @@ _The Picture-in-Picture API defines three events, which can be used to detect wh
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
   - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when it changes size.
 
+## Adding Controls
+
+If media action handlers have been set via the [Media Session API](/en-US/docs/Web/API/Media_Session_API), then appropriate controls for those actions will be added by the browser to the picture-in-picture overlay. For example, if a `"nexttrack"` action has been set, then a skip button might be displayed in the picture-in-picture view. There is no support for adding custom HTML buttons or controls.
+
 ## Controlling styling
 
 The [`:picture-in-picture`](/en-US/docs/Web/CSS/:picture-in-picture) [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
@@ -94,11 +99,9 @@ This code is called by a click handler when the user clicks the "Toggle Picture-
 ```js
 function togglePictureInPicture() {
   if (document.pictureInPictureElement) {
-      document.exitPictureInPicture();
-  } else {
-    if (document.pictureInPictureEnabled) {
-      video.requestPictureInPicture();
-    }
+    document.exitPictureInPicture();
+  } else if (document.pictureInPictureEnabled) {
+    video.requestPictureInPicture();
   }
 }
 ```

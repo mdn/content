@@ -15,6 +15,7 @@ tags:
   - StyleSheet
 browser-compat: api.CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet`** interface represents a single [CSS](/en-US/docs/Web/CSS) stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
@@ -70,20 +71,20 @@ _Inherits methods from its parent, {{domxref("StyleSheet")}}._
 
 _These properties are legacy properties as introduced by Microsoft; these are maintained for compatibility with existing sites._
 
-- {{domxref("CSSStyleSheet.rules", "rules")}} {{ReadOnlyInline}}
+- {{domxref("CSSStyleSheet.rules", "rules")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : The `rules` property is functionally identical to the standard {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property; it returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of all of the rules in the style sheet.
 
 ## Legacy methods
 
 _These methods are legacy methods as introduced by Microsoft; these are maintained for compatibility with existing sites._
 
-- {{domxref("CSSStyleSheet.addRule", "addRule()")}}
+- {{domxref("CSSStyleSheet.addRule", "addRule()")}} {{Deprecated_Inline}}
 
   - : Adds a new rule to the stylesheet given the selector to which the style applies and the style block to apply to the matching elements.
 
     This differs from {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}, which takes the textual representation of the entire rule as a single string.
 
-- {{domxref("CSSStyleSheet.removeRule", "removeRule()")}}
+- {{domxref("CSSStyleSheet.removeRule", "removeRule()")}} {{Deprecated_Inline}}
   - : Functionally identical to {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}; removes the rule at the specified index from the stylesheet's rule list.
 
 ## Obtaining a StyleSheet

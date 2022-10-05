@@ -5,7 +5,6 @@ page-type: web-api-interface
 tags:
   - API
   - Bounding Box
-  - Experimental
   - Interface
   - Reference
   - Resize Observer API
@@ -14,6 +13,7 @@ tags:
   - observers
 browser-compat: api.ResizeObserver
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`ResizeObserver`** interface reports changes to the dimensions of an {{domxref('Element')}}'s content or border box, or the bounding box of an {{domxref('SVGElement')}}.
@@ -42,7 +42,7 @@ None.
 
 ## Examples
 
-In the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example, we use the resize observer to change the {{cssxref("font-size")}} of a header and paragraph as a slider's value is changed causing the containing `<div>` to change width. This shows that you can respond to changes in an element's size, even if they have nothing to do with the viewport.
+In the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) example, we use the resize observer to change the {{cssxref("font-size")}} of a header and paragraph as a slider's value is changed causing the containing `<div>` to change width. This shows that you can respond to changes in an element's size, even if they have nothing to do with the viewport.
 
 We also provide a checkbox to turn the observer off and on. If it is turned off, the text will not change in response to the `<div>`'s width changing.
 
@@ -58,20 +58,20 @@ const checkbox = document.querySelector('input[type="checkbox"]');
 divElem.style.width = '600px';
 
 slider.addEventListener('input', () => {
-  divElem.style.width = slider.value + 'px';
+  divElem.style.width = `${slider.value}px`;
 })
 
-const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    if(entry.contentBoxSize) {
+const resizeObserver = new ResizeObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.contentBoxSize) {
       // Firefox implements `contentBoxSize` as a single content rect, rather than an array
       const contentBoxSize = Array.isArray(entry.contentBoxSize) ? entry.contentBoxSize[0] : entry.contentBoxSize;
 
-      h1Elem.style.fontSize = Math.max(1.5, contentBoxSize.inlineSize / 200) + 'rem';
-      pElem.style.fontSize = Math.max(1, contentBoxSize.inlineSize / 600) + 'rem';
+      h1Elem.style.fontSize = `${Math.max(1.5, contentBoxSize.inlineSize / 200)}rem`;
+      pElem.style.fontSize = `${Math.max(1, contentBoxSize.inlineSize / 600)}rem`;
     } else {
-      h1Elem.style.fontSize = Math.max(1.5, entry.contentRect.width / 200) + 'rem';
-      pElem.style.fontSize = Math.max(1, entry.contentRect.width / 600) + 'rem';
+      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentRect.width / 200)}rem`;
+      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
   }
 

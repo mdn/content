@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: api.Window.beforeprint_event
 ---
+
 {{APIRef}}
 
 The **`beforeprint`** event is fired when the associated document is about to be printed or previewed for printing.
@@ -18,8 +19,8 @@ The {{domxref("Window.afterprint_event", "afterprint")}} and `beforeprint` event
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('beforeprint', event => { });
-onbeforeprint = event => { };
+addEventListener('beforeprint', (event) => { });
+onbeforeprint = (event) => { };
 ```
 
 ## Event type

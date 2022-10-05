@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "`'use strict'` not allowed in function" occurs
@@ -17,17 +18,12 @@ when a `"use strict"` directive is used at the top of a function with
 
 ## Message
 
-```js
-Edge:
-Cannot apply strict mode on functions with non-simple parameter list
-
-Firefox:
-SyntaxError: "use strict" not allowed in function with default parameter
-SyntaxError: "use strict" not allowed in function with rest parameter
-SyntaxError: "use strict" not allowed in function with destructuring parameter
-
-Chrome:
-SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
+```
+SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list (V8-based)
+SyntaxError: "use strict" not allowed in function with default parameter (Firefox)
+SyntaxError: "use strict" not allowed in function with rest parameter (Firefox)
+SyntaxError: "use strict" not allowed in function with destructuring parameter (Firefox)
+SyntaxError: 'use strict' directive not allowed inside a function with a non-simple parameter list. (Safari)
 ```
 
 ## Error type

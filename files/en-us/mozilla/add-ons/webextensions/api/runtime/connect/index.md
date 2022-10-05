@@ -13,6 +13,7 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.connect
 ---
+
 {{AddonSidebar()}}
 
 Make a connection between different contexts inside the extension.
@@ -24,9 +25,11 @@ You can call this:
 
 Note that you can't use this function to connect an extension to its content scripts. To do this, use {{WebExtAPIRef('tabs.connect()')}}.
 
+By default, this connection enables the extension to exchange messages with itself or any other extension (if `extensionId` is specified). However, the [`externally_connectable`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable) manifest key can be used to limit communication to specific extensions and enable communication with websites. Connections within the extension trigger the {{WebExtAPIRef('runtime.onConnect')}} event, connections from other extensions or web pages trigger the {{WebExtAPIRef('runtime.onConnectExternal')}} event.
+
 ## Syntax
 
-```js
+```js-nolint
 let port = browser.runtime.connect(
   extensionId, // optional string
   connectInfo  // optional object
@@ -48,7 +51,7 @@ let port = browser.runtime.connect(
 
 ### Return value
 
-{{WebExtAPIRef('runtime.Port')}}. Port through which messages can be sent and received. The port's  `onDisconnect` event is fired if the extension does not exist.
+{{WebExtAPIRef('runtime.Port')}}. Port through which messages can be sent and received. The port's `onDisconnect` event is fired if the extension does not exist.
 
 ## Browser compatibility
 
@@ -68,12 +71,12 @@ This content script:
 let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener((m) => {
   console.log("In content script, received message from background script: ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
+document.body.addEventListener("click", () => {
   myPort.postMessage({greeting: "they clicked the page!"});
 });
 ```
@@ -97,7 +100,7 @@ let portFromCS;
 function connected(p) {
   portFromCS = p;
   portFromCS.postMessage({greeting: "hi there content script!"});
-  portFromCS.onMessage.addListener(function(m) {
+  portFromCS.onMessage.addListener((m) => {
     console.log("In background script, received message from content script")
     console.log(m.greeting);
   });
@@ -105,7 +108,7 @@ function connected(p) {
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   portFromCS.postMessage({greeting: "they clicked the button!"});
 });
 ```
@@ -116,7 +119,8 @@ browser.browserAction.onClicked.addListener(function() {
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -143,4 +147,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

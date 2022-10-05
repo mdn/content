@@ -12,6 +12,9 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEventTiming
 ---
+
+{{APIRef}}
+
 The `PerformanceEventTiming` interface of the Event Timing API provides timing information for the event types listed below.
 
 - {{domxref("Element/auxclick_event", "auxclick")}}
@@ -47,26 +50,26 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{domxref("HTMLElement/pointerleave_event", "pointerleave")}}
 - {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}}
 - {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
-- {{event("touchstart")}}
-- {{event("touchend")}}
-- {{event("touchcancel")}}
+- {{domxref("Element/touchstart_event", "touchstart")}}
+- {{domxref("Element/touchend_event", "touchend")}}
+- {{domxref("Element/touchcancel_event", "touchcancel")}}
 
 {{InheritanceDiagram}}
 
 ## Properties
 
-- **`{{domxref("PerformanceEventTiming.processingStart")}}`**
+- {{domxref("PerformanceEventTiming.processingStart")}}
   - : Returns the time at which event dispatch started.
-- **`{{domxref("PerformanceEventTiming.processingEnd")}}`**
+- {{domxref("PerformanceEventTiming.processingEnd")}}
   - : Returns the time at which the event dispatch ended.
-- **`{{domxref("PerformanceEventTiming.cancelable")}}`**
+- {{domxref("PerformanceEventTiming.cancelable")}}
   - : Returns the associated event's cancelable attribute.
-- **`{{domxref("PerformanceEventTiming.target")}}`**
+- {{domxref("PerformanceEventTiming.target")}}
   - : Returns the associated event's last target, if it is not removed.
 
 ## Methods
 
-- **`{{domxref("PerformanceEventTiming.toJSON()")}}`**
+- {{domxref("PerformanceEventTiming.toJSON()")}}
   - : Converts the PerformanceEventTiming object to JSON.
 
 ## Examples
@@ -74,8 +77,8 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 The following example shows how to use the API for all events:
 
 ```js
-const observer = new PerformanceObserver(function(list) {
-    const perfEntries = list.getEntries().forEach(entry => {
+const observer = new PerformanceObserver((list) => {
+    list.getEntries().forEach((entry) => {
         // Full duration
         const inputDuration = entry.duration;
         // Input delay (before processing event)

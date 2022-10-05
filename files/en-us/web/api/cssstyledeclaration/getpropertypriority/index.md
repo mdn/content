@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.getPropertyPriority
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **CSSStyleDeclaration.getPropertyPriority()** method interface returns
@@ -17,7 +18,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyPriority(property)
 ```
 
@@ -37,8 +38,8 @@ The following JavaScript code checks whether `margin` is marked as important
 in a CSS selector rule:
 
 ```js
-var declaration = document.styleSheets[0].cssRules[0].style;
-var isImportant = declaration.getPropertyPriority('margin') === 'important';
+const declaration = document.styleSheets[0].cssRules[0].style;
+const isImportant = declaration.getPropertyPriority('margin') === 'important';
 ```
 
 ## Specifications

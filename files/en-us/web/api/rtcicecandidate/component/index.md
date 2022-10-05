@@ -18,6 +18,7 @@ tags:
   - component
 browser-compat: api.RTCIceCandidate.component
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`component`** property
@@ -58,9 +59,9 @@ This code snippet examines a candidate's component type and dispatches the candi
 different handlers depending on the value.
 
 ```js
-if (candidate.component == "rtp") {
+if (candidate.component === "rtp") {
   handleRTPCandidate(candidate);
-} else if (candidate.component == "rtcp") {
+} else if (candidate.component === "rtcp") {
   handleRTCPCandidate(candidate);
 } else {
   handleUnknownCandidate(candidate);

@@ -6,6 +6,7 @@ tags:
   - Guide
   - Security
 ---
+
 The strength of the hash algorithm used in {{Glossary("Signature/Security", "signing")}} a {{Glossary("Digital certificate", "digital certificate")}} is a critical element of the security of the certificate. This article provides some information about signature algorithms known to be weak, so you can avoid them when appropriate.
 
 Weaknesses in hash algorithms can lead to situations in which attackers can create or obtain fraudulent certificates. As new attacks are found and improvements in available technology make attacks more feasible, the use of older algorithms is discouraged and support for them is eventually removed.

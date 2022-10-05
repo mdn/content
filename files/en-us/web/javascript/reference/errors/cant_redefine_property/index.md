@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't redefine non-configurable property" occurs when it was
@@ -14,10 +15,10 @@ attempted to redefine a property, but that property is [non-configurable](/en-US
 
 ## Message
 
-```js
-TypeError: Cannot modify non-writable property {x} (Edge)
+```
+TypeError: Cannot redefine property: "x" (V8-based)
 TypeError: can't redefine non-configurable property "x" (Firefox)
-TypeError: Cannot redefine property: "x" (Chrome)
+TypeError: Attempting to change value of a readonly property. (Safari)
 ```
 
 ## Error type

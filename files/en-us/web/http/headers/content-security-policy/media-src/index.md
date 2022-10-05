@@ -11,8 +11,9 @@ tags:
   - Security
   - media-src
   - source
-browser-compat: http.headers.csp.Content-Security-Policy.media-src
+browser-compat: http.headers.Content-Security-Policy.media-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -71,7 +72,7 @@ The following {{HTMLElement("audio")}}, {{HTMLElement("video")}} and
 <audio src="https://not-example.com/audio"></audio>
 
 <video src="https://not-example.com/video">
-  <track kind="subtitles" src="https://not-example.com/subtitles">
+  <track kind="subtitles" src="https://not-example.com/subtitles" />
 </video>
 ```
 

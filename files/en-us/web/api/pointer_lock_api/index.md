@@ -11,9 +11,10 @@ tags:
   - pointer lock
 browser-compat: api.Element.requestPointerLock
 ---
+
 {{DefaultAPISidebar("Pointer Lock API")}}
 
-The **Pointer Lock API** (formerly called _Mouse Lock API_) provides input methods based on the movement of the mouse over time (i.e., deltas), not just the absolute position of the mouse cursor in the viewport. It gives you access to raw mouse movement, locks the target of mouse events to a single element, eliminates limits on how far mouse movement can go in a single direction, and removes the cursor from view. It is ideal for first person 3D games, for example.
+The **Pointer Lock API** (formerly called _Mouse Lock API_) provides input methods based on the movement of the mouse over time (i.e., deltas), not just the absolute position of the mouse cursor in the viewport. It gives you access to raw mouse movement, locks the target of mouse events to a single element, eliminates limits on how far mouse movement can go in a single direction, and removes the cursor from view. It is ideal for first-person 3D games, for example.
 
 More than that, the API is useful for any applications that require significant mouse input to control movements, rotate objects, and change entries, for example allowing users to control the viewing angle by moving the mouse around without any button clicking. The buttons are then freed up for other actions. Other examples include apps for viewing maps or satellite imagery.
 
@@ -54,7 +55,7 @@ The {{domxref("Document.pointerLockElement","pointerLockElement")}} property is 
 Here is an example of using `pointerLockElement`:
 
 ```js
-if(document.pointerLockElement === canvas ||
+if (document.pointerLockElement === canvas ||
   document.mozPointerLockElement === canvas) {
     console.log('The pointer lock status is now locked');
 } else {
@@ -84,7 +85,7 @@ if ("onpointerlockchange" in document) {
 }
 
 function lockChangeAlert() {
-  if(document.pointerLockElement === canvas ||
+  if (document.pointerLockElement === canvas ||
   document.mozPointerLockElement === canvas) {
     console.log('The pointer lock status is now locked');
     // Do something useful in response
@@ -126,7 +127,7 @@ When the mouse is unlocked, the system cursor can exit and re-enter the browser 
 
 ## Simple example walkthrough
 
-We've written a [simple pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) to show you how to use it to set up a simple control system ([see source code](https://github.com/mdn/dom-examples/tree/master/pointer-lock)). The demo looks like this:
+We've written a [simple pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) to show you how to use it to set up a simple control system ([see source code](https://github.com/mdn/dom-examples/tree/main/pointer-lock)). The demo looks like this:
 
 ![A red circle on top of a black background.](pointer-lock.png)
 
@@ -152,7 +153,7 @@ document.exitPointerLock = document.exitPointerLock ||
 Now we set up an event listener to run the `requestPointerLock()` method on the canvas when it is clicked, which initiates pointer lock.
 
 ```js
-canvas.onclick = function() {
+canvas.onclick = () => {
   canvas.requestPointerLock();
 }
 ```
@@ -182,12 +183,12 @@ function lockChangeAlert() {
 }
 ```
 
-The updatePosition() function updates the position of the ball on the canvas (`x` and `y`), and also includes `if()` statements to check whether the ball has gone off the edges of the canvas. If so, it makes the ball wrap around to the opposite edge. It also includes a check whether a [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame) call has previously been made, and if so, calls it again as required, and calls the `canvasDraw()` function that updates the canvas scene. A tracker is also set up to write out the X and Y values to the screen, for reference.
+The updatePosition() function updates the position of the ball on the canvas (`x` and `y`), and also includes `if ()` statements to check whether the ball has gone off the edges of the canvas. If so, it makes the ball wrap around to the opposite edge. It also includes a check whether a [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame) call has previously been made, and if so, calls it again as required, and calls the `canvasDraw()` function that updates the canvas scene. A tracker is also set up to write out the X and Y values to the screen, for reference.
 
 ```js
 const tracker = document.getElementById('tracker');
 
-const animation;
+let animation;
 function updatePosition(e) {
   x += e.movementX;
   y += e.movementY;
@@ -203,10 +204,10 @@ function updatePosition(e) {
   if (y < -RADIUS) {
     y = canvas.height + RADIUS;
   }
-  tracker.textContent = "X position: " + x + ", Y position: " + y;
+  tracker.textContent = `X position: ${x}, Y position: ${y}`;
 
   if (!animation) {
-    animation = requestAnimationFrame(function() {
+    animation = requestAnimationFrame(() => {
       animation = null;
       canvasDraw();
     });

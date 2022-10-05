@@ -1,6 +1,7 @@
 ---
 title: <angle>
 slug: Web/CSS/angle
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -11,6 +12,7 @@ tags:
   - angle
 browser-compat: css.types.angle
 ---
+
 {{ CSSRef() }}
 
 The **`<angle>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in {{cssxref("&lt;gradient&gt;")}}s and in some {{cssxref("transform")}} functions.

@@ -11,8 +11,10 @@ tags:
   - Reference
   - getLayoutMap()
   - keyboard
+  - Experimental
 browser-compat: api.Keyboard.getLayoutMap
 ---
+
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`getLayoutMap()`** method of the
@@ -22,7 +24,7 @@ functions for retrieving the strings associated with specific physical keys.
 
 ## Syntax
 
-```js
+```js-nolint
 getLayoutMap()
 ```
 
@@ -43,9 +45,9 @@ associated with the key that corresponds to the 'W' key on an English QWERTY key
 ```js
 const keyboard = navigator.keyboard;
 keyboard.getLayoutMap()
-.then(keyboardLayoutMap => {
+.then((keyboardLayoutMap) => {
   const upKey = keyboardLayoutMap.get('KeyW');
-  window.alert('Press ' + upKey + ' to move up.');
+  window.alert(`Press ${upKey} to move up.`);
 })
 ```
 

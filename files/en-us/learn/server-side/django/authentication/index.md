@@ -16,6 +16,7 @@ tags:
   - server-side
   - sessions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
 In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
@@ -59,17 +60,17 @@ The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of
 
 ```python
 INSTALLED_APPS = [
-    ...
+    # …
     'django.contrib.auth',  #Core authentication framework and its default models.
     'django.contrib.contenttypes',  #Django content type system (allows permissions to be associated with models).
-    ....
+    # …
 
 MIDDLEWARE = [
-    ...
+    # …
     'django.contrib.sessions.middleware.SessionMiddleware',  #Manages sessions across requests
-    ...
+    # …
     'django.contrib.auth.middleware.AuthenticationMiddleware',  #Associates users with requests using sessions.
-    ....
+    # …
 ```
 
 ## Creating users and groups
@@ -178,7 +179,7 @@ The next step is to create a registration directory on the search path and then 
 
 The URLs (and implicitly, views) that we just added expect to find their associated templates in a directory **/registration/** somewhere in the templates search path.
 
-For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, i.e the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
+For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, that is, the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
 
 > **Note:** Your folder structure should now look like the below:
 >
@@ -202,13 +203,13 @@ import os # needed by code below
 Update the `TEMPLATES` section's `'DIRS'` line as shown:
 
 ```python
-    ...
+    # …
     TEMPLATES = [
       {
-       ...
+       # …
        'DIRS': [os.path.join(BASE_DIR, 'templates')],
        'APP_DIRS': True,
-       ...
+       # …
 ```
 
 ### Login template
@@ -420,7 +421,7 @@ Open the base template (**/locallibrary/catalog/templates/base_generic.html**) a
 ```html
   <ul class="sidebar-nav">
 
-    ...
+    …
 
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
@@ -446,7 +447,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def my_view(request):
-    ...
+    # …
 ```
 
 > **Note:** You can do the same sort of thing manually by testing on `request.user.is_authenticated`, but the decorator is much more convenient!
@@ -457,7 +458,7 @@ Similarly, the easiest way to restrict access to logged-in users in your class-b
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 class MyView(LoginRequiredMixin, View):
-    ...
+    # …
 ```
 
 This has exactly the same redirect behavior as the `login_required` decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (`login_url`), and a URL parameter name instead of "`next`" to insert the current absolute path (`redirect_field_name`).
@@ -651,9 +652,9 @@ For example, we might define a permission to allow a user to mark that a book ha
 
 ```python
 class BookInstance(models.Model):
-    ...
+    # …
     class Meta:
-        ...
+        # …
         permissions = (("can_mark_returned", "Set book as returned"),)
 ```
 
@@ -684,7 +685,7 @@ from django.contrib.auth.decorators import permission_required
 @permission_required('catalog.can_mark_returned')
 @permission_required('catalog.can_edit')
 def my_view(request):
-    ...
+    # …
 ```
 
 A permission-required mixin for class-based views.
@@ -713,7 +714,7 @@ class MyView(PermissionRequiredMixin, View):
 > @login_required
 > @permission_required('catalog.can_mark_returned', raise_exception=True)
 > def my_view(request):
->     ...
+>     # …
 > ```
 
 ### Example

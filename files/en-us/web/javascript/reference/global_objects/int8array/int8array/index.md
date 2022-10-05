@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Int8Array.Int8Array
 ---
+
 {{JSRef}}
 
 The **`Int8Array()`** constructor creates a typed array of
@@ -18,16 +19,18 @@ using standard array index syntax (that is, using bracket notation).
 
 ## Syntax
 
-```js
-new Int8Array(); // new in ES2017
-new Int8Array(length);
-new Int8Array(typedArray);
-new Int8Array(object);
+```js-nolint
+new Int8Array()
+new Int8Array(length)
+new Int8Array(typedArray)
+new Int8Array(object)
 
-new Int8Array(buffer);
-new Int8Array(buffer, byteOffset);
-new Int8Array(buffer, byteOffset, length);
+new Int8Array(buffer)
+new Int8Array(buffer, byteOffset)
+new Int8Array(buffer, byteOffset, length)
 ```
+
+> **Note:** `Int8Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -95,23 +98,6 @@ console.log(int8FromIterable);
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-Starting with ECMAScript 2015, `Int8Array` constructors require to be
-constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a
-`Int8Array` constructor as a function without `new`, will throw a
-{{jsxref("TypeError")}} from now on.
-
-```js example-bad
-const dv = Int8Array([1, 2, 3]);
-// TypeError: calling a builtin Int8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-const dv = new Int8Array([1, 2, 3]);
-```
 
 ## See also
 

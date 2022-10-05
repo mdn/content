@@ -7,9 +7,11 @@ tags:
   - Web Serial
   - Overview
   - Reference
+  - Experimental
 browser-compat: api.Serial
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Web Serial API")}}
+
+{{DefaultAPISidebar("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **Web Serial API** provides a way for websites to read from and write to serial devices. These devices may be connected via a serial port, or be USB or Bluetooth devices that emulate a serial port.
 
@@ -52,7 +54,7 @@ navigator.serial.getPorts().then((ports) => {
 });
 
 button.addEventListener('click', () => {
-  const usbVendorId = ...;
+  const usbVendorId = 0xABCD;
   navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
     // Connect to `port` or add it to the list of available ports.
   }).catch((e) => {

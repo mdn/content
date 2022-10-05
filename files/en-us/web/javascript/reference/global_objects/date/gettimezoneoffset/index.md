@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.getTimezoneOffset
 ---
+
 {{JSRef}}
 
 The **`getTimezoneOffset()`** method returns the difference, in minutes, between a date as evaluated in the UTC time zone, and the same date as evaluated in the local time zone.
@@ -17,7 +18,7 @@ The **`getTimezoneOffset()`** method returns the difference, in minutes, between
 
 ## Syntax
 
-```js
+```js-nolint
 getTimezoneOffset()
 ```
 

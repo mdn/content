@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: api.Event.type
 ---
+
 {{APIRef}}
 
 The **`type`** read-only property of the {{domxref("Event")}}
@@ -36,7 +37,7 @@ button.
 ```js
 function getEventType(event) {
   const log = document.getElementById('log');
-  log.innerText = event.type + '\n' + log.innerText;
+  log.innerText = `${event.type}\n${log.innerText}`;
 }
 
 // Keyboard events

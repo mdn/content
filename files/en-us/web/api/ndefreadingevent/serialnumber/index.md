@@ -11,6 +11,7 @@ tags:
   - NDEFReadingEvent
 browser-compat: api.NDEFReadingEvent.serialNumber
 ---
+
 {{securecontext_header}}{{APIRef()}}{{SeeCompatTable}}
 
 The **`serialNumber`** property of the {{domxref("NDEFReadingEvent")}} interface returns the serial number of the device, which is used for anti-collision and identification, or an empty string if no serial number is available.
@@ -30,11 +31,11 @@ const ndefReader = new NDEFReader();
     return new Promise((resolve, reject) => {
       const ctlr = new AbortController();
       ctlr.signal.onabort = reject;
-      ndefReader.addEventListener("reading", event => {
+      ndefReader.addEventListener("reading", (event) => {
         ctlr.abort();
         resolve(event);
       }, { once: true });
-      ndefReader.scan({ signal: ctlr.signal }).catch(err => reject(err));
+      ndefReader.scan({ signal: ctlr.signal }).catch((err) => reject(err));
     });
   }
 

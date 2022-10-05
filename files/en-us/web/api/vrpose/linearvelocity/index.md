@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - linearVelocity
+  - Non-standard
 browser-compat: api.VRPose.linearVelocity
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`linearVelocity`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the linear velocity vector of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.
 
@@ -39,14 +41,14 @@ function drawVRScene() {
 
   // Retrieve the linear velocity values for use in rendering
   // curFramePose is a VRPose object
-  var curFramePose = frameData.pose;
-  var linVel = curFramePose.linearVelocity;
-  var lvx = linVel[0];
-  var lvy = linVel[1];
-  var lvz = linVel[2];
+  const curFramePose = frameData.pose;
+  const linVel = curFramePose.linearVelocity;
+  const lvx = linVel[0];
+  const lvy = linVel[1];
+  const lvz = linVel[2];
 
   // render the scene
-  ...
+  // …
 
   // WebVR: submit the rendered frame to the VR display
   vrDisplay.submitFrame();

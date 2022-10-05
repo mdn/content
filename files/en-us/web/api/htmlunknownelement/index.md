@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLUnknownElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLUnknownElement`** interface represents an invalid HTML element and derives from the {{DOMxRef("HTMLElement")}} interface, but without implementing any additional properties or methods.
@@ -21,7 +22,7 @@ _No specific property; inherits properties from its parent, {{DOMxRef("HTMLEleme
 
 ## Methods
 
-_No specific method; inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
+_No specific method; inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
 
 ## Specifications
 

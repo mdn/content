@@ -12,10 +12,13 @@ tags:
   - Reference
 browser-compat: api.FileReader.readAsDataURL
 ---
+
+{{APIRef("File API")}}
+
 The `readAsDataURL` method is used to read the contents of the specified
 {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
 {{domxref("FileReader.readyState","readyState")}} becomes `DONE`, and the
-{{event("loadend")}} is triggered. At that time, the
+{{domxref("FileReader/loadend_event", "loadend")}} is triggered. At that time, the
 {{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) representing the
 file's data as a base64 encoded string.
 
@@ -26,7 +29,7 @@ file's data as a base64 encoded string.
 
 ## Syntax
 
-```js
+```js-nolint
 readAsDataURL(blob)
 ```
 
@@ -44,8 +47,8 @@ None ({{jsxref("undefined")}}).
 ### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Image preview...">
+<input type="file" onchange="previewFile()" /><br />
+<img src="" height="200" alt="Image preview" />
 ```
 
 ### JavaScript
@@ -56,7 +59,7 @@ function previewFile() {
   const file = document.querySelector('input[type=file]').files[0];
   const reader = new FileReader();
 
-  reader.addEventListener("load", function () {
+  reader.addEventListener("load", () => {
     // convert image file to base64 string
     preview.src = reader.result;
   }, false);
@@ -76,7 +79,7 @@ function previewFile() {
 ### HTML
 
 ```html
-<input id="browse" type="file" onchange="previewFiles()" multiple>
+<input id="browse" type="file" onchange="previewFiles()" multiple />
 <div id="preview"></div>
 ```
 
@@ -84,33 +87,29 @@ function previewFile() {
 
 ```js
 function previewFiles() {
-
   const preview = document.querySelector('#preview');
-  const files   = document.querySelector('input[type=file]').files;
+  const files = document.querySelector('input[type=file]').files;
 
   function readAndPreview(file) {
-
     // Make sure `file.name` matches our extensions criteria
-    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
       const reader = new FileReader();
 
-      reader.addEventListener("load", function () {
+      reader.addEventListener("load", () => {
         const image = new Image();
         image.height = 100;
         image.title = file.name;
         image.src = this.result;
-        preview.appendChild( image );
+        preview.appendChild(image);
       }, false);
 
       reader.readAsDataURL(file);
     }
-
   }
 
   if (files) {
-    [].forEach.call(files, readAndPreview);
+    Array.prototype.forEach.call(files, readAndPreview);
   }
-
 }
 ```
 
@@ -130,5 +129,3 @@ function previewFiles() {
 
 - {{domxref("FileReader")}}
 - {{domxref("URL.createObjectURL()")}}
-
-{{APIRef("File API")}}

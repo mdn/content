@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "_variable_ is a reserved identifier" occurs
@@ -14,10 +15,10 @@ when [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#ke
 
 ## Message
 
-```js
-SyntaxError: The use of a future reserved word for an identifier is invalid (Edge)
-SyntaxError: "x" is a reserved identifier (Firefox)
-SyntaxError: Unexpected reserved word (Chrome)
+```
+SyntaxError: Unexpected reserved word (V8-based)
+SyntaxError: implements is a reserved identifier (Firefox)
+SyntaxError: Cannot use the reserved word 'implements' as a variable name. (Safari)
 ```
 
 ## Error type

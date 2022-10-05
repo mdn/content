@@ -12,6 +12,7 @@ tags:
   - Sensors
 browser-compat: api.Sensor
 ---
+
 {{APIRef("Sensor API")}}
 
 The **Sensor APIs** are a set of interfaces built to a common design that expose device sensors in a consistent way to the web platform.
@@ -32,7 +33,7 @@ The examples below show three methods for detecting sensor APIs. Additionally yo
 
 ```js
 if (typeof Gyroscope === "function") {
-    // run in circles...
+    // run in circles…
 }
 
 if ("ProximitySensor" in window) {
@@ -40,7 +41,7 @@ if ("ProximitySensor" in window) {
 }
 
 if (window.AmbientLightSensor) {
-    // go dark...
+    // go dark…
 }
 ```
 
@@ -60,7 +61,7 @@ The code example below illustrates these principles. The {{jsxref('statements/tr
 let accelerometer = null;
 try {
     accelerometer = new Accelerometer({ referenceFrame: 'device' });
-    accelerometer.addEventListener('error', event => {
+    accelerometer.addEventListener('error', (event) => {
         // Handle runtime errors.
         if (event.error.name === 'NotAllowedError') {
             // Branch to code for requesting permission.
@@ -89,7 +90,7 @@ Sensor readings may not be taken unless the user grants permission to a specific
 
 ```js
 navigator.permissions.query({ name: 'accelerometer' })
-.then(result => {
+.then((result) => {
   if (result.state === 'denied') {
     console.log('Permission to use accelerometer sensor is denied.');
     return;
@@ -103,7 +104,7 @@ An alternative approach is to attempt to use the sensor and listen for the `Secu
 ```js
 const sensor = new AbsoluteOrientationSensor();
 sensor.start();
-sensor.addEventListener('error', error => {
+sensor.addEventListener('error', (error) => {
   if (event.error.name === 'SecurityError')
     console.log("No permissions to use AbsoluteOrientationSensor.");
 });
@@ -131,12 +132,12 @@ The following example illustrates this using the {{domxref('Magnetometer')}} sen
 ```js
 let magSensor = new Magnetometer({frequency: 60});
 
-magSensor.addEventListener('reading', e => {
-  console.log("Magnetic field along the X-axis " + magSensor.x);
-  console.log("Magnetic field along the Y-axis " + magSensor.y);
-  console.log("Magnetic field along the Z-axis " + magSensor.z);
+magSensor.addEventListener('reading', (e) => {
+  console.log(`Magnetic field along the X-axis ${magSensor.x}`);
+  console.log(`Magnetic field along the Y-axis ${magSensor.y}`);
+  console.log(`Magnetic field along the Z-axis ${magSensor.z}`);
 })
-magSensor.addEventListener('error', event => {
+magSensor.addEventListener('error', (event) => {
   console.log(event.error.name, event.error.message);
 })
 magSensor.start();

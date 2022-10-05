@@ -7,6 +7,7 @@ tags:
   - header
 browser-compat: http.headers.Host
 ---
+
 {{HTTPSidebar}}
 
 The **`Host`** request header specifies the host and port
@@ -34,7 +35,7 @@ message that lacks or contains more than one `Host` header field.
 
 ## Syntax
 
-```
+```http
 Host: <host>:<port>
 ```
 
@@ -47,7 +48,7 @@ Host: <host>:<port>
 
 ## Examples
 
-```
+```http
 Host: developer.mozilla.org
 ```
 

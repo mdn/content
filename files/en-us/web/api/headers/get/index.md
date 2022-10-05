@@ -11,6 +11,7 @@ tags:
   - get
 browser-compat: api.Headers.get
 ---
+
 {{APIRef("Fetch")}}
 
 The **`get()`** method of the {{domxref("Headers")}} interface
@@ -25,7 +26,7 @@ and {{Glossary("Forbidden_response_header_name", "forbidden response header name
 
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 
@@ -46,7 +47,7 @@ A {{jsxref("String")}} sequence representing the values of the retrieved header 
 Creating an empty `Headers` object is simple:
 
 ```js
-var myHeaders = new Headers(); // Currently empty
+const myHeaders = new Headers(); // Currently empty
 myHeaders.get('Not-Set'); // Returns null
 ```
 
@@ -65,7 +66,7 @@ the values, in the order they were added to the Headers object:
 myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
 myHeaders.get('Accept-Encoding'); // Returns "deflate, gzip"
-myHeaders.get('Accept-Encoding').split(',').map(v => v.trimStart()); // Returns [ "deflate", "gzip" ]
+myHeaders.get('Accept-Encoding').split(',').map((v) => v.trimStart()); // Returns [ "deflate", "gzip" ]
 ```
 
 ## Specifications

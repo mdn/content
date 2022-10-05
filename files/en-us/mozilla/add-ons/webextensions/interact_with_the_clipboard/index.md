@@ -16,6 +16,7 @@ browser-compat:
   - api.Clipboard
   - webextensions.api.clipboard
 ---
+
 {{AddonSidebar}}
 
 Working with the clipboard in extensions is transitioning from the Web API {{domxref("Document.execCommand()","document.execCommand")}} method (which is deprecated) to the {{domxref("Clipboard", "navigator.clipboard")}} method.
@@ -45,8 +46,8 @@ The Clipboard API writes arbitrary data to the clipboard from your extension. Us
 For page scripts, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. You can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
 
 ```js
-navigator.permissions.query({name: "clipboard-write"}).then(result => {
-  if (result.state == "granted" || result.state == "prompt") {
+navigator.permissions.query({name: "clipboard-write"}).then((result) => {
+  if (result.state === "granted" || result.state === "prompt") {
     /* write to the clipboard now */
   }
 });
@@ -58,9 +59,9 @@ This function takes a string and writes it to the clipboard:
 
 ```js
 function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(function() {
+  navigator.clipboard.writeText(newClip).then(() => {
     /* clipboard successfully set */
-  }, function() {
+  }, () => {
     /* clipboard write failed */
   });
 }
@@ -73,8 +74,7 @@ The `"cut"` and `"copy"` commands of the {{domxref("Document.execCommand", "docu
 For example, suppose you've got a popup that includes the following HTML:
 
 ```html
-<input id="input" type="text"/>
-<button id="copy">Copy</button>
+<input id="input" type="text" /> <button id="copy">Copy</button>
 ```
 
 To make the `"copy"` button copy the contents of the {{HTMLElement("input")}} element, you can use code like this:
@@ -140,7 +140,7 @@ The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readTex
 Once you have the `"clipboard-read"` permission from the [Permissions API](/en-US/docs/Web/API/Permissions_API), you can read from the clipboard easily. For example, this snippet of code fetches the text from the clipboard and replaces the contents of the element with the ID `"outbox"` with that text.
 
 ```js
-navigator.clipboard.readText().then(clipText =>
+navigator.clipboard.readText().then((clipText) =>
   document.getElementById("outbox").innerText = clipText);
 ```
 
@@ -151,8 +151,7 @@ To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)
 Consider HTML that includes something like this:
 
 ```html
-<textarea id="output"></textarea>
-<button id="paste">Paste</button>
+<textarea id="output"></textarea> <button id="paste">Paste</button>
 ```
 
 To set the content of the {{HTMLElement("textarea")}} element with the ID `"output"` from the clipboard when the user clicks the `"paste"` {{HTMLElement("button")}}, you can use code like this:

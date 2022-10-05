@@ -7,6 +7,7 @@ tags:
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "called on incompatible target (or object)" occurs when a
@@ -15,12 +16,13 @@ the type expected by the function.
 
 ## Message
 
-```js
-TypeError: 'this' is not a Set object (Edge)
+```
+TypeError: Method Set.prototype.add called on incompatible receiver undefined (V8-based)
+TypeError: Bind must be called on a function (V8-based)
 TypeError: Function.prototype.toString called on incompatible object (Firefox)
 TypeError: Function.prototype.bind called on incompatible target (Firefox)
-TypeError: Method Set.prototype.add called on incompatible receiver undefined (Chrome)
-TypeError: Bind must be called on a function (Chrome)
+TypeError: Type error (Safari)
+TypeError: undefined is not an object (Safari)
 ```
 
 ## Error type
@@ -69,7 +71,7 @@ const mySet = new Set;
 const myFun = function () {
   console.log(this);
 };
-['bar', 'baz'].forEach(x => myFun.bind(x));
+['bar', 'baz'].forEach((x) => myFun.bind(x));
 // This works using the "bind" function. It creates a lambda forwarding the argument.
 ```
 
