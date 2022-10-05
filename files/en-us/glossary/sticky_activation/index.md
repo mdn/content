@@ -13,7 +13,10 @@ A page is considered "user activated" if a user is currently interacting with th
 
 See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for examples of APIs that require _sticky activation_.
 
+See the {{domxref("UserActivation.hasBeenActive")}} property to programmatically access the current window's sticky activation state.
+
 ## See also
 
 - [HTML Living Standard > Sticky activation](https://html.spec.whatwg.org/multipage/interaction.html#sticky-activation)
 - {{Glossary("Transient activation")}}
+- {{domxref("UserActivation.hasBeenActive")}}

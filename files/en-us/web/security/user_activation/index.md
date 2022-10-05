@@ -65,10 +65,18 @@ Examples APIs that require sticky activation:
 - `navigator.getAutoplayPolicy()`
 - `navigator.virtualKeyboard.show()`
 
+## UserActivation API
+
+To programmatically determine if a window has either sticky or transient user activation, the {{domxref("UserActivation")}} API provides two properties which are available using {{domxref("navigator.userActivation")}}:
+
+- {{domxref("UserActivation.hasBeenActive")}} indicates whether the window has sticky user activation.
+- {{domxref("UserActivation.isActive")}} indicates whether the window has transient user activation.
+
 ## See also
 
 - {{Glossary("Transient activation")}}
 - {{Glossary("Sticky activation")}}
+- {{domxref("UserActivation")}} API
 - [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
