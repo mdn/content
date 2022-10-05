@@ -103,7 +103,7 @@ After you've covered Steam, there's plenty of buzz around initiatives like [Humb
 
 ## Packaging games
 
-The web is the first and the best choice for HTML games, but if you want to reach a broader audience and distribute your game in a closed ecosystem, you still can do that by packaging it. The good thing is that you don't need a few separate teams working on the same game for different platforms — you can build it once and use tools like [Phonegap](/en-US/docs/Web) or [CocoonIO](/en-US/docs/Web) to package the game for native stores. The resulting packages are usually pretty reliable, but you should still test them and be on the lookout for small issues or bugs to fix.
+The web is the first and the best choice for HTML games, but if you want to reach a broader audience and distribute your game in a closed ecosystem, you still can do that by packaging it. The good thing is that you don't need a few separate teams working on the same game for different platforms — you can build it once and use tools like [Phonegap](https://phonegap.com/) or [CocoonIO](http://cocoon.io/) to package the game for native stores. The resulting packages are usually pretty reliable, but you should still test them and be on the lookout for small issues or bugs to fix.
 
 ### Available tools
 

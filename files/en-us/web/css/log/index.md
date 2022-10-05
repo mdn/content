@@ -1,6 +1,7 @@
 ---
 title: log()
 slug: Web/CSS/log
+page-type: css-function
 tags:
   - CSS
   - CSS Function

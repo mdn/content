@@ -1,6 +1,7 @@
 ---
 title: math-shift
 slug: Web/CSS/math-shift
+page-type: css-property
 tags:
   - CSS
   - MathML

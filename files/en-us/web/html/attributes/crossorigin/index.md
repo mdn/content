@@ -9,7 +9,7 @@ tags:
   - NeedsContent
   - Reference
   - Security
-spec-urls: https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes
+spec-urls: https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-settings-attributes
 browser-compat:
   - html.elements.img.crossorigin
   - html.elements.link.crossorigin
@@ -23,7 +23,7 @@ The **`crossorigin`** attribute, valid on the {{HTMLElement("audio")}}, {{HTMLEl
 
 The `crossorigin` content attribute on media elements is a CORS settings attribute.
 
-These attributes are enumerated, and have the following possible values:
+These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the following possible values:
 
 - `anonymous`
   - : Request uses CORS headers and credentials flag is set to `'same-origin'`. There is no exchange of **user credentials** via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.

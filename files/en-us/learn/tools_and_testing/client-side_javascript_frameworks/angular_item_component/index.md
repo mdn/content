@@ -172,7 +172,7 @@ To use the `ItemComponent` UI, you must add logic to the component such as funct
 In `item.component.ts`, edit the JavaScript imports as follows:
 
 ```js
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Item } from "../item";
 ```
 

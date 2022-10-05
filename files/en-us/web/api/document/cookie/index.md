@@ -155,7 +155,7 @@ function clearOutputCookies() {
 
 {{EmbedLiveSample('Example_1_Simple_usage', 200, 72)}}
 
-### Example #2: Get a sample cookie named _test2_
+### Example #2: Get a sample cookie named test2
 
 ```js
 // Note that we are setting `SameSite=None;` in this example because the example

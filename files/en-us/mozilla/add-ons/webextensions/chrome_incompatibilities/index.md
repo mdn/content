@@ -29,7 +29,7 @@ The rest of this page summarizes these and other incompatibilities.
 
 ## JavaScript APIs
 
-### _chrome.\*_ and _browser.\*_ namespace
+### chrome.\* and browser.\* namespace
 
 - **In Firefox:** The equivalent APIs are accessed using the `browser` namespace.
 

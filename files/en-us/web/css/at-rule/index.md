@@ -1,6 +1,7 @@
 ---
 title: At-rules
 slug: Web/CSS/At-rule
+page-type: guide
 tags:
   - CSS
   - Guide

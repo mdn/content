@@ -1,6 +1,7 @@
 ---
 title: Using z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
+page-type: guide
 tags:
   - Advanced
   - CSS

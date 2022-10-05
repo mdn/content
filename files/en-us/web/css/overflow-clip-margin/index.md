@@ -8,11 +8,10 @@ tags:
   - CSS Property
   - Reference
   - recipe:css-property
-  - Experimental
 browser-compat: css.properties.overflow-clip-margin
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`overflow-clip-margin`** [CSS](/en-US/docs/Web/CSS) property determines how far outside its bounds an element with [`overflow: clip`](/en-US/docs/Web/CSS/overflow) may be painted before being clipped.
 
