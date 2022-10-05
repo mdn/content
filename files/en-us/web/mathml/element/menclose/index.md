@@ -11,7 +11,7 @@ browser-compat: mathml.elements.menclose
 
 {{MathMLRef}}
 
-The MathML `<menclose>` element renders its content inside an enclosing notation specified by the `notation` attribute.
+The **`<menclose>`** [MathML](/en-US/docs/Web/MathML) element renders its content inside an enclosing notation specified by the `notation` attribute.
 
 ## Attributes
 

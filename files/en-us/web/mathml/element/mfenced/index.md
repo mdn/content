@@ -7,13 +7,14 @@ tags:
   - MathML Reference
   - MathML:Element
   - MathML:General Layout Schemata
-  - Non-standard
 browser-compat: mathml.elements.mfenced
 ---
 
-{{MathMLRef}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{MathMLRef}}{{Deprecated_Header}}
 
-The deprecated MathML `<mfenced>` element used to provide the possibility to add custom opening and closing parentheses (such as brackets) and separators (such as commas or semicolons) to an expression. It has been removed from the latest MathML standard and modern browsers no longer support it. Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead.
+The **`<mfenced>`** [MathML](/en-US/docs/Web/MathML) element provides the possibility to add custom opening and closing parentheses (such as brackets) and separators (such as commas or semicolons) to an expression.
+
+> **Note:** Historically, the `<mfenced>` element was defined as a shorthand for writing fenced expressions and equivalent to an expanded form involving {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements. Nowadays, it is recommended to use that equivalent form instead.
 
 ## Attributes
 
@@ -70,7 +71,7 @@ Rendering in your browser:
 
 ## Specifications
 
-The \<mfenced> element is no longer part of the [latest MathML standard](https://github.com/w3c/mathml/issues/2). Use the {{MathMLElement("mrow")}} and {{MathMLElement("mo")}} elements instead, or, for backwards compatibility, see [mathml-polyfills/mfenced.](https://github.com/mathml-refresh/mathml-polyfills/tree/main/mfenced)
+{{Specifications}}
 
 ## Browser compatibility
 
