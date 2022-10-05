@@ -99,3 +99,4 @@ This specification fires events with the following custom interface:
 - [sifrr-storage:](https://www.npmjs.com/package/@sifrr/storage) A small (\~2kB) promise based library for client side key-value storage. Works with IndexedDB, localStorage, Web SQL (deprecated), Cookies. Can automatically use supported storage available based on priority.
 - [lovefield](https://github.com/google/lovefield): Lovefield is a relational database for web apps. Written in JavaScript, works cross-browser. Provides SQL-like APIs that are fast, safe, and easy to use.
 - [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): Tiny (\~1.3kB) TypeScript facade with promise-based API and automatic migrations.
+- [RxDB](https://rxdb.info/) A NoSQL client side database that can be used on top of IndexedDB. Supports indexes, compression and replication. Also adds cross tab functionality and observability to IndexedDB.
