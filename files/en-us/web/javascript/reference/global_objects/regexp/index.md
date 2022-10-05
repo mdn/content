@@ -262,7 +262,7 @@ console.log(regex.lastIndex); // logs '15'
 // and so on
 ```
 
-The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{L}/u` (to match a letter from any language), or `\p{scx=Cyrl}` (to match any Cyrillic letter).
+The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature provides a simpler way to target particular Unicode ranges, by allowing for statements like `\p{scx=Cyrl}` (to match any Cyrillic letter), or `\p{L}/u` (to match a letter from any language).
 
 ### Extracting subdomain name from URL
 
