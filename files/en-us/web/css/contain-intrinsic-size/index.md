@@ -9,10 +9,11 @@ tags:
   - experimental
   - contain-intrinsic-size
   - recipe:css-shorthand-property
+  - Experimental
 browser-compat: css.properties.contain-intrinsic-size
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the size of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
