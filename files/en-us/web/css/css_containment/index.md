@@ -125,11 +125,10 @@ There are two special values of contain:
 
 We encountered the first in the example above. Using `contain: content` turns on `layout` and `paint` containment. The specification describes this value as being "reasonably safe to apply widely". It does not apply `size` containment, so you would not be at risk of a box ending up zero-sized due to a reliance on the size of its children.
 
-To gain as much containment as possible use `contain: strict`, which behaves the same as `contain: size layout paint`, or perhaps the following to also add `style` containment in browsers that support it:
+To gain as much containment as possible use `contain: strict`, which behaves the same as `contain: size layout paint style`:
 
 ```css
 contain: strict;
-contain: strict style;
 ```
 
 ## Reference
