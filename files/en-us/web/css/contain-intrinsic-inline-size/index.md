@@ -8,11 +8,12 @@ tags:
   - Reference
   - experimental
   - contain-intrinsic-inline-size
+  - Experimental
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-inline-size
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`contain-intrinsic-inline-size`** [CSS](/en-US/docs/Web/CSS) [logical property](/en-US/docs/Web/CSS/CSS_Logical_Properties) defines the inline-size of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
 
