@@ -16,7 +16,7 @@ The CSS **selector list** (`,`) selects all the matching nodes. A selector list 
 
 ## Description
 
-When more than one selectors shares the same declarations, they can be grouped together into a comma-separated list. Selector lists can also be passed as parameters to some functional CSS pseudo-classes. White space may appear before and/or after the comma.
+When multiple selectors share the same declarations, they can be grouped together into a comma-separated list. Selector lists can also be passed as parameters to some functional CSS pseudo-classes. White space may appear before and/or after the comma.
 
 The following three declarations are equivalent:
 
@@ -135,7 +135,7 @@ h2:has(+ p, > ul::after, + ul.red) {
 }
 ```
 
-In the above, and `h2` that is immediately followed by a `<p>` or a `<ul class="red">`, will be italic. While pseudo-elements are not valid in the [`:has()`](/en-US/docs/Web/CSS/:has) forgiving relative selector list parameter, because the list is forgiving, it doesn't "break" the selector.
+In the above, an `h2` that is immediately followed by a `<p>` or a `<ul class="red">`, will be italic. While pseudo-elements are not valid in the [`:has()`](/en-US/docs/Web/CSS/:has) forgiving relative selector list parameter, because the list is forgiving, it doesn't "break" the selector.
 
 ## Specifications
 
