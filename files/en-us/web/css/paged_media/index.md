@@ -1,6 +1,7 @@
 ---
 title: Paged media
 slug: Web/CSS/Paged_Media
+page-type: css-module
 tags:
   - CSS
   - Guide

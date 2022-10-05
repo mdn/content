@@ -2140,22 +2140,6 @@
       "teoli"
     ]
   },
-  "Glossary/Empty_element": {
-    "modified": "2019-03-23T23:13:31.023Z",
-    "contributors": [
-      "yisibl",
-      "sideshowbarker",
-      "rudijuri",
-      "chrisdavidmills",
-      "joshcartme",
-      "ThatGlennD",
-      "jtojnar",
-      "cvrebert",
-      "Andrew_Pfeiffer",
-      "klez",
-      "teoli"
-    ]
-  },
   "Glossary/Encapsulation": {
     "modified": "2019-03-23T23:05:09.108Z",
     "contributors": [
@@ -5184,6 +5168,22 @@
   "Glossary/VoIP": {
     "modified": "2019-03-23T22:58:50.586Z",
     "contributors": ["hbloomer", "klez", "chrisdavidmills", "ravi_pro"]
+  },
+  "Glossary/Void_element": {
+    "modified": "2019-03-23T23:13:31.023Z",
+    "contributors": [
+      "yisibl",
+      "sideshowbarker",
+      "rudijuri",
+      "chrisdavidmills",
+      "joshcartme",
+      "ThatGlennD",
+      "jtojnar",
+      "cvrebert",
+      "Andrew_Pfeiffer",
+      "klez",
+      "teoli"
+    ]
   },
   "Glossary/W3C": {
     "modified": "2020-10-05T12:31:52.600Z",
@@ -94956,46 +94956,6 @@
       "xaky",
       "fscholz",
       "jswisher"
-    ]
-  },
-  "Web/Guide/HTML/Editable_content": {
-    "modified": "2020-11-28T20:50:53.577Z",
-    "contributors": [
-      "brandoncc",
-      "chrisdavidmills",
-      "tamias",
-      "ExE-Boss",
-      "Azeirah",
-      "Jzege",
-      "Masayuki",
-      "clunday",
-      "Sheppy",
-      "billymail",
-      "Emads3",
-      "Poteitow",
-      "s9w",
-      "stiegenaufgang",
-      "mnoorenberghe",
-      "Jeremie",
-      "kscarfone",
-      "mzakes",
-      "hoanganzglobal",
-      "teoli",
-      "fastclemmy",
-      "ethertank",
-      "bokepz10",
-      "andrewpyszkowski",
-      "chanchhaya14@gmail.com",
-      "dante777",
-      "ziyunfei",
-      "flowdock",
-      "lmorchard",
-      "RAMilewski",
-      "sailplaneTW",
-      "Jesdisciple",
-      "gurdiga",
-      "Shz",
-      "xaky"
     ]
   },
   "Web/Guide/HTML/HTML5/Constraint_validation": {

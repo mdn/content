@@ -8,11 +8,10 @@ tags:
   - Method
   - OffscreenCanvas
   - Reference
-  - Experimental
 browser-compat: api.OffscreenCanvas.transferToImageBitmap
 ---
 
-{{APIRef("Canvas API")}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 The **`OffscreenCanvas.transferToImageBitmap()`** method creates an {{domxref("ImageBitmap")}} object from the most recently rendered image of the `OffscreenCanvas`.
 

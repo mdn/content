@@ -1,6 +1,7 @@
 ---
 title: sin()
 slug: Web/CSS/sin
+page-type: css-function
 tags:
   - CSS
   - CSS Function

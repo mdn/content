@@ -8,11 +8,10 @@ tags:
   - OffscreenCanvas
   - Property
   - Reference
-  - Experimental
 browser-compat: api.OffscreenCanvas.width
 ---
 
-{{APIRef("Canvas API")}}{{SeeCompatTable}}
+{{APIRef("Canvas API")}}
 
 The **`width`** property returns and sets the width of an {{domxref("OffscreenCanvas")}} object.
 

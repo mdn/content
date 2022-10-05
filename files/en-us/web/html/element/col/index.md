@@ -31,7 +31,7 @@ The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines a column within a t
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None, it is an {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -78,7 +78,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - {{htmlattrdef("align")}} {{deprecated_inline}}
 
-  - : This enumerated attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
+  - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
 
     - `left`, aligning the content to the left of the cell
     - `center`, centering the content in the cell

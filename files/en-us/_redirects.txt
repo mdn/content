@@ -3596,6 +3596,7 @@
 /en-US/docs/Glossary/Content_type	/en-US/docs/Glossary/MIME_type
 /en-US/docs/Glossary/DTD	/en-US/docs/Glossary/Doctype
 /en-US/docs/Glossary/Distributed_DenialofService	/en-US/docs/Glossary/Distributed_Denial_of_Service
+/en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
@@ -3646,7 +3647,7 @@
 /en-US/docs/HTML/Canvas/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/HTML/Canvas/Tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
-/en-US/docs/HTML/Content_Editable	/en-US/docs/Web/Guide/HTML/Editable_content
+/en-US/docs/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/HTML/Content_categories	/en-US/docs/Web/Guide/HTML/Content_categories
 /en-US/docs/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/HTML/Element	/en-US/docs/Web/HTML/Element
@@ -11277,6 +11278,8 @@
 /en-US/docs/Web/CSS/color_value/oklch()	/en-US/docs/Web/CSS/color_value/oklch
 /en-US/docs/Web/CSS/color_value/rgb()	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/color_value/rgba()	/en-US/docs/Web/CSS/color_value/rgba
+/en-US/docs/Web/CSS/color_value/system-color	/en-US/docs/Web/CSS/system-color
+/en-US/docs/Web/CSS/color_value/system_color_keywords	/en-US/docs/Web/CSS/system-color
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient
 /en-US/docs/Web/CSS/conic-gradient()	/en-US/docs/Web/CSS/gradient/conic-gradient
 /en-US/docs/Web/CSS/counter()	/en-US/docs/Web/CSS/counter
@@ -11808,10 +11811,11 @@
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images
-/en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/Guide/HTML/Editable_content
+/en-US/docs/Web/Guide/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Drag_and_drop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 /en-US/docs/Web/Guide/HTML/Drag_operations	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /en-US/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items	/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items
+/en-US/docs/Web/Guide/HTML/Editable_content	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/Guide/HTML/Element	/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
 /en-US/docs/Web/Guide/HTML/Email_links	/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links
 /en-US/docs/Web/Guide/HTML/Event_attributes	/en-US/docs/Learn/JavaScript/Building_blocks/Events#Inline_event_handlers_—_don't_use_these
@@ -11868,7 +11872,7 @@
 /en-US/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/HTML/Canvas/Tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/HTML/Canvas/Tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
-/en-US/docs/Web/HTML/Content_Editable	/en-US/docs/Web/Guide/HTML/Editable_content
+/en-US/docs/Web/HTML/Content_Editable	/en-US/docs/Web/HTML/Global_attributes/contenteditable
 /en-US/docs/Web/HTML/Content_categories	/en-US/docs/Web/Guide/HTML/Content_categories
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /en-US/docs/Web/HTML/Controlling_spell_checking_in_HTML_formsControlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck

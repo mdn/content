@@ -120,7 +120,7 @@ tags:
 
 - Cross-site access controls for HTTP
   - : In Firefox 3.5, it's now possible for HTTP requests, including those made by [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest), to work across domains if the server supports it.
-- [Progress events for](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)[`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [Progress events for `XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
   - : Progress events are now offered to enable extensions to monitor the progress of requests.
 - Improved Synchronous `XMLHttpRequest` support
   - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) and [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) are now suppressed during a synchronous `XMLHttpRequest`.

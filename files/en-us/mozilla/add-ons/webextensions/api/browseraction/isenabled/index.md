@@ -66,11 +66,11 @@ Check the state of the currently active tab:
 ```js
 async function enabledInActiveTab() {
   let tabs = await browser.tabs.query({
-    currentWindow:true,
-    active: true
+    currentWindow: true,
+    active: true,
   });
   let enabled = await browser.browserAction.isEnabled({
-    tabId: tabs[0].id
+    tabId: tabs[0].id,
   });
   console.log(enabled);
 }

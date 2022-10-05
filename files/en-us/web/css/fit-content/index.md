@@ -1,6 +1,7 @@
 ---
 title: fit-content
 slug: Web/CSS/fit-content
+page-type: css-keyword
 tags:
   - CSS
   - Keyword

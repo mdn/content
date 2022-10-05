@@ -8,6 +8,8 @@ tags:
   - perceivable
 ---
 
+{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+
 While [color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) is often primarily an aesthetic choice, the _use of color_ on a website pertains to _using color to communicate information_. WCAG guideline 1.4.1 on the use of color requires that "color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element."
 
 ## Solution

@@ -110,7 +110,7 @@ If you do this, of course you'll have to reverse the conversion on the decoded s
 ```js
 function fromBinary(binary) {
   const bytes = Uint8Array.from({ length: binary.length }, (element, index) =>
-    string.charCodeAt(index)
+    binary.charCodeAt(index)
   );
   const charCodes = new Uint16Array(bytes.buffer);
 

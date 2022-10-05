@@ -82,7 +82,7 @@ function sort() {
   myDOM = fragment;
 
   // Add the new content from the transformation
-  document.getElementById("example").appendChild(fragment)
+  document.getElementById("example").appendChild(fragment);
 }
 ```
 
