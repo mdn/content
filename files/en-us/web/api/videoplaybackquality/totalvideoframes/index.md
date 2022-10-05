@@ -4,7 +4,6 @@ slug: Web/API/VideoPlaybackQuality/totalVideoFrames
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Frames
   - HTML DOM
   - Media
@@ -19,6 +18,7 @@ tags:
   - totalVideoFrames
 browser-compat: api.VideoPlaybackQuality.totalVideoFrames
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("VideoPlaybackQuality")}} interface's

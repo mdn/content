@@ -17,6 +17,7 @@ tags:
   - getResponseHeader
 browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{DOMxRef("XMLHttpRequest")}} method
@@ -36,7 +37,7 @@ which returns the entire raw header string.
 
 ## Syntax
 
-```js
+```js-nolint
 getResponseHeader(headerName)
 ```
 
@@ -63,7 +64,7 @@ canceled by calling {{DOMxRef("XMLHttpRequest.abort", "abort()")}}.
 
 ```js
 const client = new XMLHttpRequest();
-client.open("GET", "unicorns-are-teh-awesome.txt", true);
+client.open("GET", "unicorns-are-awesome.txt", true);
 client.send();
 
 client.onreadystatechange = () => {

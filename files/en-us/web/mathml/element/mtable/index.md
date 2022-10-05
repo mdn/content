@@ -8,9 +8,10 @@ tags:
   - MathML:Tabular Math
 browser-compat: mathml.elements.mtable
 ---
+
 {{MathMLRef}}
 
-The MathML `<mtable>` element allows you to create tables or matrices. Inside a `<mtable>` only {{ MathMLElement("mtr") }} and {{ MathMLElement("mtd") }} elements may appear. These elements are similar to {{ HTMLElement("table") }} , {{ HTMLElement("tr") }} and {{ HTMLElement("td") }} elements of [HTML](/en-US/docs/Web/HTML).
+The MathML `<mtable>` element allows you to create tables or matrices. Inside a `<mtable>` only {{ MathMLElement("mtr") }} and {{ MathMLElement("mtd") }} elements may appear. These elements are similar to {{ HTMLElement("table") }}, {{ HTMLElement("tr") }} and {{ HTMLElement("td") }} elements of [HTML](/en-US/docs/Web/HTML).
 
 > **Note:** The `<mtable>` element resets the `displaystyle` attribute to `false`. If you want to use this element as an inline-block, you might want to set `<mtable displaystyle="true">...</mtable>`.
 
@@ -29,7 +30,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
     - `center`: See baseline.
     - `top`: The top of the table aligns on the environments baseline.
 
-    In addition, values of the `align` attribute can end with a _rownumber_ (e.g. `align="center 3"`). This allows you to align the specified row of the table rather than the whole table. A negative Integer value counts rows from the bottom of the table. Starting with Gecko 8.0 {{ geckoRelease("8.0") }} the interpretation of _negative_ values has been corrected ({{ bug(601436) }}). In Gecko 17.0 {{geckoRelease("17.0")}} the parsing has been updated to treat whitespace correctly.
+    In addition, values of the `align` attribute can end with a _rownumber_ (e.g. `align="center 3"`). This allows you to align the specified row of the table rather than the whole table. A negative Integer value counts rows from the bottom of the table.
 
 - `columnalign`
   - : Specifies the horizontal alignment of the cells. Multiple values separated by space are allowed and apply to the corresponding columns (e.g. `columnalign="left right center"`). Possible values are: `left`, `center` (default) and `right`.
@@ -48,36 +49,36 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - {{ unimplemented_inline() }} rowspacing
   - : Specifies the space between table rows.
 - `width`
-  - : Specifies the width of the entire table. Accepts [length values](/en-US/docs/Web/MathML/Attribute/Values#lengths).
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the width of the entire table.
+
+> **Note:** For the `width` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
 
 ## Examples
 
 ### Alignment with row number
 
-Rendering: ![](mtable-1.png)
-
 ```html
-<math>
-
-    <mi>X</mi>
-    <mo>=</mo>
-    <mtable frame="solid" rowlines="solid" align="axis 3">
-        <mtr>
-             <mtd><mi>A</mi></mtd>
-             <mtd><mi>B</mi></mtd>
-        </mtr>
-        <mtr>
-             <mtd><mi>C</mi></mtd>
-             <mtd><mi>D</mi></mtd>
-        </mtr>
-        <mtr>
-             <mtd><mi>E</mi></mtd>
-             <mtd><mi>F</mi></mtd>
-        </mtr>
-    </mtable>
-
+<math display="block">
+  <mi>X</mi>
+  <mo>=</mo>
+  <mtable frame="solid" rowlines="solid" align="axis 3">
+    <mtr>
+      <mtd><mi>A</mi></mtd>
+      <mtd><mi>B</mi></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mi>C</mi></mtd>
+      <mtd><mi>D</mi></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mi>E</mi></mtd>
+      <mtd><mi>F</mi></mtd>
+    </mtr>
+  </mtable>
 </math>
 ```
+
+{{ EmbedLiveSample('mtable_example', 700, 200, "", "") }}
 
 ## Specifications
 

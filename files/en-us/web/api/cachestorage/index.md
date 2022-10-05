@@ -11,6 +11,7 @@ tags:
   - ServiceWorker
 browser-compat: api.CacheStorage
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.
@@ -49,7 +50,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Examples
 
-This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/).)
+This code snippet is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (see [simple service worker running live](https://bncb2v.csb.app/).)
 This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
 
 In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:
@@ -61,46 +62,50 @@ In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We co
 Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.
 
 ```js
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
     caches
-      .open('v1')
+      .open("v1")
       .then((cache) =>
         cache.addAll([
-          '/sw-test/',
-          '/sw-test/index.html',
-          '/sw-test/style.css',
-          '/sw-test/app.js',
-          '/sw-test/image-list.js',
-          '/sw-test/star-wars-logo.jpg',
-          '/sw-test/gallery/bountyHunters.jpg',
-          '/sw-test/gallery/myLittleVader.jpg',
-          '/sw-test/gallery/snowTroopers.jpg',
+          "/",
+          "/index.html",
+          "/style.css",
+          "/app.js",
+          "/image-list.js",
+          "/star-wars-logo.jpg",
+          "/gallery/bountyHunters.jpg",
+          "/gallery/myLittleVader.jpg",
+          "/gallery/snowTroopers.jpg",
         ])
       )
   );
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(caches.match(event.request).then((response) => {
-    // caches.match() always resolves
-    // but in case of success response will have value
-    if (response !== undefined) {
-      return response;
-    } else {
-      return fetch(event.request).then((response) => {
-        // response may be used only once
-        // we need to save clone to put one copy in cache
-        // and serve second one
-        let responseClone = response.clone();
-
-        caches.open('v1').then((cache) => {
-          cache.put(event.request, responseClone);
-        });
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      // caches.match() always resolves
+      // but in case of success response will have value
+      if (response !== undefined) {
         return response;
-      }).catch(() => caches.match('/sw-test/gallery/myLittleVader.jpg'));
-    }
-  }));
+      } else {
+        return fetch(event.request)
+          .then((response) => {
+            // response may be used only once
+            // we need to save clone to put one copy in cache
+            // and serve second one
+            let responseClone = response.clone();
+
+            caches.open("v1").then((cache) => {
+              cache.put(event.request, responseClone);
+            });
+            return response;
+          })
+          .catch(() => caches.match("/gallery/myLittleVader.jpg"));
+      }
+    })
+  );
 });
 ```
 
@@ -111,15 +116,15 @@ This snippet shows how the API can be used outside of a service worker context, 
 async function getData() {
   const cacheVersion = 1;
   const cacheName = `myapp-${cacheVersion}`;
-  const url = 'https://jsonplaceholder.typicode.com/todos/1';
+  const url = "https://jsonplaceholder.typicode.com/todos/1";
   let cachedData = await getCachedData(cacheName, url);
 
   if (cachedData) {
-    console.log('Retrieved cached data');
+    console.log("Retrieved cached data");
     return cachedData;
   }
 
-  console.log('Fetching fresh data');
+  console.log("Fetching fresh data");
 
   const cacheStorage = await caches.open(cacheName);
   await cacheStorage.add(url);
@@ -146,7 +151,7 @@ async function deleteOldCaches(currentCache) {
   const keys = await caches.keys();
 
   for (const key of keys) {
-    const isOurCache = key.startsWith('myapp-');
+    const isOurCache = key.startsWith("myapp-");
     if (currentCache === key || !isOurCache) {
       continue;
     }

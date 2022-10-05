@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/accessKeyLabel
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.accessKeyLabel
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.accessKeyLabel`**
@@ -12,7 +13,7 @@ browser-assigned access key (if any); otherwise it returns an empty string.
 
 ## Syntax
 
-```js
+```js-nolint
 label = element.accessKeyLabel
 ```
 

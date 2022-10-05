@@ -8,6 +8,7 @@ tags:
   - part 6
   - server-side
 ---
+
 This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
 
 ## Controller—get route
@@ -81,7 +82,8 @@ exports.book_update_post = [
   // Convert the genre to an array
   (req, res, next) => {
     if (!Array.isArray(req.body.genre)) {
-      req.body.genre = typeof req.body.genre === "undefined" ? [] : [req.body.genre];
+      req.body.genre =
+        typeof req.body.genre === "undefined" ? [] : [req.body.genre];
     }
     next();
   },
@@ -158,7 +160,7 @@ exports.book_update_post = [
       if (err) {
         return next(err);
       }
-      
+
       // Successful: redirect to book detail page.
       res.redirect(thebook.url);
     });
@@ -213,7 +215,7 @@ Run the application, open your browser to `http://localhost:3000/`, select the _
 
 The form should look just like the _Create book_ page, only with a title of 'Update book', and pre-populated with record values.
 
-![](locallibary_express_book_update_noerrors.png)
+![The update book section of the Local library application. The left column has a vertical navigation bar. The right column has a form to update the book with an heading that reads 'Update book'. There are five input fields labelled Title, Author, Summary, ISBN, Genre. Genre is a checkbox option field. There is a button labelled 'Submit' at the end.](locallibary_express_book_update_noerrors.png)
 
 > **Note:** The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.
 

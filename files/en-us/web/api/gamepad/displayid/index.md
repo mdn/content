@@ -12,9 +12,11 @@ tags:
   - WebVR
   - displayId
   - Deprecated
+  - Non-standard
 browser-compat: api.Gamepad.displayId
 ---
-{{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`displayId`** read-only property of the {{domxref("Gamepad")}} interface _returns the {{domxref("VRDisplay.displayId")}} of the associated {{domxref("VRDisplay")}} — the `VRDisplay` that the gamepad is controlling the displayed scene of._
 

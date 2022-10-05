@@ -13,6 +13,7 @@ tags:
   - to()
 browser-compat: api.CSSNumericValue.to
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`to()`** method of the
@@ -21,7 +22,7 @@ another.
 
 ## Syntax
 
-```js
+```js-nolint
 to(unit)
 ```
 

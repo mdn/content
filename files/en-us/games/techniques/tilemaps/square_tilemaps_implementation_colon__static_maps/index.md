@@ -1,5 +1,5 @@
 ---
-title: 'Square tilemaps implementation: Static maps'
+title: "Square tilemaps implementation: Static maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
 tags:
   - Canvas
@@ -12,6 +12,7 @@ tags:
   - tilemaps
   - tiles
 ---
+
 {{GamesSidebar}}
 
 This article covers how to implement static square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
@@ -60,18 +61,13 @@ const map = {
   rows: 8,
   tsize: 64,
   tiles: [
-    1, 3, 3, 3, 1, 1, 3, 1,
-    1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 1, 1, 2, 1, 1,
-    1, 1, 1, 1, 1, 1, 1, 1,
-    1, 1, 1, 2, 1, 1, 1, 1,
-    1, 1, 1, 1, 2, 1, 1, 1,
-    1, 1, 1, 1, 2, 1, 1, 1,
-    1, 1, 1, 0, 0, 1, 1, 1
+    1, 3, 3, 3, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1,
+    1, 1, 2, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1,
   ],
   getTile(col, row) {
-    return this.tiles[row * map.cols + col]
-  }
+    return this.tiles[row * map.cols + col];
+  },
 };
 ```
 
@@ -87,7 +83,8 @@ We can render the map by iterating over its columns and rows. This snippet assum
 for (let c = 0; c < map.cols; c++) {
   for (let r = 0; r < map.rows; r++) {
     const tile = map.getTile(c, r);
-    if (tile !== 0) { // 0 => empty tile
+    if (tile !== 0) {
+      // 0 => empty tile
       context.drawImage(
         tileAtlas, // image
         (tile - 1) * map.tsize, // source x

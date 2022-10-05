@@ -3,9 +3,9 @@ title: Syntax
 slug: Glossary/Syntax
 tags:
   - CodingScripting
-  - Glossary
   - Syntax
 ---
+
 Syntax specifies the required combination and sequence of {{Glossary("character","characters")}} making up correctly structured code. Syntax generally includes grammar and the rules that apply to writing it, such as indentation requirements in Python.
 
 Syntax varies from language to language (e.g., syntax is different in {{Glossary("HTML")}} and {{Glossary("JavaScript")}}). Although languages can share few similarities in terms of their syntaxes for example "operand operator operand" rule in JavaScript and Python. This does not mean the two languages share similarities with syntax.
@@ -20,4 +20,4 @@ Frameworks are said to have a "clean" syntax if they produce simple, readable, c
 
 ## See also
 
-- [Syntax (programming languages)](https://en.wikipedia.org/wiki/Syntax_(programming_languages)) on Wikipedia
+- [Syntax (programming languages)](<https://en.wikipedia.org/wiki/Syntax_(programming_languages)>) on Wikipedia

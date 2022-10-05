@@ -10,13 +10,14 @@ tags:
   - contentScripts
 browser-compat: webextensions.api.contentScripts
 ---
+
 {{AddonSidebar}}
 
 Use this API to register content scripts. Registering a content script instructs the browser to insert the given content scripts into pages that match the given URL patterns.
 
 > **Note:** When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.registerContentScripts()")}} to register scripts.
 
-This API is very similar to the [`"content_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) key, except that with  `"content_scripts"` , the set of content scripts and associated patterns is fixed at install time. With the `contentScripts` API, an extension can register and unregister scripts at runtime.
+This API is very similar to the [`"content_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) key, except that with `"content_scripts"`, the set of content scripts and associated patterns is fixed at install time. With the `contentScripts` API, an extension can register and unregister scripts at runtime.
 
 To use the API, call {{WebExtAPIRef("contentScripts.register()")}} passing in an object defining the scripts to register, the URL patterns, and other options. This returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is resolved with a {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} object.
 

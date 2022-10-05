@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.replace
 ---
+
 {{JSRef}}
 
 The **`replace()`** method returns a new string with one, some, or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function called for each match. If `pattern` is a string, only the first occurrence will be replaced. The original string is left unchanged.
@@ -20,7 +21,7 @@ The **`replace()`** method returns a new string with one, some, or all matches o
 
 ## Syntax
 
-```js
+```js-nolint
 replace(pattern, replacement)
 ```
 
@@ -58,7 +59,7 @@ A regexp with the `g` flag is the only case where `replace()` replaces more than
 The replacement string can include the following special replacement patterns:
 
 | Pattern   | Inserts                                                                                        |
-| --------- | -----------------------------------------------------------------------------------------------|
+| --------- | ---------------------------------------------------------------------------------------------- |
 | `$$`      | Inserts a `"$"`.                                                                               |
 | `$&`      | Inserts the matched substring.                                                                 |
 | `` $` ``  | Inserts the portion of the string that precedes the matched substring.                         |
@@ -70,7 +71,7 @@ The replacement string can include the following special replacement patterns:
 
 ```js
 "foo".replace(/(f)/, "$2"); // "$2oo"; the regex doesn't have the second group
-"foo".replace("f", "$1"); // "$1oo"
+"foo".replace("f", "$1"); // "$1oo"; the pattern is a string, so it doesn't have any groups
 "foo".replace(/(f)|(g)/, "$2"); // "oo"; the second group exists but isn't matched
 ```
 
@@ -114,7 +115,7 @@ const newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 console.log(newString);  // abc - 12345 - #$*%
 ```
 
-The function will be invoked multiple times for each full match to be replaced if the regular expression in the first parameter is global. 
+The function will be invoked multiple times for each full match to be replaced if the regular expression in the first parameter is global.
 
 ## Examples
 

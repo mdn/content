@@ -1,8 +1,9 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - Accessibility
   - CSS
   - Media Queries
@@ -10,6 +11,9 @@ tags:
   - media feature
 browser-compat: css.at-rules.media.prefers-reduced-motion
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+
 The **`prefers-reduced-motion`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses.
 
 > **Warning:** An embedded example at the bottom of this page has a scaling movement that may be problematic for some readers. Readers with vestibular motion disorders may wish to enable the reduce motion feature on their device before viewing the animation.
@@ -75,17 +79,33 @@ This example has a scaling animation by default. If Reduce Motion is enabled in 
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  25% { transform: scale(.9); }
-  50% { transform: scale(1); }
-  75% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes dissolve {
-  0% { opacity: 1; }
-  50% { opacity: 0.8; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 ```
 
@@ -105,5 +125,3 @@ This example has a scaling animation by default. If Reduce Motion is enabled in 
 
 - [An Introduction to the Reduced Motion Media Query (CSS Tricks)](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion (WebKit Blog)](https://webkit.org/blog/7551/responsive-design-for-motion/) includes vestibular motion trigger examples.
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}

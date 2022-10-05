@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document.hasFocus
 ---
+
 {{APIRef}}
 
 The **`hasFocus()`** method of the {{domxref("Document")}}
@@ -23,7 +24,7 @@ active element in a document has focus.
 
 ## Syntax
 
-```js
+```js-nolint
 hasFocus()
 ```
 
@@ -87,4 +88,5 @@ setInterval(checkPageFocus, 300);
 
 ## See also
 
+- {{domxref("Document.activeElement")}}
 - [Using the Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)

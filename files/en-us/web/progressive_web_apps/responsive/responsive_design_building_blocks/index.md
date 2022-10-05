@@ -4,10 +4,11 @@ slug: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
 tags:
   - Apps
   - CSS
-  - HTML5
+  - HTML
   - Mobile
   - Responsive Design
 ---
+
 In this article we will discuss the main essential components of responsive design, with some links to further information where necessary.
 
 For Web developers, it is now fairly common to be called upon to create a Web site or app that changes its user interface depending on the browser or device accessing the site to provide an optimized experience. One approach to this is to create different versions of your site/app for different platforms or browsers and serve them appropriately after detecting which browser or platform is looking at your site. But this is increasingly inefficient: browser sniffing is inherently error prone, and maintaining multiple copies of your code can turn out to be a nightmare.
@@ -79,8 +80,6 @@ The padding does not affect the overall width and height of the containers becau
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 ```
@@ -222,19 +221,11 @@ This rule changes the width of the gallery images so now there are two per line.
     width: 100%;
     position: absolute;
     z-index: 1000;
-
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
     display: flex;
   }
 
   nav button {
     font-size: 6.8vw;
-
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
     flex: 1;
 
     border-left: 1px solid rgba(100,100,100,0.4);
@@ -257,7 +248,10 @@ Last, we have used `flex: 1;` to make the buttons always take up the same propor
 What's more relevant to this article is that we didn't want the Brick CSS and JavaScript files being applied to the markup unless we were looking at the mobile app view. To achieve this, we applied the Brick CSS to the page using a separate {{HTMLElement("link")}} element with a `media` attribute:
 
 ```html
-<link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)">
+<link
+  href="dist/brick.css"
+  rel="stylesheet"
+  media="all and (max-width: 480px)" />
 ```
 
 This says that the whole stylesheet will not be linked to the HTML unless the viewport width is 480px or less. Moving on to the JavaScript, {{HTMLElement("script")}} elements don't accept `media` attributes, so I had to do this a different way. Fortunately there is a JavaScript construct called {{domxref("window.matchMedia()")}}, which can conditionally run JavaScript constructs depending on whether a media query returns `true` or not. We opened up the `brick.js` file and wrapped the whole lot in the following:
@@ -300,10 +294,6 @@ We also came across some problems with orientation: the mobile-app layout of our
 @media all and (max-width: 480px) and (orientation: landscape) {
   nav {
     width: auto;
-
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -350,7 +340,7 @@ One last problem to mention for our example app is concerned with mobile browser
 There is a way to override this mobile rendering behavior — viewport, which is inserted into our HTML pages in the form of a {{HTMLElement("meta")}} tag. In my example, let's add the following into our HTML {{HTMLElement("head")}}:
 
 ```html
-<meta name="viewport" content="width=480">
+<meta name="viewport" content="width=480" />
 ```
 
 This causes our browser to render our mobile app layout properly — `width=480` tells the browser _"render this markup at 480 pixels wide"_, hence the media queries kick in appropriately. There are many more options available in the viewport meta tag, which you can read about in [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Mozilla/Mobile/Viewport_meta_tag).
@@ -388,9 +378,8 @@ button {
   background: url(images/low-res-header.jpg) 1rem center;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-       only screen and (min-resolution: 192dpi),
-       only screen and (min-resolution: 2dppx) {
+@media only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
   button {
     background: url(images/high-res-header.jpg) 1rem center;
   }
@@ -405,8 +394,8 @@ HTML video is fairly well catered for in terms of responsive capabilities. If yo
 
 ```html
 <video controls>
-  <source src="videos/720/crystal720.mp4" type="video/mp4">
-  <source src="videos/720/crystal720.webm" type="video/webm">
+  <source src="videos/720/crystal720.mp4" type="video/mp4" />
+  <source src="videos/720/crystal720.webm" type="video/webm" />
 </video>
 ```
 
@@ -414,10 +403,22 @@ But you can go one step further. You can include `media` attributes on the `<sou
 
 ```html
 <video controls>
-  <source src="videos/320/crystal320.mp4" type="video/mp4" media="all and (max-width: 480px)">
-  <source src="videos/320/crystal320.webm" type="video/webm" media="all and (max-width: 480px)">
-  <source src="videos/720/crystal720.mp4" type="video/mp4" media="all and (min-width: 481px)">
-  <source src="videos/720/crystal720.webm" type="video/webm" media="all and (min-width: 481px)">
+  <source
+    src="videos/320/crystal320.mp4"
+    type="video/mp4"
+    media="all and (max-width: 480px)" />
+  <source
+    src="videos/320/crystal320.webm"
+    type="video/webm"
+    media="all and (max-width: 480px)" />
+  <source
+    src="videos/720/crystal720.mp4"
+    type="video/mp4"
+    media="all and (min-width: 481px)" />
+  <source
+    src="videos/720/crystal720.webm"
+    type="video/webm"
+    media="all and (min-width: 481px)" />
 </video>
 ```
 

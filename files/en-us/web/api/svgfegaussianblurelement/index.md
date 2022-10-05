@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEGaussianBlurElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEGaussianBlurElement`** interface corresponds to the {{SVGElement("feGaussianBlur")}} element.

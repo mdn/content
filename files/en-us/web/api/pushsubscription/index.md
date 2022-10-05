@@ -12,6 +12,7 @@ tags:
   - Service Workers
 browser-compat: api.PushSubscription
 ---
+
 {{ApiRef("Push API")}}
 
 The `PushSubscription` interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a subscription's URL endpoint and allows unsubscribing from a push service.
@@ -20,13 +21,13 @@ An instance of this interface can be serialized.
 
 ## Properties
 
-- {{domxref("PushSubscription.endpoint")}} {{readonlyinline}}
+- {{domxref("PushSubscription.endpoint")}} {{ReadOnlyInline}}
   - : A string containing the endpoint associated with the push subscription.
-- {{domxref("PushSubscription.expirationTime")}} {{readonlyinline}}
+- {{domxref("PushSubscription.expirationTime")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} of the subscription expiration time associated with the push subscription, if there is one, or null otherwise.
-- {{domxref("PushSubscription.options")}} {{readonlyinline}}
+- {{domxref("PushSubscription.options")}} {{ReadOnlyInline}}
   - : An object containing the options used to create the subscription.
-- {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{readonlyinline}}
+- {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : A string containing the subscription ID associated with the push subscription.
 
 ## Methods

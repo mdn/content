@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTextElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGTextElement`** interface corresponds to the {{SVGElement("text")}} elements.

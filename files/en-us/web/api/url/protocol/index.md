@@ -10,6 +10,7 @@ tags:
   - URL API
 browser-compat: api.URL.protocol
 ---
+
 {{ApiRef("URL API")}}
 
 The **`protocol`** property of the {{domxref("URL")}} interface

@@ -11,6 +11,7 @@ tags:
   - slot
 browser-compat: api.Element.slot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`slot`** property of the {{domxref("Element")}} interface

@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.get
 ---
+
 {{JSRef}}
 
 The static **`Reflect.get()`** method works like getting a
@@ -19,7 +20,7 @@ property from an object (`target[propertyKey]`) as a function.
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.get(target, propertyKey)
 Reflect.get(target, propertyKey, receiver)
 ```

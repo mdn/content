@@ -12,6 +12,7 @@ tags:
   - Title
 browser-compat: api.Notification.title
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`title`** read-only property of the

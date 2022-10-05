@@ -11,6 +11,7 @@ tags:
   - Web Audio API
 browser-compat: api.DynamicsCompressorNode.release
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `release` property of the {{ domxref("DynamicsCompressorNode") }} interface Is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} representing the amount of time, in seconds, required to increase the gain by 10 dB. It defines how quick the signal is adapted when its volume is reduced.

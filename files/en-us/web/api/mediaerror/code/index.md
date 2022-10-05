@@ -16,6 +16,7 @@ tags:
   - Video
 browser-compat: api.MediaError.code
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only property **`MediaError.code`** returns a numeric
@@ -27,7 +28,7 @@ string with specific diagnostic information, see {{domxref("MediaError.message")
 A numeric value indicating the general type of error which occurred. The possible
 values are described below, in [Media error code constants](#media_error_code_constants).
 
-#### Media error code constants
+### Media error code constants
 
 <table class="no-markdown">
   <thead>

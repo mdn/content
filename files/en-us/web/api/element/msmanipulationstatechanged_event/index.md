@@ -10,9 +10,10 @@ tags:
   - Reference
 browser-compat: api.Element.MSManipulationStateChanged_event
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
-**`MSManipulationStateChanged`** fires when the state of an element being manipulated has changed (ie. whenever you start or finish panning or zooming an element).
+**`MSManipulationStateChanged`** fires when the state of an element being manipulated has changed (i.e. whenever you start or finish panning or zooming an element).
 
 It is a proprietary event specific to Microsoft Edge and Internet Explorer.
 

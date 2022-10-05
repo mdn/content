@@ -7,6 +7,7 @@ tags:
   - writing-guide
 browser-compat: api.AbortController
 ---
+
 {{MDNSidebar}}
 
 MDN has a standard format for compatibility tables for our open web documentation; that is, documentation of technologies such as the DOM, HTML, CSS, JavaScript, SVG, and so forth, that are shared across all browsers. This article is a "getting started" guide to how to add to and maintain the database from which the compatibility tables are generated, as well as how to integrate the tables into articles.
@@ -45,27 +46,27 @@ Now, whenever you want to update your fork, you can do so by:
 
 1. Making sure you are in the main branch:
 
-    ```bash
-    git checkout main
-    ```
+   ```bash
+   git checkout main
+   ```
 
 2. fetching the up-to-date repo contents using the following:
 
-    ```bash
-    git fetch upstream
-    ```
+   ```bash
+   git fetch upstream
+   ```
 
 3. rebasing the contents of your main branch with the official repo's contents:
 
-    ```bash
-    git rebase upstream/main
-    ```
+   ```bash
+   git rebase upstream/main
+   ```
 
 4. pushing these updates back to your remote fork using this:
 
-    ```bash
-    git push
-    ```
+   ```bash
+   git push
+   ```
 
 ### Creating a new branch to do your work in
 
@@ -308,7 +309,7 @@ Often compat tables will include footnotes related to certain entries that expla
 
 ### Including a vendor prefix
 
-If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. imagine you had a feature that was supported with a `-moz-` prefix in Firefox. To specify this in the compat data, you'd need to add a "prefix" submember inside the relevant "firefox" submember. It would look something like this:
+If a feature is supported behind a vendor prefix in one or more browsers, you'll want to make that clear in the browser compat data. Imagine you had a feature that was supported with a `-moz-` prefix in Firefox. To specify this in the compat data, you'd need to add a "prefix" submember inside the relevant "firefox" submember. It would look something like this:
 
 ```json
 "firefox": {
@@ -473,6 +474,7 @@ For example, for the {{domxref("AbortController")}} this would be added as shown
 
 ```plain
 ---
+
 title: AbortController
 slug: Web/API/AbortController
 
@@ -480,6 +482,7 @@ slug: Web/API/AbortController
 
 browser-compat: api.AbortController
 ---
+
 ```
 
 The compatibility and specification tables corresponding to the key are then automatically rendered in place of the `\{{Compat}}` and `\{{Specifications}}` macros in the source.
@@ -488,10 +491,10 @@ You can also specify the desired API as the first argument to the macro as shown
 
 The macro calls generate the following tables (and corresponding set of notes):
 
-#### Compatibility table example
+### Compatibility table example
 
 {{Compat}}
 
-#### Specifications table examples
+### Specifications table examples
 
 {{Specifications}}

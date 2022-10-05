@@ -1,14 +1,16 @@
 ---
 title: video-dynamic-range
 slug: Web/CSS/@media/video-dynamic-range
+page-type: css-media-feature
 tags:
-  - '@media'
+  - "@media"
   - CSS
   - Media Queries
   - Reference
   - media feature
 browser-compat: css.at-rules.media.video-dynamic-range
 ---
+
 {{CSSRef}}
 
 The **`video-dynamic-range`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the combination of brightness, contrast ratio, and color depth that are supported by the video plane of the {{glossary("user agent")}} and the output device.
@@ -20,6 +22,7 @@ Some user agents, including many TVs, render video and graphics in two separate 
 The `video-dynamic-range` feature is specified as a keyword value chosen from the list below.
 
 - `standard`
+
   - : This value matches any visual device and excludes devices lacking visual capabilities. A user agent or an output device that matches `high` will also match the `standard` value.
 
 - `high`

@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.DataTransfer.addElement
 ---
+
 {{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 The **`DataTransfer.addElement()`** method sets the drag source
@@ -22,7 +23,7 @@ dragged).
 
 ## Syntax
 
-```js
+```js-nolint
 addElement(element)
 ```
 

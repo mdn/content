@@ -13,6 +13,7 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTService
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The `BluetoothRemoteGATTService` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a
@@ -23,13 +24,13 @@ and a list of the characteristics of this service.
 
 ## Properties
 
-- {{domxref("BluetoothRemoteGATTService.device")}} {{readonlyinline}} {{Experimental_Inline}}
+- {{domxref("BluetoothRemoteGATTService.device")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns information about a Bluetooth device through an instance of
     {{domxref("BluetoothDevice")}}.
-- {{domxref("BluetoothRemoteGATTService.isPrimary")}} {{readonlyinline}} {{Experimental_Inline}}
+- {{domxref("BluetoothRemoteGATTService.isPrimary")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean value indicating whether this is a primary or secondary
     service.
-- {{domxref("BluetoothRemoteGATTService.uuid")}} {{readonlyinline}} {{Experimental_Inline}}
+- {{domxref("BluetoothRemoteGATTService.uuid")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string representing the UUID of this service.
 
 ## Methods

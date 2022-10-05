@@ -2,10 +2,10 @@
 title: Character set
 slug: Glossary/character_set
 tags:
-  - Glossary
   - character encoding
   - character set
 ---
+
 A **character set** is an encoding system to let computers know how to recognize {{Glossary("Character")}}, including letters, numbers, punctuation marks, and whitespace.
 
 In earlier times, countries developed their own character sets due to their different languages used, such as Kanji JIS codes (e.g. Shift-JIS, EUC-JP, etc.) for Japanese, Big5 for traditional Chinese, and KOI8-R for Russian. However, {{Glossary("Unicode")}} gradually became most acceptable character set for its universal language support.

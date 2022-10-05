@@ -10,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.toStringTag
 ---
+
 {{JSRef}}
 
 The **`Symbol.toStringTag`** well-known symbol is a string valued property that is used in the creation of the default string description of an object. It is accessed internally by the {{jsxref("Object.prototype.toString()")}} method.

@@ -1,6 +1,7 @@
 ---
-title: ':last-child'
+title: ":last-child"
 slug: Web/CSS/:last-child
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -10,6 +11,7 @@ tags:
   - Web
 browser-compat: css.selectors.last-child
 ---
+
 {{CSSRef}}
 
 The **`:last-child`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the last element among a group of sibling elements.
@@ -62,7 +64,8 @@ p:last-child {
 <ul>
   <li>Item 1</li>
   <li>Item 2</li>
-  <li>Item 3
+  <li>
+    Item 3
     <ul>
       <li>Item 3.1</li>
       <li>Item 3.2</li>

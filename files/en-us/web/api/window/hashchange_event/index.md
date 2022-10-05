@@ -10,6 +10,7 @@ tags:
   - Window
 browser-compat: api.Window.hashchange_event
 ---
+
 {{APIRef}}
 
 The **`hashchange`** event is fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
@@ -31,9 +32,9 @@ A {{domxref("HashChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}
+- {{domxref("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
   - : The new URL to which the window is navigating.
-- {{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}
+- {{domxref("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
   - : The previous URL from which the window was navigated.
 
 ## Event handler aliases

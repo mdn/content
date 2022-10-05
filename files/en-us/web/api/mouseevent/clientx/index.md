@@ -13,6 +13,7 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.clientX
 ---
+
 {{APIRef("UI Events")}}
 
 The **`clientX`** read-only property of the {{domxref("MouseEvent")}} interface provides the horizontal coordinate within the application's {{glossary("viewport")}} at which the event occurred (as opposed to the coordinate within the page).

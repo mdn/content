@@ -13,6 +13,7 @@ tags:
   - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.sample
 ---
+
 {{HTTPSidebar}}
 
 The **`sample`** read-only property of the

@@ -7,6 +7,7 @@ tags:
   - Node
   - server-side
 ---
+
 This subarticle shows how to define a page to delete `Author` objects.
 
 As discussed in the [form design](/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design) section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an `Author` to be deleted if it is referenced by a `Book`).
@@ -175,7 +176,7 @@ p
 
 The control should now appear as a link, as shown below on the _Author detail_ page.
 
-![](locallibary_express_author_detail_delete.png)
+![The Author details section of the Local library application. The left column has a vertical navigation bar. The right section contains the author details with a heading that has the Author's name followed by the life dates of the author and lists the books written by the author below it. There is a button labelled 'Delete Author' at the bottom.](locallibary_express_author_detail_delete.png)
 
 ## What does it look like?
 
@@ -185,12 +186,12 @@ Then select the _All authors_ link, and then select a particular author. Finally
 If the author has no books, you'll be presented with a page like this.
 After pressing delete, the server will delete the author and redirect to the author list.
 
-![](locallibary_express_author_delete_nobooks.png)
+![The Delete Author section of the Local library application of an author who does not have any books. The left column has a vertical navigation bar. The right section contains the author's name and life dates. There is the question "Do you really want to delete this author" with a button labeled 'Delete'.](locallibary_express_author_delete_nobooks.png)
 
 If the author does have books, then you'll be presented with a view like the following.
 You can then delete the books from their detail pages (once that code is implemented!).
 
-![](locallibary_express_author_delete_withbooks.png)
+![The Delete Author section of the Local library application of an author who does have books under his name. The section contains the author's name and life dates of the author. There is a statement that reads "Delete the following books before attempting to delete this author" followed by the author's books. The list includes the titles of each book, as links, followed by a brief description in plain text.](locallibary_express_author_delete_withbooks.png)
 
 > **Note:** The other pages for deleting objects can be implemented in much the same way.
 > We've left that as a challenge.

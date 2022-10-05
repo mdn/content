@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Generator.next
 ---
+
 {{JSRef}}
 
 The **`next()`** method returns an
@@ -19,7 +20,7 @@ generator.
 
 ## Syntax
 
-```js
+```js-nolint
 generatorObject.next(value)
 ```
 

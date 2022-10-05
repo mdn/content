@@ -1,6 +1,7 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders
@@ -9,6 +10,7 @@ tags:
   - recipe:css-shorthand-property
 browser-compat: css.properties.border-width
 ---
+
 {{CSSRef}}
 
 The **`border-width`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width of an element's border.
@@ -87,14 +89,18 @@ The `border-width` property may be specified using one, two, three, or four valu
 #### HTML
 
 ```html
-<p id="sval">
-    one value: 6px wide border on all 4 sides</p>
+<p id="sval">one value: 6px wide border on all 4 sides</p>
 <p id="bival">
-    two different values: 2px wide top and bottom border, 10px wide right and left border</p>
+  two different values: 2px wide top and bottom border, 10px wide right and left
+  border
+</p>
 <p id="treval">
-    three different values: 0.3em top, 9px bottom, and zero width right and left</p>
+  three different values: 0.3em top, 9px bottom, and zero width right and left
+</p>
 <p id="fourval">
-    four different values: "thin" top, "medium" right, "thick" bottom, and 1em left</p>
+  four different values: "thin" top, "medium" right, "thick" bottom, and 1em
+  left
+</p>
 ```
 
 #### CSS

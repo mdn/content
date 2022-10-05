@@ -15,6 +15,7 @@ tags:
   - forEach()
 browser-compat: api.CSSUnparsedValue.forEach
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSUnparsedValue.forEach()`** method
@@ -23,7 +24,7 @@ executes a provided function once for each element of the
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach((currentValue) => { /* … */ } )
 forEach((currentValue, index) => { /* … */ } )
@@ -55,7 +56,7 @@ forEach(function(currentValue, index, array) { /* … */ }, thisArg)
         on.
 
 - `thisArg` {{Optional_inline}}
-  - : Value to use as **`this`** (i.e the reference
+  - : Value to use as **`this`** (i.e., the reference
     `Object`) when executing `callback`.
 
 ### Return value

@@ -9,6 +9,7 @@ tags:
   - Gecko 2.0
   - Guide
 ---
+
 {{HTTPSidebar}}
 
 This document describes the user agent string used in Firefox 4 and later and applications based on Gecko 2.0 and later. For a breakdown of changes to the string in Gecko 2.0, see [Final User Agent string for Firefox 4](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/) (blog post). See also this document on [user agent sniffing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) and this [Hacks blog post](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/).
@@ -182,7 +183,7 @@ Although it is **strongly discouraged** by Mozilla, some handset manufacturers u
 
 Here is a JavaScript regular expression that will detect all mobile devices, including devices with a device id in their UA string:
 
-```
+```js
 /mobi/i
 ```
 
@@ -206,7 +207,7 @@ While the version number for Firefox OS is not included in the UA string, it is 
 
 > **Note:** It's easy to find the correspondences by looking at the [Mercurial repository names](https://hg.mozilla.org/releases): repositories starting by `mozilla-b2g` are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.
 
-Firefox OS has a four-digit version number: `X.X.X.Y`. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.
+Firefox OS has a four-digit version number: `X.X.X.Y`. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc.). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.
 
 ## Firefox for iOS
 

@@ -14,6 +14,7 @@ tags:
   - Experimental
 browser-compat: api.USBDevice.controlTransferIn
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`controlTransferIn()`** method of the
@@ -23,7 +24,7 @@ been received from the USB device.
 
 ## Syntax
 
-```js
+```js-nolint
 controlTransferIn(setup, length)
 ```
 
@@ -31,7 +32,7 @@ controlTransferIn(setup, length)
 
 - `setup`
 
-  - : An object that sets options for . The available options are:
+  - : An object that sets options for. The available options are:
 
     - `requestType`
       - : Must be one of three values specifying whether the

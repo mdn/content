@@ -11,6 +11,7 @@ tags:
   - Workers
 browser-compat: api.SharedWorker
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`SharedWorker`** interface represents a specific kind of worker that can be _accessed_ from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, {{domxref("SharedWorkerGlobalScope")}}.
@@ -28,7 +29,7 @@ The **`SharedWorker`** interface represents a specific kind of worker that can b
 
 _Inherits properties from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("SharedWorker.port")}} {{readonlyInline}}
+- {{domxref("SharedWorker.port")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MessagePort")}} object used to communicate with and control the shared worker.
 
 ## Events
@@ -42,7 +43,7 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}._
 
 ## Example
 
-In our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.
+In our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.
 
 The following code snippet shows creation of a `SharedWorker` object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:
 

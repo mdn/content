@@ -3,10 +3,10 @@ title: Signature (functions)
 slug: Glossary/Signature/Function
 tags:
   - CodingScripting
-  - Glossary
   - Java
   - JavaScript
 ---
+
 A **function signature** (or _type_ signature, or _method_ signature) defines input and output of {{Glossary("Function", "functions")}} or {{Glossary("Method", "methods")}}.
 
 A signature can include:
@@ -23,7 +23,7 @@ A signature can include:
 {{Glossary("JavaScript")}} is a _loosely typed_ or a _dynamic_ language. That means you don't have to declare the type of a variable ahead of time. The type will get determined automatically while the program is being processed. A signature in JavaScript can still give you some information about the method:
 
 ```js
-MyObject.prototype.myFunction(value)
+MyObject.prototype.myFunction(value);
 ```
 
 - The method is installed on an {{Glossary("object")}} called `MyObject`.
@@ -43,7 +43,7 @@ public static void main(String[] args)
 - The `static` keyword indicates that this method is a class method as opposed to being an instance method.
 - The `void` keyword indicates that this method has no return value.
 - The name of the method is `main`.
-- The method accepts one parameter of type String Array. It is named `args.`
+- The method accepts one parameter of type String Array. It is named `args`.
 
 ## See also
 

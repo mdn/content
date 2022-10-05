@@ -10,8 +10,9 @@ tags:
   - OOJS
   - Object-Oriented
   - Objects
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 In this assessment, you are expected to use the bouncing balls demo from the previous article as a starting point, and add some new and interesting features to it.
@@ -56,7 +57,7 @@ Our bouncy ball demo is fun, but now we want to make it a little bit more intera
 
 The following screenshot gives you an idea of what the finished program should look like:
 
-![](bouncing-evil-circle.png)
+![Screenshot of the bouncing balls demo page. A white-outlined circle is visible in addition to the colored balls, and the text "Ball count: 23" is visible under the heading.](bouncing-evil-circle.png)
 
 To give you more of an idea, have a look at the [finished example](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (no peeking at the source code!)
 
@@ -117,18 +118,18 @@ The constructor for `EvilCircle` should:
 Finally, the constructor should set up the code enabling the user to move the evil circle around the screen:
 
 ```js
-window.addEventListener('keydown', (e) => {
-  switch(e.key) {
-    case 'a':
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "a":
       this.x -= this.velX;
       break;
-    case 'd':
+    case "d":
       this.x += this.velX;
       break;
-    case 'w':
+    case "w":
       this.y -= this.velY;
       break;
-    case 's':
+    case "s":
       this.y += this.velY;
       break;
   }
@@ -177,22 +178,22 @@ To implement the score counter, follow the following steps:
 1. In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
 2. In your CSS file, add the following rule at the bottom:
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. In your JavaScript, make the following updates:
 
-    - Create a variable that stores a reference to the paragraph.
-    - Keep a count of the number of balls on screen in some way.
-    - Increment the count and display the updated number of balls each time a ball is added to the scene.
-    - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
+   - Create a variable that stores a reference to the paragraph.
+   - Keep a count of the number of balls on screen in some way.
+   - Increment the count and display the updated number of balls each time a ball is added to the scene.
+   - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
 
 ## Assessment or further help
 
@@ -201,10 +202,10 @@ If you would like your work assessed, or are stuck and want to ask for help:
 1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Adding bouncing balls features".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+   - A descriptive title such as "Assessment wanted for Adding bouncing balls features".
+   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+   - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 

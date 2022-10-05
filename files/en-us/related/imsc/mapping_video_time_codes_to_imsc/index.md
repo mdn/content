@@ -9,6 +9,7 @@ tags:
   - mapping
   - subtitles
 ---
+
 Mapping the time or time code value that is seen within a video track or video editor timeline to an IMSC document can be a little tricky. There are a few different issues that you'll need to be aware of, which we'll cover in this article.
 
 ## Considering time code start times

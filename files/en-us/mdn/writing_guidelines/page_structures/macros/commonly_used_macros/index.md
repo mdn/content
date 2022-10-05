@@ -6,6 +6,7 @@ tags:
   - meta
   - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This page lists many of the general-purpose macros created for use on MDN.
@@ -30,7 +31,7 @@ This macro accepts one required parameter and one optional parameter:
 
 ### Linking to pages in references
 
-There are macros for locale-independent linking to pages in specific reference areas of MDN: Javascript, CSS, HTML elements, SVG etc.
+There are macros for locale-independent linking to pages in specific reference areas of MDN: JavaScript, CSS, HTML elements, SVG etc.
 
 The macros are easy to use.
 Minimally all you need to do is specify the name of the item to link to in the first argument.
@@ -160,7 +161,6 @@ Most macros will also take a second argument allowing you to change the display 
         <code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}
       </td>
     </tr>
-    </tr>
   </tbody>
 </table>
 
@@ -273,14 +273,14 @@ They can also be used to mark up a section on a page.
 The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 You can use the argument `notservice` to indicate that a feature works in web workers except for service workers.
 
-##### Syntax
+#### Syntax
 
 ```plain
 \{{AvailableInWorkers}}
 \{{AvailableInWorkers("notservice")}}
 ```
 
-##### Examples
+#### Examples
 
 {{AvailableInWorkers}}
 {{AvailableInWorkers("notservice")}}

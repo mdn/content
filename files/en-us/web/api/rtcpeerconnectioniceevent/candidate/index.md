@@ -15,6 +15,7 @@ tags:
   - rtc
 browser-compat: api.RTCPeerConnectionIceEvent.candidate
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`candidate`** property

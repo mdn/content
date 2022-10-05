@@ -11,6 +11,7 @@ tags:
   - latitude
 browser-compat: api.GeolocationCoordinates.latitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.latitude`** read-only property is a `double` representing the latitude of the position in decimal degrees.

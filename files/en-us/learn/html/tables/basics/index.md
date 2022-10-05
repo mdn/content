@@ -17,6 +17,7 @@ tags:
   - row
   - rowspan
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 This article gets you started with HTML tables, covering the very basics such as rows, cells, headings, making cells span multiple columns and rows, and how to group together all the cells in a column for styling purposes.
@@ -59,137 +60,143 @@ The point of a table is that it is rigid. Information is easily interpreted by m
 
 ```html hidden
 <table>
- <caption>Data about the planets of our solar system (Planetary facts taken from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
- <thead>
-  <tr>
-   <td colspan="2"></td>
-   <th scope="col">Name</th>
-   <th scope="col">Mass (10<sup>24</sup>kg)</th>
-   <th scope="col">Diameter (km)</th>
-   <th scope="col">Density (kg/m<sup>3</sup>)</th>
-   <th scope="col">Gravity (m/s<sup>2</sup>)</th>
-   <th scope="col">Length of day (hours)</th>
-   <th scope="col">Distance from Sun (10<sup>6</sup>km)</th>
-   <th scope="col">Mean temperature (°C)</th>
-   <th scope="col">Number of moons</th>
-   <th scope="col">Notes</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th colspan="2" rowspan="4" scope="rowgroup">Terrestrial planets</th>
-   <th scope="row">Mercury</th>
-   <td>0.330</td>
-   <td>4,879</td>
-   <td>5427</td>
-   <td>3.7</td>
-   <td>4222.6</td>
-   <td>57.9</td>
-   <td>167</td>
-   <td>0</td>
-   <td>Closest to the Sun</td>
-  </tr>
-  <tr>
-   <th scope="row">Venus</th>
-   <td>4.87</td>
-   <td>12,104</td>
-   <td>5243</td>
-   <td>8.9</td>
-   <td>2802.0</td>
-   <td>108.2</td>
-   <td>464</td>
-   <td>0</td>
-   <td></td>
-  </tr>
-  <tr>
-   <th scope="row">Earth</th>
-   <td>5.97</td>
-   <td>12,756</td>
-   <td>5514</td>
-   <td>9.8</td>
-   <td>24.0</td>
-   <td>149.6</td>
-   <td>15</td>
-   <td>1</td>
-   <td>Our world</td>
-  </tr>
-  <tr>
-   <th scope="row">Mars</th>
-   <td>0.642</td>
-   <td>6,792</td>
-   <td>3933</td>
-   <td>3.7</td>
-   <td>24.7</td>
-   <td>227.9</td>
-   <td>-65</td>
-   <td>2</td>
-   <td>The red planet</td>
-  </tr>
-  <tr>
-   <th rowspan="4" scope="rowgroup">Jovian planets</th>
-   <th rowspan="2" scope="rowgroup">Gas giants</th>
-   <th scope="row">Jupiter</th>
-   <td>1898</td>
-   <td>142,984</td>
-   <td>1326</td>
-   <td>23.1</td>
-   <td>9.9</td>
-   <td>778.6</td>
-   <td>-110</td>
-   <td>67</td>
-   <td>The largest planet</td>
-  </tr>
-  <tr>
-   <th scope="row">Saturn</th>
-   <td>568</td>
-   <td>120,536</td>
-   <td>687</td>
-   <td>9.0</td>
-   <td>10.7</td>
-   <td>1433.5</td>
-   <td>-140</td>
-   <td>62</td>
-   <td></td>
-  </tr>
-  <tr>
-   <th rowspan="2" scope="rowgroup">Ice giants</th>
-   <th scope="row">Uranus</th>
-   <td>86.8</td>
-   <td>51,118</td>
-   <td>1271</td>
-   <td>8.7</td>
-   <td>17.2</td>
-   <td>2872.5</td>
-   <td>-195</td>
-   <td>27</td>
-   <td></td>
-  </tr>
-  <tr>
-   <th scope="row">Neptune</th>
-   <td>102</td>
-   <td>49,528</td>
-   <td>1638</td>
-   <td>11.0</td>
-   <td>16.1</td>
-   <td>4495.1</td>
-   <td>-200</td>
-   <td>14</td>
-   <td></td>
-  </tr>
-  <tr>
-   <th colspan="2" scope="rowgroup">Dwarf planets</th>
-   <th scope="row">Pluto</th>
-   <td>0.0146</td>
-   <td>2,370</td>
-   <td>2095</td>
-   <td>0.7</td>
-   <td>153.3</td>
-   <td>5906.4</td>
-   <td>-225</td>
-   <td>5</td>
-   <td>Declassified as a planet in 2006, but this <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.</td>
-  </tr>
- </tbody>
+  <caption>
+    Data about the planets of our solar system (Planetary facts taken from
+    <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).
+  </caption>
+  <thead>
+    <tr>
+      <td colspan="2"></td>
+      <th scope="col">Name</th>
+      <th scope="col">Mass (10<sup>24</sup>kg)</th>
+      <th scope="col">Diameter (km)</th>
+      <th scope="col">Density (kg/m<sup>3</sup>)</th>
+      <th scope="col">Gravity (m/s<sup>2</sup>)</th>
+      <th scope="col">Length of day (hours)</th>
+      <th scope="col">Distance from Sun (10<sup>6</sup>km)</th>
+      <th scope="col">Mean temperature (°C)</th>
+      <th scope="col">Number of moons</th>
+      <th scope="col">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="2" rowspan="4" scope="rowgroup">Terrestrial planets</th>
+      <th scope="row">Mercury</th>
+      <td>0.330</td>
+      <td>4,879</td>
+      <td>5427</td>
+      <td>3.7</td>
+      <td>4222.6</td>
+      <td>57.9</td>
+      <td>167</td>
+      <td>0</td>
+      <td>Closest to the Sun</td>
+    </tr>
+    <tr>
+      <th scope="row">Venus</th>
+      <td>4.87</td>
+      <td>12,104</td>
+      <td>5243</td>
+      <td>8.9</td>
+      <td>2802.0</td>
+      <td>108.2</td>
+      <td>464</td>
+      <td>0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Earth</th>
+      <td>5.97</td>
+      <td>12,756</td>
+      <td>5514</td>
+      <td>9.8</td>
+      <td>24.0</td>
+      <td>149.6</td>
+      <td>15</td>
+      <td>1</td>
+      <td>Our world</td>
+    </tr>
+    <tr>
+      <th scope="row">Mars</th>
+      <td>0.642</td>
+      <td>6,792</td>
+      <td>3933</td>
+      <td>3.7</td>
+      <td>24.7</td>
+      <td>227.9</td>
+      <td>-65</td>
+      <td>2</td>
+      <td>The red planet</td>
+    </tr>
+    <tr>
+      <th rowspan="4" scope="rowgroup">Jovian planets</th>
+      <th rowspan="2" scope="rowgroup">Gas giants</th>
+      <th scope="row">Jupiter</th>
+      <td>1898</td>
+      <td>142,984</td>
+      <td>1326</td>
+      <td>23.1</td>
+      <td>9.9</td>
+      <td>778.6</td>
+      <td>-110</td>
+      <td>67</td>
+      <td>The largest planet</td>
+    </tr>
+    <tr>
+      <th scope="row">Saturn</th>
+      <td>568</td>
+      <td>120,536</td>
+      <td>687</td>
+      <td>9.0</td>
+      <td>10.7</td>
+      <td>1433.5</td>
+      <td>-140</td>
+      <td>62</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th rowspan="2" scope="rowgroup">Ice giants</th>
+      <th scope="row">Uranus</th>
+      <td>86.8</td>
+      <td>51,118</td>
+      <td>1271</td>
+      <td>8.7</td>
+      <td>17.2</td>
+      <td>2872.5</td>
+      <td>-195</td>
+      <td>27</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Neptune</th>
+      <td>102</td>
+      <td>49,528</td>
+      <td>1638</td>
+      <td>11.0</td>
+      <td>16.1</td>
+      <td>4495.1</td>
+      <td>-200</td>
+      <td>14</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="rowgroup">Dwarf planets</th>
+      <th scope="row">Pluto</th>
+      <td>0.0146</td>
+      <td>2,370</td>
+      <td>2095</td>
+      <td>0.7</td>
+      <td>153.3</td>
+      <td>5906.4</td>
+      <td>-225</td>
+      <td>5</td>
+      <td>
+        Declassified as a planet in 2006, but this
+        <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -199,7 +206,8 @@ table {
   border: 2px solid black;
 }
 
-th, td {
+th,
+td {
   padding: 5px;
   border: 1px solid black;
 }
@@ -223,7 +231,7 @@ HTML tables should be used for tabular data — this is what they are designed f
 
 In short, using tables for layout rather than [CSS layout techniques](/en-US/docs/Learn/CSS/CSS_layout) is a bad idea. The main reasons are as follows:
 
-1. **Layout tables reduce accessibility for visually impaired users**: [Screenreaders](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders), used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.
+1. **Layout tables reduce accessibility for visually impaired users**: [screen readers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers), used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screen readers' output will be confusing to their users.
 2. **Tables produce tag soup**: As mentioned above, table layouts generally involve more complex markup structures than proper layout techniques. This can result in the code being harder to write, maintain, and debug.
 3. **Tables are not automatically responsive**: When you use proper layout containers (such as {{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}}, or {{htmlelement("div")}}), their width defaults to 100% of their parent element. Tables on the other hand are sized according to their content by default, so extra measures are needed to get table layout styling to effectively work across a variety of devices.
 
@@ -235,18 +243,18 @@ We've talked table theory enough, so, let's dive into a practical example and bu
 2. The content of every table is enclosed by these two tags : **[`<table></table>`](/en-US/docs/Web/HTML/Element/table)**. Add these inside the body of your HTML.
 3. The smallest container inside a table is a table cell, which is created by a **[`<td>`](/en-US/docs/Web/HTML/Element/td)** element ('td' stands for 'table data'). Add the following inside your table tags:
 
-    ```html
-    <td>Hi, I'm your first cell.</td>
-    ```
+   ```html
+   <td>Hi, I'm your first cell.</td>
+   ```
 
 4. If we want a row of four cells, we need to copy these tags three times. Update the contents of your table to look like so:
 
-    ```html
-    <td>Hi, I'm your first cell.</td>
-    <td>I'm your second cell.</td>
-    <td>I'm your third cell.</td>
-    <td>I'm your fourth cell.</td>
-    ```
+   ```html
+   <td>Hi, I'm your first cell.</td>
+   <td>I'm your second cell.</td>
+   <td>I'm your third cell.</td>
+   <td>I'm your fourth cell.</td>
+   ```
 
 As you will see, the cells are not placed underneath each other, rather they are automatically aligned with each other on the same row. Each `<td>` element creates a single cell and together they make up the first row. Every cell we add makes the row grow longer.
 
@@ -254,14 +262,14 @@ To stop this row from growing and start placing subsequent cells on a second row
 
 1. Place the four cells you've already created inside `<tr>` tags, like so:
 
-    ```html
-    <tr>
-      <td>Hi, I'm your first cell.</td>
-      <td>I'm your second cell.</td>
-      <td>I'm your third cell.</td>
-      <td>I'm your fourth cell.</td>
-    </tr>
-    ```
+   ```html
+   <tr>
+     <td>Hi, I'm your first cell.</td>
+     <td>I'm your second cell.</td>
+     <td>I'm your third cell.</td>
+     <td>I'm your fourth cell.</td>
+   </tr>
+   ```
 
 2. Now you've made one row, have a go at making one or two more — each row needs to be wrapped in an additional `<tr>` element, with each cell contained in a `<td>`.
 
@@ -288,13 +296,14 @@ This should result in a table that looks something like the following:
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 {{EmbedLiveSample("Result")}}
@@ -346,13 +355,14 @@ Now let's turn our attention to table headers — special cells that go at the s
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 Now the actual rendered table:
@@ -377,7 +387,7 @@ We have already partially answered this question — it is easier to find the da
 
 > **Note:** Table headings come with some default styling — they are bold and centered even if you don't add your own styling to the table, to help them stand out.
 
-Tables headers also have an added benefit — along with the `scope` attribute (which we'll learn about in the next article), they allow you to make tables more accessible by associating each header with all the data in the same row or column. Screenreaders are then able to read out a whole row or column of data at once, which is pretty useful.
+Tables headers also have an added benefit — along with the `scope` attribute (which we'll learn about in the next article), they allow you to make tables more accessible by associating each header with all the data in the same row or column. Screen readers are then able to read out a whole row or column of data at once, which is pretty useful.
 
 ## Allowing cells to span multiple rows and columns
 
@@ -414,13 +424,14 @@ The initial markup looks like this:
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 But the output doesn't give us quite what we want:
@@ -466,13 +477,14 @@ Take the following simple example:
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 Which gives us the following result:
@@ -488,8 +500,8 @@ Instead of doing this, we can specify the information once, on a `<col>` element
 ```html
 <table>
   <colgroup>
-    <col>
-    <col style="background-color: yellow">
+    <col />
+    <col style="background-color: yellow" />
   </colgroup>
   <tr>
     <th>Data 1</th>
@@ -512,7 +524,7 @@ If we wanted to apply the styling information to both columns, we could just inc
 
 ```html
 <colgroup>
-  <col style="background-color: yellow" span="2">
+  <col style="background-color: yellow" span="2" />
 </colgroup>
 ```
 

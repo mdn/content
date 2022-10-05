@@ -8,6 +8,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.commands
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -91,43 +92,43 @@ This JSON defines 2 shortcuts:
 
 1. `"toggle-feature"`, accessed with
 
-    <kbd>Ctrl</kbd>
+   <kbd>Ctrl</kbd>
 
-    \+
+   \+
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    \+
+   \+
 
-    <kbd>U</kbd>
+   <kbd>U</kbd>
 
-    on Linux, and
+   on Linux, and
 
-    <kbd>Alt</kbd>
+   <kbd>Alt</kbd>
 
-    \+
+   \+
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    \+
+   \+
 
-    <kbd>U</kbd>
+   <kbd>U</kbd>
 
-    on all other platforms.
+   on all other platforms.
 
 2. `"do-another-thing"`, accessed with
 
-    <kbd>Ctrl</kbd>
+   <kbd>Ctrl</kbd>
 
-    \+
+   \+
 
-    <kbd>Shift</kbd>
+   <kbd>Shift</kbd>
 
-    \+
+   \+
 
-    <kbd>Y</kbd>
+   <kbd>Y</kbd>
 
-    on all platforms.
+   on all platforms.
 
 You could then listen for the `"toggle-feature"` command with code like this:
 
@@ -173,10 +174,10 @@ Key combinations must consist of 2 or 3 keys:
 2. **secondary modifier** (optional). If supplied, this must be either `"Shift"` or (for Firefox ≥ 63) any one of `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`. Must not be the modifier already used as the main modifier.
 3. **key** (mandatory). This can be any one of:
 
-    - the letters `A`–`Z`
-    - the numbers `0`–`9`
-    - the function keys `F1`–`F12`
-    - `Comma`, `Period`, `Home`, `End`, `PageUp`, `PageDown`, `Space`, `Insert`, `Delete`, `Up`, `Down`, `Left`, `Right`
+   - the letters `A`–`Z`
+   - the numbers `0`–`9`
+   - the function keys `F1`–`F12`
+   - `Comma`, `Period`, `Home`, `End`, `PageUp`, `PageDown`, `Space`, `Insert`, `Delete`, `Up`, `Down`, `Left`, `Right`
 
 The key is then given as a string containing the set of key values, in the order listed above, separated by "`+`". For example, `"Ctrl+Shift+Z"`.
 

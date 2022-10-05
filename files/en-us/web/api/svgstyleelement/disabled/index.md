@@ -10,6 +10,7 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStyleElement.disabled
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGStyleElement.disabled`** property can be used to get and set whether the stylesheet is disabled (`true`) or not (`false`).
@@ -36,7 +37,9 @@ The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Eleme
 
 ```html
 <button>Enable</button>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <style id="circle_style_id">
     circle {
       fill: gold;
@@ -56,7 +59,7 @@ The style already exists because it is defined in the SVG, so this should succee
 ```js
 const svg = document.querySelector("svg");
 const style = svg.getElementById("circle_style_id")
-style.disabled = true;  
+style.disabled = true;
 ```
 
 We then add an event handler for the button that toggles the disabled state and button text.
@@ -90,8 +93,10 @@ The HTML is similar to the previous case, but the SVG definition does not includ
 
 ```html
 <button>Enable</button>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <circle cx="50" cy="50" r="25" />
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <circle cx="50" cy="50" r="25" />
 </svg>
 ```
 

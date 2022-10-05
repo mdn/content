@@ -13,8 +13,9 @@ tags:
   - Operators
   - Variables
   - events
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
 Now you've learned something about the theory of JavaScript and what you can do with it, we are going to give you an idea of what the process of creating a simple JavaScript program is like, by guiding you through a practical tutorial. Here you'll build up a simple "Guess the number" game, step by step.
@@ -47,7 +48,7 @@ We want to set really clear expectations here: You won't be expected to learn Ja
 
 One of the hardest things to learn in programming is not the syntax you need to learn, but how to apply it to solve real world problems. You need to start thinking like a programmer — this generally involves looking at descriptions of what your program needs to do, working out what code features are needed to achieve those things, and how to make them work together.
 
-This requires a mixture of hard work, experience with the programming syntax, and practice — plus a bit of creativity. The more you code, the better you'll get at it. We can't promise that you'll develop "programmer brain" in five minutes, but we will give you plenty of opportunity to practice thinking like a programmer throughout the course.
+This requires a mixture of hard work, experience with the programming syntax, and practice — plus a bit of creativity. The more you code, the better you'll get at it. We can't promise that you'll develop "programmer brain" in five minutes, but we will give you plenty of opportunities to practice thinking like a programmer throughout the course.
 
 With that in mind, let's look at the example we'll be building up in this article, and review the general process of dissecting it into tangible tasks.
 
@@ -61,7 +62,7 @@ Have a go at playing it — familiarize yourself with the game before you move o
 
 Let's imagine your boss has given you the following brief for creating this game:
 
-> I want you to create a simple guess the number type game. It should choose a random number between 1 and 100, then challenge the player to guess the number in 10 turns. After each turn the player should be told if they are right or wrong, and if they are wrong, whether the guess was too low or too high. It should also tell the player what numbers they previously guessed. The game will end once the player guesses correctly, or once they run out of turns. When the game ends, the player should be given an option to start playing again.
+> I want you to create a simple guess the number type game. It should choose a random number between 1 and 100, then challenge the player to guess the number in 10 turns. After each turn, the player should be told if they are right or wrong, and if they are wrong, whether the guess was too low or too high. It should also tell the player what numbers they previously guessed. The game will end once the player guesses correctly, or once they run out of turns. When the game ends, the player should be given an option to start playing again.
 
 Upon looking at this brief, the first thing we can do is to start breaking it down into simple actionable tasks, in as much of a programmer mindset as possible:
 
@@ -72,21 +73,21 @@ Upon looking at this brief, the first thing we can do is to start breaking it do
 5. Next, check whether it is the correct number.
 6. If it is correct:
 
-    1. Display congratulations message.
-    2. Stop the player from being able to enter more guesses (this would mess the game up).
-    3. Display control allowing the player to restart the game.
+   1. Display congratulations message.
+   2. Stop the player from being able to enter more guesses (this would mess the game up).
+   3. Display control allowing the player to restart the game.
 
 7. If it is wrong and the player has turns left:
 
-    1. Tell the player they are wrong and whether their guess was too high or too low.
-    2. Allow them to enter another guess.
-    3. Increment the turn number by 1.
+   1. Tell the player they are wrong and whether their guess was too high or too low.
+   2. Allow them to enter another guess.
+   3. Increment the turn number by 1.
 
 8. If it is wrong and the player has no turns left:
 
-    1. Tell the player it is game over.
-    2. Stop the player from being able to enter more guesses (this would mess the game up).
-    3. Display control allowing the player to restart the game.
+   1. Tell the player it is game over.
+   2. Stop the player from being able to enter more guesses (this would mess the game up).
+   3. Display control allowing the player to restart the game.
 
 9. Once the game restarts, make sure the game logic and UI are completely reset, then go back to step 1.
 
@@ -100,9 +101,7 @@ The place where we'll be adding all our code is inside the {{htmlelement("script
 
 ```html
 <script>
-
   // Your JavaScript goes here
-
 </script>
 ```
 
@@ -128,7 +127,7 @@ This section of the code sets up the variables and constants we need to store th
 
 Variables are basically names for values (such as numbers, or strings of text). You create a variable with the keyword `let` followed by a name for your variable.
 
-Constants are also used to name values, but unlike variables, you can't change the value once set. In this case we are using constants to store references to parts of our user interface. The text inside some of these elements might change, but each constant always references the same HTML element that it was initialized with. You create a constant with the keyword `const` followed by a name for the constant.
+Constants are also used to name values, but unlike variables, you can't change the value once set. In this case, we are using constants to store references to parts of our user interface. The text inside some of these elements might change, but each constant always references the same HTML element that it was initialized with. You create a constant with the keyword `const` followed by a name for the constant.
 
 You can assign a value to your variable or constant with an equals sign (`=`) followed by the value you want to give it.
 
@@ -149,8 +148,8 @@ In our example:
 
   ```html
   <label for="guessField">Enter a guess: </label>
-  <input type="text" id="guessField" class="guessField">
-  <input type="submit" value="Submit guess" class="guessSubmit">
+  <input type="number" id="guessField" class="guessField" />
+  <input type="submit" value="Submit guess" class="guessSubmit" />
   ```
 
 - Our final two variables store a guess count of 1 (used to keep track of how many guesses the player has had), and a reference to a reset button that doesn't exist yet (but will later).
@@ -167,7 +166,7 @@ function checkGuess() {
 }
 ```
 
-Functions are reusable blocks of code that you can write once and run again and again, saving the need to keep repeating code all the time. This is really useful. There are a number of ways to define functions, but for now we'll concentrate on one simple type. Here we have defined a function by using the keyword `function`, followed by a name, with parentheses put after it. After that we put two curly braces (`{ }`). Inside the curly braces goes all the code that we want to run whenever we call the function.
+Functions are reusable blocks of code that you can write once and run again and again, saving the need to keep repeating code all the time. This is really useful. There are a number of ways to define functions, but for now we'll concentrate on one simple type. Here we have defined a function by using the keyword `function`, followed by a name, with parentheses put after it. After that, we put two curly braces (`{ }`). Inside the curly braces goes all the code that we want to run whenever we call the function.
 
 When we want to run the code, we type the name of the function followed by the parentheses.
 
@@ -272,7 +271,7 @@ When we are running true/false tests (for example inside conditionals — see [b
       <td>
         <pre class="brush: js">
 6 > 10 // false
-20 > 10  // true</pre
+20 > 10 // true</pre
         >
       </td>
     </tr>
@@ -321,7 +320,7 @@ function checkGuess() {
 This is a lot of code — phew! Let's go through each section and explain what it does.
 
 - The first line declares a variable called `userGuess` and sets its value to the current value entered inside the text field. We also run this value through the built-in `Number()` constructor, just to make sure the value is definitely a number. Since we're not changing this variable, we'll declare it using `const`.
-- Next, we encounter our first conditional code block. A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword `if`, then some parentheses, then some curly braces. Inside the parentheses we include a test. If the test returns `true`, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code. In this case the test is testing whether the `guessCount` variable is equal to `1` (i.e. whether this is the player's first go or not):
+- Next, we encounter our first conditional code block. A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword `if`, then some parentheses, then some curly braces. Inside the parentheses, we include a test. If the test returns `true`, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code. In this case, the test is testing whether the `guessCount` variable is equal to `1` (i.e. whether this is the player's first go or not):
 
   ```js
   guessCount === 1
@@ -404,7 +403,7 @@ This rather long block of code completely resets everything to how it was at the
 - Removes the background color from the `lastResult` paragraph.
 - Generates a new random number so that you are not just guessing the same number again!
 
-**At this point you should have a fully working (simple) game — congratulations!**
+**At this point, you should have a fully working (simple) game — congratulations!**
 
 All we have left to do now in this article is to talk about a few other important code features that you've already seen, although you may have not realized it.
 
@@ -431,7 +430,7 @@ A `for...of` loop gives you a way to get each item in the array and run some Jav
 2. Set the `fruit` variable to that item, then run the code between the `{}` brackets.
 3. Get the next item in `fruits`, and repeat 2, until you reach the end of `fruits`.
 
-In this case the code inside the brackets is writing out `fruit` to the console.
+In this case, the code inside the brackets is writing out `fruit` to the console.
 
 Now let's look at the loop in our number guessing game — the following can be found inside the `resetGame()` function:
 
@@ -483,37 +482,37 @@ Let's play with some browser objects a bit.
 3. Type `guessField` into the console and the console shows you that the variable contains an {{htmlelement("input")}} element. You'll also notice that the console autocompletes the names of objects that exist inside the execution environment, including your variables!
 4. Now type in the following:
 
-    ```js
-    guessField.value = 'Hello';
-    ```
+   ```js
+   guessField.value = 2;
+   ```
 
-    The `value` property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!
+   The `value` property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!
 
 5. Now try typing `guesses` into the console and pressing return. The console shows you that the variable contains a {{htmlelement("p")}} element.
 6. Now try entering the following line:
 
-    ```js
-    guesses.value
-    ```
+   ```js
+   guesses.value
+   ```
 
-    The browser returns `undefined`, because paragraphs don't have the `value` property.
+   The browser returns `undefined`, because paragraphs don't have the `value` property.
 
 7. To change the text inside a paragraph, you need the {{domxref("Node.textContent", "textContent")}} property instead. Try this:
 
-    ```js
-    guesses.textContent = 'Where is my paragraph?';
-    ```
+   ```js
+   guesses.textContent = 'Where is my paragraph?';
+   ```
 
 8. Now for some fun stuff. Try entering the below lines, one by one:
 
-    ```js
-    guesses.style.backgroundColor = 'yellow';
-    guesses.style.fontSize = '200%';
-    guesses.style.padding = '10px';
-    guesses.style.boxShadow = '3px 3px 6px black';
-    ```
+   ```js
+   guesses.style.backgroundColor = 'yellow';
+   guesses.style.fontSize = '200%';
+   guesses.style.padding = '10px';
+   guesses.style.boxShadow = '3px 3px 6px black';
+   ```
 
-    Every element on a page has a `style` property, which itself contains an object whose properties contain all the inline CSS styles applied to that element. This allows us to dynamically set new CSS styles on elements using JavaScript.
+   Every element on a page has a `style` property, which itself contains an object whose properties contain all the inline CSS styles applied to that element. This allows us to dynamically set new CSS styles on elements using JavaScript.
 
 ## Finished for now…
 

@@ -7,6 +7,7 @@ tags:
   - community-guidelines
   - governance
 ---
+
 {{MDNSidebar}}
 
 ## Guidelines for after submitting a pull request
@@ -39,9 +40,9 @@ Regardless of how a content change is done, they will be submitted as
 1. Different MDN staff members and volunteers have been assigned as "topic
    review owners", meaning that when a pull request comes in related to a
    particular topic area of the site (e.g. the CSS reference, or the learning area), it will be assigned to that area's topic review owner(s) and they will receive an e-mail notification asking for a review. This is being handled using a [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS) file, in which particular content directories are assigned to the topics review owner's GitHub usernames.
-1. Once the review has been done and the pull request has been approved, the
+2. Once the review has been done and the pull request has been approved, the
    reviewer should also merge the pull request.
-1. The site will be rebuilt once every 24 hours to ensure that the content
+3. The site will be rebuilt once every 24 hours to ensure that the content
    does not get too stale.
 
 ## Review guidelines
@@ -52,18 +53,18 @@ perfectly in accordance with all of these points immediately. It is more
 important to make sure the content is readable, useful, correct, and not
 inappropriate, than it is to follow every guideline to the letter.
 
-1. Familiarize yourself with the [MDN Code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_example_guidelines) and make sure that code examples follow the guidelines. You'll get used to them eventually, and we are intending to automatically lint against our guidelines at some point in the future.
-1. Familiarize yourself with the [MDN Writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide), and use it to inform your reviews of new text content.
-1. Familiarize yourself with the MDN [pull request guidelines](https://github.com/mdn/content/blob/main/README.md#pull-request-etiquette).
+1. Familiarize yourself with the [MDN Code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) and make sure that code examples follow the guidelines. You'll get used to them eventually, and we are intending to automatically lint against our guidelines at some point in the future.
+2. Familiarize yourself with the [MDN Writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide), and use it to inform your reviews of new text content.
+3. Familiarize yourself with the MDN [pull request guidelines](https://github.com/mdn/content/blob/main/README.md#pull-request-etiquette).
    The key points here are
    - You have the right to request more information to help your review if the submitter has not explained why they are making this change.
    - You have the right to close a pull request if it is too complex and/or contains multiple unrelated changes and ask the submitter to submit their changes in smaller atomic chunks.
-1. When reviewing a pull request, use the [GitHub review tools](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews). Use "Request changes" when submitting a review that will require the submitter to do some more work, or "Approve" if the submission is ready to add and you want to merge it. [Reviewing proposed changes in a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) is also useful if you want more information.
-1. Be polite and constructive at all times when writing review comments, or otherwise interacting with the submitter and other community members. We are all bound by our Code of Conduct when contributing to MDN, which means adhering to Mozilla's [Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/). If anyone has engaged in behavior that is potentially illegal or makes you or someone else feel unsafe, unwelcome, or uncomfortable, you are encouraged to [report it](https://www.mozilla.org/en-US/about/governance/policies/participation/reporting/). We want MDN to be a welcoming, friendly community that we can all be proud of.
-1. If a pull request is fine apart from a small typo or some other minor issue, you might want to just fix the issue yourself rather than ask the submitter to change it. You can do this provided the PR has been set up to allow changes (see [Allowing changes to a pull request branch created from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork) for more details). If you are not sure how to make changes to someone else's pull request, [@vkWeb](https://github.com/vkWeb/) wrote some nice simple instructions on how to do this on the command line; see [ReviewPRCommands](https://gist.github.com/vkWeb/dcec82b079f1edc19478ddb58b0ffc5e).
+4. When reviewing a pull request, use the [GitHub review tools](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews). Use "Request changes" when submitting a review that will require the submitter to do some more work, or "Approve" if the submission is ready to add and you want to merge it. [Reviewing proposed changes in a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) is also useful if you want more information.
+5. Be polite and constructive at all times when writing review comments, or otherwise interacting with the submitter and other community members. We are all bound by our Code of Conduct when contributing to MDN, which means adhering to Mozilla's [Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/). If anyone has engaged in behavior that is potentially illegal or makes you or someone else feel unsafe, unwelcome, or uncomfortable, you are encouraged to [report it](https://www.mozilla.org/en-US/about/governance/policies/participation/reporting/). We want MDN to be a welcoming, friendly community that we can all be proud of.
+6. If a pull request is fine apart from a small typo or some other minor issue, you might want to just fix the issue yourself rather than ask the submitter to change it. You can do this provided the PR has been set up to allow changes (see [Allowing changes to a pull request branch created from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork) for more details). If you are not sure how to make changes to someone else's pull request, [@vkWeb](https://github.com/vkWeb/) wrote some nice simple instructions on how to do this on the command line; see [ReviewPRCommands](https://gist.github.com/vkWeb/dcec82b079f1edc19478ddb58b0ffc5e).
    - Alternatively, you can edit files using the GitHub UI — go to the pull request's "Files changed" tab, find the file you want to edit, and choose "three dot" menu (...) > Edit file.
-1. If you don't understand a content change that you've been selected to review, or feel that it is too large and complex for you to deal with, don't panic! Feel free to reach out to someone else to ask for help, like a colleague, or someone else in your group of topic review owners (if you know who they are). If you are not sure who to approach for help, then ping our `@core-yari-content` group to ask for help.
-1. Related to the above point, it is rare that you'll be required to review a large, complex content change with no warning, like a complete page rewrite, or the addition of several new reference pages or tutorials. Usually such changes are done as part of specific work streams where the content has been approved for addition, and reviewer(s) have been assigned already. In such cases, the PR should be linked to an issue that explains all these details. If you are not sure, ask the submitter if they need a review of the content, and where the rationale behind the change is explained. Ping our team on [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) to ask for help if you are still not sure, or if you think the content is suspicious.
+7. If you don't understand a content change that you've been selected to review, or feel that it is too large and complex for you to deal with, don't panic! Feel free to reach out to someone else to ask for help, like a colleague, or someone else in your group of topic review owners (if you know who they are). If you are not sure who to approach for help, then ping our `@core-yari-content` group to ask for help.
+8. Related to the above point, it is rare that you'll be required to review a large, complex content change with no warning, like a complete page rewrite, or the addition of several new reference pages or tutorials. Usually such changes are done as part of specific work streams where the content has been approved for addition, and reviewer(s) have been assigned already. In such cases, the PR should be linked to an issue that explains all these details. If you are not sure, ask the submitter if they need a review of the content, and where the rationale behind the change is explained. Ping our team on [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) to ask for help if you are still not sure, or if you think the content is suspicious.
 
 Note: You may encounter merge conflicts as you review pull requests, if a another pull request that touches some of the same files got merged before the one you are reviewing. [Addressing merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts) is a useful resource to help you. Feel free also to ask your team(s) for help if you need it.
 
@@ -80,7 +81,7 @@ Therefore, if you receive a pull request review request and then see that you ha
 ## Topic review owners
 
 The following specific topic areas are being reviewed by the kind souls listed underneath them. Be kind to them, and thank them for all the help they give to this project. If you would like to help with MDN content reviews,
-[get in touch with us](https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#Step_4_Ask_for_help).
+[get in touch with us](/en-US/docs/MDN/Community/Contributing/Getting_started#Step_4_Ask_for_help).
 
 Note that changes to any content areas not explicitly listed below will be handled by the [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content) team.
 

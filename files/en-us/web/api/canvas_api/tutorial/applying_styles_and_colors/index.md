@@ -6,10 +6,10 @@ tags:
   - Canvas
   - Graphics
   - HTML
-  - HTML5
   - Intermediate
   - Tutorial
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 In the chapter about [drawing shapes](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), we used only the default line and fill styles. Here we will explore the canvas options we have at our disposal to make our drawings a little more attractive. You will learn how to add different colors, line styles, gradients, patterns and shadows to your drawings.
@@ -77,7 +77,7 @@ This example is similar to the one above, but uses the `strokeStyle` property to
       for (let j = 0; j < 6; j++) {
         ctx.strokeStyle = `rgb(0, ${Math.floor(255 - 42.5 * i)}, ${Math.floor(255 - 42.5 * j)})`;
         ctx.beginPath();
-        ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+        ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, 2 * Math.PI, true);
         ctx.stroke();
       }
     }
@@ -248,7 +248,7 @@ draw();
 
 Obtaining crisp lines requires understanding how paths are stroked. In the images below, the grid represents the canvas coordinate grid. The squares between gridlines are actual on-screen pixels. In the first grid image below, a rectangle from (2,1) to (5,5) is filled. The entire area between them (light red) falls on pixel boundaries, so the resulting filled rectangle will have crisp edges.
 
-![](canvas-grid.png)
+![Three coordinate grids. The grid lines are actual pixels on the screen. The top left corner of each grid is labeled (0,0). In the first grid, a rectangle from (2,1) to (5,5) is filled in light-red color. In the second grid, (3,1) to (3,5) is joined with a 1-pixel thick royal blue line. The royal-blue line is centered on a grid line, extends from 2.5 to 3.5 on the x access, halfway into the pixels on either side of the graph line, with a light blue background on either side extending from 2 to 4 on the x-access. To avoid the light blue blur extension of the line in the second coordinate grid, the path in, the third coordinate grid is a royal-blue from line (3.5,1) to (3.5,5). The 1 pixel line width ends up completely and precisely filling a single pixel vertical line.](canvas-grid.png)
 
 If you consider a path from (3,1) to (3,5) with a line thickness of `1.0`, you end up with the situation in the second image. The actual area to be filled (dark blue) only extends halfway into the pixels on either side of the path. An approximation of this has to be rendered, which means that those pixels being only partially shaded, and results in the entire area (the light blue and dark blue) being filled in with a color only half as dark as the actual stroke color. This is what happens with the `1.0` width line in the previous example code.
 
@@ -280,7 +280,6 @@ The line on the left uses the default `butt` option. You'll notice that it's dra
 ```js
 function draw() {
   const ctx = document.getElementById('canvas').getContext('2d');
-  const lineCap = ['butt', 'round', 'square'];
 
   // Draw guides
   ctx.strokeStyle = '#09f';
@@ -293,14 +292,14 @@ function draw() {
 
   // Draw lines
   ctx.strokeStyle = 'black';
-  for (let i = 0; i < lineCap.length; i++) {
+  ['butt', 'round', 'square'].forEach((lineCap, i) => {
     ctx.lineWidth = 15;
-    ctx.lineCap = lineCap[i];
+    ctx.lineCap = lineCap;
     ctx.beginPath();
     ctx.moveTo(25 + i * 50, 10);
     ctx.lineTo(25 + i * 50, 140);
     ctx.stroke();
-  }
+  });
 }
 ```
 
@@ -332,10 +331,9 @@ The example below draws three different paths, demonstrating each of these three
 ```js
 function draw() {
   const ctx = document.getElementById('canvas').getContext('2d');
-  const lineJoin = ['round', 'bevel', 'miter'];
   ctx.lineWidth = 10;
-  for (let i = 0; i < lineJoin.length; i++) {
-    ctx.lineJoin = lineJoin[i];
+  ['round', 'bevel', 'miter'].forEach((lineJoin, i) => {
+    ctx.lineJoin = lineJoin;
     ctx.beginPath();
     ctx.moveTo(-5, 5 + i * 40);
     ctx.lineTo(35, 45 + i * 40);
@@ -343,7 +341,7 @@ function draw() {
     ctx.lineTo(115, 45 + i * 40);
     ctx.lineTo(155, 5 + i * 40);
     ctx.stroke();
-  }
+  });
 }
 ```
 
@@ -359,7 +357,7 @@ draw();
 
 ### A demo of the `miterLimit` property
 
-As you've seen in the previous example, when joining two lines with the `miter` option, the outside edges of the two joining lines are extended up to the point where they meet. For lines which are at large angles with each other, this point is not far from the inside connection point. However, as the angles between each line decreases, the distance (miter length) between these points increases exponentially.
+As you've seen in the previous example, when joining two lines with the `miter` option, the outside edges of the two joining lines are extended up to the point where they meet. For lines which are at large angles with each other, this point is not far from the inside connection point. However, as the angles between each line decrease, the distance (miter length) between these points increases exponentially.
 
 The `miterLimit` property determines how far the outside connection point can be placed from the inside connection point. If two lines exceed this value, a bevel join gets drawn instead. Note that the maximum miter length is the product of the line width measured in the current coordinate system, by the value of this `miterLimit` property (whose default value is 10.0 in the HTML {{HTMLElement("canvas")}}), so the `miterLimit` can be set independently from the current display scale or any affine transforms of paths: it only influences the effectively rendered shape of line edges.
 
@@ -401,7 +399,7 @@ function draw() {
   // Draw lines
   ctx.beginPath();
   ctx.moveTo(0, 100);
-  for (i = 0; i < 24 ; i++) {
+  for (let i = 0; i < 24; i++) {
     const dy = i % 2 === 0 ? 25 : -25;
     ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
@@ -414,11 +412,13 @@ function draw() {
 <table>
   <tr>
     <td><canvas id="canvas" width="150" height="150"></canvas></td>
-    <td>Change the <code>miterLimit</code> by entering a new value below and clicking the redraw button.<br><br>
+    <td>
+      Change the <code>miterLimit</code> by entering a new value below and
+      clicking the redraw button.<br /><br />
       <form onsubmit="return draw();">
         <label for="miterLimit">Miter limit</label>
-        <input type="number" size="3" id="miterLimit"/>
-        <input type="submit" value="Redraw"/>
+        <input type="number" size="3" id="miterLimit" />
+        <input type="submit" value="Redraw" />
       </form>
     </td>
   </tr>
@@ -761,8 +761,10 @@ When using `fill` (or {{domxref("CanvasRenderingContext2D.clip", "clip")}} and {
 
 Two values are possible:
 
-- **`"nonzero"`**: The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
-- **`"evenodd"`**: The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+- `nonzero`
+  - : The [non-zero winding rule](https://en.wikipedia.org/wiki/Nonzero-rule), which is the default rule.
+- `evenodd`
+  - : The [even-odd winding rule](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 In this example we are using the `evenodd` rule.
 

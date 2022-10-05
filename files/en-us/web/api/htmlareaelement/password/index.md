@@ -8,6 +8,7 @@ tags:
   - Property
 browser-compat: api.HTMLAreaElement.password
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.password`** property is a

@@ -9,6 +9,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.fromEntries
 ---
+
 {{JSRef}}
 
 The **`Object.fromEntries()`** method transforms a list of
@@ -18,8 +19,8 @@ key-value pairs into an object.
 
 ## Syntax
 
-```js
-Object.fromEntries(iterable);
+```js-nolint
+Object.fromEntries(iterable)
 ```
 
 ### Parameters

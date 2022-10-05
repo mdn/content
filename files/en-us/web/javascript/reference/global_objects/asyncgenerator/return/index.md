@@ -10,13 +10,14 @@ tags:
   - Reference
 browser-compat: javascript.builtins.AsyncGenerator.return
 ---
+
 {{JSRef}}
 
 The **`return()`** method of an async generator acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) block.
 
 ## Syntax
 
-```js
+```js-nolint
 asyncGeneratorObject.return(value)
 ```
 

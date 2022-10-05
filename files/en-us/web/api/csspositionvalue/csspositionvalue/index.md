@@ -13,6 +13,7 @@ tags:
   - Non-standard
 browser-compat: api.CSSPositionValue.CSSPositionValue
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`CSSPositionValue()`** constructor
@@ -21,7 +22,7 @@ properties that take a position, for example {{cssxref('object-position')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSPositionValue(x, y)
 ```
 
@@ -30,7 +31,7 @@ new CSSPositionValue(x, y)
 - `x`
   - : A position along the web page's horizontal axis.
 - `y`
-  - : A position along the web page's vertical axix.
+  - : A position along the web page's vertical axis.
 
 ## Examples
 

@@ -14,6 +14,7 @@ tags:
   - width
 browser-compat: api.Window.innerWidth
 ---
+
 {{APIRef}}
 
 The read-only {{domxref("Window")}} property

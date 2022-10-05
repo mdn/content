@@ -12,6 +12,7 @@ tags:
   - Video
   - effects
 ---
+
 {{CanvasSidebar}}
 
 By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Element/video) element with a [`canvas`](/en-US/docs/Web/HTML/Element/canvas), you can manipulate video data in real time to incorporate a variety of visual effects to the video being displayed. This tutorial demonstrates how to perform chroma-keying (also known as the "green screen effect") using JavaScript code.
@@ -26,12 +27,12 @@ The HTML document used to render this content is shown below.
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Video test page</title>
     <style>
       body {
         background: black;
-        color: #CCCCCC;
+        color: #cccccc;
       }
       #c2 {
         background-image: url(media/foo.png);
@@ -39,23 +40,27 @@ The HTML document used to render this content is shown below.
       }
       div {
         float: left;
-        border : 1px solid #444444;
+        border: 1px solid #444444;
         padding: 10px;
         margin: 10px;
-        background: #3B3B3B;
+        background: #3b3b3b;
       }
     </style>
   </head>
 
   <body>
     <div>
-      <video id="video" src="media/video.mp4" controls="true" crossorigin="anonymous"/>
+      <video
+        id="video"
+        src="media/video.mp4"
+        controls="true"
+        crossorigin="anonymous" />
     </div>
     <div>
       <canvas id="c1" width="160" height="96"></canvas>
       <canvas id="c2" width="160" height="96"></canvas>
     </div>
-  <script src="processor.js"></script>
+    <script src="processor.js"></script>
   </body>
 </html>
 ```
@@ -125,13 +130,12 @@ The last thing the callback does is call `setTimeout()` to schedule itself to be
 The `computeFrame()` method, shown below, is responsible for actually fetching a frame of data and performing the chroma-keying effect.
 
 ```js
-  processor.computeFrame = function computeFrame() {
+  processor.computeFrame = function () {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
     const frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    const length = frame.data.length;
     const data = frame.data;
 
-    for (let i = 0; i < length; i += 4) {
+    for (let i = 0; i < data.length; i += 4) {
       const red = data[i + 0];
       const green = data[i + 1];
       const blue = data[i + 2];
@@ -145,11 +149,11 @@ The `computeFrame()` method, shown below, is responsible for actually fetching a
 
 When this routine is called, the video element is displaying the most recent frame of video data, which looks like this:
 
-![](video.png)
+![A single frame of the video element. There is a person wearing a black t-shirt. The background-color is yellow.](video.png)
 
 In line 2, that frame of video is copied into the graphics context `ctx1` of the first canvas, specifying as the height and width the values we previously saved to draw the frame at half size. Note that you can pass the video element into the context's `drawImage()` method to draw the current video frame into the context. The result is:
 
-![](sourcectx.png)
+![A single frame of the video element. There is a person wearing a black t-shirt. The background-color is yellow. This is a smaller version of the picture above.](sourcectx.png)
 
 Line 3 fetches a copy of the raw graphics data for the current frame of video by calling the `getImageData()` method on the first context. This provides raw 32-bit pixel image data we can then manipulate. Line 4 computes the number of pixels in the image by dividing the total size of the frame's image data by four.
 
@@ -159,11 +163,11 @@ Every pixel in the frame's image data that is found that is within the parameter
 
 The resulting image looks like this:
 
-![](output.png)
+![A single frame of the video element shows the same person wearing a black t-shirt as in the photos above. The background is different: it is the Firefox logo.](output.png)
 
 This is done repeatedly as the video plays, so that frame after frame is processed and displayed with the chroma-key effect.
 
-[View the full source for this example](https://github.com/mdn/dom-examples/tree/master/canvas/chroma-keying).
+[View the full source for this example](https://github.com/mdn/dom-examples/tree/main/canvas/chroma-keying).
 
 ## See also
 

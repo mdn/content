@@ -10,9 +10,11 @@ tags:
   - PeriodicSyncManager
   - Service Worker
   - Web Periodic Background Synchronization API
+  - Experimental
 browser-compat: api.PeriodicSyncManager.register
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`register()`** method of the
 {{domxref("PeriodicSyncManager")}} interface registers a periodic sync request with the
@@ -21,7 +23,7 @@ resolves when the registration completes.
 
 ## Syntax
 
-```js
+```js-nolint
 register(tag, options)
 ```
 

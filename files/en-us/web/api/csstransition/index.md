@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.CSSTransition
 ---
+
 {{APIRef("Web Animations API")}}
 
 The **`CSSTransition`** interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object used for a [CSS Transition](/en-US/docs/Web/CSS/CSS_Transitions).
@@ -18,9 +19,9 @@ The **`CSSTransition`** interface of the {{domxref('Web Animations API','','',' 
 
 ## Properties
 
-Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("transitionProperty")}}.
+Inherits properties from its ancestor {{domxref("Animation")}} and adds {{domxref("transitionProperty")}}.
 
-- {{domxref("CSSTransition.transitionProperty")}} {{readonlyinline}}
+- {{domxref("CSSTransition.transitionProperty")}} {{ReadOnlyInline}}
   - : Returns the transition CSS property name as a string.
 
 ### Event handlers

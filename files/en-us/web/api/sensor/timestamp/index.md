@@ -13,6 +13,7 @@ tags:
   - timeStamp
 browser-compat: api.Sensor.timestamp
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`timestamp`** read-only property

@@ -10,6 +10,7 @@ tags:
   - Web Standards
   - XHTML
 ---
+
 {{HTMLRef}}
 
 In the old days of the web, pages were typically written in two versions: One for Netscape Navigator, and one for Microsoft Internet Explorer. When the web standards were made at W3C, browsers could not just start using them, as doing so would break most existing sites on the web. Browsers therefore introduced two modes to treat new standards compliant sites differently from old legacy sites.
@@ -24,11 +25,10 @@ For [HTML](/en-US/docs/Web/HTML) documents, browsers use a DOCTYPE in the beginn
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset=UTF-8>
+    <meta charset="UTF-8" />
     <title>Hello World!</title>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -36,7 +36,7 @@ The DOCTYPE shown in the example, `<!DOCTYPE html>`, is the simplest possible, a
 
 Make sure you put the DOCTYPE right at the beginning of your HTML document. Anything before the DOCTYPE, like a comment or an XML declaration will trigger quirks mode in Internet Explorer 9 and older.
 
-In HTML5, the only purpose of the DOCTYPE is to activate full standards mode. Older versions of the HTML standard gave additional meaning to the DOCTYPE, but no browser has ever used the DOCTYPE for anything other than switching between quirks mode and standards mode.
+The only purpose of `<!DOCTYPE html>` is to activate full standards mode. Older versions of HTML standard DOCTYPEs provided additional meaning, but no browser ever used the DOCTYPE for anything other than switching between quirks mode and standards mode.
 
 See also a detailed description of [when different browsers choose various modes](https://hsivonen.fi/doctype/).
 

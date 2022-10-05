@@ -12,9 +12,11 @@ tags:
   - Virtual Reality
   - WebVR
   - renderWidth
+  - Non-standard
 browser-compat: api.VREyeParameters.renderWidth
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`renderWidth`** read-only property of the {{domxref("VREyeParameters")}} interface describes the recommended render target width of each eye viewport, in pixels.
 

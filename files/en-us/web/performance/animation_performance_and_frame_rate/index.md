@@ -22,7 +22,7 @@ However, the performance cost of modifying a CSS property can vary from one prop
 
 The process a browser uses to paint changes to a page when an element is animating CSS properties can be described as a waterfall consisting of the following steps:
 
-![](css-rendering-waterfall.png)
+![Flowchart of the CSS rendering waterfall. In order, the steps are recalculate style, layout, and paint.](css-rendering-waterfall.png)
 
 1. **Recalculate Style**: when a property for an element changes, the browser must recalculate computed styles.
 2. **Layout**: next, the browser uses the computed styles to figure out the position and geometry for the elements. This operation is labeled "layout" but is also sometimes called "reflow".
@@ -103,8 +103,6 @@ In the context of the rendering waterfall, some properties are more expensive th
     </tr>
   </tbody>
 </table>
-
-> **Note:** The [CSS Triggers](https://csstriggers.com/) website shows how much of the waterfall is triggered for each CSS property, with information for most CSS properties by browser engine.
 
 ## Developer tools
 

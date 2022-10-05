@@ -12,6 +12,7 @@ tags:
   - delete
 browser-compat: api.CacheStorage.delete
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`delete()`** method of the {{domxref("CacheStorage")}} interface finds the {{domxref("Cache")}} object matching the `cacheName`, and if found, deletes the {{domxref("Cache")}} object and returns a {{jsxref("Promise")}} that resolves to `true`.
@@ -21,7 +22,7 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 
 ## Syntax
 
-```js
+```js-nolint
 delete(cacheName)
 ```
 
@@ -46,8 +47,8 @@ check each key to see if it is in the array. If not, we delete it using
 `delete()`.
 
 ```js
-this.addEventListener('activate', (event) => {
-  const cachesToKeep = ['v2'];
+this.addEventListener("activate", (event) => {
+  const cachesToKeep = ["v2"];
 
   event.waitUntil(
     caches.keys().then((keyList) =>

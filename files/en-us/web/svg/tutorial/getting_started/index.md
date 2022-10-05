@@ -7,6 +7,7 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
 ### A simple example
@@ -44,7 +45,7 @@ The rendering process involves the following:
 
 ### Basic properties of SVG files
 
-- The first important thing to notice is the order of rendering elements. The globally valid rule for SVG files is, that *later* elements are rendered *atop previous* elements. The further down an element is the more it will be visible.
+- The first important thing to notice is the order of rendering elements. The globally valid rule for SVG files is, that _later_ elements are rendered _atop previous_ elements. The further down an element is the more it will be visible.
 - SVG files on the web can be displayed directly in the browser or embedded in HTML files via several methods:
 
   - If the HTML is XHTML and is delivered as type `application/xhtml+xml`, the SVG can be directly embedded in the XML source.
@@ -76,14 +77,14 @@ Due to the potentially massive size SVG files can reach when used for some appli
 
 Now that you have an idea of how to create basic SVG files, the next stage is to upload them to a Webserver. There are some gotchas at this stage though. For normal SVG files, servers should send the HTTP headers:
 
-```
+```http
 Content-Type: image/svg+xml
 Vary: Accept-Encoding
 ```
 
 For gzip-compressed SVG files, servers should send the HTTP headers:
 
-```
+```http
 Content-Type: image/svg+xml
 Content-Encoding: gzip
 Vary: Accept-Encoding

@@ -1,6 +1,7 @@
 ---
 title: max-block-size
 slug: Web/CSS/max-block-size
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
@@ -16,6 +17,7 @@ tags:
   - width
 browser-compat: css.properties.max-block-size
 ---
+
 {{CSSRef}}
 
 The **`max-block-size`** [CSS](/en-US/docs/Web/CSS) property specifies the maximum size of an element in the direction opposite that of the writing direction as specified by {{cssxref("writing-mode")}}. That is, if the writing direction is horizontal, then `max-block-size` is equivalent to {{cssxref("max-height")}}; if the writing direction is vertical, `max-block-size` is the same as {{cssxref("max-width")}}.

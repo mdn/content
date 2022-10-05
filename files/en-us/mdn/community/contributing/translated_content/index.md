@@ -7,6 +7,7 @@ tags:
   - community-guidelines
   - governance
 ---
+
 {{MDNSidebar}}
 
 Since December 14th 2020, MDN has been running on the new GitHub-based [Yari platform](https://github.com/mdn/yari). This has a lot of advantages for MDN, but we've needed to make radical changes to the way in which we handle localization. This is because we've ended up with a lot of unmaintained and out-of-date content in our non-en-US locales, and we want to manage it better in the future.
@@ -30,7 +31,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 ### French (fr)
 
 - Discussions : [Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- Current contributors: [cw118](https://github.com/cw118), [Jb Audras](https://github.com/audrasjb), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- Current contributors: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### Japanese (ja)
 

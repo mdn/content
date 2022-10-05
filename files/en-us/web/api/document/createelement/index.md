@@ -11,13 +11,14 @@ tags:
   - createElement
 browser-compat: api.Document.createElement
 ---
+
 {{APIRef("DOM")}}
 
 In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** method creates the HTML element specified by _tagName_, or an {{domxref("HTMLUnknownElement")}} if _tagName_ isn't recognized.
 
 ## Syntax
 
-```js
+```js-nolint
 createElement(tagName)
 createElement(tagName, options)
 ```
@@ -49,13 +50,13 @@ This creates a new `<div>` and inserts it before the element with the ID "`div1`
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>||Working with elements||</title>
-</head>
-<body>
-  <div id="div1">The text above has been created dynamically.</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Working with elements</title>
+  </head>
+  <body>
+    <div id="div1">The text above has been created dynamically.</div>
+  </body>
 </html>
 ```
 
@@ -64,7 +65,7 @@ This creates a new `<div>` and inserts it before the element with the ID "`div1`
 ```js
 document.body.onload = addElement;
 
-function addElement () {
+function addElement() {
   // create a new div element
   const newDiv = document.createElement("div");
 
@@ -101,13 +102,13 @@ class ExpandingList extends HTMLUListElement {
 }
 
 // Define the new element
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 If we wanted to create an instance of this element programmatically, we'd use a call along the following lines:
 
 ```js
-let expandingList = document.createElement('ul', { is : 'expanding-list' })
+let expandingList = document.createElement("ul", { is: "expanding-list" });
 ```
 
 The new element will be given an [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute whose value is the custom element's tag name.

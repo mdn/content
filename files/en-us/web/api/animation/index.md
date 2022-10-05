@@ -12,6 +12,7 @@ tags:
   - web animations api
 browser-compat: api.Animation
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) represents a single animation player and provides playback controls and a timeline for an animation node or source.
@@ -29,17 +30,17 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
   - : The current time value of the animation in milliseconds, whether running or paused. If the animation lacks a {{domxref("AnimationTimeline", "timeline")}}, is inactive or hasn't been played yet, its value is `null`.
 - {{domxref("Animation.effect")}}
   - : Gets and sets the {{domxref("AnimationEffect")}} associated with this animation. This will usually be a {{domxref("KeyframeEffect")}} object.
-- {{domxref("Animation.finished")}} {{readOnlyInline}}
+- {{domxref("Animation.finished")}} {{ReadOnlyInline}}
   - : Returns the current finished Promise for this animation.
 - {{domxref("Animation.id")}}
   - : Gets and sets the `String` used to identify the animation.
-- {{domxref("Animation.pending")}} {{readonlyinline}}
+- {{domxref("Animation.pending")}} {{ReadOnlyInline}}
   - : Indicates whether the animation is currently waiting for an asynchronous operation such as initiating playback or pausing a running animation.
-- {{domxref("Animation.playState")}} {{readOnlyInline}}
+- {{domxref("Animation.playState")}} {{ReadOnlyInline}}
   - : Returns an enumerated value describing the playback state of an animation.
 - {{domxref("Animation.playbackRate")}}
   - : Gets or sets the playback rate of the animation.
-- {{domxref("Animation.ready")}} {{readOnlyInline}}
+- {{domxref("Animation.ready")}} {{ReadOnlyInline}}
   - : Returns the current ready Promise for this animation.
 - {{domxref("animation.replaceState")}}
   - : Returns the replace state of the animation. This will be `active` if the animation has been replaced, or `persisted` if {{domxref("Animation.persist()")}} has been invoked on it.
@@ -71,7 +72,7 @@ The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/We
 
 - {{domxref("Animation.cancel_event", "cancel")}}
   - : Fires when the {{domxref("Animation.cancel()")}} method is called or when the animation enters the `"idle"` play state from another state.
-- {{domxref("Animation.finish_event" , "finish")}}
+- {{domxref("Animation.finish_event", "finish")}}
   - : Fires when the animation finishes playing.
 - {{domxref("animation.remove_event", "remove")}}
   - : Fires when the animation is removed (i.e., put into an `active` replace state).
@@ -97,7 +98,7 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
 - [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
-- [Understanding Success Criterion 2.2.2  | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## Specifications
 

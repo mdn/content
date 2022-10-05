@@ -11,6 +11,7 @@ tags:
   - Experimental
 browser-compat: api.AudioEncoder.state
 ---
+
 {{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`state`** read-only property of the {{domxref("AudioEncoder")}} interface returns the current state of the underlying codec.

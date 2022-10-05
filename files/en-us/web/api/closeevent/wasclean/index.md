@@ -9,6 +9,7 @@ tags:
   - closeEvent
 browser-compat: api.CloseEvent.wasClean
 ---
+
 {{APIRef("Websockets API")}}
 
 The **`wasClean`** read-only property of the {{domxref("CloseEvent")}} interface returns `true` if the connection closed cleanly.

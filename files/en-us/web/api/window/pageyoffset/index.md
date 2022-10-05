@@ -15,6 +15,7 @@ tags:
   - scrolling
 browser-compat: api.Window.pageYOffset
 ---
+
 {{ APIRef("CSSOM View") }}
 
 The read-only {{domxref("Window")}} property **`pageYOffset`**
@@ -33,11 +34,11 @@ alias for {{domxref("Window.scrollX", "scrollX")}}.
 
 ## Value
 
-A floating-point number specifying the number of pixels the {{domxref("Document")}} is
-scrolled vertically within its containing {{domxref("Window")}}. This number is subpixel
-precise, so it may not be an integer. A value of 0.0 indicates that the window is not
-scrolled vertically, and that the top of the document is located at the top edge of the
-window's content area.
+A double-precision floating-point number specifying the number of pixels the {{domxref("Document")}}
+is scrolled vertically within its containing {{domxref("Window")}}. This number is subpixel precise
+with a range of E(min)=-1022 to E(max)=1023, so it may not be an integer. A value of 0.0 indicates
+that the window is not scrolled vertically, and that the top of the document is located at the top
+edge of the window's content area.
 
 Since this property is an alias for {{domxref("Window.scrollY")}}, see that article for
 additional details on this value and its use.
@@ -106,11 +107,9 @@ that contains the document we're going to scroll, and a {{HTMLElement("div")}} i
 which we'll output the value of `pageYOffset` when we've finished the scroll.
 
 ```html
-<iframe id="frame">
-</iframe>
+<iframe id="frame"> </iframe>
 
-<div id="info">
-</div>
+<div id="info"></div>
 ```
 
 ### JavaScript

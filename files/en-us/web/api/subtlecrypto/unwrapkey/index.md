@@ -11,6 +11,7 @@ tags:
   - unwrapKey
 browser-compat: api.SubtleCrypto.unwrapKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`unwrapKey()`** method of the {{domxref("SubtleCrypto")}}
@@ -33,7 +34,7 @@ of encrypt + export.
 
 ## Syntax
 
-```js
+```js-nolint
 unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extractable, keyUsages)
 ```
 
@@ -92,8 +93,8 @@ unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extra
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  that fulfills with the unwrapped key as a [`CryptoKey`](/en-US/docs/Web/API/CryptoKey)
-  object.
+that fulfills with the unwrapped key as a [`CryptoKey`](/en-US/docs/Web/API/CryptoKey)
+object.
 
 ### Exceptions
 
@@ -130,7 +131,7 @@ AES-KW unwrapping key. The salt needs to be the same as the salt that was used t
 the original AES-KW key wrapping key.
 
 Once we have the unwrapping key we pass it into `unwrapKey()` with the
-wrapped key and other parameters. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/unwrap-key/raw.js)
+wrapped key and other parameters. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/unwrap-key/raw.js)
 
 ```js
 /*
@@ -235,7 +236,7 @@ derive the original AES-GCM key wrapping key.
 Once we have the unwrapping key we pass it into `unwrapKey()` with the
 wrapped key and other parameters. Note that when using AES-GCM we have to pass the iv
 value into `unwrapKey()`, and this must be the same as the iv that was used
-in the corresponding `wrapKey()` operation. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/unwrap-key/pkcs8.js)
+in the corresponding `wrapKey()` operation. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/unwrap-key/pkcs8.js)
 
 ```js
 /*

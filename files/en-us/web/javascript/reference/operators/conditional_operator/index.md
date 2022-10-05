@@ -14,6 +14,7 @@ tags:
   - ternary
 browser-compat: javascript.operators.conditional
 ---
+
 {{jsSidebar("Operators")}}
 
 The **conditional (ternary) operator** is the only JavaScript operator that takes three operands:
@@ -24,7 +25,7 @@ This operator is frequently used as an alternative to an [`if...else`](/en-US/do
 
 ## Syntax
 
-```js
+```js-nolint
 condition ? exprIfTrue : exprIfFalse
 ```
 

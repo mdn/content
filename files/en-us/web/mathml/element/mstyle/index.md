@@ -8,6 +8,7 @@ tags:
   - MathML:General Layout Schemata
 browser-compat: mathml.elements.mstyle
 ---
+
 {{MathMLRef}}
 
 The MathML `<mstyle>` element is used to change the style of its children.
@@ -18,6 +19,16 @@ The MathML `<mstyle>` element is used to change the style of its children.
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following deprecated attributes:
 
+- `background` {{deprecated_inline}}
+  - : Use <a href="/en-US/docs/Web/CSS/background-color"><code>background-color</code></a> instead.
+- `color` {{deprecated_inline}}
+  - : Use <a href="/en-US/docs/Web/CSS/color"><code>color</code></a> instead.
+- `fontsize` {{deprecated_inline}}
+  - : Use <a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a> instead.
+- `fontstyle` {{deprecated_inline}}
+  - : Use <a href="/en-US/docs/Web/CSS/font-style"><code>font-style</code></a> instead.
+- `fontweight` {{deprecated_inline}}
+  - : Use <a href="/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a> instead.
 - `scriptminsize` {{deprecated_inline}}
   - : Specifies a minimum font size allowed due to changes in `scriptlevel`. The default value is `8pt`.
 - `scriptsizemultiplier` {{deprecated_inline}}
@@ -25,11 +36,20 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Examples
 
+### Attributes mapped to CSS
+
 The following example uses [global attributes](/en-US/docs/Web/MathML/Global_attributes) `displaystyle` and `mathcolor` to respectively override the [`math-style`](/en-US/docs/Web/CSS/math-style) and [`color`](/en-US/docs/Web/CSS/color) of the `<munder>` and `<munderover>` children:
 
+```html hidden
+ <link
+   rel="stylesheet"
+   href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css"
+  />
+```
+
 ```html
-<math>
-  <mstyle displaystyle="true" mathcolor="teal">
+<math display="block">
+  <mstyle displaystyle="false" mathcolor="teal">
     <munder>
       <mo>∑</mo>
       <mi>I</mi>
@@ -47,10 +67,14 @@ The following example uses [global attributes](/en-US/docs/Web/MathML/Global_att
 </math>
 ```
 
+{{ EmbedLiveSample('mstyle_example1', 700, 200, "", "") }}
+
+### Legacy script attributes
+
 The following example shows a formula with [`font-size`](/en-US/docs/Web/CSS/font-size) set to `128pt`. It contains numbers that are placed in nested superscripts as well as an `<mstyle>` element with legacy attributes `scriptsizemultiplier` and `scriptminsize`. The `font-size` is multiplied by `0.5` when entering each superscript as long as that does not make it smaller than `16pt`.
 
 ```html
-<math style="font-size: 128pt">
+<math display="block" style="font-size: 128pt">
   <mstyle scriptsizemultiplier="0.5" scriptminsize="16pt">
     <msup>
       <mn>2</mn>
@@ -74,6 +98,8 @@ The following example shows a formula with [`font-size`](/en-US/docs/Web/CSS/fon
   </mstyle>
 </math>
 ```
+
+{{ EmbedLiveSample('mstyle_example2', 700, 400, "", "") }}
 
 ## Specifications
 

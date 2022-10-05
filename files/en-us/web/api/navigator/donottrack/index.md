@@ -11,6 +11,7 @@ tags:
   - Deprecated
 browser-compat: api.Navigator.doNotTrack
 ---
+
 {{ApiRef("HTML DOM")}}{{Deprecated_header}}
 
 The **`Navigator.doNotTrack`** property returns the user's Do Not Track setting, which indicates whether the user is requesting web sites and advertisers to not track them.
@@ -38,4 +39,4 @@ console.log(navigator.doNotTrack);
 
 ## See also
 
-- [The Do Not Track field guide](/en-US/docs/Web/HTTP/Headers/DNT)
+- {{httpheader("DNT")}} HTTP header

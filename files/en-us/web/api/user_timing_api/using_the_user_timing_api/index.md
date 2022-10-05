@@ -6,6 +6,7 @@ tags:
   - Guide
   - Web Performance
 ---
+
 {{DefaultAPISidebar("User Timing API")}}
 
 The **`User Timing`** interface allows the developer to create application specific {{domxref("DOMHighResTimeStamp","timestamps")}} that are part of the browser's _performance timeline_. There are two types of _user_ defined timing entry types: the "`mark`" {{domxref("PerformanceEntry.entryType","entry type")}} and the "`measure`" {{domxref("PerformanceEntry.entryType","entry type")}}.
@@ -14,7 +15,7 @@ The **`User Timing`** interface allows the developer to create application speci
 
 This document shows how to create `mark` and `measure` {{domxref("PerformanceEntry.entryType","performance entry types")}} and how to use `User Timing` methods (which are extensions of the {{domxref("Performance")}} interface) to retrieve and remove entries from the browser's _performance timeline_.
 
-A _live_ version of the examples is available on [GitHub](https://mdn.github.io/dom-examples/performance-apis/Using_the_User_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_User_Timing_API.html). Pull requests, enhancement requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
+A _live_ version of the examples is available on [GitHub](https://mdn.github.io/dom-examples/performance-apis/Using_the_User_Timing_API.html), as is the [source code](https://github.com/mdn/dom-examples/blob/main/performance-apis/Using_the_User_Timing_API.html). Pull requests, enhancement requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
 ## Performance `marks`
 
@@ -178,7 +179,7 @@ function display_measures(ev) {
   entries = performance.getEntriesByType("measure");
   entries.forEach((entry, i) => {
     if (i === 0) log("= getEntriesByType('measure')", 1);
-    log(`... [${i}] = ${entriy.name}`, 1);
+    log(`... [${i}] = ${entry.name}`, 1);
   });
 
   // Display each measure using getEntriesName() - have to look for each measure separately

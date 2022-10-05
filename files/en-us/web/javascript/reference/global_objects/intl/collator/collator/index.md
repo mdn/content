@@ -11,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Collator.Collator
 ---
+
 {{JSRef}}
 
 The **`Intl.Collator()`** constructor creates
@@ -23,19 +24,23 @@ comparison.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Collator()
 new Intl.Collator(locales)
 new Intl.Collator(locales, options)
+
+Intl.Collator()
+Intl.Collator(locales)
+Intl.Collator(locales, options)
 ```
+
+> **Note:** `Intl.Collator()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.Collator` instance.
 
 ### Parameters
 
 - `locales` {{optional_inline}}
 
-  - : Optional. A string with a BCP 47 language tag, or an array of such strings. For
-    the general form and interpretation of the `locales` argument, see
-    the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 
     The following Unicode extension keys are allowed:
 
@@ -62,6 +67,7 @@ new Intl.Collator(locales, options)
         - `trad`
         - `unihan` (Chinese, Japanese, and Korean; not available in Chrome or Edge)
         - `zhuyin` (Chinese)
+
         This option can be also be set through the `options` property `collation`.
     - `kn`
       - : Whether numeric collation should be used, such that "1" < "2" <
@@ -153,6 +159,7 @@ new Intl.Collator(locales, options)
         - `trad`
         - `unihan` (Chinese, Japanese, and Korean; not available in Chrome or Edge)
         - `zhuyin` (Chinese)
+
         > **Note:** This option can also be set through the `co` Unicode
         > extension key; if both are provided, this `options`
         > property takes precedence.

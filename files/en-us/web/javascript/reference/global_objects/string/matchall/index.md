@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.matchAll
 ---
+
 {{JSRef}}
 
 The **`matchAll()`** method returns an iterator of all results matching a string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
@@ -19,7 +20,7 @@ The **`matchAll()`** method returns an iterator of all results matching a string
 
 ## Syntax
 
-```js
+```js-nolint
 matchAll(regexp)
 ```
 
@@ -31,7 +32,7 @@ matchAll(regexp)
 
     If `regexp` is not a `RegExp` object and does not have a `Symbol.matchAll` method, it is implicitly converted to a {{jsxref("RegExp")}} by using `new RegExp(regexp, 'g')`.
 
-    If `regexp` is a `RegExp` object (via the [`IsRegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match#disabling_the_isregexp_check) check), then it must have the global (`g`) flag set, or a {{jsxref("TypeError")}} is thrown.
+    If `regexp` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes), then it must have the global (`g`) flag set, or a {{jsxref("TypeError")}} is thrown.
 
 ### Return value
 
@@ -40,7 +41,7 @@ An [iterable iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the `regexp` is a `RegExp` object that does not have the global (`g`) flag set.
+  - : Thrown if the `regexp` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes) that does not have the global (`g`) flag set (its [`flags`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) property does not contain `"g"`).
 
 ## Description
 
@@ -64,7 +65,7 @@ while ((match = regexp.exec(str)) !== null) {
 }
 ```
 
-With `matchAll()` available, you can avoid the {{jsxref("Statements/while", "while")}} loop and `exec` with `g`. Instead, you get an iterator to use with the more convenient {{jsxref("Statements/for...of", "for...of")}}, {{jsxref("Operators/Spread_syntax", "array spread")}}, or {{jsxref("Array.from()")}} constructs:
+With `matchAll()` available, you can avoid the {{jsxref("Statements/while", "while")}} loop and `exec` with `g`. Instead, you get an iterator to use with the more convenient {{jsxref("Statements/for...of", "for...of")}}, [array spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), or {{jsxref("Array.from()")}} constructs:
 
 ```js
 const regexp = /foo[a-z]*/g;
@@ -77,7 +78,7 @@ for (const match of matches) {
 // expected output: "Found football start=6 end=14."
 // expected output: "Found foosball start=16 end=24."
 
-// matches iterator is exhausted after the for..of iteration
+// matches iterator is exhausted after the for...of iteration
 // Call matchAll again to create a new iterator
 Array.from(str.matchAll(regexp), (m) => m[0]);
 // Array [ "football", "foosball" ]

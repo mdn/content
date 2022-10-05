@@ -13,6 +13,7 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTService.device
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.device`** read-only property

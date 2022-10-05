@@ -12,6 +12,7 @@ tags:
   - copy
 browser-compat: api.Element.copy_event
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`copy`** event fires when the user initiates a copy action through the browser's user interface.
@@ -36,7 +37,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
   - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
 
 ## Example
@@ -47,7 +48,9 @@ This example blocks every copy and paste attempt from the {{htmlElement("textare
 
 ```html
 <h3>Play with this text area:</h3>
-<textarea id="editor" rows="3">Try copying and pasting text into this field!</textarea>
+<textarea id="editor" rows="3">
+Try copying and pasting text into this field!
+</textarea>
 
 <h3>Log:</h3>
 <p id="log"></p>

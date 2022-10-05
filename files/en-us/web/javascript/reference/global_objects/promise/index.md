@@ -11,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Promise
 ---
+
 {{JSRef}}
 
 The **`Promise`** object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
@@ -32,7 +33,7 @@ When either of these options occur, the associated handlers queued up by a promi
 
 A promise is said to be _settled_ if it is either fulfilled or rejected, but not pending.
 
-![](promises.png)
+![Flowchart showing how the Promise state transitions between pending, fulfilled, and rejected via then/catch handlers. A pending promise can become either fulfilled or rejected. If fulfilled, the "on fulfillment" handler, or first parameter of the then() method, is executed and carries out further asynchronous actions. If rejected, the error handler, either passed as the second parameter of the then() method or as the sole parameter of the catch() method, gets executed.](promises.png)
 
 You will also hear the term _resolved_ used with promises — this means that the promise is settled or "locked-in" to match the eventual state of another promise, and further resolving or rejecting it has no effect. The [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) document from the original Promise proposal contains more details about promise terminology. Colloquially, "resolved" promises are often equivalent to "fulfilled" promises, but as illustrated in "States and fates", resolved promises can be pending or rejected as well. For example:
 
@@ -52,7 +53,7 @@ This promise is already _resolved_ at the time when it's created (because the `r
 
 ### Chained Promises
 
-The methods `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototype.catch()")}}`, and `{{jsxref("Promise.prototype.finally()")}}` are used to associate further action with a promise that becomes settled. As the `{{JSxRef("Promise.then", "Promise.prototype.then()")}}` and `{{JSxRef("Promise.catch", "Promise.prototype.catch()")}}` methods return promises, they can be chained.
+The methods `{{jsxref("Promise.prototype.then()")}}`, `{{jsxref("Promise.prototype.catch()")}}`, and `{{jsxref("Promise.prototype.finally()")}}` are used to associate further action with a promise that becomes settled. As the `{{JSxRef("Promise/then", "Promise.prototype.then()")}}` and `{{JSxRef("Promise/catch", "Promise.prototype.catch()")}}` methods return promises, they can be chained.
 
 The `.then()` method takes up to two arguments; the first argument is a callback function for the fulfilled case of the promise, and the second argument is a callback function for the rejected case. Each `.then()` returns a newly generated promise object, which can optionally be used for chaining; for example:
 
@@ -211,11 +212,15 @@ If we change this so that the `<iframe>` in the document is listening to post me
 <!-- x.html -->
 <!DOCTYPE html>
 <script>
-  window.addEventListener("message", (event) => {
-    document.querySelector("#text").textContent = "hello";
-    // this code will only run in browsers that track the incumbent settings object
-    console.log(event);
-  }, false);
+  window.addEventListener(
+    "message",
+    (event) => {
+      document.querySelector("#text").textContent = "hello";
+      // this code will only run in browsers that track the incumbent settings object
+      console.log(event);
+    },
+    false
+  );
 </script>
 ```
 
@@ -333,11 +338,11 @@ function troubleWithGetNumber(reason) {
 
 function promiseGetWord(parityInfo) {
   return new Promise((resolve, reject) => {
-    const { value } = parityInfo;
+    const { value, isOdd } = parityInfo;
     if (value >= THRESHOLD_A - 1) {
       reject(`Still too large: ${value}`);
     } else {
-      parityInfo.wordEvenOdd = parityInfo.isOdd ? "odd" : "even";
+      parityInfo.wordEvenOdd = isOdd ? "odd" : "even";
       resolve(parityInfo);
     }
   });

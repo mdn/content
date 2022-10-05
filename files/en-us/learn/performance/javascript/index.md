@@ -8,6 +8,7 @@ tags:
   - Video
   - Web Performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
 
 While images and video account for over 70% of the bytes downloaded for the average website, byte per byte, JavaScript has a greater negative impact on performance. This article looks to introduce performance issues caused by scripts and introduces tips and tricks for optimizing JavaScript for web performance.

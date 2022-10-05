@@ -1,5 +1,5 @@
 ---
-title: 'aria-dropeffect'
+title: "aria-dropeffect"
 slug: Web/Accessibility/ARIA/Attributes/aria-dropeffect
 tags:
   - Accessibility
@@ -45,7 +45,7 @@ The value is a space separated list of possible actions. The following are the v
 - `move`
   - : The source object will be removed from its current location and dropped into the target.
 - `none` (default)
-  - : No operation can be performed; effectively cancels the drag operation if an attempt is made to drop on this object. Ignored if combined with any other token value. e.g., 'none copy' is equivalent to a 'copy' value.
+  - : No operation can be performed; effectively cancels the drag operation if an attempt is made to drop on this object. Ignored if combined with any other token value; for example, 'none copy' is equivalent to a 'copy' value.
 - `popup`
   - : There is a popup menu or dialog that allows the user to choose one of the drag operations (copy, move, link, execute) and any other drag functionality, such as cancel.
 
@@ -59,7 +59,7 @@ Used in **ALL** roles.
 
 ## See Also
 
-- [`aria-grabbed`](../aria-grabbed)
+- [`aria-grabbed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
 - [HTML global `draggable` attribute](/en-US/docs/Web/HTML/Global_attributes/draggable)
 - HTML [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - {{domxref('dataTransfer')}}

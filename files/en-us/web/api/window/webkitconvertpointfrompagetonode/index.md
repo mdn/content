@@ -14,6 +14,7 @@ tags:
   - convertPointFromPageToNode
 browser-compat: api.Window.convertPointFromPageToNode
 ---
+
 {{APIRef}}
 
 {{Non-standard_header}}
@@ -28,7 +29,7 @@ system of the specified DOM {{domxref("Node")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 convertPointFromPageToNode(node, pagePoint)
 ```
 

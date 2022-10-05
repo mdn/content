@@ -11,6 +11,7 @@ tags:
   - Streams
 browser-compat: api.ReadableByteStreamController
 ---
+
 {{APIRef("Streams")}}
 
 The **`ReadableByteStreamController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller for a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
@@ -40,9 +41,9 @@ None. `ReadableByteStreamController` instances are automatically created if an `
 
 ## Properties
 
-- {{domxref("ReadableByteStreamController.byobRequest")}} {{readonlyInline}}
+- {{domxref("ReadableByteStreamController.byobRequest")}} {{ReadOnlyInline}}
   - : Returns the current BYOB pull request, or `null` if there no outstanding request.
-- {{domxref("ReadableByteStreamController.desiredSize")}} {{readonlyInline}}
+- {{domxref("ReadableByteStreamController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size required to fill the stream's internal queue.
 
 ## Methods

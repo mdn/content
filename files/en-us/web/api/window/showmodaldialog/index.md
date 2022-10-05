@@ -8,9 +8,11 @@ tags:
   - HTML DOM
   - Method
   - Window
+  - Non-standard
 browser-compat: api.Window.showModalDialog
 ---
-{{deprecated_header}}{{APIRef}}
+
+{{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 > **Warning:** This feature has been removed. Please fix your Web sites and applications.
 >
@@ -21,7 +23,7 @@ created and displayed a modal dialog box containing a specified HTML document.
 
 ## Syntax
 
-```js
+```js-nolint
 showModalDialog(uri)
 showModalDialog(uri, arguments)
 showModalDialog(uri, arguments, options)
@@ -98,7 +100,7 @@ showModalDialog(uri, arguments, options)
 
 ### Return value
 
- Holds the `returnValue` property as set by the document specified by `uri`.
+Holds the `returnValue` property as set by the document specified by `uri`.
 
 ## Specifications
 

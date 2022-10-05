@@ -10,13 +10,14 @@ tags:
   - CSSRuleList
 browser-compat: api.CSSRuleList.item
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`item()`** method of the {{domxref("CSSRuleList")}} interface returns the {{domxref("CSSRule")}} object at the specified `index` or `null` if the specified `index` doesn't exist.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 

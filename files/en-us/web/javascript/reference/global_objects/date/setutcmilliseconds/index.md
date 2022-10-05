@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.setUTCMilliseconds
 ---
+
 {{JSRef}}
 
 The **`setUTCMilliseconds()`** method sets the milliseconds for
@@ -18,7 +19,7 @@ a specified date according to universal time.
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCMilliseconds(millisecondsValue)
 ```
 

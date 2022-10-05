@@ -8,6 +8,7 @@ tags:
   - Styling
   - Video
 ---
+
 In the previous [Cross browser video player article](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) we described how to build a cross-browser HTML video player using the Media and Fullscreen APIs. This follow-up article looks at how to style this custom player, including making it responsive.
 
 ## The example in action
@@ -28,17 +29,17 @@ The markup for the custom controls now looks as follows:
 
 ```html
 <div id="video-controls" class="controls" data-state="hidden">
-   <button id="playpause" type="button" data-state="play">Play/Pause</button>
-   <button id="stop" type="button" data-state="stop">Stop</button>
-   <div class="progress">
-      <progress id="progress" value="0" min="0">
-         <span id="progress-bar"></span>
-      </progress>
-   </div>
-   <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
-   <button id="volinc" type="button" data-state="volup">Vol+</button>
-   <button id="voldec" type="button" data-state="voldown">Vol-</button>
-   <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
+  <button id="playpause" type="button" data-state="play">Play/Pause</button>
+  <button id="stop" type="button" data-state="stop">Stop</button>
+  <div class="progress">
+    <progress id="progress" value="0" min="0">
+      <span id="progress-bar"></span>
+    </progress>
+  </div>
+  <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+  <button id="volinc" type="button" data-state="volup">Vol+</button>
+  <button id="voldec" type="button" data-state="voldown">Vol-</button>
+  <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
 </div>
 ```
 
@@ -64,13 +65,13 @@ The HTML video and its controls are all contained within a {{htmlelement("figure
 
 ```css
 figure {
-   max-width:64rem;
-   width:100%;
-   max-height:30.875rem;
-   height:100%;
-   margin:1.25rem auto;
-   padding:1.051%;
-   background-color:#666;
+  max-width: 64rem;
+  width: 100%;
+  max-height: 30.875rem;
+  height: 100%;
+  margin: 1.25rem auto;
+  padding: 1.051%;
+  background-color: #666;
 }
 ```
 
@@ -78,9 +79,9 @@ The video controls container itself also needs some styling so that it is set up
 
 ```css
 .controls {
-   width:100%;
-   height:8.0971659919028340080971659919028%; /* of figure's height */
-   position:relative;
+  width: 100%;
+  height: 8.0971659919028340080971659919028%; /* of figure's height */
+  position: relative;
 }
 ```
 
@@ -89,12 +90,12 @@ The height of the `.controls` class is set to be (a very precise!) percentage of
 As mentioned earlier, a `data-state` attribute is now used to indicate whether the video controls are visible or not and these also need to be styled:
 
 ```css
-.controls[data-state=hidden] {
-   display:none;
+.controls[data-state="hidden"] {
+  display: none;
 }
 
-.controls[data-state=visible] {
-   display:block;
+.controls[data-state="visible"] {
+  display: block;
 }
 ```
 
@@ -102,15 +103,15 @@ There are a number of properties that also need to be set for all elements withi
 
 ```css
 .controls > * {
-   float:left;
-   width:3.90625%;
-   height:100%;
-   margin-left:0.1953125%;
-   display:block;
+  float: left;
+  width: 3.90625%;
+  height: 100%;
+  margin-left: 0.1953125%;
+  display: block;
 }
 
 .controls > *:first-child {
-   margin-left:0;
+  margin-left: 0;
 }
 ```
 
@@ -120,8 +121,8 @@ The {{htmlelement("div") }} container for the {{htmlelement("progress") }} eleme
 
 ```css
 .controls .progress {
-   cursor:pointer;
-   width:75.390625%;
+  cursor: pointer;
+  width: 75.390625%;
 }
 ```
 
@@ -133,11 +134,11 @@ Each button has some basic styling:
 
 ```css
 .controls button {
-   border:none;
-   cursor:pointer;
-   background:transparent;
-   background-size:contain;
-   background-repeat:no-repeat;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 ```
 
@@ -146,8 +147,9 @@ By default, all {{htmlelement("button") }} elements have a border, so this is re
 Simple `:hover` and `:focus` states are then set for each button that alters the opacity of the button:
 
 ```css
-.controls button:hover, .controls button:focus {
-   opacity:0.5;
+.controls button:hover,
+.controls button:focus {
+  opacity: 0.5;
 }
 ```
 
@@ -159,11 +161,11 @@ For example, the play/pause button has the following background image definition
 
 ```css
 .controls button[data-state="play"] {
-   background-image: url('data:image/png;base64,iVBORw0KGgoAAA…');
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAA…");
 }
 
 .controls button[data-state="pause"] {
-   background-image: url('data:image/png;base64,iVBORw0KGgoAAA…');
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAA…");
 }
 ```
 
@@ -175,15 +177,15 @@ The {{htmlelement("progress") }} element has the following basic style set up:
 
 ```css
 .controls progress {
-    display:block;
-    width:100%;
-    height:81%;
-    margin-top:0.125rem;
-    border:none;
-    color:#0095dd;
-    -moz-border-radius:2px;
-    -webkit-border-radius:2px;
-    border-radius:2px;
+  display: block;
+  width: 100%;
+  height: 81%;
+  margin-top: 0.125rem;
+  border: none;
+  color: #0095dd;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 ```
 
@@ -193,28 +195,28 @@ As mentioned in the [previous article](/en-US/docs/Web/Guide/Audio_and_video_del
 
 ```css
 .controls progress[data-state="fake"] {
-   background:#e6e6e6;
-   height:65%;
+  background: #e6e6e6;
+  height: 65%;
 }
 .controls progress span {
-   width:0%;
-   height:100%;
-   display:inline-block;
-   background-color:#2a84cd;
+  width: 0%;
+  height: 100%;
+  display: inline-block;
+  background-color: #2a84cd;
 }
 ```
 
-A `.data-state` class is also used here when a {{ htmlelement("progress") }} element is being "faked";  when it's in this state the background color needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background color set.
+A `.data-state` class is also used here when a {{ htmlelement("progress") }} element is being "faked"; when it's in this state the background color needs to be set. The internal {{htmlelement("span") }} element used as the actual progressing part of the faked progress bar has its width initially set to 0% (it is updated via JavaScript) and it also has its background color set.
 
 There are some browser-specific properties that need to be set to ensure that Firefox and Chrome use the required color for the progress bar:
 
 ```css
 .controls progress::-moz-progress-bar {
-   background-color:#0095dd;
+  background-color: #0095dd;
 }
 
 .controls progress::-webkit-progress-value {
-   background-color:#0095dd;
+  background-color: #0095dd;
 }
 ```
 
@@ -281,7 +283,7 @@ stop.addEventListener('click', (e) => {
   video.pause();
   video.currentTime = 0;
   progress.value = 0;
-  
+
   // Update the play/pause button's 'data-state' which allows the correct button image to be set via CSS
   changeButtonState('playpause');
 });
@@ -317,7 +319,7 @@ function checkVolume(dir) {
     } else if (dir === '-' && currentVolume > 0) {
        video.volume -= 0.1;
     }
-    
+
     // If the volume has been turned off, also set it as muted
     // Note: can only do this with the custom control set as when the 'volumechange' event is raised,
     // there is no way to know if it was via a volume or a mute change
@@ -361,51 +363,51 @@ Now that the player has its basic look and feel taken care of, some other stylin
 The player currently works fairly well until displayed on a "medium" screen (e.g. 1024px/64em) or smaller. In this case, the margins and padding on the {{ htmlelement("figure") }} element need to be removed so that all the available space is taken advantage of, and the buttons are a bit too small so this needs to be altered by setting a new height on the element that has the `.controls` class set on it:
 
 ```css
-@media screen and (max-width:64em) {
-   figure {
-      padding-left:0;
-      padding-right:0;
-      height:auto;
-   }
+@media screen and (max-width: 64em) {
+  figure {
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+  }
 
-   .controls {
-      height:1.876rem;
-   }
+  .controls {
+    height: 1.876rem;
+  }
 }
 ```
 
 This works well enough until it is viewed on a smaller screen (680px/42.5em), so another breakpoint is made here. Since the height of the `.controls` class element will now vary, a fixed height is no longer required — it is therefore set to `auto`. The definitions for the elements within the `.controls` element now also need to changed:
 
 ```css
-@media screen and (max-width:42.5em) {
-   .controls {
-      height:auto;
-   }
+@media screen and (max-width: 42.5em) {
+  .controls {
+    height: auto;
+  }
 
-   .controls > * {
-      display:block;
-      width:16.6667%;
-      margin-left:0;
-      height:2.5rem;
-      margin-top:2.5rem;
-   }
+  .controls > * {
+    display: block;
+    width: 16.6667%;
+    margin-left: 0;
+    height: 2.5rem;
+    margin-top: 2.5rem;
+  }
 
-   .controls .progress {
-      position:absolute;
-      top:0;
-      width:100%;
-      float:none;
-      margin-top:0;
-   }
+  .controls .progress {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    float: none;
+    margin-top: 0;
+  }
 
-   .controls .progress progress {
-      width:98%;
-      margin:0 auto;
-   }
+  .controls .progress progress {
+    width: 98%;
+    margin: 0 auto;
+  }
 
-   .controls button {
-      background-position:center center;
-   }
+  .controls button {
+    background-position: center center;
+  }
 }
 ```
 

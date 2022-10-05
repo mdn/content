@@ -13,13 +13,16 @@ tags:
   - onMoved
 browser-compat: webextensions.api.bookmarks.onMoved
 ---
+
 {{AddonSidebar()}}
 
-Fired when a bookmark or folder is moved to a different parent folder and/or position within a folder.
+Fired when a bookmark or folder is moved to a different parent folder or position within a folder.
+
+> **Note:** If you're moving multiple bookmarks, because this API is asynchronous, the move calls may get processed in any order. Consequently, the value of each bookmark's index may change or be unknown until all the move calls are completed. If the index associated with a bookmark matters to your extension, then – when moving multiple bookmarks – the extension should wait for each `bookmarks.move` call to complete before moving the next bookmark. Waiting ensures that the index associated with each bookmark is not affected by a move call executing concurrently while the original call is in progress.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onMoved.addListener(listener)
 browser.bookmarks.onMoved.removeListener(listener)
 browser.bookmarks.onMoved.hasListener(listener)
@@ -44,9 +47,6 @@ Events have three functions:
 
     - `id`
       - : `string`. ID of the item that was moved.
-
-    <!---->
-
     - `moveInfo`
       - : [`object`](#moveinfo). Object containing more details about the move.
 
@@ -91,7 +91,8 @@ browser.browserAction.onClicked.addListener(handleClick);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +119,4 @@ browser.browserAction.onClicked.addListener(handleClick);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

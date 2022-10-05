@@ -11,6 +11,7 @@ tags:
   - frequency
 browser-compat: api.BiquadFilterNode.frequency
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `frequency` property of the {{ domxref("BiquadFilterNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} — a double representing a frequency in the current filtering algorithm measured in hertz (Hz).

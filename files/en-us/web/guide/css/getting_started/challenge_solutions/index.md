@@ -5,6 +5,7 @@ tags:
   - Beginner
   - NeedsUpdate
 ---
+
 This page provides solutions to the challenges posed in the [CSS Getting Started](/en-US/docs/Learn/CSS/First_steps) tutorial. These are not the only possible solutions. The sections below correspond to the titles of the tutorial sections.
 
 ## Why use CSS
@@ -42,8 +43,13 @@ The challenges on page [Cascading and inheritance](/en-US/docs/Learn/CSS/Buildin
   - : Move the declaration for underlining from the rule for {{ HTMLElement("p") }} to the one for {{ HTMLElement("strong") }}. The resulting file looks like this:
 
     ```css
-    p {color: blue; }
-    strong {color: orange; text-decoration: underline;}
+    p {
+      color: blue;
+    }
+    strong {
+      color: orange;
+      text-decoration: underline;
+    }
     ```
 
 Later sections of this tutorial describe style rules and declarations in greater detail.
@@ -61,7 +67,9 @@ The challenges on page [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selecto
   - : Add a rule with an ID selector of `#second` and a declaration `color: blue;`, as shown below:
 
     ```css
-    #second { color: blue; }
+    #second {
+      color: blue;
+    }
     ```
 
     A more specific selector, `p#second` also works.
@@ -75,7 +83,9 @@ The challenges on page [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selecto
   - : Change the selector of the new rule to be a tag selector using `p`:
 
     ```css
-    p { color: blue; }
+    p {
+      color: blue;
+    }
     ```
 
 The rules for the other colors all have more specific selectors, so they override the blue of the paragraph.
@@ -109,7 +119,7 @@ The rules for the other colors all have more specific selectors, so they overrid
   - : Add the following style declaration to the `strong` rule:
 
     ```css
-      font: 200% serif;
+    font: 200% serif;
     ```
 
     If you use separate declarations for `font-size` and `font-family`, then the `font-style` setting on the first paragraph is _not_ overridden.
@@ -157,7 +167,7 @@ The challenges on page are:
   - : Add this rule to your stylesheet:
 
     ```css
-    p:before{
+    p::before {
       content: url("yellow-pin.png");
     }
     ```
@@ -190,8 +200,10 @@ The challenges on page [Lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
 
     ```css
     /* numbered headings */
-    body {counter-reset: headnum;}
-    h3:before {
+    body {
+      counter-reset: headnum;
+    }
+    h3::before {
       content: "(" counter(headnum, upper-latin) ") ";
       counter-increment: headnum;
     }
@@ -212,7 +224,7 @@ The challenges on page [Boxes](/en-US/docs/Learn/CSS/Building_blocks) are:
     ```css
     ul {
       border: 10px solid lightblue;
-      width:  100px;
+      width: 100px;
     }
     ```
 
@@ -237,7 +249,7 @@ The challenges on page [Layout](/en-US/docs/Learn/CSS/CSS_layout) are:
 
     ```css
     #fixed-pin {
-      position:fixed;
+      position: fixed;
       top: 3px;
       right: 3px;
     }
@@ -257,7 +269,7 @@ The challenges on page [Tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_ta
 
     ```css
     #demo-table tbody td {
-      border:1px solid #7a7;
+      border: 1px solid #7a7;
     }
     ```
 

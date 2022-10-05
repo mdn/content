@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.set
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`set`** syntax binds an object
@@ -19,9 +20,9 @@ property.
 
 ## Syntax
 
-```js
-{ set prop() { /* … */ } }
-{ set [expression]() { /* … */ } }
+```js-nolint
+{ set prop(val) { /* … */ } }
+{ set [expression](val) { /* … */ } }
 ```
 
 ### Parameters

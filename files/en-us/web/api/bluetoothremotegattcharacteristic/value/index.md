@@ -13,6 +13,7 @@ tags:
   - value
 browser-compat: api.BluetoothRemoteGATTCharacteristic.value
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTCharacteristic.value`** read-only

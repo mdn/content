@@ -12,6 +12,7 @@ tags:
   - hasPointerCapture
 browser-compat: api.Element.hasPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 The **`hasPointerCapture()`** method of the
@@ -20,7 +21,7 @@ pointer capture for the pointer identified by the given pointer ID.
 
 ## Syntax
 
-```js
+```js-nolint
 hasPointerCapture(pointerId)
 ```
 
@@ -38,7 +39,7 @@ capture, `false` if it doesn't.
 ## Examples
 
 ```html
-<html>
+<html lang="en">
   <script>
     function downHandler(ev) {
       const el = document.getElementById("target");

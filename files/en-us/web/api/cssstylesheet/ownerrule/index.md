@@ -19,6 +19,7 @@ tags:
   - ownerRule
 browser-compat: api.CSSStyleSheet.ownerRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only {{domxref("CSSStyleSheet")}} property

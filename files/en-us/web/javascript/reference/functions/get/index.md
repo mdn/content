@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.functions.get
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`get`** syntax binds an object property to a function
@@ -19,7 +20,7 @@ that will be called when that property is looked up.
 
 ## Syntax
 
-```js
+```js-nolint
 { get prop() { /* … */ } }
 { get [expression]() { /* … */ } }
 ```
@@ -146,7 +147,7 @@ subsequent accesses return the cached value without recalculating it. This is us
 the following situations:
 
 - If the calculation of a property value is expensive (takes much RAM or CPU time,
-  spawns worker threads, retrieves remote file, etc).
+  spawns worker threads, retrieves remote file, etc.).
 - If the value isn't needed just now. It will be used later, or in some case it's not
   used at all.
 - If it's used, it will be accessed several times, and there is no need to
@@ -217,6 +218,6 @@ console.log(
 - [Setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object/__defineGetter__", "__defineGetter__")}}
-- {{jsxref("Object/__defineSetter__", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Defining getters and setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters) in JavaScript Guide

@@ -12,13 +12,14 @@ tags:
   - image-rendering
   - pixel
 ---
+
 {{GamesSidebar}}
 
 This article discusses a useful technique for giving your canvas/WebGL games a crisp pixel art look, even on high definition monitors.
 
 ## The concept
 
-Retro [pixel art](https://wikipedia.org/wiki/Pixel_art) aesthetics are getting popular, especially in [indie games](https://wikipedia.org/wiki/Indie_game) or [game jam](https://wikipedia.org/wiki/Game_jam) entries. But since today's screens render content at high resolutions, there is a problem with making sure the pixel art does not look blurry. Developers have been manually scaling up graphics so they are shown with blocks that represent pixels. Two downsides to this method are larger file sizes and [compression artifacts](https://wikipedia.org/wiki/Compression_artifact).
+Retro [pixel art](https://en.wikipedia.org/wiki/Pixel_art) aesthetics are getting popular, especially in [indie games](https://en.wikipedia.org/wiki/Indie_game) or [game jam](https://en.wikipedia.org/wiki/Game_jam) entries. But since today's screens render content at high resolutions, there is a problem with making sure the pixel art does not look blurry. Developers have been manually scaling up graphics so they are shown with blocks that represent pixels. Two downsides to this method are larger file sizes and [compression artifacts](https://en.wikipedia.org/wiki/Compression_artifact).
 
 <table class="standard-table">
   <tbody>
@@ -36,7 +37,7 @@ Retro [pixel art](https://wikipedia.org/wiki/Pixel_art) aesthetics are getting p
       <td>none</td>
       <td>vendor's algorithm</td>
       <td>
-        <a href="https://wikipedia.org/wiki/Nearest-neighbor_interpolation"
+        <a href="https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation"
           >nearest-neighbor algorithm</a
         >
       </td>
@@ -83,15 +84,15 @@ And some JavaScript to set up the canvas and load the image:
 
 ```js
 // Get canvas context
-const ctx = document.getElementById('game').getContext('2d');
+const ctx = document.getElementById("game").getContext("2d");
 
 // Load image
 const image = new Image();
 image.onload = () => {
   // Draw the image into the canvas
   ctx.drawImage(image, 0, 0);
-}
-image.src = 'cat.png';
+};
+image.src = "cat.png";
 ```
 
 This code used together produces the following result:

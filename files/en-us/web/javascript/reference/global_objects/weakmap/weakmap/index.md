@@ -9,16 +9,19 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.WeakMap.WeakMap
 ---
+
 {{JSRef}}
 
 The **`WeakMap()` constructor** creates a [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) object, optionally based on a provided [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) or other iterable object.
 
 ## Syntax
 
-```js
+```js-nolint
 new WeakMap()
 new WeakMap(iterable)
 ```
+
+> **Note:** `WeakMap()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

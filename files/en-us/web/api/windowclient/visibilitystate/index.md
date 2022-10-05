@@ -4,7 +4,6 @@ slug: Web/API/WindowClient/visibilityState
 page-type: web-api-instance-property
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Service Workers
@@ -13,6 +12,7 @@ tags:
   - visibilityState
 browser-compat: api.WindowClient.visibilityState
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`visibilityState`** read-only property of the

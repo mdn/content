@@ -10,6 +10,7 @@ tags:
   - WebGL2
 browser-compat: api.WebGL2RenderingContext.isVertexArray
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.isVertexArray()`** method of the
@@ -18,7 +19,7 @@ passed object is a valid {{domxref("WebGLVertexArrayObject")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 isVertexArray(vertexArray)
 ```
 

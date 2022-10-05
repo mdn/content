@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognitionResult
 page-type: web-api-interface
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - SpeechRecognitionResult
@@ -13,15 +12,16 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionResult
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`SpeechRecognitionResult`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.
 
 ## Properties
 
-- {{domxref("SpeechRecognitionResult.isFinal")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionResult.isFinal")}} {{ReadOnlyInline}}
   - : A boolean value that states whether this result is final (true) or not (false) — if so, then this is the final time this result will be returned; if not, then this result is an interim result, and may be updated later on.
-- {{domxref("SpeechRecognitionResult.length")}} {{readonlyinline}}
+- {{domxref("SpeechRecognitionResult.length")}} {{ReadOnlyInline}}
   - : Returns the length of the "array" — the number of {{domxref("SpeechRecognitionAlternative")}} objects contained in the result (also referred to as "n-best alternatives".)
 
 ## Methods
@@ -31,7 +31,7 @@ The **`SpeechRecognitionResult`** interface of the [Web Speech API](/en-US/docs/
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
 recognition.onresult = (event) => {

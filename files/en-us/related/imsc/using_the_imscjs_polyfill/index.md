@@ -8,11 +8,12 @@ tags:
   - rendering
   - subtitles
 ---
+
 You currently need a polyfill to render IMSC on the web. imscJS is a good choice as it is actively maintained and has almost complete coverage of the IMSC features. This article shows you how to make use of imscJS and how to integrate it on your own website.
 
 ## Introducing imscJS
 
-[imscJS](https://github.com/sandflow/imscJS) is a JavaScript library for rendering IMSC documents to HTML. Below we will first go through a simple example how to use imscJS, then we'll look at a more complex example that actually renders subtitles on top of video at appropriate times. You can find the source code of the [first sample on GitHub](https://github.com/mdn/imsc/blob/master/imscjs-simple-sample/imscjs-simple-sample.html).
+[imscJS](https://github.com/sandflow/imscJS) is a JavaScript library for rendering IMSC documents to HTML. Below we will first go through a simple example how to use imscJS, then we'll look at a more complex example that actually renders subtitles on top of video at appropriate times. You can find the source code of the [first sample on GitHub](https://github.com/mdn/imsc-examples/blob/main/imscjs-simple-sample/imscjs-simple-sample.html).
 
 ## Embedding imscJS
 
@@ -26,7 +27,7 @@ Once the imscJS library is loaded, it can be used to render an IMSC document in 
 
 ## Parsing the IMSC document
 
-First of all, the IMSC document is parsed into an immutable Javascript object (`doc`, in our case):
+First of all, the IMSC document is parsed into an immutable JavaScript object (`doc`, in our case):
 
 ```js
 const doc = imsc.fromXML(source);
@@ -53,7 +54,7 @@ This point in time does not have to be one of the values returned by `getMediaTi
 In the third and final step, a snapshot is rendered into an HTML {{htmlelement("div")}} using `imsc.renderHTML()`:
 
 ```js
-const vdiv = document.getElementById('render-div');
+const vdiv = document.getElementById("render-div");
 imsc.renderHTML(isd, vdiv);
 ```
 
@@ -61,9 +62,9 @@ imsc.renderHTML(isd, vdiv);
 
 Lets look at a more expanded example and show you how can render subtitles with imscJS on an embedded HTML video. As an example we use the below video with subtitles.
 
-{{EmbedGHLiveSample("imsc/imscjs-demo/imscjs-demo.html", '100%', 320)}}
+{{EmbedGHLiveSample("imsc-examples/imscjs-demo/imscjs-demo.html", '100%', 320)}}
 
-You can find the [HTML markup](https://github.com/mdn/imsc/blob/master/imscjs-demo/imscjs-demo.html) and the [JavaScript source code](https://github.com/mdn/imsc/blob/master/imscjs-demo/js/index.js) on the [MDN repository for IMSC samples](https://github.com/mdn/imsc).
+You can find the [HTML markup](https://github.com/mdn/imsc-examples/blob/main/imscjs-demo/imscjs-demo.html) and the [JavaScript source code](https://github.com/mdn/imsc-examples/blob/main/imscjs-demo/js/index.js) on the [MDN repository for IMSC samples](https://github.com/mdn/imsc-examples).
 
 ## Accessing the DOM
 
@@ -95,12 +96,12 @@ The browser will not retrieve the document automatically for us. In most browser
 ```js
 const client = new XMLHttpRequest();
 
-client.open('GET', ttmlUrl);
+client.open("GET", ttmlUrl);
 client.onreadystatechange = function () {
   initTrack(client.responseText);
-}
+};
 
-client.send()
+client.send();
 ```
 
 ## Setting the text track mode
@@ -188,9 +189,9 @@ for (let i = 0; i < timeEvents.length; i++) {
   if (i < timeEvents.length - 1) {
     myCue = Cue(timeEvents[i], myVideo.duration, "");
   } else {
-    myCue = new Cue(timeEvents[i], timeEvents[i + 1], ""); 
+    myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");
   }
-  
+
   myCue.onenter = function () {
     clearSubFromScreen();
     const myIsd = imsc.generateISD(imscDoc, this.startTime);
@@ -249,7 +250,7 @@ We call this function again once the `onexit` event of the cue is thrown:
 
 ```js
 myCue.onexit = function () {
- clearSubFromScreen();
+  clearSubFromScreen();
 };
 ```
 
@@ -270,7 +271,7 @@ This causes two problems when using imscJS:
 1. The IMSC HTML overlay covers the complete video. It sits on top of the `<video>` element. Although you can see the player controls (because most of the overlay has a transparent background), pointer events like mouse clicks are not coming through to the controls. Because they can't be accessed by standard CSS you can also not change the z-index of the controls to solve this problem. So, if you always have a subtitle overlay, you will not able be able to stop the video once it has started. This would be a very bad user experience.
 2. Usually the native video player controls have a caption user interface. You can select a text track or to switch off the rendering of subtitles. Unfortunately, the caption interface only controls the rendering of WebVTT subtitles. The browser does not know that we are rendering subtitles with imscJS, so these controls will have no effect.
 
-For the first problem there is a straightforward CSS solution. We need to set the CSS property `pointer-events` to `none` (see the [sample code](https://github.com/mdn/imsc/blob/master/imscjs-demo/css/style.css) on GitHub for the complete CSS).
+For the first problem there is a straightforward CSS solution. We need to set the CSS property `pointer-events` to `none` (see the [sample code](https://github.com/mdn/imsc-examples/blob/main/imscjs-demo/css/style.css) on GitHub for the complete CSS).
 
 ```css
 #render-div {

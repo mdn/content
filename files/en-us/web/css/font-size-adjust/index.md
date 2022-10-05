@@ -1,6 +1,7 @@
 ---
 title: font-size-adjust
 slug: Web/CSS/font-size-adjust
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts
@@ -9,6 +10,9 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.font-size-adjust
 ---
+
+{{CSSRef}}
+
 The **`font-size-adjust`** [CSS](/en-US/docs/Web/CSS) property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).
 
 ```css
@@ -85,9 +89,17 @@ It is really specifying that the lowercase letters of the font should be `7px` h
 #### HTML
 
 ```html
-<p class="times">This text uses the Times font (10px), which is hard to read in small sizes.</p>
-<p class="verdana">This text uses the Verdana font (10px), which has relatively large lowercase letters.</p>
-<p class="adjtimes">This is the 10px Times, but now adjusted to the same aspect ratio as the Verdana.</p>
+<p class="times">
+  This text uses the Times font (10px), which is hard to read in small sizes.
+</p>
+<p class="verdana">
+  This text uses the Verdana font (10px), which has relatively large lowercase
+  letters.
+</p>
+<p class="adjtimes">
+  This is the 10px Times, but now adjusted to the same aspect ratio as the
+  Verdana.
+</p>
 ```
 
 #### CSS
@@ -121,8 +133,6 @@ It is really specifying that the lowercase letters of the font should be `7px` h
 ## Browser compatibility
 
 {{Compat}}
-
-{{CSSRef}}
 
 ## See also
 

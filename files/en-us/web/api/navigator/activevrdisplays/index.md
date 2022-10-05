@@ -13,9 +13,11 @@ tags:
   - Virtual Reality
   - WebVR
   - activeVRDisplays
+  - Non-standard
 browser-compat: api.Navigator.activeVRDisplays
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
+
+{{APIRef("WebVR API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`activeVRDisplays`** read-only property of the
 {{domxref("Navigator")}} interface returns an array containing every

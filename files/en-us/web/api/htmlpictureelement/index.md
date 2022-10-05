@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLPictureElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLPictureElement`** interface represents a {{HTMLElement("picture")}} HTML element. It doesn't implement specific properties or methods.

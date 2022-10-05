@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: api.IDBRequest.error_event
 ---
+
 {{APIRef("IndexedDB")}}
 
 The `error` handler is executed when an error caused a request to fail.

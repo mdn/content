@@ -9,6 +9,7 @@ tags:
   - Status code
 spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-6
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`511 Network Authentication Required`** response

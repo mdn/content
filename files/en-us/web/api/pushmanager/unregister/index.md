@@ -10,6 +10,7 @@ tags:
   - Simple Push API
 browser-compat: api.PushManager.unregister
 ---
+
 {{deprecated_header}}{{ ApiRef("Push API")}}
 
 The **`unregister()`** method was used to ask the system to
@@ -19,7 +20,7 @@ unregister and delete the specified endpoint.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister(pushEndpoint)
 ```
 

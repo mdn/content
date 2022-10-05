@@ -11,6 +11,7 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.SecurityInfo
 ---
+
 {{AddonSidebar()}}
 
 An object describing the security properties of a particular web request. An object of this type is returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API.

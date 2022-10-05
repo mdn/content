@@ -13,10 +13,11 @@ tags:
   - Web
   - Web Components
   - shadow dom
+  - Non-standard
 browser-compat: html.elements.content
 ---
 
-{{Deprecated_header}}
+{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`<content>`** [HTML](/en-US/docs/Web/HTML) element—an obsolete part of the [Web Components](/en-US/docs/Web/Web_Components) suite of technologies—was used inside of [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) as an {{glossary("insertion point")}}, and wasn't meant to be used in ordinary HTML. It has now been replaced by the {{HTMLElement("slot")}} element, which creates a point in the DOM at which a shadow DOM can be inserted.
 
@@ -74,27 +75,27 @@ Here is a simple example of using the `<content>` element. It is an HTML file wi
 > **Note:** For this code to work, the browser you display it in must support Web Components. See [Enabling Web Components in Firefox](/en-US/docs/Web/Web_Components#enabling_web_components_in_firefox).
 
 ```html
-<html>
+<html lang="en">
   <head></head>
   <body>
-  <!-- The original content accessed by <content> -->
-  <div>
-    <h4>My Content Heading</h4>
-    <p>My content text</p>
-  </div>
+    <!-- The original content accessed by <content> -->
+    <div>
+      <h4>My Content Heading</h4>
+      <p>My content text</p>
+    </div>
 
-  <script>
-    // Get the <div> above.
-    const myContent = document.querySelector('div');
+    <script>
+      // Get the <div> above.
+      const myContent = document.querySelector("div");
 
-    // Create a shadow DOM on the <div>
-    const shadowroot = myContent.createShadowRoot();
+      // Create a shadow DOM on the <div>
+      const shadowroot = myContent.createShadowRoot();
 
-    // Insert into the shadow DOM a new heading and
-    // part of the original content: the <p> tag.
-    shadowroot.innerHTML = '<h2>Inserted Heading</h2> <content select="p"></content>';
-  </script>
-
+      // Insert into the shadow DOM a new heading and
+      // part of the original content: the <p> tag.
+      shadowroot.innerHTML =
+        '<h2>Inserted Heading</h2> <content select="p"></content>';
+    </script>
   </body>
 </html>
 ```

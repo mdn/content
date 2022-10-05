@@ -8,9 +8,11 @@ tags:
   - Reference
   - isTypeSupported
   - ImageDecoder
+  - Experimental
 browser-compat: api.ImageDecoder.isTypeSupported
 ---
-{{securecontext_header}}{{APIRef("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`ImageDecoder.isTypeSupported()`** static method checks if a given [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) can be decoded by the user agent.
 

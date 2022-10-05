@@ -2,11 +2,12 @@
 title: Firefox 103 for developers
 slug: Mozilla/Firefox/Releases/103
 tags:
-  - '103'
+  - "103"
   - Firefox
   - Mozilla
   - Release
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 103 that will affect developers. Firefox 103 was released on July 26, 2022.
@@ -16,6 +17,9 @@ This article provides information about the changes in Firefox 103 that will aff
 ### HTML
 
 #### Removals
+
+- Support for the `<menuitem>` element has been removed along with the `dom.menuitem.enabled` preference.
+  For more details, see [Bug 1372276](https://bugzilla.mozilla.org/show_bug.cgi?id=1372276).
 
 ### MathML
 
@@ -28,6 +32,7 @@ This article provides information about the changes in Firefox 103 that will aff
 - The {{CSSxRef("backdrop-filter")}} property (which can be used to apply graphical effects such as blurring or color shifting to the area behind an element) is now available by default. It was earlier behind a preference setting ({{bug(1578503)}}).
 - The {{CSSxRef("scroll-snap-stop")}} property is now available ({{bug(1312165)}}). You can use this property's `always` and `normal` values to specify whether or not to pass the snap points, even when scrolling fast.
 - Support has been added for the {{CSSxRef(":modal")}} pseudo class. It selects all elements that are in a state in which they exclude all interaction with other elements until the interaction has been dismissed ({{bug(1768535)}}).
+- The [`style`](/en-US/docs/Web/CSS/contain#style) value for the `contain` property is now supported. You can use this value for properties that can have effects on more than just an element and its descendants for effects don't escape the containing element. For more information, see ({{bug(1463600)}}).
 
 #### Removals
 
@@ -85,7 +90,7 @@ This article provides information about the changes in Firefox 103 that will aff
 
 ## Changes for add-on developers
 
-#### Removals
+### Removals
 
 - Removed the ServiceWorker API in WebExtensions (`'serviceWorker' in navigator` now returns false when run inside an extension). ({{bug(1593931)}})
 

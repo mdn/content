@@ -17,7 +17,8 @@ tags:
   - requestAnimationFrame()
 browser-compat: api.XRSession.requestAnimationFrame
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRSession")}}
 method **`requestAnimationFrame()`**, much like the
@@ -37,13 +38,13 @@ You can cancel a previously scheduled animation by calling
 
 > **Note:** Despite the obvious similarities between these methods and the
 > global {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} function
-> provided by the `Window` interface, you *must not* treat these as
-> interchangeable. There is *no* guarantee that the latter will work at all while
+> provided by the `Window` interface, you _must not_ treat these as
+> interchangeable. There is _no_ guarantee that the latter will work at all while
 > an immersive XR session is underway.
 
 ## Syntax
 
-```js
+```js-nolint
 requestAnimationFrame(animationFrameCallback)
 ```
 

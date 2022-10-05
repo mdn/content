@@ -10,6 +10,7 @@ tags:
   - Reporting API
 browser-compat: api.Report.body
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`body`** read-only property of the {{domxref("Report")}}
