@@ -11,7 +11,7 @@ browser-compat: api.UserActivation
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`UserActivation`** interface allows to query information about a window's user activation state.
+The **`UserActivation`** interface allows querying information about a window's user activation state.
 
 A user activation either implies that the user is currently interacting with the page, or has completed an interaction since page load. Typically, this is a click on a button or some other user interaction with the UI.
 
