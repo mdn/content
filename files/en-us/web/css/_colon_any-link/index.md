@@ -1,6 +1,7 @@
 ---
 title: ":any-link"
 slug: Web/CSS/:any-link
+page-type: css-pseudo-class
 tags:
   - ":any-link"
   - CSS

@@ -1,6 +1,7 @@
 ---
 title: font-language-override
 slug: Web/CSS/font-language-override
+page-type: css-property
 tags:
   - CSS
   - CSS Fonts

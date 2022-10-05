@@ -3,7 +3,6 @@ title: RDF
 slug: Glossary/RDF
 tags:
   - CodingScripting
-  - Glossary
   - Infrastructure
   - OpenPractices
   - WebMechanics

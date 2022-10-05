@@ -50,7 +50,7 @@ document.getElementById("open-search").addEventListener("click", async () => {
 
 Once the user clicks on the button, the async click handler is called. The function waits till the module is loaded, then calls the `loadAutoComplete()` function exported from that module. The `search.js` module is therefore only downloaded, parsed, and executed when the interaction happens.
 
-We can also split css files and add media types to them:
+We can also split CSS files and add media types to them:
 
 ```html
 <link rel="stylesheet" href="style.css" />
@@ -82,11 +82,11 @@ Those images will be loaded via JavaScript _after_ the site finishes building th
 The `app.js` file processes the `data-src` attributes like so:
 
 ```js
-let imagesToLoad = document.querySelectorAll('img[data-src]');
+let imagesToLoad = document.querySelectorAll("img[data-src]");
 const loadImages = (image) => {
-  image.setAttribute('src', image.getAttribute('data-src'));
+  image.setAttribute("src", image.getAttribute("data-src"));
   image.onload = () => {
-    image.removeAttribute('data-src');
+    image.removeAttribute("data-src");
   };
 };
 ```
@@ -124,7 +124,7 @@ This will remove the blur effect within half a second, which looks good enough f
 
 The image loading mechanism discussed in the above section works OK — it loads the images after rendering the HTML structure, and applies a nice transition effect in the process. The problem is that it still loads _all_ the images at once, even though the user will only see the first two or three upon page load.
 
-This problem can be solved by loading the images only when needed: this is called _lazy loading_. [Lazy loading](https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading) is a technique to load images only when they appear in the viewport. There are several ways to tell the browser to lazy load images.
+This problem can be solved by loading the images only when needed: this is called _lazy loading_. [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) is a technique to load images only when they appear in the viewport. There are several ways to tell the browser to lazy load images.
 
 ### The loading attribute on \<img>
 
@@ -145,7 +145,7 @@ This is a progressive enhancement to the previously working example — [Interse
 Here's what the relevant code looks like:
 
 ```js
-if ('IntersectionObserver' in window) {
+if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((items, observer) => {
     items.forEach((item) => {
       if (item.isIntersecting) {

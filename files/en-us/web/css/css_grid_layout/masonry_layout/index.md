@@ -1,6 +1,7 @@
 ---
 title: Masonry layout
 slug: Web/CSS/CSS_Grid_Layout/Masonry_Layout
+page-type: guide
 tags:
   - CSS
   - CSS Grid

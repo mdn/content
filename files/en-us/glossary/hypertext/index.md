@@ -2,7 +2,6 @@
 title: Hypertext
 slug: Glossary/Hypertext
 tags:
-  - Glossary
   - Web
   - WebMechanics
 ---

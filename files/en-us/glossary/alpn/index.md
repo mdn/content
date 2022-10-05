@@ -4,7 +4,6 @@ slug: Glossary/ALPN
 tags:
   - ALPN
   - Draft
-  - Glossary
   - NeedsContent
   - TLS
 ---

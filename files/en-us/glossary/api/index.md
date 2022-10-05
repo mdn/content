@@ -3,7 +3,6 @@ title: API
 slug: Glossary/API
 tags:
   - CodingScripting
-  - Glossary
   - Infrastructure
 ---
 

@@ -4,7 +4,6 @@ slug: Glossary/W3C
 tags:
   - Community
   - Consortium
-  - Glossary
   - Intro
   - W3C
   - Web consortium

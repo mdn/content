@@ -1,6 +1,7 @@
 ---
 title: CSS Fonts
 slug: Web/CSS/CSS_Fonts
+page-type: css-module
 tags:
   - CSS
   - CSS Fonts

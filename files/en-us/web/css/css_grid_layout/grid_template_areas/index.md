@@ -1,6 +1,7 @@
 ---
 title: Grid template areas
 slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+page-type: guide
 tags:
   - CSS
   - CSS Grids
@@ -346,8 +347,6 @@ We give the image area a grid area name of `img` and the text area `content`, th
   border-radius: 5px;
   background-color: #fff4e6;
   max-width: 400px;
-}
-.media {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "img content";
@@ -391,8 +390,6 @@ We might want to be able to display our box with the image the other way around.
   border-radius: 5px;
   background-color: #fff4e6;
   max-width: 400px;
-}
-.media {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "img content";

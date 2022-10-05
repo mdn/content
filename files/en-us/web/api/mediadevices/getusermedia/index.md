@@ -451,7 +451,7 @@ const constraints = {
 
 ## See also
 
-- The older {{domxref("navigator.getUserMedia()")}} legacy API.
+- The older {{domxref("navigator.getUserMedia()")}} legacy API
 - {{domxref("mediaDevices.enumerateDevices()")}}: Listing available media devices
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)

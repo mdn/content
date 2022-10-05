@@ -1,6 +1,7 @@
 ---
 title: max-inline-size
 slug: Web/CSS/max-inline-size
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Properties

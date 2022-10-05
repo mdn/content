@@ -1,6 +1,7 @@
 ---
 title: align-tracks
 slug: Web/CSS/align-tracks
+page-type: css-property
 tags:
   - CSS
   - CSS Property

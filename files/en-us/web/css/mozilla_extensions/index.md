@@ -1,6 +1,7 @@
 ---
 title: Mozilla CSS extensions
 slug: Web/CSS/Mozilla_Extensions
+page-type: landing-page
 tags:
   - CSS
   - CSS:Mozilla Extensions

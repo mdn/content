@@ -1,6 +1,7 @@
 ---
 title: <translation-value>
 slug: Web/CSS/translation-value
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

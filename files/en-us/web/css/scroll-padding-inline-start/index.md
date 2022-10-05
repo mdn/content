@@ -1,6 +1,7 @@
 ---
 title: scroll-padding-inline-start
 slug: Web/CSS/scroll-padding-inline-start
+page-type: css-property
 tags:
   - CSS
   - CSS Property

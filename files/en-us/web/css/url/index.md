@@ -1,6 +1,7 @@
 ---
 title: url()
 slug: Web/CSS/url
+page-type: css-function
 tags:
   - CSS
   - CSS Function

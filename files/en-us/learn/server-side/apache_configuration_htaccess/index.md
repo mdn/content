@@ -44,7 +44,7 @@ There are times when we need to tell users that a resource has moved, either tem
 </IfModule>
 ```
 
-The possible values for the first parameter are listed below. If the first parameter is not included is defaults to `temp`.
+The possible values for the first parameter are listed below. If the first parameter is not included, it defaults to `temp`.
 
 - permanent
   - : Returns a permanent redirect status (301) indicating that the resource has moved permanently.

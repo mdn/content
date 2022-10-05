@@ -1,8 +1,9 @@
 ---
-title: ':where()'
+title: ":where()"
 slug: Web/CSS/:where
+page-type: css-pseudo-class
 tags:
-  - ':where'
+  - ":where"
   - CSS
   - NeedsBrowserCompatibility
   - NeedsContent

@@ -3,7 +3,6 @@ title: IP Address
 slug: Glossary/IP_Address
 tags:
   - Beginner
-  - Glossary
   - Infrastructure
   - Web
 ---

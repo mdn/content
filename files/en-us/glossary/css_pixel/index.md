@@ -4,7 +4,6 @@ slug: Glossary/CSS_pixel
 tags:
   - CSS
   - CSS Pixel
-  - Glossary
   - height
   - length
   - pixel

@@ -1,6 +1,7 @@
 ---
 title: Adapting to the new two-value syntax of display
 slug: Web/CSS/display/two-value_syntax_of_display
+page-type: guide
 tags:
   - CSS
   - Example

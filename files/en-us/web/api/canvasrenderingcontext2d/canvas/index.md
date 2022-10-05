@@ -34,9 +34,9 @@ Given this {{HTMLElement("canvas")}} element:
 `CanvasRenderingContext2D` by using the `canvas` property:
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-ctx.canvas // HTMLCanvasElement
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.canvas; // HTMLCanvasElement
 ```
 
 ## Specifications

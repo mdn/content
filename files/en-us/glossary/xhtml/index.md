@@ -3,7 +3,6 @@ title: XHTML
 slug: Glossary/XHTML
 tags:
   - CodingScripting
-  - Glossary
   - XHTML
 ---
 

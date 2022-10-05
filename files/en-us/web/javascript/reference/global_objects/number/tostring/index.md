@@ -11,8 +11,7 @@ browser-compat: javascript.builtins.Number.toString
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the
-specified {{jsxref("Number")}} object.
+The **`toString()`** method returns a string representing the specified number value.
 
 {{EmbedInteractiveExample("pages/js/number-tostring.html")}}
 
@@ -26,61 +25,61 @@ toString(radix)
 ### Parameters
 
 - `radix` {{optional_inline}}
-  - : An integer in the range `2` through `36` specifying the base
-    to use for representing numeric values.
+  - : An integer in the range `2` through `36` specifying the base to use for representing the number value. Defaults to 10.
 
 ### Return value
 
-A string representing the specified {{jsxref("Number")}} object.
+A string representing the specified number value.
 
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : If `toString()` is given a `radix` less than
-    `2` or greater than `36`, a {{jsxref("RangeError")}} is thrown.
+  - : Thrown if `radix` is less than 2 or greater than 36.
 
 ## Description
 
-The {{jsxref("Number")}} object overrides the `toString()` method of the
-{{jsxref("Object")}}. For {{jsxref("Number")}} objects, the
-`toString()` method returns a string representation of the object in the
-specified radix.
+The {{jsxref("Number")}} object overrides the `toString` method of {{jsxref("Object")}}; it does not inherit
+{{jsxref("Object.prototype.toString()")}}. For `Number` values, the `toString` method returns a string representation of the value in the specified radix.
 
-The `toString()` method parses its first argument, and attempts to return a
-string representation in the specified `radix` (base). For radices
-above `10`, the letters of the alphabet indicate numerals greater than 9. For
-example, for hexadecimal numbers (base 16), `a` through `f` are
-used.
+For radixes above 10, the letters of the alphabet indicate digits greater than 9. For example, for hexadecimal numbers (base 16) `a` through `f` are used.
 
-If the `radix` is not specified, the preferred radix is assumed
-to be `10`.
+If the specified number value is negative, the sign is preserved. This is the case even if the radix is 2; the string returned is the positive binary representation of the number value preceded by a `-` sign, **not** the two's complement of the number value.
 
-If the `numObj` is negative, the sign is preserved. This is the
-case even if the radix is `2`; the string returned is the positive binary
-representation of the `numObj` preceded by a `-` sign,
-**not** the two's complement of the `numObj`.
+Both `0` and `-0` have `"0"` as their string representation. {{jsxref("Infinity")}} returns `"Infinity"` and {{jsxref("NaN")}} returns `"NaN"`.
 
-If the `numObj` is not a whole number, the 'dot' sign is used to
-separate the decimal places.
+If the number is not a whole number, the decimal point `.` is used to separate the decimal places. [Scientific notation](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#exponential) is used if the radix is 10 and the number's magnitude (ignoring sign) is greater than or equal to 10<sup>21</sup> or less than 10<sup>-6</sup>. In this case, the returned string always explicitly specifies the sign of the exponent.
+
+```js
+console.log((10 ** 21.5).toString()); // "3.1622776601683794e+21"
+console.log((10 ** 21.5).toString(8)); // "526665530627250154000000"
+```
+
+The `toString()` method requires its `this` value to be a `Number` primitive or wrapper object. It throws a {{jsxref("TypeError")}} for other `this` values without attempting to coerce them to number values.
+
+Because `Number` doesn't have a [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) method, JavaScript calls the `toString()` method automatically when a `Number` _object_ is used in a context expecting a string, such as in a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals). However, Number _primitive_ values do not consult the `toString()` method to be [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) — rather, they are directly converted using the same algorithm as the initial `toString()` implementation.
+
+```js
+Number.prototype.toString = () => "Overridden";
+console.log(`${1}`); // "1"
+console.log(`${new Number(1)}`); // "Overridden"
+```
 
 ## Examples
 
-### Using toString
+### Using toString()
 
 ```js
 const count = 10;
+console.log(count.toString()); // "10"
 
-console.log(count.toString());    // displays '10'
-console.log((17).toString());     // displays '17'
-console.log((17.2).toString());   // displays '17.2'
+console.log((17).toString()); // "17"
+console.log((17.2).toString()); // "17.2"
 
 const x = 6;
-
-console.log(x.toString(2));       // displays '110'
-console.log((254).toString(16));  // displays 'fe'
-
-console.log((-10).toString(2));   // displays '-1010'
-console.log((-0xff).toString(2)); // displays '-11111111'
+console.log(x.toString(2)); // "110"
+console.log((254).toString(16)); // "fe"
+console.log((-10).toString(2)); // "-1010"
+console.log((-0xff).toString(2)); // "-11111111"
 ```
 
 ### Converting radix of number strings

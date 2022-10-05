@@ -2,7 +2,6 @@
 title: RAIL
 slug: Glossary/RAIL
 tags:
-  - Glossary
   - RAIL
   - Timings
   - Web Performance

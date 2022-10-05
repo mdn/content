@@ -1,6 +1,7 @@
 ---
 title: inset()
 slug: Web/CSS/basic-shape/inset
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type

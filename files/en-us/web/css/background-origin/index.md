@@ -1,6 +1,7 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
+page-type: css-property
 tags:
   - CSS
   - CSS Background

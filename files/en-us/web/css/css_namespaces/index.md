@@ -1,6 +1,7 @@
 ---
 title: CSS Namespaces
 slug: Web/CSS/CSS_Namespaces
+page-type: css-module
 tags:
   - CSS
   - CSS Namespaces

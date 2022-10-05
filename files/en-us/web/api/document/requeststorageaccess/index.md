@@ -19,7 +19,35 @@ The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface
 
 This is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
-## Conditions for granting storage access
+## Syntax
+
+```js-nolint
+requestStorageAccess()
+```
+
+### Parameters
+
+None.
+
+### Return value
+
+A {{jsxref("Promise")}} that fulfills with `undefined` if the access to first-party storage was granted, and rejects if access was denied.
+
+When the promise gets resolved, the resolve handler will run as if a user gesture is being processed, whether the promise was fulfilled or rejected:
+
+- In the former case, code can then start to call APIs that require user activation and things can move forward.
+- In the latter case, code can run to inform the user of why the request failed and what they can do to continue (for example asking them to log in, if that is a requirement).
+
+## Examples
+
+```js
+document.requestStorageAccess().then(
+  () => { console.log('access granted') },
+  () => { console.log('access denied') }
+);
+```
+
+## Security
 
 Storage access is granted based on a series of checks described here:
 
@@ -82,34 +110,6 @@ To make testing easier, we have added two preferences in `about:config` that con
   All calls to `requestStorageAccess()` by origins classified as trackers will trigger a prompt.
 - `dom.storage_access.max_concurrent_auto_grants` controls the threshold number of storage access grants at which users will begin to receive prompts.
   For example, if you want to configure Firefox to automatically grant access on the first site where `requestStorageAccess()` is called and then prompt afterwards, you should adjust the value of the `dom.storage_access.max_concurrent_auto_grants` preference to 1.
-
-## Syntax
-
-```js-nolint
-requestStorageAccess()
-```
-
-### Parameters
-
-None.
-
-### Return value
-
-A {{jsxref("Promise")}} that fulfills with `undefined` if the access to first-party storage was granted, and rejects if access was denied.
-
-When the promise gets resolved, the resolve handler will run as if a user gesture is being processed, whether the promise was fulfilled or rejected:
-
-- In the former case, code can then start to call APIs that require user activation and things can move forward.
-- In the latter case, code can run to inform the user of why the request failed and what they can do to continue (for example asking them to log in, if that is a requirement).
-
-## Examples
-
-```js
-document.requestStorageAccess().then(
-  () => { console.log('access granted') },
-  () => { console.log('access denied') }
-);
-```
 
 ## Specifications
 

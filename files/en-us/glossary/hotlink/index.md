@@ -2,7 +2,6 @@
 title: Hotlink
 slug: Glossary/Hotlink
 tags:
-  - Glossary
   - WebMechanics
 ---
 

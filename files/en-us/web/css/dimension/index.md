@@ -1,6 +1,7 @@
 ---
 title: <dimension>
 slug: Web/CSS/dimension
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

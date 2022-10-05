@@ -1,6 +1,7 @@
 ---
 title: Specified value
 slug: Web/CSS/specified_value
+page-type: guide
 tags:
   - CSS
   - Guide

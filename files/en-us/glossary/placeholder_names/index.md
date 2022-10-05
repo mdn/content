@@ -3,7 +3,6 @@ title: Placeholder names
 slug: Glossary/Placeholder_names
 tags:
   - Cryptography
-  - Glossary
   - Security
 ---
 

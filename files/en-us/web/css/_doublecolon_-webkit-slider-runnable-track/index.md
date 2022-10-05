@@ -1,6 +1,7 @@
 ---
 title: '::-webkit-slider-runnable-track'
 slug: Web/CSS/::-webkit-slider-runnable-track
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:WebKit Extensions

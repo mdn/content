@@ -1,6 +1,7 @@
 ---
 title: skew()
 slug: Web/CSS/transform-function/skew
+page-type: css-function
 tags:
   - CSS
   - CSS Function

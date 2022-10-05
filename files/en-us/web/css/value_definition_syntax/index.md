@@ -1,6 +1,7 @@
 ---
 title: Value definition syntax
 slug: Web/CSS/Value_definition_syntax
+page-type: guide
 tags:
   - CSS
   - Guide

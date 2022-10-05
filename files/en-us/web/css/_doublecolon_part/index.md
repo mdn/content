@@ -1,6 +1,7 @@
 ---
 title: '::part()'
 slug: Web/CSS/::part
+page-type: css-pseudo-element
 tags:
   - '::part'
   - CSS
@@ -89,9 +90,9 @@ globalThis.customElements.define(
   template.id,
   class extends HTMLElement {
     constructor() {
-      super();
-      this.attachShadow({ mode: "open" });
-      this.shadowRoot.appendChild(template.content);
+      super()
+        .attachShadow({ mode: "open" })
+        .append(template.content);
     }
   }
 );

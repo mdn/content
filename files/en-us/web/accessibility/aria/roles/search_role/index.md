@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: search role'
+title: "ARIA: search role"
 slug: Web/Accessibility/ARIA/Roles/search_role
 tags:
   - ARIA

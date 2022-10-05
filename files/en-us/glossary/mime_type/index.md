@@ -2,7 +2,6 @@
 title: MIME type
 slug: Glossary/MIME_type
 tags:
-  - Glossary
   - WebMechanics
 ---
 

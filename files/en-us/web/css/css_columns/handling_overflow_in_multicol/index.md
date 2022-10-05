@@ -1,6 +1,7 @@
 ---
 title: Handling overflow in multi-column layout
 slug: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
+page-type: guide
 tags:
   - CSS
   - CSS Multi-column Layout

@@ -1,6 +1,7 @@
 ---
 title: border-bottom-right-radius
 slug: Web/CSS/border-bottom-right-radius
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

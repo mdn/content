@@ -3,7 +3,6 @@ title: RTL (Right to Left)
 slug: Glossary/rtl
 tags:
   - Composing
-  - Glossary
   - Localization
 ---
 

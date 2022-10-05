@@ -3,7 +3,6 @@ title: XML
 slug: Glossary/XML
 tags:
   - CodingScripting
-  - Glossary
   - XML
   - "l10n:priority"
 ---

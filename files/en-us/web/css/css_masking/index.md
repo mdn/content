@@ -1,6 +1,7 @@
 ---
 title: CSS Masking
 slug: Web/CSS/CSS_Masking
+page-type: css-module
 tags:
   - CSS
   - CSS Masking

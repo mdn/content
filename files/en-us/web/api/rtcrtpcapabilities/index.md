@@ -51,7 +51,7 @@ There are three special entries that should always be present, representing unde
 - RTX (Retransmission)
   - : This component is responsible for retransmission of data; it's media type should be `video/rtx`. There will only be one entry for RTX, and it will not have an {{domxref("RTCRtpCodecCapability.sdpFmtpLine", "sdpFmtpLine")}} property.
 
-Don't be surprised to see these show up ijn the list; be prepared to ignore them if you're only interested in the actual codecs used for the media itself.
+Don't be surprised to see these show up in the list; be prepared to ignore them if you're only interested in the actual codecs used for the media itself.
 
 ## Specifications
 

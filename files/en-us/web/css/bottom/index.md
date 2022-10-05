@@ -1,6 +1,7 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
+page-type: css-property
 tags:
   - CSS
   - CSS Positioning

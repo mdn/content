@@ -1,6 +1,7 @@
 ---
 title: cos()
 slug: Web/CSS/cos
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -11,7 +12,6 @@ tags:
   - cos
   - Experimental
 browser-compat: css.types.cos
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -22,17 +22,17 @@ The **`cos()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 
 ```css
 /* Single <angle> values */
-width: calc(cos(45deg) * 100px);
-width: calc(cos(0.125turn) * 100px);
-width: calc(cos(0.785398163rad) * 100px);
+width: calc(100px * cos(45deg));
+width: calc(100px * cos(0.125turn));
+width: calc(100px * cos(0.785398163rad));
 
 /* Single <number> values */
-width: calc(cos(63.673) * 100px);
-width: calc(cos(2 * 0.125) * 100px);
+width: calc(100px * cos(63.673));
+width: calc(100px * cos(2 * 0.125));
 
 /* Other values */
-width: calc(cos(pi) * 100px);
-width: calc(cos(e / 2) * 100px);
+width: calc(100px * cos(pi));
+width: calc(100px * cos(e / 2));
 ```
 
 ### Parameter
@@ -40,13 +40,21 @@ width: calc(cos(e / 2) * 100px);
 The `cos(angle)` function accepts only one value as its parameter.
 
 - `angle`
-  - : A {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}. When specifying `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} or an {{cssxref("&lt;angle&gt;")}}. When specifying unitless numbers they are interpreted as a number of radians, representing an {{cssxref("&lt;angle&gt;")}}.
+
+### Return value
+
+The cosine of an `angle` will always return a number between `−1` and `1`.
+
+- If `angle` is `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
 
 ### Formal syntax
 
 {{CSSSyntax}}
 
-## Example
+## Examples
+
+### Keep the size of a rotated box
 
 The `cos()` function can be used to keep the size of a rotated box.
 
@@ -54,11 +62,15 @@ When the element is rotated using {{cssxref("transform-function/rotate", "rotate
 
 For example, if you rotate a `100px`/`100px` square `45deg`, the diamond it creates will be wider and taller than the original square. To shrink the diamond into the box allotted for the original square, you would have to scale down the diamond using this formula: `width = height = 100px * cos(45deg) = 100px * 0.707 = 70.7px`. You need to also adjust the {{cssxref("transform-origin")}} and add {{cssxref("transform-function/translate", "translate()")}} to correct the position:
 
-```html hidden
+#### HTML
+
+```html
 <div class="original-square"></div>
 <div class="rotated-diamond"></div>
 <div class="rotated-scaled-diamond"></div>
 ```
+
+#### CSS
 
 ```css hidden
 body {
@@ -76,14 +88,12 @@ div.original-square {
   height: 100px;
   background-color: blue;
 }
-
 div.rotated-diamond {
   width: 100px;
   height: 100px;
   background-color: red;
   transform: rotate(45deg);
 }
-
 div.rotated-scaled-diamond {
   width: calc(100px * cos(45deg));
   height: calc(100px * cos(45deg));
@@ -94,7 +104,9 @@ div.rotated-scaled-diamond {
 }
 ```
 
-{{EmbedLiveSample('example', '100%', '200px')}}
+#### Result
+
+{{EmbedLiveSample('Keep the size of a rotated box', '100%', '200px')}}
 
 ## Specifications
 

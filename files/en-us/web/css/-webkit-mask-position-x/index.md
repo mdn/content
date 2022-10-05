@@ -1,6 +1,7 @@
 ---
-title: '-webkit-mask-position-x'
+title: "-webkit-mask-position-x"
 slug: Web/CSS/-webkit-mask-position-x
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

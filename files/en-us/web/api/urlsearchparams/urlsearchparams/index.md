@@ -45,7 +45,10 @@ various inputs.
 ```js
 // Retrieve params via url.search, passed into ctor
 const url = new URL('https://example.com?foo=1&bar=2');
-const params = new URLSearchParams(url.search);
+const params1 = new URLSearchParams(url.search);
+
+// Get the URLSearchParams object directly from an URL object
+const params1a = url.searchParams
 
 // Pass in a string literal
 const params2 = new URLSearchParams("foo=1&bar=2");

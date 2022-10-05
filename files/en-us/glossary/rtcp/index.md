@@ -2,7 +2,6 @@
 title: RTCP (RTP Control Protocol)
 slug: Glossary/RTCP
 tags:
-  - Glossary
   - Media
   - Networking
   - Protocol

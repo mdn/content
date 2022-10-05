@@ -2,7 +2,6 @@
 title: Request header
 slug: Glossary/Request_header
 tags:
-  - Glossary
   - WebMechanics
 ---
 
