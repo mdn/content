@@ -236,7 +236,7 @@ The main formats used for adaptive streaming are [HLS](/en-US/docs/Web/Guide/Aud
 
 > **Note:** Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
 
-DASH also provides a number of profiles including simple onDemand profiles that no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
+DASH also provides a number of profiles including simple onDemand profiles that require no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
 
 For further information see [Live streaming web audio and video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video).
 
@@ -414,7 +414,7 @@ Your files may have been encoded incorrectly — try encoding using one of the f
 - [Firefogg](http://www.firefogg.org/) — Video and Audio encoding for Firefox
 - [FFmpeg2](https://www.ffmpeg.org/) — Comprehensive command line encoder
 - [Libav](https://libav.org/) — Comprehensive command line encoder
-- [Vid.ly](https://m.vid.ly/) — Video player,transcoding and delivery
+- [Vid.ly](https://m.vid.ly/) — Video player, transcoding and delivery
 - [Internet Archive](https://archive.org/) — Free transcoding and storage
 
 ### Detecting when no sources have loaded

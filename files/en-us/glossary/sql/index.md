@@ -4,7 +4,6 @@ slug: Glossary/SQL
 tags:
   - CodingScripting
   - Database
-  - Glossary
   - Sql
 ---
 

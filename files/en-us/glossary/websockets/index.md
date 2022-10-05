@@ -3,7 +3,6 @@ title: WebSockets
 slug: Glossary/WebSockets
 tags:
   - Connection
-  - Glossary
   - Infrastructure
   - Networking
   - Protocols

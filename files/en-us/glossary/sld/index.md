@@ -2,7 +2,6 @@
 title: SLD
 slug: Glossary/SLD
 tags:
-  - Glossary
   - Infrastructure
 ---
 

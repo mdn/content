@@ -3,7 +3,6 @@ title: Microsoft Edge
 slug: Glossary/Microsoft_Edge
 tags:
   - Browser
-  - Glossary
   - Infrastructure
 ---
 

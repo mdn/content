@@ -1,6 +1,7 @@
 ---
 title: CSS Ruby Layout
 slug: Web/CSS/CSS_Ruby
+page-type: css-module
 tags:
   - CSS
   - CSS Ruby

@@ -1,6 +1,7 @@
 ---
 title: sepia()
 slug: Web/CSS/filter-function/sepia
+page-type: css-function
 tags:
   - CSS
   - CSS Function

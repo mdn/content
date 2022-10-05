@@ -1,6 +1,7 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -132,7 +133,7 @@ transform: translate(30%, 50%);
 ### Formal syntax
 
 ```css
-translate({{cssxref("&lt;length-percentage&gt;")}} , {{cssxref("&lt;length-percentage&gt;")}}?)
+translate({{cssxref("&lt;length-percentage&gt;")}}, {{cssxref("&lt;length-percentage&gt;")}}?)
 ```
 
 ## Examples

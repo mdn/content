@@ -2,7 +2,6 @@
 title: Time to interactive
 slug: Glossary/Time_to_interactive
 tags:
-  - Glossary
   - Performance
   - Reference
   - Web Performance
@@ -12,7 +11,7 @@ tags:
 
 TTI, proposed by the Web Incubator Community Group in 2018, is intended to provide a metric that describes when a page or application contains useful content and the main thread is idle and free to respond to user interactions, including having event handlers registered.
 
-#### Caveat:
+#### Caveat
 
 TTI is derived by leveraging information from the {{domxref("Long Tasks API")}}. Although available in some performance monitoring tools, TTI is not a part of any official web specification at the time of writing.
 

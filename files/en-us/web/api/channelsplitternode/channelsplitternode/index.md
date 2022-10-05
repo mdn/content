@@ -57,8 +57,8 @@ A new {{domxref("ChannelSplitterNode")}} object instance.
 const ac = new AudioContext();
 
 const options = {
-  numberOfOutputs : 2
-}
+  numberOfOutputs: 2,
+};
 
 const mySplitter = new ChannelSplitterNode(ac, options);
 ```

@@ -3,7 +3,6 @@ title: Control flow
 slug: Glossary/Control_flow
 tags:
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 

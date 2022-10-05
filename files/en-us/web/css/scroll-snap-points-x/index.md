@@ -1,6 +1,7 @@
 ---
 title: scroll-snap-points-x
 slug: Web/CSS/scroll-snap-points-x
+page-type: css-property
 tags:
   - CSS
   - CSS Property

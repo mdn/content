@@ -15,11 +15,11 @@ browser-compat: api.Element.focus_event
 
 {{APIRef}}
 
-The **`focus`** event fires when an element has received focus. The main difference between this event and {{domxref("Element/focusin_event", "focusin")}} is that `focusin` bubbles while `focus` does not.
+The **`focus`** event fires when an element has received focus. The event does not bubble, but the related {{domxref("Element/focusin_event", "focusin")}} event that follows does bubble.
 
-The opposite of `focus` is {{domxref("Element/blur_event", "blur")}}.
+The opposite of `focus` is the {{domxref("Element/blur_event", "blur")}} event, which fires when the element has _lost_ focus.
 
-This event is not cancelable and does not bubble.
+The `focus` event is not cancelable.
 
 ## Syntax
 
@@ -42,7 +42,7 @@ A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
 _This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
 
 - {{domxref("FocusEvent.relatedTarget")}}
-  - : An {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to `null` for security reasons.
+  - : The element losing focus, if any.
 
 ## Examples
 
@@ -52,8 +52,12 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input" />
-  <input type="password" placeholder="password" />
+  <label>Some text:
+    <input type="text" placeholder="text input" />
+  </label>
+  <label>Password:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 
@@ -83,8 +87,12 @@ There are two ways of implementing event delegation for this event: by using the
 
 ```html
 <form id="form">
-  <input type="text" placeholder="text input" />
-  <input type="password" placeholder="password" />
+  <label>Some text:
+    <input type="text" placeholder="text input" />
+  </label>
+  <label>Password:
+    <input type="password" placeholder="password" />
+  </label>
 </form>
 ```
 
@@ -116,6 +124,7 @@ form.addEventListener('blur', (event) => {
 
 ## See also
 
+- The {{domxref("HTMLElement.focus()")}} method
 - Related events: {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}
 - This event on `Window` targets: {{domxref("Window/focus_event", "focus")}} event
 - [Focusing: focus/blur](https://javascript.info/focus-blur)

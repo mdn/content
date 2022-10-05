@@ -1,6 +1,7 @@
 ---
 title: Using media queries for accessibility
 slug: Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility
+page-type: guide
 tags:
   - "@media"
   - Accessibility

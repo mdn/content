@@ -1,6 +1,7 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/background-blend-mode
+page-type: css-property
 tags:
   - CSS
   - CSS Property

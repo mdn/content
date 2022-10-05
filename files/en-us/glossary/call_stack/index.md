@@ -4,7 +4,6 @@ slug: Glossary/Call_stack
 tags:
   - Call Stack
   - CodingScripting
-  - Glossary
   - JavaScript
 ---
 
@@ -13,7 +12,7 @@ A **call stack** is a mechanism for an interpreter (like the JavaScript interpre
 - When a script calls a function, the interpreter adds it to the call stack and then starts carrying out the function.
 - Any functions that are called by that function are added to the call stack further up, and run where their calls are reached.
 - When the current function is finished, the interpreter takes it off the stack and resumes execution where it left off in the last code listing.
-- If the stack takes up more space than it had assigned to it, it results in a "stack overflow" error.
+- If the stack takes up more space than it was assigned, a "stack overflow" error is thrown.
 
 ## Example
 

@@ -4,7 +4,6 @@ slug: Glossary/CORS-safelisted_response_header
 tags:
   - CORS
   - Fetch
-  - Glossary
   - HTTP
 ---
 

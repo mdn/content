@@ -1,6 +1,7 @@
 ---
 title: '::-moz-page'
 slug: Web/CSS/::-moz-page
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:Mozilla Extensions

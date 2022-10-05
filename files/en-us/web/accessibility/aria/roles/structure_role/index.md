@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: structure role'
+title: "ARIA: structure role"
 slug: Web/Accessibility/ARIA/Roles/structure_role
 tags:
   - Accessibility
@@ -42,15 +42,13 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 - [ARIA: `section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
 - [ARIA: `sectionhead` role](/en-US/docs/Web/Accessibility/ARIA/Roles/sectionhead_role)
 
-<div class="hidden">
 <!-- these shouldn't be used so we shouldn't link to them
 - [ARIA: `application` role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
 - [ARIA: `document` role](/en-US/docs/Web/Accessibility/ARIA/
 "Roles/document_role)
 - [ARIA: `rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
 - [ARIA: `separator` role](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
--->]
-</div>
+-->
 
 <section id="Quick_links">
 

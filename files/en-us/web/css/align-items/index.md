@@ -1,6 +1,7 @@
 ---
 title: align-items
 slug: Web/CSS/align-items
+page-type: css-property
 tags:
   - CSS
   - CSS Flexible Boxes

@@ -1,6 +1,7 @@
 ---
 title: atan()
 slug: Web/CSS/atan
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -11,12 +12,11 @@ tags:
   - atan
   - Experimental
 browser-compat: css.types.atan
-spec-urls: https://drafts.csswg.org/css-values/#trig-funcs
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`atan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse tangent of a number between `-∞` and `∞`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+The **`atan()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse tangent of a number between `-∞` and `+∞`. The function contains a single calculation that returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
 
 ## Syntax
 
@@ -35,23 +35,45 @@ transform: rotate(atan(e * 3));
 The `atan(number)` function accepts only one value as its parameter.
 
 - `number`
-  - : A {{cssxref("&lt;number&gt;")}} between `-∞` and `∞`. When specifying `+∞` the result is `90deg`. When specifying `-∞` the result is `-90deg`. That is, `atan(0)` representing `0deg`, `atan(1)` representing `45deg`, and `atan(infinity)` representing `90deg`.
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} between `-∞` and `+∞`.
+
+### Return value
+
+The inverse tangent of an `number` will always return an {{cssxref("&lt;angle&gt;")}} between `-90deg` and `90deg`.
+
+- If `number` is `0⁻`, the result is `0⁻`.
+- If `number` is `+∞` the result is `90deg`.
+- If `number` is `-∞` the result is `-90deg`.
+
+That is:
+
+- `atan(-infinity)` representing `-90deg`.
+- `atan(-1)` representing `-45deg`
+- `atan(0)` representing `0deg`
+- `atan(1)` representing `45deg`
+- `atan(infinity)` representing `90deg`.
 
 ### Formal syntax
 
 {{CSSSyntax}}
 
-## Example
+## Examples
+
+### Rotate elements
 
 The `atan()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("&lt;angle&gt;")}}.
 
-```html hidden
+#### HTML
+
+```html
 <div class="box box-1"></div>
 <div class="box box-2"></div>
 <div class="box box-3"></div>
 <div class="box box-4"></div>
 <div class="box box-5"></div>
 ```
+
+#### CSS
 
 ```css hidden
 body {
@@ -86,7 +108,9 @@ div.box-5 {
 }
 ```
 
-{{EmbedLiveSample('example', '100%', '200px')}}
+#### Result
+
+{{EmbedLiveSample('Rotate elements', '100%', '200px')}}
 
 ## Specifications
 

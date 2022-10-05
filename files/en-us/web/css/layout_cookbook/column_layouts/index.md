@@ -1,6 +1,7 @@
 ---
 title: Column layouts
 slug: Web/CSS/Layout_cookbook/Column_layouts
+page-type: guide
 tags:
   - CSS
   - Guide

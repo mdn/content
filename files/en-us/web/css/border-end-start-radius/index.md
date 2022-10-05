@@ -1,6 +1,7 @@
 ---
 title: border-end-start-radius
 slug: Web/CSS/border-end-start-radius
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
@@ -96,5 +97,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - The mapped physical property: {{CSSxRef("border-top-right-radius")}}
 - {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

@@ -4,7 +4,6 @@ slug: Glossary/Descriptor_(CSS)
 tags:
   - CSS
   - CodingScripting
-  - Glossary
   - NeedsContent
 ---
 

@@ -28,9 +28,6 @@ resolved. Unlike {{domxref("Clipboard.readText", "readText()")}}, the
 `read()` method can return arbitrary data, such as images. This method can
 also return text.
 
-To read from the clipboard, you must first have the `"clipboard-read"`
-permission.
-
 > **Note:** The asynchronous Clipboard and [Permissions APIs](/en-US/docs/Web/API/Permissions_API) are still in the
 > process of being integrated into most browsers, so they often deviate from the
 > official rules for permissions and the like. Be sure to review the [compatibility table](#browser_compatibility) before using these methods.
@@ -50,6 +47,13 @@ None.
 A {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem")}} objects
 containing the clipboard's contents. The promise is rejected if permission to access the
 clipboard is not granted.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+
+To read from the clipboard, you must first have the `"clipboard-read"`
+permission.
 
 ## Examples
 

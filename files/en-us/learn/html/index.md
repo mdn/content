@@ -25,7 +25,7 @@ To build websites, you should know about {{Glossary('HTML')}} — the fundamenta
 
 ## Prerequisites
 
-Before starting this topic, you should have at least basic familiarity with using computers and using the web passively (i.e. just looking at it, consuming the content). You should have a basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and understand how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — both are parts of our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) complete beginner's module.
+Before starting this topic, you should have at least basic familiarity with using computers and using the web passively (i.e., just looking at it, consuming the content). You should have a basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and understand how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — both are parts of our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) complete beginner's module.
 
 It is recommended that you work through [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) before attempting this topic. However, this isn't absolutely necessary; much of what is covered in the [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) article is also covered in our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module, albeit in a lot more detail.
 

@@ -4,7 +4,6 @@ slug: Glossary/Jank
 tags:
   - Beginner
   - CodingScripting
-  - Glossary
   - Performance
   - Web Performance
 ---

@@ -1,6 +1,7 @@
 ---
 title: break-before
 slug: Web/CSS/break-before
+page-type: css-property
 tags:
   - CSS
   - CSS Fragmentation

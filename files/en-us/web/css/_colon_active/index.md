@@ -1,6 +1,7 @@
 ---
 title: ":active"
 slug: Web/CSS/:active
+page-type: css-pseudo-class
 tags:
   - CSS
   - Layout
@@ -46,20 +47,25 @@ Styles defined by the `:active` pseudo-class will be overridden by any subsequen
 #### CSS
 
 ```css
-a:link { /* Unvisited links */
+/* Unvisited links */
+a:link {
   color: blue;
 }
-a:visited { /* Visited links */
+/* Visited links */
+a:visited {
   color: purple;
 }
-a:hover { /* Hovered links */
+/* Hovered links */
+a:hover {
   background: yellow;
 }
-a:active { /* Active links */
+/* Active links */
+a:active {
   color: red;
 }
 
-p:active { /* Active paragraphs */
+/* Active paragraphs */
+p:active {
   background: #eee;
 }
 ```

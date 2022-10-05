@@ -1,6 +1,7 @@
 ---
 title: Box alignment for block, absolutely positioned and table layout
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
+page-type: guide
 tags:
   - Block
   - CSS

@@ -243,7 +243,6 @@ We also added some rudimentary styling for the newly created subtitles menu:
   background: #666;
   list-style-type: none;
   margin: 0;
-  padding: 0;
   width: 100px;
   padding: 10px;
 }

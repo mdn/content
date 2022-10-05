@@ -1,6 +1,7 @@
 ---
 title: "::before (:before)"
 slug: Web/CSS/::before
+page-type: css-pseudo-element
 tags:
   - CSS
   - Layout

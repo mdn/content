@@ -44,11 +44,10 @@ _While `ContentIndexEvent` offers no methods of its own, it inherits any specifi
 This example shows the [service worker](/en-US/docs/Web/API/ServiceWorker) script listening for the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", 'contentdelete')}} event and logs the removed content index id.
 
 ```js
-self.addEventListener('contentdelete', (event) => {
+self.addEventListener("contentdelete", (event) => {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache
-
 });
 ```
 

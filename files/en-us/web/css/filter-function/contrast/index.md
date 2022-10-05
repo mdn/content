@@ -1,6 +1,7 @@
 ---
 title: contrast()
 slug: Web/CSS/filter-function/contrast
+page-type: css-function
 tags:
   - CSS
   - CSS Function

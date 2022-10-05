@@ -1,6 +1,7 @@
 ---
 title: empty-cells
 slug: Web/CSS/empty-cells
+page-type: css-property
 tags:
   - CSS
   - CSS Property

@@ -70,8 +70,8 @@ The rectangle's corner is located at (10, 20). It has a width of 150 and a heigh
 100\.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.rect(10, 20, 150, 100);
 ctx.fill();
 ```

@@ -3,7 +3,6 @@ title: Trident
 slug: Glossary/Trident
 tags:
   - Browser
-  - Glossary
   - Infrastructure
   - Trident
 ---

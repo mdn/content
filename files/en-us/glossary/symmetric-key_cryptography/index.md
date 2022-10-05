@@ -3,7 +3,6 @@ title: Symmetric-key cryptography
 slug: Glossary/Symmetric-key_cryptography
 tags:
   - Cryptography
-  - Glossary
   - Security
   - Symmetric-key cryptography
 ---

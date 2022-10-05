@@ -1,6 +1,7 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

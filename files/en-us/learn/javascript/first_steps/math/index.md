@@ -106,7 +106,7 @@ Sometimes you might end up with a number that is stored as a string type, which 
 For example, try typing these lines into your console:
 
 ```js
-let myNumber = '74';
+let myNumber = "74";
 myNumber += 3;
 ```
 
@@ -119,7 +119,7 @@ typeof myNumber;
 To fix the calculation, you can do this:
 
 ```js
-let myNumber = '74';
+let myNumber = "74";
 myNumber = Number(myNumber) + 3;
 ```
 
@@ -204,9 +204,9 @@ We probably don't need to teach you how to do basic math, but we would like to t
 1. First try entering some simple examples of your own, such as
 
    ```js
-   10 + 7
-   9 * 8
-   60 % 3
+   10 + 7;
+   9 * 8;
+   60 % 3;
    ```
 
 2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
@@ -223,7 +223,7 @@ We probably don't need to teach you how to do basic math, but we would like to t
 
    ```js
    5 + 10 * 3;
-   num2 % 9 * num1;
+   (num2 % 9) * num1;
    num2 + num1 / 8 + 2;
    ```
 
@@ -251,7 +251,7 @@ If you want to override operator precedence, you can put parentheses around the 
 
 Try it and see.
 
-> **Note:** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#operator_precedence).
+> **Note:** A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
 ## Increment and decrement operators
 
@@ -417,18 +417,18 @@ We'll look at how to code such logic when we look at conditional statements in a
 ```
 
 ```js
-const btn = document.querySelector('button');
-const txt = document.querySelector('p');
+const btn = document.querySelector("button");
+const txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.textContent === 'Start machine') {
-    btn.textContent = 'Stop machine';
-    txt.textContent = 'The machine has started!';
+  if (btn.textContent === "Start machine") {
+    btn.textContent = "Stop machine";
+    txt.textContent = "The machine has started!";
   } else {
-    btn.textContent = 'Start machine';
-    txt.textContent = 'The machine is stopped.';
+    btn.textContent = "Start machine";
+    txt.textContent = "The machine is stopped.";
   }
 }
 ```

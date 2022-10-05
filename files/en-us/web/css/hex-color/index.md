@@ -1,6 +1,7 @@
 ---
 title: <hex-color>
 slug: Web/CSS/hex-color
+page-type: css-type
 tags:
   - Reference
   - CSS

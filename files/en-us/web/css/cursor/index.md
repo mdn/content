@@ -1,6 +1,7 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
+page-type: css-property
 tags:
   - Arrow
   - CSS
@@ -176,7 +177,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: move">
           <td><code>move</code></td>
-          <td><img src="move.gif"  alt="plus sign made of two thin lines. The four points are small arrows facing out" /></td>
+          <td><img src="move.gif" alt="plus sign made of two thin lines. The four points are small arrows facing out" /></td>
           <td>Something is to be moved.</td>
         </tr>
         <tr style="cursor: no-drop">
@@ -309,23 +310,23 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>sw-resize</code></td>
           <td>
             <img
-              alt="thin long arrow pointing  bottom-left"
+              alt="thin long arrow pointing bottom-left"
               src="sw-resize.gif"
             />
           </td>
         </tr>
         <tr style="cursor: ew-resize">
           <td><code>ew-resize</code></td>
-          <td><img  alt="thin long arrow pointing left and right" class="default" src="3-resize.gif" /></td>
+          <td><img alt="thin long arrow pointing left and right" class="default" src="3-resize.gif" /></td>
           <td rowspan="4" style="cursor: auto">Bidirectional resize cursor.</td>
         </tr>
         <tr style="cursor: ns-resize">
           <td><code>ns-resize</code></td>
-          <td><img  alt="thin long arrow pointing up and down" class="default" src="6-resize.gif" /></td>
+          <td><img alt="thin long arrow pointing up and down" class="default" src="6-resize.gif" /></td>
         </tr>
         <tr style="cursor: nesw-resize">
           <td><code>nesw-resize</code></td>
-          <td><img  alt="thin long arrow pointing both to the top-right and bottom-left" class="default" src="1-resize.gif" /></td>
+          <td><img alt="thin long arrow pointing both to the top-right and bottom-left" class="default" src="1-resize.gif" /></td>
         </tr>
         <tr style="cursor: nwse-resize">
           <td><code>nwse-resize</code></td>
@@ -341,7 +342,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
         </tr>
         <tr style="cursor: zoom-out">
           <td><code>zoom-out</code></td>
-          <td><img  alt="magnifying glass with a minus sign" class="default" src="zoom-out.gif" /></td>
+          <td><img alt="magnifying glass with a minus sign" class="default" src="zoom-out.gif" /></td>
         </tr>
       </tbody>
     </table>

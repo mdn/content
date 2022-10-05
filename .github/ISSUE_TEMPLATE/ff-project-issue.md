@@ -26,3 +26,5 @@ title: ""
 ## Other
 
 - [ ] Check content open issues to see if any pertain to the subject matter. If there are any that can be closed because of the work, do so. If there are any that can be fixed relatively quickly because of the knowledge from completing this issue and you have time, feel free to go ahead and fix them.
+- [ ] Check if [Glossary](https://developer.mozilla.org/en-US/docs/Glossary) updates are required for the feature you're documenting - whether an existing term needs to be updated or a new term should be added.
+- [ ] Check if BCD update means that content pages need to have experimental markup removed or deprecated markup added (front matter tags and macros).

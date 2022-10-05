@@ -39,10 +39,10 @@ By far the most commonly-used method is {{domxref("console.log")}}, which is use
 ## Examples
 
 ```js
-let myString = 'Hello world';
+let myString = "Hello world";
 
 // Output "Hello world" to the console
-console.log(myString)
+console.log(myString);
 ```
 
 See the [console](/en-US/docs/Web/API/console#usage) reference page for more examples.

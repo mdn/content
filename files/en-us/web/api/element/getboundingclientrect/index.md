@@ -79,8 +79,8 @@ position changes (because their values are relative to the viewport and not abso
 
 If you need the bounding rectangle relative to the top-left corner of the document,
 just add the current scrolling position to the `top` and `left`
-properties (these can be obtained using {{domxref("window.scrollX")}} and
-{{domxref("window.scrollY")}}) to get a bounding rectangle which is independent from the
+properties (these can be obtained using {{domxref("window.scrollY")}} and
+{{domxref("window.scrollX")}}) to get a bounding rectangle which is independent from the
 current scrolling position.
 
 ## Examples
@@ -111,7 +111,7 @@ let rect = elem.getBoundingClientRect();
 for (const key in rect) {
   if (typeof rect[key] !== 'function') {
     let para = document.createElement('p');
-    para.textContent  = `${key} : ${rect[key]}`;
+    para.textContent = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
 }
@@ -163,7 +163,7 @@ function update() {
   for (const key in rect) {
     if (typeof rect[key] !== 'function') {
       let para = document.createElement('p');
-      para.textContent  = `${key} : ${rect[key]}`;
+      para.textContent = `${key} : ${rect[key]}`;
       container.appendChild(para);
     }
   }

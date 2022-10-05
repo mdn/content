@@ -129,7 +129,6 @@ It is composed of a comma-separated list of image descriptors. Each image descri
 ```html
 <picture>
   <source srcset="logo-768.png, logo-768-1.5x.png 1.5x" />
-  <source srcset="logo-480.png, logo-480-2x.png 2x" />
   <img src="logo-320.png" alt="logo" />
 </picture>
 ```

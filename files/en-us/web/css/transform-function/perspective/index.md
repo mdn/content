@@ -1,6 +1,7 @@
 ---
 title: perspective()
 slug: Web/CSS/transform-function/perspective
+page-type: css-function
 tags:
   - CSS
   - CSS Function

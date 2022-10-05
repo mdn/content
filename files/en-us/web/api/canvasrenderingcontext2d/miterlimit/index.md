@@ -62,7 +62,7 @@ reset.addEventListener("click", () => {
 
 edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

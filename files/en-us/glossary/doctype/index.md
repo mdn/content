@@ -5,7 +5,6 @@ tags:
   - Browser
   - CodingScripting
   - DOCTYPE
-  - Glossary
   - HTML
   - Intro
 ---

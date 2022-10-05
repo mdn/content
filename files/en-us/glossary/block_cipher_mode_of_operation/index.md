@@ -4,7 +4,6 @@ slug: Glossary/Block_cipher_mode_of_operation
 tags:
   - Block cipher mode of operation
   - Cryptography
-  - Glossary
   - Security
 ---
 

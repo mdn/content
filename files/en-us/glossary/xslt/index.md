@@ -3,7 +3,6 @@ title: XSLT
 slug: Glossary/XSLT
 tags:
   - CodingScripting
-  - Glossary
   - XML
   - XSLT
 ---

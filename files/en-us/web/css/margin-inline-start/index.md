@@ -1,6 +1,7 @@
 ---
 title: margin-inline-start
 slug: Web/CSS/margin-inline-start
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property
@@ -93,6 +94,7 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - {{cssxref("margin-inline-end")}}
 - The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

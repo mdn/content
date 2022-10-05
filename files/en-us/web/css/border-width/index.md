@@ -1,6 +1,7 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders

@@ -1,6 +1,7 @@
 ---
 title: border-left
 slug: Web/CSS/border-left
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders

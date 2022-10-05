@@ -3,7 +3,6 @@ title: Compile
 slug: Glossary/Compile
 tags:
   - CodingScripting
-  - Glossary
 ---
 
 **Compiling** is the process of transforming a computer program written in a given {{Glossary("computer programming", "language")}} into a set of instructions in another format or language. A **compiler** is a computer program to execute that task.

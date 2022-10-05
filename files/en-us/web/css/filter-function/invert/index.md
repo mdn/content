@@ -1,6 +1,7 @@
 ---
 title: invert()
 slug: Web/CSS/filter-function/invert
+page-type: css-function
 tags:
   - CSS
   - CSS Function

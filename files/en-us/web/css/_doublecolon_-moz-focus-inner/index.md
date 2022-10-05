@@ -1,6 +1,7 @@
 ---
 title: '::-moz-focus-inner'
 slug: Web/CSS/::-moz-focus-inner
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:Mozilla Extensions

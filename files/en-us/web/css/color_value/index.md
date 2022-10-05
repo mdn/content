@@ -1,6 +1,7 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type
@@ -102,7 +103,7 @@ HSL colors are expressed through the functional `hsl()` and `hsla()` notations.
 
 Similar to HSL color model, the HWB color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its hue, whiteness and blackness components.
 
-As with HSL, HWB can be more intuitive to use than RGB. A hue is specified in the same way, followed by the amount of whiteness and blackness, respectively, in percentage values. This function also accepts a alpha value.
+As with HSL, HWB can be more intuitive to use than RGB. A hue is specified in the same way, followed by the amount of whiteness and blackness, respectively, in percentage values. This function also accepts an alpha value.
 
 > **Note:** There is **no** separate `hwba()` function as there is with HSL, the alpha value is an optional parameter, if it is not specified an alpha value of 1 (or 100%) is used. To specify this value a forward slash (`/`) must follow the blackness value before the alpha value is specified.
 
@@ -114,7 +115,7 @@ HWB colors are expressed through the functional `hwb()` notation.
 
   - : Same as HSL: `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in the [CSS Color](https://drafts.csswg.org/css-color/#the-hsl-notation) specification. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in the [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) specification. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
-    `W` (whiteness) and `B` (blackness) are percentages. These two colors mix, so you would need `0%` **whiteness** and `100%` **blackness** to produce the color black. And vice versa `100%` whiteness and `0%` blackness for the color white. `50%` of both values renders a mid grey and any other variations a shade of the hue specified.
+    `W` (whiteness) and `B` (blackness) are percentages. These two colors mix, so you would need `0%` **whiteness** and `100%` **blackness** to produce the color black. And vice versa `100%` whiteness and `0%` blackness for the color white. `50%` of both values renders a mid-grey and any other variations a shade of the hue specified.
 
     `A` (alpha), optional, can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity). When specifying an alpha value it must be preceded with a forward slash (`/`).
 
@@ -124,7 +125,7 @@ In _forced colors mode_ (detectable with the [forced-colors](/en-US/docs/Web/CSS
 
 The keywords in the following list are defined by the CSS Color Module Level 4 specification: `ActiveText`, `ButtonBorder`, `ButtonFace`, `ButtonText`, `Canvas`, `CanvasText`, `Field`, `FieldText`, `GrayText`, `Highlight`, `HighlightText`, `LinkText`, `Mark`, `MarkText`, `VisitedText`.
 
-> **Note:** Note that these keywords are _case insensitive_, but are listed here with mixed case for readability.
+> **Note:** Note that these keywords are _case-insensitive_, but are listed here with mixed case for readability.
 
 ### Lab colors
 
@@ -224,7 +225,7 @@ inputElem.addEventListener('change', () => {
 
 This example shows the many ways in which a single color can be created with the various RGB color syntaxes.
 
-```css
+```css-nolint
 /* These syntax variations all specify the same color: a fully opaque hot pink. */
 
 /* Hexadecimal syntax */
@@ -250,6 +251,8 @@ rgb(255 0 153)
 
 /* Functional syntax with alpha value */
 rgb(255, 0, 153, 1)
+rgb(255, 0, 153, .5)
+rgb(255, 0, 153, 0.5)
 rgb(255, 0, 153, 100%)
 
 /* Whitespace syntax */
@@ -263,55 +266,56 @@ rgb(2.55e2, 0e0, 1.53e2, 1e2%)
 
 ### RGB transparency variations
 
-```css
+```css-nolint
 /* Hexadecimal syntax */
 #3a30                    /*   0% opaque green */
-#3A3F                    /* full opaque green */
+#3a3f                    /* full opaque green */
 #33aa3300                /*   0% opaque green */
-#33AA3380                /*  50% opaque green */
+#33aa3380                /*  50% opaque green */
 
 /* Functional syntax */
-rgba(51, 170, 51, .1)    /*  10% opaque green */
-rgba(51, 170, 51, .4)    /*  40% opaque green */
-rgba(51, 170, 51, .7)    /*  70% opaque green */
-rgba(51, 170, 51,  1)    /* full opaque green */
+rgba(51, 170, 51, 0.1)    /*  10% opaque green */
+rgba(51, 170, 51, 0.4)    /*  40% opaque green */
+rgba(51, 170, 51, 0.7)    /*  70% opaque green */
+rgba(51, 170, 51,   1)    /* full opaque green */
 
 /* Whitespace syntax */
 rgba(51 170 51 / 0.4)    /*  40% opaque green */
 rgba(51 170 51 / 40%)    /*  40% opaque green */
 
 /* Functional syntax with floats value */
-rgba(51, 170, 51.6, 1)
+rgba(51,    170,   51.6,  1)
 rgba(5.1e1, 1.7e2, 5.1e1, 1e2%)
 ```
 
 ### HSL syntax variations
 
-```css
+```css-nolint
 /* These examples all specify the same color: a lavender. */
 hsl(270,60%,70%)
 hsl(270, 60%, 70%)
 hsl(270 60% 70%)
 hsl(270deg, 60%, 70%)
 hsl(4.71239rad, 60%, 70%)
-hsl(.75turn, 60%, 70%)
+hsl(0.75turn, 60%, 70%)
 
 /* These examples all specify the same color: a lavender that is 15% opaque. */
-hsl(270, 60%, 50%, .15)
+hsl(270, 60%, 50%, 0.15)
+hsl(270, 60%, 50%, 0.15)
 hsl(270, 60%, 50%, 15%)
-hsl(270 60% 50% / .15)
+hsl(270 60% 50% / 0.15)
 hsl(270 60% 50% / 15%)
 ```
 
 ### HWB syntax variations
 
-```css
+```css-nolint
 /* These examples all specify varying shades of a lime green. */
 hwb(90 10% 10%)
 hwb(90 50% 10%)
 hwb(90deg 10% 10%)
 hwb(1.5708rad 60% 0%)
-hwb(.25turn 0% 40%)
+hwb(0.25turn 0% 40%)
 
 /* Same lime green but with an alpha value */
 hwb(90 10% 10% / 0.5)
@@ -487,14 +491,14 @@ hwb(90 10% 10% / 50%)
 
 ### HSL transparency variations
 
-```css
-hsla(240, 100%, 50%, .05)     /*   5% opaque blue */
-hsla(240, 100%, 50%, .4)      /*  40% opaque blue */
-hsla(240, 100%, 50%, .7)      /*  70% opaque blue */
+```css-nolint
+hsla(240, 100%, 50%, 0.05)    /*   5% opaque blue */
+hsla(240, 100%, 50%, 0.4)     /*  40% opaque blue */
+hsla(240, 100%, 50%, 0.7)     /*  70% opaque blue */
 hsla(240, 100%, 50%, 1)       /* full opaque blue */
 
 /* Whitespace syntax */
-hsla(240 100% 50% / .05)      /*   5% opaque blue */
+hsla(240 100% 50% / 0.05)     /*   5% opaque blue */
 
 /* Percentage value for alpha */
 hsla(240 100% 50% / 5%)       /*   5% opaque blue */

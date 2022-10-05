@@ -3,7 +3,6 @@ title: MathML
 slug: Glossary/MathML
 tags:
   - CodingScripting
-  - Glossary
   - MathML
   - Mathematical Markup Language
   - XML

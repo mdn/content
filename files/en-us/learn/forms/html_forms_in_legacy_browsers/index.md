@@ -138,10 +138,11 @@ Before styling a replaced form control widget, you can check to see if the brows
 
 ```css
 @supports (appearance: none) {
- input[type="search"] {
-   appearance: none;
-   /* restyle the search input */
- }
+  input[type="search"] {
+    appearance: none;
+    /* restyle the search input */
+  }
+}
 ```
 
 The {{cssxref('appearance')}} property can be used to display an element using platform-native styling, or, as is done with the value of `none`, remove default platform-native based styling.
@@ -166,18 +167,18 @@ Here is an example:
 ```js
 Modernizr.load({
   // This tests if your browser supports the Form validation API
-  test : Modernizr.formvalidation,
+  test: Modernizr.formvalidation,
 
   // If the browser does not support it, the following polyfill is loaded
-  nope : form-validation-API-polyfill.js,
+  nope: "form-validation-API-polyfill.js",
 
   // In any case, your core App file that depends on that API is loaded
-  both : app.js,
+  both: "app.js",
 
   // Once both files are loaded, this function is called in order to initialize the App.
   complete() {
     app.init();
-  }
+  },
 });
 ```
 

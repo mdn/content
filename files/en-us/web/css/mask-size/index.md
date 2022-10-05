@@ -1,6 +1,7 @@
 ---
 title: mask-size
 slug: Web/CSS/mask-size
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

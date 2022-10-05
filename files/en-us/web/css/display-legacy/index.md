@@ -1,6 +1,7 @@
 ---
 title: <display-legacy>
 slug: Web/CSS/display-legacy
+page-type: css-type
 tags:
   - CSS
   - CSS Data Type

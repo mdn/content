@@ -100,13 +100,13 @@ And finally, should you want to include animated images into your page, then kno
 <picture>
   <source type="video/mp4" src="giphy.mp4" />
   <source type="image/webp" src="giphy.webp" />
-  <img src="giphy.gif" alt="" />
+  <img src="giphy.gif" alt="A GIF animation" />
 </picture>
 ```
 
 #### Serving the optimal size
 
-In image delivery the "one size fits all" approach will not yield the best results, meaning that for smaller screens you would want to serve images with smaller resolution and vis-versa for larger screens. On top of that you'd also want to serve higher resolution images to those devices that boast a high DPI screen (e.g. "Retina"). So apart from creating plenty of intermediate image variants you also need a way to serve the right file to the right browser. That's where you would need to upgrade your `<picture>` and `<source>` elements with [media](/en-US/docs/Web/HTML/Element/source#attr-media) and/or [sizes](/en-US/docs/Web/HTML/Element/source#attr-sizes) attributes. A detailed article on how to combine all of these attributes can be found [here](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
+In image delivery the "one size fits all" approach will not yield the best results, meaning that for smaller screens you would want to serve images with smaller resolution and vice versa for larger screens. On top of that, you'd also want to serve higher resolution images to those devices that boast a high DPI screen (e.g. "Retina"). So apart from creating plenty of intermediate image variants you also need a way to serve the right file to the right browser. That's where you would need to upgrade your `<picture>` and `<source>` elements with [media](/en-US/docs/Web/HTML/Element/source#attr-media) and/or [sizes](/en-US/docs/Web/HTML/Element/source#attr-sizes) attributes. A detailed article on how to combine all of these attributes can be found [here](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
 
 Two interesting effects to keep in mind regarding high dpi screens is that:
 

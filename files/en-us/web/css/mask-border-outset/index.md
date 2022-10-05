@@ -1,6 +1,7 @@
 ---
 title: mask-border-outset
 slug: Web/CSS/mask-border-outset
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

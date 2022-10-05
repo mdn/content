@@ -1,6 +1,7 @@
 ---
 title: clip
 slug: Web/CSS/clip
+page-type: css-property
 tags:
   - CSS
   - CSS Masking

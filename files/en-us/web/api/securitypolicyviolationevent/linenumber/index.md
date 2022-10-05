@@ -14,7 +14,7 @@ tags:
 browser-compat: api.SecurityPolicyViolationEvent.lineNumber
 ---
 
-{{HTTPSidebar}}")}}
+{{HTTPSidebar}}
 
 The **`lineNumber`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is the line number in the document
