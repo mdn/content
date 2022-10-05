@@ -1,6 +1,7 @@
 ---
 title: ":modal"
 slug: Web/CSS/:modal
+page-type: css-pseudo-class
 tags:
   - CSS
   - Modal

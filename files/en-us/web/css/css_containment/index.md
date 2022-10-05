@@ -1,6 +1,7 @@
 ---
 title: CSS Containment
 slug: Web/CSS/CSS_Containment
+page-type: css-module
 tags:
   - CSS
   - CSS Containment

@@ -176,7 +176,7 @@ Intl.NumberFormat(locales, options)
 
     - `roundingPriority` {{experimental_inline}}
 
-      - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are specified:
+      - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maxmumsignificantdigits)) are specified:
 
         - `"auto"`: the result from the significant digits property is used (default).
         - `"morePrecision"`: the result from the property that results in more precision is used.
@@ -551,7 +551,7 @@ console.log(
 
 #### Specifying significant and fractional digits at the same time
 
-The fraction digits ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and significant digits ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#minimumsignificantdigits)) are both ways of controlling how many fractional and leading digits should be formatted.
+The fraction digits ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and significant digits ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) are both ways of controlling how many fractional and leading digits should be formatted.
 If both are used at the same time, it is possible for them to conflict.
 
 These conflicts are resolved using the [`roundingPriority`](#roundingpriority) property.

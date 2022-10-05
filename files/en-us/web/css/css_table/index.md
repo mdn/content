@@ -1,6 +1,7 @@
 ---
 title: CSS Table
 slug: Web/CSS/CSS_Table
+page-type: css-module
 tags:
   - CSS
   - CSS Table

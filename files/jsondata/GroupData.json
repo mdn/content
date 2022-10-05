@@ -615,6 +615,7 @@
         "PopStateEvent",
         "PromiseRejectionEvent",
         "RadioNodeList",
+        "UserActivation",
         "ValidityState",
         "Window"
       ],
@@ -740,7 +741,7 @@
         "IDBVersionChangeEvent"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["indexedDB"],
       "events": []
     },
     "Intersection Observer API": {
@@ -750,7 +751,7 @@
       ],
       "interfaces": ["IntersectionObserver", "IntersectionObserverEntry"],
       "methods": [],
-      "properties": ["indexedDB"],
+      "properties": [],
       "events": []
     },
     "Largest Contentful Paint API": {
@@ -1992,6 +1993,7 @@
     },
     "Web Speech API": {
       "overview": ["Web Speech API"],
+      "guides": ["/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API"],
       "interfaces": [
         "SpeechGrammar",
         "SpeechGrammarList",

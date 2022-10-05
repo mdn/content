@@ -1,6 +1,7 @@
 ---
 title: CSS Functional Notation
 slug: Web/CSS/CSS_Functions
+page-type: guide
 tags:
   - CSS
   - CSS Data Type

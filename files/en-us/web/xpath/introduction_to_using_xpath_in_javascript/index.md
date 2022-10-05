@@ -185,7 +185,7 @@ When the result type in the `resultType` parameter is specified as `ANY_TYPE`, t
 
 It could be any of the simple types (`NUMBER_TYPE, STRING_TYPE, BOOLEAN_TYPE`), **but**, if the returned result type is a node-set then it will **only** be an `UNORDERED_NODE_ITERATOR_TYPE`.
 
-To determine that type after evaluation, we use the `resultType` property of the `XPathResult` object. The [constant](#xpathresult_defined_constants) values of this property are defined in the appendix. None Yet =====Any_Type Example===== \<pre> \</pre>
+To determine that type after evaluation, we use the `resultType` property of the `XPathResult` object. The [constant](#xpathresult_defined_constants) values of this property are defined in the appendix.
 
 ## Examples
 

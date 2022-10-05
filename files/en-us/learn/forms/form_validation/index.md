@@ -517,7 +517,7 @@ First, the HTML. Again, feel free to build this along with us:
 </form>
 ```
 
-This simple form uses the [`novalidate`](/en-US/docs/Web/HTML/Attributes/novalidate) attribute to turn off the browser's automatic validation; this lets our script take control over validation.
+This simple form uses the [`novalidate`](/en-US/docs/Web/HTML/Element/form#attr-novalidate) attribute to turn off the browser's automatic validation; this lets our script take control over validation.
 However, this doesn't disable support for the constraint validation API nor the application of CSS pseudo-classes like {{cssxref(":valid")}}, etc.
 That means that even though the browser doesn't automatically check the validity of the form before sending its data, you can still do it yourself and style the form accordingly.
 

@@ -325,7 +325,7 @@ There are other projects related to Svelte that are worth checking out:
 - Nevertheless, [Svelte.js — The Complete Guide](https://www.udemy.com/course/sveltejs-the-complete-guide/) by [Academind](https://academind.com/) is a very popular option with great ratings.
 - [The Svelte Handbook](https://www.freecodecamp.org/news/the-svelte-handbook/), by [Flavio Copes](https://flaviocopes.com/), is also a useful reference for learning the main Svelte concepts.
 - If you prefer to read books, there's [Svelte and Sapper in Action](https://www.manning.com/books/svelte-and-sapper-in-action) by [Mark Volkman](https://twitter.com/mark_volkmann), expected to be published in September 2020, but which you can already [preview online](https://livebook.manning.com/book/svelte-and-sapper-in-action/welcome/v-5/) for free.
-- If you want dive deeper and understand the inner working of Svelte's compiler you should check [Tan Li Hau](https://twitter.com/lihautan)'s Compile [Svelte in your head](https://lihautan.com/compile-svelte-in-your-head-part-1/) blog posts. Here's [Part 1](https://lihautan.com/compile-svelte-in-your-head-part-1/), [Part 2](https://lihautan.com/compile-svelte-in-your-head-part-2/), and [Part 3](https://lihautan.com/compile-svelte-in-your-head-part-3/).
+- If you want dive deeper and understand the inner working of Svelte's compiler you should check [Tan Li Hau](https://twitter.com/lihautan)'s _Compile Svelte in your head_ blog posts. Here's [Part 1](https://lihautan.com/compile-svelte-in-your-head-part-1/), [Part 2](https://lihautan.com/compile-svelte-in-your-head-part-2/), and [Part 3](https://lihautan.com/compile-svelte-in-your-head-part-3/).
 
 ### Interacting with the community
 

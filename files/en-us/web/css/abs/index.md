@@ -11,10 +11,10 @@ tags:
   - Web
   - abs
   - Experimental
-spec-urls: https://drafts.csswg.org/css-values/#sign-funcs
+browser-compat: css.types.abs
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`abs()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns the absolute value of the argument, as the same type as the input.
 
@@ -66,9 +66,25 @@ div {
 }
 ```
 
+### Backwards compatible fallback
+
+In older browsers that lack the support for CSS `abs()` function, you can use the CSS {{CSSxRef("max")}} function to achieve the same result, as shown below:
+
+```css
+p {
+  line-height: max(var(--lh), -1*var(--lh));
+}
+```
+
+We use the {{CSSxRef("max")}} function to return the largest (most positive) value from a list of two values: `var(--lh)` or `-1 * var(--lh)`. Irrespective of whether `--lh` is positive or negative, the calculated return value will always be positive, that is, an absolute number.
+
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

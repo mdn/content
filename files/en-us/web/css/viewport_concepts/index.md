@@ -1,6 +1,7 @@
 ---
 title: Viewport concepts
 slug: Web/CSS/Viewport_concepts
+page-type: guide
 tags:
   - Best practices
   - CSS

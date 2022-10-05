@@ -1,6 +1,7 @@
 ---
 title: Layout and the containing block
 slug: Web/CSS/Containing_block
+page-type: guide
 tags:
   - CSS
   - CSS Position

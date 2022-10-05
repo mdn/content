@@ -351,13 +351,13 @@ Note the use of `:` in `on:click`. That's Svelte's syntax for listening to DOM e
 Let's open `src/main.js`, which is where the `App` component is being imported and used. This file is the entry point for our app, and it initially looks like this:
 
 ```js
-import App from './App.svelte';
+import App from "./App.svelte";
 
 const app = new App({
   target: document.body,
   props: {
-    name: 'world'
-  }
+    name: "world",
+  },
 });
 
 export default app;
