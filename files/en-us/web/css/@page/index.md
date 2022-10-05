@@ -39,7 +39,7 @@ The **`@page`** CSS at-rule is used to modify some CSS properties when printing 
 
 ## Description
 
-You can't change all CSS properties with `@page`. You can only change the margin of the document. Attempts to change any other CSS properties will be ignored.
+You can't change all CSS properties with `@page`. You can only change the margins of the document. Attempts to change any other CSS properties will be ignored.
 
 The `@page` at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.
 
