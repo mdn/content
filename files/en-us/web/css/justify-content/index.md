@@ -1,6 +1,7 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
+page-type: css-property
 tags:
   - CSS
   - CSS Box Alignment

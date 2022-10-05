@@ -1,6 +1,7 @@
 ---
 title: padding-inline-start
 slug: Web/CSS/padding-inline-start
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

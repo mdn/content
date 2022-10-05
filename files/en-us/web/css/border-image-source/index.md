@@ -1,6 +1,7 @@
 ---
 title: border-image-source
 slug: Web/CSS/border-image-source
+page-type: css-property
 tags:
   - CSS
   - CSS Borders

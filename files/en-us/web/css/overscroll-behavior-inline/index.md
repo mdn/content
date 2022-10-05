@@ -1,6 +1,7 @@
 ---
 title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
+page-type: css-property
 tags:
   - CSS
   - CSS Box Model

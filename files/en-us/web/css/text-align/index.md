@@ -1,6 +1,7 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
+page-type: css-property
 tags:
   - CSS
   - CSS Property

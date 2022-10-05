@@ -1,6 +1,7 @@
 ---
 title: border-style
 slug: Web/CSS/border-style
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders

@@ -287,7 +287,7 @@ Some time ago in a place rather distant....
 
 ### Cue identifier
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->"`. It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
+The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->`". It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
 
 Here are a few examples:
 
@@ -548,7 +548,7 @@ The methods which are available in the {{domxref("VTTCue")}} interface are:
 - {{domxref("VTTCue.getCueAsHTML", "getCueAsHTML()")}} to get the HTML of that cue.
 - A constructor, {{domxref("VTTCue.VTTCue", "VTTCue()")}} for creating new instances of this interface.
 
-Different properties allowing to read and set the characteristics of the cue, like its position, alignment or size are also available. Check {{domxref("VTTCue")}}) for a complete list.
+Different properties allowing to read and set the characteristics of the cue, like its position, alignment or size are also available. Check {{domxref("VTTCue")}} for a complete list.
 
 ### VTTRegion
 

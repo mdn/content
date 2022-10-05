@@ -1,6 +1,7 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
+page-type: css-property
 tags:
   - CSS
   - CSS Property

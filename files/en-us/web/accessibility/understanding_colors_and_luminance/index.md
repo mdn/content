@@ -26,6 +26,10 @@ tags:
   - seizure disorders
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 When designing visual and readable content with the aim of accessibility for all sighted users, it is important to have an understanding of light, color, and perception. This page specifically discusses:
 
 - luminance, which is a linear measure of light,
@@ -123,24 +127,47 @@ These are examples of the CSS notations used to define a color. Here the example
 
 ```css
 /* by name (from a defined set of names) */
-div { color: magenta; }
+div {
+  color: magenta;
+}
 
 /* by HSL representation of the sRGB value */
-div { color: hsl(300, 100%, 50%); }
-div { color: hsla(300, 100%, 50%, 50%); }
+div {
+  color: hsl(300, 100%, 50%);
+}
+div {
+  color: hsla(300, 100%, 50%, 50%);
+}
 
 /* by sRGB value as a percentage */
-div { color: rgb(100%, 0%, 100%); }
-div { color: rgba(100%, 0%, 100%, 50%); }
+div {
+  color: rgb(100%, 0%, 100%);
+}
+div {
+  color: rgba(100%, 0%, 100%, 50%);
+}
 
 /* by sRGB integer values */
-div { color: rgb(255, 0, 255); }
-div { color: rgba(255, 0, 255, 0.5); }
+div {
+  color: rgb(255, 0, 255);
+}
+div {
+  color: rgba(255, 0, 255, 0.5);
+}
 
 /* by sRGB value in hex */
-div { color: #f0f; }            /* #rgb, a shorthand for #rrggbb */
-div { color: #ff00ff; }         /* #rrggbb */
-div { color: #ff00ff80; }       /* #rrggbbaa */
+div {
+  /* #rgb, a shorthand for #rrggbb */
+  color: #f0f;
+}
+div {
+  /* #rrggbb */
+  color: #ff00ff;
+}
+div {
+  /* #rrggbbaa */
+  color: #ff00ff80;
+}
 ```
 
 The first example is using one of the defined color names. The list of basic color keywords is: `aqua`, `black`, `blue`, `fuchsia`, `gray`, `green`, `lime`, `maroon`, `navy`, `olive`, `purple`, `red`, `silver`, `teal`, `white`, and `yellow`. Some color names have aliases, for instance, `cyan` and `aqua` are the same color, as is `fuchsia` and `magenta`, and `grey` and `gray`. There are over [a hundred and forty more](https://www.w3.org/TR/css-color-3/#svg-color) names that came from the SVG specification that are supported by most browsers.

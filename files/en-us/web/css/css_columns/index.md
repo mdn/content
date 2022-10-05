@@ -1,6 +1,7 @@
 ---
 title: CSS Multi-column Layout
 slug: Web/CSS/CSS_Columns
+page-type: css-module
 tags:
   - CSS
   - CSS Multi-column Layout

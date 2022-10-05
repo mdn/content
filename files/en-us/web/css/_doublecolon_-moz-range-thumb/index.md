@@ -1,6 +1,7 @@
 ---
 title: '::-moz-range-thumb'
 slug: Web/CSS/::-moz-range-thumb
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS:Mozilla Extensions

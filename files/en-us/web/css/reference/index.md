@@ -1,6 +1,7 @@
 ---
 title: CSS reference
 slug: Web/CSS/Reference
+page-type: landing-page
 tags:
   - CSS
   - Guide

@@ -1,6 +1,7 @@
 ---
 title: max()
 slug: Web/CSS/max
+page-type: css-function
 tags:
   - CSS
   - CSS Function

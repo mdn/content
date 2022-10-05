@@ -1,6 +1,7 @@
 ---
 title: padding-block-end
 slug: Web/CSS/padding-block-end
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

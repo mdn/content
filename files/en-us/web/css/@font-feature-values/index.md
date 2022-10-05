@@ -1,6 +1,7 @@
 ---
-title: '@font-feature-values'
+title: "@font-feature-values"
 slug: Web/CSS/@font-feature-values
+page-type: css-at-rule
 tags:
   - At-rule
   - CSS

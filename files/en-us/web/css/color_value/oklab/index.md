@@ -1,6 +1,7 @@
 ---
 title: oklab()
 slug: Web/CSS/color_value/oklab
+page-type: css-function
 tags:
   - CSS
   - CSS Data Type

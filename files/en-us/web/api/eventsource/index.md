@@ -60,7 +60,7 @@ _This interface also inherits methods from its parent, {{domxref("EventTarget")}
 - {{domxref("EventSource/open_event", "open")}}
   - : Fired when a connection to an event source has opened.
 
-Additionally, the event source itself may send messages with an event field, which will create ad-hoc events keyed to that value.
+Additionally, the event source itself may send messages with an event field, which will create ad hoc events keyed to that value.
 
 ## Examples
 

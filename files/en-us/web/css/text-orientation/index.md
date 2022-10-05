@@ -1,6 +1,7 @@
 ---
 title: text-orientation
 slug: Web/CSS/text-orientation
+page-type: css-property
 tags:
   - CSS
   - CSS Property

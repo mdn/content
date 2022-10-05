@@ -1,6 +1,7 @@
 ---
 title: CSS Positioned Layout
 slug: Web/CSS/CSS_Positioning
+page-type: css-module
 tags:
   - CSS
   - CSS Positioning

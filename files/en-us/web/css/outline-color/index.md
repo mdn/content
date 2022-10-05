@@ -1,6 +1,7 @@
 ---
 title: outline-color
 slug: Web/CSS/outline-color
+page-type: css-property
 tags:
   - CSS
   - CSS Outline

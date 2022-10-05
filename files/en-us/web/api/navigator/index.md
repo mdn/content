@@ -71,6 +71,8 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
   - : Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
+- {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("UserActivation")}} object containing information about the current window's user activation state.
 - {{domxref("Navigator.userAgent")}} {{ReadOnlyInline}}
   - : Returns the user agent string for the current browser.
 - {{domxref("Navigator.userAgentData")}} {{ReadOnlyInline}} {{Experimental_Inline}}

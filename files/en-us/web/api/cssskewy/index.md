@@ -34,7 +34,7 @@ _Inherits properties from its ancestor_ {{domxref("CSSTransformValue")}}.
 
 ## Methods
 
-_Inherits methods from its ancestor_ {{domxref("CSSTransformValue")}}_._
+_Inherits methods from its ancestor_ {{domxref("CSSTransformValue")}}.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: '::marker'
 slug: Web/CSS/::marker
+page-type: css-pseudo-element
 tags:
   - CSS
   - CSS Lists

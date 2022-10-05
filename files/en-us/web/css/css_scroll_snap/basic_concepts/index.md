@@ -1,6 +1,7 @@
 ---
 title: Basic concepts of CSS Scroll Snap
 slug: Web/CSS/CSS_Scroll_Snap/Basic_concepts
+page-type: guide
 tags:
   - CSS
   - CSS Scroll Snap

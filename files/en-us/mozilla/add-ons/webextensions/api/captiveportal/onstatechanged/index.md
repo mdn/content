@@ -53,7 +53,7 @@ function handlePortalStatus(portalstatusInfo) {
   console.log(`The portal status is now: ${portalstatusInfo.details}`);
 }
 
-browser.captivePortal.onStateChanged.addListener(handlePortalStatus)
+browser.captivePortal.onStateChanged.addListener(handlePortalStatus);
 ```
 
 {{WebExtExamples}}

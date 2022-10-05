@@ -1,6 +1,7 @@
 ---
 title: ':-moz-first-node'
 slug: Web/CSS/:-moz-first-node
+page-type: css-pseudo-class
 tags:
   - CSS
   - CSS:Mozilla Extensions

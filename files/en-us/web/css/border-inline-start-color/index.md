@@ -1,6 +1,7 @@
 ---
 title: border-inline-start-color
 slug: Web/CSS/border-inline-start-color
+page-type: css-property
 tags:
   - CSS
   - CSS Logical Property

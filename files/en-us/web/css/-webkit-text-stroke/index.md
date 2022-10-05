@@ -1,6 +1,7 @@
 ---
-title: '-webkit-text-stroke'
+title: "-webkit-text-stroke"
 slug: Web/CSS/-webkit-text-stroke
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Property

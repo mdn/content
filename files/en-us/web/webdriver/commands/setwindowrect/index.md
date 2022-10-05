@@ -53,7 +53,7 @@ The input is a [`WindowRect`](/en-US/docs/Web/WebDriver/WindowRect) object:
 
 ### Response
 
-The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow)[:](/en-US/docs/Web/WebDriver/WebWindow)
+The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/WebWindow):
 
 - `x`
   - : Horizontal position of the operating system window associated with [`window`](/en-US/docs/Web/API/Window), equivalent to [`Window.screenX`](/en-US/docs/Web/API/Window/screenX).

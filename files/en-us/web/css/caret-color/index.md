@@ -1,6 +1,7 @@
 ---
 title: caret-color
 slug: Web/CSS/caret-color
+page-type: css-property
 tags:
   - CSS
   - CSS Property

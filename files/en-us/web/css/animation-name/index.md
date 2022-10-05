@@ -1,6 +1,7 @@
 ---
 title: animation-name
 slug: Web/CSS/animation-name
+page-type: css-property
 tags:
   - CSS
   - CSS Animations

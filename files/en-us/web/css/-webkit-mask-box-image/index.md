@@ -1,6 +1,7 @@
 ---
-title: '-webkit-mask-box-image'
+title: "-webkit-mask-box-image"
 slug: Web/CSS/-webkit-mask-box-image
+page-type: css-property
 tags:
   - CSS
   - Layout

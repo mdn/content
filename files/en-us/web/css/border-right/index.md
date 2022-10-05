@@ -1,6 +1,7 @@
 ---
 title: border-right
 slug: Web/CSS/border-right
+page-type: css-shorthand-property
 tags:
   - CSS
   - CSS Borders
